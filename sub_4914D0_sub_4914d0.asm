@@ -1,0 +1,4 @@
+004914D0    push 0x868DCC
+004914D5    mov ecx, 0xBE687C
+004914DA    call 0x004ACB80
+004914DF    ret

@@ -1,0 +1,4 @@
+00763DB0    push 0x19E5D0C
+00763DB5    call 0x00759692
+00763DBA    pop ecx
+00763DBB    ret

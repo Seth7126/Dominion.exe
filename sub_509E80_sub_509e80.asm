@@ -1,0 +1,5 @@
+00509E80    dword 83EC8B55
+00509E84    jnl 0x00509E92
+00509E86    add ecx, dword ptr ds:[edi]
+00509E88    popfd
+00509E89    rcr byte ptr ss:[ebp-0x3D], 0xCC

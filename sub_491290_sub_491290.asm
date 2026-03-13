@@ -1,0 +1,5 @@
+00491290    push 0x8683B4
+00491295    mov ecx, 0xBE6714
+0049129A    call 0x004ACB80
+0049129F    mov dword ptr ds:[0x00BE6714], 0x801A84
+004912A9    ret

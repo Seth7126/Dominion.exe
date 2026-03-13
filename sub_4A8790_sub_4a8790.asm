@@ -1,0 +1,4 @@
+004A8790    push 0x7741C0
+004A8795    call 0x0075964C
+004A879A    pop ecx
+004A879B    ret

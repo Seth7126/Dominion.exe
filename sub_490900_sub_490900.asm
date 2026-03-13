@@ -1,0 +1,4 @@
+00490900    push 0x8663B0
+00490905    mov ecx, 0xBE620C
+0049090A    call 0x004ACB80
+0049090F    ret

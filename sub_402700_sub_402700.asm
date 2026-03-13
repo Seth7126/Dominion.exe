@@ -1,0 +1,4 @@
+00402700    push 0x804BB4
+00402705    mov ecx, 0x8DC5A8
+0040270A    call 0x004ACB80
+0040270F    ret

@@ -1,0 +1,4 @@
+00491370    push 0x868478
+00491375    mov ecx, 0xBE678C
+0049137A    call 0x004ACB80
+0049137F    ret

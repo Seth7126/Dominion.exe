@@ -1,0 +1,4 @@
+0048C060    push 0x773CB0
+0048C065    call 0x0075964C
+0048C06A    pop ecx
+0048C06B    ret

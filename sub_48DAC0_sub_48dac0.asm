@@ -1,0 +1,4 @@
+0048DAC0    push 0x860B00
+0048DAC5    mov ecx, 0xBE44C4
+0048DACA    call 0x004ACB80
+0048DACF    ret

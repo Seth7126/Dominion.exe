@@ -1,0 +1,4 @@
+004A6700    push 0x773F20
+004A6705    call 0x0075964C
+004A670A    pop ecx
+004A670B    ret

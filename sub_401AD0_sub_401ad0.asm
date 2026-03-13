@@ -1,0 +1,4 @@
+00401AD0    push 0x773600
+00401AD5    call 0x0075964C
+00401ADA    pop ecx
+00401ADB    ret

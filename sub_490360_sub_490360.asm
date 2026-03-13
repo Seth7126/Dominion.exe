@@ -1,0 +1,5 @@
+00490360    push 0x865DAC
+00490365    mov ecx, 0xBE5F18
+0049036A    call 0x004ACB80
+0049036F    mov dword ptr ds:[0x00BE5F18], 0x801A84
+00490379    ret

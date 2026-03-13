@@ -1,0 +1,5 @@
+0048D380    push 0x85F438
+0048D385    mov ecx, 0xBE4068
+0048D38A    call 0x004ACB80
+0048D38F    mov dword ptr ds:[0x00BE4068], 0x801A90
+0048D399    ret

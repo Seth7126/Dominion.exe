@@ -1,0 +1,4 @@
+004015F0    push 0x802D44
+004015F5    mov ecx, 0x8DB904
+004015FA    call 0x004ACB80
+004015FF    ret

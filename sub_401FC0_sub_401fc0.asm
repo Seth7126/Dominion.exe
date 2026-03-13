@@ -1,0 +1,4 @@
+00401FC0    push 0x773750
+00401FC5    call 0x0075964C
+00401FCA    pop ecx
+00401FCB    ret

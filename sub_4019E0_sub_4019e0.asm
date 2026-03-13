@@ -1,0 +1,4 @@
+004019E0    push 0x803118
+004019E5    mov ecx, 0x8DBB98
+004019EA    call 0x004ACB80
+004019EF    ret

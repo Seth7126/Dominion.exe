@@ -1,0 +1,4 @@
+004A77B0    push 0x774190
+004A77B5    call 0x0075964C
+004A77BA    pop ecx
+004A77BB    ret

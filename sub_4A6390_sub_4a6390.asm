@@ -1,0 +1,5 @@
+004A6390    push 0x86CE0C
+004A6395    mov ecx, 0xBF15A0
+004A639A    call 0x004ACB80
+004A639F    mov dword ptr ds:[0x00BF15A0], 0x801A90
+004A63A9    ret

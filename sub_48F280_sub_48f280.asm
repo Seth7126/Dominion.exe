@@ -1,0 +1,4 @@
+0048F280    push 0x864AE8
+0048F285    mov ecx, 0xBE53E0
+0048F28A    call 0x004ACB80
+0048F28F    ret

@@ -1,0 +1,4 @@
+004A7490    push 0x774170
+004A7495    call 0x0075964C
+004A749A    pop ecx
+004A749B    ret

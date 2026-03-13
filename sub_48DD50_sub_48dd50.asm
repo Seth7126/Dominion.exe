@@ -1,0 +1,4 @@
+0048DD50    push 0x860DAC
+0048DD55    mov ecx, 0xBE46B0
+0048DD5A    call 0x004ACB80
+0048DD5F    ret

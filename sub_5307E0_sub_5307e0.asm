@@ -1,0 +1,10 @@
+005307E0    xor edx, edx
+005307E2    push ecx
+005307E3    push 0x00
+005307E5    lea ecx, ds:[edx+0x03]
+005307E8    call 0x00561E00
+005307ED    add esp, 0x04
+005307F0    mov edx, 0xC1C
+005307F5    call 0x0052BE60
+005307FA    pop ecx
+005307FB    ret

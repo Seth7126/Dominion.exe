@@ -1,0 +1,8 @@
+004A8390    push 0x801800
+004A8395    push 0x00
+004A8397    push 0x00
+004A8399    push 0x00
+004A839B    push 0x1F
+004A839D    mov ecx, 0x1777504
+004A83A2    call 0x006B7CB0
+004A83A7    ret

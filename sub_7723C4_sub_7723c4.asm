@@ -1,0 +1,4 @@
+007723C4    push 0x1A9A3A0
+007723C9    call 0x00759692
+007723CE    pop ecx
+007723CF    ret

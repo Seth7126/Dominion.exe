@@ -1,0 +1,5 @@
+004021C0    push 0x8041E4
+004021C5    mov ecx, 0x8DC290
+004021CA    call 0x004ACB80
+004021CF    mov dword ptr ds:[0x008DC290], 0x801A84
+004021D9    ret

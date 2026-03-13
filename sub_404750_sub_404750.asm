@@ -1,0 +1,4 @@
+00404750    push 0x807530
+00404755    mov ecx, 0x8DE7D4
+0040475A    call 0x004ACB80
+0040475F    ret

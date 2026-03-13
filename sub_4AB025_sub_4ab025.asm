@@ -1,0 +1,4 @@
+004AB025    push 0x7742D3
+004AB02A    call 0x0075964C
+004AB02F    pop ecx
+004AB030    ret

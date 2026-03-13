@@ -1,0 +1,2 @@
+004FCAD0    mov ecx, 0xB08
+004FCAD5    jmp 0x0056CE60

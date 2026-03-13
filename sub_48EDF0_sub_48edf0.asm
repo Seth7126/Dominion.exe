@@ -1,0 +1,4 @@
+0048EDF0    push 0x864710
+0048EDF5    mov ecx, 0xBE5098
+0048EDFA    call 0x004ACB80
+0048EDFF    ret

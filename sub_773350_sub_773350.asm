@@ -1,0 +1,6 @@
+00773350    push 0x7A0
+00773355    mov eax, dword ptr ss:[ebp-0x10]
+00773358    push eax
+00773359    call 0x00759661
+0077335E    add esp, 0x08
+00773361    ret

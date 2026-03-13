@@ -1,0 +1,4 @@
+0048BE10    push 0x871934
+0048BE15    mov ecx, 0xBE3430
+0048BE1A    call 0x004ACB80
+0048BE1F    ret

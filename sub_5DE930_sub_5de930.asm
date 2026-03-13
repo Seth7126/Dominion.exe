@@ -1,0 +1,18 @@
+005DE930    push ecx
+005DE931    call 0x005DE8B0
+005DE936    test eax, eax
+005DE938    jz 0x005DE93C
+005DE93A    pop ecx
+005DE93B    ret
+005DE93C    push 0x871958
+005DE941    push 0x3D96
+005DE946    push 0x86F1E8
+005DE94B    mov edx, 0x801800
+005DE950    mov ecx, 0x871964
+005DE955    call 0x0063B870
+005DE95A    add esp, 0x0C
+005DE95D    call 0x0063BC30
+005DE962    test al, al
+005DE964    jz 0x005DE967
+005DE966    int3
+005DE967    call 0x0063BB00

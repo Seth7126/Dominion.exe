@@ -1,0 +1,4 @@
+00491120    push 0x8682A4
+00491125    mov ecx, 0xBE666C
+0049112A    call 0x004ACB80
+0049112F    ret

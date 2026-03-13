@@ -1,0 +1,7 @@
+0076A063    mov eax, dword ptr ss:[ebp-0x14]
+0076A066    and eax, 0x08
+0076A069    jz 0x0076A07B
+0076A06F    and dword ptr ss:[ebp-0x14], 0xFFFFFFF7
+0076A073    lea ecx, ss:[ebp-0x34]
+0076A076    jmp 0x0063D770
+0076A07B    ret

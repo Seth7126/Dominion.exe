@@ -1,0 +1,4 @@
+004A99D0    push 0x774250
+004A99D5    call 0x0075964C
+004A99DA    pop ecx
+004A99DB    ret

@@ -1,0 +1,11 @@
+00527000    dword 83EC8B55
+00527004    in al, 0xF8
+00527006    push ecx
+00527007    mov eax, esp
+00527009    mov dword ptr ds:[eax], 0x03
+0052700F    call 0x005652D0
+00527014    add esp, 0x04
+00527017    call 0x00526CC0
+0052701C    mov esp, ebp
+0052701E    pop ebp
+0052701F    ret

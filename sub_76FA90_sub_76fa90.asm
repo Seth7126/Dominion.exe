@@ -1,0 +1,4 @@
+0076FA90    push 0x1A9A298
+0076FA95    call 0x00759692
+0076FA9A    pop ecx
+0076FA9B    ret

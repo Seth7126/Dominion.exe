@@ -1,0 +1,4 @@
+00491470    push 0x868DAC
+00491475    mov ecx, 0xBE6834
+0049147A    call 0x004ACB80
+0049147F    ret

@@ -1,0 +1,4 @@
+007684E0    push 0x1A8A080
+007684E5    call 0x00759692
+007684EA    pop ecx
+007684EB    ret

@@ -1,0 +1,20 @@
+004A86B0    mov eax, dword ptr ds:[0x0147AC60]
+004A86B5    cmp eax, 0x100
+004A86BA    jl 0x004A86E9
+004A86BC    push 0x87A58C
+004A86C1    push 0x2A
+004A86C3    push 0x87A564
+004A86C8    mov edx, 0x801800
+004A86CD    mov ecx, 0x87A5C0
+004A86D2    call 0x0063B870
+004A86D7    add esp, 0x0C
+004A86DA    call 0x0063BC30
+004A86DF    test al, al
+004A86E1    jz 0x004A86E4
+004A86E3    int3
+004A86E4    jmp 0x0063BB00
+004A86E9    mov dword ptr ds:[eax*4+0x147AC68], 0x8CE2F4
+004A86F4    inc eax
+004A86F5    mov dword ptr ds:[0x0147AC60], eax
+004A86FA    mov dword ptr ds:[0x01777510], 0x8CE2F4
+004A8704    ret

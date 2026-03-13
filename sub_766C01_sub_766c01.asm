@@ -1,0 +1,12 @@
+00766C01    nop
+00766C02    nop
+00766C03    mov edx, dword ptr ss:[esp+0x08]
+00766C07    lea eax, ds:[edx+0x0C]
+00766C0A    mov ecx, dword ptr ds:[edx-0x1A10]
+00766C10    xor ecx, eax
+00766C12    call 0x0075927A
+00766C17    mov ecx, dword ptr ds:[edx-0x04]
+00766C1A    xor ecx, eax
+00766C1C    call 0x0075927A
+00766C21    mov eax, 0x8B2780
+00766C26    jmp 0x00761FA6

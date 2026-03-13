@@ -1,0 +1,4 @@
+00401C60    push 0x803500
+00401C65    mov ecx, 0x8DBD34
+00401C6A    call 0x004ACB80
+00401C6F    ret

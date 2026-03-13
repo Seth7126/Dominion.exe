@@ -1,0 +1,5 @@
+00485E50    mov edx, 0x03
+00485E55    mov ecx, 0x8566D0
+00485E5A    call 0x0069F030
+00485E5F    mov dword ptr ds:[0x0171EAD4], eax
+00485E64    ret

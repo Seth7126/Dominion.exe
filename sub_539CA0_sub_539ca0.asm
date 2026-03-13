@@ -1,0 +1,14 @@
+00539CA0    dword 83EC8B55
+00539CA4    in al, 0xF8
+00539CA6    push ecx
+00539CA7    push 0x00
+00539CA9    push 0x00
+00539CAB    xor edx, edx
+00539CAD    mov ecx, 0x3EB
+00539CB2    call 0x00568960
+00539CB7    add esp, 0x0C
+00539CBA    test eax, eax
+00539CBC    setz al
+00539CBF    mov esp, ebp
+00539CC1    pop ebp
+00539CC2    ret

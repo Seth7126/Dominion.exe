@@ -1,0 +1,5 @@
+004A7160    push 0x8755C0
+004A7165    mov ecx, 0xCADEAC
+004A716A    call 0x004ACB80
+004A716F    mov dword ptr ds:[0x00CADEAC], 0x801A90
+004A7179    ret

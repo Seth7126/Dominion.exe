@@ -1,0 +1,4 @@
+004017E0    push 0x802EF8
+004017E5    mov ecx, 0x8DBA3C
+004017EA    call 0x004ACB80
+004017EF    ret

@@ -1,0 +1,16 @@
+00512660    dword 83EC8B55
+00512664    in al, 0xF8
+00512666    sub esp, 0xC88
+0051266C    push 0x01
+0051266E    lea eax, ss:[esp+0x04]
+00512672    mov dword ptr ss:[esp+0x04], 0x00
+0051267A    push eax
+0051267B    push 0x10000
+00512680    push 0x00
+00512682    mov edx, 0x5074D0
+00512687    mov ecx, 0x01
+0051268C    call 0x0056C680
+00512691    add esp, 0x10
+00512694    mov esp, ebp
+00512696    pop ebp
+00512697    ret

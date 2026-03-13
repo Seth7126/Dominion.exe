@@ -1,0 +1,3 @@
+0047FA30    mov edx, 0x15
+0047FA35    mov ecx, 0x844674
+0047FA3A    jmp 0x0069F030

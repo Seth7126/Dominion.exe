@@ -1,0 +1,14 @@
+00543680    dword 83EC8B55
+00543684    in al, 0xF8
+00543686    push ecx
+00543687    push 0x00
+00543689    push 0x00
+0054368B    mov edx, 0xD19
+00543690    mov ecx, 0x3E9
+00543695    call 0x00568960
+0054369A    not eax
+0054369C    add esp, 0x0C
+0054369F    and eax, 0x01
+005436A2    mov esp, ebp
+005436A4    pop ebp
+005436A5    ret

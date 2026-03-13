@@ -1,0 +1,4 @@
+0048E2D0    push 0x8615B4
+0048E2D5    mov ecx, 0xBE49E4
+0048E2DA    call 0x004ACB80
+0048E2DF    ret

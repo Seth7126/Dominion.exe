@@ -1,0 +1,2 @@
+00774170    mov ecx, 0xCAE18C
+00774175    jmp 0x004E3EA0

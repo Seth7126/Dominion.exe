@@ -1,0 +1,4 @@
+00490F50    push 0x805280
+00490F55    mov ecx, 0xBE6528
+00490F5A    call 0x004ACB80
+00490F5F    ret

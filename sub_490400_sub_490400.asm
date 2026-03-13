@@ -1,0 +1,5 @@
+00490400    push 0x865DD8
+00490405    mov ecx, 0xBE5F54
+0049040A    call 0x004ACB80
+0049040F    mov dword ptr ds:[0x00BE5F54], 0x801A84
+00490419    ret

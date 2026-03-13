@@ -1,0 +1,4 @@
+00401760    push 0x802E54
+00401765    mov ecx, 0x8DB9DC
+0040176A    call 0x004ACB80
+0040176F    ret

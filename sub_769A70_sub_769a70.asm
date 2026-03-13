@@ -1,0 +1,2 @@
+00769A70    mov ecx, 0xB809FC
+00769A75    jmp 0x005CAF20

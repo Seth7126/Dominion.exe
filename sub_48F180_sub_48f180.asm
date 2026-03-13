@@ -1,0 +1,4 @@
+0048F180    push 0x864A34
+0048F185    mov ecx, 0xBE5320
+0048F18A    call 0x004ACB80
+0048F18F    ret

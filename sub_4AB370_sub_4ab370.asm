@@ -1,0 +1,2 @@
+004AB370    add ecx, 0x10
+004AB373    jmp 0x004AB0E0

@@ -1,0 +1,4 @@
+0048E340    push 0x773D40
+0048E345    call 0x0075964C
+0048E34A    pop ecx
+0048E34B    ret

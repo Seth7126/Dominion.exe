@@ -1,0 +1,4 @@
+00401790    push 0x802E90
+00401795    mov ecx, 0x8DBA00
+0040179A    call 0x004ACB80
+0040179F    ret

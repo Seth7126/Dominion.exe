@@ -1,0 +1,4 @@
+0076A33C    push 0x1A93B00
+0076A341    call 0x00759692
+0076A346    pop ecx
+0076A347    ret

@@ -1,0 +1,4 @@
+004012A0    push 0x773560
+004012A5    call 0x0075964C
+004012AA    pop ecx
+004012AB    ret

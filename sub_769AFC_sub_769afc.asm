@@ -1,0 +1,4 @@
+00769AFC    push 0x1A8C6F8
+00769B01    call 0x00759692
+00769B06    pop ecx
+00769B07    ret

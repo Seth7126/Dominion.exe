@@ -1,0 +1,4 @@
+0076FB80    push 0x1A9A2E8
+0076FB85    call 0x00759692
+0076FB8A    pop ecx
+0076FB8B    ret

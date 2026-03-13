@@ -1,0 +1,4 @@
+004900F0    push 0x865A90
+004900F5    mov ecx, 0xBE5D50
+004900FA    call 0x004ACB80
+004900FF    ret

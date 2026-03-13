@@ -1,0 +1,4 @@
+0048DAB0    push 0x860AD8
+0048DAB5    mov ecx, 0xBE44B8
+0048DABA    call 0x004ACB80
+0048DABF    ret

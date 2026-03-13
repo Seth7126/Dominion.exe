@@ -1,0 +1,4 @@
+004022C0    push 0x804344
+004022C5    mov ecx, 0x8DC338
+004022CA    call 0x004ACB80
+004022CF    ret

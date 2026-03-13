@@ -1,0 +1,4 @@
+004A65E0    push 0x86A3D8
+004A65E5    mov ecx, 0xBF1708
+004A65EA    call 0x004ACB80
+004A65EF    ret

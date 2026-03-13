@@ -1,0 +1,4 @@
+004046F0    push 0x773920
+004046F5    call 0x0075964C
+004046FA    pop ecx
+004046FB    ret

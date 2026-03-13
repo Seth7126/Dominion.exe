@@ -1,0 +1,25 @@
+00504460    dword 83EC8B55
+00504464    in al, 0xF8
+00504466    push 0x00
+00504468    push 0x04
+0050446A    call 0x0056E820
+0050446F    add esp, 0x08
+00504472    test al, al
+00504474    jz 0x00504495
+00504476    push ecx
+00504477    push 0x00
+00504479    push 0x00
+0050447B    xor edx, edx
+0050447D    mov ecx, 0x3EA
+00504482    call 0x00568960
+00504487    add esp, 0x0C
+0050448A    cmp eax, 0x04
+0050448D    jnle 0x00504495
+0050448F    mov al, 0x01
+00504491    mov esp, ebp
+00504493    pop ebp
+00504494    ret
+00504495    xor al, al
+00504497    mov esp, ebp
+00504499    pop ebp
+0050449A    ret

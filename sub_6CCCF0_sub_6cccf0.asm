@@ -1,0 +1,101 @@
+006CCCF0    cmp byte ptr ds:[0x0147ABA1], 0x00
+006CCCF7    push esi
+006CCCF8    jnz 0x006CCE4B
+006CCCFE    mov ecx, dword ptr ds:[0x0147B070]
+006CCD04    push 0x00
+006CCD06    mov eax, dword ptr ds:[ecx]
+006CCD08    call dword ptr ds:[eax+0xA8]
+006CCD0E    mov esi, dword ptr ds:[0x0147ABE8]
+006CCD14    test esi, esi
+006CCD16    jz 0x006CCD21
+006CCD18    mov esi, dword ptr ds:[esi+0x1C]
+006CCD1B    shr esi, 0x0E
+006CCD1E    and esi, 0x01
+006CCD21    mov ecx, dword ptr ds:[0x0147D1B0]
+006CCD27    mov eax, dword ptr ds:[ecx]
+006CCD29    mov eax, dword ptr ds:[eax+0x18]
+006CCD2C    call eax
+006CCD2E    test al, al
+006CCD30    jz 0x006CCD85
+006CCD32    mov byte ptr ds:[0x0147D2B0], 0x01
+006CCD39    call 0x006CC190
+006CCD3E    mov ecx, dword ptr ds:[0x0147B070]
+006CCD44    mov eax, dword ptr ds:[ecx]
+006CCD46    call dword ptr ds:[eax+0x98]
+006CCD4C    mov edx, esi
+006CCD4E    xor ecx, ecx
+006CCD50    call 0x006CC4B0
+006CCD55    call 0x006CC600
+006CCD5A    cmp esi, 0x01
+006CCD5D    jz 0x006CCD70
+006CCD5F    mov edx, esi
+006CCD61    mov ecx, 0x01
+006CCD66    call 0x006CC4B0
+006CCD6B    call 0x006CC600
+006CCD70    mov ecx, dword ptr ds:[0x0147B070]
+006CCD76    mov byte ptr ds:[0x0147D2B0], 0x00
+006CCD7D    mov eax, dword ptr ds:[ecx]
+006CCD7F    call dword ptr ds:[eax+0x9C]
+006CCD85    mov ecx, dword ptr ds:[0x0147B070]
+006CCD8B    push 0x00
+006CCD8D    mov eax, dword ptr ds:[ecx]
+006CCD8F    call dword ptr ds:[eax+0xAC]
+006CCD95    mov ecx, dword ptr ds:[0x0147B070]
+006CCD9B    push 0x01
+006CCD9D    mov eax, dword ptr ds:[ecx]
+006CCD9F    call dword ptr ds:[eax+0xA8]
+006CCDA5    mov eax, dword ptr ds:[0x00CF65B8]
+006CCDAA    cmp dword ptr ds:[eax+0x1C], 0x00
+006CCDAE    jz 0x006CCDE6
+006CCDB0    cmp byte ptr ds:[0x00CCF6E6], 0x00
+006CCDB7    jz 0x006CCDE6
+006CCDB9    mov ecx, dword ptr ds:[0x0147D1B0]
+006CCDBF    mov eax, dword ptr ds:[0x0147D1D4]
+006CCDC4    mov edx, dword ptr ds:[ecx]
+006CCDC6    cmp esi, 0x01
+006CCDC9    jnz 0x006CCDD6
+006CCDCB    mov eax, dword ptr ds:[eax*4+0x147D1B4]
+006CCDD2    push eax
+006CCDD3    push eax
+006CCDD4    jmp 0x006CCE11
+006CCDD6    push dword ptr ds:[eax*4+0x147D1B8]
+006CCDDD    push dword ptr ds:[eax*4+0x147D1B4]
+006CCDE4    jmp 0x006CCE11
+006CCDE6    mov ecx, dword ptr ds:[0x0147D1B0]
+006CCDEC    mov eax, dword ptr ds:[0x0147D1D4]
+006CCDF1    mov edx, dword ptr ds:[ecx]
+006CCDF3    cmp esi, 0x01
+006CCDF6    jnz 0x006CCE03
+006CCDF8    mov eax, dword ptr ds:[eax*4+0x147D1BC]
+006CCDFF    push eax
+006CCE00    push eax
+006CCE01    jmp 0x006CCE11
+006CCE03    push dword ptr ds:[eax*4+0x147D1C0]
+006CCE0A    push dword ptr ds:[eax*4+0x147D1BC]
+006CCE11    push 0x147D218
+006CCE16    call dword ptr ds:[edx+0x1C]
+006CCE19    mov ecx, dword ptr ds:[0x0147B070]
+006CCE1F    push 0x01
+006CCE21    mov eax, dword ptr ds:[ecx]
+006CCE23    call dword ptr ds:[eax+0xAC]
+006CCE29    mov eax, dword ptr ds:[0x0147D1D4]
+006CCE2E    inc eax
+006CCE2F    mov dword ptr ds:[0x0147D1D4], eax
+006CCE34    cmp eax, 0x01
+006CCE37    jnz 0x006CCE43
+006CCE39    mov dword ptr ds:[0x0147D1D4], 0x00
+006CCE43    xor ecx, ecx
+006CCE45    pop esi
+006CCE46    jmp 0x006E1520
+006CCE4B    push 0x87EB40
+006CCE50    push 0x190
+006CCE55    push 0x87E9F4
+006CCE5A    mov edx, 0x801800
+006CCE5F    mov ecx, 0x872928
+006CCE64    call 0x0063B870
+006CCE69    add esp, 0x0C
+006CCE6C    call 0x0063BC30
+006CCE71    test al, al
+006CCE73    jz 0x006CCE76
+006CCE75    int3
+006CCE76    call 0x0063BB00

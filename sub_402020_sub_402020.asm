@@ -1,0 +1,4 @@
+00402020    push 0x80403C
+00402025    mov ecx, 0x8DC170
+0040202A    call 0x004ACB80
+0040202F    ret

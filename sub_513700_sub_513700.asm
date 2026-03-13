@@ -1,0 +1,16 @@
+00513700    dword 83EC8B55
+00513704    in al, 0xF8
+00513706    sub esp, 0xC88
+0051370C    push 0x01
+0051370E    lea eax, ss:[esp+0x04]
+00513712    mov dword ptr ss:[esp+0x04], 0x00
+0051371A    push eax
+0051371B    push 0x10000
+00513720    push 0x5139A0
+00513725    mov edx, 0x513990
+0051372A    mov ecx, 0x01
+0051372F    call 0x0056C680
+00513734    add esp, 0x10
+00513737    mov esp, ebp
+00513739    pop ebp
+0051373A    ret

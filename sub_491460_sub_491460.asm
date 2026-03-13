@@ -1,0 +1,4 @@
+00491460    push 0x868D94
+00491465    mov ecx, 0xBE6828
+0049146A    call 0x004ACB80
+0049146F    ret

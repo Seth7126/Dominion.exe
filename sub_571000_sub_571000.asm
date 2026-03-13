@@ -1,0 +1,10 @@
+00571000    push ebp
+00571001    mov ebp, esp
+00571003    cmp byte ptr ss:[ebp+0x08], 0x00
+00571007    jz 0x00571014
+00571009    push 0x14
+0057100B    push ecx
+0057100C    call 0x00759661
+00571011    add esp, 0x08
+00571014    pop ebp
+00571015    ret 0x04

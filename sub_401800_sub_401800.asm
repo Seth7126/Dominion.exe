@@ -1,0 +1,4 @@
+00401800    push 0x802F18
+00401805    mov ecx, 0x8DBA54
+0040180A    call 0x004ACB80
+0040180F    ret

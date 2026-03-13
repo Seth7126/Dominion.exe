@@ -1,0 +1,4 @@
+004A7000    push 0x774150
+004A7005    call 0x0075964C
+004A700A    pop ecx
+004A700B    ret

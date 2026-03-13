@@ -1,0 +1,7 @@
+00770761    mov eax, dword ptr ss:[ebp-0x128]
+00770767    and eax, 0x01
+0077076A    jz 0x00770782
+00770770    and dword ptr ss:[ebp-0x128], 0xFFFFFFFE
+00770777    lea ecx, ss:[ebp-0x11C]
+0077077D    jmp 0x0063D770
+00770782    ret

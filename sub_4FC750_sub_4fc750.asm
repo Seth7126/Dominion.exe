@@ -1,0 +1,2 @@
+004FC750    mov ecx, 0xB09
+004FC755    jmp 0x0056CE60

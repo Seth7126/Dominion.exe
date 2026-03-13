@@ -1,0 +1,4 @@
+00490580    push 0x865F48
+00490585    mov ecx, 0xBE5FF0
+0049058A    call 0x004ACB80
+0049058F    ret

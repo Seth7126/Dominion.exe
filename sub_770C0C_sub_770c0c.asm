@@ -1,0 +1,4 @@
+00770C0C    push 0x1A9A318
+00770C11    call 0x00759692
+00770C16    pop ecx
+00770C17    ret

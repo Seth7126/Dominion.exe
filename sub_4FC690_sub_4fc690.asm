@@ -1,0 +1,3 @@
+004FC690    dword 4A8DD233
+004FC694    pop es
+004FC695    jmp 0x00562F10

@@ -1,0 +1,5 @@
+004A7270    push 0x875690
+004A7275    mov ecx, 0xCADF3C
+004A727A    call 0x004ACB80
+004A727F    mov dword ptr ds:[0x00CADF3C], 0x801A84
+004A7289    ret

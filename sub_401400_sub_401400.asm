@@ -1,0 +1,4 @@
+00401400    push 0x802A28
+00401405    mov ecx, 0x8DB7DC
+0040140A    call 0x004ACB80
+0040140F    ret

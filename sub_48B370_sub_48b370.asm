@@ -1,0 +1,4 @@
+0048B370    push 0x870AE8
+0048B375    mov ecx, 0xBE2C5C
+0048B37A    call 0x004ACB80
+0048B37F    ret

@@ -1,0 +1,2 @@
+00523FE0    add ecx, 0x04
+00523FE3    jmp 0x00520BD0

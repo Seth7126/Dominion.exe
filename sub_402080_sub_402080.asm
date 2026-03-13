@@ -1,0 +1,4 @@
+00402080    push 0x8040B0
+00402085    mov ecx, 0x8DC1B8
+0040208A    call 0x004ACB80
+0040208F    ret

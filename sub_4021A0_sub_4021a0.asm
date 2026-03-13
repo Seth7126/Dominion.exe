@@ -1,0 +1,4 @@
+004021A0    push 0x8041C0
+004021A5    mov ecx, 0x8DC278
+004021AA    call 0x004ACB80
+004021AF    ret

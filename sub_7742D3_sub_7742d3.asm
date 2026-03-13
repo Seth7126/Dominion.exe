@@ -1,0 +1,2 @@
+007742D3    mov ecx, 0xCC89DC
+007742D8    jmp 0x0075922E

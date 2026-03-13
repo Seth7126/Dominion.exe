@@ -1,0 +1,4 @@
+0076C610    push 0x1A98F60
+0076C615    call 0x00759692
+0076C61A    pop ecx
+0076C61B    ret

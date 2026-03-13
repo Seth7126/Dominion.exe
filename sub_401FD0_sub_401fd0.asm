@@ -1,0 +1,4 @@
+00401FD0    push 0x7737D0
+00401FD5    call 0x0075964C
+00401FDA    pop ecx
+00401FDB    ret

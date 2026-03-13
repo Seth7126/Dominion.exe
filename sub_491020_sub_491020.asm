@@ -1,0 +1,4 @@
+00491020    push 0x86819C
+00491025    mov ecx, 0xBE65AC
+0049102A    call 0x004ACB80
+0049102F    ret

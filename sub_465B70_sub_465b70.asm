@@ -1,0 +1,4 @@
+00465B70    push 0x773A40
+00465B75    call 0x0075964C
+00465B7A    pop ecx
+00465B7B    ret

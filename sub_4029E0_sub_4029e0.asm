@@ -1,0 +1,5 @@
+004029E0    push 0x804E10
+004029E5    mov ecx, 0x8DC740
+004029EA    call 0x004ACB80
+004029EF    mov dword ptr ds:[0x008DC740], 0x801A84
+004029F9    ret

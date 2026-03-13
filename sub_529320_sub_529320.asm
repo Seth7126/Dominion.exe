@@ -1,0 +1,19 @@
+00529320    push ebp
+00529321    mov ebp, esp
+00529323    sub esp, 0xC84
+00529329    call 0x00568C60
+0052932E    sub eax, 0x04
+00529331    test eax, eax
+00529333    jle 0x00529351
+00529335    push 0x05
+00529337    push 0x00
+00529339    lea ecx, ss:[ebp-0xC84]
+0052933F    mov edx, 0x0E
+00529344    push 0x07
+00529346    push ecx
+00529347    mov ecx, eax
+00529349    call 0x00567110
+0052934E    add esp, 0x10
+00529351    mov esp, ebp
+00529353    pop ebp
+00529354    ret

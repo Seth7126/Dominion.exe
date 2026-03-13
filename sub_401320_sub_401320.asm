@@ -1,0 +1,5 @@
+00401320    push 0x802498
+00401325    mov ecx, 0x8DB574
+0040132A    call 0x004ACB80
+0040132F    mov dword ptr ds:[0x008DB574], 0x801A84
+00401339    ret

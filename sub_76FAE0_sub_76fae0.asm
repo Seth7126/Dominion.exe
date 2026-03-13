@@ -1,0 +1,4 @@
+0076FAE0    push 0x1A9A2A0
+0076FAE5    call 0x00759692
+0076FAEA    pop ecx
+0076FAEB    ret

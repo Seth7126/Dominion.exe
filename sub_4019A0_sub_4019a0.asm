@@ -1,0 +1,5 @@
+004019A0    push 0x8030D4
+004019A5    mov ecx, 0x8DBB74
+004019AA    call 0x004ACB80
+004019AF    mov dword ptr ds:[0x008DBB74], 0x801A90
+004019B9    ret

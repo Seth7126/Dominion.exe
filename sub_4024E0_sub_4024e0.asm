@@ -1,0 +1,4 @@
+004024E0    push 0x804900
+004024E5    mov ecx, 0x8DC488
+004024EA    call 0x004ACB80
+004024EF    ret

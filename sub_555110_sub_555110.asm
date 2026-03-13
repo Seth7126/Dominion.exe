@@ -1,0 +1,18 @@
+00555110    dword 83EC8B55
+00555114    in al, 0xF8
+00555116    call 0x00566800
+0055511B    push ecx
+0055511C    push 0x00
+0055511E    push 0x02
+00555120    xor edx, edx
+00555122    mov ecx, 0x3EA
+00555127    call 0x00568960
+0055512C    add esp, 0x08
+0055512F    xor edx, edx
+00555131    mov ecx, eax
+00555133    push 0x00
+00555135    call 0x00561E00
+0055513A    add esp, 0x08
+0055513D    mov esp, ebp
+0055513F    pop ebp
+00555140    ret
