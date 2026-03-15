@@ -1,13 +1,19 @@
-004B4000    mov edx, dword ptr ds:[0x00CC8D5C]
+// ============================================================
+// 函数名称: sub_4b4000
+// 起始地址: 0x4b4000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+004B4000    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B4006    push ebx
 004B4007    push esi
 004B4008    push edi
 004B4009    test edx, edx
 004B400B    jnz 0x004B4020
-004B400D    push 0x77EB90
+004B400D    push 0x77EB90                                   ; => [ String: GetClient ]
 004B4012    push 0x7B
-004B4014    push 0x77EB50
-004B4019    mov ecx, 0x77EB9C
+004B4014    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+004B4019    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 004B401E    jmp 0x004B4086
 004B4020    mov eax, dword ptr ds:[edx+0x5028]
 004B4026    test eax, eax
@@ -39,15 +45,15 @@
 004B406E    add eax, ebx
 004B4070    pop ebx
 004B4071    ret
-004B4072    push 0x801F98
+004B4072    push 0x801F98                                   ; => [ String: MostRecentFriend ]
 004B4077    push 0xA7E
-004B407C    push 0x801AF8
-004B4081    mov ecx, 0x801FAC
+004B407C    push 0x801AF8                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
+004B4081    mov ecx, 0x801FAC                               ; => [ String: c.numFriends > 0 ]
 004B4086    mov edx, 0x801800
-004B408B    call 0x0063B870
+004B408B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004B4090    add esp, 0x0C
 004B4093    call 0x0063BC30
 004B4098    test al, al
-004B409A    jz 0x004B409D
+004B409A    jz 0x004B409D                                   ; => [ Call: sub_63bc30 ]
 004B409C    int3
-004B409D    call 0x0063BB00
+004B409D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

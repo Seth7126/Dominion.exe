@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5bfe30
+// 起始地址: 0x5bfe30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BFE30    push ebp
 005BFE31    mov ebp, esp
 005BFE33    sub esp, 0x08
@@ -25,7 +31,7 @@
 005BFE6C    mov eax, 0x80000000
 005BFE71    add eax, 0x23
 005BFE74    push eax
-005BFE75    call 0x00759772
+005BFE75    call 0x00759772                                 ; => [ Call: operator new ]
 005BFE7A    add esp, 0x04
 005BFE7D    test eax, eax
 005BFE7F    jz 0x005BFF43
@@ -46,7 +52,7 @@
 005BFEA8    lea ecx, ds:[edi+0x01]
 005BFEAB    test ecx, ecx
 005BFEAD    jnz 0x005BFEB3
-005BFEAF    xor esi, esi
+005BFEAF    xor esi, esi                                    ; => [ Call: nullptr ]
 005BFEB1    jmp 0x005BFED3
 005BFEB3    cmp ecx, 0x1000
 005BFEB9    jb 0x005BFEC8
@@ -57,7 +63,7 @@
 005BFEC8    push ecx
 005BFEC9    call 0x00759772
 005BFECE    add esp, 0x04
-005BFED1    mov esi, eax
+005BFED1    mov esi, eax                                    ; => [ Call: operator new ]
 005BFED3    mov ecx, dword ptr ss:[ebp+0x18]
 005BFED6    mov eax, dword ptr ss:[ebp-0x08]
 005BFED9    mov dword ptr ds:[ebx+0x14], edi
@@ -72,13 +78,13 @@
 005BFEF3    push esi
 005BFEF4    jbe 0x005BFF49
 005BFEF6    mov edi, dword ptr ds:[ebx]
-005BFEF8    call 0x00761FBE
+005BFEF8    call 0x00761FBE                                 ; => [ Call: memcpy | String: card_encode ]
 005BFEFD    mov eax, dword ptr ss:[ebp-0x04]
 005BFF00    inc eax
 005BFF01    push eax
 005BFF02    push edi
 005BFF03    push dword ptr ss:[ebp+0x18]
-005BFF06    call 0x00761FBE
+005BFF06    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BFF0B    mov ecx, dword ptr ss:[ebp+0x08]
 005BFF0E    add esp, 0x18
 005BFF11    inc ecx
@@ -93,7 +99,7 @@
 005BFF2A    mov edi, edx
 005BFF2C    push ecx
 005BFF2D    push edi
-005BFF2E    call 0x00759661
+005BFF2E    call 0x00759661                                 ; => [ Call: operator new ]
 005BFF33    add esp, 0x08
 005BFF36    mov dword ptr ds:[ebx], esi
 005BFF38    mov eax, ebx
@@ -104,11 +110,11 @@
 005BFF3F    pop ebp
 005BFF40    ret 0x14
 005BFF43    call dword ptr ds:[0x007755F4]
-005BFF49    call 0x00761FBE
+005BFF49    call 0x00761FBE                                 ; => [ Call: memcpy | String: card_encode ]
 005BFF4E    push edi
 005BFF4F    push ebx
 005BFF50    push dword ptr ss:[ebp+0x18]
-005BFF53    call 0x00761FBE
+005BFF53    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BFF58    add esp, 0x18
 005BFF5B    mov dword ptr ds:[ebx], esi
 005BFF5D    mov eax, ebx
@@ -118,5 +124,5 @@
 005BFF62    mov esp, ebp
 005BFF64    pop ebp
 005BFF65    ret 0x14
-005BFF68    call 0x005B0860
-005BFF6D    call 0x004F7EE0
+005BFF68    call 0x005B0860                                 ; => [ Call: sub_5b0860 ]
+005BFF6D    call 0x004F7EE0                                 ; => [ Call: sub_4f7ee0 ]

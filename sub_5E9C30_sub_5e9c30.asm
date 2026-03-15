@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e9c30
+// 起始地址: 0x5e9c30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E9C30    push ecx
 005E9C31    push esi
 005E9C32    push edi
@@ -6,7 +12,7 @@
 005E9C3E    nop
 005E9C40    mov ecx, dword ptr ds:[edi]
 005E9C42    test ecx, ecx
-005E9C44    jz 0x005E9C61
+005E9C44    jz 0x005E9C61                                   ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 005E9C46    mov edx, dword ptr ds:[0x00CCE9B0]
 005E9C4C    call 0x00571B30
 005E9C51    mov eax, dword ptr ds:[eax+0x98]

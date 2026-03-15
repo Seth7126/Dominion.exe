@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_569210
+// 起始地址: 0x569210
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00569210    push ebp
 00569211    mov ebp, esp
 00569213    and esp, 0xFFFFFFF0
 00569216    mov eax, 0x1978
-0056921B    call 0x00761E50
+0056921B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00569220    push esi
 00569221    lea eax, ss:[esp+0x6C]
 00569225    mov dword ptr ss:[esp+0x08], ecx
@@ -15,7 +21,7 @@
 0056923C    mov eax, dword ptr ss:[ebp+0x08]
 0056923F    add esp, 0x04
 00569242    mov edi, eax
-00569244    rep movsd
+00569244    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 00569246    mov ecx, dword ptr ds:[eax+0xC80]
 0056924C    test ecx, ecx
 0056924E    jz 0x00569320
@@ -26,7 +32,7 @@
 0056925F    movlpd qword ptr ss:[esp+0x18], xmm0
 00569265    push 0x00
 00569267    cmovnle edx, ecx
-0056926A    movlpd qword ptr ss:[esp+0x2C], xmm0
+0056926A    movlpd qword ptr ss:[esp+0x2C], xmm0            ; => [ Call: __builtin_memset ]
 00569270    push 0x0E
 00569272    movlpd qword ptr ss:[esp+0x44], xmm0
 00569278    lea ecx, ss:[esp+0x4C]
@@ -52,11 +58,11 @@
 005692D1    lea edi, ss:[esp+0x8C]
 005692D8    mov ecx, 0x321
 005692DD    add esp, 0x1C
-005692E0    rep movsd
+005692E0    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
 005692E2    mov edi, dword ptr ss:[ebp+0x08]
 005692E5    lea esi, ss:[esp+0x70]
 005692E9    mov ecx, 0x321
-005692EE    rep movsd
+005692EE    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005692F0    mov edi, dword ptr ss:[ebp+0x08]
 005692F3    mov eax, dword ptr ds:[edi+0xC80]
 005692F9    test eax, eax
@@ -67,12 +73,12 @@
 00569303    mov ecx, dword ptr ds:[edi+esi*4]
 00569306    mov edx, 0x3EA
 0056930B    push 0x0B
-0056930D    call 0x005695C0
+0056930D    call 0x005695C0                                 ; => [ Call: sub_5695c0 ]
 00569312    inc esi
 00569313    add esp, 0x04
 00569316    cmp esi, dword ptr ds:[edi+0xC80]
 0056931C    jl 0x00569303
-0056931E    mov eax, edi
+0056931E    mov eax, edi                                    ; => [ Call: nullptr ]
 00569320    pop edi
 00569321    pop esi
 00569322    mov esp, ebp

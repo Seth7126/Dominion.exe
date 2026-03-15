@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_65ed50
+// 起始地址: 0x65ed50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065ED50    push ebp
 0065ED51    mov ebp, esp
 0065ED53    sub esp, 0x4C
@@ -8,15 +14,15 @@
 0065ED5C    mov edi, ecx
 0065ED5E    cmp dword ptr ds:[edi+0x18], 0x00
 0065ED62    jnz 0x0065ED94
-0065ED64    movaps xmm2, xmmword ptr ds:[0x00893940]
+0065ED64    movaps xmm2, xmmword ptr ds:[0x00893940]        ; => [ Data: data_893940 ]
 0065ED6B    xorps xmm0, xmm0
-0065ED6E    mov dword ptr ss:[ebp-0x34], 0x00
+0065ED6E    mov dword ptr ss:[ebp-0x34], 0x00               ; => [ Call: __builtin_memset ]
 0065ED75    xorps xmm1, xmm1
 0065ED78    movups xmmword ptr ss:[ebp-0x30], xmm0
 0065ED7C    test esi, esi
 0065ED7E    jnz 0x0065EEE9
 0065ED84    mov dword ptr ss:[ebp-0x38], 0x00
-0065ED8B    movups xmmword ptr ss:[ebp-0x20], xmm0
+0065ED8B    movups xmmword ptr ss:[ebp-0x20], xmm0          ; => [ String: 0 | String: zx ]
 0065ED8F    jmp 0x0065EF50
 0065ED94    mov eax, dword ptr ds:[esi]
 0065ED96    cmp eax, 0xFFFFFFFF
@@ -29,18 +35,18 @@
 0065EDB3    mov eax, dword ptr ds:[edi+0x14]
 0065EDB6    cmp dword ptr ds:[ecx+eax*1+0x0C], 0x00
 0065EDBB    jz 0x0065EDD1
-0065EDBD    push 0x874F68
+0065EDBD    push 0x874F68                                   ; => [ String: FinalizeCurrentLine ]
 0065EDC2    push 0x2A05
-0065EDC7    mov ecx, 0x874FBC
+0065EDC7    mov ecx, 0x874FBC                               ; => [ String: layout.entries[lineParams.firstEntryIdx].entryIdxOnLine == 0 ]
 0065EDCC    jmp 0x0065EF90
 0065EDD1    mov ecx, dword ptr ds:[edx+0x10]
-0065EDD4    call 0x006B7590
+0065EDD4    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 0065EDD9    mov edx, dword ptr ds:[esi+0x04]
 0065EDDC    xorps xmm1, xmm1
 0065EDDF    mov dword ptr ss:[ebp-0x08], eax
 0065EDE2    cmp edx, 0xFFFFFFFF
 0065EDE5    jnz 0x0065EDEC
-0065EDE7    xorps xmm0, xmm0
+0065EDE7    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0065EDEA    jmp 0x0065EE07
 0065EDEC    test edx, edx
 0065EDEE    js 0x0065EE6C
@@ -78,14 +84,14 @@
 0065EE51    cmp ecx, dword ptr ds:[esi+0x04]
 0065EE54    jle 0x0065EE26
 0065EE56    jmp 0x0065EED4
-0065EE58    push 0x874F68
+0065EE58    push 0x874F68                                   ; => [ String: FinalizeCurrentLine ]
 0065EE5D    push 0x2A14
-0065EE62    mov ecx, 0x874FA0
+0065EE62    mov ecx, 0x874FA0                               ; => [ String: entry.entryIdxOnLine == i ]
 0065EE67    jmp 0x0065EF90
-0065EE6C    push 0x876A2C
+0065EE6C    push 0x876A2C                                   ; => [ String: XDynArray<struct TextEntry>::operator [] ]
 0065EE71    push 0xD4
-0065EE76    push 0x824FB0
-0065EE7B    mov ecx, 0x824FD0
+0065EE76    push 0x824FB0                                   ; => [ String: C:\x\ax2017\Engine\xDynArray.h ]
+0065EE7B    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 0065EE80    jmp 0x0065EF95
 0065EE85    movss xmm0, dword ptr ds:[esi+0x18]
 0065EE8A    xorps xmm1, xmm1
@@ -93,9 +99,9 @@
 0065EE90    lahf
 0065EE91    test ah, 0x44
 0065EE94    jnp 0x0065EEAA
-0065EE96    push 0x874F68
+0065EE96    push 0x874F68                                   ; => [ String: FinalizeCurrentLine ]
 0065EE9B    push 0x2A1D
-0065EEA0    mov ecx, 0x87501C
+0065EEA0    mov ecx, 0x87501C                               ; => [ String: lineParams.baselineY == 0 ]
 0065EEA5    jmp 0x0065EF90
 0065EEAA    movss xmm2, dword ptr ds:[esi+0x28]
 0065EEAF    ucomiss xmm2, xmm1
@@ -107,9 +113,9 @@
 0065EEC6    addss xmm0, xmm2
 0065EECA    addss xmm0, dword ptr ds:[esi+0x38]
 0065EECF    movss dword ptr ds:[esi+0x18], xmm0
-0065EED4    movaps xmm2, xmmword ptr ds:[0x00893940]
+0065EED4    movaps xmm2, xmmword ptr ds:[0x00893940]        ; => [ Data: data_893940 | Data: data_893940 ]
 0065EEDB    xorps xmm0, xmm0
-0065EEDE    mov dword ptr ss:[ebp-0x34], 0x00
+0065EEDE    mov dword ptr ss:[ebp-0x34], 0x00               ; => [ Call: __builtin_memset | Call: __builtin_memset ]
 0065EEE5    movups xmmword ptr ss:[ebp-0x30], xmm0
 0065EEE9    mov eax, dword ptr ds:[esi+0x10]
 0065EEEC    movss xmm0, dword ptr ds:[esi+0x18]
@@ -149,7 +155,7 @@
 0065EF61    pop edi
 0065EF62    movups xmmword ptr ds:[esi+0x10], xmm0
 0065EF66    movups xmm0, xmmword ptr ss:[ebp-0x28]
-0065EF6A    movups xmmword ptr ds:[esi+0x20], xmm0
+0065EF6A    movups xmmword ptr ds:[esi+0x20], xmm0          ; => [ Call: __builtin_memset ]
 0065EF6E    movq xmm0, qword ptr ss:[ebp-0x18]
 0065EF73    movq qword ptr ds:[esi+0x30], xmm0
 0065EF78    mov dword ptr ds:[esi+0x38], eax
@@ -158,15 +164,15 @@
 0065EF7D    mov esp, ebp
 0065EF7F    pop ebp
 0065EF80    ret
-0065EF81    push 0x874F68
+0065EF81    push 0x874F68                                   ; => [ String: FinalizeCurrentLine ]
 0065EF86    push 0x2A1E
-0065EF8B    mov ecx, 0x874FFC
-0065EF90    push 0x8739B4
+0065EF8B    mov ecx, 0x874FFC                               ; => [ String: lineParams.prevBaselineY != 0 ]
+0065EF90    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
 0065EF95    mov edx, 0x801800
-0065EF9A    call 0x0063B870
+0065EF9A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0065EF9F    add esp, 0x0C
 0065EFA2    call 0x0063BC30
 0065EFA7    test al, al
-0065EFA9    jz 0x0065EFAC
+0065EFA9    jz 0x0065EFAC                                   ; => [ Call: sub_63bc30 ]
 0065EFAB    int3
-0065EFAC    call 0x0063BB00
+0065EFAC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

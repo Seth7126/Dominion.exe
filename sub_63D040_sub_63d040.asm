@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63d040
+// 起始地址: 0x63d040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063D040    push esi
 0063D041    mov esi, ecx
 0063D043    mov ecx, dword ptr ds:[esi+0x14]
@@ -16,7 +22,7 @@
 0063D06C    mov eax, edx
 0063D06E    push ecx
 0063D06F    push eax
-0063D070    call 0x00759661
+0063D070    call 0x00759661                                 ; => [ Call: operator new ]
 0063D075    add esp, 0x08
 0063D078    xor eax, eax
 0063D07A    mov dword ptr ds:[esi+0x10], 0x00

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4b4be0
+// 起始地址: 0x4b4be0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B4BE0    push ebp
 004B4BE1    mov ebp, esp
 004B4BE3    push ecx
@@ -23,13 +29,13 @@
 004B4C11    cmovl ebx, eax
 004B4C14    cmp dword ptr ds:[edi], 0x00
 004B4C17    jz 0x004B4C2A
-004B4C19    push 0x8020BC
+004B4C19    push 0x8020BC                                   ; => [ String: AllocateLog ]
 004B4C1E    push 0xB68
-004B4C23    mov ecx, 0x8020C8
+004B4C23    mov ecx, 0x8020C8                               ; => [ String: log.logBytes == NULL ]
 004B4C28    jmp 0x004B4C97
 004B4C2A    mov ecx, ebx
 004B4C2C    call 0x00687730
-004B4C31    mov dword ptr ds:[edi], eax
+004B4C31    mov dword ptr ds:[edi], eax                     ; => [ Call: sub_687730 ]
 004B4C33    lea ecx, ds:[esi+0x10]
 004B4C36    lea eax, ds:[esi+0x10]
 004B4C39    mov dword ptr ds:[edi+0x08], ebx
@@ -43,7 +49,7 @@
 004B4C53    push dword ptr ds:[esi+0x08]
 004B4C56    add eax, dword ptr ds:[esi+0x14]
 004B4C59    push eax
-004B4C5A    call 0x00761FBE
+004B4C5A    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004B4C5F    mov ecx, dword ptr ss:[ebp+0x08]
 004B4C62    add esp, 0x0C
 004B4C65    mov eax, dword ptr ds:[esi+0x14]
@@ -62,15 +68,15 @@
 004B4C84    mov esp, ebp
 004B4C86    pop ebp
 004B4C87    ret
-004B4C88    push 0x8020E0
+004B4C88    push 0x8020E0                                   ; => [ String: SetLog ]
 004B4C8D    push 0xB8E
-004B4C92    mov ecx, 0x8020E8
+004B4C92    mov ecx, 0x8020E8                               ; => [ String: log.logRead <= log.logSizeWritten ]
 004B4C97    push 0x801AF8
 004B4C9C    mov edx, 0x801800
-004B4CA1    call 0x0063B870
+004B4CA1    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B4CA6    add esp, 0x0C
 004B4CA9    call 0x0063BC30
 004B4CAE    test al, al
-004B4CB0    jz 0x004B4CB3
+004B4CB0    jz 0x004B4CB3                                   ; => [ Call: sub_63bc30 ]
 004B4CB2    int3
-004B4CB3    call 0x0063BB00
+004B4CB3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

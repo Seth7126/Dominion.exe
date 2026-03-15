@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_514ac0
+// 起始地址: 0x514ac0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00514AC0    dword 83EC8B55
 00514AC4    in al, 0xF8
 00514AC6    sub esp, 0xC88
 00514ACC    mov ecx, 0x14
-00514AD1    call 0x00513D60
+00514AD1    call 0x00513D60                                 ; => [ Call: sub_513d60 ]
 00514AD6    push 0x58
 00514AD8    lea eax, ss:[esp+0x04]
 00514ADC    mov dword ptr ss:[esp+0x04], 0x00
@@ -15,4 +21,4 @@
 00514AFE    add esp, 0x10
 00514B01    mov esp, ebp
 00514B03    pop ebp
-00514B04    ret
+00514B04    ret                                             ; => [ Call: sub_4f9990 | Call: sub_513e80 | Call: sub_56c680 ]

@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_5caf20
+// 起始地址: 0x5caf20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CAF20    push ebp
 005CAF21    mov ebp, esp
 005CAF23    push 0xFFFFFFFF
-005CAF25    push 0x769AB0
+005CAF25    push 0x769AB0                                   ; => [ Call: __ehhandler$??$_Deallocate@$03$0A@@std@@YAXPAXI@Z | Type: EHRegistrationNode ]
 005CAF2A    mov eax, dword ptr fs:[0x00000000]
-005CAF30    push eax
+005CAF30    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005CAF31    mov eax, dword ptr ds:[0x008C4040]
 005CAF36    xor eax, ebp
-005CAF38    push eax
-005CAF39    lea eax, ss:[ebp-0x0C]
-005CAF3C    mov dword ptr fs:[0x00000000], eax
+005CAF38    push eax                                        ; => [ Data: __security_cookie ]
+005CAF39    lea eax, ss:[ebp-0x0C]                          ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+005CAF3C    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005CAF42    mov dword ptr ss:[ebp-0x04], 0x00
 005CAF49    cmp dword ptr ds:[0x00CF65BC], 0x00
-005CAF50    jz 0x005CAF6C
+005CAF50    jz 0x005CAF6C                                   ; => [ Data: data_cf65bc ]
 005CAF52    mov eax, dword ptr ds:[ecx]
 005CAF54    test eax, eax
 005CAF56    jz 0x005CAF6C
@@ -19,9 +25,9 @@
 005CAF5B    mov dword ptr ds:[ecx+0x04], 0x00
 005CAF62    mov ecx, eax
 005CAF64    shl edx, 0x03
-005CAF67    call 0x0064C080
+005CAF67    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 005CAF6C    mov ecx, dword ptr ss:[ebp-0x0C]
-005CAF6F    mov dword ptr fs:[0x00000000], ecx
+005CAF6F    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005CAF76    pop ecx
 005CAF77    mov esp, ebp
 005CAF79    pop ebp

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_519770
+// 起始地址: 0x519770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00519770    push ebp
 00519771    mov ebp, esp
 00519773    push esi
@@ -5,7 +11,7 @@
 00519777    mov edx, 0x18
 0051977C    push edi
 0051977D    mov ecx, esi
-0051977F    call 0x00571B30
+0051977F    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00519784    mov ecx, dword ptr ds:[eax+0x98]
 0051978A    mov eax, dword ptr ds:[eax+0x9C]
 00519790    and ecx, 0x7F000400
@@ -17,7 +23,7 @@
 005197A6    sar ecx, 0x04
 005197A9    or ecx, esi
 005197AB    and ecx, dword ptr ds:[0x01597E10]
-005197B1    mov eax, dword ptr ds:[eax+ecx*4]
+005197B1    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 005197B4    mov ecx, eax
 005197B6    test ecx, ecx
 005197B8    jz 0x005197F4
@@ -86,7 +92,7 @@
 00519845    test ecx, ecx
 00519847    jz 0x0051981B
 00519849    mov edx, dword ptr ds:[ecx]
-0051984B    xor eax, eax
+0051984B    xor eax, eax                                    ; => [ Call: nullptr ]
 0051984D    mov ecx, dword ptr ds:[ecx+0x04]
 00519850    test ecx, ecx
 00519852    jle 0x0051981B

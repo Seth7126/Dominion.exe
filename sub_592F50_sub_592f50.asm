@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_592f50
+// 起始地址: 0x592f50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00592F50    push ebp
 00592F51    mov ebp, esp
 00592F53    sub esp, 0x64
@@ -6,10 +12,10 @@
 00592F58    push edi
 00592F59    mov edi, edx
 00592F5B    mov ebx, ecx
-00592F5D    call 0x00592E40
+00592F5D    call 0x00592E40                                 ; => [ Call: sub_592e40 ]
 00592F62    mov ecx, edi
 00592F64    mov esi, eax
-00592F66    call 0x00592E40
+00592F66    call 0x00592E40                                 ; => [ Call: sub_592e40 ]
 00592F6B    cmp esi, eax
 00592F6D    jnl 0x00592F78
 00592F6F    mov al, 0x01
@@ -22,11 +28,11 @@
 00592F78    jnle 0x0059308D
 00592F7E    mov edx, 0x18
 00592F83    mov ecx, ebx
-00592F85    call 0x00571B30
+00592F85    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00592F8A    mov edx, 0x18
 00592F8F    mov dword ptr ss:[ebp-0x08], eax
 00592F92    mov ecx, edi
-00592F94    call 0x00571B30
+00592F94    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00592F99    mov edx, 0x18
 00592F9E    mov dword ptr ss:[ebp-0x04], eax
 00592FA1    mov ecx, ebx
@@ -37,7 +43,7 @@
 00592FB2    call 0x00576C00
 00592FB7    mov edx, 0x18
 00592FBC    mov ecx, edi
-00592FBE    movups xmm0, xmmword ptr ds:[eax]
+00592FBE    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Call: sub_571b30 ]
 00592FC1    movups xmmword ptr ss:[ebp-0x18], xmm0
 00592FC5    movups xmmword ptr ss:[ebp-0x2C], xmm0
 00592FC9    call 0x00571B30
@@ -48,7 +54,7 @@
 00592FDD    mov edi, dword ptr ss:[ebp-0x18]
 00592FE0    add esp, 0x10
 00592FE3    mov edx, dword ptr ss:[ebp-0x28]
-00592FE6    movups xmm0, xmmword ptr ds:[eax]
+00592FE6    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Call: sub_571b30 ]
 00592FE9    mov eax, dword ptr ss:[ebp-0x24]
 00592FEC    movd ebx, xmm0
 00592FF0    movups xmmword ptr ss:[ebp-0x48], xmm0

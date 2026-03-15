@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_530130
+// 起始地址: 0x530130
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00530130    dword 53EC8B55
 00530134    push esi
 00530135    push edi
-00530136    call 0x00573400
+00530136    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0053013B    mov esi, dword ptr ss:[ebp+0x08]
 0053013E    mov ebx, eax
 00530140    mov edi, 0x05
@@ -10,11 +16,11 @@
 0053014D    push 0x00
 0053014F    push 0xFFFFFFFF
 00530151    push esi
-00530152    call 0x005727E0
+00530152    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 00530157    add esp, 0x0C
 0053015A    sub edi, 0x01
 0053015D    jnz 0x00530145
-0053015F    call 0x00573400
+0053015F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00530164    mov ebx, eax
 00530166    mov edi, 0x05
 0053016B    nop dword ptr ds:[eax+eax*1], eax
@@ -23,7 +29,7 @@
 00530178    push 0x00
 0053017A    push 0xFFFFFFFF
 0053017C    push esi
-0053017D    call 0x005727E0
+0053017D    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 00530182    add esp, 0x0C
 00530185    sub edi, 0x01
 00530188    jnz 0x00530170
@@ -34,4 +40,4 @@
 00530193    mov ecx, dword ptr ds:[eax+0x04]
 00530196    pop ebx
 00530197    pop ebp
-00530198    jmp 0x0056DE40
+00530198    jmp 0x0056DE40                                  ; => [ Call: sub_573400 | Call: sub_56de40 ]

@@ -1,24 +1,30 @@
+// ============================================================
+// 函数名称: sub_5586a0
+// 起始地址: 0x5586a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005586A0    dword 83EC8B55
 005586A4    in al, 0xF8
 005586A6    sub esp, 0x1C
 005586A9    push ebx
 005586AA    push esi
 005586AB    push edi
-005586AC    call 0x0056D020
-005586B1    call 0x00573400
+005586AC    call 0x0056D020                                 ; => [ Call: sub_56d020 ]
+005586B1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005586B6    mov esi, eax
 005586B8    cmp dword ptr ds:[esi+0x40], 0x00
 005586BC    jnz 0x005586C3
-005586BE    call 0x00591930
+005586BE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005586C3    mov edi, dword ptr ds:[esi+0x40]
-005586C6    call 0x00573400
+005586C6    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005586CB    movzx esi, di
 005586CE    mov ebx, dword ptr ds:[eax+0x04]
 005586D1    mov eax, dword ptr ds:[eax+0x0C]
 005586D4    mov dword ptr ss:[esp+0x0C], eax
 005586D8    cmp esi, 0x320
 005586DE    jb 0x005586E5
-005586E0    call 0x00591930
+005586E0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005586E5    mov edx, dword ptr ss:[esp+0x0C]
 005586E9    xorps xmm0, xmm0
 005586EC    imul eax, esi, 0x64
@@ -42,4 +48,4 @@
 00558727    pop ebx
 00558728    mov esp, ebp
 0055872A    pop ebp
-0055872B    ret
+0055872B    ret                                             ; => [ Call: sub_586320 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7028e0
+// 起始地址: 0x7028e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007028E0    dec ecx
 007028E1    cmp ecx, 0x07
 007028E4    jnbe 0x0070291D
@@ -23,10 +29,10 @@
 00702927    push 0x88C504
 0070292C    mov edx, 0x801800
 00702931    mov ecx, 0x801AA4
-00702936    call 0x0063B870
+00702936    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GLCompareModeFromDx | Data: data_801800 | String: Halt | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 0070293B    add esp, 0x0C
 0070293E    call 0x0063BC30
 00702943    test al, al
-00702945    jz 0x00702948
+00702945    jz 0x00702948                                   ; => [ Call: sub_63bc30 ]
 00702947    int3
-00702948    jmp 0x0063BB00
+00702948    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

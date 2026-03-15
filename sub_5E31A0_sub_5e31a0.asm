@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_5e31a0
+// 起始地址: 0x5e31a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E31A0    push ebp
 005E31A1    mov ebp, esp
 005E31A3    test edx, edx
 005E31A5    jnle 0x005E31B8
-005E31A7    push 0x85F1A8
+005E31A7    push 0x85F1A8                                   ; => [ String: GetSplitPosition ]
 005E31AC    push 0x472E
-005E31B1    mov ecx, 0x816988
+005E31B1    mov ecx, 0x816988                               ; => [ String: total > 0 ]
 005E31B6    jmp 0x005E3235
 005E31B8    cmp edx, 0x01
 005E31BB    jnz 0x005E31F1
 005E31BD    test ecx, ecx
 005E31BF    jz 0x005E31D2
-005E31C1    push 0x85F1A8
+005E31C1    push 0x85F1A8                                   ; => [ String: GetSplitPosition ]
 005E31C6    push 0x4732
-005E31CB    mov ecx, 0x85F1D0
+005E31CB    mov ecx, 0x85F1D0                               ; => [ String: idx == 0 ]
 005E31D0    jmp 0x005E3235
 005E31D2    mov eax, dword ptr ss:[ebp+0x08]
 005E31D5    mov dword ptr ds:[eax], 0x3F800000
@@ -38,18 +44,18 @@
 005E3220    ret
 005E3221    cmp ecx, 0x01
 005E3224    jz 0x005E31DB
-005E3226    push 0x85F1A8
+005E3226    push 0x85F1A8                                   ; => [ String: GetSplitPosition ]
 005E322B    push 0x477A
-005E3230    mov ecx, 0x801AA4
+005E3230    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005E3235    push 0x86F1E8
 005E323A    mov edx, 0x801800
-005E323F    call 0x0063B870
+005E323F    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: GetSplitPosition ]
 005E3244    add esp, 0x0C
 005E3247    call 0x0063BC30
 005E324C    test al, al
-005E324E    jz 0x005E3251
+005E324E    jz 0x005E3251                                   ; => [ Call: sub_63bc30 ]
 005E3250    int3
-005E3251    jmp 0x0063BB00
+005E3251    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 005E3256    cmp edx, 0x03
 005E3259    jnz 0x005E3294
 005E325B    mov eax, dword ptr ss:[ebp+0x08]
@@ -70,7 +76,7 @@
 005E3294    cmp edx, 0x04
 005E3297    jnz 0x005E3226
 005E3299    mov eax, dword ptr ss:[ebp+0x08]
-005E329C    mov dword ptr ds:[eax], 0x3F266666
+005E329C    mov dword ptr ds:[eax], 0x3F266666              ; => [ String: ff&? | Call: __builtin_strncpy ]
 005E32A2    test ecx, ecx
 005E32A4    jnz 0x005E32C4
 005E32A6    mov eax, dword ptr ss:[ebp+0x0C]
@@ -86,7 +92,7 @@
 005E32CC    jz 0x005E3203
 005E32D2    cmp ecx, 0x03
 005E32D5    jz 0x005E31DB
-005E32DB    push 0x85F1A8
+005E32DB    push 0x85F1A8                                   ; => [ String: GetSplitPosition ]
 005E32E0    push 0x4774
-005E32E5    mov ecx, 0x85F1DC
+005E32E5    mov ecx, 0x85F1DC                               ; => [ String: idx == 3 ]
 005E32EA    jmp 0x005E3235

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4acb80
+// 起始地址: 0x4acb80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ACB80    push ebp
 004ACB81    mov ebp, esp
 004ACB83    push ecx
 004ACB84    push ebx
 004ACB85    mov ebx, dword ptr ds:[0x00775688]
 004ACB8B    push esi
-004ACB8C    mov esi, dword ptr ds:[0x0147ABD8]
+004ACB8C    mov esi, dword ptr ds:[0x0147ABD8]              ; => [ Data: data_147abd8 ]
 004ACB92    mov dword ptr ss:[ebp-0x04], ecx
 004ACB95    push edi
 004ACB96    mov edi, dword ptr ss:[ebp+0x08]
@@ -20,7 +26,7 @@
 004ACBAD    mov esi, dword ptr ds:[esi+0x04]
 004ACBB0    test esi, esi
 004ACBB2    jnz 0x004ACBA0
-004ACBB4    mov esi, dword ptr ds:[0x0147ABD8]
+004ACBB4    mov esi, dword ptr ds:[0x0147ABD8]              ; => [ Data: data_147abd8 ]
 004ACBBA    test esi, esi
 004ACBBC    jz 0x004ACBD4
 004ACBBE    nop
@@ -38,10 +44,10 @@
 004ACBD9    push edi
 004ACBDA    mov eax, dword ptr ds:[ebx]
 004ACBDC    call dword ptr ds:[eax]
-004ACBDE    mov eax, dword ptr ds:[0x0147ABD8]
-004ACBE3    inc dword ptr ds:[0x0147ABDC]
+004ACBDE    mov eax, dword ptr ds:[0x0147ABD8]              ; => [ Data: data_147abd8 ]
+004ACBE3    inc dword ptr ds:[0x0147ABDC]                   ; => [ Data: data_147abdc ]
 004ACBE9    mov dword ptr ds:[ebx+0x04], eax
-004ACBEC    mov dword ptr ds:[0x0147ABD8], ebx
+004ACBEC    mov dword ptr ds:[0x0147ABD8], ebx              ; => [ Data: data_147abd8 ]
 004ACBF2    pop edi
 004ACBF3    pop esi
 004ACBF4    pop ebx
@@ -65,10 +71,10 @@
 004ACC19    push 0x801820
 004ACC1E    mov edx, 0x801800
 004ACC23    mov ecx, 0x80183C
-004ACC28    call 0x0063B870
+004ACC28    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: StateDoesntExist(arg_name) | String: UI2StateDeclI::FindOrAlloc | String: C:\x\ax2017\Engine\UI2.h ]
 004ACC2D    add esp, 0x0C
 004ACC30    call 0x0063BC30
 004ACC35    test al, al
-004ACC37    jz 0x004ACC3A
+004ACC37    jz 0x004ACC3A                                   ; => [ Call: sub_63bc30 ]
 004ACC39    int3
-004ACC3A    call 0x0063BB00
+004ACC3A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

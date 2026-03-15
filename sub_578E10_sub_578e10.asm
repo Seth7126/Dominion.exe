@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_578e10
+// 起始地址: 0x578e10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00578E10    push ebp
 00578E11    mov ebp, esp
 00578E13    and esp, 0xFFFFFFF8
@@ -11,7 +17,7 @@
 00578E23    mov dword ptr ss:[esp+0x0C], ebx
 00578E27    cmp esi, 0x320
 00578E2D    jb 0x00578E34
-00578E2F    call 0x00591930
+00578E2F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578E34    imul eax, esi, 0x64
 00578E37    mov dword ptr ss:[esp+0x10], edi
 00578E3B    xor edi, edi
@@ -37,11 +43,11 @@
 00578E82    cmp dword ptr ds:[ecx], 0x00
 00578E85    jz 0x00578E94
 00578E87    lea edx, ss:[esp+0x10]
-00578E8B    call 0x005941B0
+00578E8B    call 0x005941B0                                 ; => [ Call: sub_5941b0 ]
 00578E90    test al, al
 00578E92    jnz 0x00578EA8
 00578E94    cmp dword ptr ds:[esi], 0x00
-00578E97    jz 0x00578EDB
+00578E97    jz 0x00578EDB                                   ; => [ Call: sub_5941b0 ]
 00578E99    lea edx, ss:[esp+0x10]
 00578E9D    mov ecx, esi
 00578E9F    call 0x005941B0
@@ -50,7 +56,7 @@
 00578EA8    movzx ebx, word ptr ds:[esi]
 00578EAB    cmp ebx, 0x320
 00578EB1    jb 0x00578EB8
-00578EB3    call 0x00591930
+00578EB3    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578EB8    imul eax, ebx, 0x64
 00578EBB    mov ebx, dword ptr ss:[esp+0x0C]
 00578EBF    mov ecx, ebx
@@ -60,7 +66,7 @@
 00578ECF    call 0x005754F0
 00578ED4    add esp, 0x08
 00578ED7    test al, al
-00578ED9    jnz 0x00578EF7
+00578ED9    jnz 0x00578EF7                                  ; => [ Call: sub_5754f0 ]
 00578EDB    inc edi
 00578EDC    add esi, 0xA8
 00578EE2    cmp edi, dword ptr ds:[ebx+0x19B8]

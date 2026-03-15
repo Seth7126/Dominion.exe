@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_637c10
+// 起始地址: 0x637c10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00637C10    push ebp
 00637C11    mov ebp, esp
 00637C13    and esp, 0xFFFFFFF0
 00637C16    sub esp, 0x48
-00637C19    mov eax, dword ptr ds:[0x008C4040]
+00637C19    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00637C1E    xor eax, esp
 00637C20    mov dword ptr ss:[esp+0x44], eax
 00637C24    push esi
@@ -24,7 +30,7 @@
 00637C5B    push edx
 00637C5C    mov edx, edi
 00637C5E    lea ecx, ss:[esp+0x1C]
-00637C62    call 0x00595450
+00637C62    call 0x00595450                                 ; => [ Call: sub_595450 ]
 00637C67    mov ecx, dword ptr ss:[ebp+0x08]
 00637C6A    add esp, 0x08
 00637C6D    mov edx, dword ptr ss:[esp+0x1C]
@@ -85,7 +91,7 @@
 00637D1B    add eax, 0x10
 00637D1E    push edi
 00637D1F    push eax
-00637D20    call 0x00762362
+00637D20    call 0x00762362                                 ; => [ Call: memmove ]
 00637D25    movups xmm0, xmmword ptr ss:[esp+0x3C]
 00637D2A    add esp, 0x0C
 00637D2D    movups xmmword ptr ds:[edi], xmm0
@@ -113,7 +119,7 @@
 00637D68    push dword ptr ss:[esp+0x1C]
 00637D6C    mov ecx, edi
 00637D6E    movups xmmword ptr ss:[esp+0x3C], xmm0
-00637D73    call 0x00596680
+00637D73    call 0x00596680                                 ; => [ Call: sub_596680 ]
 00637D78    mov eax, dword ptr ss:[esp+0x34]
 00637D7C    add esp, 0x0C
 00637D7F    mov ecx, dword ptr ss:[esp+0x20]
@@ -138,7 +144,7 @@
 00637DBD    sub eax, edi
 00637DBF    sar eax, 0x04
 00637DC2    push eax
-00637DC3    call 0x00596680
+00637DC3    call 0x00596680                                 ; => [ Call: sub_596680 ]
 00637DC8    mov eax, dword ptr ss:[esp+0x20]
 00637DCC    sub esi, edi
 00637DCE    sub eax, 0x10
@@ -151,7 +157,7 @@
 00637DE1    pop esi
 00637DE2    mov ecx, dword ptr ss:[esp+0x44]
 00637DE6    xor ecx, esp
-00637DE8    call 0x0075927A
+00637DE8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00637DED    mov esp, ebp
 00637DEF    pop ebp
 00637DF0    ret
@@ -193,7 +199,7 @@
 00637E62    pop edi
 00637E63    pop esi
 00637E64    xor ecx, esp
-00637E66    call 0x0075927A
+00637E66    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00637E6B    mov esp, ebp
 00637E6D    pop ebp
 00637E6E    ret

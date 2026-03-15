@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5afa40
+// 起始地址: 0x5afa40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AFA40    push ebp
 005AFA41    mov ebp, esp
 005AFA43    sub esp, 0x08
@@ -11,17 +17,17 @@
 005AFA57    jz 0x005AFA69
 005AFA59    cmp ebx, 0xF1A
 005AFA5F    jnz 0x005AFA7A
-005AFA61    mov edx, dword ptr ds:[0x0171DC08]
+005AFA61    mov edx, dword ptr ds:[0x0171DC08]              ; => [ Data: data_171dc08 ]
 005AFA67    jmp 0x005AFA6F
-005AFA69    mov edx, dword ptr ds:[0x0171DC04]
+005AFA69    mov edx, dword ptr ds:[0x0171DC04]              ; => [ Data: data_171dc04 ]
 005AFA6F    push 0x00
 005AFA71    push ecx
-005AFA72    call 0x005AF930
+005AFA72    call 0x005AF930                                 ; => [ Call: sub_5af930 ]
 005AFA77    add esp, 0x08
 005AFA7A    call 0x005CF7E0
 005AFA7F    mov edx, eax
 005AFA81    mov ecx, ebx
-005AFA83    call 0x00571B30
+005AFA83    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 005AFA88    mov esi, eax
 005AFA8A    mov ecx, dword ptr ds:[esi+0x98]
 005AFA90    and ecx, 0x400
@@ -35,12 +41,12 @@
 005AFAA8    mov edx, dword ptr ds:[edx]
 005AFAAA    push 0x00
 005AFAAC    push ecx
-005AFAAD    call 0x005AF930
+005AFAAD    call 0x005AF930                                 ; => [ Call: sub_5af930 ]
 005AFAB2    add esp, 0x08
 005AFAB5    mov edx, dword ptr ds:[0x0171E6E0]
 005AFABB    push 0x00
 005AFABD    push ecx
-005AFABE    call 0x005AF930
+005AFABE    call 0x005AF930                                 ; => [ Data: data_171e6e0 | Call: sub_5af930 ]
 005AFAC3    add esp, 0x08
 005AFAC6    mov eax, dword ptr ds:[esi+0x98]
 005AFACC    and eax, 0x8000000
@@ -50,19 +56,19 @@
 005AFAD9    push 0x00
 005AFADB    push ecx
 005AFADC    mov edx, dword ptr ds:[edx]
-005AFADE    call 0x005AF930
+005AFADE    call 0x005AF930                                 ; => [ Call: sub_5af930 ]
 005AFAE3    add esp, 0x08
 005AFAE6    mov edx, dword ptr ds:[0x00B824A4]
 005AFAEC    mov ecx, 0xB80AD8
 005AFAF1    push 0xB00
-005AFAF6    call 0x00571EE0
+005AFAF6    call 0x00571EE0                                 ; => [ Data: data_b824a4 | Call: sub_571ee0 ]
 005AFAFB    add esp, 0x04
 005AFAFE    cmp eax, 0xFFFFFFFF
 005AFB01    jnz 0x005AFB24
 005AFB03    mov edx, dword ptr ds:[0x00B824A4]
 005AFB09    mov ecx, 0xB80AD8
 005AFB0E    push 0xB0A
-005AFB13    call 0x00571EE0
+005AFB13    call 0x00571EE0                                 ; => [ Data: data_b824a4 | Call: sub_571ee0 ]
 005AFB18    add esp, 0x04
 005AFB1B    cmp eax, 0xFFFFFFFF
 005AFB1E    jz 0x005AFBBD
@@ -71,13 +77,13 @@
 005AFB29    mov ecx, 0xB80AD8
 005AFB2E    mov dword ptr ss:[ebp-0x04], eax
 005AFB31    call 0x0057DA30
-005AFB36    mov ecx, eax
+005AFB36    mov ecx, eax                                    ; => [ Call: sub_57da30 ]
 005AFB38    mov edi, 0x07
 005AFB3D    mov dword ptr ss:[ebp+0x08], ecx
-005AFB40    mov esi, 0xB8206C
+005AFB40    mov esi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005AFB45    cmp edi, 0x48
 005AFB48    jl 0x005AFB52
-005AFB4A    call 0x00591930
+005AFB4A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005AFB4F    mov ecx, dword ptr ss:[ebp+0x08]
 005AFB52    mov eax, dword ptr ds:[esi]
 005AFB54    cmp eax, ebx
@@ -95,11 +101,11 @@
 005AFB71    test ebx, ebx
 005AFB73    jz 0x005AFB9F
 005AFB75    mov edi, 0x07
-005AFB7A    mov esi, 0xB8206C
+005AFB7A    mov esi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005AFB7F    nop
 005AFB80    cmp edi, 0x48
 005AFB83    jl 0x005AFB8A
-005AFB85    call 0x00591930
+005AFB85    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005AFB8A    cmp dword ptr ds:[esi], ebx
 005AFB8C    jz 0x005AFBA1
 005AFB8E    cmp dword ptr ds:[esi+0x04], ebx
@@ -115,7 +121,7 @@
 005AFBAC    mov edx, dword ptr ds:[0x0171DB28]
 005AFBB2    push 0x00
 005AFBB4    push ecx
-005AFBB5    call 0x005AF930
+005AFBB5    call 0x005AF930                                 ; => [ Data: data_171db28 | Call: sub_5af930 ]
 005AFBBA    add esp, 0x08
 005AFBBD    pop edi
 005AFBBE    pop esi

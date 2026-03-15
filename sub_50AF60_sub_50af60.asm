@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50af60
+// 起始地址: 0x50af60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050AF60    push ebp
 0050AF61    mov ebp, esp
 0050AF63    sub esp, 0x08
@@ -13,7 +19,7 @@
 0050AF78    jle 0x0050B07A
 0050AF7E    nop
 0050AF80    mov ecx, dword ptr ds:[eax+edi*8+0x04]
-0050AF84    call 0x00516F30
+0050AF84    call 0x00516F30                                 ; => [ Call: sub_516f30 ]
 0050AF89    mov esi, eax
 0050AF8B    xor ecx, ecx
 0050AF8D    lea edx, ds:[esi+0x0C]
@@ -39,13 +45,13 @@
 0050AFCD    mov esi, dword ptr ds:[esi]
 0050AFCF    add eax, 0x590
 0050AFD4    shl ecx, 0x0B
-0050AFD7    add eax, ecx
+0050AFD7    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050AFD9    mov ecx, dword ptr ds:[0x00CCA788]
 0050AFDF    nop
 0050AFE0    cmp dword ptr ds:[eax-0x04], esi
 0050AFE3    jnz 0x0050AFE9
 0050AFE5    cmp dword ptr ds:[eax], ecx
-0050AFE7    jz 0x0050AFFA
+0050AFE7    jz 0x0050AFFA                                   ; => [ Data: data_cca788 ]
 0050AFE9    inc edx
 0050AFEA    add eax, 0x14
 0050AFED    cmp edx, 0x20
@@ -61,14 +67,14 @@
 0050B009    jz 0x0050B07A
 0050B00B    mov ecx, dword ptr ss:[ebp-0x08]
 0050B00E    mov edx, ebx
-0050B010    call 0x0063ED10
+0050B010    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0050B015    xor edi, edi
 0050B017    mov dword ptr ss:[ebp-0x08], eax
 0050B01A    xor esi, esi
 0050B01C    nop dword ptr ds:[eax], eax
 0050B020    mov eax, dword ptr ss:[ebp-0x04]
 0050B023    mov ecx, dword ptr ds:[eax+esi*8+0x04]
-0050B027    call 0x00516F30
+0050B027    call 0x00516F30                                 ; => [ Call: sub_516f30 ]
 0050B02C    mov ebx, eax
 0050B02E    xor ecx, ecx
 0050B030    lea edx, ds:[ebx+0x0C]
@@ -114,10 +120,10 @@
 0050B08D    push 0x80CD80
 0050B092    mov edx, 0x801800
 0050B097    mov ecx, 0x801AA4
-0050B09C    call 0x0063B870
+0050B09C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RollTable | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 0050B0A1    add esp, 0x0C
 0050B0A4    call 0x0063BC30
 0050B0A9    test al, al
-0050B0AB    jz 0x0050B0AE
+0050B0AB    jz 0x0050B0AE                                   ; => [ Call: sub_63bc30 ]
 0050B0AD    int3
-0050B0AE    call 0x0063BB00
+0050B0AE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

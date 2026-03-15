@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_724680
+// 起始地址: 0x724680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00724680    push ebp
 00724681    mov ebp, esp
 00724683    sub esp, 0x0C
@@ -17,10 +23,10 @@
 007246DD    mov dword ptr ds:[edi+0x4804], 0x00
 007246E7    call 0x00724580
 007246EC    test eax, eax
-007246EE    jz 0x00724887
+007246EE    jz 0x00724887                                   ; => [ Call: sub_724580 ]
 007246F4    mov ecx, edi
 007246F6    call 0x00722720
-007246FB    movzx eax, al
+007246FB    movzx eax, al                                   ; => [ Call: sub_722720 ]
 007246FE    cmp eax, 0xD9
 00724703    jz 0x00724989
 00724709    lea ecx, ds:[edi+0x47C4]
@@ -31,11 +37,11 @@
 0072471E    mov ecx, edi
 00724720    call 0x00723B50
 00724725    test eax, eax
-00724727    jz 0x00724887
+00724727    jz 0x00724887                                   ; => [ Call: sub_723b50 ]
 0072472D    mov ecx, edi
 0072472F    call 0x00722830
 00724734    test eax, eax
-00724736    jz 0x00724887
+00724736    jz 0x00724887                                   ; => [ Call: sub_722830 ]
 0072473C    mov ecx, dword ptr ss:[ebp-0x04]
 0072473F    cmp byte ptr ds:[ecx], 0xFF
 00724742    jnz 0x007248A0
@@ -131,10 +137,10 @@
 00724864    cmp eax, 0xDC
 00724869    jnz 0x00724890
 0072486B    mov ecx, dword ptr ds:[edi]
-0072486D    call 0x007202A0
+0072486D    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 00724872    mov ecx, dword ptr ds:[edi]
 00724874    mov esi, eax
-00724876    call 0x007202A0
+00724876    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072487B    cmp esi, 0x04
 0072487E    jnz 0x00724887
 00724880    mov ecx, dword ptr ds:[edi]
@@ -151,7 +157,7 @@
 00724892    mov ecx, edi
 00724894    call 0x007232B0
 00724899    test eax, eax
-0072489B    jz 0x00724887
+0072489B    jz 0x00724887                                   ; => [ Call: sub_7232b0 ]
 0072489D    mov ecx, dword ptr ss:[ebp-0x04]
 007248A0    mov al, byte ptr ds:[ecx]
 007248A2    cmp al, 0xFF
@@ -232,7 +238,7 @@
 00724989    cmp dword ptr ds:[edi+0x47CC], 0x00
 00724990    jz 0x00724999
 00724992    mov ecx, edi
-00724994    call 0x00723130
+00724994    call 0x00723130                                 ; => [ Call: sub_723130 ]
 00724999    pop edi
 0072499A    pop esi
 0072499B    mov eax, 0x01

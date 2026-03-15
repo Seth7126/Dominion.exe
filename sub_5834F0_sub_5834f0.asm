@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5834f0
+// 起始地址: 0x5834f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005834F0    push ebp
 005834F1    mov ebp, esp
 005834F3    sub esp, 0xCA4
-005834F9    mov eax, dword ptr ds:[0x008C4040]
+005834F9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005834FE    xor eax, ebp
 00583500    mov dword ptr ss:[ebp-0x04], eax
 00583503    mov eax, dword ptr ss:[ebp+0x0C]
@@ -18,7 +24,7 @@
 00583525    mov dword ptr ds:[ecx], 0x00
 0058352B    cmp ebx, 0x320
 00583531    jb 0x00583538
-00583533    call 0x00591930
+00583533    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00583538    imul ebx, ebx, 0x64
 0058353B    mov ecx, edi
 0058353D    add ebx, edi
@@ -26,30 +32,30 @@
 00583541    push 0xFFFFFFFF
 00583543    push 0x00
 00583545    mov edx, dword ptr ds:[ebx+0x1A4C]
-0058354B    call 0x00573890
+0058354B    call 0x00573890                                 ; => [ Call: sub_573890 ]
 00583550    mov ecx, dword ptr ss:[ebp+0x08]
 00583553    add esp, 0x0C
 00583556    cmp dword ptr ss:[ebp-0xC94], 0x320
 00583560    mov dword ptr ds:[ecx+0x38], eax
 00583563    mov dword ptr ds:[ecx+0x3C], edx
 00583566    jb 0x0058356D
-00583568    call 0x00591930
+00583568    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058356D    push dword ptr ds:[ebx+0x1A50]
 00583573    mov ecx, edi
 00583575    push 0xC00
-0058357A    call 0x00583F70
+0058357A    call 0x00583F70                                 ; => [ Call: sub_583f70 ]
 0058357F    mov ecx, dword ptr ss:[ebp+0x08]
 00583582    add esp, 0x08
 00583585    cmp dword ptr ss:[ebp-0xC94], 0x320
 0058358F    mov dword ptr ds:[ecx+0x2C], eax
 00583592    jb 0x00583599
-00583594    call 0x00591930
+00583594    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00583599    push 0x00
 0058359B    push dword ptr ds:[ebx+0x1A4C]
 005835A1    mov edx, edi
 005835A3    lea ecx, ss:[ebp-0xC94]
 005835A9    push esi
-005835AA    call 0x00576E90
+005835AA    call 0x00576E90                                 ; => [ Call: sub_576e90 ]
 005835AF    mov eax, dword ptr ss:[ebp-0xC94]
 005835B5    add esp, 0x0C
 005835B8    mov dword ptr ds:[ebx+0x1A60], eax
@@ -71,7 +77,7 @@
 00583602    push 0x462
 00583607    mov ecx, edi
 00583609    call 0x00590990
-0058360E    mov edx, eax
+0058360E    mov edx, eax                                    ; => [ Call: sub_590990 ]
 00583610    add esp, 0x08
 00583613    xor esi, esi
 00583615    mov dword ptr ss:[ebp-0xC9C], edx
@@ -81,7 +87,7 @@
 00583620    movzx edi, word ptr ss:[ebp+esi*4-0xC90]
 00583628    cmp edi, 0x320
 0058362E    jb 0x0058363B
-00583630    call 0x00591930
+00583630    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00583635    mov edx, dword ptr ss:[ebp-0xC9C]
 0058363B    imul ecx, edi, 0x64
 0058363E    mov edi, dword ptr ss:[ebp-0xCA0]
@@ -138,8 +144,8 @@
 0058370C    pop esi
 0058370D    mov dword ptr ds:[ebx+0x44], edx
 00583710    pop ebx
-00583711    call 0x0075927A
+00583711    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00583716    mov esp, ebp
 00583718    pop ebp
 00583719    ret
-0058371A    call 0x007598E1
+0058371A    call 0x007598E1                                 ; => [ Call: ___report_rangecheckfailure ]

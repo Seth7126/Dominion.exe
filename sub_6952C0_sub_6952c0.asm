@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6952c0
+// 起始地址: 0x6952c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006952C0    push ebp
 006952C1    mov ebp, esp
 006952C3    push ecx
@@ -60,7 +66,7 @@
 0069533B    push dword ptr ss:[ebp+0x0C]
 0069533E    push edi
 0069533F    push esi
-00695340    call 0x006950C0
+00695340    call 0x006950C0                                 ; => [ Call: sub_6950c0 ]
 00695345    add esp, 0x10
 00695348    test al, al
 0069534A    jnz 0x0069534E
@@ -76,10 +82,10 @@
 0069535C    push 0x879400
 00695361    mov edx, 0x801800
 00695366    mov ecx, 0x87948C
-0069536B    call 0x0063B870
+0069536B    call 0x0063B870                                 ; => [ String: pDefMap->definitionSize != 0 | Call: sub_63b870 | String: DefinitionGetSize | String: C:\x\ax2017\Engine\Definition.cpp | Data: data_801800 ]
 00695370    add esp, 0x0C
 00695373    call 0x0063BC30
 00695378    test al, al
-0069537A    jz 0x0069537D
+0069537A    jz 0x0069537D                                   ; => [ Call: sub_63bc30 ]
 0069537C    int3
-0069537D    call 0x0063BB00
+0069537D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

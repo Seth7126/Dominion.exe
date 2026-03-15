@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_688cf0
+// 起始地址: 0x688cf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00688CF0    push ebp
 00688CF1    mov ebp, esp
 00688CF3    push esi
@@ -11,7 +17,7 @@
 00688D03    mov ecx, dword ptr ds:[eax+esi*8]
 00688D06    test ecx, ecx
 00688D08    jz 0x00688D0F
-00688D0A    call 0x006A2BC0
+00688D0A    call 0x006A2BC0                                 ; => [ Call: sub_6a2bc0 ]
 00688D0F    inc esi
 00688D10    cmp esi, dword ptr ds:[edi+0x30]
 00688D13    jl 0x00688D00

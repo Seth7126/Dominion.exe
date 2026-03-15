@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57f5b0
+// 起始地址: 0x57f5b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057F5B0    push ebp
 0057F5B1    mov ebp, esp
 0057F5B3    sub esp, 0x1C
@@ -22,7 +28,7 @@
 0057F5F6    mov dword ptr ss:[ebp-0x14], edx
 0057F5F9    nop dword ptr ds:[eax], eax
 0057F600    push dword ptr ds:[ebx]
-0057F602    call 0x0057F390
+0057F602    call 0x0057F390                                 ; => [ Call: sub_57f390 ]
 0057F607    add esp, 0x04
 0057F60A    cmp eax, 0x05
 0057F60D    jnbe 0x0057F745
@@ -86,7 +92,7 @@
 0057F6B0    push dword ptr ds:[edi]
 0057F6B2    mov ecx, dword ptr ss:[ebp-0x04]
 0057F6B5    push dword ptr ds:[ebx]
-0057F6B7    call 0x0057F4A0
+0057F6B7    call 0x0057F4A0                                 ; => [ Call: nullptr | Call: sub_57f4a0 ]
 0057F6BC    add esp, 0x08
 0057F6BF    test al, al
 0057F6C1    jz 0x0057F6F0
@@ -128,20 +134,20 @@
 0057F72B    mov esp, ebp
 0057F72D    pop ebp
 0057F72E    ret
-0057F72F    push 0x81E9E4
+0057F72F    push 0x81E9E4                                   ; => [ String: AbilityID::static_ability_card_id ]
 0057F734    push 0x11E
-0057F739    push 0x81E978
-0057F73E    mov ecx, 0x81EA08
+0057F739    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+0057F73E    mov ecx, 0x81EA08                               ; => [ String: type() == ABILITY_CARD_STATIC ]
 0057F743    jmp 0x0057F759
-0057F745    push 0x81FDF0
+0057F745    push 0x81FDF0                                   ; => [ String: FilterTriggeredAbilities ]
 0057F74A    push 0x2394
-0057F74F    push 0x81F4B8
-0057F754    mov ecx, 0x801AA4
+0057F74F    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+0057F754    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0057F759    mov edx, 0x801800
-0057F75E    call 0x0063B870
+0057F75E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0057F763    add esp, 0x0C
 0057F766    call 0x0063BC30
 0057F76B    test al, al
-0057F76D    jz 0x0057F770
+0057F76D    jz 0x0057F770                                   ; => [ Call: sub_63bc30 ]
 0057F76F    int3
-0057F770    call 0x0063BB00
+0057F770    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

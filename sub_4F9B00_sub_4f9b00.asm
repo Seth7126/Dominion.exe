@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f9b00
+// 起始地址: 0x4f9b00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F9B00    dword 83EC8B55
 004F9B04    in al, 0xF8
 004F9B06    sub esp, 0xC88
@@ -7,7 +13,7 @@
 004F9B15    push 0x00
 004F9B17    push 0x4F9AC0
 004F9B1C    lea ecx, ds:[edx-0x0B]
-004F9B1F    call 0x0056C4A0
+004F9B1F    call 0x0056C4A0                                 ; => [ Call: sub_4f9ac0 | Call: sub_56c4a0 ]
 004F9B24    push 0x02
 004F9B26    lea eax, ss:[esp+0x14]
 004F9B2A    mov dword ptr ss:[esp+0x14], 0x00
@@ -19,4 +25,4 @@
 004F9B41    add esp, 0x1C
 004F9B44    mov esp, ebp
 004F9B46    pop ebp
-004F9B47    ret
+004F9B47    ret                                             ; => [ Call: sub_4f9b50 | Call: sub_56bba0 ]

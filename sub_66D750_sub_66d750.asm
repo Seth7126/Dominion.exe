@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66d750
+// 起始地址: 0x66d750
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066D750    push ebp
 0066D751    mov ebp, esp
 0066D753    push ecx
@@ -7,13 +13,13 @@
 0066D758    mov esi, edx
 0066D75A    push edi
 0066D75B    mov dword ptr ss:[ebp-0x04], eax
-0066D75E    call 0x0064CC90
+0066D75E    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 0066D763    mov edi, dword ptr ds:[esi]
 0066D765    mov ebx, eax
-0066D767    mov esi, 0x801800
+0066D767    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 0066D76C    test edi, edi
-0066D76E    mov edx, esi
-0066D770    mov ecx, esi
+0066D76E    mov edx, esi                                    ; => [ Data: data_801800 ]
+0066D770    mov ecx, esi                                    ; => [ Data: data_801800 ]
 0066D772    cmovnz edx, edi
 0066D775    mov al, byte ptr ds:[edx]
 0066D777    cmp al, byte ptr ds:[ecx]
@@ -38,20 +44,20 @@
 0066D7A7    test eax, eax
 0066D7A9    jz 0x0066D7E8
 0066D7AB    cmp eax, 0x801800
-0066D7B0    jz 0x0066D7E8
+0066D7B0    jz 0x0066D7E8                                   ; => [ Data: data_801800 ]
 0066D7B2    cmp dword ptr ds:[0x00CF65BC], 0x00
 0066D7B9    jz 0x0066D7DE
 0066D7BB    cmp byte ptr ds:[eax], 0x00
-0066D7BE    jz 0x0066D7DE
+0066D7BE    jz 0x0066D7DE                                   ; => [ Data: data_cf65bc ]
 0066D7C0    lea ecx, ds:[esi+0x1720]
-0066D7C6    call 0x0063D4E0
+0066D7C6    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0066D7CB    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 0066D7CF    jnz 0x0066D7DE
 0066D7D1    mov edx, dword ptr ds:[eax+0x0C]
 0066D7D4    mov ecx, eax
 0066D7D6    add edx, 0x10
-0066D7D9    call 0x0064C080
-0066D7DE    mov dword ptr ds:[esi+0x1720], 0x801800
+0066D7D9    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+0066D7DE    mov dword ptr ds:[esi+0x1720], 0x801800         ; => [ Data: data_801800 ]
 0066D7E8    push 0x6F
 0066D7EA    mov edx, ebx
 0066D7EC    mov ecx, 0x8CAE70
@@ -62,7 +68,7 @@
 0066D7FB    pop ebx
 0066D7FC    mov esp, ebp
 0066D7FE    pop ebp
-0066D7FF    ret
+0066D7FF    ret                                             ; => [ Data: data_8cae70 | Call: sub_6dcec0 ]
 0066D800    test edi, edi
 0066D802    mov edx, ebx
 0066D804    mov ecx, 0x8CAE70
@@ -76,4 +82,4 @@
 0066D819    pop ebx
 0066D81A    mov esp, ebp
 0066D81C    pop ebp
-0066D81D    ret
+0066D81D    ret                                             ; => [ Data: data_8cae70 | Call: sub_6dce10 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5deb60
+// 起始地址: 0x5deb60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DEB60    push ebx
 005DEB61    mov ebx, ecx
 005DEB63    push esi
@@ -5,22 +11,22 @@
 005DEB65    mov edi, edx
 005DEB67    cmp dword ptr ds:[ebx+0x2C], 0x03
 005DEB6B    jz 0x005DEB86
-005DEB6D    push 0x85E574
+005DEB6D    push 0x85E574                                   ; => [ String: IsPileInActiveSet ]
 005DEB72    push 0x3DF8
-005DEB77    push 0x86F1E8
-005DEB7C    mov ecx, 0x871988
+005DEB77    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005DEB7C    mov ecx, 0x871988                               ; => [ String: gfxPile.type == DOMGFX_PILE ]
 005DEB81    jmp 0x005DECF6
-005DEB86    mov ecx, dword ptr ds:[0x00CC8D5C]
+005DEB86    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005DEB8C    test ecx, ecx
 005DEB8E    jz 0x005DECE5
 005DEB94    mov eax, dword ptr ds:[0x00B80B48]
 005DEB99    cmp eax, dword ptr ds:[ecx+0x7590]
-005DEB9F    jnz 0x005DECAF
+005DEB9F    jnz 0x005DECAF                                  ; => [ Data: data_b80b48 | Call: sub_610fb0 ]
 005DEBA5    mov ecx, ebx
 005DEBA7    call 0x00610FB0
 005DEBAC    test al, al
 005DEBAE    jz 0x005DECAF
-005DEBB4    mov eax, dword ptr ds:[0x00B80AFC]
+005DEBB4    mov eax, dword ptr ds:[0x00B80AFC]              ; => [ Data: data_b80afc ]
 005DEBB9    cmp eax, 0x07
 005DEBBC    jnz 0x005DEC60
 005DEBC2    mov esi, dword ptr ds:[ebx+0x30]
@@ -32,7 +38,7 @@
 005DEBD9    xor eax, eax
 005DEBDB    and ecx, 0x100000
 005DEBE1    or eax, ecx
-005DEBE3    jnz 0x005DECAF
+005DEBE3    jnz 0x005DECAF                                  ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 005DEBE9    mov eax, dword ptr ds:[ebx+0x30]
 005DEBEC    test eax, eax
 005DEBEE    jz 0x005DEC5B
@@ -70,26 +76,26 @@
 005DEC58    pop esi
 005DEC59    pop ebx
 005DEC5A    ret
-005DEC5B    mov eax, dword ptr ds:[0x00B80AFC]
+005DEC5B    mov eax, dword ptr ds:[0x00B80AFC]              ; => [ Data: data_b80afc ]
 005DEC60    cmp eax, 0x08
 005DEC63    jnz 0x005DECB5
 005DEC65    test edi, edi
 005DEC67    jz 0x005DEC92
 005DEC69    mov dword ptr ds:[edi], 0x01
 005DEC6F    mov eax, dword ptr ds:[0x00B80B08]
-005DEC74    add eax, 0xFFFFFF13
+005DEC74    add eax, 0xFFFFFF13                             ; => [ Data: data_b80b08 ]
 005DEC79    cmp eax, 0x06
 005DEC7C    jnbe 0x005DEC92
-005DEC7E    movzx eax, byte ptr ds:[eax+0x5DED18]
+005DEC7E    movzx eax, byte ptr ds:[eax+0x5DED18]           ; => [ Data: lookup_table_5ded18 ]
 005DEC85    jmp dword ptr ds:[eax*4+0x5DED14]
 005DEC8C    mov dword ptr ds:[edi], 0x16
-005DEC92    mov ecx, dword ptr ds:[0x00B80B64]
-005DEC98    xor eax, eax
+005DEC92    mov ecx, dword ptr ds:[0x00B80B64]              ; => [ Data: data_b80b64 ]
+005DEC98    xor eax, eax                                    ; => [ Call: nullptr ]
 005DEC9A    test ecx, ecx
 005DEC9C    jle 0x005DECAF
 005DEC9E    mov edx, dword ptr ds:[ebx+0x30]
 005DECA1    cmp dword ptr ds:[eax*4+0xB80B68], edx
-005DECA8    jz 0x005DEC55
+005DECA8    jz 0x005DEC55                                   ; => [ Data: data_b80b68 ]
 005DECAA    inc eax
 005DECAB    cmp eax, ecx
 005DECAD    jl 0x005DECA1
@@ -101,7 +107,7 @@
 005DECB5    mov ecx, dword ptr ds:[ebx+0x70]
 005DECB8    test ecx, ecx
 005DECBA    jz 0x005DECAF
-005DECBC    call 0x005CBA00
+005DECBC    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005DECC1    mov esi, eax
 005DECC3    mov edx, edi
 005DECC5    push 0x00
@@ -109,7 +115,7 @@
 005DECC9    call 0x005EFE00
 005DECCE    add esp, 0x04
 005DECD1    test al, al
-005DECD3    jz 0x005DECAF
+005DECD3    jz 0x005DECAF                                   ; => [ Call: sub_5efe00 ]
 005DECD5    mov ecx, esi
 005DECD7    call 0x00610FB0
 005DECDC    pop edi
@@ -117,16 +123,16 @@
 005DECDF    pop esi
 005DECE0    setnz al
 005DECE3    pop ebx
-005DECE4    ret
-005DECE5    push 0x77EB90
+005DECE4    ret                                             ; => [ Call: sub_610fb0 ]
+005DECE5    push 0x77EB90                                   ; => [ String: GetClient ]
 005DECEA    push 0x7B
-005DECEC    push 0x77EB50
-005DECF1    mov ecx, 0x77EB9C
+005DECEC    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+005DECF1    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 005DECF6    mov edx, 0x801800
-005DECFB    call 0x0063B870
+005DECFB    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005DED00    add esp, 0x0C
 005DED03    call 0x0063BC30
 005DED08    test al, al
-005DED0A    jz 0x005DED0D
+005DED0A    jz 0x005DED0D                                   ; => [ Call: sub_63bc30 ]
 005DED0C    int3
-005DED0D    call 0x0063BB00
+005DED0D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

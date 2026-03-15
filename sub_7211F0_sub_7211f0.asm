@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7211f0
+// 起始地址: 0x7211f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007211F0    push ebp
 007211F1    mov ebp, esp
 007211F3    push ecx
@@ -16,18 +22,18 @@
 0072120D    ret
 0072120E    cmp dword ptr ds:[edi+0x47C0], 0x10
 00721215    jnl 0x0072121C
-00721217    call 0x00720CA0
+00721217    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 0072121C    cmp dword ptr ds:[edi+0x47D8], 0x00
 00721223    jnz 0x00721390
 00721229    push 0x80
 0072122E    push 0x00
 00721230    push ebx
-00721231    call 0x00761FC4
+00721231    call 0x00761FC4                                 ; => [ Call: memset ]
 00721236    add esp, 0x0C
 00721239    cmp dword ptr ds:[edi+0x47C0], 0x10
 00721240    jnl 0x00721249
 00721242    mov ecx, edi
-00721244    call 0x00720CA0
+00721244    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00721249    mov ebx, dword ptr ds:[edi+0x47BC]
 0072124F    mov eax, ebx
 00721251    mov edx, dword ptr ss:[ebp+0x08]
@@ -78,7 +84,7 @@
 007212E5    shr eax, cl
 007212E7    mov ecx, dword ptr ss:[ebp+0x08]
 007212EA    and eax, dword ptr ds:[esi*4+0x801050]
-007212F1    add eax, dword ptr ds:[ecx+esi*4+0x64C]
+007212F1    add eax, dword ptr ds:[ecx+esi*4+0x64C]         ; => [ Data: data_801050 ]
 007212F8    mov ecx, esi
 007212FA    shl ebx, cl
 007212FC    mov ecx, dword ptr ss:[ebp+0x08]
@@ -91,15 +97,15 @@
 00721319    cmp edx, ebx
 0072131B    jnl 0x00721324
 0072131D    mov ecx, edi
-0072131F    call 0x00720CA0
+0072131F    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00721324    mov edx, dword ptr ds:[edi+0x47BC]
 0072132A    mov ecx, ebx
 0072132C    sub dword ptr ds:[edi+0x47C0], ebx
 00721332    mov esi, edx
 00721334    rol esi, cl
-00721336    mov ecx, dword ptr ds:[ebx*4+0x801050]
+00721336    mov ecx, dword ptr ds:[ebx*4+0x801050]          ; => [ Data: data_801050 ]
 0072133D    mov eax, ecx
-0072133F    mov ebx, dword ptr ds:[ebx*4+0x801010]
+0072133F    mov ebx, dword ptr ds:[ebx*4+0x801010]          ; => [ Data: data_801010 ]
 00721346    not eax
 00721348    sar edx, 0x1F
 0072134B    and eax, esi
@@ -129,7 +135,7 @@
 00721390    cmp dword ptr ds:[edi+0x47C0], 0x01
 00721397    jnl 0x007213A0
 00721399    mov ecx, edi
-0072139B    call 0x00720CA0
+0072139B    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 007213A0    mov ecx, dword ptr ds:[edi+0x47BC]
 007213A6    dec dword ptr ds:[edi+0x47C0]
 007213AC    lea eax, ds:[ecx+ecx*1]

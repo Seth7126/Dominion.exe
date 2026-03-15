@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_559090
+// 起始地址: 0x559090
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00559090    push ebp
 00559091    mov ebp, esp
 00559093    and esp, 0xFFFFFFF8
 00559096    push ecx
 00559097    push esi
 00559098    mov ecx, 0x100
-0055909D    call 0x00563590
+0055909D    call 0x00563590                                 ; => [ Call: sub_563590 ]
 005590A2    mov esi, eax
 005590A4    test esi, esi
 005590A6    jz 0x005590CE
-005590A8    call 0x00573400
+005590A8    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005590AD    push 0x04
 005590AF    push 0x00
 005590B1    push 0x00
@@ -18,7 +24,7 @@
 005590BE    push 0x00
 005590C0    push 0x476
 005590C5    push esi
-005590C6    call 0x00583720
+005590C6    call 0x00583720                                 ; => [ Call: nullptr | Call: sub_583720 ]
 005590CB    add esp, 0x1C
 005590CE    push 0x00
 005590D0    push 0x10
@@ -29,4 +35,4 @@
 005590E4    pop esi
 005590E5    mov esp, ebp
 005590E7    pop ebp
-005590E8    ret
+005590E8    ret                                             ; => [ Call: sub_562bb0 ]

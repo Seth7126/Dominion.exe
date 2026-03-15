@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_569720
+// 起始地址: 0x569720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00569720    push ebp
 00569721    mov ebp, esp
 00569723    and esp, 0xFFFFFFF0
@@ -7,7 +13,7 @@
 0056972D    mov dword ptr ss:[esp+0x08], ecx
 00569731    mov dword ptr ss:[esp+0x10], eax
 00569735    mov dword ptr ss:[esp+0x14], edx
-00569739    call 0x00573400
+00569739    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056973E    mov ecx, dword ptr ss:[ebp+0x0C]
 00569741    mov esi, eax
 00569743    movups xmm0, xmmword ptr ds:[ecx]
@@ -46,7 +52,7 @@
 005697AB    push ecx
 005697AC    lea edx, ss:[esp+0x40]
 005697B0    mov ecx, esi
-005697B2    call 0x006236A0
+005697B2    call 0x006236A0                                 ; => [ Call: sub_6236a0 ]
 005697B7    mov eax, dword ptr ss:[esp+0x34]
 005697BB    add esp, 0x28
 005697BE    pop esi

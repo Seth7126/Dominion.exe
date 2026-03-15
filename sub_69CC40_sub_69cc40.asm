@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69cc40
+// 起始地址: 0x69cc40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069CC40    push ebp
 0069CC41    mov ebp, esp
 0069CC43    mov eax, dword ptr ss:[ebp+0x0C]
@@ -19,7 +25,7 @@
 0069CC6C    mov ecx, esi
 0069CC6E    push edx
 0069CC6F    mov edx, eax
-0069CC71    call 0x0069CBC0
+0069CC71    call 0x0069CBC0                                 ; => [ Call: sub_69cbc0 ]
 0069CC76    add esp, 0x08
 0069CC79    test esi, esi
 0069CC7B    jz 0x0069CC87
@@ -36,10 +42,10 @@
 0069CC9B    push 0x879400
 0069CCA0    mov edx, 0x801800
 0069CCA5    mov ecx, 0x8795BC
-0069CCAA    call 0x0063B870
+0069CCAA    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Definition.cpp | String: pArrayStart == NULL | Data: data_801800 | String: DefinitionDeleteVariableArray ]
 0069CCAF    add esp, 0x0C
 0069CCB2    call 0x0063BC30
 0069CCB7    test al, al
-0069CCB9    jz 0x0069CCBC
+0069CCB9    jz 0x0069CCBC                                   ; => [ Call: sub_63bc30 ]
 0069CCBB    int3
-0069CCBC    call 0x0063BB00
+0069CCBC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

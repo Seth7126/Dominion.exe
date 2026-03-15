@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71dda0
+// 起始地址: 0x71dda0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071DDA0    push ebp
 0071DDA1    mov ebp, esp
 0071DDA3    sub esp, 0xE0
@@ -58,7 +64,7 @@
 0071DE92    movss dword ptr ss:[ebp-0xA4], xmm2
 0071DE9A    movss dword ptr ss:[ebp-0xB0], xmm3
 0071DEA2    movss dword ptr ss:[ebp-0xAC], xmm1
-0071DEAA    call 0x0071D730
+0071DEAA    call 0x0071D730                                 ; => [ Call: sub_71d730 ]
 0071DEAF    mov esi, eax
 0071DEB1    push esi
 0071DEB2    call dword ptr ds:[0x0077552C]
@@ -79,7 +85,7 @@
 0071DECF    push dword ptr ss:[ebp+0x14]
 0071DED2    push ecx
 0071DED3    lea ecx, ss:[ebp-0xE0]
-0071DED9    call 0x0071D8C0
+0071DED9    call 0x0071D8C0                                 ; => [ Call: sub_71d8c0 ]
 0071DEDE    add esp, 0x2C
 0071DEE1    mov esi, eax
 0071DEE3    push edi

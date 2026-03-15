@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6fee60
+// 起始地址: 0x6fee60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FEE60    push ebp
 006FEE61    mov ebp, esp
 006FEE63    sub esp, 0x08
@@ -11,7 +17,7 @@
 006FEE79    mov eax, dword ptr ds:[0x0147DED4]
 006FEE7E    lea esi, ds:[ebx+ebx*2]
 006FEE81    mov edx, dword ptr ss:[ebp+0x08]
-006FEE84    add eax, 0x28
+006FEE84    add eax, 0x28                                   ; => [ Data: data_147ded4 ]
 006FEE87    shl ecx, 0x04
 006FEE8A    shl esi, 0x02
 006FEE8D    mov dword ptr ss:[ebp-0x08], ecx
@@ -61,7 +67,7 @@
 006FEF00    add eax, ecx
 006FEF02    push esi
 006FEF03    push eax
-006FEF04    call 0x00761FBE
+006FEF04    call 0x00761FBE                                 ; => [ Data: data_147ded4 | Call: memcpy | Data: data_147ded4 | Call: memcpy | Data: data_147ded4 | Call: memcpy | Data: data_147ded4 | Call: memcpy ]
 006FEF09    add esp, 0x0C
 006FEF0C    pop edi
 006FEF0D    pop esi
@@ -74,10 +80,10 @@
 006FEF1D    push 0x88C504
 006FEF22    mov edx, 0x801800
 006FEF27    mov ecx, 0x88C60C
-006FEF2C    call 0x0063B870
+006FEF2C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GLDupCheck_glUniform3fv | Data: data_801800 | String: registerIndex < MAX_UNIFORMS | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 006FEF31    add esp, 0x0C
 006FEF34    call 0x0063BC30
 006FEF39    test al, al
-006FEF3B    jz 0x006FEF3E
+006FEF3B    jz 0x006FEF3E                                   ; => [ Call: sub_63bc30 ]
 006FEF3D    int3
-006FEF3E    call 0x0063BB00
+006FEF3E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

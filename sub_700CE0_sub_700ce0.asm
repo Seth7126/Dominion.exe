@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_700ce0
+// 起始地址: 0x700ce0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700CE0    push ebp
 00700CE1    mov ebp, esp
 00700CE3    push ecx
@@ -5,7 +11,7 @@
 00700CEA    mov byte ptr ss:[ebp-0x01], al
 00700CED    push ebx
 00700CEE    mov ebx, edx
-00700CF0    mov edx, dword ptr ds:[0x0147DED4]
+00700CF0    mov edx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700CF6    push esi
 00700CF7    lea esi, ds:[ecx+0x14]
 00700CFA    push edi
@@ -35,8 +41,8 @@
 00700D50    mov eax, dword ptr ds:[0x00775764]
 00700D55    mov eax, dword ptr ds:[eax]
 00700D57    call eax
-00700D59    mov eax, dword ptr ds:[0x0147B06C]
-00700D5E    mov edx, dword ptr ds:[0x0147DED4]
+00700D59    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
+00700D5E    mov edx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700D64    inc dword ptr ds:[eax+0x14]
 00700D67    movzx eax, di
 00700D6A    cmp eax, dword ptr ds:[edx+0x4250]
@@ -57,9 +63,9 @@
 00700DA5    mov esp, ebp
 00700DA7    pop ebp
 00700DA8    ret
-00700DA9    push 0x88CA00
+00700DA9    push 0x88CA00                                   ; => [ String: OpenGLBindOrCreateVAO ]
 00700DAE    push 0x7F3
-00700DB3    mov ecx, 0x88C9A0
+00700DB3    mov ecx, 0x88C9A0                               ; => [ String: vertexBufferData->mBufferFormat >= 0 && vertexBufferData->mBufferFormat < VERTEX_FORMAT_COUNT ]
 00700DB8    jmp 0x00700EA8
 00700DBD    cmp dword ptr ds:[eax], ebx
 00700DBF    jnz 0x00700DC6
@@ -76,19 +82,19 @@
 00700DDB    add esi, 0x0C
 00700DDE    cmp eax, 0x10
 00700DE1    jl 0x00700DD5
-00700DE3    push 0x88CA18
-00700DE8    call 0x0063B5F0
-00700DED    mov eax, dword ptr ds:[0x0147DED4]
+00700DE3    push 0x88CA18                                   ; => [ String: Ran out of VAO slots! ]
+00700DE8    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 ]
+00700DED    mov eax, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700DF2    add esp, 0x04
 00700DF5    cmp dword ptr ds:[eax+0x4098], 0x00
 00700DFC    jz 0x00700E90
 00700E02    mov dword ptr ds:[eax+0x4098], 0x00
-00700E0C    push 0x00
+00700E0C    push 0x00                                       ; => [ Call: nullptr ]
 00700E0E    jmp 0x00700E7F
-00700E10    push 0x88D514
+00700E10    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 00700E15    push 0x6D
-00700E17    push 0x80193C
-00700E1C    mov ecx, 0x802748
+00700E17    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00700E1C    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00700E21    jmp 0x00700EAD
 00700E26    mov eax, dword ptr ds:[eax-0x04]
 00700E29    cmp dword ptr ds:[edx+0x4098], eax
@@ -98,7 +104,7 @@
 00700E38    mov eax, dword ptr ds:[0x00775764]
 00700E3D    mov eax, dword ptr ds:[eax]
 00700E3F    call eax
-00700E41    mov eax, dword ptr ds:[0x0147B06C]
+00700E41    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00700E46    inc dword ptr ds:[eax+0x14]
 00700E49    pop edi
 00700E4A    pop esi
@@ -115,7 +121,7 @@
 00700E5E    mov eax, dword ptr ds:[esi]
 00700E60    test eax, eax
 00700E62    jz 0x00700E99
-00700E64    mov ecx, dword ptr ds:[0x0147DED4]
+00700E64    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700E6A    mov dword ptr ds:[esi+0x04], ebx
 00700E6D    mov dword ptr ds:[esi+0x08], edi
 00700E70    cmp dword ptr ds:[ecx+0x4098], eax
@@ -125,7 +131,7 @@
 00700E7F    mov eax, dword ptr ds:[0x00775764]
 00700E84    mov eax, dword ptr ds:[eax]
 00700E86    call eax
-00700E88    mov eax, dword ptr ds:[0x0147B06C]
+00700E88    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00700E8D    inc dword ptr ds:[eax+0x14]
 00700E90    pop edi
 00700E91    pop esi
@@ -134,15 +140,15 @@
 00700E95    mov esp, ebp
 00700E97    pop ebp
 00700E98    ret
-00700E99    push 0x88CA00
+00700E99    push 0x88CA00                                   ; => [ String: OpenGLBindOrCreateVAO ]
 00700E9E    push 0x81A
-00700EA3    mov ecx, 0x88CA30
-00700EA8    push 0x88C504
+00700EA3    mov ecx, 0x88CA30                               ; => [ String: entry->mVertexArrayHandle != 0 ]
+00700EA8    push 0x88C504                                   ; => [ String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 00700EAD    mov edx, 0x801800
-00700EB2    call 0x0063B870
+00700EB2    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00700EB7    add esp, 0x0C
 00700EBA    call 0x0063BC30
 00700EBF    test al, al
-00700EC1    jz 0x00700EC4
+00700EC1    jz 0x00700EC4                                   ; => [ Call: sub_63bc30 ]
 00700EC3    int3
-00700EC4    call 0x0063BB00
+00700EC4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

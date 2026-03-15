@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6372f0
+// 起始地址: 0x6372f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006372F0    push ebp
 006372F1    mov ebp, esp
 006372F3    mov eax, dword ptr ss:[ebp+0x14]
@@ -39,24 +45,24 @@
 00637370    jz 0x00637424
 00637376    lea ecx, ds:[ebx+0x250]
 0063737C    mov edx, 0x01
-00637381    call 0x00633AA0
+00637381    call 0x00633AA0                                 ; => [ Call: sub_633aa0 ]
 00637386    cmp dword ptr ds:[ebx+0x118], 0x00
 0063738D    lea edx, ds:[ebx+0x250]
 00637393    jz 0x006373A5
 00637395    lea edi, ds:[ebx+0x08]
 00637398    mov ecx, 0x22
 0063739D    lea esi, ds:[ebx+0x118]
-006373A3    rep movsd
+006373A3    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 006373A5    mov eax, dword ptr ss:[ebp+0x0C]
 006373A8    lea edi, ds:[ebx+0x90]
 006373AE    mov ecx, 0x22
 006373B3    mov dword ptr ds:[ebx+0x17CC], 0x00
 006373BD    lea esi, ds:[ebx+0x118]
-006373C3    rep movsd
+006373C3    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 006373C5    mov esi, dword ptr ss:[ebp+0x08]
 006373C8    lea edi, ss:[ebp-0xB0]
 006373CE    mov ecx, 0x22
-006373D3    rep movsd
+006373D3    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 006373D5    mov dword ptr ss:[ebp-0x28], eax
 006373D8    lea edi, ds:[ebx+0x1C0]
 006373DE    mov eax, dword ptr ss:[ebp+0x10]
@@ -70,12 +76,12 @@
 006373FE    movq qword ptr ss:[ebp-0x10], xmm0
 00637403    xorps xmm0, xmm0
 00637406    movq qword ptr ss:[ebp-0x08], xmm0
-0063740B    rep movsd
+0063740B    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0063740D    mov dword ptr ds:[ebx+0x17C0], 0x01
 00637417    mov ecx, dword ptr ds:[edx]
 00637419    cmp dword ptr ds:[ecx+0x2C], 0x00
 0063741D    jnz 0x00637424
-0063741F    call 0x005CBB20
+0063741F    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 00637424    pop edi
 00637425    pop esi
 00637426    pop ebx
@@ -114,10 +120,10 @@
 006374B3    push 0x86E0F4
 006374B8    mov edx, 0x801800
 006374BD    mov ecx, 0x86E1A0
-006374C2    call 0x0063B870
+006374C2    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\CardMotion.h | Data: data_801800 | String: MoveComponent<struct DomLoc,struct DomMoveCallback>::Move | String: &callback.gfx->move == this ]
 006374C7    add esp, 0x0C
 006374CA    call 0x0063BC30
 006374CF    test al, al
-006374D1    jz 0x006374D4
+006374D1    jz 0x006374D4                                   ; => [ Call: sub_63bc30 ]
 006374D3    int3
-006374D4    call 0x0063BB00
+006374D4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

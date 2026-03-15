@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_6cbe10
+// 起始地址: 0x6cbe10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CBE10    push ecx
 006CBE11    push esi
-006CBE12    mov esi, dword ptr ds:[0x0147D19C]
+006CBE12    mov esi, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CBE18    push edi
 006CBE19    test esi, esi
 006CBE1B    jz 0x006CC0FF
@@ -8,7 +14,7 @@
 006CBE23    cmp eax, 0x01
 006CBE26    jnz 0x006CC0AC
 006CBE2C    mov eax, dword ptr ds:[ecx+0x04]
-006CBE2F    mov edi, dword ptr ds:[0x0147ABE8]
+006CBE2F    mov edi, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006CBE35    cmp eax, 0x50
 006CBE38    jnz 0x006CBE87
 006CBE3A    test byte ptr ds:[ecx+0x08], 0x0A
@@ -110,7 +116,7 @@
 006CBF76    xor ecx, ecx
 006CBF78    cmp dword ptr ds:[esi+0xBBAA84], ecx
 006CBF7E    jle 0x006CBF95
-006CBF80    lea eax, ds:[esi+0xB9B69C]
+006CBF80    lea eax, ds:[esi+0xB9B69C]                      ; => [ Data: data_b9b69c ]
 006CBF86    mov byte ptr ds:[eax], 0x00
 006CBF89    lea eax, ds:[eax+0x1C]
 006CBF8C    inc ecx
@@ -119,13 +125,13 @@
 006CBF95    xor ecx, ecx
 006CBF97    mov dword ptr ds:[esi+0xBBAAB0], 0x02
 006CBFA1    mov dword ptr ds:[esi+0xBBAAB4], edi
-006CBFA7    call 0x006CAAB0
-006CBFAC    mov edx, dword ptr ds:[0x0147D19C]
+006CBFA7    call 0x006CAAB0                                 ; => [ Call: sub_6caab0 ]
+006CBFAC    mov edx, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CBFB2    xor eax, eax
 006CBFB4    mov esi, dword ptr ds:[edx+0xBBAA84]
 006CBFBA    test esi, esi
 006CBFBC    jle 0x006CBFD5
-006CBFBE    lea ecx, ds:[edx+0xB9B69C]
+006CBFBE    lea ecx, ds:[edx+0xB9B69C]                      ; => [ Data: data_b9b69c ]
 006CBFC4    cmp byte ptr ds:[ecx], 0x00
 006CBFC7    jz 0x006CBFCD
 006CBFC9    cmp eax, edi
@@ -193,7 +199,7 @@
 006CC0B6    jz 0x006CC0FF
 006CC0B8    mov eax, dword ptr ds:[0x0147ABE8]
 006CC0BD    cmp byte ptr ds:[eax+0x20], 0x00
-006CC0C1    jz 0x006CC0FF
+006CC0C1    jz 0x006CC0FF                                   ; => [ Data: data_147abe8 ]
 006CC0C3    mov eax, dword ptr ds:[ecx+0x04]
 006CC0C6    cmp eax, 0x5B
 006CC0C9    jnz 0x006CC0E2

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56bd60
+// 起始地址: 0x56bd60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056BD60    push ebp
 0056BD61    mov ebp, esp
 0056BD63    sub esp, 0x14
@@ -6,7 +12,7 @@
 0056BD68    push edi
 0056BD69    mov dword ptr ss:[ebp-0x10], edx
 0056BD6C    mov dword ptr ss:[ebp-0x0C], ecx
-0056BD6F    call 0x00573400
+0056BD6F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056BD74    mov edi, eax
 0056BD76    mov eax, dword ptr ds:[edi]
 0056BD78    cmp eax, 0x02
@@ -19,7 +25,7 @@
 0056BD8C    mov dword ptr ss:[ebp-0x08], eax
 0056BD8F    cmp esi, 0x320
 0056BD95    jb 0x0056BD9C
-0056BD97    call 0x00591930
+0056BD97    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056BD9C    mov ecx, dword ptr ss:[ebp-0x08]
 0056BD9F    imul eax, esi, 0x64
 0056BDA2    mov eax, dword ptr ds:[eax+ecx*1+0x1A4C]
@@ -28,17 +34,17 @@
 0056BDAE    jnz 0x0056BE76
 0056BDB4    push dword ptr ds:[edi+0x10]
 0056BDB7    mov ecx, dword ptr ds:[edi+0x04]
-0056BDBA    call 0x005916D0
+0056BDBA    call 0x005916D0                                 ; => [ Call: sub_5916d0 ]
 0056BDBF    mov ecx, dword ptr ds:[edi+0x04]
 0056BDC2    add esp, 0x04
 0056BDC5    mov ebx, eax
 0056BDC7    mov dword ptr ss:[ebp-0x04], edx
 0056BDCA    push dword ptr ds:[edi+0x10]
-0056BDCD    call 0x005915B0
+0056BDCD    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 0056BDD2    add esp, 0x04
 0056BDD5    mov ecx, dword ptr ds:[edi+0x04]
 0056BDD8    mov dword ptr ss:[ebp-0x08], eax
-0056BDDB    call 0x005768A0
+0056BDDB    call 0x005768A0                                 ; => [ Call: sub_5768a0 ]
 0056BDE0    mov ecx, dword ptr ds:[edi+0x0C]
 0056BDE3    mov esi, eax
 0056BDE5    mov eax, dword ptr ss:[ebp-0x04]
@@ -82,16 +88,16 @@
 0056BE71    pop ebx
 0056BE72    mov esp, ebp
 0056BE74    pop ebp
-0056BE75    ret
+0056BE75    ret                                             ; => [ Call: sub_56b8e0 ]
 0056BE76    push 0x81EC70
 0056BE7B    push 0x1221
 0056BE80    push 0x81EA70
 0056BE85    mov edx, 0x801800
 0056BE8A    mov ecx, 0x801AA4
-0056BE8F    call 0x0063B870
+0056BE8F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp | String: EndOfTurn | String: Halt ]
 0056BE94    add esp, 0x0C
 0056BE97    call 0x0063BC30
 0056BE9C    test al, al
-0056BE9E    jz 0x0056BEA1
+0056BE9E    jz 0x0056BEA1                                   ; => [ Call: sub_63bc30 ]
 0056BEA0    int3
-0056BEA1    call 0x0063BB00
+0056BEA1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_518070
+// 起始地址: 0x518070
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00518070    dword 83EC8B55
 00518074    byte E4
 00518075    byte F8
 00518076    sub esp, 0x24
-00518079    mov eax, dword ptr ds:[0x008C4040]
+00518079    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0051807E    xor eax, esp
 00518080    mov dword ptr ss:[esp+0x20], eax
 00518084    push ebx
 00518085    push esi
 00518086    push edi
-00518087    call 0x00517E90
+00518087    call 0x00517E90                                 ; => [ Call: sub_517e90 ]
 0051808C    mov esi, dword ptr ds:[0x00CCA784]
-00518092    mov ecx, dword ptr ds:[0x00CCA780]
-00518098    mov eax, dword ptr ds:[0x00CCA790]
+00518092    mov ecx, dword ptr ds:[0x00CCA780]              ; => [ Data: data_cca780 ]
+00518098    mov eax, dword ptr ds:[0x00CCA790]              ; => [ Data: data_cca790 ]
 0051809D    shl esi, 0x0B
-005180A0    add esi, ecx
+005180A0    add esi, ecx                                    ; => [ Data: data_cca784 ]
 005180A2    cmp eax, 0x02
 005180A5    jnz 0x005180AF
 005180A7    lea ebx, ds:[esi+0x540]
@@ -24,7 +30,7 @@
 005180BB    mov dword ptr ds:[esi+0x548], eax
 005180C1    mov ecx, dword ptr ds:[ebx+0x04]
 005180C4    call 0x005156C0
-005180C9    mov dword ptr ds:[esi+0x54C], eax
+005180C9    mov dword ptr ds:[esi+0x54C], eax               ; => [ Call: sub_5156c0 ]
 005180CF    lea ecx, ss:[esp+0x0C]
 005180D3    xor esi, esi
 005180D5    lea edx, ss:[esp+0x10]
@@ -38,9 +44,9 @@
 005180F7    mov ecx, 0xCCA794
 005180FC    mov dword ptr ds:[eax+0x08], edx
 005180FF    xor edx, edx
-00518101    mov dword ptr ds:[eax], 0x816F58
+00518101    mov dword ptr ds:[eax], 0x816F58                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_8de846b85825e3270cdeb52d3d141248>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 00518107    mov dword ptr ds:[eax+0x24], eax
-0051810A    call 0x0050AD20
+0051810A    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 0051810F    mov edi, eax
 00518111    add esp, 0x28
 00518114    test edi, edi
@@ -48,7 +54,7 @@
 00518118    push 0x00
 0051811A    push 0x00
 0051811C    mov ecx, edi
-0051811E    call 0x0050A6A0
+0051811E    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 00518123    mov dword ptr ss:[esp+esi*4+0x20], edi
 00518127    lea ecx, ss:[esp+0x14]
 0051812B    inc esi
@@ -68,9 +74,9 @@
 00518159    mov ecx, 0xCCA794
 0051815E    mov dword ptr ds:[eax+0x08], edx
 00518161    xor edx, edx
-00518163    mov dword ptr ds:[eax], 0x816F58
+00518163    mov dword ptr ds:[eax], 0x816F58                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_8de846b85825e3270cdeb52d3d141248>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 00518169    mov dword ptr ds:[eax+0x24], eax
-0051816C    call 0x0050AD20
+0051816C    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 00518171    mov edi, eax
 00518173    add esp, 0x28
 00518176    test edi, edi
@@ -78,7 +84,7 @@
 0051817A    push 0x00
 0051817C    push 0x00
 0051817E    mov ecx, edi
-00518180    call 0x0050A6A0
+00518180    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 00518185    mov dword ptr ss:[esp+esi*4+0x20], edi
 00518189    lea ecx, ss:[esp+0x18]
 0051818D    inc esi
@@ -92,14 +98,14 @@
 005181A2    mov ecx, 0xCCA794
 005181A7    mov dword ptr ds:[eax+0x04], edx
 005181AA    xor edx, edx
-005181AC    mov dword ptr ds:[eax], 0x816F74
+005181AC    mov dword ptr ds:[eax], 0x816F74                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_58a405897e0e71b2066f3f25da284cd9>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 005181B2    mov dword ptr ds:[eax+0x24], eax
-005181B5    call 0x0050AD20
+005181B5    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 005181BA    mov edi, eax
 005181BC    push 0x01
 005181BE    push 0x00
 005181C0    mov ecx, edi
-005181C2    call 0x0050A6A0
+005181C2    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 005181C7    add esp, 0x30
 005181CA    test edi, edi
 005181CC    jz 0x005181D3
@@ -109,18 +115,18 @@
 005181D5    mov ecx, 0xCC8DE0
 005181DA    call 0x0063ED10
 005181DF    mov ecx, dword ptr ss:[esp+eax*4+0x18]
-005181E3    call 0x00511A60
+005181E3    call 0x00511A60                                 ; => [ Call: sub_63ed10 | Call: sub_511a60 | Data: data_cc8de0 ]
 005181E8    push 0x00
 005181EA    push 0x02
 005181EC    mov ecx, eax
-005181EE    call 0x0050A6A0
+005181EE    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 005181F3    mov ecx, dword ptr ss:[esp+0x34]
 005181F7    add esp, 0x08
 005181FA    pop edi
 005181FB    pop esi
 005181FC    pop ebx
 005181FD    xor ecx, esp
-005181FF    call 0x0075927A
+005181FF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00518204    mov esp, ebp
 00518206    pop ebp
 00518207    ret

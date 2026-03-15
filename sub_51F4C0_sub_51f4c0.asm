@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_51f4c0
+// 起始地址: 0x51f4c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051F4C0    push ebp
 0051F4C1    mov ebp, esp
 0051F4C3    mov eax, dword ptr ss:[ebp+0x08]
-0051F4C6    mov dword ptr ds:[eax], 0x817070
+0051F4C6    mov dword ptr ds:[eax], 0x817070                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_c99038c50bc714f5137673adab3853a4>,bool,enum CardID>::`vftable'{for `std::_Func_base<bool,enum CardID>'} ]
 0051F4CC    pop ebp
 0051F4CD    ret 0x04

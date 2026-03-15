@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6af460
+// 起始地址: 0x6af460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AF460    push ebp
 006AF461    mov ebp, esp
 006AF463    push esi
 006AF464    push dword ptr ss:[ebp+0x08]
 006AF467    mov esi, ecx
 006AF469    lea ecx, ds:[esi+0x38]
-006AF46C    call 0x006B2EC0
+006AF46C    call 0x006B2EC0                                 ; => [ Call: sub_6b2ec0 ]
 006AF471    mov edx, eax
 006AF473    cmp dword ptr ds:[edx], 0x02
 006AF476    jnz 0x006AF48C
@@ -21,10 +27,10 @@
 006AF496    push 0x87B990
 006AF49B    mov edx, 0x801800
 006AF4A0    mov ecx, 0x87BC18
-006AF4A5    call 0x0063B870
+006AF4A5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: Dx11GraphicsInterface::TextureBufferCreateMipmaps | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: bufferData->mBufferType == DX11BUFFER_TEXTURE ]
 006AF4AA    add esp, 0x0C
 006AF4AD    call 0x0063BC30
 006AF4B2    test al, al
-006AF4B4    jz 0x006AF4B7
+006AF4B4    jz 0x006AF4B7                                   ; => [ Call: sub_63bc30 ]
 006AF4B6    int3
-006AF4B7    call 0x0063BB00
+006AF4B7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5bbe60
+// 起始地址: 0x5bbe60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BBE60    push esi
 005BBE61    mov esi, ecx
 005BBE63    mov ecx, dword ptr ds:[esi+0x14]
@@ -16,7 +22,7 @@
 005BBE86    mov eax, edx
 005BBE88    push ecx
 005BBE89    push eax
-005BBE8A    call 0x00759661
+005BBE8A    call 0x00759661                                 ; => [ Call: operator new ]
 005BBE8F    add esp, 0x08
 005BBE92    mov dword ptr ds:[esi+0x10], 0x00
 005BBE99    mov dword ptr ds:[esi+0x14], 0x0F

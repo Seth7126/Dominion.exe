@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_531590
+// 起始地址: 0x531590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00531590    dword 83EC8B55
 00531594    in al, 0xF0
 00531596    sub esp, 0x60
@@ -5,24 +11,24 @@
 0053159B    push ecx
 0053159C    push 0x00
 0053159E    lea ecx, ds:[edx+0x01]
-005315A1    call 0x00561E00
-005315A6    call 0x00573400
+005315A1    call 0x00561E00                                 ; => [ Call: sub_561e00 ]
+005315A6    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005315AB    push 0x00
 005315AD    push 0x00
 005315AF    push 0x02
 005315B1    mov edx, dword ptr ds:[eax+0x0C]
 005315B4    mov ecx, dword ptr ds:[eax+0x04]
 005315B7    push 0x01
-005315B9    call 0x00590760
+005315B9    call 0x00590760                                 ; => [ Call: sub_590760 ]
 005315BE    add esp, 0x18
-005315C1    call 0x00573400
+005315C1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005315C6    mov ecx, dword ptr ds:[eax+0x0C]
 005315C9    cmp ecx, 0xFFFFFFFF
 005315CC    jz 0x0053165C
 005315D2    mov eax, dword ptr ds:[eax+0x04]
 005315D5    xorps xmm0, xmm0
 005315D8    imul ecx, ecx, 0x5A30
-005315DE    movlpd qword ptr ss:[esp+0x04], xmm0
+005315DE    movlpd qword ptr ss:[esp+0x04], xmm0            ; => [ Call: __builtin_memset ]
 005315E4    movlpd qword ptr ss:[esp+0x14], xmm0
 005315EA    movlpd qword ptr ss:[esp+0x28], xmm0
 005315F0    movlpd qword ptr ss:[esp+0x20], xmm0
@@ -40,13 +46,13 @@
 00531639    push 0x00
 0053163B    push 0x02
 0053163D    movaps xmmword ptr ss:[esp+0x58], xmm0
-00531642    call 0x00563050
+00531642    call 0x00563050                                 ; => [ Call: sub_563050 ]
 00531647    add esp, 0x08
 0053164A    test eax, eax
 0053164C    jz 0x00531658
 0053164E    xor edx, edx
 00531650    lea ecx, ds:[edx+0x01]
-00531653    call 0x005621A0
+00531653    call 0x005621A0                                 ; => [ Call: sub_5621a0 ]
 00531658    mov esp, ebp
 0053165A    pop ebp
 0053165B    ret
@@ -55,10 +61,10 @@
 00531663    push 0x81EA70
 00531668    mov edx, 0x801800
 0053166D    mov ecx, 0x813C5C
-00531672    call 0x0063B870
+00531672    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 00531677    add esp, 0x0C
 0053167A    call 0x0063BC30
 0053167F    test al, al
-00531681    jz 0x00531684
+00531681    jz 0x00531684                                   ; => [ Call: sub_63bc30 ]
 00531683    int3
-00531684    call 0x0063BB00
+00531684    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

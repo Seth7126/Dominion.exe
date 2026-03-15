@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58d7a0
+// 起始地址: 0x58d7a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058D7A0    push ebp
 0058D7A1    mov ebp, esp
 0058D7A3    sub esp, 0x10
@@ -8,7 +14,7 @@
 0058D7AD    push edi
 0058D7AE    lea edx, ss:[ebp-0x08]
 0058D7B1    mov ecx, eax
-0058D7B3    call 0x00571770
+0058D7B3    call 0x00571770                                 ; => [ Call: sub_571770 ]
 0058D7B8    xor ebx, ebx
 0058D7BA    mov dword ptr ss:[ebp-0x0C], eax
 0058D7BD    test eax, eax
@@ -63,7 +69,7 @@
 0058D85A    mov esi, dword ptr ds:[edi-0x0C]
 0058D85D    mov edx, esi
 0058D85F    mov ecx, dword ptr ss:[ebp-0x04]
-0058D862    call 0x0058D710
+0058D862    call 0x0058D710                                 ; => [ Call: sub_58d710 ]
 0058D867    test al, al
 0058D869    jnz 0x0058D89F
 0058D86B    mov eax, dword ptr ss:[ebp-0x04]
@@ -101,10 +107,10 @@
 0058D8C3    push 0x81F4B8
 0058D8C8    mov edx, 0x801800
 0058D8CD    mov ecx, 0x820494
-0058D8D2    call 0x0063B870
+0058D8D2    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: AddExpansionCards | String: numCards < 1024 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0058D8D7    add esp, 0x0C
 0058D8DA    call 0x0063BC30
 0058D8DF    test al, al
-0058D8E1    jz 0x0058D8E4
+0058D8E1    jz 0x0058D8E4                                   ; => [ Call: sub_63bc30 ]
 0058D8E3    int3
-0058D8E4    call 0x0063BB00
+0058D8E4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

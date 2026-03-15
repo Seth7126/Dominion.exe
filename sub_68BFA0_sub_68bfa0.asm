@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_68bfa0
+// 起始地址: 0x68bfa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0068BFA0    push ebp
 0068BFA1    mov ebp, esp
 0068BFA3    sub esp, 0x408
-0068BFA9    mov eax, dword ptr ds:[0x008C4040]
+0068BFA9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0068BFAE    xor eax, ebp
 0068BFB0    mov dword ptr ss:[ebp-0x04], eax
 0068BFB3    mov eax, dword ptr ss:[ebp+0x08]
@@ -9,7 +15,7 @@
 0068BFB7    push esi
 0068BFB8    mov dword ptr ss:[ebp-0x408], eax
 0068BFBE    mov eax, dword ptr ds:[ecx]
-0068BFC0    mov ecx, 0x801800
+0068BFC0    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0068BFC5    push edi
 0068BFC6    test eax, eax
 0068BFC8    mov edi, edx
@@ -25,7 +31,7 @@
 0068BFF1    push eax
 0068BFF2    mov byte ptr ss:[ebp-0x05], 0x00
 0068BFF6    call ebx
-0068BFF8    mov esi, eax
+0068BFF8    mov esi, eax                                    ; => [ Data: data_807234 ]
 0068BFFA    add esp, 0x14
 0068BFFD    test esi, esi
 0068BFFF    jz 0x0068C061
@@ -68,7 +74,7 @@
 0068C04F    push 0x807234
 0068C054    push 0x00
 0068C056    call ebx
-0068C058    mov esi, eax
+0068C058    mov esi, eax                                    ; => [ Call: nullptr | Data: data_807234 ]
 0068C05A    add esp, 0x08
 0068C05D    test esi, esi
 0068C05F    jnz 0x0068C001
@@ -78,7 +84,7 @@
 0068C065    pop ebx
 0068C066    mov ecx, dword ptr ss:[ebp-0x04]
 0068C069    xor ecx, ebp
-0068C06B    call 0x0075927A
+0068C06B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0068C070    mov esp, ebp
 0068C072    pop ebp
 0068C073    ret
@@ -107,27 +113,27 @@
 0068C0AD    test eax, eax
 0068C0AF    jz 0x0068C13A
 0068C0B5    cmp eax, 0x801800
-0068C0BA    jz 0x0068C13A
+0068C0BA    jz 0x0068C13A                                   ; => [ Data: data_801800 ]
 0068C0C0    cmp dword ptr ds:[0x00CF65BC], 0x00
 0068C0C7    jz 0x0068C0E8
 0068C0C9    cmp byte ptr ds:[eax], 0x00
-0068C0CC    jz 0x0068C0E8
+0068C0CC    jz 0x0068C0E8                                   ; => [ Data: data_cf65bc ]
 0068C0CE    mov ecx, ebx
-0068C0D0    call 0x0063D4E0
+0068C0D0    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068C0D5    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 0068C0D9    jnz 0x0068C0E8
 0068C0DB    mov edx, dword ptr ds:[eax+0x0C]
 0068C0DE    mov ecx, eax
 0068C0E0    add edx, 0x10
-0068C0E3    call 0x0064C080
+0068C0E3    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0068C0E8    pop edi
 0068C0E9    pop esi
-0068C0EA    mov dword ptr ds:[ebx], 0x801800
+0068C0EA    mov dword ptr ds:[ebx], 0x801800                ; => [ Data: data_801800 ]
 0068C0F0    mov al, 0x01
 0068C0F2    pop ebx
 0068C0F3    mov ecx, dword ptr ss:[ebp-0x04]
 0068C0F6    xor ecx, ebp
-0068C0F8    call 0x0075927A
+0068C0F8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0068C0FD    mov esp, ebp
 0068C0FF    pop ebp
 0068C100    ret
@@ -152,14 +158,14 @@
 0068C12F    lea eax, ds:[edi+0x01]
 0068C132    add eax, esi
 0068C134    push eax
-0068C135    call 0x0063D8D0
+0068C135    call 0x0063D8D0                                 ; => [ Call: sub_63d8d0 ]
 0068C13A    mov ecx, dword ptr ss:[ebp-0x04]
 0068C13D    mov al, 0x01
 0068C13F    pop edi
 0068C140    pop esi
 0068C141    xor ecx, ebp
 0068C143    pop ebx
-0068C144    call 0x0075927A
+0068C144    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0068C149    mov esp, ebp
 0068C14B    pop ebp
 0068C14C    ret

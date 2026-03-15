@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_75ba20
+// 起始地址: 0x75ba20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075BA20    push ebp
 0075BA21    mov ebp, esp
 0075BA23    sub esp, 0xEC
-0075BA29    mov eax, dword ptr ds:[0x008C4040]
+0075BA29    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0075BA2E    xor eax, ebp
 0075BA30    mov dword ptr ss:[ebp-0x04], eax
 0075BA33    cmp byte ptr ds:[0x00CC8D48], 0x00
@@ -13,18 +19,18 @@
 0075BA44    mov dword ptr ss:[ebp-0xDC], esi
 0075BA4A    mov dword ptr ss:[ebp-0xD4], edi
 0075BA50    mov dword ptr ss:[ebp-0xD8], eax
-0075BA56    jnz 0x0075BA7A
+0075BA56    jnz 0x0075BA7A                                  ; => [ Data: data_cc8d48 ]
 0075BA58    test byte ptr ds:[esi+0x1068], 0x08
-0075BA5F    mov byte ptr ds:[0x00CC8D48], 0x01
+0075BA5F    mov byte ptr ds:[0x00CC8D48], 0x01              ; => [ Data: data_cc8d48 ]
 0075BA66    jnz 0x0075BA7A
 0075BA68    push 0x3000000
-0075BA6D    push 0x1000000
-0075BA72    call 0x0076207E
+0075BA6D    push 0x1000000                                  ; => [ Data: data_1000000 ]
+0075BA72    call 0x0076207E                                 ; => [ Call: _controlfp | Data: data_1000000 ]
 0075BA77    add esp, 0x08
 0075BA7A    cmp byte ptr ds:[0x00CC8D49], 0x00
-0075BA81    jnz 0x0075BAB2
+0075BA81    jnz 0x0075BAB2                                  ; => [ Data: data_cc8d49 ]
 0075BA83    test byte ptr ds:[esi+0x1068], 0x08
-0075BA8A    mov byte ptr ds:[0x00CC8D49], 0x01
+0075BA8A    mov byte ptr ds:[0x00CC8D49], 0x01              ; => [ Data: data_cc8d49 ]
 0075BA91    jnz 0x0075BAB2
 0075BA93    stmxcsr dword ptr ss:[ebp-0xD0]
 0075BA9A    mov eax, dword ptr ss:[ebp-0xD0]
@@ -35,7 +41,7 @@
 0075BAB6    mov eax, edi
 0075BAB8    cvtdq2pd xmm0, xmm0
 0075BABC    shr eax, 0x1F
-0075BABF    addsd xmm0, qword ptr ds:[eax*8+0x893660]
+0075BABF    addsd xmm0, qword ptr ds:[eax*8+0x893660]       ; => [ Data: data_893660 ]
 0075BAC8    mov eax, dword ptr ds:[esi+0x1054]
 0075BACE    cvtpd2ps xmm1, xmm0
 0075BAD2    movd xmm0, eax
@@ -44,11 +50,11 @@
 0075BADD    cmp dword ptr ds:[esi+0x10AC], 0x00
 0075BAE4    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 0075BAED    cvtpd2ps xmm0, xmm0
-0075BAF1    divss xmm1, xmm0
+0075BAF1    divss xmm1, xmm0                                ; => [ Data: data_893660 ]
 0075BAF5    xorps xmm0, xmm0
 0075BAF8    movss dword ptr ss:[ebp-0xE8], xmm1
 0075BB00    cvtps2pd xmm1, xmm1
-0075BB03    movsd qword ptr ds:[esi+0x10B8], xmm0
+0075BB03    movsd qword ptr ds:[esi+0x10B8], xmm0           ; => [ String: 0 | String: zx ]
 0075BB0B    addsd xmm1, qword ptr ds:[esi+0x10B0]
 0075BB13    movss xmm0, dword ptr ds:[esi+0x106C]
 0075BB1B    movss dword ptr ss:[ebp-0xE4], xmm0
@@ -57,32 +63,32 @@
 0075BB2D    sub esp, 0x08
 0075BB30    lea ecx, ds:[esi+0x1080]
 0075BB36    movsd qword ptr ss:[esp], xmm1
-0075BB3B    call 0x007607E0
+0075BB3B    call 0x007607E0                                 ; => [ Call: sub_7607e0 ]
 0075BB40    fstp dword ptr ds:[esi+0x106C]
 0075BB46    cmp dword ptr ds:[esi+0x04], 0x00
 0075BB4A    movss xmm0, dword ptr ds:[esi+0x106C]
 0075BB52    movss dword ptr ss:[ebp-0xEC], xmm0
 0075BB5A    jz 0x0075BB67
 0075BB5C    push dword ptr ds:[esi+0x04]
-0075BB5F    call 0x00761D70
+0075BB5F    call 0x00761D70                                 ; => [ Call: sub_761d70 ]
 0075BB64    add esp, 0x04
 0075BB67    cmp byte ptr ds:[esi+0x08], 0x00
 0075BB6B    jz 0x0075BB9E
-0075BB6D    push 0x77E8E4
+0075BB6D    push 0x77E8E4                                   ; => [ String: !mInsideAudioThreadMutex ]
 0075BB72    push 0x902
-0075BB77    push 0x77E900
+0075BB77    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075BB7C    lea eax, ss:[ebp-0xCC]
 0075BB82    push 0x77E920
 0075BB87    push eax
-0075BB88    call 0x0063BB20
+0075BB88    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075BB8D    add esp, 0x14
 0075BB90    lea eax, ss:[ebp-0xCC]
 0075BB96    push eax
 0075BB97    call dword ptr ds:[0x007750A8]
 0075BB9D    int3
-0075BB9E    xor eax, eax
+0075BB9E    xor eax, eax                                    ; => [ Call: nullptr ]
 0075BBA0    mov byte ptr ds:[esi+0x08], 0x01
-0075BBA4    mov dword ptr ss:[ebp-0xD0], eax
+0075BBA4    mov dword ptr ss:[ebp-0xD0], eax                ; => [ Call: nullptr ]
 0075BBAA    cmp dword ptr ds:[esi+0x1C], eax
 0075BBAD    jle 0x0075BDB3
 0075BBB3    lea edi, ds:[esi+0x50]
@@ -115,14 +121,14 @@
 0075BC2B    sub esp, 0x08
 0075BC2E    add ecx, 0xC8
 0075BC34    movsd qword ptr ss:[esp], xmm0
-0075BC39    call 0x007607E0
+0075BC39    call 0x007607E0                                 ; => [ Call: sub_7607e0 ]
 0075BC3E    push ecx
 0075BC3F    fstp dword ptr ss:[ebp-0xE0]
 0075BC45    movss xmm0, dword ptr ss:[ebp-0xE0]
 0075BC4D    mov ecx, esi
 0075BC4F    movss dword ptr ss:[esp], xmm0
 0075BC54    push dword ptr ss:[ebp-0xD0]
-0075BC5A    call 0x00760BD0
+0075BC5A    call 0x00760BD0                                 ; => [ Call: sub_760bd0 ]
 0075BC5F    mov ecx, dword ptr ds:[edi]
 0075BC61    cmp dword ptr ds:[ecx+0xC4], 0x00
 0075BC68    jle 0x0075BCB7
@@ -136,10 +142,10 @@
 0075BC86    push dword ptr ss:[ebp-0xD0]
 0075BC8C    fstp dword ptr ss:[ebp-0xE0]
 0075BC92    movss xmm0, dword ptr ss:[ebp-0xE0]
-0075BC9A    movss dword ptr ds:[eax+0x38], xmm0
+0075BC9A    movss dword ptr ds:[eax+0x38], xmm0             ; => [ Call: sub_7607e0 ]
 0075BC9F    mov eax, dword ptr ds:[edi]
 0075BCA1    mov dword ptr ds:[eax+0x158], 0x01
-0075BCAB    call 0x007610D0
+0075BCAB    call 0x007610D0                                 ; => [ Call: sub_7610d0 ]
 0075BCB0    mov byte ptr ds:[esi+0x1CDC0], 0x01
 0075BCB7    mov ecx, dword ptr ds:[edi]
 0075BCB9    cmp dword ptr ds:[ecx+0x94], 0x00
@@ -148,14 +154,14 @@
 0075BCC7    sub esp, 0x08
 0075BCCA    add ecx, 0x68
 0075BCCD    movsd qword ptr ss:[esp], xmm0
-0075BCD2    call 0x007607E0
+0075BCD2    call 0x007607E0                                 ; => [ Call: sub_7607e0 ]
 0075BCD7    push ecx
 0075BCD8    fstp dword ptr ss:[ebp-0xE0]
 0075BCDE    movss xmm0, dword ptr ss:[ebp-0xE0]
 0075BCE6    mov ecx, esi
 0075BCE8    movss dword ptr ss:[esp], xmm0
 0075BCED    push dword ptr ss:[ebp-0xD0]
-0075BCF3    call 0x007608E0
+0075BCF3    call 0x007608E0                                 ; => [ Call: sub_7608e0 ]
 0075BCF8    mov eax, dword ptr ds:[edi]
 0075BCFA    mov dword ptr ds:[eax+0x158], 0x01
 0075BD04    mov ecx, dword ptr ds:[edi]
@@ -165,7 +171,7 @@
 0075BD14    sub esp, 0x08
 0075BD17    add ecx, 0xF8
 0075BD1D    movsd qword ptr ss:[esp], xmm0
-0075BD22    call 0x007607E0
+0075BD22    call 0x007607E0                                 ; => [ Call: sub_7607e0 ]
 0075BD27    mov eax, dword ptr ds:[edi]
 0075BD29    fstp st0
 0075BD2B    cmp dword ptr ds:[eax+0x124], 0xFFFFFFFF
@@ -174,7 +180,7 @@
 0075BD36    push dword ptr ss:[ebp-0xD0]
 0075BD3C    mov ecx, esi
 0075BD3E    mov dword ptr ds:[eax+0x124], 0x00
-0075BD48    call 0x00760AF0
+0075BD48    call 0x00760AF0                                 ; => [ Call: sub_760af0 ]
 0075BD4D    mov ecx, dword ptr ds:[edi]
 0075BD4F    cmp dword ptr ds:[ecx+0x154], 0x00
 0075BD56    jz 0x0075BD94
@@ -182,7 +188,7 @@
 0075BD5D    sub esp, 0x08
 0075BD60    add ecx, 0x128
 0075BD66    movsd qword ptr ss:[esp], xmm0
-0075BD6B    call 0x007607E0
+0075BD6B    call 0x007607E0                                 ; => [ Call: sub_7607e0 ]
 0075BD70    mov eax, dword ptr ds:[edi]
 0075BD72    fstp st0
 0075BD74    cmp dword ptr ds:[eax+0x154], 0xFFFFFFFF
@@ -190,7 +196,7 @@
 0075BD7D    push dword ptr ss:[ebp-0xD0]
 0075BD83    mov ecx, esi
 0075BD85    mov dword ptr ds:[eax+0x154], 0x00
-0075BD8F    call 0x00760F30
+0075BD8F    call 0x00760F30                                 ; => [ Call: sub_760f30 ]
 0075BD94    mov eax, dword ptr ss:[ebp-0xD0]
 0075BD9A    inc eax
 0075BD9B    add edi, 0x04
@@ -201,7 +207,7 @@
 0075BDB3    cmp byte ptr ds:[esi+0x1CDC0], 0x00
 0075BDBA    jz 0x0075BDC3
 0075BDBC    mov ecx, esi
-0075BDBE    call 0x0075A730
+0075BDBE    call 0x0075A730                                 ; => [ Call: sub_75a730 ]
 0075BDC3    mov eax, dword ptr ds:[esi+0x1054]
 0075BDC9    push dword ptr ds:[esi+0x1050]
 0075BDCF    push dword ptr ds:[esi+0x1058]
@@ -211,14 +217,14 @@
 0075BDE0    push ecx
 0075BDE1    mov ecx, esi
 0075BDE3    addsd xmm0, qword ptr ds:[eax*8+0x893660]
-0075BDEC    cvtpd2ps xmm0, xmm0
+0075BDEC    cvtpd2ps xmm0, xmm0                             ; => [ Data: data_893660 ]
 0075BDF0    movss dword ptr ss:[esp], xmm0
 0075BDF5    push 0x00
 0075BDF7    push dword ptr ds:[esi+0x20]
 0075BDFA    push dword ptr ss:[ebp-0xD8]
 0075BE00    push edi
 0075BE01    push dword ptr ds:[esi+0x30]
-0075BE04    call 0x0075B0E0
+0075BE04    call 0x0075B0E0                                 ; => [ Call: sub_75b0e0 ]
 0075BE09    mov eax, 0x08
 0075BE0E    lea edi, ds:[esi+0x10E0]
 0075BE14    mov dword ptr ss:[ebp-0xD0], eax
@@ -235,7 +241,7 @@
 0075BE43    cvtdq2pd xmm0, xmm0
 0075BE47    shr eax, 0x1F
 0075BE4A    addsd xmm0, qword ptr ds:[eax*8+0x893660]
-0075BE53    cvtpd2ps xmm0, xmm0
+0075BE53    cvtpd2ps xmm0, xmm0                             ; => [ Data: data_893660 ]
 0075BE57    movss dword ptr ss:[esp], xmm0
 0075BE5C    push dword ptr ds:[esi+0x1058]
 0075BE62    push dword ptr ss:[ebp-0xD8]
@@ -249,13 +255,13 @@
 0075BE86    jnz 0x0075BE20
 0075BE88    cmp byte ptr ds:[esi+0x08], 0x00
 0075BE8C    jnz 0x0075BEBF
-0075BE8E    push 0x77E9B8
+0075BE8E    push 0x77E9B8                                   ; => [ String: mInsideAudioThreadMutex ]
 0075BE93    push 0x908
-0075BE98    push 0x77E900
+0075BE98    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075BE9D    lea eax, ss:[ebp-0xCC]
 0075BEA3    push 0x77E920
 0075BEA8    push eax
-0075BEA9    call 0x0063BB20
+0075BEA9    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075BEAE    add esp, 0x14
 0075BEB1    lea eax, ss:[ebp-0xCC]
 0075BEB7    push eax
@@ -265,7 +271,7 @@
 0075BEC3    mov byte ptr ds:[esi+0x08], 0x00
 0075BEC7    jz 0x0075BED4
 0075BEC9    push dword ptr ds:[esi+0x04]
-0075BECC    call 0x00761DD0
+0075BECC    call 0x00761DD0                                 ; => [ Call: sub_761dd0 ]
 0075BED1    add esp, 0x04
 0075BED4    movss xmm0, dword ptr ss:[ebp-0xEC]
 0075BEDC    lea eax, ds:[esi+0x20]
@@ -278,13 +284,13 @@
 0075BEFD    push eax
 0075BEFE    lea eax, ds:[esi+0x30]
 0075BF01    push eax
-0075BF02    call 0x0075A8D0
+0075BF02    call 0x0075A8D0                                 ; => [ Call: sub_75a8d0 ]
 0075BF07    test byte ptr ds:[esi+0x1068], 0x02
 0075BF0E    jz 0x0075C0DF
 0075BF14    cmp dword ptr ss:[ebp-0xD4], 0xFF
 0075BF1E    lea ecx, ds:[esi+0x1100]
 0075BF24    movss xmm2, dword ptr ds:[0x008937A0]
-0075BF2C    mov dword ptr ds:[esi+0x1100], 0x00
+0075BF2C    mov dword ptr ds:[esi+0x1100], 0x00             ; => [ Call: __builtin_memset ]
 0075BF36    mov dword ptr ds:[esi+0x1104], 0x00
 0075BF40    mov dword ptr ds:[esi+0x1108], 0x00
 0075BF4A    mov dword ptr ds:[esi+0x110C], 0x00
@@ -335,7 +341,7 @@
 0075C029    pop esi
 0075C02A    mov ecx, dword ptr ss:[ebp-0x04]
 0075C02D    xor ecx, ebp
-0075C02F    call 0x0075927A
+0075C02F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075C034    mov esp, ebp
 0075C036    pop ebp
 0075C037    ret 0x08
@@ -383,7 +389,7 @@
 0075C0E2    pop edi
 0075C0E3    xor ecx, ebp
 0075C0E5    pop esi
-0075C0E6    call 0x0075927A
+0075C0E6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075C0EB    mov esp, ebp
 0075C0ED    pop ebp
 0075C0EE    ret 0x08

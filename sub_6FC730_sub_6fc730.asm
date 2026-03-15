@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6fc730
+// 起始地址: 0x6fc730
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FC730    push ebp
 006FC731    mov ebp, esp
 006FC733    sub esp, 0x5C
-006FC736    mov eax, dword ptr ds:[0x008C4040]
+006FC736    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006FC73B    xor eax, ebp
 006FC73D    mov dword ptr ss:[ebp-0x04], eax
 006FC740    push ebx
@@ -11,12 +17,12 @@
 006FC748    push edi
 006FC749    call 0x0063C270
 006FC74E    test al, al
-006FC750    jz 0x006FC894
+006FC750    jz 0x006FC894                                   ; => [ Call: sub_63c270 ]
 006FC756    movq xmm0, qword ptr ds:[0x007FEFA4]
 006FC75E    mov eax, dword ptr ds:[0x007FEFAC]
 006FC763    movq qword ptr ss:[ebp-0x58], xmm0
 006FC768    xorps xmm0, xmm0
-006FC76B    movss dword ptr ss:[ebp-0x44], xmm0
+006FC76B    movss dword ptr ss:[ebp-0x44], xmm0             ; => [ Call: nullptr ]
 006FC770    movss xmm0, dword ptr ds:[0x00890F10]
 006FC778    mov dword ptr ss:[ebp-0x50], eax
 006FC77B    mov dword ptr ss:[ebp-0x20], 0x00
@@ -25,7 +31,7 @@
 006FC790    call 0x004AC580
 006FC795    movss xmm1, dword ptr ds:[0x00890E18]
 006FC79D    xor ebx, ebx
-006FC79F    divss xmm1, xmm0
+006FC79F    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006FC7A3    mov esi, 0x70
 006FC7A8    movss dword ptr ss:[ebp-0x14], xmm1
 006FC7AD    movups xmm0, xmmword ptr ss:[ebp-0x20]
@@ -34,10 +40,10 @@
 006FC7B8    movq qword ptr ss:[ebp-0x10], xmm1
 006FC7BD    nop dword ptr ds:[eax], eax
 006FC7C0    mov eax, dword ptr ds:[0x0147DEC8]
-006FC7C5    mov ecx, dword ptr ds:[esi+eax*1]
+006FC7C5    mov ecx, dword ptr ds:[esi+eax*1]               ; => [ Data: data_147dec8 ]
 006FC7C8    test ecx, ecx
 006FC7CA    jz 0x006FC852
-006FC7D0    call 0x006DB490
+006FC7D0    call 0x006DB490                                 ; => [ Call: sub_6db490 ]
 006FC7D5    mov edi, eax
 006FC7D7    lea edx, ss:[ebp-0x20]
 006FC7DA    lea eax, ss:[ebp-0x4C]
@@ -46,7 +52,7 @@
 006FC7E0    call 0x006DA9E0
 006FC7E5    add esp, 0x04
 006FC7E8    test al, al
-006FC7EA    jz 0x006FC852
+006FC7EA    jz 0x006FC852                                   ; => [ Call: sub_6da9e0 | Call: sub_6daff0 ]
 006FC7EC    lea eax, ss:[ebp-0x4C]
 006FC7EF    mov ecx, edi
 006FC7F1    push eax
@@ -82,13 +88,13 @@
 006FC860    jnz 0x006FC8A7
 006FC862    xorps xmm0, xmm0
 006FC865    lea edx, ss:[ebp-0x40]
-006FC868    movups xmmword ptr ss:[ebp-0x40], xmm0
+006FC868    movups xmmword ptr ss:[ebp-0x40], xmm0          ; => [ String: 0 | String: zx ]
 006FC86C    lea ecx, ss:[ebp-0x20]
 006FC86F    mov byte ptr ss:[ebp-0x34], 0x01
-006FC873    movups xmmword ptr ss:[ebp-0x30], xmm0
+006FC873    movups xmmword ptr ss:[ebp-0x30], xmm0          ; => [ String: 0 | String: zx ]
 006FC877    call 0x006DB2F0
 006FC87C    test al, al
-006FC87E    jz 0x006FC894
+006FC87E    jz 0x006FC894                                   ; => [ Call: sub_6db2f0 ]
 006FC880    mov ebx, dword ptr ss:[ebp-0x24]
 006FC883    movq xmm0, qword ptr ss:[ebp-0x30]
 006FC888    mov esi, dword ptr ss:[ebp-0x28]
@@ -101,7 +107,7 @@
 006FC898    pop ebx
 006FC899    mov ecx, dword ptr ss:[ebp-0x04]
 006FC89C    xor ecx, ebp
-006FC89E    call 0x0075927A
+006FC89E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006FC8A3    mov esp, ebp
 006FC8A5    pop ebp
 006FC8A6    ret
@@ -110,17 +116,17 @@
 006FC8AF    movq qword ptr ss:[ebp-0x48], xmm0
 006FC8B4    mov ecx, ebx
 006FC8B6    call 0x006DB490
-006FC8BB    mov edx, dword ptr ds:[eax+0x68]
+006FC8BB    mov edx, dword ptr ds:[eax+0x68]                ; => [ Call: sub_6db490 ]
 006FC8BE    mov eax, dword ptr ds:[0x0147DECC]
 006FC8C3    cmp dword ptr ds:[eax], 0x01
-006FC8C6    mov eax, dword ptr ds:[0x0147DEC8]
+006FC8C6    mov eax, dword ptr ds:[0x0147DEC8]              ; => [ Data: data_147dec8 ]
 006FC8CB    jnz 0x006FC8DC
 006FC8CD    cmp dword ptr ds:[eax+0x70], edx
 006FC8D0    jz 0x006FC911
 006FC8D2    cmp dword ptr ds:[eax+0x74], edx
 006FC8D5    jz 0x006FC911
 006FC8D7    cmp dword ptr ds:[eax+0x78], edx
-006FC8DA    jz 0x006FC911
+006FC8DA    jz 0x006FC911                                   ; => [ Data: data_147decc ]
 006FC8DC    mov ecx, edx
 006FC8DE    sar ecx, 0x04
 006FC8E1    or ecx, edx
@@ -140,7 +146,7 @@
 006FC8FD    pop ebx
 006FC8FE    mov ecx, dword ptr ss:[ebp-0x04]
 006FC901    xor ecx, ebp
-006FC903    call 0x0075927A
+006FC903    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006FC908    mov esp, ebp
 006FC90A    pop ebp
 006FC90B    ret
@@ -158,7 +164,7 @@
 006FC92A    pop esi
 006FC92B    xor ecx, ebp
 006FC92D    pop ebx
-006FC92E    call 0x0075927A
+006FC92E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006FC933    mov esp, ebp
 006FC935    pop ebp
 006FC936    ret

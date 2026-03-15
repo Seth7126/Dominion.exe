@@ -1,20 +1,26 @@
+// ============================================================
+// 函数名称: sub_567780
+// 起始地址: 0x567780
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00567780    push ebp
 00567781    mov ebp, esp
 00567783    push 0xFFFFFFFF
-00567785    push 0x767155
+00567785    push 0x767155                                   ; => [ Type: EHRegistrationNode | Call: sub_767155 ]
 0056778A    mov eax, dword ptr fs:[0x00000000]
-00567790    push eax
+00567790    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00567791    mov eax, 0x1948
-00567796    call 0x00761E50
+00567796    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0056779B    mov eax, dword ptr ds:[0x008C4040]
-005677A0    xor eax, ebp
+005677A0    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 005677A2    mov dword ptr ss:[ebp-0x14], eax
 005677A5    push ebx
 005677A6    push esi
 005677A7    push edi
 005677A8    push eax
 005677A9    lea eax, ss:[ebp-0x0C]
-005677AC    mov dword ptr fs:[0x00000000], eax
+005677AC    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005677B2    mov dword ptr ss:[ebp-0x18], ecx
 005677B5    lea eax, ss:[ebp-0xCCC]
 005677BB    mov ecx, 0x3EA
@@ -26,7 +32,7 @@
 005677CE    mov ecx, 0x321
 005677D3    mov edi, ebx
 005677D5    lea eax, ss:[ebp-0x1954]
-005677DB    rep movsd
+005677DB    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 005677DD    push 0x1000
 005677E2    push 0x00
 005677E4    push eax
@@ -37,7 +43,7 @@
 005677F6    lea edi, ss:[ebp-0xCCC]
 005677FC    mov esi, eax
 005677FE    add esp, 0x0C
-00567801    rep movsd
+00567801    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5685f0 ]
 00567803    mov edi, dword ptr ss:[ebp-0x4C]
 00567806    xor edx, edx
 00567808    test edi, edi
@@ -57,8 +63,8 @@
 0056783A    mov eax, dword ptr ss:[ebp-0x18]
 0056783D    mov dword ptr ss:[ebp-0x40], eax
 00567840    lea eax, ss:[ebp-0x44]
-00567843    mov dword ptr ss:[ebp-0x44], 0x81F14C
-0056784A    mov dword ptr ss:[ebp-0x20], eax
+00567843    mov dword ptr ss:[ebp-0x44], 0x81F14C           ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_e918bbb9afe58de0ead3fdf1487a3e3e>,bool,enum CardID>::VTable | Data: std::_Func_impl_no_alloc<class <lambda_e918bbb9afe58de0ead3fdf1487a3e3e>,bool,enum CardID>::`vftable'{for `std::_Func_base<bool,enum CardID>'} ]
+0056784A    mov dword ptr ss:[ebp-0x20], eax                ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_e918bbb9afe58de0ead3fdf1487a3e3e>,bool,enum CardID>::VTable ]
 0056784D    lea eax, ss:[ebp-0x18]
 00567850    mov dword ptr ss:[ebp-0x04], 0x00
 00567857    push eax
@@ -82,7 +88,7 @@
 00567889    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 00567890    add esp, 0x30
 00567893    mov ecx, dword ptr ss:[ebp-0x20]
-00567896    mov dword ptr ds:[ebx+0xC80], eax
+00567896    mov dword ptr ds:[ebx+0xC80], eax               ; => [ Call: GSI1::OffForSym ]
 0056789C    test ecx, ecx
 0056789E    jz 0x005678B8
 005678A0    mov edx, dword ptr ds:[ecx]
@@ -94,17 +100,17 @@
 005678AE    call dword ptr ds:[edx+0x10]
 005678B1    mov dword ptr ss:[ebp-0x20], 0x00
 005678B8    mov ecx, ebx
-005678BA    call 0x00567690
+005678BA    call 0x00567690                                 ; => [ Call: sub_567690 ]
 005678BF    mov eax, ebx
 005678C1    mov ecx, dword ptr ss:[ebp-0x0C]
-005678C4    mov dword ptr fs:[0x00000000], ecx
+005678C4    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005678CB    pop ecx
 005678CC    pop edi
 005678CD    pop esi
 005678CE    pop ebx
 005678CF    mov ecx, dword ptr ss:[ebp-0x14]
 005678D2    xor ecx, ebp
-005678D4    call 0x0075927A
+005678D4    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005678D9    mov esp, ebp
 005678DB    pop ebp
 005678DC    ret

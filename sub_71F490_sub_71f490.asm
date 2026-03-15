@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71f490
+// 起始地址: 0x71f490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071F490    push ebp
 0071F491    mov ebp, esp
 0071F493    movq xmm0, qword ptr ds:[0x00CB3CDC]
@@ -5,10 +11,10 @@
 0071F49C    mov esi, ecx
 0071F49E    push edi
 0071F49F    push 0x80
-0071F4A4    movq qword ptr ds:[esi+0x10], xmm0
+0071F4A4    movq qword ptr ds:[esi+0x10], xmm0              ; => [ Data: data_cb3cdc ]
 0071F4A9    lea edi, ds:[esi+0x28]
 0071F4AC    mov eax, dword ptr ds:[0x00CB3CE4]
-0071F4B1    mov dword ptr ds:[esi+0x18], eax
+0071F4B1    mov dword ptr ds:[esi+0x18], eax                ; => [ Data: data_cb3ce4 ]
 0071F4B4    mov eax, dword ptr ss:[ebp+0x08]
 0071F4B7    push edi
 0071F4B8    mov dword ptr ds:[esi+0x1C], eax

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72b700
+// 起始地址: 0x72b700
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072B700    push ebp
 0072B701    mov ebp, esp
 0072B703    sub esp, 0x10
@@ -8,7 +14,7 @@
 0072B710    push edi
 0072B711    mov esi, ecx
 0072B713    mov dword ptr ss:[ebp-0x08], eax
-0072B716    xor ebx, ebx
+0072B716    xor ebx, ebx                                    ; => [ Call: nullptr ]
 0072B718    test edx, eax
 0072B71A    jz 0x0072B820
 0072B720    cmp dword ptr ds:[esi+0x10], 0x00

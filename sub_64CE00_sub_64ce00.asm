@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64ce00
+// 起始地址: 0x64ce00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064CE00    push ebp
 0064CE01    mov ebp, esp
 0064CE03    sub esp, 0x0C
@@ -9,13 +15,13 @@
 0064CE11    cmp eax, 0x09
 0064CE14    jnbe 0x0064CF07
 0064CE1A    movzx eax, byte ptr ds:[eax+0x64CF5C]
-0064CE21    jmp dword ptr ds:[eax*4+0x64CF4C]
-0064CE28    mov eax, dword ptr ds:[edx+0x04]
+0064CE21    jmp dword ptr ds:[eax*4+0x64CF4C]               ; => [ Data: jump_table_64cf4c ]
+0064CE28    mov eax, dword ptr ds:[edx+0x04]                ; => [ Data: lookup_table_64cf5c ]
 0064CE2B    sub eax, 0x00
 0064CE2E    jz 0x0064CE58
 0064CE30    mov edx, 0x801800
 0064CE35    mov ecx, 0x801AA4
-0064CE3A    push 0x876B20
+0064CE3A    push 0x876B20                                   ; => [ String: EvalValEval ]
 0064CE3F    sub eax, 0x01
 0064CE42    jz 0x0064CE4E
 0064CE44    push 0xCA9
@@ -29,14 +35,14 @@
 0064CE65    cmp byte ptr ds:[eax], 0x00
 0064CE68    jz 0x0064CF13
 0064CE6E    mov ecx, esi
-0064CE70    call 0x0063D4E0
+0064CE70    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0064CE75    inc dword ptr ds:[eax+0x04]
 0064CE78    mov eax, esi
 0064CE7A    pop esi
 0064CE7B    mov esp, ebp
 0064CE7D    pop ebp
 0064CE7E    ret
-0064CE7F    mov eax, dword ptr ds:[edx+0x04]
+0064CE7F    mov eax, dword ptr ds:[edx+0x04]                ; => [ Data: lookup_table_64cf5c ]
 0064CE82    sub eax, 0x00
 0064CE85    jnz 0x0064CE30
 0064CE87    sub ecx, 0x01
@@ -46,7 +52,7 @@
 0064CE91    sub ecx, 0x01
 0064CE94    jnz 0x0064CF1A
 0064CE9A    mov eax, dword ptr ds:[edx+0x0C]
-0064CE9D    mov ecx, 0x801800
+0064CE9D    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0064CEA2    test eax, eax
 0064CEA4    cmovnz ecx, eax
 0064CEA7    push ecx
@@ -64,7 +70,7 @@
 0064CED0    movsd qword ptr ss:[esp], xmm0
 0064CED5    push 0x874634
 0064CEDA    push esi
-0064CEDB    call 0x0063DF30
+0064CEDB    call 0x0063DF30                                 ; => [ String: %g | Call: sub_63df30 ]
 0064CEE0    add esp, 0x10
 0064CEE3    mov eax, esi
 0064CEE5    pop esi
@@ -73,10 +79,10 @@
 0064CEE9    ret
 0064CEEA    mov ecx, edx
 0064CEEC    call 0x0067D600
-0064CEF1    push eax
+0064CEF1    push eax                                        ; => [ Data: lookup_table_64cf5c | Call: sub_67d600 ]
 0064CEF2    push 0x808880
 0064CEF7    push esi
-0064CEF8    call 0x0063DF30
+0064CEF8    call 0x0063DF30                                 ; => [ String: %d | Call: sub_63df30 ]
 0064CEFD    add esp, 0x0C
 0064CF00    mov eax, esi
 0064CF02    pop esi
@@ -85,21 +91,21 @@
 0064CF06    ret
 0064CF07    mov edx, 0x801800
 0064CF0C    mov ecx, esi
-0064CF0E    call 0x0063D720
+0064CF0E    call 0x0063D720                                 ; => [ Data: data_801800 | Call: sub_63d720 | Data: lookup_table_64cf5c | Data: data_801800 | Call: sub_63d720 ]
 0064CF13    mov eax, esi
 0064CF15    pop esi
 0064CF16    mov esp, ebp
 0064CF18    pop ebp
 0064CF19    ret
-0064CF1A    push 0x8742E8
+0064CF1A    push 0x8742E8                                   ; => [ String: EvalValGet ]
 0064CF1F    push 0x8E0
 0064CF24    mov edx, 0x801800
 0064CF29    mov ecx, 0x801AA4
 0064CF2E    push 0x8739B4
-0064CF33    call 0x0063B870
+0064CF33    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\UI2.cpp | String: Halt ]
 0064CF38    add esp, 0x0C
 0064CF3B    call 0x0063BC30
 0064CF40    test al, al
-0064CF42    jz 0x0064CF45
+0064CF42    jz 0x0064CF45                                   ; => [ Call: sub_63bc30 ]
 0064CF44    int3
-0064CF45    call 0x0063BB00
+0064CF45    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

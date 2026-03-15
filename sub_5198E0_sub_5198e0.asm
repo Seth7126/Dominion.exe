@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5198e0
+// 起始地址: 0x5198e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005198E0    dword B9575653
 005198E4    adc byte ptr ds:[edi], ah
 005198E6    add byte ptr ds:[eax], al
 005198E8    call 0x00516F30
-005198ED    mov edi, eax
+005198ED    mov edi, eax                                    ; => [ Call: sub_516f30 ]
 005198EF    xor ecx, ecx
 005198F1    mov edx, edi
 005198F3    cmp dword ptr ds:[edx+0x0C], 0x04
@@ -25,7 +31,7 @@
 00519921    push ecx
 00519922    mov ecx, dword ptr ds:[ebx+esi*4]
 00519925    mov edx, 0x05
-0051992A    call 0x00517980
+0051992A    call 0x00517980                                 ; => [ Call: sub_517980 ]
 0051992F    add esp, 0x04
 00519932    test al, al
 00519934    jnz 0x0051993F

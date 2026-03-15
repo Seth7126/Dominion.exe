@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51e730
+// 起始地址: 0x51e730
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051E730    push ebp
 0051E731    mov ebp, esp
 0051E733    mov eax, dword ptr ss:[ebp+0x08]
@@ -7,7 +13,7 @@
 0051E73F    sar ecx, 0x04
 0051E742    or ecx, edx
 0051E744    and ecx, dword ptr ds:[0x01597E10]
-0051E74A    mov eax, dword ptr ds:[eax+ecx*4]
+0051E74A    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 0051E74D    test eax, eax
 0051E74F    jz 0x0051E75C
 0051E751    cmp edx, dword ptr ds:[eax]
@@ -22,7 +28,7 @@
 0051E765    test ecx, ecx
 0051E767    jz 0x0051E75C
 0051E769    mov edx, dword ptr ds:[ecx]
-0051E76B    xor eax, eax
+0051E76B    xor eax, eax                                    ; => [ Call: nullptr ]
 0051E76D    mov ecx, dword ptr ds:[ecx+0x04]
 0051E770    test ecx, ecx
 0051E772    jle 0x0051E75C

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_574670
+// 起始地址: 0x574670
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00574670    push ebp
 00574671    mov ebp, esp
 00574673    push ecx
@@ -16,7 +22,7 @@
 0057468B    push edi
 0057468C    push 0x3EB
 00574691    mov edx, dword ptr ds:[eax+ebx*4]
-00574694    call 0x005727E0
+00574694    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 00574699    mov eax, dword ptr ss:[ebp+0x10]
 0057469C    inc ebx
 0057469D    add esp, 0x0C
@@ -25,7 +31,7 @@
 005746A4    mov ebx, 0x07
 005746A9    sub ebx, eax
 005746AB    jns 0x005746B4
-005746AD    call 0x00591930
+005746AD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005746B2    jmp 0x005746D4
 005746B4    test ebx, ebx
 005746B6    jle 0x005746D4
@@ -34,7 +40,7 @@
 005746BB    push 0x3EB
 005746C0    mov edx, 0x104
 005746C5    mov ecx, esi
-005746C7    call 0x005727E0
+005746C7    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 005746CC    add esp, 0x0C
 005746CF    sub ebx, 0x01
 005746D2    jnz 0x005746B8
@@ -45,7 +51,7 @@
 005746E3    push 0x3EB
 005746E8    mov edx, 0x101
 005746ED    mov ecx, esi
-005746EF    call 0x005727E0
+005746EF    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 005746F4    add esp, 0x0C
 005746F7    sub ebx, 0x01
 005746FA    jnz 0x005746E0
@@ -54,7 +60,7 @@
 00574704    push 0x01
 00574706    push eax
 00574707    mov ecx, esi
-00574709    call 0x0051BB20
+00574709    call 0x0051BB20                                 ; => [ Call: sub_51bb20 ]
 0057470E    add esp, 0x08
 00574711    mov ebx, eax
 00574713    cmp byte ptr ss:[ebp+0x08], 0x00
@@ -64,19 +70,19 @@
 0057471F    push ecx
 00574720    mov edx, edi
 00574722    mov ecx, esi
-00574724    call 0x005745C0
+00574724    call 0x005745C0                                 ; => [ Call: sub_5745c0 ]
 00574729    add esp, 0x08
 0057472C    mov edx, edi
 0057472E    push 0x92B
 00574733    push ecx
 00574734    mov ecx, esi
-00574736    call 0x005745C0
+00574736    call 0x005745C0                                 ; => [ Call: sub_5745c0 ]
 0057473B    add esp, 0x08
 0057473E    mov edx, edi
 00574740    push 0x929
 00574745    push ecx
 00574746    mov ecx, esi
-00574748    call 0x005745C0
+00574748    call 0x005745C0                                 ; => [ Call: sub_5745c0 ]
 0057474D    add esp, 0x0C
 00574750    lea eax, ds:[esi+0xD38]
 00574756    mov edx, edi
@@ -86,8 +92,8 @@
 0057475D    call 0x0051BB20
 00574762    add esp, 0x08
 00574765    mov ecx, esi
-00574767    or ebx, eax
-00574769    call 0x00583350
+00574767    or ebx, eax                                     ; => [ Call: sub_51bb20 ]
+00574769    call 0x00583350                                 ; => [ Call: sub_583350 ]
 0057476E    pop edi
 0057476F    pop esi
 00574770    mov eax, ebx

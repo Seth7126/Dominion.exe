@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d1670
+// 起始地址: 0x6d1670
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D1670    push ebp
 006D1671    mov ebp, esp
 006D1673    sub esp, 0x14
@@ -50,7 +56,7 @@
 006D16E5    mov dword ptr ds:[edi+0x04], esi
 006D16E8    jmp 0x006D1696
 006D16EA    mov ecx, edi
-006D16EC    call 0x006D14D0
+006D16EC    call 0x006D14D0                                 ; => [ Call: sub_6d14d0 ]
 006D16F1    jmp 0x006D1696
 006D16F3    cmp ecx, esi
 006D16F5    jl 0x006D16FD

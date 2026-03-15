@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e9e00
+// 起始地址: 0x4e9e00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E9E00    push ebp
 004E9E01    mov ebp, esp
 004E9E03    push esi
@@ -23,7 +29,7 @@
 004E9E2D    shr esi, 0x10
 004E9E30    or esi, ecx
 004E9E32    lea ecx, ds:[esi*4+0x04]
-004E9E39    call 0x0064C020
+004E9E39    call 0x0064C020                                 ; => [ Call: sub_64c020 ]
 004E9E3E    mov dword ptr ds:[edi+0x04], esi
 004E9E41    mov dword ptr ds:[edi], eax
 004E9E43    pop edi
@@ -35,10 +41,10 @@
 004E9E50    push 0x802620
 004E9E55    mov edx, 0x801800
 004E9E5A    mov ecx, 0x80264C
-004E9E5F    call 0x0063B870
+004E9E5F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\xMap.h | String: mNodeBuckets == NULL | String: XMap<class XString,enum DomCardEnum>::SetNumBuckets ]
 004E9E64    add esp, 0x0C
 004E9E67    call 0x0063BC30
 004E9E6C    test al, al
-004E9E6E    jz 0x004E9E71
+004E9E6E    jz 0x004E9E71                                   ; => [ Call: sub_63bc30 ]
 004E9E70    int3
-004E9E71    call 0x0063BB00
+004E9E71    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

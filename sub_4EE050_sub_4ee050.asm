@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ee050
+// 起始地址: 0x4ee050
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EE050    push ebp
 004EE051    mov ebp, esp
 004EE053    push ecx
@@ -10,21 +16,21 @@
 004EE05E    lea ebx, ds:[esi+0xD0]
 004EE064    cmp dword ptr ds:[esi+0xD4], edi
 004EE06A    jle 0x004EE0A6
-004EE06C    xor esi, esi
+004EE06C    xor esi, esi                                    ; => [ Call: nullptr ]
 004EE06E    nop
 004EE070    mov eax, dword ptr ds:[ebx]
 004EE072    mov eax, dword ptr ds:[esi+eax*1]
 004EE075    test eax, eax
 004EE077    jz 0x004EE082
 004EE079    push eax
-004EE07A    call 0x007597B9
+004EE07A    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 004EE07F    add esp, 0x04
 004EE082    mov eax, dword ptr ds:[ebx]
 004EE084    mov eax, dword ptr ds:[eax+esi*1+0x34]
 004EE088    test eax, eax
 004EE08A    jz 0x004EE095
 004EE08C    push eax
-004EE08D    call 0x007597B9
+004EE08D    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 004EE092    add esp, 0x04
 004EE095    mov eax, dword ptr ss:[ebp-0x04]
 004EE098    inc edi
@@ -33,10 +39,10 @@
 004EE0A2    jl 0x004EE070
 004EE0A4    mov esi, eax
 004EE0A6    push dword ptr ds:[ebx]
-004EE0A8    call 0x007597B9
+004EE0A8    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 004EE0AD    push 0xE4
 004EE0B2    push esi
-004EE0B3    call 0x00759661
+004EE0B3    call 0x00759661                                 ; => [ Call: operator new ]
 004EE0B8    add esp, 0x0C
 004EE0BB    mov eax, esi
 004EE0BD    pop edi

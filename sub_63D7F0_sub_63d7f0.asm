@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_63d7f0
+// 起始地址: 0x63d7f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063D7F0    push ebp
 0063D7F1    mov ebp, esp
 0063D7F3    mov eax, dword ptr ss:[ebp+0x08]
 0063D7F6    mov ecx, dword ptr ds:[ecx]
 0063D7F8    push esi
 0063D7F9    mov edx, dword ptr ds:[eax]
-0063D7FB    mov eax, 0x801800
+0063D7FB    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 0063D800    test edx, edx
-0063D802    mov esi, eax
+0063D802    mov esi, eax                                    ; => [ Data: data_801800 ]
 0063D804    cmovnz esi, edx
 0063D807    test ecx, ecx
 0063D809    cmovnz eax, ecx

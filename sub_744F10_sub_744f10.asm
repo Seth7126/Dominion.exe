@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_744f10
+// 起始地址: 0x744f10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00744F10    push ebp
 00744F11    mov ebp, esp
 00744F13    push ecx
@@ -6,15 +12,15 @@
 00744F16    push edi
 00744F17    mov edi, ecx
 00744F19    mov ebx, edx
-00744F1B    mov ecx, dword ptr ds:[0x01512450]
+00744F1B    mov ecx, dword ptr ds:[0x01512450]              ; => [ Data: data_1512450 ]
 00744F21    cmp dword ptr ds:[ecx+0x04], 0x1E
 00744F25    jz 0x00744F3D
-00744F27    push 0x8790A8
+00744F27    push 0x8790A8                                   ; => [ String: UIDefGet ]
 00744F2C    push 0x127
-00744F31    push 0x878EA8
-00744F36    mov ecx, 0x8790C8
+00744F31    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+00744F36    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 00744F3B    jmp 0x00744F8D
-00744F3D    call 0x005AF880
+00744F3D    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00744F42    xor ecx, ecx
 00744F44    mov dword ptr ss:[ebp-0x04], eax
 00744F47    mov esi, dword ptr ds:[eax+0x08]
@@ -40,15 +46,15 @@
 00744F75    mov esp, ebp
 00744F77    pop ebp
 00744F78    ret
-00744F79    push 0x876798
+00744F79    push 0x876798                                   ; => [ String: FindElement ]
 00744F7E    push 0x126
-00744F83    push 0x88FC60
-00744F88    mov ecx, 0x801AA4
+00744F83    push 0x88FC60                                   ; => [ String: C:\x\ax2017\Engine\Editor\UIEditor.cpp ]
+00744F88    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00744F8D    mov edx, 0x801800
-00744F92    call 0x0063B870
+00744F92    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00744F97    add esp, 0x0C
 00744F9A    call 0x0063BC30
 00744F9F    test al, al
-00744FA1    jz 0x00744FA4
+00744FA1    jz 0x00744FA4                                   ; => [ Call: sub_63bc30 ]
 00744FA3    int3
-00744FA4    call 0x0063BB00
+00744FA4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

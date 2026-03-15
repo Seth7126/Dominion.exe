@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_646e00
+// 起始地址: 0x646e00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00646E00    push ebp
 00646E01    mov ebp, esp
 00646E03    sub esp, 0x3C
-00646E06    mov eax, dword ptr ds:[0x008C4040]
+00646E06    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00646E0B    xor eax, ebp
 00646E0D    mov dword ptr ss:[ebp-0x04], eax
 00646E10    movss xmm1, dword ptr ds:[0x00890D84]
@@ -66,7 +72,7 @@
 00646EFB    movaps xmm1, xmm5
 00646EFE    mulss xmm1, xmm5
 00646F02    addss xmm0, xmm1
-00646F06    call 0x004AC580
+00646F06    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 00646F0B    movaps xmm1, xmm0
 00646F0E    movss xmm0, dword ptr ds:[0x00890C78]
 00646F16    comiss xmm0, xmm1
@@ -96,7 +102,7 @@
 00646F80    addss xmm0, xmm1
 00646F84    call 0x004AC580
 00646F89    movss xmm1, dword ptr ds:[0x00890E18]
-00646F91    divss xmm1, xmm0
+00646F91    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 00646F95    movaps xmm0, xmm1
 00646F98    mulss xmm0, dword ptr ss:[ebp-0x18]
 00646F9D    movss dword ptr ss:[ebp-0x30], xmm0
@@ -115,19 +121,19 @@
 00646FCF    call 0x005AF880
 00646FD4    push 0x53
 00646FD6    mov ecx, 0x8CE7BC
-00646FDB    mov eax, dword ptr ds:[eax+0x08]
+00646FDB    mov eax, dword ptr ds:[eax+0x08]                ; => [ Call: sub_5af880 ]
 00646FDE    mov edx, dword ptr ds:[eax+0x08]
 00646FE1    add edx, 0x08
 00646FE4    call 0x006DD280
-00646FE9    mov esi, eax
+00646FE9    mov esi, eax                                    ; => [ Call: sub_6dd280 | Data: data_8ce7bc ]
 00646FEB    add esp, 0x04
 00646FEE    test esi, esi
-00646FF0    cmovz esi, dword ptr ds:[0x01724A58]
+00646FF0    cmovz esi, dword ptr ds:[0x01724A58]            ; => [ Data: data_1724a58 ]
 00646FF7    mov ecx, edi
 00646FF9    call 0x005AF880
 00646FFE    push 0x54
 00647000    mov ecx, 0x8CE7BC
-00647005    mov eax, dword ptr ds:[eax+0x08]
+00647005    mov eax, dword ptr ds:[eax+0x08]                ; => [ Call: sub_5af880 ]
 00647008    mov edx, dword ptr ds:[eax+0x08]
 0064700B    add edx, 0x08
 0064700E    call 0x006DD280
@@ -142,14 +148,14 @@
 00647022    push eax
 00647023    push dword ptr ss:[ebp+0x0C]
 00647026    push dword ptr ss:[ebp-0x34]
-00647029    call 0x00646580
+00647029    call 0x00646580                                 ; => [ Call: sub_646580 | Call: sub_6dd280 | Data: data_8ce7bc ]
 0064702E    mov ecx, dword ptr ss:[ebp-0x04]
 00647031    add esp, 0x20
 00647034    xor ecx, ebp
 00647036    pop edi
 00647037    pop esi
 00647038    pop ebx
-00647039    call 0x0075927A
+00647039    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0064703E    mov esp, ebp
 00647040    pop ebp
 00647041    ret

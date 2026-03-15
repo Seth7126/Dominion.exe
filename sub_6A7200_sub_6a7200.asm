@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6a7200
+// 起始地址: 0x6a7200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A7200    push ebp
 006A7201    mov ebp, esp
 006A7203    mov eax, 0x1014
-006A7208    call 0x00761E50
+006A7208    call 0x00761E50                                 ; => [ Call: __chkstk ]
 006A720D    mov eax, dword ptr ds:[0x008C4040]
 006A7212    xor eax, ebp
-006A7214    mov dword ptr ss:[ebp-0x04], eax
+006A7214    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 006A7217    push ebx
 006A7218    push esi
 006A7219    mov esi, dword ptr ss:[ebp+0x08]
@@ -30,7 +36,7 @@
 006A7252    add esp, 0x10
 006A7255    test eax, eax
 006A7257    jz 0x006A7265
-006A7259    push 0x87AD38
+006A7259    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A725E    push 0x58
 006A7260    jmp 0x006A7399
 006A7265    push dword ptr ss:[ebp-0x100C]
@@ -42,7 +48,7 @@
 006A727F    add esp, 0x0C
 006A7282    test eax, eax
 006A7284    jz 0x006A7292
-006A7286    push 0x87AD38
+006A7286    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A728B    push 0x5C
 006A728D    jmp 0x006A7399
 006A7292    mov eax, dword ptr ds:[esi]
@@ -53,11 +59,11 @@
 006A72A5    jz 0x006A72B3
 006A72A7    mov ecx, esi
 006A72A9    call 0x0063D4E0
-006A72AE    mov edx, dword ptr ds:[eax+0x08]
+006A72AE    mov edx, dword ptr ds:[eax+0x08]                ; => [ Call: sub_63d4e0 ]
 006A72B1    jmp 0x006A72B5
 006A72B3    xor edx, edx
 006A72B5    mov eax, dword ptr ds:[esi]
-006A72B7    mov ecx, 0x801800
+006A72B7    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A72BC    test eax, eax
 006A72BE    cmovnz ecx, eax
 006A72C1    lea eax, ss:[ebp-0x100C]
@@ -70,7 +76,7 @@
 006A72D3    add esp, 0x10
 006A72D6    test eax, eax
 006A72D8    jz 0x006A72E6
-006A72DA    push 0x87AD38
+006A72DA    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A72DF    push 0x60
 006A72E1    jmp 0x006A7399
 006A72E6    push 0x00
@@ -78,11 +84,11 @@
 006A72ED    push dword ptr ss:[ebp-0x1014]
 006A72F3    lea eax, ss:[ebp-0x1010]
 006A72F9    push eax
-006A72FA    call dword ptr ds:[0x007756C4]
+006A72FA    call dword ptr ds:[0x007756C4]                  ; => [ String: EMSA1(SHA-256) ]
 006A7300    add esp, 0x10
 006A7303    test eax, eax
 006A7305    jz 0x006A7313
-006A7307    push 0x87AD38
+006A7307    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A730C    push 0x64
 006A730E    jmp 0x006A7399
 006A7313    push 0x20
@@ -92,7 +98,7 @@
 006A7322    add esp, 0x0C
 006A7325    test eax, eax
 006A7327    jz 0x006A7332
-006A7329    push 0x87AD38
+006A7329    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A732E    push 0x67
 006A7330    jmp 0x006A7399
 006A7332    push dword ptr ss:[ebp-0x100C]
@@ -106,7 +112,7 @@
 006A7359    add esp, 0x10
 006A735C    test eax, eax
 006A735E    jz 0x006A7369
-006A7360    push 0x87AD38
+006A7360    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A7365    push 0x6C
 006A7367    jmp 0x006A7399
 006A7369    push dword ptr ss:[ebp-0x1010]
@@ -121,19 +127,19 @@
 006A7385    xor ecx, ebp
 006A7387    pop esi
 006A7388    pop ebx
-006A7389    call 0x0075927A
+006A7389    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006A738E    mov esp, ebp
 006A7390    pop ebp
 006A7391    ret
-006A7392    push 0x87AD38
+006A7392    push 0x87AD38                                   ; => [ String: CryptoVerify ]
 006A7397    push 0x6F
 006A7399    push 0x87AD18
 006A739E    mov edx, 0x801800
 006A73A3    mov ecx, 0x77EB84
-006A73A8    call 0x0063B870
+006A73A8    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Crypto.cpp | String: result == 0 ]
 006A73AD    add esp, 0x0C
 006A73B0    call 0x0063BC30
 006A73B5    test al, al
-006A73B7    jz 0x006A73BA
+006A73B7    jz 0x006A73BA                                   ; => [ Call: sub_63bc30 ]
 006A73B9    int3
-006A73BA    call 0x0063BB00
+006A73BA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

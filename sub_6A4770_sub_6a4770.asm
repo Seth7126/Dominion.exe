@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a4770
+// 起始地址: 0x6a4770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A4770    push ebp
 006A4771    mov ebp, esp
 006A4773    and esp, 0xFFFFFFF8
@@ -10,7 +16,7 @@
 006A4782    mov edi, edx
 006A4784    mov dword ptr ss:[esp+0x14], eax
 006A4788    jnz 0x006A478F
-006A478A    call 0x0069CA80
+006A478A    call 0x0069CA80                                 ; => [ Call: sub_69ca80 ]
 006A478F    mov ebx, dword ptr ss:[ebp+0x08]
 006A4792    test ebx, ebx
 006A4794    jz 0x006A482D
@@ -23,7 +29,7 @@
 006A47AC    test esi, esi
 006A47AE    jz 0x006A47DC
 006A47B0    mov eax, dword ptr ds:[esi]
-006A47B2    mov ecx, 0x801800
+006A47B2    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A47B7    mov esi, dword ptr ds:[esi+0x04]
 006A47BA    mov dword ptr ss:[esp+0x10], eax
 006A47BE    push 0x87AA8C
@@ -34,7 +40,7 @@
 006A47CB    call dword ptr ds:[0x00775688]
 006A47D1    add esp, 0x08
 006A47D4    test eax, eax
-006A47D6    jz 0x006A47FD
+006A47D6    jz 0x006A47FD                                   ; => [ String: _version ]
 006A47D8    test esi, esi
 006A47DA    jnz 0x006A47B0
 006A47DC    xor eax, eax
@@ -57,7 +63,7 @@
 006A4801    test eax, eax
 006A4803    jz 0x006A47DC
 006A4805    mov eax, dword ptr ds:[eax+0x04]
-006A4808    mov ecx, 0x801800
+006A4808    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A480D    test eax, eax
 006A480F    cmovnz ecx, eax
 006A4812    push ecx
@@ -67,7 +73,7 @@
 006A481E    mov ecx, dword ptr ss:[esp+0x14]
 006A4822    mov edx, edi
 006A4824    push ebx
-006A4825    call 0x006A4510
+006A4825    call 0x006A4510                                 ; => [ Call: sub_6a4510 ]
 006A482A    add esp, 0x04
 006A482D    pop edi
 006A482E    pop esi
@@ -83,10 +89,10 @@
 006A484A    push 0x87A6C8
 006A484F    mov edx, 0x801800
 006A4854    mov ecx, 0x8027A0
-006A4859    call 0x0063B870
+006A4859    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: result | String: C:\x\ax2017\Engine\DefParseTree.cpp | Data: data_801800 | String: DefParseReadBlock | Call: sub_63b5f0 | String: Difficult versioning function failed on '%s' ]
 006A485E    add esp, 0x14
 006A4861    call 0x0063BC30
 006A4866    test al, al
-006A4868    jz 0x006A486B
+006A4868    jz 0x006A486B                                   ; => [ Call: sub_63bc30 ]
 006A486A    int3
-006A486B    call 0x0063BB00
+006A486B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

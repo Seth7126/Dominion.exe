@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_608170
+// 起始地址: 0x608170
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00608170    push ebp
 00608171    mov ebp, esp
 00608173    sub esp, 0x0C
@@ -19,7 +25,7 @@
 006081A3    test ecx, ecx
 006081A5    jz 0x006081E2
 006081A7    mov edx, 0x18
-006081AC    call 0x00571B30
+006081AC    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 006081B1    mov ecx, dword ptr ds:[eax+0x98]
 006081B7    mov eax, dword ptr ds:[eax+0x9C]
 006081BD    and ecx, 0x7F000400
@@ -44,10 +50,10 @@
 006081EC    push 0x86F1E8
 006081F1    mov edx, 0x801800
 006081F6    mov ecx, 0x8654C0
-006081FB    call 0x0063B870
+006081FB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: bans[i] != CARD_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: CountBanTypes ]
 00608200    add esp, 0x0C
 00608203    call 0x0063BC30
 00608208    test al, al
-0060820A    jz 0x0060820D
+0060820A    jz 0x0060820D                                   ; => [ Call: sub_63bc30 ]
 0060820C    int3
-0060820D    call 0x0063BB00
+0060820D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ffe80
+// 起始地址: 0x5ffe80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005FFE80    dword A1EC8B55
 005FFE84    byte 38
 005FFE85    byte BF
@@ -32,4 +38,4 @@
 005FFEE7    add esp, 0x20
 005FFEEA    mov esp, ebp
 005FFEEC    pop ebp
-005FFEED    ret
+005FFEED    ret                                             ; => [ Data: data_8dbfa8 | Data: data_8dbf3c | Data: data_8dbf48 | Data: data_8dbf50 | Call: sub_5fdf40 ]

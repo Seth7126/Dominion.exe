@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_6af590
+// 起始地址: 0x6af590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AF590    push ebp
 006AF591    mov ebp, esp
 006AF593    push 0xFFFFFFFF
-006AF595    push 0x76FC95
+006AF595    push 0x76FC95                                   ; => [ Call: sub_76fc95 | Type: EHRegistrationNode ]
 006AF59A    mov eax, dword ptr fs:[0x00000000]
-006AF5A0    push eax
+006AF5A0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006AF5A1    sub esp, 0x10C
 006AF5A7    mov eax, dword ptr ds:[0x008C4040]
 006AF5AC    xor eax, ebp
@@ -11,9 +17,9 @@
 006AF5B1    push ebx
 006AF5B2    push esi
 006AF5B3    push edi
-006AF5B4    push eax
+006AF5B4    push eax                                        ; => [ Data: __security_cookie ]
 006AF5B5    lea eax, ss:[ebp-0x0C]
-006AF5B8    mov dword ptr fs:[0x00000000], eax
+006AF5B8    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006AF5BE    mov dword ptr ss:[ebp-0x4C], ecx
 006AF5C1    mov ebx, dword ptr ss:[ebp+0x08]
 006AF5C4    mov eax, dword ptr ss:[ebp+0x0C]
@@ -23,33 +29,33 @@
 006AF5CE    push 0x04
 006AF5D0    mov edx, 0x879C7C
 006AF5D5    lea ecx, ss:[ebp-0x34]
-006AF5D8    call 0x0069FD50
+006AF5D8    call 0x0069FD50                                 ; => [ String: !Null\Null | Call: sub_69fd50 ]
 006AF5DD    add esp, 0x04
 006AF5E0    mov dword ptr ss:[ebp-0x04], ebx
 006AF5E3    lea edx, ds:[ebx+0x04]
 006AF5E6    mov eax, dword ptr ss:[ebp-0x34]
-006AF5E9    mov ecx, 0x801800
+006AF5E9    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006AF5EE    test eax, eax
 006AF5F0    cmovnz ecx, eax
-006AF5F3    call 0x0069F030
+006AF5F3    call 0x0069F030                                 ; => [ Call: sub_69f030 ]
 006AF5F8    mov esi, eax
 006AF5FA    mov dword ptr ss:[ebp-0x04], 0x01
 006AF601    cmp dword ptr ds:[0x00CF65BC], ebx
-006AF607    jz 0x006AF636
+006AF607    jz 0x006AF636                                   ; => [ Data: data_cf65bc ]
 006AF609    mov eax, dword ptr ss:[ebp-0x34]
 006AF60C    test eax, eax
 006AF60E    jz 0x006AF636
 006AF610    cmp byte ptr ds:[eax], bl
 006AF612    jz 0x006AF636
 006AF614    lea ecx, ss:[ebp-0x34]
-006AF617    call 0x0063D4E0
+006AF617    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006AF61C    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 006AF620    jnz 0x006AF636
 006AF622    mov edx, dword ptr ds:[eax+0x0C]
 006AF625    mov ecx, eax
 006AF627    add edx, 0x10
-006AF62A    call 0x0064C080
-006AF62F    mov dword ptr ss:[ebp-0x34], 0x801800
+006AF62A    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+006AF62F    mov dword ptr ss:[ebp-0x34], 0x801800           ; => [ Data: data_801800 ]
 006AF636    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 006AF63D    mov edi, esi
 006AF63F    jmp 0x006AF64F
@@ -63,7 +69,7 @@
 006AF657    push 0x01
 006AF659    xor dl, dl
 006AF65B    mov ecx, edi
-006AF65D    call 0x0069F4A0
+006AF65D    call 0x0069F4A0                                 ; => [ Call: sub_69f4a0 ]
 006AF662    add esp, 0x04
 006AF665    mov eax, dword ptr ds:[edi+0x1C]
 006AF668    mov dword ptr ss:[ebp-0x38], eax
@@ -83,14 +89,14 @@
 006AF691    mov dword ptr ds:[edi+0x1C], eax
 006AF694    xor eax, eax
 006AF696    mov ecx, dword ptr ss:[ebp-0x0C]
-006AF699    mov dword ptr fs:[0x00000000], ecx
+006AF699    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006AF6A0    pop ecx
 006AF6A1    pop edi
 006AF6A2    pop esi
 006AF6A3    pop ebx
 006AF6A4    mov ecx, dword ptr ss:[ebp-0x10]
 006AF6A7    xor ecx, ebp
-006AF6A9    call 0x0075927A
+006AF6A9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006AF6AE    mov esp, ebp
 006AF6B0    pop ebp
 006AF6B1    ret 0x08
@@ -99,17 +105,17 @@
 006AF6BA    mov eax, dword ptr ds:[eax+0x20]
 006AF6BD    add ecx, 0x38
 006AF6C0    mov dword ptr ss:[ebp-0x40], eax
-006AF6C3    call 0x006B2E00
+006AF6C3    call 0x006B2E00                                 ; => [ Call: sub_6b2e00 ]
 006AF6C8    mov ecx, eax
 006AF6CA    mov eax, dword ptr ss:[ebp-0x44]
 006AF6CD    mov dword ptr ss:[ebp-0x34], ecx
 006AF6D0    sub eax, 0x00
-006AF6D3    jz 0x006AF726
+006AF6D3    jz 0x006AF726                                   ; => [ Type: HRESULT ]
 006AF6D5    sub eax, 0x01
 006AF6D8    jz 0x006AF6EE
-006AF6DA    push 0x87BE84
+006AF6DA    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AF6DF    push 0x37A
-006AF6E4    mov ecx, 0x801AA4
+006AF6E4    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006AF6E9    jmp 0x006AFAF6
 006AF6EE    mov eax, dword ptr ss:[ebp-0x4C]
 006AF6F1    mov dword ptr ds:[ecx], 0x04
@@ -126,11 +132,11 @@
 006AF70D    test eax, eax
 006AF70F    jns 0x006AF77D
 006AF711    mov eax, dword ptr ds:[ebx+0x20]
-006AF714    mov ecx, 0x801800
+006AF714    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006AF719    test eax, eax
 006AF71B    cmovnz ecx, eax
 006AF71E    push ecx
-006AF71F    push 0x87BE24
+006AF71F    push 0x87BE24                                   ; => [ String: failed to load pixel shader %s ]
 006AF724    jmp 0x006AF75C
 006AF726    mov eax, dword ptr ss:[ebp-0x4C]
 006AF729    mov dword ptr ds:[ecx], 0x03
@@ -147,12 +153,12 @@
 006AF745    test eax, eax
 006AF747    jns 0x006AF77D
 006AF749    mov eax, dword ptr ds:[ebx+0x20]
-006AF74C    mov ecx, 0x801800
+006AF74C    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006AF751    test eax, eax
 006AF753    cmovnz ecx, eax
 006AF756    push ecx
-006AF757    push 0x87BE44
-006AF75C    call 0x0063B5F0
+006AF757    push 0x87BE44                                   ; => [ String: failed to load vertex shader %s ]
+006AF75C    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 ]
 006AF761    add esp, 0x08
 006AF764    mov eax, dword ptr ss:[ebp-0x34]
 006AF767    mov eax, dword ptr ds:[eax+0x248]
@@ -161,12 +167,12 @@
 006AF775    dec dword ptr ds:[esi+0x1C]
 006AF778    jmp 0x006AF696
 006AF77D    lea eax, ss:[ebp-0x48]
-006AF780    mov dword ptr ss:[ebp-0x48], 0x00
+006AF780    mov dword ptr ss:[ebp-0x48], 0x00               ; => [ Call: nullptr ]
 006AF787    push eax
 006AF788    push 0x77E8C4
 006AF78D    push dword ptr ss:[ebp-0x40]
 006AF790    push edi
-006AF791    call dword ptr ds:[0x0077502C]
+006AF791    call dword ptr ds:[0x0077502C]                  ; => [ Data: data_77e8c4 ]
 006AF797    test eax, eax
 006AF799    js 0x006AFAE7
 006AF79F    mov eax, dword ptr ss:[ebp-0x48]
@@ -182,9 +188,9 @@
 006AF7C0    jz 0x006AF7FD
 006AF7C2    cmp eax, 0x01
 006AF7C5    jz 0x006AF7DB
-006AF7C7    push 0x87BE84
+006AF7C7    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AF7CC    push 0x388
-006AF7D1    mov ecx, 0x87BE64
+006AF7D1    mov ecx, 0x87BE64                               ; => [ String: shaderDesc.ConstantBuffers == 1 ]
 006AF7D6    jmp 0x006AFB26
 006AF7DB    mov eax, dword ptr ss:[ebp-0x48]
 006AF7DE    push 0x00
@@ -207,12 +213,12 @@
 006AF807    xor eax, eax
 006AF809    jmp 0x006AF824
 006AF80B    mov ecx, edi
-006AF80D    call 0x00687730
+006AF80D    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006AF812    push edi
 006AF813    push 0x00
 006AF815    push eax
 006AF816    mov dword ptr ss:[ebp-0x38], eax
-006AF819    call 0x00761FC4
+006AF819    call 0x00761FC4                                 ; => [ Call: memset ]
 006AF81E    mov eax, dword ptr ss:[ebp-0x38]
 006AF821    add esp, 0x0C
 006AF824    mov ebx, dword ptr ss:[ebp-0x3C]
@@ -224,9 +230,9 @@
 006AF840    jz 0x006AF943
 006AF846    cmp eax, 0x01
 006AF849    jz 0x006AF85F
-006AF84B    push 0x87BE84
+006AF84B    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AF850    push 0x39C
-006AF855    mov ecx, 0x87BE64
+006AF855    mov ecx, 0x87BE64                               ; => [ String: shaderDesc.ConstantBuffers == 1 ]
 006AF85A    jmp 0x006AFB56
 006AF85F    mov eax, dword ptr ss:[ebp-0x48]
 006AF862    push 0x00
@@ -260,10 +266,10 @@
 006AF8A3    xor edi, edi
 006AF8A5    mov dword ptr ss:[ebp-0x5C], ecx
 006AF8A8    cmp dword ptr ds:[0x008CE7C4], edi
-006AF8AE    jle 0x006AF8DF
+006AF8AE    jle 0x006AF8DF                                  ; => [ Data: data_8ce7c4 ]
 006AF8B0    xor ebx, ebx
 006AF8B2    mov eax, dword ptr ds:[0x008CE7C0]
-006AF8B7    add eax, ebx
+006AF8B7    add eax, ebx                                    ; => [ Data: data_8ce7c0 ]
 006AF8B9    push ecx
 006AF8BA    mov dword ptr ss:[ebp-0x54], eax
 006AF8BD    push dword ptr ds:[eax+0x04]
@@ -275,11 +281,11 @@
 006AF8D0    inc edi
 006AF8D1    add ebx, 0x3C
 006AF8D4    cmp edi, dword ptr ds:[0x008CE7C4]
-006AF8DA    jl 0x006AF8B2
+006AF8DA    jl 0x006AF8B2                                   ; => [ Data: data_8ce7c4 ]
 006AF8DC    mov ebx, dword ptr ss:[ebp-0x3C]
 006AF8DF    push dword ptr ss:[ebp-0x80]
 006AF8E2    push 0x87BEDC
-006AF8E7    call 0x0063B5F0
+006AF8E7    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Dx11 Unknown shader constant '%s' ]
 006AF8EC    add esp, 0x08
 006AF8EF    mov ecx, dword ptr ss:[ebp-0x38]
 006AF8F2    inc ecx
@@ -330,10 +336,10 @@
 006AF973    xor edi, edi
 006AF975    mov dword ptr ss:[ebp-0x50], ecx
 006AF978    cmp dword ptr ds:[0x008CE7C4], edi
-006AF97E    jle 0x006AF9B0
+006AF97E    jle 0x006AF9B0                                  ; => [ Data: data_8ce7c4 ]
 006AF980    xor ebx, ebx
 006AF982    mov eax, dword ptr ds:[0x008CE7C0]
-006AF987    add eax, ebx
+006AF987    add eax, ebx                                    ; => [ Data: data_8ce7c0 ]
 006AF989    push ecx
 006AF98A    mov dword ptr ss:[ebp-0x54], eax
 006AF98D    push dword ptr ds:[eax+0x04]
@@ -345,10 +351,10 @@
 006AF9A4    inc edi
 006AF9A5    add ebx, 0x3C
 006AF9A8    cmp edi, dword ptr ds:[0x008CE7C4]
-006AF9AE    jl 0x006AF982
+006AF9AE    jl 0x006AF982                                   ; => [ Data: data_8ce7c4 ]
 006AF9B0    push dword ptr ss:[ebp-0x30]
-006AF9B3    push 0x87BF2C
-006AF9B8    call 0x0063B5F0
+006AF9B3    push 0x87BF2C                                   ; => [ String: Dx11 Unknown texture '%s' ]
+006AF9B8    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 ]
 006AF9BD    mov ebx, dword ptr ss:[ebp-0x3C]
 006AF9C0    add esp, 0x08
 006AF9C3    mov edx, dword ptr ss:[ebp-0x38]
@@ -401,14 +407,14 @@
 006AFA5D    mov eax, dword ptr ss:[ebp-0x54]
 006AFA60    mov edi, dword ptr ds:[eax]
 006AFA62    cmp edi, 0xFFFFFFFF
-006AFA65    jz 0x006AF9B0
+006AFA65    jz 0x006AF9B0                                   ; => [ Data: data_8ce7c4 ]
 006AFA6B    mov edx, edi
 006AFA6D    mov ecx, 0x8CE7BC
 006AFA72    call 0x006DD320
 006AFA77    cmp dword ptr ds:[eax+0x10], 0x0F
-006AFA7B    jz 0x006AFA8A
+006AFA7B    jz 0x006AFA8A                                   ; => [ Call: sub_6dd320 | Data: data_8ce7bc ]
 006AFA7D    push dword ptr ss:[ebp-0x30]
-006AFA80    push 0x87BF00
+006AFA80    push 0x87BF00                                   ; => [ String: Dx11 shader variable '%s' isn't a texture ]
 006AFA85    jmp 0x006AF9B8
 006AFA8A    mov ebx, dword ptr ss:[ebp-0x3C]
 006AFA8D    mov eax, dword ptr ds:[ebx+0x18]
@@ -428,86 +434,86 @@
 006AFAC1    push 0x82829C
 006AFAC6    mov edx, 0x801800
 006AFACB    mov ecx, 0x8282BC
-006AFAD0    call 0x0063B870
+006AFAD0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DefAutoLock::DefAutoLock | String: assetPtr && assetPtr->assetType == assetType | Data: data_801800 | String: C:\x\ax2017\Engine\DefLoad.h ]
 006AFAD5    add esp, 0x0C
 006AFAD8    call 0x0063BC30
 006AFADD    test al, al
-006AFADF    jz 0x006AFAE2
+006AFADF    jz 0x006AFAE2                                   ; => [ Call: sub_63bc30 ]
 006AFAE1    int3
-006AFAE2    call 0x0063BB00
-006AFAE7    push 0x87BE84
+006AFAE2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+006AFAE7    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFAEC    push 0x37F
-006AFAF1    mov ecx, 0x87BA34
+006AFAF1    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
 006AFAF6    push 0x87B990
 006AFAFB    mov edx, 0x801800
-006AFB00    call 0x0063B870
+006AFB00    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFB05    add esp, 0x0C
 006AFB08    call 0x0063BC30
 006AFB0D    test al, al
-006AFB0F    jz 0x006AFB12
+006AFB0F    jz 0x006AFB12                                   ; => [ Call: sub_63bc30 ]
 006AFB11    int3
-006AFB12    call 0x0063BB00
-006AFB17    push 0x87BE84
+006AFB12    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+006AFB17    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFB1C    push 0x38E
-006AFB21    mov ecx, 0x87BA34
+006AFB21    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
 006AFB26    push 0x87B990
 006AFB2B    mov edx, 0x801800
-006AFB30    call 0x0063B870
+006AFB30    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFB35    add esp, 0x0C
 006AFB38    call 0x0063BC30
 006AFB3D    test al, al
-006AFB3F    jz 0x006AFB42
+006AFB3F    jz 0x006AFB42                                   ; => [ Call: sub_63bc30 ]
 006AFB41    int3
-006AFB42    call 0x0063BB00
-006AFB47    push 0x87BE84
+006AFB42    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+006AFB47    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFB4C    push 0x3A2
-006AFB51    mov ecx, 0x87BA34
+006AFB51    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
 006AFB56    push 0x87B990
 006AFB5B    mov edx, 0x801800
-006AFB60    call 0x0063B870
+006AFB60    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFB65    add esp, 0x0C
 006AFB68    call 0x0063BC30
 006AFB6D    test al, al
-006AFB6F    jz 0x006AFB72
+006AFB6F    jz 0x006AFB72                                   ; => [ Call: sub_63bc30 ]
 006AFB71    int3
-006AFB72    call 0x0063BB00
+006AFB72    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 006AFB77    push 0x87BE84
 006AFB7C    push 0x3B2
 006AFB81    push 0x87B990
 006AFB86    mov edx, 0x801800
 006AFB8B    mov ecx, 0x87BEB0
-006AFB90    call 0x0063B870
+006AFB90    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateShaderBuffer | String: constantTable->constantCount < maxConstants ]
 006AFB95    add esp, 0x0C
 006AFB98    call 0x0063BC30
 006AFB9D    test al, al
-006AFB9F    jz 0x006AFBA2
+006AFB9F    jz 0x006AFBA2                                   ; => [ Call: sub_63bc30 ]
 006AFBA1    int3
-006AFBA2    call 0x0063BB00
+006AFBA2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 006AFBA7    push 0x87BE84
 006AFBAC    push 0x3F7
 006AFBB1    push 0x87B990
 006AFBB6    mov edx, 0x801800
 006AFBBB    mov ecx, 0x87BA34
-006AFBC0    call 0x0063B870
+006AFBC0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SUCCEEDED(hr) | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFBC5    add esp, 0x0C
 006AFBC8    call 0x0063BC30
 006AFBCD    test al, al
-006AFBCF    jz 0x006AFBD2
+006AFBCF    jz 0x006AFBD2                                   ; => [ Call: sub_63bc30 ]
 006AFBD1    int3
-006AFBD2    call 0x0063BB00
-006AFBD7    push 0x87BE84
+006AFBD2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+006AFBD7    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFBDC    push 0x3D5
-006AFBE1    mov ecx, 0x87BEB0
+006AFBE1    mov ecx, 0x87BEB0                               ; => [ String: constantTable->constantCount < maxConstants ]
 006AFBE6    jmp 0x006AFBF7
-006AFBE8    push 0x87BE84
+006AFBE8    push 0x87BE84                                   ; => [ String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFBED    push 0x3C3
-006AFBF2    mov ecx, 0x87BA34
+006AFBF2    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
 006AFBF7    push 0x87B990
 006AFBFC    mov edx, 0x801800
-006AFC01    call 0x0063B870
+006AFC01    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateShaderBuffer ]
 006AFC06    add esp, 0x0C
 006AFC09    call 0x0063BC30
 006AFC0E    test al, al
-006AFC10    jz 0x006AFC13
+006AFC10    jz 0x006AFC13                                   ; => [ Call: sub_63bc30 ]
 006AFC12    int3
-006AFC13    call 0x0063BB00
+006AFC13    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

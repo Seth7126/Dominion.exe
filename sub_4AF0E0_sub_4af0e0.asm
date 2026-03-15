@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4af0e0
+// 起始地址: 0x4af0e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AF0E0    push ebp
 004AF0E1    mov ebp, esp
 004AF0E3    sub esp, 0x94
@@ -8,24 +14,24 @@
 004AF0F3    mov esi, edx
 004AF0F5    mov dword ptr ss:[ebp-0x10], ebx
 004AF0F8    push edi
-004AF0F9    mov dword ptr ds:[ebx+0x0C], 0x8028C4
+004AF0F9    mov dword ptr ds:[ebx+0x0C], 0x8028C4           ; => [ Data: UI2HitResult::`vftable'{for `InputHitResult'} ]
 004AF100    mov dword ptr ds:[ebx+0x10], 0x00
 004AF107    mov dword ptr ds:[ebx+0x14], 0x00
 004AF10E    mov dword ptr ds:[ebx+0x20], 0x00
 004AF115    mov dword ptr ss:[ebp-0x08], esi
-004AF118    mov dword ptr ds:[ebx], 0x8028BC
+004AF118    mov dword ptr ds:[ebx], 0x8028BC                ; => [ Data: HitResult::`vftable'{for `InputHitResult'} ]
 004AF11E    mov dword ptr ds:[ebx+0x04], 0x00
-004AF125    call 0x005EF820
-004AF12A    mov edx, dword ptr ds:[0x00BE2250]
+004AF125    call 0x005EF820                                 ; => [ Call: sub_5ef820 ]
+004AF12A    mov edx, dword ptr ds:[0x00BE2250]              ; => [ Data: data_be2250 ]
 004AF130    test edx, edx
-004AF132    jnz 0x004AF13E
+004AF132    jnz 0x004AF13E                                  ; => [ Type: InputHitResult::UI2HitResult::VTable ]
 004AF134    mov dword ptr ss:[ebp-0x0C], edx
 004AF137    xor eax, eax
 004AF139    mov dword ptr ss:[ebp-0x1C], edx
 004AF13C    jmp 0x004AF159
 004AF13E    push esi
 004AF13F    lea ecx, ss:[ebp-0x38]
-004AF142    call 0x00656520
+004AF142    call 0x00656520                                 ; => [ Call: sub_656520 ]
 004AF147    mov ecx, dword ptr ss:[ebp-0x30]
 004AF14A    add esp, 0x04
 004AF14D    mov eax, dword ptr ss:[ebp-0x24]
@@ -34,13 +40,13 @@
 004AF156    mov dword ptr ss:[ebp-0x0C], ecx
 004AF159    mov dword ptr ss:[ebp-0x04], eax
 004AF15C    mov esi, 0x0A
-004AF161    mov edi, 0x8DB72C
+004AF161    mov edi, 0x8DB72C                               ; => [ Data: data_8db72c ]
 004AF166    cmp dword ptr ds:[edi], 0x00
-004AF169    jz 0x004AF1CF
+004AF169    jz 0x004AF1CF                                   ; => [ Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable ]
 004AF16B    push dword ptr ss:[ebp-0x08]
 004AF16E    mov edx, dword ptr ds:[edi+0x04]
 004AF171    lea ecx, ss:[ebp-0x70]
-004AF174    call 0x00656520
+004AF174    call 0x00656520                                 ; => [ Type: InputHitResult::UI2HitResult::VTable | Call: sub_656520 ]
 004AF179    mov eax, dword ptr ss:[ebp-0x5C]
 004AF17C    add esp, 0x04
 004AF17F    mov dword ptr ss:[ebp-0x3C], eax
@@ -77,7 +83,7 @@
 004AF1D2    sub edi, 0x28
 004AF1D5    dec esi
 004AF1D6    cmp edi, 0x8DB59C
-004AF1DC    jnl 0x004AF166
+004AF1DC    jnl 0x004AF166                                  ; => [ Data: data_8db59c ]
 004AF1DE    mov edx, dword ptr ss:[ebp-0x2C]
 004AF1E1    mov edi, ecx
 004AF1E3    mov dword ptr ss:[ebp-0x04], edx
@@ -88,8 +94,8 @@
 004AF1F6    movq qword ptr ss:[ebp-0x58], xmm0
 004AF1FB    push eax
 004AF1FC    mov dword ptr ss:[ebp-0x54], 0xFFFFFFFF
-004AF203    call 0x004ADE00
-004AF208    mov eax, dword ptr ss:[ebp-0x14]
+004AF203    call 0x004ADE00                                 ; => [ Call: sub_4ade00 ]
+004AF208    mov eax, dword ptr ss:[ebp-0x14]                ; => [ Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable ]
 004AF20B    cmp eax, 0xFFFFFFFF
 004AF20E    jz 0x004AF26E
 004AF210    mov esi, dword ptr ss:[ebp-0x08]
@@ -100,7 +106,7 @@
 004AF221    mov edx, esi
 004AF223    push ecx
 004AF224    mov ecx, eax
-004AF226    call 0x004ADAE0
+004AF226    call 0x004ADAE0                                 ; => [ Call: sub_4adae0 ]
 004AF22B    add esp, 0x04
 004AF22E    movq xmm0, qword ptr ds:[eax]
 004AF232    movq qword ptr ss:[ebp-0x64], xmm0
@@ -116,38 +122,38 @@
 004AF254    mov ecx, dword ptr ss:[ebp-0x18]
 004AF257    lea eax, ss:[ebp-0x14]
 004AF25A    push eax
-004AF25B    call 0x004ADE60
+004AF25B    call 0x004ADE60                                 ; => [ Call: sub_4ade60 ]
 004AF260    mov eax, dword ptr ss:[ebp-0x14]
 004AF263    cmp eax, 0xFFFFFFFF
 004AF266    jnz 0x004AF215
 004AF268    mov dword ptr ss:[ebp-0x44], ebx
 004AF26B    mov ebx, dword ptr ss:[ebp-0x10]
-004AF26E    mov esi, 0x1724008
-004AF273    mov edx, dword ptr ds:[esi]
+004AF26E    mov esi, 0x1724008                              ; => [ Data: data_1724008 ]
+004AF273    mov edx, dword ptr ds:[esi]                     ; => [ Type: InputHitResult::UI2HitResult::VTable | Type: InputHitResult::UI2HitResult::VTable ]
 004AF275    test edx, edx
 004AF277    jz 0x004AF292
 004AF279    push dword ptr ss:[ebp-0x08]
 004AF27C    lea ecx, ss:[ebp-0x38]
-004AF27F    call 0x00656520
+004AF27F    call 0x00656520                                 ; => [ Call: sub_656520 ]
 004AF284    mov ecx, dword ptr ss:[ebp-0x24]
 004AF287    add esp, 0x04
 004AF28A    test ecx, ecx
 004AF28C    jnz 0x004AF371
 004AF292    add esi, 0x04
 004AF295    cmp esi, 0x1724030
-004AF29B    jl 0x004AF273
+004AF29B    jl 0x004AF273                                   ; => [ Data: data_1724030 ]
 004AF29D    mov eax, dword ptr ss:[ebp-0x14]
-004AF2A0    xor esi, esi
+004AF2A0    xor esi, esi                                    ; => [ Call: nullptr ]
 004AF2A2    mov dword ptr ss:[ebp-0x10], eax
 004AF2A5    xor ecx, ecx
 004AF2A7    mov eax, dword ptr ss:[ebp-0x14]
-004AF2AA    mov dword ptr ss:[ebp-0x08], esi
+004AF2AA    mov dword ptr ss:[ebp-0x08], esi                ; => [ Call: nullptr ]
 004AF2AD    mov dword ptr ss:[ebp-0x40], eax
 004AF2B0    mov eax, dword ptr ss:[ebp-0x90]
-004AF2B6    or edx, 0xFFFFFFFF
+004AF2B6    or edx, 0xFFFFFFFF                              ; => [ Type: InputHitResult::UI2HitResult::VTable ]
 004AF2B9    test eax, eax
 004AF2BB    jz 0x004AF2EE
-004AF2BD    mov edx, dword ptr ss:[ebp-0x8C]
+004AF2BD    mov edx, dword ptr ss:[ebp-0x8C]                ; => [ Type: InputHitResult::UI2HitResult::VTable ]
 004AF2C3    mov dword ptr ds:[ebx+0x08], eax
 004AF2C6    mov eax, dword ptr ss:[ebp-0x84]
 004AF2CC    mov dword ptr ds:[ebx+0x04], 0x01

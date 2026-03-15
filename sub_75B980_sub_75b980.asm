@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75b980
+// 起始地址: 0x75b980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075B980    push ebp
 0075B981    mov ebp, esp
 0075B983    sub esp, 0x0C
@@ -11,7 +17,7 @@
 0075B994    push ecx
 0075B995    mov ecx, esi
 0075B997    mov dword ptr ss:[ebp-0x0C], eax
-0075B99A    call 0x0075BA20
+0075B99A    call 0x0075BA20                                 ; => [ Call: sub_75ba20 ]
 0075B99F    mov edi, dword ptr ds:[esi+0x1058]
 0075B9A5    mov eax, dword ptr ds:[esi+0x20]
 0075B9A8    xor esi, esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_681740
+// 起始地址: 0x681740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00681740    push ebp
 00681741    mov ebp, esp
 00681743    push ecx
@@ -67,7 +73,7 @@
 006817E5    add ecx, 0x02
 006817E8    test dl, dl
 006817EA    jnz 0x006817D0
-006817EC    xor eax, eax
+006817EC    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 006817EE    jmp 0x006817F5
 006817F0    sbb eax, eax
 006817F2    or eax, 0x01
@@ -112,7 +118,7 @@
 0068186B    add ecx, 0x02
 0068186E    test dl, dl
 00681870    jnz 0x00681856
-00681872    xor eax, eax
+00681872    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 00681874    jmp 0x0068187B
 00681876    sbb eax, eax
 00681878    or eax, 0x01

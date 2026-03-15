@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6beef0
+// 起始地址: 0x6beef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BEEF0    push ebp
 006BEEF1    mov ebp, esp
 006BEEF3    sub esp, 0x34
@@ -45,7 +51,7 @@
 006BEF98    addss xmm0, xmm1
 006BEF9C    call 0x004AC580
 006BEFA1    movss xmm1, dword ptr ds:[0x00890E18]
-006BEFA9    divss xmm1, xmm0
+006BEFA9    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006BEFAD    mov eax, dword ptr ss:[ebp+0x08]
 006BEFB0    movss xmm3, dword ptr ds:[eax+0x10]
 006BEFB5    mulss xmm3, dword ptr ss:[ebp-0x20]
@@ -83,7 +89,7 @@
 006BF044    addss xmm0, xmm1
 006BF048    call 0x004AC580
 006BF04D    movss xmm6, dword ptr ds:[0x00890E18]
-006BF055    divss xmm6, xmm0
+006BF055    divss xmm6, xmm0                                ; => [ Call: sub_4ac580 ]
 006BF059    movaps xmm7, xmm6
 006BF05C    movaps xmm4, xmm6
 006BF05F    mulss xmm7, dword ptr ss:[ebp-0x14]
@@ -130,7 +136,7 @@
 006BF10A    addss xmm0, xmm1
 006BF10E    call 0x004AC580
 006BF113    movss xmm3, dword ptr ds:[0x00890E18]
-006BF11B    divss xmm3, xmm0
+006BF11B    divss xmm3, xmm0                                ; => [ Call: sub_4ac580 ]
 006BF11F    movss xmm0, dword ptr ds:[0x00890D84]
 006BF127    movaps xmm1, xmm3
 006BF12A    movaps xmm2, xmm3
@@ -159,7 +165,7 @@
 006BF18E    addss xmm0, xmm1
 006BF192    call 0x004AC580
 006BF197    movss xmm1, dword ptr ds:[0x00890E18]
-006BF19F    divss xmm1, xmm0
+006BF19F    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006BF1A3    movss xmm6, dword ptr ss:[ebp-0x14]
 006BF1A8    movss xmm7, dword ptr ss:[ebp-0x30]
 006BF1AD    movaps xmm0, xmm1
@@ -210,7 +216,7 @@
 006BF266    addss xmm0, xmm1
 006BF26A    call 0x004AC580
 006BF26F    movss xmm3, dword ptr ds:[0x00890E18]
-006BF277    divss xmm3, xmm0
+006BF277    divss xmm3, xmm0                                ; => [ Call: sub_4ac580 ]
 006BF27B    movss xmm0, dword ptr ds:[0x00890D84]
 006BF283    movaps xmm1, xmm3
 006BF286    movaps xmm2, xmm3
@@ -237,7 +243,7 @@
 006BF2E3    movaps xmm1, xmm3
 006BF2E6    mulss xmm1, xmm3
 006BF2EA    addss xmm0, xmm1
-006BF2EE    call 0x004AC580
+006BF2EE    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006BF2F3    movss xmm6, dword ptr ds:[0x00890E18]
 006BF2FB    divss xmm6, xmm0
 006BF2FF    movaps xmm4, xmm6

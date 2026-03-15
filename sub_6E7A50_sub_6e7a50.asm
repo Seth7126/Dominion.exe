@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e7a50
+// 起始地址: 0x6e7a50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7A50    push ebp
 006E7A51    mov ebp, esp
 006E7A53    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 006E7A5C    movss dword ptr ss:[esp+0x0C], xmm2
 006E7A62    mov ebx, ecx
 006E7A64    cmp dword ptr ds:[edi+0x48], 0x00
-006E7A68    jz 0x006E7C1C
+006E7A68    jz 0x006E7C1C                                   ; => [ Call: sub_6e7570 ]
 006E7A6E    call 0x006E7570
 006E7A73    test al, al
 006E7A75    jnz 0x006E7C1C
@@ -99,10 +105,10 @@
 006E7C03    lea ecx, ds:[ebx+0x40]
 006E7C06    call 0x005AF6F0
 006E7C0B    lea edx, ds:[edi+0x44]
-006E7C0E    mov dword ptr ds:[ebx+0x40], eax
+006E7C0E    mov dword ptr ds:[ebx+0x40], eax                ; => [ Call: sub_5af6f0 ]
 006E7C11    lea ecx, ds:[ebx+0x44]
 006E7C14    call 0x005AF6F0
-006E7C19    mov dword ptr ds:[ebx+0x44], eax
+006E7C19    mov dword ptr ds:[ebx+0x44], eax                ; => [ Call: sub_5af6f0 ]
 006E7C1C    pop edi
 006E7C1D    pop esi
 006E7C1E    pop ebx

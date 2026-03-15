@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4ac9c0
+// 起始地址: 0x4ac9c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AC9C0    push ebp
 004AC9C1    mov ebp, esp
 004AC9C3    and esp, 0xFFFFFFF8
 004AC9C6    sub esp, 0x34
-004AC9C9    mov eax, dword ptr ds:[0x008C4040]
+004AC9C9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004AC9CE    xor eax, esp
 004AC9D0    mov dword ptr ss:[esp+0x30], eax
 004AC9D4    movss xmm7, dword ptr ds:[edx+0x08]
@@ -35,7 +41,7 @@
 004ACA49    movaps xmm1, xmm6
 004ACA4C    mulss xmm1, xmm6
 004ACA50    addss xmm0, xmm1
-004ACA54    call 0x004AC580
+004ACA54    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 004ACA59    movaps xmm1, xmm0
 004ACA5C    movss xmm0, dword ptr ds:[0x00890C78]
 004ACA64    comiss xmm0, xmm1
@@ -65,7 +71,7 @@
 004ACAD4    addss xmm0, xmm1
 004ACAD8    call 0x004AC580
 004ACADD    movss xmm1, dword ptr ds:[0x00890E18]
-004ACAE5    divss xmm1, xmm0
+004ACAE5    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 004ACAE9    movaps xmm0, xmm1
 004ACAEC    mulss xmm0, dword ptr ss:[esp+0x08]
 004ACAF2    movss dword ptr ss:[esp+0x20], xmm0
@@ -92,8 +98,8 @@
 004ACB4B    mov eax, dword ptr ss:[ebp+0x08]
 004ACB4E    pop esi
 004ACB4F    xor ecx, esp
-004ACB51    movups xmmword ptr ds:[eax], xmm0
-004ACB54    call 0x0075927A
+004ACB51    movups xmmword ptr ds:[eax], xmm0               ; => [ Call: sub_4ac840 ]
+004ACB54    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004ACB59    mov esp, ebp
 004ACB5B    pop ebp
 004ACB5C    ret

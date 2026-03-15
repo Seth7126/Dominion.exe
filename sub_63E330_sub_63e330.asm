@@ -1,21 +1,27 @@
+// ============================================================
+// 函数名称: sub_63e330
+// 起始地址: 0x63e330
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063E330    push ebp
 0063E331    mov ebp, esp
 0063E333    push 0xFFFFFFFF
-0063E335    push 0x76C4D6
+0063E335    push 0x76C4D6                                   ; => [ Type: EHRegistrationNode | Call: __ehhandler$??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z ]
 0063E33A    mov eax, dword ptr fs:[0x00000000]
-0063E340    push eax
+0063E340    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0063E341    sub esp, 0x10
 0063E344    push esi
 0063E345    mov eax, dword ptr ds:[0x008C4040]
 0063E34A    xor eax, ebp
-0063E34C    push eax
+0063E34C    push eax                                        ; => [ Data: __security_cookie ]
 0063E34D    lea eax, ss:[ebp-0x0C]
-0063E350    mov dword ptr fs:[0x00000000], eax
+0063E350    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0063E356    mov esi, ecx
 0063E358    mov dword ptr ss:[ebp-0x14], esi
 0063E35B    mov dword ptr ss:[ebp-0x10], 0x00
 0063E362    mov dword ptr ss:[ebp-0x04], 0x01
-0063E369    mov edx, 0x801800
+0063E369    mov edx, 0x801800                               ; => [ Data: data_801800 ]
 0063E36E    mov eax, dword ptr ss:[ebp+0x08]
 0063E371    test eax, eax
 0063E373    push 0x2F
@@ -26,7 +32,7 @@
 0063E382    test eax, eax
 0063E384    jnz 0x0063E3D7
 0063E386    mov eax, dword ptr ss:[ebp+0x08]
-0063E389    mov ecx, 0x801800
+0063E389    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0063E38E    test eax, eax
 0063E390    push 0x5C
 0063E392    cmovnz ecx, eax
@@ -42,39 +48,39 @@
 0063E3AC    cmp byte ptr ds:[eax], 0x00
 0063E3AF    jz 0x0063E3BE
 0063E3B1    mov ecx, esi
-0063E3B3    call 0x0063D4E0
+0063E3B3    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0063E3B8    inc dword ptr ds:[eax+0x04]
 0063E3BB    mov eax, dword ptr ss:[ebp+0x08]
 0063E3BE    mov dword ptr ss:[ebp-0x10], 0x01
 0063E3C5    mov dword ptr ss:[ebp-0x04], 0x02
 0063E3CC    cmp dword ptr ds:[0x00CF65BC], 0x00
-0063E3D3    jz 0x0063E423
+0063E3D3    jz 0x0063E423                                   ; => [ Data: data_cf65bc ]
 0063E3D5    jmp 0x0063E3FF
 0063E3D7    lea edx, ds:[eax+0x01]
 0063E3DA    test edx, edx
 0063E3DC    jz 0x0063E435
 0063E3DE    mov ecx, esi
-0063E3E0    call 0x0063D720
+0063E3E0    call 0x0063D720                                 ; => [ Call: sub_63d720 ]
 0063E3E5    mov dword ptr ss:[ebp-0x10], 0x01
 0063E3EC    mov dword ptr ss:[ebp-0x04], 0x03
 0063E3F3    cmp dword ptr ds:[0x00CF65BC], 0x00
-0063E3FA    jz 0x0063E423
+0063E3FA    jz 0x0063E423                                   ; => [ Data: data_cf65bc ]
 0063E3FC    mov eax, dword ptr ss:[ebp+0x08]
 0063E3FF    test eax, eax
 0063E401    jz 0x0063E423
 0063E403    cmp byte ptr ds:[eax], 0x00
 0063E406    jz 0x0063E423
 0063E408    lea ecx, ss:[ebp+0x08]
-0063E40B    call 0x0063D4E0
+0063E40B    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0063E410    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 0063E414    jnz 0x0063E423
 0063E416    mov edx, dword ptr ds:[eax+0x0C]
 0063E419    mov ecx, eax
 0063E41B    add edx, 0x10
-0063E41E    call 0x0064C080
+0063E41E    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0063E423    mov eax, esi
 0063E425    mov ecx, dword ptr ss:[ebp-0x0C]
-0063E428    mov dword ptr fs:[0x00000000], ecx
+0063E428    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0063E42F    pop ecx
 0063E430    pop esi
 0063E431    mov esp, ebp
@@ -85,10 +91,10 @@
 0063E43F    push 0x871D5C
 0063E444    mov edx, 0x801800
 0063E449    mov ecx, 0x871E0C
-0063E44E    call 0x0063B870
+0063E44E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\xString.cpp | String: XString::XString | String: str ]
 0063E453    add esp, 0x0C
 0063E456    call 0x0063BC30
 0063E45B    test al, al
-0063E45D    jz 0x0063E460
+0063E45D    jz 0x0063E460                                   ; => [ Call: sub_63bc30 ]
 0063E45F    int3
-0063E460    call 0x0063BB00
+0063E460    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

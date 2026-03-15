@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_581a00
+// 起始地址: 0x581a00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00581A00    push ebp
 00581A01    mov ebp, esp
 00581A03    push ecx
@@ -11,7 +17,7 @@
 00581A0F    movzx edi, si
 00581A12    cmp edi, 0x320
 00581A18    jb 0x00581A1F
-00581A1A    call 0x00591930
+00581A1A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00581A1F    mov ecx, dword ptr ss:[ebp+0x08]
 00581A22    mov edx, dword ptr ss:[ebp+0x0C]
 00581A25    imul eax, edi, 0x19
@@ -40,7 +46,7 @@
 00581A64    push esi
 00581A65    push ecx
 00581A66    setz cl
-00581A69    call 0x0061B1B0
+00581A69    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00581A6E    add esp, 0x2C
 00581A71    pop edi
 00581A72    pop esi
@@ -53,10 +59,10 @@
 00581A81    push 0x81F4B8
 00581A86    mov edx, 0x801800
 00581A8B    mov ecx, 0x820014
-00581A90    call 0x0063B870
+00581A90    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: id != CARDID_NULL | String: CardSetReveal | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00581A95    add esp, 0x0C
 00581A98    call 0x0063BC30
 00581A9D    test al, al
-00581A9F    jz 0x00581AA2
+00581A9F    jz 0x00581AA2                                   ; => [ Call: sub_63bc30 ]
 00581AA1    int3
-00581AA2    call 0x0063BB00
+00581AA2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

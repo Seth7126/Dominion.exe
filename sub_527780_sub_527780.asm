@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_527780
+// 起始地址: 0x527780
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00527780    dword 83EC8B55
 00527784    in al, 0xF0
 00527786    mov eax, 0x1988
-0052778B    call 0x00761E50
+0052778B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00527790    mov eax, dword ptr ds:[0x008C4040]
 00527795    xor eax, esp
 00527797    mov dword ptr ss:[esp+0x1984], eax
@@ -20,14 +26,14 @@
 005277C0    lea edi, ss:[esp+0xD04]
 005277C7    mov ecx, 0x321
 005277CC    mov edx, 0x03
-005277D1    rep movsd
+005277D1    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: __security_cookie | Call: sub_568780 | Call: sub_561af0 ]
 005277D3    lea ecx, ss:[esp+0xD04]
-005277DA    call 0x00561940
+005277DA    call 0x00561940                                 ; => [ Call: sub_561940 ]
 005277DF    add esp, 0x04
 005277E2    cmp dword ptr ss:[esp+0x1980], 0x00
 005277EA    jz 0x005278A2
 005277F0    xorps xmm0, xmm0
-005277F3    mov dword ptr ss:[esp+0x1C], 0x00
+005277F3    mov dword ptr ss:[esp+0x1C], 0x00               ; => [ Call: __builtin_memset ]
 005277FB    movlpd qword ptr ss:[esp+0x14], xmm0
 00527801    lea eax, ss:[esp+0x40]
 00527805    movlpd qword ptr ss:[esp+0x24], xmm0
@@ -47,10 +53,10 @@
 00527856    push 0x0C
 00527858    push eax
 00527859    movaps xmmword ptr ss:[esp+0x6C], xmm0
-0052785E    call 0x00563C40
+0052785E    call 0x00563C40                                 ; => [ Call: sub_563c40 ]
 00527863    add esp, 0x0C
 00527866    mov esi, eax
-00527868    call 0x00573400
+00527868    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052786D    push 0x04
 0052786F    push 0x00
 00527871    push 0x00
@@ -60,27 +66,27 @@
 0052787E    push 0x00
 00527880    push 0x476
 00527885    push esi
-00527886    call 0x00583720
+00527886    call 0x00583720                                 ; => [ Call: nullptr | Call: sub_583720 ]
 0052788B    add esp, 0x1C
 0052788E    pop edi
 0052788F    pop esi
 00527890    mov ecx, dword ptr ss:[esp+0x1984]
 00527897    xor ecx, esp
-00527899    call 0x0075927A
+00527899    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0052789E    mov esp, ebp
 005278A0    pop ebp
 005278A1    ret
 005278A2    sub esp, 0x28
 005278A5    mov eax, esp
-005278A7    mov dword ptr ds:[eax], 0x818500
-005278AD    mov dword ptr ds:[eax+0x24], eax
-005278B0    call 0x005699B0
+005278A7    mov dword ptr ds:[eax], 0x818500                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_168cf53ba9da64953cc9fdef43c09f71>, void>::`vftable'{for `std::_Func_base<void>'} | Type: std::_Func_base<void>::std::_Func_impl_no_alloc<class <lambda_168cf53ba9da64953cc9fdef43c09f71>, void>::VTable ]
+005278AD    mov dword ptr ds:[eax+0x24], eax                ; => [ Type: std::_Func_base<void>::std::_Func_impl_no_alloc<class <lambda_168cf53ba9da64953cc9fdef43c09f71>, void>::VTable ]
+005278B0    call 0x005699B0                                 ; => [ Call: sub_5699b0 ]
 005278B5    mov ecx, dword ptr ss:[esp+0x19B4]
 005278BC    add esp, 0x28
 005278BF    pop edi
 005278C0    pop esi
 005278C1    xor ecx, esp
-005278C3    call 0x0075927A
+005278C3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005278C8    mov esp, ebp
 005278CA    pop ebp
 005278CB    ret

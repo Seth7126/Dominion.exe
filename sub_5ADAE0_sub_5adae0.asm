@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5adae0
+// 起始地址: 0x5adae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005ADAE0    push ebp
 005ADAE1    mov ebp, esp
 005ADAE3    sub esp, 0x10
@@ -17,14 +23,14 @@
 005ADB02    push dword ptr ss:[ebp+0x10]
 005ADB05    lea edx, ds:[eax+0x180]
 005ADB0B    mov ecx, eax
-005ADB0D    call 0x005ACFF0
+005ADB0D    call 0x005ACFF0                                 ; => [ Call: sub_5acff0 ]
 005ADB12    add esp, 0x04
 005ADB15    sub esi, 0x01
 005ADB18    jnz 0x005ADB02
 005ADB1A    push dword ptr ss:[ebp+0x10]
 005ADB1D    mov edx, dword ptr ss:[ebp-0x08]
 005ADB20    mov ecx, eax
-005ADB22    call 0x005ACFF0
+005ADB22    call 0x005ACFF0                                 ; => [ Call: sub_5acff0 ]
 005ADB27    add esp, 0x04
 005ADB2A    cmp edi, 0x20
 005ADB2D    jle 0x005ADC40
@@ -70,7 +76,7 @@
 005ADBB7    push esi
 005ADBB8    push edx
 005ADBB9    push edi
-005ADBBA    call 0x00762362
+005ADBBA    call 0x00762362                                 ; => [ Call: memmove ]
 005ADBBF    mov ecx, dword ptr ss:[ebp-0x04]
 005ADBC2    add esp, 0x0C
 005ADBC5    add edi, esi
@@ -83,7 +89,7 @@
 005ADBDB    push eax
 005ADBDC    push ecx
 005ADBDD    push edi
-005ADBDE    call 0x00762362
+005ADBDE    call 0x00762362                                 ; => [ Call: memmove ]
 005ADBE3    mov ebx, dword ptr ss:[ebp+0x08]
 005ADBE6    add esp, 0x0C
 005ADBE9    mov ecx, dword ptr ss:[ebp+0x0C]
@@ -94,7 +100,7 @@
 005ADBF6    push 0x40
 005ADBF8    push dword ptr ss:[ebp-0x0C]
 005ADBFB    mov edx, edi
-005ADBFD    call 0x005AEEF0
+005ADBFD    call 0x005AEEF0                                 ; => [ Call: sub_5aeef0 ]
 005ADC02    mov esi, 0x80
 005ADC07    add esp, 0x10
 005ADC0A    cmp ebx, esi
@@ -114,7 +120,7 @@
 005ADC2C    push esi
 005ADC2D    push dword ptr ss:[ebp-0x0C]
 005ADC30    mov edx, edi
-005ADC32    call 0x005AEEF0
+005ADC32    call 0x005AEEF0                                 ; => [ Call: sub_5aeef0 ]
 005ADC37    add esi, esi
 005ADC39    add esp, 0x20
 005ADC3C    cmp ebx, esi

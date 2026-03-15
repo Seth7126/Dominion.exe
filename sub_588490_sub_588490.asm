@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_588490
+// 起始地址: 0x588490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00588490    push ebp
 00588491    mov ebp, esp
 00588493    and esp, 0xFFFFFFF8
@@ -39,20 +45,20 @@
 00588505    push 0x00
 00588507    push 0x04
 00588509    push eax
-0058850A    call 0x0059F9B0
+0058850A    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0058850F    add esp, 0x24
 00588512    inc dword ptr ds:[ebx+0x17564]
 00588518    mov edx, 0x3EC
 0058851D    push edi
 0058851E    mov ecx, esi
-00588520    call 0x00572B80
+00588520    call 0x00572B80                                 ; => [ Call: sub_572b80 ]
 00588525    mov ebx, dword ptr ds:[ebx+0x17460]
 0058852B    add esp, 0x04
 0058852E    mov edx, 0x3EB
 00588533    mov ecx, esi
 00588535    push edi
 00588536    call 0x005722C0
-0058853B    mov edx, eax
+0058853B    mov edx, eax                                    ; => [ Call: sub_5722c0 ]
 0058853D    add esp, 0x04
 00588540    mov ecx, dword ptr ds:[edx]
 00588542    test ecx, ecx
@@ -61,7 +67,7 @@
 00588550    movzx edi, cx
 00588553    cmp edi, 0x320
 00588559    jb 0x00588560
-0058855B    call 0x00591930
+0058855B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00588560    imul edx, edi, 0x64
 00588563    add edx, 0x1AA4
 00588569    add edx, esi
@@ -78,13 +84,13 @@
 00588590    movzx edi, bx
 00588593    cmp edi, 0x320
 00588599    jb 0x005885A0
-0058859B    call 0x00591930
+0058859B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005885A0    mov ecx, dword ptr ss:[esp+0x10]
 005885A4    imul edi, edi, 0x64
 005885A7    mov dword ptr ds:[edi+esi*1+0x1A50], 0x3EB
 005885B2    cmp dword ptr ds:[edi+esi*1+0x1A70], ecx
 005885B9    jz 0x005885C4
-005885BB    call 0x00591930
+005885BB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005885C0    mov ecx, dword ptr ss:[esp+0x10]
 005885C4    mov eax, dword ptr ds:[esi+0x1504]
 005885CA    cmp eax, 0x03
@@ -109,7 +115,7 @@
 005885FB    push ebx
 005885FC    push ecx
 005885FD    setz cl
-00588600    call 0x0061B1B0
+00588600    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00588605    add esp, 0x2C
 00588608    mov ebx, dword ptr ds:[edi+esi*1+0x1AA4]
 0058860F    test ebx, ebx
@@ -125,10 +131,10 @@
 00588628    push 0x81F4B8
 0058862D    mov edx, 0x801800
 00588632    mov ecx, 0x81F8F8
-00588637    call 0x0063B870
+00588637    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: who != PLAYER_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: GetPileHead ]
 0058863C    add esp, 0x0C
 0058863F    call 0x0063BC30
 00588644    test al, al
-00588646    jz 0x00588649
+00588646    jz 0x00588649                                   ; => [ Call: sub_63bc30 ]
 00588648    int3
-00588649    call 0x0063BB00
+00588649    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

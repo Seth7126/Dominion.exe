@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_568920
+// 起始地址: 0x568920
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00568920    push ebp
 00568921    mov ebp, esp
 00568923    and esp, 0xFFFFFFF8
@@ -15,7 +21,7 @@
 00568944    mov eax, dword ptr ss:[ebp+0x08]
 00568947    mov ecx, 0x321
 0056894C    mov edi, eax
-0056894E    rep movsd
+0056894E    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5685f0 ]
 00568950    pop edi
 00568951    pop esi
 00568952    mov esp, ebp

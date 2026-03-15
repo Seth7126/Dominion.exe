@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_65bdd0
+// 起始地址: 0x65bdd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065BDD0    push ebp
 0065BDD1    mov ebp, esp
 0065BDD3    sub esp, 0x08
@@ -14,7 +20,7 @@
 0065BDF0    mov ecx, dword ptr ds:[edi-0x10]
 0065BDF3    mov ecx, dword ptr ds:[ecx+0x08]
 0065BDF6    call 0x0069C4D0
-0065BDFB    mov edx, eax
+0065BDFB    mov edx, eax                                    ; => [ Call: sub_69c4d0 ]
 0065BDFD    lea ecx, ds:[edi-0x08]
 0065BE00    mov esi, 0x04
 0065BE05    movzx eax, byte ptr ds:[ecx]
@@ -22,7 +28,7 @@
 0065BE0B    xor eax, edx
 0065BE0D    shr edx, 0x08
 0065BE10    movzx eax, al
-0065BE13    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+0065BE13    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0065BE1A    sub esi, 0x01
 0065BE1D    jnz 0x0065BE05
 0065BE1F    lea ecx, ds:[edi+0x04]
@@ -32,7 +38,7 @@
 0065BE2D    xor eax, edx
 0065BE2F    shr edx, 0x08
 0065BE32    movzx eax, al
-0065BE35    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+0065BE35    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0065BE3C    sub esi, 0x01
 0065BE3F    jnz 0x0065BE27
 0065BE41    lea ecx, ds:[edi-0x0C]
@@ -43,7 +49,7 @@
 0065BE56    xor eax, edx
 0065BE58    shr edx, 0x08
 0065BE5B    movzx eax, al
-0065BE5E    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+0065BE5E    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0065BE65    sub esi, 0x01
 0065BE68    jnz 0x0065BE50
 0065BE6A    mov eax, dword ptr ds:[edi-0x08]
@@ -59,7 +65,7 @@
 0065BE86    xor eax, edx
 0065BE88    shr edx, 0x08
 0065BE8B    movzx eax, al
-0065BE8E    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+0065BE8E    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0065BE95    sub esi, 0x01
 0065BE98    jnz 0x0065BE80
 0065BE9A    jmp 0x0065BEAE
@@ -69,7 +75,7 @@
 0065BEA3    mov ecx, dword ptr ds:[edi]
 0065BEA5    add ecx, dword ptr ds:[eax]
 0065BEA7    call 0x0069C4D0
-0065BEAC    mov edx, eax
+0065BEAC    mov edx, eax                                    ; => [ Call: sub_69c4d0 ]
 0065BEAE    inc ebx
 0065BEAF    add edi, 0x1C
 0065BEB2    cmp ebx, dword ptr ss:[ebp-0x04]
@@ -86,10 +92,10 @@
 0065BECE    push 0x8739B4
 0065BED3    mov edx, 0x801800
 0065BED8    mov ecx, 0x807EC4
-0065BEDD    call 0x0063B870
+0065BEDD    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: base | String: StringLinear::GetString ]
 0065BEE2    add esp, 0x0C
 0065BEE5    call 0x0063BC30
 0065BEEA    test al, al
-0065BEEC    jz 0x0065BEEF
+0065BEEC    jz 0x0065BEEF                                   ; => [ Call: sub_63bc30 ]
 0065BEEE    int3
-0065BEEF    call 0x0063BB00
+0065BEEF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

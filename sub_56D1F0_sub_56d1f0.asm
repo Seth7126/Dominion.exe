@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56d1f0
+// 起始地址: 0x56d1f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056D1F0    push ebp
 0056D1F1    mov ebp, esp
 0056D1F3    and esp, 0xFFFFFFF8
@@ -8,26 +14,26 @@
 0056D1FA    call 0x0056B800
 0056D1FF    mov esi, eax
 0056D201    call 0x00573400
-0056D206    movzx esi, si
-0056D209    mov edi, dword ptr ds:[eax+0x04]
+0056D206    movzx esi, si                                   ; => [ Call: sub_56b800 ]
+0056D209    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056D20C    cmp esi, 0x320
 0056D212    jb 0x0056D219
-0056D214    call 0x00591930
+0056D214    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056D219    imul eax, esi, 0x64
 0056D21C    xor ebx, ebx
 0056D21E    mov eax, dword ptr ds:[eax+edi*1+0x1A4C]
 0056D225    mov dword ptr ss:[esp+0x0C], eax
-0056D229    call 0x00573400
+0056D229    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056D22E    mov edi, eax
 0056D230    cmp dword ptr ds:[edi], 0x02
 0056D233    jnz 0x0056D25A
 0056D235    mov esi, dword ptr ds:[edi+0x10]
 0056D238    call 0x00573400
 0056D23D    movzx esi, si
-0056D240    mov ebx, dword ptr ds:[eax+0x04]
+0056D240    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056D243    cmp esi, 0x320
 0056D249    jb 0x0056D250
-0056D24B    call 0x00591930
+0056D24B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056D250    imul eax, esi, 0x64
 0056D253    mov ebx, dword ptr ds:[eax+ebx*1+0x1A4C]
 0056D25A    mov edx, dword ptr ds:[edi+0x0C]
@@ -48,4 +54,4 @@
 0056D27F    pop ebx
 0056D280    mov esp, ebp
 0056D282    pop ebp
-0056D283    ret
+0056D283    ret                                             ; => [ Call: sub_5911e0 ]

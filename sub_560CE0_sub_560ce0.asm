@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_560ce0
+// 起始地址: 0x560ce0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00560CE0    push ebp
 00560CE1    mov ebp, esp
 00560CE3    sub esp, 0x08
@@ -6,23 +12,23 @@
 00560CE8    push edi
 00560CE9    call 0x00573400
 00560CEE    movzx esi, word ptr ss:[ebp+0x08]
-00560CF2    mov ebx, dword ptr ds:[eax+0x04]
+00560CF2    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00560CF5    cmp esi, 0x320
 00560CFB    jb 0x00560D02
-00560CFD    call 0x00591930
+00560CFD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560D02    imul edi, esi, 0x64
 00560D05    cmp dword ptr ds:[edi+ebx*1+0x1A4C], 0x105
 00560D10    jz 0x00560D34
 00560D12    call 0x00573400
-00560D17    mov ebx, dword ptr ds:[eax+0x04]
+00560D17    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00560D1A    cmp esi, 0x320
 00560D20    jb 0x00560D27
-00560D22    call 0x00591930
+00560D22    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560D27    cmp dword ptr ds:[edi+ebx*1+0x1A4C], 0x106
 00560D32    jnz 0x00560D67
 00560D34    call 0x00573400
 00560D39    xor ecx, ecx
-00560D3B    mov eax, dword ptr ds:[eax+0x04]
+00560D3B    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00560D3E    mov edx, dword ptr ds:[eax+0x19B8]
 00560D44    test edx, edx
 00560D46    jle 0x00560D67
@@ -43,7 +49,7 @@
 00560D6C    mov esp, ebp
 00560D6E    pop ebp
 00560D6F    ret
-00560D70    call 0x00573400
+00560D70    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00560D75    xor edi, edi
 00560D77    mov edx, dword ptr ds:[eax+0x04]
 00560D7A    imul eax, dword ptr ds:[eax+0x0C], 0x5A30
@@ -58,7 +64,7 @@
 00560DA2    and esi, 0xFFFF
 00560DA8    cmp esi, 0x320
 00560DAE    jb 0x00560DB8
-00560DB0    call 0x00591930
+00560DB0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560DB5    mov edx, dword ptr ss:[ebp+0x08]
 00560DB8    imul eax, esi, 0x64
 00560DBB    add eax, 0x1A4C
@@ -68,7 +74,7 @@
 00560DCB    jz 0x00560D67
 00560DCD    cmp esi, 0x320
 00560DD3    jb 0x00560DE0
-00560DD5    call 0x00591930
+00560DD5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560DDA    mov eax, dword ptr ss:[ebp-0x04]
 00560DDD    mov edx, dword ptr ss:[ebp+0x08]
 00560DE0    cmp dword ptr ds:[eax], 0x106

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58d980
+// 起始地址: 0x58d980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058D980    push ebp
 0058D981    mov ebp, esp
 0058D983    push ecx
@@ -9,7 +15,7 @@
 0058D98C    mov edi, ecx
 0058D98E    cmp eax, 0x3F
 0058D991    jnbe 0x0058DBC6
-0058D997    movzx eax, byte ptr ds:[eax+0x58DC18]
+0058D997    movzx eax, byte ptr ds:[eax+0x58DC18]           ; => [ Data: lookup_table_58dc18 ]
 0058D99E    jmp dword ptr ds:[eax*4+0x58DBF8]
 0058D9A5    mov edx, edi
 0058D9A7    mov ecx, esi
@@ -17,7 +23,7 @@
 0058D9AE    mov eax, dword ptr ds:[eax+0x98]
 0058D9B4    and eax, 0x20
 0058D9B7    or eax, 0x00
-0058D9BA    jnz 0x0058DAD5
+0058D9BA    jnz 0x0058DAD5                                  ; => [ Call: sub_571b30 ]
 0058D9C0    xor al, al
 0058D9C2    pop edi
 0058D9C3    pop esi
@@ -30,7 +36,7 @@
 0058D9D0    mov eax, dword ptr ds:[eax+0x98]
 0058D9D6    and eax, 0x20
 0058D9D9    or eax, 0x00
-0058D9DC    jz 0x0058DAD5
+0058D9DC    jz 0x0058DAD5                                   ; => [ Call: sub_571b30 ]
 0058D9E2    xor al, al
 0058D9E4    pop edi
 0058D9E5    pop esi
@@ -39,7 +45,7 @@
 0058D9E8    ret
 0058D9E9    mov edx, edi
 0058D9EB    mov ecx, esi
-0058D9ED    call 0x00571B30
+0058D9ED    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058D9F2    mov edx, dword ptr ds:[eax+0x18]
 0058D9F5    mov ecx, dword ptr ds:[eax+0x1C]
 0058D9F8    test edx, edx
@@ -48,9 +54,9 @@
 0058D9FF    jz 0x0058DA32
 0058DA01    cmp dword ptr ds:[eax+0x20], 0xFFFFFFFF
 0058DA05    jz 0x0058DA1B
-0058DA07    push 0x8204C0
+0058DA07    push 0x8204C0                                   ; => [ String: CardHasProp ]
 0058DA0C    push 0x4036
-0058DA11    mov ecx, 0x8204CC
+0058DA11    mov ecx, 0x8204CC                               ; => [ String: def.props[0].abilityIndex == ABILITY_INDEX_PLAY ]
 0058DA16    jmp 0x0058DBD5
 0058DA1B    test ecx, ecx
 0058DA1D    jl 0x0058DA32
@@ -63,7 +69,7 @@
 0058DA2C    jnz 0x0058DAD5
 0058DA32    mov edx, edi
 0058DA34    mov ecx, esi
-0058DA36    call 0x00571B30
+0058DA36    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058DA3B    mov ecx, dword ptr ds:[eax+0x98]
 0058DA41    and ecx, 0x40
 0058DA44    or ecx, 0x00
@@ -91,7 +97,7 @@
 0058DA80    ret
 0058DA81    mov edx, edi
 0058DA83    mov ecx, esi
-0058DA85    call 0x00571B30
+0058DA85    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058DA8A    mov ecx, dword ptr ds:[eax+0x18]
 0058DA8D    mov edx, dword ptr ds:[eax+0x1C]
 0058DA90    test ecx, ecx
@@ -100,9 +106,9 @@
 0058DA97    jz 0x0058D9C0
 0058DA9D    cmp dword ptr ds:[eax+0x20], 0xFFFFFFFF
 0058DAA1    jz 0x0058DAB7
-0058DAA3    push 0x8204C0
+0058DAA3    push 0x8204C0                                   ; => [ String: CardHasProp ]
 0058DAA8    push 0x4036
-0058DAAD    mov ecx, 0x8204CC
+0058DAAD    mov ecx, 0x8204CC                               ; => [ String: def.props[0].abilityIndex == ABILITY_INDEX_PLAY ]
 0058DAB2    jmp 0x0058DBD5
 0058DAB7    test edx, edx
 0058DAB9    jnle 0x0058DAC9
@@ -120,7 +126,7 @@
 0058DADB    ret
 0058DADC    mov edx, edi
 0058DADE    mov ecx, esi
-0058DAE0    call 0x00571B30
+0058DAE0    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058DAE5    mov ecx, dword ptr ds:[eax+0x18]
 0058DAE8    mov edx, dword ptr ds:[eax+0x1C]
 0058DAEB    test ecx, ecx
@@ -129,9 +135,9 @@
 0058DAF2    jz 0x0058D9C0
 0058DAF8    cmp dword ptr ds:[eax+0x20], 0xFFFFFFFF
 0058DAFC    jz 0x0058DB12
-0058DAFE    push 0x8204C0
+0058DAFE    push 0x8204C0                                   ; => [ String: CardHasProp ]
 0058DB03    push 0x4036
-0058DB08    mov ecx, 0x8204CC
+0058DB08    mov ecx, 0x8204CC                               ; => [ String: def.props[0].abilityIndex == ABILITY_INDEX_PLAY ]
 0058DB0D    jmp 0x0058DBD5
 0058DB12    test edx, edx
 0058DB14    jnle 0x0058DB24
@@ -142,7 +148,7 @@
 0058DB27    jmp 0x0058DACC
 0058DB29    mov edx, edi
 0058DB2B    mov ecx, esi
-0058DB2D    call 0x00571B30
+0058DB2D    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058DB32    mov ecx, dword ptr ds:[eax+0x18]
 0058DB35    mov edx, dword ptr ds:[eax+0x1C]
 0058DB38    test ecx, ecx
@@ -151,9 +157,9 @@
 0058DB3F    jz 0x0058D9C0
 0058DB45    cmp dword ptr ds:[eax+0x20], 0xFFFFFFFF
 0058DB49    jz 0x0058DB5C
-0058DB4B    push 0x8204C0
+0058DB4B    push 0x8204C0                                   ; => [ String: CardHasProp ]
 0058DB50    push 0x4036
-0058DB55    mov ecx, 0x8204CC
+0058DB55    mov ecx, 0x8204CC                               ; => [ String: def.props[0].abilityIndex == ABILITY_INDEX_PLAY ]
 0058DB5A    jmp 0x0058DBD5
 0058DB5C    test edx, edx
 0058DB5E    jnle 0x0058DB6E
@@ -164,7 +170,7 @@
 0058DB71    jmp 0x0058DACC
 0058DB76    mov edx, edi
 0058DB78    mov ecx, esi
-0058DB7A    call 0x00571B30
+0058DB7A    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058DB7F    mov ecx, dword ptr ds:[eax+0x18]
 0058DB82    mov edx, dword ptr ds:[eax+0x1C]
 0058DB85    test ecx, ecx
@@ -173,9 +179,9 @@
 0058DB8C    jz 0x0058D9C0
 0058DB92    cmp dword ptr ds:[eax+0x20], 0xFFFFFFFF
 0058DB96    jz 0x0058DBA9
-0058DB98    push 0x8204C0
+0058DB98    push 0x8204C0                                   ; => [ String: CardHasProp ]
 0058DB9D    push 0x4036
-0058DBA2    mov ecx, 0x8204CC
+0058DBA2    mov ecx, 0x8204CC                               ; => [ String: def.props[0].abilityIndex == ABILITY_INDEX_PLAY ]
 0058DBA7    jmp 0x0058DBD5
 0058DBA9    test edx, edx
 0058DBAB    jnle 0x0058DBBB
@@ -184,15 +190,15 @@
 0058DBB5    jb 0x0058D9C0
 0058DBBB    and ecx, 0x2000
 0058DBC1    jmp 0x0058DACC
-0058DBC6    push 0x8204FC
+0058DBC6    push 0x8204FC                                   ; => [ String: CardMeetsFlag ]
 0058DBCB    push 0x4060
-0058DBD0    mov ecx, 0x801AA4
+0058DBD0    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0058DBD5    push 0x81F4B8
 0058DBDA    mov edx, 0x801800
-0058DBDF    call 0x0063B870
+0058DBDF    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0058DBE4    add esp, 0x0C
 0058DBE7    call 0x0063BC30
 0058DBEC    test al, al
-0058DBEE    jz 0x0058DBF1
+0058DBEE    jz 0x0058DBF1                                   ; => [ Call: sub_63bc30 ]
 0058DBF0    int3
-0058DBF1    call 0x0063BB00
+0058DBF1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

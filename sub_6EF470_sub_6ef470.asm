@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_6ef470
+// 起始地址: 0x6ef470
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EF470    push ebp
 006EF471    mov ebp, esp
 006EF473    push 0xFFFFFFFF
-006EF475    push 0x763270
+006EF475    push 0x763270                                   ; => [ Call: __ehhandler$___std_smf_ellint_2@16 | Type: EHRegistrationNode ]
 006EF47A    mov eax, dword ptr fs:[0x00000000]
-006EF480    push eax
+006EF480    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006EF481    sub esp, 0x08
 006EF484    push esi
 006EF485    push edi
 006EF486    mov eax, dword ptr ds:[0x008C4040]
 006EF48B    xor eax, ebp
-006EF48D    push eax
+006EF48D    push eax                                        ; => [ Data: __security_cookie ]
 006EF48E    lea eax, ss:[ebp-0x0C]
-006EF491    mov dword ptr fs:[0x00000000], eax
-006EF497    call 0x006EE740
+006EF491    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
+006EF497    call 0x006EE740                                 ; => [ Type: LRESULT | Call: sub_6ee740 ]
 006EF49C    cmp eax, 0x4A
 006EF49F    jz 0x006EF500
 006EF4A1    cmp eax, 0x05
@@ -34,15 +40,15 @@
 006EF4D2    call edi
 006EF4D4    mov esi, dword ptr ds:[0x007752BC]
 006EF4DA    push eax
-006EF4DB    call esi
+006EF4DB    call esi                                        ; => [ Data: data_147d470 ]
 006EF4DD    push 0x00
 006EF4DF    push 0x88
 006EF4E4    push dword ptr ds:[0x0147D470]
 006EF4EA    call edi
 006EF4EC    push eax
-006EF4ED    call esi
+006EF4ED    call esi                                        ; => [ Data: data_147d470 | Type: BOOL ]
 006EF4EF    mov ecx, dword ptr ss:[ebp-0x0C]
-006EF4F2    mov dword ptr fs:[0x00000000], ecx
+006EF4F2    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006EF4F9    pop ecx
 006EF4FA    pop edi
 006EF4FB    pop esi
@@ -56,45 +62,45 @@
 006EF513    call edi
 006EF515    mov esi, dword ptr ds:[0x007752BC]
 006EF51B    push eax
-006EF51C    call esi
+006EF51C    call esi                                        ; => [ Data: data_147d470 ]
 006EF51E    push 0x05
 006EF520    push 0x88
 006EF525    push dword ptr ds:[0x0147D470]
 006EF52B    call edi
 006EF52D    push eax
-006EF52E    call esi
-006EF530    call 0x006EE7A0
+006EF52E    call esi                                        ; => [ Data: data_147d470 ]
+006EF530    call 0x006EE7A0                                 ; => [ Call: sub_6ee7a0 ]
 006EF535    test eax, eax
-006EF537    jz 0x006EF5AA
+006EF537    jz 0x006EF5AA                                   ; => [ Type: BOOL ]
 006EF539    mov edx, eax
 006EF53B    lea ecx, ss:[ebp-0x10]
-006EF53E    call 0x006EF360
-006EF543    mov eax, dword ptr ss:[ebp-0x10]
-006EF546    mov ecx, 0x801800
+006EF53E    call 0x006EF360                                 ; => [ Type: BOOL | Call: sub_6ef360 ]
+006EF543    mov eax, dword ptr ss:[ebp-0x10]                ; => [ Type: BOOL ]
+006EF546    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006EF54B    test eax, eax
 006EF54D    cmovnz ecx, eax
 006EF550    push ecx
 006EF551    push 0x87
 006EF556    push dword ptr ds:[0x0147D470]
-006EF55C    call dword ptr ds:[0x0077530C]
+006EF55C    call dword ptr ds:[0x0077530C]                  ; => [ Data: data_147d470 ]
 006EF562    mov dword ptr ss:[ebp-0x04], 0x00
 006EF569    cmp dword ptr ds:[0x00CF65BC], 0x00
-006EF570    jz 0x006EF5C0
+006EF570    jz 0x006EF5C0                                   ; => [ Data: data_cf65bc ]
 006EF572    mov eax, dword ptr ss:[ebp-0x10]
 006EF575    test eax, eax
 006EF577    jz 0x006EF5C0
 006EF579    cmp byte ptr ds:[eax], 0x00
 006EF57C    jz 0x006EF5C0
 006EF57E    lea ecx, ss:[ebp-0x10]
-006EF581    call 0x0063D4E0
+006EF581    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006EF586    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 006EF58A    jnz 0x006EF5C0
 006EF58C    mov edx, dword ptr ds:[eax+0x0C]
 006EF58F    mov ecx, eax
 006EF591    add edx, 0x10
-006EF594    call 0x0064C080
+006EF594    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006EF599    mov ecx, dword ptr ss:[ebp-0x0C]
-006EF59C    mov dword ptr fs:[0x00000000], ecx
+006EF59C    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006EF5A3    pop ecx
 006EF5A4    pop edi
 006EF5A5    pop esi
@@ -104,9 +110,9 @@
 006EF5AA    push 0x801800
 006EF5AF    push 0x87
 006EF5B4    push dword ptr ds:[0x0147D470]
-006EF5BA    call dword ptr ds:[0x0077530C]
+006EF5BA    call dword ptr ds:[0x0077530C]                  ; => [ Data: data_801800 | Data: data_147d470 ]
 006EF5C0    mov ecx, dword ptr ss:[ebp-0x0C]
-006EF5C3    mov dword ptr fs:[0x00000000], ecx
+006EF5C3    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006EF5CA    pop ecx
 006EF5CB    pop edi
 006EF5CC    pop esi

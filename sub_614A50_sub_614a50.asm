@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_614a50
+// 起始地址: 0x614a50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00614A50    push ebx
 00614A51    mov ebx, esp
 00614A53    sub esp, 0x08
@@ -8,44 +14,44 @@
 00614A60    mov dword ptr ss:[esp+0x04], ebp
 00614A64    mov ebp, esp
 00614A66    sub esp, 0x128
-00614A6C    mov eax, dword ptr ds:[0x008C4040]
+00614A6C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00614A71    xor eax, ebp
 00614A73    mov dword ptr ss:[ebp-0x04], eax
 00614A76    mov eax, dword ptr ds:[0x00B7D424]
-00614A7B    dec eax
+00614A7B    dec eax                                         ; => [ Data: data_b7d424 ]
 00614A7C    push esi
 00614A7D    push edi
 00614A7E    cmp eax, 0x03
 00614A81    jnbe 0x00614C55
 00614A87    jmp dword ptr ds:[eax*4+0x614C88]
-00614A8E    call 0x00614800
+00614A8E    call 0x00614800                                 ; => [ Call: nullptr | Call: sub_614800 ]
 00614A93    pop edi
 00614A94    pop esi
 00614A95    mov ecx, dword ptr ss:[ebp-0x04]
 00614A98    xor ecx, ebp
-00614A9A    call 0x0075927A
+00614A9A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00614A9F    mov esp, ebp
 00614AA1    pop ebp
 00614AA2    mov esp, ebx
 00614AA4    pop ebx
 00614AA5    ret
-00614AA6    mov dword ptr ds:[0x00B7D424], 0x01
+00614AA6    mov dword ptr ds:[0x00B7D424], 0x01             ; => [ Data: data_b7d424 ]
 00614AB0    pop edi
 00614AB1    pop esi
 00614AB2    mov ecx, dword ptr ss:[ebp-0x04]
 00614AB5    xor ecx, ebp
-00614AB7    call 0x0075927A
+00614AB7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00614ABC    mov esp, ebp
 00614ABE    pop ebp
 00614ABF    mov esp, ebx
 00614AC1    pop ebx
 00614AC2    ret
-00614AC3    mov edi, dword ptr ds:[0x00B7F4B8]
+00614AC3    mov edi, dword ptr ds:[0x00B7F4B8]              ; => [ Data: data_b7f4b8 ]
 00614AC9    xor ecx, ecx
-00614ACB    mov edx, dword ptr ds:[0x00B7F4C0]
+00614ACB    mov edx, dword ptr ds:[0x00B7F4C0]              ; => [ Data: data_b7f4c0 ]
 00614AD1    test edi, edi
-00614AD3    mov eax, 0xB7D438
-00614AD8    cmovz eax, ecx
+00614AD3    mov eax, 0xB7D438                               ; => [ Data: data_b7d438 ]
+00614AD8    cmovz eax, ecx                                  ; => [ Call: nullptr ]
 00614ADB    xor esi, esi
 00614ADD    test eax, eax
 00614ADF    jz 0x00614B0A
@@ -53,7 +59,7 @@
 00614AE3    jz 0x00614B19
 00614AE5    test eax, eax
 00614AE7    jnz 0x00614AF0
-00614AE9    mov eax, 0xB7D438
+00614AE9    mov eax, 0xB7D438                               ; => [ Data: data_b7d438 ]
 00614AEE    jmp 0x00614B05
 00614AF0    mov ecx, dword ptr ds:[eax]
 00614AF2    lea ecx, ds:[ecx+ecx*2]
@@ -61,11 +67,11 @@
 00614AF8    add eax, 0x08
 00614AFB    lea ecx, ds:[edi+0xB7D438]
 00614B01    cmp eax, ecx
-00614B03    jz 0x00614B0A
+00614B03    jz 0x00614B0A                                   ; => [ Data: data_b7d438 ]
 00614B05    inc esi
 00614B06    test eax, eax
 00614B08    jnz 0x00614AE1
-00614B0A    push 0x870718
+00614B0A    push 0x870718                                   ; => [ String: ZoomGetPileIdx ]
 00614B0F    push 0x2CC1
 00614B14    jmp 0x00614C5F
 00614B19    xor edi, edi
@@ -76,7 +82,7 @@
 00614B28    mov dword ptr ss:[ebp-0x74], eax
 00614B2B    nop dword ptr ds:[eax+eax*1], eax
 00614B30    mov ecx, dword ptr ds:[eax+edx*1+0x0C]
-00614B34    call 0x005CBA00
+00614B34    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 00614B39    mov dword ptr ss:[ebp-0x120], 0x23
 00614B43    lea edx, ss:[ebp-0xC0]
 00614B49    mov dword ptr ss:[ebp-0x118], 0xFFFFFFFF
@@ -111,8 +117,8 @@
 00614BF1    push ecx
 00614BF2    add ecx, 0x258
 00614BF8    movq qword ptr ss:[ebp-0xB0], xmm0
-00614C00    call 0x005CB7C0
-00614C05    mov edx, dword ptr ds:[0x00B7F4C0]
+00614C00    call 0x005CB7C0                                 ; => [ Call: sub_5cb7c0 ]
+00614C05    mov edx, dword ptr ds:[0x00B7F4C0]              ; => [ Data: data_b7f4c0 ]
 00614C0B    inc edi
 00614C0C    mov eax, dword ptr ss:[ebp-0x74]
 00614C0F    add esp, 0x08
@@ -124,27 +130,27 @@
 00614C23    xor eax, eax
 00614C25    cmp dword ptr ds:[0x00B7D428], 0x03
 00614C2C    pop edi
-00614C2D    setz al
-00614C30    mov dword ptr ds:[0x00B7F4C0], 0x00
+00614C2D    setz al                                         ; => [ Data: data_b7d428 ]
+00614C30    mov dword ptr ds:[0x00B7F4C0], 0x00             ; => [ Data: data_b7f4c0 ]
 00614C3A    xor ecx, ebp
 00614C3C    pop esi
 00614C3D    lea eax, ds:[eax*2+0x01]
-00614C44    mov dword ptr ds:[0x00B7D424], eax
-00614C49    call 0x0075927A
+00614C44    mov dword ptr ds:[0x00B7D424], eax              ; => [ Data: data_b7d424 ]
+00614C49    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00614C4E    mov esp, ebp
 00614C50    pop ebp
 00614C51    mov esp, ebx
 00614C53    pop ebx
 00614C54    ret
-00614C55    push 0x868540
+00614C55    push 0x868540                                   ; => [ String: DomZoomDismissBack ]
 00614C5A    push 0xC297
 00614C5F    push 0x86F1E8
 00614C64    mov edx, 0x801800
 00614C69    mov ecx, 0x801AA4
-00614C6E    call 0x0063B870
+00614C6E    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: Halt ]
 00614C73    add esp, 0x0C
 00614C76    call 0x0063BC30
 00614C7B    test al, al
-00614C7D    jz 0x00614C80
+00614C7D    jz 0x00614C80                                   ; => [ Call: sub_63bc30 ]
 00614C7F    int3
-00614C80    call 0x0063BB00
+00614C80    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

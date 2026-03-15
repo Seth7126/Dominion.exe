@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_5eaa50
+// 起始地址: 0x5eaa50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EAA50    push ebp
 005EAA51    mov ebp, esp
 005EAA53    push ecx
 005EAA54    mov ecx, dword ptr ss:[ebp+0x08]
 005EAA57    mov edx, 0x18
 005EAA5C    push esi
-005EAA5D    call 0x00571B30
+005EAA5D    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 005EAA62    mov ecx, dword ptr ss:[ebp+0x0C]
 005EAA65    mov edx, 0x18
 005EAA6A    mov esi, eax
 005EAA6C    call 0x00571B30
-005EAA71    mov ecx, dword ptr ds:[eax+0x58]
+005EAA71    mov ecx, dword ptr ds:[eax+0x58]                ; => [ Call: sub_571b30 ]
 005EAA74    mov eax, dword ptr ds:[esi+0x58]
 005EAA77    mov dl, byte ptr ds:[eax]
 005EAA79    cmp dl, byte ptr ds:[ecx]

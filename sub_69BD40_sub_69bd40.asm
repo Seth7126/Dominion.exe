@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69bd40
+// 起始地址: 0x69bd40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069BD40    push ebp
 0069BD41    mov ebp, esp
 0069BD43    push ebx
@@ -7,32 +13,32 @@
 0069BD49    push edi
 0069BD4A    test esi, esi
 0069BD4C    jnz 0x0069BD5F
-0069BD4E    push 0x8793D8
+0069BD4E    push 0x8793D8                                   ; => [ String: DataArray<struct UIState>::DataArrayGet ]
 0069BD53    push 0x6C
-0069BD55    mov ecx, 0x802734
+0069BD55    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 0069BD5A    jmp 0x0069BE2F
 0069BD5F    movzx eax, si
 0069BD62    cmp eax, dword ptr ds:[0x00CAF264]
-0069BD68    jnb 0x0069BE23
+0069BD68    jnb 0x0069BE23                                  ; => [ Data: data_caf264 ]
 0069BD6E    imul edi, eax, 0x438
-0069BD74    add edi, dword ptr ds:[0x00CAF260]
+0069BD74    add edi, dword ptr ds:[0x00CAF260]              ; => [ Data: data_caf260 ]
 0069BD7A    cmp dword ptr ds:[edi+0x434], esi
-0069BD80    jnz 0x0069BE23
+0069BD80    jnz 0x0069BE23                                  ; => [ Data: data_caf264 ]
 0069BD86    mov ecx, dword ptr ds:[edi+0x04]
 0069BD89    cmp dword ptr ds:[ecx+0x04], 0x1E
 0069BD8D    jz 0x0069BDA8
-0069BD8F    push 0x8790A8
+0069BD8F    push 0x8790A8                                   ; => [ String: UIDefGet ]
 0069BD94    push 0x127
-0069BD99    push 0x878EA8
-0069BD9E    mov ecx, 0x8790C8
+0069BD99    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+0069BD9E    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 0069BDA3    jmp 0x0069BE34
-0069BDA8    call 0x005AF880
+0069BDA8    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0069BDAD    imul esi, ebx, 0x178
 0069BDB3    mov edx, ebx
 0069BDB5    push 0x801800
 0069BDBA    mov ecx, edi
 0069BDBC    add esi, dword ptr ds:[eax]
-0069BDBE    call 0x00698630
+0069BDBE    call 0x00698630                                 ; => [ Call: sub_698630 | Data: data_801800 ]
 0069BDC3    add esp, 0x04
 0069BDC6    mov edx, dword ptr ds:[eax]
 0069BDC8    lea ecx, ds:[edx+0x01]
@@ -63,15 +69,15 @@
 0069BE20    pop ebx
 0069BE21    pop ebp
 0069BE22    ret
-0069BE23    push 0x8793D8
+0069BE23    push 0x8793D8                                   ; => [ String: DataArray<struct UIState>::DataArrayGet ]
 0069BE28    push 0x6D
-0069BE2A    mov ecx, 0x802748
-0069BE2F    push 0x80193C
+0069BE2A    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
+0069BE2F    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h | String: C:\x\ax2017\Engine\DataArray.h ]
 0069BE34    mov edx, 0x801800
-0069BE39    call 0x0063B870
+0069BE39    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0069BE3E    add esp, 0x0C
 0069BE41    call 0x0063BC30
 0069BE46    test al, al
-0069BE48    jz 0x0069BE4B
+0069BE48    jz 0x0069BE4B                                   ; => [ Call: sub_63bc30 ]
 0069BE4A    int3
-0069BE4B    call 0x0063BB00
+0069BE4B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

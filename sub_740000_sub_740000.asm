@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_740000
+// 起始地址: 0x740000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00740000    push ebx
 00740001    mov ebx, esp
 00740003    sub esp, 0x08
@@ -12,12 +18,12 @@
 0074001C    cmp ecx, 0x09
 0074001F    jnbe 0x00740284
 00740025    jmp dword ptr ds:[ecx*4+0x7402B4]
-0074002C    movss xmm3, dword ptr ds:[0x015123F4]
-00740034    movss xmm2, dword ptr ds:[0x01512400]
+0074002C    movss xmm3, dword ptr ds:[0x015123F4]           ; => [ Data: data_15123f4 ]
+00740034    movss xmm2, dword ptr ds:[0x01512400]           ; => [ Data: data_1512400 ]
 0074003C    movaps xmm5, xmm3
-0074003F    movss xmm6, dword ptr ds:[0x015123FC]
+0074003F    movss xmm6, dword ptr ds:[0x015123FC]           ; => [ Data: data_15123fc ]
 00740047    movaps xmm0, xmm2
-0074004A    movss xmm1, dword ptr ds:[0x015123F8]
+0074004A    movss xmm1, dword ptr ds:[0x015123F8]           ; => [ Data: data_15123f8 ]
 00740052    movaps xmm4, xmm6
 00740055    mulss xmm5, xmm6
 00740059    mulss xmm0, xmm1
@@ -44,7 +50,7 @@
 007400AA    movaps xmm0, xmm6
 007400AD    mulss xmm0, dword ptr ds:[edx+0x08]
 007400B2    addss xmm1, xmm0
-007400B6    xorps xmm1, xmmword ptr ds:[0x008937C0]
+007400B6    xorps xmm1, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 007400BD    movss dword ptr ds:[eax], xmm5
 007400C1    movss dword ptr ds:[eax+0x04], xmm4
 007400C6    movss dword ptr ds:[eax+0x08], xmm6
@@ -54,12 +60,12 @@
 007400D3    mov esp, ebx
 007400D5    pop ebx
 007400D6    ret
-007400D7    movss xmm6, dword ptr ds:[0x015123F4]
-007400DF    movss xmm2, dword ptr ds:[0x015123FC]
+007400D7    movss xmm6, dword ptr ds:[0x015123F4]           ; => [ Data: data_15123f4 ]
+007400DF    movss xmm2, dword ptr ds:[0x015123FC]           ; => [ Data: data_15123fc ]
 007400E7    movaps xmm5, xmm6
-007400EA    movss xmm3, dword ptr ds:[0x015123F8]
+007400EA    movss xmm3, dword ptr ds:[0x015123F8]           ; => [ Data: data_15123f8 ]
 007400F2    movaps xmm0, xmm2
-007400F5    movss xmm1, dword ptr ds:[0x01512400]
+007400F5    movss xmm1, dword ptr ds:[0x01512400]           ; => [ Data: data_1512400 ]
 007400FD    movaps xmm4, xmm3
 00740100    mulss xmm0, xmm1
 00740104    mulss xmm5, xmm3
@@ -79,12 +85,12 @@
 00740139    addss xmm6, xmm2
 0074013D    addss xmm6, xmm6
 00740141    jmp 0x00740090
-00740146    movss xmm6, dword ptr ds:[0x015123F4]
-0074014E    movss xmm3, dword ptr ds:[0x01512400]
+00740146    movss xmm6, dword ptr ds:[0x015123F4]           ; => [ Data: data_15123f4 ]
+0074014E    movss xmm3, dword ptr ds:[0x01512400]           ; => [ Data: data_1512400 ]
 00740156    movaps xmm5, xmm6
-00740159    movss xmm2, dword ptr ds:[0x015123FC]
+00740159    movss xmm2, dword ptr ds:[0x015123FC]           ; => [ Data: data_15123fc ]
 00740161    movaps xmm0, xmm3
-00740164    movss xmm1, dword ptr ds:[0x015123F8]
+00740164    movss xmm1, dword ptr ds:[0x015123F8]           ; => [ Data: data_15123f8 ]
 0074016C    movaps xmm4, xmm2
 0074016F    mulss xmm0, xmm3
 00740173    mulss xmm5, xmm6
@@ -117,7 +123,7 @@
 007401E4    xorps xmm2, xmmword ptr ds:[0x008937C0]
 007401EB    mov eax, dword ptr ds:[ebx+0x08]
 007401EE    mov dword ptr ss:[ebp-0x0C], 0x00
-007401F5    movss dword ptr ss:[ebp-0x04], xmm2
+007401F5    movss dword ptr ss:[ebp-0x04], xmm2             ; => [ Data: data_8937c0 ]
 007401FA    movups xmm0, xmmword ptr ss:[ebp-0x10]
 007401FE    movups xmmword ptr ds:[eax], xmm0
 00740201    mov esp, ebp
@@ -147,7 +153,7 @@
 0074025F    mov dword ptr ss:[ebp-0x08], 0x00
 00740266    addss xmm1, xmm0
 0074026A    xorps xmm1, xmmword ptr ds:[0x008937C0]
-00740271    movss dword ptr ss:[ebp-0x04], xmm1
+00740271    movss dword ptr ss:[ebp-0x04], xmm1             ; => [ Data: data_8937c0 ]
 00740276    movups xmm0, xmmword ptr ss:[ebp-0x10]
 0074027A    movups xmmword ptr ds:[eax], xmm0
 0074027D    mov esp, ebp
@@ -160,10 +166,10 @@
 0074028E    push 0x88FA7C
 00740293    mov edx, 0x801800
 00740298    mov ecx, 0x801AA4
-0074029D    call 0x0063B870
+0074029D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CalcDragPlane | String: C:\x\ax2017\Engine\Editor\FabEditor.cpp | String: Halt ]
 007402A2    add esp, 0x0C
 007402A5    call 0x0063BC30
 007402AA    test al, al
-007402AC    jz 0x007402AF
+007402AC    jz 0x007402AF                                   ; => [ Call: sub_63bc30 ]
 007402AE    int3
-007402AF    call 0x0063BB00
+007402AF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

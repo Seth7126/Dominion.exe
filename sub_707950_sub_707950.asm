@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_707950
+// 起始地址: 0x707950
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707950    push ebp
 00707951    mov ebp, esp
 00707953    push ebx
@@ -5,7 +11,7 @@
 00707955    push edi
 00707956    mov edi, dword ptr ss:[ebp+0x08]
 00707959    mov ecx, dword ptr ds:[edi]
-0070795B    call 0x00707A50
+0070795B    call 0x00707A50                                 ; => [ Call: sub_707a50 ]
 00707960    mov ecx, dword ptr ds:[edi+0x50]
 00707963    mov ebx, eax
 00707965    mov dword ptr ds:[ebx+0x50], ecx
@@ -28,7 +34,7 @@
 00707996    inc ecx
 00707997    test al, al
 00707999    jnz 0x00707994
-0070799B    mov eax, dword ptr ds:[0x0147DED8]
+0070799B    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007079A0    sub ecx, edx
 007079A2    inc ecx
 007079A3    test eax, eax
@@ -36,11 +42,11 @@
 007079A7    push 0x36
 007079A9    push 0x88D958
 007079AE    push ecx
-007079AF    call eax
+007079AF    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\RegionAttachment.c ]
 007079B1    add esp, 0x0C
 007079B4    jmp 0x007079C0
 007079B6    push ecx
-007079B7    call dword ptr ds:[0x00800B4C]
+007079B7    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007079BD    add esp, 0x04
 007079C0    mov ecx, eax
 007079C2    mov dword ptr ds:[ebx+0x14], ecx

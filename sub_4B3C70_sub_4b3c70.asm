@@ -1,39 +1,45 @@
+// ============================================================
+// 函数名称: sub_4b3c70
+// 起始地址: 0x4b3c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B3C70    push ebp
 004B3C71    mov ebp, esp
 004B3C73    and esp, 0xFFFFFFF8
 004B3C76    mov eax, 0x11E4
-004B3C7B    call 0x00761E50
-004B3C80    mov eax, dword ptr ds:[0x008C4040]
+004B3C7B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+004B3C80    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004B3C85    xor eax, esp
 004B3C87    mov dword ptr ss:[esp+0x11E0], eax
 004B3C8E    push esi
 004B3C8F    mov esi, ecx
 004B3C91    lea edx, ss:[esp+0x0C]
 004B3C95    lea ecx, ss:[esp+0x08]
-004B3C99    call 0x004DAF40
+004B3C99    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004B3C9E    mov edx, dword ptr ss:[esp+0x08]
 004B3CA2    push ecx
 004B3CA3    push eax
 004B3CA4    mov ecx, esi
-004B3CA6    call 0x004DBEF0
+004B3CA6    call 0x004DBEF0                                 ; => [ Call: sub_4dbef0 ]
 004B3CAB    push 0x11D0
 004B3CB0    lea eax, ss:[esp+0x1C]
 004B3CB4    push 0x00
 004B3CB6    push eax
-004B3CB7    call 0x00761FC4
+004B3CB7    call 0x00761FC4                                 ; => [ Call: memset ]
 004B3CBC    add esp, 0x14
 004B3CBF    mov ecx, esi
 004B3CC1    push 0x11B0
-004B3CC6    call 0x004B3B80
+004B3CC6    call 0x004B3B80                                 ; => [ Call: sub_4b3b80 ]
 004B3CCB    push eax
 004B3CCC    lea eax, ss:[esp+0x18]
 004B3CD0    push eax
-004B3CD1    call 0x00761FBE
+004B3CD1    call 0x00761FBE                                 ; => [ Data: data_19e2790 | Call: memcpy ]
 004B3CD6    mov ecx, dword ptr ds:[0x00CC8DC8]
 004B3CDC    add esp, 0x0C
 004B3CDF    mov dword ptr ss:[esp+0x34], 0x17
 004B3CE7    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-004B3CED    call 0x004D8F30
+004B3CED    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004B3CF2    lea esi, ds:[eax+0x56E8]
 004B3CF8    mov dword ptr ss:[esp+0x11D0], esi
 004B3CFF    mov ecx, dword ptr ds:[eax+0x58E8]
@@ -48,10 +54,10 @@
 004B3D26    xor ecx, eax
 004B3D28    shr eax, 0x08
 004B3D2B    movzx ecx, cl
-004B3D2E    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+004B3D2E    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 004B3D35    sub edx, 0x01
 004B3D38    jnz 0x004B3D20
-004B3D3A    mov ecx, dword ptr ds:[0x00CC8D5C]
+004B3D3A    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B3D40    mov dword ptr ss:[esp+0x11DC], eax
 004B3D47    test ecx, ecx
 004B3D49    jz 0x004B3D7F
@@ -62,12 +68,12 @@
 004B3D58    push eax
 004B3D59    push dword ptr ds:[0x01597D18]
 004B3D5F    mov edx, 0xF42C9
-004B3D64    call 0x0068B720
+004B3D64    call 0x0068B720                                 ; => [ Call: sub_68b720 | Data: data_1597d18 ]
 004B3D69    add esp, 0x08
 004B3D6C    mov ecx, dword ptr ss:[esp+0x11E4]
 004B3D73    pop esi
 004B3D74    xor ecx, esp
-004B3D76    call 0x0075927A
+004B3D76    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004B3D7B    mov esp, ebp
 004B3D7D    pop ebp
 004B3D7E    ret
@@ -76,10 +82,10 @@
 004B3D86    push 0x77EB50
 004B3D8B    mov edx, 0x801800
 004B3D90    mov ecx, 0x77EB9C
-004B3D95    call 0x0063B870
+004B3D95    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004B3D9A    add esp, 0x0C
 004B3D9D    call 0x0063BC30
 004B3DA2    test al, al
-004B3DA4    jz 0x004B3DA7
+004B3DA4    jz 0x004B3DA7                                   ; => [ Call: sub_63bc30 ]
 004B3DA6    int3
-004B3DA7    call 0x0063BB00
+004B3DA7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

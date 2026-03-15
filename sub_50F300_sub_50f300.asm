@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50f300
+// 起始地址: 0x50f300
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050F300    dword 840D8B51
 0050F304    cmpsd
 0050F305    int3
@@ -5,7 +11,7 @@
 0050F308    shl byte ptr ds:[ecx+0xCCA780], cl
 0050F30E    shl ecx, 0x0B
 0050F311    add eax, 0x58C
-0050F316    add eax, ecx
+0050F316    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050F318    cmp dword ptr ds:[eax], 0x00
 0050F31B    jz 0x0050F32B
 0050F31D    inc edx
@@ -23,7 +29,7 @@
 0050F355    mov eax, dword ptr ds:[0x00CCA780]
 0050F35A    shl ecx, 0x0B
 0050F35D    add eax, 0x58C
-0050F362    add eax, ecx
+0050F362    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050F364    cmp dword ptr ds:[eax], 0x00
 0050F367    jz 0x0050F377
 0050F369    inc edx
@@ -41,7 +47,7 @@
 0050F3A1    mov eax, dword ptr ds:[0x00CCA780]
 0050F3A6    shl ecx, 0x0B
 0050F3A9    add eax, 0x58C
-0050F3AE    add eax, ecx
+0050F3AE    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050F3B0    cmp dword ptr ds:[eax], 0x00
 0050F3B3    jz 0x0050F3C3
 0050F3B5    inc edx
@@ -59,7 +65,7 @@
 0050F3ED    mov eax, dword ptr ds:[0x00CCA780]
 0050F3F2    shl ecx, 0x0B
 0050F3F5    add eax, 0x58C
-0050F3FA    add eax, ecx
+0050F3FA    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050F3FC    nop dword ptr ds:[eax], eax
 0050F400    cmp dword ptr ds:[eax], 0x00
 0050F403    jz 0x0050F410
@@ -78,7 +84,7 @@
 0050F43A    mov eax, dword ptr ds:[0x00CCA780]
 0050F43F    shl ecx, 0x0B
 0050F442    add eax, 0x58C
-0050F447    add eax, ecx
+0050F447    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050F449    nop dword ptr ds:[eax], eax
 0050F450    cmp dword ptr ds:[eax], 0x00
 0050F453    jz 0x0050F460
@@ -99,10 +105,10 @@
 0050F48E    push 0x80CD80
 0050F493    mov edx, 0x801800
 0050F498    mov ecx, 0x801AA4
-0050F49D    call 0x0063B870
+0050F49D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignAddExtra | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 0050F4A2    add esp, 0x0C
 0050F4A5    call 0x0063BC30
 0050F4AA    test al, al
-0050F4AC    jz 0x0050F4AF
+0050F4AC    jz 0x0050F4AF                                   ; => [ Call: sub_63bc30 ]
 0050F4AE    int3
-0050F4AF    call 0x0063BB00
+0050F4AF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

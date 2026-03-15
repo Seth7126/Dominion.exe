@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_698fb0
+// 起始地址: 0x698fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00698FB0    push ebp
 00698FB1    mov ebp, esp
 00698FB3    mov eax, dword ptr ds:[ecx+0x1900]
@@ -8,13 +14,13 @@
 00698FC7    push 0x878EA8
 00698FCC    mov edx, 0x801800
 00698FD1    mov ecx, 0x8791E0
-00698FD6    call 0x0063B870
+00698FD6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: stack.numEntries > 0 | String: C:\x\ax2017\Engine\UIDef.cpp | String: Peek ]
 00698FDB    add esp, 0x0C
 00698FDE    call 0x0063BC30
 00698FE3    test al, al
-00698FE5    jz 0x00698FE8
+00698FE5    jz 0x00698FE8                                   ; => [ Call: sub_63bc30 ]
 00698FE7    int3
-00698FE8    jmp 0x0063BB00
+00698FE8    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00698FED    imul eax, eax, 0x64
 00698FF0    add ecx, eax
 00698FF2    mov eax, dword ptr ss:[ebp+0x08]

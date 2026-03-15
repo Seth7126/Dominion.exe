@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c3d10
+// 起始地址: 0x6c3d10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C3D10    push ebp
 006C3D11    mov ebp, esp
 006C3D13    mov eax, dword ptr ss:[ebp+0x08]
@@ -16,7 +22,7 @@
 006C3D47    movss xmm4, dword ptr ss:[ebp+0x0C]
 006C3D4C    comiss xmm4, dword ptr ds:[0x00891030]
 006C3D53    jb 0x006C3D58
-006C3D55    xorps xmm4, xmm4
+006C3D55    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 006C3D58    divss xmm4, dword ptr ds:[0x00890FCC]
 006C3D60    xorps xmm0, xmm0
 006C3D63    movss xmm2, dword ptr ss:[ebp+0x14]

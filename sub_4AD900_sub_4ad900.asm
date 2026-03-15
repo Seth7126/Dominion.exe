@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4ad900
+// 起始地址: 0x4ad900
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AD900    push ebp
 004AD901    mov ebp, esp
 004AD903    and esp, 0xFFFFFFF0
 004AD906    sub esp, 0x78
 004AD909    mov eax, dword ptr ds:[0x008C4040]
 004AD90E    xor eax, esp
-004AD910    mov dword ptr ss:[esp+0x74], eax
+004AD910    mov dword ptr ss:[esp+0x74], eax                ; => [ Data: __security_cookie ]
 004AD914    push esi
 004AD915    mov esi, ecx
 004AD917    push edi
@@ -32,7 +38,7 @@
 004AD967    test ah, 0x44
 004AD96A    jnp 0x004ADAC9
 004AD970    comiss xmm1, dword ptr ds:[esi+0xBCC]
-004AD977    mov eax, dword ptr ds:[0x00CF65B8]
+004AD977    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 004AD97C    movd xmm0, dword ptr ds:[eax+0x14]
 004AD981    movd xmm3, dword ptr ds:[eax+0x18]
 004AD986    cvtdq2ps xmm0, xmm0
@@ -56,13 +62,13 @@
 004AD9D5    lea ecx, ss:[esp+0x54]
 004AD9D9    movaps xmmword ptr ss:[esp+0x24], xmm0
 004AD9DE    movaps xmmword ptr ss:[esp+0x54], xmm0
-004AD9E3    call 0x00682560
+004AD9E3    call 0x00682560                                 ; => [ Call: sub_682560 ]
 004AD9E8    add esp, 0x04
 004AD9EB    cmp dword ptr ds:[esi+0x258], 0x00
 004AD9F2    movups xmm0, xmmword ptr ds:[eax]
 004AD9F5    mov eax, dword ptr ds:[eax+0x10]
 004AD9F8    mov dword ptr ss:[esp+0x10], eax
-004AD9FC    mov eax, dword ptr ds:[0x0147ABE4]
+004AD9FC    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 004ADA01    movaps xmmword ptr ss:[esp+0x50], xmm0
 004ADA06    jnz 0x004ADA18
 004ADA08    movaps xmm0, xmmword ptr ss:[esp+0x20]
@@ -85,11 +91,11 @@
 004ADA4C    jz 0x004ADA5A
 004ADA4E    call 0x0064E7A0
 004ADA53    mov ecx, eax
-004ADA55    call 0x00664D00
+004ADA55    call 0x00664D00                                 ; => [ Call: sub_64e7a0 | Call: sub_664d00 ]
 004ADA5A    inc edi
 004ADA5B    cmp edi, dword ptr ds:[esi+0xBBC]
 004ADA61    jl 0x004ADA22
-004ADA63    mov eax, dword ptr ds:[0x0147ABE4]
+004ADA63    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 004ADA68    movaps xmm0, xmmword ptr ss:[esp+0x50]
 004ADA6D    mov ecx, dword ptr ss:[esp+0x10]
 004ADA71    movups xmmword ptr ds:[eax+0x28], xmm0
@@ -102,7 +108,7 @@
 004ADA88    jz 0x004ADA96
 004ADA8A    call 0x0064E7A0
 004ADA8F    mov ecx, eax
-004ADA91    call 0x00664D00
+004ADA91    call 0x00664D00                                 ; => [ Call: sub_64e7a0 | Call: sub_664d00 ]
 004ADA96    mov ecx, dword ptr ds:[esi+0xBE4]
 004ADA9C    cmp ecx, 0xFFFFFFFF
 004ADA9F    jz 0x004ADAC9
@@ -116,12 +122,12 @@
 004ADABB    jz 0x004ADAC9
 004ADABD    call 0x0064E7A0
 004ADAC2    mov ecx, eax
-004ADAC4    call 0x00664D00
+004ADAC4    call 0x00664D00                                 ; => [ Call: sub_64e7a0 | Call: sub_664d00 ]
 004ADAC9    mov ecx, dword ptr ss:[esp+0x7C]
 004ADACD    pop edi
 004ADACE    pop esi
 004ADACF    xor ecx, esp
-004ADAD1    call 0x0075927A
+004ADAD1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004ADAD6    mov esp, ebp
 004ADAD8    pop ebp
 004ADAD9    ret

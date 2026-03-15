@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_525710
+// 起始地址: 0x525710
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00525710    dword 83EC8B55
 00525714    in al, 0xF8
 00525716    mov eax, 0x1910
-0052571B    call 0x00761E50
+0052571B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00525720    push esi
 00525721    push edi
 00525722    push 0x00
@@ -15,15 +21,15 @@
 0052573D    lea edi, ss:[esp+0x08]
 00525741    mov esi, eax
 00525743    mov ecx, 0x321
-00525748    rep movsd
+00525748    rep movsd                                       ; => [ Call: sub_5678e0 | Call: __builtin_memcpy ]
 0052574A    call 0x0056B800
 0052574F    mov esi, eax
 00525751    call 0x00573400
-00525756    movzx esi, si
-00525759    mov edi, dword ptr ds:[eax+0x04]
+00525756    movzx esi, si                                   ; => [ Call: sub_56b800 ]
+00525759    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0052575C    cmp esi, 0x320
 00525762    jb 0x00525769
-00525764    call 0x00591930
+00525764    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00525769    imul eax, esi, 0x64
 0052576C    xor ecx, ecx
 0052576E    cmp dword ptr ds:[eax+edi*1+0x1A50], 0x3EA

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_665d10
+// 起始地址: 0x665d10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00665D10    push ebp
 00665D11    mov ebp, esp
 00665D13    push ecx
@@ -25,7 +31,7 @@
 00665D4E    test eax, eax
 00665D50    jz 0x00665D78
 00665D52    mov ecx, dword ptr ds:[edi+esi*4+0x179C]
-00665D59    call 0x0064E7A0
+00665D59    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00665D5E    mov ecx, dword ptr ss:[ebp+0x0C]
 00665D61    mov edx, ebx
 00665D63    inc ecx
@@ -48,10 +54,10 @@
 00665D89    push 0x8739B4
 00665D8E    mov edx, 0x801800
 00665D93    mov ecx, 0x875730
-00665D98    call 0x0063B870
+00665D98    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: FlattenTreeRec | String: el.worldInfo.index == 0 ]
 00665D9D    add esp, 0x0C
 00665DA0    call 0x0063BC30
 00665DA5    test al, al
-00665DA7    jz 0x00665DAA
+00665DA7    jz 0x00665DAA                                   ; => [ Call: sub_63bc30 ]
 00665DA9    int3
-00665DAA    call 0x0063BB00
+00665DAA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

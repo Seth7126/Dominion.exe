@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4faca0
+// 起始地址: 0x4faca0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FACA0    dword 83EC8B55
 004FACA4    in al, 0xF8
 004FACA6    push ecx
@@ -9,7 +15,7 @@
 004FACB7    xor ecx, ecx
 004FACB9    add esp, 0x0C
 004FACBC    test eax, eax
-004FACBE    setnle cl
+004FACBE    setnle cl                                       ; => [ Call: sub_568960 ]
 004FACC1    mov eax, ecx
 004FACC3    mov esp, ebp
 004FACC5    pop ebp

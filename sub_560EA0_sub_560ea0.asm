@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_560ea0
+// 起始地址: 0x560ea0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00560EA0    push ebp
 00560EA1    mov ebp, esp
 00560EA3    and esp, 0xFFFFFFF8
@@ -5,7 +11,7 @@
 00560EA9    push ebx
 00560EAA    push esi
 00560EAB    push edi
-00560EAC    call 0x00573400
+00560EAC    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00560EB1    xor edi, edi
 00560EB3    mov ecx, dword ptr ds:[eax+0x0C]
 00560EB6    mov eax, dword ptr ds:[eax+0x04]
@@ -23,7 +29,7 @@
 00560EE5    mov dword ptr ss:[esp+0x1C], eax
 00560EE9    cmp esi, 0x320
 00560EEF    jb 0x00560EFA
-00560EF1    call 0x00591930
+00560EF1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560EF6    mov ecx, dword ptr ss:[esp+0x10]
 00560EFA    imul eax, esi, 0x64
 00560EFD    push 0x00
@@ -35,16 +41,16 @@
 00560F0E    call 0x005754F0
 00560F13    add esp, 0x08
 00560F16    test al, al
-00560F18    jz 0x00560F4C
+00560F18    jz 0x00560F4C                                   ; => [ Call: sub_5754f0 ]
 00560F1A    cmp esi, 0x320
 00560F20    jb 0x00560F27
-00560F22    call 0x00591930
+00560F22    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560F27    mov eax, dword ptr ss:[esp+0x14]
 00560F2B    cmp dword ptr ds:[eax], 0x105
 00560F31    jz 0x00560F65
 00560F33    cmp esi, 0x320
 00560F39    jb 0x00560F44
-00560F3B    call 0x00591930
+00560F3B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560F40    mov eax, dword ptr ss:[esp+0x14]
 00560F44    cmp dword ptr ds:[eax], 0x106
 00560F4A    jz 0x00560F65

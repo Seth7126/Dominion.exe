@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_706bb0
+// 起始地址: 0x706bb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00706BB0    push ebp
 00706BB1    mov ebp, esp
 00706BB3    sub esp, 0x10
@@ -22,7 +28,7 @@
 00706BE5    pop esi
 00706BE6    mov esp, ebp
 00706BE8    pop ebp
-00706BE9    ret
+00706BE9    ret                                             ; => [ Call: sub_706af0 ]
 00706BEA    mov edx, dword ptr ds:[edi+0x08]
 00706BED    xor eax, eax
 00706BEF    test edx, edx
@@ -52,7 +58,7 @@
 00706C2F    pop esi
 00706C30    mov esp, ebp
 00706C32    pop ebp
-00706C33    ret
+00706C33    ret                                             ; => [ Call: sub_706af0 ]
 00706C34    add eax, eax
 00706C36    mov edx, dword ptr ds:[edi+0x0C]
 00706C39    movss xmm0, dword ptr ds:[ecx+eax*8+0x08]
@@ -62,12 +68,12 @@
 00706C4C    lea ecx, ds:[esi-0x10]
 00706C4F    divss xmm2, xmm0
 00706C53    movss dword ptr ss:[ebp-0x0C], xmm2
-00706C58    call 0x00706AF0
+00706C58    call 0x00706AF0                                 ; => [ Call: sub_706af0 ]
 00706C5D    mov edx, dword ptr ds:[edi+0x0C]
 00706C60    mov ecx, esi
 00706C62    movss xmm1, dword ptr ss:[ebp-0x04]
 00706C67    movss dword ptr ss:[ebp-0x08], xmm0
-00706C6C    call 0x00706AF0
+00706C6C    call 0x00706AF0                                 ; => [ Call: sub_706af0 ]
 00706C71    mov ecx, dword ptr ds:[esi+0x0C]
 00706C74    movaps xmm2, xmm0
 00706C77    movss xmm1, dword ptr ss:[ebp-0x08]
@@ -77,4 +83,4 @@
 00706C87    pop esi
 00706C88    mov esp, ebp
 00706C8A    pop ebp
-00706C8B    ret
+00706C8B    ret                                             ; => [ Call: sub_4ae110 ]

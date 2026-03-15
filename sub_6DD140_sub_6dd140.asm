@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dd140
+// 起始地址: 0x6dd140
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DD140    push ebp
 006DD141    mov ebp, esp
 006DD143    push ebx
@@ -7,12 +13,12 @@
 006DD14A    push edi
 006DD14B    mov edi, edx
 006DD14D    mov edx, esi
-006DD14F    call 0x006DD320
+006DD14F    call 0x006DD320                                 ; => [ Call: sub_6dd320 ]
 006DD154    cmp dword ptr ds:[eax+0x10], 0x08
 006DD158    jz 0x006DD16B
-006DD15A    push 0x881430
+006DD15A    push 0x881430                                   ; => [ String: AttribMapGetString ]
 006DD15F    push 0x1CC
-006DD164    mov ecx, 0x881490
+006DD164    mov ecx, 0x881490                               ; => [ String: AttribTagGetDefMap(pAttribTable, tag)->defType == DT_STRING ]
 006DD169    jmp 0x006DD1B4
 006DD16B    mov edx, dword ptr ds:[edi]
 006DD16D    xor ecx, ecx
@@ -45,15 +51,15 @@
 006DD1A2    pop ebx
 006DD1A3    pop ebp
 006DD1A4    ret
-006DD1A5    push 0x88131C
+006DD1A5    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006DD1AA    push 0x8B
-006DD1AF    mov ecx, 0x881344
+006DD1AF    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006DD1B4    push 0x8812F8
 006DD1B9    mov edx, 0x801800
-006DD1BE    call 0x0063B870
+006DD1BE    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\AttribMap.cpp ]
 006DD1C3    add esp, 0x0C
 006DD1C6    call 0x0063BC30
 006DD1CB    test al, al
-006DD1CD    jz 0x006DD1D0
+006DD1CD    jz 0x006DD1D0                                   ; => [ Call: sub_63bc30 ]
 006DD1CF    int3
-006DD1D0    call 0x0063BB00
+006DD1D0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

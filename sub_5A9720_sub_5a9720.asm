@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a9720
+// 起始地址: 0x5a9720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A9720    push ebp
 005A9721    mov ebp, esp
 005A9723    sub esp, 0x20
-005A9726    mov eax, dword ptr ds:[0x008C4040]
+005A9726    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A972B    xor eax, ebp
 005A972D    mov dword ptr ss:[ebp-0x08], eax
-005A9730    mov eax, dword ptr ds:[0x00CC8DC0]
+005A9730    mov eax, dword ptr ds:[0x00CC8DC0]              ; => [ Data: data_cc8dc0 ]
 005A9735    push ebx
 005A9736    push esi
 005A9737    mov esi, ecx
@@ -16,14 +22,14 @@
 005A9748    movaps xmm0, xmmword ptr ds:[0x00893710]
 005A974F    lea edx, ss:[ebp+0x08]
 005A9752    lea ecx, ss:[ebp-0x18]
-005A9755    movups xmmword ptr ss:[ebp-0x18], xmm0
-005A9759    call 0x00682F00
+005A9755    movups xmmword ptr ss:[ebp-0x18], xmm0          ; => [ Data: data_893710 ]
+005A9759    call 0x00682F00                                 ; => [ Call: sub_682f00 ]
 005A975E    pop edi
 005A975F    pop esi
 005A9760    pop ebx
 005A9761    mov ecx, dword ptr ss:[ebp-0x08]
 005A9764    xor ecx, ebp
-005A9766    call 0x0075927A
+005A9766    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A976B    mov esp, ebp
 005A976D    pop ebp
 005A976E    ret
@@ -105,8 +111,8 @@
 005A989E    push dword ptr ss:[ebp-0x1C]
 005A98A1    push dword ptr ss:[ebp-0x20]
 005A98A4    push 0x00
-005A98A6    call 0x005A9590
-005A98AB    mov eax, dword ptr ds:[0x00CC8DC0]
+005A98A6    call 0x005A9590                                 ; => [ Call: nullptr | Call: sub_5a9590 ]
+005A98AB    mov eax, dword ptr ds:[0x00CC8DC0]              ; => [ Data: data_cc8dc0 ]
 005A98B0    add esp, 0x14
 005A98B3    test eax, eax
 005A98B5    jz 0x005A990D
@@ -127,7 +133,7 @@
 005A9900    pop esi
 005A9901    xor ecx, ebp
 005A9903    pop ebx
-005A9904    call 0x0075927A
+005A9904    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A9909    mov esp, ebp
 005A990B    pop ebp
 005A990C    ret
@@ -136,10 +142,10 @@
 005A9917    push 0x806734
 005A991C    mov edx, 0x801800
 005A9921    mov ecx, 0x806A58
-005A9926    call 0x0063B870
+005A9926    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetLocalSettings | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSettings.cpp | Data: data_801800 | String: gGameSettings.localSettings ]
 005A992B    add esp, 0x0C
 005A992E    call 0x0063BC30
 005A9933    test al, al
-005A9935    jz 0x005A9938
+005A9935    jz 0x005A9938                                   ; => [ Call: sub_63bc30 ]
 005A9937    int3
-005A9938    call 0x0063BB00
+005A9938    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

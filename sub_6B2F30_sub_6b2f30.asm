@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6b2f30
+// 起始地址: 0x6b2f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B2F30    push ebp
 006B2F31    mov ebp, esp
 006B2F33    sub esp, 0x20
-006B2F36    mov eax, dword ptr ds:[0x008C4040]
+006B2F36    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B2F3B    xor eax, ebp
 006B2F3D    mov dword ptr ss:[ebp-0x04], eax
 006B2F40    mov eax, dword ptr ss:[ebp+0x08]
@@ -13,7 +19,7 @@
 006B2F50    movaps xmm2, xmm5
 006B2F53    addss xmm2, xmm4
 006B2F57    push edi
-006B2F58    mulss xmm2, dword ptr ds:[0x017774F8]
+006B2F58    mulss xmm2, dword ptr ds:[0x017774F8]           ; => [ Data: data_17774f8 ]
 006B2F60    movaps xmm1, xmm2
 006B2F63    addss xmm2, xmm5
 006B2F67    addss xmm1, xmm4
@@ -29,7 +35,7 @@
 006B2F8A    lea edx, ds:[eax-0x01]
 006B2F8D    cvtdq2ps xmm0, xmm0
 006B2F90    comiss xmm0, xmm2
-006B2F93    movss xmm2, dword ptr ds:[0x017774FC]
+006B2F93    movss xmm2, dword ptr ds:[0x017774FC]           ; => [ Data: data_17774fc ]
 006B2F9B    movd xmm0, ebx
 006B2F9F    cmovbe edx, eax
 006B2FA2    xor ecx, ecx
@@ -102,7 +108,7 @@
 006B309A    mov eax, dword ptr ds:[esi+eax*4+0x800]
 006B30A1    mulss xmm1, xmm1
 006B30A5    lea eax, ds:[eax+eax*2]
-006B30A8    movq xmm0, qword ptr ds:[eax*4+0xCAF788]
+006B30A8    movq xmm0, qword ptr ds:[eax*4+0xCAF788]        ; => [ Data: data_caf788 ]
 006B30B1    movq qword ptr ss:[ebp-0x10], xmm0
 006B30B6    movss xmm5, dword ptr ss:[ebp-0x0C]
 006B30BB    movss xmm0, dword ptr ss:[ebp-0x10]
@@ -126,7 +132,7 @@
 006B30F8    jmp 0x006B312F
 006B30FA    lea eax, ds:[edx+edx*2]
 006B30FD    mulss xmm3, xmm3
-006B3101    movq xmm0, qword ptr ds:[eax*4+0xCAF788]
+006B3101    movq xmm0, qword ptr ds:[eax*4+0xCAF788]        ; => [ Data: data_caf788 ]
 006B310A    movq qword ptr ss:[ebp-0x10], xmm0
 006B310F    movss xmm1, dword ptr ss:[ebp-0x0C]
 006B3114    movss xmm0, dword ptr ss:[ebp-0x10]
@@ -145,7 +151,7 @@
 006B3148    jnbe 0x006B317D
 006B314A    lea eax, ds:[ecx+ecx*2]
 006B314D    mulss xmm2, xmm2
-006B3151    movq xmm0, qword ptr ds:[eax*4+0xCAF788]
+006B3151    movq xmm0, qword ptr ds:[eax*4+0xCAF788]        ; => [ Data: data_caf788 ]
 006B315A    movq qword ptr ss:[ebp-0x10], xmm0
 006B315F    movss xmm4, dword ptr ss:[ebp-0x0C]
 006B3164    movss xmm0, dword ptr ss:[ebp-0x10]
@@ -160,7 +166,7 @@
 006B3186    addss xmm1, xmm4
 006B318A    mulss xmm1, dword ptr ds:[0x00890FD4]
 006B3192    movaps xmm0, xmm1
-006B3195    call 0x0075927A
+006B3195    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B319A    mov esp, ebp
 006B319C    pop ebp
 006B319D    ret 0x04

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: ??__C@YGXPAX0IIP6EX00@ZP6EX0@Z@Z
+// 起始地址: 0x759a18
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00759A18    push 0x10
 00759A1A    push 0x8C04E0
 00759A1F    call 0x0075A040
@@ -18,12 +24,12 @@
 00759A4F    inc ebx
 00759A50    mov dword ptr ss:[ebp-0x20], ebx
 00759A53    jmp 0x00759A2F
-00759A55    mov al, 0x01
+00759A55    mov al, 0x01                                    ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
 00759A57    mov byte ptr ss:[ebp-0x19], al
 00759A5A    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFE
-00759A61    call 0x00759A7E
+00759A61    call 0x00759A7E                                 ; => [ Call: $LN11 ]
 00759A66    mov ecx, dword ptr ss:[ebp-0x10]
-00759A69    mov dword ptr fs:[0x00000000], ecx
+00759A69    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00759A70    pop ecx
 00759A71    pop edi
 00759A72    pop esi

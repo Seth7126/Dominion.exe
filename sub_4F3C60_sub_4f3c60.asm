@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f3c60
+// 起始地址: 0x4f3c60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F3C60    push ebp
 004F3C61    mov ebp, esp
 004F3C63    sub esp, 0x0C
@@ -13,11 +19,11 @@
 004F3C82    addss xmm0, dword ptr ds:[0x00890E18]
 004F3C8A    divss xmm0, dword ptr ds:[esi+0x08]
 004F3C8F    call 0x004EA070
-004F3C94    addss xmm0, dword ptr ds:[esi+0x0C]
+004F3C94    addss xmm0, dword ptr ds:[esi+0x0C]             ; => [ Call: sub_4ea070 ]
 004F3C99    movss dword ptr ss:[ebp-0x04], xmm0
 004F3C9E    movd xmm0, dword ptr ss:[ebp+0x08]
 004F3CA3    cvtdq2ps xmm0, xmm0
-004F3CA6    call 0x004AC580
+004F3CA6    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 004F3CAB    movd xmm1, edi
 004F3CAF    cvtdq2ps xmm1, xmm1
 004F3CB2    push ecx
@@ -31,13 +37,13 @@
 004F3CD5    fstp dword ptr ss:[esp]
 004F3CD8    movss dword ptr ss:[ebp-0x04], xmm1
 004F3CDD    movss dword ptr ss:[ebp-0x08], xmm1
-004F3CE2    call 0x00762374
+004F3CE2    call 0x00762374                                 ; => [ Call: _fdclass ]
 004F3CE7    add esp, 0x04
 004F3CEA    cmp ax, 0x01
 004F3CEE    jnz 0x004F3D01
-004F3CF0    push 0x808DEC
+004F3CF0    push 0x808DEC                                   ; => [ String: ComputeUCT ]
 004F3CF5    push 0x1490
-004F3CFA    mov ecx, 0x808DF8
+004F3CFA    mov ecx, 0x808DF8                               ; => [ String: !isinf(uct) ]
 004F3CFF    jmp 0x004F3D30
 004F3D01    fld dword ptr ss:[ebp-0x08]
 004F3D04    fstp dword ptr ss:[ebp+0x08]
@@ -52,15 +58,15 @@
 004F3D1D    mov esp, ebp
 004F3D1F    pop ebp
 004F3D20    ret
-004F3D21    push 0x808DEC
+004F3D21    push 0x808DEC                                   ; => [ String: ComputeUCT ]
 004F3D26    push 0x1491
-004F3D2B    mov ecx, 0x808E04
+004F3D2B    mov ecx, 0x808E04                               ; => [ String: !isnan(uct) ]
 004F3D30    push 0x8088A8
 004F3D35    mov edx, 0x801800
-004F3D3A    call 0x0063B870
+004F3D3A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ComputeUCT | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp ]
 004F3D3F    add esp, 0x0C
 004F3D42    call 0x0063BC30
 004F3D47    test al, al
-004F3D49    jz 0x004F3D4C
+004F3D49    jz 0x004F3D4C                                   ; => [ Call: sub_63bc30 ]
 004F3D4B    int3
-004F3D4C    call 0x0063BB00
+004F3D4C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

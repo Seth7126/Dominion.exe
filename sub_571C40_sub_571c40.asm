@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571c40
+// 起始地址: 0x571c40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571C40    push ebp
 00571C41    mov ebp, esp
 00571C43    sub esp, 0x08
@@ -6,7 +12,7 @@
 00571C4A    push edi
 00571C4B    mov edi, ecx
 00571C4D    mov ecx, dword ptr ds:[edi]
-00571C4F    call 0x00571BC0
+00571C4F    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 00571C54    mov esi, eax
 00571C56    xor edx, edx
 00571C58    test esi, esi
@@ -32,10 +38,10 @@
 00571C84    push 0x81F4B8
 00571C89    mov edx, 0x801800
 00571C8E    mov ecx, 0x81F894
-00571C93    call 0x0063B870
+00571C93    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GameSepcific_GetDlcDef | String: pDef | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00571C98    add esp, 0x0C
 00571C9B    call 0x0063BC30
 00571CA0    test al, al
-00571CA2    jz 0x00571CA5
+00571CA2    jz 0x00571CA5                                   ; => [ Call: sub_63bc30 ]
 00571CA4    int3
-00571CA5    call 0x0063BB00
+00571CA5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

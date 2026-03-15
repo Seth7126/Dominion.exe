@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_504cb0
+// 起始地址: 0x504cb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00504CB0    dword B8EC8B55
 00504CB4    or byte ptr ds:[ecx], bl
 00504CB6    add byte ptr ds:[eax], al
@@ -12,7 +18,7 @@
 00504CD3    lea edi, ss:[ebp-0xC84]
 00504CD9    mov esi, eax
 00504CDB    mov ecx, 0x321
-00504CE0    rep movsd
+00504CE0    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: __chkstk | Call: sub_568780 ]
 00504CE2    cmp dword ptr ss:[ebp-0x04], 0x01
 00504CE6    pop edi
 00504CE7    setnle al

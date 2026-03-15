@@ -1,68 +1,74 @@
+// ============================================================
+// 函数名称: sub_648580
+// 起始地址: 0x648580
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00648580    push ebp
 00648581    mov ebp, esp
 00648583    push 0xFFFFFFFF
-00648585    push 0x76C6BD
+00648585    push 0x76C6BD                                   ; => [ Type: EHRegistrationNode | Call: sub_76c6bd ]
 0064858A    mov eax, dword ptr fs:[0x00000000]
-00648590    push eax
+00648590    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00648591    sub esp, 0x48
 00648594    push ebx
 00648595    push esi
 00648596    push edi
 00648597    mov eax, dword ptr ds:[0x008C4040]
 0064859C    xor eax, ebp
-0064859E    push eax
+0064859E    push eax                                        ; => [ Data: __security_cookie ]
 0064859F    lea eax, ss:[ebp-0x0C]
-006485A2    mov dword ptr fs:[0x00000000], eax
+006485A2    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006485A8    mov dword ptr ss:[ebp-0x10], edx
 006485AB    mov eax, ecx
 006485AD    mov dword ptr ss:[ebp-0x28], eax
 006485B0    cmp dword ptr ds:[eax+0x04], 0x02
 006485B4    jz 0x006485CF
-006485B6    push 0x87A528
+006485B6    push 0x87A528                                   ; => [ String: StructureDefGet ]
 006485BB    push 0x313
-006485C0    push 0x87A2E0
-006485C5    mov ecx, 0x87A4FC
+006485C0    push 0x87A2E0                                   ; => [ String: C:\x\ax2017\Engine\AssetUtils.cpp ]
+006485C5    mov ecx, 0x87A4FC                               ; => [ String: assetPtr->assetType == ASSET_TYPE_STRUCTURE ]
 006485CA    jmp 0x00648901
-006485CF    call 0x005AF880
+006485CF    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006485D4    mov ebx, eax
 006485D6    mov dword ptr ss:[ebp-0x24], ebx
 006485D9    cmp dword ptr ds:[ebx], 0x00
 006485DC    jz 0x00648819
 006485E2    mov ecx, dword ptr fs:[0x0000002C]
-006485E9    mov esi, dword ptr ds:[ecx]
+006485E9    mov esi, dword ptr ds:[ecx]                     ; => [ Field: ThreadLocalStoragePointer ]
 006485EB    mov ecx, dword ptr ds:[0x01A98F70]
 006485F1    cmp ecx, dword ptr ds:[esi+0x08]
-006485F7    jle 0x0064863E
+006485F7    jle 0x0064863E                                  ; => [ Data: data_1a98f70 ]
 006485F9    push 0x1A98F70
-006485FE    call 0x0075970E
+006485FE    call 0x0075970E                                 ; => [ Data: data_1a98f70 | Call: sub_75970e ]
 00648603    add esp, 0x04
 00648606    cmp dword ptr ds:[0x01A98F70], 0xFFFFFFFF
-0064860D    jnz 0x0064863E
+0064860D    jnz 0x0064863E                                  ; => [ Data: data_1a98f70 ]
 0064860F    mov edx, 0x05
 00648614    mov dword ptr ss:[ebp-0x04], 0x00
 0064861B    mov ecx, 0x85D3B8
 00648620    call 0x0069F030
 00648625    push 0x1A98F70
-0064862A    mov dword ptr ds:[0x01A98F74], eax
+0064862A    mov dword ptr ds:[0x01A98F74], eax              ; => [ String: sys/draw3d.material | Data: data_1a98f74 | Call: sub_69f030 ]
 0064862F    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-00648636    call 0x007596BD
+00648636    call 0x007596BD                                 ; => [ Data: data_1a98f70 | Call: __Init_thread_footer ]
 0064863B    add esp, 0x04
 0064863E    mov eax, dword ptr ds:[0x01A98F78]
 00648643    cmp eax, dword ptr ds:[esi+0x08]
-00648649    jle 0x00648690
+00648649    jle 0x00648690                                  ; => [ Data: data_1a98f78 ]
 0064864B    push 0x1A98F78
-00648650    call 0x0075970E
+00648650    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a98f78 ]
 00648655    add esp, 0x04
 00648658    cmp dword ptr ds:[0x01A98F78], 0xFFFFFFFF
-0064865F    jnz 0x00648690
+0064865F    jnz 0x00648690                                  ; => [ Data: data_1a98f78 ]
 00648661    mov edx, 0x03
 00648666    mov dword ptr ss:[ebp-0x04], 0x01
 0064866D    mov ecx, 0x872AE4
 00648672    call 0x0069F030
 00648677    push 0x1A98F78
-0064867C    mov dword ptr ds:[0x01A98F7C], eax
+0064867C    mov dword ptr ds:[0x01A98F7C], eax              ; => [ String: sys/pbr/brdf_lut.texture | Data: data_1a98f7c | Call: sub_69f030 ]
 00648681    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-00648688    call 0x007596BD
+00648688    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a98f78 ]
 0064868D    add esp, 0x04
 00648690    mov eax, dword ptr ds:[ebx]
 00648692    mov edi, dword ptr ss:[ebp+0x0C]
@@ -80,7 +86,7 @@
 006486BD    mov eax, dword ptr ds:[ecx+0x08]
 006486C0    test eax, eax
 006486C2    jle 0x006486FF
-006486C4    xor edi, edi
+006486C4    xor edi, edi                                    ; => [ Call: nullptr ]
 006486C6    mov eax, dword ptr ds:[ecx]
 006486C8    mov edx, dword ptr ds:[edi+eax*1]
 006486CB    mov ecx, edx
@@ -123,7 +129,7 @@
 00648729    mov dword ptr ss:[ebp-0x4C], eax
 0064872C    mov eax, dword ptr ds:[0x01A98F7C]
 00648731    push edi
-00648732    mov dword ptr ss:[ebp-0x44], eax
+00648732    mov dword ptr ss:[ebp-0x44], eax                ; => [ Data: data_1a98f7c ]
 00648735    lea eax, ss:[ebp-0x54]
 00648738    push 0x05
 0064873A    push eax
@@ -149,7 +155,7 @@
 00648774    mov dword ptr ss:[ebp-0x3C], edi
 00648777    mov edi, dword ptr ss:[ebp+0x0C]
 0064877A    push edi
-0064877B    mov dword ptr ss:[ebp-0x34], eax
+0064877B    mov dword ptr ss:[ebp-0x34], eax                ; => [ Data: data_1a98f7c ]
 0064877E    lea eax, ss:[ebp-0x40]
 00648781    push 0x04
 00648783    push eax
@@ -189,11 +195,11 @@
 006487CF    push eax
 006487D0    jmp 0x006487D6
 006487D2    push 0x00
-006487D4    push 0x00
-006487D6    push dword ptr ds:[0x01A98F74]
+006487D4    push 0x00                                       ; => [ Call: nullptr ]
+006487D6    push dword ptr ds:[0x01A98F74]                  ; => [ Data: data_1a98f74 ]
 006487DC    mov ecx, dword ptr ss:[ebp-0x14]
 006487DF    mov edx, dword ptr ss:[ebp-0x10]
-006487E2    call 0x00647050
+006487E2    call 0x00647050                                 ; => [ Call: sub_647050 ]
 006487E7    mov eax, dword ptr ss:[ebp-0x24]
 006487EA    add esp, 0x10
 006487ED    mov edx, dword ptr ss:[ebp-0x18]
@@ -208,10 +214,10 @@
 0064880A    mov edx, dword ptr ss:[ebp-0x10]
 0064880D    mov ecx, dword ptr ss:[ebp-0x28]
 00648810    push edi
-00648811    call 0x00647D70
+00648811    call 0x00647D70                                 ; => [ Call: sub_647d70 ]
 00648816    add esp, 0x04
 00648819    mov ecx, dword ptr ss:[ebp-0x0C]
-0064881C    mov dword ptr fs:[0x00000000], ecx
+0064881C    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00648823    pop ecx
 00648824    pop edi
 00648825    pop esi
@@ -222,17 +228,17 @@
 0064882B    lea ecx, ds:[edx+0x20]
 0064882E    mov dword ptr ss:[ebp-0x40], eax
 00648831    call 0x005BC1E0
-00648836    mov dword ptr ss:[ebp-0x3C], eax
+00648836    mov dword ptr ss:[ebp-0x3C], eax                ; => [ Call: sub_5bc1e0 ]
 00648839    lea ecx, ds:[edx+0x08]
 0064883C    mov eax, dword ptr ds:[0x01A98F7C]
-00648841    mov dword ptr ss:[ebp-0x38], eax
+00648841    mov dword ptr ss:[ebp-0x38], eax                ; => [ Data: data_1a98f7c ]
 00648844    mov eax, dword ptr ss:[ebp+0x0C]
 00648847    push eax
 00648848    push 0x03
 0064884A    lea eax, ss:[ebp-0x40]
 0064884D    mov dword ptr ss:[ebp-0x34], 0x00
 00648854    push eax
-00648855    call 0x005BC1E0
+00648855    call 0x005BC1E0                                 ; => [ Call: sub_5bc1e0 ]
 0064885A    mov edx, dword ptr ss:[ebp-0x10]
 0064885D    mov ecx, dword ptr ss:[ebp-0x14]
 00648860    push eax
@@ -242,25 +248,25 @@
 00648870    push 0x872630
 00648875    mov edx, 0x801800
 0064887A    mov ecx, 0x801AA4
-0064887F    call 0x0063B870
+0064887F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Draw3d.cpp | Call: sub_647050 | String: Draw3DStructureMaterialTableMatrixOverrides | String: Halt ]
 00648884    add esp, 0x1C
 00648887    jmp 0x0064890E
 0064888C    lea ecx, ds:[edx+0x20]
 0064888F    mov dword ptr ss:[ebp-0x40], eax
 00648892    call 0x005BC1E0
 00648897    mov ecx, edi
-00648899    mov dword ptr ss:[ebp-0x3C], eax
+00648899    mov dword ptr ss:[ebp-0x3C], eax                ; => [ Call: sub_5bc1e0 ]
 0064889C    call 0x005BC1E0
-006488A1    mov dword ptr ss:[ebp-0x38], eax
+006488A1    mov dword ptr ss:[ebp-0x38], eax                ; => [ Call: sub_5bc1e0 ]
 006488A4    lea ecx, ds:[edx+0x08]
 006488A7    mov eax, dword ptr ds:[0x01A98F7C]
-006488AC    mov dword ptr ss:[ebp-0x34], eax
+006488AC    mov dword ptr ss:[ebp-0x34], eax                ; => [ Data: data_1a98f7c ]
 006488AF    mov eax, dword ptr ss:[ebp+0x0C]
 006488B2    push eax
 006488B3    push 0x04
 006488B5    lea eax, ss:[ebp-0x40]
 006488B8    push eax
-006488B9    call 0x005BC1E0
+006488B9    call 0x005BC1E0                                 ; => [ Call: sub_5bc1e0 ]
 006488BE    mov edx, dword ptr ss:[ebp-0x10]
 006488C1    mov ecx, dword ptr ss:[ebp-0x14]
 006488C4    push eax
@@ -270,18 +276,18 @@
 006488D4    push 0x872630
 006488D9    mov edx, 0x801800
 006488DE    mov ecx, 0x801AA4
-006488E3    call 0x0063B870
+006488E3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Draw3d.cpp | Call: sub_647050 | String: Draw3DStructureMaterialTableMatrixOverrides | String: Halt ]
 006488E8    add esp, 0x1C
 006488EB    jmp 0x0064890E
-006488ED    push 0x872AA4
+006488ED    push 0x872AA4                                   ; => [ String: GetMaterialEntry ]
 006488F2    push 0x7FD
-006488F7    push 0x872630
-006488FC    mov ecx, 0x872A88
+006488F7    push 0x872630                                   ; => [ String: C:\x\ax2017\Engine\Draw3d.cpp ]
+006488FC    mov ecx, 0x872A88                               ; => [ String: materialTable.numMaterials ]
 00648901    mov edx, 0x801800
-00648906    call 0x0063B870
+00648906    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0064890B    add esp, 0x0C
 0064890E    call 0x0063BC30
 00648913    test al, al
-00648915    jz 0x00648918
+00648915    jz 0x00648918                                   ; => [ Call: sub_63bc30 ]
 00648917    int3
-00648918    call 0x0063BB00
+00648918    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

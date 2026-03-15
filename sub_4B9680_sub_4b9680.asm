@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4b9680
+// 起始地址: 0x4b9680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B9680    push esi
 004B9681    mov esi, dword ptr ds:[ecx+0x11A0]
 004B9687    xor eax, eax
@@ -19,10 +25,10 @@
 004B96B1    push 0x801AF8
 004B96B6    mov edx, 0x801800
 004B96BB    mov ecx, 0x801AA4
-004B96C0    call 0x0063B870
+004B96C0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GameGetPlayer | Data: data_801800 | String: Halt | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B96C5    add esp, 0x0C
 004B96C8    call 0x0063BC30
 004B96CD    test al, al
-004B96CF    jz 0x004B96D2
+004B96CF    jz 0x004B96D2                                   ; => [ Call: sub_63bc30 ]
 004B96D1    int3
-004B96D2    call 0x0063BB00
+004B96D2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

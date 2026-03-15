@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6417e0
+// 起始地址: 0x6417e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006417E0    push ebp
 006417E1    mov ebp, esp
 006417E3    sub esp, 0x18
@@ -11,12 +17,12 @@
 006417F6    movss dword ptr ss:[ebp-0x0C], xmm2
 006417FB    mov dword ptr ss:[ebp-0x14], eax
 006417FE    jz 0x00641819
-00641800    push 0x872364
+00641800    push 0x872364                                   ; => [ String: TTFontGet ]
 00641805    push 0x1EF
-0064180A    push 0x8720A4
-0064180F    mov ecx, 0x87233C
+0064180A    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+0064180F    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 00641814    jmp 0x0064199D
-00641819    call 0x005AF880
+00641819    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0064181E    mov cl, byte ptr ds:[esi]
 00641820    xorps xmm0, xmm0
 00641823    mov dword ptr ss:[ebp-0x18], eax
@@ -39,7 +45,7 @@
 00641851    jnz 0x00641989
 00641857    lea ecx, ss:[ebp-0x04]
 0064185A    mov dword ptr ss:[ebp-0x04], esi
-0064185D    call 0x005A0D00
+0064185D    call 0x005A0D00                                 ; => [ Call: sub_5a0d00 ]
 00641862    mov dl, byte ptr ds:[esi]
 00641864    mov edi, eax
 00641866    mov dword ptr ss:[ebp-0x04], esi
@@ -57,7 +63,7 @@
 00641883    cmp dl, 0xF0
 00641886    jnz 0x0064197D
 0064188C    lea ecx, ss:[ebp-0x04]
-0064188F    call 0x005A0D00
+0064188F    call 0x005A0D00                                 ; => [ Call: sub_5a0d00 ]
 00641894    mov esi, dword ptr ss:[ebp-0x04]
 00641897    mov cl, byte ptr ds:[esi]
 00641899    cmp cl, 0x80
@@ -77,7 +83,7 @@
 006418BD    mov dword ptr ss:[ebp-0x04], esi
 006418C0    call 0x005A0D00
 006418C5    movss xmm1, dword ptr ss:[ebp-0x08]
-006418CA    mov ebx, eax
+006418CA    mov ebx, eax                                    ; => [ Call: sub_5a0d00 ]
 006418CC    movss xmm0, dword ptr ds:[0x00890E18]
 006418D4    ucomiss xmm1, xmm2
 006418D7    movss dword ptr ss:[ebp-0x04], xmm0
@@ -113,7 +119,7 @@
 00641933    mulss xmm1, dword ptr ss:[ebp-0x0C]
 00641938    mov edx, edi
 0064193A    push 0x00
-0064193C    call 0x00642680
+0064193C    call 0x00642680                                 ; => [ Call: sub_642680 ]
 00641941    mov cl, byte ptr ds:[esi]
 00641943    xorps xmm2, xmm2
 00641946    add esp, 0x04
@@ -133,18 +139,18 @@
 00641979    mov esp, ebp
 0064197B    pop ebp
 0064197C    ret
-0064197D    push 0x825084
+0064197D    push 0x825084                                   ; => [ String: Xutf8_next ]
 00641982    push 0x222
 00641987    jmp 0x00641993
-00641989    push 0x825074
+00641989    push 0x825074                                   ; => [ String: Xutf8_peek_next ]
 0064198E    push 0x21C
-00641993    push 0x825090
-00641998    mov ecx, 0x8250B0
+00641993    push 0x825090                                   ; => [ String: C:\x\ax2017\Engine\Xutf8.cpp ]
+00641998    mov ecx, 0x8250B0                               ; => [ String: !Xutf8_is_invalid_lead_char(str) ]
 0064199D    mov edx, 0x801800
-006419A2    call 0x0063B870
+006419A2    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006419A7    add esp, 0x0C
 006419AA    call 0x0063BC30
 006419AF    test al, al
-006419B1    jz 0x006419B4
+006419B1    jz 0x006419B4                                   ; => [ Call: sub_63bc30 ]
 006419B3    int3
-006419B4    call 0x0063BB00
+006419B4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

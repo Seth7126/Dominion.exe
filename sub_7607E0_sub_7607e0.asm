@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7607e0
+// 起始地址: 0x7607e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007607E0    push ebp
 007607E1    mov ebp, esp
 007607E3    push esi
@@ -12,7 +18,7 @@
 00760801    movaps xmm1, xmm0
 00760804    subsd xmm0, xmm1
 00760808    mulsd xmm0, qword ptr ds:[esi+0x20]
-0076080D    call 0x00762096
+0076080D    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 00760812    movss xmm2, dword ptr ds:[esi+0x08]
 00760817    cvtps2pd xmm1, xmm2
 0076081A    addss xmm2, dword ptr ds:[esi]

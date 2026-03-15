@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5292c0
+// 起始地址: 0x5292c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005292C0    push ebp
 005292C1    mov ebp, esp
 005292C3    mov eax, dword ptr ss:[ebp+0x08]
@@ -6,10 +12,10 @@
 005292C8    mov esi, dword ptr ds:[eax]
 005292CA    call 0x00573400
 005292CF    movzx esi, si
-005292D2    mov edi, dword ptr ds:[eax+0x04]
+005292D2    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005292D5    cmp esi, 0x320
 005292DB    jb 0x005292E2
-005292DD    call 0x00591930
+005292DD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005292E2    imul eax, esi, 0x64
 005292E5    cmp dword ptr ds:[eax+edi*1+0x1A4C], 0x105
 005292F0    pop edi

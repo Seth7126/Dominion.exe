@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_60eb90
+// 起始地址: 0x60eb90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060EB90    mov byte ptr ds:[edx], 0x00
 0060EB93    cmp ecx, 0x18
 0060EB96    jnbe 0x0060EC21
@@ -50,10 +56,10 @@
 0060EC2B    push 0x86F1E8
 0060EC30    mov edx, 0x801800
 0060EC35    mov ecx, 0x801AA4
-0060EC3A    call 0x0063B870
+0060EC3A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: GetAssociatedExpansion | String: Halt ]
 0060EC3F    add esp, 0x0C
 0060EC42    call 0x0063BC30
 0060EC47    test al, al
-0060EC49    jz 0x0060EC4C
+0060EC49    jz 0x0060EC4C                                   ; => [ Call: sub_63bc30 ]
 0060EC4B    int3
-0060EC4C    jmp 0x0063BB00
+0060EC4C    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

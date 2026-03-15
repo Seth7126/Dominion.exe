@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_4dae80
+// 起始地址: 0x4dae80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DAE80    push ebp
 004DAE81    mov ebp, esp
-004DAE83    mov eax, dword ptr ds:[0x00BF23B8]
+004DAE83    mov eax, dword ptr ds:[0x00BF23B8]              ; => [ Data: data_bf23b8 ]
 004DAE88    sub esp, 0x08
 004DAE8B    push ebx
 004DAE8C    mov ebx, ecx
@@ -13,7 +19,7 @@
 004DAE9A    push 0xCB4518
 004DAE9F    call dword ptr ds:[0x0077583C]
 004DAEA5    add esp, 0x04
-004DAEA8    mov ecx, dword ptr ds:[eax]
+004DAEA8    mov ecx, dword ptr ds:[eax]                     ; => [ Data: data_cb4518 ]
 004DAEAA    push dword ptr ds:[ebx+0x08]
 004DAEAD    mov eax, dword ptr ds:[ecx]
 004DAEAF    mov eax, dword ptr ds:[eax+0x1C]
@@ -41,7 +47,7 @@
 004DAED6    ret
 004DAED7    lea edx, ss:[ebp-0x08]
 004DAEDA    lea ecx, ss:[ebp-0x04]
-004DAEDD    call 0x004DAF40
+004DAEDD    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004DAEE2    mov edi, eax
 004DAEE4    xor esi, esi
 004DAEE6    test edi, edi
@@ -50,7 +56,7 @@
 004DAEF0    mov eax, dword ptr ss:[ebp-0x04]
 004DAEF3    mov edx, dword ptr ds:[ebx]
 004DAEF5    mov ecx, dword ptr ds:[eax+esi*4]
-004DAEF8    call 0x004DB560
+004DAEF8    call 0x004DB560                                 ; => [ Call: sub_4db560 ]
 004DAEFD    test al, al
 004DAEFF    jnz 0x004DAF10
 004DAF01    inc esi

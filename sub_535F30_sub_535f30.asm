@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_535f30
+// 起始地址: 0x535f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00535F30    push ebp
 00535F31    mov ebp, esp
 00535F33    and esp, 0xFFFFFFF0
@@ -6,7 +12,7 @@
 00535F3C    xorps xmm0, xmm0
 00535F3F    movlpd qword ptr ss:[esp+0x10], xmm0
 00535F45    mov edx, 0x09
-00535F4A    movlpd qword ptr ss:[esp+0x20], xmm0
+00535F4A    movlpd qword ptr ss:[esp+0x20], xmm0            ; => [ Call: __builtin_memset ]
 00535F50    movlpd qword ptr ss:[esp+0x34], xmm0
 00535F56    mov eax, dword ptr ds:[eax]
 00535F58    movlpd qword ptr ss:[esp+0x2C], xmm0
@@ -27,7 +33,7 @@
 00535FA0    push 0x08
 00535FA2    push eax
 00535FA3    movaps xmmword ptr ss:[esp+0x6C], xmm0
-00535FA8    call 0x00563C40
+00535FA8    call 0x00563C40                                 ; => [ Call: sub_563c40 ]
 00535FAD    add esp, 0x0C
 00535FB0    mov dword ptr ds:[esi], eax
 00535FB2    pop esi

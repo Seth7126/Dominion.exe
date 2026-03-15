@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5337b0
+// 起始地址: 0x5337b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005337B0    dword 106B956
 005337B4    add byte ptr ds:[eax], al
-005337B6    call 0x00563590
+005337B6    call 0x00563590                                 ; => [ Call: sub_563590 ]
 005337BB    mov esi, eax
 005337BD    test esi, esi
 005337BF    jz 0x005337E7
-005337C1    call 0x00573400
+005337C1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005337C6    push 0x04
 005337C8    push 0x00
 005337CA    push 0x00
@@ -14,7 +20,7 @@
 005337D7    push 0x00
 005337D9    push 0x476
 005337DE    push esi
-005337DF    call 0x00583720
+005337DF    call 0x00583720                                 ; => [ Call: nullptr | Call: sub_583720 ]
 005337E4    add esp, 0x1C
 005337E7    pop esi
 005337E8    ret

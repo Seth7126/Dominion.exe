@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_665f50
+// 起始地址: 0x665f50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00665F50    push ebp
 00665F51    mov ebp, esp
 00665F53    push ecx
@@ -5,7 +11,7 @@
 00665F55    push esi
 00665F56    push edi
 00665F57    mov ebx, edx
-00665F59    call 0x0064E7A0
+00665F59    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00665F5E    mov edi, eax
 00665F60    xor esi, esi
 00665F62    mov eax, dword ptr ds:[edi+0x16F4]
@@ -28,7 +34,7 @@
 00665F93    jnz 0x00665FB9
 00665F95    mov ecx, 0x1C00
 00665F9A    call 0x0064C020
-00665F9F    mov dword ptr ds:[edi+0x16F0], eax
+00665F9F    mov dword ptr ds:[edi+0x16F0], eax              ; => [ Call: sub_64c020 ]
 00665FA5    mov dword ptr ds:[edi+0x16F4], 0x00
 00665FAF    mov dword ptr ds:[edi+0x16F8], 0x100
 00665FB9    mov eax, dword ptr ds:[edi+0x16F4]
@@ -60,16 +66,16 @@
 00666026    pop ebx
 00666027    pop ecx
 00666028    pop ebp
-00666029    ret
+00666029    ret                                             ; => [ Call: sub_65bf00 ]
 0066602A    push 0x876A80
 0066602F    push 0xA1
 00666034    push 0x816BDC
 00666039    mov edx, 0x801800
 0066603E    mov ecx, 0x816BF8
-00666043    call 0x0063B870
+00666043    call 0x0063B870                                 ; => [ String: mSize < mSizeReserved | Call: sub_63b870 | String: C:\x\ax2017\Engine\xArray.h | Data: data_801800 | String: XArray<struct UI2State>::Alloc ]
 00666048    add esp, 0x0C
 0066604B    call 0x0063BC30
 00666050    test al, al
-00666052    jz 0x00666055
+00666052    jz 0x00666055                                   ; => [ Call: sub_63bc30 ]
 00666054    int3
-00666055    call 0x0063BB00
+00666055    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

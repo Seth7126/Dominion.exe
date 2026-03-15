@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_595620
+// 起始地址: 0x595620
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00595620    push ebp
 00595621    mov ebp, esp
 00595623    sub esp, 0x14
@@ -17,7 +23,7 @@
 00595643    lea eax, ds:[edi-0x04]
 00595646    mov edx, esi
 00595648    push eax
-00595649    call 0x005969F0
+00595649    call 0x005969F0                                 ; => [ Call: sub_5969f0 ]
 0059564E    add esp, 0x08
 00595651    lea ebx, ds:[esi+0x04]
 00595654    mov dword ptr ss:[ebp-0x04], ebx
@@ -30,13 +36,13 @@
 00595665    push dword ptr ds:[esi-0x04]
 00595668    call 0x00586690
 0059566D    test al, al
-0059566F    jnz 0x00595689
+0059566F    jnz 0x00595689                                  ; => [ Call: sub_586690 ]
 00595671    push dword ptr ds:[esi-0x04]
 00595674    lea ecx, ss:[ebp+0x0C]
 00595677    push dword ptr ds:[esi]
 00595679    call 0x00586690
 0059567E    test al, al
-00595680    jnz 0x00595689
+00595680    jnz 0x00595689                                  ; => [ Call: sub_586690 ]
 00595682    add esi, 0xFFFFFFFC
 00595685    cmp ebx, esi
 00595687    jb 0x00595660
@@ -48,13 +54,13 @@
 00595695    push dword ptr ds:[ebx]
 00595697    call 0x00586690
 0059569C    test al, al
-0059569E    jnz 0x005956B7
+0059569E    jnz 0x005956B7                                  ; => [ Call: sub_586690 ]
 005956A0    push dword ptr ds:[ebx]
 005956A2    lea ecx, ss:[ebp+0x0C]
 005956A5    push dword ptr ds:[esi]
 005956A7    call 0x00586690
 005956AC    test al, al
-005956AE    jnz 0x005956B7
+005956AE    jnz 0x005956B7                                  ; => [ Call: sub_586690 ]
 005956B0    add ebx, 0x04
 005956B3    cmp ebx, edi
 005956B5    jb 0x00595690
@@ -71,13 +77,13 @@
 005956D5    push dword ptr ds:[esi]
 005956D7    call 0x00586690
 005956DC    test al, al
-005956DE    jnz 0x005956FF
+005956DE    jnz 0x005956FF                                  ; => [ Call: sub_586690 ]
 005956E0    push dword ptr ds:[esi]
 005956E2    lea ecx, ss:[ebp+0x0C]
 005956E5    push dword ptr ds:[edi]
 005956E7    call 0x00586690
 005956EC    test al, al
-005956EE    jnz 0x00595707
+005956EE    jnz 0x00595707                                  ; => [ Call: sub_586690 ]
 005956F0    cmp ebx, edi
 005956F2    jz 0x005956FC
 005956F4    mov ecx, dword ptr ds:[ebx]
@@ -102,13 +108,13 @@
 00595725    push dword ptr ds:[edi]
 00595727    call 0x00586690
 0059572C    test al, al
-0059572E    jnz 0x0059574F
+0059572E    jnz 0x0059574F                                  ; => [ Call: sub_586690 ]
 00595730    push dword ptr ds:[edi]
 00595732    lea ecx, ss:[ebp+0x0C]
 00595735    push dword ptr ds:[esi]
 00595737    call 0x00586690
 0059573C    test al, al
-0059573E    jnz 0x0059575E
+0059573E    jnz 0x0059575E                                  ; => [ Call: sub_586690 ]
 00595740    sub esi, 0x04
 00595743    cmp esi, edi
 00595745    jz 0x0059574F

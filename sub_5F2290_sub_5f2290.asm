@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5f2290
+// 起始地址: 0x5f2290
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F2290    push ebp
 005F2291    mov ebp, esp
 005F2293    sub esp, 0x17C
-005F2299    mov eax, dword ptr ds:[0x008C4040]
+005F2299    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005F229E    xor eax, ebp
 005F22A0    mov dword ptr ss:[ebp-0x04], eax
 005F22A3    mov eax, dword ptr ss:[ebp+0x0C]
@@ -21,23 +27,23 @@
 005F22D7    mov dword ptr ss:[ebp-0xC8], edi
 005F22DD    cmp edx, 0x05
 005F22E0    jnz 0x005F22F6
-005F22E2    push 0x860708
+005F22E2    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F22E7    push 0x7721
-005F22EC    mov ecx, 0x8606E4
+005F22EC    mov ecx, 0x8606E4                               ; => [ String: gfx.card.where != CW_BOARD_MOUSE ]
 005F22F1    jmp 0x005F2D4C
 005F22F6    mov eax, dword ptr ds:[esi+0x5C]
 005F22F9    cmp eax, 0x05
 005F22FC    jnz 0x005F2312
-005F22FE    push 0x860708
+005F22FE    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F2303    push 0x7722
-005F2308    mov ecx, 0x860724
+005F2308    mov ecx, 0x860724                               ; => [ String: pileDest.pile.where != CW_BOARD_MOUSE ]
 005F230D    jmp 0x005F2D4C
 005F2312    cmp eax, 0x3EC
 005F2317    jnz 0x005F232A
-005F2319    mov ecx, dword ptr ds:[0x019E39F8]
+005F2319    mov ecx, dword ptr ds:[0x019E39F8]              ; => [ Data: data_19e39f8 ]
 005F231F    mov dword ptr ds:[ebx+0x08], ecx
 005F2322    lea eax, ds:[ecx+0x01]
-005F2325    mov dword ptr ds:[0x019E39F8], eax
+005F2325    mov dword ptr ds:[0x019E39F8], eax              ; => [ Data: data_19e39f8 ]
 005F232A    cmp edx, dword ptr ds:[esi+0x5C]
 005F232D    mov eax, dword ptr ds:[esi+0x1C28]
 005F2333    mov dword ptr ss:[ebp-0xB8], eax
@@ -52,34 +58,34 @@
 005F2357    jz 0x005F23D3
 005F2359    movzx ecx, ax
 005F235C    cmp ecx, dword ptr ds:[0x00B809E4]
-005F2362    jnb 0x005F23D3
+005F2362    jnb 0x005F23D3                                  ; => [ Data: data_b809e4 ]
 005F2364    imul edx, ecx, 0x1C30
-005F236A    add edx, dword ptr ds:[0x00B809E0]
+005F236A    add edx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005F2370    cmp dword ptr ds:[edx+0x1C28], eax
 005F2376    jnz 0x005F23D3
 005F2378    test edx, edx
 005F237A    jz 0x005F23D3
 005F237C    mov ecx, ebx
-005F237E    call 0x005CD880
+005F237E    call 0x005CD880                                 ; => [ Call: sub_5cd880 ]
 005F2383    jmp 0x005F23D3
 005F2385    cmp edx, 0x3F1
 005F238B    jnz 0x005F2396
 005F238D    mov ecx, ebx
-005F238F    call 0x005CD3E0
+005F238F    call 0x005CD3E0                                 ; => [ Call: sub_5cd3e0 ]
 005F2394    jmp 0x005F23D3
 005F2396    cmp dword ptr ds:[ebx+0x2C], 0x00
 005F239A    jz 0x005F23B0
-005F239C    push 0x8606A0
+005F239C    push 0x8606A0                                   ; => [ String: CardGetPile ]
 005F23A1    push 0x76A2
-005F23A6    mov ecx, 0x86F474
+005F23A6    mov ecx, 0x86F474                               ; => [ String: gfx.type == DOMGFX_CARD ]
 005F23AB    jmp 0x005F2D4C
 005F23B0    mov ecx, dword ptr ds:[ebx+0x9C]
-005F23B6    call 0x005CBA00
+005F23B6    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005F23BB    push dword ptr ss:[ebp-0xEC]
 005F23C1    mov edx, eax
 005F23C3    mov ecx, ebx
 005F23C5    push dword ptr ss:[ebp-0xC0]
-005F23CB    call 0x005CE1B0
+005F23CB    call 0x005CE1B0                                 ; => [ Call: sub_5ce1b0 ]
 005F23D0    add esp, 0x08
 005F23D3    mov eax, dword ptr ds:[ebx+0xA0]
 005F23D9    mov edx, dword ptr ss:[ebp-0xB8]
@@ -89,16 +95,16 @@
 005F23ED    jz 0x005F2D3D
 005F23F3    movzx eax, dx
 005F23F6    cmp eax, dword ptr ds:[0x00B809E4]
-005F23FC    jnb 0x005F2D3D
+005F23FC    jnb 0x005F2D3D                                  ; => [ Data: data_b809e4 ]
 005F2402    imul eax, eax, 0x1C30
-005F2408    add eax, dword ptr ds:[0x00B809E0]
+005F2408    add eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005F240E    cmp dword ptr ds:[eax+0x1C28], edx
 005F2414    jnz 0x005F2D3D
 005F241A    cmp dword ptr ds:[esi+0x2C], 0x03
 005F241E    jz 0x005F2434
-005F2420    push 0x860708
+005F2420    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F2425    push 0x7752
-005F242A    mov ecx, 0x860768
+005F242A    mov ecx, 0x860768                               ; => [ String: pileDest.type == DOMGFX_PILE ]
 005F242F    jmp 0x005F2D4C
 005F2434    mov ecx, dword ptr ds:[esi+0x5C]
 005F2437    mov edx, dword ptr ss:[ebp+0x18]
@@ -110,14 +116,14 @@
 005F244C    push dword ptr ds:[eax+0x04]
 005F244F    push dword ptr ds:[eax]
 005F2451    push dword ptr ss:[ebp-0xC0]
-005F2457    call 0x005CE300
+005F2457    call 0x005CE300                                 ; => [ Call: sub_5ce300 ]
 005F245C    add esp, 0x0C
 005F245F    mov esi, eax
 005F2461    lea eax, ss:[ebp-0x150]
 005F2467    push 0x60
 005F2469    push 0x00
 005F246B    push eax
-005F246C    call 0x00761FC4
+005F246C    call 0x00761FC4                                 ; => [ Call: memset ]
 005F2471    mov ecx, dword ptr ss:[ebp-0xC4]
 005F2477    mov dword ptr ss:[ebp-0x144], esi
 005F247D    mov esi, dword ptr ss:[ebp-0xC4]
@@ -130,14 +136,14 @@
 005F24A7    jnz 0x005F2548
 005F24AD    cmp dword ptr ds:[esi+0x58], edi
 005F24B0    jz 0x005F24C6
-005F24B2    push 0x860708
+005F24B2    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F24B7    push 0x7760
-005F24BC    mov ecx, 0x86074C
+005F24BC    mov ecx, 0x86074C                               ; => [ String: pileDest.pile.owner == who ]
 005F24C1    jmp 0x005F2D4C
 005F24C6    push 0xFFFFFFFF
 005F24C8    mov edx, edi
 005F24CA    mov ecx, ebx
-005F24CC    call 0x005CD0A0
+005F24CC    call 0x005CD0A0                                 ; => [ Call: sub_5cd0a0 ]
 005F24D1    add esp, 0x04
 005F24D4    mov dword ptr ds:[ebx+0xA4], 0x3F1
 005F24DE    mov ecx, dword ptr ds:[esi+0x1C28]
@@ -150,7 +156,7 @@
 005F24FF    push 0x40
 005F2501    push 0x00
 005F2503    push eax
-005F2504    call 0x00761FC4
+005F2504    call 0x00761FC4                                 ; => [ Call: memset ]
 005F2509    mov eax, dword ptr ss:[ebp-0xC8]
 005F250F    mov dword ptr ss:[ebp-0x148], eax
 005F2515    mov eax, dword ptr ss:[ebp-0xB8]
@@ -168,8 +174,8 @@
 005F2560    cmp ecx, 0x3EF
 005F2566    jz 0x005F298A
 005F256C    cmp byte ptr ss:[ebp-0xB1], 0x00
-005F2573    mov ecx, dword ptr ds:[0x00B604E0]
-005F2579    mov eax, dword ptr ds:[0x00B7FCF4]
+005F2573    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
+005F2579    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F257E    jnz 0x005F26E7
 005F2584    cmp dword ptr ds:[esi+0x5C], 0x02
 005F2588    jnz 0x005F25C6
@@ -183,7 +189,7 @@
 005F25B2    jnz 0x005F268E
 005F25B8    cmp edx, 0x13
 005F25BB    jz 0x005F268E
-005F25C1    mov eax, dword ptr ds:[0x00B7FCF4]
+005F25C1    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F25C6    cmp dword ptr ds:[esi+0x1C28], eax
 005F25CC    jz 0x005F26BB
 005F25D2    cmp ecx, 0xFFFFFFFF
@@ -196,11 +202,11 @@
 005F25EF    jnz 0x005F2612
 005F25F1    cmp dword ptr ds:[esi+0x5C], 0x3E9
 005F25F8    jz 0x005F268E
-005F25FE    push 0x860708
+005F25FE    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F2603    push 0x7783
-005F2608    mov ecx, 0x8607B4
+005F2608    mov ecx, 0x8607B4                               ; => [ String: pileDest.pile.where == CW_PLAYER_IN_PLAY ]
 005F260D    jmp 0x005F2D4C
-005F2612    mov eax, dword ptr ds:[0x00B7FCF4]
+005F2612    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F2617    cmp dword ptr ds:[esi+0x1C28], eax
 005F261D    jz 0x005F26BB
 005F2623    cmp edx, 0x06
@@ -211,7 +217,7 @@
 005F2637    cmovz eax, dword ptr ss:[ebp-0xB8]
 005F263E    cmp edi, eax
 005F2640    jnz 0x005F268E
-005F2642    mov eax, dword ptr ds:[0x00B7FCF4]
+005F2642    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F2647    cmp dword ptr ds:[esi+0x1C28], eax
 005F264D    jz 0x005F26BB
 005F264F    cmp edx, 0x05
@@ -236,14 +242,14 @@
 005F269E    push esi
 005F269F    push eax
 005F26A0    mov ecx, edi
-005F26A2    call 0x005F1E60
+005F26A2    call 0x005F1E60                                 ; => [ Call: sub_5f1e60 ]
 005F26A7    add esp, 0x10
 005F26AA    pop edi
 005F26AB    pop esi
 005F26AC    pop ebx
 005F26AD    mov ecx, dword ptr ss:[ebp-0x04]
 005F26B0    xor ecx, ebp
-005F26B2    call 0x0075927A
+005F26B2    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005F26B7    mov esp, ebp
 005F26B9    pop ebp
 005F26BA    ret
@@ -257,7 +263,7 @@
 005F26D7    cmovz eax, dword ptr ss:[ebp-0xB8]
 005F26DE    cmp edi, eax
 005F26E0    jnz 0x005F268E
-005F26E2    mov eax, dword ptr ds:[0x00B7FCF4]
+005F26E2    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F26E7    cmp dword ptr ds:[esi+0x5C], 0x3EC
 005F26EE    jnz 0x005F279A
 005F26F4    cmp byte ptr ss:[ebp-0xB1], 0x00
@@ -281,7 +287,7 @@
 005F2746    jz 0x005F268E
 005F274C    mov eax, dword ptr ds:[0x00B7FCF4]
 005F2751    cmp dword ptr ds:[esi+0x1C28], eax
-005F2757    jz 0x005F279A
+005F2757    jz 0x005F279A                                   ; => [ Data: data_b7fcf4 ]
 005F2759    cmp ecx, 0xFFFFFFFF
 005F275C    mov dword ptr ss:[ebp-0xB8], 0x00
 005F2766    mov eax, ecx
@@ -296,8 +302,8 @@
 005F2781    call 0x005CBAA0
 005F2786    add esp, 0x08
 005F2789    test al, al
-005F278B    jnz 0x005F268E
-005F2791    mov ecx, dword ptr ds:[0x00B604E0]
+005F278B    jnz 0x005F268E                                  ; => [ Call: sub_5cbaa0 ]
+005F2791    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005F2797    mov edx, dword ptr ss:[ebp+0x18]
 005F279A    mov eax, dword ptr ds:[esi+0x5C]
 005F279D    cmp eax, 0x3EB
@@ -307,11 +313,11 @@
 005F27AC    jnz 0x005F2901
 005F27B2    cmp dword ptr ds:[esi+0x2C], 0x03
 005F27B6    jz 0x005F27CC
-005F27B8    push 0x86F520
+005F27B8    push 0x86F520                                   ; => [ String: PileIsOpen ]
 005F27BD    push 0xAF0
-005F27C2    mov ecx, 0x86F4A8
+005F27C2    mov ecx, 0x86F4A8                               ; => [ String: gfx.type == DOMGFX_PILE ]
 005F27C7    jmp 0x005F2D4C
-005F27CC    mov eax, dword ptr ds:[0x00B7FCF4]
+005F27CC    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F27D1    cmp dword ptr ds:[esi+0x1C28], eax
 005F27D7    jz 0x005F28D6
 005F27DD    cmp ecx, 0xFFFFFFFF
@@ -333,11 +339,11 @@
 005F2824    jnz 0x005F2901
 005F282A    cmp dword ptr ds:[esi+0x2C], 0x03
 005F282E    jz 0x005F2844
-005F2830    push 0x86F520
+005F2830    push 0x86F520                                   ; => [ String: PileIsOpen ]
 005F2835    push 0xAF0
-005F283A    mov ecx, 0x86F4A8
+005F283A    mov ecx, 0x86F4A8                               ; => [ String: gfx.type == DOMGFX_PILE ]
 005F283F    jmp 0x005F2D4C
-005F2844    mov eax, dword ptr ds:[0x00B7FCF4]
+005F2844    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F2849    cmp dword ptr ds:[esi+0x1C28], eax
 005F284F    jz 0x005F28D6
 005F2855    cmp ecx, 0xFFFFFFFF
@@ -356,11 +362,11 @@
 005F288B    jnz 0x005F28D1
 005F288D    cmp dword ptr ds:[esi+0x2C], 0x03
 005F2891    jz 0x005F28A7
-005F2893    push 0x86F520
+005F2893    push 0x86F520                                   ; => [ String: PileIsOpen ]
 005F2898    push 0xAF0
-005F289D    mov ecx, 0x86F4A8
+005F289D    mov ecx, 0x86F4A8                               ; => [ String: gfx.type == DOMGFX_PILE ]
 005F28A2    jmp 0x005F2D4C
-005F28A7    mov eax, dword ptr ds:[0x00B7FCF4]
+005F28A7    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F28AC    cmp dword ptr ds:[esi+0x1C28], eax
 005F28B2    jz 0x005F28D6
 005F28B4    cmp ecx, 0xFFFFFFFF
@@ -369,12 +375,12 @@
 005F28C8    cmp edi, ecx
 005F28CA    jnz 0x005F28D6
 005F28CC    jmp 0x005F268E
-005F28D1    mov eax, dword ptr ds:[0x00B7FCF4]
+005F28D1    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005F28D6    cmp dword ptr ds:[esi+0x2C], 0x03
 005F28DA    jz 0x005F28F0
-005F28DC    push 0x86F520
+005F28DC    push 0x86F520                                   ; => [ String: PileIsOpen ]
 005F28E1    push 0xAF0
-005F28E6    mov ecx, 0x86F4A8
+005F28E6    mov ecx, 0x86F4A8                               ; => [ String: gfx.type == DOMGFX_PILE ]
 005F28EB    jmp 0x005F2D4C
 005F28F0    cmp dword ptr ds:[esi+0x1C28], eax
 005F28F6    jz 0x005F2901
@@ -386,15 +392,15 @@
 005F290B    push dword ptr ds:[eax+0x04]
 005F290E    push dword ptr ds:[eax]
 005F2910    push dword ptr ss:[ebp-0xC0]
-005F2916    call 0x005CE300
+005F2916    call 0x005CE300                                 ; => [ Call: sub_5ce300 ]
 005F291B    add esp, 0x0C
 005F291E    mov edx, eax
 005F2920    cmp dword ptr ds:[esi+0x2C], 0x03
 005F2924    mov ecx, 0x06
 005F2929    jz 0x005F293F
-005F292B    push 0x86F520
+005F292B    push 0x86F520                                   ; => [ String: PileIsOpen ]
 005F2930    push 0xAF0
-005F2935    mov ecx, 0x86F4A8
+005F2935    mov ecx, 0x86F4A8                               ; => [ String: gfx.type == DOMGFX_PILE ]
 005F293A    jmp 0x005F2D4C
 005F293F    mov eax, dword ptr ds:[esi+0x1C28]
 005F2945    cmp eax, dword ptr ds:[0x00B7FCF4]
@@ -402,13 +408,13 @@
 005F2950    push ebx
 005F2951    push edx
 005F2952    mov edx, dword ptr ds:[esi+0x5C]
-005F2955    cmovz ecx, eax
+005F2955    cmovz ecx, eax                                  ; => [ Data: data_b7fcf4 ]
 005F2958    push edi
 005F2959    push dword ptr ds:[esi+0x64]
 005F295C    lea eax, ss:[ebp-0x150]
 005F2962    push dword ptr ds:[esi+0x60]
 005F2965    push eax
-005F2966    call 0x005CC540
+005F2966    call 0x005CC540                                 ; => [ Call: sub_5cc540 ]
 005F296B    add esp, 0x18
 005F296E    movups xmm1, xmmword ptr ds:[eax]
 005F2971    movups xmm2, xmmword ptr ds:[eax+0x10]
@@ -423,7 +429,7 @@
 005F2994    push dword ptr ds:[eax+0x04]
 005F2997    push dword ptr ds:[eax]
 005F2999    push dword ptr ss:[ebp-0xC0]
-005F299F    call 0x005CE300
+005F299F    call 0x005CE300                                 ; => [ Call: sub_5ce300 ]
 005F29A4    mov ebx, dword ptr ds:[esi+0x60]
 005F29A7    add esp, 0x0C
 005F29AA    mov esi, dword ptr ds:[esi+0x5C]
@@ -432,7 +438,7 @@
 005F29B5    push 0x40
 005F29B7    push 0x00
 005F29B9    push eax
-005F29BA    call 0x00761FC4
+005F29BA    call 0x00761FC4                                 ; => [ Call: memset ]
 005F29BF    mov eax, dword ptr ss:[ebp-0xC8]
 005F29C5    mov dword ptr ss:[ebp-0x14C], esi
 005F29CB    mov esi, dword ptr ss:[ebp-0xC4]
@@ -484,28 +490,28 @@
 005F2AD4    push ecx
 005F2AD5    lea eax, ss:[ebp-0x1C]
 005F2AD8    push eax
-005F2AD9    call 0x005CB840
+005F2AD9    call 0x005CB840                                 ; => [ Call: sub_5cb840 ]
 005F2ADE    add esp, 0x10
 005F2AE1    pop edi
 005F2AE2    pop esi
 005F2AE3    pop ebx
 005F2AE4    mov ecx, dword ptr ss:[ebp-0x04]
 005F2AE7    xor ecx, ebp
-005F2AE9    call 0x0075927A
+005F2AE9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005F2AEE    mov esp, ebp
 005F2AF0    pop ebp
 005F2AF1    ret
 005F2AF2    push eax
 005F2AF3    push ecx
 005F2AF4    lea edx, ss:[ebp-0x1C]
-005F2AF7    call 0x005CB7C0
+005F2AF7    call 0x005CB7C0                                 ; => [ Call: sub_5cb7c0 ]
 005F2AFC    add esp, 0x08
 005F2AFF    pop edi
 005F2B00    pop esi
 005F2B01    pop ebx
 005F2B02    mov ecx, dword ptr ss:[ebp-0x04]
 005F2B05    xor ecx, ebp
-005F2B07    call 0x0075927A
+005F2B07    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005F2B0C    mov esp, ebp
 005F2B0E    pop ebp
 005F2B0F    ret
@@ -516,7 +522,7 @@
 005F2B22    lea eax, ss:[ebp-0xE8]
 005F2B28    mov ecx, ebx
 005F2B2A    push eax
-005F2B2B    call 0x005DE520
+005F2B2B    call 0x005DE520                                 ; => [ Call: sub_5de520 ]
 005F2B30    add esp, 0x04
 005F2B33    lea ecx, ds:[ebx+0x258]
 005F2B39    lea edx, ss:[ebp-0x24]
@@ -524,7 +530,7 @@
 005F2B3F    movups xmmword ptr ss:[ebp-0x24], xmm0
 005F2B43    movups xmm0, xmmword ptr ds:[eax+0x10]
 005F2B47    movups xmmword ptr ss:[ebp-0x14], xmm0
-005F2B4B    call 0x005CB6E0
+005F2B4B    call 0x005CB6E0                                 ; => [ Call: sub_5cb6e0 ]
 005F2B50    mov ecx, dword ptr ss:[ebp+0x18]
 005F2B53    cmp ecx, 0x02
 005F2B56    jnz 0x005F2B5F
@@ -534,14 +540,14 @@
 005F2B62    jz 0x005F2B6D
 005F2B64    cmp ecx, 0x13
 005F2B67    jz 0x005F2B6D
-005F2B69    xor ecx, ecx
+005F2B69    xor ecx, ecx                                    ; => [ Call: nullptr ]
 005F2B6B    jmp 0x005F2B72
 005F2B6D    mov ecx, 0x04
 005F2B72    mov eax, dword ptr ds:[esi+0x5C]
 005F2B75    xorps xmm0, xmm0
 005F2B78    push dword ptr ss:[ebp-0xC0]
 005F2B7E    mov dword ptr ss:[ebp-0xD8], eax
-005F2B84    xor edx, edx
+005F2B84    xor edx, edx                                    ; => [ Call: nullptr ]
 005F2B86    movlpd qword ptr ss:[ebp-0xD4], xmm0
 005F2B8E    lea eax, ss:[ebp-0x88]
 005F2B94    mov dword ptr ss:[ebp-0xE0], ebx
@@ -579,7 +585,7 @@
 005F2C2B    movq xmm0, qword ptr ss:[ebp-0xD0]
 005F2C33    movq qword ptr ss:[ebp-0x0C], xmm0
 005F2C38    jnz 0x005F2C55
-005F2C3A    mov eax, dword ptr ds:[0x00B604E0]
+005F2C3A    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005F2C3F    xor edx, edx
 005F2C41    cmp eax, 0xFFFFFFFF
 005F2C44    cmovz eax, edx
@@ -589,7 +595,7 @@
 005F2C4E    jnz 0x005F2C55
 005F2C50    lea edx, ds:[ecx-0x01]
 005F2C53    jmp 0x005F2C57
-005F2C55    xor edx, edx
+005F2C55    xor edx, edx                                    ; => [ Call: nullptr ]
 005F2C57    push dword ptr ss:[ebp-0xC0]
 005F2C5D    lea eax, ss:[ebp-0x88]
 005F2C63    push eax
@@ -624,32 +630,32 @@
 005F2CF6    movups xmmword ptr ss:[ebp-0x120], xmm6
 005F2CFD    movups xmmword ptr ss:[ebp-0x1C], xmm0
 005F2D01    movq xmm0, qword ptr ss:[ebp-0xD0]
-005F2D09    rep movsd
+005F2D09    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005F2D0B    lea ecx, ds:[ebx+0x258]
 005F2D11    movq qword ptr ss:[ebp-0x0C], xmm0
-005F2D16    call 0x006371B0
+005F2D16    call 0x006371B0                                 ; => [ Call: sub_6371b0 ]
 005F2D1B    mov ecx, dword ptr ss:[ebp-0x04]
 005F2D1E    pop edi
 005F2D1F    pop esi
 005F2D20    xor ecx, ebp
 005F2D22    pop ebx
-005F2D23    call 0x0075927A
+005F2D23    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005F2D28    mov esp, ebp
 005F2D2A    pop ebp
 005F2D2B    ret
-005F2D2C    push 0x860708
+005F2D2C    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F2D31    push 0x788D
-005F2D36    mov ecx, 0x801AA4
+005F2D36    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005F2D3B    jmp 0x005F2D4C
-005F2D3D    push 0x860708
+005F2D3D    push 0x860708                                   ; => [ String: DomMoveCard ]
 005F2D42    push 0x7751
-005F2D47    mov ecx, 0x860714
+005F2D47    mov ecx, 0x860714                               ; => [ String: GfxTry(pileId) ]
 005F2D4C    push 0x86F1E8
 005F2D51    mov edx, 0x801800
-005F2D56    call 0x0063B870
+005F2D56    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 ]
 005F2D5B    add esp, 0x0C
 005F2D5E    call 0x0063BC30
 005F2D63    test al, al
-005F2D65    jz 0x005F2D68
+005F2D65    jz 0x005F2D68                                   ; => [ Call: sub_63bc30 ]
 005F2D67    int3
-005F2D68    call 0x0063BB00
+005F2D68    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

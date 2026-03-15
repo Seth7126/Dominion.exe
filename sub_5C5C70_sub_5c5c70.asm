@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c5c70
+// 起始地址: 0x5c5c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C5C70    push ebx
 005C5C71    mov ebx, esp
 005C5C73    sub esp, 0x08
@@ -8,17 +14,17 @@
 005C5C80    mov dword ptr ss:[esp+0x04], ebp
 005C5C84    mov ebp, esp
 005C5C86    push 0xFFFFFFFF
-005C5C88    push 0x7698A0
+005C5C88    push 0x7698A0                                   ; => [ Type: EHRegistrationNode | Call: sub_7698a0 ]
 005C5C8D    mov eax, dword ptr fs:[0x00000000]
-005C5C93    push eax
+005C5C93    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005C5C94    push ebx
 005C5C95    sub esp, 0x14
 005C5C98    push esi
 005C5C99    mov eax, dword ptr ds:[0x008C4040]
 005C5C9E    xor eax, ebp
-005C5CA0    push eax
+005C5CA0    push eax                                        ; => [ Data: __security_cookie ]
 005C5CA1    lea eax, ss:[ebp-0x0C]
-005C5CA4    mov dword ptr fs:[0x00000000], eax
+005C5CA4    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005C5CAA    mov esi, ecx
 005C5CAC    mov eax, dword ptr ds:[edx]
 005C5CAE    mov ecx, dword ptr ds:[esi+0x04]
@@ -39,10 +45,10 @@
 005C5CDD    push eax
 005C5CDE    lea eax, ss:[ebp-0x20]
 005C5CE1    push eax
-005C5CE2    call 0x005C7590
+005C5CE2    call 0x005C7590                                 ; => [ Call: sub_5c7590 ]
 005C5CE7    add esp, 0x14
 005C5CEA    mov ecx, dword ptr ss:[ebp-0x0C]
-005C5CED    mov dword ptr fs:[0x00000000], ecx
+005C5CED    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005C5CF4    pop ecx
 005C5CF5    pop esi
 005C5CF6    mov esp, ebp

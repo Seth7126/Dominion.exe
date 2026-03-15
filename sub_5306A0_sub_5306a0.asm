@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5306a0
+// 起始地址: 0x5306a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005306A0    push ebp
 005306A1    mov ebp, esp
 005306A3    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 005306AD    push 0x00
 005306AF    push 0x08
 005306B1    mov ecx, 0x3E9
-005306B6    call 0x00568960
+005306B6    call 0x00568960                                 ; => [ Call: sub_568960 ]
 005306BB    mov ecx, dword ptr ds:[esi+0x04]
 005306BE    add esp, 0x0C
 005306C1    add dword ptr ds:[ecx], eax

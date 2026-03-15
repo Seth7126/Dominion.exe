@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_4b42a0
+// 起始地址: 0x4b42a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B42A0    push ebp
 004B42A1    mov ebp, esp
 004B42A3    sub esp, 0x08
 004B42A6    push ebx
 004B42A7    push esi
 004B42A8    push edi
-004B42A9    mov edi, dword ptr ds:[0x00CC8D5C]
+004B42A9    mov edi, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B42AF    mov esi, ecx
 004B42B1    mov dword ptr ss:[ebp-0x04], edx
 004B42B4    test edi, edi
 004B42B6    jnz 0x004B42CE
-004B42B8    push 0x77EB90
+004B42B8    push 0x77EB90                                   ; => [ String: GetClient ]
 004B42BD    push 0x7B
-004B42BF    push 0x77EB50
-004B42C4    mov ecx, 0x77EB9C
+004B42BF    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+004B42C4    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 004B42C9    jmp 0x004B4423
 004B42CE    mov eax, dword ptr ds:[edi]
 004B42D0    mov ecx, dword ptr ds:[edi+0x04]
@@ -49,7 +55,7 @@
 004B4331    ret
 004B4332    add eax, 0x08
 004B4335    jz 0x004B43FA
-004B433B    xor edx, edx
+004B433B    xor edx, edx                                    ; => [ Call: nullptr ]
 004B433D    nop dword ptr ds:[eax], eax
 004B4340    mov eax, dword ptr ds:[ecx+0x18]
 004B4343    cmp esi, dword ptr ds:[ecx]
@@ -70,7 +76,7 @@
 004B435C    jmp 0x004B4361
 004B435E    mov dword ptr ds:[edx+0x18], eax
 004B4361    mov edx, 0x20
-004B4366    call 0x0064C080
+004B4366    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004B436B    dec dword ptr ds:[edi+0x7578]
 004B4371    pop edi
 004B4372    pop esi
@@ -96,13 +102,13 @@
 004B43AB    test eax, eax
 004B43AD    jnz 0x004B43A4
 004B43AF    mov ecx, 0x20
-004B43B4    call 0x0064BFD0
+004B43B4    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 004B43B9    mov ebx, eax
 004B43BB    inc dword ptr ds:[ebx+0x0C]
 004B43BE    cmp dword ptr ds:[ebx], 0x00
 004B43C1    jnz 0x004B43CA
 004B43C3    mov ecx, ebx
-004B43C5    call 0x0064BE70
+004B43C5    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 004B43CA    mov ecx, dword ptr ds:[ebx]
 004B43CC    mov edx, dword ptr ss:[ebp-0x08]
 004B43CF    mov eax, dword ptr ds:[ecx]
@@ -131,15 +137,15 @@
 004B440B    mov esp, ebp
 004B440D    pop ebp
 004B440E    ret
-004B440F    push 0x801FC0
+004B440F    push 0x801FC0                                   ; => [ String: SetPresence ]
 004B4414    push 0xADA
-004B4419    push 0x801AF8
-004B441E    mov ecx, 0x801FCC
+004B4419    push 0x801AF8                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
+004B441E    mov ecx, 0x801FCC                               ; => [ String: presence.status != PRESENCE_NONE ]
 004B4423    mov edx, 0x801800
-004B4428    call 0x0063B870
+004B4428    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004B442D    add esp, 0x0C
 004B4430    call 0x0063BC30
 004B4435    test al, al
-004B4437    jz 0x004B443A
+004B4437    jz 0x004B443A                                   ; => [ Call: sub_63bc30 ]
 004B4439    int3
-004B443A    call 0x0063BB00
+004B443A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

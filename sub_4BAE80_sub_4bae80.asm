@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4bae80
+// 起始地址: 0x4bae80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BAE80    push ebx
 004BAE81    push esi
 004BAE82    push edi
 004BAE83    mov edi, ecx
-004BAE85    xor esi, esi
+004BAE85    xor esi, esi                                    ; => [ Call: nullptr ]
 004BAE87    lea edx, ds:[edi+0x0C]
 004BAE8A    test esi, esi
 004BAE8C    jnz 0x004BAE92
@@ -27,7 +33,7 @@
 004BAED6    pop ebx
 004BAED7    ret
 004BAED8    lea ecx, ds:[esi+0x10]
-004BAEDB    call 0x004AB0E0
+004BAEDB    call 0x004AB0E0                                 ; => [ Call: Concurrency::details::_Micro_queue::_Pop_finalizer::~_Pop_finalizer ]
 004BAEE0    movzx eax, word ptr ds:[esi+0x1328]
 004BAEE7    mov ecx, dword ptr ds:[edi+0x0C]
 004BAEEA    mov dword ptr ds:[edi+0x0C], eax

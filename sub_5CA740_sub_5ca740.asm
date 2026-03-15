@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ca740
+// 起始地址: 0x5ca740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CA740    push ebp
 005CA741    mov ebp, esp
 005CA743    mov eax, dword ptr ss:[ebp+0x08]
@@ -31,7 +37,7 @@
 005CA782    mov edx, ecx
 005CA784    mov ecx, eax
 005CA786    push ebx
-005CA787    call 0x0067BE20
+005CA787    call 0x0067BE20                                 ; => [ Call: sub_67be20 ]
 005CA78C    add esp, 0x04
 005CA78F    cmp edi, 0xFFFFFFFF
 005CA792    jnz 0x005CA7CD
@@ -40,7 +46,7 @@
 005CA799    jz 0x005CA7F0
 005CA79B    mov edx, dword ptr ss:[ebp+0x14]
 005CA79E    mov ecx, eax
-005CA7A0    call 0x0067BD70
+005CA7A0    call 0x0067BD70                                 ; => [ Call: sub_67bd70 ]
 005CA7A5    mov dword ptr ds:[esi+0x20], eax
 005CA7A8    mov ecx, dword ptr ss:[ebp+0x08]
 005CA7AB    mov dword ptr ds:[esi], ecx
@@ -67,7 +73,7 @@
 005CA7DB    mov edx, dword ptr ss:[ebp+0x14]
 005CA7DE    mov ecx, eax
 005CA7E0    push edi
-005CA7E1    call 0x0067BE20
+005CA7E1    call 0x0067BE20                                 ; => [ Call: sub_67be20 ]
 005CA7E6    add esp, 0x04
 005CA7E9    mov dword ptr ds:[esi+0x20], eax
 005CA7EC    test eax, eax

@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_6157b0
+// 起始地址: 0x6157b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006157B0    imul edx, dword ptr ds:[0x00B809E4], 0x1C30
-006157BA    mov eax, dword ptr ds:[0x00B809E0]
-006157BF    add edx, eax
+006157BA    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+006157BF    add edx, eax                                    ; => [ Data: data_b809e4 ]
 006157C1    cmp eax, edx
 006157C3    jnb 0x0061582C
 006157C5    nop word ptr ds:[eax+eax*1], ax
@@ -34,11 +40,11 @@
 00615836    push 0x86F1E8
 0061583B    mov edx, 0x801800
 00615840    mov ecx, 0x801AA4
-00615845    call 0x0063B870
+00615845    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: LookupToken | String: Halt ]
 0061584A    add esp, 0x0C
 0061584D    call 0x0063BC30
 00615852    test al, al
-00615854    jz 0x00615857
+00615854    jz 0x00615857                                   ; => [ Call: sub_63bc30 ]
 00615856    int3
-00615857    jmp 0x0063BB00
+00615857    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 0061585C    ret

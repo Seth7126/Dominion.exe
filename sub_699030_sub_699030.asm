@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_699030
+// 起始地址: 0x699030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00699030    push esi
 00699031    mov esi, ecx
 00699033    mov edx, dword ptr ds:[esi+0x1900]
@@ -28,10 +34,10 @@
 0069907A    push 0x878EA8
 0069907F    mov edx, 0x801800
 00699084    mov ecx, 0x8791E0
-00699089    call 0x0063B870
+00699089    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: stack.numEntries > 0 | String: C:\x\ax2017\Engine\UIDef.cpp | String: PopOne ]
 0069908E    add esp, 0x0C
 00699091    call 0x0063BC30
 00699096    test al, al
-00699098    jz 0x0069909B
+00699098    jz 0x0069909B                                   ; => [ Call: sub_63bc30 ]
 0069909A    int3
-0069909B    call 0x0063BB00
+0069909B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

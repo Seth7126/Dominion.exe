@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_74afe0
+// 起始地址: 0x74afe0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074AFE0    push ebp
 0074AFE1    mov ebp, esp
 0074AFE3    sub esp, 0x08
@@ -20,7 +26,7 @@
 0074B00C    jz 0x0074B013
 0074B00E    cmp byte ptr ds:[esi], 0x00
 0074B011    jnz 0x0074B018
-0074B013    mov esi, 0x801800
+0074B013    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 0074B018    mov ecx, esi
 0074B01A    lea edx, ds:[ecx+0x01]
 0074B01D    nop dword ptr ds:[eax], eax
@@ -55,7 +61,7 @@
 0074B059    push ecx
 0074B05A    push esi
 0074B05B    push edi
-0074B05C    call 0x00761FBE
+0074B05C    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0074B061    mov esi, dword ptr ss:[ebp-0x04]
 0074B064    add esp, 0x0C
 0074B067    mov eax, dword ptr ss:[ebp-0x08]
@@ -64,7 +70,7 @@
 0074B06E    jz 0x0074B075
 0074B070    cmp byte ptr ds:[ebx], 0x00
 0074B073    jnz 0x0074B07A
-0074B075    mov ebx, 0x801800
+0074B075    mov ebx, 0x801800                               ; => [ Data: data_801800 ]
 0074B07A    mov ecx, ebx
 0074B07C    lea edx, ds:[ecx+0x01]
 0074B07F    nop
@@ -99,7 +105,7 @@
 0074B0B9    push ecx
 0074B0BA    push ebx
 0074B0BB    push esi
-0074B0BC    call 0x00761FBE
+0074B0BC    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0074B0C1    mov ebx, dword ptr ss:[ebp-0x04]
 0074B0C4    add esp, 0x0C
 0074B0C7    mov eax, dword ptr ss:[ebp-0x08]
@@ -109,7 +115,7 @@
 0074B0D2    jz 0x0074B0D9
 0074B0D4    cmp byte ptr ds:[esi], 0x00
 0074B0D7    jnz 0x0074B0DE
-0074B0D9    mov esi, 0x801800
+0074B0D9    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 0074B0DE    mov ecx, esi
 0074B0E0    lea edx, ds:[ecx+0x01]
 0074B0E3    mov al, byte ptr ds:[ecx]
@@ -142,7 +148,7 @@
 0074B119    push ecx
 0074B11A    push esi
 0074B11B    push edi
-0074B11C    call 0x00761FBE
+0074B11C    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0074B121    add esp, 0x0C
 0074B124    mov eax, dword ptr ss:[ebp-0x08]
 0074B127    mov dword ptr ds:[eax+0x10], edi
@@ -156,7 +162,7 @@
 0074B13C    jz 0x0074B143
 0074B13E    cmp byte ptr ds:[esi], 0x00
 0074B141    jnz 0x0074B148
-0074B143    mov esi, 0x801800
+0074B143    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 0074B148    mov ecx, esi
 0074B14A    lea edx, ds:[ecx+0x01]
 0074B14D    nop dword ptr ds:[eax], eax
@@ -190,7 +196,7 @@
 0074B189    push ecx
 0074B18A    push esi
 0074B18B    push edi
-0074B18C    call 0x00761FBE
+0074B18C    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0074B191    jmp 0x0074B1F8
 0074B193    mov ebx, dword ptr ss:[ebp+0x0C]
 0074B196    test ebx, ebx
@@ -199,8 +205,8 @@
 0074B19C    test al, al
 0074B19E    jnz 0x0074B1AA
 0074B1A0    mov al, byte ptr ds:[0x00801800]
-0074B1A5    mov ebx, 0x801800
-0074B1AA    xor esi, esi
+0074B1A5    mov ebx, 0x801800                               ; => [ Data: data_801800 ]
+0074B1AA    xor esi, esi                                    ; => [ Call: nullptr ]
 0074B1AC    mov edx, ebx
 0074B1AE    test al, al
 0074B1B0    jz 0x0074B1CB
@@ -235,7 +241,7 @@
 0074B1ED    push esi
 0074B1EE    push ebx
 0074B1EF    push edi
-0074B1F0    call 0x00761FBE
+0074B1F0    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0074B1F5    mov ebx, dword ptr ss:[ebp-0x04]
 0074B1F8    add esp, 0x0C
 0074B1FB    mov eax, dword ptr ss:[ebp-0x08]
@@ -245,7 +251,7 @@
 0074B206    jz 0x0074B20D
 0074B208    cmp byte ptr ds:[esi], 0x00
 0074B20B    jnz 0x0074B212
-0074B20D    mov esi, 0x801800
+0074B20D    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 0074B212    mov ecx, esi
 0074B214    lea edx, ds:[ecx+0x01]
 0074B217    mov al, byte ptr ds:[ecx]
@@ -285,7 +291,7 @@
 0074B259    push ecx
 0074B25A    push esi
 0074B25B    push edi
-0074B25C    call 0x00761FBE
+0074B25C    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0074B261    mov eax, dword ptr ss:[ebp-0x08]
 0074B264    add esp, 0x0C
 0074B267    mov dword ptr ds:[eax+0x0C], edi

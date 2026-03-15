@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4df200
+// 起始地址: 0x4df200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DF200    push ebp
 004DF201    mov ebp, esp
 004DF203    sub esp, 0x0C
@@ -94,10 +100,10 @@
 004DF323    push 0x806FE4
 004DF328    mov edx, 0x801800
 004DF32D    mov ecx, 0x80746C
-004DF332    call 0x0063B870
+004DF332    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: num <= 12 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | String: GetRefCards ]
 004DF337    add esp, 0x0C
 004DF33A    call 0x0063BC30
 004DF33F    test al, al
-004DF341    jz 0x004DF344
+004DF341    jz 0x004DF344                                   ; => [ Call: sub_63bc30 ]
 004DF343    int3
-004DF344    call 0x0063BB00
+004DF344    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

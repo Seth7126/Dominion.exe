@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cde50
+// 起始地址: 0x5cde50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CDE50    cmp dword ptr ds:[ecx+0x2C], 0x03
 005CDE54    jz 0x005CDE86
 005CDE56    push 0x86F68C
@@ -5,13 +11,13 @@
 005CDE60    push 0x86F1E8
 005CDE65    mov edx, 0x801800
 005CDE6A    mov ecx, 0x86F698
-005CDE6F    call 0x0063B870
+005CDE6F    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: pile.type == DOMGFX_PILE | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: GetPileView ]
 005CDE74    add esp, 0x0C
 005CDE77    call 0x0063BC30
 005CDE7C    test al, al
-005CDE7E    jz 0x005CDE81
+005CDE7E    jz 0x005CDE81                                   ; => [ Call: sub_63bc30 ]
 005CDE80    int3
-005CDE81    jmp 0x0063BB00
+005CDE81    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 005CDE86    mov eax, dword ptr ds:[ecx+0x8C]
 005CDE8C    test eax, eax
 005CDE8E    jnz 0x005CDED8

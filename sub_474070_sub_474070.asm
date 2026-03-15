@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_474070
+// 起始地址: 0x474070
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00474070    mov edx, 0x03
 00474075    mov ecx, 0x82F6F8
-0047407A    call 0x0069F030
-0047407F    mov dword ptr ds:[0x0171D370], eax
+0047407A    call 0x0069F030                                 ; => [ String: res/card_gen/nocturne/goat.texture | Call: sub_69f030 ]
+0047407F    mov dword ptr ds:[0x0171D370], eax              ; => [ Data: data_171d370 ]
 00474084    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66ba80
+// 起始地址: 0x66ba80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066BA80    push ebp
 0066BA81    mov ebp, esp
 0066BA83    and esp, 0xFFFFFFF8
@@ -15,16 +21,16 @@
 0066BAA5    call 0x0064E7A0
 0066BAAA    or edx, 0xFFFFFFFF
 0066BAAD    mov ecx, eax
-0066BAAF    call 0x0066B600
+0066BAAF    call 0x0066B600                                 ; => [ Data: data_c27c44 | Call: sub_64e7a0 | Call: sub_66b2b0 | String: layersTable | Call: sub_66b600 ]
 0066BAB4    mov ecx, esi
 0066BAB6    mov dword ptr ss:[esp+0x0C], eax
 0066BABA    mov ebx, edx
-0066BABC    call 0x0064E7A0
+0066BABC    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066BAC1    mov edi, eax
 0066BAC3    mov ecx, edi
 0066BAC5    call 0x0066B940
 0066BACA    cmp dword ptr ds:[eax+0x0C], 0x02
-0066BACE    jnz 0x0066BB1F
+0066BACE    jnz 0x0066BB1F                                  ; => [ Call: sub_66b940 ]
 0066BAD0    mov esi, edi
 0066BAD2    test edi, edi
 0066BAD4    jz 0x0066BB1A
@@ -33,29 +39,29 @@
 0066BADC    mov edx, 0x8B
 0066BAE1    mov byte ptr ds:[esi+0x13], 0x00
 0066BAE5    mov ecx, esi
-0066BAE7    call 0x00667AE0
+0066BAE7    call 0x00667AE0                                 ; => [ Call: sub_667ae0 ]
 0066BAEC    push 0x00
 0066BAEE    push 0x00
 0066BAF0    push 0x8B
 0066BAF5    mov edx, eax
 0066BAF7    mov ecx, 0x8CAE70
-0066BAFC    call 0x006DCC50
+0066BAFC    call 0x006DCC50                                 ; => [ Call: nullptr | Call: sub_6dcc50 | Data: data_8cae70 ]
 0066BB01    add esp, 0x0C
 0066BB04    mov ecx, esi
-0066BB06    call 0x0065BF00
-0066BB0B    call 0x0066BA20
+0066BB06    call 0x0065BF00                                 ; => [ Call: sub_65bf00 ]
+0066BB0B    call 0x0066BA20                                 ; => [ Call: sub_66ba20 ]
 0066BB10    mov esi, dword ptr ds:[esi+0x1718]
 0066BB16    test esi, esi
 0066BB18    jnz 0x0066BAD6
-0066BB1A    call 0x00666850
+0066BB1A    call 0x00666850                                 ; => [ Call: sub_666850 ]
 0066BB1F    mov ecx, edi
-0066BB21    call 0x0066B940
+0066BB21    call 0x0066B940                                 ; => [ Call: sub_66b940 ]
 0066BB26    mov esi, dword ptr ds:[eax+0x08]
 0066BB29    cmp esi, 0xFFFFFFFF
 0066BB2C    jnz 0x0066BB42
-0066BB2E    push 0x875DD0
+0066BB2E    push 0x875DD0                                   ; => [ String: UI2EditorSyncSelection ]
 0066BB33    push 0x404B
-0066BB38    mov ecx, 0x875E28
+0066BB38    mov ecx, 0x875E28                               ; => [ String: display.displayIndex != -1 ]
 0066BB3D    jmp 0x0066BC4D
 0066BB42    mov eax, dword ptr ss:[esp+0x0C]
 0066BB46    cmp esi, eax
@@ -63,11 +69,11 @@
 0066BB4A    cmp esi, ebx
 0066BB4C    jle 0x0066BC37
 0066BB52    sub ebx, eax
-0066BB54    mov ecx, dword ptr ds:[0x00C27C1C]
+0066BB54    mov ecx, dword ptr ds:[0x00C27C1C]              ; => [ Data: data_c27c1c ]
 0066BB5A    jns 0x0066BB70
-0066BB5C    push 0x875DD0
+0066BB5C    push 0x875DD0                                   ; => [ String: UI2EditorSyncSelection ]
 0066BB61    push 0x4051
-0066BB66    mov ecx, 0x875E14
+0066BB66    mov ecx, 0x875E14                               ; => [ String: displayWidth >= 0 ]
 0066BB6B    jmp 0x0066BC4D
 0066BB70    mov eax, ebx
 0066BB72    mov edi, esi
@@ -101,17 +107,17 @@
 0066BBAD    mov dword ptr ss:[esp+0x14], edx
 0066BBB1    cmp ebx, edi
 0066BBB3    jl 0x0066BC3E
-0066BBB9    mov edi, dword ptr ds:[0x00C27C44]
+0066BBB9    mov edi, dword ptr ds:[0x00C27C44]              ; => [ Data: data_c27c44 ]
 0066BBBF    mov ecx, edi
-0066BBC1    call 0x0064E7A0
-0066BBC6    mov edx, 0x801800
+0066BBC1    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+0066BBC6    mov edx, 0x801800                               ; => [ Data: data_801800 ]
 0066BBCB    mov dword ptr ss:[esp+0x0C], eax
 0066BBCF    push 0x875DA0
 0066BBD4    mov ecx, dword ptr ds:[eax+0x15E0]
 0066BBDA    test ecx, ecx
 0066BBDC    cmovnz edx, ecx
 0066BBDF    push edx
-0066BBE0    call dword ptr ds:[0x00775688]
+0066BBE0    call dword ptr ds:[0x00775688]                  ; => [ String: layersTable ]
 0066BBE6    add esp, 0x08
 0066BBE9    test eax, eax
 0066BBEB    jz 0x0066BC27
@@ -124,7 +130,7 @@
 0066BC00    mov ecx, dword ptr ds:[eax+esi*4+0x179C]
 0066BC07    mov edx, 0x875DA0
 0066BC0C    push 0xFFFFFFFF
-0066BC0E    call 0x0066B2B0
+0066BC0E    call 0x0066B2B0                                 ; => [ Call: sub_66b2b0 | String: layersTable ]
 0066BC13    mov edi, eax
 0066BC15    add esp, 0x04
 0066BC18    test edi, edi
@@ -137,7 +143,7 @@
 0066BC27    push 0x00
 0066BC29    lea edx, ss:[esp+0x14]
 0066BC2D    mov ecx, edi
-0066BC2F    call 0x0066B420
+0066BC2F    call 0x0066B420                                 ; => [ Call: sub_66b420 ]
 0066BC34    add esp, 0x04
 0066BC37    pop edi
 0066BC38    pop esi
@@ -145,15 +151,15 @@
 0066BC3A    mov esp, ebp
 0066BC3C    pop ebp
 0066BC3D    ret
-0066BC3E    push 0x875DD0
+0066BC3E    push 0x875DD0                                   ; => [ String: UI2EditorSyncSelection ]
 0066BC43    push 0x4055
-0066BC48    mov ecx, 0x875E58
+0066BC48    mov ecx, 0x875E58                               ; => [ String: idealRange.y >= idealRange.x ]
 0066BC4D    push 0x8739B4
 0066BC52    mov edx, 0x801800
-0066BC57    call 0x0063B870
+0066BC57    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\UI2.cpp | String: UI2EditorSyncSelection ]
 0066BC5C    add esp, 0x0C
 0066BC5F    call 0x0063BC30
 0066BC64    test al, al
-0066BC66    jz 0x0066BC69
+0066BC66    jz 0x0066BC69                                   ; => [ Call: sub_63bc30 ]
 0066BC68    int3
-0066BC69    call 0x0063BB00
+0066BC69    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

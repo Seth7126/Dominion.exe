@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_707390
+// 起始地址: 0x707390
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707390    push ebp
 00707391    mov ebp, esp
 00707393    push ecx
@@ -17,7 +23,7 @@
 007073B6    mov ecx, ebx
 007073B8    call 0x00707330
 007073BD    test al, al
-007073BF    jz 0x0070745E
+007073BF    jz 0x0070745E                                   ; => [ Call: sub_707330 ]
 007073C5    mov ecx, dword ptr ds:[ebx+0x08]
 007073C8    mov edi, ecx
 007073CA    cmp byte ptr ds:[ecx], 0x0A
@@ -38,7 +44,7 @@
 007073EF    cmp dl, 0xF0
 007073F2    jnz 0x007073FD
 007073F4    mov ecx, edi
-007073F6    call 0x005A0DB0
+007073F6    call 0x005A0DB0                                 ; => [ Call: sub_5a0db0 | Call: sub_5a0db0 | Call: sub_5a0db0 ]
 007073FB    jmp 0x00707400
 007073FD    lea eax, ds:[edi+0x01]
 00707400    mov edi, dword ptr ss:[ebp-0x04]
@@ -47,28 +53,28 @@
 00707408    push eax
 00707409    push 0x88D918
 0070740E    mov dword ptr ds:[ecx], eax
-00707410    call edi
+00707410    call edi                                        ; => [ String: amp; ]
 00707412    add esp, 0x0C
 00707415    test eax, eax
 00707417    jz 0x007073A7
 00707419    push 0x03
 0070741B    push dword ptr ds:[ebx+0x08]
 0070741E    push 0x88D924
-00707423    call edi
+00707423    call edi                                        ; => [ String: lt; ]
 00707425    add esp, 0x0C
 00707428    test eax, eax
 0070742A    jz 0x007073A7
 00707430    push 0x03
 00707432    push dword ptr ds:[ebx+0x08]
 00707435    push 0x88D920
-0070743A    call edi
+0070743A    call edi                                        ; => [ String: gt; ]
 0070743C    add esp, 0x0C
 0070743F    test eax, eax
 00707441    jz 0x007073A7
 00707447    push 0x05
 00707449    push dword ptr ds:[ebx+0x08]
 0070744C    push 0x88D94C
-00707451    call edi
+00707451    call edi                                        ; => [ String: quot; ]
 00707453    add esp, 0x0C
 00707456    test eax, eax
 00707458    jz 0x007073A7
@@ -114,7 +120,7 @@
 007074AF    mov dword ptr ds:[ebx+0x08], eax
 007074B2    jmp 0x007073A7
 007074B7    mov ecx, edx
-007074B9    call 0x005A0DB0
+007074B9    call 0x005A0DB0                                 ; => [ Call: sub_5a0db0 ]
 007074BE    mov dword ptr ds:[ebx+0x08], eax
 007074C1    jmp 0x007073A7
 007074C6    sub edx, dword ptr ds:[ebx+0x0C]

@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_733460
+// 起始地址: 0x733460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00733460    push ebp
 00733461    mov ebp, esp
 00733463    push 0xFFFFFFFF
-00733465    push 0x76E58E
+00733465    push 0x76E58E                                   ; => [ Type: EHRegistrationNode | Call: __ehhandler$?find_next_state@?$output_processor@DV?$console_output_adapter@D@__crt_stdio_output@@V?$standard_base@DV?$console_output_adapter@D@__crt_stdio_output@@@2@@__crt_stdio_output@@ABE?AW4state@2@DW432@@Z ]
 0073346A    mov eax, dword ptr fs:[0x00000000]
-00733470    push eax
+00733470    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00733471    sub esp, 0x08
 00733474    push ebx
 00733475    push esi
 00733476    push edi
 00733477    mov eax, dword ptr ds:[0x008C4040]
 0073347C    xor eax, ebp
-0073347E    push eax
+0073347E    push eax                                        ; => [ Data: __security_cookie ]
 0073347F    lea eax, ss:[ebp-0x0C]
-00733482    mov dword ptr fs:[0x00000000], eax
+00733482    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 00733488    mov ebx, edx
 0073348A    mov esi, ecx
 0073348C    mov dword ptr ss:[ebp-0x14], esi
@@ -40,16 +46,16 @@
 007334C5    jnz 0x007334B3
 007334C7    mov dword ptr ds:[ebx], eax
 007334C9    sub eax, edi
-007334CB    mov dword ptr ds:[esi], 0x801800
+007334CB    mov dword ptr ds:[esi], 0x801800                ; => [ Data: data_801800 ]
 007334D1    push eax
 007334D2    mov dword ptr ss:[ebp-0x04], 0x00
 007334D9    mov ecx, esi
 007334DB    push edi
 007334DC    mov dword ptr ss:[ebp-0x10], 0x01
-007334E3    call 0x0063DB30
+007334E3    call 0x0063DB30                                 ; => [ Call: sub_63db30 ]
 007334E8    mov eax, esi
 007334EA    mov ecx, dword ptr ss:[ebp-0x0C]
-007334ED    mov dword ptr fs:[0x00000000], ecx
+007334ED    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 007334F4    pop ecx
 007334F5    pop edi
 007334F6    pop esi

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_570120
+// 起始地址: 0x570120
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00570120    push ebp
 00570121    mov ebp, esp
 00570123    and esp, 0xFFFFFFF0
 00570126    mov eax, 0x1998
-0057012B    call 0x00761E50
+0057012B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00570130    push esi
 00570131    push edi
 00570132    push 0x00
@@ -10,7 +16,7 @@
 00570137    mov dword ptr ss:[esp+0x34], edx
 0057013B    push 0x00
 0057013D    push dword ptr ss:[ebp+0x08]
-00570140    movlpd qword ptr ss:[esp+0x40], xmm0
+00570140    movlpd qword ptr ss:[esp+0x40], xmm0            ; => [ Call: __builtin_memset ]
 00570146    lea eax, ss:[esp+0x6C]
 0057014A    movlpd qword ptr ss:[esp+0x50], xmm0
 00570150    xor edx, edx
@@ -35,14 +41,14 @@
 005701AE    lea edi, ss:[esp+0xAC]
 005701B5    mov ecx, 0x321
 005701BA    add esp, 0x1C
-005701BD    rep movsd
+005701BD    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
 005701BF    mov eax, dword ptr ss:[esp+0xD10]
 005701C6    test eax, eax
 005701C8    jz 0x00570248
 005701CA    cmp eax, 0x01
 005701CD    jz 0x005701D4
-005701CF    call 0x00591930
-005701D4    call 0x00573400
+005701CF    call 0x00591930                                 ; => [ Call: sub_591930 ]
+005701D4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005701D9    mov esi, dword ptr ss:[esp+0x90]
 005701E0    movzx edi, si
 005701E3    mov ecx, dword ptr ds:[eax+0x04]
@@ -51,7 +57,7 @@
 005701ED    mov dword ptr ss:[esp+0x1C], eax
 005701F1    cmp edi, 0x320
 005701F7    jb 0x00570202
-005701F9    call 0x00591930
+005701F9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005701FE    mov ecx, dword ptr ss:[esp+0x14]
 00570202    mov edx, dword ptr ss:[esp+0x1C]
 00570206    xorps xmm0, xmm0
@@ -68,7 +74,7 @@
 00570232    push eax
 00570233    lea eax, ss:[esp+0x2C]
 00570237    push eax
-00570238    call 0x00586320
+00570238    call 0x00586320                                 ; => [ Call: sub_586320 ]
 0057023D    add esp, 0x10
 00570240    mov eax, esi
 00570242    pop edi

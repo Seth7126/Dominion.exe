@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_757c90
+// 起始地址: 0x757c90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00757C90    push ebp
 00757C91    mov ebp, esp
 00757C93    sub esp, 0x20
@@ -9,13 +15,13 @@
 00757C9E    mov dword ptr ss:[ebp-0x0C], esi
 00757CA1    cmp dword ptr ss:[ebp+0x10], ecx
 00757CA4    jz 0x00757CBF
-00757CA6    push 0x8908B4
+00757CA6    push 0x8908B4                                   ; => [ String: TGGAudioInstance::getAudio ]
 00757CAB    push 0x240
-00757CB0    push 0x8907BC
-00757CB5    mov ecx, 0x890918
+00757CB0    push 0x8907BC                                   ; => [ String: C:\x\ax2017\Engine\SoundSoloud.cpp ]
+00757CB5    mov ecx, 0x890918                               ; => [ String: aBufferSize == aSamplesToRead ]
 00757CBA    jmp 0x00757F80
-00757CBF    xor eax, eax
-00757CC1    mov dword ptr ss:[ebp-0x04], eax
+00757CBF    xor eax, eax                                    ; => [ Call: nullptr ]
+00757CC1    mov dword ptr ss:[ebp-0x04], eax                ; => [ Call: nullptr ]
 00757CC4    test ecx, ecx
 00757CC6    jz 0x00757F05
 00757CCC    lea edi, ds:[esi+0x790]
@@ -36,7 +42,7 @@
 00757D02    mov dword ptr ss:[ebp-0x14], edx
 00757D05    test ecx, ecx
 00757D07    jnle 0x00757D1C
-00757D09    xor ebx, ebx
+00757D09    xor ebx, ebx                                    ; => [ Call: nullptr ]
 00757D0B    lea edi, ds:[esi+0x790]
 00757D11    lea edx, ds:[esi+0x794]
 00757D17    jmp 0x00757DAE
@@ -69,7 +75,7 @@
 00757D6A    add eax, edx
 00757D6C    push eax
 00757D6D    push esi
-00757D6E    call 0x00761FBE
+00757D6E    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00757D73    mov ecx, dword ptr ss:[ebp+0x10]
 00757D76    inc edi
 00757D77    mov edx, dword ptr ss:[ebp-0x1C]
@@ -87,21 +93,21 @@
 00757D9E    lea edi, ds:[esi+0x790]
 00757DA4    lea edx, ds:[esi+0x794]
 00757DAA    jmp 0x00757DAE
-00757DAC    xor ebx, ebx
+00757DAC    xor ebx, ebx                                    ; => [ Call: nullptr ]
 00757DAE    add eax, ebx
 00757DB0    cmp eax, ecx
 00757DB2    jle 0x00757EBD
-00757DB8    push 0x8908B4
+00757DB8    push 0x8908B4                                   ; => [ String: TGGAudioInstance::getAudio ]
 00757DBD    push 0x24B
-00757DC2    push 0x8907BC
-00757DC7    mov ecx, 0x8908DC
+00757DC2    push 0x8907BC                                   ; => [ String: C:\x\ax2017\Engine\SoundSoloud.cpp ]
+00757DC7    mov ecx, 0x8908DC                               ; => [ String: source.ogg.frameOffset + numRead <= source.ogg.frameSize ]
 00757DCC    jmp 0x00757F80
 00757DD1    mov eax, dword ptr ds:[esi+0x1C0]
 00757DD7    mov ecx, dword ptr ds:[eax+0x68]
 00757DDA    cmp dword ptr ds:[ecx+0x04], 0x15
 00757DDE    jnz 0x00757F6C
 00757DE4    call 0x005AF880
-00757DE9    mov edx, eax
+00757DE9    mov edx, eax                                    ; => [ Call: sub_5af880 ]
 00757DEB    cmp dword ptr ds:[edx+0x30], 0x00
 00757DEF    jz 0x00757E22
 00757DF1    cmp dword ptr ds:[edx+0x18], 0x00
@@ -114,7 +120,7 @@
 00757E0B    cmp dword ptr ds:[ecx+0x04], 0x15
 00757E0F    jnz 0x00757F6C
 00757E15    call 0x005AF880
-00757E1A    mov edx, eax
+00757E1A    mov edx, eax                                    ; => [ Call: sub_5af880 ]
 00757E1C    lea edi, ds:[esi+0x790]
 00757E22    mov eax, dword ptr ds:[edx+0x38]
 00757E25    mov ecx, dword ptr ds:[esi+0x48]
@@ -148,7 +154,7 @@
 00757E80    push eax
 00757E81    push ebx
 00757E82    push edi
-00757E83    call 0x00761FBE
+00757E83    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00757E88    mov ecx, dword ptr ss:[ebp-0x14]
 00757E8B    add esp, 0x0C
 00757E8E    lea eax, ds:[ecx*4]
@@ -169,7 +175,7 @@
 00757EC3    call 0x00757B20
 00757EC8    test al, al
 00757ECA    mov eax, dword ptr ss:[ebp-0x04]
-00757ECD    jnz 0x00757F2A
+00757ECD    jnz 0x00757F2A                                  ; => [ Call: sub_757b20 ]
 00757ECF    lea edi, ds:[esi+0x790]
 00757ED5    jmp 0x00757EFA
 00757ED7    mov eax, dword ptr ds:[esi+0x10]
@@ -182,7 +188,7 @@
 00757EE7    cmp dword ptr ds:[edx], ecx
 00757EE9    jnz 0x00757EF2
 00757EEB    mov ecx, esi
-00757EED    call 0x00757B20
+00757EED    call 0x00757B20                                 ; => [ Call: sub_757b20 ]
 00757EF2    mov eax, dword ptr ss:[ebp-0x04]
 00757EF5    add eax, ebx
 00757EF7    mov dword ptr ss:[ebp-0x04], eax
@@ -196,10 +202,10 @@
 00757F0E    mov esp, ebp
 00757F10    pop ebp
 00757F11    ret 0x0C
-00757F14    push 0x890868
+00757F14    push 0x890868                                   ; => [ String: TGGAudioInstance::getOggData ]
 00757F19    push 0x1C1
-00757F1E    push 0x8907BC
-00757F23    mov ecx, 0x8908D0
+00757F1E    push 0x8907BC                                   ; => [ String: C:\x\ax2017\Engine\SoundSoloud.cpp ]
+00757F23    mov ecx, 0x8908D0                               ; => [ String: samples > 0 ]
 00757F28    jmp 0x00757F80
 00757F2A    or dword ptr ds:[esi+0x10], 0x10000
 00757F31    add dword ptr ds:[esi+0x79C], eax
@@ -209,25 +215,25 @@
 00757F3A    mov esp, ebp
 00757F3C    pop ebp
 00757F3D    ret 0x0C
-00757F40    push 0x8908B4
+00757F40    push 0x8908B4                                   ; => [ String: TGGAudioInstance::getAudio ]
 00757F45    push 0x254
-00757F4A    push 0x8907BC
-00757F4F    mov ecx, 0x890938
+00757F4A    push 0x8907BC                                   ; => [ String: C:\x\ax2017\Engine\SoundSoloud.cpp ]
+00757F4F    mov ecx, 0x890938                               ; => [ String: tggSource->mData ]
 00757F54    jmp 0x00757F80
-00757F56    push 0x8908B4
+00757F56    push 0x8908B4                                   ; => [ String: TGGAudioInstance::getAudio ]
 00757F5B    push 0x253
-00757F60    push 0x8907BC
-00757F65    mov ecx, 0x89094C
+00757F60    push 0x8907BC                                   ; => [ String: C:\x\ax2017\Engine\SoundSoloud.cpp ]
+00757F65    mov ecx, 0x89094C                               ; => [ String: sound->pSoundImportData->numChannels == (int)mChannels ]
 00757F6A    jmp 0x00757F80
-00757F6C    push 0x877324
+00757F6C    push 0x877324                                   ; => [ String: SoundGetDef ]
 00757F71    push 0x356
-00757F76    push 0x8772E4
-00757F7B    mov ecx, 0x877344
+00757F76    push 0x8772E4                                   ; => [ String: C:\x\ax2017\Engine\Sound.cpp ]
+00757F7B    mov ecx, 0x877344                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 00757F80    mov edx, 0x801800
-00757F85    call 0x0063B870
+00757F85    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00757F8A    add esp, 0x0C
 00757F8D    call 0x0063BC30
 00757F92    test al, al
-00757F94    jz 0x00757F97
+00757F94    jz 0x00757F97                                   ; => [ Call: sub_63bc30 ]
 00757F96    int3
-00757F97    call 0x0063BB00
+00757F97    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

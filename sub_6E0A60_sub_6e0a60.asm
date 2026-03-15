@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e0a60
+// 起始地址: 0x6e0a60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E0A60    push esi
 006E0A61    mov esi, ecx
 006E0A63    mov eax, dword ptr ds:[esi+0x08]
@@ -5,7 +11,7 @@
 006E0A68    jle 0x006E0AA3
 006E0A6A    imul ecx, eax, 0x314
 006E0A70    add ecx, 0x04
-006E0A73    call 0x00687730
+006E0A73    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006E0A78    mov ecx, dword ptr ds:[esi+0x04]
 006E0A7B    mov dword ptr ds:[eax], ecx
 006E0A7D    xor ecx, ecx
@@ -29,10 +35,10 @@
 006E0AAD    push 0x825828
 006E0AB2    mov edx, 0x801800
 006E0AB7    mov ecx, 0x825818
-006E0ABC    call 0x0063B870
+006E0ABC    call 0x0063B870                                 ; => [ String: mGrowCount > 0 | Call: sub_63b870 | String: C:\x\ax2017\Engine\xAlloc.h | Data: data_801800 | String: XTypedAllocator<struct StructureAnim>::Grow ]
 006E0AC1    add esp, 0x0C
 006E0AC4    call 0x0063BC30
 006E0AC9    test al, al
-006E0ACB    jz 0x006E0ACE
+006E0ACB    jz 0x006E0ACE                                   ; => [ Call: sub_63bc30 ]
 006E0ACD    int3
-006E0ACE    call 0x0063BB00
+006E0ACE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

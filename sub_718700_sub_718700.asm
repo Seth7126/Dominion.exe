@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_718700
+// 起始地址: 0x718700
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00718700    dword 83EC8B55
 00718704    jnl 0x0071872E
 00718706    add dword ptr ds:[ebx+0x21752445], ecx
@@ -13,7 +19,7 @@
 00718723    call 0x00761FBE
 00718728    add esp, 0x0C
 0071872B    pop ebp
-0071872C    ret
+0071872C    ret                                             ; => [ Call: memcpy ]
 0071872D    movss xmm1, dword ptr ss:[ebp+0x14]
 00718732    push esi
 00718733    push edi
@@ -37,7 +43,7 @@
 00718768    pop edi
 00718769    pop esi
 0071876A    pop ebp
-0071876B    ret
+0071876B    ret                                             ; => [ Call: memcpy ]
 0071876C    mov edx, dword ptr ds:[edi+0x08]
 0071876F    push ebx
 00718770    comiss xmm1, dword ptr ds:[esi+edx*4-0x04]
@@ -60,7 +66,7 @@
 007187A0    pop edi
 007187A1    pop esi
 007187A2    pop ebp
-007187A3    ret
+007187A3    ret                                             ; => [ Call: memcpy ]
 007187A4    xor ebx, ebx
 007187A6    add edx, 0xFFFFFFFE
 007187A9    jnz 0x007187AF

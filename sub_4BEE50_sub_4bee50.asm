@@ -1,10 +1,16 @@
-004BEE50    mov eax, dword ptr ds:[0x008DB778]
+// ============================================================
+// 函数名称: sub_4bee50
+// 起始地址: 0x4bee50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+004BEE50    mov eax, dword ptr ds:[0x008DB778]              ; => [ Data: data_8db778 ]
 004BEE55    push esi
 004BEE56    mov esi, ecx
 004BEE58    cmp eax, 0x04
 004BEE5B    jnbe 0x004BEF05
 004BEE61    jmp dword ptr ds:[eax*4+0x4BEF38]
-004BEE68    mov al, 0x01
+004BEE68    mov al, 0x01                                    ; => [ Call: nullptr ]
 004BEE6A    pop esi
 004BEE6B    ret
 004BEE6C    cmp byte ptr ds:[esi], 0x00
@@ -12,7 +18,7 @@
 004BEE70    setnz al
 004BEE73    ret
 004BEE74    mov edx, 0x8033CC
-004BEE79    call 0x0069DD70
+004BEE79    call 0x0069DD70                                 ; => [ Call: sub_69dd70 | String: @. ]
 004BEE7E    test eax, eax
 004BEE80    jz 0x004BEF01
 004BEE82    cmp eax, esi
@@ -20,7 +26,7 @@
 004BEE86    mov edx, 0x8033D0
 004BEE8B    mov ecx, eax
 004BEE8D    call 0x0069DD70
-004BEE92    mov ecx, eax
+004BEE92    mov ecx, eax                                    ; => [ Call: sub_69dd70 | String: . ]
 004BEE94    test ecx, ecx
 004BEE96    jz 0x004BEF01
 004BEE98    lea edx, ds:[ecx+0x01]
@@ -35,9 +41,9 @@
 004BEEAD    setnb al
 004BEEB0    ret
 004BEEB1    pop esi
-004BEEB2    jmp 0x004C0160
+004BEEB2    jmp 0x004C0160                                  ; => [ Call: sub_4c0160 ]
 004BEEB7    mov edx, 0x8033CC
-004BEEBC    call 0x0069DD70
+004BEEBC    call 0x0069DD70                                 ; => [ Call: sub_69dd70 | String: @. ]
 004BEEC1    test eax, eax
 004BEEC3    jz 0x004BEEF2
 004BEEC5    cmp eax, esi
@@ -45,7 +51,7 @@
 004BEEC9    mov edx, 0x8033D0
 004BEECE    mov ecx, eax
 004BEED0    call 0x0069DD70
-004BEED5    mov ecx, eax
+004BEED5    mov ecx, eax                                    ; => [ Call: sub_69dd70 | String: . ]
 004BEED7    test ecx, ecx
 004BEED9    jz 0x004BEEF2
 004BEEDB    lea edx, ds:[ecx+0x01]
@@ -60,7 +66,7 @@
 004BEEF2    mov ecx, esi
 004BEEF4    call 0x004C0160
 004BEEF9    test al, al
-004BEEFB    jnz 0x004BEE68
+004BEEFB    jnz 0x004BEE68                                  ; => [ Call: sub_4c0160 ]
 004BEF01    xor al, al
 004BEF03    pop esi
 004BEF04    ret
@@ -69,10 +75,10 @@
 004BEF0F    push 0x80292C
 004BEF14    mov edx, 0x801800
 004BEF19    mov ecx, 0x801AA4
-004BEF1E    call 0x0063B870
+004BEF1E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: InputBoxValidate | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp | String: Halt ]
 004BEF23    add esp, 0x0C
 004BEF26    call 0x0063BC30
 004BEF2B    test al, al
-004BEF2D    jz 0x004BEF30
+004BEF2D    jz 0x004BEF30                                   ; => [ Call: sub_63bc30 ]
 004BEF2F    int3
-004BEF30    call 0x0063BB00
+004BEF30    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

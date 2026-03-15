@@ -1,16 +1,22 @@
+// ============================================================
+// 函数名称: sub_64b040
+// 起始地址: 0x64b040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064B040    push ebp
 0064B041    mov ebp, esp
 0064B043    and esp, 0xFFFFFFF8
 0064B046    sub esp, 0x68
-0064B049    mov eax, dword ptr ds:[0x008C4040]
+0064B049    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0064B04E    xor eax, esp
 0064B050    mov dword ptr ss:[esp+0x64], eax
 0064B054    push esi
 0064B055    push edi
 0064B056    mov edi, edx
 0064B058    lea edx, ss:[esp+0x08]
-0064B05C    call 0x006DB800
-0064B061    mov esi, 0x872E3C
+0064B05C    call 0x006DB800                                 ; => [ Call: sub_6db800 ]
+0064B061    mov esi, 0x872E3C                               ; => [ Data: data_872e3c ]
 0064B066    push dword ptr ds:[edi]
 0064B068    mov eax, dword ptr ds:[esi]
 0064B06A    sub esp, 0x0C
@@ -28,16 +34,16 @@
 0064B094    mov eax, dword ptr ss:[esp+eax*4+0x2C]
 0064B098    movq qword ptr ds:[ecx], xmm0
 0064B09C    mov dword ptr ds:[ecx+0x08], eax
-0064B09F    call 0x0064AC90
+0064B09F    call 0x0064AC90                                 ; => [ Call: sub_64ac90 ]
 0064B0A4    add esi, 0x08
 0064B0A7    add esp, 0x1C
 0064B0AA    cmp esi, 0x872E9C
-0064B0B0    jl 0x0064B066
+0064B0B0    jl 0x0064B066                                   ; => [ String: Union ]
 0064B0B2    mov ecx, dword ptr ss:[esp+0x6C]
 0064B0B6    pop edi
 0064B0B7    pop esi
 0064B0B8    xor ecx, esp
-0064B0BA    call 0x0075927A
+0064B0BA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0064B0BF    mov esp, ebp
 0064B0C1    pop ebp
 0064B0C2    ret

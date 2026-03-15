@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5702b0
+// 起始地址: 0x5702b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005702B0    push ebp
 005702B1    mov ebp, esp
 005702B3    sub esp, 0x0C
@@ -7,7 +13,7 @@
 005702BF    mov esi, dword ptr ds:[eax+0x19C4]
 005702C5    call 0x00573400
 005702CA    cmp esi, dword ptr ds:[eax+0x0C]
-005702CD    jnz 0x005702D6
+005702CD    jnz 0x005702D6                                  ; => [ Call: sub_573400 ]
 005702CF    mov al, 0x01
 005702D1    pop esi
 005702D2    mov esp, ebp
@@ -18,7 +24,7 @@
 005702D9    mov dword ptr ss:[ebp-0x0C], 0x00
 005702E0    push edi
 005702E1    mov dword ptr ss:[ebp-0x08], ebx
-005702E4    call 0x00573400
+005702E4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005702E9    xor edi, edi
 005702EB    mov dword ptr ss:[ebp-0x04], eax
 005702EE    mov esi, dword ptr ds:[eax+0x04]
@@ -27,7 +33,7 @@
 005702F9    nop dword ptr ds:[eax], eax
 00570300    cmp dword ptr ds:[ebx+esi*1+0x3B5B4], 0x00
 00570308    jnz 0x00570321
-0057030A    call 0x00573400
+0057030A    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0057030F    mov ecx, dword ptr ds:[ebx+esi*1+0x3B5B8]
 00570316    cmp ecx, dword ptr ds:[eax+0x0C]
 00570319    mov eax, dword ptr ss:[ebp-0x04]
@@ -35,7 +41,7 @@
 0057031E    inc dword ptr ss:[ebp-0x0C]
 00570321    cmp dword ptr ds:[ebx+esi*1+0x3B5B4], 0x01
 00570329    jnz 0x00570342
-0057032B    call 0x00573400
+0057032B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00570330    mov ecx, dword ptr ds:[ebx+esi*1+0x3B5B8]
 00570337    cmp ecx, dword ptr ds:[eax+0x0C]
 0057033A    mov eax, dword ptr ss:[ebp-0x04]

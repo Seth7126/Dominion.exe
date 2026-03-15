@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_514940
+// 起始地址: 0x514940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00514940    dword 83EC8B55
 00514944    in al, 0xF8
 00514946    push esi
 00514947    push edi
-00514948    mov eax, 0xCC97B8
+00514948    mov eax, 0xCC97B8                               ; => [ Data: data_cc97b8 ]
 0051494D    nop dword ptr ds:[eax], eax
 00514950    mov ecx, dword ptr ds:[eax]
 00514952    test ecx, ecx
@@ -18,7 +24,7 @@
 00514969    mov esp, ebp
 0051496B    pop ebp
 0051496C    ret
-0051496D    mov esi, dword ptr ds:[0x00CCA788]
+0051496D    mov esi, dword ptr ds:[0x00CCA788]              ; => [ Data: data_cca788 ]
 00514973    test esi, esi
 00514975    jz 0x00514A34
 0051497B    mov eax, dword ptr ds:[0x01597E0C]
@@ -26,7 +32,7 @@
 00514982    sar ecx, 0x04
 00514985    or ecx, esi
 00514987    and ecx, dword ptr ds:[0x01597E10]
-0051498D    mov eax, dword ptr ds:[eax+ecx*4]
+0051498D    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 00514990    mov ecx, eax
 00514992    test ecx, ecx
 00514994    jz 0x005149C2
@@ -62,7 +68,7 @@
 005149D6    test ecx, ecx
 005149D8    jz 0x005149F4
 005149DA    mov edx, dword ptr ds:[ecx]
-005149DC    xor eax, eax
+005149DC    xor eax, eax                                    ; => [ Call: nullptr ]
 005149DE    mov ecx, dword ptr ds:[ecx+0x04]
 005149E1    test ecx, ecx
 005149E3    jle 0x005149F4
@@ -77,7 +83,7 @@
 00514A00    mov eax, dword ptr ds:[eax+0x98]
 00514A06    and eax, 0x04
 00514A09    or eax, 0x00
-00514A0C    jz 0x00514965
+00514A0C    jz 0x00514965                                   ; => [ Call: sub_571b30 ]
 00514A12    mov edx, 0x17
 00514A17    mov ecx, esi
 00514A19    call 0x00571B30

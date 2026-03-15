@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_74cd20
+// 起始地址: 0x74cd20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074CD20    dword 8BEC8B55
 0074CD24    inc ebp
 0074CD25    or al, 0x83
@@ -12,7 +18,7 @@
 0074CD47    push 0x00
 0074CD49    push 0x464
 0074CD4E    push dword ptr ss:[ebp+0x08]
-0074CD51    call dword ptr ds:[0x00775308]
+0074CD51    call dword ptr ds:[0x00775308]                  ; => [ Data: data_1a9a5b8 ]
 0074CD57    xor eax, eax
 0074CD59    pop ebp
 0074CD5A    ret 0x10

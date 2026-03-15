@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5855e0
+// 起始地址: 0x5855e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005855E0    push ebp
 005855E1    mov ebp, esp
 005855E3    and esp, 0xFFFFFFF8
@@ -16,14 +22,14 @@
 0058560A    call eax
 0058560C    mov edx, edi
 0058560E    mov ecx, esi
-00585610    call 0x0057DC30
+00585610    call 0x0057DC30                                 ; => [ Call: sub_57dc30 ]
 00585615    push 0x00
 00585617    push 0x00
 00585619    push eax
 0058561A    push 0x21
 0058561C    mov edx, ebx
 0058561E    mov ecx, esi
-00585620    call 0x00576B30
+00585620    call 0x00576B30                                 ; => [ Call: sub_576b30 ]
 00585625    add esp, 0x10
 00585628    test eax, eax
 0058562A    jle 0x0058564C
@@ -34,7 +40,7 @@
 0058563C    push eax
 0058563D    xor edx, edx
 0058563F    mov ecx, 0x4F8080
-00585644    call 0x0056BBA0
+00585644    call 0x0056BBA0                                 ; => [ Call: sub_56bba0 | Call: sub_4f8080 ]
 00585649    add esp, 0x0C
 0058564C    pop edi
 0058564D    pop esi

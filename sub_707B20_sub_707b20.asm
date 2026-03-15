@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_707b20
+// 起始地址: 0x707b20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707B20    push ebp
 00707B21    mov ebp, esp
 00707B23    push esi
@@ -5,9 +11,9 @@
 00707B25    mov edi, ecx
 00707B27    mov esi, edx
 00707B29    push dword ptr ds:[edi]
-00707B2B    call dword ptr ds:[0x00800B48]
+00707B2B    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00707B31    push dword ptr ds:[edi+0x04]
-00707B34    call dword ptr ds:[0x00800B48]
+00707B34    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00707B3A    mov ecx, esi
 00707B3C    add esp, 0x08
 00707B3F    lea edx, ds:[ecx+0x01]
@@ -15,7 +21,7 @@
 00707B44    inc ecx
 00707B45    test al, al
 00707B47    jnz 0x00707B42
-00707B49    mov eax, dword ptr ds:[0x0147DED8]
+00707B49    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00707B4E    sub ecx, edx
 00707B50    inc ecx
 00707B51    test eax, eax
@@ -23,11 +29,11 @@
 00707B55    push 0x58
 00707B57    push 0x88D9A0
 00707B5C    push ecx
-00707B5D    call eax
+00707B5D    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\AttachmentLoader.c ]
 00707B5F    add esp, 0x0C
 00707B62    jmp 0x00707B6E
 00707B64    push ecx
-00707B65    call dword ptr ds:[0x00800B4C]
+00707B65    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00707B6B    add esp, 0x04
 00707B6E    mov ecx, eax
 00707B70    mov dword ptr ds:[edi], ecx
@@ -45,7 +51,7 @@
 00707B92    inc ecx
 00707B93    test al, al
 00707B95    jnz 0x00707B90
-00707B97    mov eax, dword ptr ds:[0x0147DED8]
+00707B97    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00707B9C    sub ecx, edx
 00707B9E    inc ecx
 00707B9F    test eax, eax
@@ -53,11 +59,11 @@
 00707BA3    push 0x59
 00707BA5    push 0x88D9A0
 00707BAA    push ecx
-00707BAB    call eax
+00707BAB    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\AttachmentLoader.c ]
 00707BAD    add esp, 0x0C
 00707BB0    jmp 0x00707BBC
 00707BB2    push ecx
-00707BB3    call dword ptr ds:[0x00800B4C]
+00707BB3    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00707BB9    add esp, 0x04
 00707BBC    mov ecx, eax
 00707BBE    mov dword ptr ds:[edi+0x04], ecx

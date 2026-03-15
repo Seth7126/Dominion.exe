@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50c620
+// 起始地址: 0x50c620
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050C620    dword 88358B56
 0050C624    cmpsd
 0050C625    int3
@@ -11,7 +17,7 @@
 0050C646    sar ecx, 0x04
 0050C649    or ecx, esi
 0050C64B    and ecx, dword ptr ds:[0x01597E10]
-0050C651    mov eax, dword ptr ds:[eax+ecx*4]
+0050C651    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 0050C654    test eax, eax
 0050C656    jz 0x0050C6E3
 0050C65C    nop dword ptr ds:[eax], eax
@@ -25,7 +31,7 @@
 0050C670    test ecx, ecx
 0050C672    jz 0x0050C6E3
 0050C674    mov edx, dword ptr ds:[ecx]
-0050C676    xor eax, eax
+0050C676    xor eax, eax                                    ; => [ Call: nullptr ]
 0050C678    mov ecx, dword ptr ds:[ecx+0x04]
 0050C67B    test ecx, ecx
 0050C67D    jle 0x0050C6E3
@@ -41,16 +47,16 @@
 0050C695    mov eax, dword ptr ds:[0x00CCA780]
 0050C69A    shl ecx, 0x0B
 0050C69D    add eax, 0x58C
-0050C6A2    add eax, ecx
+0050C6A2    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050C6A4    cmp dword ptr ds:[eax], 0x00
 0050C6A7    jz 0x0050C6C3
 0050C6A9    inc edx
 0050C6AA    add eax, 0x14
 0050C6AD    cmp edx, 0x20
 0050C6B0    jl 0x0050C6A4
-0050C6B2    push 0x80CF1C
+0050C6B2    push 0x80CF1C                                   ; => [ String: CampaignAddExtra ]
 0050C6B7    push 0x242
-0050C6BC    mov ecx, 0x801AA4
+0050C6BC    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0050C6C1    jmp 0x0050C6F2
 0050C6C3    mov dword ptr ds:[eax+0x04], esi
 0050C6C6    mov dword ptr ds:[eax], 0xDC1
@@ -59,15 +65,15 @@
 0050C6DA    mov dword ptr ds:[eax+0x10], 0x00
 0050C6E1    pop esi
 0050C6E2    ret
-0050C6E3    push 0x813818
+0050C6E3    push 0x813818                                   ; => [ String: CardMod_ShuffleSplitPile ]
 0050C6E8    push 0x7E2
-0050C6ED    mov ecx, 0x813834
+0050C6ED    mov ecx, 0x813834                               ; => [ String: IsCategory(what, CATEGORY_SPLIT) ]
 0050C6F2    push 0x80CD80
 0050C6F7    mov edx, 0x801800
-0050C6FC    call 0x0063B870
+0050C6FC    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 0050C701    add esp, 0x0C
 0050C704    call 0x0063BC30
 0050C709    test al, al
-0050C70B    jz 0x0050C70E
+0050C70B    jz 0x0050C70E                                   ; => [ Call: sub_63bc30 ]
 0050C70D    int3
-0050C70E    call 0x0063BB00
+0050C70E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

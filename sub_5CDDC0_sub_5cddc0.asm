@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cddc0
+// 起始地址: 0x5cddc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CDDC0    push ebp
 005CDDC1    mov ebp, esp
 005CDDC3    and esp, 0xFFFFFFF8
@@ -8,9 +14,9 @@
 005CDDD0    mov ecx, dword ptr ds:[ecx+0x1E1A4]
 005CDDD6    call 0x004D8F30
 005CDDDB    test byte ptr ds:[eax+0x42BC], 0x01
-005CDDE2    jnz 0x005CDE32
+005CDDE2    jnz 0x005CDE32                                  ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 005CDDE4    mov ecx, esi
-005CDDE6    call 0x005CC5E0
+005CDDE6    call 0x005CC5E0                                 ; => [ Call: sub_5cc5e0 ]
 005CDDEB    mov edi, eax
 005CDDED    cmp byte ptr ds:[edi+0x4D0D], 0x01
 005CDDF4    jz 0x005CDE32
@@ -18,19 +24,19 @@
 005CDDF8    push 0x00
 005CDDFA    mov edx, 0x3EA
 005CDDFF    mov ecx, esi
-005CDE01    call 0x005D1210
+005CDE01    call 0x005D1210                                 ; => [ Call: sub_5d1210 ]
 005CDE06    push eax
 005CDE07    mov edx, 0x3EA
 005CDE0C    mov ecx, esi
 005CDE0E    call 0x005CDC20
 005CDE13    add esp, 0x0C
 005CDE16    test al, al
-005CDE18    jz 0x005CDE3A
+005CDE18    jz 0x005CDE3A                                   ; => [ Call: sub_5cdc20 ]
 005CDE1A    mov edx, 0x3EA
 005CDE1F    mov ecx, esi
 005CDE21    call 0x005D10B0
 005CDE26    cmp eax, 0x08
-005CDE29    jl 0x005CDE3A
+005CDE29    jl 0x005CDE3A                                   ; => [ Call: sub_5d10b0 ]
 005CDE2B    mov byte ptr ds:[edi+0x4D0D], 0x01
 005CDE32    xor al, al
 005CDE34    pop edi

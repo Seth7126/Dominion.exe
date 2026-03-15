@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b18f0
+// 起始地址: 0x6b18f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B18F0    push ebp
 006B18F1    mov ebp, esp
 006B18F3    push ebx
@@ -8,7 +14,7 @@
 006B18FB    mov edi, ecx
 006B18FD    mov ebx, dword ptr ds:[ebx+0x350]
 006B1903    mov ecx, dword ptr ds:[ebx]
-006B1905    call 0x006D8ED0
+006B1905    call 0x006D8ED0                                 ; => [ Call: sub_6d8ed0 ]
 006B190A    test eax, eax
 006B190C    jz 0x006B1A88
 006B1912    movzx ecx, ax
@@ -33,11 +39,11 @@
 006B1953    mov edx, ebx
 006B1955    mov ecx, ebx
 006B1957    push esi
-006B1958    call 0x006B17C0
+006B1958    call 0x006B17C0                                 ; => [ Call: sub_6b17c0 ]
 006B195D    mov ecx, dword ptr ds:[ebx+0x3F0]
 006B1963    add esp, 0x08
 006B1966    mov edx, 0x01
-006B196B    call 0x006D8ED0
+006B196B    call 0x006D8ED0                                 ; => [ Call: sub_6d8ed0 ]
 006B1970    test eax, eax
 006B1972    jz 0x006B1A88
 006B1978    movzx ecx, ax
@@ -60,24 +66,24 @@
 006B19B4    lea edx, ds:[ebx+0x3F0]
 006B19BA    mov ecx, ebx
 006B19BC    push esi
-006B19BD    call 0x006B17C0
+006B19BD    call 0x006B17C0                                 ; => [ Call: sub_6b17c0 ]
 006B19C2    mov eax, dword ptr ds:[ebx+0xE40]
 006B19C8    add esp, 0x08
-006B19CB    mov edx, dword ptr ds:[0x0147B078]
+006B19CB    mov edx, dword ptr ds:[0x0147B078]              ; => [ Data: data_147b078 ]
 006B19D1    test eax, eax
 006B19D3    jnz 0x006B19D9
-006B19D5    xor esi, esi
+006B19D5    xor esi, esi                                    ; => [ Call: nullptr ]
 006B19D7    jmp 0x006B19F9
 006B19D9    movzx ecx, ax
 006B19DC    cmp ecx, dword ptr ds:[edx+0x3C]
 006B19DF    jb 0x006B19E5
-006B19E1    xor esi, esi
+006B19E1    xor esi, esi                                    ; => [ Call: nullptr ]
 006B19E3    jmp 0x006B19F9
 006B19E5    imul esi, ecx, 0x24C
 006B19EB    xor ecx, ecx
 006B19ED    add esi, dword ptr ds:[edx+0x38]
 006B19F0    cmp dword ptr ds:[esi+0x248], eax
-006B19F6    cmovnz esi, ecx
+006B19F6    cmovnz esi, ecx                                 ; => [ Call: nullptr ]
 006B19F9    cmp dword ptr ds:[esi], 0x05
 006B19FC    jnz 0x006B1A91
 006B1A02    mov eax, dword ptr ds:[edi+0x08]
@@ -94,13 +100,13 @@
 006B1A25    push eax
 006B1A26    call dword ptr ds:[ecx+0x90]
 006B1A2C    mov eax, dword ptr ds:[0x0147B06C]
-006B1A31    mov al, byte ptr ds:[eax+0x166]
+006B1A31    mov al, byte ptr ds:[eax+0x166]                 ; => [ Data: data_147b06c ]
 006B1A37    test al, al
 006B1A39    setnz cl
 006B1A3C    cmp dword ptr ds:[0x0147B074], 0x01
 006B1A43    jnz 0x006B1A53
 006B1A45    cmp byte ptr ds:[0x00CF69DC], 0x00
-006B1A4C    jnz 0x006B1A53
+006B1A4C    jnz 0x006B1A53                                  ; => [ Data: data_cf69dc | Data: data_147b074 ]
 006B1A4E    test al, al
 006B1A50    setz cl
 006B1A53    mov edx, dword ptr ds:[edi+0x08]
@@ -136,10 +142,10 @@
 006B1A9B    push 0x87B990
 006B1AA0    mov edx, 0x801800
 006B1AA5    mov ecx, 0x87C3F8
-006B1AAA    call 0x0063B870
+006B1AAA    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: bufferDataMaterial->mBufferType == DX11BUFFER_MATERIAL | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::GraphicsMaterialSetup ]
 006B1AAF    add esp, 0x0C
 006B1AB2    call 0x0063BC30
 006B1AB7    test al, al
-006B1AB9    jz 0x006B1ABC
+006B1AB9    jz 0x006B1ABC                                   ; => [ Call: sub_63bc30 ]
 006B1ABB    int3
-006B1ABC    call 0x0063BB00
+006B1ABC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7532e0
+// 起始地址: 0x7532e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007532E0    push ebp
 007532E1    mov ebp, esp
 007532E3    and esp, 0xFFFFFFF8
@@ -60,27 +66,27 @@
 0075339C    test eax, eax
 0075339E    jz 0x007533AA
 007533A0    push eax
-007533A1    call dword ptr ds:[0x00800B48]
+007533A1    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007533A7    add esp, 0x04
-007533AA    mov ecx, dword ptr ds:[0x0147DED8]
+007533AA    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007533B0    lea eax, ds:[esi*4]
 007533B7    test ecx, ecx
 007533B9    jz 0x007533CA
 007533BB    push 0x63
 007533BD    push 0x890648
 007533C2    push eax
-007533C3    call ecx
+007533C3    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\PathConstraint.c ]
 007533C5    add esp, 0x0C
 007533C8    jmp 0x007533D4
 007533CA    push eax
-007533CB    call dword ptr ds:[0x00800B4C]
+007533CB    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007533D1    add esp, 0x04
 007533D4    mov edx, dword ptr ss:[esp+0x14]
 007533D8    mov ecx, dword ptr ss:[esp+0x2C]
 007533DC    mov dword ptr ds:[edi+0x24], eax
 007533DF    mov dword ptr ds:[edi+0x20], esi
 007533E2    mov eax, dword ptr ds:[edi+0x24]
-007533E5    xor ebx, ebx
+007533E5    xor ebx, ebx                                    ; => [ Call: nullptr ]
 007533E7    mov dword ptr ss:[esp+0x18], eax
 007533EB    mov dword ptr ds:[eax], 0x00
 007533F1    movss xmm0, dword ptr ds:[edi+0x14]
@@ -106,20 +112,20 @@
 0075343B    test eax, eax
 0075343D    jz 0x00753449
 0075343F    push eax
-00753440    call dword ptr ds:[0x00800B48]
+00753440    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00753446    add esp, 0x04
-00753449    mov ecx, dword ptr ds:[0x0147DED8]
+00753449    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0075344F    lea eax, ds:[ebx*4]
 00753456    test ecx, ecx
 00753458    jz 0x00753469
 0075345A    push 0x6E
 0075345C    push 0x890648
 00753461    push eax
-00753462    call ecx
+00753462    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\PathConstraint.c ]
 00753464    add esp, 0x0C
 00753467    jmp 0x00753473
 00753469    push eax
-0075346A    call dword ptr ds:[0x00800B4C]
+0075346A    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00753470    add esp, 0x04
 00753473    mov edx, dword ptr ss:[esp+0x14]
 00753477    mov dword ptr ds:[edi+0x44], eax
@@ -147,7 +153,7 @@
 007534C9    cmp edx, 0x02
 007534CC    jnz 0x007534D5
 007534CE    mov dword ptr ds:[ebx+esi*4], 0x00
-007534D5    xorps xmm0, xmm0
+007534D5    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 007534D8    jmp 0x0075359C
 007534DD    cmp dword ptr ss:[esp+0x2C], 0x02
 007534E2    jnz 0x0075352E
@@ -165,7 +171,7 @@
 0075350C    jnbe 0x00753514
 0075350E    sqrtsd xmm0, xmm0
 00753512    jmp 0x00753519
-00753514    call 0x00762084
+00753514    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00753519    mov edx, dword ptr ss:[esp+0x14]
 0075351D    cvtsd2ss xmm0, xmm0
 00753521    movss dword ptr ds:[ebx+esi*4], xmm0
@@ -184,7 +190,7 @@
 00753554    jnbe 0x0075355C
 00753556    sqrtsd xmm0, xmm0
 0075355A    jmp 0x00753561
-0075355C    call 0x00762084
+0075355C    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00753561    mov edx, dword ptr ss:[esp+0x14]
 00753565    xorps xmm2, xmm2
 00753568    cvtsd2ss xmm2, xmm0
@@ -222,7 +228,7 @@
 007535E4    mov ecx, dword ptr ds:[edi]
 007535E6    add esp, 0x10
 007535E9    xorps xmm6, xmm6
-007535EC    mov edx, eax
+007535EC    mov edx, eax                                    ; => [ Call: sub_753c50 ]
 007535EE    movss xmm2, dword ptr ds:[ecx+0x24]
 007535F3    movss xmm5, dword ptr ds:[edx]
 007535F7    movss xmm4, dword ptr ds:[edx+0x04]
@@ -238,7 +244,7 @@
 00753617    mov dword ptr ss:[esp+0x38], eax
 0075361B    jmp 0x00753668
 0075361D    mov eax, dword ptr ds:[edi+0x0C]
-00753620    mov dword ptr ss:[esp+0x38], 0x00
+00753620    mov dword ptr ss:[esp+0x38], 0x00               ; => [ Call: nullptr ]
 00753628    mov eax, dword ptr ds:[eax+0x04]
 0075362B    movss xmm1, dword ptr ds:[eax+0x60]
 00753630    movss xmm0, dword ptr ds:[eax+0x5C]
@@ -301,7 +307,7 @@
 00753722    jnbe 0x0075372A
 00753724    sqrtsd xmm0, xmm0
 00753728    jmp 0x0075372F
-0075372A    call 0x00762084
+0075372A    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0075372F    xorps xmm1, xmm1
 00753732    movss xmm2, dword ptr ss:[esp+0x34]
 00753738    cvtsd2ss xmm1, xmm0
@@ -346,7 +352,7 @@
 007537E5    cvtps2pd xmm0, xmm2
 007537E8    movsd qword ptr ss:[esp+0x50], xmm0
 007537EE    fld qword ptr ss:[esp+0x50]
-007537F2    call 0x00762368
+007537F2    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 007537F7    fstp dword ptr ss:[esp+0x50]
 007537FB    movss xmm1, dword ptr ss:[esp+0x50]
 00753801    movss xmm0, dword ptr ds:[esi+0x5C]
@@ -358,7 +364,7 @@
 0075381F    cvtps2pd xmm0, xmm0
 00753822    movsd qword ptr ss:[esp+0x50], xmm0
 00753828    fld qword ptr ss:[esp+0x50]
-0075382C    call 0x00762368
+0075382C    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00753831    cmp dword ptr ss:[esp+0x38], 0x00
 00753836    movss xmm2, dword ptr ss:[esp+0x3C]
 0075383C    fstp qword ptr ss:[esp+0x50]
@@ -372,12 +378,12 @@
 00753863    movss dword ptr ss:[esp+0x10], xmm0
 00753869    jz 0x00753906
 0075386F    cvtps2pd xmm0, xmm0
-00753872    call 0x0076209C
+00753872    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 00753877    movss xmm1, dword ptr ss:[esp+0x10]
 0075387D    cvtsd2ss xmm0, xmm0
 00753881    movss dword ptr ss:[esp+0x18], xmm0
 00753887    cvtps2pd xmm0, xmm1
-0075388A    call 0x00762096
+0075388A    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 0075388F    movss xmm3, dword ptr ss:[esp+0x18]
 00753895    xorps xmm2, xmm2
 00753898    mov eax, dword ptr ds:[esi]
@@ -416,12 +422,12 @@
 00753938    mulss xmm0, xmm7
 0075393C    movss dword ptr ss:[esp+0x10], xmm0
 00753942    cvtps2pd xmm0, xmm0
-00753945    call 0x0076209C
+00753945    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 0075394A    movss xmm1, dword ptr ss:[esp+0x10]
 00753950    cvtsd2ss xmm0, xmm0
 00753954    movss dword ptr ss:[esp+0x50], xmm0
 0075395A    cvtps2pd xmm0, xmm1
-0075395D    call 0x00762096
+0075395D    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 00753962    movss xmm3, dword ptr ss:[esp+0x50]
 00753968    xorps xmm2, xmm2
 0075396B    cvtsd2ss xmm2, xmm0

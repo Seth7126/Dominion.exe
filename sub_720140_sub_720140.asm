@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_720140
+// 起始地址: 0x720140
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00720140    push ebp
 00720141    mov ebp, esp
 00720143    and esp, 0xFFFFFFF8
 00720146    sub esp, 0xC4
-0072014C    mov eax, dword ptr ds:[0x008C4040]
+0072014C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00720151    xor eax, esp
 00720153    mov dword ptr ss:[esp+0xC0], eax
 0072015A    push ebx
@@ -14,13 +20,13 @@
 00720166    push edi
 00720167    lea ecx, ss:[esp+0x18]
 0072016B    mov ebx, eax
-0072016D    call 0x0071F490
+0072016D    call 0x0071F490                                 ; => [ Call: sub_71f490 ]
 00720172    add esp, 0x08
 00720175    lea ecx, ss:[esp+0x10]
 00720179    mov edx, 0x88DD48
 0072017E    call 0x0072D4A0
 00720183    mov ecx, dword ptr ss:[esp+0xC0]
-0072018A    mov esi, eax
+0072018A    mov esi, eax                                    ; => [ String: #?RADIANCE\n | Call: sub_72d4a0 ]
 0072018C    mov dword ptr ss:[esp+0xB8], ecx
 00720193    mov ecx, dword ptr ss:[esp+0xC4]
 0072019A    mov dword ptr ss:[esp+0xBC], ecx
@@ -29,7 +35,7 @@
 007201A5    mov edx, 0x88DD60
 007201AA    lea ecx, ss:[esp+0x10]
 007201AE    call 0x0072D4A0
-007201B3    mov esi, eax
+007201B3    mov esi, eax                                    ; => [ String: #?RGBE\n | Call: sub_72d4a0 ]
 007201B5    mov eax, dword ptr ss:[esp+0xC0]
 007201BC    mov dword ptr ss:[esp+0xB8], eax
 007201C3    mov eax, dword ptr ss:[esp+0xC4]
@@ -45,7 +51,7 @@
 007201E8    pop esi
 007201E9    pop ebx
 007201EA    xor ecx, esp
-007201EC    call 0x0075927A
+007201EC    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 007201F1    mov esp, ebp
 007201F3    pop ebp
 007201F4    ret

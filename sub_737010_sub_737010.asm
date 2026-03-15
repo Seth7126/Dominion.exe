@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_737010
+// 起始地址: 0x737010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00737010    push ebp
 00737011    mov ebp, esp
 00737013    and esp, 0xFFFFFFF0
@@ -8,13 +14,13 @@
 0073701D    mov edi, edx
 0073701F    cmp dword ptr ds:[esi+0x04], 0x12
 00737023    jnz 0x007371CB
-00737029    call 0x005AF880
+00737029    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0073702E    lea ecx, ds:[edi+edi*2]
 00737031    mov dword ptr ss:[esp+0x6C], 0x00
 00737039    shl ecx, 0x04
 0073703C    xorps xmm0, xmm0
 0073703F    xorps xmm2, xmm2
-00737042    movlpd qword ptr ss:[esp+0x54], xmm0
+00737042    movlpd qword ptr ss:[esp+0x54], xmm0            ; => [ Call: __builtin_memset ]
 00737048    mov edx, dword ptr ds:[eax+0x20]
 0073704B    mov eax, dword ptr ss:[ebp+0x0C]
 0073704E    add edx, ecx
@@ -85,11 +91,11 @@
 0073713A    lea eax, ss:[esp+0x14]
 0073713E    push eax
 0073713F    push edi
-00737140    call 0x00737B10
+00737140    call 0x00737B10                                 ; => [ Call: sub_737b10 ]
 00737145    add esp, 0x0C
 00737148    lea edx, ss:[esp+0x10]
 0073714C    lea ecx, ss:[esp+0x30]
-00737150    call 0x00736550
+00737150    call 0x00736550                                 ; => [ Call: sub_736550 ]
 00737155    movd xmm0, dword ptr ss:[esp+0x3C]
 0073715B    cvtdq2ps xmm0, xmm0
 0073715E    mov eax, dword ptr ss:[esp+0x38]
@@ -124,10 +130,10 @@
 007371D5    push 0x87A2E0
 007371DA    mov edx, 0x801800
 007371DF    mov ecx, 0x87A48C
-007371E4    call 0x0063B870
+007371E4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_FONT | String: FontGetDef | String: C:\x\ax2017\Engine\AssetUtils.cpp ]
 007371E9    add esp, 0x0C
 007371EC    call 0x0063BC30
 007371F1    test al, al
-007371F3    jz 0x007371F6
+007371F3    jz 0x007371F6                                   ; => [ Call: sub_63bc30 ]
 007371F5    int3
-007371F6    call 0x0063BB00
+007371F6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

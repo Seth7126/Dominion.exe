@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d7490
+// 起始地址: 0x6d7490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D7490    push ebp
 006D7491    mov ebp, esp
 006D7493    sub esp, 0x54
@@ -10,7 +16,7 @@
 006D74A1    mov esi, ecx
 006D74A3    push eax
 006D74A4    mov edx, edi
-006D74A6    call 0x006D4740
+006D74A6    call 0x006D4740                                 ; => [ Call: sub_6d4740 ]
 006D74AB    add esp, 0x04
 006D74AE    mov dword ptr ss:[ebp-0x10], eax
 006D74B1    cmp dword ptr ds:[esi+0x40], 0x00
@@ -20,13 +26,13 @@
 006D74BB    xorps xmm0, xmm0
 006D74BE    mov dword ptr ss:[ebp-0x50], 0x01
 006D74C5    lea eax, ss:[ebp-0x50]
-006D74C8    mov dword ptr ss:[ebp-0x4C], 0x00
+006D74C8    mov dword ptr ss:[ebp-0x4C], 0x00               ; => [ Call: __builtin_memset ]
 006D74CF    push eax
 006D74D0    movups xmmword ptr ss:[ebp-0x48], xmm0
 006D74D4    mov dword ptr ss:[ebp-0x28], 0x00
 006D74DB    movups xmmword ptr ss:[ebp-0x38], xmm0
 006D74DF    mov dword ptr ss:[ebp-0x24], 0x00
-006D74E6    call 0x006D3180
+006D74E6    call 0x006D3180                                 ; => [ Call: sub_6d3180 ]
 006D74EB    xor esi, esi
 006D74ED    add esp, 0x04
 006D74F0    test eax, eax
@@ -35,7 +41,7 @@
 006D74F8    test eax, eax
 006D74FA    cmovnz edi, dword ptr ss:[ebp-0x2C]
 006D74FE    jmp 0x006D754A
-006D7500    call 0x006D2320
+006D7500    call 0x006D2320                                 ; => [ Call: sub_6d2320 ]
 006D7505    mov edi, eax
 006D7507    test edi, edi
 006D7509    js 0x006D75B1
@@ -65,7 +71,7 @@
 006D7561    movsd qword ptr ss:[ebp-0x08], xmm0
 006D7566    fld qword ptr ss:[ebp-0x08]
 006D7569    fstp qword ptr ss:[esp]
-006D756C    call 0x0076208A
+006D756C    call 0x0076208A                                 ; => [ Call: floor ]
 006D7571    movss xmm0, dword ptr ss:[ebp+0x20]
 006D7576    xorps xmm1, xmm1
 006D7579    cvtsi2ss xmm1, edi
@@ -77,7 +83,7 @@
 006D7591    movsd qword ptr ss:[ebp-0x08], xmm0
 006D7596    fld qword ptr ss:[ebp-0x08]
 006D7599    fstp qword ptr ss:[esp]
-006D759C    call 0x0076208A
+006D759C    call 0x0076208A                                 ; => [ Call: floor ]
 006D75A1    fstp qword ptr ss:[ebp-0x08]
 006D75A4    cvttsd2si eax, qword ptr ss:[ebp-0x08]
 006D75A9    add esp, 0x08
@@ -111,7 +117,7 @@
 006D760C    push eax
 006D760D    mov ecx, ebx
 006D760F    mov dword ptr ss:[ebp+0x0C], 0x00
-006D7616    call 0x006D7070
+006D7616    call 0x006D7070                                 ; => [ Call: sub_6d7070 ]
 006D761B    add esp, 0x0C
 006D761E    mov dword ptr ss:[ebp+0x10], eax
 006D7621    test eax, eax
@@ -133,7 +139,7 @@
 006D765D    movss dword ptr ss:[esp], xmm0
 006D7662    push dword ptr ss:[ebp+0x08]
 006D7665    push esi
-006D7666    call 0x006D6770
+006D7666    call 0x006D6770                                 ; => [ Call: sub_6d6770 ]
 006D766B    push esi
 006D766C    call edi
 006D766E    add esp, 0x2C

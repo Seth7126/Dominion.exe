@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_761c80
+// 起始地址: 0x761c80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00761C80    push ebp
 00761C81    mov ebp, esp
 00761C83    mov eax, dword ptr ss:[ebp+0x18]
@@ -22,9 +28,9 @@
 00761CB2    push dword ptr ss:[ebp+0x10]
 00761CB5    mov ecx, esi
 00761CB7    mov dword ptr ds:[esi], 0x00
-00761CBD    mov dword ptr ds:[esi+0x0C], 0x4BFB50
-00761CC4    call 0x0075E950
-00761CC9    mov dword ptr ds:[esi+0x1060], 0x77EAF0
+00761CBD    mov dword ptr ds:[esi+0x0C], 0x4BFB50           ; => [ Call: sub_4bfb50 ]
+00761CC4    call 0x0075E950                                 ; => [ Call: sub_75e950 ]
+00761CC9    mov dword ptr ds:[esi+0x1060], 0x77EAF0         ; => [ String: null driver ]
 00761CD3    xor eax, eax
 00761CD5    pop esi
 00761CD6    pop ebp

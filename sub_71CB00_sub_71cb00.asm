@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71cb00
+// 起始地址: 0x71cb00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071CB00    push ebp
 0071CB01    mov ebp, esp
 0071CB03    sub esp, 0x44
@@ -42,7 +48,7 @@
 0071CB7C    mov eax, dword ptr ds:[ecx+0xB8]
 0071CB82    push 0x00
 0071CB84    push eax
-0071CB85    call 0x00761FC4
+0071CB85    call 0x00761FC4                                 ; => [ Call: memset ]
 0071CB8A    lea eax, ds:[esi-0x01]
 0071CB8D    add esp, 0x0C
 0071CB90    xor edx, edx
@@ -317,7 +323,7 @@
 0071CF26    jle 0x0071D03E
 0071CF2C    mov ecx, dword ptr ss:[ebp-0x04]
 0071CF2F    lea edx, ds:[esi*4]
-0071CF36    xor ebx, ebx
+0071CF36    xor ebx, ebx                                    ; => [ Call: nullptr ]
 0071CF38    mov dword ptr ss:[ebp-0x38], edx
 0071CF3B    mov eax, dword ptr ds:[ecx+0xB8]
 0071CF41    lea ecx, ds:[edi+0x0C]
@@ -416,4 +422,4 @@
 0071D078    pop ebx
 0071D079    mov esp, ebp
 0071D07B    pop ebp
-0071D07C    ret
+0071D07C    ret                                             ; => [ Call: sub_71bc80 ]

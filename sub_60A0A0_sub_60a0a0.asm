@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_60a0a0
+// 起始地址: 0x60a0a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060A0A0    push ebp
 0060A0A1    mov ebp, esp
 0060A0A3    sub esp, 0x1C
-0060A0A6    mov eax, dword ptr ds:[0x008C4040]
+0060A0A6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0060A0AB    xor eax, ebp
 0060A0AD    mov dword ptr ss:[ebp-0x04], eax
 0060A0B0    push esi
@@ -53,7 +59,7 @@
 0060A12B    push ecx
 0060A12C    mov edx, eax
 0060A12E    lea ecx, ss:[ebp-0x10]
-0060A131    call 0x0064B530
+0060A131    call 0x0064B530                                 ; => [ Call: sub_64b530 ]
 0060A136    mov edx, dword ptr ss:[ebp+0x08]
 0060A139    add esp, 0x04
 0060A13C    movq xmm0, qword ptr ds:[eax]
@@ -65,7 +71,7 @@
 0060A14F    pop edi
 0060A150    xor ecx, ebp
 0060A152    pop esi
-0060A153    call 0x0075927A
+0060A153    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0060A158    mov esp, ebp
 0060A15A    pop ebp
 0060A15B    ret

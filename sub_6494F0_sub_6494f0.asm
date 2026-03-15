@@ -1,24 +1,30 @@
+// ============================================================
+// 函数名称: sub_6494f0
+// 起始地址: 0x6494f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006494F0    cmp dword ptr ds:[0x00E76B40], 0x00
 006494F7    push ebx
 006494F8    push esi
 006494F9    push edi
 006494FA    mov esi, ecx
-006494FC    jz 0x00649A58
+006494FC    jz 0x00649A58                                   ; => [ Data: data_e76b40 ]
 00649502    cmp byte ptr ds:[0x0147ABA1], 0x00
-00649509    jz 0x00649524
-0064950B    push 0x872C84
+00649509    jz 0x00649524                                   ; => [ Data: data_147aba1 ]
+0064950B    push 0x872C84                                   ; => [ String: RenderItemListDraw ]
 00649510    push 0xAA2
-00649515    push 0x872630
-0064951A    mov ecx, 0x872928
+00649515    push 0x872630                                   ; => [ String: C:\x\ax2017\Engine\Draw3d.cpp ]
+0064951A    mov ecx, 0x872928                               ; => [ String: !gDraw3DData.submittingRenderItems ]
 0064951F    jmp 0x00649A86
 00649524    mov ecx, 0x02
-00649529    call 0x006E1520
+00649529    call 0x006E1520                                 ; => [ Call: sub_6e1520 ]
 0064952E    movups xmm0, xmmword ptr ds:[0x00800850]
 00649535    xor edi, edi
-00649537    mov dword ptr ds:[0x0147ABB4], esi
-0064953D    mov dword ptr ds:[0x00CF6A1C], 0x00
-00649547    movups xmmword ptr ds:[0x00CF6684], xmm0
-0064954E    mov dword ptr ds:[0x00CF6A58], 0x3F800000
+00649537    mov dword ptr ds:[0x0147ABB4], esi              ; => [ Data: data_147abb4 ]
+0064953D    mov dword ptr ds:[0x00CF6A1C], 0x00             ; => [ Data: data_cf6a1c ]
+00649547    movups xmmword ptr ds:[0x00CF6684], xmm0        ; => [ Call: __builtin_memset | Data: data_cf6684 ]
+0064954E    mov dword ptr ds:[0x00CF6A58], 0x3F800000       ; => [ Data: data_cf6a58 ]
 00649558    movups xmm0, xmmword ptr ds:[0x00800860]
 0064955F    movups xmmword ptr ds:[0x00CF6694], xmm0
 00649566    movups xmm0, xmmword ptr ds:[0x00800870]
@@ -26,12 +32,12 @@
 00649574    movups xmm0, xmmword ptr ds:[0x00800880]
 0064957B    movups xmmword ptr ds:[0x00CF66B4], xmm0
 00649582    cmp dword ptr ds:[0x00E76B40], edi
-00649588    jle 0x00649A3A
+00649588    jle 0x00649A3A                                  ; => [ Data: data_e76b40 ]
 0064958E    mov ebx, 0x01
 00649593    mov ecx, esi
 00649595    shl ebx, cl
 00649597    nop word ptr ds:[eax+eax*1], ax
-006495A0    mov eax, dword ptr ds:[edi*4+0x1476B90]
+006495A0    mov eax, dword ptr ds:[edi*4+0x1476B90]         ; => [ Data: data_1476b90 ]
 006495A7    lea esi, ds:[eax+eax*2]
 006495AA    shl esi, 0x07
 006495AD    add esi, 0xCF6B40
@@ -43,11 +49,11 @@
 006495CA    sub eax, 0x01
 006495CD    jnz 0x00649A5C
 006495D3    cmp dword ptr ds:[0x0147AB94], eax
-006495D9    jz 0x00649819
+006495D9    jz 0x00649819                                   ; => [ Data: data_147ab94 ]
 006495DF    mov eax, dword ptr ds:[0x0147AB90]
 006495E4    mov eax, dword ptr ds:[eax*4+0x1476B90]
 006495EB    lea ecx, ds:[eax+eax*2]
-006495EE    shl ecx, 0x07
+006495EE    shl ecx, 0x07                                   ; => [ Data: data_1476b90 | Data: data_147ab90 ]
 006495F1    mov eax, dword ptr ds:[ecx+0xCF6B88]
 006495F7    cmp eax, dword ptr ds:[esi+0x48]
 006495FA    jnz 0x00649819
@@ -164,35 +170,35 @@
 00649813    lahf
 00649814    test ah, 0x44
 00649817    jnp 0x00649829
-00649819    call 0x00648C30
-0064981E    call 0x00648FA0
-00649823    mov dword ptr ds:[0x0147AB90], edi
+00649819    call 0x00648C30                                 ; => [ Call: sub_648c30 ]
+0064981E    call 0x00648FA0                                 ; => [ Call: sub_648fa0 ]
+00649823    mov dword ptr ds:[0x0147AB90], edi              ; => [ Data: data_147ab90 ]
 00649829    mov eax, edi
 0064982B    sub eax, dword ptr ds:[0x0147AB90]
 00649831    inc eax
-00649832    mov dword ptr ds:[0x0147AB94], eax
+00649832    mov dword ptr ds:[0x0147AB94], eax              ; => [ Data: data_147ab90 | Data: data_147ab94 ]
 00649837    jmp 0x00649A2D
 0064983C    mov ecx, dword ptr ds:[esi+0x48]
 0064983F    call 0x00643790
 00649844    test eax, eax
-00649846    jz 0x00649A0F
+00649846    jz 0x00649A0F                                   ; => [ Call: sub_643790 ]
 0064984C    cmp dword ptr ds:[0x0147AB9C], 0x00
-00649853    jz 0x006499F0
+00649853    jz 0x006499F0                                   ; => [ Data: data_147ab9c ]
 00649859    mov ecx, dword ptr ds:[esi+0x48]
 0064985C    call 0x006D7690
 00649861    mov ecx, eax
-00649863    call 0x006D77D0
+00649863    call 0x006D77D0                                 ; => [ Call: sub_6d7690 | Call: sub_6d77d0 ]
 00649868    mov ecx, dword ptr ds:[eax]
 0064986A    cmp dword ptr ds:[ecx+0x04], 0x04
 0064986E    jnz 0x00649A72
-00649874    call 0x005AF880
-00649879    mov edx, dword ptr ds:[0x0147AB9C]
+00649874    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
+00649879    mov edx, dword ptr ds:[0x0147AB9C]              ; => [ Data: data_147ab9c ]
 0064987F    cmp edx, dword ptr ds:[eax+0x54]
 00649882    jz 0x006499F0
 00649888    mov eax, dword ptr ds:[0x0147AB98]
 0064988D    mov eax, dword ptr ds:[eax*4+0x1476B90]
 00649894    lea ecx, ds:[eax+eax*2]
-00649897    shl ecx, 0x07
+00649897    shl ecx, 0x07                                   ; => [ Data: data_147ab98 | Data: data_1476b90 ]
 0064989A    mov eax, dword ptr ds:[ecx+0xCF6B44]
 006498A0    cmp eax, dword ptr ds:[esi+0x04]
 006498A3    jnz 0x006499F0
@@ -267,49 +273,49 @@
 006499EA    lahf
 006499EB    test ah, 0x44
 006499EE    jnp 0x00649A06
-006499F0    call 0x00648C30
-006499F5    call 0x00648FA0
-006499FA    mov edx, dword ptr ds:[0x0147AB9C]
-00649A00    mov dword ptr ds:[0x0147AB98], edi
+006499F0    call 0x00648C30                                 ; => [ Call: sub_648c30 ]
+006499F5    call 0x00648FA0                                 ; => [ Call: sub_648fa0 ]
+006499FA    mov edx, dword ptr ds:[0x0147AB9C]              ; => [ Data: data_147ab9c ]
+00649A00    mov dword ptr ds:[0x0147AB98], edi              ; => [ Data: data_147ab98 ]
 00649A06    inc edx
-00649A07    mov dword ptr ds:[0x0147AB9C], edx
+00649A07    mov dword ptr ds:[0x0147AB9C], edx              ; => [ Data: data_147ab9c ]
 00649A0D    jmp 0x00649A2D
-00649A0F    call 0x00648C30
-00649A14    call 0x00648FA0
+00649A0F    call 0x00648C30                                 ; => [ Call: sub_648c30 ]
+00649A14    call 0x00648FA0                                 ; => [ Call: sub_648fa0 ]
 00649A19    mov ecx, esi
-00649A1B    mov dword ptr ds:[0x0147AB98], edi
-00649A21    call 0x00642EF0
+00649A1B    mov dword ptr ds:[0x0147AB98], edi              ; => [ Data: data_147ab98 ]
+00649A21    call 0x00642EF0                                 ; => [ Call: sub_642ef0 ]
 00649A26    mov ecx, esi
-00649A28    call 0x006437E0
+00649A28    call 0x006437E0                                 ; => [ Call: sub_6437e0 ]
 00649A2D    inc edi
 00649A2E    cmp edi, dword ptr ds:[0x00E76B40]
-00649A34    jl 0x006495A0
-00649A3A    call 0x00648C30
-00649A3F    call 0x00648FA0
-00649A44    mov dword ptr ds:[0x0147ABB4], 0x05
+00649A34    jl 0x006495A0                                   ; => [ Data: data_e76b40 ]
+00649A3A    call 0x00648C30                                 ; => [ Call: sub_648c30 ]
+00649A3F    call 0x00648FA0                                 ; => [ Call: sub_648fa0 ]
+00649A44    mov dword ptr ds:[0x0147ABB4], 0x05             ; => [ Data: data_147abb4 ]
 00649A4E    xor ecx, ecx
 00649A50    pop edi
 00649A51    pop esi
 00649A52    pop ebx
-00649A53    jmp 0x006E1520
+00649A53    jmp 0x006E1520                                  ; => [ Call: sub_6e1520 ]
 00649A58    pop edi
 00649A59    pop esi
 00649A5A    pop ebx
 00649A5B    ret
-00649A5C    push 0x872C84
+00649A5C    push 0x872C84                                   ; => [ String: RenderItemListDraw ]
 00649A61    push 0xAC4
-00649A66    push 0x872630
-00649A6B    mov ecx, 0x801AA4
+00649A66    push 0x872630                                   ; => [ String: C:\x\ax2017\Engine\Draw3d.cpp ]
+00649A6B    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00649A70    jmp 0x00649A86
-00649A72    push 0x880BB4
+00649A72    push 0x880BB4                                   ; => [ String: ShaderGetDef ]
 00649A77    push 0x8A
-00649A7C    push 0x880B94
-00649A81    mov ecx, 0x880BC4
+00649A7C    push 0x880B94                                   ; => [ String: C:\x\ax2017\Engine\Shader.cpp ]
+00649A81    mov ecx, 0x880BC4                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SHADER ]
 00649A86    mov edx, 0x801800
-00649A8B    call 0x0063B870
+00649A8B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00649A90    add esp, 0x0C
 00649A93    call 0x0063BC30
 00649A98    test al, al
-00649A9A    jz 0x00649A9D
+00649A9A    jz 0x00649A9D                                   ; => [ Call: sub_63bc30 ]
 00649A9C    int3
-00649A9D    call 0x0063BB00
+00649A9D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5dc7e0
+// 起始地址: 0x5dc7e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DC7E0    mov eax, dword ptr ds:[ecx+0x2C]
 005DC7E3    test eax, eax
 005DC7E5    jz 0x005DC81C
@@ -8,17 +14,17 @@
 005DC7F6    push 0x86F1E8
 005DC7FB    mov edx, 0x801800
 005DC800    mov ecx, 0x8716FC
-005DC805    call 0x0063B870
+005DC805    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: gfx.type == DOMGFX_CARD || gfx.type == DOMGFX_PILE | String: IsOpponentCard ]
 005DC80A    add esp, 0x0C
 005DC80D    call 0x0063BC30
 005DC812    test al, al
-005DC814    jz 0x005DC817
+005DC814    jz 0x005DC817                                   ; => [ Call: sub_63bc30 ]
 005DC816    int3
-005DC817    jmp 0x0063BB00
+005DC817    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 005DC81C    mov ecx, dword ptr ds:[ecx+0xA0]
 005DC822    cmp ecx, 0xFFFFFFFF
 005DC825    jz 0x005DC83B
-005DC827    mov eax, dword ptr ds:[0x00B604E0]
+005DC827    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005DC82C    xor edx, edx
 005DC82E    cmp eax, 0xFFFFFFFF
 005DC831    cmovz eax, edx

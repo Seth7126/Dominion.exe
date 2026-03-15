@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_552de0
+// 起始地址: 0x552de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00552DE0    push ebp
 00552DE1    mov ebp, esp
 00552DE3    mov eax, dword ptr ss:[ebp+0x08]
@@ -8,7 +14,7 @@
 00552DED    and esi, 0xFFFF
 00552DF3    cmp esi, 0x320
 00552DF9    jb 0x00552E00
-00552DFB    call 0x00591930
+00552DFB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00552E00    imul eax, esi, 0x64
 00552E03    mov al, byte ptr ds:[eax+edi*1+0x1A6C]
 00552E0A    not al

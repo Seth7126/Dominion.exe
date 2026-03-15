@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67a8a0
+// 起始地址: 0x67a8a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067A8A0    push esi
 0067A8A1    mov esi, ecx
 0067A8A3    mov eax, dword ptr ds:[esi+0x14E8]
@@ -12,7 +18,7 @@
 0067A8C9    call 0x0067A770
 0067A8CE    mov ecx, esi
 0067A8D0    pop esi
-0067A8D1    jmp 0x0065BF00
+0067A8D1    jmp 0x0065BF00                                  ; => [ Call: nullptr | Call: sub_67a770 | Call: sub_65bf00 ]
 0067A8D6    cmp eax, 0x03
 0067A8D9    jnz 0x0067A8EA
 0067A8DB    movss xmm0, dword ptr ds:[edx+0x04]
@@ -27,16 +33,16 @@
 0067A905    call 0x0067A770
 0067A90A    mov ecx, esi
 0067A90C    pop esi
-0067A90D    jmp 0x0065BF00
+0067A90D    jmp 0x0065BF00                                  ; => [ Call: nullptr | Call: sub_67a770 | Call: sub_65bf00 ]
 0067A912    push 0x876898
 0067A917    push 0x570C
 0067A91C    push 0x8739B4
 0067A921    mov edx, 0x801800
 0067A926    mov ecx, 0x801AA4
-0067A92B    call 0x0063B870
+0067A92B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: UI2ApplyScrollDelta | String: Halt ]
 0067A930    add esp, 0x0C
 0067A933    call 0x0063BC30
 0067A938    test al, al
-0067A93A    jz 0x0067A93D
+0067A93A    jz 0x0067A93D                                   ; => [ Call: sub_63bc30 ]
 0067A93C    int3
-0067A93D    call 0x0063BB00
+0067A93D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_58ffd0
+// 起始地址: 0x58ffd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058FFD0    push esi
 0058FFD1    push edi
 0058FFD2    mov esi, edx
 0058FFD4    mov edi, ecx
 0058FFD6    mov ecx, esi
 0058FFD8    call 0x00593FB0
-0058FFDD    mov edx, eax
+0058FFDD    mov edx, eax                                    ; => [ Call: sub_593fb0 ]
 0058FFDF    mov eax, dword ptr ds:[edi+0xC80]
 0058FFE5    test edx, edx
 0058FFE7    cmovz edx, esi

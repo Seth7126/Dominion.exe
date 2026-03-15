@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7208e0
+// 起始地址: 0x7208e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007208E0    push ebp
 007208E1    mov ebp, esp
 007208E3    sub esp, 0x1C
@@ -50,9 +56,9 @@
 00720974    test esi, esi
 00720976    jle 0x00720A5B
 0072097C    mov edi, dword ptr ss:[ebp-0x08]
-0072097F    xor edx, edx
+0072097F    xor edx, edx                                    ; => [ Call: nullptr ]
 00720981    movss xmm2, dword ptr ds:[0x0089102C]
-00720989    mov dword ptr ss:[ebp-0x14], edx
+00720989    mov dword ptr ss:[ebp-0x14], edx                ; => [ Call: nullptr ]
 0072098C    mov dword ptr ss:[ebp-0x0C], edi
 0072098F    mov dword ptr ss:[ebp-0x04], ecx
 00720992    jmp 0x00720997
@@ -67,7 +73,7 @@
 007209B0    movss xmm0, dword ptr ds:[edi]
 007209B4    movsd xmm1, qword ptr ds:[0x00890E70]
 007209BC    cvtps2pd xmm0, xmm0
-007209BF    call 0x00762090
+007209BF    call 0x00762090                                 ; => [ Call: _libm_sse2_pow_precise ]
 007209C4    movss xmm2, dword ptr ds:[0x0089102C]
 007209CC    xorps xmm1, xmm1
 007209CF    cvtsd2ss xmm0, xmm0

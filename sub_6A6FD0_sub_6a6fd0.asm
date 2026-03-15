@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a6fd0
+// 起始地址: 0x6a6fd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A6FD0    push ebp
 006A6FD1    mov ebp, esp
 006A6FD3    and esp, 0xFFFFFFF8
@@ -63,7 +69,7 @@
 006A707A    dec dword ptr ds:[esi+0x0C]
 006A707D    mov edx, 0x0C
 006A7082    mov ecx, edi
-006A7084    call 0x0064C080
+006A7084    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006A7089    mov edx, dword ptr ss:[esp+0x10]
 006A708D    mov ecx, dword ptr ss:[esp+0x20]
 006A7091    push ebx

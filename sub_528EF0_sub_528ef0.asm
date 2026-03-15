@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_528ef0
+// 起始地址: 0x528ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00528EF0    push ebp
 00528EF1    mov ebp, esp
 00528EF3    and esp, 0xFFFFFFF8
@@ -13,7 +19,7 @@
 00528F10    push 0x03
 00528F12    mov edx, dword ptr ds:[edx]
 00528F14    push 0x3EA
-00528F19    call 0x00566140
+00528F19    call 0x00566140                                 ; => [ Call: nullptr | Call: sub_566140 ]
 00528F1E    mov eax, dword ptr ds:[esi+0x08]
 00528F21    add esp, 0x18
 00528F24    mov dword ptr ds:[eax], 0x3EA

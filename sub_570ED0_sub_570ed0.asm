@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_570ed0
+// 起始地址: 0x570ed0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00570ED0    push ebp
 00570ED1    mov ebp, esp
 00570ED3    and esp, 0xFFFFFFF8
@@ -16,10 +22,10 @@
 00570EF5    mov dword ptr ss:[esp+0x10], eax
 00570EF9    call 0x00573400
 00570EFE    movzx esi, si
-00570F01    mov edi, dword ptr ds:[eax+0x04]
+00570F01    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00570F04    cmp esi, 0x320
 00570F0A    jb 0x00570F11
-00570F0C    call 0x00591930
+00570F0C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00570F11    imul eax, esi, 0x64
 00570F14    mov edx, dword ptr ds:[eax+edi*1+0x1A4C]
 00570F1B    test edx, edx
@@ -32,7 +38,7 @@
 00570F2E    or esi, ebx
 00570F30    push esi
 00570F31    push 0x01
-00570F33    call 0x00573890
+00570F33    call 0x00573890                                 ; => [ Call: sub_573890 ]
 00570F38    mov esi, eax
 00570F3A    mov ecx, edx
 00570F3C    and esi, dword ptr ss:[esp+0x18]

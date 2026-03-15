@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6b3f10
+// 起始地址: 0x6b3f10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B3F10    push ebp
 006B3F11    mov ebp, esp
 006B3F13    and esp, 0xFFFFFFF8
 006B3F16    sub esp, 0x68
-006B3F19    mov eax, dword ptr ds:[0x008C4040]
+006B3F19    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B3F1E    xor eax, esp
 006B3F20    mov dword ptr ss:[esp+0x64], eax
 006B3F24    movss xmm1, dword ptr ss:[ebp+0x14]
@@ -23,7 +29,7 @@
 006B3F69    movss dword ptr ss:[esp+0x14], xmm2
 006B3F6F    movss dword ptr ss:[esp+0x20], xmm3
 006B3F75    mov dword ptr ss:[esp+0x2C], 0x3F800000
-006B3F7D    call 0x004AC390
+006B3F7D    call 0x004AC390                                 ; => [ Call: sub_4ac390 | Data: data_8002b0 ]
 006B3F82    movss xmm0, dword ptr ss:[esp+0x4C]
 006B3F88    lea edx, ss:[esp+0x0C]
 006B3F8C    movss dword ptr ss:[esp+0x0C], xmm0
@@ -44,7 +50,7 @@
 006B3FDF    movss dword ptr ss:[esp+0x38], xmm0
 006B3FE5    movaps xmm0, xmmword ptr ds:[0x00891330]
 006B3FEC    push dword ptr ds:[0x007E2AAC]
-006B3FF2    movups xmmword ptr ss:[esp+0x40], xmm0
+006B3FF2    movups xmmword ptr ss:[esp+0x40], xmm0          ; => [ Data: data_891330 ]
 006B3FF7    mov dword ptr ss:[esp+0x28], 0x00
 006B3FFF    movss xmm0, dword ptr ss:[esp+0x78]
 006B4005    push dword ptr ds:[0x007E5D1C]
@@ -57,13 +63,13 @@
 006B402D    mov dword ptr ss:[esp+0x44], 0x00
 006B4035    mov dword ptr ss:[esp+0x64], 0x00
 006B403D    movss dword ptr ss:[esp+0x68], xmm0
-006B4043    call 0x006B3D40
+006B4043    call 0x006B3D40                                 ; => [ Call: sub_6b3d40 ]
 006B4048    mov ecx, dword ptr ss:[esp+0x90]
 006B404F    add esp, 0x24
 006B4052    pop edi
 006B4053    pop esi
 006B4054    xor ecx, esp
-006B4056    call 0x0075927A
+006B4056    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B405B    mov esp, ebp
 006B405D    pop ebp
 006B405E    ret

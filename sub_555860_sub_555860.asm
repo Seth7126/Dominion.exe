@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_555860
+// 起始地址: 0x555860
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00555860    push ebp
 00555861    mov ebp, esp
 00555863    and esp, 0xFFFFFFF8
@@ -6,14 +12,14 @@
 0055586A    push esi
 0055586B    push edi
 0055586C    mov edi, dword ptr ds:[ecx+0x04]
-0055586F    call 0x00573400
+0055586F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00555874    movzx esi, di
 00555877    mov ebx, dword ptr ds:[eax+0x04]
 0055587A    mov eax, dword ptr ds:[eax+0x0C]
 0055587D    mov dword ptr ss:[esp+0x0C], eax
 00555881    cmp esi, 0x320
 00555887    jb 0x0055588E
-00555889    call 0x00591930
+00555889    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0055588E    mov edx, dword ptr ss:[esp+0x0C]
 00555892    xorps xmm0, xmm0
 00555895    imul eax, esi, 0x64
@@ -37,4 +43,4 @@
 005558D0    pop ebx
 005558D1    mov esp, ebp
 005558D3    pop ebp
-005558D4    ret
+005558D4    ret                                             ; => [ Call: sub_586320 ]

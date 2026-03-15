@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_512800
+// 起始地址: 0x512800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00512800    dword 83EC8B55
 00512804    in al, 0xF8
 00512806    sub esp, 0xC88
@@ -13,4 +19,4 @@
 00512834    add esp, 0x10
 00512837    mov esp, ebp
 00512839    pop ebp
-0051283A    ret
+0051283A    ret                                             ; => [ Call: Concurrency::details::_StructuredTaskCollection::_CancelViaToken | Call: sub_56c680 | Call: sub_512840 ]

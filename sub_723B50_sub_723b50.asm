@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_723b50
+// 起始地址: 0x723b50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00723B50    push ebp
 00723B51    mov ebp, esp
 00723B53    sub esp, 0x0C
@@ -6,7 +12,7 @@
 00723B58    push edi
 00723B59    mov edi, ecx
 00723B5B    mov ecx, dword ptr ds:[edi]
-00723B5D    call 0x007202A0
+00723B5D    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 00723B62    mov esi, dword ptr ds:[edi]
 00723B64    mov edx, eax
 00723B66    mov dword ptr ss:[ebp-0x08], edx

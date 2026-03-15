@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_5d29b0
+// 起始地址: 0x5d29b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D29B0    push esi
 005D29B1    mov esi, edx
 005D29B3    push edi
 005D29B4    cmp ecx, 0x8A
 005D29BA    jnbe 0x005D3137
-005D29C0    movzx eax, byte ptr ds:[ecx+0x5D3270]
+005D29C0    movzx eax, byte ptr ds:[ecx+0x5D3270]           ; => [ Data: lookup_table_5d3270 ]
 005D29C7    jmp dword ptr ds:[eax*4+0x5D3168]
-005D29CE    push 0x86FF04
+005D29CE    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D29D3    push 0x1ED1
 005D29D8    jmp 0x005D3141
 005D29DD    cmp esi, 0x05
@@ -24,7 +30,7 @@
 005D2A03    pop edi
 005D2A04    pop esi
 005D2A05    ret
-005D2A06    push 0x86FF04
+005D2A06    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D2A0B    push 0x1EDE
 005D2A10    jmp 0x005D3141
 005D2A15    cmp esi, 0x03
@@ -48,7 +54,7 @@
 005D2A4E    pop edi
 005D2A4F    pop esi
 005D2A50    ret
-005D2A51    push 0x86FF04
+005D2A51    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D2A56    push 0x1EE7
 005D2A5B    jmp 0x005D3141
 005D2A60    cmp esi, 0x03
@@ -65,7 +71,7 @@
 005D2A85    pop edi
 005D2A86    pop esi
 005D2A87    ret
-005D2A88    push 0x86FF04
+005D2A88    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D2A8D    push 0x1EEE
 005D2A92    jmp 0x005D3141
 005D2A97    lea edx, ds:[esi*8+0x04]
@@ -299,7 +305,7 @@
 005D2CC5    pop edi
 005D2CC6    pop esi
 005D2CC7    ret
-005D2CC8    push 0x86FF04
+005D2CC8    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D2CCD    push 0x1F84
 005D2CD2    jmp 0x005D3141
 005D2CD7    cmp esi, 0x10
@@ -565,7 +571,7 @@
 005D2FCE    pop edi
 005D2FCF    pop esi
 005D2FD0    ret
-005D2FD1    push 0x86FF04
+005D2FD1    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D2FD6    push 0x208C
 005D2FDB    jmp 0x005D3141
 005D2FE0    cmp esi, 0x08
@@ -699,15 +705,15 @@
 005D3133    add edx, esi
 005D3135    pop esi
 005D3136    ret
-005D3137    push 0x86FF04
+005D3137    push 0x86FF04                                   ; => [ String: LayoutExtraIdx ]
 005D313C    push 0x20F2
 005D3141    push 0x86F1E8
 005D3146    mov edx, 0x801800
 005D314B    mov ecx, 0x801AA4
-005D3150    call 0x0063B870
+005D3150    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: LayoutExtraIdx | String: Halt ]
 005D3155    add esp, 0x0C
 005D3158    call 0x0063BC30
 005D315D    test al, al
-005D315F    jz 0x005D3162
+005D315F    jz 0x005D3162                                   ; => [ Call: sub_63bc30 ]
 005D3161    int3
-005D3162    call 0x0063BB00
+005D3162    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

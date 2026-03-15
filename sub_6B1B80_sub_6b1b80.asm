@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6b1b80
+// 起始地址: 0x6b1b80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B1B80    push ebp
 006B1B81    mov ebp, esp
 006B1B83    sub esp, 0x1C
-006B1B86    mov eax, dword ptr ds:[0x008C4040]
+006B1B86    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B1B8B    xor eax, ebp
 006B1B8D    mov dword ptr ss:[ebp-0x04], eax
 006B1B90    mov edx, dword ptr ss:[ebp+0x08]
@@ -36,7 +42,7 @@
 006B1BF3    mov ecx, dword ptr ss:[ebp-0x04]
 006B1BF6    xor ecx, ebp
 006B1BF8    pop esi
-006B1BF9    call 0x0075927A
+006B1BF9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B1BFE    mov esp, ebp
 006B1C00    pop ebp
 006B1C01    ret 0x10

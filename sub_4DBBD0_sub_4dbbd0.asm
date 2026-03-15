@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4dbbd0
+// 起始地址: 0x4dbbd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DBBD0    push ebp
 004DBBD1    mov ebp, esp
 004DBBD3    sub esp, 0x08
@@ -14,9 +20,9 @@
 004DBBEE    jz 0x004DBE1F
 004DBBF4    sub eax, 0x01
 004DBBF7    jz 0x004DBC0D
-004DBBF9    push 0x80704C
+004DBBF9    push 0x80704C                                   ; => [ String: DomValidateEntryOwnership ]
 004DBBFE    push 0x4D5
-004DBC03    mov ecx, 0x801AA4
+004DBC03    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004DBC08    jmp 0x004DBEC0
 004DBC0D    mov ecx, dword ptr ds:[edx+0x0C]
 004DBC10    mov eax, dword ptr ds:[edx+0x08]
@@ -36,7 +42,7 @@
 004DBC3C    nop dword ptr ds:[eax], eax
 004DBC40    mov ecx, dword ptr ds:[esi+edi*4]
 004DBC43    mov edx, 0x0F
-004DBC48    call 0x004DB700
+004DBC48    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBC4D    test al, al
 004DBC4F    jnz 0x004DBE4C
 004DBC55    inc edi
@@ -65,7 +71,7 @@
 004DBC98    nop dword ptr ds:[eax+eax*1], eax
 004DBCA0    mov ecx, dword ptr ds:[esi+ebx*4]
 004DBCA3    mov edx, 0x0B
-004DBCA8    call 0x004DB700
+004DBCA8    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBCAD    test al, al
 004DBCAF    jnz 0x004DBE94
 004DBCB5    inc ebx
@@ -75,7 +81,7 @@
 004DBCBC    nop dword ptr ds:[eax], eax
 004DBCC0    mov ecx, dword ptr ds:[esi+ebx*4]
 004DBCC3    mov edx, 0x0C
-004DBCC8    call 0x004DB700
+004DBCC8    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBCCD    test al, al
 004DBCCF    jnz 0x004DBE94
 004DBCD5    inc ebx
@@ -85,7 +91,7 @@
 004DBCDC    nop dword ptr ds:[eax], eax
 004DBCE0    mov ecx, dword ptr ds:[esi+ebx*4]
 004DBCE3    mov edx, 0x0F
-004DBCE8    call 0x004DB700
+004DBCE8    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBCED    test al, al
 004DBCEF    jnz 0x004DBE94
 004DBCF5    inc ebx
@@ -95,7 +101,7 @@
 004DBCFC    nop dword ptr ds:[eax], eax
 004DBD00    mov ecx, dword ptr ds:[esi+ebx*4]
 004DBD03    mov edx, 0x12
-004DBD08    call 0x004DB700
+004DBD08    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBD0D    test al, al
 004DBD0F    jnz 0x004DBE94
 004DBD15    inc ebx
@@ -105,7 +111,7 @@
 004DBD1C    nop dword ptr ds:[eax], eax
 004DBD20    mov ecx, dword ptr ds:[esi+ebx*4]
 004DBD23    mov edx, 0x11
-004DBD28    call 0x004DB700
+004DBD28    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBD2D    test al, al
 004DBD2F    jnz 0x004DBE94
 004DBD35    inc ebx
@@ -130,7 +136,7 @@
 004DBD6A    nop word ptr ds:[eax+eax*1], ax
 004DBD70    mov ecx, dword ptr ds:[esi+edi*4]
 004DBD73    mov edx, 0x0E
-004DBD78    call 0x004DB700
+004DBD78    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBD7D    test al, al
 004DBD7F    jnz 0x004DBE4C
 004DBD85    inc edi
@@ -148,7 +154,7 @@
 004DBDA7    nop word ptr ds:[eax+eax*1], ax
 004DBDB0    mov ecx, dword ptr ds:[esi+edi*4]
 004DBDB3    mov edx, 0x0C
-004DBDB8    call 0x004DB700
+004DBDB8    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBDBD    test al, al
 004DBDBF    jnz 0x004DBE4C
 004DBDC5    inc edi
@@ -166,16 +172,16 @@
 004DBDE8    nop dword ptr ds:[eax+eax*1], eax
 004DBDF0    mov ecx, dword ptr ds:[esi+edi*4]
 004DBDF3    mov edx, 0x11
-004DBDF8    call 0x004DB700
+004DBDF8    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBDFD    test al, al
 004DBDFF    jnz 0x004DBE4C
 004DBE01    inc edi
 004DBE02    cmp edi, ebx
 004DBE04    jl 0x004DBDF0
 004DBE06    jmp 0x004DBC5A
-004DBE0B    push 0x80704C
+004DBE0B    push 0x80704C                                   ; => [ String: DomValidateEntryOwnership ]
 004DBE10    push 0x4D1
-004DBE15    mov ecx, 0x801AA4
+004DBE15    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004DBE1A    jmp 0x004DBEC0
 004DBE1F    mov ebx, dword ptr ss:[ebp+0x08]
 004DBE22    xor edi, edi
@@ -184,7 +190,7 @@
 004DBE2C    nop dword ptr ds:[eax], eax
 004DBE30    mov edx, dword ptr ds:[edx+0x08]
 004DBE33    mov ecx, dword ptr ds:[esi+edi*4]
-004DBE36    call 0x004DB700
+004DBE36    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 004DBE3B    test al, al
 004DBE3D    jnz 0x004DBE4C
 004DBE3F    mov edx, dword ptr ss:[ebp-0x04]
@@ -206,7 +212,7 @@
 004DBE6E    nop
 004DBE70    mov ecx, dword ptr ds:[esi+edi*4]
 004DBE73    mov edx, ebx
-004DBE75    call 0x004DB7A0
+004DBE75    call 0x004DB7A0                                 ; => [ Call: sub_4db7a0 ]
 004DBE7A    test al, al
 004DBE7C    jnz 0x004DBE9B
 004DBE7E    inc edi
@@ -231,15 +237,15 @@
 004DBEAD    mov esp, ebp
 004DBEAF    pop ebp
 004DBEB0    ret
-004DBEB1    push 0x80704C
+004DBEB1    push 0x80704C                                   ; => [ String: DomValidateEntryOwnership ]
 004DBEB6    push 0x4AA
-004DBEBB    mov ecx, 0x807068
+004DBEBB    mov ecx, 0x807068                               ; => [ String: entry.what != CARD_NONE ]
 004DBEC0    push 0x806FE4
 004DBEC5    mov edx, 0x801800
-004DBECA    call 0x0063B870
+004DBECA    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | Call: sub_63b870 | Data: data_801800 | String: DomValidateEntryOwnership ]
 004DBECF    add esp, 0x0C
 004DBED2    call 0x0063BC30
 004DBED7    test al, al
-004DBED9    jz 0x004DBEDC
+004DBED9    jz 0x004DBEDC                                   ; => [ Call: sub_63bc30 ]
 004DBEDB    int3
-004DBEDC    call 0x0063BB00
+004DBEDC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

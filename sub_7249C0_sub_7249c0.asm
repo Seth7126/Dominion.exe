@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_7249c0
+// 起始地址: 0x7249c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007249C0    push ebp
 007249C1    mov ebp, esp
 007249C3    sub esp, 0x10
-007249C6    xor edx, edx
+007249C6    xor edx, edx                                    ; => [ Call: nullptr ]
 007249C8    push esi
 007249C9    mov esi, dword ptr ss:[ebp+0x14]
 007249CC    push edi
@@ -30,12 +36,12 @@
 00724A14    lea eax, ds:[esi-0x01]
 00724A17    add eax, ebx
 00724A19    cmp eax, edi
-00724A1B    jnb 0x00724B4D
-00724A21    movaps xmm2, xmmword ptr ds:[0x00891420]
+00724A1B    jnb 0x00724B4D                                  ; => [ Data: data_cc8d30 ]
+00724A21    movaps xmm2, xmmword ptr ds:[0x00891420]        ; => [ Data: data_891420 ]
 00724A28    mov eax, esi
-00724A2A    movaps xmm3, xmmword ptr ds:[0x008913E0]
+00724A2A    movaps xmm3, xmmword ptr ds:[0x008913E0]        ; => [ Data: data_8913e0 ]
 00724A31    mov esi, edi
-00724A33    movups xmm4, xmmword ptr ds:[0x00891990]
+00724A33    movups xmm4, xmmword ptr ds:[0x00891990]        ; => [ Data: data_891990 ]
 00724A3A    sub esi, ecx
 00724A3C    and eax, 0xFFFFFFF0
 00724A3F    mov dword ptr ss:[ebp-0x04], esi

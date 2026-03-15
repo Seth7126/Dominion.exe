@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_725ee0
+// 起始地址: 0x725ee0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00725EE0    push ebp
 00725EE1    mov ebp, esp
 00725EE3    sub esp, 0x10
@@ -10,7 +16,7 @@
 00725EF2    lea ebx, ds:[esi+0x20]
 00725EF5    jnl 0x00725EFE
 00725EF7    mov ecx, esi
-00725EF9    call 0x00725DE0
+00725EF9    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 00725EFE    mov edx, dword ptr ds:[esi+0x0C]
 00725F01    mov eax, edx
 00725F03    and eax, 0x1FF
@@ -26,7 +32,7 @@
 00725F22    jmp 0x00725F2D
 00725F24    mov edx, ebx
 00725F26    mov ecx, esi
-00725F28    call 0x00725E20
+00725F28    call 0x00725E20                                 ; => [ Call: sub_725e20 ]
 00725F2D    mov dword ptr ss:[ebp-0x04], eax
 00725F30    cmp eax, 0x100
 00725F35    jnl 0x00725F9A
@@ -64,15 +70,15 @@
 00725F94    inc edi
 00725F95    jmp 0x00725EEE
 00725F9A    jz 0x00726130
-00725FA0    mov ecx, dword ptr ds:[eax*4+0x800A0C]
-00725FA7    mov ebx, dword ptr ds:[eax*4+0x800A8C]
+00725FA0    mov ecx, dword ptr ds:[eax*4+0x800A0C]          ; => [ Data: data_800a0c ]
+00725FA7    mov ebx, dword ptr ds:[eax*4+0x800A8C]          ; => [ Data: data_800a8c ]
 00725FAE    mov dword ptr ss:[ebp-0x08], ecx
 00725FB1    test ecx, ecx
 00725FB3    jz 0x00725FDD
 00725FB5    cmp dword ptr ds:[esi+0x08], ecx
 00725FB8    jnl 0x00725FC4
 00725FBA    mov ecx, esi
-00725FBC    call 0x00725DE0
+00725FBC    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 00725FC1    mov ecx, dword ptr ss:[ebp-0x08]
 00725FC4    mov edx, dword ptr ds:[esi+0x0C]
 00725FC7    mov eax, edx
@@ -88,7 +94,7 @@
 00725FE1    lea ecx, ds:[esi+0x804]
 00725FE7    jnl 0x00725FF6
 00725FE9    mov ecx, esi
-00725FEB    call 0x00725DE0
+00725FEB    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 00725FF0    lea ecx, ds:[esi+0x804]
 00725FF6    mov edx, dword ptr ds:[esi+0x0C]
 00725FF9    mov eax, edx
@@ -105,11 +111,11 @@
 0072601A    jmp 0x00726025
 0072601C    mov edx, ecx
 0072601E    mov ecx, esi
-00726020    call 0x00725E20
+00726020    call 0x00725E20                                 ; => [ Call: sub_725e20 ]
 00726025    test eax, eax
 00726027    js 0x00726127
-0072602D    mov ecx, dword ptr ds:[eax*4+0x800F10]
-00726034    mov edx, dword ptr ds:[eax*4+0x800F90]
+0072602D    mov ecx, dword ptr ds:[eax*4+0x800F10]          ; => [ Data: data_800f10 ]
+00726034    mov edx, dword ptr ds:[eax*4+0x800F90]          ; => [ Data: data_800f90 ]
 0072603B    mov dword ptr ss:[ebp-0x04], edx
 0072603E    mov dword ptr ss:[ebp-0x08], ecx
 00726041    test ecx, ecx
@@ -117,7 +123,7 @@
 00726045    cmp dword ptr ds:[esi+0x08], ecx
 00726048    jnl 0x00726054
 0072604A    mov ecx, esi
-0072604C    call 0x00725DE0
+0072604C    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 00726051    mov ecx, dword ptr ss:[ebp-0x08]
 00726054    mov edx, dword ptr ds:[esi+0x0C]
 00726057    mov eax, edx
@@ -180,7 +186,7 @@
 007260F9    push ebx
 007260FA    push dword ptr ss:[ebp-0x10]
 007260FD    push edi
-007260FE    call 0x00761FC4
+007260FE    call 0x00761FC4                                 ; => [ Call: memset ]
 00726103    add esp, 0x0C
 00726106    add edi, ebx
 00726108    jmp 0x00725EEE

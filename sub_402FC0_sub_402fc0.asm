@@ -1,3 +1,9 @@
-00402FC0    mov eax, dword ptr ds:[0x01597CEC]
-00402FC5    mov dword ptr ds:[0x01597CF0], eax
+// ============================================================
+// 函数名称: sub_402fc0
+// 起始地址: 0x402fc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00402FC0    mov eax, dword ptr ds:[0x01597CEC]              ; => [ Data: data_1597cec ]
+00402FC5    mov dword ptr ds:[0x01597CF0], eax              ; => [ Data: data_1597cf0 ]
 00402FCA    ret

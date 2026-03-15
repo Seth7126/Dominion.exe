@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_578f60
+// 起始地址: 0x578f60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00578F60    push ebp
 00578F61    mov ebp, esp
 00578F63    push ecx
@@ -15,7 +21,7 @@
 00578F82    and eax, 0x03
 00578F85    jmp dword ptr ds:[eax*4+0x579100]
 00578F8C    push esi
-00578F8D    call 0x00576940
+00578F8D    call 0x00576940                                 ; => [ Call: sub_576940 ]
 00578F92    add esp, 0x04
 00578F95    mov esi, dword ptr ds:[eax+0x28]
 00578F98    test esi, esi
@@ -26,7 +32,7 @@
 00578FA4    and esi, 0xFFFF
 00578FAA    cmp esi, 0x320
 00578FB0    jb 0x00578FB7
-00578FB2    call 0x00591930
+00578FB2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578FB7    mov ecx, dword ptr ss:[ebp-0x04]
 00578FBA    imul eax, esi, 0x64
 00578FBD    mov esi, dword ptr ds:[eax+ecx*1+0x1A4C]
@@ -34,7 +40,7 @@
 00578FC6    shr esi, 0x12
 00578FC9    cmp esi, 0x320
 00578FCF    jb 0x00578FD9
-00578FD1    call 0x00591930
+00578FD1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578FD6    mov ecx, dword ptr ss:[ebp-0x04]
 00578FD9    imul eax, esi, 0x64
 00578FDC    mov esi, dword ptr ds:[eax+ecx*1+0x1A4C]
@@ -44,24 +50,24 @@
 00578FE9    cmp al, 0x20
 00578FEB    jnz 0x005790B5
 00578FF1    shr esi, 0x12
-00578FF4    mov eax, 0x820F60
+00578FF4    mov eax, 0x820F60                               ; => [ Data: data_820f60 ]
 00578FF9    nop dword ptr ds:[eax], eax
 00579000    cmp dword ptr ds:[eax], esi
 00579002    jz 0x0057908E
 00579008    add eax, 0x04
 0057900B    cmp eax, 0x820F84
-00579010    jl 0x00579000
+00579010    jl 0x00579000                                   ; => [ String: dom_log_entry_source ]
 00579012    mov eax, dword ptr ds:[ebx+edi*4]
 00579015    push eax
 00579016    test al, 0x30
 00579018    jnz 0x00579027
-0057901A    call 0x00576940
+0057901A    call 0x00576940                                 ; => [ Call: sub_576940 ]
 0057901F    mov ecx, dword ptr ds:[eax+0x84]
 00579025    jmp 0x00579032
-00579027    call 0x005769E0
+00579027    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 0057902C    mov ecx, dword ptr ds:[eax+0xB0]
 00579032    add esp, 0x04
-00579035    mov eax, 0x820F48
+00579035    mov eax, 0x820F48                               ; => [ Data: data_820f48 ]
 0057903A    nop word ptr ds:[eax+eax*1], ax
 00579040    cmp dword ptr ds:[eax], esi
 00579042    jnz 0x00579049
@@ -69,7 +75,7 @@
 00579047    jz 0x0057908E
 00579049    add eax, 0x08
 0057904C    cmp eax, 0x820F60
-00579051    jl 0x00579040
+00579051    jl 0x00579040                                   ; => [ Data: data_820f60 ]
 00579053    xor al, al
 00579055    pop edi
 00579056    pop esi
@@ -82,14 +88,14 @@
 00579061    cmp al, 0x30
 00579063    jnz 0x005790CB
 00579065    shr esi, 0x12
-00579068    mov eax, 0x820F38
+00579068    mov eax, 0x820F38                               ; => [ Data: data_820f38 ]
 0057906D    shl esi, 0x05
 00579070    mov ecx, dword ptr ds:[esi+ecx*1+0x152C8]
 00579077    cmp dword ptr ds:[eax], ecx
 00579079    jz 0x0057908E
 0057907B    add eax, 0x04
 0057907E    cmp eax, 0x820F48
-00579083    jl 0x00579077
+00579083    jl 0x00579077                                   ; => [ Data: data_820f48 ]
 00579085    xor al, al
 00579087    pop edi
 00579088    pop esi
@@ -113,21 +119,21 @@
 005790B1    mov esp, ebp
 005790B3    pop ebp
 005790B4    ret
-005790B5    push 0x81E9A4
+005790B5    push 0x81E9A4                                   ; => [ String: AbilityID::static_ability_card_enum ]
 005790BA    push 0x111
-005790BF    push 0x81E978
-005790C4    mov ecx, 0x81E9C8
+005790BF    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+005790C4    mov ecx, 0x81E9C8                               ; => [ String: type() == ABILITY_CARD_ENUM ]
 005790C9    jmp 0x005790E1
-005790CB    push 0x81EA28
+005790CB    push 0x81EA28                                   ; => [ String: AbilityID::static_ability_token_id ]
 005790D0    push 0x12A
-005790D5    push 0x81E978
-005790DA    mov ecx, 0x81EA4C
+005790D5    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+005790DA    mov ecx, 0x81EA4C                               ; => [ String: type() == ABILITY_TOKEN ]
 005790DF    jmp 0x005790E1
 005790E1    mov edx, 0x801800
-005790E6    call 0x0063B870
+005790E6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 005790EB    add esp, 0x0C
 005790EE    call 0x0063BC30
 005790F3    test al, al
-005790F5    jz 0x005790F8
+005790F5    jz 0x005790F8                                   ; => [ Call: sub_63bc30 ]
 005790F7    int3
-005790F8    call 0x0063BB00
+005790F8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

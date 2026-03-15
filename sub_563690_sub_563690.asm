@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_563690
+// 起始地址: 0x563690
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00563690    push ebp
 00563691    mov ebp, esp
 00563693    push ebx
@@ -9,11 +15,11 @@
 0056369C    jle 0x005636D6
 0056369E    nop
 005636A0    mov ecx, ebx
-005636A2    call 0x00563590
+005636A2    call 0x00563590                                 ; => [ Call: sub_563590 ]
 005636A7    mov edi, eax
 005636A9    test edi, edi
 005636AB    jz 0x005636D1
-005636AD    call 0x00573400
+005636AD    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005636B2    push 0x04
 005636B4    push 0x00
 005636B6    push 0x00
@@ -23,7 +29,7 @@
 005636C3    push 0x00
 005636C5    push dword ptr ss:[ebp+0x08]
 005636C8    push edi
-005636C9    call 0x00583720
+005636C9    call 0x00583720                                 ; => [ Call: nullptr | Call: sub_583720 ]
 005636CE    add esp, 0x1C
 005636D1    sub esi, 0x01
 005636D4    jnz 0x005636A0

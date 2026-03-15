@@ -1,25 +1,31 @@
+// ============================================================
+// 函数名称: sub_4bec10
+// 起始地址: 0x4bec10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BEC10    dword 6AEC8B55
 004BEC14    jmp far fword ptr ds:[eax+0x40]
 004BEC17    sub eax, 0xA1640076
 004BEC1C    add byte ptr ds:[eax], al
 004BEC1E    add byte ptr ds:[eax], al
-004BEC20    push eax
+004BEC20    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 004BEC21    push ecx
 004BEC22    push ebx
 004BEC23    push esi
 004BEC24    push edi
 004BEC25    mov eax, dword ptr ds:[0x008C4040]
-004BEC2A    xor eax, ebp
+004BEC2A    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004BEC2C    push eax
 004BEC2D    lea eax, ss:[ebp-0x0C]
-004BEC30    mov dword ptr fs:[0x00000000], eax
+004BEC30    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004BEC36    mov edi, dword ptr ss:[ebp+0x08]
 004BEC39    lea ecx, ss:[ebp+0x08]
 004BEC3C    mov edx, 0x802BCC
 004BEC41    mov esi, dword ptr ds:[edi+0x04]
-004BEC44    call 0x0063D720
+004BEC44    call 0x0063D720                                 ; => [ String: btnBack | Call: sub_63d720 ]
 004BEC49    mov eax, dword ptr ss:[ebp+0x08]
-004BEC4C    mov ecx, 0x801800
+004BEC4C    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 004BEC51    test eax, eax
 004BEC53    cmovnz ecx, eax
 004BEC56    mov dl, byte ptr ds:[ecx]
@@ -51,25 +57,25 @@
 004BEC9B    test eax, eax
 004BEC9D    jz 0x004BECBF
 004BEC9F    cmp byte ptr ds:[eax], 0x00
-004BECA2    jz 0x004BECBF
+004BECA2    jz 0x004BECBF                                   ; => [ Data: data_cf65bc ]
 004BECA4    lea ecx, ss:[ebp+0x08]
-004BECA7    call 0x0063D4E0
+004BECA7    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004BECAC    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004BECB0    jnz 0x004BECBF
 004BECB2    mov edx, dword ptr ds:[eax+0x0C]
 004BECB5    mov ecx, eax
 004BECB7    add edx, 0x10
-004BECBA    call 0x0064C080
+004BECBA    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004BECBF    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004BECC6    test bl, bl
 004BECC8    jz 0x004BECF0
 004BECCA    xor dl, dl
 004BECCC    mov ecx, 0x07
-004BECD1    call 0x004D46E0
-004BECD6    call dword ptr ds:[0x008DB774]
+004BECD1    call 0x004D46E0                                 ; => [ Call: sub_4d46e0 ]
+004BECD6    call dword ptr ds:[0x008DB774]                  ; => [ Data: data_8db774 ]
 004BECDC    xor al, al
 004BECDE    mov ecx, dword ptr ss:[ebp-0x0C]
-004BECE1    mov dword ptr fs:[0x00000000], ecx
+004BECE1    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004BECE8    pop ecx
 004BECE9    pop edi
 004BECEA    pop esi
@@ -80,11 +86,11 @@
 004BECF0    mov esi, dword ptr ds:[edi+0x04]
 004BECF3    lea ecx, ss:[ebp+0x08]
 004BECF6    mov edx, 0x8032AC
-004BECFB    call 0x0063D720
+004BECFB    call 0x0063D720                                 ; => [ Call: sub_63d720 | String: BtnPaste ]
 004BED00    mov eax, dword ptr ss:[ebp+0x08]
-004BED03    mov ebx, 0x801800
+004BED03    mov ebx, 0x801800                               ; => [ Data: data_801800 ]
 004BED08    test eax, eax
-004BED0A    mov ecx, ebx
+004BED0A    mov ecx, ebx                                    ; => [ Data: data_801800 ]
 004BED0C    cmovnz ecx, eax
 004BED0F    nop
 004BED10    mov dl, byte ptr ds:[ecx]
@@ -109,23 +115,23 @@
 004BED45    test eax, eax
 004BED47    jz 0x004BED69
 004BED49    cmp byte ptr ds:[eax], 0x00
-004BED4C    jz 0x004BED69
+004BED4C    jz 0x004BED69                                   ; => [ Data: data_cf65bc ]
 004BED4E    lea ecx, ss:[ebp+0x08]
-004BED51    call 0x0063D4E0
+004BED51    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004BED56    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004BED5A    jnz 0x004BED69
 004BED5C    mov edx, dword ptr ds:[eax+0x0C]
 004BED5F    mov ecx, eax
 004BED61    add edx, 0x10
-004BED64    call 0x0064C080
+004BED64    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004BED69    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004BED70    test esi, esi
 004BED72    jnz 0x004BED92
 004BED74    mov ecx, 0x8DB76C
-004BED79    call 0x0063C340
-004BED7E    xor al, al
+004BED79    call 0x0063C340                                 ; => [ Call: sub_63c340 | Data: data_8db76c ]
+004BED7E    xor al, al                                      ; => [ Type: BOOL ]
 004BED80    mov ecx, dword ptr ss:[ebp-0x0C]
-004BED83    mov dword ptr fs:[0x00000000], ecx
+004BED83    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004BED8A    pop ecx
 004BED8B    pop edi
 004BED8C    pop esi
@@ -136,9 +142,9 @@
 004BED92    mov esi, dword ptr ds:[edi+0x04]
 004BED95    lea ecx, ss:[ebp+0x08]
 004BED98    mov edx, 0x8032B8
-004BED9D    call 0x0063D720
+004BED9D    call 0x0063D720                                 ; => [ String: BtnOK | Call: sub_63d720 ]
 004BEDA2    mov eax, dword ptr ss:[ebp+0x08]
-004BEDA5    mov ecx, ebx
+004BEDA5    mov ecx, ebx                                    ; => [ Data: data_801800 ]
 004BEDA7    test eax, eax
 004BEDA9    cmovnz ecx, eax
 004BEDAC    nop dword ptr ds:[eax], eax
@@ -164,31 +170,31 @@
 004BEDE5    test eax, eax
 004BEDE7    jz 0x004BEE09
 004BEDE9    cmp byte ptr ds:[eax], 0x00
-004BEDEC    jz 0x004BEE09
+004BEDEC    jz 0x004BEE09                                   ; => [ Data: data_cf65bc ]
 004BEDEE    lea ecx, ss:[ebp+0x08]
-004BEDF1    call 0x0063D4E0
+004BEDF1    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004BEDF6    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004BEDFA    jnz 0x004BEE09
 004BEDFC    mov edx, dword ptr ds:[eax+0x0C]
 004BEDFF    mov ecx, eax
 004BEE01    add edx, 0x10
-004BEE04    call 0x0064C080
+004BEE04    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004BEE09    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004BEE10    test esi, esi
 004BEE12    jnz 0x004BEE34
 004BEE14    xor dl, dl
 004BEE16    lea ecx, ds:[esi+0x07]
-004BEE19    call 0x004D46E0
-004BEE1E    mov eax, dword ptr ds:[0x008DB76C]
+004BEE19    call 0x004D46E0                                 ; => [ Call: sub_4d46e0 ]
+004BEE1E    mov eax, dword ptr ds:[0x008DB76C]              ; => [ Data: data_8db76c ]
 004BEE23    test eax, eax
 004BEE25    mov ecx, dword ptr ds:[0x008DB770]
 004BEE2B    cmovnz ebx, eax
 004BEE2E    push ebx
-004BEE2F    call ecx
+004BEE2F    call ecx                                        ; => [ Data: data_8db770 ]
 004BEE31    add esp, 0x04
 004BEE34    xor al, al
 004BEE36    mov ecx, dword ptr ss:[ebp-0x0C]
-004BEE39    mov dword ptr fs:[0x00000000], ecx
+004BEE39    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004BEE40    pop ecx
 004BEE41    pop edi
 004BEE42    pop esi

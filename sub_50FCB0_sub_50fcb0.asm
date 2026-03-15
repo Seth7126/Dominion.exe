@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50fcb0
+// 起始地址: 0x50fcb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050FCB0    push ebp
 0050FCB1    mov ebp, esp
 0050FCB3    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 0050FCBB    push edi
 0050FCBC    mov edi, edx
 0050FCBE    mov esi, ecx
-0050FCC0    call 0x00573400
+0050FCC0    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0050FCC5    mov ecx, dword ptr ds:[eax+0x0C]
 0050FCC8    mov ebx, dword ptr ds:[eax+0x04]
 0050FCCB    mov dword ptr ss:[esp+0x14], ecx
@@ -17,7 +23,7 @@
 0050FCD8    mov edx, ecx
 0050FCDA    mov ecx, ebx
 0050FCDC    push esi
-0050FCDD    call 0x0050F8D0
+0050FCDD    call 0x0050F8D0                                 ; => [ Call: sub_50f8d0 ]
 0050FCE2    add esp, 0x08
 0050FCE5    mov dword ptr ss:[esp+0x10], eax
 0050FCE9    mov esi, 0x07
@@ -37,10 +43,10 @@
 0050FD0E    lea eax, ds:[esi-0x07]
 0050FD11    cmp eax, 0x41
 0050FD14    jbe 0x0050FD1B
-0050FD16    call 0x00591930
+0050FD16    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0050FD1B    cmp esi, 0x48
 0050FD1E    jl 0x0050FD25
-0050FD20    call 0x00591930
+0050FD20    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0050FD25    mov eax, dword ptr ss:[esp+0x10]
 0050FD29    add esi, esi
 0050FD2B    mov esi, dword ptr ds:[ebx+esi*8+0x152C]
@@ -80,7 +86,7 @@
 0050FD8A    push 0x3EB
 0050FD8F    push 0x15
 0050FD91    push esi
-0050FD92    call 0x005822E0
+0050FD92    call 0x005822E0                                 ; => [ Call: nullptr | Call: sub_5822e0 ]
 0050FD97    add esp, 0x34
 0050FD9A    pop edi
 0050FD9B    pop esi
@@ -93,10 +99,10 @@
 0050FDAB    push 0x80CD80
 0050FDB0    mov edx, 0x801800
 0050FDB5    mov ecx, 0x813BF8
-0050FDBA    call 0x0063B870
+0050FDBA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: whatTo != CARD_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: ReplaceStartingCard ]
 0050FDBF    add esp, 0x0C
 0050FDC2    call 0x0063BC30
 0050FDC7    test al, al
-0050FDC9    jz 0x0050FDCC
+0050FDC9    jz 0x0050FDCC                                   ; => [ Call: sub_63bc30 ]
 0050FDCB    int3
-0050FDCC    call 0x0063BB00
+0050FDCC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

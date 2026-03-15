@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_64f580
+// 起始地址: 0x64f580
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064F580    push ebp
 0064F581    mov ebp, esp
 0064F583    mov eax, dword ptr ss:[ebp+0x0C]
 0064F586    mov ecx, dword ptr ds:[eax]
 0064F588    test ecx, ecx
-0064F58A    mov eax, 0x801800
-0064F58F    mov edx, eax
+0064F58A    mov eax, 0x801800                               ; => [ Data: data_801800 ]
+0064F58F    mov edx, eax                                    ; => [ Data: data_801800 ]
 0064F591    cmovnz edx, ecx
 0064F594    mov ecx, dword ptr ss:[ebp+0x08]
 0064F597    mov ecx, dword ptr ds:[ecx]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_52f660
+// 起始地址: 0x52f660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052F660    dword 83EC8B55
 0052F664    in al, 0xF8
 0052F666    push ecx
@@ -12,7 +18,7 @@
 0052F686    xor eax, eax
 0052F688    and ecx, 0x20000
 0052F68E    or eax, ecx
-0052F690    jnz 0x0052F6CC
+0052F690    jnz 0x0052F6CC                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0052F692    mov edx, dword ptr ds:[0x00CCE9B0]
 0052F698    mov ecx, esi
 0052F69A    call 0x00571B30
@@ -20,14 +26,14 @@
 0052F6A5    xor eax, eax
 0052F6A7    and edx, 0x10000
 0052F6AD    or eax, edx
-0052F6AF    jnz 0x0052F6CC
+0052F6AF    jnz 0x0052F6CC                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0052F6B1    mov edx, dword ptr ds:[0x00CCE9B0]
 0052F6B7    mov ecx, esi
 0052F6B9    call 0x00571B30
 0052F6BE    mov eax, dword ptr ds:[eax+0x98]
 0052F6C4    and eax, 0x04
 0052F6C7    or eax, 0x00
-0052F6CA    jnz 0x0052F6D3
+0052F6CA    jnz 0x0052F6D3                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0052F6CC    xor al, al
 0052F6CE    pop esi
 0052F6CF    mov esp, ebp

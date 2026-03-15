@@ -1,22 +1,28 @@
+// ============================================================
+// 函数名称: sub_547c50
+// 起始地址: 0x547c50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00547C50    dword 83EC8B55
 00547C54    in al, 0xF0
 00547C56    mov eax, 0x1988
-00547C5B    call 0x00761E50
-00547C60    mov eax, dword ptr ds:[0x008C4040]
+00547C5B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00547C60    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00547C65    xor eax, esp
 00547C67    mov dword ptr ss:[esp+0x1984], eax
 00547C6E    push esi
 00547C6F    push edi
-00547C70    call 0x00573400
+00547C70    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00547C75    push 0x00
 00547C77    push 0x00
 00547C79    push 0x01
 00547C7B    mov edx, dword ptr ds:[eax+0x0C]
 00547C7E    mov ecx, dword ptr ds:[eax+0x04]
 00547C81    push 0x01
-00547C83    call 0x00590760
+00547C83    call 0x00590760                                 ; => [ Call: sub_590760 ]
 00547C88    add esp, 0x10
-00547C8B    call 0x00573400
+00547C8B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00547C90    mov ecx, dword ptr ds:[eax+0x0C]
 00547C93    cmp ecx, 0xFFFFFFFF
 00547C96    jz 0x00547DF2
@@ -35,7 +41,7 @@
 00547CD9    mov dword ptr ss:[esp+0x2C], 0x00
 00547CE1    lea edi, ss:[esp+0x78]
 00547CE5    xorps xmm0, xmm0
-00547CE8    rep movsd
+00547CE8    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 00547CEA    mov eax, dword ptr ss:[esp+0xCF8]
 00547CF1    mov ecx, 0x04
 00547CF6    push 0x00
@@ -62,22 +68,22 @@
 00547D49    movaps xmm0, xmmword ptr ss:[esp+0x48]
 00547D4E    push eax
 00547D4F    movaps xmmword ptr ss:[esp+0x7C], xmm0
-00547D54    call 0x00563960
+00547D54    call 0x00563960                                 ; => [ Call: sub_563960 ]
 00547D59    mov ecx, 0x321
 00547D5E    lea edi, ss:[esp+0x94]
 00547D65    mov esi, eax
 00547D67    add esp, 0x1C
-00547D6A    rep movsd
+00547D6A    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00547D6C    mov esi, dword ptr ss:[esp+0xCF8]
 00547D73    test esi, esi
 00547D75    jz 0x00547DDE
 00547D77    push 0x00
 00547D79    push ecx
-00547D7A    call 0x0056B800
+00547D7A    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 00547D7F    push eax
 00547D80    mov edx, 0x3EA
 00547D85    lea ecx, ss:[esp+0x84]
-00547D8C    call 0x005661E0
+00547D8C    call 0x005661E0                                 ; => [ Call: sub_5661e0 ]
 00547D91    add esp, 0x0C
 00547D94    mov dword ptr ss:[esp+0xD00], 0x04
 00547D9F    lea eax, ds:[esi*4]
@@ -86,7 +92,7 @@
 00547DAB    push eax
 00547DAC    lea eax, ss:[esp+0xD0C]
 00547DB3    push eax
-00547DB4    call 0x00761FBE
+00547DB4    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00547DB9    add esp, 0x0C
 00547DBC    mov dword ptr ss:[esp+0x1984], esi
 00547DC3    lea eax, ss:[esp+0xD00]
@@ -95,13 +101,13 @@
 00547DD1    push 0x02
 00547DD3    push 0x01
 00547DD5    push eax
-00547DD6    call 0x0056BBA0
+00547DD6    call 0x0056BBA0                                 ; => [ Call: sub_547e20 | Call: sub_56bba0 ]
 00547DDB    add esp, 0x0C
 00547DDE    mov ecx, dword ptr ss:[esp+0x198C]
 00547DE5    pop edi
 00547DE6    pop esi
 00547DE7    xor ecx, esp
-00547DE9    call 0x0075927A
+00547DE9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00547DEE    mov esp, ebp
 00547DF0    pop ebp
 00547DF1    ret
@@ -110,10 +116,10 @@
 00547DF9    push 0x81EA70
 00547DFE    mov edx, 0x801800
 00547E03    mov ecx, 0x813C5C
-00547E08    call 0x0063B870
+00547E08    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 00547E0D    add esp, 0x0C
 00547E10    call 0x0063BC30
 00547E15    test al, al
-00547E17    jz 0x00547E1A
+00547E17    jz 0x00547E1A                                   ; => [ Call: sub_63bc30 ]
 00547E19    int3
-00547E1A    call 0x0063BB00
+00547E1A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

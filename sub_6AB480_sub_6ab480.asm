@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ab480
+// 起始地址: 0x6ab480
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AB480    push ebp
 006AB481    mov ebp, esp
 006AB483    sub esp, 0x18
@@ -11,22 +17,22 @@
 006AB493    mov eax, dword ptr ds:[esi+0x08]
 006AB496    cmp eax, dword ptr ds:[ebx+0x08]
 006AB499    jz 0x006AB4AF
-006AB49B    push 0x87B58C
+006AB49B    push 0x87B58C                                   ; => [ String: ImageBufferRotateCopy ]
 006AB4A0    push 0x468
-006AB4A5    mov ecx, 0x87B560
+006AB4A5    mov ecx, 0x87B560                               ; => [ String: sourceImage->height == destImage->height ]
 006AB4AA    jmp 0x006AB5DA
 006AB4AF    mov eax, dword ptr ds:[esi+0x04]
 006AB4B2    cmp eax, dword ptr ds:[ebx+0x04]
 006AB4B5    jz 0x006AB4CB
-006AB4B7    push 0x87B58C
+006AB4B7    push 0x87B58C                                   ; => [ String: ImageBufferRotateCopy ]
 006AB4BC    push 0x469
-006AB4C1    mov ecx, 0x87B5C0
+006AB4C1    mov ecx, 0x87B5C0                               ; => [ String: sourceImage->width == destImage->width ]
 006AB4C6    jmp 0x006AB5DA
 006AB4CB    mov ecx, dword ptr ds:[esi+0x10]
-006AB4CE    call 0x006A9450
+006AB4CE    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 006AB4D3    mov ecx, dword ptr ds:[ebx+0x10]
 006AB4D6    mov dword ptr ss:[ebp-0x14], eax
-006AB4D9    call 0x006A9450
+006AB4D9    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 006AB4DE    xor edi, edi
 006AB4E0    mov dword ptr ss:[ebp-0x10], eax
 006AB4E3    cmp dword ptr ds:[esi+0x08], edi
@@ -41,7 +47,7 @@
 006AB504    cmp eax, 0x03
 006AB507    jnbe 0x006AB5CB
 006AB50D    jmp dword ptr ds:[eax*4+0x6AB5FC]
-006AB514    mov edx, ebx
+006AB514    mov edx, ebx                                    ; => [ Call: nullptr ]
 006AB516    mov ecx, edi
 006AB518    jmp 0x006AB536
 006AB51A    sub ecx, ebx
@@ -78,12 +84,12 @@
 006AB563    add esi, dword ptr ds:[ecx]
 006AB565    mov ecx, eax
 006AB567    mov edx, dword ptr ds:[edx+0x10]
-006AB56A    call 0x006A97A0
+006AB56A    call 0x006A97A0                                 ; => [ Call: sub_6a97a0 ]
 006AB56F    push eax
 006AB570    mov eax, dword ptr ss:[ebp-0x04]
 006AB573    mov ecx, esi
 006AB575    mov edx, dword ptr ds:[eax+0x10]
-006AB578    call 0x006A9BC0
+006AB578    call 0x006A9BC0                                 ; => [ Call: sub_6a9bc0 ]
 006AB57D    mov esi, dword ptr ss:[ebp-0x0C]
 006AB580    inc ebx
 006AB581    mov eax, dword ptr ss:[ebp-0x14]
@@ -102,23 +108,23 @@
 006AB5A5    mov esp, ebp
 006AB5A7    pop ebp
 006AB5A8    ret
-006AB5A9    push 0x87B58C
+006AB5A9    push 0x87B58C                                   ; => [ String: ImageBufferRotateCopy ]
 006AB5AE    push 0x48C
-006AB5B3    mov ecx, 0x87B600
+006AB5B3    mov ecx, 0x87B600                               ; => [ String: destY < destImage->height ]
 006AB5B8    jmp 0x006AB5DA
-006AB5BA    push 0x87B58C
+006AB5BA    push 0x87B58C                                   ; => [ String: ImageBufferRotateCopy ]
 006AB5BF    push 0x48B
-006AB5C4    mov ecx, 0x87B5A4
+006AB5C4    mov ecx, 0x87B5A4                               ; => [ String: destX < destImage->width ]
 006AB5C9    jmp 0x006AB5DA
-006AB5CB    push 0x87B58C
+006AB5CB    push 0x87B58C                                   ; => [ String: ImageBufferRotateCopy ]
 006AB5D0    push 0x488
-006AB5D5    mov ecx, 0x801AA4
+006AB5D5    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006AB5DA    push 0x87B3F4
 006AB5DF    mov edx, 0x801800
-006AB5E4    call 0x0063B870
+006AB5E4    call 0x0063B870                                 ; => [ String: ImageBufferRotateCopy | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\TextureImport.cpp ]
 006AB5E9    add esp, 0x0C
 006AB5EC    call 0x0063BC30
 006AB5F1    test al, al
-006AB5F3    jz 0x006AB5F6
+006AB5F3    jz 0x006AB5F6                                   ; => [ Call: sub_63bc30 ]
 006AB5F5    int3
-006AB5F6    call 0x0063BB00
+006AB5F6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

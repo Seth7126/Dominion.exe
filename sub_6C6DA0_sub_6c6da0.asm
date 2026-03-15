@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c6da0
+// 起始地址: 0x6c6da0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C6DA0    push ebx
 006C6DA1    mov ebx, esp
 006C6DA3    sub esp, 0x08
@@ -8,9 +14,9 @@
 006C6DB0    mov dword ptr ss:[esp+0x04], ebp
 006C6DB4    mov ebp, esp
 006C6DB6    push 0xFFFFFFFF
-006C6DB8    push 0x77050D
+006C6DB8    push 0x77050D                                   ; => [ Type: EHRegistrationNode | Call: sub_77050d ]
 006C6DBD    mov eax, dword ptr fs:[0x00000000]
-006C6DC3    push eax
+006C6DC3    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006C6DC4    push ebx
 006C6DC5    sub esp, 0x38
 006C6DC8    mov eax, dword ptr ds:[0x008C4040]
@@ -18,15 +24,15 @@
 006C6DCF    mov dword ptr ss:[ebp-0x14], eax
 006C6DD2    push esi
 006C6DD3    push edi
-006C6DD4    push eax
+006C6DD4    push eax                                        ; => [ Data: __security_cookie ]
 006C6DD5    lea eax, ss:[ebp-0x0C]
-006C6DD8    mov dword ptr fs:[0x00000000], eax
+006C6DD8    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006C6DDE    mov dword ptr ss:[ebp-0x28], ecx
 006C6DE1    mov dword ptr ss:[ebp-0x04], 0x00
 006C6DE8    xorps xmm0, xmm0
 006C6DEB    mov edi, dword ptr ds:[0x00775374]
 006C6DF1    push 0x10
-006C6DF3    movups xmmword ptr ss:[ebp-0x48], xmm0
+006C6DF3    movups xmmword ptr ss:[ebp-0x48], xmm0          ; => [ Call: __builtin_memset ]
 006C6DF7    movups xmmword ptr ss:[ebp-0x38], xmm0
 006C6DFB    call edi
 006C6DFD    movzx esi, ax
@@ -47,14 +53,14 @@
 006C6E26    push dword ptr ds:[0x0147B084]
 006C6E2C    cmovns ecx, edi
 006C6E2F    mov dword ptr ss:[ebp-0x40], ecx
-006C6E32    call dword ptr ds:[0x007753C0]
-006C6E38    mov edx, dword ptr ss:[ebp-0x1C]
+006C6E32    call dword ptr ds:[0x007753C0]                  ; => [ Type: RECT | Data: data_147b084 ]
+006C6E38    mov edx, dword ptr ss:[ebp-0x1C]                ; => [ Field: right ]
 006C6E3B    test edx, edx
 006C6E3D    jz 0x006C6E8B
-006C6E3F    mov ecx, dword ptr ss:[ebp-0x18]
+006C6E3F    mov ecx, dword ptr ss:[ebp-0x18]                ; => [ Field: bottom ]
 006C6E42    test ecx, ecx
 006C6E44    jz 0x006C6E8B
-006C6E46    mov eax, dword ptr ds:[0x00CF65B8]
+006C6E46    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006C6E4B    xorps xmm0, xmm0
 006C6E4E    cvtsi2ss xmm0, dword ptr ds:[ebx+0x08]
 006C6E53    xorps xmm1, xmm1
@@ -80,7 +86,7 @@
 006C6EA8    movss dword ptr ss:[ebp-0x34], xmm2
 006C6EAD    cmp eax, 0x46
 006C6EB0    jnbe 0x006C6F5E
-006C6EB6    movzx eax, byte ptr ds:[eax+0x6C6FAC]
+006C6EB6    movzx eax, byte ptr ds:[eax+0x6C6FAC]           ; => [ Data: lookup_table_6c6fac ]
 006C6EBD    jmp dword ptr ds:[eax*4+0x6C6F90]
 006C6EC4    mov dword ptr ss:[ebp-0x48], 0x04
 006C6ECB    jmp 0x006C6EF8
@@ -94,33 +100,33 @@
 006C6EEF    jmp 0x006C6EF8
 006C6EF1    mov dword ptr ss:[ebp-0x48], 0x07
 006C6EF8    cmp dword ptr ds:[0x0147ABE8], 0x00
-006C6EFF    jz 0x006C6F09
+006C6EFF    jz 0x006C6F09                                   ; => [ Data: data_147abe8 ]
 006C6F01    lea ecx, ss:[ebp-0x48]
-006C6F04    call 0x0069E480
+006C6F04    call 0x0069E480                                 ; => [ Call: sub_69e480 ]
 006C6F09    mov dword ptr ss:[ebp-0x04], 0x01
 006C6F10    cmp dword ptr ds:[0x00CF65BC], 0x00
-006C6F17    jz 0x006C6F40
+006C6F17    jz 0x006C6F40                                   ; => [ Data: data_cf65bc ]
 006C6F19    mov eax, dword ptr ss:[ebp-0x30]
 006C6F1C    test eax, eax
 006C6F1E    jz 0x006C6F40
 006C6F20    cmp byte ptr ds:[eax], 0x00
 006C6F23    jz 0x006C6F40
 006C6F25    lea ecx, ss:[ebp-0x30]
-006C6F28    call 0x0063D4E0
+006C6F28    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006C6F2D    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 006C6F31    jnz 0x006C6F40
 006C6F33    mov edx, dword ptr ds:[eax+0x0C]
 006C6F36    mov ecx, eax
 006C6F38    add edx, 0x10
-006C6F3B    call 0x0064C080
+006C6F3B    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006C6F40    mov ecx, dword ptr ss:[ebp-0x0C]
-006C6F43    mov dword ptr fs:[0x00000000], ecx
+006C6F43    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006C6F4A    pop ecx
 006C6F4B    pop edi
 006C6F4C    pop esi
 006C6F4D    mov ecx, dword ptr ss:[ebp-0x14]
 006C6F50    xor ecx, ebp
-006C6F52    call 0x0075927A
+006C6F52    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C6F57    mov esp, ebp
 006C6F59    pop ebp
 006C6F5A    mov esp, ebx
@@ -131,10 +137,10 @@
 006C6F68    push 0x87E2E8
 006C6F6D    mov edx, 0x801800
 006C6F72    mov ecx, 0x801AA4
-006C6F77    call 0x0063B870
+006C6F77    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: OnButtonMesage | String: C:\x\ax2017\Engine\Windows\WindowsApp.cpp | Data: data_801800 | String: Halt ]
 006C6F7C    add esp, 0x0C
 006C6F7F    call 0x0063BC30
 006C6F84    test al, al
-006C6F86    jz 0x006C6F89
+006C6F86    jz 0x006C6F89                                   ; => [ Call: sub_63bc30 ]
 006C6F88    int3
-006C6F89    call 0x0063BB00
+006C6F89    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

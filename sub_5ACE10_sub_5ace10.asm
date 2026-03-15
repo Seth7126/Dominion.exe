@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ace10
+// 起始地址: 0x5ace10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005ACE10    push ebp
 005ACE11    mov ebp, esp
 005ACE13    sub esp, 0x1C
@@ -19,7 +25,7 @@
 005ACE3C    mov edx, edi
 005ACE3E    lea ecx, ss:[ebp-0x10]
 005ACE41    push ebx
-005ACE42    call 0x005AD850
+005ACE42    call 0x005AD850                                 ; => [ Call: sub_5ad850 ]
 005ACE47    mov edx, dword ptr ss:[ebp-0x10]
 005ACE4A    mov eax, esi
 005ACE4C    sar eax, 0x02
@@ -107,7 +113,7 @@
 005ACF3A    mov dword ptr ss:[ebp-0x14], ecx
 005ACF3D    mov ecx, edi
 005ACF3F    push ebx
-005ACF40    call 0x005AEA10
+005ACF40    call 0x005AEA10                                 ; => [ Call: sub_5aea10 ]
 005ACF45    add esp, 0x0C
 005ACF48    test esi, esi
 005ACF4A    jnle 0x005ACF25
@@ -132,7 +138,7 @@
 005ACF86    lea eax, ds:[ebx-0x08]
 005ACF89    sar eax, 0x03
 005ACF8C    push eax
-005ACF8D    call 0x005AEA10
+005ACF8D    call 0x005AEA10                                 ; => [ Call: sub_5aea10 ]
 005ACF92    add ebx, 0xFFFFFFF8
 005ACF95    add esp, 0x0C
 005ACF98    mov eax, ebx
@@ -157,7 +163,7 @@
 005ACFBD    add eax, 0x08
 005ACFC0    push edi
 005ACFC1    push eax
-005ACFC2    call 0x00762362
+005ACFC2    call 0x00762362                                 ; => [ Call: memmove ]
 005ACFC7    mov eax, dword ptr ss:[ebp-0x08]
 005ACFCA    add esp, 0x0C
 005ACFCD    mov dword ptr ds:[edi], eax

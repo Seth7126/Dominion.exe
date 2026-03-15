@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_560100
+// 起始地址: 0x560100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00560100    dword 83EC8B55
 00560104    in al, 0xF8
 00560106    push ecx
@@ -7,13 +13,13 @@
 0056010A    call 0x00573400
 0056010F    mov eax, dword ptr ds:[eax+0x04]
 00560112    cmp dword ptr ds:[eax+0xD48], 0x12
-00560119    jnl 0x005601B5
-0056011F    call 0x00573400
+00560119    jnl 0x005601B5                                  ; => [ Call: sub_573400 ]
+0056011F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00560124    mov esi, eax
 00560126    push 0x416
 0056012B    mov edx, dword ptr ds:[esi+0x0C]
 0056012E    mov ecx, dword ptr ds:[esi+0x04]
-00560131    call 0x00593A90
+00560131    call 0x00593A90                                 ; => [ Call: sub_593a90 ]
 00560136    add esp, 0x04
 00560139    test al, al
 0056013B    jz 0x00560213
@@ -22,19 +28,19 @@
 0056014A    cmp eax, dword ptr ds:[esi+0x0C]
 0056014D    jz 0x00560213
 00560153    xor ecx, ecx
-00560155    call 0x0056B700
+00560155    call 0x0056B700                                 ; => [ Call: sub_56b700 ]
 0056015A    xor esi, esi
-0056015C    call 0x00573400
+0056015C    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00560161    mov edi, eax
 00560163    cmp dword ptr ds:[edi], 0x02
 00560166    jnz 0x0056018D
 00560168    mov esi, dword ptr ds:[edi+0x10]
 0056016B    call 0x00573400
 00560170    movzx esi, si
-00560173    mov ebx, dword ptr ds:[eax+0x04]
+00560173    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00560176    cmp esi, 0x320
 0056017C    jb 0x00560183
-0056017E    call 0x00591930
+0056017E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00560183    imul eax, esi, 0x64
 00560186    mov esi, dword ptr ds:[eax+ebx*1+0x1A4C]
 0056018D    mov edx, dword ptr ds:[edi+0x0C]
@@ -55,19 +61,19 @@
 005601B0    pop ebx
 005601B1    mov esp, ebp
 005601B3    pop ebp
-005601B4    ret
+005601B4    ret                                             ; => [ Call: sub_5911e0 ]
 005601B5    xor esi, esi
-005601B7    call 0x00573400
+005601B7    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005601BC    mov edi, eax
 005601BE    cmp dword ptr ds:[edi], 0x02
 005601C1    jnz 0x005601E8
 005601C3    mov esi, dword ptr ds:[edi+0x10]
 005601C6    call 0x00573400
 005601CB    movzx esi, si
-005601CE    mov ebx, dword ptr ds:[eax+0x04]
+005601CE    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005601D1    cmp esi, 0x320
 005601D7    jb 0x005601DE
-005601D9    call 0x00591930
+005601D9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005601DE    imul eax, esi, 0x64
 005601E1    mov esi, dword ptr ds:[eax+ebx*1+0x1A4C]
 005601E8    mov edx, dword ptr ds:[edi+0x0C]
@@ -81,10 +87,10 @@
 005601FB    push 0x00
 005601FD    push 0x00
 005601FF    push 0x1B
-00560201    call 0x005911E0
+00560201    call 0x005911E0                                 ; => [ Call: sub_5911e0 ]
 00560206    add esp, 0x24
 00560209    mov ecx, 0x04
-0056020E    call 0x0056B700
+0056020E    call 0x0056B700                                 ; => [ Call: sub_56b700 ]
 00560213    pop edi
 00560214    pop esi
 00560215    pop ebx

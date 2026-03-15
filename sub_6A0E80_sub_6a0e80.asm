@@ -1,4 +1,10 @@
-006A0E80    mov eax, dword ptr ds:[0x0147AC30]
+// ============================================================
+// 函数名称: sub_6a0e80
+// 起始地址: 0x6a0e80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+006A0E80    mov eax, dword ptr ds:[0x0147AC30]              ; => [ Data: data_147ac30 ]
 006A0E85    push ebx
 006A0E86    push esi
 006A0E87    push edi
@@ -12,7 +18,7 @@
 006A0E93    add eax, 0x04
 006A0E96    push eax
 006A0E97    call dword ptr ds:[0x00775138]
-006A0E9D    mov ebx, dword ptr ds:[0x0147AC30]
+006A0E9D    mov ebx, dword ptr ds:[0x0147AC30]              ; => [ Data: data_147ac30 ]
 006A0EA3    xor edi, edi
 006A0EA5    xor esi, esi
 006A0EA7    mov eax, dword ptr ds:[esi+ebx*1+0x24]
@@ -23,14 +29,14 @@
 006A0EB8    jnz 0x006A0F24
 006A0EBA    call 0x005AF880
 006A0EBF    mov eax, dword ptr ds:[eax+0x18]
-006A0EC2    mov byte ptr ds:[eax], 0x01
+006A0EC2    mov byte ptr ds:[eax], 0x01                     ; => [ Call: sub_5af880 ]
 006A0EC5    mov ecx, dword ptr ds:[esi+ebx*1+0x28]
-006A0EC9    call 0x006A0F60
+006A0EC9    call 0x006A0F60                                 ; => [ Call: sub_6a0f60 ]
 006A0ECE    mov ecx, dword ptr ds:[esi+ebx*1+0x28]
-006A0ED2    call 0x006A0DE0
+006A0ED2    call 0x006A0DE0                                 ; => [ Call: sub_6a0de0 ]
 006A0ED7    mov dword ptr ds:[esi+ebx*1+0x24], 0x00
 006A0EDF    mov dword ptr ds:[esi+ebx*1+0x28], 0x00
-006A0EE7    mov ebx, dword ptr ds:[0x0147AC30]
+006A0EE7    mov ebx, dword ptr ds:[0x0147AC30]              ; => [ Data: data_147ac30 ]
 006A0EED    jmp 0x006A0F0C
 006A0EEF    cmp eax, 0x03
 006A0EF2    jnz 0x006A0F06
@@ -56,10 +62,10 @@
 006A0F2E    push 0x86F02C
 006A0F33    mov edx, 0x801800
 006A0F38    mov ecx, 0x86F04C
-006A0F3D    call 0x0063B870
+006A0F3D    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Texture.h | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_TEXTURE | String: TextureGetDef ]
 006A0F42    add esp, 0x0C
 006A0F45    call 0x0063BC30
 006A0F4A    test al, al
-006A0F4C    jz 0x006A0F4F
+006A0F4C    jz 0x006A0F4F                                   ; => [ Call: sub_63bc30 ]
 006A0F4E    int3
-006A0F4F    call 0x0063BB00
+006A0F4F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

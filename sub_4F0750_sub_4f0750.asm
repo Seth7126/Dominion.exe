@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f0750
+// 起始地址: 0x4f0750
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F0750    push ebp
 004F0751    mov ebp, esp
 004F0753    sub esp, 0x10
@@ -24,24 +30,24 @@
 004F07A4    jnz 0x004F0870
 004F07AA    cmp eax, edx
 004F07AC    jnz 0x004F0870
-004F07B2    mov edi, dword ptr ds:[0x0177793C]
-004F07B8    mov ebx, dword ptr ds:[0x01777938]
+004F07B2    mov edi, dword ptr ds:[0x0177793C]              ; => [ Data: data_177793c ]
+004F07B8    mov ebx, dword ptr ds:[0x01777938]              ; => [ Data: data_1777938 ]
 004F07BE    push 0x5851F42D
 004F07C3    push 0x4C957F2D
 004F07C8    push edi
 004F07C9    push ebx
-004F07CA    call 0x007621D0
-004F07CF    add eax, dword ptr ds:[0x01777940]
+004F07CA    call 0x007621D0                                 ; => [ Call: __allmul ]
+004F07CF    add eax, dword ptr ds:[0x01777940]              ; => [ Data: data_1777940 ]
 004F07D5    mov ecx, edi
 004F07D7    mov esi, edi
-004F07D9    mov dword ptr ds:[0x01777938], eax
+004F07D9    mov dword ptr ds:[0x01777938], eax              ; => [ Data: data_1777940 | Data: data_1777938 ]
 004F07DE    adc edx, dword ptr ds:[0x01777944]
 004F07E4    mov eax, 0x51EB851F
 004F07E9    shr esi, 0x0D
 004F07EC    shrd ebx, edi, 0x1B
 004F07F0    shr ecx, 0x1B
 004F07F3    xor esi, ebx
-004F07F5    mov dword ptr ds:[0x0177793C], edx
+004F07F5    mov dword ptr ds:[0x0177793C], edx              ; => [ Data: data_177793c | Data: data_1777944 ]
 004F07FB    mov ebx, dword ptr ss:[ebp-0x08]
 004F07FE    ror esi, cl
 004F0800    mov ecx, dword ptr ss:[ebp-0x04]
@@ -174,7 +180,7 @@
 004F09E4    add eax, edx
 004F09E6    imul eax, eax, 0x2717
 004F09EC    sub ecx, eax
-004F09EE    mov eax, dword ptr ds:[ecx*4+0x1938E70]
+004F09EE    mov eax, dword ptr ds:[ecx*4+0x1938E70]         ; => [ Data: data_1938e70 ]
 004F09F5    test eax, eax
 004F09F7    jz 0x004F0A0E
 004F09F9    nop dword ptr ds:[eax], eax
@@ -185,9 +191,9 @@
 004F0A0C    jnz 0x004F0A00
 004F0A0E    push esi
 004F0A0F    push 0x8089C0
-004F0A14    call 0x004F7F30
+004F0A14    call 0x004F7F30                                 ; => [ String: Couldn't lookup %d\n | Call: sub_4f7f30 ]
 004F0A19    add esp, 0x08
-004F0A1C    xor eax, eax
+004F0A1C    xor eax, eax                                    ; => [ Call: nullptr ]
 004F0A1E    mov eax, dword ptr ds:[eax+0x08]
 004F0A21    and eax, 0x02
 004F0A24    or eax, 0x00

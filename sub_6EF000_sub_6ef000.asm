@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_6ef000
+// 起始地址: 0x6ef000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EF000    push ecx
 006EF001    push esi
 006EF002    mov esi, ecx
-006EF004    mov ecx, dword ptr ds:[0x0147DED0]
+006EF004    mov ecx, dword ptr ds:[0x0147DED0]              ; => [ Data: data_147ded0 ]
 006EF00A    push edi
 006EF00B    mov edi, edx
 006EF00D    test ecx, ecx
 006EF00F    jz 0x006EF04A
 006EF011    cmp dword ptr ds:[ecx+0x04], 0x19
 006EF015    jnz 0x006EF04A
-006EF017    call 0x005AF880
+006EF017    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006EF01C    test eax, eax
 006EF01E    jz 0x006EF04A
 006EF020    test esi, esi
@@ -22,19 +28,19 @@
 006EF036    pop esi
 006EF037    pop ecx
 006EF038    ret
-006EF039    push 0x88B244
+006EF039    push 0x88B244                                   ; => [ String: EmitterSetIndent ]
 006EF03E    push 0x339
-006EF043    mov ecx, 0x87DC50
+006EF043    mov ecx, 0x87DC50                               ; => [ String: emitterIndex >= 0 && emitterIndex < pParticleDef->mEmitterCount ]
 006EF048    jmp 0x006EF059
-006EF04A    push 0x88B244
+006EF04A    push 0x88B244                                   ; => [ String: EmitterSetIndent ]
 006EF04F    push 0x337
-006EF054    mov ecx, 0x88B258
+006EF054    mov ecx, 0x88B258                               ; => [ String: pParticleDef ]
 006EF059    push 0x88AF54
 006EF05E    mov edx, 0x801800
-006EF063    call 0x0063B870
+006EF063    call 0x0063B870                                 ; => [ String: EmitterSetIndent | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\EditorWindow.cpp ]
 006EF068    add esp, 0x0C
 006EF06B    call 0x0063BC30
 006EF070    test al, al
-006EF072    jz 0x006EF075
+006EF072    jz 0x006EF075                                   ; => [ Call: sub_63bc30 ]
 006EF074    int3
-006EF075    call 0x0063BB00
+006EF075    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

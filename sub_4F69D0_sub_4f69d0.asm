@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f69d0
+// 起始地址: 0x4f69d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F69D0    push ebx
 004F69D1    mov ebx, esp
 004F69D3    sub esp, 0x08
@@ -30,7 +36,7 @@
 004F6A18    mov edx, esi
 004F6A1A    push eax
 004F6A1B    mov ecx, edi
-004F6A1D    call 0x004F7640
+004F6A1D    call 0x004F7640                                 ; => [ Call: sub_4f7640 ]
 004F6A22    mov edx, dword ptr ss:[ebp-0x10]
 004F6A25    lea edi, ds:[esi+0x0C]
 004F6A28    add esp, 0x08

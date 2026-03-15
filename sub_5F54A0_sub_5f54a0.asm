@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f54a0
+// 起始地址: 0x5f54a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F54A0    push ebx
 005F54A1    push esi
 005F54A2    push edi
@@ -5,7 +11,7 @@
 005F54A5    mov esi, ecx
 005F54A7    mov edx, 0x18
 005F54AC    mov dword ptr ds:[edi], esi
-005F54AE    call 0x00571B30
+005F54AE    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 005F54B3    mov ebx, dword ptr ds:[eax+0x9C]
 005F54B9    mov ecx, ebx
 005F54BB    mov edx, dword ptr ds:[eax+0x98]
@@ -74,7 +80,7 @@
 005F555E    pop esi
 005F555F    pop ebx
 005F5560    ret
-005F5561    push 0x8609DC
+005F5561    push 0x8609DC                                   ; => [ String: AssociatedArtifact ]
 005F5566    push 0x7D0F
 005F556B    jmp 0x005F56A7
 005F5570    mov eax, edx
@@ -140,7 +146,7 @@
 005F55F7    or eax, ecx
 005F55F9    jz 0x005F566F
 005F55FB    mov ecx, esi
-005F55FD    call 0x00593FB0
+005F55FD    call 0x00593FB0                                 ; => [ Call: sub_593fb0 ]
 005F5602    test eax, eax
 005F5604    jnz 0x005F5532
 005F560A    cmp esi, 0xD2A
@@ -203,15 +209,15 @@
 005F5699    xor al, al
 005F569B    pop ebx
 005F569C    ret
-005F569D    push 0x860A20
+005F569D    push 0x860A20                                   ; => [ String: AssociatedHeirloom ]
 005F56A2    push 0x7D26
 005F56A7    push 0x86F1E8
 005F56AC    mov edx, 0x801800
 005F56B1    mov ecx, 0x801AA4
-005F56B6    call 0x0063B870
+005F56B6    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: Halt ]
 005F56BB    add esp, 0x0C
 005F56BE    call 0x0063BC30
 005F56C3    test al, al
-005F56C5    jz 0x005F56C8
+005F56C5    jz 0x005F56C8                                   ; => [ Call: sub_63bc30 ]
 005F56C7    int3
-005F56C8    call 0x0063BB00
+005F56C8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

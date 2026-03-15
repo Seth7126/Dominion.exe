@@ -1,16 +1,22 @@
+// ============================================================
+// 函数名称: sub_5517b0
+// 起始地址: 0x5517b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005517B0    dword 83EC8B55
 005517B4    in al, 0xF8
 005517B6    push ecx
 005517B7    push ebx
 005517B8    push esi
 005517B9    push edi
-005517BA    call 0x00573400
+005517BA    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005517BF    mov edi, dword ptr ss:[ebp+0x08]
 005517C2    movzx esi, di
 005517C5    mov ebx, dword ptr ds:[eax+0x04]
 005517C8    cmp esi, 0x320
 005517CE    jb 0x005517D5
-005517D0    call 0x00591930
+005517D0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005517D5    imul eax, esi, 0x64
 005517D8    cmp dword ptr ds:[eax+ebx*1+0x1A4C], 0x105
 005517E3    jnz 0x00551823
@@ -22,8 +28,8 @@
 005517F1    call 0x00568960
 005517F6    add esp, 0x0C
 005517F9    test eax, eax
-005517FB    jz 0x00551823
-005517FD    call 0x00573400
+005517FB    jz 0x00551823                                   ; => [ Call: sub_568960 ]
+005517FD    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00551802    push 0x00
 00551804    push 0x00
 00551806    push edi
@@ -33,7 +39,7 @@
 0055180F    call 0x00576B30
 00551814    add esp, 0x10
 00551817    test eax, eax
-00551819    setle al
+00551819    setle al                                        ; => [ Call: sub_576b30 ]
 0055181C    pop edi
 0055181D    pop esi
 0055181E    pop ebx

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5a5040
+// 起始地址: 0x5a5040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A5040    push ebp
 005A5041    mov ebp, esp
 005A5043    and esp, 0xFFFFFFF8
 005A5046    sub esp, 0x840
-005A504C    mov eax, dword ptr ds:[0x008C4040]
+005A504C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A5051    xor eax, esp
 005A5053    mov dword ptr ss:[esp+0x83C], eax
 005A505A    mov eax, dword ptr ss:[ebp+0x08]
@@ -20,7 +26,7 @@
 005A5085    test eax, eax
 005A5087    jle 0x005A5294
 005A508D    nop dword ptr ds:[eax], eax
-005A5090    call 0x005A41C0
+005A5090    call 0x005A41C0                                 ; => [ Call: sub_5a41c0 ]
 005A5095    mov ecx, dword ptr ss:[esp+0x08]
 005A5099    mov dword ptr ss:[esp+0x38], eax
 005A509D    movss xmm0, dword ptr ss:[esp+0x38]
@@ -39,7 +45,7 @@
 005A50E2    push esi
 005A50E3    push edi
 005A50E4    movss dword ptr ss:[esp+0x3C], xmm0
-005A50EA    call 0x007621D0
+005A50EA    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A50EF    mov ecx, dword ptr ss:[esp+0x08]
 005A50F3    movss xmm1, dword ptr ss:[esp+0x2C]
 005A50F9    subss xmm1, dword ptr ss:[esp+0x14]
@@ -84,7 +90,7 @@
 005A5186    movss dword ptr ss:[esp+0x24], xmm0
 005A518C    movss xmm0, dword ptr ds:[eax+0x10]
 005A5191    movss dword ptr ss:[esp+0x28], xmm0
-005A5197    call 0x007621D0
+005A5197    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A519C    mov ecx, dword ptr ss:[esp+0x08]
 005A51A0    mov dword ptr ss:[esp+0x24], 0x00
 005A51A8    add eax, dword ptr ds:[ecx+0x08]
@@ -120,7 +126,7 @@
 005A520F    jbe 0x005A5250
 005A5211    xorps xmm2, xmmword ptr ds:[0x008937C0]
 005A5218    xorps xmm0, xmm0
-005A521B    cvtss2sd xmm0, xmm2
+005A521B    cvtss2sd xmm0, xmm2                             ; => [ Data: data_8937c0 ]
 005A521F    ucomisd xmm1, xmm0
 005A5223    jnbe 0x005A523A
 005A5225    sqrtsd xmm0, xmm0
@@ -128,7 +134,7 @@
 005A5231    cvtsd2ss xmm0, xmm0
 005A5235    xorps xmm0, xmm3
 005A5238    jmp 0x005A5270
-005A523A    call 0x00762084
+005A523A    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A523F    movss xmm3, dword ptr ds:[0x008937C0]
 005A5247    cvtsd2ss xmm0, xmm0
 005A524B    xorps xmm0, xmm3
@@ -138,7 +144,7 @@
 005A5257    jnbe 0x005A525F
 005A5259    sqrtsd xmm0, xmm0
 005A525D    jmp 0x005A5264
-005A525F    call 0x00762084
+005A525F    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A5264    movss xmm3, dword ptr ds:[0x008937C0]
 005A526C    cvtsd2ss xmm0, xmm0
 005A5270    mov esi, dword ptr ss:[esp+0x0C]
@@ -175,7 +181,7 @@
 005A52FE    addss xmm1, dword ptr ds:[0x00890E18]
 005A5306    mulss xmm0, xmm1
 005A530A    call 0x004EA090
-005A530F    mulss xmm0, dword ptr ss:[esp+esi*4+0x240]
+005A530F    mulss xmm0, dword ptr ss:[esp+esi*4+0x240]      ; => [ Call: sub_4ea090 ]
 005A5318    inc esi
 005A5319    mov edx, dword ptr ss:[esp+0x10]
 005A531D    movss xmm3, dword ptr ds:[0x008937C0]
@@ -195,7 +201,7 @@
 005A535E    pop edi
 005A535F    pop esi
 005A5360    xor ecx, esp
-005A5362    call 0x0075927A
+005A5362    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A5367    mov esp, ebp
 005A5369    pop ebp
 005A536A    ret
@@ -204,10 +210,10 @@
 005A5375    push 0x8250E0
 005A537A    mov edx, 0x801800
 005A537F    mov ecx, 0x8252C0
-005A5384    call 0x0063B870
+005A5384    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ApplyDots | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: dots.count <= MAX_DOTS ]
 005A5389    add esp, 0x0C
 005A538C    call 0x0063BC30
 005A5391    test al, al
-005A5393    jz 0x005A5396
+005A5393    jz 0x005A5396                                   ; => [ Call: sub_63bc30 ]
 005A5395    int3
-005A5396    call 0x0063BB00
+005A5396    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

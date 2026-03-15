@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_576c70
+// 起始地址: 0x576c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00576C70    mov eax, dword ptr ds:[edx+0x04]
 00576C73    push esi
 00576C74    mov esi, dword ptr ds:[edx]
@@ -23,10 +29,10 @@
 00576CAC    push 0x81F4B8
 00576CB1    mov edx, 0x801800
 00576CB6    mov ecx, 0x81FC54
-00576CBB    call 0x0063B870
+00576CBB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cost.potions == 1 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: CardCostMerge ]
 00576CC0    add esp, 0x0C
 00576CC3    call 0x0063BC30
 00576CC8    test al, al
-00576CCA    jz 0x00576CCD
+00576CCA    jz 0x00576CCD                                   ; => [ Call: sub_63bc30 ]
 00576CCC    int3
-00576CCD    call 0x0063BB00
+00576CCD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

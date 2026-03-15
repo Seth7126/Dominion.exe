@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66b2b0
+// 起始地址: 0x66b2b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066B2B0    push ebp
 0066B2B1    mov ebp, esp
 0066B2B3    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 0066B2BF    push edi
 0066B2C0    mov dword ptr ss:[esp+0x14], esi
 0066B2C4    mov dword ptr ss:[esp+0x10], eax
-0066B2C8    call 0x0064E7A0
+0066B2C8    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066B2CD    mov ebx, dword ptr ss:[ebp+0x08]
 0066B2D0    mov edi, eax
 0066B2D2    mov ecx, dword ptr ds:[edi+0x15E0]
@@ -18,7 +24,7 @@
 0066B2E0    cmp ebx, 0xFFFFFFFF
 0066B2E3    jnz 0x0066B309
 0066B2E5    test ecx, ecx
-0066B2E7    mov eax, 0x801800
+0066B2E7    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 0066B2EC    push esi
 0066B2ED    cmovnz eax, ecx
 0066B2F0    push eax

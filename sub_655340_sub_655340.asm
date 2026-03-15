@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_655340
+// 起始地址: 0x655340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00655340    mov eax, dword ptr ds:[ecx+0x1598]
 00655346    cmp eax, 0x06
 00655349    jnbe 0x00655381
@@ -23,10 +29,10 @@
 0065538B    push 0x8739B4
 00655390    mov edx, 0x801800
 00655395    mov ecx, 0x801AA4
-0065539A    call 0x0063B870
+0065539A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: UI2AcceptsClicks | String: Halt ]
 0065539F    add esp, 0x0C
 006553A2    call 0x0063BC30
 006553A7    test al, al
-006553A9    jz 0x006553AC
+006553A9    jz 0x006553AC                                   ; => [ Call: sub_63bc30 ]
 006553AB    int3
-006553AC    jmp 0x0063BB00
+006553AC    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

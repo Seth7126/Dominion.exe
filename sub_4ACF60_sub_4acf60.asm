@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4acf60
+// 起始地址: 0x4acf60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ACF60    push esi
 004ACF61    sub edx, 0x02
 004ACF64    jz 0x004ACFA2
@@ -20,7 +26,7 @@
 004ACF97    jns 0x004ACF88
 004ACF99    or edx, 0xFFFFFFFF
 004ACF9C    pop esi
-004ACF9D    jmp 0x004AD010
+004ACF9D    jmp 0x004AD010                                  ; => [ Call: sub_4ad010 ]
 004ACFA2    mov edx, dword ptr ds:[ecx+0xBD4]
 004ACFA8    sub edx, 0x01
 004ACFAB    js 0x004ACF99
@@ -39,16 +45,16 @@
 004ACFCF    jns 0x004ACFC0
 004ACFD1    or edx, 0xFFFFFFFF
 004ACFD4    pop esi
-004ACFD5    jmp 0x004AD010
+004ACFD5    jmp 0x004AD010                                  ; => [ Call: sub_4ad010 ]
 004ACFDA    push 0x801864
 004ACFDF    push 0xCD
 004ACFE4    push 0x801874
 004ACFE9    mov edx, 0x801800
 004ACFEE    mov ecx, 0x801AA4
-004ACFF3    call 0x0063B870
+004ACFF3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameCardset.cpp | String: CardsetSwipe | String: Halt ]
 004ACFF8    add esp, 0x0C
 004ACFFB    call 0x0063BC30
 004AD000    test al, al
-004AD002    jz 0x004AD005
+004AD002    jz 0x004AD005                                   ; => [ Call: sub_63bc30 ]
 004AD004    int3
-004AD005    call 0x0063BB00
+004AD005    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

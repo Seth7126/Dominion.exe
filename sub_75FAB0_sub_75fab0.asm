@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75fab0
+// 起始地址: 0x75fab0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075FAB0    push ebp
 0075FAB1    mov ebp, esp
 0075FAB3    push esi
@@ -8,10 +14,10 @@
 0075FABF    mov edi, ecx
 0075FAC1    cmp eax, 0xFFFFF000
 0075FAC6    jz 0x0075FB18
-0075FAC8    call 0x0075AE50
+0075FAC8    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075FACD    push esi
 0075FACE    mov ecx, edi
-0075FAD0    call 0x00761E10
+0075FAD0    call 0x00761E10                                 ; => [ Call: sub_761e10 ]
 0075FAD5    test eax, eax
 0075FAD7    jz 0x0075FADB
 0075FAD9    mov esi, dword ptr ds:[eax]
@@ -30,16 +36,16 @@
 0075FAFE    test ecx, ecx
 0075FB00    jz 0x0075FB11
 0075FB02    mov ecx, edi
-0075FB04    call 0x0075EC70
+0075FB04    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075FB09    pop edi
-0075FB0A    mov al, 0x01
+0075FB0A    mov al, 0x01                                    ; => [ Type: CRITICAL_SECTION ]
 0075FB0C    pop esi
 0075FB0D    pop ebp
 0075FB0E    ret 0x04
 0075FB11    mov ecx, edi
-0075FB13    call 0x0075EC70
+0075FB13    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075FB18    pop edi
-0075FB19    xor al, al
+0075FB19    xor al, al                                      ; => [ Type: CRITICAL_SECTION ]
 0075FB1B    pop esi
 0075FB1C    pop ebp
 0075FB1D    ret 0x04

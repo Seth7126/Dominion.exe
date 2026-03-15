@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_550640
+// 起始地址: 0x550640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00550640    dword 83EC8B55
 00550644    in al, 0xF8
 00550646    sub esp, 0x0C
 00550649    mov eax, dword ptr ss:[ebp+0x10]
-0055064C    mov ecx, dword ptr ds:[0x00CCE9BC]
+0055064C    mov ecx, dword ptr ds:[0x00CCE9BC]              ; => [ Data: data_cce9bc ]
 00550652    push ebx
 00550653    push esi
 00550654    xor esi, esi
@@ -30,14 +36,14 @@
 0055069E    mov edx, ecx
 005506A0    mov ecx, ebx
 005506A2    push 0x00
-005506A4    call 0x0058DCC0
+005506A4    call 0x0058DCC0                                 ; => [ Call: sub_58dcc0 ]
 005506A9    add esp, 0x04
 005506AC    mov dword ptr ss:[esp+0x10], eax
 005506B0    xor edi, edi
 005506B2    mov dword ptr ss:[esp+0x14], edx
 005506B6    xor ecx, ecx
 005506B8    cmp dword ptr ds:[ecx+0x7BFAE8], edx
-005506BE    jz 0x005506D0
+005506BE    jz 0x005506D0                                   ; => [ Data: data_7bfae8 ]
 005506C0    add ecx, 0x48
 005506C3    inc edi
 005506C4    cmp ecx, 0x3F0
@@ -46,7 +52,7 @@
 005506CE    jmp 0x005506F7
 005506D0    lea eax, ds:[edi+edi*8]
 005506D3    lea edi, ds:[eax*8+0x7BFAF0]
-005506DA    mov eax, dword ptr ds:[eax*8+0x7BFAEC]
+005506DA    mov eax, dword ptr ds:[eax*8+0x7BFAEC]          ; => [ Data: data_7bfaec ]
 005506E1    test eax, eax
 005506E3    jnz 0x005506E9
 005506E5    mov edi, edx
@@ -54,9 +60,9 @@
 005506E9    mov ecx, dword ptr ss:[esp+0x0C]
 005506ED    mov edx, eax
 005506EF    call 0x0063ED10
-005506F4    mov edi, dword ptr ds:[edi+eax*4]
+005506F4    mov edi, dword ptr ds:[edi+eax*4]               ; => [ Data: data_7bfaf0 | Call: sub_63ed10 ]
 005506F7    mov ecx, edi
-005506F9    call 0x005502F0
+005506F9    call 0x005502F0                                 ; => [ Call: sub_5502f0 ]
 005506FE    test eax, eax
 00550700    jz 0x00550715
 00550702    mov eax, dword ptr ss:[ebp+0x0C]
@@ -77,7 +83,7 @@
 00550742    mov ecx, dword ptr ss:[esp+0x0C]
 00550746    jmp 0x00550680
 0055074B    mov ecx, ebx
-0055074D    call 0x0058DD90
+0055074D    call 0x0058DD90                                 ; => [ Call: sub_58dd90 ]
 00550752    pop edi
 00550753    mov eax, esi
 00550755    pop esi
@@ -90,10 +96,10 @@
 00550765    push 0x81F4B8
 0055076A    mov edx, 0x801800
 0055076F    mov ecx, 0x820524
-00550774    call 0x0063B870
+00550774    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RandomizerDeck_Reject | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: deck.numRejects < MAX_CARDS ]
 00550779    add esp, 0x0C
 0055077C    call 0x0063BC30
 00550781    test al, al
-00550783    jz 0x00550786
+00550783    jz 0x00550786                                   ; => [ Call: sub_63bc30 ]
 00550785    int3
-00550786    call 0x0063BB00
+00550786    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

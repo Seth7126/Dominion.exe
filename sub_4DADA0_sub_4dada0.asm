@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4dada0
+// 起始地址: 0x4dada0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DADA0    push ebp
 004DADA1    mov ebp, esp
 004DADA3    sub esp, 0x0C
@@ -6,7 +12,7 @@
 004DADAC    push ebx
 004DADAD    push esi
 004DADAE    push edi
-004DADAF    call 0x004DAF40
+004DADAF    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004DADB4    mov edi, eax
 004DADB6    xor esi, esi
 004DADB8    test edi, edi
@@ -17,13 +23,13 @@
 004DADC3    mov edx, 0x1300
 004DADC8    call 0x004DB7A0
 004DADCD    test al, al
-004DADCF    jnz 0x004DAE6F
+004DADCF    jnz 0x004DAE6F                                  ; => [ Call: sub_4db7a0 ]
 004DADD5    inc esi
 004DADD6    cmp esi, edi
 004DADD8    jl 0x004DADC0
 004DADDA    lea edx, ss:[ebp-0x08]
 004DADDD    lea ecx, ss:[ebp-0x04]
-004DADE0    call 0x004DAF40
+004DADE0    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004DADE5    mov edi, eax
 004DADE7    xor esi, esi
 004DADE9    test edi, edi
@@ -33,13 +39,13 @@
 004DADF3    mov edx, 0x1304
 004DADF8    call 0x004DB7A0
 004DADFD    test al, al
-004DADFF    jnz 0x004DAE6F
+004DADFF    jnz 0x004DAE6F                                  ; => [ Call: sub_4db7a0 ]
 004DAE01    inc esi
 004DAE02    cmp esi, edi
 004DAE04    jl 0x004DADF0
 004DAE06    lea edx, ss:[ebp-0x08]
 004DAE09    lea ecx, ss:[ebp-0x04]
-004DAE0C    call 0x004DAF40
+004DAE0C    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004DAE11    mov edi, eax
 004DAE13    xor esi, esi
 004DAE15    test edi, edi
@@ -50,14 +56,14 @@
 004DAE23    mov edx, 0x1305
 004DAE28    call 0x004DB7A0
 004DAE2D    test al, al
-004DAE2F    jnz 0x004DAE6F
+004DAE2F    jnz 0x004DAE6F                                  ; => [ Call: sub_4db7a0 ]
 004DAE31    inc esi
 004DAE32    cmp esi, edi
 004DAE34    jl 0x004DAE20
 004DAE36    lea edx, ss:[ebp-0x08]
 004DAE39    lea ecx, ss:[ebp-0x04]
 004DAE3C    call 0x004DAF40
-004DAE41    mov edi, eax
+004DAE41    mov edi, eax                                    ; => [ Call: sub_4daf40 ]
 004DAE43    xor esi, esi
 004DAE45    test edi, edi
 004DAE47    jle 0x004DAE66
@@ -67,7 +73,7 @@
 004DAE53    mov edx, 0x130E
 004DAE58    call 0x004DB7A0
 004DAE5D    test al, al
-004DAE5F    jnz 0x004DAE6F
+004DAE5F    jnz 0x004DAE6F                                  ; => [ Call: sub_4db7a0 ]
 004DAE61    inc esi
 004DAE62    cmp esi, edi
 004DAE64    jl 0x004DAE50

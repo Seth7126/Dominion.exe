@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e9e30
+// 起始地址: 0x6e9e30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E9E30    push ebp
 006E9E31    mov ebp, esp
 006E9E33    push esi
@@ -11,7 +17,7 @@
 006E9E42    jz 0x006E9E97
 006E9E44    cmp byte ptr ds:[eax], 0x00
 006E9E47    jz 0x006E9E97
-006E9E49    call 0x0063D4E0
+006E9E49    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006E9E4E    cmp esi, dword ptr ds:[eax+0x08]
 006E9E51    jnle 0x006E9E97
 006E9E53    lea edx, ds:[esi-0x01]
@@ -20,7 +26,7 @@
 006E9E5A    mov esi, dword ptr ds:[edi]
 006E9E5C    nop dword ptr ds:[eax], eax
 006E9E60    test esi, esi
-006E9E62    mov eax, 0x801800
+006E9E62    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 006E9E67    cmovnz eax, esi
 006E9E6A    mov cl, byte ptr ds:[eax+edx*1]
 006E9E6D    cmp cl, 0x80
@@ -49,10 +55,10 @@
 006E9EA1    push 0x882988
 006E9EA6    mov edx, 0x801800
 006E9EAB    mov ecx, 0x8829F8
-006E9EB0    call 0x0063B870
+006E9EB0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: index > 0 && index <= mText.Length() | Data: data_801800 | String: UITextBox::Utf8StringLeftOneIndex | String: C:\x\ax2017\Engine\UITextBox.cpp ]
 006E9EB5    add esp, 0x0C
 006E9EB8    call 0x0063BC30
 006E9EBD    test al, al
-006E9EBF    jz 0x006E9EC2
+006E9EBF    jz 0x006E9EC2                                   ; => [ Call: sub_63bc30 ]
 006E9EC1    int3
-006E9EC2    call 0x0063BB00
+006E9EC2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

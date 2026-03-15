@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5ac840
+// 起始地址: 0x5ac840
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AC840    push ebx
 005AC841    push esi
 005AC842    push edi
 005AC843    mov esi, ecx
-005AC845    xor eax, eax
+005AC845    xor eax, eax                                    ; => [ Call: nullptr ]
 005AC847    lea edi, ds:[esi+0x0C]
 005AC84A    test eax, eax
 005AC84C    jnz 0x005AC852

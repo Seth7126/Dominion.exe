@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6559a0
+// 起始地址: 0x6559a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006559A0    push ebx
 006559A1    mov ebx, esp
 006559A3    sub esp, 0x08
@@ -8,13 +14,13 @@
 006559B0    mov dword ptr ss:[esp+0x04], ebp
 006559B4    mov ebp, esp
 006559B6    sub esp, 0xC8
-006559BC    mov eax, dword ptr ds:[0x008C4040]
+006559BC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006559C1    xor eax, ebp
 006559C3    mov dword ptr ss:[ebp-0x04], eax
 006559C6    push esi
-006559C7    mov esi, dword ptr ds:[0x00CF65B8]
-006559CD    movss xmm2, dword ptr ds:[0x00CF65C0]
-006559D5    mov eax, dword ptr ds:[0x00CF65EC]
+006559C7    mov esi, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
+006559CD    movss xmm2, dword ptr ds:[0x00CF65C0]           ; => [ Data: data_cf65c0 ]
+006559D5    mov eax, dword ptr ds:[0x00CF65EC]              ; => [ Data: data_cf65e0 ]
 006559DA    movss dword ptr ss:[ebp-0x74], xmm2
 006559DF    movd xmm0, dword ptr ds:[esi+0x14]
 006559E4    movd xmm3, dword ptr ds:[esi+0x18]
@@ -37,17 +43,17 @@
 00655A36    movaps xmm0, xmm1
 00655A39    movss dword ptr ss:[ebp-0x78], xmm1
 00655A3E    xorps xmm0, xmmword ptr ds:[0x008937C0]
-00655A45    movq xmm1, qword ptr ds:[0x00CF65E4]
-00655A4D    movss dword ptr ss:[ebp-0x80], xmm0
+00655A45    movq xmm1, qword ptr ds:[0x00CF65E4]            ; => [ Data: data_cf65e0 ]
+00655A4D    movss dword ptr ss:[ebp-0x80], xmm0             ; => [ Data: data_8937c0 ]
 00655A52    movaps xmm0, xmm2
 00655A55    xorps xmm0, xmmword ptr ds:[0x008937C0]
-00655A5C    movss dword ptr ss:[ebp-0x7C], xmm0
+00655A5C    movss dword ptr ss:[ebp-0x7C], xmm0             ; => [ Data: data_8937c0 ]
 00655A61    movups xmm0, xmmword ptr ss:[ebp-0x80]
 00655A65    movq qword ptr ss:[ebp-0x94], xmm1
 00655A6D    movups xmmword ptr ss:[ebp-0xC4], xmm0
 00655A74    movups xmm0, xmmword ptr ds:[0x00CF65D4]
-00655A7B    movups xmmword ptr ss:[ebp-0xA4], xmm0
-00655A82    call 0x006DC460
+00655A7B    movups xmmword ptr ss:[ebp-0xA4], xmm0          ; => [ Data: data_cf65d0 ]
+00655A82    call 0x006DC460                                 ; => [ Call: sub_6dc460 ]
 00655A87    movss xmm4, dword ptr ds:[edi+0x08]
 00655A8C    add esp, 0x04
 00655A8F    movss xmm5, dword ptr ds:[edi+0x10]
@@ -191,7 +197,7 @@
 00655CE4    addss xmm2, xmm1
 00655CE8    movaps xmm1, xmm6
 00655CEB    mulss xmm1, xmm3
-00655CEF    xorps xmm2, xmmword ptr ds:[0x008937C0]
+00655CEF    xorps xmm2, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 00655CF6    movss dword ptr ss:[ebp-0x30], xmm2
 00655CFB    movups xmm2, xmmword ptr ds:[eax]
 00655CFE    shufps xmm2, xmm2, 0xFF
@@ -205,7 +211,7 @@
 00655D22    movss dword ptr ss:[ebp-0x4C], xmm1
 00655D27    andps xmm1, xmmword ptr ds:[0x008937A0]
 00655D2E    comiss xmm0, xmm1
-00655D31    jnbe 0x00655EFB
+00655D31    jnbe 0x00655EFB                                 ; => [ Data: data_8937a0 ]
 00655D37    movss xmm5, dword ptr ss:[ebp-0x20]
 00655D3C    movss xmm1, dword ptr ss:[ebp-0x1C]
 00655D41    movaps xmm0, xmm5
@@ -222,7 +228,7 @@
 00655D6E    jb 0x00655EFB
 00655D74    xorps xmm6, xmmword ptr ds:[0x008937C0]
 00655D7B    lea eax, ss:[ebp-0x38]
-00655D7E    divss xmm6, xmm4
+00655D7E    divss xmm6, xmm4                                ; => [ Data: data_8937c0 ]
 00655D82    push dword ptr ds:[0x007FFB18]
 00655D88    mulss xmm2, xmm6
 00655D8C    push dword ptr ds:[0x007FFB14]
@@ -232,7 +238,7 @@
 00655D9B    addss xmm3, xmm1
 00655D9F    movups xmmword ptr ss:[ebp-0x18], xmm2
 00655DA3    movss dword ptr ss:[ebp-0x48], xmm3
-00655DA8    call 0x00655800
+00655DA8    call 0x00655800                                 ; => [ Call: sub_655800 ]
 00655DAD    movd xmm2, dword ptr ds:[esi+0x18]
 00655DB2    add esp, 0x0C
 00655DB5    movd xmm1, dword ptr ds:[esi+0x14]
@@ -259,7 +265,7 @@
 00655E06    subss xmm2, dword ptr ss:[ebp-0x70]
 00655E0B    movq xmm0, qword ptr ds:[eax]
 00655E0F    subss xmm3, dword ptr ss:[ebp-0x6C]
-00655E14    movq qword ptr ss:[ebp-0x38], xmm0
+00655E14    movq qword ptr ss:[ebp-0x38], xmm0              ; => [ Call: sub_655800 ]
 00655E19    movss xmm0, dword ptr ss:[ebp-0x38]
 00655E1E    subss xmm0, dword ptr ss:[ebp-0x70]
 00655E23    movss xmm1, dword ptr ds:[0x00890E18]
@@ -316,7 +322,7 @@
 00655EE9    pop esi
 00655EEA    mov ecx, dword ptr ss:[ebp-0x04]
 00655EED    xor ecx, ebp
-00655EEF    call 0x0075927A
+00655EEF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00655EF4    mov esp, ebp
 00655EF6    pop ebp
 00655EF7    mov esp, ebx
@@ -327,7 +333,7 @@
 00655F00    pop edi
 00655F01    xor ecx, ebp
 00655F03    pop esi
-00655F04    call 0x0075927A
+00655F04    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00655F09    mov esp, ebp
 00655F0B    pop ebp
 00655F0C    mov esp, ebx
@@ -338,10 +344,10 @@
 00655F1A    push 0x801A00
 00655F1F    mov edx, 0x801800
 00655F24    mov ecx, 0x801A1C
-00655F29    call 0x0063B870
+00655F29    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectContains | String: C:\x\ax2017\Engine\Rect.cpp | String: RectIsNormalized(r) ]
 00655F2E    add esp, 0x0C
 00655F31    call 0x0063BC30
 00655F36    test al, al
-00655F38    jz 0x00655F3B
+00655F38    jz 0x00655F3B                                   ; => [ Call: sub_63bc30 ]
 00655F3A    int3
-00655F3B    call 0x0063BB00
+00655F3B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

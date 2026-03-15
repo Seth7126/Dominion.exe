@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d7b90
+// 起始地址: 0x5d7b90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D7B92    in al, dx
 005D7B93    sub esp, 0x0C
 005D7B96    cmp dword ptr ds:[0x00CC8D5C], 0x00
@@ -5,14 +11,14 @@
 005D7B9E    push esi
 005D7B9F    push edi
 005D7BA0    mov esi, ecx
-005D7BA2    jnz 0x005D7BBA
-005D7BA4    push 0x77EB90
+005D7BA2    jnz 0x005D7BBA                                  ; => [ Data: data_cc8d5c ]
+005D7BA4    push 0x77EB90                                   ; => [ String: GetClient ]
 005D7BA9    push 0x7B
-005D7BAB    push 0x77EB50
-005D7BB0    mov ecx, 0x77EB9C
+005D7BAB    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+005D7BB0    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 005D7BB5    jmp 0x005D85EB
 005D7BBA    mov ecx, dword ptr ds:[esi+0x2C]
-005D7BBD    mov edx, dword ptr ds:[0x00CC8D5C]
+005D7BBD    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005D7BC3    cmp ecx, 0x05
 005D7BC6    jnz 0x005D7BD4
 005D7BC8    mov eax, dword ptr ds:[edx+0x10]
@@ -21,14 +27,14 @@
 005D7BD4    cmp byte ptr ds:[0x00CCF768], 0x00
 005D7BDB    jnz 0x005D8446
 005D7BE1    cmp byte ptr ds:[esi+0x1B9C], 0x00
-005D7BE8    jnz 0x005D8446
+005D7BE8    jnz 0x005D8446                                  ; => [ Data: data_ccf768 | Data: data_ccf768 ]
 005D7BEE    cmp ecx, 0x01
 005D7BF1    jnz 0x005D7C29
 005D7BF3    mov eax, dword ptr ds:[esi+0x174]
 005D7BF9    cmp eax, 0x02
 005D7BFC    jnz 0x005D7C12
 005D7BFE    cmp dword ptr ds:[0x008DB664], 0x3E8
-005D7C08    setz al
+005D7C08    setz al                                         ; => [ Data: data_8db664 ]
 005D7C0B    pop edi
 005D7C0C    pop esi
 005D7C0D    pop ebx
@@ -44,7 +50,7 @@
 005D7C24    pop ebx
 005D7C25    mov esp, ebp
 005D7C27    pop ebp
-005D7C28    ret
+005D7C28    ret                                             ; => [ Call: sub_5d7a30 | Call: sub_5d7a30 ]
 005D7C29    cmp ecx, 0x02
 005D7C2C    jz 0x005D7C1B
 005D7C2E    cmp ecx, 0x08
@@ -54,9 +60,9 @@
 005D7C3F    jz 0x005D8446
 005D7C45    movzx ecx, ax
 005D7C48    cmp ecx, dword ptr ds:[0x00B809E4]
-005D7C4E    jnb 0x005D8446
+005D7C4E    jnb 0x005D8446                                  ; => [ Data: data_b809e4 ]
 005D7C54    imul edi, ecx, 0x1C30
-005D7C5A    add edi, dword ptr ds:[0x00B809E0]
+005D7C5A    add edi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005D7C60    cmp dword ptr ds:[edi+0x1C28], eax
 005D7C66    jnz 0x005D8446
 005D7C6C    test edi, edi
@@ -77,14 +83,14 @@
 005D7C93    ret
 005D7C94    test eax, eax
 005D7C96    jz 0x005D7CAC
-005D7C98    push 0x870774
+005D7C98    push 0x870774                                   ; => [ String: IsTopOfSupplyPile ]
 005D7C9D    push 0x2D32
-005D7CA2    mov ecx, 0x870788
+005D7CA2    mov ecx, 0x870788                               ; => [ String: gfxCard.type == DOMGFX_CARD ]
 005D7CA7    jmp 0x005D85E6
 005D7CAC    mov ecx, dword ptr ds:[edi+0x9C]
 005D7CB2    test ecx, ecx
 005D7CB4    jz 0x005D7CD5
-005D7CB6    call 0x005CBA00
+005D7CB6    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005D7CBB    mov ecx, dword ptr ds:[eax+0x5C]
 005D7CBE    sub ecx, 0x08
 005D7CC1    cmp ecx, 0x3E
@@ -100,7 +106,7 @@
 005D7CE7    mov ecx, edi
 005D7CE9    call 0x005E3790
 005D7CEE    test al, al
-005D7CF0    jz 0x005D8446
+005D7CF0    jz 0x005D8446                                   ; => [ Call: sub_5e3790 ]
 005D7CF6    cmp dword ptr ds:[esi+0x2C], 0x03
 005D7CFA    jnz 0x005D7D61
 005D7CFC    cmp dword ptr ds:[esi+0x5C], 0x3EE
@@ -111,42 +117,42 @@
 005D7D0D    jz 0x005D7D61
 005D7D0F    test ecx, ecx
 005D7D11    jz 0x005D7D61
-005D7D13    call 0x005DE8B0
+005D7D13    call 0x005DE8B0                                 ; => [ Call: sub_5de8b0 ]
 005D7D18    test eax, eax
 005D7D1A    jnz 0x005D7D30
-005D7D1C    push 0x871958
+005D7D1C    push 0x871958                                   ; => [ String: LookupCard ]
 005D7D21    push 0x3D96
-005D7D26    mov ecx, 0x871964
+005D7D26    mov ecx, 0x871964                               ; => [ Data: data_871964 ]
 005D7D2B    jmp 0x005D85E6
 005D7D30    mov edx, dword ptr ds:[eax+0x1B8C]
 005D7D36    test edx, edx
 005D7D38    jz 0x005D7D61
-005D7D3A    mov ecx, dword ptr ds:[0x00B809E4]
+005D7D3A    mov ecx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
 005D7D40    movzx eax, dx
 005D7D43    cmp eax, ecx
 005D7D45    jnb 0x005D7D67
 005D7D47    imul eax, eax, 0x1C30
 005D7D4D    add eax, dword ptr ds:[0x00B809E0]
 005D7D53    cmp dword ptr ds:[eax+0x1C28], edx
-005D7D59    jz 0x005D8446
+005D7D59    jz 0x005D8446                                   ; => [ Data: data_b809e0 ]
 005D7D5F    jmp 0x005D7D67
-005D7D61    mov ecx, dword ptr ds:[0x00B809E4]
+005D7D61    mov ecx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
 005D7D67    mov eax, dword ptr ds:[esi+0x2C]
 005D7D6A    test eax, eax
 005D7D6C    jnz 0x005D7D81
 005D7D6E    mov eax, dword ptr ds:[0x00B7FCD0]
 005D7D73    cmp eax, dword ptr ds:[esi+0x1C28]
-005D7D79    jz 0x005D85CE
+005D7D79    jz 0x005D85CE                                   ; => [ Data: data_b7fcd0 ]
 005D7D7F    jmp 0x005D7DEC
 005D7D81    cmp eax, 0x03
 005D7D84    jnz 0x005D7DEC
 005D7D86    cmp dword ptr ds:[esi+0x5C], eax
 005D7D89    jnz 0x005D7DEC
 005D7D8B    mov ebx, 0x07
-005D7D90    mov edi, 0xB8206C
+005D7D90    mov edi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005D7D95    cmp ebx, 0x48
 005D7D98    jl 0x005D7D9F
-005D7D9A    call 0x00591930
+005D7D9A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005D7D9F    cmp dword ptr ds:[edi], 0xD00
 005D7DA5    jz 0x005D7DBE
 005D7DA7    cmp dword ptr ds:[edi+0x04], 0xD00
@@ -163,12 +169,12 @@
 005D7DC7    call 0x005CC410
 005D7DCC    add esp, 0x08
 005D7DCF    test eax, eax
-005D7DD1    jz 0x005D8446
+005D7DD1    jz 0x005D8446                                   ; => [ Call: sub_5cc410 ]
 005D7DD7    mov ecx, eax
 005D7DD9    call 0x005D7B90
 005D7DDE    test al, al
 005D7DE0    jz 0x005D8446
-005D7DE6    mov ecx, dword ptr ds:[0x00B809E4]
+005D7DE6    mov ecx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
 005D7DEC    cmp dword ptr ds:[esi+0x2C], 0x03
 005D7DF0    jnz 0x005D7E6A
 005D7DF2    mov eax, dword ptr ds:[esi+0x5C]
@@ -176,15 +182,15 @@
 005D7DFA    jz 0x005D8446
 005D7E00    cmp eax, 0x3EF
 005D7E05    jz 0x005D8446
-005D7E0B    mov edi, dword ptr ds:[0x00B7FCF4]
+005D7E0B    mov edi, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005D7E11    cmp dword ptr ds:[esi+0x1C28], edi
 005D7E17    jz 0x005D8446
 005D7E1D    cmp dword ptr ds:[esi+0x30], 0x00
 005D7E21    jz 0x005D7E70
-005D7E23    call 0x005CF7E0
+005D7E23    call 0x005CF7E0                                 ; => [ Call: sub_5cf7e0 ]
 005D7E28    mov ecx, dword ptr ds:[esi+0x30]
 005D7E2B    mov edx, eax
-005D7E2D    call 0x00571B30
+005D7E2D    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 005D7E32    mov ecx, dword ptr ds:[eax+0x98]
 005D7E38    mov eax, dword ptr ds:[eax+0x9C]
 005D7E3E    and ecx, 0x7F000400
@@ -194,11 +200,11 @@
 005D7E4D    mov ecx, dword ptr ds:[esi+0x70]
 005D7E50    call 0x005CBA00
 005D7E55    mov ecx, eax
-005D7E57    call 0x005DC840
+005D7E57    call 0x005DC840                                 ; => [ Call: sub_5cba00 | Call: sub_5dc840 ]
 005D7E5C    test al, al
 005D7E5E    jz 0x005D8446
-005D7E64    mov ecx, dword ptr ds:[0x00B809E4]
-005D7E6A    mov edi, dword ptr ds:[0x00B7FCF4]
+005D7E64    mov ecx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005D7E6A    mov edi, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 | Data: data_b7fcf4 ]
 005D7E70    mov edx, dword ptr ds:[esi+0x1B8C]
 005D7E76    test edx, edx
 005D7E78    jz 0x005D7E99
@@ -208,7 +214,7 @@
 005D7E81    imul eax, eax, 0x1C30
 005D7E87    add eax, dword ptr ds:[0x00B809E0]
 005D7E8D    cmp dword ptr ds:[eax+0x1C28], edx
-005D7E93    jz 0x005D8446
+005D7E93    jz 0x005D8446                                   ; => [ Data: data_b809e0 ]
 005D7E99    mov eax, dword ptr ds:[esi+0x2C]
 005D7E9C    cmp eax, 0x03
 005D7E9F    jnz 0x005D7EBD
@@ -223,12 +229,12 @@
 005D7EC2    cmp dword ptr ds:[esi+0x1BC], 0x474
 005D7ECC    jnz 0x005D85CE
 005D7ED2    mov ecx, dword ptr ds:[esi+0x1C0]
-005D7ED8    call 0x005DE8B0
+005D7ED8    call 0x005DE8B0                                 ; => [ Call: sub_5de8b0 ]
 005D7EDD    test eax, eax
 005D7EDF    jnz 0x005D7EF5
-005D7EE1    push 0x871958
+005D7EE1    push 0x871958                                   ; => [ String: LookupCard ]
 005D7EE6    push 0x3D96
-005D7EEB    mov ecx, 0x871964
+005D7EEB    mov ecx, 0x871964                               ; => [ Data: data_871964 ]
 005D7EF0    jmp 0x005D85E6
 005D7EF5    mov ecx, eax
 005D7EF7    call 0x005D7B90
@@ -251,28 +257,28 @@
 005D7F26    jz 0x005D7F3A
 005D7F28    mov eax, dword ptr ds:[esi+0x9C]
 005D7F2E    cmp eax, dword ptr ds:[0x00B7D42C]
-005D7F34    jz 0x005D8446
-005D7F3A    mov ecx, dword ptr ds:[0x00B809E4]
-005D7F40    mov edi, dword ptr ds:[0x00B7FCF4]
+005D7F34    jz 0x005D8446                                   ; => [ Call: sub_5e2c00 | Data: data_b7d42c ]
+005D7F3A    mov ecx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005D7F40    mov edi, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005D7F46    mov eax, dword ptr ds:[esi+0x2C]
 005D7F49    cmp eax, 0x05
 005D7F4C    jnz 0x005D7F89
-005D7F4E    mov eax, dword ptr ds:[0x00B604E0]
+005D7F4E    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005D7F53    xor ecx, ecx
 005D7F55    cmp eax, 0xFFFFFFFF
-005D7F58    cmovz eax, ecx
+005D7F58    cmovz eax, ecx                                  ; => [ Call: nullptr ]
 005D7F5B    cmp dword ptr ds:[esi+0x1F0], eax
 005D7F61    jnz 0x005D8446
 005D7F67    cmp dword ptr ds:[0x00CC8D5C], ecx
-005D7F6D    jz 0x005D7BA4
+005D7F6D    jz 0x005D7BA4                                   ; => [ Data: data_cc8d5c ]
 005D7F73    mov eax, dword ptr ds:[0x00CC8D5C]
 005D7F78    mov eax, dword ptr ds:[eax+0x7590]
-005D7F7E    cmp eax, dword ptr ds:[0x00B80B48]
+005D7F7E    cmp eax, dword ptr ds:[0x00B80B48]              ; => [ Data: data_cc8d5c | Data: data_b80b48 ]
 005D7F84    jmp 0x005D85C8
 005D7F89    test eax, eax
 005D7F8B    jnz 0x005D85CE
 005D7F91    mov ebx, dword ptr ds:[esi+0x1C28]
-005D7F97    mov edx, dword ptr ds:[0x00B7D434]
+005D7F97    mov edx, dword ptr ds:[0x00B7D434]              ; => [ Data: data_b7d434 ]
 005D7F9D    cmp edx, ebx
 005D7F9F    jz 0x005D85CE
 005D7FA5    test edx, edx
@@ -281,7 +287,7 @@
 005D7FAC    cmp eax, ecx
 005D7FAE    jnb 0x005D7FDE
 005D7FB0    imul eax, eax, 0x1C30
-005D7FB6    add eax, dword ptr ds:[0x00B809E0]
+005D7FB6    add eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005D7FBC    cmp dword ptr ds:[eax+0x1C28], edx
 005D7FC2    jnz 0x005D7FDE
 005D7FC4    test eax, eax
@@ -325,25 +331,25 @@
 005D8076    cmp edx, ecx
 005D8078    jnb 0x005D8446
 005D807E    imul edx, edx, 0x1C30
-005D8084    add edx, dword ptr ds:[0x00B809E0]
+005D8084    add edx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005D808A    cmp dword ptr ds:[edx+0x1C28], eax
 005D8090    jnz 0x005D8446
 005D8096    test edx, edx
 005D8098    jz 0x005D8446
 005D809E    test edi, edi
 005D80A0    jnz 0x005D80A6
-005D80A2    xor ecx, ecx
+005D80A2    xor ecx, ecx                                    ; => [ Call: nullptr ]
 005D80A4    jmp 0x005D80C8
 005D80A6    movzx eax, di
 005D80A9    cmp eax, ecx
 005D80AB    jb 0x005D80B1
-005D80AD    xor ecx, ecx
+005D80AD    xor ecx, ecx                                    ; => [ Call: nullptr ]
 005D80AF    jmp 0x005D80C8
 005D80B1    imul ecx, eax, 0x1C30
 005D80B7    xor eax, eax
-005D80B9    add ecx, dword ptr ds:[0x00B809E0]
+005D80B9    add ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005D80BF    cmp dword ptr ds:[ecx+0x1C28], edi
-005D80C5    cmovnz ecx, eax
+005D80C5    cmovnz ecx, eax                                 ; => [ Call: nullptr ]
 005D80C8    mov eax, dword ptr ds:[esi+0xA4]
 005D80CE    cmp eax, 0x3EC
 005D80D3    jnz 0x005D80FA
@@ -446,10 +452,10 @@
 005D8243    cmp dword ptr ds:[esi+0x37C], 0x44D
 005D824D    mov ecx, eax
 005D824F    jnz 0x005D827C
-005D8251    mov eax, dword ptr ds:[0x00B604E0]
+005D8251    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005D8256    xor edx, edx
 005D8258    cmp eax, 0xFFFFFFFF
-005D825B    cmovz eax, edx
+005D825B    cmovz eax, edx                                  ; => [ Call: nullptr ]
 005D825E    cmp dword ptr ds:[esi+0xA0], eax
 005D8264    jnz 0x005D8446
 005D826A    cmp dword ptr ds:[ecx+0x1C28], edi
@@ -531,7 +537,7 @@
 005D838B    cmp ecx, 0x474
 005D8391    jnz 0x005D83B1
 005D8393    mov ecx, dword ptr ds:[eax+0x68]
-005D8396    call 0x005DE930
+005D8396    call 0x005DE930                                 ; => [ Call: sub_5de930 ]
 005D839B    mov ecx, eax
 005D839D    call 0x005D7B90
 005D83A2    test al, al
@@ -561,7 +567,7 @@
 005D840A    or edx, 0xFFFFFFFF
 005D840D    call 0x005CC500
 005D8412    test eax, eax
-005D8414    jnz 0x005D85CE
+005D8414    jnz 0x005D85CE                                  ; => [ Call: sub_5cc500 ]
 005D841A    xor al, al
 005D841C    pop edi
 005D841D    pop esi
@@ -601,7 +607,7 @@
 005D84A0    mov ecx, esi
 005D84A2    call 0x005DC840
 005D84A7    test al, al
-005D84A9    jz 0x005D84B6
+005D84A9    jz 0x005D84B6                                   ; => [ Call: sub_5dc840 ]
 005D84AB    mov eax, dword ptr ss:[ebp-0x08]
 005D84AE    cmp dword ptr ds:[eax+0x1C28], edi
 005D84B4    jmp 0x005D8440
@@ -613,11 +619,11 @@
 005D84D1    jz 0x005D85CE
 005D84D7    sub ebx, 0x01
 005D84DA    jz 0x005D85CE
-005D84E0    mov ecx, dword ptr ds:[0x00B604E0]
+005D84E0    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005D84E6    xor edx, edx
 005D84E8    cmp ecx, 0xFFFFFFFF
 005D84EB    mov eax, ecx
-005D84ED    cmovz eax, edx
+005D84ED    cmovz eax, edx                                  ; => [ Call: nullptr ]
 005D84F0    mov edx, dword ptr ds:[esi+0xA0]
 005D84F6    cmp edx, eax
 005D84F8    jnz 0x005D850A
@@ -629,18 +635,18 @@
 005D8518    xor ebx, ebx
 005D851A    mov eax, ecx
 005D851C    cmp ecx, 0xFFFFFFFF
-005D851F    cmovz eax, ebx
+005D851F    cmovz eax, ebx                                  ; => [ Call: nullptr ]
 005D8522    cmp edx, eax
 005D8524    jnz 0x005D853D
 005D8526    mov ecx, edi
 005D8528    call 0x005CC500
 005D852D    test eax, eax
-005D852F    jnz 0x005D85CE
+005D852F    jnz 0x005D85CE                                  ; => [ Call: sub_5cc500 ]
 005D8535    mov eax, dword ptr ss:[ebp-0x08]
 005D8538    jmp 0x005D8437
 005D853D    xor eax, eax
 005D853F    cmp ecx, 0xFFFFFFFF
-005D8542    cmovz ecx, eax
+005D8542    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 005D8545    cmp edx, ecx
 005D8547    jz 0x005D85CE
 005D854D    cmp edx, 0xFFFFFFFF
@@ -656,7 +662,7 @@
 005D8566    ret
 005D8567    mov ecx, edi
 005D8569    call 0x005CBA70
-005D856E    mov ecx, eax
+005D856E    mov ecx, eax                                    ; => [ Call: sub_5cba70 ]
 005D8570    test ecx, ecx
 005D8572    jz 0x005D8446
 005D8578    cmp dword ptr ds:[ecx+0x5C], 0x3EF
@@ -686,15 +692,15 @@
 005D85D3    mov esp, ebp
 005D85D5    pop ebp
 005D85D6    ret
-005D85D7    push 0x8707A4
+005D85D7    push 0x8707A4                                   ; => [ String: GfxIsVisible ]
 005D85DC    push 0x2DFE
-005D85E1    mov ecx, 0x8707B4
-005D85E6    push 0x86F1E8
+005D85E1    mov ecx, 0x8707B4                               ; => [ String: zoom->type == DOMGFX_CARD_PLACEHOLDER ]
+005D85E6    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
 005D85EB    mov edx, 0x801800
-005D85F0    call 0x0063B870
+005D85F0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005D85F5    add esp, 0x0C
 005D85F8    call 0x0063BC30
 005D85FD    test al, al
-005D85FF    jz 0x005D8602
+005D85FF    jz 0x005D8602                                   ; => [ Call: sub_63bc30 ]
 005D8601    int3
-005D8602    call 0x0063BB00
+005D8602    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

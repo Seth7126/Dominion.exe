@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_67cf00
+// 起始地址: 0x67cf00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067CF00    push ebx
 0067CF01    push esi
 0067CF02    push edi
 0067CF03    mov esi, ecx
-0067CF05    call 0x0064E7A0
+0067CF05    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0067CF0A    cmp dword ptr ds:[eax+0x15F8], 0x03
 0067CF11    jnz 0x0067CF38
 0067CF13    cmp byte ptr ds:[eax+0x1568], 0x01
@@ -12,7 +18,7 @@
 0067CF25    push ecx
 0067CF26    xor edx, edx
 0067CF28    mov ecx, esi
-0067CF2A    call 0x0066CC40
+0067CF2A    call 0x0066CC40                                 ; => [ Call: sub_66cc40 ]
 0067CF2F    add esp, 0x04
 0067CF32    mov al, 0x01
 0067CF34    pop edi

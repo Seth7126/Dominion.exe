@@ -1,3 +1,9 @@
-00403AE0    mov eax, dword ptr ds:[0x01597D84]
-00403AE5    mov dword ptr ds:[0x01597D88], eax
+// ============================================================
+// 函数名称: sub_403ae0
+// 起始地址: 0x403ae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00403AE0    mov eax, dword ptr ds:[0x01597D84]              ; => [ Data: data_1597d84 ]
+00403AE5    mov dword ptr ds:[0x01597D88], eax              ; => [ Data: data_1597d88 ]
 00403AEA    ret

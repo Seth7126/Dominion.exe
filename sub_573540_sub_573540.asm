@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_573540
+// 起始地址: 0x573540
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00573540    mov eax, dword ptr fs:[0x0000002C]
-00573546    mov eax, dword ptr ds:[eax]
+00573546    mov eax, dword ptr ds:[eax]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 00573548    mov ecx, dword ptr ds:[eax+0xF010]
 0057354E    lea edx, ds:[eax+0x10]
 00573554    test ecx, ecx
@@ -9,13 +15,13 @@
 00573562    push 0x81F4B8
 00573567    mov edx, 0x801800
 0057356C    mov ecx, 0x81F9F0
-00573571    call 0x0063B870
+00573571    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomGetParentContext ]
 00573576    add esp, 0x0C
 00573579    call 0x0063BC30
 0057357E    test al, al
-00573580    jz 0x00573583
+00573580    jz 0x00573583                                   ; => [ Call: sub_63bc30 ]
 00573582    int3
-00573583    jmp 0x0063BB00
+00573583    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00573588    cmp ecx, 0x01
 0057358B    jnz 0x00573590
 0057358D    xor eax, eax

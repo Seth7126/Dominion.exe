@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72d5c0
+// 起始地址: 0x72d5c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072D5C0    push ebp
 0072D5C1    mov ebp, esp
 0072D5C3    sub esp, 0x0C
@@ -7,7 +13,7 @@
 0072D5CA    mov dword ptr ss:[ebp-0x0C], edx
 0072D5CD    xor eax, eax
 0072D5CF    push edi
-0072D5D0    mov dword ptr ss:[ebp-0x08], eax
+0072D5D0    mov dword ptr ss:[ebp-0x08], eax                ; => [ Call: nullptr ]
 0072D5D3    mov eax, dword ptr ds:[esi+0xA8]
 0072D5D9    lea edi, ds:[esi+0x20]
 0072D5DC    mov dword ptr ss:[ebp-0x04], edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6af4c0
+// 起始地址: 0x6af4c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AF4C0    push ebp
 006AF4C1    mov ebp, esp
 006AF4C3    mov eax, dword ptr ss:[ebp+0x08]
@@ -17,9 +23,9 @@
 006AF4ED    jz 0x006AF555
 006AF4EF    cmp dword ptr ds:[esi], 0x02
 006AF4F2    jz 0x006AF505
-006AF4F4    push 0x87BDC4
+006AF4F4    push 0x87BDC4                                   ; => [ String: Dx11GraphicsInterface::ReleaseTextureBuffer ]
 006AF4F9    push 0x335
-006AF4FE    mov ecx, 0x87BC18
+006AF4FE    mov ecx, 0x87BC18                               ; => [ String: bufferData->mBufferType == DX11BUFFER_TEXTURE ]
 006AF503    jmp 0x006AF56A
 006AF505    cmp dword ptr ds:[esi+0x08], 0x00
 006AF509    jnz 0x006AF55B
@@ -56,15 +62,15 @@
 006AF556    pop edi
 006AF557    pop ebp
 006AF558    ret 0x04
-006AF55B    push 0x87BDC4
+006AF55B    push 0x87BDC4                                   ; => [ String: Dx11GraphicsInterface::ReleaseTextureBuffer ]
 006AF560    push 0x336
-006AF565    mov ecx, 0x87BC74
+006AF565    mov ecx, 0x87BC74                               ; => [ String: bufferData->mBufferPtr == NULL ]
 006AF56A    push 0x87B990
 006AF56F    mov edx, 0x801800
-006AF574    call 0x0063B870
+006AF574    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::ReleaseTextureBuffer ]
 006AF579    add esp, 0x0C
 006AF57C    call 0x0063BC30
 006AF581    test al, al
-006AF583    jz 0x006AF586
+006AF583    jz 0x006AF586                                   ; => [ Call: sub_63bc30 ]
 006AF585    int3
-006AF586    call 0x0063BB00
+006AF586    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

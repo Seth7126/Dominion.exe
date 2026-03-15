@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_618560
+// 起始地址: 0x618560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00618560    push ebp
 00618561    mov ebp, esp
 00618563    mov ecx, edx
-00618565    call 0x005DE8B0
+00618565    call 0x005DE8B0                                 ; => [ Call: sub_5de8b0 ]
 0061856A    mov edx, eax
 0061856C    test edx, edx
 0061856E    jnz 0x00618584
-00618570    push 0x871958
+00618570    push 0x871958                                   ; => [ String: LookupCard ]
 00618575    push 0x3D96
-0061857A    mov ecx, 0x871964
+0061857A    mov ecx, 0x871964                               ; => [ Data: data_871964 ]
 0061857F    jmp 0x0061867C
 00618584    mov eax, dword ptr ss:[ebp+0x08]
 00618587    cmp eax, 0x07
@@ -26,9 +32,9 @@
 006185BA    jz 0x006185F6
 006185BC    movzx ecx, ax
 006185BF    cmp ecx, dword ptr ds:[0x00B809E4]
-006185C5    jnb 0x006185F6
+006185C5    jnb 0x006185F6                                  ; => [ Data: data_b809e4 ]
 006185C7    imul ecx, ecx, 0x1C30
-006185CD    add ecx, dword ptr ds:[0x00B809E0]
+006185CD    add ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 006185D3    cmp dword ptr ds:[ecx+0x1C28], eax
 006185D9    jnz 0x006185F6
 006185DB    test ecx, ecx
@@ -36,7 +42,7 @@
 006185DF    push dword ptr ss:[ebp+0x14]
 006185E2    mov edx, ecx
 006185E4    mov dword ptr ds:[ecx+0x84], 0x00
-006185EE    call 0x005CDEE0
+006185EE    call 0x005CDEE0                                 ; => [ Call: sub_5cdee0 ]
 006185F3    add esp, 0x04
 006185F6    pop ebp
 006185F7    ret
@@ -69,7 +75,7 @@
 00618649    ret
 0061864A    mov ecx, dword ptr ss:[ebp+0x10]
 0061864D    cmp ecx, 0x01
-00618650    jnz 0x0061865C
+00618650    jnz 0x0061865C                                  ; => [ Call: nullptr ]
 00618652    xor ecx, ecx
 00618654    mov dword ptr ds:[edx+0x100], ecx
 0061865A    pop ebp
@@ -79,15 +85,15 @@
 00618665    mov dword ptr ds:[edx+0x100], ecx
 0061866B    pop ebp
 0061866C    ret
-0061866D    push 0x868B74
+0061866D    push 0x868B74                                   ; => [ String: DomSetCardParam ]
 00618672    push 0xCD8A
-00618677    mov ecx, 0x801AA4
+00618677    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0061867C    push 0x86F1E8
 00618681    mov edx, 0x801800
-00618686    call 0x0063B870
+00618686    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 ]
 0061868B    add esp, 0x0C
 0061868E    call 0x0063BC30
 00618693    test al, al
-00618695    jz 0x00618698
+00618695    jz 0x00618698                                   ; => [ Call: sub_63bc30 ]
 00618697    int3
-00618698    jmp 0x0063BB00
+00618698    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

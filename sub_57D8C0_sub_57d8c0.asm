@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57d8c0
+// 起始地址: 0x57d8c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057D8C0    push ebp
 0057D8C1    mov ebp, esp
 0057D8C3    sub esp, 0x824
@@ -12,13 +18,13 @@
 0057D8DC    mov ecx, esi
 0057D8DE    call 0x005722C0
 0057D8E3    add esp, 0x04
-0057D8E6    mov edi, dword ptr ds:[eax]
+0057D8E6    mov edi, dword ptr ds:[eax]                     ; => [ Call: sub_5722c0 ]
 0057D8E8    test edi, edi
 0057D8EA    jz 0x0057D90B
 0057D8EC    movzx esi, di
 0057D8EF    cmp esi, 0x320
 0057D8F5    jb 0x0057D8FC
-0057D8F7    call 0x00591930
+0057D8F7    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057D8FC    imul eax, esi, 0x64
 0057D8FF    mov esi, dword ptr ss:[ebp-0x08]
 0057D902    mov eax, dword ptr ds:[eax+esi*1+0x1AA4]
@@ -48,7 +54,7 @@
 0057D959    push edx
 0057D95A    mov edx, esi
 0057D95C    mov ecx, edi
-0057D95E    call 0x00575DE0
+0057D95E    call 0x00575DE0                                 ; => [ Call: sub_575de0 ]
 0057D963    mov edx, dword ptr ss:[ebp+0x10]
 0057D966    add esp, 0x04
 0057D969    mov dword ptr ss:[ebp+ebx*4-0x418], eax
@@ -64,7 +70,7 @@
 0057D98B    mov ecx, 0x101
 0057D990    lea esi, ss:[ebp-0x418]
 0057D996    lea edi, ss:[ebp-0x820]
-0057D99C    rep movsd
+0057D99C    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0057D99E    xor edi, edi
 0057D9A0    test ebx, ebx
 0057D9A2    jle 0x0057D9EC
@@ -81,7 +87,7 @@
 0057D9C6    call 0x0057C810
 0057D9CB    add esp, 0x14
 0057D9CE    test al, al
-0057D9D0    jz 0x0057D9E4
+0057D9D0    jz 0x0057D9E4                                   ; => [ Call: sub_57c810 ]
 0057D9D2    mov ecx, dword ptr ss:[ebp-0x10]
 0057D9D5    mov eax, dword ptr ds:[ecx+0x400]
 0057D9DB    mov dword ptr ds:[ecx+eax*4], esi
@@ -97,7 +103,7 @@
 0057D9F5    movzx esi, ax
 0057D9F8    cmp esi, 0x320
 0057D9FE    jb 0x0057D8FC
-0057DA04    call 0x00591930
+0057DA04    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057DA09    imul eax, esi, 0x64
 0057DA0C    mov esi, dword ptr ss:[ebp-0x08]
 0057DA0F    mov eax, dword ptr ds:[eax+esi*1+0x1AA4]

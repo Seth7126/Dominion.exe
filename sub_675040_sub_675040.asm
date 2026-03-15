@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_675040
+// 起始地址: 0x675040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00675040    imul edx, dword ptr ds:[0x00C23BAC], 0x18D0
-0067504A    xor eax, eax
+0067504A    xor eax, eax                                    ; => [ Call: nullptr ]
 0067504C    push ebx
-0067504D    mov ebx, dword ptr ds:[0x00C23BA8]
+0067504D    mov ebx, dword ptr ds:[0x00C23BA8]              ; => [ Data: data_c23ba8 ]
 00675053    push esi
 00675054    push edi
 00675055    mov edi, dword ptr ds:[ecx+0x18C8]
-0067505B    add edx, ebx
+0067505B    add edx, ebx                                    ; => [ Data: data_c23bac ]
 0067505D    nop dword ptr ds:[eax], eax
 00675060    test eax, eax
 00675062    jnz 0x00675068
@@ -37,7 +43,7 @@
 006750AE    jmp 0x00675060
 006750B0    cmp dword ptr ds:[eax+0x1600], 0x00
 006750B7    jnz 0x006750BB
-006750B9    xor eax, eax
+006750B9    xor eax, eax                                    ; => [ Call: nullptr ]
 006750BB    pop edi
 006750BC    pop esi
 006750BD    pop ebx

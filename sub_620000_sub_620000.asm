@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_620000
+// 起始地址: 0x620000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00620000    push ebp
 00620001    mov ebp, esp
 00620003    and esp, 0xFFFFFFF8
 00620006    sub esp, 0x164
-0062000C    mov eax, dword ptr ds:[0x008C4040]
+0062000C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00620011    xor eax, esp
 00620013    mov dword ptr ss:[esp+0x160], eax
-0062001A    mov eax, dword ptr ds:[0x0171ECD4]
+0062001A    mov eax, dword ptr ds:[0x0171ECD4]              ; => [ Data: data_171ecd4 ]
 0062001F    push ebx
 00620020    mov ebx, edx
 00620022    mov dword ptr ss:[esp+0x48], eax
@@ -93,7 +99,7 @@
 00620182    mulss xmm0, xmm0
 00620186    addss xmm0, xmm1
 0062018A    call 0x004AC580
-0062018F    divss xmm0, dword ptr ss:[esp+0x34]
+0062018F    divss xmm0, dword ptr ss:[esp+0x34]             ; => [ Call: sub_4ac580 ]
 00620195    xorps xmm1, xmm1
 00620198    comiss xmm1, xmm0
 0062019B    jbe 0x006201A7
@@ -154,7 +160,7 @@
 006202A7    movss dword ptr ss:[esp+0x40], xmm0
 006202AD    mulss xmm0, dword ptr ss:[ebp+0x18]
 006202B2    movss dword ptr ss:[esp+0x44], xmm4
-006202B8    call 0x004D5CB0
+006202B8    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 006202BD    movaps xmm1, xmm0
 006202C0    xorps xmm0, xmm0
 006202C3    comiss xmm0, xmm1
@@ -239,7 +245,7 @@
 00620405    mov dword ptr ss:[esp+0x6C], eax
 00620409    movss dword ptr ss:[esp+0x04], xmm0
 0062040F    movss dword ptr ss:[esp], xmm0
-00620414    call 0x00682DF0
+00620414    call 0x00682DF0                                 ; => [ Call: sub_682df0 ]
 00620419    movss xmm7, dword ptr ss:[esp+0x5C]
 0062041F    add esp, 0x08
 00620422    mov eax, dword ptr ss:[esp+0x10]
@@ -259,7 +265,7 @@
 0062045A    pop esi
 0062045B    pop ebx
 0062045C    xor ecx, esp
-0062045E    call 0x0075927A
+0062045E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00620463    mov esp, ebp
 00620465    pop ebp
 00620466    ret
@@ -268,10 +274,10 @@
 00620471    push 0x86F1E8
 00620476    mov edx, 0x801800
 0062047B    mov ecx, 0x86AE14
-00620480    call 0x0063B870
+00620480    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DrawPath | String: nDraw <= nTotal | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 ]
 00620485    add esp, 0x0C
 00620488    call 0x0063BC30
 0062048D    test al, al
-0062048F    jz 0x00620492
+0062048F    jz 0x00620492                                   ; => [ Call: sub_63bc30 ]
 00620491    int3
-00620492    call 0x0063BB00
+00620492    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

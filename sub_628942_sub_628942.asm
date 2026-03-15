@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_628942
+// 起始地址: 0x628942
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006288F5    mov eax, 0x02
 006288FA    ret
 0062892C    jmp far 0x6288:0x2A006287
@@ -45,8 +51,8 @@
 006289B6    mov ecx, dword ptr ss:[ebp+0x08]
 006289B9    call 0x0064E7A0
 006289BE    lea ecx, ss:[ebp-0x04]
-006289C1    mov dword ptr ds:[eax+0x18BC], 0x628170
-006289CB    call 0x00628630
+006289C1    mov dword ptr ds:[eax+0x18BC], 0x628170         ; => [ Call: sub_628170 | Call: sub_64e7a0 ]
+006289CB    call 0x00628630                                 ; => [ Call: sub_628630 ]
 006289D0    mov ecx, eax
 006289D2    xor eax, eax
 006289D4    mov dword ptr ss:[ebp-0x10], ecx
@@ -56,7 +62,7 @@
 006289E2    push ebx
 006289E3    push esi
 006289E4    push edi
-006289E5    mov esi, 0x1A96DFC
+006289E5    mov esi, 0x1A96DFC                              ; => [ Data: data_1a96dfc ]
 006289EA    nop word ptr ds:[eax+eax*1], ax
 006289F0    mov ecx, dword ptr ss:[ebp-0x04]
 006289F3    shl eax, 0x03
@@ -78,10 +84,10 @@
 00628A20    imul eax, eax, 0x18D0
 00628A26    add eax, dword ptr ds:[0x00C23BA8]
 00628A2C    cmp dword ptr ds:[eax+0x18C8], ebx
-00628A32    jz 0x00628A53
+00628A32    jz 0x00628A53                                   ; => [ Data: data_c23ba8 | Data: data_c23bac ]
 00628A34    mov edx, edi
 00628A36    call 0x0067BD70
-00628A3B    mov ebx, eax
+00628A3B    mov ebx, eax                                    ; => [ Call: sub_67bd70 ]
 00628A3D    mov dword ptr ds:[esi+0x1C], ebx
 00628A40    test ebx, ebx
 00628A42    jz 0x00628A8F
@@ -93,22 +99,22 @@
 00628A56    mov edx, 0x18
 00628A5B    mov ecx, dword ptr ss:[ebp-0x0C]
 00628A5E    mov ecx, dword ptr ds:[ecx+eax*1+0x04]
-00628A62    call 0x00571B30
+00628A62    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00628A67    push 0x00
 00628A69    mov edi, eax
 00628A6B    mov ecx, ebx
 00628A6D    push 0x00
 00628A6F    push 0x00
 00628A71    mov edx, edi
-00628A73    call 0x005E01B0
+00628A73    call 0x005E01B0                                 ; => [ Call: sub_5e01b0 ]
 00628A78    push 0x00
 00628A7A    mov edx, edi
 00628A7C    mov ecx, ebx
-00628A7E    call 0x005E0DF0
+00628A7E    call 0x005E0DF0                                 ; => [ Call: sub_5e0df0 ]
 00628A83    add esp, 0x10
 00628A86    mov edx, edi
 00628A88    mov ecx, ebx
-00628A8A    call 0x005DEFB0
+00628A8A    call 0x005DEFB0                                 ; => [ Call: sub_5defb0 ]
 00628A8F    mov eax, dword ptr ss:[ebp-0x08]
 00628A92    add esi, 0x24
 00628A95    inc eax

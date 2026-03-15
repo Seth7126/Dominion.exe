@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dd740
+// 起始地址: 0x6dd740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DD740    push ebp
 006DD741    mov ebp, esp
 006DD743    sub esp, 0x0C
@@ -22,7 +28,7 @@
 006DD76E    cmp byte ptr ss:[ebp-0x01], 0x00
 006DD772    jz 0x006DD7B0
 006DD774    mov ecx, esi
-006DD776    call 0x006DD660
+006DD776    call 0x006DD660                                 ; => [ Call: sub_6dd660 ]
 006DD77B    mov eax, dword ptr ss:[ebp-0x08]
 006DD77E    mov ecx, dword ptr ds:[ebx+0x08]
 006DD781    mov eax, dword ptr ds:[eax]
@@ -41,7 +47,7 @@
 006DD7A1    dec dword ptr ds:[esi+0x0C]
 006DD7A4    mov edx, 0x0C
 006DD7A9    mov ecx, ebx
-006DD7AB    call 0x0064C080
+006DD7AB    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006DD7B0    test edi, edi
 006DD7B2    jnz 0x006DD755
 006DD7B4    pop edi

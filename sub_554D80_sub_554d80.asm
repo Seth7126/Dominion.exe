@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_554d80
+// 起始地址: 0x554d80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00554D80    dword 83EC8B55
 00554D84    in al, 0xF8
 00554D86    push ecx
@@ -5,17 +11,17 @@
 00554D88    push esi
 00554D89    push edi
 00554D8A    xor esi, esi
-00554D8C    call 0x00573400
+00554D8C    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00554D91    mov edi, eax
 00554D93    cmp dword ptr ds:[edi], 0x02
 00554D96    jnz 0x00554DBD
 00554D98    mov esi, dword ptr ds:[edi+0x10]
 00554D9B    call 0x00573400
 00554DA0    movzx esi, si
-00554DA3    mov ebx, dword ptr ds:[eax+0x04]
+00554DA3    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00554DA6    cmp esi, 0x320
 00554DAC    jb 0x00554DB3
-00554DAE    call 0x00591930
+00554DAE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00554DB3    imul eax, esi, 0x64
 00554DB6    mov esi, dword ptr ds:[eax+ebx*1+0x1A4C]
 00554DBD    mov edx, dword ptr ds:[edi+0x0C]
@@ -36,4 +42,4 @@
 00554DE0    pop ebx
 00554DE1    mov esp, ebp
 00554DE3    pop ebp
-00554DE4    ret
+00554DE4    ret                                             ; => [ Call: sub_5911e0 ]

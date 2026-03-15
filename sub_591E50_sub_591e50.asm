@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_591e50
+// 起始地址: 0x591e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00591E50    push ebp
 00591E51    mov ebp, esp
 00591E53    and esp, 0xFFFFFFF8
 00591E56    mov eax, 0x191C
-00591E5B    call 0x00761E50
-00591E60    mov eax, dword ptr ds:[0x008C4040]
+00591E5B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00591E60    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00591E65    xor eax, esp
 00591E67    mov dword ptr ss:[esp+0x1918], eax
 00591E6E    push ebx
@@ -11,9 +17,9 @@
 00591E70    mov esi, ecx
 00591E72    xor eax, eax
 00591E74    mov ecx, dword ptr ss:[ebp+0x08]
-00591E77    xor ebx, ebx
-00591E79    mov dword ptr ss:[esp+0x10], eax
-00591E7D    mov dword ptr ss:[esp+0x14], eax
+00591E77    xor ebx, ebx                                    ; => [ Call: nullptr ]
+00591E79    mov dword ptr ss:[esp+0x10], eax                ; => [ Call: nullptr ]
+00591E7D    mov dword ptr ss:[esp+0x14], eax                ; => [ Call: nullptr ]
 00591E81    push edi
 00591E82    mov dword ptr ds:[ecx], eax
 00591E84    lea eax, ss:[esp+0xCA0]
@@ -23,7 +29,7 @@
 00591E94    push eax
 00591E95    mov ecx, esi
 00591E97    mov dword ptr ss:[esp+0x24], esi
-00591E9B    call 0x00591B80
+00591E9B    call 0x00591B80                                 ; => [ Call: sub_591b80 ]
 00591EA0    add esp, 0x08
 00591EA3    mov dword ptr ss:[esp+0x10], eax
 00591EA7    xor edi, edi
@@ -43,7 +49,7 @@
 00591ECA    call 0x005754F0
 00591ECF    add esp, 0x08
 00591ED2    test al, al
-00591ED4    jz 0x00591F13
+00591ED4    jz 0x00591F13                                   ; => [ Call: sub_5754f0 ]
 00591ED6    mov eax, dword ptr ss:[esp+edi*4+0xCA0]
 00591EDD    mov ecx, dword ptr ss:[esp+0x14]
 00591EE1    cmp eax, ecx
@@ -79,7 +85,7 @@
 00591F33    pop esi
 00591F34    pop ebx
 00591F35    xor ecx, esp
-00591F37    call 0x0075927A
+00591F37    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00591F3C    mov esp, ebp
 00591F3E    pop ebp
 00591F3F    ret
@@ -88,10 +94,10 @@
 00591F4A    push 0x81F4B8
 00591F4F    mov edx, 0x801800
 00591F54    mov ecx, 0x820994
-00591F59    call 0x0063B870
+00591F59    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: secondPile != CARD_NONE | String: CalcTriumphalArchPile | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00591F5E    add esp, 0x0C
 00591F61    call 0x0063BC30
 00591F66    test al, al
-00591F68    jz 0x00591F6B
+00591F68    jz 0x00591F6B                                   ; => [ Call: sub_63bc30 ]
 00591F6A    int3
-00591F6B    call 0x0063BB00
+00591F6B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

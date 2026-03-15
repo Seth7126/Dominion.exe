@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57dc30
+// 起始地址: 0x57dc30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057DC30    push ebx
 0057DC31    push esi
 0057DC32    movzx esi, dx
@@ -5,12 +11,12 @@
 0057DC37    push edi
 0057DC38    cmp esi, 0x320
 0057DC3E    jb 0x0057DC45
-0057DC40    call 0x00591930
+0057DC40    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057DC45    imul eax, esi, 0x64
 0057DC48    mov ecx, ebx
 0057DC4A    mov esi, dword ptr ds:[eax+ebx*1+0x1A4C]
 0057DC51    mov edx, esi
-0057DC53    call 0x0057DA30
+0057DC53    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0057DC58    mov edi, eax
 0057DC5A    lea ecx, ds:[ebx+0x1594]
 0057DC60    mov edx, 0x07

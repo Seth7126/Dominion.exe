@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a3c70
+// 起始地址: 0x6a3c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A3C70    push ebp
 006A3C71    mov ebp, esp
 006A3C73    sub esp, 0x10
@@ -19,15 +25,15 @@
 006A3C9E    mov esi, dword ptr ds:[eax+0x0C]
 006A3CA1    test esi, esi
 006A3CA3    jnz 0x006A3CBB
-006A3CA5    push 0x87943C
+006A3CA5    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 006A3CAA    push 0x6D
-006A3CAC    push 0x879400
-006A3CB1    mov ecx, 0x87948C
+006A3CAC    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+006A3CB1    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 006A3CB6    jmp 0x006A3DA3
 006A3CBB    mov ecx, esi
 006A3CBD    imul ecx, edx
 006A3CC0    call 0x00687730
-006A3CC5    mov edx, eax
+006A3CC5    mov edx, eax                                    ; => [ Call: sub_687730 ]
 006A3CC7    mov eax, dword ptr ss:[ebp-0x04]
 006A3CCA    mov dword ptr ss:[ebp-0x08], edx
 006A3CCD    mov ecx, dword ptr ds:[eax]
@@ -35,16 +41,16 @@
 006A3CD1    jle 0x006A3D47
 006A3CD3    test ecx, ecx
 006A3CD5    jnz 0x006A3CEB
-006A3CD7    push 0x87A854
+006A3CD7    push 0x87A854                                   ; => [ String: DefParseReadVariableArray ]
 006A3CDC    push 0x267
-006A3CE1    mov ecx, 0x87A88C
+006A3CE1    mov ecx, 0x87A88C                               ; => [ String: *ppSubDefinition ]
 006A3CE6    jmp 0x006A3D9E
 006A3CEB    mov eax, esi
 006A3CED    imul eax, ebx
 006A3CF0    push eax
 006A3CF1    push ecx
 006A3CF2    push edx
-006A3CF3    call 0x00761FBE
+006A3CF3    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006A3CF8    mov eax, dword ptr ss:[ebp-0x04]
 006A3CFB    add esp, 0x0C
 006A3CFE    mov ecx, dword ptr ds:[eax]
@@ -62,7 +68,7 @@
 006A3D1F    mov dword ptr ds:[eax], ecx
 006A3D21    mov ecx, dword ptr ds:[edi+0x18]
 006A3D24    add esi, edx
-006A3D26    call 0x0069C590
+006A3D26    call 0x0069C590                                 ; => [ Call: sub_69c590 ]
 006A3D2B    mov edx, dword ptr ds:[edi+0x18]
 006A3D2E    test al, al
 006A3D30    jz 0x006A3D5C
@@ -76,20 +82,20 @@
 006A3D42    pop ebx
 006A3D43    mov esp, ebp
 006A3D45    pop ebp
-006A3D46    ret
+006A3D46    ret                                             ; => [ Call: sub_6a34e0 ]
 006A3D47    test ecx, ecx
 006A3D49    jz 0x006A3D14
-006A3D4B    push 0x87A854
+006A3D4B    push 0x87A854                                   ; => [ String: DefParseReadVariableArray ]
 006A3D50    push 0x26D
-006A3D55    mov ecx, 0x87A8DC
+006A3D55    mov ecx, 0x87A8DC                               ; => [ String: *ppSubDefinition == NULL ]
 006A3D5A    jmp 0x006A3D9E
 006A3D5C    mov eax, dword ptr ds:[edx+0x10]
 006A3D5F    dec eax
 006A3D60    cmp eax, 0x10
 006A3D63    jnbe 0x006A3D76
-006A3D65    push 0x87A854
+006A3D65    push 0x87A854                                   ; => [ String: DefParseReadVariableArray ]
 006A3D6A    push 0x27B
-006A3D6F    mov ecx, 0x878958
+006A3D6F    mov ecx, 0x878958                               ; => [ String: !DefTypeIsBuiltIn(pField->pSubDefMap) ]
 006A3D74    jmp 0x006A3D9E
 006A3D76    mov eax, dword ptr ss:[ebp+0x08]
 006A3D79    mov ecx, esi
@@ -102,16 +108,16 @@
 006A3D8A    pop ebx
 006A3D8B    mov esp, ebp
 006A3D8D    pop ebp
-006A3D8E    ret
-006A3D8F    push 0x87A854
+006A3D8E    ret                                             ; => [ Call: sub_6a4770 ]
+006A3D8F    push 0x87A854                                   ; => [ String: DefParseReadVariableArray ]
 006A3D94    push 0x25E
-006A3D99    mov ecx, 0x87A8A0
-006A3D9E    push 0x87A6C8
+006A3D99    mov ecx, 0x87A8A0                               ; => [ String: oldCount >= 0 && oldCount <=1000000 ]
+006A3D9E    push 0x87A6C8                                   ; => [ String: C:\x\ax2017\Engine\DefParseTree.cpp | String: C:\x\ax2017\Engine\DefParseTree.cpp ]
 006A3DA3    mov edx, 0x801800
-006A3DA8    call 0x0063B870
+006A3DA8    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006A3DAD    add esp, 0x0C
 006A3DB0    call 0x0063BC30
 006A3DB5    test al, al
-006A3DB7    jz 0x006A3DBA
+006A3DB7    jz 0x006A3DBA                                   ; => [ Call: sub_63bc30 ]
 006A3DB9    int3
-006A3DBA    call 0x0063BB00
+006A3DBA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

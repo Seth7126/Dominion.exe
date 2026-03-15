@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_70bd10
+// 起始地址: 0x70bd10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0070BD10    push ebp
 0070BD11    mov ebp, esp
 0070BD13    sub esp, 0x14
@@ -9,24 +15,24 @@
 0070BD20    push edi
 0070BD21    mov dword ptr ss:[ebp-0x0C], eax
 0070BD24    mov edi, edx
-0070BD26    mov eax, dword ptr ds:[0x0147DED8]
+0070BD26    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070BD2B    mov dword ptr ss:[ebp-0x14], edi
 0070BD2E    test eax, eax
 0070BD30    jz 0x0070BD42
 0070BD32    push 0x21
 0070BD34    push 0x890348
 0070BD39    push 0x0C
-0070BD3B    call eax
+0070BD3B    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Array.c ]
 0070BD3D    add esp, 0x0C
 0070BD40    jmp 0x0070BD4D
 0070BD42    push 0x0C
-0070BD44    call dword ptr ds:[0x00800B4C]
+0070BD44    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070BD4A    add esp, 0x04
 0070BD4D    mov esi, eax
 0070BD4F    test esi, esi
 0070BD51    jz 0x0070BD5A
 0070BD53    mov dword ptr ds:[esi+0x08], 0x00
-0070BD5A    mov eax, dword ptr ds:[0x0147DED8]
+0070BD5A    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070BD5F    mov dword ptr ds:[esi], 0x00
 0070BD65    mov dword ptr ds:[esi+0x04], 0x08
 0070BD6C    test eax, eax
@@ -34,20 +40,20 @@
 0070BD70    push 0x21
 0070BD72    push 0x890348
 0070BD77    push 0x20
-0070BD79    call eax
+0070BD79    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Array.c ]
 0070BD7B    add esp, 0x0C
 0070BD7E    jmp 0x0070BD8B
 0070BD80    push 0x20
-0070BD82    call dword ptr ds:[0x00800B4C]
+0070BD82    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070BD88    add esp, 0x04
 0070BD8B    test eax, eax
 0070BD8D    jz 0x0070BD99
 0070BD8F    xorps xmm0, xmm0
-0070BD92    movups xmmword ptr ds:[eax], xmm0
+0070BD92    movups xmmword ptr ds:[eax], xmm0               ; => [ Call: __builtin_memset ]
 0070BD95    movups xmmword ptr ds:[eax+0x10], xmm0
 0070BD99    mov ecx, 0x08
 0070BD9E    mov dword ptr ds:[esi+0x08], eax
-0070BDA1    call 0x007523C0
+0070BDA1    call 0x007523C0                                 ; => [ Call: sub_7523c0 ]
 0070BDA6    mov ecx, dword ptr ss:[ebp+0x08]
 0070BDA9    mov dword ptr ss:[ebp-0x08], eax
 0070BDAC    mov eax, dword ptr ss:[ebp-0x0C]
@@ -65,16 +71,16 @@
 0070BDC8    movss xmm2, dword ptr ds:[ecx]
 0070BDCC    mov ecx, edi
 0070BDCE    call 0x0070BB10
-0070BDD3    mov dword ptr ds:[ebx+0x20], eax
+0070BDD3    mov dword ptr ds:[ebx+0x20], eax                ; => [ Call: sub_70bb10 ]
 0070BDD6    mov dword ptr ds:[ebx+0x14], 0x00
 0070BDDD    mov dword ptr ds:[ebx+0x18], 0x00
 0070BDE4    push dword ptr ds:[esi+0x08]
-0070BDE7    call dword ptr ds:[0x00800B48]
+0070BDE7    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070BDED    push esi
-0070BDEE    call dword ptr ds:[0x00800B48]
+0070BDEE    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070BDF4    mov esi, dword ptr ss:[ebp-0x08]
 0070BDF7    push dword ptr ds:[esi+0x08]
-0070BDFA    call dword ptr ds:[0x00800B48]
+0070BDFA    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070BE00    push esi
 0070BE01    call dword ptr ds:[0x00800B48]
 0070BE07    add esp, 0x10
@@ -83,7 +89,7 @@
 0070BE0C    pop ebx
 0070BE0D    mov esp, ebp
 0070BE0F    pop ebp
-0070BE10    ret
+0070BE10    ret                                             ; => [ Call: free ]
 0070BE11    lea ecx, ds:[eax+eax*8]
 0070BE14    cmp dword ptr ds:[esi+0x04], ecx
 0070BE17    jnl 0x0070BE36
@@ -91,7 +97,7 @@
 0070BE20    mov dword ptr ds:[esi+0x04], ecx
 0070BE23    push eax
 0070BE24    push dword ptr ds:[esi+0x08]
-0070BE27    call dword ptr ds:[0x00800B50]
+0070BE27    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070BE2D    mov dword ptr ds:[esi+0x08], eax
 0070BE30    add esp, 0x08
 0070BE33    mov eax, dword ptr ss:[ebp-0x0C]
@@ -103,7 +109,7 @@
 0070BE44    shl eax, 0x02
 0070BE47    push eax
 0070BE48    push dword ptr ds:[ebx+0x08]
-0070BE4B    call dword ptr ds:[0x00800B50]
+0070BE4B    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070BE51    add esp, 0x08
 0070BE54    mov dword ptr ds:[ebx+0x08], eax
 0070BE57    cmp dword ptr ss:[ebp+0x0C], 0x00
@@ -178,7 +184,7 @@
 0070BF1F    movss xmm1, dword ptr ds:[0x00890E78]
 0070BF27    add esp, 0x08
 0070BF2A    mov edx, dword ptr ss:[ebp-0x04]
-0070BF2D    mov dword ptr ds:[ebx+0x08], eax
+0070BF2D    mov dword ptr ds:[ebx+0x08], eax                ; => [ Call: realloc ]
 0070BF30    mov ecx, dword ptr ds:[ebx]
 0070BF32    mov eax, dword ptr ds:[ebx+0x08]
 0070BF35    mov dword ptr ds:[eax+ecx*4], edx
@@ -245,7 +251,7 @@
 0070BFD8    shl eax, 0x02
 0070BFDB    push eax
 0070BFDC    push dword ptr ds:[ebx+0x08]
-0070BFDF    call dword ptr ds:[0x00800B50]
+0070BFDF    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070BFE5    add esp, 0x08
 0070BFE8    mov dword ptr ds:[ebx+0x08], eax
 0070BFEB    mov ecx, dword ptr ds:[ebx]
@@ -295,7 +301,7 @@
 0070C065    shl eax, 0x02
 0070C068    push eax
 0070C069    push dword ptr ds:[esi+0x08]
-0070C06C    call dword ptr ds:[0x00800B50]
+0070C06C    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070C072    movss xmm0, dword ptr ss:[ebp-0x0C]
 0070C077    add esp, 0x08
 0070C07A    mov dword ptr ds:[esi+0x08], eax
@@ -345,7 +351,7 @@
 0070C0F6    shl eax, 0x02
 0070C0F9    push eax
 0070C0FA    push dword ptr ds:[esi+0x08]
-0070C0FD    call dword ptr ds:[0x00800B50]
+0070C0FD    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070C103    movss xmm0, dword ptr ss:[ebp-0x0C]
 0070C108    add esp, 0x08
 0070C10B    mov dword ptr ds:[esi+0x08], eax
@@ -391,7 +397,7 @@
 0070C176    shl eax, 0x02
 0070C179    push eax
 0070C17A    push dword ptr ds:[esi+0x08]
-0070C17D    call dword ptr ds:[0x00800B50]
+0070C17D    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070C183    add esp, 0x08
 0070C186    mov dword ptr ds:[esi+0x08], eax
 0070C189    mov ecx, dword ptr ds:[esi]
@@ -412,7 +418,7 @@
 0070C1C7    mov dword ptr ds:[edi+0x1C], eax
 0070C1CA    mov eax, dword ptr ds:[esi+0x08]
 0070C1CD    mov dword ptr ds:[edi+0x20], eax
-0070C1D0    call dword ptr ds:[0x00800B48]
+0070C1D0    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070C1D6    mov eax, dword ptr ds:[ebx]
 0070C1D8    mov dword ptr ds:[edi+0x14], eax
 0070C1DB    mov eax, dword ptr ds:[ebx+0x08]
@@ -425,4 +431,4 @@
 0070C1ED    pop ebx
 0070C1EE    mov esp, ebp
 0070C1F0    pop ebp
-0070C1F1    ret
+0070C1F1    ret                                             ; => [ Call: free ]

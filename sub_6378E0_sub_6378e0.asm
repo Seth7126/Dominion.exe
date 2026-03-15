@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6378e0
+// 起始地址: 0x6378e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006378E0    push ebp
 006378E1    mov ebp, esp
 006378E3    push ecx
@@ -15,10 +21,10 @@
 00637900    mov edi, esi
 00637902    mov esi, dword ptr ds:[esi+0x14]
 00637905    lea ecx, ds:[edi+0x04]
-00637908    call 0x005DFDB0
+00637908    call 0x005DFDB0                                 ; => [ Call: sub_5dfdb0 ]
 0063790D    mov edx, 0x18
 00637912    mov ecx, edi
-00637914    call 0x0064C080
+00637914    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00637919    test esi, esi
 0063791B    jnz 0x00637900
 0063791D    mov ecx, dword ptr ss:[ebp-0x04]

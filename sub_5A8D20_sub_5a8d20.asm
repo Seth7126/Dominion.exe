@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a8d20
+// 起始地址: 0x5a8d20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A8D20    push ebx
 005A8D21    mov ebx, esp
 005A8D23    sub esp, 0x08
@@ -8,14 +14,14 @@
 005A8D30    mov dword ptr ss:[esp+0x04], ebp
 005A8D34    mov ebp, esp
 005A8D36    sub esp, 0x90
-005A8D3C    mov eax, dword ptr ds:[0x008C4040]
+005A8D3C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A8D41    xor eax, ebp
 005A8D43    mov dword ptr ss:[ebp-0x04], eax
-005A8D46    movss xmm2, dword ptr ds:[0x00B4A5AC]
-005A8D4E    movss xmm3, dword ptr ds:[0x00B4A5B0]
+005A8D46    movss xmm2, dword ptr ds:[0x00B4A5AC]           ; => [ Data: data_b4a5ac ]
+005A8D4E    movss xmm3, dword ptr ds:[0x00B4A5B0]           ; => [ Data: data_b4a5b0 ]
 005A8D56    movss xmm1, dword ptr ds:[ecx]
 005A8D5A    movss xmm0, dword ptr ds:[ecx+0x04]
-005A8D5F    mov eax, dword ptr ds:[0x0147B06C]
+005A8D5F    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 005A8D64    movss xmm5, dword ptr ds:[ecx+0x10]
 005A8D69    movss xmm4, dword ptr ds:[ecx+0x14]
 005A8D6E    mulss xmm1, xmm2
@@ -97,10 +103,10 @@
 005A8EFC    mulss xmm0, dword ptr ds:[ecx+0x0C]
 005A8F01    lea edx, ss:[ebp-0x24]
 005A8F04    push ecx
-005A8F05    push dword ptr ds:[0x0171D8D8]
+005A8F05    push dword ptr ds:[0x0171D8D8]                  ; => [ Data: data_171d8d8 ]
 005A8F0B    addss xmm1, dword ptr ss:[ebp-0x80]
 005A8F10    push dword ptr ds:[ebx+0x08]
-005A8F13    push dword ptr ds:[0x0171D8C0]
+005A8F13    push dword ptr ds:[0x0171D8C0]                  ; => [ Data: data_171d8c0 ]
 005A8F19    addss xmm1, xmm3
 005A8F1D    movss dword ptr ss:[ebp-0x44], xmm1
 005A8F22    movaps xmm1, xmm6
@@ -154,11 +160,11 @@
 005A9007    push 0x00
 005A9009    push 0xBF23AC
 005A900E    movq qword ptr ss:[ebp-0x8C], xmm0
-005A9016    call 0x00646580
+005A9016    call 0x00646580                                 ; => [ Call: sub_646580 | Data: data_bf23ac ]
 005A901B    mov ecx, dword ptr ss:[ebp-0x04]
 005A901E    add esp, 0x20
 005A9021    xor ecx, ebp
-005A9023    call 0x0075927A
+005A9023    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A9028    mov esp, ebp
 005A902A    pop ebp
 005A902B    mov esp, ebx

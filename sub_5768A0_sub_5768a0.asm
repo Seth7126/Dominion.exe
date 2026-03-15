@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5768a0
+// 起始地址: 0x5768a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005768A0    push esi
 005768A1    push edi
 005768A2    mov edi, ecx
@@ -12,7 +18,7 @@
 005768C8    add esi, 0x3B568
 005768CE    add esi, edi
 005768D0    push esi
-005768D1    call 0x00761FC4
+005768D1    call 0x00761FC4                                 ; => [ Call: memset ]
 005768D6    mov edx, dword ptr ds:[edi+0x19BC]
 005768DC    add esp, 0x0C
 005768DF    mov eax, esi
@@ -31,10 +37,10 @@
 0057690C    push 0x81F4B8
 00576911    mov edx, 0x801800
 00576916    mov ecx, 0x81FBF0
-0057691B    call 0x0063B870
+0057691B    call 0x0063B870                                 ; => [ String: AbilityAllocRegistered | Call: sub_63b870 | String: g.numScheduledAbilities < MAX_ABILITIES | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00576920    add esp, 0x0C
 00576923    call 0x0063BC30
 00576928    test al, al
-0057692A    jz 0x0057692D
+0057692A    jz 0x0057692D                                   ; => [ Call: sub_63bc30 ]
 0057692C    int3
-0057692D    call 0x0063BB00
+0057692D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

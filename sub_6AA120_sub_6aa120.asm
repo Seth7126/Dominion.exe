@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6aa120
+// 起始地址: 0x6aa120
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AA120    push ebp
 006AA121    mov ebp, esp
 006AA123    and esp, 0xFFFFFFF0
 006AA126    sub esp, 0x48
-006AA129    mov eax, dword ptr ds:[0x008C4040]
+006AA129    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006AA12E    xor eax, esp
 006AA130    mov dword ptr ss:[esp+0x44], eax
 006AA134    push esi
@@ -14,19 +20,19 @@
 006AA140    cmp edx, 0x04
 006AA143    jz 0x006AA166
 006AA145    push dword ptr ss:[ebp+0x08]
-006AA148    push 0x87B378
-006AA14D    call 0x0063B5F0
+006AA148    push 0x87B378                                   ; => [ String: unsupported format for sanding %s ]
+006AA14D    call 0x0063B5F0                                 ; => [ String: unsupported format for sanding %s | Call: sub_63b5f0 ]
 006AA152    add esp, 0x08
 006AA155    pop edi
 006AA156    pop esi
 006AA157    mov ecx, dword ptr ss:[esp+0x44]
 006AA15B    xor ecx, esp
-006AA15D    call 0x0075927A
+006AA15D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006AA162    mov esp, ebp
 006AA164    pop ebp
 006AA165    ret
 006AA166    mov ecx, dword ptr ds:[edi+0x04]
-006AA169    call 0x006A9570
+006AA169    call 0x006A9570                                 ; => [ Call: sub_6a9570 ]
 006AA16E    cmp dword ptr ds:[edi+0x0C], eax
 006AA171    jnz 0x006AA7A4
 006AA177    mov ecx, dword ptr ds:[edi+0x08]
@@ -39,7 +45,7 @@
 006AA18D    mov dword ptr ss:[esp+0x1C], edx
 006AA191    test ecx, ecx
 006AA193    jle 0x006AA793
-006AA199    movups xmm1, xmmword ptr ds:[0x007FF010]
+006AA199    movups xmm1, xmmword ptr ds:[0x007FF010]        ; => [ Data: data_7ff010 ]
 006AA1A0    movss xmm5, dword ptr ds:[0x0089102C]
 006AA1A8    xorps xmm2, xmm2
 006AA1AB    nop dword ptr ds:[eax+eax*1], eax
@@ -407,7 +413,7 @@
 006AA69C    addss xmm3, xmm7
 006AA6A0    test edx, edx
 006AA6A2    jnz 0x006AA6E4
-006AA6A4    mov edx, dword ptr ds:[0x00CF65B8]
+006AA6A4    mov edx, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006AA6AA    movzx ecx, byte ptr ds:[edx+0x2D]
 006AA6AE    movzx eax, byte ptr ds:[edx+0x2E]
 006AA6B2    add ecx, 0x100
@@ -418,7 +424,7 @@
 006AA6C4    add ecx, eax
 006AA6C6    mov eax, dword ptr ss:[esp+0x18]
 006AA6CA    mov dword ptr ds:[eax], ecx
-006AA6CC    movups xmm1, xmmword ptr ds:[0x007FF010]
+006AA6CC    movups xmm1, xmmword ptr ds:[0x007FF010]        ; => [ Data: data_7ff010 ]
 006AA6D3    mov esi, dword ptr ss:[esp+0x08]
 006AA6D7    mov ecx, dword ptr ss:[esp+0x28]
 006AA6DB    xorps xmm2, xmm2
@@ -437,7 +443,7 @@
 006AA710    movss dword ptr ss:[esp+0x48], xmm3
 006AA716    movups xmm0, xmmword ptr ss:[esp+0x40]
 006AA71B    movups xmmword ptr ds:[eax], xmm0
-006AA71E    call 0x0064B360
+006AA71E    call 0x0064B360                                 ; => [ Call: sub_64b360 ]
 006AA723    mov edx, eax
 006AA725    movzx ecx, al
 006AA728    shr edx, 0x18
@@ -478,19 +484,19 @@
 006AA797    pop edi
 006AA798    pop esi
 006AA799    xor ecx, esp
-006AA79B    call 0x0075927A
+006AA79B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006AA7A0    mov esp, ebp
 006AA7A2    pop ebp
 006AA7A3    ret
-006AA7A4    push 0x87B368
+006AA7A4    push 0x87B368                                   ; => [ String: SandImageBuffer ]
 006AA7A9    push 0x66
-006AA7AB    push 0x87B3F4
+006AA7AB    push 0x87B3F4                                   ; => [ String: C:\x\ax2017\Engine\TextureImport.cpp ]
 006AA7B0    mov edx, 0x801800
 006AA7B5    mov ecx, 0x87B3A0
-006AA7BA    call 0x0063B870
+006AA7BA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: sourceImage->pitch == TextureFormatPitch(sourceImage->width, sourceImage->format) ]
 006AA7BF    add esp, 0x0C
 006AA7C2    call 0x0063BC30
 006AA7C7    test al, al
-006AA7C9    jz 0x006AA7CC
+006AA7C9    jz 0x006AA7CC                                   ; => [ Call: sub_63bc30 ]
 006AA7CB    int3
-006AA7CC    call 0x0063BB00
+006AA7CC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_594cc0
+// 起始地址: 0x594cc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00594CC0    push ebp
 00594CC1    mov ebp, esp
 00594CC3    sub esp, 0x1C
@@ -20,7 +26,7 @@
 00594CEB    mov edx, edi
 00594CED    lea ecx, ss:[ebp-0x1C]
 00594CF0    push ebx
-00594CF1    call 0x005960E0
+00594CF1    call 0x005960E0                                 ; => [ Call: sub_5960e0 ]
 00594CF6    mov edx, dword ptr ss:[ebp-0x1C]
 00594CF9    mov eax, esi
 00594CFB    sar eax, 0x02
@@ -72,7 +78,7 @@
 00594D7E    mov dword ptr ss:[ebp-0x10], ebx
 00594D81    call 0x00596040
 00594D86    test al, al
-00594D88    jz 0x00594E32
+00594D88    jz 0x00594E32                                   ; => [ Call: sub_596040 ]
 00594D8E    mov ecx, ebx
 00594D90    mov eax, ebx
 00594D92    sub ecx, edi
@@ -81,7 +87,7 @@
 00594D97    add eax, 0x02
 00594D9A    push edi
 00594D9B    push eax
-00594D9C    call 0x00762362
+00594D9C    call 0x00762362                                 ; => [ Call: memmove ]
 00594DA1    mov ecx, dword ptr ss:[ebp-0x04]
 00594DA4    add esp, 0x0C
 00594DA7    mov word ptr ds:[edi], cx
@@ -105,7 +111,7 @@
 00594DD6    mov ecx, edi
 00594DD8    push eax
 00594DD9    push ebx
-00594DDA    call 0x00596EF0
+00594DDA    call 0x00596EF0                                 ; => [ Call: sub_596ef0 ]
 00594DDF    add esp, 0x0C
 00594DE2    test esi, esi
 00594DE4    jnle 0x00594DC5
@@ -125,7 +131,7 @@
 00594E10    lea eax, ds:[ebx-0x02]
 00594E13    sar eax, 0x01
 00594E15    push eax
-00594E16    call 0x00596EF0
+00594E16    call 0x00596EF0                                 ; => [ Call: sub_596ef0 ]
 00594E1B    add ebx, 0xFFFFFFFE
 00594E1E    add esp, 0x0C
 00594E21    mov eax, ebx
@@ -144,7 +150,7 @@
 00594E39    lea ecx, ss:[ebp-0x0C]
 00594E3C    call 0x00596040
 00594E41    test al, al
-00594E43    jz 0x00594E72
+00594E43    jz 0x00594E72                                   ; => [ Call: sub_596040 ]
 00594E45    mov ebx, dword ptr ss:[ebp-0x10]
 00594E48    nop dword ptr ds:[eax+eax*1], eax
 00594E50    mov ax, word ptr ds:[esi]
@@ -155,7 +161,7 @@
 00594E5E    lea eax, ss:[ebp-0x04]
 00594E61    push esi
 00594E62    push eax
-00594E63    call 0x00596040
+00594E63    call 0x00596040                                 ; => [ Call: sub_596040 ]
 00594E68    test al, al
 00594E6A    jnz 0x00594E50
 00594E6C    mov dword ptr ss:[ebp-0x10], ebx

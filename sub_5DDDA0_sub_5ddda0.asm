@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5ddda0
+// 起始地址: 0x5ddda0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DDDA0    push esi
 005DDDA1    mov esi, dword ptr ds:[ecx+0x1C28]
 005DDDA7    cmp dword ptr ds:[0x00B7FCD0], esi
-005DDDAD    jnz 0x005DDDC0
+005DDDAD    jnz 0x005DDDC0                                  ; => [ Data: data_b7fcd0 ]
 005DDDAF    xor eax, eax
 005DDDB1    cmp dword ptr ds:[ecx+0x1BF8], 0x04
 005DDDB8    pop esi
@@ -18,9 +24,9 @@
 005DDDE2    jz 0x005DDDF6
 005DDDE4    mov eax, dword ptr ds:[ecx+0x98]
 005DDDEA    cmp eax, dword ptr ds:[0x00B80B50]
-005DDDF0    jz 0x005DDF0D
+005DDDF0    jz 0x005DDF0D                                   ; => [ Data: data_b80b4c | Data: data_b80b50 | Data: data_b80b08 ]
 005DDDF6    mov edx, dword ptr ds:[ecx+0x1A18]
-005DDDFC    mov eax, dword ptr ds:[0x00B604E0]
+005DDDFC    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005DDE01    test edx, edx
 005DDE03    jle 0x005DDF18
 005DDE09    xor edx, edx
@@ -28,7 +34,7 @@
 005DDE0E    cmovz eax, edx
 005DDE11    cmp dword ptr ds:[ecx+0x2E8], edx
 005DDE17    jz 0x005DDF14
-005DDE1D    mov edx, dword ptr ds:[0x00B7D434]
+005DDE1D    mov edx, dword ptr ds:[0x00B7D434]              ; => [ Data: data_b7d434 ]
 005DDE23    cmp dword ptr ds:[ecx+0xA0], eax
 005DDE29    jnz 0x005DDECE
 005DDE2F    cmp dword ptr ds:[ecx+0x370], 0x00
@@ -116,6 +122,6 @@
 005DDF5D    xor ecx, ecx
 005DDF5F    test al, al
 005DDF61    pop esi
-005DDF62    setnz cl
+005DDF62    setnz cl                                        ; => [ Call: sub_5dc840 ]
 005DDF65    mov eax, ecx
 005DDF67    ret

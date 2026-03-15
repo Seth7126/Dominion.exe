@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6339d0
+// 起始地址: 0x6339d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006339D0    push ebp
 006339D1    mov ebp, esp
 006339D3    push ecx
@@ -19,13 +25,13 @@
 00633A0A    mov edx, dword ptr ds:[0x0171E720]
 00633A10    push 0x00
 00633A12    push ecx
-00633A13    call 0x005AF930
+00633A13    call 0x005AF930                                 ; => [ Data: data_171e720 | Call: sub_5af930 ]
 00633A18    add esp, 0x08
 00633A1B    mov esi, dword ptr ds:[edi+0x0C]
 00633A1E    call 0x005CF7E0
 00633A23    mov edx, eax
 00633A25    mov ecx, esi
-00633A27    call 0x00571B30
+00633A27    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 00633A2C    mov edx, dword ptr ds:[eax+0x64]
 00633A2F    test edx, edx
 00633A31    jz 0x00633A95
@@ -38,7 +44,7 @@
 00633A41    pop esi
 00633A42    pop ecx
 00633A43    pop ebp
-00633A44    ret
+00633A44    ret                                             ; => [ Call: sub_5af930 ]
 00633A45    cmp ecx, 0x02
 00633A48    jnz 0x00633A64
 00633A4A    test al, 0x04
@@ -52,12 +58,12 @@
 00633A60    pop esi
 00633A61    pop ecx
 00633A62    pop ebp
-00633A63    ret
+00633A63    ret                                             ; => [ Data: data_171e768 | Call: sub_5af930 ]
 00633A64    mov esi, dword ptr ds:[edi+0x0C]
 00633A67    call 0x005CF7E0
 00633A6C    mov edx, eax
 00633A6E    mov ecx, esi
-00633A70    call 0x00571B30
+00633A70    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 00633A75    mov eax, dword ptr ds:[eax+0x98]
 00633A7B    and eax, 0x4000000
 00633A80    or eax, 0x00
@@ -65,7 +71,7 @@
 00633A85    mov edx, dword ptr ds:[0x0171E714]
 00633A8B    push eax
 00633A8C    push ecx
-00633A8D    call 0x005AF930
+00633A8D    call 0x005AF930                                 ; => [ Data: data_171e714 | Call: sub_5af930 ]
 00633A92    add esp, 0x08
 00633A95    pop edi
 00633A96    pop esi

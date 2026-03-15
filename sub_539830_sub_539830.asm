@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_539830
+// 起始地址: 0x539830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00539830    dword 83EC8B55
 00539834    jnl 0x00539842
 00539836    add dword ptr ds:[esi+0x74], edx
@@ -13,21 +19,21 @@
 00539858    xor al, ch
 0053985A    mov byte ptr ds:[0x0F00039B], al
 0053985F    mov bh, 0xF6
-00539861    mov edi, dword ptr ds:[eax+0x04]
+00539861    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00539864    cmp esi, 0x320
 0053986A    jb 0x00539871
-0053986C    call 0x00591930
+0053986C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00539871    imul eax, esi, 0x64
 00539874    cmp dword ptr ds:[eax+edi*1+0x1A4C], 0x30E
 0053987F    pop edi
 00539880    jnz 0x005398BB
-00539882    call 0x00573400
+00539882    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00539887    cmp dword ptr ds:[eax], 0x05
 0053988A    jnz 0x005398C0
 0053988C    mov esi, dword ptr ds:[eax+0x18]
 0053988F    call 0x00573400
 00539894    mov eax, dword ptr ds:[eax+0x04]
-00539897    mov eax, dword ptr ds:[eax+0x19E4]
+00539897    mov eax, dword ptr ds:[eax+0x19E4]              ; => [ Call: sub_573400 ]
 0053989D    cmp eax, dword ptr ds:[esi+0x04]
 005398A0    jz 0x005398AD
 005398A2    xorps xmm0, xmm0
@@ -43,15 +49,15 @@
 005398BD    pop esi
 005398BE    pop ebp
 005398BF    ret
-005398C0    push 0x81EF48
+005398C0    push 0x81EF48                                   ; => [ String: DomAchievementDataGet ]
 005398C5    push 0x1CB1
-005398CA    push 0x81EA70
-005398CF    mov ecx, 0x80AEA0
+005398CA    push 0x81EA70                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
+005398CF    mov ecx, 0x80AEA0                               ; => [ String: c.contextType == CONTEXT_ACHIEVEMENT ]
 005398D4    mov edx, 0x801800
-005398D9    call 0x0063B870
+005398D9    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005398DE    add esp, 0x0C
 005398E1    call 0x0063BC30
 005398E6    test al, al
-005398E8    jz 0x005398EB
+005398E8    jz 0x005398EB                                   ; => [ Call: sub_63bc30 ]
 005398EA    int3
-005398EB    call 0x0063BB00
+005398EB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

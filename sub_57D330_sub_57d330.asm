@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57d330
+// 起始地址: 0x57d330
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057D330    push ebp
 0057D331    mov ebp, esp
 0057D333    sub esp, 0x08
@@ -11,7 +17,7 @@
 0057D349    jz 0x0057D40B
 0057D34F    mov edx, dword ptr ds:[edi+0xD48]
 0057D355    mov ecx, 0x50C
-0057D35A    call 0x00571B30
+0057D35A    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0057D35F    xor esi, esi
 0057D361    mov dword ptr ss:[ebp-0x08], eax
 0057D364    mov dword ptr ss:[ebp-0x04], esi
@@ -39,7 +45,7 @@
 0057D3B0    jmp 0x0057D3A0
 0057D3B2    push dword ptr ss:[ebp+0x10]
 0057D3B5    mov edx, esi
-0057D3B7    call 0x00575DE0
+0057D3B7    call 0x00575DE0                                 ; => [ Call: sub_575de0 ]
 0057D3BC    mov edx, dword ptr ss:[ebp+0x08]
 0057D3BF    add esp, 0x04
 0057D3C2    mov esi, eax
@@ -52,7 +58,7 @@
 0057D3D0    call 0x0057C810
 0057D3D5    add esp, 0x14
 0057D3D8    test al, al
-0057D3DA    jz 0x0057D3EB
+0057D3DA    jz 0x0057D3EB                                   ; => [ Call: sub_57c810 ]
 0057D3DC    mov eax, dword ptr ds:[ebx+0x400]
 0057D3E2    mov dword ptr ds:[ebx+eax*4], esi
 0057D3E5    inc dword ptr ds:[ebx+0x400]
@@ -76,10 +82,10 @@
 0057D41C    push 0x81F4B8
 0057D421    mov edx, 0x801800
 0057D426    mov ecx, 0x801AA4
-0057D42B    call 0x0063B870
+0057D42B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: FindAnyCard | String: Halt ]
 0057D430    add esp, 0x0C
 0057D433    call 0x0063BC30
 0057D438    test al, al
-0057D43A    jz 0x0057D43D
+0057D43A    jz 0x0057D43D                                   ; => [ Call: sub_63bc30 ]
 0057D43C    int3
-0057D43D    call 0x0063BB00
+0057D43D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4bb360
+// 起始地址: 0x4bb360
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BB360    push ebp
 004BB361    mov ebp, esp
 004BB363    push ecx
@@ -33,13 +39,13 @@
 004BB3A9    test eax, eax
 004BB3AB    jnz 0x004BB398
 004BB3AD    mov ecx, 0x14
-004BB3B2    call 0x0064BFD0
+004BB3B2    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 004BB3B7    mov esi, eax
 004BB3B9    inc dword ptr ds:[esi+0x0C]
 004BB3BC    cmp dword ptr ds:[esi], 0x00
 004BB3BF    jnz 0x004BB3C8
 004BB3C1    mov ecx, esi
-004BB3C3    call 0x0064BE70
+004BB3C3    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 004BB3C8    mov ecx, dword ptr ds:[esi]
 004BB3CA    mov edx, dword ptr ss:[ebp-0x04]
 004BB3CD    mov eax, dword ptr ds:[ecx]

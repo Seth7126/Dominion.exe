@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63cca0
+// 起始地址: 0x63cca0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063CCA0    push ebx
 0063CCA1    mov ebx, esp
 0063CCA3    sub esp, 0x08
@@ -8,9 +14,9 @@
 0063CCB0    mov dword ptr ss:[esp+0x04], ebp
 0063CCB4    mov ebp, esp
 0063CCB6    push 0xFFFFFFFF
-0063CCB8    push 0x76C3B5
+0063CCB8    push 0x76C3B5                                   ; => [ Call: sub_76c3b5 | Type: EHRegistrationNode ]
 0063CCBD    mov eax, dword ptr fs:[0x00000000]
-0063CCC3    push eax
+0063CCC3    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0063CCC4    push ebx
 0063CCC5    sub esp, 0x68
 0063CCC8    mov eax, dword ptr ds:[0x008C4040]
@@ -18,9 +24,9 @@
 0063CCCF    mov dword ptr ss:[ebp-0x14], eax
 0063CCD2    push esi
 0063CCD3    push edi
-0063CCD4    push eax
+0063CCD4    push eax                                        ; => [ Data: __security_cookie ]
 0063CCD5    lea eax, ss:[ebp-0x0C]
-0063CCD8    mov dword ptr fs:[0x00000000], eax
+0063CCD8    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0063CCDE    mov dword ptr ss:[ebp-0x50], ecx
 0063CCE1    mov eax, dword ptr ds:[ebx+0x08]
 0063CCE4    xorps xmm0, xmm0
@@ -29,7 +35,7 @@
 0063CCED    mov dword ptr ss:[ebp-0x54], eax
 0063CCF0    mov dword ptr ss:[ebp-0x5C], eax
 0063CCF3    mov eax, 0x0F
-0063CCF8    movups xmmword ptr ss:[ebp-0x44], xmm0
+0063CCF8    movups xmmword ptr ss:[ebp-0x44], xmm0          ; => [ String: 0 | String: zx ]
 0063CCFC    mov dword ptr ss:[ebp-0x74], edx
 0063CCFF    mov dword ptr ss:[ebp-0x48], edx
 0063CD02    mov dword ptr ss:[ebp-0x4C], edi
@@ -37,7 +43,7 @@
 0063CD08    mov byte ptr ss:[ebp-0x44], 0x00
 0063CD0C    mov dword ptr ss:[ebp-0x04], 0x00
 0063CD13    mov esi, eax
-0063CD15    movups xmmword ptr ss:[ebp-0x2C], xmm0
+0063CD15    movups xmmword ptr ss:[ebp-0x2C], xmm0          ; => [ String: 0 | String: zx ]
 0063CD19    mov dword ptr ss:[ebp-0x1C], 0x00
 0063CD20    mov dword ptr ss:[ebp-0x18], esi
 0063CD23    mov byte ptr ss:[ebp-0x2C], 0x00
@@ -102,7 +108,7 @@
 0063CDE4    push dword ptr ss:[ebp-0x64]
 0063CDE7    push ecx
 0063CDE8    lea ecx, ss:[ebp-0x2C]
-0063CDEB    call 0x0063D0A0
+0063CDEB    call 0x0063D0A0                                 ; => [ Call: sub_63d0a0 ]
 0063CDF0    mov edx, dword ptr ss:[ebp-0x48]
 0063CDF3    mov esi, dword ptr ss:[ebp-0x18]
 0063CDF6    add edx, 0x02
@@ -129,7 +135,7 @@
 0063CE2A    cmovnbe eax, dword ptr ss:[ebp-0x2C]
 0063CE2E    lea esi, ds:[eax+edx*1]
 0063CE31    push esi
-0063CE32    call 0x00762362
+0063CE32    call 0x00762362                                 ; => [ Call: memmove ]
 0063CE37    mov byte ptr ds:[esi+edi*1], 0x00
 0063CE3B    add esp, 0x0C
 0063CE3E    mov esi, dword ptr ss:[ebp-0x18]
@@ -138,7 +144,7 @@
 0063CE47    lea ecx, ss:[ebp-0x2C]
 0063CE4A    push dword ptr ss:[ebp-0x70]
 0063CE4D    push edi
-0063CE4E    call 0x0063D320
+0063CE4E    call 0x0063D320                                 ; => [ Call: sub_63d320 ]
 0063CE53    mov esi, dword ptr ss:[ebp-0x18]
 0063CE56    jmp 0x0063CEA2
 0063CE58    mov ecx, dword ptr ss:[ebp-0x34]
@@ -163,7 +169,7 @@
 0063CE96    push dword ptr ss:[ebp-0x5C]
 0063CE99    push ecx
 0063CE9A    lea ecx, ss:[ebp-0x44]
-0063CE9D    call 0x0063D1E0
+0063CE9D    call 0x0063D1E0                                 ; => [ Call: sub_63d1e0 ]
 0063CEA2    mov edi, dword ptr ss:[ebp-0x4C]
 0063CEA5    mov edx, dword ptr ss:[ebp-0x48]
 0063CEA8    mov ecx, dword ptr ss:[ebp-0x50]
@@ -180,7 +186,7 @@
 0063CECD    add eax, 0x10
 0063CED0    push eax
 0063CED1    mov ecx, edi
-0063CED3    call 0x005BBFB0
+0063CED3    call 0x005BBFB0                                 ; => [ Call: sub_5bbfb0 ]
 0063CED8    cmp esi, 0x0F
 0063CEDB    jbe 0x0063CF09
 0063CEDD    mov ecx, dword ptr ss:[ebp-0x2C]
@@ -196,7 +202,7 @@
 0063CEF9    jnbe 0x0063CFD5
 0063CEFF    push esi
 0063CF00    push ecx
-0063CF01    call 0x00759661
+0063CF01    call 0x00759661                                 ; => [ Call: operator new ]
 0063CF06    add esp, 0x08
 0063CF09    mov ecx, dword ptr ss:[ebp-0x30]
 0063CF0C    cmp ecx, 0x0F
@@ -214,17 +220,17 @@
 0063CF2D    jnbe 0x0063CFD5
 0063CF33    push ecx
 0063CF34    push edx
-0063CF35    call 0x00759661
+0063CF35    call 0x00759661                                 ; => [ Call: operator new ]
 0063CF3A    add esp, 0x08
 0063CF3D    mov eax, edi
 0063CF3F    mov ecx, dword ptr ss:[ebp-0x0C]
-0063CF42    mov dword ptr fs:[0x00000000], ecx
+0063CF42    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0063CF49    pop ecx
 0063CF4A    pop edi
 0063CF4B    pop esi
 0063CF4C    mov ecx, dword ptr ss:[ebp-0x14]
 0063CF4F    xor ecx, ebp
-0063CF51    call 0x0075927A
+0063CF51    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0063CF56    mov esp, ebp
 0063CF58    pop ebp
 0063CF59    mov esp, ebx
@@ -237,7 +243,7 @@
 0063CF6F    add eax, 0x10
 0063CF72    push eax
 0063CF73    mov ecx, edi
-0063CF75    call 0x005BBFB0
+0063CF75    call 0x005BBFB0                                 ; => [ Call: sub_5bbfb0 ]
 0063CF7A    cmp esi, 0x0F
 0063CF7D    jbe 0x0063CFA7
 0063CF7F    mov ecx, dword ptr ss:[ebp-0x2C]
@@ -253,7 +259,7 @@
 0063CF9B    jnbe 0x0063CFD5
 0063CF9D    push esi
 0063CF9E    push ecx
-0063CF9F    call 0x00759661
+0063CF9F    call 0x00759661                                 ; => [ Call: operator new ]
 0063CFA4    add esp, 0x08
 0063CFA7    mov ecx, dword ptr ss:[ebp-0x30]
 0063CFAA    cmp ecx, 0x0F
@@ -272,7 +278,7 @@
 0063CFD5    call dword ptr ds:[0x007755F4]
 0063CFDB    mov edi, dword ptr ss:[ebp-0x54]
 0063CFDE    xorps xmm0, xmm0
-0063CFE1    movups xmmword ptr ds:[edi], xmm0
+0063CFE1    movups xmmword ptr ds:[edi], xmm0               ; => [ Call: __builtin_memset ]
 0063CFE4    mov dword ptr ds:[edi+0x10], 0x00
 0063CFEB    mov dword ptr ds:[edi+0x14], 0x00
 0063CFF2    movups xmm0, xmmword ptr ss:[ebp-0x2C]
@@ -293,4 +299,4 @@
 0063D02B    cmp eax, 0x1F
 0063D02E    jbe 0x0063CF33
 0063D034    call dword ptr ds:[0x007755F4]
-0063D03A    call 0x0063BBB0
+0063D03A    call 0x0063BBB0                                 ; => [ Call: sub_63bbb0 | Call: sub_63bbb0 ]

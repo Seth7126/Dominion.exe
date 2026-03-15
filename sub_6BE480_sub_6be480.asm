@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6be480
+// 起始地址: 0x6be480
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BE480    push ebx
 006BE481    mov ebx, esp
 006BE483    sub esp, 0x08
@@ -8,7 +14,7 @@
 006BE490    mov dword ptr ss:[esp+0x04], ebp
 006BE494    mov ebp, esp
 006BE496    sub esp, 0x68
-006BE499    mov eax, dword ptr ds:[0x008C4040]
+006BE499    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006BE49E    xor eax, ebp
 006BE4A0    mov dword ptr ss:[ebp-0x04], eax
 006BE4A3    mov eax, ecx
@@ -42,7 +48,7 @@
 006BE4F0    push eax
 006BE4F1    call 0x006C3D10
 006BE4F6    add esp, 0x10
-006BE4F9    movups xmm2, xmmword ptr ds:[eax]
+006BE4F9    movups xmm2, xmmword ptr ds:[eax]               ; => [ Call: sub_6c3d10 ]
 006BE4FC    movaps xmm3, xmm2
 006BE4FF    movaps xmm4, xmm2
 006BE502    mulss xmm4, dword ptr ss:[ebp-0x18]
@@ -77,7 +83,7 @@
 006BE578    subss xmm5, xmm0
 006BE57C    comiss xmm6, xmm5
 006BE57F    jb 0x006BE590
-006BE581    xorps xmm1, xmm1
+006BE581    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BE584    movss dword ptr ss:[ebp-0x08], xmm6
 006BE589    movss dword ptr ss:[ebp-0x20], xmm6
 006BE58E    jmp 0x006BE5F7
@@ -115,7 +121,7 @@
 006BE60F    movsd qword ptr ss:[ebp-0x10], xmm0
 006BE614    fld qword ptr ss:[ebp-0x10]
 006BE617    fld qword ptr ds:[0x00890F30]
-006BE61D    call 0x0076236E
+006BE61D    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 006BE622    xorps xmm7, xmm7
 006BE625    comiss xmm7, dword ptr ss:[ebp-0x40]
 006BE629    fstp dword ptr ss:[ebp-0x0C]
@@ -141,7 +147,7 @@
 006BE676    call 0x006C3D10
 006BE67B    movss xmm2, dword ptr ds:[edi+0x30]
 006BE680    add esp, 0x10
-006BE683    movups xmm0, xmmword ptr ds:[eax]
+006BE683    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_6c3d10 ]
 006BE686    movups xmmword ptr ss:[ebp-0x40], xmm2
 006BE68A    movups xmmword ptr ss:[ebp-0x18], xmm0
 006BE68E    movss xmm2, dword ptr ss:[ebp-0x14]
@@ -167,7 +173,7 @@
 006BE6E6    mov ecx, dword ptr ds:[esi]
 006BE6E8    call 0x005AF880
 006BE6ED    mov ecx, dword ptr ss:[ebp-0x28]
-006BE6F0    mov eax, dword ptr ds:[eax]
+006BE6F0    mov eax, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006BE6F2    imul ecx, dword ptr ds:[ecx+0x2DC], 0x168
 006BE6FC    cmp byte ptr ds:[ecx+eax*1+0xE6], 0x00
 006BE704    jnz 0x006BE712
@@ -240,7 +246,7 @@
 006BE7EC    xor ecx, ebp
 006BE7EE    pop edi
 006BE7EF    pop esi
-006BE7F0    call 0x0075927A
+006BE7F0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006BE7F5    mov esp, ebp
 006BE7F7    pop ebp
 006BE7F8    mov esp, ebx

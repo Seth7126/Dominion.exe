@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4f2800
+// 起始地址: 0x4f2800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F2802    byte EC
 004F2803    sub esp, 0x34
 004F2806    mov eax, dword ptr ds:[0x008C4040]
-004F280B    xor eax, ebp
+004F280B    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004F280D    mov dword ptr ss:[ebp-0x04], eax
 004F2810    push esi
 004F2811    mov esi, ecx
@@ -85,8 +91,8 @@
 004F2901    jnz 0x004F2909
 004F2903    mov dword ptr ds:[esi+0xDC], ecx
 004F2909    mov ecx, dword ptr ds:[esi+0xD4]
-004F290F    xor eax, eax
-004F2911    mov dword ptr ss:[ebp-0x24], eax
+004F290F    xor eax, eax                                    ; => [ Call: nullptr ]
+004F2911    mov dword ptr ss:[ebp-0x24], eax                ; => [ Call: nullptr ]
 004F2914    test ecx, ecx
 004F2916    jle 0x004F2A56
 004F291C    xor edx, edx
@@ -98,7 +104,7 @@
 004F2930    jz 0x004F2A3E
 004F2936    mov edi, dword ptr ds:[ecx+0x08]
 004F2939    xorps xmm0, xmm0
-004F293C    movups xmmword ptr ss:[ebp-0x1C], xmm0
+004F293C    movups xmmword ptr ss:[ebp-0x1C], xmm0          ; => [ Call: __builtin_memset ]
 004F2940    xor ebx, ebx
 004F2942    movss xmm4, dword ptr ss:[ebp-0x10]
 004F2947    movss xmm5, dword ptr ss:[ebp-0x14]
@@ -225,7 +231,7 @@
 004F2B42    mov ecx, dword ptr ss:[ebp-0x04]
 004F2B45    xor ecx, ebp
 004F2B47    pop esi
-004F2B48    call 0x0075927A
+004F2B48    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F2B4D    mov esp, ebp
 004F2B4F    pop ebp
 004F2B50    ret

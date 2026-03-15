@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5dc990
+// 起始地址: 0x5dc990
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DC990    push ecx
 005DC991    push esi
 005DC992    mov esi, ecx
@@ -84,7 +90,7 @@
 005DCAF4    ret
 005DCAF5    mov eax, dword ptr ds:[0x00B7FCD0]
 005DCAFA    cmp eax, dword ptr ds:[esi+0x1C28]
-005DCB00    jz 0x005DD90E
+005DCB00    jz 0x005DD90E                                   ; => [ Data: data_b7fcd0 ]
 005DCB06    test ecx, ecx
 005DCB08    jnz 0x005DCB1B
 005DCB0A    cmp dword ptr ds:[esi+0x128], ecx
@@ -525,7 +531,7 @@
 005DD1D8    cmp dword ptr ds:[eax], 0x1E
 005DD1DB    jz 0x005DD33E
 005DD1E1    mov ecx, esi
-005DD1E3    call 0x005DC7E0
+005DD1E3    call 0x005DC7E0                                 ; => [ Call: sub_5dc7e0 ]
 005DD1E8    mov ecx, dword ptr ds:[esi+0x1A18]
 005DD1EE    test al, al
 005DD1F0    jz 0x005DD2E1
@@ -536,7 +542,7 @@
 005DD203    cmp dword ptr ds:[edi], 0x1D
 005DD206    jnz 0x005DD21F
 005DD208    mov ecx, dword ptr ds:[esi+0x37C]
-005DD20E    call 0x005DE930
+005DD20E    call 0x005DE930                                 ; => [ Call: sub_5de930 ]
 005DD213    mov ecx, eax
 005DD215    call 0x005DC990
 005DD21A    dec eax
@@ -550,7 +556,7 @@
 005DD22F    jnz 0x005DD248
 005DD231    mov eax, dword ptr ds:[esi+0xA0]
 005DD237    cmp eax, dword ptr ds:[0x00B604E4]
-005DD23D    jz 0x005DD284
+005DD23D    jz 0x005DD284                                   ; => [ Data: data_b604e4 ]
 005DD23F    mov eax, 0x2B8F
 005DD244    pop edi
 005DD245    pop esi
@@ -569,7 +575,7 @@
 005DD274    jnz 0x005DD28D
 005DD276    mov eax, dword ptr ds:[esi+0xA0]
 005DD27C    cmp eax, dword ptr ds:[0x00B604E4]
-005DD282    jnz 0x005DD2D8
+005DD282    jnz 0x005DD2D8                                  ; => [ Data: data_b604e4 ]
 005DD284    mov eax, 0x2B99
 005DD289    pop edi
 005DD28A    pop esi
@@ -582,7 +588,7 @@
 005DD298    cmp dword ptr ds:[esi+0x1A18], 0x00
 005DD29F    jnz 0x005DD2D8
 005DD2A1    cmp dword ptr ds:[esi+0x370], 0x01
-005DD2A8    jnz 0x005DD2D8
+005DD2A8    jnz 0x005DD2D8                                  ; => [ Call: sub_5dc7e0 ]
 005DD2AA    mov eax, dword ptr ds:[esi+0x378]
 005DD2B0    cmp eax, 0x06
 005DD2B3    jz 0x005DD2BA
@@ -592,7 +598,7 @@
 005DD2C4    jnz 0x005DD2D8
 005DD2C6    mov eax, dword ptr ds:[esi+0xA0]
 005DD2CC    cmp eax, dword ptr ds:[0x00B809CC]
-005DD2D2    jz 0x005DD905
+005DD2D2    jz 0x005DD905                                   ; => [ Data: data_b809cc ]
 005DD2D8    mov eax, 0x2B8F
 005DD2DD    pop edi
 005DD2DE    pop esi
@@ -620,7 +626,7 @@
 005DD32C    mov ecx, 0x3EB
 005DD331    call 0x005CC500
 005DD336    test eax, eax
-005DD338    jz 0x005DD8AE
+005DD338    jz 0x005DD8AE                                   ; => [ Call: sub_5cc500 ]
 005DD33E    mov eax, 0x2CF7
 005DD343    pop edi
 005DD344    pop esi
@@ -641,7 +647,7 @@
 005DD37B    mov ecx, 0x3EC
 005DD380    call 0x005CC500
 005DD385    test eax, eax
-005DD387    jnz 0x005DD33E
+005DD387    jnz 0x005DD33E                                  ; => [ Call: sub_5cc500 ]
 005DD389    mov eax, 0x2D3E
 005DD38E    pop edi
 005DD38F    pop esi
@@ -683,14 +689,14 @@
 005DD417    pop ecx
 005DD418    ret
 005DD419    mov ecx, esi
-005DD41B    call 0x005DC840
+005DD41B    call 0x005DC840                                 ; => [ Call: sub_5dc840 ]
 005DD420    test al, al
 005DD422    jz 0x005DD484
 005DD424    cmp dword ptr ds:[esi+0x2C], 0x00
 005DD428    jnz 0x005DD46A
 005DD42A    push 0x00
 005DD42C    push 0x4000000
-005DD431    call 0x005CBAA0
+005DD431    call 0x005CBAA0                                 ; => [ Call: sub_5cbaa0 ]
 005DD436    add esp, 0x08
 005DD439    test al, al
 005DD43B    jnz 0x005DD4BA
@@ -700,7 +706,7 @@
 005DD446    call 0x005CBAA0
 005DD44B    add esp, 0x08
 005DD44E    test al, al
-005DD450    jnz 0x005DD4BA
+005DD450    jnz 0x005DD4BA                                  ; => [ Call: sub_5cbaa0 ]
 005DD452    cmp dword ptr ds:[esi+0x2C], 0x00
 005DD456    jnz 0x005DD46A
 005DD458    mov eax, dword ptr ds:[esi+0x37C]
@@ -717,7 +723,7 @@
 005DD483    ret
 005DD484    call 0x005DC8C0
 005DD489    test al, al
-005DD48B    jnz 0x005DD33E
+005DD48B    jnz 0x005DD33E                                  ; => [ Call: sub_5dc8c0 ]
 005DD491    test edi, edi
 005DD493    jnz 0x005DD4C3
 005DD495    mov eax, dword ptr ds:[esi+0x370]
@@ -856,7 +862,7 @@
 005DD675    mov ecx, esi
 005DD677    call 0x005D78E0
 005DD67C    test al, al
-005DD67E    jnz 0x005DD33E
+005DD67E    jnz 0x005DD33E                                  ; => [ Call: sub_5d78e0 ]
 005DD684    call 0x005D78E0
 005DD689    test al, al
 005DD68B    jnz 0x005DD33E
@@ -956,10 +962,10 @@
 005DD7FA    mov ecx, esi
 005DD7FC    call 0x005D78E0
 005DD801    test al, al
-005DD803    jnz 0x005DD33E
+005DD803    jnz 0x005DD33E                                  ; => [ Call: sub_5d78e0 ]
 005DD809    call 0x005DC7E0
 005DD80E    test al, al
-005DD810    jz 0x005DD849
+005DD810    jz 0x005DD849                                   ; => [ Call: sub_5dc7e0 ]
 005DD812    cmp dword ptr ds:[esi+0x1A18], 0x00
 005DD819    jnz 0x005DD840
 005DD81B    cmp dword ptr ds:[esi+0x370], 0x01
@@ -1017,7 +1023,7 @@
 005DD8D5    jnz 0x005DD905
 005DD8D7    cmp dword ptr ds:[esi+0x420], 0x0F
 005DD8DE    jnz 0x005DD905
-005DD8E0    mov ecx, dword ptr ds:[0x00B604E0]
+005DD8E0    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005DD8E6    xor eax, eax
 005DD8E8    cmp ecx, 0xFFFFFFFF
 005DD8EB    mov edx, 0x2B71
@@ -1044,10 +1050,10 @@
 005DD921    push 0x86F1E8
 005DD926    mov edx, 0x801800
 005DD92B    mov ecx, 0x871740
-005DD930    call 0x0063B870
+005DD930    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: gfx.type == DOMGFX_CARD || gfx.type == DOMGFX_PILE || gfx.type == DOMGFX_CARD_PLACEHOLDER | String: CardGetLayer ]
 005DD935    add esp, 0x0C
 005DD938    call 0x0063BC30
 005DD93D    test al, al
-005DD93F    jz 0x005DD942
+005DD93F    jz 0x005DD942                                   ; => [ Call: sub_63bc30 ]
 005DD941    int3
-005DD942    call 0x0063BB00
+005DD942    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

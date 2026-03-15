@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5eaab0
+// 起始地址: 0x5eaab0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EAAB0    imul edx, dword ptr ds:[0x00B809E4], 0x1C30
-005EAABA    mov eax, dword ptr ds:[0x00B809E0]
+005EAABA    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005EAABF    push esi
 005EAAC0    mov esi, ecx
-005EAAC2    add edx, eax
+005EAAC2    add edx, eax                                    ; => [ Data: data_b809e4 ]
 005EAAC4    cmp eax, edx
 005EAAC6    jnb 0x005EAB32
 005EAAC8    nop dword ptr ds:[eax+eax*1], eax
@@ -43,10 +49,10 @@
 005EAB3C    push 0x86F1E8
 005EAB41    mov edx, 0x801800
 005EAB46    mov ecx, 0x801AA4
-005EAB4B    call 0x0063B870
+005EAB4B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: DomBoardPileGet | String: Halt ]
 005EAB50    add esp, 0x0C
 005EAB53    call 0x0063BC30
 005EAB58    test al, al
-005EAB5A    jz 0x005EAB5D
+005EAB5A    jz 0x005EAB5D                                   ; => [ Call: sub_63bc30 ]
 005EAB5C    int3
-005EAB5D    call 0x0063BB00
+005EAB5D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

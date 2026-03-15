@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ae6e0
+// 起始地址: 0x4ae6e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AE6E0    push ebp
 004AE6E1    mov ebp, esp
 004AE6E3    mov ecx, dword ptr ss:[ebp+0x08]
@@ -58,10 +64,10 @@
 004AE754    push 0x801AC4
 004AE759    mov edx, 0x801800
 004AE75E    mov ecx, 0x801AA4
-004AE763    call 0x0063B870
+004AE763    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: HitResult::Comparator | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.h | String: Halt ]
 004AE768    add esp, 0x0C
 004AE76B    call 0x0063BC30
 004AE770    test al, al
-004AE772    jz 0x004AE775
+004AE772    jz 0x004AE775                                   ; => [ Call: sub_63bc30 ]
 004AE774    int3
-004AE775    call 0x0063BB00
+004AE775    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_657fc0
+// 起始地址: 0x657fc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00657FC0    push ebp
 00657FC1    mov ebp, esp
 00657FC3    sub esp, 0x1C
-00657FC6    mov eax, dword ptr ds:[0x0147ABE8]
+00657FC6    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 00657FCB    push ebx
 00657FCC    push esi
 00657FCD    push edi
@@ -24,15 +30,15 @@
 00658014    subss xmm2, dword ptr ds:[esi+0x88]
 0065801C    mov ecx, esi
 0065801E    movaps xmm1, xmm2
-00658021    call 0x0067F6B0
+00658021    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 00658026    movss xmm1, dword ptr ss:[ebp-0x04]
 0065802B    lea ecx, ds:[esi+0x3C]
 0065802E    movss dword ptr ss:[ebp-0x14], xmm0
-00658033    call 0x0067F6B0
+00658033    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 00658038    movss xmm1, dword ptr ss:[ebp-0x04]
 0065803D    lea ecx, ds:[esi+0x78]
 00658040    movss dword ptr ss:[ebp-0x0C], xmm0
-00658045    call 0x0064C3C0
+00658045    call 0x0064C3C0                                 ; => [ Call: sub_64c3c0 ]
 0065804A    movaps xmm3, xmm0
 0065804D    movss xmm0, dword ptr ss:[ebp-0x0C]
 00658052    subss xmm0, dword ptr ss:[ebp-0x14]
@@ -42,17 +48,17 @@
 00658068    mov edx, dword ptr ds:[edi+0x1508]
 0065806E    movss xmm1, dword ptr ss:[ebp-0x08]
 00658073    push ecx
-00658074    push dword ptr ds:[0x00C23BF4]
+00658074    push dword ptr ds:[0x00C23BF4]                  ; => [ Data: data_c23bf4 ]
 0065807A    lea ecx, ds:[edi+0x15D8]
-00658080    call 0x006B7420
+00658080    call 0x006B7420                                 ; => [ Call: sub_6b7420 ]
 00658085    add esp, 0x08
 00658088    movss dword ptr ss:[ebp-0x14], xmm0
 0065808D    mov ecx, edi
-0065808F    call 0x00657E50
+0065808F    call 0x00657E50                                 ; => [ Call: sub_657e50 ]
 00658094    movss xmm0, dword ptr ss:[ebp-0x14]
 00658099    mov dword ptr ss:[ebp-0x0C], edx
 0065809C    divss xmm0, dword ptr ss:[ebp-0x0C]
-006580A1    call 0x004D5CF0
+006580A1    call 0x004D5CF0                                 ; => [ Call: sub_4d5cf0 ]
 006580A6    xorps xmm1, xmm1
 006580A9    comiss xmm1, xmm0
 006580AC    jbe 0x006580B8

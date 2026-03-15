@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50b2a0
+// 起始地址: 0x50b2a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050B2A0    push ebp
 0050B2A1    mov ebp, esp
 0050B2A3    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 0050B2AB    mov ebx, ecx
 0050B2AD    push edi
 0050B2AE    mov dword ptr ss:[esp+0x20], ebx
-0050B2B2    call 0x00516F30
+0050B2B2    call 0x00516F30                                 ; => [ Call: sub_516f30 ]
 0050B2B7    mov edi, eax
 0050B2B9    xor edx, edx
 0050B2BB    lea esi, ds:[edi+0x0C]
@@ -20,7 +26,7 @@
 0050B2D3    jl 0x0050B2C0
 0050B2D5    mov ecx, ebx
 0050B2D7    call 0x00516F30
-0050B2DC    mov esi, eax
+0050B2DC    mov esi, eax                                    ; => [ Call: sub_516f30 ]
 0050B2DE    mov dword ptr ss:[esp+0x24], esi
 0050B2E2    cmp ebx, 0x17E3
 0050B2E8    jnz 0x0050B416
@@ -28,7 +34,7 @@
 0050B2F4    mov eax, dword ptr ds:[0x00CCA780]
 0050B2F9    shl edx, 0x0B
 0050B2FC    add eax, 0x0C
-0050B2FF    add eax, edx
+0050B2FF    add eax, edx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050B301    mov dword ptr ss:[esp+0x10], 0x14
 0050B309    mov dword ptr ss:[esp+0x18], eax
 0050B30D    lea ebx, ds:[eax+0x26C]
@@ -36,14 +42,14 @@
 0050B316    xor edx, edx
 0050B318    mov eax, esp
 0050B31A    mov ecx, 0xCCA794
-0050B31F    mov dword ptr ds:[eax], 0x816FAC
+0050B31F    mov dword ptr ds:[eax], 0x816FAC                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_0da76c1fb1f7e3c2524723ff49b3fad1>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 0050B325    mov dword ptr ds:[eax+0x24], eax
-0050B328    call 0x0050AD20
+0050B328    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 0050B32D    add esp, 0x28
 0050B330    mov dword ptr ds:[ebx], eax
 0050B332    mov edx, 0x17
 0050B337    mov ecx, eax
-0050B339    call 0x00571B30
+0050B339    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0050B33E    mov edi, eax
 0050B340    xor edx, edx
 0050B342    lea ecx, ds:[edi+0xC8]
@@ -76,7 +82,7 @@
 0050B3A2    pop ebx
 0050B3A3    mov esp, ebp
 0050B3A5    pop ebp
-0050B3A6    ret
+0050B3A6    ret                                             ; => [ Call: sub_63b5f0 | String: Don't meet requirement for twist ]
 0050B3A7    imul eax, edx, 0xB4
 0050B3AD    mov ecx, dword ptr ds:[eax+edi*1+0xBC]
 0050B3B4    mov edi, dword ptr ds:[eax+edi*1+0xC0]
@@ -92,11 +98,11 @@
 0050B3D9    xor edx, edx
 0050B3DB    mov dword ptr ds:[eax+0x04], ecx
 0050B3DE    mov ecx, 0xCCA794
-0050B3E3    mov dword ptr ds:[eax], 0x816F90
+0050B3E3    mov dword ptr ds:[eax], 0x816F90                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_be2cfa244d4912ebd43891f759bfd414>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 0050B3E9    mov dword ptr ds:[eax+0x24], eax
 0050B3EC    call 0x0050AD20
 0050B3F1    add esp, 0x28
-0050B3F4    mov dword ptr ds:[esi], eax
+0050B3F4    mov dword ptr ds:[esi], eax                     ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 0050B3F6    lea esi, ds:[esi+0x04]
 0050B3F9    sub edi, 0x01
 0050B3FC    jnz 0x0050B3D0
@@ -112,17 +118,17 @@
 0050B421    xor edx, edx
 0050B423    mov eax, esp
 0050B425    mov ecx, 0xCCA794
-0050B42A    mov dword ptr ds:[eax], 0x816FC8
+0050B42A    mov dword ptr ds:[eax], 0x816FC8                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_d1d8a37b8fc8e2a32cb019feb033559d>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 0050B430    mov dword ptr ds:[eax+0x24], eax
-0050B433    call 0x0050AD20
+0050B433    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 0050B438    mov edx, dword ptr ds:[0x00CCA784]
 0050B43E    mov ecx, eax
 0050B440    mov eax, dword ptr ds:[0x00CCA780]
 0050B445    add esp, 0x28
 0050B448    shl edx, 0x0B
-0050B44B    mov dword ptr ds:[edx+eax*1+0x2CC], ecx
+0050B44B    mov dword ptr ds:[edx+eax*1+0x2CC], ecx         ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050B452    xor edx, edx
-0050B454    call 0x0058E890
+0050B454    call 0x0058E890                                 ; => [ Call: sub_58e890 ]
 0050B459    xor ecx, ecx
 0050B45B    mov eax, esi
 0050B45D    nop dword ptr ds:[eax], eax
@@ -148,27 +154,27 @@
 0050B4A4    mov ecx, 0xCCA794
 0050B4A9    mov dword ptr ds:[eax+0x04], edx
 0050B4AC    xor edx, edx
-0050B4AE    mov dword ptr ds:[eax], 0x817188
+0050B4AE    mov dword ptr ds:[eax], 0x817188                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_415f7ea91a0d7399bd91b65b9795f86f>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 0050B4B4    mov dword ptr ds:[eax+0x08], esi
 0050B4B7    mov dword ptr ds:[eax+0x24], eax
-0050B4BA    call 0x0050AD20
+0050B4BA    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 0050B4BF    mov edx, eax
 0050B4C1    add esp, 0x28
 0050B4C4    test edx, edx
 0050B4C6    jz 0x0050B4ED
 0050B4C8    mov ecx, dword ptr ds:[0x00CCA784]
-0050B4CE    mov eax, dword ptr ds:[0x00CCA780]
+0050B4CE    mov eax, dword ptr ds:[0x00CCA780]              ; => [ Data: data_cca780 ]
 0050B4D3    shl ecx, 0x0B
 0050B4D6    cmp dword ptr ds:[ecx+eax*1+0x30], 0x00
-0050B4DB    jnz 0x0050B512
+0050B4DB    jnz 0x0050B512                                  ; => [ Data: data_cca784 ]
 0050B4DD    push 0x00
 0050B4DF    push 0x04
 0050B4E1    mov ecx, edx
-0050B4E3    call 0x0050A6A0
+0050B4E3    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 0050B4E8    add esp, 0x08
 0050B4EB    jmp 0x0050B4FA
 0050B4ED    push 0x80D018
-0050B4F2    call 0x0063B5F0
+0050B4F2    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Couldn't add twist card ]
 0050B4F7    add esp, 0x04
 0050B4FA    push 0x00
 0050B4FC    push 0x00
@@ -182,16 +188,16 @@
 0050B50D    pop ebx
 0050B50E    mov esp, ebp
 0050B510    pop ebp
-0050B511    ret
+0050B511    ret                                             ; => [ Call: sub_50ac80 ]
 0050B512    push 0x80CFE4
 0050B517    push 0x4A6
 0050B51C    push 0x80CD80
 0050B521    mov edx, 0x801800
 0050B526    mov ecx, 0x80CFF8
-0050B52B    call 0x0063B870
+0050B52B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: CampaignHasKingdomPilesFree(1) | String: CampaignAddTwist | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 0050B530    add esp, 0x0C
 0050B533    call 0x0063BC30
 0050B538    test al, al
-0050B53A    jz 0x0050B53D
+0050B53A    jz 0x0050B53D                                   ; => [ Call: sub_63bc30 ]
 0050B53C    int3
-0050B53D    call 0x0063BB00
+0050B53D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: ?OffForSym@GSI1@@UAEKPAE@Z
+// 起始地址: 0x57eb70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057EB70    push ebp
 0057EB71    mov ebp, esp
 0057EB73    push 0xFFFFFFFF
-0057EB75    push 0x76545D
+0057EB75    push 0x76545D                                   ; => [ Call: __ehhandler$?_mbstowcs_l_helper@@YAIPA_WPBDIAAV__crt_cached_ptd_host@@@Z | Type: EHRegistrationNode ]
 0057EB7A    mov eax, dword ptr fs:[0x00000000]
-0057EB80    push eax
+0057EB80    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0057EB81    sub esp, 0x0C
 0057EB84    push ebx
 0057EB85    push esi
 0057EB86    push edi
 0057EB87    mov eax, dword ptr ds:[0x008C4040]
 0057EB8C    xor eax, ebp
-0057EB8E    push eax
+0057EB8E    push eax                                        ; => [ Data: __security_cookie ]
 0057EB8F    lea eax, ss:[ebp-0x0C]
-0057EB92    mov dword ptr fs:[0x00000000], eax
+0057EB92    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0057EB98    mov edi, edx
 0057EB9A    mov dword ptr ss:[ebp-0x10], ecx
 0057EB9D    mov eax, dword ptr ss:[ebp+0x30]
@@ -66,7 +72,7 @@
 0057EC1A    call dword ptr ds:[edx+0x10]
 0057EC1D    mov eax, edi
 0057EC1F    mov ecx, dword ptr ss:[ebp-0x0C]
-0057EC22    mov dword ptr fs:[0x00000000], ecx
+0057EC22    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0057EC29    pop ecx
 0057EC2A    pop edi
 0057EC2B    pop esi

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6c6270
+// 起始地址: 0x6c6270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C6270    push ebp
 006C6271    mov ebp, esp
 006C6273    and esp, 0xFFFFFFF0
 006C6276    sub esp, 0xC88
-006C627C    mov eax, dword ptr ds:[0x008C4040]
+006C627C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006C6281    xor eax, esp
 006C6283    mov dword ptr ss:[esp+0xC84], eax
 006C628A    push esi
@@ -17,7 +23,7 @@
 006C62AA    lea eax, ss:[esp+0x78C]
 006C62B1    push eax
 006C62B2    push 0x00
-006C62B4    call dword ptr ds:[0x00775148]
+006C62B4    call dword ptr ds:[0x00775148]                  ; => [ Call: nullptr ]
 006C62BA    lea eax, ss:[esp+0xB88]
 006C62C1    push eax
 006C62C2    lea eax, ss:[esp+0x36C]
@@ -37,12 +43,12 @@
 006C62EF    push eax
 006C62F0    lea eax, ss:[esp+0x17C]
 006C62F7    push eax
-006C62F8    call dword ptr ds:[0x00775500]
+006C62F8    call dword ptr ds:[0x00775500]                  ; => [ Call: nullptr ]
 006C62FE    add esp, 0x28
 006C6301    lea eax, ss:[esp+0x158]
 006C6308    push eax
 006C6309    call dword ptr ds:[0x00775150]
-006C630F    call dword ptr ds:[0x007750E0]
+006C630F    call dword ptr ds:[0x007750E0]                  ; => [ Type: HANDLE ]
 006C6315    xor esi, esi
 006C6317    mov dword ptr ss:[esp+0x14], eax
 006C631B    cmp dword ptr ds:[edi], esi
@@ -56,7 +62,7 @@
 006C633B    push 0x00
 006C633D    push eax
 006C633E    movlpd qword ptr ss:[esp+0x34], xmm0
-006C6344    call 0x00761FC4
+006C6344    call 0x00761FC4                                 ; => [ Call: memset ]
 006C6349    mov eax, dword ptr ss:[esp+0x1C]
 006C634D    add esp, 0x0C
 006C6350    cdq
@@ -77,10 +83,10 @@
 006C638C    test eax, eax
 006C638E    jnz 0x006C63AD
 006C6390    call dword ptr ds:[0x00775154]
-006C6396    push eax
+006C6396    push eax                                        ; => [ Type: WIN32_ERROR ]
 006C6397    push dword ptr ss:[esp+0x14]
 006C639B    push 0x87E278
-006C63A0    call 0x0063B6F0
+006C63A0    call 0x0063B6F0                                 ; => [ Call: sub_63b6f0 | String: unknown symbol 0x%X (error %d) ]
 006C63A5    add esp, 0x0C
 006C63A8    jmp 0x006C6456
 006C63AD    push 0x3FF
@@ -88,7 +94,7 @@
 006C63B9    mov byte ptr ss:[esp+0x78C], 0x00
 006C63C1    push 0x00
 006C63C3    push eax
-006C63C4    call 0x00761FC4
+006C63C4    call 0x00761FC4                                 ; => [ Call: memset ]
 006C63C9    add esp, 0x0C
 006C63CC    lea eax, ss:[esp+0x788]
 006C63D3    push 0x1000
@@ -104,24 +110,24 @@
 006C63FD    xorps xmm0, xmm0
 006C6400    push eax
 006C6401    push dword ptr ss:[esp+0x24]
-006C6405    movaps xmmword ptr ss:[esp+0x3C], xmm0
+006C6405    movaps xmmword ptr ss:[esp+0x3C], xmm0          ; => [ Type: IMAGEHLP_LINE64 | Call: __builtin_memset ]
 006C640A    push dword ptr ss:[esp+0x2C]
 006C640E    movq qword ptr ss:[esp+0x50], xmm0
 006C6414    push dword ptr ss:[esp+0x24]
-006C6418    mov dword ptr ss:[esp+0x44], 0x18
+006C6418    mov dword ptr ss:[esp+0x44], 0x18               ; => [ Field: SizeOfStruct ]
 006C6420    call dword ptr ds:[0x007756F4]
 006C6426    test eax, eax
 006C6428    jnz 0x006C6439
 006C642A    push 0x87E2AC
-006C642F    call 0x0063B6F0
+006C642F    call 0x0063B6F0                                 ; => [ Call: sub_63b6f0 | String: unknown file ]
 006C6434    add esp, 0x04
 006C6437    jmp 0x006C6456
 006C6439    lea eax, ss:[esp+0x384]
 006C6440    push eax
-006C6441    push dword ptr ss:[esp+0x3C]
-006C6445    push dword ptr ss:[esp+0x44]
+006C6441    push dword ptr ss:[esp+0x3C]                    ; => [ Field: LineNumber ]
+006C6445    push dword ptr ss:[esp+0x44]                    ; => [ Type: CHAR | Field: FileName ]
 006C6449    push 0x87E29C
-006C644E    call 0x0063B6F0
+006C644E    call 0x0063B6F0                                 ; => [ Call: sub_63b6f0 | String: %s(%d): %s ]
 006C6453    add esp, 0x10
 006C6456    mov eax, dword ptr ss:[esp+0x24]
 006C645A    inc esi
@@ -130,12 +136,12 @@
 006C6460    jl 0x006C6326
 006C6466    lea eax, ss:[esp+0x260]
 006C646D    push eax
-006C646E    call dword ptr ds:[0x00775150]
+006C646E    call dword ptr ds:[0x00775150]                  ; => [ Type: BOOL ]
 006C6474    mov ecx, dword ptr ss:[esp+0xC8C]
 006C647B    pop edi
 006C647C    pop esi
 006C647D    xor ecx, esp
-006C647F    call 0x0075927A
+006C647F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C6484    mov esp, ebp
 006C6486    pop ebp
 006C6487    ret

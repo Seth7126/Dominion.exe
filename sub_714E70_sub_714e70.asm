@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_714e70
+// 起始地址: 0x714e70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00714E70    push ebp
 00714E71    mov ebp, esp
 00714E73    mov eax, dword ptr ss:[ebp+0x0C]
@@ -54,14 +60,14 @@
 00714F13    jmp 0x00715007
 00714F18    push 0x03
 00714F1A    mov ecx, edi
-00714F1C    call 0x00714A40
+00714F1C    call 0x00714A40                                 ; => [ Call: sub_714a40 ]
 00714F21    mov ecx, eax
 00714F23    movss xmm3, dword ptr ds:[0x00890E18]
 00714F2B    mov eax, 0x55555556
 00714F30    mov dword ptr ss:[ebp+0x0C], ecx
 00714F33    imul ecx
 00714F35    movaps xmm5, xmm3
-00714F38    xorps xmm1, xmm1
+00714F38    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00714F3B    movss xmm0, dword ptr ds:[edi+ecx*4-0x0C]
 00714F41    movss xmm6, dword ptr ds:[edi+ecx*4-0x08]
 00714F47    movss xmm7, dword ptr ds:[edi+ecx*4-0x04]
@@ -79,7 +85,7 @@
 00714F74    subss xmm5, xmm2
 00714F78    comiss xmm1, xmm5
 00714F7B    jbe 0x00714F82
-00714F7D    xorps xmm4, xmm4
+00714F7D    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 00714F80    jmp 0x00714F89
 00714F82    movaps xmm4, xmm3
 00714F85    minss xmm4, xmm5
@@ -91,11 +97,11 @@
 00714F95    lahf
 00714F96    test ah, 0x44
 00714F99    jp 0x00714FA0
-00714F9B    xorps xmm4, xmm4
+00714F9B    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 00714F9E    jmp 0x00714FE0
 00714FA0    mov eax, dword ptr ss:[ebp+0x08]
 00714FA3    add ecx, 0xFFFFFFEE
-00714FA6    xorps xmm2, xmm2
+00714FA6    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00714FA9    mov ebx, ecx
 00714FAB    cmp ecx, eax
 00714FAD    jnl 0x00714FC1
@@ -128,7 +134,7 @@
 00715013    jmp dword ptr ds:[eax*4+0x7150D0]
 0071501A    cmp ecx, ebx
 0071501C    jnz 0x00715023
-0071501E    movaps xmm3, xmm1
+0071501E    movaps xmm3, xmm1                               ; => [ String: 0 | String: zx ]
 00715021    jmp 0x0071502F
 00715023    movss xmm1, dword ptr ds:[edx+ecx*4-0x08]
 00715029    movss xmm3, dword ptr ds:[edx+ecx*4-0x04]

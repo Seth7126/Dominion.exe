@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53dc20
+// 起始地址: 0x53dc20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053DC20    dword 83EC8B55
 0053DC24    in al, 0xF8
 0053DC26    push ecx
@@ -5,7 +11,7 @@
 0053DC29    push 0x00
 0053DC2B    xor edx, edx
 0053DC2D    mov ecx, 0x3EB
-0053DC32    call 0x00568960
+0053DC32    call 0x00568960                                 ; => [ Call: sub_568960 ]
 0053DC37    add esp, 0x0C
 0053DC3A    test eax, eax
 0053DC3C    jnz 0x0053DC5D
@@ -17,7 +23,7 @@
 0053DC48    call 0x00568960
 0053DC4D    add esp, 0x0C
 0053DC50    test eax, eax
-0053DC52    jnz 0x0053DC5D
+0053DC52    jnz 0x0053DC5D                                  ; => [ Call: sub_568960 ]
 0053DC54    mov eax, 0x01
 0053DC59    mov esp, ebp
 0053DC5B    pop ebp

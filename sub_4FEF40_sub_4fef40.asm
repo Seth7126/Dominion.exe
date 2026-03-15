@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4fef40
+// 起始地址: 0x4fef40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FEF40    dword B8EC8B55
 004FEF44    or byte ptr ds:[ecx], bl
 004FEF46    add byte ptr ds:[eax], al
@@ -12,7 +18,7 @@
 004FEF63    lea edi, ss:[ebp-0xC84]
 004FEF69    mov esi, eax
 004FEF6B    mov ecx, 0x321
-004FEF70    rep movsd
+004FEF70    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: __chkstk | Call: sub_568780 ]
 004FEF72    xor eax, eax
 004FEF74    cmp dword ptr ss:[ebp-0x04], 0x01
 004FEF78    pop edi

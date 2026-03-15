@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_74d590
+// 起始地址: 0x74d590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074D590    push ebp
 0074D591    mov ebp, esp
 0074D593    sub esp, 0x0C
-0074D596    mov eax, dword ptr ds:[0x019E2778]
+0074D596    mov eax, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D59B    push ebx
 0074D59C    push esi
 0074D59D    mov esi, dword ptr ds:[0x00775308]
@@ -17,10 +23,10 @@
 0074D5C5    jnz 0x0074D5CD
 0074D5C7    call dword ptr ds:[0x0077537C]
 0074D5CD    push 0x00
-0074D5CF    call dword ptr ds:[0x007753CC]
+0074D5CF    call dword ptr ds:[0x007753CC]                  ; => [ Call: nullptr ]
 0074D5D5    push ebx
-0074D5D6    call dword ptr ds:[0x00775414]
-0074D5DC    mov ecx, dword ptr ds:[0x019E2778]
+0074D5D6    call dword ptr ds:[0x00775414]                  ; => [ Type: HDC ]
+0074D5DC    mov ecx, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D5E2    push 0x06
 0074D5E4    push eax
 0074D5E5    mov dword ptr ss:[ebp-0x08], eax
@@ -34,7 +40,7 @@
 0074D5FC    mov esi, dword ptr ss:[ebp-0x08]
 0074D5FF    push ecx
 0074D600    push esi
-0074D601    call dword ptr ds:[0x0077507C]
+0074D601    call dword ptr ds:[0x0077507C]                  ; => [ Call: nullptr ]
 0074D607    push ebx
 0074D608    push dword ptr ss:[ebp-0x04]
 0074D60B    push esi
@@ -52,10 +58,10 @@
 0074D632    push 0x00
 0074D634    push 0x00
 0074D636    push ebx
-0074D637    mov dword ptr ds:[eax+0x24], ecx
-0074D63A    call dword ptr ds:[0x007753FC]
+0074D637    mov dword ptr ds:[eax+0x24], ecx                ; => [ Data: data_19e2778 ]
+0074D63A    call dword ptr ds:[0x007753FC]                  ; => [ Call: nullptr ]
 0074D640    mov eax, dword ptr ds:[0x019E2778]
-0074D645    mov eax, dword ptr ds:[eax+0x04]
+0074D645    mov eax, dword ptr ds:[eax+0x04]                ; => [ Data: data_19e2778 ]
 0074D648    test eax, eax
 0074D64A    jz 0x0074D683
 0074D64C    mov eax, dword ptr ds:[eax+0x14]
@@ -68,36 +74,36 @@
 0074D66B    mov eax, dword ptr ds:[0x019E2778]
 0074D670    push 0x05
 0074D672    push dword ptr ds:[eax+0x20]
-0074D675    call esi
+0074D675    call esi                                        ; => [ Data: data_19e2778 ]
 0074D677    mov eax, dword ptr ds:[0x019E2778]
 0074D67C    push 0x05
 0074D67E    push dword ptr ds:[eax+0x1C]
-0074D681    call esi
+0074D681    call esi                                        ; => [ Data: data_19e2778 | Data: data_19e2778 | Data: data_19e2778 ]
 0074D683    mov esi, dword ptr ds:[0x00775308]
 0074D689    mov eax, dword ptr ds:[0x019E2778]
 0074D68E    push 0x00
 0074D690    push 0x0D
 0074D692    push 0x102
 0074D697    push dword ptr ds:[eax+0x1C]
-0074D69A    call esi
+0074D69A    call esi                                        ; => [ Data: data_19e2778 ]
 0074D69C    mov eax, dword ptr ds:[0x019E2778]
 0074D6A1    push 0x00
 0074D6A3    push 0x0D
 0074D6A5    push 0x102
 0074D6AA    push dword ptr ds:[eax+0x20]
-0074D6AD    call esi
+0074D6AD    call esi                                        ; => [ Data: data_19e2778 ]
 0074D6AF    push ebx
 0074D6B0    call dword ptr ds:[0x007753F4]
 0074D6B6    movzx eax, ax
 0074D6B9    push ebx
-0074D6BA    or eax, 0x10000
+0074D6BA    or eax, 0x10000                                 ; => [ Type: WPARAM ]
 0074D6BF    push eax
 0074D6C0    push 0x111
 0074D6C5    push ebx
 0074D6C6    call dword ptr ds:[0x00775368]
 0074D6CC    push eax
 0074D6CD    call esi
-0074D6CF    mov eax, dword ptr ds:[0x019E2778]
+0074D6CF    mov eax, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 | Type: LRESULT ]
 0074D6D4    mov ecx, dword ptr ds:[eax+0x04]
 0074D6D7    test ecx, ecx
 0074D6D9    jz 0x0074D6F9
@@ -144,7 +150,7 @@
 0074D739    jmp 0x0074D689
 0074D73E    push 0x8901E0
 0074D743    push dword ptr ds:[ecx+0x08]
-0074D746    call dword ptr ds:[0x007755B0]
+0074D746    call dword ptr ds:[0x007755B0]                  ; => [ Type: LPARAM | Data: data_8901e0 ]
 0074D74C    add esp, 0x08
 0074D74F    test eax, eax
 0074D751    jnz 0x0074D6ED

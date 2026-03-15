@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7086b0
+// 起始地址: 0x7086b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007086B0    push ebx
 007086B1    mov ebx, ecx
 007086B3    push esi
@@ -8,9 +14,9 @@
 007086BB    nop dword ptr ds:[eax+eax*1], eax
 007086C0    push dword ptr ds:[edi+0x04]
 007086C3    mov esi, dword ptr ds:[edi+0x28]
-007086C6    call dword ptr ds:[0x00800B48]
+007086C6    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007086CC    push edi
-007086CD    call dword ptr ds:[0x00800B48]
+007086CD    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007086D3    add esp, 0x08
 007086D6    mov edi, esi
 007086D8    test esi, esi
@@ -20,13 +26,13 @@
 007086E1    jz 0x00708710
 007086E3    push dword ptr ds:[edi]
 007086E5    mov esi, dword ptr ds:[edi+0x50]
-007086E8    call dword ptr ds:[0x00800B48]
+007086E8    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007086EE    push dword ptr ds:[edi+0x44]
-007086F1    call dword ptr ds:[0x00800B48]
+007086F1    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007086F7    push dword ptr ds:[edi+0x48]
-007086FA    call dword ptr ds:[0x00800B48]
+007086FA    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00708700    push edi
-00708701    call dword ptr ds:[0x00800B48]
+00708701    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00708707    add esp, 0x10
 0070870A    mov edi, esi
 0070870C    test esi, esi
@@ -37,4 +43,4 @@
 0070871A    pop edi
 0070871B    pop esi
 0070871C    pop ebx
-0070871D    ret
+0070871D    ret                                             ; => [ Call: free ]

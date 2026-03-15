@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_665200
+// 起始地址: 0x665200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00665200    cmp byte ptr ds:[0x00C28C60], 0x00
 00665207    mov eax, ecx
 00665209    jnz 0x006652EE
@@ -10,9 +16,9 @@
 00665236    cmp byte ptr ds:[0x00CA9A77], 0x00
 0066523D    jnz 0x006652EE
 00665243    test eax, eax
-00665245    jz 0x006652EE
+00665245    jz 0x006652EE                                   ; => [ Data: data_ca9a77 | Data: data_ca9a76 | Data: data_ca9a74 | Data: data_ca9a75 | Data: data_c28c60 ]
 0066524B    mov ecx, dword ptr ds:[eax+0x10]
-0066524E    xorps xmm1, xmm1
+0066524E    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00665251    push esi
 00665252    xor esi, esi
 00665254    push edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64c870
+// 起始地址: 0x64c870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064C870    push ebp
 0064C871    mov ebp, esp
 0064C873    sub esp, 0x08
@@ -10,9 +16,9 @@
 0064C887    mov dword ptr ss:[ebp-0x04], edi
 0064C88A    test eax, eax
 0064C88C    jns 0x0064C8A2
-0064C88E    push 0x874364
+0064C88E    push 0x874364                                   ; => [ String: UI2::at ]
 0064C893    push 0xB74
-0064C898    mov ecx, 0x874310
+0064C898    mov ecx, 0x874310                               ; => [ String: numChildren >= 0 ]
 0064C89D    jmp 0x0064C947
 0064C8A2    mov ebx, dword ptr ss:[ebp+0x08]
 0064C8A5    test ebx, ebx
@@ -26,7 +32,7 @@
 0064C8BF    lea esi, ds:[edi+ebx*4]
 0064C8C2    call 0x0064E7A0
 0064C8C7    cmp dword ptr ds:[eax+0x15E4], ebx
-0064C8CD    jnz 0x0064C8DE
+0064C8CD    jnz 0x0064C8DE                                  ; => [ Call: sub_64e7a0 ]
 0064C8CF    mov eax, dword ptr ds:[esi+0x179C]
 0064C8D5    pop edi
 0064C8D6    pop esi
@@ -45,7 +51,7 @@
 0064C900    mov ecx, dword ptr ds:[edi]
 0064C902    call 0x0064E7A0
 0064C907    cmp dword ptr ds:[eax+0x15E4], ebx
-0064C90D    jz 0x0064C925
+0064C90D    jz 0x0064C925                                   ; => [ Call: sub_64e7a0 ]
 0064C90F    mov eax, dword ptr ss:[ebp+0x08]
 0064C912    inc esi
 0064C913    add edi, 0x04
@@ -66,15 +72,15 @@
 0064C932    mov esp, ebp
 0064C934    pop ebp
 0064C935    ret 0x04
-0064C938    push 0x874364
+0064C938    push 0x874364                                   ; => [ String: UI2::at ]
 0064C93D    push 0xB75
-0064C942    mov ecx, 0x814428
+0064C942    mov ecx, 0x814428                               ; => [ String: idx >= 0 ]
 0064C947    push 0x8739B4
 0064C94C    mov edx, 0x801800
-0064C951    call 0x0063B870
+0064C951    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: UI2::at | String: C:\x\ax2017\Engine\UI2.cpp ]
 0064C956    add esp, 0x0C
 0064C959    call 0x0063BC30
 0064C95E    test al, al
-0064C960    jz 0x0064C963
+0064C960    jz 0x0064C963                                   ; => [ Call: sub_63bc30 ]
 0064C962    int3
-0064C963    call 0x0063BB00
+0064C963    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

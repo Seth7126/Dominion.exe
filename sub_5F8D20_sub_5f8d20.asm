@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f8d20
+// 起始地址: 0x5f8d20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F8D20    push ebp
 005F8D21    mov ebp, esp
 005F8D23    sub esp, 0x10
@@ -11,7 +17,7 @@
 005F8D32    mov ecx, 0x28
 005F8D37    mov esi, edx
 005F8D39    mov edi, ebx
-005F8D3B    rep movsd
+005F8D3B    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005F8D3D    mov esi, edx
 005F8D3F    nop
 005F8D40    cmp dword ptr ds:[esi], 0x00

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_517610
+// 起始地址: 0x517610
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00517610    push ebp
 00517611    mov ebp, esp
 00517613    push ebx
@@ -6,7 +12,7 @@
 0051761C    push esi
 0051761D    push edi
 0051761E    mov ecx, ebx
-00517620    call 0x00571B30
+00517620    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00517625    mov ecx, dword ptr ds:[eax+0x98]
 0051762B    mov eax, dword ptr ds:[eax+0x9C]
 00517631    and ecx, 0x7F000400
@@ -18,7 +24,7 @@
 00517648    mov esi, dword ptr ds:[0x00CCA780]
 0051764E    shl ecx, 0x0B
 00517651    add esi, 0x34
-00517654    add esi, ecx
+00517654    add esi, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00517656    mov ecx, dword ptr ds:[esi]
 00517658    test ecx, ecx
 0051765A    jz 0x00517685
@@ -30,7 +36,7 @@
 00517674    or eax, ecx
 00517676    jz 0x0051767C
 00517678    cmp dword ptr ds:[esi], ebx
-0051767A    jz 0x0051768C
+0051767A    jz 0x0051768C                                   ; => [ Call: sub_571b30 ]
 0051767C    inc edi
 0051767D    add esi, 0x3C
 00517680    cmp edi, 0x04

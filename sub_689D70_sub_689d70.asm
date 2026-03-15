@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_689d70
+// 起始地址: 0x689d70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00689D70    push ebp
 00689D71    mov ebp, esp
 00689D73    push ecx
-00689D74    mov eax, dword ptr ds:[0x0147ABF4]
+00689D74    mov eax, dword ptr ds:[0x0147ABF4]              ; => [ Data: data_147abf4 ]
 00689D79    push ebx
 00689D7A    mov ebx, edx
 00689D7C    push esi
@@ -26,7 +32,7 @@
 00689DAC    push 0x00
 00689DAE    push eax
 00689DAF    mov edx, dword ptr ds:[ecx]
-00689DB1    call dword ptr ds:[edx+0x08]
+00689DB1    call dword ptr ds:[edx+0x08]                    ; => [ Data: data_147abf8 ]
 00689DB4    mov edx, eax
 00689DB6    mov dword ptr ds:[esi+0x20], edx
 00689DB9    cmp edx, 0xFFFFFFFF
@@ -37,19 +43,19 @@
 00689DCA    push ebx
 00689DCB    mov eax, dword ptr ds:[ecx]
 00689DCD    push edx
-00689DCE    call dword ptr ds:[eax+0x10]
+00689DCE    call dword ptr ds:[eax+0x10]                    ; => [ Data: data_147abf8 ]
 00689DD1    cmp eax, 0xFFFFFFFE
 00689DD4    jnz 0x00689DF8
 00689DD6    mov ecx, dword ptr ds:[0x0147ABF8]
 00689DDC    push dword ptr ds:[esi+0x20]
 00689DDF    mov eax, dword ptr ds:[ecx]
-00689DE1    call dword ptr ds:[eax+0x0C]
+00689DE1    call dword ptr ds:[eax+0x0C]                    ; => [ Data: data_147abf8 ]
 00689DE4    mov ecx, dword ptr ds:[0x0147ABF8]
 00689DEA    movzx eax, word ptr ds:[edi]
 00689DED    push 0x00
 00689DEF    push eax
 00689DF0    mov edx, dword ptr ds:[ecx]
-00689DF2    call dword ptr ds:[edx+0x08]
+00689DF2    call dword ptr ds:[edx+0x08]                    ; => [ Data: data_147abf8 ]
 00689DF5    mov dword ptr ds:[esi+0x20], eax
 00689DF8    pop edi
 00689DF9    pop esi

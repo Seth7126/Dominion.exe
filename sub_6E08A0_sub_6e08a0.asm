@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e08a0
+// 起始地址: 0x6e08a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E08A0    push ebp
 006E08A1    mov ebp, esp
 006E08A3    mov eax, dword ptr ss:[ebp+0x08]
@@ -20,7 +26,7 @@
 006E08C8    push eax
 006E08C9    push 0x00
 006E08CB    push ecx
-006E08CC    call 0x00761FC4
+006E08CC    call 0x00761FC4                                 ; => [ Call: memset ]
 006E08D1    add esp, 0x0C
 006E08D4    add dword ptr ds:[esi+0x04], edi
 006E08D7    pop edi
@@ -38,10 +44,10 @@
 006E08EF    push 0x816BDC
 006E08F4    mov edx, 0x801800
 006E08F9    mov ecx, 0x825700
-006E08FE    call 0x0063B870
+006E08FE    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\xArray.h | Data: data_801800 | String: XArray<struct Mat4>::SetSize | String: size_arg >= 0 && size_arg <= mSizeReserved ]
 006E0903    add esp, 0x0C
 006E0906    call 0x0063BC30
 006E090B    test al, al
-006E090D    jz 0x006E0910
+006E090D    jz 0x006E0910                                   ; => [ Call: sub_63bc30 ]
 006E090F    int3
-006E0910    call 0x0063BB00
+006E0910    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4baa90
+// 起始地址: 0x4baa90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BAA90    push ebp
 004BAA91    mov ebp, esp
 004BAA93    sub esp, 0x24
-004BAA96    mov eax, dword ptr ds:[0x008C4040]
+004BAA96    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004BAA9B    xor eax, ebp
 004BAA9D    mov dword ptr ss:[ebp-0x04], eax
 004BAAA0    push ebx
@@ -11,7 +17,7 @@
 004BAAA5    mov edi, ecx
 004BAAA7    mov dword ptr ss:[ebp-0x20], esi
 004BAAAA    mov ecx, esi
-004BAAAC    call 0x004BAA40
+004BAAAC    call 0x004BAA40                                 ; => [ Call: sub_4baa40 ]
 004BAAB1    test eax, eax
 004BAAB3    jnz 0x004BABD3
 004BAAB9    mov ecx, dword ptr ds:[edi+0x42A0]
@@ -32,14 +38,14 @@
 004BAAE2    push 0x01
 004BAAE4    mov edx, esi
 004BAAE6    mov ecx, edi
-004BAAE8    call 0x004BAC10
+004BAAE8    call 0x004BAC10                                 ; => [ Call: sub_4bac10 ]
 004BAAED    add esp, 0x08
 004BAAF0    pop edi
 004BAAF1    pop esi
 004BAAF2    pop ebx
 004BAAF3    mov ecx, dword ptr ss:[ebp-0x04]
 004BAAF6    xor ecx, ebp
-004BAAF8    call 0x0075927A
+004BAAF8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004BAAFD    mov esp, ebp
 004BAAFF    pop ebp
 004BAB00    ret
@@ -77,7 +83,7 @@
 004BAB60    mov dword ptr ss:[ebp-0x0C], 0x00
 004BAB67    push eax
 004BAB68    mov ecx, edi
-004BAB6A    call 0x004BB130
+004BAB6A    call 0x004BB130                                 ; => [ Call: sub_4bb130 ]
 004BAB6F    and ebx, dword ptr ds:[edi+0x04]
 004BAB72    mov eax, dword ptr ds:[edi]
 004BAB74    mov eax, dword ptr ds:[eax+ebx*4]
@@ -89,25 +95,25 @@
 004BAB84    mov eax, dword ptr ds:[eax+0x10]
 004BAB87    test eax, eax
 004BAB89    jnz 0x004BAB80
-004BAB8B    xor edi, edi
-004BAB8D    mov ecx, dword ptr ds:[0x00CC8DC8]
-004BAB93    call 0x004D8AD0
+004BAB8B    xor edi, edi                                    ; => [ Call: nullptr ]
+004BAB8D    mov ecx, dword ptr ds:[0x00CC8DC8]              ; => [ Data: data_cc8dc8 ]
+004BAB93    call 0x004D8AD0                                 ; => [ Call: sub_4d8ad0 ]
 004BAB98    mov eax, dword ptr ss:[ebp-0x1C]
 004BAB9B    cmp eax, dword ptr ds:[0x00CC8D68]
-004BABA1    jnz 0x004BAAF0
+004BABA1    jnz 0x004BAAF0                                  ; => [ Data: data_cc8d68 ]
 004BABA7    mov ecx, dword ptr ds:[edi+0x04]
 004BABAA    mov eax, dword ptr ds:[edi]
 004BABAC    mov dword ptr ss:[ebp-0x0C], ecx
 004BABAF    lea ecx, ss:[ebp-0x18]
 004BABB2    mov dword ptr ss:[ebp-0x18], esi
 004BABB5    mov dword ptr ss:[ebp-0x10], eax
-004BABB8    call 0x004BB950
+004BABB8    call 0x004BB950                                 ; => [ Call: sub_4bb950 ]
 004BABBD    mov ecx, dword ptr ss:[ebp-0x04]
 004BABC0    pop edi
 004BABC1    pop esi
 004BABC2    xor ecx, ebp
 004BABC4    pop ebx
-004BABC5    call 0x0075927A
+004BABC5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004BABCA    mov esp, ebp
 004BABCC    pop ebp
 004BABCD    ret
@@ -118,10 +124,10 @@
 004BABDD    push 0x801AF8
 004BABE2    mov edx, 0x801800
 004BABE7    mov ecx, 0x802580
-004BABEC    call 0x0063B870
+004BABEC    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SyncedKeyType(key) == SYNCEDDATA_SUM | Data: data_801800 | String: SyncedDataIncrement | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004BABF1    add esp, 0x0C
 004BABF4    call 0x0063BC30
 004BABF9    test al, al
-004BABFB    jz 0x004BABFE
+004BABFB    jz 0x004BABFE                                   ; => [ Call: sub_63bc30 ]
 004BABFD    int3
-004BABFE    call 0x0063BB00
+004BABFE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

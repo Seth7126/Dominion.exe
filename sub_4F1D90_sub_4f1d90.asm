@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f1d90
+// 起始地址: 0x4f1d90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F1D90    push ebp
 004F1D91    mov ebp, esp
 004F1D93    sub esp, 0x1C
@@ -66,7 +72,7 @@
 004F1E4C    mov ebx, dword ptr ds:[eax+0x1A4C]
 004F1E52    cmp ebx, edx
 004F1E54    jz 0x004F1EF1
-004F1E5A    call 0x0057DA30
+004F1E5A    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 004F1E5F    cmp eax, ebx
 004F1E61    jz 0x004F1EF1
 004F1E67    mov eax, dword ptr ss:[ebp-0x14]
@@ -94,12 +100,12 @@
 004F1E98    mov ecx, dword ptr ss:[ebp-0x04]
 004F1E9B    push edx
 004F1E9C    mov edx, dword ptr ds:[ebx+0x4C]
-004F1E9F    call 0x005731D0
+004F1E9F    call 0x005731D0                                 ; => [ Call: sub_5731d0 ]
 004F1EA4    mov eax, dword ptr ds:[esi+0x04]
 004F1EA7    add esp, 0x04
 004F1EAA    call eax
 004F1EAC    mov ecx, dword ptr fs:[0x0000002C]
-004F1EB3    mov edx, dword ptr ds:[ecx]
+004F1EB3    mov edx, dword ptr ds:[ecx]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 004F1EB5    mov ecx, dword ptr ds:[edx+0xF010]
 004F1EBB    test ecx, ecx
 004F1EBD    jle 0x004F1F0F
@@ -133,10 +139,10 @@
 004F1F19    push 0x81F4B8
 004F1F1E    mov edx, 0x801800
 004F1F23    mov ecx, 0x81F9F0
-004F1F28    call 0x0063B870
+004F1F28    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomPopContext ]
 004F1F2D    add esp, 0x0C
 004F1F30    call 0x0063BC30
 004F1F35    test al, al
-004F1F37    jz 0x004F1F3A
+004F1F37    jz 0x004F1F3A                                   ; => [ Call: sub_63bc30 ]
 004F1F39    int3
-004F1F3A    call 0x0063BB00
+004F1F3A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

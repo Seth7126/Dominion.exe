@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5467b0
+// 起始地址: 0x5467b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005467B0    dword 83EC8B55
 005467B4    in al, dx
 005467B5    xor al, 0xA1
@@ -26,14 +32,14 @@
 00546809    add edi, 0x04
 0054680C    cmp edi, 0x0C
 0054680F    jl 0x005467D0
-00546811    call 0x00573400
+00546811    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00546816    mov ebx, dword ptr ds:[eax+0x04]
 00546819    test ebx, ebx
 0054681B    jnz 0x00546836
-0054681D    push 0x81EDE0
+0054681D    push 0x81EDE0                                   ; => [ String: GameRNG ]
 00546822    push 0x1577
-00546827    push 0x81EA70
-0054682C    mov ecx, 0x81EDE8
+00546827    push 0x81EA70                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
+0054682C    mov ecx, 0x81EDE8                               ; => [ Data: data_81ede8 ]
 00546831    jmp 0x005468B7
 00546836    xor edi, edi
 00546838    mov esi, 0x0C
@@ -42,7 +48,7 @@
 00546843    jb 0x005468A3
 00546845    mov edx, esi
 00546847    mov ecx, ebx
-00546849    call 0x0063ED10
+00546849    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0054684E    mov ecx, dword ptr ss:[ebp+edi*4-0x34]
 00546852    dec esi
 00546853    lea edx, ds:[edi+eax*1]
@@ -52,7 +58,7 @@
 0054685F    mov dword ptr ss:[ebp+edx*4-0x34], ecx
 00546863    test esi, esi
 00546865    jnle 0x00546840
-00546867    call 0x00573400
+00546867    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0054686C    mov ebx, eax
 0054686E    lea esi, ss:[ebp-0x08]
 00546871    mov edi, 0x0C
@@ -61,7 +67,7 @@
 0054687B    push 0x00
 0054687D    push 0xFFFFFFFF
 0054687F    push dword ptr ss:[ebp+0x08]
-00546882    call 0x005727E0
+00546882    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 00546887    add esp, 0x0C
 0054688A    lea esi, ds:[esi-0x04]
 0054688D    sub edi, 0x01
@@ -71,19 +77,19 @@
 00546896    pop esi
 00546897    xor ecx, ebp
 00546899    pop ebx
-0054689A    call 0x0075927A
+0054689A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0054689F    mov esp, ebp
 005468A1    pop ebp
 005468A2    ret
-005468A3    push 0x871F38
+005468A3    push 0x871F38                                   ; => [ String: RandomPCGIntRange ]
 005468A8    push 0x120
-005468AD    push 0x871ED0
-005468B2    mov ecx, 0x871F28
+005468AD    push 0x871ED0                                   ; => [ String: C:\x\ax2017\Engine\Random.cpp ]
+005468B2    mov ecx, 0x871F28                               ; => [ String: mmin <= mmax ]
 005468B7    mov edx, 0x801800
-005468BC    call 0x0063B870
+005468BC    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005468C1    add esp, 0x0C
 005468C4    call 0x0063BC30
 005468C9    test al, al
-005468CB    jz 0x005468CE
+005468CB    jz 0x005468CE                                   ; => [ Call: sub_63bc30 ]
 005468CD    int3
-005468CE    call 0x0063BB00
+005468CE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

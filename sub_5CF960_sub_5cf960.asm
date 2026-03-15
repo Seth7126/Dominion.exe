@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cf960
+// 起始地址: 0x5cf960
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CF960    push ebp
 005CF961    mov ebp, esp
 005CF963    push ebx
@@ -6,7 +12,7 @@
 005CF968    xorps xmm0, xmm0
 005CF96B    push edi
 005CF96C    mov edi, ecx
-005CF96E    movups xmmword ptr ds:[esi], xmm0
+005CF96E    movups xmmword ptr ds:[esi], xmm0               ; => [ String: 0 | String: zx ]
 005CF971    mov eax, dword ptr ds:[edi+0x2C]
 005CF974    cmp eax, 0x08
 005CF977    jnbe 0x005CFC1D
@@ -52,7 +58,7 @@
 005CFA13    pop ebx
 005CFA14    pop ebp
 005CFA15    ret
-005CFA16    call 0x005CF840
+005CFA16    call 0x005CF840                                 ; => [ Call: sub_5cf840 ]
 005CFA1B    test eax, eax
 005CFA1D    jz 0x005CFA4B
 005CFA1F    mov dword ptr ds:[esi], 0x03
@@ -77,7 +83,7 @@
 005CFA56    pop ebp
 005CFA57    ret
 005CFA58    mov ecx, dword ptr ds:[edi+0x240]
-005CFA5E    call 0x005CBA00
+005CFA5E    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005CFA63    mov ecx, dword ptr ds:[eax+0x2C]
 005CFA66    cmp ecx, 0x03
 005CFA69    jnz 0x005CFA83
@@ -94,9 +100,9 @@
 005CFA82    ret
 005CFA83    test ecx, ecx
 005CFA85    jz 0x005CFA9B
-005CFA87    push 0x86F80C
+005CFA87    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFA8C    push 0x155C
-005CFA91    mov ecx, 0x86F820
+005CFA91    mov ecx, 0x86F820                               ; => [ String: source.type == DOMGFX_CARD ]
 005CFA96    jmp 0x005CFC2C
 005CFA9B    mov eax, dword ptr ds:[eax+0x98]
 005CFAA1    mov dword ptr ds:[esi+0x04], eax
@@ -115,7 +121,7 @@
 005CFAC4    jz 0x005CFB0A
 005CFAC6    sub eax, 0x01
 005CFAC9    jz 0x005CFADA
-005CFACB    push 0x86F80C
+005CFACB    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFAD0    push 0x1583
 005CFAD5    jmp 0x005CFC27
 005CFADA    cmp dword ptr ds:[edi+0x370], 0x01
@@ -123,9 +129,9 @@
 005CFAE7    mov dword ptr ds:[esi], 0x02
 005CFAED    mov dword ptr ds:[esi+0x04], eax
 005CFAF0    jz 0x005CFA3B
-005CFAF6    push 0x86F80C
+005CFAF6    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFAFB    push 0x157B
-005CFB00    mov ecx, 0x86F83C
+005CFB00    mov ecx, 0x86F83C                               ; => [ String: gfx.move.locCurrent.type == LOC_USER ]
 005CFB05    jmp 0x005CFC2C
 005CFB0A    cmp dword ptr ds:[edi+0x370], 0x01
 005CFB11    mov eax, dword ptr ds:[edi+0x22C]
@@ -134,25 +140,25 @@
 005CFB20    mov dword ptr ds:[esi], 0x03
 005CFB26    mov dword ptr ds:[esi+0x08], eax
 005CFB29    jz 0x005CFA3B
-005CFB2F    push 0x86F80C
+005CFB2F    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFB34    push 0x1575
-005CFB39    mov ecx, 0x86F83C
+005CFB39    mov ecx, 0x86F83C                               ; => [ String: gfx.move.locCurrent.type == LOC_USER ]
 005CFB3E    jmp 0x005CFC2C
 005CFB43    cmp dword ptr ds:[edi+0x370], 0x01
 005CFB4A    mov eax, dword ptr ds:[edi+0x228]
 005CFB50    mov dword ptr ds:[esi], 0x01
 005CFB56    mov dword ptr ds:[esi+0x04], eax
 005CFB59    jz 0x005CFA3B
-005CFB5F    push 0x86F80C
+005CFB5F    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFB64    push 0x156D
-005CFB69    mov ecx, 0x86F83C
+005CFB69    mov ecx, 0x86F83C                               ; => [ String: gfx.move.locCurrent.type == LOC_USER ]
 005CFB6E    jmp 0x005CFC2C
 005CFB73    mov eax, dword ptr ds:[edi+0xA4]
 005CFB79    cmp eax, 0x06
 005CFB7C    jz 0x005CFB9F
 005CFB7E    cmp eax, 0x3F1
 005CFB83    jz 0x005CFB94
-005CFB85    push 0x86F80C
+005CFB85    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFB8A    push 0x15A7
 005CFB8F    jmp 0x005CFC27
 005CFB94    mov eax, dword ptr ds:[edi+0xA0]
@@ -162,25 +168,25 @@
 005CFBAB    mov dword ptr ds:[esi], 0x03
 005CFBB1    cmp ebx, 0x320
 005CFBB7    jb 0x005CFBBE
-005CFBB9    call 0x00591930
+005CFBB9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CFBBE    imul eax, ebx, 0x64
 005CFBC1    mov ecx, dword ptr ds:[eax+0xB82524]
-005CFBC7    call 0x005CC6C0
+005CFBC7    call 0x005CC6C0                                 ; => [ Call: sub_5cc6c0 | Data: data_b82524 ]
 005CFBCC    jmp 0x005CFA25
 005CFBD1    mov eax, dword ptr ds:[edi+0x58]
 005CFBD4    cmp eax, 0xFFFFFFFF
 005CFBD7    jnz 0x005CFBEA
-005CFBD9    push 0x86F80C
+005CFBD9    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFBDE    push 0x15AB
-005CFBE3    mov ecx, 0x86F864
+005CFBE3    mov ecx, 0x86F864                               ; => [ String: gfx.pile.owner != PLAYER_NONE ]
 005CFBE8    jmp 0x005CFC2C
 005CFBEA    cmp dword ptr ds:[edi+0x370], 0x01
 005CFBF1    mov dword ptr ds:[esi], 0x01
 005CFBF7    mov dword ptr ds:[esi+0x04], eax
 005CFBFA    jz 0x005CFC0D
-005CFBFC    push 0x86F80C
+005CFBFC    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFC01    push 0x15B0
-005CFC06    mov ecx, 0x86F83C
+005CFC06    mov ecx, 0x86F83C                               ; => [ String: gfx.move.locCurrent.type == LOC_USER ]
 005CFC0B    jmp 0x005CFC2C
 005CFC0D    mov ecx, dword ptr ds:[edi+0x384]
 005CFC13    mov dword ptr ds:[esi+0x0C], ecx
@@ -190,15 +196,15 @@
 005CFC1A    pop ebx
 005CFC1B    pop ebp
 005CFC1C    ret
-005CFC1D    push 0x86F80C
+005CFC1D    push 0x86F80C                                   ; => [ String: CalcPodIconWhere ]
 005CFC22    push 0x15B4
-005CFC27    mov ecx, 0x801AA4
+005CFC27    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005CFC2C    push 0x86F1E8
 005CFC31    mov edx, 0x801800
-005CFC36    call 0x0063B870
+005CFC36    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: CalcPodIconWhere ]
 005CFC3B    add esp, 0x0C
 005CFC3E    call 0x0063BC30
 005CFC43    test al, al
-005CFC45    jz 0x005CFC48
+005CFC45    jz 0x005CFC48                                   ; => [ Call: sub_63bc30 ]
 005CFC47    int3
-005CFC48    call 0x0063BB00
+005CFC48    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

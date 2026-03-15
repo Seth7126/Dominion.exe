@@ -1,20 +1,26 @@
+// ============================================================
+// 函数名称: sub_757710
+// 起始地址: 0x757710
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00757710    push ebp
 00757711    mov ebp, esp
 00757713    push 0xFFFFFFFF
-00757715    push 0x77332D
+00757715    push 0x77332D                                   ; => [ Call: sub_77332d | Type: EHRegistrationNode ]
 0075771A    mov eax, dword ptr fs:[0x00000000]
-00757720    push eax
+00757720    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00757721    sub esp, 0x2F4
 00757727    push esi
 00757728    push edi
 00757729    mov eax, dword ptr ds:[0x008C4040]
 0075772E    xor eax, ebp
-00757730    push eax
+00757730    push eax                                        ; => [ Data: __security_cookie ]
 00757731    lea eax, ss:[ebp-0x0C]
-00757734    mov dword ptr fs:[0x00000000], eax
+00757734    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0075773A    mov esi, ecx
 0075773C    mov dword ptr ss:[ebp-0x10], esi
-0075773F    call 0x0075EE50
+0075773F    call 0x0075EE50                                 ; => [ Call: sub_75ee50 ]
 00757744    mov eax, dword ptr ss:[ebp+0x08]
 00757747    xorps xmm0, xmm0
 0075774A    mov dword ptr ss:[ebp-0x04], 0x00
@@ -23,35 +29,35 @@
 0075775C    lea eax, ss:[ebp-0x300]
 00757762    push 0x00
 00757764    push eax
-00757765    mov dword ptr ds:[esi], 0x890A58
-0075776B    mov dword ptr ds:[esi+0x788], 0x00
+00757765    mov dword ptr ds:[esi], 0x890A58                ; => [ Data: data_890a58 ]
+0075776B    mov dword ptr ds:[esi+0x788], 0x00              ; => [ Call: __builtin_memset ]
 00757775    movups xmmword ptr ds:[esi+0x78C], xmm0
-0075777C    call 0x00761FC4
+0075777C    call 0x00761FC4                                 ; => [ Call: memset ]
 00757781    push 0x2E0
 00757786    lea edi, ds:[esi+0x1C8]
 0075778C    mov ecx, 0xB8
 00757791    lea eax, ss:[ebp-0x300]
 00757797    lea esi, ss:[ebp-0x300]
 0075779D    push 0x00
-0075779F    rep movsd
+0075779F    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 007577A1    push eax
-007577A2    call 0x00761FC4
+007577A2    call 0x00761FC4                                 ; => [ Call: memset ]
 007577A7    mov edi, dword ptr ss:[ebp-0x10]
 007577AA    lea esi, ss:[ebp-0x300]
 007577B0    mov eax, dword ptr ss:[ebp+0x08]
 007577B3    add edi, 0x4A8
 007577B9    mov ecx, 0xB8
 007577BE    add esp, 0x18
-007577C1    rep movsd
+007577C1    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 007577C3    mov ecx, dword ptr ds:[eax+0x68]
 007577C6    cmp dword ptr ds:[ecx+0x04], 0x15
 007577CA    jz 0x007577E5
-007577CC    push 0x877324
+007577CC    push 0x877324                                   ; => [ String: SoundGetDef ]
 007577D1    push 0x356
-007577D6    push 0x8772E4
-007577DB    mov ecx, 0x877344
+007577D6    push 0x8772E4                                   ; => [ String: C:\x\ax2017\Engine\Sound.cpp ]
+007577DB    mov ecx, 0x877344                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 007577E0    jmp 0x00757AFE
-007577E5    call 0x005AF880
+007577E5    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 007577EA    mov esi, eax
 007577EC    mov dword ptr ss:[ebp-0x1C], esi
 007577EF    mov edi, dword ptr ds:[esi+0x30]
@@ -62,13 +68,13 @@
 00757803    mov ecx, dword ptr ds:[eax+0x68]
 00757806    cmp dword ptr ds:[ecx+0x04], 0x15
 0075780A    jz 0x00757825
-0075780C    push 0x877324
+0075780C    push 0x877324                                   ; => [ String: SoundGetDef ]
 00757811    push 0x356
-00757816    push 0x8772E4
-0075781B    mov ecx, 0x877344
+00757816    push 0x8772E4                                   ; => [ String: C:\x\ax2017\Engine\Sound.cpp ]
+0075781B    mov ecx, 0x877344                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 00757820    jmp 0x00757AFE
 00757825    call 0x005AF880
-0075782A    mov esi, dword ptr ds:[eax+0x38]
+0075782A    mov esi, dword ptr ds:[eax+0x38]                ; => [ Call: sub_5af880 ]
 0075782D    mov eax, dword ptr ds:[esi+0x04]
 00757830    cdq
 00757831    and edx, 0x07
@@ -87,7 +93,7 @@
 0075785D    jbe 0x00757AD5
 00757863    mov eax, dword ptr ds:[edi+0x1C0]
 00757869    mov esi, dword ptr ds:[eax+0x68]
-0075786C    movups xmm0, xmmword ptr ds:[0x00800A2C]
+0075786C    movups xmm0, xmmword ptr ds:[0x00800A2C]        ; => [ Data: data_800a2c ]
 00757873    sub esp, 0x10
 00757876    mov dword ptr ds:[edi+0x498], esi
 0075787C    mov eax, esp
@@ -106,7 +112,7 @@
 007578B2    lea ecx, ds:[esi+0x20]
 007578B5    push eax
 007578B6    call 0x0063D7E0
-007578BB    push eax
+007578BB    push eax                                        ; => [ Call: sub_63d7e0 ]
 007578BC    push 0x88C36C
 007578C1    call 0x0063B5F0
 007578C6    push 0x88C388
@@ -114,7 +120,7 @@
 007578D0    push 0x88C304
 007578D5    mov edx, 0x801800
 007578DA    mov ecx, 0x801AA4
-007578DF    call 0x0063B870
+007578DF    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\SoundOgg.cpp | Data: data_801800 | Call: sub_63b5f0 | String: failed to read ogg %s %d | String: SoundOggReaderOpen | String: Halt ]
 007578E4    add esp, 0x18
 007578E7    jmp 0x00757B0B
 007578EC    cmp edi, 0x01
@@ -123,20 +129,20 @@
 007578F9    jnz 0x0075799E
 007578FF    call 0x0063EB70
 00757904    xor edx, edx
-00757906    div edi
+00757906    div edi                                         ; => [ Call: sub_63eb70 ]
 00757908    mov edi, dword ptr ss:[ebp-0x10]
 0075790B    mov dword ptr ds:[edi+0x1C4], edx
 00757911    mov eax, dword ptr ds:[esi+0x20]
 00757914    mov ecx, dword ptr ds:[eax+edx*8]
 00757917    cmp dword ptr ds:[ecx+0x04], 0x15
 0075791B    jz 0x00757936
-0075791D    push 0x877324
+0075791D    push 0x877324                                   ; => [ String: SoundGetDef ]
 00757922    push 0x356
-00757927    push 0x8772E4
-0075792C    mov ecx, 0x877344
+00757927    push 0x8772E4                                   ; => [ String: C:\x\ax2017\Engine\Sound.cpp ]
+0075792C    mov ecx, 0x877344                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 00757931    jmp 0x00757AFE
 00757936    call 0x005AF880
-0075793B    mov esi, dword ptr ds:[eax+0x38]
+0075793B    mov esi, dword ptr ds:[eax+0x38]                ; => [ Call: sub_5af880 ]
 0075793E    mov eax, dword ptr ds:[esi+0x04]
 00757941    cdq
 00757942    and edx, 0x07
@@ -165,14 +171,14 @@
 007579A2    jnz 0x00757AEA
 007579A8    cmp edi, 0x02
 007579AB    jz 0x007579C1
-007579AD    push 0x890844
+007579AD    push 0x890844                                   ; => [ String: TGGAudioInstance::TGGAudioInstance ]
 007579B2    push 0x198
-007579B7    mov ecx, 0x890824
+007579B7    mov ecx, 0x890824                               ; => [ String: sound->permutationCount == 2 ]
 007579BC    jmp 0x00757AF9
 007579C1    mov edi, dword ptr ss:[ebp-0x10]
-007579C4    xor ecx, ecx
+007579C4    xor ecx, ecx                                    ; => [ Call: nullptr ]
 007579C6    mov dword ptr ss:[ebp+0x08], 0x00
-007579CD    mov dword ptr ss:[ebp-0x14], ecx
+007579CD    mov dword ptr ss:[ebp-0x14], ecx                ; => [ Call: nullptr ]
 007579D0    lea eax, ds:[edi+0x49C]
 007579D6    mov dword ptr ss:[ebp-0x18], eax
 007579D9    nop dword ptr ds:[eax], eax
@@ -181,7 +187,7 @@
 007579E6    cmp dword ptr ds:[ecx+0x04], 0x15
 007579EA    jnz 0x007577CC
 007579F0    call 0x005AF880
-007579F5    mov esi, dword ptr ds:[eax+0x38]
+007579F5    mov esi, dword ptr ds:[eax+0x38]                ; => [ Call: sub_5af880 ]
 007579F8    mov eax, dword ptr ds:[esi+0x04]
 007579FB    cdq
 007579FC    and edx, 0x07
@@ -202,7 +208,7 @@
 00757A2D    mov eax, dword ptr ss:[ebp-0x1C]
 00757A30    sub esp, 0x10
 00757A33    mov ecx, dword ptr ss:[ebp-0x14]
-00757A36    movups xmm0, xmmword ptr ds:[0x00800A2C]
+00757A36    movups xmm0, xmmword ptr ds:[0x00800A2C]        ; => [ Data: data_800a2c ]
 00757A3D    mov eax, dword ptr ds:[eax+0x20]
 00757A40    mov eax, dword ptr ds:[ecx+eax*1]
 00757A43    lea ecx, ds:[esi-0x2D4]
@@ -242,30 +248,30 @@
 00757AB3    jz 0x00757ACB
 00757AB5    cmp edx, 0x02
 00757AB8    jz 0x00757ACB
-00757ABA    push 0x890844
+00757ABA    push 0x890844                                   ; => [ String: TGGAudioInstance::TGGAudioInstance ]
 00757ABF    push 0x1A6
-00757AC4    mov ecx, 0x890888
+00757AC4    mov ecx, 0x890888                               ; => [ String: countStreaming == 0 || countStreaming == 2 ]
 00757AC9    jmp 0x00757AF9
 00757ACB    or dword ptr ds:[edi+0x10], 0x01
 00757ACF    mov dword ptr ds:[edi+0x788], edx
 00757AD5    mov eax, edi
 00757AD7    mov ecx, dword ptr ss:[ebp-0x0C]
-00757ADA    mov dword ptr fs:[0x00000000], ecx
+00757ADA    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00757AE1    pop ecx
 00757AE2    pop edi
 00757AE3    pop esi
 00757AE4    mov esp, ebp
 00757AE6    pop ebp
 00757AE7    ret 0x04
-00757AEA    push 0x890844
+00757AEA    push 0x890844                                   ; => [ String: TGGAudioInstance::TGGAudioInstance ]
 00757AEF    push 0x1AE
-00757AF4    mov ecx, 0x801AA4
-00757AF9    push 0x8907BC
+00757AF4    mov ecx, 0x801AA4                               ; => [ String: Halt ]
+00757AF9    push 0x8907BC                                   ; => [ String: C:\x\ax2017\Engine\SoundSoloud.cpp ]
 00757AFE    mov edx, 0x801800
-00757B03    call 0x0063B870
+00757B03    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00757B08    add esp, 0x0C
 00757B0B    call 0x0063BC30
 00757B10    test al, al
-00757B12    jz 0x00757B15
+00757B12    jz 0x00757B15                                   ; => [ Call: sub_63bc30 ]
 00757B14    int3
-00757B15    call 0x0063BB00
+00757B15    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

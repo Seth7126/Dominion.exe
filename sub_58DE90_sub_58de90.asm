@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58de90
+// 起始地址: 0x58de90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058DE90    push ebp
 0058DE91    mov ebp, esp
 0058DE93    push ecx
@@ -8,7 +14,7 @@
 0058DE9C    push edi
 0058DE9D    xor edi, edi
 0058DE9F    xor esi, esi
-0058DEA1    mov ecx, dword ptr ds:[0x00CCE9C8]
+0058DEA1    mov ecx, dword ptr ds:[0x00CCE9C8]              ; => [ Data: data_cce9c8 ]
 0058DEA7    mov eax, dword ptr ds:[ecx+esi*1+0xA0]
 0058DEAE    test eax, eax
 0058DEB0    jz 0x0058DEF2
@@ -19,7 +25,7 @@
 0058DEBB    jz 0x0058DEE6
 0058DEBD    mov edx, dword ptr ds:[0x00CCE9B0]
 0058DEC3    mov ecx, dword ptr ds:[ecx+esi*1+0xA4]
-0058DECA    call 0x00571B30
+0058DECA    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0058DECF    mov edx, dword ptr ss:[ebp+0x08]
 0058DED2    mov ecx, edx
 0058DED4    and ecx, dword ptr ds:[eax+0x98]

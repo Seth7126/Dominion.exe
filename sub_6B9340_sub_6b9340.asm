@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b9340
+// 起始地址: 0x6b9340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B9340    push ebp
 006B9341    mov ebp, esp
 006B9343    sub esp, 0x38
@@ -6,31 +12,31 @@
 006B934E    mov dword ptr ss:[ebp-0x28], eax
 006B9351    mov eax, dword ptr fs:[0x0000002C]
 006B9357    push esi
-006B9358    mov esi, dword ptr ds:[0x019E3BA0]
+006B9358    mov esi, dword ptr ds:[0x019E3BA0]              ; => [ Data: data_19e3ba0 ]
 006B935E    push edi
-006B935F    mov edi, dword ptr ds:[eax]
+006B935F    mov edi, dword ptr ds:[eax]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 006B9361    movq qword ptr ss:[ebp-0x30], xmm0
 006B9366    cmp esi, dword ptr ds:[edi+0x08]
 006B936C    jle 0x006B93A3
 006B936E    push 0x19E3BA0
-006B9373    call 0x0075970E
-006B9378    mov esi, dword ptr ds:[0x019E3BA0]
+006B9373    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_19e3ba0 ]
+006B9378    mov esi, dword ptr ds:[0x019E3BA0]              ; => [ Data: data_19e3ba0 ]
 006B937E    add esp, 0x04
 006B9381    cmp esi, 0xFFFFFFFF
 006B9384    jnz 0x006B93A3
 006B9386    push 0x19E3BA0
-006B938B    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35
-006B9395    call 0x007596BD
-006B939A    mov esi, dword ptr ds:[0x019E3BA0]
+006B938B    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35       ; => [ Data: data_19e3b9c ]
+006B9395    call 0x007596BD                                 ; => [ Data: data_19e3ba0 | Call: __Init_thread_footer ]
+006B939A    mov esi, dword ptr ds:[0x019E3BA0]              ; => [ Data: data_19e3ba0 ]
 006B93A0    add esp, 0x04
 006B93A3    movss xmm0, dword ptr ss:[ebp-0x30]
 006B93A8    mulss xmm0, dword ptr ds:[0x019E3B9C]
-006B93B0    mulss xmm0, dword ptr ds:[0x00890D84]
+006B93B0    mulss xmm0, dword ptr ds:[0x00890D84]           ; => [ Data: data_19e3b9c ]
 006B93B8    movss dword ptr ss:[ebp-0x14], xmm0
-006B93BD    call 0x004AE0D0
+006B93BD    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006B93C2    movss dword ptr ss:[ebp-0x18], xmm0
 006B93C7    movss xmm0, dword ptr ss:[ebp-0x14]
-006B93CC    call 0x004AE0F0
+006B93CC    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006B93D1    movaps xmm1, xmm0
 006B93D4    movss dword ptr ss:[ebp-0x14], xmm0
 006B93D9    xorps xmm0, xmm0
@@ -39,24 +45,24 @@
 006B93E5    cmp esi, dword ptr ds:[edi+0x08]
 006B93EB    jle 0x006B9422
 006B93ED    push 0x19E3BA0
-006B93F2    call 0x0075970E
-006B93F7    mov esi, dword ptr ds:[0x019E3BA0]
+006B93F2    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_19e3ba0 ]
+006B93F7    mov esi, dword ptr ds:[0x019E3BA0]              ; => [ Data: data_19e3ba0 ]
 006B93FD    add esp, 0x04
 006B9400    cmp esi, 0xFFFFFFFF
 006B9403    jnz 0x006B9422
 006B9405    push 0x19E3BA0
-006B940A    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35
-006B9414    call 0x007596BD
-006B9419    mov esi, dword ptr ds:[0x019E3BA0]
+006B940A    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35       ; => [ Data: data_19e3b9c ]
+006B9414    call 0x007596BD                                 ; => [ Data: data_19e3ba0 | Call: __Init_thread_footer ]
+006B9419    mov esi, dword ptr ds:[0x019E3BA0]              ; => [ Data: data_19e3ba0 ]
 006B941F    add esp, 0x04
 006B9422    movss xmm0, dword ptr ss:[ebp-0x2C]
 006B9427    mulss xmm0, dword ptr ds:[0x019E3B9C]
-006B942F    mulss xmm0, dword ptr ds:[0x00890D84]
+006B942F    mulss xmm0, dword ptr ds:[0x00890D84]           ; => [ Data: data_19e3b9c ]
 006B9437    movss dword ptr ss:[ebp-0x10], xmm0
-006B943C    call 0x004AE0D0
+006B943C    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006B9441    movss dword ptr ss:[ebp-0x04], xmm0
 006B9446    movss xmm0, dword ptr ss:[ebp-0x10]
-006B944B    call 0x004AE0F0
+006B944B    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006B9450    movaps xmm4, xmm0
 006B9453    xorps xmm1, xmm1
 006B9456    mulss xmm4, xmm1
@@ -65,22 +71,22 @@
 006B9464    cmp esi, dword ptr ds:[edi+0x08]
 006B946A    jle 0x006B9499
 006B946C    push 0x19E3BA0
-006B9471    call 0x0075970E
+006B9471    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_19e3ba0 ]
 006B9476    add esp, 0x04
 006B9479    cmp dword ptr ds:[0x019E3BA0], 0xFFFFFFFF
-006B9480    jnz 0x006B9499
+006B9480    jnz 0x006B9499                                  ; => [ Data: data_19e3ba0 ]
 006B9482    push 0x19E3BA0
-006B9487    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35
-006B9491    call 0x007596BD
+006B9487    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35       ; => [ Data: data_19e3b9c ]
+006B9491    call 0x007596BD                                 ; => [ Data: data_19e3ba0 | Call: __Init_thread_footer ]
 006B9496    add esp, 0x04
 006B9499    movss xmm0, dword ptr ss:[ebp-0x28]
 006B949E    mulss xmm0, dword ptr ds:[0x019E3B9C]
-006B94A6    mulss xmm0, dword ptr ds:[0x00890D84]
+006B94A6    mulss xmm0, dword ptr ds:[0x00890D84]           ; => [ Data: data_19e3b9c ]
 006B94AE    movss dword ptr ss:[ebp-0x08], xmm0
-006B94B3    call 0x004AE0D0
+006B94B3    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006B94B8    movss dword ptr ss:[ebp-0x20], xmm0
 006B94BD    movss xmm0, dword ptr ss:[ebp-0x08]
-006B94C2    call 0x004AE0F0
+006B94C2    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006B94C7    movss xmm4, dword ptr ss:[ebp-0x34]
 006B94CC    movaps xmm3, xmm0
 006B94CF    movss xmm6, dword ptr ss:[ebp-0x04]

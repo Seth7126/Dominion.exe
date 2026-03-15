@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_7015e0
+// 起始地址: 0x7015e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007015E0    push ebp
 007015E1    mov ebp, esp
 007015E3    push esi
 007015E4    mov esi, ecx
 007015E6    cmp dword ptr ds:[esi+0x4268], 0x00
 007015ED    jnle 0x00701876
-007015F3    mov edx, dword ptr ds:[0x0147DED4]
+007015F3    mov edx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 007015F9    push edi
 007015FA    mov edi, dword ptr ds:[edx+0x4058]
 00701600    cmp edi, 0xFFFFFFFF
@@ -13,9 +19,9 @@
 0070160A    mov ebx, dword ptr ss:[ebp+0x0C]
 0070160D    test ebx, ebx
 0070160F    jnz 0x00701622
-00701611    push 0x88D514
+00701611    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 00701616    push 0x6C
-00701618    mov ecx, 0x802734
+00701618    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 0070161D    jmp 0x00701887
 00701622    movzx eax, bx
 00701625    cmp eax, dword ptr ds:[esi+0x4250]
@@ -35,20 +41,20 @@
 00701664    push 0x8892
 00701669    mov eax, dword ptr ds:[eax]
 0070166B    call eax
-0070166D    mov eax, dword ptr ds:[0x0147B06C]
+0070166D    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00701672    inc dword ptr ds:[eax+0x10]
 00701675    mov ebx, dword ptr ss:[ebp+0x10]
 00701678    mov edx, edi
 0070167A    mov ecx, dword ptr ss:[ebp+0x0C]
 0070167D    push ebx
-0070167E    call 0x00700CE0
+0070167E    call 0x00700CE0                                 ; => [ Call: sub_700ce0 ]
 00701683    add esp, 0x04
 00701686    test al, al
 00701688    jnz 0x0070174F
 0070168E    mov edx, dword ptr ss:[ebp+0x14]
 00701691    mov ecx, edi
 00701693    push 0x00
-00701695    call 0x00701050
+00701695    call 0x00701050                                 ; => [ Call: sub_701050 ]
 0070169A    add esp, 0x04
 0070169D    test ebx, ebx
 0070169F    jz 0x007016DA
@@ -76,7 +82,7 @@
 007016FE    mov dword ptr ss:[ebp+0x10], eax
 00701701    cmp dword ptr ds:[eax+0x148], edx
 00701707    jnz 0x0070187B
-0070170D    mov ecx, dword ptr ds:[0x0147DED4]
+0070170D    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00701713    mov eax, dword ptr ds:[eax]
 00701715    cmp dword ptr ds:[ecx+0x409C], eax
 0070171B    jz 0x0070173A
@@ -86,17 +92,17 @@
 00701729    push 0x8892
 0070172E    mov eax, dword ptr ds:[eax]
 00701730    call eax
-00701732    mov eax, dword ptr ds:[0x0147B06C]
+00701732    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00701737    inc dword ptr ds:[eax+0x10]
 0070173A    mov edx, dword ptr ss:[ebp+0x10]
 0070173D    mov ecx, edi
 0070173F    push 0x01
 00701741    mov edx, dword ptr ds:[edx+0xDC]
-00701747    call 0x00701050
+00701747    call 0x00701050                                 ; => [ Call: sub_701050 ]
 0070174C    add esp, 0x04
 0070174F    mov ecx, dword ptr ss:[ebp+0x08]
 00701752    mov edi, dword ptr ss:[ebp+0x18]
-00701755    mov eax, dword ptr ds:[ecx*4+0x800A40]
+00701755    mov eax, dword ptr ds:[ecx*4+0x800A40]          ; => [ Data: data_800a40 ]
 0070175C    test ebx, ebx
 0070175E    jz 0x00701826
 00701764    lea eax, ds:[ecx-0x01]
@@ -135,7 +141,7 @@
 007017DD    push eax
 007017DE    mov eax, dword ptr ds:[0x007757A0]
 007017E3    mov eax, dword ptr ds:[eax]
-007017E5    call eax
+007017E5    call eax                                        ; => [ Data: data_800a40 ]
 007017E7    jmp 0x00701852
 007017E9    mov ecx, dword ptr ds:[ecx+0x138]
 007017EF    push 0x00
@@ -150,12 +156,12 @@
 00701804    push eax
 00701805    mov eax, dword ptr ds:[0x007757A4]
 0070180A    mov eax, dword ptr ds:[eax]
-0070180C    call eax
+0070180C    call eax                                        ; => [ Data: data_800a40 ]
 0070180E    jmp 0x00701852
-00701810    push 0x88CA84
+00701810    push 0x88CA84                                   ; => [ String: OpenGLInterface::DrawPrimitive ]
 00701815    push 0xA38
-0070181A    push 0x88C504
-0070181F    mov ecx, 0x801AA4
+0070181A    push 0x88C504                                   ; => [ String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
+0070181F    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00701824    jmp 0x0070188C
 00701826    mov ecx, dword ptr ss:[ebp+0x0C]
 00701829    mov esi, dword ptr ss:[ebp+0x24]
@@ -175,7 +181,7 @@
 0070184A    push ecx
 0070184B    push eax
 0070184C    call dword ptr ds:[0x0077521C]
-00701852    mov ecx, dword ptr ds:[0x0147B06C]
+00701852    mov ecx, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00701858    test esi, esi
 0070185A    mov edx, 0x01
 0070185F    cmovnle edx, esi
@@ -190,15 +196,15 @@
 00701876    pop esi
 00701877    pop ebp
 00701878    ret 0x20
-0070187B    push 0x88D514
-00701880    mov ecx, 0x802748
+0070187B    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
+00701880    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00701885    push 0x6D
-00701887    push 0x80193C
+00701887    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
 0070188C    mov edx, 0x801800
-00701891    call 0x0063B870
+00701891    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00701896    add esp, 0x0C
 00701899    call 0x0063BC30
 0070189E    test al, al
-007018A0    jz 0x007018A3
+007018A0    jz 0x007018A3                                   ; => [ Call: sub_63bc30 ]
 007018A2    int3
-007018A3    call 0x0063BB00
+007018A3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

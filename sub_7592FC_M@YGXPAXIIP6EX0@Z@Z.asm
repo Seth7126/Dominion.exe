@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: ??_M@YGXPAXIIP6EX0@Z@Z
+// 起始地址: 0x7592fc
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007592FC    push 0x0C
 007592FE    push 0x8C0428
 00759303    call 0x0075A040
@@ -25,9 +31,9 @@
 00759342    mov al, 0x01
 00759344    mov byte ptr ss:[ebp-0x19], al
 00759347    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFE
-0075934E    call 0x00759371
+0075934E    call 0x00759371                                 ; => [ Call: $LN10 ]
 00759353    mov ecx, dword ptr ss:[ebp-0x10]
-00759356    mov dword ptr fs:[0x00000000], ecx
+00759356    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0075935D    pop ecx
 0075935E    pop edi
 0075935F    pop esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_507880
+// 起始地址: 0x507880
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00507880    dword 81EC8B55
 00507884    in al, dx
 00507885    test byte ptr ds:[eax+eax*1], cl
@@ -13,9 +19,9 @@
 005078A1    mov edx, dword ptr ds:[eax+0x0C]
 005078A4    mov ecx, dword ptr ds:[eax+0x04]
 005078A7    push 0x01
-005078A9    call 0x00590760
+005078A9    call 0x00590760                                 ; => [ Call: sub_590760 ]
 005078AE    add esp, 0x18
-005078B1    call 0x00573400
+005078B1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005078B6    mov ecx, dword ptr ds:[eax+0x0C]
 005078B9    cmp ecx, 0xFFFFFFFF
 005078BC    jz 0x0050792B
@@ -26,13 +32,13 @@
 005078CA    or dword ptr ds:[edx+eax*1+0x17558], 0x02
 005078D2    xor edx, edx
 005078D4    lea ecx, ds:[edx+0x01]
-005078D7    call 0x00561AF0
+005078D7    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 005078DC    add esp, 0x04
 005078DF    call 0x00573400
 005078E4    xor esi, esi
 005078E6    mov eax, dword ptr ds:[eax+0x04]
 005078E9    lea ecx, ds:[esi+0x07]
-005078EC    add eax, 0x1594
+005078EC    add eax, 0x1594                                 ; => [ Call: sub_573400 ]
 005078F1    cmp dword ptr ds:[eax], 0x00
 005078F4    jz 0x005078FD
 005078F6    cmp dword ptr ds:[eax+0x08], 0x00
@@ -51,7 +57,7 @@
 00507919    push 0x07
 0050791B    push eax
 0050791C    mov ecx, esi
-0050791E    call 0x00567110
+0050791E    call 0x00567110                                 ; => [ Call: sub_567110 ]
 00507923    add esp, 0x10
 00507926    pop esi
 00507927    mov esp, ebp
@@ -62,10 +68,10 @@
 00507932    push 0x81EA70
 00507937    mov edx, 0x801800
 0050793C    mov ecx, 0x813C5C
-00507941    call 0x0063B870
+00507941    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 00507946    add esp, 0x0C
 00507949    call 0x0063BC30
 0050794E    test al, al
-00507950    jz 0x00507953
+00507950    jz 0x00507953                                   ; => [ Call: sub_63bc30 ]
 00507952    int3
-00507953    call 0x0063BB00
+00507953    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

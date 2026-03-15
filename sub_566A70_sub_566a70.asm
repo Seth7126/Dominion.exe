@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_566a70
+// 起始地址: 0x566a70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00566A70    push ebp
 00566A71    mov ebp, esp
 00566A73    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 00566A7B    push edi
 00566A7C    mov ebx, edx
 00566A7E    mov dword ptr ss:[esp+0x10], ecx
-00566A82    call 0x00573400
+00566A82    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00566A87    mov dword ptr ss:[esp+0x1C], eax
 00566A8B    movzx esi, bx
 00566A8E    mov edi, dword ptr ds:[eax+0x04]
@@ -15,12 +21,12 @@
 00566A93    jz 0x00566AE0
 00566A95    cmp esi, 0x320
 00566A9B    jb 0x00566AA2
-00566A9D    call 0x00591930
+00566A9D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00566AA2    mov edx, dword ptr ds:[edi+0xD48]
 00566AA8    imul eax, esi, 0x64
 00566AAB    mov dword ptr ss:[esp+0x18], eax
 00566AAF    mov ecx, dword ptr ds:[eax+edi*1+0x1A4C]
-00566AB6    call 0x00571B30
+00566AB6    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00566ABB    mov ecx, dword ptr ds:[eax+0x98]
 00566AC1    mov eax, dword ptr ds:[eax+0x9C]
 00566AC7    and ecx, 0x7F000400
@@ -38,7 +44,7 @@
 00566AF5    mov dword ptr ss:[esp+0x1C], eax
 00566AF9    cmp eax, 0x320
 00566AFE    jb 0x00566B09
-00566B00    call 0x00591930
+00566B00    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00566B05    mov eax, dword ptr ss:[esp+0x1C]
 00566B09    mov ecx, dword ptr ss:[esp+0x10]
 00566B0D    xorps xmm0, xmm0
@@ -49,7 +55,7 @@
 00566B24    mov dword ptr ss:[esp+0x2C], eax
 00566B28    cmp esi, 0x320
 00566B2E    jb 0x00566B35
-00566B30    call 0x00591930
+00566B30    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00566B35    mov eax, dword ptr ss:[esp+0x18]
 00566B39    mov ecx, edi
 00566B3B    mov edx, dword ptr ss:[esp+0x24]
@@ -72,16 +78,16 @@
 00566B6E    pop ebx
 00566B6F    mov esp, ebp
 00566B71    pop ebp
-00566B72    ret
+00566B72    ret                                             ; => [ Call: sub_586320 ]
 00566B73    push 0x81EB14
 00566B78    push 0x6CA
 00566B7D    push 0x81EA70
 00566B82    mov edx, 0x801800
 00566B87    mov ecx, 0x81EB20
-00566B8C    call 0x0063B870
+00566B8C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: whichExtraPlay == CARDID_NULL || !IsLandscape(g, whichExtraPlay) | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp | String: ReplayCard ]
 00566B91    add esp, 0x0C
 00566B94    call 0x0063BC30
 00566B99    test al, al
-00566B9B    jz 0x00566B9E
+00566B9B    jz 0x00566B9E                                   ; => [ Call: sub_63bc30 ]
 00566B9D    int3
-00566B9E    call 0x0063BB00
+00566B9E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

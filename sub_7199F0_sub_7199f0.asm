@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_7199f0
+// 起始地址: 0x7199f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007199F0    push ebp
 007199F1    mov ebp, esp
 007199F3    sub esp, 0x14
 007199F6    mov eax, dword ptr ss:[ebp+0x10]
-007199F9    xorps xmm0, xmm0
+007199F9    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 007199FC    push ebx
 007199FD    mov ebx, dword ptr ss:[ebp+0x14]
 00719A00    movaps xmm2, xmm1
@@ -34,7 +40,7 @@
 00719A62    movss xmm1, dword ptr ss:[ebp+0x0C]
 00719A67    subss xmm1, xmm0
 00719A6B    movss dword ptr ss:[esp], xmm1
-00719A70    call eax
+00719A70    call eax                                        ; => [ Data: data_cb3cac ]
 00719A72    fstp dword ptr ss:[ebp-0x0C]
 00719A75    movss xmm0, dword ptr ss:[ebp-0x0C]
 00719A7A    add esp, 0x08

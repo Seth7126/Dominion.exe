@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6eed20
+// 起始地址: 0x6eed20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EED20    push ebp
 006EED21    mov ebp, esp
 006EED23    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 006EED30    sub esp, 0x08
 006EED33    movsd xmm1, qword ptr ds:[0x00890EC0]
 006EED3B    movaps xmm2, xmm0
-006EED3E    andps xmm3, xmmword ptr ds:[0x008937B0]
+006EED3E    andps xmm3, xmmword ptr ds:[0x008937B0]         ; => [ Data: data_8937b0 ]
 006EED45    comisd xmm1, xmm3
 006EED49    jb 0x006EED91
 006EED4B    mulss xmm2, dword ptr ds:[0x00890FF0]
@@ -17,7 +23,7 @@
 006EED62    movsd qword ptr ss:[esp+0x08], xmm0
 006EED68    fld qword ptr ss:[esp+0x08]
 006EED6C    fstp qword ptr ss:[esp]
-006EED6F    call 0x0076208A
+006EED6F    call 0x0076208A                                 ; => [ Call: floor ]
 006EED74    fstp qword ptr ss:[esp+0x08]
 006EED78    movsd xmm0, qword ptr ss:[esp+0x08]
 006EED7E    add esp, 0x08
@@ -36,7 +42,7 @@
 006EEDB6    movsd qword ptr ss:[esp+0x08], xmm0
 006EEDBC    fld qword ptr ss:[esp+0x08]
 006EEDC0    fstp qword ptr ss:[esp]
-006EEDC3    call 0x0076208A
+006EEDC3    call 0x0076208A                                 ; => [ Call: floor ]
 006EEDC8    fstp qword ptr ss:[esp+0x08]
 006EEDCC    movsd xmm0, qword ptr ss:[esp+0x08]
 006EEDD2    add esp, 0x08
@@ -50,7 +56,7 @@
 006EEDF1    movsd qword ptr ss:[esp+0x08], xmm0
 006EEDF7    fld qword ptr ss:[esp+0x08]
 006EEDFB    fstp qword ptr ss:[esp]
-006EEDFE    call 0x0076208A
+006EEDFE    call 0x0076208A                                 ; => [ Call: floor ]
 006EEE03    fstp qword ptr ss:[esp+0x08]
 006EEE07    movsd xmm0, qword ptr ss:[esp+0x08]
 006EEE0D    add esp, 0x08

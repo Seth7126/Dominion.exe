@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cb840
+// 起始地址: 0x5cb840
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CB840    push ebp
 005CB841    mov ebp, esp
 005CB843    sub esp, 0x124
@@ -29,20 +35,20 @@
 005CB8A7    jz 0x005CB8B9
 005CB8A9    lea ecx, ds:[ebx+0x250]
 005CB8AF    mov edx, 0x01
-005CB8B4    call 0x00633AA0
+005CB8B4    call 0x00633AA0                                 ; => [ Call: sub_633aa0 ]
 005CB8B9    lea edi, ds:[ebx+0x08]
 005CB8BC    mov dword ptr ds:[ebx+0x17C0], 0x00
 005CB8C6    mov ecx, 0x22
 005CB8CB    lea esi, ss:[ebp-0x98]
-005CB8D1    rep movsd
+005CB8D1    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB8D3    lea edi, ds:[ebx+0x90]
 005CB8D9    mov ecx, 0x22
 005CB8DE    lea esi, ss:[ebp-0x98]
-005CB8E4    rep movsd
+005CB8E4    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB8E6    lea edi, ds:[ebx+0x118]
 005CB8EC    mov ecx, 0x22
 005CB8F1    lea esi, ss:[ebp-0x98]
-005CB8F7    rep movsd
+005CB8F7    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB8F9    pop edi
 005CB8FA    pop esi
 005CB8FB    pop ebx
@@ -66,7 +72,7 @@
 005CB936    push eax
 005CB937    push edx
 005CB938    push ecx
-005CB939    call 0x00762362
+005CB939    call 0x00762362                                 ; => [ Call: memmove ]
 005CB93E    mov eax, dword ptr ss:[ebp-0x04]
 005CB941    add esp, 0x0C
 005CB944    mov edx, dword ptr ss:[ebp+0x14]
@@ -108,7 +114,7 @@
 005CB9DC    lea eax, ss:[ebp-0x120]
 005CB9E2    push eax
 005CB9E3    movups xmmword ptr ss:[ebp-0x40], xmm0
-005CB9E7    rep movsd
+005CB9E7    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB9E9    mov ecx, dword ptr ss:[ebp-0x04]
 005CB9EC    call 0x006371B0
 005CB9F1    pop edi
@@ -116,4 +122,4 @@
 005CB9F3    pop ebx
 005CB9F4    mov esp, ebp
 005CB9F6    pop ebp
-005CB9F7    ret
+005CB9F7    ret                                             ; => [ Call: sub_6371b0 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4d51f0
+// 起始地址: 0x4d51f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D51F0    push ebp
 004D51F1    mov ebp, esp
 004D51F3    sub esp, 0x1C
@@ -19,7 +25,7 @@
 004D5218    push edi
 004D5219    push eax
 004D521A    mov edx, esi
-004D521C    call 0x004D5720
+004D521C    call 0x004D5720                                 ; => [ Call: sub_4d5720 ]
 004D5221    add esp, 0x08
 004D5224    lea ebx, ds:[esi+0x20]
 004D5227    mov dword ptr ss:[ebp-0x04], ebx
@@ -90,7 +96,7 @@
 004D52B7    jz 0x004D52C7
 004D52B9    mov edx, edi
 004D52BB    mov ecx, ebx
-004D52BD    call 0x004D58C0
+004D52BD    call 0x004D58C0                                 ; => [ Call: sub_4d58c0 ]
 004D52C2    mov ebx, dword ptr ss:[ebp-0x14]
 004D52C5    jmp 0x004D52C9
 004D52C7    mov ebx, eax
@@ -125,7 +131,7 @@
 004D530D    jz 0x004D5318
 004D530F    mov edx, edi
 004D5311    mov ecx, esi
-004D5313    call 0x004D58C0
+004D5313    call 0x004D58C0                                 ; => [ Call: sub_4d58c0 ]
 004D5318    sub ebx, 0x20
 004D531B    sub edi, 0x20
 004D531E    cmp dword ptr ss:[ebp-0x0C], ebx
@@ -145,7 +151,7 @@
 004D5343    jz 0x004D534E
 004D5345    mov edx, ebx
 004D5347    mov ecx, esi
-004D5349    call 0x004D58C0
+004D5349    call 0x004D58C0                                 ; => [ Call: sub_4d58c0 ]
 004D534E    mov ecx, dword ptr ss:[ebp-0x18]
 004D5351    add ebx, 0x20
 004D5354    mov edx, dword ptr ss:[ebp-0x14]
@@ -161,12 +167,12 @@
 004D536F    jz 0x004D537A
 004D5371    mov edx, esi
 004D5373    mov ecx, eax
-004D5375    call 0x004D58C0
+004D5375    call 0x004D58C0                                 ; => [ Call: sub_4d58c0 ]
 004D537A    sub ebx, 0x20
 004D537D    mov ecx, esi
 004D537F    mov edx, ebx
 004D5381    mov dword ptr ss:[ebp-0x04], ebx
-004D5384    call 0x004D58C0
+004D5384    call 0x004D58C0                                 ; => [ Call: sub_4d58c0 ]
 004D5389    mov eax, dword ptr ss:[ebp-0x08]
 004D538C    mov ecx, dword ptr ss:[ebp+0x08]
 004D538F    jmp 0x004D5293
@@ -175,7 +181,7 @@
 004D5399    mov edx, eax
 004D539B    add edi, 0x20
 004D539E    mov dword ptr ss:[ebp-0x10], edi
-004D53A1    call 0x004D58C0
+004D53A1    call 0x004D58C0                                 ; => [ Call: sub_4d58c0 ]
 004D53A6    mov eax, dword ptr ss:[ebp-0x08]
 004D53A9    mov ecx, dword ptr ss:[ebp+0x08]
 004D53AC    jmp 0x004D5293

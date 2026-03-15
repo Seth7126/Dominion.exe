@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c3e30
+// 起始地址: 0x6c3e30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C3E30    push ebp
 006C3E31    mov ebp, esp
 006C3E33    push ecx
@@ -34,7 +40,7 @@
 006C3E82    cmp eax, esi
 006C3E84    jle 0x006C3E90
 006C3E86    movups xmm0, xmmword ptr ds:[0x008003E8]
-006C3E8D    movups xmmword ptr ds:[ebx], xmm0
+006C3E8D    movups xmmword ptr ds:[ebx], xmm0               ; => [ Data: data_8003e8 ]
 006C3E90    pop edi
 006C3E91    pop esi
 006C3E92    mov eax, ebx

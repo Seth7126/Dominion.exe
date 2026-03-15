@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f6c30
+// 起始地址: 0x4f6c30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F6C30    push ebp
 004F6C31    mov ebp, esp
 004F6C33    and esp, 0xFFFFFFF8
@@ -21,7 +27,7 @@
 004F6C61    push ebx
 004F6C62    mov edx, edi
 004F6C64    lea ecx, ss:[esp+0x20]
-004F6C68    call 0x004F78C0
+004F6C68    call 0x004F78C0                                 ; => [ Call: sub_4f78c0 ]
 004F6C6D    mov edx, dword ptr ss:[esp+0x20]
 004F6C71    mov eax, esi
 004F6C73    sar eax, 0x02
@@ -73,7 +79,7 @@
 004F6CF5    add eax, 0x04
 004F6CF8    push edi
 004F6CF9    push eax
-004F6CFA    call 0x00762362
+004F6CFA    call 0x00762362                                 ; => [ Call: memmove ]
 004F6CFF    add esp, 0x0C
 004F6D02    mov dword ptr ds:[edi], ebx
 004F6D04    jmp 0x004F6DB0
@@ -96,7 +102,7 @@
 004F6D32    mov ecx, edi
 004F6D34    push eax
 004F6D35    push ebx
-004F6D36    call 0x004F7240
+004F6D36    call 0x004F7240                                 ; => [ Call: sub_4f7240 ]
 004F6D3B    mov ecx, dword ptr ss:[ebp+0x0C]
 004F6D3E    add esp, 0x0C
 004F6D41    test esi, esi
@@ -117,7 +123,7 @@
 004F6D6B    mov ecx, edi
 004F6D6D    sar eax, 0x02
 004F6D70    push eax
-004F6D71    call 0x004F7240
+004F6D71    call 0x004F7240                                 ; => [ Call: sub_4f7240 ]
 004F6D76    mov ecx, dword ptr ss:[ebp+0x0C]
 004F6D79    add ebx, 0xFFFFFFFC
 004F6D7C    mov eax, ebx

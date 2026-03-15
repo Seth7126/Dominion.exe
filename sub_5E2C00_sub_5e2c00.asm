@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5e2c00
+// 起始地址: 0x5e2c00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E2C00    push esi
 005E2C01    mov esi, ecx
 005E2C03    cmp dword ptr ds:[esi+0x2C], 0x00
-005E2C07    jnz 0x005E2C52
+005E2C07    jnz 0x005E2C52                                  ; => [ Call: sub_5dea30 ]
 005E2C09    mov edx, esi
 005E2C0B    mov ecx, 0xB80AD8
 005E2C10    call 0x005DEA30

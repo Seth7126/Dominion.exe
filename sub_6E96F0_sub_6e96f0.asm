@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e96f0
+// 起始地址: 0x6e96f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E96F0    push ebp
 006E96F1    mov ebp, esp
 006E96F3    push ecx
@@ -6,8 +12,8 @@
 006E96F6    push edi
 006E96F7    push 0x00
 006E96F9    mov esi, ecx
-006E96FB    call 0x006EAA50
-006E9700    xor edi, edi
+006E96FB    call 0x006EAA50                                 ; => [ Call: sub_6eaa50 ]
+006E9700    xor edi, edi                                    ; => [ Call: nullptr ]
 006E9702    mov eax, dword ptr ds:[esi]
 006E9704    movss dword ptr ss:[ebp-0x04], xmm0
 006E9709    test eax, eax
@@ -16,18 +22,18 @@
 006E9710    jz 0x006E971E
 006E9712    mov ecx, esi
 006E9714    call 0x0063D4E0
-006E9719    mov eax, dword ptr ds:[eax+0x08]
+006E9719    mov eax, dword ptr ds:[eax+0x08]                ; => [ Call: sub_63d4e0 ]
 006E971C    jmp 0x006E9720
 006E971E    xor eax, eax
 006E9720    cmp edi, eax
 006E9722    jnl 0x006E9760
 006E9724    push edi
 006E9725    mov ecx, esi
-006E9727    call 0x006E9D30
+006E9727    call 0x006E9D30                                 ; => [ Call: sub_6e9d30 ]
 006E972C    mov ebx, eax
 006E972E    mov ecx, esi
 006E9730    push ebx
-006E9731    call 0x006EAA50
+006E9731    call 0x006EAA50                                 ; => [ Call: sub_6eaa50 ]
 006E9736    movaps xmm1, xmm0
 006E9739    subss xmm1, dword ptr ss:[ebp-0x04]
 006E973E    mulss xmm1, dword ptr ds:[0x00890DB0]
@@ -56,7 +62,7 @@
 006E9777    pop ebx
 006E9778    mov esp, ebp
 006E977A    pop ebp
-006E977B    ret 0x08
+006E977B    ret 0x08                                        ; => [ Call: sub_63d4e0 ]
 006E977E    pop edi
 006E977F    pop esi
 006E9780    xor eax, eax

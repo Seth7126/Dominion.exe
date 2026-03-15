@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72cd60
+// 起始地址: 0x72cd60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072CD60    push ebp
 0072CD61    mov ebp, esp
 0072CD63    sub esp, 0x1C
@@ -16,7 +22,7 @@
 0072CD88    call 0x0072C440
 0072CD8D    add esp, 0x08
 0072CD90    test eax, eax
-0072CD92    jz 0x0072D3DD
+0072CD92    jz 0x0072D3DD                                   ; => [ Call: sub_72c440 ]
 0072CD98    mov eax, dword ptr ds:[ebx]
 0072CD9A    imul eax, dword ptr ds:[ebx+0x04]
 0072CD9E    mov edi, dword ptr ds:[0x0077552C]
@@ -46,20 +52,20 @@
 0072CDE1    push eax
 0072CDE2    push 0x00
 0072CDE4    push ecx
-0072CDE5    call 0x00761FC4
+0072CDE5    call 0x00761FC4                                 ; => [ Call: memset ]
 0072CDEA    mov eax, dword ptr ds:[ebx]
 0072CDEC    imul eax, dword ptr ds:[edi]
 0072CDEF    shl eax, 0x02
 0072CDF2    push eax
 0072CDF3    push 0x00
 0072CDF5    push dword ptr ds:[ebx+0x0C]
-0072CDF8    call 0x00761FC4
+0072CDF8    call 0x00761FC4                                 ; => [ Call: memset ]
 0072CDFD    mov eax, dword ptr ds:[ebx]
 0072CDFF    imul eax, dword ptr ds:[edi]
 0072CE02    push eax
 0072CE03    push 0x00
 0072CE05    push dword ptr ds:[ebx+0x10]
-0072CE08    call 0x00761FC4
+0072CE08    call 0x00761FC4                                 ; => [ Call: memset ]
 0072CE0D    add esp, 0x24
 0072CE10    mov dword ptr ss:[ebp-0x18], 0x01
 0072CE17    jmp 0x0072CE79
@@ -76,7 +82,7 @@
 0072CE33    cmp dl, 0x08
 0072CE36    jnz 0x0072CE61
 0072CE38    lea edi, ds:[ebx+0x04]
-0072CE3B    xor edx, edx
+0072CE3B    xor edx, edx                                    ; => [ Call: nullptr ]
 0072CE3D    test ecx, ecx
 0072CE3F    jle 0x0072CE61
 0072CE41    mov eax, dword ptr ds:[ebx+0x10]
@@ -97,14 +103,14 @@
 0072CE6A    push eax
 0072CE6B    push dword ptr ds:[ebx+0x08]
 0072CE6E    push dword ptr ds:[ebx+0x0C]
-0072CE71    call 0x00761FBE
+0072CE71    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0072CE76    add esp, 0x0C
 0072CE79    mov eax, dword ptr ds:[edi]
 0072CE7B    imul eax, dword ptr ds:[ebx]
 0072CE7E    push eax
 0072CE7F    push 0x00
 0072CE81    push dword ptr ds:[ebx+0x10]
-0072CE84    call 0x00761FC4
+0072CE84    call 0x00761FC4                                 ; => [ Call: memset ]
 0072CE89    add esp, 0x0C
 0072CE8C    lea edi, ds:[esi+0xA8]
 0072CE92    mov ecx, dword ptr ds:[esi+0xAC]
@@ -263,7 +269,7 @@
 0072D031    mov dword ptr ss:[ebp-0x14], ecx
 0072D034    lea eax, ds:[eax+eax*4]
 0072D037    add eax, eax
-0072D039    mov dword ptr ds:[ebx+0x8854], eax
+0072D039    mov dword ptr ds:[ebx+0x8854], eax              ; => [ Call: sub_7203e0 ]
 0072D03F    mov eax, dword ptr ds:[ecx]
 0072D041    test eax, eax
 0072D043    js 0x0072D04A
@@ -425,16 +431,16 @@
 0072D203    pop ebp
 0072D204    ret
 0072D205    mov ecx, esi
-0072D207    call 0x007203E0
+0072D207    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072D20C    mov ecx, esi
 0072D20E    mov dword ptr ss:[ebp-0x10], eax
-0072D211    call 0x007203E0
+0072D211    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072D216    mov ecx, esi
 0072D218    mov dword ptr ss:[ebp-0x08], eax
-0072D21B    call 0x007203E0
+0072D21B    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072D220    mov ecx, esi
 0072D222    mov dword ptr ss:[ebp-0x14], eax
-0072D225    call 0x007203E0
+0072D225    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072D22A    mov ecx, dword ptr ss:[ebp-0x10]
 0072D22D    mov edx, eax
 0072D22F    mov eax, dword ptr ss:[ebp-0x04]
@@ -528,7 +534,7 @@
 0072D366    shl eax, cl
 0072D368    mov ecx, esi
 0072D36A    push eax
-0072D36B    call 0x0072C280
+0072D36B    call 0x0072C280                                 ; => [ Call: sub_72c280 ]
 0072D370    add esp, 0x08
 0072D373    lea eax, ds:[edi+0x428]
 0072D379    jmp 0x0072D384
@@ -538,7 +544,7 @@
 0072D384    mov edx, edi
 0072D386    mov dword ptr ds:[edi+0x8828], eax
 0072D38C    mov ecx, esi
-0072D38E    call 0x0072C960
+0072D38E    call 0x0072C960                                 ; => [ Call: sub_72c960 ]
 0072D393    mov ebx, eax
 0072D395    test ebx, ebx
 0072D397    jz 0x0072D3DD
@@ -548,7 +554,7 @@
 0072D3A3    jz 0x0072D3D4
 0072D3A5    cmp dword ptr ds:[edi+0x18], 0x00
 0072D3A9    jle 0x0072D3D4
-0072D3AB    xor edx, edx
+0072D3AB    xor edx, edx                                    ; => [ Call: nullptr ]
 0072D3AD    test esi, esi
 0072D3AF    jle 0x0072D3D4
 0072D3B1    mov eax, dword ptr ds:[edi+0x10]

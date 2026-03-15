@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4be8d0
+// 起始地址: 0x4be8d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BE8D0    push ebp
 004BE8D1    mov ebp, esp
 004BE8D3    push ecx
@@ -5,7 +11,7 @@
 004BE8D5    mov esi, ecx
 004BE8D7    lea edx, ss:[ebp-0x04]
 004BE8DA    mov ecx, 0x03
-004BE8DF    call 0x00571BC0
+004BE8DF    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004BE8E4    mov ecx, eax
 004BE8E6    xor edx, edx
 004BE8E8    test ecx, ecx
@@ -23,7 +29,7 @@
 004BE900    jnz 0x004BE992
 004BE906    lea edx, ss:[ebp-0x04]
 004BE909    xor ecx, ecx
-004BE90B    call 0x00571BC0
+004BE90B    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004BE910    mov edx, eax
 004BE912    xor ecx, ecx
 004BE914    test edx, edx
@@ -41,7 +47,7 @@
 004BE930    jnz 0x004BE992
 004BE932    lea edx, ss:[ebp-0x04]
 004BE935    mov ecx, 0x02
-004BE93A    call 0x00571BC0
+004BE93A    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004BE93F    mov edx, eax
 004BE941    xor ecx, ecx
 004BE943    test edx, edx
@@ -59,7 +65,7 @@
 004BE960    jnz 0x004BE992
 004BE962    lea edx, ss:[ebp-0x04]
 004BE965    mov ecx, 0x01
-004BE96A    call 0x00571BC0
+004BE96A    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004BE96F    mov edx, eax
 004BE971    xor ecx, ecx
 004BE973    test edx, edx
@@ -84,10 +90,10 @@
 004BE9A1    push 0x80292C
 004BE9A6    mov edx, 0x801800
 004BE9AB    mov ecx, 0x801AA4
-004BE9B0    call 0x0063B870
+004BE9B0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp | String: GetDlcDef | String: Halt ]
 004BE9B5    add esp, 0x0C
 004BE9B8    call 0x0063BC30
 004BE9BD    test al, al
-004BE9BF    jz 0x004BE9C2
+004BE9BF    jz 0x004BE9C2                                   ; => [ Call: sub_63bc30 ]
 004BE9C1    int3
-004BE9C2    call 0x0063BB00
+004BE9C2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

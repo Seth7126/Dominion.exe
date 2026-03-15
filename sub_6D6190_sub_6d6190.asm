@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d6190
+// 起始地址: 0x6d6190
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D6190    push ebx
 006D6191    mov ebx, esp
 006D6193    sub esp, 0x08
@@ -8,13 +14,13 @@
 006D61A0    mov dword ptr ss:[esp+0x04], ebp
 006D61A4    mov ebp, esp
 006D61A6    sub esp, 0x248
-006D61AC    mov eax, dword ptr ds:[0x008C4040]
+006D61AC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006D61B1    xor eax, ebp
 006D61B3    mov dword ptr ss:[ebp-0x04], eax
 006D61B6    push esi
 006D61B7    push edi
 006D61B8    mov edi, edx
-006D61BA    mov dword ptr ss:[ebp-0x234], 0x00
+006D61BA    mov dword ptr ss:[ebp-0x234], 0x00              ; => [ Call: nullptr ]
 006D61C4    mov edx, ecx
 006D61C6    mov dword ptr ss:[ebp-0x244], edi
 006D61CC    mov ecx, dword ptr ds:[ebx+0x08]
@@ -22,10 +28,10 @@
 006D61D1    mov dword ptr ss:[ebp-0x214], edx
 006D61D7    mov dword ptr ss:[ebp-0x220], ecx
 006D61DD    mov eax, dword ptr ds:[edx]
-006D61DF    mov dword ptr ss:[ebp-0x224], 0x00
+006D61DF    mov dword ptr ss:[ebp-0x224], 0x00              ; => [ Call: nullptr ]
 006D61E9    mov dword ptr ss:[ebp-0x240], 0x00
-006D61F3    mov dword ptr ss:[ebp-0x23C], esi
-006D61F9    mov dword ptr ss:[ebp-0x22C], esi
+006D61F3    mov dword ptr ss:[ebp-0x23C], esi               ; => [ Call: nullptr ]
+006D61F9    mov dword ptr ss:[ebp-0x22C], esi               ; => [ Call: nullptr ]
 006D61FF    mov dword ptr ss:[ebp-0x230], esi
 006D6205    cmp eax, 0x40
 006D6208    jle 0x006D6229
@@ -47,7 +53,7 @@
 006D6251    mov eax, dword ptr ds:[edx+0x04]
 006D6254    add eax, esi
 006D6256    mov dword ptr ss:[ebp-0x220], esi
-006D625C    mov esi, 0x00
+006D625C    mov esi, 0x00                                   ; => [ Call: nullptr ]
 006D6261    movd xmm0, eax
 006D6265    lea eax, ds:[ecx+ecx*4]
 006D6268    cvtdq2ps xmm0, xmm0
@@ -71,14 +77,14 @@
 006D62B6    addss xmm0, xmm2
 006D62BA    movss dword ptr ss:[ebp-0x21C], xmm1
 006D62C2    movss dword ptr ss:[ebp-0x228], xmm0
-006D62CA    call 0x00761FC4
+006D62CA    call 0x00761FC4                                 ; => [ Call: memset ]
 006D62CF    mov eax, dword ptr ss:[ebp-0x214]
 006D62D5    mov eax, dword ptr ds:[eax]
 006D62D7    lea eax, ds:[eax*4+0x04]
 006D62DE    push eax
 006D62DF    push 0x00
 006D62E1    push dword ptr ss:[ebp-0x238]
-006D62E7    call 0x00761FC4
+006D62E7    call 0x00761FC4                                 ; => [ Call: memset ]
 006D62EC    movss xmm3, dword ptr ss:[ebp-0x228]
 006D62F4    add esp, 0x18
 006D62F7    test esi, esi
@@ -123,7 +129,7 @@
 006D638A    add esp, 0x04
 006D638D    test eax, eax
 006D638F    jnz 0x006D6395
-006D6391    xor ecx, ecx
+006D6391    xor ecx, ecx                                    ; => [ Call: nullptr ]
 006D6393    jmp 0x006D63C4
 006D6395    mov ecx, dword ptr ss:[ebp-0x234]
 006D639B    mov dword ptr ds:[eax], ecx
@@ -144,7 +150,7 @@
 006D63DB    test ecx, ecx
 006D63DD    jz 0x006D6481
 006D63E3    movss xmm4, dword ptr ds:[0x00890E18]
-006D63EB    xorps xmm0, xmm0
+006D63EB    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 006D63EE    ucomiss xmm2, xmm0
 006D63F1    movss dword ptr ds:[ecx+0x08], xmm2
 006D63F6    lahf
@@ -173,7 +179,7 @@
 006D6453    mov dword ptr ds:[ecx+0x14], eax
 006D6456    mov eax, dword ptr ds:[edi+0x0C]
 006D6459    mov dword ptr ds:[ecx+0x18], eax
-006D645C    mov dword ptr ds:[ecx], 0x00
+006D645C    mov dword ptr ds:[ecx], 0x00                    ; => [ Call: nullptr ]
 006D6462    jnz 0x006D6475
 006D6464    cmp dword ptr ds:[ebx+0x14], 0x00
 006D6468    jz 0x006D6475
@@ -202,12 +208,12 @@
 006D64CA    push esi
 006D64CB    push dword ptr ds:[eax]
 006D64CD    lea edx, ds:[edx+0x04]
-006D64D0    call 0x006D4A60
+006D64D0    call 0x006D4A60                                 ; => [ Call: sub_6d4a60 ]
 006D64D5    add esp, 0x0C
 006D64D8    mov eax, dword ptr ss:[ebp-0x214]
 006D64DE    xor edx, edx
 006D64E0    xorps xmm2, xmm2
-006D64E3    xorps xmm1, xmm1
+006D64E3    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006D64E6    cmp dword ptr ds:[eax], edx
 006D64E8    jle 0x006D6575
 006D64EE    mov esi, dword ptr ss:[ebp-0x238]
@@ -281,7 +287,7 @@
 006D65F9    pop edi
 006D65FA    xor ecx, ebp
 006D65FC    pop esi
-006D65FD    call 0x0075927A
+006D65FD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D6602    mov esp, ebp
 006D6604    pop ebp
 006D6605    mov esp, ebx

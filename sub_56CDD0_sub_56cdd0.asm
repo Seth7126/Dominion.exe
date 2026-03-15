@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56cdd0
+// 起始地址: 0x56cdd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056CDD0    push ebp
 0056CDD1    mov ebp, esp
 0056CDD3    and esp, 0xFFFFFFF8
@@ -8,9 +14,9 @@
 0056CDE3    mov eax, dword ptr ds:[0x007BFAD4]
 0056CDE8    push edi
 0056CDE9    mov dword ptr ss:[esp+0x0C], eax
-0056CDED    call 0x0056B800
+0056CDED    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0056CDF2    mov edi, eax
-0056CDF4    call 0x00573400
+0056CDF4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056CDF9    mov esi, eax
 0056CDFB    mov eax, dword ptr ds:[esi+0x04]
 0056CDFE    mov dword ptr ss:[esp+0x1C], eax
@@ -18,7 +24,7 @@
 0056CE05    mov dword ptr ss:[esp+0x08], eax
 0056CE09    cmp eax, 0x320
 0056CE0E    jb 0x0056CE19
-0056CE10    call 0x00591930
+0056CE10    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056CE15    mov eax, dword ptr ss:[esp+0x08]
 0056CE19    push dword ptr ss:[esp+0x0C]
 0056CE1D    mov ecx, dword ptr ds:[esi+0x04]
@@ -38,7 +44,7 @@
 0056CE4A    push 0x16
 0056CE4C    push 0x461
 0056CE51    push edi
-0056CE52    call 0x00582D10
+0056CE52    call 0x00582D10                                 ; => [ Call: nullptr | Call: sub_582d10 ]
 0056CE57    add esp, 0x38
 0056CE5A    pop edi
 0056CE5B    pop esi

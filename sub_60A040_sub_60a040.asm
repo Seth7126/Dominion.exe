@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_60a040
+// 起始地址: 0x60a040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060A040    push ebp
 0060A041    mov ebp, esp
 0060A043    push ecx
-0060A044    mov ecx, dword ptr ds:[0x00CC8D5C]
+0060A044    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 0060A04A    test ecx, ecx
 0060A04C    jz 0x0060A069
 0060A04E    mov eax, dword ptr ss:[ebp+0x08]
@@ -17,10 +23,10 @@
 0060A070    push 0x77EB50
 0060A075    mov edx, 0x801800
 0060A07A    mov ecx, 0x77EB9C
-0060A07F    call 0x0063B870
+0060A07F    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 0060A084    add esp, 0x0C
 0060A087    call 0x0063BC30
 0060A08C    test al, al
-0060A08E    jz 0x0060A091
+0060A08E    jz 0x0060A091                                   ; => [ Call: sub_63bc30 ]
 0060A090    int3
-0060A091    call 0x0063BB00
+0060A091    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

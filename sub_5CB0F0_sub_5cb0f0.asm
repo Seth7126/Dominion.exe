@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cb0f0
+// 起始地址: 0x5cb0f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CB0F0    push ecx
 005CB0F1    push esi
 005CB0F2    dec ecx
@@ -6,9 +12,9 @@
 005CB0F6    cmp ecx, 0x09
 005CB0F9    jnbe 0x005CB48D
 005CB0FF    jmp dword ptr ds:[ecx*4+0x5CB4C0]
-005CB106    call 0x00614CA0
-005CB10B    mov edx, dword ptr ds:[0x00B809E4]
-005CB111    mov ecx, dword ptr ds:[0x00B809E0]
+005CB106    call 0x00614CA0                                 ; => [ Call: sub_614ca0 ]
+005CB10B    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005CB111    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CB117    mov esi, ecx
 005CB119    imul eax, edx, 0x1C30
 005CB11F    add eax, esi
@@ -20,10 +26,10 @@
 005CB13C    add esi, 0x1C30
 005CB142    cmp esi, eax
 005CB144    jb 0x005CB130
-005CB146    push 0x86F404
+005CB146    push 0x86F404                                   ; => [ String: GetCardInPlay ]
 005CB14B    push 0x777
-005CB150    push 0x86F1E8
-005CB155    mov ecx, 0x801AA4
+005CB150    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005CB155    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005CB15A    jmp 0x005CB4A2
 005CB15F    cmp esi, 0xFFFFFFFF
 005CB162    jz 0x005CB146
@@ -32,8 +38,8 @@
 005CB16A    mov ecx, esi
 005CB16C    call 0x005CBB20
 005CB171    cmp eax, edi
-005CB173    jnz 0x005CB196
-005CB175    mov eax, dword ptr ds:[0x00B604E0]
+005CB173    jnz 0x005CB196                                  ; => [ Call: sub_5cbb20 ]
+005CB175    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005CB17A    xor ecx, ecx
 005CB17C    cmp eax, 0xFFFFFFFF
 005CB17F    cmovz eax, ecx
@@ -41,8 +47,8 @@
 005CB188    jnz 0x005CB196
 005CB18A    cmp dword ptr ds:[esi+0xA4], 0x3E9
 005CB194    jz 0x005CB1D9
-005CB196    mov edx, dword ptr ds:[0x00B809E4]
-005CB19C    mov ecx, dword ptr ds:[0x00B809E0]
+005CB196    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005CB19C    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CB1A2    imul eax, edx, 0x1C30
 005CB1A8    add esi, 0x1C30
 005CB1AE    add eax, ecx
@@ -59,14 +65,14 @@
 005CB1D4    jmp 0x005CB146
 005CB1D9    mov dl, 0x01
 005CB1DB    mov ecx, esi
-005CB1DD    call 0x005D0AB0
+005CB1DD    call 0x005D0AB0                                 ; => [ Call: sub_5d0ab0 ]
 005CB1E2    pop edi
 005CB1E3    pop esi
 005CB1E4    pop ecx
 005CB1E5    ret
-005CB1E6    call 0x00614CA0
-005CB1EB    mov edx, dword ptr ds:[0x00B809E4]
-005CB1F1    mov ecx, dword ptr ds:[0x00B809E0]
+005CB1E6    call 0x00614CA0                                 ; => [ Call: sub_614ca0 ]
+005CB1EB    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005CB1F1    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CB1F7    mov esi, ecx
 005CB1F9    imul eax, edx, 0x1C30
 005CB1FF    add eax, esi
@@ -89,15 +95,15 @@
 005CB242    mov ecx, esi
 005CB244    call 0x005CBB20
 005CB249    cmp eax, edi
-005CB24B    jnz 0x005CB266
-005CB24D    mov eax, dword ptr ds:[0x00B604E0]
+005CB24B    jnz 0x005CB266                                  ; => [ Call: sub_5cbb20 ]
+005CB24D    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005CB252    xor ecx, ecx
 005CB254    cmp eax, 0xFFFFFFFF
 005CB257    cmovz eax, ecx
 005CB25A    cmp dword ptr ds:[esi+0xA0], eax
 005CB260    jz 0x005CB1D9
-005CB266    mov edx, dword ptr ds:[0x00B809E4]
-005CB26C    mov ecx, dword ptr ds:[0x00B809E0]
+005CB266    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005CB26C    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CB272    imul eax, edx, 0x1C30
 005CB278    add esi, 0x1C30
 005CB27E    add eax, ecx
@@ -111,15 +117,15 @@
 005CB29A    jmp 0x005CB2A1
 005CB29C    cmp esi, 0xFFFFFFFF
 005CB29F    jnz 0x005CB230
-005CB2A1    push 0x86F3F4
+005CB2A1    push 0x86F3F4                                   ; => [ String: GetCardInHand ]
 005CB2A6    push 0x769
-005CB2AB    push 0x86F1E8
-005CB2B0    mov ecx, 0x801AA4
+005CB2AB    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005CB2B0    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005CB2B5    jmp 0x005CB4A2
-005CB2BA    call 0x00614CA0
+005CB2BA    call 0x00614CA0                                 ; => [ Call: sub_614ca0 ]
 005CB2BF    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
-005CB2C9    mov ecx, dword ptr ds:[0x00B809E0]
-005CB2CF    add eax, ecx
+005CB2C9    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+005CB2CF    add eax, ecx                                    ; => [ Data: data_b809e4 ]
 005CB2D1    cmp ecx, eax
 005CB2D3    jnb 0x005CB2F6
 005CB2D5    nop word ptr ds:[eax+eax*1], ax
@@ -128,10 +134,10 @@
 005CB2EC    add ecx, 0x1C30
 005CB2F2    cmp ecx, eax
 005CB2F4    jb 0x005CB2E0
-005CB2F6    push 0x86F3EC
+005CB2F6    push 0x86F3EC                                   ; => [ String: GetPile ]
 005CB2FB    push 0x74E
-005CB300    push 0x86F1E8
-005CB305    mov ecx, 0x801AA4
+005CB300    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005CB305    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005CB30A    jmp 0x005CB4A2
 005CB30F    cmp ecx, 0xFFFFFFFF
 005CB312    jz 0x005CB2F6
@@ -153,14 +159,14 @@
 005CB34B    jnz 0x005CB314
 005CB34D    jmp 0x005CB2F6
 005CB34F    mov dl, 0x01
-005CB351    call 0x005D09F0
+005CB351    call 0x005D09F0                                 ; => [ Call: sub_5d09f0 ]
 005CB356    pop edi
 005CB357    pop esi
 005CB358    pop ecx
 005CB359    ret
-005CB35A    call 0x00614CA0
-005CB35F    mov edx, dword ptr ds:[0x00B809E4]
-005CB365    mov ecx, dword ptr ds:[0x00B809E0]
+005CB35A    call 0x00614CA0                                 ; => [ Call: sub_614ca0 ]
+005CB35F    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005CB365    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CB36B    mov esi, ecx
 005CB36D    imul eax, edx, 0x1C30
 005CB373    add eax, esi
@@ -181,9 +187,9 @@
 005CB3A6    mov ecx, esi
 005CB3A8    call 0x005CBB20
 005CB3AD    cmp eax, edi
-005CB3AF    jz 0x005CB1D9
-005CB3B5    mov edx, dword ptr ds:[0x00B809E4]
-005CB3BB    mov ecx, dword ptr ds:[0x00B809E0]
+005CB3AF    jz 0x005CB1D9                                   ; => [ Call: sub_5cbb20 ]
+005CB3B5    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
+005CB3BB    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CB3C1    imul eax, edx, 0x1C30
 005CB3C7    add esi, 0x1C30
 005CB3CD    add eax, ecx
@@ -197,20 +203,20 @@
 005CB3E9    jmp 0x005CB3F0
 005CB3EB    cmp esi, 0xFFFFFFFF
 005CB3EE    jnz 0x005CB3A0
-005CB3F0    push 0x86F414
+005CB3F0    push 0x86F414                                   ; => [ String: GetCardAnywhere ]
 005CB3F5    push 0x783
-005CB3FA    push 0x86F1E8
-005CB3FF    mov ecx, 0x801AA4
+005CB3FA    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005CB3FF    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005CB404    jmp 0x005CB4A2
-005CB409    call 0x00614CA0
+005CB409    call 0x00614CA0                                 ; => [ Call: sub_614ca0 ]
 005CB40E    pop edi
 005CB40F    pop esi
 005CB410    pop ecx
 005CB411    ret
 005CB412    mov ecx, dword ptr ds:[0x00CC8DC8]
 005CB418    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-005CB41E    call 0x004D8F30
-005CB423    mov ecx, dword ptr ds:[0x00CC8D5C]
+005CB41E    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
+005CB423    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005CB429    mov esi, eax
 005CB42B    test ecx, ecx
 005CB42D    jz 0x005CB491
@@ -218,7 +224,7 @@
 005CB436    jz 0x005CB46B
 005CB438    call 0x004B93F0
 005CB43D    mov ecx, dword ptr ds:[eax+0x1C]
-005CB440    sub ecx, 0x65
+005CB440    sub ecx, 0x65                                   ; => [ Call: sub_4b93f0 ]
 005CB443    cmp ecx, 0x08
 005CB446    jnle 0x005CB45A
 005CB448    mov eax, dword ptr ds:[esi+0x42D0]
@@ -226,9 +232,9 @@
 005CB44F    cmp eax, ecx
 005CB451    cmovle eax, ecx
 005CB454    mov dword ptr ds:[esi+0x42D0], eax
-005CB45A    mov ecx, dword ptr ds:[0x00CC8DC8]
-005CB460    call 0x004D8AD0
-005CB465    mov ecx, dword ptr ds:[0x00CC8D5C]
+005CB45A    mov ecx, dword ptr ds:[0x00CC8DC8]              ; => [ Data: data_cc8dc8 ]
+005CB460    call 0x004D8AD0                                 ; => [ Call: sub_4d8ad0 ]
+005CB465    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005CB46B    test ecx, ecx
 005CB46D    jz 0x005CB491
 005CB46F    mov dword ptr ds:[ecx+0x5044], 0x07
@@ -238,15 +244,15 @@
 005CB48E    pop esi
 005CB48F    pop ecx
 005CB490    ret
-005CB491    push 0x77EB90
+005CB491    push 0x77EB90                                   ; => [ String: GetClient ]
 005CB496    push 0x7B
-005CB498    mov ecx, 0x77EB9C
-005CB49D    push 0x77EB50
+005CB498    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
+005CB49D    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
 005CB4A2    mov edx, 0x801800
-005CB4A7    call 0x0063B870
+005CB4A7    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005CB4AC    add esp, 0x0C
 005CB4AF    call 0x0063BC30
 005CB4B4    test al, al
-005CB4B6    jz 0x005CB4B9
+005CB4B6    jz 0x005CB4B9                                   ; => [ Call: sub_63bc30 ]
 005CB4B8    int3
-005CB4B9    call 0x0063BB00
+005CB4B9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

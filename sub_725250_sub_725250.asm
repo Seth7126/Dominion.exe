@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_725250
+// 起始地址: 0x725250
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00725250    push ebp
 00725251    mov ebp, esp
 00725253    sub esp, 0x10
@@ -10,9 +16,9 @@
 00725262    push ebx
 00725263    cpuid
 00725265    mov esi, ebx
-00725267    mov dword ptr ds:[edi+0x480C], 0x721940
-00725271    mov dword ptr ds:[edi+0x4810], 0x724F10
-0072527B    mov dword ptr ds:[edi+0x4814], 0x724C50
+00725267    mov dword ptr ds:[edi+0x480C], 0x721940         ; => [ Call: sub_721940 ]
+00725271    mov dword ptr ds:[edi+0x4810], 0x724F10         ; => [ Call: sub_724f10 ]
+0072527B    mov dword ptr ds:[edi+0x4814], 0x724C50         ; => [ Call: sub_724c50 ]
 00725285    pop ebx
 00725286    lea ebx, ss:[ebp-0x10]
 00725289    mov dword ptr ds:[ebx], eax
@@ -21,9 +27,9 @@
 00725291    mov dword ptr ds:[ebx+0x0C], edx
 00725294    test dword ptr ss:[ebp-0x04], 0x4000000
 0072529B    jz 0x007252BB
-0072529D    mov dword ptr ds:[edi+0x480C], 0x721E90
-007252A7    mov dword ptr ds:[edi+0x4810], 0x725020
-007252B1    mov dword ptr ds:[edi+0x4814], 0x724CF0
+0072529D    mov dword ptr ds:[edi+0x480C], 0x721E90         ; => [ Call: sub_721e90 ]
+007252A7    mov dword ptr ds:[edi+0x4810], 0x725020         ; => [ Call: sub_725020 ]
+007252B1    mov dword ptr ds:[edi+0x4814], 0x724CF0         ; => [ Call: sub_724cf0 ]
 007252BB    pop edi
 007252BC    pop esi
 007252BD    pop ebx

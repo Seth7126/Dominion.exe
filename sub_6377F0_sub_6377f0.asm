@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6377f0
+// 起始地址: 0x6377f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006377F0    push ebp
 006377F1    mov ebp, esp
 006377F3    sub esp, 0x48
@@ -11,7 +17,7 @@
 0063780D    lea eax, ss:[ebp-0x44]
 00637810    lea ecx, ds:[esi+0x08]
 00637813    push eax
-00637814    call 0x005D4590
+00637814    call 0x005D4590                                 ; => [ Call: sub_5d4590 ]
 00637819    add esp, 0x04
 0063781C    lea ecx, ss:[ebp-0x24]
 0063781F    movups xmm1, xmmword ptr ds:[eax]
@@ -20,7 +26,7 @@
 0063782A    movups xmmword ptr ss:[ebp-0x14], xmm2
 0063782E    call 0x00639970
 00637833    test al, al
-00637835    jz 0x0063784E
+00637835    jz 0x0063784E                                   ; => [ Call: sub_639970 ]
 00637837    mov eax, dword ptr ss:[ebp+0x08]
 0063783A    movups xmmword ptr ds:[esi+0x20], xmm1
 0063783E    movups xmmword ptr ds:[esi+0x30], xmm2
@@ -47,7 +53,7 @@
 00637877    mov eax, dword ptr ss:[ebp+0x08]
 0063787A    movups xmm1, xmmword ptr ds:[0x007FEDDC]
 00637881    movups xmm2, xmmword ptr ds:[0x007FEDEC]
-00637888    movups xmmword ptr ds:[eax], xmm1
+00637888    movups xmmword ptr ds:[eax], xmm1               ; => [ Call: __builtin_memcpy | String: \x17\xb7\xd1\x38\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ]
 0063788B    movups xmmword ptr ds:[eax+0x10], xmm2
 0063788F    pop esi
 00637890    mov esp, ebp
@@ -70,10 +76,10 @@
 006378B9    push 0x86E0F4
 006378BE    mov edx, 0x801800
 006378C3    mov ecx, 0x801AA4
-006378C8    call 0x0063B870
+006378C8    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\CardMotion.h | Data: data_801800 | String: CalcTransform | String: Halt ]
 006378CD    add esp, 0x0C
 006378D0    call 0x0063BC30
 006378D5    test al, al
-006378D7    jz 0x006378DA
+006378D7    jz 0x006378DA                                   ; => [ Call: sub_63bc30 ]
 006378D9    int3
-006378DA    call 0x0063BB00
+006378DA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

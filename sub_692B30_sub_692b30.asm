@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_692b30
+// 起始地址: 0x692b30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00692B30    push ebp
 00692B31    mov ebp, esp
 00692B33    and esp, 0xFFFFFFF8
@@ -8,7 +14,7 @@
 00692B3C    mov edi, ecx
 00692B3E    mov ebx, edx
 00692B40    mov dword ptr ss:[esp+0x10], edi
-00692B44    mov esi, 0x7FF640
+00692B44    mov esi, 0x7FF640                               ; => [ Data: data_7ff640 ]
 00692B49    nop dword ptr ds:[eax], eax
 00692B50    mov eax, ebx
 00692B52    lea edx, ds:[esi+0x08]
@@ -44,7 +50,7 @@
 00692B9B    push dword ptr ss:[ebp+0x08]
 00692B9E    jnz 0x00692BB6
 00692BA0    mov edx, 0x8780E8
-00692BA5    call 0x00692860
+00692BA5    call 0x00692860                                 ; => [ Call: sub_692860 | String: $ ,. ]
 00692BAA    mov eax, edi
 00692BAC    add esp, 0x10
 00692BAF    pop edi
@@ -54,7 +60,7 @@
 00692BB4    pop ebp
 00692BB5    ret
 00692BB6    mov edx, 0x878110
-00692BBB    call 0x00692860
+00692BBB    call 0x00692860                                 ; => [ Call: sub_692860 | String: ,. $ ]
 00692BC0    mov eax, edi
 00692BC2    add esp, 0x10
 00692BC5    pop edi
@@ -66,13 +72,13 @@
 00692BCC    mov edx, dword ptr ds:[esi+0x10]
 00692BCF    test edx, edx
 00692BD1    jnz 0x00692BF7
-00692BD3    mov edx, 0x8780E8
+00692BD3    mov edx, 0x8780E8                               ; => [ String: $ ,. ]
 00692BD8    push dword ptr ds:[esi+0x0C]
 00692BDB    push dword ptr ds:[esi+0x04]
 00692BDE    mov ecx, edi
 00692BE0    push dword ptr ss:[ebp+0x0C]
 00692BE3    push dword ptr ss:[ebp+0x08]
-00692BE6    call 0x00692860
+00692BE6    call 0x00692860                                 ; => [ Call: sub_692860 ]
 00692BEB    add esp, 0x10
 00692BEE    mov eax, edi
 00692BF0    pop edi
@@ -86,11 +92,11 @@
 00692BFC    jnz 0x00692C0B
 00692BFE    cmp dword ptr ss:[ebp+0x10], 0x03
 00692C02    jnz 0x00692BD8
-00692C04    mov edx, 0x878140
+00692C04    mov edx, 0x878140                               ; => [ String: ., $ ]
 00692C09    jmp 0x00692BD8
 00692C0B    cmp eax, 0x2F4
 00692C10    jnz 0x00692BD8
 00692C12    cmp dword ptr ss:[ebp+0x10], 0x02
 00692C16    jnz 0x00692BD8
-00692C18    push 0x878224
+00692C18    push 0x878224                                   ; => [ Data: data_878224 ]
 00692C1D    jmp 0x00692BDB

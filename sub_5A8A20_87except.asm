@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: __87except
+// 起始地址: 0x5a8a20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A8A20    push ebx
 005A8A21    mov ebx, esp
 005A8A23    sub esp, 0x08
@@ -8,12 +14,12 @@
 005A8A30    mov dword ptr ss:[esp+0x04], ebp
 005A8A34    mov ebp, esp
 005A8A36    sub esp, 0xA0
-005A8A3C    mov eax, dword ptr ds:[0x008C4040]
+005A8A3C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A8A41    xor eax, ebp
 005A8A43    mov dword ptr ss:[ebp-0x04], eax
-005A8A46    mov eax, dword ptr ds:[0x0147B06C]
+005A8A46    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 005A8A4B    movaps xmm0, xmmword ptr ds:[0x00891330]
-005A8A52    movups xmmword ptr ss:[ebp-0x54], xmm0
+005A8A52    movups xmmword ptr ss:[ebp-0x54], xmm0          ; => [ Call: __builtin_memcpy | String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f ]
 005A8A56    movaps xmm0, xmmword ptr ds:[0x008935A0]
 005A8A5D    movss xmm1, dword ptr ds:[eax+0x12C]
 005A8A65    movups xmmword ptr ss:[ebp-0x44], xmm0
@@ -97,7 +103,7 @@
 005A8BF2    addss xmm1, xmm3
 005A8BF6    mov ecx, dword ptr ds:[0x007E2AAC]
 005A8BFC    push ecx
-005A8BFD    push dword ptr ds:[0x0171D8D4]
+005A8BFD    push dword ptr ds:[0x0171D8D4]                  ; => [ Data: data_171d8d4 ]
 005A8C03    addss xmm0, dword ptr ss:[ebp-0x74]
 005A8C08    addss xmm1, dword ptr ss:[ebp-0x74]
 005A8C0D    push dword ptr ds:[ebx+0x0C]
@@ -137,7 +143,7 @@
 005A8CB0    mov eax, dword ptr ds:[0x007FEF94]
 005A8CB5    mov dword ptr ss:[ebp-0x94], eax
 005A8CBB    mov eax, dword ptr ds:[0x008D2FCC]
-005A8CC0    mov dword ptr ss:[ebp-0x8C], eax
+005A8CC0    mov dword ptr ss:[ebp-0x8C], eax                ; => [ Data: data_8d2fcc ]
 005A8CC6    lea eax, ss:[ebp-0x9C]
 005A8CCC    push eax
 005A8CCD    lea eax, ss:[ebp-0x6C]
@@ -151,11 +157,11 @@
 005A8CEA    movq qword ptr ss:[ebp-0x34], xmm1
 005A8CEF    movq qword ptr ss:[ebp-0x6C], xmm1
 005A8CF4    movq qword ptr ss:[ebp-0x9C], xmm0
-005A8CFC    call 0x00646580
+005A8CFC    call 0x00646580                                 ; => [ Call: sub_646580 ]
 005A8D01    mov ecx, dword ptr ss:[ebp-0x04]
 005A8D04    add esp, 0x20
 005A8D07    xor ecx, ebp
-005A8D09    call 0x0075927A
+005A8D09    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A8D0E    mov esp, ebp
 005A8D10    pop ebp
 005A8D11    mov esp, ebx

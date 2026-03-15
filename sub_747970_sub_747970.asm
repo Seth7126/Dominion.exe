@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_747970
+// 起始地址: 0x747970
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00747970    push ebx
 00747971    mov ebx, esp
 00747973    sub esp, 0x08
@@ -9,26 +15,26 @@
 00747984    mov ebp, esp
 00747986    sub esp, 0x138
 0074798C    mov eax, dword ptr ds:[0x008C4040]
-00747991    xor eax, ebp
+00747991    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 00747993    mov dword ptr ss:[ebp-0x04], eax
-00747996    mov ecx, dword ptr ds:[0x01512450]
+00747996    mov ecx, dword ptr ds:[0x01512450]              ; => [ Data: data_1512450 ]
 0074799C    push esi
 0074799D    push edi
 0074799E    cmp dword ptr ds:[ecx+0x04], 0x1E
 007479A2    jz 0x007479BD
-007479A4    push 0x8790A8
+007479A4    push 0x8790A8                                   ; => [ String: UIDefGet ]
 007479A9    push 0x127
-007479AE    push 0x878EA8
-007479B3    mov ecx, 0x8790C8
+007479AE    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+007479B3    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 007479B8    jmp 0x00747D9B
-007479BD    call 0x005AF880
+007479BD    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 007479C2    movaps xmm0, xmmword ptr ds:[0x008934A0]
 007479C9    lea edi, ss:[ebp-0xDC]
-007479CF    movss xmm7, dword ptr ds:[0x01593C6C]
+007479CF    movss xmm7, dword ptr ds:[0x01593C6C]           ; => [ Data: data_1593c6c ]
 007479D7    xor esi, esi
 007479D9    movss xmm6, dword ptr ds:[ebx+0x08]
 007479DE    movups xmm2, xmmword ptr ds:[eax+0x0C]
-007479E2    movups xmmword ptr ss:[ebp-0xE0], xmm0
+007479E2    movups xmmword ptr ss:[ebp-0xE0], xmm0          ; => [ Call: __builtin_memcpy | String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x3f\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x3f\x00\x00\x00\x00\x00\x00\x00\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f ]
 007479E9    movaps xmm0, xmmword ptr ds:[0x00891310]
 007479F0    movaps xmm1, xmm2
 007479F3    movups xmmword ptr ss:[ebp-0xD0], xmm0
@@ -64,10 +70,10 @@
 00747A83    subss xmm1, dword ptr ds:[0x01593C70]
 00747A8B    subss xmm0, dword ptr ds:[0x01593C74]
 00747A93    mulss xmm1, xmm7
-00747A97    mulss xmm0, xmm7
-00747A9B    movss dword ptr ss:[ebp-0x40], xmm1
+00747A97    mulss xmm0, xmm7                                ; => [ Data: data_1593c74 ]
+00747A9B    movss dword ptr ss:[ebp-0x40], xmm1             ; => [ Data: data_1593c70 ]
 00747AA0    movss dword ptr ss:[ebp-0x3C], xmm0
-00747AA5    call 0x005AF7F0
+00747AA5    call 0x005AF7F0                                 ; => [ Call: sub_5af7f0 ]
 00747AAA    add esp, 0x04
 00747AAD    movups xmm0, xmmword ptr ds:[eax]
 00747AB0    movaps xmm1, xmm0
@@ -101,7 +107,7 @@
 00747B14    pop esi
 00747B15    mov ecx, dword ptr ss:[ebp-0x04]
 00747B18    xor ecx, ebp
-00747B1A    call 0x0075927A
+00747B1A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00747B1F    mov esp, ebp
 00747B21    pop ebp
 00747B22    mov esp, ebx
@@ -109,14 +115,14 @@
 00747B25    ret
 00747B26    movaps xmm0, xmmword ptr ds:[0x008911D0]
 00747B2D    lea eax, ss:[ebp-0x18]
-00747B30    movups xmmword ptr ss:[ebp-0x110], xmm0
+00747B30    movups xmmword ptr ss:[ebp-0x110], xmm0         ; => [ Call: __builtin_memcpy | String: \x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00\x03\x00\x00\x00\x02\x00\x00\x00\x07\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x06\x00\x00\x00 ]
 00747B37    lea ecx, ss:[ebp-0x38]
 00747B3A    movaps xmm0, xmmword ptr ds:[0x008914D0]
 00747B41    movups xmmword ptr ss:[ebp-0x100], xmm0
 00747B48    push eax
 00747B49    movaps xmm0, xmmword ptr ds:[0x008914C0]
 00747B50    movups xmmword ptr ss:[ebp-0xF0], xmm0
-00747B57    call 0x00744C10
+00747B57    call 0x00744C10                                 ; => [ Call: sub_744c10 ]
 00747B5C    movss xmm7, dword ptr ds:[ebx+0x0C]
 00747B61    lea edi, ss:[ebp-0x10C]
 00747B67    add esp, 0x04
@@ -134,7 +140,7 @@
 00747B9C    movss xmm1, dword ptr ss:[ebp-0x70]
 00747BA1    lea ecx, ss:[ebp-0x48]
 00747BA4    movss xmm0, dword ptr ss:[ebp-0x90]
-00747BAC    movss xmm2, dword ptr ds:[0x01593C6C]
+00747BAC    movss xmm2, dword ptr ds:[0x01593C6C]           ; => [ Data: data_1593c6c ]
 00747BB4    mulss xmm1, dword ptr ss:[ebp+eax*8-0xE0]
 00747BBD    mulss xmm0, dword ptr ss:[ebp+eax*8-0xDC]
 00747BC6    lea eax, ss:[ebp-0x120]
@@ -144,8 +150,8 @@
 00747BDA    subss xmm1, dword ptr ds:[0x01593C70]
 00747BE2    subss xmm0, dword ptr ds:[0x01593C74]
 00747BEA    mulss xmm1, xmm2
-00747BEE    mulss xmm0, xmm2
-00747BF2    movss dword ptr ss:[ebp-0x48], xmm1
+00747BEE    mulss xmm0, xmm2                                ; => [ Data: data_1593c74 ]
+00747BF2    movss dword ptr ss:[ebp-0x48], xmm1             ; => [ Data: data_1593c70 ]
 00747BF7    movss dword ptr ss:[ebp-0x44], xmm0
 00747BFC    call 0x005AF7F0
 00747C01    movss xmm1, dword ptr ss:[ebp-0x70]
@@ -153,7 +159,7 @@
 00747C09    movss xmm0, dword ptr ss:[ebp-0x90]
 00747C11    lea ecx, ss:[ebp-0x58]
 00747C14    add esp, 0x04
-00747C17    movups xmm6, xmmword ptr ds:[eax]
+00747C17    movups xmm6, xmmword ptr ds:[eax]               ; => [ Call: sub_5af7f0 ]
 00747C1A    mov eax, dword ptr ss:[ebp-0x1C]
 00747C1D    movups xmmword ptr ss:[ebp-0x38], xmm6
 00747C21    mulss xmm1, dword ptr ss:[ebp+eax*8-0xE0]
@@ -165,10 +171,10 @@
 00747C47    subss xmm1, dword ptr ds:[0x01593C70]
 00747C4F    subss xmm0, dword ptr ds:[0x01593C74]
 00747C57    mulss xmm1, dword ptr ds:[0x01593C6C]
-00747C5F    mulss xmm0, dword ptr ds:[0x01593C6C]
-00747C67    movss dword ptr ss:[ebp-0x58], xmm1
+00747C5F    mulss xmm0, dword ptr ds:[0x01593C6C]           ; => [ Data: data_1593c74 | Data: data_1593c6c ]
+00747C67    movss dword ptr ss:[ebp-0x58], xmm1             ; => [ Data: data_1593c70 | Data: data_1593c6c ]
 00747C6C    movss dword ptr ss:[ebp-0x54], xmm0
-00747C71    call 0x005AF7F0
+00747C71    call 0x005AF7F0                                 ; => [ Call: sub_5af7f0 ]
 00747C76    movaps xmm2, xmm6
 00747C79    add esp, 0x04
 00747C7C    shufps xmm2, xmm6, 0xAA
@@ -238,7 +244,7 @@
 00747D4E    pop esi
 00747D4F    mov ecx, dword ptr ss:[ebp-0x04]
 00747D52    xor ecx, ebp
-00747D54    call 0x0075927A
+00747D54    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00747D59    mov esp, ebp
 00747D5B    pop ebp
 00747D5C    mov esp, ebx
@@ -249,25 +255,25 @@
 00747D66    pop edi
 00747D67    xor ecx, ebp
 00747D69    pop esi
-00747D6A    call 0x0075927A
+00747D6A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00747D6F    mov esp, ebp
 00747D71    pop ebp
 00747D72    mov esp, ebx
 00747D74    pop ebx
 00747D75    ret
-00747D76    push 0x872E98
+00747D76    push 0x872E98                                   ; => [ String: RectUnion ]
 00747D7B    push 0xDB
-00747D80    mov ecx, 0x872EA4
+00747D80    mov ecx, 0x872EA4                               ; => [ String: RectIsNormalized(r0) ]
 00747D85    jmp 0x00747D96
-00747D87    push 0x8019F0
+00747D87    push 0x8019F0                                   ; => [ String: RectContains ]
 00747D8C    push 0xA4
-00747D91    mov ecx, 0x801A1C
-00747D96    push 0x801A00
+00747D91    mov ecx, 0x801A1C                               ; => [ String: RectIsNormalized(r) ]
+00747D96    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
 00747D9B    mov edx, 0x801800
-00747DA0    call 0x0063B870
+00747DA0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00747DA5    add esp, 0x0C
 00747DA8    call 0x0063BC30
 00747DAD    test al, al
-00747DAF    jz 0x00747DB2
+00747DAF    jz 0x00747DB2                                   ; => [ Call: sub_63bc30 ]
 00747DB1    int3
-00747DB2    call 0x0063BB00
+00747DB2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

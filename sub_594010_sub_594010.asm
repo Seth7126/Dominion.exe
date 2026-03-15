@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_594010
+// 起始地址: 0x594010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00594010    push ebp
 00594011    mov ebp, esp
 00594013    sub esp, 0x0C
@@ -16,7 +22,7 @@
 0059403C    jz 0x005940DD
 00594042    mov ebx, dword ptr ss:[ebp+0x08]
 00594045    mov edx, ebx
-00594047    call 0x0057DA30
+00594047    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0059404C    lea edx, ds:[edi+0x1594]
 00594052    mov esi, 0x07
 00594057    mov ecx, edx
@@ -61,9 +67,9 @@
 005940AB    jz 0x005940DD
 005940AD    add eax, 0xFFFFFFDE
 005940B0    jns 0x005940C3
-005940B2    push 0x820DAC
+005940B2    push 0x820DAC                                   ; => [ String: DoLandscapeTracking ]
 005940B7    push 0x53C6
-005940BC    mov ecx, 0x814428
+005940BC    mov ecx, 0x814428                               ; => [ String: idx >= 0 ]
 005940C1    jmp 0x005940F3
 005940C3    cmp eax, 0x04
 005940C6    jnl 0x005940E4
@@ -79,15 +85,15 @@
 005940E0    mov esp, ebp
 005940E2    pop ebp
 005940E3    ret
-005940E4    push 0x820DAC
+005940E4    push 0x820DAC                                   ; => [ String: DoLandscapeTracking ]
 005940E9    push 0x53C7
-005940EE    mov ecx, 0x820DC0
+005940EE    mov ecx, 0x820DC0                               ; => [ String: idx < MAX_LANDSCAPE_CARDS ]
 005940F3    push 0x81F4B8
 005940F8    mov edx, 0x801800
-005940FD    call 0x0063B870
+005940FD    call 0x0063B870                                 ; => [ String: DoLandscapeTracking | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00594102    add esp, 0x0C
 00594105    call 0x0063BC30
 0059410A    test al, al
-0059410C    jz 0x0059410F
+0059410C    jz 0x0059410F                                   ; => [ Call: sub_63bc30 ]
 0059410E    int3
-0059410F    call 0x0063BB00
+0059410F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b31a0
+// 起始地址: 0x6b31a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B31A0    push ebp
 006B31A1    mov ebp, esp
 006B31A3    sub esp, 0x0C
@@ -7,13 +13,13 @@
 006B31AF    push 0xFFFFFFFF
 006B31B1    lea eax, ds:[ebx+0x44]
 006B31B4    push eax
-006B31B5    call 0x00761FC4
+006B31B5    call 0x00761FC4                                 ; => [ Call: memset ]
 006B31BA    add esp, 0x0C
 006B31BD    xorps xmm0, xmm0
 006B31C0    movq qword ptr ds:[ebx+0x38], xmm0
 006B31C5    mov ecx, 0x400
 006B31CA    mov dword ptr ds:[ebx+0x40], 0x00
-006B31D1    call 0x0064C020
+006B31D1    call 0x0064C020                                 ; => [ Call: sub_64c020 ]
 006B31D6    mov dword ptr ds:[ebx+0x38], eax
 006B31D9    mov dword ptr ds:[ebx+0x3C], 0xFF
 006B31E0    cmp dword ptr ds:[ebx+0x1C], 0x00
@@ -24,8 +30,8 @@
 006B31F0    mov dword ptr ss:[ebp-0x0C], ecx
 006B31F3    cmp dword ptr ds:[ecx+0x18], edi
 006B31F6    jle 0x006B32A0
-006B31FC    xor edx, edx
-006B31FE    mov dword ptr ss:[ebp-0x04], edx
+006B31FC    xor edx, edx                                    ; => [ Call: nullptr ]
+006B31FE    mov dword ptr ss:[ebp-0x04], edx                ; => [ Call: nullptr ]
 006B3201    push esi
 006B3202    mov eax, dword ptr ds:[ecx+0x20]
 006B3205    mov esi, dword ptr ds:[edx+eax*1]
@@ -56,13 +62,13 @@
 006B3247    test eax, eax
 006B3249    jnz 0x006B3240
 006B324B    mov ecx, 0x0C
-006B3250    call 0x0064BFD0
+006B3250    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 006B3255    mov ebx, eax
 006B3257    inc dword ptr ds:[ebx+0x0C]
 006B325A    cmp dword ptr ds:[ebx], 0x00
 006B325D    jnz 0x006B3266
 006B325F    mov ecx, ebx
-006B3261    call 0x0064BE70
+006B3261    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 006B3266    mov ecx, dword ptr ds:[ebx]
 006B3268    mov edx, dword ptr ss:[ebp-0x08]
 006B326B    mov eax, dword ptr ds:[ecx]

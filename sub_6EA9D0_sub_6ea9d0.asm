@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_6ea9d0
+// 起始地址: 0x6ea9d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EA9D0    push esi
 006EA9D1    mov esi, ecx
-006EA9D3    mov edx, 0x801800
+006EA9D3    mov edx, 0x801800                               ; => [ Data: data_801800 ]
 006EA9D8    mov eax, dword ptr ds:[esi]
 006EA9DA    test eax, eax
 006EA9DC    mov ecx, dword ptr ds:[esi+0x3C]
@@ -10,13 +16,13 @@
 006EA9E6    movss xmm3, dword ptr ds:[esi+0x4C]
 006EA9EB    movss xmm2, dword ptr ds:[esi+0x40]
 006EA9F0    push ecx
-006EA9F1    call 0x006417E0
+006EA9F1    call 0x006417E0                                 ; => [ Call: sub_6417e0 ]
 006EA9F6    add esp, 0x04
 006EA9F9    jmp 0x006EAA0D
 006EA9FB    movss xmm3, dword ptr ds:[esi+0x50]
 006EAA00    movss xmm2, dword ptr ds:[esi+0x4C]
 006EAA05    mov ecx, dword ptr ds:[esi+0x38]
-006EAA08    call 0x006B43A0
+006EAA08    call 0x006B43A0                                 ; => [ Call: sub_6b43a0 ]
 006EAA0D    mov eax, dword ptr ds:[esi+0x6C]
 006EAA10    movaps xmm1, xmm0
 006EAA13    mulss xmm1, dword ptr ds:[esi+0x48]

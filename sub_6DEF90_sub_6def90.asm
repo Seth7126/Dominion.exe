@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6def90
+// 起始地址: 0x6def90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DEF90    push ebp
 006DEF91    mov ebp, esp
 006DEF93    sub esp, 0x08
@@ -8,8 +14,8 @@
 006DEF9C    mov ecx, edi
 006DEF9E    mov dword ptr ss:[ebp-0x04], edx
 006DEFA1    xor dl, dl
-006DEFA3    call 0x006DD740
-006DEFA8    mov ebx, dword ptr ds:[0x0147ABE8]
+006DEFA3    call 0x006DD740                                 ; => [ Call: sub_6dd740 ]
+006DEFA8    mov ebx, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006DEFAE    test ebx, ebx
 006DEFB0    jz 0x006DF0B6
 006DEFB6    mov ebx, dword ptr ds:[ebx+0x04]
@@ -17,7 +23,7 @@
 006DEFBC    cmp dword ptr ds:[ebx], 0x00
 006DEFBF    jnz 0x006DEFC8
 006DEFC1    mov ecx, ebx
-006DEFC3    call 0x006E09E0
+006DEFC3    call 0x006E09E0                                 ; => [ Call: sub_6e09e0 ]
 006DEFC8    mov esi, dword ptr ds:[ebx]
 006DEFCA    mov ecx, edi
 006DEFCC    mov edx, esi
@@ -34,7 +40,7 @@
 006DEFFA    mov dword ptr ds:[esi+0x24], 0x3F800000
 006DF001    mov dword ptr ds:[esi+0xAC], 0x00
 006DF00B    mov dword ptr ds:[esi+0xB0], 0x00
-006DF015    call 0x006DDA80
+006DF015    call 0x006DDA80                                 ; => [ Call: sub_6dda80 ]
 006DF01A    cmp dword ptr ds:[esi+0x1C], 0x02
 006DF01E    mov ecx, eax
 006DF020    movss xmm1, dword ptr ds:[0x00890E18]
@@ -49,13 +55,13 @@
 006DF046    mov ecx, 0x0C
 006DF04B    mov dword ptr ds:[esi+0x04], 0x00
 006DF052    mov dword ptr ds:[esi+0x08], 0x00
-006DF059    call 0x0064BFD0
+006DF059    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 006DF05E    mov ebx, eax
 006DF060    inc dword ptr ds:[ebx+0x0C]
 006DF063    cmp dword ptr ds:[ebx], 0x00
 006DF066    jnz 0x006DF06F
 006DF068    mov ecx, ebx
-006DF06A    call 0x0064BE70
+006DF06A    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 006DF06F    mov ecx, dword ptr ds:[ebx]
 006DF071    mov eax, dword ptr ds:[ecx]
 006DF073    mov dword ptr ds:[ebx], eax
@@ -92,10 +98,10 @@
 006DF0BD    push 0x871FA0
 006DF0C2    mov edx, 0x801800
 006DF0C7    mov ecx, 0x871F94
-006DF0CC    call 0x0063B870
+006DF0CC    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetGameData | Data: data_801800 | String: gpGameData | String: C:\x\ax2017\Engine\Game.h ]
 006DF0D1    add esp, 0x0C
 006DF0D4    call 0x0063BC30
 006DF0D9    test al, al
-006DF0DB    jz 0x006DF0DE
+006DF0DB    jz 0x006DF0DE                                   ; => [ Call: sub_63bc30 ]
 006DF0DD    int3
-006DF0DE    call 0x0063BB00
+006DF0DE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

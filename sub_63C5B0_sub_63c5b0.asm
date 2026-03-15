@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63c5b0
+// 起始地址: 0x63c5b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063C5B0    push ebp
 0063C5B1    mov ebp, esp
 0063C5B3    sub esp, 0x08
@@ -26,7 +32,7 @@
 0063C5E5    push esi
 0063C5E6    push dword ptr ss:[ebp+0x08]
 0063C5E9    mov ecx, eax
-0063C5EB    call 0x0063C7E0
+0063C5EB    call 0x0063C7E0                                 ; => [ Call: sub_63c7e0 ]
 0063C5F0    test eax, eax
 0063C5F2    jnz 0x0063C615
 0063C5F4    lea eax, ss:[ebp-0x02]

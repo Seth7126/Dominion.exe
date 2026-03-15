@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ec490
+// 起始地址: 0x6ec490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EC490    push ebp
 006EC491    mov ebp, esp
 006EC493    sub esp, 0x08
@@ -7,7 +13,7 @@
 006EC49B    mov ebx, ecx
 006EC49D    push edi
 006EC49E    mov dword ptr ss:[ebp-0x04], ebx
-006EC4A1    mov edi, 0x8D0B80
+006EC4A1    mov edi, 0x8D0B80                               ; => [ Data: data_8d0b80 ]
 006EC4A6    mov ecx, 0x1C
 006EC4AB    nop dword ptr ds:[eax+eax*1], eax
 006EC4B0    mov eax, dword ptr ds:[esi]
@@ -19,7 +25,7 @@
 006EC4BF    jnb 0x006EC4B0
 006EC4C1    mov edx, 0x882CF8
 006EC4C6    mov ecx, ebx
-006EC4C8    call 0x0063D720
+006EC4C8    call 0x0063D720                                 ; => [ Call: sub_63d720 | String: \tfloat2 uv = arg_uv;\n ]
 006EC4CD    pop edi
 006EC4CE    pop esi
 006EC4CF    mov eax, ebx
@@ -41,7 +47,7 @@
 006EC4F8    movups xmmword ptr ds:[eax], xmm0
 006EC4FB    movups xmm0, xmmword ptr ds:[ecx+0x10]
 006EC4FF    movups xmmword ptr ds:[eax+0x10], xmm0
-006EC503    call 0x0063DF30
+006EC503    call 0x0063DF30                                 ; => [ Call: sub_63df30 | String: \tfloat2 uv = MultiplyMatrixVec(float3(arg_uv, 1.0), gTexAnim%d).xy;\n ]
 006EC508    add esp, 0x0C
 006EC50B    mov eax, ebx
 006EC50D    pop edi

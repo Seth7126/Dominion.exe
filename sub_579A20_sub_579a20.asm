@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_579a20
+// 起始地址: 0x579a20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00579A20    push ebp
 00579A21    mov ebp, esp
 00579A23    sub esp, 0x5C
@@ -14,7 +20,7 @@
 00579A40    and esi, 0xFFFF
 00579A46    cmp esi, 0x320
 00579A4C    jb 0x00579A59
-00579A4E    call 0x00591930
+00579A4E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00579A53    mov ecx, dword ptr ds:[ebx+0xC80]
 00579A59    imul eax, esi, 0x64
 00579A5C    xor edx, edx
@@ -49,7 +55,7 @@
 00579AB3    push eax
 00579AB4    mov edx, esi
 00579AB6    mov ecx, edi
-00579AB8    call 0x0059F9B0
+00579AB8    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 00579ABD    add esp, 0x24
 00579AC0    mov esi, dword ptr ds:[ebx+0xC80]
 00579AC6    xor ecx, ecx
@@ -79,7 +85,7 @@
 00579B06    push dword ptr ds:[ebx]
 00579B08    setz cl
 00579B0B    push dword ptr ss:[ebp-0x0C]
-00579B0E    call 0x0061B1B0
+00579B0E    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00579B13    mov ecx, dword ptr ss:[ebp-0x04]
 00579B16    add esp, 0x2C
 00579B19    xor esi, esi
@@ -89,7 +95,7 @@
 00579B25    mov ecx, edi
 00579B27    push 0x06
 00579B29    push esi
-00579B2A    call 0x00581A00
+00579B2A    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00579B2F    inc esi
 00579B30    add esp, 0x08
 00579B33    cmp esi, dword ptr ds:[edi+0xD38]
@@ -107,7 +113,7 @@
 00579B56    lea eax, ss:[ebp-0x58]
 00579B59    push 0x00
 00579B5B    push eax
-00579B5C    call 0x00761FC4
+00579B5C    call 0x00761FC4                                 ; => [ Call: memset ]
 00579B61    mov edx, dword ptr ss:[ebp-0x0C]
 00579B64    lea eax, ss:[ebp-0x58]
 00579B67    add esp, 0x0C
@@ -121,7 +127,7 @@
 00579B7A    lea eax, ss:[ebp-0x08]
 00579B7D    push 0x01
 00579B7F    push eax
-00579B80    call 0x00580700
+00579B80    call 0x00580700                                 ; => [ Call: nullptr | Call: sub_580700 ]
 00579B85    add esp, 0x1C
 00579B88    pop edi
 00579B89    pop esi

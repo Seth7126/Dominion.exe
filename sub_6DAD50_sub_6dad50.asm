@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dad50
+// 起始地址: 0x6dad50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DAD50    push ebx
 006DAD51    mov ebx, esp
 006DAD53    sub esp, 0x08
@@ -8,7 +14,7 @@
 006DAD60    mov dword ptr ss:[esp+0x04], ebp
 006DAD64    mov ebp, esp
 006DAD66    sub esp, 0x88
-006DAD6C    mov eax, dword ptr ds:[0x008C4040]
+006DAD6C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006DAD71    xor eax, ebp
 006DAD73    mov dword ptr ss:[ebp-0x04], eax
 006DAD76    push esi
@@ -30,7 +36,7 @@
 006DADA9    lea edx, ss:[ebp-0x80]
 006DADAC    push edx
 006DADAD    mov edx, dword ptr ds:[eax+0x7C]
-006DADB0    call 0x00731EF0
+006DADB0    call 0x00731EF0                                 ; => [ Call: sub_731ef0 ]
 006DADB5    add esp, 0x04
 006DADB8    movq xmm0, qword ptr ds:[eax]
 006DADBC    movss xmm1, dword ptr ds:[edi+0x24]
@@ -145,7 +151,7 @@
 006DAF73    addss xmm1, xmm2
 006DAF77    addss xmm1, dword ptr ss:[ebp-0x54]
 006DAF7C    movss dword ptr ds:[eax+0x08], xmm1
-006DAF81    call 0x0075927A
+006DAF81    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006DAF86    mov esp, ebp
 006DAF88    pop ebp
 006DAF89    mov esp, ebx
@@ -156,22 +162,22 @@
 006DAF97    push 0x880FE4
 006DAF9C    mov edx, 0x801800
 006DAFA1    mov ecx, 0x881164
-006DAFA6    call 0x0063B870
+006DAFA6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: sStructureGetAnimatedVertexPosition | Data: data_801800 | String: defSubMesh.vertexFormat == VERTEX_FORMAT_POS_NORM_COL_TEX | String: C:\x\ax2017\Engine\Structure.cpp ]
 006DAFAB    add esp, 0x0C
 006DAFAE    call 0x0063BC30
 006DAFB3    test al, al
-006DAFB5    jz 0x006DAFB8
+006DAFB5    jz 0x006DAFB8                                   ; => [ Call: sub_63bc30 ]
 006DAFB7    int3
-006DAFB8    call 0x0063BB00
+006DAFB8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 006DAFBD    push 0x872E14
 006DAFC2    push 0xB5
 006DAFC7    push 0x816BDC
 006DAFCC    mov edx, 0x801800
 006DAFD1    mov ecx, 0x824FD0
-006DAFD6    call 0x0063B870
+006DAFD6    call 0x0063B870                                 ; => [ String: index >= 0 && index < mSize | Call: sub_63b870 | String: C:\x\ax2017\Engine\xArray.h | String: XArray<struct Mat4>::operator [] | Data: data_801800 ]
 006DAFDB    add esp, 0x0C
 006DAFDE    call 0x0063BC30
 006DAFE3    test al, al
-006DAFE5    jz 0x006DAFE8
+006DAFE5    jz 0x006DAFE8                                   ; => [ Call: sub_63bc30 ]
 006DAFE7    int3
-006DAFE8    call 0x0063BB00
+006DAFE8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

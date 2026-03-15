@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a4f40
+// 起始地址: 0x5a4f40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A4F40    push ebp
 005A4F41    mov ebp, esp
 005A4F43    mov eax, 0x10004
-005A4F48    call 0x00761E50
+005A4F48    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A4F4D    mov eax, dword ptr ds:[0x008C4040]
 005A4F52    xor eax, ebp
-005A4F54    mov dword ptr ss:[ebp-0x04], eax
+005A4F54    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005A4F57    push ebx
 005A4F58    push esi
 005A4F59    push edi
@@ -15,7 +21,7 @@
 005A4F67    mov eax, dword ptr ds:[ebx]
 005A4F69    xor ecx, ecx
 005A4F6B    add eax, 0x3FFF0
-005A4F70    movaps xmm1, xmm2
+005A4F70    movaps xmm1, xmm2                               ; => [ String: 0 | String: zx ]
 005A4F73    lea edx, ds:[edi+eax*4]
 005A4F76    mov eax, dword ptr ds:[edx]
 005A4F78    cmp eax, 0xFFFFFFFF
@@ -34,7 +40,7 @@
 005A4F9D    cvtdq2ps xmm0, xmm0
 005A4FA0    divss xmm1, xmm0
 005A4FA4    jmp 0x005A4FA9
-005A4FA6    movaps xmm1, xmm2
+005A4FA6    movaps xmm1, xmm2                               ; => [ String: 0 | String: zx | String: 0 | String: zx ]
 005A4FA9    movss dword ptr ss:[ebp+esi*4-0x10004], xmm1
 005A4FB2    add ebx, 0x04
 005A4FB5    inc esi
@@ -68,7 +74,7 @@
 005A502C    jl 0x005A4FD0
 005A502E    mov ecx, dword ptr ss:[ebp-0x04]
 005A5031    xor ecx, ebp
-005A5033    call 0x0075927A
+005A5033    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A5038    mov esp, ebp
 005A503A    pop ebp
 005A503B    ret

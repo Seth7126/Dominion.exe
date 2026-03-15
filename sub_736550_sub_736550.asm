@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_736550
+// 起始地址: 0x736550
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00736550    push ebp
 00736551    mov ebp, esp
 00736553    and esp, 0xFFFFFFF0
@@ -26,7 +32,7 @@
 0073659A    call 0x007364D0
 0073659F    add esp, 0x10
 007365A2    test al, al
-007365A4    jz 0x007365B5
+007365A4    jz 0x007365B5                                   ; => [ Call: sub_7364d0 ]
 007365A6    inc dword ptr ds:[esi+0x10]
 007365A9    inc dword ptr ds:[esi+0x20]
 007365AC    mov edx, dword ptr ss:[esp+0x0C]
@@ -48,7 +54,7 @@
 007365DD    mov dword ptr ss:[esp+0x24], edi
 007365E1    movups xmm0, xmmword ptr ss:[esp+0x20]
 007365E6    movups xmmword ptr ds:[eax], xmm0
-007365E9    call 0x007364D0
+007365E9    call 0x007364D0                                 ; => [ Call: sub_7364d0 ]
 007365EE    add esp, 0x10
 007365F1    test al, al
 007365F3    jz 0x00736603
@@ -74,7 +80,7 @@
 00736632    mov eax, esp
 00736634    movups xmm0, xmmword ptr ss:[esp+0x20]
 00736639    movups xmmword ptr ds:[eax], xmm0
-0073663C    call 0x007364D0
+0073663C    call 0x007364D0                                 ; => [ Call: sub_7364d0 ]
 00736641    add esp, 0x10
 00736644    test al, al
 00736646    jz 0x00736653
@@ -98,7 +104,7 @@
 0073667E    mov dword ptr ss:[esp+0x20], edi
 00736682    movups xmm0, xmmword ptr ss:[esp+0x20]
 00736687    movups xmmword ptr ds:[eax], xmm0
-0073668A    call 0x007364D0
+0073668A    call 0x007364D0                                 ; => [ Call: sub_7364d0 ]
 0073668F    add esp, 0x10
 00736692    test al, al
 00736694    jz 0x007366A0

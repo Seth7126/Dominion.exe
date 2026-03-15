@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_478830
+// 起始地址: 0x478830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00478830    mov edx, 0x03
 00478835    mov ecx, 0x83806C
-0047883A    call 0x0069F030
-0047883F    mov dword ptr ds:[0x0171D934], eax
+0047883A    call 0x0069F030                                 ; => [ String: res/non_atlas/gamebg_guilds.texture | Call: sub_69f030 ]
+0047883F    mov dword ptr ds:[0x0171D934], eax              ; => [ Data: data_171d934 ]
 00478844    ret

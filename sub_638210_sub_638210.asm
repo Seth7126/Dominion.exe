@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_638210
+// 起始地址: 0x638210
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00638210    push ebp
 00638211    mov ebp, esp
 00638213    sub esp, 0x44
@@ -20,7 +26,7 @@
 00638241    push esi
 00638242    mov edx, edi
 00638244    lea ecx, ss:[ebp-0x10]
-00638247    call 0x00638C00
+00638247    call 0x00638C00                                 ; => [ Call: sub_638c00 ]
 0063824C    mov eax, ebx
 0063824E    mov ecx, esi
 00638250    sub ecx, dword ptr ss:[ebp-0x0C]
@@ -153,7 +159,7 @@
 006383D6    mov ecx, edi
 006383D8    movq xmm0, qword ptr ds:[ebx+0x10]
 006383DD    movq qword ptr ss:[ebp-0x30], xmm0
-006383E2    call 0x00639560
+006383E2    call 0x00639560                                 ; => [ Call: sub_639560 ]
 006383E7    mov ecx, dword ptr ss:[ebp+0x0C]
 006383EA    add esp, 0x0C
 006383ED    test esi, esi
@@ -195,7 +201,7 @@
 00638454    movq xmm0, qword ptr ds:[edi+0x10]
 00638459    push eax
 0063845A    movq qword ptr ds:[esi+0x10], xmm0
-0063845F    call 0x00639560
+0063845F    call 0x00639560                                 ; => [ Call: sub_639560 ]
 00638464    add esp, 0x0C
 00638467    mov ebx, dword ptr ss:[ebp-0x0C]
 0063846A    sub esi, 0x18
@@ -223,7 +229,7 @@
 0063849B    add eax, 0x18
 0063849E    push edi
 0063849F    push eax
-006384A0    call 0x00762362
+006384A0    call 0x00762362                                 ; => [ Call: memmove ]
 006384A5    movups xmm0, xmmword ptr ss:[ebp-0x28]
 006384A9    add esp, 0x0C
 006384AC    movups xmmword ptr ds:[edi], xmm0

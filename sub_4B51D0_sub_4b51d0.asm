@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4b51d0
+// 起始地址: 0x4b51d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B51D0    push esi
 004B51D1    push edi
 004B51D2    mov edi, dword ptr ds:[ecx+0x11A8]
@@ -23,10 +29,10 @@
 004B5207    push 0x801AF8
 004B520C    mov edx, 0x801800
 004B5211    mov ecx, 0x801AA4
-004B5216    call 0x0063B870
+004B5216    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetPlayerByAccountID | Data: data_801800 | String: Halt | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B521B    add esp, 0x0C
 004B521E    call 0x0063BC30
 004B5223    test al, al
-004B5225    jz 0x004B5228
+004B5225    jz 0x004B5228                                   ; => [ Call: sub_63bc30 ]
 004B5227    int3
-004B5228    call 0x0063BB00
+004B5228    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

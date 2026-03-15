@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_74b3b0
+// 起始地址: 0x74b3b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074B3B0    push ebp
 0074B3B1    mov ebp, esp
 0074B3B3    sub esp, 0x14
@@ -7,7 +13,7 @@
 0074B3C0    mov edx, esi
 0074B3C2    mov dword ptr ss:[ebp-0x08], 0x00
 0074B3C9    mov dword ptr ss:[ebp-0x0C], 0x00
-0074B3D0    lea ecx, ds:[edx+0x01]
+0074B3D0    lea ecx, ds:[edx+0x01]                          ; => [ Type: va_list ]
 0074B3D3    mov al, byte ptr ds:[edx]
 0074B3D5    inc edx
 0074B3D6    test al, al
@@ -25,10 +31,10 @@
 0074B3F0    call 0x0064B6D0
 0074B3F5    add esp, 0x14
 0074B3F8    test eax, eax
-0074B3FA    jnz 0x0074B42D
+0074B3FA    jnz 0x0074B42D                                  ; => [ Call: sub_64b6d0 | String: #%02x%02x%02x ]
 0074B3FC    push 0x2C
 0074B3FE    push esi
-0074B3FF    call dword ptr ds:[0x00775454]
+0074B3FF    call dword ptr ds:[0x00775454]                  ; => [ Type: va_list ]
 0074B405    add esp, 0x08
 0074B408    test eax, eax
 0074B40A    lea eax, ss:[ebp-0x04]
@@ -38,11 +44,11 @@
 0074B412    lea eax, ss:[ebp-0x0C]
 0074B415    push eax
 0074B416    jz 0x0074B41F
-0074B418    push 0x88FF18
+0074B418    push 0x88FF18                                   ; => [ String: %d,%d,%d ]
 0074B41D    jmp 0x0074B424
-0074B41F    push 0x87A7A8
+0074B41F    push 0x87A7A8                                   ; => [ String: %d %d %d ]
 0074B424    push esi
-0074B425    call 0x0064B6D0
+0074B425    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 ]
 0074B42A    add esp, 0x14
 0074B42D    movzx eax, byte ptr ss:[ebp-0x04]
 0074B431    movzx ecx, byte ptr ss:[ebp-0x08]

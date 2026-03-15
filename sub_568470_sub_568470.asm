@@ -1,38 +1,44 @@
+// ============================================================
+// 函数名称: sub_568470
+// 起始地址: 0x568470
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00568470    push ebp
 00568471    mov ebp, esp
 00568473    sub esp, 0x50
-00568476    mov eax, dword ptr ds:[0x008C4040]
+00568476    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0056847B    xor eax, ebp
 0056847D    mov dword ptr ss:[ebp-0x04], eax
 00568480    push ebx
 00568481    push esi
 00568482    push edi
 00568483    mov esi, ecx
-00568485    call 0x00573400
+00568485    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056848A    movzx esi, si
 0056848D    mov ebx, dword ptr ds:[eax+0x0C]
 00568490    mov edi, dword ptr ds:[eax+0x04]
 00568493    cmp esi, 0x320
 00568499    jb 0x005684A0
-0056849B    call 0x00591930
+0056849B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005684A0    imul eax, esi, 0x64
 005684A3    lea ecx, ss:[ebp-0x08]
 005684A6    push 0x00
 005684A8    mov edx, edi
 005684AA    push dword ptr ds:[eax+edi*1+0x1A4C]
 005684B1    push ebx
-005684B2    call 0x00576E90
+005684B2    call 0x00576E90                                 ; => [ Call: sub_576e90 ]
 005684B7    add esp, 0x0C
 005684BA    lea eax, ss:[ebp-0x20]
 005684BD    push dword ptr ss:[ebp-0x08]
 005684C0    push eax
 005684C1    call 0x00576C00
 005684C6    push dword ptr ss:[ebp+0x08]
-005684C9    movups xmm1, xmmword ptr ds:[eax]
+005684C9    movups xmm1, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 ]
 005684CC    lea eax, ss:[ebp-0x50]
 005684CF    push eax
 005684D0    movups xmmword ptr ss:[ebp-0x34], xmm1
-005684D4    call 0x00576C00
+005684D4    call 0x00576C00                                 ; => [ Call: sub_576c00 ]
 005684D9    psrldq xmm1, 0x08
 005684DE    add esp, 0x10
 005684E1    movd ecx, xmm1
@@ -53,7 +59,7 @@
 0056850C    pop ebx
 0056850D    mov ecx, dword ptr ss:[ebp-0x04]
 00568510    xor ecx, ebp
-00568512    call 0x0075927A
+00568512    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00568517    mov esp, ebp
 00568519    pop ebp
 0056851A    ret
@@ -63,7 +69,7 @@
 00568521    pop esi
 00568522    xor ecx, ebp
 00568524    pop ebx
-00568525    call 0x0075927A
+00568525    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0056852A    mov esp, ebp
 0056852C    pop ebp
 0056852D    ret

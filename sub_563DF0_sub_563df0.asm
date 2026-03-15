@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_563df0
+// 起始地址: 0x563df0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00563DF0    push ebp
 00563DF1    mov ebp, esp
 00563DF3    and esp, 0xFFFFFFF8
@@ -5,7 +11,7 @@
 00563DF9    push ebx
 00563DFA    push esi
 00563DFB    push edi
-00563DFC    call 0x00573400
+00563DFC    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00563E01    xor ebx, ebx
 00563E03    mov dword ptr ss:[esp+0x0C], ebx
 00563E07    mov edx, dword ptr ds:[eax+0x04]
@@ -20,7 +26,7 @@
 00563E30    movzx esi, word ptr ds:[edi]
 00563E33    cmp esi, 0x320
 00563E39    jb 0x00563E40
-00563E3B    call 0x00591930
+00563E3B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00563E40    mov eax, dword ptr ss:[esp+0x10]
 00563E44    mov ecx, eax
 00563E46    imul edx, esi, 0x64
@@ -33,7 +39,7 @@
 00563E60    add esp, 0x08
 00563E63    test al, al
 00563E65    mov eax, dword ptr ss:[esp+0x14]
-00563E69    cmovz ecx, ebx
+00563E69    cmovz ecx, ebx                                  ; => [ Call: sub_5754f0 ]
 00563E6C    inc edx
 00563E6D    add edi, 0x04
 00563E70    mov dword ptr ss:[esp+0x0C], edx

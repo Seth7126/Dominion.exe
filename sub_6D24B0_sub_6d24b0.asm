@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d24b0
+// 起始地址: 0x6d24b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D24B0    push ebp
 006D24B1    mov ebp, esp
 006D24B3    and esp, 0xFFFFFFF8
@@ -6,7 +12,7 @@
 006D24BA    push edi
 006D24BB    mov dword ptr ss:[esp+0x38], ecx
 006D24BF    xor edi, edi
-006D24C1    call 0x006D2320
+006D24C1    call 0x006D2320                                 ; => [ Call: sub_6d2320 ]
 006D24C6    mov esi, eax
 006D24C8    mov eax, dword ptr ss:[ebp+0x08]
 006D24CB    mov dword ptr ds:[eax], edi
@@ -182,7 +188,7 @@
 006D26DA    xor eax, eax
 006D26DC    mov edi, dword ptr ss:[esp+0x0C]
 006D26E0    xor edx, edx
-006D26E2    mov dword ptr ss:[esp+0x1C], eax
+006D26E2    mov dword ptr ss:[esp+0x1C], eax                ; => [ Call: __builtin_memset ]
 006D26E6    xor ecx, ecx
 006D26E8    mov dword ptr ss:[esp+0x34], edx
 006D26EC    lea eax, ds:[esi*8]
@@ -216,7 +222,7 @@
 006D2753    push dword ptr ss:[esp+0x2C]
 006D2757    call 0x006D23E0
 006D275C    add esp, 0x20
-006D275F    mov edx, eax
+006D275F    mov edx, eax                                    ; => [ Call: sub_6d23e0 ]
 006D2761    movzx eax, byte ptr ss:[esp+0x0A]
 006D2766    mov ecx, dword ptr ss:[esp+0x18]
 006D276A    not eax
@@ -370,7 +376,7 @@
 006D2985    push dword ptr ss:[esp+0x58]
 006D2989    mov ecx, edi
 006D298B    push dword ptr ss:[esp+0x2C]
-006D298F    call 0x006D23E0
+006D298F    call 0x006D23E0                                 ; => [ Call: sub_6d23e0 ]
 006D2994    mov ecx, eax
 006D2996    add esp, 0x20
 006D2999    mov eax, dword ptr ss:[ebp+0x08]
@@ -392,7 +398,7 @@
 006D29C2    mov al, byte ptr ds:[esi+0x02]
 006D29C5    xorps xmm1, xmm1
 006D29C8    movzx edx, byte ptr ds:[esi+0x01]
-006D29CC    movups xmm0, xmmword ptr ds:[0x00893540]
+006D29CC    movups xmm0, xmmword ptr ds:[0x00893540]        ; => [ Data: data_893540 ]
 006D29D3    mov byte ptr ss:[esp+0x0A], al
 006D29D7    mov al, byte ptr ds:[esi+0x03]
 006D29DA    add esi, 0x04
@@ -444,7 +450,7 @@
 006D2A7E    movzx ecx, byte ptr ds:[esi]
 006D2A81    mov eax, 0x100
 006D2A86    cwde
-006D2A87    xorps xmm3, xmm3
+006D2A87    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 006D2A8A    movsx ecx, cx
 006D2A8D    imul ecx, eax
 006D2A90    movzx eax, byte ptr ds:[esi+0x01]
@@ -463,7 +469,7 @@
 006D2AC1    movzx ecx, byte ptr ds:[esi]
 006D2AC4    mov edx, 0x100
 006D2AC9    movsx ecx, cx
-006D2ACC    xorps xmm3, xmm3
+006D2ACC    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 006D2ACF    movsx eax, dx
 006D2AD2    imul ecx, eax
 006D2AD5    movzx eax, byte ptr ds:[esi+0x01]
@@ -553,7 +559,7 @@
 006D2C17    jnbe 0x006D2C1F
 006D2C19    sqrtsd xmm0, xmm0
 006D2C1D    jmp 0x006D2C24
-006D2C1F    call 0x00762084
+006D2C1F    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006D2C24    movss xmm1, dword ptr ss:[esp+0x2C]
 006D2C2A    cvtsd2ss xmm0, xmm0
 006D2C2E    mulss xmm1, xmm1
@@ -567,7 +573,7 @@
 006D2C50    jnbe 0x006D2C58
 006D2C52    sqrtsd xmm0, xmm0
 006D2C56    jmp 0x006D2C5D
-006D2C58    call 0x00762084
+006D2C58    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006D2C5D    movzx edx, byte ptr ss:[esp+0x0A]
 006D2C62    lea eax, ss:[esp+0x20]
 006D2C66    mov ecx, dword ptr ss:[esp+0x38]
@@ -577,13 +583,13 @@
 006D2C74    shl edx, 0x08
 006D2C77    add edx, eax
 006D2C79    movss dword ptr ss:[esp+0x4C], xmm0
-006D2C7F    call 0x006D4740
+006D2C7F    call 0x006D4740                                 ; => [ Call: sub_6d4740 ]
 006D2C84    add esp, 0x04
 006D2C87    mov dword ptr ss:[esp+0x44], eax
 006D2C8B    test eax, eax
 006D2C8D    jle 0x006D2E2B
 006D2C93    movss xmm4, dword ptr ss:[esp+0x2C]
-006D2C99    xor edx, edx
+006D2C99    xor edx, edx                                    ; => [ Call: nullptr ]
 006D2C9B    movss xmm5, dword ptr ss:[esp+0x34]
 006D2CA1    mov edi, eax
 006D2CA3    movss xmm6, dword ptr ss:[esp+0x28]
@@ -659,7 +665,7 @@
 006D2DC2    push ecx
 006D2DC3    push edi
 006D2DC4    push eax
-006D2DC5    call 0x00761FBE
+006D2DC5    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006D2DCA    mov edx, dword ptr ss:[esp+0x30]
 006D2DCE    add esp, 0x0C
 006D2DD1    mov ecx, dword ptr ss:[esp+0x44]
@@ -673,7 +679,7 @@
 006D2DF0    sub eax, edx
 006D2DF2    lea eax, ds:[ecx+eax*2]
 006D2DF5    push eax
-006D2DF6    call 0x00761FBE
+006D2DF6    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006D2DFB    add esp, 0x0C
 006D2DFE    test edi, edi
 006D2E00    jz 0x006D2E0C

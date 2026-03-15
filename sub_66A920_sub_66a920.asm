@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_66a920
+// 起始地址: 0x66a920
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066A920    push ebp
 0066A921    mov ebp, esp
 0066A923    sub esp, 0x220
-0066A929    mov eax, dword ptr ds:[0x008C4040]
+0066A929    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0066A92E    xor eax, ebp
 0066A930    mov dword ptr ss:[ebp-0x08], eax
 0066A933    mov eax, dword ptr ss:[ebp+0x08]
@@ -20,14 +26,14 @@
 0066A960    mov ecx, 0x32
 0066A965    mov esi, 0x8C9EF8
 0066A96A    mov edi, ebx
-0066A96C    rep movsd
+0066A96C    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8c9ef8 ]
 0066A96E    mov esi, 0x0A
 0066A973    mov dword ptr ss:[ebp-0x210], esi
 0066A979    jmp 0x0066A9DF
 0066A97B    mov ecx, 0x32
 0066A980    mov esi, 0x8CA780
 0066A985    mov edi, ebx
-0066A987    rep movsd
+0066A987    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca780 ]
 0066A989    mov ecx, dword ptr ds:[edx+0x1478]
 0066A98F    mov esi, 0x0A
 0066A994    mov dword ptr ss:[ebp-0x210], esi
@@ -35,14 +41,14 @@
 0066A99C    jz 0x0066A9DF
 0066A99E    cmp dword ptr ds:[ecx+0x04], 0x23
 0066A9A2    jz 0x0066A9BD
-0066A9A4    push 0x87AED4
+0066A9A4    push 0x87AED4                                   ; => [ String: SpineDefGet ]
 0066A9A9    push 0x1BD
-0066A9AE    push 0x87ADA4
-0066A9B3    mov ecx, 0x87AEF8
+0066A9AE    push 0x87ADA4                                   ; => [ String: C:\x\ax2017\Engine\Spine.cpp ]
+0066A9B3    mov ecx, 0x87AEF8                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SPINE ]
 0066A9B8    jmp 0x0066AC38
 0066A9BD    call 0x005AF880
 0066A9C2    xor ecx, ecx
-0066A9C4    mov eax, dword ptr ds:[eax+0x28]
+0066A9C4    mov eax, dword ptr ds:[eax+0x28]                ; => [ Call: sub_5af880 ]
 0066A9C7    mov edx, dword ptr ds:[eax+0x28]
 0066A9CA    mov dword ptr ss:[ebp-0x218], edx
 0066A9D0    cmp edx, 0x76
@@ -88,7 +94,7 @@
 0066AA69    add edi, 0x14
 0066AA6C    mov dword ptr ds:[ecx+0x10], edx
 0066AA6F    inc edx
-0066AA70    mov dword ptr ds:[ecx], 0x875C88
+0066AA70    mov dword ptr ds:[ecx], 0x875C88                ; => [ String: Slot ]
 0066AA76    mov dword ptr ds:[ecx+0x08], eax
 0066AA79    mov dword ptr ds:[ecx+0x04], 0x111
 0066AA80    mov dword ptr ds:[ecx+0x0C], 0x05
@@ -99,56 +105,56 @@
 0066AA96    mov ecx, 0x55
 0066AA9B    mov esi, 0x8CA208
 0066AAA0    mov edi, ebx
-0066AAA2    rep movsd
+0066AAA2    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca208 ]
 0066AAA4    mov esi, 0x11
 0066AAA9    mov dword ptr ss:[ebp-0x210], esi
 0066AAAF    jmp 0x0066A9DF
 0066AAB4    mov ecx, 0x23
 0066AAB9    mov esi, 0x8CA520
 0066AABE    mov edi, ebx
-0066AAC0    rep movsd
+0066AAC0    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca520 ]
 0066AAC2    mov esi, 0x07
 0066AAC7    mov dword ptr ss:[ebp-0x210], esi
 0066AACD    jmp 0x0066A9DF
 0066AAD2    mov ecx, 0x28
 0066AAD7    mov esi, 0x8CA5B0
 0066AADC    mov edi, ebx
-0066AADE    rep movsd
+0066AADE    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca5b0 ]
 0066AAE0    mov esi, 0x08
 0066AAE5    mov dword ptr ss:[ebp-0x210], esi
 0066AAEB    jmp 0x0066A9DF
 0066AAF0    mov ecx, 0x4B
 0066AAF5    mov esi, 0x8CA650
 0066AAFA    mov edi, ebx
-0066AAFC    rep movsd
+0066AAFC    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca650 ]
 0066AAFE    mov esi, 0x0F
 0066AB03    mov dword ptr ss:[ebp-0x210], esi
 0066AB09    jmp 0x0066A9DF
 0066AB0E    mov ecx, 0x5F
 0066AB13    mov esi, 0x8CA848
 0066AB18    mov edi, ebx
-0066AB1A    rep movsd
+0066AB1A    rep movsd                                       ; => [ Data: data_8ca848 | Call: __builtin_memcpy ]
 0066AB1C    mov esi, 0x13
 0066AB21    mov dword ptr ss:[ebp-0x210], esi
 0066AB27    jmp 0x0066A9DF
 0066AB2C    mov ecx, 0x4B
 0066AB31    mov esi, 0x8CA3F0
 0066AB36    mov edi, ebx
-0066AB38    rep movsd
+0066AB38    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca3f0 ]
 0066AB3A    mov esi, 0x0F
 0066AB3F    mov dword ptr ss:[ebp-0x210], esi
 0066AB45    jmp 0x0066A9DF
 0066AB4A    mov ecx, 0x23
 0066AB4F    mov esi, 0x8CA360
 0066AB54    mov edi, ebx
-0066AB56    rep movsd
+0066AB56    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8ca360 ]
 0066AB58    mov esi, 0x07
 0066AB5D    mov dword ptr ss:[ebp-0x210], esi
 0066AB63    jmp 0x0066A9DF
 0066AB68    mov ecx, 0x91
 0066AB6D    mov esi, 0x8C9FC0
 0066AB72    mov edi, ebx
-0066AB74    rep movsd
+0066AB74    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8c9fc0 ]
 0066AB76    mov esi, 0x1D
 0066AB7B    mov dword ptr ss:[ebp-0x210], esi
 0066AB81    jmp 0x0066A9DF
@@ -167,7 +173,7 @@
 0066ABB3    mov ecx, 0x19
 0066ABB8    mov esi, 0x8C9E90
 0066ABBD    lea ebx, ds:[ebx+0x64]
-0066ABC0    rep movsd
+0066ABC0    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_8c9e90 ]
 0066ABC2    mov dword ptr ds:[ebx-0x78], edx
 0066ABC5    mov dword ptr ds:[ebx-0x64], edx
 0066ABC8    mov dword ptr ds:[ebx-0x50], edx
@@ -182,7 +188,7 @@
 0066ABDE    pop ebx
 0066ABDF    mov ecx, dword ptr ss:[ebp-0x08]
 0066ABE2    xor ecx, ebp
-0066ABE4    call 0x0075927A
+0066ABE4    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066ABE9    mov esp, ebp
 0066ABEB    pop ebp
 0066ABEC    ret
@@ -191,28 +197,28 @@
 0066ABF7    inc esi
 0066ABF8    lea edx, ds:[ebx+ecx*4]
 0066ABFB    mov dword ptr ss:[ebp-0x210], esi
-0066AC01    movups xmmword ptr ds:[edx], xmm0
+0066AC01    movups xmmword ptr ds:[edx], xmm0               ; => [ Data: data_8c9e90 ]
 0066AC04    mov ecx, dword ptr ds:[0x008C9EA0]
-0066AC0A    mov dword ptr ds:[edx+0x10], ecx
+0066AC0A    mov dword ptr ds:[edx+0x10], ecx                ; => [ Data: data_8c9ea0 ]
 0066AC0D    mov ecx, dword ptr ss:[ebp-0x08]
 0066AC10    mov eax, dword ptr ss:[ebp-0x210]
 0066AC16    xor ecx, ebp
 0066AC18    pop edi
 0066AC19    pop esi
 0066AC1A    pop ebx
-0066AC1B    call 0x0075927A
+0066AC1B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction | Call: CookieCheckFunction ]
 0066AC20    mov esp, ebp
 0066AC22    pop ebp
 0066AC23    ret
-0066AC24    push 0x875CB4
+0066AC24    push 0x875CB4                                   ; => [ String: GetPropDefs ]
 0066AC29    push 0x3E2A
-0066AC2E    push 0x8739B4
-0066AC33    mov ecx, 0x801AA4
+0066AC2E    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0066AC33    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0066AC38    mov edx, 0x801800
-0066AC3D    call 0x0063B870
+0066AC3D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0066AC42    add esp, 0x0C
 0066AC45    call 0x0063BC30
 0066AC4A    test al, al
-0066AC4C    jz 0x0066AC4F
+0066AC4C    jz 0x0066AC4F                                   ; => [ Call: sub_63bc30 ]
 0066AC4E    int3
-0066AC4F    call 0x0063BB00
+0066AC4F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6db800
+// 起始地址: 0x6db800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DB800    push ebp
 006DB801    mov ebp, esp
 006DB803    movss xmm1, dword ptr ds:[0x00890D84]
 006DB80B    sub esp, 0x28
-006DB80E    mov eax, 0x8008D8
+006DB80E    mov eax, 0x8008D8                               ; => [ Data: data_8008d8 ]
 006DB813    push esi
 006DB814    lea esi, ds:[edx+0x08]
 006DB817    sub edx, eax
@@ -100,14 +106,14 @@
 006DB9A7    mulss xmm0, xmm4
 006DB9AB    addss xmm3, xmm0
 006DB9AF    addss xmm3, dword ptr ds:[ecx]
-006DB9B3    movss dword ptr ds:[edx+eax*1], xmm3
+006DB9B3    movss dword ptr ds:[edx+eax*1], xmm3            ; => [ Data: data_8008d8 ]
 006DB9B8    add eax, 0x0C
 006DB9BB    movss dword ptr ds:[esi-0x04], xmm5
 006DB9C0    movss dword ptr ds:[esi], xmm2
 006DB9C4    add esi, 0x0C
 006DB9C7    movss xmm1, dword ptr ds:[0x00890D84]
 006DB9CF    cmp eax, 0x800938
-006DB9D4    jl 0x006DB820
+006DB9D4    jl 0x006DB820                                   ; => [ Data: data_800930 ]
 006DB9DA    pop esi
 006DB9DB    mov esp, ebp
 006DB9DD    pop ebp

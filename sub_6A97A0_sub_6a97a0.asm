@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a97a0
+// 起始地址: 0x6a97a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A97A0    push ebx
 006A97A1    push esi
 006A97A2    mov esi, ecx
@@ -7,7 +13,7 @@
 006A97B6    dec edx
 006A97B7    cmp edx, 0x73
 006A97BA    jnbe 0x006A9AD5
-006A97C0    movzx eax, byte ptr ds:[edx+0x6A9B40]
+006A97C0    movzx eax, byte ptr ds:[edx+0x6A9B40]           ; => [ Data: jump_table_6a9b08 ]
 006A97C7    jmp dword ptr ds:[eax*4+0x6A9B08]
 006A97CE    movzx eax, byte ptr ds:[esi+0x03]
 006A97D2    movzx ecx, byte ptr ds:[esi]
@@ -234,8 +240,8 @@
 006A9A1E    or eax, 0xFFFFFF
 006A9A23    pop esi
 006A9A24    pop ebx
-006A9A25    ret
-006A9A26    push 0x87B268
+006A9A25    ret                                             ; => [ Data: data_ffffff ]
+006A9A26    push 0x87B268                                   ; => [ String: ImagePixelToRgba ]
 006A9A2B    push 0x151
 006A9A30    jmp 0x006A9ADF
 006A9A35    movss xmm0, dword ptr ds:[esi]
@@ -286,15 +292,15 @@
 006A9AD1    or eax, ecx
 006A9AD3    pop ebx
 006A9AD4    ret
-006A9AD5    push 0x87B268
+006A9AD5    push 0x87B268                                   ; => [ String: ImagePixelToRgba ]
 006A9ADA    push 0x154
 006A9ADF    push 0x87B1B4
 006A9AE4    mov edx, 0x801800
 006A9AE9    mov ecx, 0x801AA4
-006A9AEE    call 0x0063B870
+006A9AEE    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ImagePixelToRgba | Data: data_801800 | String: C:\x\ax2017\Engine\ImageUtils.cpp | String: Halt ]
 006A9AF3    add esp, 0x0C
 006A9AF6    call 0x0063BC30
 006A9AFB    test al, al
-006A9AFD    jz 0x006A9B00
+006A9AFD    jz 0x006A9B00                                   ; => [ Call: sub_63bc30 ]
 006A9AFF    int3
-006A9B00    call 0x0063BB00
+006A9B00    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

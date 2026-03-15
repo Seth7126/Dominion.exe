@@ -1,22 +1,28 @@
+// ============================================================
+// 函数名称: sub_74d7e0
+// 起始地址: 0x74d7e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074D7E0    push ebp
 0074D7E1    mov ebp, esp
 0074D7E3    sub esp, 0x124
-0074D7E9    mov eax, dword ptr ds:[0x008C4040]
+0074D7E9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0074D7EE    xor eax, ebp
 0074D7F0    mov dword ptr ss:[ebp-0x04], eax
 0074D7F3    push ebx
 0074D7F4    mov ebx, edx
-0074D7F6    mov edx, dword ptr ds:[0x019E2778]
+0074D7F6    mov edx, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D7FC    push esi
 0074D7FD    push edi
-0074D7FE    mov edi, ecx
+0074D7FE    mov edi, ecx                                    ; => [ Type: HWND ]
 0074D800    mov dword ptr ss:[ebp-0x11C], ebx
 0074D806    cmp dword ptr ds:[edx+0x40], 0x00
-0074D80A    mov dword ptr ss:[ebp-0x120], edi
+0074D80A    mov dword ptr ss:[ebp-0x120], edi               ; => [ Type: HWND ]
 0074D810    jz 0x0074D8D0
 0074D816    push edi
-0074D817    call dword ptr ds:[0x00775414]
-0074D81D    mov ecx, dword ptr ds:[0x019E2778]
+0074D817    call dword ptr ds:[0x00775414]                  ; => [ Type: HDC ]
+0074D81D    mov ecx, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D823    mov edx, eax
 0074D825    push 0x06
 0074D827    push edx
@@ -32,7 +38,7 @@
 0074D84C    mov edi, eax
 0074D84E    push esi
 0074D84F    push dword ptr ss:[ebp-0x118]
-0074D855    call dword ptr ds:[0x0077507C]
+0074D855    call dword ptr ds:[0x0077507C]                  ; => [ Call: nullptr ]
 0074D85B    push ebx
 0074D85C    mov ebx, dword ptr ss:[ebp-0x118]
 0074D862    push esi
@@ -42,7 +48,7 @@
 0074D86B    mov edi, dword ptr ds:[0x0077506C]
 0074D871    push ebx
 0074D872    call edi
-0074D874    mov eax, dword ptr ds:[0x019E2778]
+0074D874    mov eax, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D879    push 0x06
 0074D87B    push dword ptr ss:[ebp-0x118]
 0074D881    mov ebx, dword ptr ds:[eax+0x50]
@@ -54,7 +60,7 @@
 0074D892    mov esi, dword ptr ss:[ebp-0x118]
 0074D898    mov edi, eax
 0074D89A    push esi
-0074D89B    call dword ptr ds:[0x0077507C]
+0074D89B    call dword ptr ds:[0x0077507C]                  ; => [ Call: nullptr ]
 0074D8A1    push ebx
 0074D8A2    mov ebx, dword ptr ss:[ebp-0x11C]
 0074D8A8    push ebx
@@ -67,7 +73,7 @@
 0074D8BE    push esi
 0074D8BF    push edi
 0074D8C0    call dword ptr ds:[0x007752A8]
-0074D8C6    mov eax, dword ptr ds:[0x019E2778]
+0074D8C6    mov eax, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D8CB    mov dword ptr ds:[eax+0x44], ebx
 0074D8CE    jmp 0x0074D8F5
 0074D8D0    mov ecx, dword ptr ds:[edx+0x24]
@@ -81,16 +87,16 @@
 0074D8E6    push 0x00
 0074D8E8    call dword ptr ds:[0x007753A8]
 0074D8EE    push eax
-0074D8EF    call dword ptr ds:[0x007753A4]
-0074D8F5    mov edx, dword ptr ds:[0x019E2778]
-0074D8FB    mov esi, dword ptr ds:[edx+0x0C]
+0074D8EF    call dword ptr ds:[0x007753A4]                  ; => [ Call: nullptr ]
+0074D8F5    mov edx, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 | Data: data_19e2778 ]
+0074D8FB    mov esi, dword ptr ds:[edx+0x0C]                ; => [ Type: HWND ]
 0074D8FE    test esi, esi
 0074D900    jz 0x0074DAFF
 0074D906    push 0x50
 0074D908    lea eax, ss:[ebp-0x58]
 0074D90B    push 0x00
 0074D90D    push eax
-0074D90E    call 0x00761FC4
+0074D90E    call 0x00761FC4                                 ; => [ Call: memset ]
 0074D913    add esp, 0x0C
 0074D916    mov dword ptr ss:[ebp-0x114], 0x2C
 0074D920    lea eax, ss:[ebp-0xA8]
@@ -102,13 +108,13 @@
 0074D93A    push esi
 0074D93B    mov esi, dword ptr ds:[0x00775308]
 0074D941    call esi
-0074D943    mov ecx, dword ptr ds:[0x019E2778]
+0074D943    mov ecx, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074D949    mov eax, dword ptr ds:[ecx+0x24]
 0074D94C    add eax, 0x05
 0074D94F    cmp ebx, eax
 0074D951    jl 0x0074DA8D
 0074D957    cmp dword ptr ds:[ecx+0x40], 0x00
-0074D95B    jnz 0x0074DA8D
+0074D95B    jnz 0x0074DA8D                                  ; => [ Type: LRESULT ]
 0074D961    movzx ecx, word ptr ss:[ebp+0x08]
 0074D965    shl ecx, 0x10
 0074D968    movzx eax, bx
@@ -173,10 +179,10 @@
 0074DA29    push ecx
 0074DA2A    push 0x88FF80
 0074DA2F    push dword ptr ds:[eax+0x10]
-0074DA32    call 0x0064B6D0
+0074DA32    call 0x0064B6D0                                 ; => [ String: Height: %d Width: %d Escapement: %d Orientation:  %d Weight: %d Italic: %hhd Underline: %hhd StrikeOut: %hhd CharSet: %hhd OutPrecision: %hhd ClipPrecision: %hhd Quality: %hhd PitchAndFamily: %hhd FaceName: %32[^\r\n] Color: %d | Call: sub_64b6d0 ]
 0074DA37    add esp, 0x44
 0074DA3A    push edi
-0074DA3B    call dword ptr ds:[0x00775414]
+0074DA3B    call dword ptr ds:[0x00775414]                  ; => [ Type: HDC ]
 0074DA41    mov edi, eax
 0074DA43    push 0x5A
 0074DA45    push edi
@@ -197,7 +203,7 @@
 0074DA79    lea eax, ss:[ebp-0x58]
 0074DA7C    push 0x50
 0074DA7E    push eax
-0074DA7F    call 0x0074AFA0
+0074DA7F    call 0x0074AFA0                                 ; => [ Call: sub_74afa0 | String: %s %d ]
 0074DA84    mov esi, dword ptr ds:[0x00775308]
 0074DA8A    add esp, 0x14
 0074DA8D    mov edi, dword ptr ds:[0x007755AC]
@@ -222,7 +228,7 @@
 0074DAC4    lea eax, ss:[ebp-0xA8]
 0074DACA    push 0x00
 0074DACC    push eax
-0074DACD    call 0x00761FC4
+0074DACD    call 0x00761FC4                                 ; => [ Call: memset ]
 0074DAD2    add esp, 0x0C
 0074DAD5    lea eax, ss:[ebp-0x58]
 0074DAD8    push 0x4F
@@ -237,13 +243,13 @@
 0074DAF3    push 0x00
 0074DAF5    push 0x40C
 0074DAFA    push dword ptr ds:[eax+0x0C]
-0074DAFD    call esi
+0074DAFD    call esi                                        ; => [ Data: data_19e2778 ]
 0074DAFF    mov ecx, dword ptr ss:[ebp-0x04]
 0074DB02    pop edi
 0074DB03    pop esi
 0074DB04    xor ecx, ebp
 0074DB06    pop ebx
-0074DB07    call 0x0075927A
+0074DB07    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0074DB0C    mov esp, ebp
 0074DB0E    pop ebp
 0074DB0F    ret

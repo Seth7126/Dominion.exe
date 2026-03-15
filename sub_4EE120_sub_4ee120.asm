@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ee120
+// 起始地址: 0x4ee120
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EE120    cmp ecx, 0x3EC
 004EE126    jnle 0x004EE152
 004EE128    jz 0x004EE14C
@@ -24,13 +30,13 @@
 004EE169    push 0x8088A8
 004EE16E    mov edx, 0x801800
 004EE173    mov ecx, 0x801AA4
-004EE178    call 0x0063B870
+004EE178    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: LookupWhere | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: Halt ]
 004EE17D    add esp, 0x0C
 004EE180    call 0x0063BC30
 004EE185    test al, al
-004EE187    jz 0x004EE18A
+004EE187    jz 0x004EE18A                                   ; => [ Call: sub_63bc30 ]
 004EE189    int3
-004EE18A    jmp 0x0063BB00
+004EE18A    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 004EE18F    mov eax, 0x14
 004EE194    ret
 004EE195    mov eax, 0x0B

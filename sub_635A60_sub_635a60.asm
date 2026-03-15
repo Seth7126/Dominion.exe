@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_635a60
+// 起始地址: 0x635a60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00635A60    push ebp
 00635A61    mov ebp, esp
 00635A63    push ecx
@@ -12,7 +18,7 @@
 00635A74    jz 0x00635A83
 00635A76    cmp byte ptr ds:[eax], 0x00
 00635A79    jz 0x00635A83
-00635A7B    call 0x0063D4E0
+00635A7B    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00635A80    inc dword ptr ds:[eax+0x04]
 00635A83    mov eax, dword ptr ds:[edi+0x04]
 00635A86    mov dword ptr ds:[esi+0x04], eax

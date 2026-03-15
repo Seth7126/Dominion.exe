@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_683220
+// 起始地址: 0x683220
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00683220    push ebp
 00683221    mov ebp, esp
 00683223    and esp, 0xFFFFFFF8
@@ -5,8 +11,8 @@
 00683229    lea eax, ss:[esp]
 0068322C    mov edx, ecx
 0068322E    push eax
-0068322F    call 0x0064B1B0
-00683234    mov ecx, dword ptr ds:[0x0147B06C]
+0068322F    call 0x0064B1B0                                 ; => [ Call: sub_64b1b0 ]
+00683234    mov ecx, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 0068323A    add esp, 0x04
 0068323D    movups xmm0, xmmword ptr ds:[eax]
 00683240    movups xmm1, xmmword ptr ds:[eax+0x10]
@@ -23,4 +29,4 @@
 0068327B    call 0x00649CC0
 00683280    mov esp, ebp
 00683282    pop ebp
-00683283    ret
+00683283    ret                                             ; => [ Call: sub_649cc0 ]

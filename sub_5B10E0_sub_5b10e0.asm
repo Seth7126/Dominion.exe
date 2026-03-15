@@ -1,29 +1,35 @@
+// ============================================================
+// 函数名称: sub_5b10e0
+// 起始地址: 0x5b10e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005B10E0    push ebp
 005B10E1    mov ebp, esp
 005B10E3    push 0xFFFFFFFF
-005B10E5    push 0x7685CD
+005B10E5    push 0x7685CD                                   ; => [ Call: __ehhandler$?accept_message@?$single_assignment@I@Concurrency@@MAEPAV?$message@I@2@H@Z | Type: EHRegistrationNode ]
 005B10EA    mov eax, dword ptr fs:[0x00000000]
-005B10F0    push eax
+005B10F0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005B10F1    push ecx
 005B10F2    push ebx
 005B10F3    push esi
 005B10F4    push edi
 005B10F5    mov eax, dword ptr ds:[0x008C4040]
 005B10FA    xor eax, ebp
-005B10FC    push eax
+005B10FC    push eax                                        ; => [ Data: __security_cookie ]
 005B10FD    lea eax, ss:[ebp-0x0C]
-005B1100    mov dword ptr fs:[0x00000000], eax
+005B1100    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005B1106    mov esi, ecx
 005B1108    sub esp, 0x18
 005B110B    mov dword ptr ss:[ebp-0x04], 0x00
 005B1112    lea eax, ss:[ebp+0x08]
 005B1115    mov ecx, esp
 005B1117    push eax
-005B1118    call 0x005BBFB0
+005B1118    call 0x005BBFB0                                 ; => [ Call: sub_5bbfb0 ]
 005B111D    call 0x005B0F20
 005B1122    movzx eax, ax
 005B1125    add esp, 0x18
-005B1128    mov esi, dword ptr ds:[esi+eax*4]
+005B1128    mov esi, dword ptr ds:[esi+eax*4]               ; => [ Call: sub_5b0f20 ]
 005B112B    test esi, esi
 005B112D    jz 0x005B11EF
 005B1133    mov ebx, dword ptr ss:[ebp+0x1C]
@@ -64,7 +70,7 @@
 005B1190    push 0x828184
 005B1195    mov edx, 0x801800
 005B119A    mov ecx, 0x8281FC
-005B119F    call 0x0063B870
+005B119F    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: w_ptr->vector != NULL | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\NeuralEigen.cpp | String: find_vector ]
 005B11A4    add esp, 0x0C
 005B11A7    jmp 0x005B1220
 005B11A9    cmp ebx, 0x0F
@@ -82,11 +88,11 @@
 005B11CB    call dword ptr ds:[0x007755F4]
 005B11D1    push ecx
 005B11D2    push edi
-005B11D3    call 0x00759661
+005B11D3    call 0x00759661                                 ; => [ Call: operator new ]
 005B11D8    add esp, 0x08
 005B11DB    mov eax, esi
 005B11DD    mov ecx, dword ptr ss:[ebp-0x0C]
-005B11E0    mov dword ptr fs:[0x00000000], ecx
+005B11E0    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005B11E7    pop ecx
 005B11E8    pop edi
 005B11E9    pop esi
@@ -96,7 +102,7 @@
 005B11EE    ret
 005B11EF    lea ecx, ss:[ebp+0x08]
 005B11F2    call 0x005BBE50
-005B11F7    push eax
+005B11F7    push eax                                        ; => [ Call: sub_5bbe50 ]
 005B11F8    push 0x828214
 005B11FD    call 0x004F7F30
 005B1202    push 0x8281F0
@@ -104,10 +110,10 @@
 005B1209    push 0x828184
 005B120E    mov edx, 0x801800
 005B1213    mov ecx, 0x801AA4
-005B1218    call 0x0063B870
+005B1218    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: Couldn't find network vector %s!\n | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\NeuralEigen.cpp | Call: sub_4f7f30 | String: find_vector | String: Halt ]
 005B121D    add esp, 0x14
 005B1220    call 0x0063BC30
 005B1225    test al, al
-005B1227    jz 0x005B122A
+005B1227    jz 0x005B122A                                   ; => [ Call: sub_63bc30 ]
 005B1229    int3
-005B122A    call 0x0063BB00
+005B122A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

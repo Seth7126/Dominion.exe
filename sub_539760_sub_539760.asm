@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_539760
+// 起始地址: 0x539760
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00539760    dword 51EC8B55
-00539764    call 0x00573400
+00539764    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00539769    cmp dword ptr ds:[eax], 0x05
 0053976C    jnz 0x005397F7
 00539772    push edi
 00539773    mov edi, dword ptr ds:[eax+0x18]
 00539776    call 0x00573400
 0053977B    mov eax, dword ptr ds:[eax+0x04]
-0053977E    mov eax, dword ptr ds:[eax+0x19E4]
+0053977E    mov eax, dword ptr ds:[eax+0x19E4]              ; => [ Call: sub_573400 ]
 00539784    cmp eax, dword ptr ds:[edi+0x04]
 00539787    jz 0x00539794
 00539789    xorps xmm0, xmm0
@@ -22,11 +28,11 @@
 005397A3    mov esi, dword ptr ds:[eax]
 005397A5    call 0x00573400
 005397AA    movzx esi, si
-005397AD    mov eax, dword ptr ds:[eax+0x04]
+005397AD    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005397B0    mov dword ptr ss:[ebp-0x04], eax
 005397B3    cmp esi, 0x320
 005397B9    jb 0x005397C0
-005397BB    call 0x00591930
+005397BB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005397C0    mov ecx, dword ptr ss:[ebp-0x04]
 005397C3    imul eax, esi, 0x64
 005397C6    cmp dword ptr ds:[eax+ecx*1+0x1A4C], 0x30E
@@ -54,10 +60,10 @@
 00539801    push 0x81EA70
 00539806    mov edx, 0x801800
 0053980B    mov ecx, 0x80AEA0
-00539810    call 0x0063B870
+00539810    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DomAchievementDataGet | Data: data_801800 | String: c.contextType == CONTEXT_ACHIEVEMENT | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 00539815    add esp, 0x0C
 00539818    call 0x0063BC30
 0053981D    test al, al
-0053981F    jz 0x00539822
+0053981F    jz 0x00539822                                   ; => [ Call: sub_63bc30 ]
 00539821    int3
-00539822    call 0x0063BB00
+00539822    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

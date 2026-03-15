@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_465a50
+// 起始地址: 0x465a50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00465A50    push ebp
 00465A51    mov ebp, esp
 00465A53    sub esp, 0xB4
@@ -5,13 +11,13 @@
 00465A5A    push edi
 00465A5B    push 0x81E7A4
 00465A60    mov ecx, 0xB49A1C
-00465A65    call 0x004ACB80
+00465A65    call 0x004ACB80                                 ; => [ Call: sub_4acb80 | String: token_embargo | Data: data_b49a1c ]
 00465A6A    push 0xB4
 00465A6F    lea eax, ss:[ebp-0xB4]
-00465A75    mov dword ptr ds:[0x00B49A28], 0x400
+00465A75    mov dword ptr ds:[0x00B49A28], 0x400            ; => [ Data: data_b49a28 ]
 00465A7F    push 0x00
 00465A81    push eax
-00465A82    call 0x00761FC4
+00465A82    call 0x00761FC4                                 ; => [ Call: memset ]
 00465A87    push 0x4EC
 00465A8C    mov ecx, 0x2D
 00465A91    mov dword ptr ss:[ebp-0xB4], 0x06
@@ -20,28 +26,28 @@
 00465AAB    mov edi, 0xB49A2C
 00465AB0    mov dword ptr ss:[ebp-0xA8], 0x00
 00465ABA    push 0x00
-00465ABC    mov dword ptr ss:[ebp-0xA0], 0x4FC7C0
+00465ABC    mov dword ptr ss:[ebp-0xA0], 0x4FC7C0           ; => [ Call: sub_4fc7c0 ]
 00465AC6    mov dword ptr ss:[ebp-0x10], 0x00
 00465ACD    mov dword ptr ss:[ebp-0x04], 0x01
-00465AD4    rep movsd
+00465AD4    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00465AD6    push 0xB49AE0
-00465ADB    call 0x00761FC4
+00465ADB    call 0x00761FC4                                 ; => [ Call: memset ]
 00465AE0    add esp, 0x18
-00465AE3    mov dword ptr ds:[0x00B49FCC], 0x81E728
+00465AE3    mov dword ptr ds:[0x00B49FCC], 0x81E728         ; => [ Data: data_b49fcc | String: pirate ]
 00465AED    mov ecx, 0xB49FD8
-00465AF2    mov dword ptr ds:[0x00B49FD0], 0x81E7B4
-00465AFC    mov dword ptr ds:[0x00B49FD4], 0x81E7C4
-00465B06    mov dword ptr ds:[0x00B49FD8], 0x801A9C
+00465AF2    mov dword ptr ds:[0x00B49FD0], 0x81E7B4         ; => [ String: Pirate token | Data: data_b49fd0 ]
+00465AFC    mov dword ptr ds:[0x00B49FD4], 0x81E7C4         ; => [ Data: data_b49fd4 ]
+00465B06    mov dword ptr ds:[0x00B49FD8], 0x801A9C         ; => [ Data: data_b49fd8 | Data: UI2StateDecl::`vftable'{for `UI2StateDeclI'} ]
 00465B10    push 0x81D11C
-00465B15    call 0x004ACB80
+00465B15    call 0x004ACB80                                 ; => [ Call: sub_4acb80 | String: token_coin | Data: data_b49fd8 ]
 00465B1A    push 0x5A0
 00465B1F    push 0x00
 00465B21    push 0xB49FE8
-00465B26    mov dword ptr ds:[0x00B49FE4], 0x401
+00465B26    mov dword ptr ds:[0x00B49FE4], 0x401            ; => [ Data: data_b49fe4 ]
 00465B30    call 0x00761FC4
 00465B35    add esp, 0x0C
 00465B38    pop edi
 00465B39    pop esi
 00465B3A    mov esp, ebp
 00465B3C    pop ebp
-00465B3D    ret
+00465B3D    ret                                             ; => [ Call: memset ]

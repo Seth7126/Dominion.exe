@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_510280
+// 起始地址: 0x510280
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00510280    dword 83EC8B55
 00510284    in al, 0xF8
 00510286    push ecx
 00510287    push esi
-00510288    call 0x0056B780
+00510288    call 0x0056B780                                 ; => [ Call: sub_56b780 ]
 0051028D    mov esi, eax
 0051028F    mov edx, 0x02
 00510294    mov ecx, esi
-00510296    call 0x0050F980
+00510296    call 0x0050F980                                 ; => [ Call: sub_50f980 ]
 0051029B    cmp esi, 0x103
 005102A1    jnz 0x005102B2
 005102A3    mov edx, 0x02
 005102A8    mov ecx, 0x601
-005102AD    call 0x0050F980
+005102AD    call 0x0050F980                                 ; => [ Call: sub_50f980 ]
 005102B2    call 0x00573400
-005102B7    mov ecx, dword ptr ds:[eax+0x04]
+005102B7    mov ecx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005102BA    mov eax, dword ptr ds:[ecx+0x1504]
 005102C0    cmp eax, 0x03
 005102C3    jz 0x00510309
@@ -39,7 +45,7 @@
 005102FB    push 0x46
 005102FD    push eax
 005102FE    or edx, 0xFFFFFFFF
-00510301    call 0x0059F9B0
+00510301    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00510306    add esp, 0x24
 00510309    pop esi
 0051030A    mov esp, ebp

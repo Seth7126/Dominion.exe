@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6891a0
+// 起始地址: 0x6891a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006891A0    push ebp
 006891A1    mov ebp, esp
 006891A3    sub esp, 0x08
@@ -5,7 +11,7 @@
 006891A7    push edi
 006891A8    mov esi, edx
 006891AA    mov edi, ecx
-006891AC    call 0x00688FF0
+006891AC    call 0x00688FF0                                 ; => [ Call: sub_688ff0 ]
 006891B1    mov dword ptr ss:[ebp-0x04], eax
 006891B4    mov dword ptr ds:[eax+0x04], esi
 006891B7    mov ecx, dword ptr ds:[edi+0x60]
@@ -26,16 +32,16 @@
 006891F4    pop esi
 006891F5    mov esp, ebp
 006891F7    pop ebp
-006891F8    ret
+006891F8    ret                                             ; => [ Call: sub_68b830 | Data: data_147abf4 ]
 006891F9    push 0x8774A4
 006891FE    push 0x14F
 00689203    push 0x8773A8
 00689208    mov edx, 0x801800
 0068920D    mov ecx, 0x8774D8
-00689212    call 0x0063B870
+00689212    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: netMessage->messageType > NETMSG_MIN_VALUE | String: MessageQueueAppendSimpleMessage | String: C:\x\ax2017\Engine\Network.cpp ]
 00689217    add esp, 0x0C
 0068921A    call 0x0063BC30
 0068921F    test al, al
-00689221    jz 0x00689224
+00689221    jz 0x00689224                                   ; => [ Call: sub_63bc30 ]
 00689223    int3
-00689224    call 0x0063BB00
+00689224    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

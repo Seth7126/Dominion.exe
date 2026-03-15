@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51e050
+// 起始地址: 0x51e050
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051E050    push ebp
 0051E051    mov ebp, esp
 0051E053    sub esp, 0x08
@@ -17,8 +23,8 @@
 0051E079    mov edx, esi
 0051E07B    lea ecx, ds:[ebx+0x10]
 0051E07E    and edx, 0xFFFFFFF8
-0051E081    xorps xmm5, xmm5
-0051E084    xorps xmm4, xmm4
+0051E081    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+0051E084    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 0051E087    nop word ptr ds:[eax+eax*1], ax
 0051E090    movd xmm2, dword ptr ds:[ecx+0x08]
 0051E095    lea ecx, ds:[ecx+0x40]
@@ -76,7 +82,7 @@
 0051E143    add ecx, eax
 0051E145    mov edx, ecx
 0051E147    mov ecx, dword ptr ss:[ebp-0x08]
-0051E14A    call 0x0063ED10
+0051E14A    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0051E14F    xor edx, edx
 0051E151    xor ecx, ecx
 0051E153    mov edi, eax
@@ -103,10 +109,10 @@
 0051E185    push 0x80CD80
 0051E18A    mov edx, 0x801800
 0051E18F    mov ecx, 0x801AA4
-0051E194    call 0x0063B870
+0051E194    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RollTable | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 0051E199    add esp, 0x0C
 0051E19C    call 0x0063BC30
 0051E1A1    test al, al
-0051E1A3    jz 0x0051E1A6
+0051E1A3    jz 0x0051E1A6                                   ; => [ Call: sub_63bc30 ]
 0051E1A5    int3
-0051E1A6    call 0x0063BB00
+0051E1A6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

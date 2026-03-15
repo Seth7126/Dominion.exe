@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c72f0
+// 起始地址: 0x5c72f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C72F0    push ebx
 005C72F1    mov ebx, esp
 005C72F3    sub esp, 0x08
@@ -22,7 +28,7 @@
 005C7321    and edx, 0x03
 005C7324    mov dword ptr ss:[ebp-0x20], edi
 005C7327    add eax, edx
-005C7329    mov dword ptr ss:[ebp-0x1C], esi
+005C7329    mov dword ptr ss:[ebp-0x1C], esi                ; => [ Call: nullptr ]
 005C732C    and eax, 0xFFFFFFFC
 005C732F    mov dword ptr ss:[ebp-0x24], eax
 005C7332    test edi, edi

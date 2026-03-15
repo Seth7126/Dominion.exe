@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_759100
+// 起始地址: 0x759100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00759100    push esi
 00759101    push edi
 00759102    mov edi, ecx
@@ -5,7 +11,7 @@
 00759106    mov eax, dword ptr ds:[edi+0x14]
 00759109    test eax, eax
 0075910B    jz 0x00759153
-0075910D    mov ecx, dword ptr ds:[0x0147DED8]
+0075910D    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00759113    mov dword ptr ds:[esi+0x14], eax
 00759116    mov eax, dword ptr ds:[edi+0x14]
 00759119    shl eax, 0x02
@@ -14,11 +20,11 @@
 00759120    push 0x77
 00759122    push 0x890C00
 00759127    push eax
-00759128    call ecx
+00759128    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\VertexAttachment.c ]
 0075912A    add esp, 0x0C
 0075912D    jmp 0x00759139
 0075912F    push eax
-00759130    call dword ptr ds:[0x00800B4C]
+00759130    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00759136    add esp, 0x04
 00759139    mov ecx, eax
 0075913B    mov dword ptr ds:[esi+0x18], ecx
@@ -27,7 +33,7 @@
 00759144    push eax
 00759145    push dword ptr ds:[edi+0x18]
 00759148    push ecx
-00759149    call 0x00761FBE
+00759149    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0075914E    add esp, 0x0C
 00759151    jmp 0x00759172
 00759153    mov eax, dword ptr ds:[esi+0x18]
@@ -35,13 +41,13 @@
 0075915D    test eax, eax
 0075915F    jz 0x00759172
 00759161    push eax
-00759162    call dword ptr ds:[0x00800B48]
+00759162    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00759168    add esp, 0x04
 0075916B    mov dword ptr ds:[esi+0x18], 0x00
 00759172    mov eax, dword ptr ds:[edi+0x1C]
 00759175    test eax, eax
 00759177    jz 0x007591C9
-00759179    mov ecx, dword ptr ds:[0x0147DED8]
+00759179    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0075917F    mov dword ptr ds:[esi+0x1C], eax
 00759182    mov eax, dword ptr ds:[edi+0x1C]
 00759185    shl eax, 0x02
@@ -50,11 +56,11 @@
 0075918C    push 0x83
 00759191    push 0x890C00
 00759196    push eax
-00759197    call ecx
+00759197    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\VertexAttachment.c ]
 00759199    add esp, 0x0C
 0075919C    jmp 0x007591A8
 0075919E    push eax
-0075919F    call dword ptr ds:[0x00800B4C]
+0075919F    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007591A5    add esp, 0x04
 007591A8    mov ecx, eax
 007591AA    mov dword ptr ds:[esi+0x20], ecx
@@ -63,7 +69,7 @@
 007591B3    push eax
 007591B4    push dword ptr ds:[edi+0x20]
 007591B7    push ecx
-007591B8    call 0x00761FBE
+007591B8    call 0x00761FBE                                 ; => [ Call: memcpy ]
 007591BD    mov eax, dword ptr ds:[edi+0x24]
 007591C0    add esp, 0x0C
 007591C3    mov dword ptr ds:[esi+0x24], eax
@@ -75,7 +81,7 @@
 007591D3    test eax, eax
 007591D5    jz 0x007591E8
 007591D7    push eax
-007591D8    call dword ptr ds:[0x00800B48]
+007591D8    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007591DE    add esp, 0x04
 007591E1    mov dword ptr ds:[esi+0x20], 0x00
 007591E8    mov eax, dword ptr ds:[edi+0x24]

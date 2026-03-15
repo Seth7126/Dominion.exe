@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4be4c0
+// 起始地址: 0x4be4c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BE4C0    push ebp
 004BE4C1    mov ebp, esp
 004BE4C3    sub esp, 0x08
@@ -6,7 +12,7 @@
 004BE4CA    push edi
 004BE4CB    mov edi, ecx
 004BE4CD    mov ecx, dword ptr ds:[edi]
-004BE4CF    call 0x00571BC0
+004BE4CF    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004BE4D4    xor edx, edx
 004BE4D6    test eax, eax
 004BE4D8    jle 0x004BE4EC
@@ -34,7 +40,7 @@
 004BE505    mov esp, ebp
 004BE507    pop ebp
 004BE508    ret
-004BE509    mov eax, dword ptr ds:[0x00BF23B8]
+004BE509    mov eax, dword ptr ds:[0x00BF23B8]              ; => [ Data: data_bf23b8 ]
 004BE50E    sub eax, 0x00
 004BE511    jz 0x004BE500
 004BE513    sub eax, 0x01
@@ -42,7 +48,7 @@
 004BE518    push 0xCB4518
 004BE51D    call dword ptr ds:[0x0077583C]
 004BE523    add esp, 0x04
-004BE526    mov ecx, dword ptr ds:[eax]
+004BE526    mov ecx, dword ptr ds:[eax]                     ; => [ Data: data_cb4518 ]
 004BE528    push dword ptr ds:[esi+0x08]
 004BE52B    mov eax, dword ptr ds:[ecx]
 004BE52D    mov eax, dword ptr ds:[eax+0x1C]

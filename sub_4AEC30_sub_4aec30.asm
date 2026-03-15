@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4aec30
+// 起始地址: 0x4aec30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AEC30    push ebp
 004AEC31    mov ebp, esp
 004AEC33    and esp, 0xFFFFFFF8
-004AEC36    mov eax, dword ptr ds:[0x00CF65B8]
+004AEC36    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 004AEC3B    xorps xmm1, xmm1
-004AEC3E    mov edx, dword ptr ds:[0x008C40A8]
+004AEC3E    mov edx, dword ptr ds:[0x008C40A8]              ; => [ Data: data_8c40a8 ]
 004AEC44    xor ecx, ecx
 004AEC46    movd xmm4, dword ptr ds:[eax+0x14]
 004AEC4B    movd xmm0, dword ptr ds:[eax+0x18]
@@ -20,7 +26,7 @@
 004AEC7B    divss xmm1, xmm0
 004AEC7F    movaps xmm0, xmm4
 004AEC82    subss xmm0, xmm1
-004AEC86    call 0x004AE0B0
+004AEC86    call 0x004AE0B0                                 ; => [ Call: sub_4ae0b0 | Data: data_8c40ac | Data: data_8c40b0 ]
 004AEC8B    xorps xmm2, xmm2
 004AEC8E    xorps xmm1, xmm1
 004AEC91    cvtsi2ss xmm2, dword ptr ds:[eax*4+0x8C40AC]
@@ -31,8 +37,8 @@
 004AECAD    subss xmm0, xmm2
 004AECB1    call 0x004AE0B0
 004AECB6    comiss xmm0, xmm3
-004AECB9    jbe 0x004AECC1
-004AECBB    mov edx, dword ptr ds:[ecx+0x8C40A8]
+004AECB9    jbe 0x004AECC1                                  ; => [ Call: sub_4ae0b0 | Data: data_8c40ac | Data: data_8c40b0 ]
+004AECBB    mov edx, dword ptr ds:[ecx+0x8C40A8]            ; => [ Data: data_8c40a8 ]
 004AECC1    add ecx, 0x0C
 004AECC4    cmp ecx, 0x30
 004AECC7    jb 0x004AEC62

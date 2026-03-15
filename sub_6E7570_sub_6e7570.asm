@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e7570
+// 起始地址: 0x6e7570
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7570    push ebp
 006E7571    mov ebp, esp
 006E7573    and esp, 0xFFFFFFF8
@@ -44,14 +50,14 @@
 006E7615    test eax, eax
 006E7617    jz 0x006E76ED
 006E761D    call 0x005AF880
-006E7622    mov ecx, dword ptr ds:[eax]
+006E7622    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006E7624    mov eax, dword ptr ds:[ecx]
 006E7626    movss xmm1, dword ptr ds:[ecx+0x0C]
 006E762B    mulss xmm1, dword ptr ds:[ecx+0x08]
 006E7630    movd xmm0, eax
 006E7634    cvtdq2pd xmm0, xmm0
 006E7638    shr eax, 0x1F
-006E763B    addsd xmm0, qword ptr ds:[eax*8+0x893660]
+006E763B    addsd xmm0, qword ptr ds:[eax*8+0x893660]       ; => [ Data: data_893660 ]
 006E7644    mov eax, dword ptr ds:[ecx+0x04]
 006E7647    mov ecx, dword ptr ds:[esi+0x48]
 006E764A    cvtpd2ps xmm0, xmm0
@@ -62,17 +68,17 @@
 006E7660    shr eax, 0x1F
 006E7663    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 006E766C    cvtpd2ps xmm0, xmm0
-006E7670    mulss xmm0, xmm1
+006E7670    mulss xmm0, xmm1                                ; => [ Data: data_893660 ]
 006E7674    movss dword ptr ss:[esp+0x0C], xmm0
 006E767A    call 0x005AF880
-006E767F    mov ecx, dword ptr ds:[eax]
+006E767F    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006E7681    mov eax, dword ptr ds:[ecx]
 006E7683    movss xmm2, dword ptr ds:[ecx+0x0C]
 006E7688    mulss xmm2, dword ptr ds:[ecx+0x08]
 006E768D    movd xmm0, eax
 006E7691    cvtdq2pd xmm0, xmm0
 006E7695    shr eax, 0x1F
-006E7698    addsd xmm0, qword ptr ds:[eax*8+0x893660]
+006E7698    addsd xmm0, qword ptr ds:[eax*8+0x893660]       ; => [ Data: data_893660 ]
 006E76A1    mov eax, dword ptr ds:[ecx+0x04]
 006E76A4    cvtpd2ps xmm1, xmm0
 006E76A8    movd xmm0, eax
@@ -83,7 +89,7 @@
 006E76C0    cvtpd2ps xmm3, xmm0
 006E76C4    movss xmm0, dword ptr ss:[esp+0x08]
 006E76CA    ucomiss xmm0, xmm1
-006E76CD    mulss xmm3, xmm2
+006E76CD    mulss xmm3, xmm2                                ; => [ Data: data_893660 ]
 006E76D1    lahf
 006E76D2    test ah, 0x44
 006E76D5    jp 0x006E76E6

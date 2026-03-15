@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6fe600
+// 起始地址: 0x6fe600
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FE600    push ebp
 006FE601    mov ebp, esp
 006FE603    mov eax, dword ptr ss:[ebp+0x14]
@@ -25,7 +31,7 @@
 006FE63A    call 0x006FE4F0
 006FE63F    mov eax, dword ptr ds:[eax+0x14]
 006FE642    add eax, dword ptr ss:[ebp+0x0C]
-006FE645    mov dword ptr ds:[esi+0x2D8], eax
+006FE645    mov dword ptr ds:[esi+0x2D8], eax               ; => [ Call: sub_6fe4f0 ]
 006FE64B    xor eax, eax
 006FE64D    pop esi
 006FE64E    pop ebp
@@ -35,10 +41,10 @@
 006FE65A    push 0x88C304
 006FE65F    mov edx, 0x801800
 006FE664    mov ecx, 0x801AA4
-006FE669    call 0x0063B870
+006FE669    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\SoundOgg.cpp | Data: data_801800 | String: SoundOggSeekFunc | String: Halt ]
 006FE66E    add esp, 0x0C
 006FE671    call 0x0063BC30
 006FE676    test al, al
-006FE678    jz 0x006FE67B
+006FE678    jz 0x006FE67B                                   ; => [ Call: sub_63bc30 ]
 006FE67A    int3
-006FE67B    call 0x0063BB00
+006FE67B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

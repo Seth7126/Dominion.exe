@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_60eae0
+// 起始地址: 0x60eae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060EAE0    push ebp
 0060EAE1    mov ebp, esp
 0060EAE3    sub esp, 0xA8
 0060EAE9    mov eax, dword ptr ds:[0x008C4040]
 0060EAEE    xor eax, ebp
-0060EAF0    mov dword ptr ss:[ebp-0x04], eax
+0060EAF0    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 0060EAF3    push esi
 0060EAF4    push edi
 0060EAF5    mov edi, edx
@@ -16,7 +22,7 @@
 0060EB06    pop esi
 0060EB07    mov ecx, dword ptr ss:[ebp-0x04]
 0060EB0A    xor ecx, ebp
-0060EB0C    call 0x0075927A
+0060EB0C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0060EB11    mov esp, ebp
 0060EB13    pop ebp
 0060EB14    ret
@@ -24,7 +30,7 @@
 0060EB16    xor ecx, ecx
 0060EB18    mov edx, 0x01
 0060EB1D    xor bl, bl
-0060EB1F    mov eax, 0x77FEA0
+0060EB1F    mov eax, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 0060EB24    test esi, edx
 0060EB26    jz 0x0060EB41
 0060EB28    mov esi, dword ptr ds:[eax]
@@ -38,7 +44,7 @@
 0060EB41    add eax, 0x04
 0060EB44    add edx, edx
 0060EB46    cmp eax, 0x77FEE8
-0060EB4B    jnz 0x0060EB24
+0060EB4B    jnz 0x0060EB24                                  ; => [ Data: data_77fee8 ]
 0060EB4D    test bl, bl
 0060EB4F    pop ebx
 0060EB50    jz 0x0060EB5E
@@ -57,7 +63,7 @@
 0060EB77    pop edi
 0060EB78    xor ecx, ebp
 0060EB7A    pop esi
-0060EB7B    call 0x0075927A
+0060EB7B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0060EB80    mov esp, ebp
 0060EB82    pop ebp
 0060EB83    ret

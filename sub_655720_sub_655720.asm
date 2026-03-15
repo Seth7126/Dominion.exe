@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_655720
+// 起始地址: 0x655720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00655720    push ebp
 00655721    mov ebp, esp
 00655723    sub esp, 0x2C
-00655726    mov eax, dword ptr ds:[0x008C4040]
+00655726    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0065572B    xor eax, ebp
 0065572D    mov dword ptr ss:[ebp-0x08], eax
 00655730    movups xmm2, xmmword ptr ds:[ecx+0x157C]
@@ -49,8 +55,8 @@
 006557E3    xor ecx, ebp
 006557E5    movups xmm0, xmmword ptr ds:[eax]
 006557E8    mov eax, dword ptr ss:[ebp+0x08]
-006557EB    movups xmmword ptr ds:[eax], xmm0
-006557EE    call 0x0075927A
+006557EB    movups xmmword ptr ds:[eax], xmm0               ; => [ Call: sub_655430 ]
+006557EE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006557F3    mov esp, ebp
 006557F5    pop ebp
 006557F6    ret

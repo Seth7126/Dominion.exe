@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64ac90
+// 起始地址: 0x64ac90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064AC90    push ebx
 0064AC91    mov ebx, esp
 0064AC93    sub esp, 0x08
@@ -8,7 +14,7 @@
 0064ACA0    mov dword ptr ss:[esp+0x04], ebp
 0064ACA4    mov ebp, esp
 0064ACA6    sub esp, 0xB8
-0064ACAC    mov eax, dword ptr ds:[0x008C4040]
+0064ACAC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0064ACB1    xor eax, ebp
 0064ACB3    mov dword ptr ss:[ebp-0x04], eax
 0064ACB6    push esi
@@ -34,7 +40,7 @@
 0064AD06    mulss xmm1, xmm1
 0064AD0A    addss xmm0, xmm2
 0064AD0E    addss xmm0, xmm1
-0064AD12    call 0x004AC580
+0064AD12    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064AD17    movss xmm1, dword ptr ds:[0x00890C78]
 0064AD1F    comiss xmm1, xmm0
 0064AD22    movss dword ptr ss:[ebp-0x90], xmm0
@@ -56,7 +62,7 @@
 0064AD73    movaps xmm1, xmm3
 0064AD76    mulss xmm1, xmm3
 0064AD7A    addss xmm0, xmm1
-0064AD7E    call 0x004AC580
+0064AD7E    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064AD83    movss xmm1, dword ptr ds:[0x00890C78]
 0064AD8B    comiss xmm1, xmm0
 0064AD8E    jbe 0x0064ADA2
@@ -85,7 +91,7 @@
 0064ADFE    addss xmm0, xmm1
 0064AE02    call 0x004AC580
 0064AE07    movss xmm1, dword ptr ds:[0x00890E18]
-0064AE0F    divss xmm1, xmm0
+0064AE0F    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 0064AE13    movaps xmm0, xmm1
 0064AE16    mulss xmm0, dword ptr ss:[ebp-0x88]
 0064AE1E    movss dword ptr ss:[ebp-0xB0], xmm0
@@ -111,12 +117,12 @@
 0064AE97    addss xmm4, dword ptr ss:[ebp-0x7C]
 0064AE9C    movss xmm0, dword ptr ds:[0x00CF65E8]
 0064AEA4    addss xmm3, dword ptr ss:[ebp-0x78]
-0064AEA9    subss xmm2, xmm1
+0064AEA9    subss xmm2, xmm1                                ; => [ Data: data_cf65e0 ]
 0064AEAD    movaps xmmword ptr ss:[ebp-0x20], xmm1
 0064AEB1    movss xmm1, dword ptr ds:[0x00CF65EC]
-0064AEB9    subss xmm0, xmm4
+0064AEB9    subss xmm0, xmm4                                ; => [ Data: data_cf65e0 ]
 0064AEBD    movss dword ptr ss:[ebp-0x84], xmm4
-0064AEC5    subss xmm1, xmm3
+0064AEC5    subss xmm1, xmm3                                ; => [ Data: data_cf65e0 ]
 0064AEC9    movss dword ptr ss:[ebp-0xA8], xmm3
 0064AED1    mulss xmm2, xmm2
 0064AED5    mulss xmm0, xmm0
@@ -124,20 +130,20 @@
 0064AEDD    addss xmm0, xmm2
 0064AEE1    addss xmm0, xmm1
 0064AEE5    call 0x004AC580
-0064AEEA    divss xmm0, dword ptr ds:[0x00890F68]
+0064AEEA    divss xmm0, dword ptr ds:[0x00890F68]           ; => [ Call: sub_4ac580 ]
 0064AEF2    sub esp, 0x10
-0064AEF5    mov edi, dword ptr ds:[0x01724A58]
+0064AEF5    mov edi, dword ptr ds:[0x01724A58]              ; => [ Data: data_1724a58 ]
 0064AEFB    mov eax, esp
 0064AEFD    mov edx, dword ptr ss:[ebp-0x88]
 0064AF03    mov ecx, dword ptr ds:[0x007FEF94]
 0064AF09    mov dword ptr ss:[ebp-0xA0], esi
-0064AF0F    mov esi, dword ptr ds:[0x01724A5C]
+0064AF0F    mov esi, dword ptr ds:[0x01724A5C]              ; => [ Data: data_1724a5c ]
 0064AF15    mov dword ptr ss:[ebp-0x9C], 0x00
 0064AF1F    movss xmm2, dword ptr ss:[ebp-0x90]
 0064AF27    mulss xmm0, dword ptr ds:[0x00890CF4]
 0064AF2F    mulss xmm2, dword ptr ds:[0x00890FF0]
 0064AF37    mulss xmm0, dword ptr ds:[0x00890FF0]
-0064AF3F    movups xmm1, xmmword ptr ds:[0x007FF520]
+0064AF3F    movups xmm1, xmmword ptr ds:[0x007FF520]        ; => [ Data: data_7ff520 ]
 0064AF46    movss dword ptr ss:[ebp-0x90], xmm0
 0064AF4E    push dword ptr ss:[ebp-0x90]
 0064AF54    movq xmm0, qword ptr ds:[0x007FEF8C]
@@ -171,7 +177,7 @@
 0064AFC4    unpcklps xmm0, xmm4
 0064AFC7    movq qword ptr ds:[ecx], xmm0
 0064AFCB    mov dword ptr ds:[ecx+0x08], eax
-0064AFCE    call 0x0064A400
+0064AFCE    call 0x0064A400                                 ; => [ Data: data_cf65e0 | Call: sub_64a400 ]
 0064AFD3    movups xmm2, xmmword ptr ss:[ebp-0x80]
 0064AFD7    movaps xmm0, xmm2
 0064AFDA    movss dword ptr ss:[ebp-0x30], xmm2
@@ -192,13 +198,13 @@
 0064B011    movss dword ptr ss:[ebp-0x1C], xmm2
 0064B016    movss dword ptr ss:[ebp-0x18], xmm1
 0064B01B    movss dword ptr ss:[ebp-0x14], xmm2
-0064B020    call 0x00646BB0
+0064B020    call 0x00646BB0                                 ; => [ Call: sub_646bb0 ]
 0064B025    add esp, 0x5C
 0064B028    mov ecx, dword ptr ss:[ebp-0x04]
 0064B02B    pop edi
 0064B02C    xor ecx, ebp
 0064B02E    pop esi
-0064B02F    call 0x0075927A
+0064B02F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0064B034    mov esp, ebp
 0064B036    pop ebp
 0064B037    mov esp, ebx

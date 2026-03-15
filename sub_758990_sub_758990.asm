@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_758990
+// 起始地址: 0x758990
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00758990    push ebp
 00758991    mov ebp, esp
 00758993    push esi
@@ -14,16 +20,16 @@
 007589AA    call eax
 007589AC    add esp, 0x08
 007589AF    push dword ptr ds:[esi+0x08]
-007589B2    call dword ptr ds:[0x00800B48]
+007589B2    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007589B8    push dword ptr ds:[esi]
-007589BA    call dword ptr ds:[0x00800B48]
+007589BA    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007589C0    push dword ptr ds:[esi+0x18]
-007589C3    call dword ptr ds:[0x00800B48]
+007589C3    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007589C9    push dword ptr ds:[esi+0x20]
-007589CC    call dword ptr ds:[0x00800B48]
+007589CC    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007589D2    push esi
 007589D3    call dword ptr ds:[0x00800B48]
 007589D9    add esp, 0x14
 007589DC    pop esi
 007589DD    pop ebp
-007589DE    ret
+007589DE    ret                                             ; => [ Call: free ]

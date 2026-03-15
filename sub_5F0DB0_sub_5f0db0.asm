@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5f0db0
+// 起始地址: 0x5f0db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F0DB0    push ebp
 005F0DB1    mov ebp, esp
 005F0DB3    sub esp, 0x08
-005F0DB6    mov eax, dword ptr ds:[0x00B80B58]
+005F0DB6    mov eax, dword ptr ds:[0x00B80B58]              ; => [ Data: data_b80b58 ]
 005F0DBB    push ebx
 005F0DBC    push esi
 005F0DBD    mov esi, ecx
@@ -15,7 +21,7 @@
 005F0DD3    mov dword ptr ds:[esi], 0x06
 005F0DD9    mov dword ptr ds:[esi+0x60], ecx
 005F0DDC    mov dword ptr ds:[esi+0x30], 0x01
-005F0DE3    call 0x005CB070
+005F0DE3    call 0x005CB070                                 ; => [ Call: sub_5cb070 ]
 005F0DE8    mov edx, eax
 005F0DEA    test edx, edx
 005F0DEC    jz 0x005F0E45
@@ -33,7 +39,7 @@
 005F0E0A    cmp ecx, 0x06
 005F0E0D    jz 0x005F0E45
 005F0E0F    cmp ecx, 0x07
-005F0E12    jz 0x005F0E45
+005F0E12    jz 0x005F0E45                                   ; => [ Data: data_b80990 | Data: data_b80988 ]
 005F0E14    cmp ecx, 0x13
 005F0E17    jz 0x005F0E1E
 005F0E19    cmp ecx, 0x14
@@ -50,9 +56,9 @@
 005F0E39    cmp dword ptr ds:[esi], 0x0B
 005F0E3C    jz 0x005F0E45
 005F0E3E    mov dword ptr ds:[esi+0x30], 0x03
-005F0E45    mov eax, dword ptr ds:[0x00B8097C]
+005F0E45    mov eax, dword ptr ds:[0x00B8097C]              ; => [ Data: data_b8097c ]
 005F0E4A    cmp eax, dword ptr ds:[0x00B80B58]
-005F0E50    jnl 0x005F0E59
+005F0E50    jnl 0x005F0E59                                  ; => [ Data: data_b80b58 ]
 005F0E52    mov dword ptr ds:[esi+0x30], 0x03
 005F0E59    mov ecx, 0x01
 005F0E5E    mov dword ptr ss:[ebp-0x04], ecx
@@ -72,15 +78,15 @@
 005F0E88    push dword ptr ds:[edi]
 005F0E8A    lea ecx, ds:[esi-0x30]
 005F0E8D    push eax
-005F0E8E    call 0x005F0C80
-005F0E93    mov edx, dword ptr ds:[0x00B8097C]
+005F0E8E    call 0x005F0C80                                 ; => [ Call: sub_5f0c80 ]
+005F0E93    mov edx, dword ptr ds:[0x00B8097C]              ; => [ Data: data_b8097c ]
 005F0E99    add esp, 0x0C
 005F0E9C    xor eax, eax
 005F0E9E    test edx, edx
 005F0EA0    jle 0x005F0EBA
 005F0EA2    mov ecx, dword ptr ds:[edi]
 005F0EA4    cmp dword ptr ds:[eax*4+0xB7FCFC], ecx
-005F0EAB    jz 0x005F0EB4
+005F0EAB    jz 0x005F0EB4                                   ; => [ Data: data_b7fcfc ]
 005F0EAD    inc eax
 005F0EAE    cmp eax, edx
 005F0EB0    jl 0x005F0EA4
@@ -101,7 +107,7 @@
 005F0EDC    shr ecx, 0x02
 005F0EDF    lea edi, ds:[edx+0x30]
 005F0EE2    add edi, esi
-005F0EE4    rep stosd
+005F0EE4    rep stosd                                       ; => [ Call: __builtin_memset ]
 005F0EE6    pop edi
 005F0EE7    pop esi
 005F0EE8    pop ebx

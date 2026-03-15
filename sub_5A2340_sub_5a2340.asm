@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a2340
+// 起始地址: 0x5a2340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A2340    dword 83EC8B55
 005A2344    in al, 0xF8
 005A2346    sub esp, 0x18
@@ -11,7 +17,7 @@
 005A235A    jnz 0x005A246E
 005A2360    mov ecx, dword ptr ss:[ebp+0x0C]
 005A2363    lea edx, ds:[esi+0x20]
-005A2366    call 0x005A1410
+005A2366    call 0x005A1410                                 ; => [ Call: sub_5a1410 ]
 005A236B    mov esi, eax
 005A236D    mov eax, dword ptr ss:[ebp+0x10]
 005A2370    mov dword ptr ss:[esp+0x08], esi
@@ -37,7 +43,7 @@
 005A23D1    cvtps2pd xmm0, xmm1
 005A23D4    movsd qword ptr ss:[esp+0x18], xmm0
 005A23DA    fld qword ptr ss:[esp+0x18]
-005A23DE    call 0x00762368
+005A23DE    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 005A23E3    xorps xmm0, xmm0
 005A23E6    comiss xmm0, dword ptr ss:[esp+0x10]
 005A23EB    fstp dword ptr ss:[esp+0x18]
@@ -47,7 +53,7 @@
 005A23FF    mov ecx, dword ptr ss:[ebp+0x0C]
 005A2402    movss dword ptr ds:[esi+0x1C], xmm0
 005A2407    mov dword ptr ds:[esi], 0x00
-005A240D    call 0x005A1470
+005A240D    call 0x005A1470                                 ; => [ Call: sub_5a1470 ]
 005A2412    mov esi, eax
 005A2414    mov eax, dword ptr ss:[esp+0x08]
 005A2418    mov ecx, dword ptr ds:[eax+0x0C]
@@ -81,7 +87,7 @@
 005A2479    jnz 0x005A2619
 005A247F    mov edx, 0x20
 005A2484    mov ecx, eax
-005A2486    call 0x005A1410
+005A2486    call 0x005A1410                                 ; => [ Call: sub_5a1410 ]
 005A248B    mov dword ptr ss:[esp+0x10], eax
 005A248F    mov dword ptr ds:[eax+0x08], 0x00
 005A2496    mov ecx, dword ptr ds:[esi+0x14]
@@ -148,7 +154,7 @@
 005A256E    cvtps2pd xmm0, xmm0
 005A2571    movsd qword ptr ss:[esp+0x18], xmm0
 005A2577    fld qword ptr ss:[esp+0x18]
-005A257B    call 0x00762368
+005A257B    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 005A2580    xorps xmm0, xmm0
 005A2583    comiss xmm0, dword ptr ss:[esp+0x0C]
 005A2588    fstp dword ptr ss:[esp+0x18]
@@ -158,7 +164,7 @@
 005A259C    mov edx, dword ptr ss:[esp+0x10]
 005A25A0    mov ecx, dword ptr ss:[ebp+0x0C]
 005A25A3    movss dword ptr ds:[edx+0x1C], xmm0
-005A25A8    call 0x005A1470
+005A25A8    call 0x005A1470                                 ; => [ Call: sub_5a1470 ]
 005A25AD    mov esi, eax
 005A25AF    mov eax, dword ptr ss:[esp+0x10]
 005A25B3    mov ecx, dword ptr ds:[eax+0x0C]
@@ -339,7 +345,7 @@
 005A27FA    movss dword ptr ss:[esp+0x10], xmm1
 005A2800    mov ecx, dword ptr ss:[ebp+0x0C]
 005A2803    mov edx, 0x20
-005A2808    call 0x005A1410
+005A2808    call 0x005A1410                                 ; => [ Call: sub_5a1410 ]
 005A280D    movss xmm0, dword ptr ss:[esp+0x10]
 005A2813    movss xmm1, dword ptr ss:[esp+0x0C]
 005A2819    mov dword ptr ss:[esp+0x18], eax
@@ -364,7 +370,7 @@
 005A2873    cvtps2pd xmm0, xmm1
 005A2876    movsd qword ptr ss:[esp+0x10], xmm0
 005A287C    fld qword ptr ss:[esp+0x10]
-005A2880    call 0x00762368
+005A2880    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 005A2885    xorps xmm0, xmm0
 005A2888    comiss xmm0, dword ptr ss:[esp+0x0C]
 005A288D    fstp dword ptr ss:[esp+0x10]
@@ -375,7 +381,7 @@
 005A28A5    movss dword ptr ds:[ecx+0x1C], xmm0
 005A28AA    mov ecx, dword ptr ss:[ebp+0x0C]
 005A28AD    call 0x005A1470
-005A28B2    mov esi, eax
+005A28B2    mov esi, eax                                    ; => [ Call: sub_5a1470 ]
 005A28B4    mov eax, dword ptr ss:[esp+0x18]
 005A28B8    mov ecx, dword ptr ds:[eax+0x0C]
 005A28BB    mov edx, dword ptr ds:[eax+0x10]
@@ -398,7 +404,7 @@
 005A28FD    jmp 0x005A2A03
 005A2902    mov ecx, dword ptr ss:[ebp+0x0C]
 005A2905    mov edx, 0x20
-005A290A    call 0x005A1410
+005A290A    call 0x005A1410                                 ; => [ Call: sub_5a1410 ]
 005A290F    mov ecx, eax
 005A2911    mov dword ptr ss:[esp+0x18], ecx
 005A2915    mov dword ptr ds:[ecx+0x08], 0x00
@@ -428,7 +434,7 @@
 005A297D    cvtps2pd xmm0, xmm0
 005A2980    movsd qword ptr ss:[esp+0x10], xmm0
 005A2986    fld qword ptr ss:[esp+0x10]
-005A298A    call 0x00762368
+005A298A    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 005A298F    xorps xmm0, xmm0
 005A2992    comiss xmm0, dword ptr ss:[esp+0x0C]
 005A2997    fstp dword ptr ss:[esp+0x10]
@@ -438,7 +444,7 @@
 005A29AB    mov ecx, dword ptr ss:[ebp+0x0C]
 005A29AE    movss dword ptr ds:[esi+0x1C], xmm0
 005A29B3    call 0x005A1470
-005A29B8    mov esi, eax
+005A29B8    mov esi, eax                                    ; => [ Call: sub_5a1470 ]
 005A29BA    mov eax, dword ptr ss:[esp+0x18]
 005A29BE    mov ecx, dword ptr ds:[eax+0x0C]
 005A29C1    mov edx, dword ptr ds:[eax+0x10]

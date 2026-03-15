@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_5048f0
+// 起始地址: 0x5048f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005048F0    dword 83EC8B55
 005048F4    in al, 0xF8
 005048F6    push esi
 005048F7    push edi
 005048F8    call 0x00573400
 005048FD    movzx esi, word ptr ss:[ebp+0x08]
-00504901    mov edi, dword ptr ds:[eax+0x04]
+00504901    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00504904    cmp esi, 0x320
 0050490A    jb 0x00504911
-0050490C    call 0x00591930
+0050490C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00504911    imul eax, esi, 0x64
 00504914    mov ecx, edi
 00504916    push 0x00
@@ -19,4 +25,4 @@
 0050492D    pop esi
 0050492E    mov esp, ebp
 00504930    pop ebp
-00504931    ret
+00504931    ret                                             ; => [ Call: sub_5754f0 ]

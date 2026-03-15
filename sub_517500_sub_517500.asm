@@ -1,4 +1,10 @@
-00517500    dword CC97B8B8
+// ============================================================
+// 函数名称: sub_517500
+// 起始地址: 0x517500
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00517500    dword CC97B8B8                                  ; => [ Data: data_cc97b8 ]
 00517504    add byte ptr ds:[ebx+0x74C98508], cl
 0051750A    jnb 0x0DC58709
 00517510    add eax, 0x10
@@ -11,7 +17,7 @@
 00517525    mov eax, dword ptr ds:[0x00CCA780]
 0051752A    shl ecx, 0x0B
 0051752D    add eax, 0x34
-00517530    add eax, ecx
+00517530    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00517532    cmp dword ptr ds:[eax], 0x00
 00517535    jz 0x00517540
 00517537    inc edx

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6b0df0
+// 起始地址: 0x6b0df0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B0DF0    push ebp
 006B0DF1    mov ebp, esp
 006B0DF3    and esp, 0xFFFFFFF0
 006B0DF6    sub esp, 0xF78
-006B0DFC    mov eax, dword ptr ds:[0x008C4040]
+006B0DFC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B0E01    xor eax, esp
 006B0E03    mov dword ptr ss:[esp+0xF74], eax
 006B0E0A    push esi
@@ -27,11 +33,11 @@
 006B0E53    jmp 0x006B1405
 006B0E58    lea edx, ss:[esp+0x78]
 006B0E5C    call 0x006433D0
-006B0E61    shl eax, 0x06
+006B0E61    shl eax, 0x06                                   ; => [ Call: sub_6433d0 ]
 006B0E64    cmp eax, dword ptr ds:[esi+0x08]
 006B0E67    jle 0x006B0E79
 006B0E69    push 0x87C178
-006B0E6E    call 0x0063B5F0
+006B0E6E    call 0x0063B5F0                                 ; => [ String: dx11 not large enough instance buffer in shader to draw mesh | Call: sub_63b5f0 ]
 006B0E73    mov eax, dword ptr ds:[esi+0x08]
 006B0E76    add esp, 0x04
 006B0E79    push eax
@@ -45,25 +51,25 @@
 006B0E92    jz 0x006B0EFE
 006B0E94    cmp dword ptr ds:[eax+0x80], 0x00
 006B0E9B    jnle 0x006B0EB6
-006B0E9D    push 0x872E14
+006B0E9D    push 0x872E14                                   ; => [ String: XArray<struct Mat4>::operator [] ]
 006B0EA2    push 0xB5
-006B0EA7    push 0x816BDC
-006B0EAC    mov ecx, 0x824FD0
+006B0EA7    push 0x816BDC                                   ; => [ String: C:\x\ax2017\Engine\xArray.h ]
+006B0EAC    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 006B0EB1    jmp 0x006B1457
 006B0EB6    mov ecx, dword ptr ds:[eax+0x7C]
 006B0EB9    mov eax, dword ptr ds:[eax+0x80]
 006B0EBF    mov dword ptr ss:[esp+0x0C], ecx
 006B0EC3    test ecx, ecx
 006B0EC5    jnz 0x006B0EDB
-006B0EC7    push 0x87C1E8
+006B0EC7    push 0x87C1E8                                   ; => [ String: Dx11GraphicsSetSpecialRenderState ]
 006B0ECC    push 0x6C3
-006B0ED1    mov ecx, 0x87C270
+006B0ED1    mov ecx, 0x87C270                               ; => [ String: pBones ]
 006B0ED6    jmp 0x006B1452
 006B0EDB    shl eax, 0x06
 006B0EDE    cmp eax, dword ptr ds:[esi+0x08]
 006B0EE1    jle 0x006B0EF7
 006B0EE3    push 0x87C240
-006B0EE8    call 0x0063B5F0
+006B0EE8    call 0x0063B5F0                                 ; => [ String: dx11 not enough bones in shader to draw mesh | Call: sub_63b5f0 ]
 006B0EED    mov eax, dword ptr ds:[esi+0x08]
 006B0EF0    add esp, 0x04
 006B0EF3    mov ecx, dword ptr ss:[esp+0x0C]
@@ -71,14 +77,14 @@
 006B0EF8    push ecx
 006B0EF9    jmp 0x006B1409
 006B0EFE    push 0x87C20C
-006B0F03    call 0x0063B5F0
+006B0F03    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Can't use bones shader on non-animation structure\n ]
 006B0F08    add esp, 0x04
 006B0F0B    mov al, 0x01
 006B0F0D    pop edi
 006B0F0E    pop esi
 006B0F0F    mov ecx, dword ptr ss:[esp+0xF74]
 006B0F16    xor ecx, esp
-006B0F18    call 0x0075927A
+006B0F18    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B0F1D    mov esp, ebp
 006B0F1F    pop ebp
 006B0F20    ret
@@ -86,14 +92,14 @@
 006B0F29    lea eax, ss:[esp+0x0C]
 006B0F2D    mov edx, dword ptr ds:[edx+0x350]
 006B0F33    push eax
-006B0F34    mov eax, dword ptr ds:[0x0147ABE8]
+006B0F34    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006B0F39    add edx, 0x1C4
 006B0F3F    shl ecx, 0x05
 006B0F42    add edx, ecx
 006B0F44    movss dword ptr ss:[esp+0x10], xmm0
 006B0F4A    lea ecx, ss:[esp+0x44]
 006B0F4E    movss xmm3, dword ptr ds:[eax+0x2C]
-006B0F53    call 0x006D7860
+006B0F53    call 0x006D7860                                 ; => [ Call: sub_6d7860 ]
 006B0F58    movss xmm0, dword ptr ss:[esp+0x44]
 006B0F5E    mov eax, 0x2C
 006B0F63    movss dword ptr ss:[esp+0x14], xmm0
@@ -119,7 +125,7 @@
 006B0FDC    cmp dword ptr ds:[esi+0x08], eax
 006B0FDF    jnl 0x006B0FF1
 006B0FE1    push 0x87C2B0
-006B0FE6    call 0x0063B5F0
+006B0FE6    call 0x0063B5F0                                 ; => [ String: dx11 not enough texAnims in shader | Call: sub_63b5f0 ]
 006B0FEB    mov eax, dword ptr ds:[esi+0x08]
 006B0FEE    add esp, 0x04
 006B0FF1    push eax
@@ -193,7 +199,7 @@
 006B1100    pop esi
 006B1101    mov ecx, dword ptr ss:[esp+0xF74]
 006B1108    xor ecx, esp
-006B110A    call 0x0075927A
+006B110A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B110F    mov esp, ebp
 006B1111    pop ebp
 006B1112    ret
@@ -223,7 +229,7 @@
 006B1160    pop esi
 006B1161    mov ecx, dword ptr ss:[esp+0xF74]
 006B1168    xor ecx, esp
-006B116A    call 0x0075927A
+006B116A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B116F    mov esp, ebp
 006B1171    pop ebp
 006B1172    ret
@@ -273,7 +279,7 @@
 006B121D    pop esi
 006B121E    mov ecx, dword ptr ss:[esp+0xF74]
 006B1225    xor ecx, esp
-006B1227    call 0x0075927A
+006B1227    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B122C    mov esp, ebp
 006B122E    pop ebp
 006B122F    ret
@@ -316,16 +322,16 @@
 006B12D3    movups xmmword ptr ss:[esp+0x10], xmm1
 006B12D8    jmp 0x006B1401
 006B12DD    push dword ptr ds:[esi+0x08]
-006B12E0    push 0xCF6A44
+006B12E0    push 0xCF6A44                                   ; => [ Data: data_cf6a40 ]
 006B12E5    jmp 0x006B1409
 006B12EA    push dword ptr ds:[esi+0x08]
-006B12ED    push 0xCF6A54
+006B12ED    push 0xCF6A54                                   ; => [ Data: data_cf6a54 ]
 006B12F2    jmp 0x006B1409
 006B12F7    lea eax, ds:[edx+0x340]
 006B12FD    jmp 0x006B1405
 006B1302    lea eax, ss:[esp+0x10]
 006B1306    push eax
-006B1307    call 0x00649DA0
+006B1307    call 0x00649DA0                                 ; => [ Call: sub_649da0 ]
 006B130C    add esp, 0x04
 006B130F    movups xmm0, xmmword ptr ds:[eax]
 006B1312    movups xmmword ptr ss:[esp+0x40], xmm0
@@ -341,14 +347,14 @@
 006B1347    movss dword ptr ss:[esp+0x18], xmm0
 006B134D    jmp 0x006B13EF
 006B1352    movups xmm0, xmmword ptr ds:[0x00CF6668]
-006B1359    mov eax, dword ptr ds:[0x00CF6680]
-006B135E    movups xmmword ptr ss:[esp+0x40], xmm0
-006B1363    movq xmm0, qword ptr ds:[0x00CF6678]
+006B1359    mov eax, dword ptr ds:[0x00CF6680]              ; => [ Data: data_cf6680 ]
+006B135E    movups xmmword ptr ss:[esp+0x40], xmm0          ; => [ Data: data_cf6668 ]
+006B1363    movq xmm0, qword ptr ds:[0x00CF6678]            ; => [ Data: data_cf6678 ]
 006B136B    jmp 0x006B131F
 006B136D    push dword ptr ds:[esi+0x08]
-006B1370    push 0xCF65FC
+006B1370    push 0xCF65FC                                   ; => [ Data: data_cf65fc ]
 006B1375    jmp 0x006B1409
-006B137A    mov eax, dword ptr ds:[0x0147ABE8]
+006B137A    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006B137F    mov dword ptr ss:[esp+0x1C], 0x00
 006B1387    movss xmm0, dword ptr ds:[eax+0x2C]
 006B138C    movss dword ptr ss:[esp+0x10], xmm0
@@ -356,7 +362,7 @@
 006B1397    mov eax, dword ptr ds:[0x0147B06C]
 006B139C    movss dword ptr ss:[esp+0x14], xmm0
 006B13A2    movss xmm0, dword ptr ds:[eax+0x94]
-006B13AA    movss dword ptr ss:[esp+0x18], xmm0
+006B13AA    movss dword ptr ss:[esp+0x18], xmm0             ; => [ Data: data_147b06c ]
 006B13B0    jmp 0x006B1401
 006B13B2    lea eax, ds:[edx+0x30C]
 006B13B8    jmp 0x006B1405
@@ -364,7 +370,7 @@
 006B13C0    jmp 0x006B1405
 006B13C2    lea eax, ds:[edx+0x2F8]
 006B13C8    jmp 0x006B1405
-006B13CA    mov eax, dword ptr ds:[0x0147B078]
+006B13CA    mov eax, dword ptr ds:[0x0147B078]              ; => [ Data: data_147b078 ]
 006B13CF    mov dword ptr ss:[esp+0x14], 0x00
 006B13D7    mov dword ptr ss:[esp+0x18], 0x00
 006B13DF    movss xmm0, dword ptr ds:[eax+0x1C]
@@ -379,14 +385,14 @@
 006B1409    mov eax, dword ptr ds:[esi+0x04]
 006B140C    add eax, edi
 006B140E    push eax
-006B140F    call 0x00761FBE
+006B140F    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006B1414    add esp, 0x0C
 006B1417    mov al, 0x01
 006B1419    pop edi
 006B141A    pop esi
 006B141B    mov ecx, dword ptr ss:[esp+0xF74]
 006B1422    xor ecx, esp
-006B1424    call 0x0075927A
+006B1424    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B1429    mov esp, ebp
 006B142B    pop ebp
 006B142C    ret
@@ -395,19 +401,19 @@
 006B1436    pop edi
 006B1437    pop esi
 006B1438    xor ecx, esp
-006B143A    call 0x0075927A
+006B143A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B143F    mov esp, ebp
 006B1441    pop ebp
 006B1442    ret
-006B1443    push 0x87C1E8
+006B1443    push 0x87C1E8                                   ; => [ String: Dx11GraphicsSetSpecialRenderState ]
 006B1448    push 0x76A
-006B144D    mov ecx, 0x87C278
-006B1452    push 0x87B990
+006B144D    mov ecx, 0x87C278                               ; => [ String: sizeof(float) * 4 * 4 == pRenderState->registerCount ]
+006B1452    push 0x87B990                                   ; => [ String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp ]
 006B1457    mov edx, 0x801800
-006B145C    call 0x0063B870
+006B145C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006B1461    add esp, 0x0C
 006B1464    call 0x0063BC30
 006B1469    test al, al
-006B146B    jz 0x006B146E
+006B146B    jz 0x006B146E                                   ; => [ Call: sub_63bc30 ]
 006B146D    int3
-006B146E    call 0x0063BB00
+006B146E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

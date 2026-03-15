@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5745c0
+// 起始地址: 0x5745c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005745C0    push ebp
 005745C1    mov ebp, esp
 005745C3    sub esp, 0x08
@@ -32,7 +38,7 @@
 0057460E    mov edx, dword ptr ds:[ecx+0xD48]
 00574614    mov ecx, eax
 00574616    call 0x00571B30
-0057461B    mov dword ptr ds:[esi-0x04], eax
+0057461B    mov dword ptr ds:[esi-0x04], eax                ; => [ Call: sub_571b30 ]
 0057461E    mov eax, dword ptr ss:[ebp-0x04]
 00574621    mov eax, dword ptr ds:[eax+0x1504]
 00574627    cmp eax, 0x03
@@ -57,7 +63,7 @@
 00574656    push edi
 00574657    push ebx
 00574658    setz cl
-0057465B    call 0x0061B1B0
+0057465B    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00574660    add esp, 0x2C
 00574663    pop edi
 00574664    pop esi

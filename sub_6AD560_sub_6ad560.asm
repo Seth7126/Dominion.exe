@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_6ad560
+// 起始地址: 0x6ad560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AD560    push ebp
 006AD561    mov ebp, esp
-006AD563    mov ecx, dword ptr ds:[0x0147ABE8]
+006AD563    mov ecx, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006AD569    sub esp, 0x08
 006AD56C    test ecx, ecx
 006AD56E    jz 0x006AD5C4
@@ -8,16 +14,16 @@
 006AD573    shr eax, 0x06
 006AD576    test al, 0x01
 006AD578    jz 0x006AD585
-006AD57A    call 0x006AD160
-006AD57F    mov ecx, dword ptr ds:[0x0147ABE8]
+006AD57A    call 0x006AD160                                 ; => [ Call: sub_6ad160 ]
+006AD57F    mov ecx, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006AD585    test ecx, ecx
 006AD587    jz 0x006AD5C4
 006AD589    mov eax, dword ptr ds:[ecx+0x1C]
 006AD58C    shr eax, 0x07
 006AD58F    test al, 0x01
 006AD591    jz 0x006AD59E
-006AD593    call 0x006CB470
-006AD598    mov ecx, dword ptr ds:[0x0147ABE8]
+006AD593    call 0x006CB470                                 ; => [ Call: sub_6cb470 ]
+006AD598    mov ecx, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006AD59E    test ecx, ecx
 006AD5A0    jz 0x006AD5C4
 006AD5A2    mov ecx, dword ptr ds:[ecx+0x1C]
@@ -32,7 +38,7 @@
 006AD5B7    shr ecx, 0x06
 006AD5BA    test cl, 0x01
 006AD5BD    jz 0x006AD5C4
-006AD5BF    call 0x006ACF10
+006AD5BF    call 0x006ACF10                                 ; => [ Call: sub_6acf10 ]
 006AD5C4    mov esp, ebp
 006AD5C6    pop ebp
 006AD5C7    ret

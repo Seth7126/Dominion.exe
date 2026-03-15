@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_718f30
+// 起始地址: 0x718f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00718F30    push ebp
 00718F31    mov ebp, esp
 00718F33    mov eax, dword ptr ss:[ebp+0x0C]
@@ -46,9 +52,9 @@
 00718FAE    jmp 0x00719085
 00718FB3    push 0x02
 00718FB5    mov ecx, edi
-00718FB7    call 0x00714A40
+00718FB7    call 0x00714A40                                 ; => [ Call: sub_714a40 ]
 00718FBC    movss xmm4, dword ptr ds:[0x00890E18]
-00718FC4    xorps xmm1, xmm1
+00718FC4    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00718FC7    mov dword ptr ss:[ebp+0x0C], eax
 00718FCA    movaps xmm3, xmm4
 00718FCD    add esp, 0x04
@@ -67,7 +73,7 @@
 00718FFC    comiss xmm1, xmm3
 00718FFF    movss xmm0, dword ptr ds:[edx+ecx*4-0x4C]
 00719005    jbe 0x0071900C
-00719007    xorps xmm2, xmm2
+00719007    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 0071900A    jmp 0x00719013
 0071900C    movaps xmm2, xmm4
 0071900F    minss xmm2, xmm3
@@ -79,11 +85,11 @@
 0071901F    lahf
 00719020    test ah, 0x44
 00719023    jp 0x0071902A
-00719025    xorps xmm2, xmm2
+00719025    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00719028    jmp 0x00719070
 0071902A    mov eax, dword ptr ss:[ebp+0x08]
 0071902D    add ecx, 0xFFFFFFEE
-00719030    xorps xmm3, xmm3
+00719030    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 00719033    mov ebx, ecx
 00719035    cmp ecx, eax
 00719037    jnl 0x00719051
@@ -120,7 +126,7 @@
 007190A5    ret
 007190A6    cmp ecx, ebx
 007190A8    jnz 0x007190AF
-007190AA    movaps xmm4, xmm1
+007190AA    movaps xmm4, xmm1                               ; => [ String: 0 | String: zx ]
 007190AD    jmp 0x007190BB
 007190AF    movss xmm1, dword ptr ds:[edx+ecx*4-0x08]
 007190B5    movss xmm4, dword ptr ds:[edx+ecx*4-0x04]

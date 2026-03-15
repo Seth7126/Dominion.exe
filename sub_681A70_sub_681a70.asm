@@ -1,4 +1,10 @@
-00681A70    mov eax, dword ptr ds:[0x0147ABE4]
+// ============================================================
+// 函数名称: sub_681a70
+// 起始地址: 0x681a70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00681A70    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 00681A75    test eax, eax
 00681A77    jz 0x00681B32
 00681A7D    cmp byte ptr ds:[eax+0x1C], 0x00
@@ -19,14 +25,14 @@
 00681AB2    mov edx, 0x0C
 00681AB7    dec dword ptr ds:[eax+0x48]
 00681ABA    mov ecx, edi
-00681ABC    call 0x0064C080
+00681ABC    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00681AC1    mov edx, dword ptr ds:[esi+0xE44]
 00681AC7    test edx, edx
 00681AC9    jz 0x00681AE1
 00681ACB    mov ecx, dword ptr ds:[0x0147B070]
 00681AD1    push edx
 00681AD2    mov eax, dword ptr ds:[ecx]
-00681AD4    call dword ptr ds:[eax+0x54]
+00681AD4    call dword ptr ds:[eax+0x54]                    ; => [ Data: data_147b070 ]
 00681AD7    mov dword ptr ds:[esi+0xE44], 0x00
 00681AE1    mov dword ptr ds:[esi+0x7E4], 0x00
 00681AEB    mov dword ptr ds:[esi+0x3F8], 0x00
@@ -37,8 +43,8 @@
 00681B0F    jz 0x00681B1D
 00681B11    mov edx, 0xF08
 00681B16    mov ecx, esi
-00681B18    call 0x0064C080
-00681B1D    mov eax, dword ptr ds:[0x0147ABE4]
+00681B18    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+00681B1D    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 00681B22    cmp dword ptr ds:[eax+0x48], 0x00
 00681B26    jnz 0x00681A93
 00681B2C    pop edi

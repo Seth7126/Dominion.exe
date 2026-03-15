@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72a0d0
+// 起始地址: 0x72a0d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072A0D0    push ebp
 0072A0D1    mov ebp, esp
 0072A0D3    sub esp, 0x0C
@@ -228,11 +234,11 @@
 0072A340    mov ecx, esi
 0072A342    call 0x007203E0
 0072A347    cmp eax, 0x01
-0072A34A    jl 0x0072A3E3
+0072A34A    jl 0x0072A3E3                                   ; => [ Call: sub_7203e0 ]
 0072A350    mov ecx, esi
 0072A352    call 0x007203E0
 0072A357    cmp eax, 0x01
-0072A35A    jl 0x0072A3E3
+0072A35A    jl 0x0072A3E3                                   ; => [ Call: sub_7203e0 ]
 0072A360    mov eax, dword ptr ds:[edi]
 0072A362    cmp eax, dword ptr ds:[esi+0xAC]
 0072A368    jnb 0x0072A36E

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_737ce0
+// 起始地址: 0x737ce0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00737CE0    push ebp
 00737CE1    mov ebp, esp
 00737CE3    and esp, 0xFFFFFFF0
@@ -11,17 +17,17 @@
 00737CF8    mov eax, dword ptr ds:[ecx+0x04]
 00737CFB    cmp dword ptr ds:[esi+0x04], eax
 00737CFE    jz 0x00737D19
-00737D00    push 0x88F238
+00737D00    push 0x88F238                                   ; => [ String: AtlasMakerPlaceRects ]
 00737D05    push 0x50A
-00737D0A    push 0x88F010
-00737D0F    mov ecx, 0x88F280
+00737D0A    push 0x88F010                                   ; => [ String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
+00737D0F    mov ecx, 0x88F280                               ; => [ String: packAssets.mSize == locs.mSize ]
 00737D14    jmp 0x007380A5
 00737D19    test eax, eax
 00737D1B    jnle 0x00737D36
-00737D1D    push 0x88F238
+00737D1D    push 0x88F238                                   ; => [ String: AtlasMakerPlaceRects ]
 00737D22    push 0x50B
-00737D27    push 0x88F010
-00737D2C    mov ecx, 0x88F270
+00737D27    push 0x88F010                                   ; => [ String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
+00737D2C    mov ecx, 0x88F270                               ; => [ String: locs.mSize > 0 ]
 00737D31    jmp 0x007380A5
 00737D36    mov eax, dword ptr ds:[ecx]
 00737D38    xor edx, edx
@@ -70,7 +76,7 @@
 00737DDB    cmp edx, 0x03
 00737DDE    jnz 0x00737E73
 00737DE4    mov ecx, esi
-00737DE6    call 0x005AF880
+00737DE6    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00737DEB    push edi
 00737DEC    lea ecx, ss:[esp+0x50]
 00737DF0    mov esi, dword ptr ds:[eax]
@@ -78,19 +84,19 @@
 00737DF4    call 0x0073AC00
 00737DF9    add esp, 0x04
 00737DFC    test al, al
-00737DFE    jz 0x00737F5D
+00737DFE    jz 0x00737F5D                                   ; => [ Call: sub_73ac00 ]
 00737E04    mov edx, dword ptr ds:[esi+0x18]
 00737E07    mov ecx, dword ptr ss:[esp+0x50]
 00737E0B    mov dword ptr ss:[esp+0x5C], edx
 00737E0F    call 0x006A9570
 00737E14    mov edx, dword ptr ss:[esp+0x20]
 00737E18    mov ecx, 0x800188
-00737E1D    mov dword ptr ss:[esp+0x58], eax
+00737E1D    mov dword ptr ss:[esp+0x58], eax                ; => [ Call: sub_6a9570 ]
 00737E21    lea eax, ss:[esp+0x4C]
 00737E25    push edi
 00737E26    push eax
 00737E27    lea edx, ds:[edx+0x04]
-00737E2A    call 0x00736340
+00737E2A    call 0x00736340                                 ; => [ Call: sub_736340 | Data: data_800188 ]
 00737E2F    mov eax, dword ptr ds:[edi+0x44]
 00737E32    add esp, 0x08
 00737E35    mov ecx, dword ptr ss:[esp+0x20]
@@ -110,7 +116,7 @@
 00737E60    mov dword ptr ds:[esi+0x04], eax
 00737E63    mov eax, dword ptr ds:[edi+0x4C]
 00737E66    mov dword ptr ds:[esi+0x08], eax
-00737E69    call 0x00735FB0
+00737E69    call 0x00735FB0                                 ; => [ Call: sub_735fb0 ]
 00737E6E    jmp 0x00737F34
 00737E73    cmp edx, 0x12
 00737E76    jnz 0x00737F34
@@ -124,7 +130,7 @@
 00737E92    mov ecx, dword ptr ss:[ebp+0x10]
 00737E95    push eax
 00737E96    mov dword ptr ss:[esp+0x30], eax
-00737E9A    call 0x00737B10
+00737E9A    call 0x00737B10                                 ; => [ Call: sub_737b10 ]
 00737E9F    add esp, 0x0C
 00737EA2    cmp dword ptr ds:[esi+0x04], 0x12
 00737EA6    jnz 0x00737F9A
@@ -137,17 +143,17 @@
 00737EC1    add ecx, ecx
 00737EC3    lea edx, ds:[edx+edx*8]
 00737EC6    mov dword ptr ss:[esp+0x24], edx
-00737ECA    mov edi, dword ptr ds:[eax+ecx*8+0x20]
+00737ECA    mov edi, dword ptr ds:[eax+ecx*8+0x20]          ; => [ Call: sub_5af880 ]
 00737ECE    movss xmm0, dword ptr ds:[edi+edx*4+0x04]
 00737ED4    addss xmm0, dword ptr ds:[0x00890D84]
 00737EDC    call 0x004D5CB0
 00737EE1    mov eax, dword ptr ss:[esp+0x24]
-00737EE5    cvttss2si esi, xmm0
+00737EE5    cvttss2si esi, xmm0                             ; => [ Call: sub_4d5cb0 ]
 00737EE9    movss xmm0, dword ptr ds:[edi+eax*4+0x08]
 00737EEF    addss xmm0, dword ptr ds:[0x00890D84]
 00737EF7    call 0x004D5CB0
 00737EFC    push dword ptr ss:[esp+0x0C]
-00737F00    cvttss2si eax, xmm0
+00737F00    cvttss2si eax, xmm0                             ; => [ Call: sub_4d5cb0 ]
 00737F04    mov dword ptr ss:[esp+0x34], esi
 00737F08    lea ecx, ss:[esp+0x34]
 00737F0C    mov esi, dword ptr ss:[esp+0x24]
@@ -155,7 +161,7 @@
 00737F13    mov dword ptr ss:[esp+0x38], eax
 00737F17    lea eax, ss:[esp+0x50]
 00737F1B    push eax
-00737F1C    call 0x00736340
+00737F1C    call 0x00736340                                 ; => [ Call: sub_736340 ]
 00737F21    movups xmm0, xmmword ptr ds:[esi+0x04]
 00737F25    mov eax, dword ptr ss:[esp+0x2C]
 00737F29    add esp, 0x08
@@ -175,7 +181,7 @@
 00737F5D    mov ecx, dword ptr ss:[esp+0x24]
 00737F61    add ecx, 0x20
 00737F64    call 0x0063D7E0
-00737F69    push eax
+00737F69    push eax                                        ; => [ Call: sub_63d7e0 ]
 00737F6A    push 0x88F064
 00737F6F    call 0x0063B5F0
 00737F74    push 0x88F250
@@ -183,18 +189,18 @@
 00737F7E    push 0x88F010
 00737F83    mov edx, 0x801800
 00737F88    mov ecx, 0x801AA4
-00737F8D    call 0x0063B870
+00737F8D    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: AtlasMaker: Image load failed %s | Data: data_801800 | String: AtlasMakerPlaceAssetTexture_New | Call: sub_63b5f0 | String: Halt | String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
 00737F92    add esp, 0x14
 00737F95    jmp 0x007380B2
-00737F9A    push 0x87A4B4
+00737F9A    push 0x87A4B4                                   ; => [ String: FontGetDef ]
 00737F9F    push 0x2E6
-00737FA4    push 0x87A2E0
-00737FA9    mov ecx, 0x87A48C
+00737FA4    push 0x87A2E0                                   ; => [ String: C:\x\ax2017\Engine\AssetUtils.cpp ]
+00737FA9    mov ecx, 0x87A48C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_FONT ]
 00737FAE    jmp 0x007380A5
-00737FB3    push 0x88F69C
+00737FB3    push 0x88F69C                                   ; => [ String: XArray<struct PackAsset>::operator [] ]
 00737FB8    push 0xC3
 00737FBD    jmp 0x0073809B
-00737FC2    push 0x88F6E8
+00737FC2    push 0x88F6E8                                   ; => [ String: XArray<struct PackLoc>::operator [] ]
 00737FC7    push 0xC3
 00737FCC    jmp 0x0073809B
 00737FD1    mov eax, dword ptr ss:[esp+0x3C]
@@ -220,7 +226,7 @@
 00738014    mov ecx, dword ptr ds:[esi]
 00738016    cmp dword ptr ds:[ecx+0x04], 0x12
 0073801A    jnz 0x00737F9A
-00738020    call 0x005AF880
+00738020    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00738025    mov ecx, dword ptr ds:[esi+0x04]
 00738028    lea ecx, ds:[ecx+ecx*2]
 0073802B    shl ecx, 0x04
@@ -237,7 +243,7 @@
 00738047    call dword ptr ds:[0x00775524]
 0073804D    add esp, 0x04
 00738050    mov ecx, dword ptr ds:[esi]
-00738052    call 0x006960B0
+00738052    call 0x006960B0                                 ; => [ Call: sub_6960b0 ]
 00738057    mov esi, dword ptr ss:[ebp+0x10]
 0073805A    mov ecx, dword ptr ss:[esp+0x28]
 0073805E    mov eax, dword ptr ss:[esp+0x24]
@@ -257,15 +263,15 @@
 0073808D    mov esp, ebp
 0073808F    pop ebp
 00738090    ret
-00738091    push 0x88F64C
+00738091    push 0x88F64C                                   ; => [ String: XArray<struct AtlasFontLayerItem>::operator [] ]
 00738096    push 0xB5
-0073809B    push 0x816BDC
-007380A0    mov ecx, 0x824FD0
+0073809B    push 0x816BDC                                   ; => [ String: C:\x\ax2017\Engine\xArray.h ]
+007380A0    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 007380A5    mov edx, 0x801800
-007380AA    call 0x0063B870
+007380AA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 007380AF    add esp, 0x0C
 007380B2    call 0x0063BC30
 007380B7    test al, al
-007380B9    jz 0x007380BC
+007380B9    jz 0x007380BC                                   ; => [ Call: sub_63bc30 ]
 007380BB    int3
-007380BC    call 0x0063BB00
+007380BC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

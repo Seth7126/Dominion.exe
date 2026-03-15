@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a4d70
+// 起始地址: 0x5a4d70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A4D70    push ebp
 005A4D71    mov ebp, esp
 005A4D73    sub esp, 0x08
@@ -52,9 +58,9 @@
 005A4E48    lahf
 005A4E49    test ah, 0x44
 005A4E4C    jp 0x005A4E62
-005A4E4E    push 0x82526C
+005A4E4E    push 0x82526C                                   ; => [ String: ApplyNormalize ]
 005A4E53    push 0x393
-005A4E58    mov ecx, 0x82527C
+005A4E58    mov ecx, 0x82527C                               ; => [ String: hMin != hMax ]
 005A4E5D    jmp 0x005A4F10
 005A4E62    movss xmm3, dword ptr ds:[0x008910DC]
 005A4E6A    subss xmm2, xmm4
@@ -77,7 +83,7 @@
 005A4EA3    movaps xmm2, xmm1
 005A4EA6    mov ecx, 0x01
 005A4EAB    movaps xmm1, xmm3
-005A4EAE    call 0x004AE110
+005A4EAE    call 0x004AE110                                 ; => [ Call: sub_4ae110 ]
 005A4EB3    movss xmm1, dword ptr ds:[0x00890E18]
 005A4EBB    xorps xmm5, xmm5
 005A4EBE    movss xmm3, dword ptr ds:[0x008910DC]
@@ -97,19 +103,19 @@
 005A4EEC    mov esp, ebp
 005A4EEE    pop ebp
 005A4EEF    ret
-005A4EF0    push 0x82526C
+005A4EF0    push 0x82526C                                   ; => [ String: ApplyNormalize ]
 005A4EF5    push 0x399
-005A4EFA    mov ecx, 0x8252A0
+005A4EFA    mov ecx, 0x8252A0                               ; => [ String: pts[i].z >= -1.0f ]
 005A4EFF    jmp 0x005A4F10
-005A4F01    push 0x82526C
+005A4F01    push 0x82526C                                   ; => [ String: ApplyNormalize ]
 005A4F06    push 0x398
-005A4F0B    mov ecx, 0x82528C
+005A4F0B    mov ecx, 0x82528C                               ; => [ String: pts[i].z <= 1.0f ]
 005A4F10    push 0x8250E0
 005A4F15    mov edx, 0x801800
-005A4F1A    call 0x0063B870
+005A4F1A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: ApplyNormalize ]
 005A4F1F    add esp, 0x0C
 005A4F22    call 0x0063BC30
 005A4F27    test al, al
-005A4F29    jz 0x005A4F2C
+005A4F29    jz 0x005A4F2C                                   ; => [ Call: sub_63bc30 ]
 005A4F2B    int3
-005A4F2C    call 0x0063BB00
+005A4F2C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5471c0
+// 起始地址: 0x5471c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005471C0    push ebp
 005471C1    mov ebp, esp
 005471C3    and esp, 0xFFFFFFF8
@@ -9,21 +15,21 @@
 005471CD    mov esi, dword ptr ds:[eax]
 005471CF    call 0x00573400
 005471D4    movzx esi, si
-005471D7    mov ebx, dword ptr ds:[eax+0x04]
+005471D7    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005471DA    cmp esi, 0x320
 005471E0    jb 0x005471E7
-005471E2    call 0x00591930
+005471E2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005471E7    imul edi, esi, 0x64
 005471EA    mov eax, dword ptr ds:[edi+ebx*1+0x1A6C]
 005471F1    shr eax, 0x01
 005471F3    not al
 005471F5    test al, 0x01
 005471F7    jz 0x00547263
-005471F9    call 0x00573400
+005471F9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005471FE    mov ebx, dword ptr ds:[eax+0x04]
 00547201    cmp esi, 0x320
 00547207    jb 0x0054720E
-00547209    call 0x00591930
+00547209    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054720E    mov edx, dword ptr ds:[edi+ebx*1+0x1A4C]
 00547215    mov ecx, ebx
 00547217    push 0x00
@@ -31,12 +37,12 @@
 0054721E    call 0x005754F0
 00547223    add esp, 0x08
 00547226    test al, al
-00547228    jnz 0x00547263
-0054722A    call 0x00573400
+00547228    jnz 0x00547263                                  ; => [ Call: sub_5754f0 ]
+0054722A    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0054722F    mov ebx, dword ptr ds:[eax+0x04]
 00547232    cmp esi, 0x320
 00547238    jb 0x0054723F
-0054723A    call 0x00591930
+0054723A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054723F    mov edx, dword ptr ds:[edi+ebx*1+0x1A4C]
 00547246    mov ecx, ebx
 00547248    push 0x00
@@ -44,7 +50,7 @@
 0054724C    call 0x005754F0
 00547251    add esp, 0x08
 00547254    test al, al
-00547256    jz 0x00547263
+00547256    jz 0x00547263                                   ; => [ Call: sub_5754f0 ]
 00547258    mov al, 0x01
 0054725A    pop edi
 0054725B    pop esi

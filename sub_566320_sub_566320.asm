@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_566320
+// 起始地址: 0x566320
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00566320    push ebp
 00566321    mov ebp, esp
 00566323    and esp, 0xFFFFFFF8
 00566326    push esi
 00566327    push edi
 00566328    mov esi, ecx
-0056632A    call 0x00573400
+0056632A    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056632F    mov edi, dword ptr ss:[ebp+0x08]
 00566332    push 0x0C
 00566334    push 0x00
@@ -19,7 +25,7 @@
 0056634D    push esi
 0056634E    call 0x00588DB0
 00566353    add esp, 0x24
-00566356    mov dword ptr ds:[edi+0xC80], eax
+00566356    mov dword ptr ds:[edi+0xC80], eax               ; => [ Call: sub_588db0 ]
 0056635C    mov eax, edi
 0056635E    pop edi
 0056635F    pop esi

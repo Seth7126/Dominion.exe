@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58dd90
+// 起始地址: 0x58dd90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058DD90    push esi
 0058DD91    xor esi, esi
 0058DD93    push edi
@@ -39,27 +45,27 @@
 0058DE1C    mov dword ptr ds:[ecx+0x3E8C], 0x00
 0058DE26    pop esi
 0058DE27    ret
-0058DE28    push 0x820540
+0058DE28    push 0x820540                                   ; => [ String: RandomizerDeck_ReturnRejects ]
 0058DE2D    push 0x4153
-0058DE32    mov ecx, 0x82059C
+0058DE32    mov ecx, 0x82059C                               ; => [ String: deck.numOthers < MAX_CARDS ]
 0058DE37    jmp 0x0058DE6A
-0058DE39    push 0x820540
+0058DE39    push 0x820540                                   ; => [ String: RandomizerDeck_ReturnRejects ]
 0058DE3E    push 0x4157
-0058DE43    mov ecx, 0x801AA4
+0058DE43    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0058DE48    jmp 0x0058DE6A
-0058DE4A    push 0x820540
+0058DE4A    push 0x820540                                   ; => [ String: RandomizerDeck_ReturnRejects ]
 0058DE4F    push 0x414F
-0058DE54    mov ecx, 0x82057C
+0058DE54    mov ecx, 0x82057C                               ; => [ String: deck.numCardsMore < MAX_CARDS ]
 0058DE59    jmp 0x0058DE6A
-0058DE5B    push 0x820540
+0058DE5B    push 0x820540                                   ; => [ String: RandomizerDeck_ReturnRejects ]
 0058DE60    push 0x414B
-0058DE65    mov ecx, 0x820560
+0058DE65    mov ecx, 0x820560                               ; => [ String: deck.numCards < MAX_CARDS ]
 0058DE6A    push 0x81F4B8
 0058DE6F    mov edx, 0x801800
-0058DE74    call 0x0063B870
+0058DE74    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RandomizerDeck_ReturnRejects | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0058DE79    add esp, 0x0C
 0058DE7C    call 0x0063BC30
 0058DE81    test al, al
-0058DE83    jz 0x0058DE86
+0058DE83    jz 0x0058DE86                                   ; => [ Call: sub_63bc30 ]
 0058DE85    int3
-0058DE86    call 0x0063BB00
+0058DE86    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

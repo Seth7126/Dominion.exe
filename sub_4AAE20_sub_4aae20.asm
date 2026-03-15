@@ -1,35 +1,41 @@
+// ============================================================
+// 函数名称: sub_4aae20
+// 起始地址: 0x4aae20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AAE20    mov eax, dword ptr ds:[0x017775CC]
-004AAE25    mov dword ptr ds:[0x00CB4224], eax
+004AAE25    mov dword ptr ds:[0x00CB4224], eax              ; => [ Data: data_cb4224 | Data: data_17775cc ]
 004AAE2A    mov eax, dword ptr ds:[0x017775D0]
-004AAE2F    mov dword ptr ds:[0x00CB422C], eax
+004AAE2F    mov dword ptr ds:[0x00CB422C], eax              ; => [ Data: data_cb422c | Data: data_17775d0 ]
 004AAE34    mov eax, dword ptr ds:[0x017775D4]
-004AAE39    mov dword ptr ds:[0x00CB4234], eax
+004AAE39    mov dword ptr ds:[0x00CB4234], eax              ; => [ Data: data_cb4234 | Data: data_17775d4 ]
 004AAE3E    mov eax, dword ptr ds:[0x017775D8]
-004AAE43    mov dword ptr ds:[0x00CB423C], eax
+004AAE43    mov dword ptr ds:[0x00CB423C], eax              ; => [ Data: data_17775d8 | Data: data_cb423c ]
 004AAE48    mov eax, dword ptr ds:[0x017775E8]
-004AAE4D    mov dword ptr ds:[0x00CB4244], eax
+004AAE4D    mov dword ptr ds:[0x00CB4244], eax              ; => [ Data: data_cb4244 | Data: data_17775e8 ]
 004AAE52    mov eax, dword ptr ds:[0x017775EC]
-004AAE57    mov dword ptr ds:[0x00CB424C], eax
+004AAE57    mov dword ptr ds:[0x00CB424C], eax              ; => [ Data: data_17775ec | Data: data_cb424c ]
 004AAE5C    mov eax, dword ptr ds:[0x017775DC]
-004AAE61    mov dword ptr ds:[0x00CB4254], eax
+004AAE61    mov dword ptr ds:[0x00CB4254], eax              ; => [ Data: data_17775dc | Data: data_cb4254 ]
 004AAE66    mov eax, dword ptr ds:[0x017775E0]
-004AAE6B    mov dword ptr ds:[0x00CB425C], eax
+004AAE6B    mov dword ptr ds:[0x00CB425C], eax              ; => [ Data: data_cb425c | Data: data_17775e0 ]
 004AAE70    mov eax, dword ptr ds:[0x017775E4]
-004AAE75    mov dword ptr ds:[0x00CB4264], eax
+004AAE75    mov dword ptr ds:[0x00CB4264], eax              ; => [ Data: data_cb4264 | Data: data_17775e4 ]
 004AAE7A    mov eax, dword ptr ds:[0x017775F0]
-004AAE7F    mov dword ptr ds:[0x00CB426C], eax
+004AAE7F    mov dword ptr ds:[0x00CB426C], eax              ; => [ Data: data_cb426c | Data: data_17775f0 ]
 004AAE84    mov eax, dword ptr ds:[0x017775F4]
-004AAE89    mov dword ptr ds:[0x00CB4274], eax
+004AAE89    mov dword ptr ds:[0x00CB4274], eax              ; => [ Data: data_cb4274 | Data: data_17775f4 ]
 004AAE8E    mov eax, dword ptr ds:[0x017775F8]
-004AAE93    mov dword ptr ds:[0x00CB427C], eax
+004AAE93    mov dword ptr ds:[0x00CB427C], eax              ; => [ Data: data_17775f8 | Data: data_cb427c ]
 004AAE98    mov eax, dword ptr ds:[0x017775FC]
-004AAE9D    mov dword ptr ds:[0x00CB4284], eax
+004AAE9D    mov dword ptr ds:[0x00CB4284], eax              ; => [ Data: data_cb4284 | Data: data_17775fc ]
 004AAEA2    mov eax, dword ptr ds:[0x01777608]
-004AAEA7    mov dword ptr ds:[0x00CB428C], eax
+004AAEA7    mov dword ptr ds:[0x00CB428C], eax              ; => [ Data: data_cb428c | Data: data_1777608 ]
 004AAEAC    mov eax, dword ptr ds:[0x01777600]
-004AAEB1    mov dword ptr ds:[0x00CB4294], eax
+004AAEB1    mov dword ptr ds:[0x00CB4294], eax              ; => [ Data: data_cb4294 | Data: data_1777600 ]
 004AAEB6    mov eax, dword ptr ds:[0x01777604]
-004AAEBB    mov dword ptr ds:[0x00CB429C], eax
-004AAEC0    mov eax, dword ptr ds:[0x01777614]
-004AAEC5    mov dword ptr ds:[0x00CB42A4], eax
+004AAEBB    mov dword ptr ds:[0x00CB429C], eax              ; => [ Data: data_1777604 | Data: data_cb429c ]
+004AAEC0    mov eax, dword ptr ds:[0x01777614]              ; => [ Data: data_1777614 ]
+004AAEC5    mov dword ptr ds:[0x00CB42A4], eax              ; => [ Data: data_cb42a4 ]
 004AAECA    ret

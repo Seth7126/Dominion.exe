@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_5482d0
+// 起始地址: 0x5482d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005482D0    dword 83EC8B55
 005482D4    in al, 0xF8
 005482D6    push ecx
 005482D7    push ebx
 005482D8    push esi
 005482D9    push edi
-005482DA    call 0x0056B800
+005482DA    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 005482DF    mov esi, eax
-005482E1    call 0x00573400
+005482E1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005482E6    movzx esi, si
 005482E9    mov edi, dword ptr ds:[eax+0x04]
 005482EC    cmp esi, 0x320
 005482F2    jb 0x005482F9
-005482F4    call 0x00591930
+005482F4    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005482F9    imul eax, esi, 0x64
 005482FC    xor ebx, ebx
 005482FE    push ecx
@@ -25,7 +31,7 @@
 0054831D    add esp, 0x08
 00548320    lea ecx, ds:[ebx+eax*1]
 00548323    mov eax, 0x55555556
-00548328    imul ecx
+00548328    imul ecx                                        ; => [ Call: sub_568960 ]
 0054832A    push 0x00
 0054832C    mov edi, edx
 0054832E    mov ecx, 0x3EB
@@ -33,7 +39,7 @@
 00548336    add edi, edx
 00548338    xor edx, edx
 0054833A    push 0x00
-0054833C    call 0x00568960
+0054833C    call 0x00568960                                 ; => [ Call: sub_568960 ]
 00548341    add esp, 0x08
 00548344    xor edx, edx
 00548346    mov ecx, 0x3EC
@@ -41,7 +47,7 @@
 0054834D    push 0x00
 0054834F    push 0x00
 00548351    call 0x00568960
-00548356    add eax, esi
+00548356    add eax, esi                                    ; => [ Call: sub_568960 ]
 00548358    add esp, 0x0C
 0054835B    cmp eax, edi
 0054835D    cmovl edi, eax

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_700aa0
+// 起始地址: 0x700aa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700AA0    push ebp
 00700AA1    mov ebp, esp
 00700AA3    push ecx
@@ -11,7 +17,7 @@
 00700AB2    push 0x01
 00700AB4    mov eax, dword ptr ds:[eax]
 00700AB6    call eax
-00700AB8    mov ecx, dword ptr ds:[0x0147DED4]
+00700AB8    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700ABE    mov eax, dword ptr ss:[ebp-0x04]
 00700AC1    cmp dword ptr ds:[ecx+0x409C], eax
 00700AC7    jz 0x00700AE6
@@ -21,7 +27,7 @@
 00700AD5    push 0x8892
 00700ADA    mov eax, dword ptr ds:[eax]
 00700ADC    call eax
-00700ADE    mov eax, dword ptr ds:[0x0147B06C]
+00700ADE    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00700AE3    inc dword ptr ds:[eax+0x10]
 00700AE6    mov bl, byte ptr ss:[ebp+0x14]
 00700AE9    mov esi, dword ptr ss:[ebp+0x0C]
@@ -36,7 +42,7 @@
 00700B08    mov eax, dword ptr ds:[eax]
 00700B0A    call eax
 00700B0C    lea ecx, ds:[edi+0x424C]
-00700B12    call 0x00706A30
+00700B12    call 0x00706A30                                 ; => [ Call: sub_706a30 ]
 00700B17    mov ecx, dword ptr ss:[ebp-0x04]
 00700B1A    pop edi
 00700B1B    mov dword ptr ds:[eax], ecx

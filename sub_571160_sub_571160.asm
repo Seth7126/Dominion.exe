@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571160
+// 起始地址: 0x571160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571160    push ebp
 00571161    mov ebp, esp
 00571163    and esp, 0xFFFFFFF8
@@ -14,19 +20,19 @@
 0057117B    mov dword ptr ss:[esp+0x14], ecx
 0057117F    mov dword ptr ss:[esp+0x10], eax
 00571183    call 0x00573400
-00571188    mov ebx, dword ptr ds:[eax+0x04]
+00571188    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0057118B    movzx eax, di
 0057118E    mov dword ptr ss:[esp+0x0C], eax
 00571192    cmp eax, 0x320
 00571197    jb 0x005711A2
-00571199    call 0x00591930
+00571199    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057119E    mov eax, dword ptr ss:[esp+0x0C]
 005711A2    push dword ptr ss:[esp+0x10]
 005711A6    imul eax, eax, 0x64
 005711A9    mov ecx, ebx
 005711AB    push dword ptr ss:[esp+0x18]
 005711AF    mov edx, dword ptr ds:[eax+ebx*1+0x1A4C]
-005711B6    call 0x005754F0
+005711B6    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 005711BB    add esp, 0x08
 005711BE    test al, al
 005711C0    jz 0x005711E0
@@ -36,7 +42,7 @@
 005711C9    call 0x005682C0
 005711CE    add esp, 0x04
 005711D1    test al, al
-005711D3    jz 0x005711E0
+005711D3    jz 0x005711E0                                   ; => [ Call: sub_5682c0 ]
 005711D5    mov al, 0x01
 005711D7    pop edi
 005711D8    pop esi

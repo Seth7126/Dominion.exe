@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64b0d0
+// 起始地址: 0x64b0d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064B0D0    push ebp
 0064B0D1    mov ebp, esp
 0064B0D3    and esp, 0xFFFFFFC0
@@ -49,7 +55,7 @@
 0064B171    mulss xmm3, xmm3
 0064B175    addss xmm0, xmm1
 0064B179    addss xmm0, xmm3
-0064B17D    call 0x004AC580
+0064B17D    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064B182    movss xmm1, dword ptr ds:[0x00890DEC]
 0064B18A    comiss xmm1, xmm0
 0064B18D    jnbe 0x0064B1A0

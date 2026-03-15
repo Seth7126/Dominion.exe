@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69ca80
+// 起始地址: 0x69ca80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069CA80    push ebp
 0069CA81    mov ebp, esp
 0069CA83    and esp, 0xFFFFFFF8
@@ -13,7 +19,7 @@
 0069CA95    push eax
 0069CA96    push 0x00
 0069CA98    push ebx
-0069CA99    call 0x00761FC4
+0069CA99    call 0x00761FC4                                 ; => [ Call: memset ]
 0069CA9E    add esp, 0x0C
 0069CAA1    cmp dword ptr ds:[edi+0x08], 0x00
 0069CAA5    jz 0x0069CAEA
@@ -31,7 +37,7 @@
 0069CAC7    mov ecx, ebx
 0069CAC9    push eax
 0069CACA    jnl 0x0069CAE2
-0069CACC    call 0x0069C840
+0069CACC    call 0x0069C840                                 ; => [ Call: sub_69c840 ]
 0069CAD1    add esp, 0x04
 0069CAD4    mov edx, esi
 0069CAD6    cmp esi, 0xFFFFFFFF
@@ -42,7 +48,7 @@
 0069CADE    mov esp, ebp
 0069CAE0    pop ebp
 0069CAE1    ret
-0069CAE2    call 0x0069C840
+0069CAE2    call 0x0069C840                                 ; => [ Call: sub_69c840 ]
 0069CAE7    add esp, 0x04
 0069CAEA    pop edi
 0069CAEB    pop esi
@@ -55,10 +61,10 @@
 0069CAF8    push 0x879400
 0069CAFD    mov edx, 0x801800
 0069CB02    mov ecx, 0x87948C
-0069CB07    call 0x0063B870
+0069CB07    call 0x0063B870                                 ; => [ String: pDefMap->definitionSize != 0 | Call: sub_63b870 | String: DefinitionGetSize | String: C:\x\ax2017\Engine\Definition.cpp | Data: data_801800 ]
 0069CB0C    add esp, 0x0C
 0069CB0F    call 0x0063BC30
 0069CB14    test al, al
-0069CB16    jz 0x0069CB19
+0069CB16    jz 0x0069CB19                                   ; => [ Call: sub_63bc30 ]
 0069CB18    int3
-0069CB19    call 0x0063BB00
+0069CB19    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

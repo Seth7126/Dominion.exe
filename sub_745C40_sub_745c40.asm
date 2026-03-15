@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_745c40
+// 起始地址: 0x745c40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00745C40    push ebp
 00745C41    mov ebp, esp
 00745C43    sub esp, 0x18
@@ -5,20 +11,20 @@
 00745C4D    push esi
 00745C4E    push edi
 00745C4F    mov edi, ecx
-00745C51    jz 0x007460BB
+00745C51    jz 0x007460BB                                   ; => [ Data: data_1513462 ]
 00745C57    mov esi, dword ptr ds:[0x00775374]
 00745C5D    push 0x11
 00745C5F    call esi
 00745C61    test ax, ax
 00745C64    jns 0x00745E86
 00745C6A    cmp dword ptr ds:[0x0151345C], 0x01
-00745C71    jz 0x00745C82
-00745C73    push 0x88FD2C
+00745C71    jz 0x00745C82                                   ; => [ Data: data_151345c ]
+00745C73    push 0x88FD2C                                   ; => [ String: OffsetActiveSet ]
 00745C78    push 0x297
 00745C7D    jmp 0x007461C5
 00745C82    mov ecx, dword ptr ds:[0x0151245C]
 00745C88    xor edx, edx
-00745C8A    call 0x00744F10
+00745C8A    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 00745C8F    movss xmm7, dword ptr ds:[edi]
 00745C93    mov esi, eax
 00745C95    movss xmm6, dword ptr ds:[edi+0x04]
@@ -150,16 +156,16 @@
 00745E84    pop ebp
 00745E85    ret
 00745E86    cmp byte ptr ds:[0x01513462], 0x00
-00745E8D    jz 0x007460BB
+00745E8D    jz 0x007460BB                                   ; => [ Data: data_1513462 ]
 00745E93    push 0x11
 00745E95    call esi
 00745E97    test ax, ax
 00745E9A    js 0x007460BB
 00745EA0    cmp dword ptr ds:[0x0151345C], 0x01
-00745EA7    jnz 0x007461BB
+00745EA7    jnz 0x007461BB                                  ; => [ Data: data_151345c ]
 00745EAD    mov ecx, dword ptr ds:[0x0151245C]
 00745EB3    xor edx, edx
-00745EB5    call 0x00744F10
+00745EB5    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 00745EBA    mov ecx, eax
 00745EBC    movss xmm0, dword ptr ds:[0x00890D84]
 00745EC4    movss xmm6, dword ptr ds:[ecx+0x10]
@@ -287,11 +293,11 @@
 007460BA    ret
 007460BB    xor esi, esi
 007460BD    cmp dword ptr ds:[0x0151345C], esi
-007460C3    jle 0x007461B5
+007460C3    jle 0x007461B5                                  ; => [ Data: data_151345c ]
 007460C9    nop dword ptr ds:[eax], eax
 007460D0    mov ecx, dword ptr ds:[esi*4+0x151245C]
 007460D7    xor edx, edx
-007460D9    call 0x00744F10
+007460D9    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 007460DE    movss xmm0, dword ptr ds:[edi]
 007460E2    mov edx, eax
 007460E4    movss xmm1, dword ptr ds:[edi+0x04]
@@ -349,21 +355,21 @@
 007461A1    movups xmm0, xmmword ptr ss:[ebp-0x18]
 007461A5    movups xmmword ptr ds:[edx+0x10], xmm0
 007461A9    cmp esi, dword ptr ds:[0x0151345C]
-007461AF    jl 0x007460D0
+007461AF    jl 0x007460D0                                   ; => [ Data: data_151345c ]
 007461B5    pop edi
 007461B6    pop esi
 007461B7    mov esp, ebp
 007461B9    pop ebp
 007461BA    ret
-007461BB    push 0x88FD2C
+007461BB    push 0x88FD2C                                   ; => [ String: OffsetActiveSet ]
 007461C0    push 0x2A2
 007461C5    push 0x88FC60
 007461CA    mov edx, 0x801800
 007461CF    mov ecx, 0x88FD00
-007461D4    call 0x0063B870
+007461D4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Editor\UIEditor.cpp | String: gUI.s.activeSetCount == 1 | String: OffsetActiveSet ]
 007461D9    add esp, 0x0C
 007461DC    call 0x0063BC30
 007461E1    test al, al
-007461E3    jz 0x007461E6
+007461E3    jz 0x007461E6                                   ; => [ Call: sub_63bc30 ]
 007461E5    int3
-007461E6    call 0x0063BB00
+007461E6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

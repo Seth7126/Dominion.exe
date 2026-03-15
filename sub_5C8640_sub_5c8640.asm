@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c8640
+// 起始地址: 0x5c8640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C8640    push ebp
 005C8641    mov ebp, esp
 005C8643    sub esp, 0x20
@@ -18,7 +24,7 @@
 005C866A    mov dword ptr ss:[ebp-0x0C], edi
 005C866D    test edx, edx
 005C866F    jnz 0x005C8679
-005C8671    xorps xmm0, xmm0
+005C8671    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 005C8674    jmp 0x005C8715
 005C8679    mov ebx, dword ptr ds:[ecx+0x04]
 005C867C    mov ecx, 0x01

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64c550
+// 起始地址: 0x64c550
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064C550    push ebp
 0064C551    mov ebp, esp
 0064C553    and esp, 0xFFFFFFF8
@@ -20,11 +26,11 @@
 0064C58F    movss dword ptr ss:[esp+0x18], xmm0
 0064C595    jmp 0x0064C5F1
 0064C597    subss xmm1, dword ptr ds:[esi+0x88]
-0064C59F    call 0x0067F6B0
+0064C59F    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C5A4    movss xmm1, dword ptr ss:[esp+0x14]
 0064C5AA    lea ecx, ds:[esi+0x3C]
 0064C5AD    movss dword ptr ss:[esp+0x1C], xmm0
-0064C5B3    call 0x0067F6B0
+0064C5B3    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C5B8    movss xmm1, dword ptr ss:[esp+0x14]
 0064C5BE    lea ecx, ds:[esi+0x78]
 0064C5C1    movss dword ptr ss:[esp+0x20], xmm0
@@ -35,7 +41,7 @@
 0064C5DB    subss xmm0, dword ptr ss:[esp+0x1C]
 0064C5E1    mulss xmm2, xmm0
 0064C5E5    addss xmm2, dword ptr ss:[esp+0x1C]
-0064C5EB    movss dword ptr ss:[esp+0x18], xmm2
+0064C5EB    movss dword ptr ss:[esp+0x18], xmm2             ; => [ Call: sub_64c3c0 ]
 0064C5F1    movss xmm0, dword ptr ds:[esi+0x10C]
 0064C5F9    lea edi, ds:[esi+0x90]
 0064C5FF    addss xmm0, dword ptr ds:[edi+0x78]
@@ -51,11 +57,11 @@
 0064C62B    jmp 0x0064C689
 0064C62D    subss xmm1, dword ptr ds:[edi+0x88]
 0064C635    mov ecx, edi
-0064C637    call 0x0067F6B0
+0064C637    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C63C    movss xmm1, dword ptr ss:[esp+0x14]
 0064C642    lea ecx, ds:[edi+0x3C]
 0064C645    movss dword ptr ss:[esp+0x1C], xmm0
-0064C64B    call 0x0067F6B0
+0064C64B    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C650    movss xmm1, dword ptr ss:[esp+0x14]
 0064C656    lea ecx, ds:[edi+0x78]
 0064C659    movss dword ptr ss:[esp+0x20], xmm0
@@ -66,7 +72,7 @@
 0064C673    subss xmm0, dword ptr ss:[esp+0x1C]
 0064C679    mulss xmm2, xmm0
 0064C67D    addss xmm2, dword ptr ss:[esp+0x1C]
-0064C683    movss dword ptr ss:[esp+0x1C], xmm2
+0064C683    movss dword ptr ss:[esp+0x1C], xmm2             ; => [ Call: sub_64c3c0 ]
 0064C689    movss xmm0, dword ptr ds:[esi+0x19C]
 0064C691    lea edi, ds:[esi+0x120]
 0064C697    addss xmm0, dword ptr ds:[edi+0x78]
@@ -82,11 +88,11 @@
 0064C6C3    jmp 0x0064C721
 0064C6C5    subss xmm1, dword ptr ds:[edi+0x88]
 0064C6CD    mov ecx, edi
-0064C6CF    call 0x0067F6B0
+0064C6CF    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C6D4    movss xmm1, dword ptr ss:[esp+0x14]
 0064C6DA    lea ecx, ds:[edi+0x3C]
 0064C6DD    movss dword ptr ss:[esp+0x24], xmm0
-0064C6E3    call 0x0067F6B0
+0064C6E3    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C6E8    movss xmm1, dword ptr ss:[esp+0x14]
 0064C6EE    lea ecx, ds:[edi+0x78]
 0064C6F1    movss dword ptr ss:[esp+0x20], xmm0
@@ -97,7 +103,7 @@
 0064C70B    subss xmm0, dword ptr ss:[esp+0x24]
 0064C711    mulss xmm2, xmm0
 0064C715    addss xmm2, dword ptr ss:[esp+0x24]
-0064C71B    movss dword ptr ss:[esp+0x20], xmm2
+0064C71B    movss dword ptr ss:[esp+0x20], xmm2             ; => [ Call: sub_64c3c0 ]
 0064C721    movss xmm0, dword ptr ds:[esi+0x22C]
 0064C729    add esi, 0x1B0
 0064C72F    movaps xmm2, xmm1
@@ -112,11 +118,11 @@
 0064C755    jmp 0x0064C7A7
 0064C757    subss xmm1, dword ptr ds:[esi+0x88]
 0064C75F    mov ecx, esi
-0064C761    call 0x0067F6B0
+0064C761    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C766    movss xmm1, dword ptr ss:[esp+0x14]
 0064C76C    lea ecx, ds:[esi+0x3C]
 0064C76F    movss dword ptr ss:[esp+0x10], xmm0
-0064C775    call 0x0067F6B0
+0064C775    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0064C77A    movss xmm1, dword ptr ss:[esp+0x14]
 0064C780    lea ecx, ds:[esi+0x78]
 0064C783    movss dword ptr ss:[esp+0x24], xmm0
@@ -125,7 +131,7 @@
 0064C791    movss xmm0, dword ptr ss:[esp+0x24]
 0064C797    subss xmm0, dword ptr ss:[esp+0x10]
 0064C79D    mulss xmm2, xmm0
-0064C7A1    addss xmm2, dword ptr ss:[esp+0x10]
+0064C7A1    addss xmm2, dword ptr ss:[esp+0x10]             ; => [ Call: sub_64c3c0 ]
 0064C7A7    mov eax, dword ptr ss:[ebp+0x08]
 0064C7AA    movss xmm1, dword ptr ss:[esp+0x18]
 0064C7B0    movss xmm3, dword ptr ss:[esp+0x1C]

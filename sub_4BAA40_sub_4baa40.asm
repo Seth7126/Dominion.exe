@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4baa40
+// 起始地址: 0x4baa40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BAA40    cmp ecx, 0x3E8
 004BAA46    jl 0x004BAA5D
 004BAA48    xor eax, eax
@@ -12,10 +18,10 @@
 004BAA67    push 0x801AF8
 004BAA6C    mov edx, 0x801800
 004BAA71    mov ecx, 0x801AA4
-004BAA76    call 0x0063B870
+004BAA76    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp | String: Halt | String: SyncedKeyType ]
 004BAA7B    add esp, 0x0C
 004BAA7E    call 0x0063BC30
 004BAA83    test al, al
-004BAA85    jz 0x004BAA88
+004BAA85    jz 0x004BAA88                                   ; => [ Call: sub_63bc30 ]
 004BAA87    int3
-004BAA88    jmp 0x0063BB00
+004BAA88    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

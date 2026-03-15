@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_569e50
+// 起始地址: 0x569e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00569E50    push ebp
 00569E51    mov ebp, esp
 00569E53    sub esp, 0x34
@@ -5,7 +11,7 @@
 00569E57    push esi
 00569E58    push edi
 00569E59    mov dword ptr ss:[ebp-0x2C], ecx
-00569E5C    call 0x00573400
+00569E5C    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00569E61    mov dword ptr ss:[ebp-0x34], eax
 00569E64    mov ebx, dword ptr ds:[eax+0x04]
 00569E67    xor eax, eax
@@ -63,7 +69,7 @@
 00569F1A    setz cl
 00569F1D    push dword ptr ds:[edx]
 00569F1F    mov edx, 0x1C
-00569F24    call 0x0061B1B0
+00569F24    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00569F29    mov edx, dword ptr ss:[ebp-0x18]
 00569F2C    add esp, 0x2C
 00569F2F    mov ecx, dword ptr ds:[edx]
@@ -100,7 +106,7 @@
 00569F7D    push 0x14
 00569F7F    push ecx
 00569F80    setz cl
-00569F83    call 0x0061B1B0
+00569F83    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00569F88    mov edx, dword ptr ss:[ebp-0x18]
 00569F8B    add esp, 0x2C
 00569F8E    dec dword ptr ds:[ebx+0x19B8]
@@ -116,7 +122,7 @@
 00569FC5    add esi, 0x3B568
 00569FCB    sub dword ptr ss:[ebp-0x10], 0xA8
 00569FD2    add esi, ebx
-00569FD4    rep movsd
+00569FD4    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00569FD6    mov esi, dword ptr ss:[ebp-0x20]
 00569FD9    mov ecx, dword ptr ss:[ebp-0x24]
 00569FDC    sub esi, 0xA8

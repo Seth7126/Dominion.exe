@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_700850
+// 起始地址: 0x700850
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700850    push ebp
 00700851    mov ebp, esp
 00700853    mov edx, dword ptr ss:[ebp+0x08]
@@ -6,9 +12,9 @@
 00700859    push edi
 0070085A    test edx, edx
 0070085C    jnz 0x0070086F
-0070085E    push 0x88D514
+0070085E    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 00700863    push 0x6C
-00700865    mov ecx, 0x802734
+00700865    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 0070086A    jmp 0x00700A77
 0070086F    movzx eax, dx
 00700872    cmp eax, dword ptr ds:[esi+0x4250]
@@ -43,7 +49,7 @@
 007008E7    push eax
 007008E8    push 0x01
 007008EA    call dword ptr ds:[0x00775218]
-007008F0    mov ecx, dword ptr ds:[0x0147DED4]
+007008F0    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 007008F6    mov eax, dword ptr ds:[ecx+0x40A8]
 007008FC    cmp eax, dword ptr ss:[ebp+0x08]
 007008FF    jnz 0x0070090B
@@ -117,15 +123,15 @@
 00700A66    pop esi
 00700A67    pop ebp
 00700A68    ret 0x04
-00700A6B    push 0x88D514
+00700A6B    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 00700A70    push 0x6D
-00700A72    mov ecx, 0x802748
+00700A72    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00700A77    push 0x80193C
 00700A7C    mov edx, 0x801800
-00700A81    call 0x0063B870
+00700A81    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\DataArray.h | String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 00700A86    add esp, 0x0C
 00700A89    call 0x0063BC30
 00700A8E    test al, al
-00700A90    jz 0x00700A93
+00700A90    jz 0x00700A93                                   ; => [ Call: sub_63bc30 ]
 00700A92    int3
-00700A93    call 0x0063BB00
+00700A93    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

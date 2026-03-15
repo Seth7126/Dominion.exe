@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_572ac0
+// 起始地址: 0x572ac0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00572AC0    push ebp
 00572AC1    mov ebp, esp
 00572AC3    sub esp, 0x08
@@ -8,7 +14,7 @@
 00572ACB    push edx
 00572ACC    mov edx, dword ptr ss:[ebp+0x08]
 00572ACF    mov dword ptr ss:[ebp-0x04], eax
-00572AD2    call 0x005722C0
+00572AD2    call 0x005722C0                                 ; => [ Call: sub_5722c0 ]
 00572AD7    mov ebx, dword ptr ss:[ebp+0x0C]
 00572ADA    add esp, 0x04
 00572ADD    mov edx, dword ptr ss:[ebp+0x10]
@@ -16,7 +22,7 @@
 00572AE2    mov ecx, dword ptr ss:[ebp-0x04]
 00572AE5    push ebx
 00572AE6    mov edi, dword ptr ds:[esi]
-00572AE8    call 0x00572350
+00572AE8    call 0x00572350                                 ; => [ Call: sub_572350 ]
 00572AED    mov ecx, dword ptr ds:[esi]
 00572AEF    add esp, 0x04
 00572AF2    mov dword ptr ds:[eax], ecx
@@ -27,7 +33,7 @@
 00572B00    movzx esi, di
 00572B03    cmp esi, 0x320
 00572B09    jb 0x00572B10
-00572B0B    call 0x00591930
+00572B0B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572B10    mov ecx, dword ptr ss:[ebp-0x04]
 00572B13    mov edx, dword ptr ss:[ebp+0x10]
 00572B16    imul esi, esi, 0x64
@@ -58,7 +64,7 @@
 00572B60    push edi
 00572B61    push ebx
 00572B62    setz cl
-00572B65    call 0x0061B1B0
+00572B65    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00572B6A    add esp, 0x2C
 00572B6D    mov edi, dword ptr ds:[esi+0x1AA4]
 00572B73    test edi, edi

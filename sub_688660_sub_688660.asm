@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_688660
+// 起始地址: 0x688660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00688660    push ebp
 00688661    mov ebp, esp
 00688663    sub esp, 0x14
-00688666    mov eax, dword ptr ds:[0x0147ABE8]
+00688666    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 0068866B    push ebx
 0068866C    push esi
 0068866D    mov esi, ecx
@@ -14,12 +20,12 @@
 00688686    mov ecx, dword ptr ds:[esi+0x10]
 00688689    cmp dword ptr ds:[ecx+0x04], 0x15
 0068868D    jz 0x006886A8
-0068868F    push 0x877324
+0068868F    push 0x877324                                   ; => [ String: SoundGetDef ]
 00688694    push 0x356
-00688699    push 0x8772E4
-0068869E    mov ecx, 0x877344
+00688699    push 0x8772E4                                   ; => [ String: C:\x\ax2017\Engine\Sound.cpp ]
+0068869E    mov ecx, 0x877344                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 006886A3    jmp 0x00688904
-006886A8    call 0x005AF880
+006886A8    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006886AD    xorps xmm2, xmm2
 006886B0    mov dword ptr ss:[ebp-0x04], eax
 006886B3    movss xmm0, dword ptr ds:[eax+0x04]
@@ -27,11 +33,11 @@
 006886BB    lahf
 006886BC    test ah, 0x44
 006886BF    jnp 0x0068876A
-006886C5    mov ebx, dword ptr ds:[0x0147ABF0]
+006886C5    mov ebx, dword ptr ds:[0x0147ABF0]              ; => [ Data: data_147abf0 ]
 006886CB    xor ecx, ecx
 006886CD    mov eax, dword ptr ds:[esi+0x10]
 006886D0    mov dword ptr ss:[ebp-0x10], eax
-006886D3    xor eax, eax
+006886D3    xor eax, eax                                    ; => [ Call: nullptr ]
 006886D5    mov esi, dword ptr ss:[ebp-0x10]
 006886D8    imul edx, dword ptr ds:[ebx+0x04], 0x64
 006886DC    mov edi, dword ptr ds:[ebx]
@@ -57,7 +63,7 @@
 0068870D    cmp ecx, eax
 0068870F    jnl 0x0068876A
 00688711    movss xmm3, dword ptr ss:[ebp-0x0C]
-00688716    xor ecx, ecx
+00688716    xor ecx, ecx                                    ; => [ Call: nullptr ]
 00688718    test ecx, ecx
 0068871A    jnz 0x0068872E
 0068871C    mov ecx, edi
@@ -80,13 +86,13 @@
 00688748    cmp eax, dword ptr ds:[ebx+0x08]
 0068874B    jnz 0x006887AE
 0068874D    mov eax, dword ptr ds:[esi]
-0068874F    mov ecx, 0x801800
+0068874F    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 00688754    mov eax, dword ptr ds:[eax+0x20]
 00688757    test eax, eax
 00688759    cmovnz ecx, eax
 0068875C    push ecx
 0068875D    push 0x877304
-00688762    call 0x0063B5F0
+00688762    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Too many sounds, not playing %s ]
 00688767    add esp, 0x08
 0068876A    xor eax, eax
 0068876C    pop edi
@@ -119,9 +125,9 @@
 006887AC    pop ebp
 006887AD    ret
 006887AE    jb 0x006887C4
-006887B0    push 0x877378
+006887B0    push 0x877378                                   ; => [ String: DataArray<struct SoundInstance>::DataArrayAlloc ]
 006887B5    push 0xF4
-006887BA    mov ecx, 0x8019B8
+006887BA    mov ecx, 0x8019B8                               ; => [ String: mUsedCount < mMaxSize ]
 006887BF    jmp 0x006888FF
 006887C4    mov eax, dword ptr ds:[ebx+0x0C]
 006887C7    mov edi, dword ptr ds:[ebx+0x04]
@@ -141,7 +147,7 @@
 006887EF    push 0x00
 006887F1    add esi, dword ptr ds:[ebx]
 006887F3    push esi
-006887F4    call 0x00761FC4
+006887F4    call 0x00761FC4                                 ; => [ Call: memset ]
 006887F9    mov eax, dword ptr ds:[ebx+0x14]
 006887FC    add esp, 0x0C
 006887FF    shl eax, 0x10
@@ -174,7 +180,7 @@
 00688853    mov dword ptr ds:[esi+0x3C], 0x3F800000
 0068885A    mov al, byte ptr ds:[ebx+0x17]
 0068885D    mov byte ptr ds:[esi+0x5D], al
-00688860    call 0x00688590
+00688860    call 0x00688590                                 ; => [ Call: sub_688590 ]
 00688865    movss dword ptr ds:[esi+0x48], xmm0
 0068886A    mov dword ptr ds:[esi+0x50], 0x3F000000
 00688871    movss xmm1, dword ptr ds:[ebx+0x04]
@@ -184,11 +190,11 @@
 00688881    jnp 0x00688899
 00688883    movsd xmm0, qword ptr ds:[0x00890EA8]
 0068888B    cvtps2pd xmm1, xmm1
-0068888E    call 0x00762090
+0068888E    call 0x00762090                                 ; => [ Call: _libm_sse2_pow_precise ]
 00688893    cvtsd2ss xmm0, xmm0
 00688897    jmp 0x006888A1
 00688899    movss xmm0, dword ptr ds:[0x00890E18]
-006888A1    mov ecx, dword ptr ds:[0x0147ABEC]
+006888A1    mov ecx, dword ptr ds:[0x0147ABEC]              ; => [ Data: data_147abec ]
 006888A7    movss dword ptr ds:[esi+0x4C], xmm0
 006888AC    push ebx
 006888AD    push esi
@@ -197,7 +203,7 @@
 006888B3    call eax
 006888B5    test al, al
 006888B7    jnz 0x006888D8
-006888B9    mov edx, dword ptr ds:[0x0147ABF0]
+006888B9    mov edx, dword ptr ds:[0x0147ABF0]              ; => [ Data: data_147abf0 ]
 006888BF    movzx eax, word ptr ds:[esi+0x60]
 006888C3    mov ecx, dword ptr ds:[edx+0x0C]
 006888C6    mov dword ptr ds:[edx+0x0C], eax
@@ -220,15 +226,15 @@
 006888EC    mov esp, ebp
 006888EE    pop ebp
 006888EF    ret
-006888F0    push 0x877378
+006888F0    push 0x877378                                   ; => [ String: DataArray<struct SoundInstance>::DataArrayAlloc ]
 006888F5    push 0xF5
-006888FA    mov ecx, 0x8019D0
-006888FF    push 0x80193C
+006888FA    mov ecx, 0x8019D0                               ; => [ String: mFreeListHead <= mMaxUsedCount ]
+006888FF    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
 00688904    mov edx, 0x801800
-00688909    call 0x0063B870
+00688909    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0068890E    add esp, 0x0C
 00688911    call 0x0063BC30
 00688916    test al, al
-00688918    jz 0x0068891B
+00688918    jz 0x0068891B                                   ; => [ Call: sub_63bc30 ]
 0068891A    int3
-0068891B    call 0x0063BB00
+0068891B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

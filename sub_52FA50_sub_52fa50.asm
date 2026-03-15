@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_52fa50
+// 起始地址: 0x52fa50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052FA50    dword B8EC8B55
 0052FA54    or byte ptr ds:[ecx], bl
 0052FA56    add byte ptr ds:[eax], al
-0052FA58    call 0x00761E50
+0052FA58    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0052FA5D    mov eax, dword ptr ds:[0x008C4040]
 0052FA62    xor eax, ebp
-0052FA64    mov dword ptr ss:[ebp-0x04], eax
+0052FA64    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 0052FA67    push esi
 0052FA68    lea edx, ss:[ebp-0xC84]
 0052FA6E    lea ecx, ss:[ebp-0x1904]
-0052FA74    call 0x0056D830
+0052FA74    call 0x0056D830                                 ; => [ Call: sub_56d830 ]
 0052FA79    mov esi, eax
 0052FA7B    xor edx, edx
 0052FA7D    xor ecx, ecx
@@ -21,11 +27,11 @@
 0052FA93    dec eax
 0052FA94    or eax, 0xFFFFFFF8
 0052FA97    inc eax
-0052FA98    movaps xmm3, xmmword ptr ds:[0x00891390]
+0052FA98    movaps xmm3, xmmword ptr ds:[0x00891390]        ; => [ Data: data_891390 ]
 0052FA9F    mov edx, esi
 0052FAA1    sub edx, eax
-0052FAA3    xorps xmm2, xmm2
-0052FAA6    xorps xmm1, xmm1
+0052FAA3    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+0052FAA6    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 0052FAA9    lea eax, ss:[ebp-0xC84]
 0052FAAF    nop
 0052FAB0    movups xmm0, xmmword ptr ds:[eax+ecx*4]
@@ -61,7 +67,7 @@
 0052FB21    xor ecx, ebp
 0052FB23    neg eax
 0052FB25    pop esi
-0052FB26    call 0x0075927A
+0052FB26    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0052FB2B    mov esp, ebp
 0052FB2D    pop ebp
 0052FB2E    ret

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a5840
+// 起始地址: 0x5a5840
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A5840    push ebp
 005A5841    mov ebp, esp
 005A5843    mov eax, 0x10028
-005A5848    call 0x00761E50
+005A5848    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A584D    mov eax, dword ptr ds:[0x008C4040]
 005A5852    xor eax, ebp
-005A5854    mov dword ptr ss:[ebp-0x08], eax
+005A5854    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 005A5857    movss xmm3, dword ptr ds:[0x008910A4]
 005A585F    xor eax, eax
 005A5861    push ebx
@@ -65,7 +71,7 @@
 005A592D    push 0x4000
 005A5932    lea edx, ss:[ebp-0x0C]
 005A5935    lea ecx, ss:[ebp-0x1000C]
-005A593B    call 0x005ACC00
+005A593B    call 0x005ACC00                                 ; => [ Call: sub_5acc00 ]
 005A5940    mov eax, dword ptr ss:[ebp-0x1000C]
 005A5946    add esp, 0x08
 005A5949    lea ecx, ds:[eax+eax*2]
@@ -92,7 +98,7 @@
 005A5999    pop esi
 005A599A    xor ecx, ebp
 005A599C    pop ebx
-005A599D    call 0x0075927A
+005A599D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A59A2    mov esp, ebp
 005A59A4    pop ebp
 005A59A5    ret
@@ -101,10 +107,10 @@
 005A59B0    push 0x8250E0
 005A59B5    mov edx, 0x801800
 005A59BA    mov ecx, 0x82530C
-005A59BF    call 0x0063B870
+005A59BF    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: mesh.points[idxs[0]].z >= mesh.points[idxs[1]].z | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: CalcFlux ]
 005A59C4    add esp, 0x0C
 005A59C7    call 0x0063BC30
 005A59CC    test al, al
-005A59CE    jz 0x005A59D1
+005A59CE    jz 0x005A59D1                                   ; => [ Call: sub_63bc30 ]
 005A59D0    int3
-005A59D1    call 0x0063BB00
+005A59D1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

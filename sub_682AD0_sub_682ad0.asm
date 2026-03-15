@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_682ad0
+// 起始地址: 0x682ad0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00682AD0    push ebp
 00682AD1    mov ebp, esp
 00682AD3    sub esp, 0x60
-00682AD6    mov eax, dword ptr ds:[0x008C4040]
+00682AD6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00682ADB    xor eax, ebp
 00682ADD    mov dword ptr ss:[ebp-0x08], eax
 00682AE0    push ebx
@@ -12,8 +18,8 @@
 00682AE8    mov edi, dword ptr ss:[ebp+0x10]
 00682AEB    mov esi, edx
 00682AED    mov dword ptr ss:[ebp-0x60], eax
-00682AF0    call 0x005A0E40
-00682AF5    mov ecx, dword ptr ds:[0x0147ABE4]
+00682AF0    call 0x005A0E40                                 ; => [ Call: sub_5a0e40 ]
+00682AF5    mov ecx, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 00682AFB    mov dword ptr ss:[ebp-0x54], eax
 00682AFE    mov eax, dword ptr ss:[ebp+0x08]
 00682B01    mov dword ptr ss:[ebp-0x50], edx
@@ -119,14 +125,14 @@
 00682CB9    movss dword ptr ss:[ebp-0x28], xmm1
 00682CBE    movss dword ptr ss:[ebp-0x18], xmm1
 00682CC3    movss dword ptr ss:[ebp-0x0C], xmm0
-00682CC8    call 0x006867A0
+00682CC8    call 0x006867A0                                 ; => [ Call: sub_6867a0 ]
 00682CCD    mov ecx, dword ptr ss:[ebp-0x08]
 00682CD0    add esp, 0x10
 00682CD3    xor ecx, ebp
 00682CD5    pop edi
 00682CD6    pop esi
 00682CD7    pop ebx
-00682CD8    call 0x0075927A
+00682CD8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00682CDD    mov esp, ebp
 00682CDF    pop ebp
 00682CE0    ret

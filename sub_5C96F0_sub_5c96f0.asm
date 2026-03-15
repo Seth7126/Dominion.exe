@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c96f0
+// 起始地址: 0x5c96f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C96F0    push ebp
 005C96F1    mov ebp, esp
 005C96F3    sub esp, 0x1C
@@ -32,14 +38,14 @@
 005C9741    mov ecx, dword ptr ss:[ebp-0x08]
 005C9744    push eax
 005C9745    mov dword ptr ss:[ebp-0x14], edx
-005C9748    call 0x005C9BA0
+005C9748    call 0x005C9BA0                                 ; => [ Call: sub_5c9ba0 ]
 005C974D    lea eax, ds:[ebx+edi*1]
 005C9750    mov ecx, edi
 005C9752    push esi
 005C9753    push eax
 005C9754    sub ecx, ebx
 005C9756    mov edx, edi
-005C9758    call 0x005C9BA0
+005C9758    call 0x005C9BA0                                 ; => [ Call: sub_5c9ba0 ]
 005C975D    mov eax, dword ptr ss:[ebp-0x0C]
 005C9760    mov ebx, eax
 005C9762    sub ebx, dword ptr ss:[ebp-0x04]
@@ -53,19 +59,19 @@
 005C9776    mov edx, edi
 005C9778    push esi
 005C9779    push ebx
-005C977A    call 0x005C9BA0
+005C977A    call 0x005C9BA0                                 ; => [ Call: sub_5c9ba0 ]
 005C977F    add esp, 0x20
 005C9782    jmp 0x005C9792
 005C9784    push ecx
 005C9785    mov ecx, dword ptr ss:[ebp-0x08]
 005C9788    mov edx, edi
-005C978A    call 0x005C9BA0
+005C978A    call 0x005C9BA0                                 ; => [ Call: sub_5c9ba0 ]
 005C978F    add esp, 0x08
 005C9792    lea ebx, ds:[edi+0x04]
 005C9795    cmp dword ptr ss:[ebp-0x08], edi
 005C9798    jnb 0x005C980A
 005C979A    nop word ptr ds:[eax+eax*1], ax
-005C97A0    mov edx, dword ptr ds:[0x00CCEA08]
+005C97A0    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C97A6    mov eax, dword ptr ds:[edi]
 005C97A8    mov ecx, dword ptr ds:[edi-0x04]
 005C97AB    mov dword ptr ss:[ebp-0x10], eax
@@ -83,7 +89,7 @@
 005C97C9    mov eax, dword ptr ss:[ebp-0x14]
 005C97CC    cmp eax, dword ptr ss:[ebp-0x10]
 005C97CF    jl 0x005C980A
-005C97D1    mov edx, dword ptr ds:[0x00CCEA08]
+005C97D1    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C97D7    mov eax, dword ptr ds:[edi-0x04]
 005C97DA    mov ecx, dword ptr ds:[edi]
 005C97DC    mov dword ptr ss:[ebp-0x10], eax
@@ -107,7 +113,7 @@
 005C980A    mov ecx, dword ptr ss:[ebp+0x08]
 005C980D    cmp ebx, ecx
 005C980F    jnb 0x005C9874
-005C9811    mov ecx, dword ptr ds:[0x00CCEA08]
+005C9811    mov ecx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9817    mov eax, dword ptr ds:[ebx]
 005C9819    mov esi, dword ptr ds:[edi]
 005C981B    mov dword ptr ss:[ebp-0x14], eax
@@ -123,7 +129,7 @@
 005C9834    jnle 0x005C9871
 005C9836    cmp dword ptr ss:[ebp-0x14], esi
 005C9839    jl 0x005C9871
-005C983B    mov ecx, dword ptr ds:[0x00CCEA08]
+005C983B    mov ecx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9841    mov eax, dword ptr ds:[edi]
 005C9843    mov esi, dword ptr ds:[ebx]
 005C9845    mov dword ptr ss:[ebp-0x14], eax
@@ -151,7 +157,7 @@
 005C987B    nop dword ptr ds:[eax+eax*1], eax
 005C9880    cmp esi, ecx
 005C9882    jnb 0x005C98FE
-005C9884    mov edx, dword ptr ds:[0x00CCEA08]
+005C9884    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C988A    mov eax, dword ptr ds:[esi]
 005C988C    mov ecx, dword ptr ds:[edi]
 005C988E    mov dword ptr ss:[ebp-0x10], eax
@@ -169,7 +175,7 @@
 005C98AC    mov eax, dword ptr ss:[ebp-0x14]
 005C98AF    cmp eax, dword ptr ss:[ebp-0x10]
 005C98B2    jl 0x005C98F3
-005C98B4    mov edx, dword ptr ds:[0x00CCEA08]
+005C98B4    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C98BA    mov eax, dword ptr ds:[edi]
 005C98BC    mov ecx, dword ptr ds:[esi]
 005C98BE    mov dword ptr ss:[ebp-0x10], eax
@@ -205,7 +211,7 @@
 005C990C    mov dword ptr ss:[ebp-0x0C], edx
 005C990F    nop
 005C9910    mov ecx, dword ptr ds:[edx]
-005C9912    mov edx, dword ptr ds:[0x00CCEA08]
+005C9912    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9918    mov eax, dword ptr ds:[edi]
 005C991A    mov dword ptr ss:[ebp-0x10], eax
 005C991D    mov dword ptr ss:[ebp-0x14], ecx
@@ -223,7 +229,7 @@
 005C993B    cmp eax, dword ptr ss:[ebp-0x10]
 005C993E    jl 0x005C9987
 005C9940    mov eax, dword ptr ss:[ebp-0x0C]
-005C9943    mov edx, dword ptr ds:[0x00CCEA08]
+005C9943    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9949    mov ecx, dword ptr ds:[edi]
 005C994B    mov dword ptr ss:[ebp-0x14], ecx
 005C994E    mov eax, dword ptr ds:[eax]
@@ -325,10 +331,10 @@
 005C9A3F    push 0x828508
 005C9A44    mov edx, 0x801800
 005C9A49    mov ecx, 0x828538
-005C9A4E    call 0x0063B870
+005C9A4E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ItemCompare | String: C:\x\ax2017\Jams\Dominion\code\PileLayout.cpp | String: gPile.fnItemCompare ]
 005C9A53    add esp, 0x0C
 005C9A56    call 0x0063BC30
 005C9A5B    test al, al
-005C9A5D    jz 0x005C9A60
+005C9A5D    jz 0x005C9A60                                   ; => [ Call: sub_63bc30 ]
 005C9A5F    int3
-005C9A60    call 0x0063BB00
+005C9A60    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

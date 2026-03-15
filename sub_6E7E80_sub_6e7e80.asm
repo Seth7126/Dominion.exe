@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e7e80
+// 起始地址: 0x6e7e80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7E80    push ebp
 006E7E81    mov ebp, esp
 006E7E83    and esp, 0xFFFFFFF8
@@ -22,7 +28,7 @@
 006E7EC0    push dword ptr ss:[ebp+0x08]
 006E7EC3    mov edx, esi
 006E7EC5    mov ecx, ebx
-006E7EC7    call 0x006E7D30
+006E7EC7    call 0x006E7D30                                 ; => [ Call: sub_6e7d30 ]
 006E7ECC    add esp, 0x04
 006E7ECF    mov dword ptr ss:[esp+0x20], eax
 006E7ED3    movss xmm1, dword ptr ss:[esp+0x20]
@@ -62,11 +68,11 @@
 006E7F3E    mov ecx, esi
 006E7F40    call 0x00687730
 006E7F45    push esi
-006E7F46    mov edi, eax
+006E7F46    mov edi, eax                                    ; => [ Call: sub_687730 ]
 006E7F48    push 0x00
 006E7F4A    push edi
 006E7F4B    mov dword ptr ss:[esp+0x20], edi
-006E7F4F    call 0x00761FC4
+006E7F4F    call 0x00761FC4                                 ; => [ Call: memset ]
 006E7F54    mov edx, dword ptr ss:[esp+0x18]
 006E7F58    add esp, 0x0C
 006E7F5B    mov dword ptr ds:[edx], edi
@@ -86,9 +92,9 @@
 006E7F8B    mov eax, dword ptr ds:[ebx+0x08]
 006E7F8E    cmp eax, 0xFFFF
 006E7F93    jl 0x006E7FA9
-006E7F95    push 0x8827EC
+006E7F95    push 0x8827EC                                   ; => [ String: FlanimCompressConstantVec2 ]
 006E7F9A    push 0x5A2
-006E7F9F    mov ecx, 0x8827C4
+006E7F9F    mov ecx, 0x8827C4                               ; => [ String: pMayaVertex->mFrameCount < MAXUINT16 ]
 006E7FA4    jmp 0x006E80B6
 006E7FA9    xor esi, esi
 006E7FAB    test eax, eax
@@ -97,7 +103,7 @@
 006E7FB0    push dword ptr ss:[ebp+0x08]
 006E7FB3    mov edx, esi
 006E7FB5    mov ecx, ebx
-006E7FB7    call 0x006E7D30
+006E7FB7    call 0x006E7D30                                 ; => [ Call: sub_6e7d30 ]
 006E7FBC    add esp, 0x04
 006E7FBF    mov dword ptr ss:[esp+0x20], eax
 006E7FC3    movss xmm1, dword ptr ss:[esp+0x20]
@@ -138,10 +144,10 @@
 006E803D    mov ecx, esi
 006E803F    call 0x00687730
 006E8044    push esi
-006E8045    mov edi, eax
+006E8045    mov edi, eax                                    ; => [ Call: sub_687730 ]
 006E8047    push 0x00
 006E8049    push edi
-006E804A    call 0x00761FC4
+006E804A    call 0x00761FC4                                 ; => [ Call: memset ]
 006E804F    mov edx, dword ptr ss:[esp+0x18]
 006E8053    add esp, 0x0C
 006E8056    mov dword ptr ds:[edx], edi
@@ -153,7 +159,7 @@
 006E8068    mov ecx, ebx
 006E806A    push dword ptr ss:[ebp+0x08]
 006E806D    mov edx, edi
-006E806F    call 0x006E7D30
+006E806F    call 0x006E7D30                                 ; => [ Call: sub_6e7d30 ]
 006E8074    mov dword ptr ss:[esp+0x24], eax
 006E8078    add esp, 0x04
 006E807B    movss xmm0, dword ptr ss:[esp+0x20]
@@ -171,15 +177,15 @@
 006E80A3    mov esp, ebp
 006E80A5    pop ebp
 006E80A6    ret
-006E80A7    push 0x8827EC
+006E80A7    push 0x8827EC                                   ; => [ String: FlanimCompressConstantVec2 ]
 006E80AC    push 0x5B1
-006E80B1    mov ecx, 0x882824
+006E80B1    mov ecx, 0x882824                               ; => [ String: dataIndex == numValues ]
 006E80B6    push 0x882314
 006E80BB    mov edx, 0x801800
-006E80C0    call 0x0063B870
+006E80C0    call 0x0063B870                                 ; => [ String: FlanimCompressConstantVec2 | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Flanim.cpp ]
 006E80C5    add esp, 0x0C
 006E80C8    call 0x0063BC30
 006E80CD    test al, al
-006E80CF    jz 0x006E80D2
+006E80CF    jz 0x006E80D2                                   ; => [ Call: sub_63bc30 ]
 006E80D1    int3
-006E80D2    call 0x0063BB00
+006E80D2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

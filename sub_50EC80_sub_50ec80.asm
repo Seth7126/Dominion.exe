@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_50ec80
+// 起始地址: 0x50ec80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050EC80    push ebp
 0050EC81    mov ebp, esp
 0050EC83    mov ecx, dword ptr ss:[ebp+0x08]
 0050EC86    mov edx, 0x18
-0050EC8B    call 0x00571B30
+0050EC8B    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0050EC90    mov ecx, dword ptr ds:[eax+0x98]
 0050EC96    mov eax, dword ptr ds:[eax+0x9C]
 0050EC9C    and ecx, 0x7F000400

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4eb460
+// 起始地址: 0x4eb460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EB460    push ebp
 004EB461    mov ebp, esp
 004EB463    sub esp, 0x14
@@ -28,7 +34,7 @@
 004EB4C3    cvtps2pd xmm0, xmm0
 004EB4C6    movsd qword ptr ss:[ebp-0x14], xmm0
 004EB4CB    fld qword ptr ss:[ebp-0x14]
-004EB4CE    call 0x00762368
+004EB4CE    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 004EB4D3    fstp qword ptr ss:[ebp-0x14]
 004EB4D6    movsd xmm0, qword ptr ss:[ebp-0x14]
 004EB4DB    cvtpd2ps xmm0, xmm0
@@ -43,7 +49,7 @@
 004EB509    subss xmm2, xmm0
 004EB50D    addss xmm2, xmm2
 004EB511    movaps xmm0, xmm2
-004EB514    call 0x004AE0B0
+004EB514    call 0x004AE0B0                                 ; => [ Call: sub_4ae0b0 ]
 004EB519    movss xmm3, dword ptr ds:[0x00890E18]
 004EB521    comiss xmm0, xmm3
 004EB524    jb 0x004EB558
@@ -59,7 +65,7 @@
 004EB551    movss dword ptr ds:[edi+0x04], xmm2
 004EB556    jmp 0x004EB581
 004EB558    cvtps2pd xmm0, xmm2
-004EB55B    call 0x00762380
+004EB55B    call 0x00762380                                 ; => [ Call: _libm_sse2_asin_precise ]
 004EB560    cvtsd2ss xmm0, xmm0
 004EB564    movss xmm3, dword ptr ds:[0x00890E18]
 004EB56C    mulss xmm0, dword ptr ds:[0x00891030]
@@ -82,7 +88,7 @@
 004EB5BC    cvtps2pd xmm0, xmm3
 004EB5BF    movsd qword ptr ss:[ebp-0x14], xmm0
 004EB5C4    fld qword ptr ss:[ebp-0x14]
-004EB5C7    call 0x00762368
+004EB5C7    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 004EB5CC    fstp qword ptr ss:[ebp-0x14]
 004EB5CF    movsd xmm0, qword ptr ss:[ebp-0x14]
 004EB5D4    mov eax, edi

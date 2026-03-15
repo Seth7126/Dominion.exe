@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_56b490
+// 起始地址: 0x56b490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056B490    push ebp
 0056B491    mov ebp, esp
 0056B493    sub esp, 0xCEC
-0056B499    mov eax, dword ptr ds:[0x008C4040]
+0056B499    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0056B49E    xor eax, ebp
 0056B4A0    mov dword ptr ss:[ebp-0x04], eax
 0056B4A3    push ebx
@@ -13,7 +19,7 @@
 0056B4AF    xor edx, edx
 0056B4B1    mov esi, dword ptr ds:[eax+0x04]
 0056B4B4    lea eax, ds:[edx+0x07]
-0056B4B7    add esi, 0x1594
+0056B4B7    add esi, 0x1594                                 ; => [ Call: sub_573400 ]
 0056B4BD    nop dword ptr ds:[eax], eax
 0056B4C0    mov ecx, dword ptr ds:[esi]
 0056B4C2    test ecx, ecx
@@ -26,7 +32,7 @@
 0056B4D5    jl 0x0056B4C0
 0056B4D7    xorps xmm0, xmm0
 0056B4DA    mov dword ptr ss:[ebp-0xCAC], 0x00
-0056B4E4    movlpd qword ptr ss:[ebp-0xCB4], xmm0
+0056B4E4    movlpd qword ptr ss:[ebp-0xCB4], xmm0           ; => [ Call: __builtin_memset ]
 0056B4EC    lea eax, ss:[ebp-0xCE8]
 0056B4F2    movlpd qword ptr ss:[ebp-0xCA4], xmm0
 0056B4FA    lea ecx, ss:[ebp-0xC88]
@@ -44,14 +50,14 @@
 0056B543    movups xmmword ptr ss:[ebp-0xCD8], xmm0
 0056B54A    movups xmm0, xmmword ptr ss:[ebp-0xC98]
 0056B551    movups xmmword ptr ss:[ebp-0xCC8], xmm0
-0056B558    call 0x0056B410
+0056B558    call 0x0056B410                                 ; => [ Call: sub_56b410 ]
 0056B55D    mov ecx, dword ptr ss:[ebp-0x04]
 0056B560    add esp, 0x0C
 0056B563    xor ecx, ebp
 0056B565    pop edi
 0056B566    pop esi
 0056B567    pop ebx
-0056B568    call 0x0075927A
+0056B568    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0056B56D    mov esp, ebp
 0056B56F    pop ebp
 0056B570    ret

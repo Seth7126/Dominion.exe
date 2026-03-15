@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_5442b0
+// 起始地址: 0x5442b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005442B0    dword B8EC8B55
 005442B4    add al, 0x19
 005442B6    add byte ptr ds:[eax], al
-005442B8    call 0x00761E50
+005442B8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005442BD    mov eax, dword ptr ds:[0x008C4040]
 005442C2    xor eax, ebp
-005442C4    mov dword ptr ss:[ebp-0x04], eax
+005442C4    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005442C7    lea eax, ss:[ebp-0xC84]
 005442CD    mov ecx, 0x3E9
 005442D2    push eax
 005442D3    lea edx, ss:[ebp-0x1904]
-005442D9    call 0x0056D740
+005442D9    call 0x0056D740                                 ; => [ Call: sub_56d740 ]
 005442DE    add esp, 0x04
 005442E1    xor edx, edx
 005442E3    xor ecx, ecx
@@ -29,7 +35,7 @@
 00544312    cmp edx, 0x05
 00544315    setnl al
 00544318    xor ecx, ebp
-0054431A    call 0x0075927A
+0054431A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0054431F    mov esp, ebp
 00544321    pop ebp
 00544322    ret

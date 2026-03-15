@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a65b0
+// 起始地址: 0x5a65b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A65B0    push ebp
 005A65B1    mov ebp, esp
 005A65B3    sub esp, 0x28
@@ -11,7 +17,7 @@
 005A65C5    mov dword ptr ss:[ebp-0x04], esi
 005A65C8    lea eax, ds:[edi+0x04]
 005A65CB    push eax
-005A65CC    call 0x00761FC4
+005A65CC    call 0x00761FC4                                 ; => [ Call: memset ]
 005A65D1    mov eax, dword ptr ds:[edi+0x1C4]
 005A65D7    add esp, 0x0C
 005A65DA    mov dword ptr ds:[edi], 0x02
@@ -50,7 +56,7 @@
 005A6650    push edi
 005A6651    push ebx
 005A6652    movss dword ptr ss:[ebp-0x1C], xmm0
-005A6657    call 0x007621D0
+005A6657    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A665C    mov ebx, eax
 005A665E    mov dword ptr ss:[ebp-0x14], 0x00
 005A6665    mov eax, dword ptr ss:[ebp-0x04]
@@ -80,7 +86,7 @@
 005A66A5    or eax, 0x3F800000
 005A66AA    push ebx
 005A66AB    mov dword ptr ss:[ebp-0x14], eax
-005A66AE    call 0x007621D0
+005A66AE    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A66B3    mov edi, eax
 005A66B5    mov eax, dword ptr ss:[ebp-0x04]
 005A66B8    mov esi, edx
@@ -91,7 +97,7 @@
 005A66C9    adc esi, dword ptr ds:[eax+0x0C]
 005A66CC    push esi
 005A66CD    push edi
-005A66CE    call 0x007621D0
+005A66CE    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A66D3    add eax, ebx
 005A66D5    movss xmm0, dword ptr ss:[ebp-0x14]
 005A66DA    mov ebx, dword ptr ss:[ebp-0x04]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56e060
+// 起始地址: 0x56e060
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056E060    push ebp
 0056E061    mov ebp, esp
 0056E063    and esp, 0xFFFFFFF8
@@ -5,13 +11,13 @@
 0056E069    push esi
 0056E06A    push edi
 0056E06B    mov edi, ecx
-0056E06D    call 0x00573400
+0056E06D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056E072    mov dword ptr ss:[esp+0x08], eax
 0056E076    cmp edi, 0xD4A
 0056E07C    jnz 0x0056E0A9
 0056E07E    call 0x00573400
 0056E083    xor esi, esi
-0056E085    mov eax, dword ptr ds:[eax+0x04]
+0056E085    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056E088    mov ecx, dword ptr ds:[eax+0x1520]
 0056E08E    test ecx, ecx
 0056E090    jle 0x0056E0E1
@@ -27,7 +33,7 @@
 0056E0AC    mov dword ptr ss:[esp+0x1C], eax
 0056E0B0    call 0x00573400
 0056E0B5    xor esi, esi
-0056E0B7    mov eax, dword ptr ds:[eax+0x04]
+0056E0B7    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056E0BA    mov ecx, dword ptr ds:[eax+0x1520]
 0056E0C0    test ecx, ecx
 0056E0C2    jle 0x0056E0E1
@@ -57,7 +63,7 @@
 0056E0FF    sub ecx, dword ptr ds:[edi+0x04]
 0056E102    mov eax, 0x51EB851F
 0056E107    sub ecx, 0x1A48
-0056E10D    imul ecx
+0056E10D    imul ecx                                        ; => [ Call: sub_5727e0 ]
 0056E10F    mov eax, dword ptr ds:[0x007BFAD0]
 0056E114    sar edx, 0x05
 0056E117    mov esi, edx
@@ -69,7 +75,7 @@
 0056E12B    mov eax, dword ptr ds:[edi+0x0C]
 0056E12E    mov dword ptr ss:[esp+0x08], eax
 0056E132    movzx edi, si
-0056E135    call 0x00573400
+0056E135    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056E13A    jmp 0x0056E161
 0056E13C    mov eax, dword ptr ds:[0x007BFAD0]
 0056E141    mov edi, dword ptr ss:[esp+0x08]
@@ -78,13 +84,13 @@
 0056E14E    mov dword ptr ss:[esp+0x0C], eax
 0056E152    mov eax, dword ptr ds:[edi+0x0C]
 0056E155    mov dword ptr ss:[esp+0x08], eax
-0056E159    call 0x00573400
+0056E159    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056E15E    movzx edi, si
 0056E161    mov eax, dword ptr ds:[eax+0x04]
 0056E164    mov dword ptr ss:[esp+0x1C], eax
 0056E168    cmp edi, 0x320
 0056E16E    jb 0x0056E175
-0056E170    call 0x00591930
+0056E170    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056E175    push dword ptr ss:[esp+0x0C]
 0056E179    mov eax, dword ptr ss:[esp+0x20]
 0056E17D    mov ecx, esi
@@ -102,4 +108,4 @@
 0056E1A5    pop esi
 0056E1A6    mov esp, ebp
 0056E1A8    pop ebp
-0056E1A9    ret
+0056E1A9    ret                                             ; => [ Call: nullptr | Call: sub_565ff0 ]

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_64bce0
+// 起始地址: 0x64bce0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064BCE0    push ebp
 0064BCE1    mov ebp, esp
 0064BCE3    sub esp, 0x0C
-0064BCE6    mov eax, dword ptr ds:[0x00BF23B8]
+0064BCE6    mov eax, dword ptr ds:[0x00BF23B8]              ; => [ Data: data_bf23b8 ]
 0064BCEB    mov dword ptr ss:[ebp-0x08], edx
 0064BCEE    push ebx
 0064BCEF    push esi
@@ -20,12 +26,12 @@
 0064BD18    mov eax, dword ptr ds:[ecx+0x14]
 0064BD1B    mov dword ptr ss:[ebp-0x04], eax
 0064BD1E    push 0xBF23E8
-0064BD23    call dword ptr ds:[0x00775138]
-0064BD29    mov ebx, dword ptr ds:[0x00C21008]
+0064BD23    call dword ptr ds:[0x00775138]                  ; => [ Data: data_bf23e8 ]
+0064BD29    mov ebx, dword ptr ds:[0x00C21008]              ; => [ Data: data_c21008 ]
 0064BD2F    xor esi, esi
 0064BD31    test ebx, ebx
 0064BD33    jle 0x0064BD79
-0064BD35    mov edi, 0xC1C808
+0064BD35    mov edi, 0xC1C808                               ; => [ Data: data_c1c808 ]
 0064BD3A    nop word ptr ds:[eax+eax*1], ax
 0064BD40    mov ecx, dword ptr ss:[ebp-0x04]
 0064BD43    mov eax, edi
@@ -53,9 +59,9 @@
 0064BD77    jl 0x0064BD40
 0064BD79    xor bl, bl
 0064BD7B    cmp dword ptr ds:[0x00BF23B8], 0x00
-0064BD82    jz 0x0064BD8F
+0064BD82    jz 0x0064BD8F                                   ; => [ Data: data_bf23b8 ]
 0064BD84    push 0xBF23E8
-0064BD89    call dword ptr ds:[0x00775144]
+0064BD89    call dword ptr ds:[0x00775144]                  ; => [ Data: data_bf23e8 ]
 0064BD8F    mov al, bl
 0064BD91    pop edi
 0064BD92    pop esi
@@ -86,10 +92,10 @@
 0064BDD2    push 0x873508
 0064BDD7    mov edx, 0x801800
 0064BDDC    mov ecx, 0x801AA4
-0064BDE1    call 0x0063B870
+0064BDE1    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GamecenterGetDLCSku | String: C:\x\ax2017\Engine\GameCenter.cpp | String: Halt ]
 0064BDE6    add esp, 0x0C
 0064BDE9    call 0x0063BC30
 0064BDEE    test al, al
-0064BDF0    jz 0x0064BDF3
+0064BDF0    jz 0x0064BDF3                                   ; => [ Call: sub_63bc30 ]
 0064BDF2    int3
-0064BDF3    call 0x0063BB00
+0064BDF3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

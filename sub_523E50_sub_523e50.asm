@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_523e50
+// 起始地址: 0x523e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00523E50    push ebp
 00523E51    mov ebp, esp
 00523E53    mov eax, dword ptr ss:[ebp+0x08]
-00523E56    mov dword ptr ds:[eax], 0x817D9C
+00523E56    mov dword ptr ds:[eax], 0x817D9C                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_0ad9a55f0365eb85a416a0b6e114fdb7>, void>::`vftable'{for `std::_Func_base<void>'} ]
 00523E5C    mov edx, dword ptr ds:[ecx+0x04]
 00523E5F    mov ecx, dword ptr ds:[ecx+0x08]
 00523E62    mov dword ptr ds:[eax+0x04], edx

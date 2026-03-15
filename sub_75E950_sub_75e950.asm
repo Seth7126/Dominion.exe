@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75e950
+// 起始地址: 0x75e950
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075E950    push ebp
 0075E951    mov ebp, esp
 0075E953    mov eax, dword ptr ss:[ebp+0x14]
@@ -22,13 +28,13 @@
 0075E99D    mov esi, 0x1000
 0075E9A2    push dword ptr ds:[edi+0x24]
 0075E9A5    shl esi, 0x03
-0075E9A8    call 0x007597B9
+0075E9A8    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 0075E9AD    lea eax, ds:[esi*4+0x10]
 0075E9B4    mov dword ptr ds:[edi+0x24], 0x00
 0075E9BB    push eax
 0075E9BC    mov dword ptr ds:[edi+0x20], 0x00
 0075E9C3    mov dword ptr ds:[edi+0x28], esi
-0075E9C6    call 0x007597A2
+0075E9C6    call 0x007597A2                                 ; => [ Call: sub_7597a2 ]
 0075E9CB    add esp, 0x08
 0075E9CE    mov dword ptr ds:[edi+0x24], eax
 0075E9D1    test eax, eax
@@ -39,13 +45,13 @@
 0075E9DE    mov esi, dword ptr ds:[edi+0x2C]
 0075E9E1    push dword ptr ds:[edi+0x34]
 0075E9E4    shl esi, 0x03
-0075E9E7    call 0x007597B9
+0075E9E7    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 0075E9EC    lea eax, ds:[esi*4+0x10]
 0075E9F3    mov dword ptr ds:[edi+0x34], 0x00
 0075E9FA    push eax
 0075E9FB    mov dword ptr ds:[edi+0x30], 0x00
 0075EA02    mov dword ptr ds:[edi+0x38], esi
-0075EA05    call 0x007597A2
+0075EA05    call 0x007597A2                                 ; => [ Call: sub_7597a2 ]
 0075EA0A    add esp, 0x08
 0075EA0D    mov dword ptr ds:[edi+0x34], eax
 0075EA10    test eax, eax
@@ -63,7 +69,7 @@
 0075EA30    or ecx, eax
 0075EA32    push ecx
 0075EA33    call 0x007597A2
-0075EA38    mov dword ptr ds:[edi+0x3C], eax
+0075EA38    mov dword ptr ds:[edi+0x3C], eax                ; => [ Call: sub_7597a2 ]
 0075EA3B    xor ecx, ecx
 0075EA3D    mov eax, dword ptr ds:[edi+0x18]
 0075EA40    mul esi
@@ -71,18 +77,18 @@
 0075EA45    neg ecx
 0075EA47    or ecx, eax
 0075EA49    push ecx
-0075EA4A    call 0x007597A2
+0075EA4A    call 0x007597A2                                 ; => [ Call: sub_7597a2 ]
 0075EA4F    mov esi, dword ptr ds:[edi+0x18]
 0075EA52    mov dword ptr ds:[edi+0x4C], eax
 0075EA55    push dword ptr ds:[edi+0x44]
 0075EA58    shl esi, 0x0D
-0075EA5B    call 0x007597B9
+0075EA5B    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 0075EA60    lea eax, ds:[esi*4+0x10]
 0075EA67    mov dword ptr ds:[edi+0x44], 0x00
 0075EA6E    push eax
 0075EA6F    mov dword ptr ds:[edi+0x40], 0x00
 0075EA76    mov dword ptr ds:[edi+0x48], esi
-0075EA79    call 0x007597A2
+0075EA79    call 0x007597A2                                 ; => [ Call: sub_7597a2 ]
 0075EA7E    add esp, 0x10
 0075EA81    mov dword ptr ds:[edi+0x44], eax
 0075EA84    test eax, eax
@@ -119,7 +125,7 @@
 0075EAD5    mov dword ptr ds:[edi+0x1068], eax
 0075EADB    mov eax, dword ptr ds:[edi+0x1058]
 0075EAE1    dec eax
-0075EAE2    mov dword ptr ds:[edi+0x1070], 0x3F733333
+0075EAE2    mov dword ptr ds:[edi+0x1070], 0x3F733333       ; => [ String: 33s? | Call: __builtin_strncpy ]
 0075EAEC    cmp eax, 0x07
 0075EAEF    jnbe 0x0075EC3E
 0075EAF5    jmp dword ptr ds:[eax*4+0x75EC48]

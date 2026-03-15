@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_702a70
+// 起始地址: 0x702a70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00702A70    push ebp
 00702A71    mov ebp, esp
 00702A73    sub esp, 0x14
@@ -25,24 +31,24 @@
 00702AAA    push edx
 00702AAB    push 0x00
 00702AAD    mov edx, 0x01
-00702AB2    call 0x007019A0
+00702AB2    call 0x007019A0                                 ; => [ Type: _EXCEPTION_REGISTRATION_RECORD | Call: sub_7019a0 ]
 00702AB7    add esp, 0x0C
 00702ABA    pop esi
 00702ABB    mov esp, ebp
 00702ABD    pop ebp
 00702ABE    ret 0x10
 00702AC1    lea eax, ds:[edx-0x53]
-00702AC4    mov dword ptr ss:[ebp-0x14], edx
-00702AC7    mov dword ptr ss:[ebp-0x0C], eax
+00702AC4    mov dword ptr ss:[ebp-0x14], edx                ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+00702AC7    mov dword ptr ss:[ebp-0x0C], eax                ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
 00702ACA    mov ecx, 0x8CE7BC
 00702ACF    mov eax, dword ptr ss:[ebp+0x10]
 00702AD2    mov dword ptr ss:[ebp-0x04], eax
 00702AD5    call 0x006DD320
 00702ADA    mov edx, dword ptr ss:[ebp+0x14]
 00702ADD    lea ecx, ss:[ebp-0x14]
-00702AE0    mov dword ptr ss:[ebp-0x08], eax
+00702AE0    mov dword ptr ss:[ebp-0x08], eax                ; => [ Call: sub_6dd320 | Data: data_8ce7bc ]
 00702AE3    mov dword ptr ss:[ebp-0x10], esi
-00702AE6    call 0x007024F0
+00702AE6    call 0x007024F0                                 ; => [ Call: sub_7024f0 ]
 00702AEB    pop esi
 00702AEC    mov esp, ebp
 00702AEE    pop ebp

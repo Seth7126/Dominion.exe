@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5930a0
+// 起始地址: 0x5930a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005930A0    mov eax, dword ptr ds:[ecx]
 005930A2    cmp eax, 0x03
 005930A5    jnbe 0x005930BC
@@ -13,10 +19,10 @@
 005930C6    push 0x81F4B8
 005930CB    mov edx, 0x801800
 005930D0    mov ecx, 0x801AA4
-005930D5    call 0x0063B870
+005930D5    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: ScoreEntryVP | String: Halt ]
 005930DA    add esp, 0x0C
 005930DD    call 0x0063BC30
 005930E2    test al, al
-005930E4    jz 0x005930E7
+005930E4    jz 0x005930E7                                   ; => [ Call: sub_63bc30 ]
 005930E6    int3
-005930E7    jmp 0x0063BB00
+005930E7    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

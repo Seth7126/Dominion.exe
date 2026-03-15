@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_72b850
+// 起始地址: 0x72b850
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072B850    push ebp
 0072B851    mov ebp, esp
 0072B853    sub esp, 0x60
-0072B856    mov eax, dword ptr ds:[0x008C4040]
+0072B856    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0072B85B    xor eax, ebp
 0072B85D    mov dword ptr ss:[ebp-0x04], eax
 0072B860    mov eax, dword ptr ss:[ebp+0x0C]
@@ -265,7 +271,7 @@
 0072BB86    jb 0x0072BC28
 0072BB8C    jnz 0x0072BB9C
 0072BB8E    mov ecx, ebx
-0072BB90    call 0x007202A0
+0072BB90    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072BB95    mov edi, eax
 0072BB97    mov dword ptr ss:[ebp-0x34], eax
 0072BB9A    jmp 0x0072BBA2
@@ -280,7 +286,7 @@
 0072BBB4    movzx eax, byte ptr ds:[eax]
 0072BBB7    mov edx, eax
 0072BBB9    mov dword ptr ss:[ebp-0x44], eax
-0072BBBC    call 0x0072B700
+0072BBBC    call 0x0072B700                                 ; => [ Call: sub_72b700 ]
 0072BBC1    add esp, 0x04
 0072BBC4    test eax, eax
 0072BBC6    jz 0x0072BE2E
@@ -329,7 +335,7 @@
 0072BC47    push esi
 0072BC48    mov edx, eax
 0072BC4A    mov ecx, ebx
-0072BC4C    call 0x0072B700
+0072BC4C    call 0x0072B700                                 ; => [ Call: sub_72b700 ]
 0072BC51    add esp, 0x04
 0072BC54    test eax, eax
 0072BC56    jz 0x0072BE2E
@@ -408,7 +414,7 @@
 0072BD41    call 0x0072B700
 0072BD46    add esp, 0x04
 0072BD49    test eax, eax
-0072BD4B    jz 0x0072BE2E
+0072BD4B    jz 0x0072BE2E                                   ; => [ Call: sub_72b700 ]
 0072BD51    mov eax, dword ptr ss:[ebp-0x34]
 0072BD54    movzx eax, al
 0072BD57    mov dword ptr ss:[ebp-0x44], eax
@@ -456,7 +462,7 @@
 0072BDC5    call 0x0072B700
 0072BDCA    add esp, 0x04
 0072BDCD    test eax, eax
-0072BDCF    jz 0x0072BE2E
+0072BDCF    jz 0x0072BE2E                                   ; => [ Call: sub_72b700 ]
 0072BDD1    mov ecx, dword ptr ss:[ebp-0x48]
 0072BDD4    inc edi
 0072BDD5    mov eax, dword ptr ss:[ebp-0x3C]
@@ -487,7 +493,7 @@
 0072BE1F    pop ebx
 0072BE20    mov ecx, dword ptr ss:[ebp-0x04]
 0072BE23    xor ecx, ebp
-0072BE25    call 0x0075927A
+0072BE25    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0072BE2A    mov esp, ebp
 0072BE2C    pop ebp
 0072BE2D    ret
@@ -497,7 +503,7 @@
 0072BE34    pop esi
 0072BE35    xor ecx, ebp
 0072BE37    pop ebx
-0072BE38    call 0x0075927A
+0072BE38    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0072BE3D    mov esp, ebp
 0072BE3F    pop ebp
 0072BE40    ret

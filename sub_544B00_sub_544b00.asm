@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_544b00
+// 起始地址: 0x544b00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00544B00    dword 83EC8B55
 00544B04    in al, 0xF8
 00544B06    mov eax, 0x1910
-00544B0B    call 0x00761E50
+00544B0B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00544B10    push esi
 00544B11    push edi
 00544B12    push 0x00
@@ -15,7 +21,7 @@
 00544B2A    lea edi, ss:[esp+0x08]
 00544B2E    mov esi, eax
 00544B30    mov ecx, 0x321
-00544B35    rep movsd
+00544B35    rep movsd                                       ; => [ Call: sub_5678e0 | Call: __builtin_memcpy ]
 00544B37    xor eax, eax
 00544B39    cmp dword ptr ss:[esp+0xC88], 0x01
 00544B41    pop edi

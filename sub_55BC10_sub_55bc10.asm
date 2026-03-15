@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_55bc10
+// 起始地址: 0x55bc10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055BC10    dword 83EC8B55
 0055BC14    in al, 0xF8
 0055BC16    push esi
 0055BC17    push edi
-0055BC18    call 0x00573400
+0055BC18    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055BC1D    push 0x00
 0055BC1F    push 0x00
 0055BC21    push 0x00
@@ -12,13 +18,13 @@
 0055BC2B    call 0x00576B30
 0055BC30    add esp, 0x10
 0055BC33    test eax, eax
-0055BC35    jle 0x0055BC84
+0055BC35    jle 0x0055BC84                                  ; => [ Call: sub_576b30 ]
 0055BC37    call 0x00573400
 0055BC3C    movzx esi, word ptr ss:[ebp+0x08]
-0055BC40    mov edi, dword ptr ds:[eax+0x04]
+0055BC40    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0055BC43    cmp esi, 0x320
 0055BC49    jb 0x0055BC50
-0055BC4B    call 0x00591930
+0055BC4B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0055BC50    imul eax, esi, 0x64
 0055BC53    mov ecx, edi
 0055BC55    push 0x00
@@ -27,11 +33,11 @@
 0055BC60    call 0x005754F0
 0055BC65    add esp, 0x08
 0055BC68    test al, al
-0055BC6A    jz 0x0055BC84
+0055BC6A    jz 0x0055BC84                                   ; => [ Call: sub_5754f0 ]
 0055BC6C    call 0x00573400
 0055BC71    mov eax, dword ptr ds:[eax+0x04]
 0055BC74    cmp dword ptr ds:[eax+0x19EC], 0x01
-0055BC7B    setz al
+0055BC7B    setz al                                         ; => [ Call: sub_573400 ]
 0055BC7E    pop edi
 0055BC7F    pop esi
 0055BC80    mov esp, ebp

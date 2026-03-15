@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4d9160
+// 起始地址: 0x4d9160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D9160    push ebp
 004D9161    mov ebp, esp
 004D9163    and esp, 0xFFFFFFF8
 004D9166    sub esp, 0x44
-004D9169    mov eax, dword ptr ds:[0x008C4040]
+004D9169    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004D916E    xor eax, esp
 004D9170    mov dword ptr ss:[esp+0x40], eax
 004D9174    push ebx
@@ -13,7 +19,7 @@
 004D917B    mov dword ptr ss:[esp+0x20], ebx
 004D917F    lea eax, ds:[ebx+0x4290]
 004D9185    mov dword ptr ds:[ebx+0x7450], 0x00
-004D918F    mov dword ptr ds:[0x00CC8D68], eax
+004D918F    mov dword ptr ds:[0x00CC8D68], eax              ; => [ Data: data_cc8d68 ]
 004D9194    mov dword ptr ss:[esp+0x10], edi
 004D9198    cmp dword ptr ds:[ebx+0x56D8], edi
 004D919E    jle 0x004D92C7
@@ -32,7 +38,7 @@
 004D91D3    push eax
 004D91D4    mov ecx, dword ptr ds:[ecx+0x04]
 004D91D7    mov dword ptr ss:[esp+0x2C], ecx
-004D91DB    call 0x00762120
+004D91DB    call 0x00762120                                 ; => [ Call: __alldiv ]
 004D91E0    cmp dword ptr ss:[esp+0x1C], edx
 004D91E4    jb 0x004D9241
 004D91E6    mov edx, dword ptr ss:[esp+0x18]
@@ -57,7 +63,7 @@
 004D9229    lea ecx, ss:[esp+0x30]
 004D922D    mov dword ptr ss:[esp+0x48], edx
 004D9231    mov dword ptr ss:[esp+0x4C], eax
-004D9235    call 0x006A7200
+004D9235    call 0x006A7200                                 ; => [ Call: sub_6a7200 | String: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQj3MqmxxzVMQdAQf/S/Wmta0aqcKyHpoPNJL8X4YKkQVW4dAMQv1rvkwOvZd3ck4Yyrrzl//Xdruzu7o6dLnBA== ]
 004D923A    add esp, 0x08
 004D923D    test al, al
 004D923F    jnz 0x004D92AE
@@ -91,7 +97,7 @@
 004D929A    lea eax, ds:[edx+0x20]
 004D929D    push eax
 004D929E    lea ecx, ds:[edi+0x20]
-004D92A1    call 0x0063D850
+004D92A1    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D92A6    mov ebx, dword ptr ss:[esp+0x20]
 004D92AA    mov edi, dword ptr ss:[esp+0x10]
 004D92AE    add dword ptr ss:[esp+0x0C], 0x28
@@ -102,7 +108,7 @@
 004D92C1    jl 0x004D91B4
 004D92C7    mov ecx, dword ptr ds:[0x00CC8DC8]
 004D92CD    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-004D92D3    call 0x004D8F30
+004D92D3    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004D92D8    mov esi, eax
 004D92DA    mov eax, dword ptr ds:[esi+0x42C0]
 004D92E0    test eax, eax
@@ -110,7 +116,7 @@
 004D92E4    lea ecx, ss:[esp+0x20]
 004D92E8    mov dword ptr ss:[esp+0x20], 0x01
 004D92F0    mov dword ptr ss:[esp+0x24], eax
-004D92F4    call 0x004DA5D0
+004D92F4    call 0x004DA5D0                                 ; => [ Call: sub_4da5d0 ]
 004D92F9    test al, al
 004D92FB    jnz 0x004D9307
 004D92FD    mov dword ptr ds:[esi+0x42C0], 0x00
@@ -119,7 +125,7 @@
 004D930C    pop esi
 004D930D    pop ebx
 004D930E    xor ecx, esp
-004D9310    call 0x0075927A
+004D9310    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004D9315    mov esp, ebp
 004D9317    pop ebp
 004D9318    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6806b0
+// 起始地址: 0x6806b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006806B0    push ebp
 006806B1    mov ebp, esp
 006806B3    sub esp, 0x1C
@@ -28,8 +34,8 @@
 006806F1    movzx eax, al
 006806F4    add esp, 0x08
 006806F7    neg eax
-006806F9    mov ecx, 0x801800
-006806FE    mov edx, ecx
+006806F9    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
+006806FE    mov edx, ecx                                    ; => [ Data: data_801800 ]
 00680700    sbb eax, eax
 00680702    add eax, 0x02
 00680705    add eax, esi
@@ -50,16 +56,16 @@
 0068072E    test edi, edi
 00680730    jz 0x00680757
 00680732    cmp byte ptr ds:[edi], 0x00
-00680735    jz 0x00680757
+00680735    jz 0x00680757                                   ; => [ Data: data_cf65bc ]
 00680737    mov ecx, esi
-00680739    call 0x0063D4E0
+00680739    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068073E    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00680742    jnz 0x00680757
 00680744    mov edx, dword ptr ds:[eax+0x0C]
 00680747    mov ecx, eax
 00680749    add edx, 0x10
-0068074C    call 0x0064C080
-00680751    mov dword ptr ds:[esi], 0x801800
+0068074C    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+00680751    mov dword ptr ds:[esi], 0x801800                ; => [ Data: data_801800 ]
 00680757    mov eax, dword ptr ss:[ebp-0x0C]
 0068075A    mov eax, dword ptr ds:[eax]
 0068075C    mov dword ptr ds:[esi], eax
@@ -68,7 +74,7 @@
 00680762    cmp byte ptr ds:[eax], 0x00
 00680765    jz 0x00680771
 00680767    mov ecx, esi
-00680769    call 0x0063D4E0
+00680769    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068076E    inc dword ptr ds:[eax+0x04]
 00680771    mov eax, dword ptr ss:[ebp-0x10]
 00680774    mov edi, eax
@@ -85,7 +91,7 @@
 00680791    lea ecx, ds:[ebx+edi*4]
 00680794    lea eax, ds:[ebx+edx*4]
 00680797    push eax
-00680798    call 0x0063D850
+00680798    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 0068079D    mov edi, dword ptr ss:[ebp-0x18]
 006807A0    cmp esi, edi
 006807A2    jnl 0x006807D2
@@ -101,7 +107,7 @@
 006807BA    push ebx
 006807BB    mov ebx, dword ptr ss:[ebp-0x08]
 006807BE    lea ecx, ds:[ebx+edi*4]
-006807C1    call 0x0063D850
+006807C1    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 006807C6    mov edi, esi
 006807C8    cmp dword ptr ss:[ebp-0x04], esi
 006807CB    jl 0x006807A4
@@ -110,9 +116,9 @@
 006807D2    mov edx, dword ptr ds:[ebx+edi*4]
 006807D5    lea esi, ds:[ebx+edi*4]
 006807D8    mov ebx, dword ptr ss:[ebp+0x0C]
-006807DB    mov edi, 0x801800
+006807DB    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 006807E0    test edx, edx
-006807E2    mov ecx, edi
+006807E2    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006807E4    cmovnz ecx, edx
 006807E7    mov eax, dword ptr ds:[ebx]
 006807E9    test eax, eax
@@ -124,16 +130,16 @@
 006807FB    test edx, edx
 006807FD    jz 0x00680824
 006807FF    cmp byte ptr ds:[edx], 0x00
-00680802    jz 0x00680824
+00680802    jz 0x00680824                                   ; => [ Data: data_cf65bc ]
 00680804    mov ecx, esi
-00680806    call 0x0063D4E0
+00680806    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068080B    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 0068080F    jnz 0x00680824
 00680811    mov edx, dword ptr ds:[eax+0x0C]
 00680814    mov ecx, eax
 00680816    add edx, 0x10
-00680819    call 0x0064C080
-0068081E    mov dword ptr ds:[esi], 0x801800
+00680819    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+0068081E    mov dword ptr ds:[esi], 0x801800                ; => [ Data: data_801800 ]
 00680824    mov eax, dword ptr ds:[ebx]
 00680826    mov dword ptr ds:[esi], eax
 00680828    test eax, eax
@@ -141,7 +147,7 @@
 0068082C    cmp byte ptr ds:[eax], 0x00
 0068082F    jz 0x0068083B
 00680831    mov ecx, esi
-00680833    call 0x0063D4E0
+00680833    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00680838    inc dword ptr ds:[eax+0x04]
 0068083B    pop edi
 0068083C    pop esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f4f40
+// 起始地址: 0x5f4f40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F4F40    push ebp
 005F4F41    mov ebp, esp
 005F4F43    mov eax, dword ptr ss:[ebp+0x08]
@@ -16,14 +22,14 @@
 005F4F5F    lea edx, ss:[ebp-0x08]
 005F4F62    lea ecx, ss:[ebp-0x04]
 005F4F65    call 0x004DAF40
-005F4F6A    mov ebx, eax
+005F4F6A    mov ebx, eax                                    ; => [ Call: sub_4daf40 ]
 005F4F6C    xor esi, esi
 005F4F6E    test ebx, ebx
 005F4F70    jle 0x005F4FC6
 005F4F72    mov eax, dword ptr ss:[ebp-0x04]
 005F4F75    mov edx, edi
 005F4F77    mov ecx, dword ptr ds:[eax+esi*4]
-005F4F7A    call 0x004DB650
+005F4F7A    call 0x004DB650                                 ; => [ Call: sub_4db650 ]
 005F4F7F    test al, al
 005F4F81    jnz 0x005F4F94
 005F4F83    inc esi
@@ -47,7 +53,7 @@
 005F4F9D    lea edx, ss:[ebp-0x08]
 005F4FA0    lea ecx, ss:[ebp-0x04]
 005F4FA3    call 0x004DAF40
-005F4FA8    mov ebx, eax
+005F4FA8    mov ebx, eax                                    ; => [ Call: sub_4daf40 ]
 005F4FAA    xor esi, esi
 005F4FAC    test ebx, ebx
 005F4FAE    jle 0x005F4FC6
@@ -56,7 +62,7 @@
 005F4FB5    mov ecx, dword ptr ds:[eax+esi*4]
 005F4FB8    call 0x004DB700
 005F4FBD    test al, al
-005F4FBF    jnz 0x005F4F94
+005F4FBF    jnz 0x005F4F94                                  ; => [ Call: sub_4db700 ]
 005F4FC1    inc esi
 005F4FC2    cmp esi, ebx
 005F4FC4    jl 0x005F4FB0
@@ -72,10 +78,10 @@
 005F4FD9    push 0x86F1E8
 005F4FDE    mov edx, 0x801800
 005F4FE3    mov ecx, 0x801AA4
-005F4FE8    call 0x0063B870
+005F4FE8    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: HasEntitlementForEdition | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: Halt ]
 005F4FED    add esp, 0x0C
 005F4FF0    call 0x0063BC30
 005F4FF5    test al, al
-005F4FF7    jz 0x005F4FFA
+005F4FF7    jz 0x005F4FFA                                   ; => [ Call: sub_63bc30 ]
 005F4FF9    int3
-005F4FFA    call 0x0063BB00
+005F4FFA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

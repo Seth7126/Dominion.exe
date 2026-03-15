@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_615860
+// 起始地址: 0x615860
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00615860    push ebp
 00615861    mov ebp, esp
 00615863    sub esp, 0x08
 00615866    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 00615870    push esi
-00615871    mov esi, dword ptr ds:[0x00B809E0]
+00615871    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 00615877    push edi
 00615878    mov edi, dword ptr ss:[ebp+0x20]
-0061587B    add eax, esi
+0061587B    add eax, esi                                    ; => [ Data: data_b809e4 ]
 0061587D    mov dword ptr ss:[ebp-0x04], edx
 00615880    mov edx, dword ptr ss:[ebp+0x24]
 00615883    cmp esi, eax
@@ -26,7 +32,7 @@
 006158B2    push dword ptr ss:[ebp+0x14]
 006158B5    push dword ptr ss:[ebp+0x18]
 006158B8    push dword ptr ss:[ebp+0x10]
-006158BB    call 0x00615360
+006158BB    call 0x00615360                                 ; => [ Call: sub_615360 ]
 006158C0    add esp, 0x1C
 006158C3    mov esi, eax
 006158C5    cmp dword ptr ds:[esi+0x2C], 0x04
@@ -66,12 +72,12 @@
 0061593E    cmp ecx, 0x06
 00615941    jnz 0x0061594C
 00615943    mov ecx, esi
-00615945    call 0x005CCEF0
+00615945    call 0x005CCEF0                                 ; => [ Call: sub_5ccef0 ]
 0061594A    jmp 0x0061597D
 0061594C    cmp ecx, 0x3F1
 00615952    jnz 0x0061595D
 00615954    mov ecx, esi
-00615956    call 0x005CD3E0
+00615956    call 0x005CD3E0                                 ; => [ Call: sub_5cd3e0 ]
 0061595B    jmp 0x0061597D
 0061595D    cmp ecx, 0x474
 00615963    jz 0x0061597D
@@ -82,14 +88,14 @@
 00615971    add esp, 0x08
 00615974    mov edx, eax
 00615976    mov ecx, esi
-00615978    call 0x005CD880
+00615978    call 0x005CD880                                 ; => [ Call: sub_5cd880 | Call: sub_5cc4b0 ]
 0061597D    mov ecx, esi
-0061597F    call 0x005CB5A0
+0061597F    call 0x005CB5A0                                 ; => [ Call: sub_5cb5a0 ]
 00615984    cmp byte ptr ss:[ebp+0x1C], 0x00
 00615988    jnz 0x00615995
 0061598A    push ecx
 0061598B    mov edx, edi
-0061598D    call 0x005AF980
+0061598D    call 0x005AF980                                 ; => [ Call: sub_5af980 ]
 00615992    add esp, 0x04
 00615995    pop edi
 00615996    pop esi
@@ -101,10 +107,10 @@
 006159A5    push 0x86F1E8
 006159AA    mov edx, 0x801800
 006159AF    mov ecx, 0x8686CC
-006159B4    call 0x0063B870
+006159B4    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: gfx.type == DOMGFX_TOKEN | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: DomModifyToken ]
 006159B9    add esp, 0x0C
 006159BC    call 0x0063BC30
 006159C1    test al, al
-006159C3    jz 0x006159C6
+006159C3    jz 0x006159C6                                   ; => [ Call: sub_63bc30 ]
 006159C5    int3
-006159C6    call 0x0063BB00
+006159C6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

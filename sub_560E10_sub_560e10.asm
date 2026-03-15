@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_560e10
+// 起始地址: 0x560e10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00560E10    dword 83EC8B55
 00560E14    in al, 0xF8
 00560E16    sub esp, 0xC88
@@ -12,7 +18,7 @@
 00560E34    push 0x560EA0
 00560E39    push 0x560E70
 00560E3E    lea ecx, ds:[edx-0x02]
-00560E41    call 0x0056C4A0
+00560E41    call 0x0056C4A0                                 ; => [ Call: sub_560ea0 | Call: sub_560e70 | Call: sub_56c4a0 | Call: sub_561af0 ]
 00560E46    push 0x02
 00560E48    lea eax, ss:[esp+0x14]
 00560E4C    mov dword ptr ss:[esp+0x14], 0x00
@@ -24,4 +30,4 @@
 00560E63    add esp, 0x1C
 00560E66    mov esp, ebp
 00560E68    pop ebp
-00560E69    ret
+00560E69    ret                                             ; => [ Call: sub_4fa160 | Call: sub_56bba0 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_74c590
+// 起始地址: 0x74c590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074C590    push ebp
 0074C591    mov ebp, esp
 0074C593    push esi
@@ -18,7 +24,7 @@
 0074C5C2    push 0x801800
 0074C5C7    push 0x88FF5C
 0074C5CC    push ecx
-0074C5CD    call dword ptr ds:[0x00775344]
+0074C5CD    call dword ptr ds:[0x00775344]                  ; => [ Call: nullptr | Data: data_801800 | String: SysDateTimePick32 | Type: HWND ]
 0074C5D3    mov esi, eax
 0074C5D5    test esi, esi
 0074C5D7    jnz 0x0074C5DC
@@ -28,7 +34,7 @@
 0074C5DC    push 0x88FF34
 0074C5E1    push 0x88FF34
 0074C5E6    push esi
-0074C5E7    call dword ptr ds:[0x00775424]
+0074C5E7    call dword ptr ds:[0x00775424]                  ; => [ Data: data_88ff34 ]
 0074C5ED    push 0x00
 0074C5EF    push 0x11
 0074C5F1    call dword ptr ds:[0x00775094]
@@ -42,11 +48,11 @@
 0074C60A    push eax
 0074C60B    push 0x88FEE8
 0074C610    push esi
-0074C611    call dword ptr ds:[0x00775410]
+0074C611    call dword ptr ds:[0x00775410]                  ; => [ String: Wprc ]
 0074C617    push 0x74BE50
 0074C61C    push 0xFFFFFFFC
 0074C61E    push esi
-0074C61F    call dword ptr ds:[0x007753D8]
+0074C61F    call dword ptr ds:[0x007753D8]                  ; => [ Call: sub_74be50 ]
 0074C625    mov eax, esi
 0074C627    pop esi
 0074C628    pop ebp

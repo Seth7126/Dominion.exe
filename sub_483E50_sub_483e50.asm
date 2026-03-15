@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_483e50
+// 起始地址: 0x483e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00483E50    mov edx, 0x22
 00483E55    mov ecx, 0x8537A8
-00483E5A    call 0x0069F030
-00483E5F    mov dword ptr ds:[0x0171E7F8], eax
+00483E5A    call 0x0069F030                                 ; => [ String: res/ui2/credits.ui2 | Call: sub_69f030 ]
+00483E5F    mov dword ptr ds:[0x0171E7F8], eax              ; => [ Data: data_171e7f8 ]
 00483E64    ret

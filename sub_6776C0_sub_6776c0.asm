@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6776c0
+// 起始地址: 0x6776c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006776C0    push ebp
 006776C1    mov ebp, esp
 006776C3    sub esp, 0x0C
@@ -9,7 +15,7 @@
 006776CE    push 0x69
 006776D0    push dword ptr ds:[0x01724A80]
 006776D6    mov ecx, 0x8CAE70
-006776DB    call 0x006DD1E0
+006776DB    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_8cae70 | Data: data_1724a80 ]
 006776E0    add esp, 0x08
 006776E3    mov dword ptr ss:[ebp-0x08], eax
 006776E6    test eax, eax
@@ -17,7 +23,7 @@
 006776EA    xor esi, esi
 006776EC    cmp dword ptr ds:[eax+0x08], esi
 006776EF    jle 0x00677722
-006776F1    xor edi, edi
+006776F1    xor edi, edi                                    ; => [ Call: nullptr ]
 006776F3    mov ebx, dword ptr ds:[eax]
 006776F5    push dword ptr ss:[ebp-0x04]
 006776F8    push dword ptr ds:[ebx+edi*1]
@@ -44,10 +50,10 @@
 0067772C    push 0x8739B4
 00677731    mov edx, 0x801800
 00677736    mov ecx, 0x801AA4
-0067773B    call 0x0063B870
+0067773B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | String: FindState | Data: data_801800 | String: Halt ]
 00677740    add esp, 0x0C
 00677743    call 0x0063BC30
 00677748    test al, al
-0067774A    jz 0x0067774D
+0067774A    jz 0x0067774D                                   ; => [ Call: sub_63bc30 ]
 0067774C    int3
-0067774D    call 0x0063BB00
+0067774D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

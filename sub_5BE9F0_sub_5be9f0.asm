@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5be9f0
+// 起始地址: 0x5be9f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BE9F0    push ebx
 005BE9F1    mov ebx, esp
 005BE9F3    sub esp, 0x08
@@ -8,18 +14,18 @@
 005BEA00    mov dword ptr ss:[esp+0x04], ebp
 005BEA04    mov ebp, esp
 005BEA06    push 0xFFFFFFFF
-005BEA08    push 0x769470
+005BEA08    push 0x769470                                   ; => [ Type: EHRegistrationNode | Call: sub_769470 ]
 005BEA0D    mov eax, dword ptr fs:[0x00000000]
-005BEA13    push eax
+005BEA13    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005BEA14    push ebx
 005BEA15    sub esp, 0x78
 005BEA18    push esi
 005BEA19    push edi
 005BEA1A    mov eax, dword ptr ds:[0x008C4040]
 005BEA1F    xor eax, ebp
-005BEA21    push eax
+005BEA21    push eax                                        ; => [ Data: __security_cookie ]
 005BEA22    lea eax, ss:[ebp-0x0C]
-005BEA25    mov dword ptr fs:[0x00000000], eax
+005BEA25    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005BEA2B    mov edi, edx
 005BEA2D    mov esi, ecx
 005BEA2F    mov dword ptr ss:[ebp-0x2C], esi
@@ -27,18 +33,18 @@
 005BEA35    mov dword ptr ss:[ebp-0x20], ecx
 005BEA38    mov dword ptr ds:[esi], 0x00
 005BEA3E    mov dword ptr ds:[esi+0x04], 0x00
-005BEA45    xor edx, edx
+005BEA45    xor edx, edx                                    ; => [ Call: nullptr ]
 005BEA47    mov dword ptr ss:[ebp-0x04], 0x00
 005BEA4E    test ecx, ecx
 005BEA50    jz 0x005BEA66
 005BEA52    jle 0x005BEA62
-005BEA54    call 0x005C0320
+005BEA54    call 0x005C0320                                 ; => [ Call: sub_5c0320 ]
 005BEA59    mov ecx, dword ptr ss:[ebp-0x20]
 005BEA5C    mov edx, eax
 005BEA5E    mov dword ptr ds:[esi], edx
 005BEA60    jmp 0x005BEA66
 005BEA62    mov dword ptr ds:[esi], edx
-005BEA64    xor edx, edx
+005BEA64    xor edx, edx                                    ; => [ Call: nullptr ]
 005BEA66    mov dword ptr ds:[esi+0x04], ecx
 005BEA69    mov eax, dword ptr ds:[edi]
 005BEA6B    mov dword ptr ss:[ebp-0x80], eax
@@ -75,8 +81,8 @@
 005BEAD9    addps xmm0, xmmword ptr ss:[ebp-0x50]
 005BEADD    call 0x005BE710
 005BEAE2    lea ecx, ss:[ebp-0x60]
-005BEAE5    movaps xmmword ptr ss:[ebp-0x60], xmm0
-005BEAE9    call 0x005BC5F0
+005BEAE5    movaps xmmword ptr ss:[ebp-0x60], xmm0          ; => [ Call: sub_5be710 | Call: sub_5bc480 ]
+005BEAE9    call 0x005BC5F0                                 ; => [ Call: sub_5bc5f0 ]
 005BEAEE    mov eax, dword ptr ss:[ebp-0x40]
 005BEAF1    mov edx, dword ptr ss:[ebp-0x18]
 005BEAF4    mov ecx, dword ptr ds:[eax]
@@ -100,11 +106,11 @@
 005BEB27    push ecx
 005BEB28    mov edx, eax
 005BEB2A    lea ecx, ss:[ebp-0x40]
-005BEB2D    call 0x005C6590
+005BEB2D    call 0x005C6590                                 ; => [ Call: sub_5c6590 ]
 005BEB32    add esp, 0x04
 005BEB35    mov eax, esi
 005BEB37    mov ecx, dword ptr ss:[ebp-0x0C]
-005BEB3A    mov dword ptr fs:[0x00000000], ecx
+005BEB3A    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005BEB41    pop ecx
 005BEB42    pop edi
 005BEB43    pop esi

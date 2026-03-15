@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_681fe0
+// 起始地址: 0x681fe0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00681FE0    push ebp
 00681FE1    mov ebp, esp
 00681FE3    sub esp, 0x90
-00681FE9    mov eax, dword ptr ds:[0x008C4040]
+00681FE9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00681FEE    xor eax, ebp
 00681FF0    mov dword ptr ss:[ebp-0x08], eax
 00681FF3    mov eax, dword ptr ds:[0x019E2754]
@@ -10,7 +16,7 @@
 00682000    mov ebx, dword ptr ss:[ebp+0x0C]
 00682003    push esi
 00682004    mov esi, dword ptr ss:[ebp+0x10]
-00682007    mov dword ptr ss:[ebp-0x0C], eax
+00682007    mov dword ptr ss:[ebp-0x0C], eax                ; => [ Data: data_19e2754 ]
 0068200A    lea eax, ss:[ebp-0x90]
 00682010    push edi
 00682011    mov edi, dword ptr ss:[ebp+0x08]
@@ -19,12 +25,12 @@
 00682018    push eax
 00682019    lea eax, ss:[ebp-0x1C]
 0068201C    push eax
-0068201D    movups xmmword ptr ss:[ebp-0x1C], xmm0
-00682021    call 0x00681E50
+0068201D    movups xmmword ptr ss:[ebp-0x1C], xmm0          ; => [ Data: data_19e2744 ]
+00682021    call 0x00681E50                                 ; => [ Call: sub_681e50 ]
 00682026    add esp, 0x0C
 00682029    test al, al
 0068202B    jz 0x00682244
-00682031    mov eax, dword ptr ds:[0x0147B06C]
+00682031    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00682036    movss xmm0, dword ptr ss:[ebp-0x80]
 0068203B    movss xmm1, dword ptr ss:[ebp-0x7C]
 00682040    movss xmm2, dword ptr ds:[eax+0x124]
@@ -131,14 +137,14 @@
 0068222D    movss dword ptr ss:[ebp-0x14], xmm0
 00682232    movss dword ptr ss:[ebp-0x10], xmm1
 00682237    movss dword ptr ss:[ebp-0x0C], xmm0
-0068223C    call 0x00646580
+0068223C    call 0x00646580                                 ; => [ Call: sub_646580 | Data: data_7fef8c ]
 00682241    add esp, 0x20
 00682244    mov ecx, dword ptr ss:[ebp-0x08]
 00682247    pop edi
 00682248    pop esi
 00682249    xor ecx, ebp
 0068224B    pop ebx
-0068224C    call 0x0075927A
+0068224C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00682251    mov esp, ebp
 00682253    pop ebp
 00682254    ret
@@ -147,10 +153,10 @@
 0068225F    push 0x876CB0
 00682264    mov edx, 0x801800
 00682269    mov ecx, 0x873D08
-0068226E    call 0x0063B870
+0068226E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: material | String: SpriteDrawRects | String: C:\x\ax2017\Engine\Sprite.cpp ]
 00682273    add esp, 0x0C
 00682276    call 0x0063BC30
 0068227B    test al, al
-0068227D    jz 0x00682280
+0068227D    jz 0x00682280                                   ; => [ Call: sub_63bc30 ]
 0068227F    int3
-00682280    call 0x0063BB00
+00682280    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

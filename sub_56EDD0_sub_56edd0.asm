@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56edd0
+// 起始地址: 0x56edd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056EDD0    push ebp
 0056EDD1    mov ebp, esp
 0056EDD3    and esp, 0xFFFFFFF8
@@ -6,24 +12,24 @@
 0056EDDA    push esi
 0056EDDB    push edi
 0056EDDC    mov dword ptr ss:[esp+0x14], ecx
-0056EDE0    call 0x00573400
+0056EDE0    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056EDE5    mov ebx, eax
 0056EDE7    cmp dword ptr ds:[ebx], 0x02
 0056EDEA    jz 0x0056EDF1
-0056EDEC    call 0x00591930
+0056EDEC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056EDF1    mov esi, dword ptr ds:[ebx+0x10]
 0056EDF4    call 0x00573400
 0056EDF9    movzx esi, si
-0056EDFC    mov edi, dword ptr ds:[eax+0x04]
+0056EDFC    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056EDFF    cmp esi, 0x320
 0056EE05    jb 0x0056EE0C
-0056EE07    call 0x00591930
+0056EE07    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056EE0C    imul eax, esi, 0x64
 0056EE0F    mov ecx, edi
 0056EE11    push 0x00
 0056EE13    push 0x20
 0056EE15    mov edx, dword ptr ds:[eax+edi*1+0x1A4C]
-0056EE1C    call 0x005754F0
+0056EE1C    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 0056EE21    add esp, 0x08
 0056EE24    test al, al
 0056EE26    jz 0x0056EE87
@@ -46,7 +52,7 @@
 0056EE5A    call 0x00576B30
 0056EE5F    add esp, 0x10
 0056EE62    test eax, eax
-0056EE64    jnle 0x0056EE72
+0056EE64    jnle 0x0056EE72                                 ; => [ Call: sub_576b30 ]
 0056EE66    mov ecx, dword ptr ss:[esp+0x14]
 0056EE6A    mov eax, dword ptr ss:[esp+0x10]
 0056EE6E    mov dword ptr ds:[ecx+esi*4], eax
@@ -67,10 +73,10 @@
 0056EE91    push 0x81EA70
 0056EE96    mov edx, 0x801800
 0056EE9B    mov ecx, 0x81ECF8
-0056EEA0    call 0x0063B870
+0056EEA0    call 0x0063B870                                 ; => [ String: isAttack | Call: sub_63b870 | Data: data_801800 | String: CollectAttackUnblocked | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0056EEA5    add esp, 0x0C
 0056EEA8    call 0x0063BC30
 0056EEAD    test al, al
-0056EEAF    jz 0x0056EEB2
+0056EEAF    jz 0x0056EEB2                                   ; => [ Call: sub_63bc30 ]
 0056EEB1    int3
-0056EEB2    call 0x0063BB00
+0056EEB2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e1610
+// 起始地址: 0x6e1610
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E1610    push ebp
 006E1611    mov ebp, esp
 006E1613    sub esp, 0x14
@@ -51,7 +57,7 @@
 006E169A    jnz 0x006E174F
 006E16A0    mov ecx, dword ptr ds:[esi+0x08]
 006E16A3    call 0x006A2D40
-006E16A8    mov dword ptr ds:[esi+0x0C], eax
+006E16A8    mov dword ptr ds:[esi+0x0C], eax                ; => [ Call: sub_6a2d40 ]
 006E16AB    mov eax, dword ptr ds:[esi]
 006E16AD    cmp eax, 0x3E8
 006E16B2    jnb 0x006E1741
@@ -76,12 +82,12 @@
 006E16EC    inc ebx
 006E16ED    lea esi, ds:[ebx*4]
 006E16F4    mov ecx, esi
-006E16F6    call 0x00687730
+006E16F6    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006E16FB    push esi
 006E16FC    mov edi, eax
 006E16FE    push 0x00
 006E1700    push edi
-006E1701    call 0x00761FC4
+006E1701    call 0x00761FC4                                 ; => [ Call: memset ]
 006E1706    mov eax, dword ptr ss:[ebp-0x08]
 006E1709    add esp, 0x0C
 006E170C    mov dword ptr ds:[eax+0x0C], edi
@@ -109,35 +115,35 @@
 006E173D    mov esp, ebp
 006E173F    pop ebp
 006E1740    ret
-006E1741    push 0x881C54
+006E1741    push 0x881C54                                   ; => [ String: AttribTableInit ]
 006E1746    push 0x40
-006E1748    mov ecx, 0x881D54
+006E1748    mov ecx, 0x881D54                               ; => [ String: pAttribField->position < 1000 ]
 006E174D    jmp 0x006E1793
-006E174F    push 0x881C54
+006E174F    push 0x881C54                                   ; => [ String: AttribTableInit ]
 006E1754    push 0x3B
-006E1756    mov ecx, 0x881D74
+006E1756    mov ecx, 0x881D74                               ; => [ String: strchr(pAttribField->fieldName, '"') == NULL ]
 006E175B    jmp 0x006E1793
-006E175D    push 0x881C54
+006E175D    push 0x881C54                                   ; => [ String: AttribTableInit ]
 006E1762    push 0x3A
-006E1764    mov ecx, 0x881CF4
+006E1764    mov ecx, 0x881CF4                               ; => [ String: strchr(pAttribField->fieldName, '&') == NULL ]
 006E1769    jmp 0x006E1793
-006E176B    push 0x881C54
+006E176B    push 0x881C54                                   ; => [ String: AttribTableInit ]
 006E1770    push 0x39
-006E1772    mov ecx, 0x881D24
+006E1772    mov ecx, 0x881D24                               ; => [ String: strchr(pAttribField->fieldName, '>') == NULL ]
 006E1777    jmp 0x006E1793
-006E1779    push 0x881C54
+006E1779    push 0x881C54                                   ; => [ String: AttribTableInit ]
 006E177E    push 0x38
-006E1780    mov ecx, 0x881C94
+006E1780    mov ecx, 0x881C94                               ; => [ String: strchr(pAttribField->fieldName, '<') == NULL ]
 006E1785    jmp 0x006E1793
-006E1787    push 0x881C54
+006E1787    push 0x881C54                                   ; => [ String: AttribTableInit ]
 006E178C    push 0x37
-006E178E    mov ecx, 0x881CC4
+006E178E    mov ecx, 0x881CC4                               ; => [ String: strchr(pAttribField->fieldName, ' ') == NULL ]
 006E1793    push 0x881C08
 006E1798    mov edx, 0x801800
-006E179D    call 0x0063B870
+006E179D    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Engine\AttribMapRegistry.cpp | Call: sub_63b870 | Data: data_801800 | String: AttribTableInit ]
 006E17A2    add esp, 0x0C
 006E17A5    call 0x0063BC30
 006E17AA    test al, al
-006E17AC    jz 0x006E17AF
+006E17AC    jz 0x006E17AF                                   ; => [ Call: sub_63bc30 ]
 006E17AE    int3
-006E17AF    call 0x0063BB00
+006E17AF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

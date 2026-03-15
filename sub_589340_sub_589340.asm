@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_589340
+// 起始地址: 0x589340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00589340    push ebp
 00589341    mov ebp, esp
 00589343    and esp, 0xFFFFFFF8
@@ -13,7 +19,7 @@
 0058935D    mov dword ptr ss:[esp+0x24], eax
 00589361    cmp dword ptr ds:[eax+0xA0], 0x00
 00589368    jnz 0x00589372
-0058936A    call 0x00591930
+0058936A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058936F    mov ebx, dword ptr ss:[ebp+0x08]
 00589372    mov eax, dword ptr ds:[esi+0x1504]
 00589378    cmp eax, 0x03
@@ -38,14 +44,14 @@
 005893A6    push ebx
 005893A7    push 0xFFFFFFFF
 005893A9    setz cl
-005893AC    call 0x0061B1B0
+005893AC    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005893B1    mov ebx, dword ptr ss:[ebp+0x08]
 005893B4    add esp, 0x2C
 005893B7    movzx eax, bx
 005893BA    mov dword ptr ss:[esp+0x10], eax
 005893BE    cmp eax, 0x320
 005893C3    jb 0x005893CE
-005893C5    call 0x00591930
+005893C5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005893CA    mov eax, dword ptr ss:[esp+0x10]
 005893CE    imul eax, eax, 0x64
 005893D1    mov edx, edi
@@ -55,13 +61,13 @@
 005893E0    mov dword ptr ss:[esp+0x20], eax
 005893E4    lea eax, ss:[esp+0x1C]
 005893E8    push eax
-005893E9    call 0x00573050
+005893E9    call 0x00573050                                 ; => [ Call: sub_573050 ]
 005893EE    mov eax, dword ptr ss:[ebp+0x0C]
 005893F1    xor ebx, ebx
 005893F3    add esp, 0x04
 005893F6    mov dword ptr ss:[esp+0x10], ebx
 005893FA    test eax, eax
-005893FC    jle 0x0058964B
+005893FC    jle 0x0058964B                                  ; => [ Type: TEB ]
 00589402    mov dword ptr ss:[esp+0x1C], ebx
 00589406    cmp eax, 0x01
 00589409    jle 0x0058946D
@@ -70,16 +76,16 @@
 00589411    mov dword ptr ss:[esp+0x14], eax
 00589415    cmp ebx, 0x320
 0058941B    jb 0x00589422
-0058941D    call 0x00591930
+0058941D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00589422    imul eax, ebx, 0x64
 00589425    mov eax, dword ptr ds:[eax+esi*1+0x1A54]
 0058942C    mov dword ptr ss:[esp+0x18], eax
 00589430    mov eax, dword ptr fs:[0x0000002C]
 00589436    mov ebx, dword ptr ds:[eax]
-00589438    add ebx, 0x10
+00589438    add ebx, 0x10                                   ; => [ Field: ThreadLocalStoragePointer ]
 0058943E    cmp dword ptr ds:[ebx+0xF000], 0x00
 00589445    jnle 0x0058944C
-00589447    call 0x00591930
+00589447    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058944C    mov eax, dword ptr ds:[ebx+0xF000]
 00589452    mov ecx, eax
 00589454    shl ecx, 0x04
@@ -98,7 +104,7 @@
 0058947B    mov ebx, eax
 0058947D    mov ecx, esi
 0058947F    mov dword ptr ss:[esp+0x20], ebx
-00589483    call 0x00578D00
+00589483    call 0x00578D00                                 ; => [ Call: sub_578d00 ]
 00589488    mov eax, dword ptr ds:[esi+0x1504]
 0058948E    add esp, 0x10
 00589491    cmp dword ptr ss:[esp+0x1C], 0x00
@@ -130,7 +136,7 @@
 005894DD    push 0x18
 005894DF    push eax
 005894E0    mov ecx, esi
-005894E2    call 0x0059F9B0
+005894E2    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 005894E7    mov ecx, dword ptr ds:[esi+0x1504]
 005894ED    add esp, 0x24
 005894F0    cmp edi, dword ptr ds:[esi+0x19CC]
@@ -157,7 +163,7 @@
 00589530    mov edx, 0x0B
 00589535    push edi
 00589536    setz cl
-00589539    call 0x0061B1B0
+00589539    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 0058953E    add esp, 0x2C
 00589541    jmp 0x0058958F
 00589543    cmp eax, 0x03
@@ -186,7 +192,7 @@
 00589582    push 0x19
 00589584    push eax
 00589585    mov ecx, esi
-00589587    call 0x0059F9B0
+00589587    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 0058958C    add esp, 0x24
 0058958F    mov eax, dword ptr ds:[esi+0x1504]
 00589595    cmp eax, 0x03
@@ -214,7 +220,7 @@
 005895D2    push eax
 005895D3    mov edx, edi
 005895D5    mov ecx, esi
-005895D7    call 0x0059F9B0
+005895D7    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 005895DC    add esp, 0x24
 005895DF    mov eax, dword ptr ss:[esp+0x24]
 005895E3    mov eax, dword ptr ds:[eax+0xA0]
@@ -245,9 +251,9 @@
 0058962E    push eax
 0058962F    mov edx, edi
 00589631    mov ecx, esi
-00589633    call 0x0059F9B0
+00589633    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00589638    add esp, 0x24
-0058963B    call 0x005EE870
+0058963B    call 0x005EE870                                 ; => [ Call: sub_5ee870 ]
 00589640    mov eax, dword ptr ss:[ebp+0x0C]
 00589643    cmp ebx, eax
 00589645    jl 0x00589402
@@ -257,10 +263,10 @@
 00589651    push dword ptr ss:[ebp+0x08]
 00589654    mov edx, edi
 00589656    mov ecx, esi
-00589658    call 0x00578D00
+00589658    call 0x00578D00                                 ; => [ Call: nullptr | Call: sub_578d00 ]
 0058965D    mov eax, dword ptr fs:[0x0000002C]
 00589663    add esp, 0x10
-00589666    mov ecx, dword ptr ds:[eax]
+00589666    mov ecx, dword ptr ds:[eax]                     ; => [ Field: ThreadLocalStoragePointer ]
 00589668    mov eax, dword ptr ds:[ecx+0xF010]
 0058966E    test eax, eax
 00589670    jle 0x005896C4
@@ -289,7 +295,7 @@
 005896AB    mov edx, 0x16
 005896B0    push 0xFFFFFFFF
 005896B2    setz cl
-005896B5    call 0x0061B1B0
+005896B5    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005896BA    add esp, 0x2C
 005896BD    pop edi
 005896BE    pop esi
@@ -302,10 +308,10 @@
 005896CE    push 0x81F4B8
 005896D3    mov edx, 0x801800
 005896D8    mov ecx, 0x81F9F0
-005896DD    call 0x0063B870
+005896DD    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomPopContext ]
 005896E2    add esp, 0x0C
 005896E5    call 0x0063BC30
 005896EA    test al, al
-005896EC    jz 0x005896EF
+005896EC    jz 0x005896EF                                   ; => [ Call: sub_63bc30 ]
 005896EE    int3
-005896EF    call 0x0063BB00
+005896EF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

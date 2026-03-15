@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e94e0
+// 起始地址: 0x6e94e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E94E0    push ebx
 006E94E1    mov ebx, esp
 006E94E3    sub esp, 0x08
@@ -56,7 +62,7 @@
 006E95C1    movaps xmm1, xmm4
 006E95C4    andps xmm1, xmmword ptr ds:[0x008937A0]
 006E95CB    comiss xmm0, xmm1
-006E95CE    jnbe 0x006E96DD
+006E95CE    jnbe 0x006E96DD                                 ; => [ Data: data_8937a0 ]
 006E95D4    movss xmm6, dword ptr ds:[0x00890E18]
 006E95DC    movss xmm3, dword ptr ds:[ecx]
 006E95E0    movss xmm2, dword ptr ds:[ecx+0x04]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cb7c0
+// 起始地址: 0x5cb7c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CB7C0    push ebp
 005CB7C1    mov ebp, esp
 005CB7C3    sub esp, 0x114
@@ -27,7 +33,7 @@
 005CB81C    lea eax, ss:[ebp-0x110]
 005CB822    push eax
 005CB823    movups xmmword ptr ss:[ebp-0x30], xmm0
-005CB827    rep movsd
+005CB827    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB829    mov ecx, ebx
 005CB82B    call 0x006372F0
 005CB830    pop edi
@@ -35,4 +41,4 @@
 005CB832    pop ebx
 005CB833    mov esp, ebp
 005CB835    pop ebp
-005CB836    ret
+005CB836    ret                                             ; => [ Call: sub_6372f0 ]

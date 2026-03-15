@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6b40d0
+// 起始地址: 0x6b40d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B40D0    push ebp
 006B40D1    mov ebp, esp
 006B40D3    sub esp, 0xD8
-006B40D9    mov eax, dword ptr ds:[0x008C4040]
+006B40D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B40DE    xor eax, ebp
 006B40E0    mov dword ptr ss:[ebp-0x04], eax
 006B40E3    push esi
@@ -9,7 +15,7 @@
 006B40E7    mov ecx, dword ptr ss:[ebp+0x1C]
 006B40EA    push edi
 006B40EB    mov dword ptr ss:[ebp-0x08], edx
-006B40EE    call 0x006B7590
+006B40EE    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 006B40F3    movss xmm1, dword ptr ss:[ebp+0x18]
 006B40F8    mov ecx, 0x800890
 006B40FD    mov dword ptr ss:[ebp-0x14], eax
@@ -41,10 +47,10 @@
 006B417A    movaps xmm2, xmmword ptr ds:[0x00893530]
 006B4181    movups xmmword ptr ss:[ebp-0x98], xmm0
 006B4188    movups xmm0, xmmword ptr ss:[ebp-0x48]
-006B418C    movups xmmword ptr ss:[ebp-0x78], xmm1
+006B418C    movups xmmword ptr ss:[ebp-0x78], xmm1          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B4190    movups xmmword ptr ss:[ebp-0x88], xmm0
 006B4197    movups xmmword ptr ss:[ebp-0x68], xmm2
-006B419B    call 0x00642AE0
+006B419B    call 0x00642AE0                                 ; => [ Data: data_800890 | Call: sub_642ae0 ]
 006B41A0    mov ecx, dword ptr ss:[ebp-0x0C]
 006B41A3    lea edx, ss:[ebp-0x98]
 006B41A9    mov dword ptr ss:[esp], 0x00
@@ -63,13 +69,13 @@
 006B41E5    movups xmm0, xmmword ptr ds:[eax+0x30]
 006B41E9    push dword ptr ss:[ebp-0x08]
 006B41EC    movups xmmword ptr ss:[ebp-0x68], xmm0
-006B41F0    call 0x006B3D40
+006B41F0    call 0x006B3D40                                 ; => [ Call: sub_6b3d40 ]
 006B41F5    mov ecx, dword ptr ss:[ebp-0x04]
 006B41F8    add esp, 0x24
 006B41FB    xor ecx, ebp
 006B41FD    pop edi
 006B41FE    pop esi
-006B41FF    call 0x0075927A
+006B41FF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B4204    mov esp, ebp
 006B4206    pop ebp
 006B4207    ret

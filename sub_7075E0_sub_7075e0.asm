@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7075e0
+// 起始地址: 0x7075e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007075E0    push ecx
 007075E1    push esi
 007075E2    push edi
@@ -5,7 +11,7 @@
 007075E5    mov esi, ecx
 007075E7    call 0x00707330
 007075EC    test al, al
-007075EE    jz 0x00707689
+007075EE    jz 0x00707689                                   ; => [ Call: sub_707330 ]
 007075F4    mov ecx, dword ptr ds:[esi+0x08]
 007075F7    mov dword ptr ds:[esi+0x0C], ecx
 007075FA    nop word ptr ds:[eax+eax*1], ax
@@ -35,7 +41,7 @@
 00707634    mov dword ptr ds:[esi+0x08], ecx
 00707637    jmp 0x00707600
 00707639    call 0x005A0DB0
-0070763E    mov ecx, eax
+0070763E    mov ecx, eax                                    ; => [ Call: sub_5a0db0 ]
 00707640    mov dword ptr ds:[esi+0x08], ecx
 00707643    jmp 0x00707600
 00707645    mov edx, dword ptr ds:[esi+0x0C]
@@ -60,7 +66,7 @@
 0070766B    mov ecx, esi
 0070766D    call 0x007074E0
 00707672    test al, al
-00707674    jz 0x007076C0
+00707674    jz 0x007076C0                                   ; => [ Call: sub_7074e0 ]
 00707676    mov al, 0x01
 00707678    pop edi
 00707679    pop esi
@@ -77,13 +83,13 @@
 0070768D    call 0x00707330
 00707692    mov ecx, esi
 00707694    test al, al
-00707696    jz 0x007076B7
-00707698    call 0x007072D0
+00707696    jz 0x007076B7                                   ; => [ Call: sub_707330 ]
+00707698    call 0x007072D0                                 ; => [ Call: sub_7072d0 ]
 0070769D    mov dl, 0x3E
 0070769F    mov ecx, esi
 007076A1    call 0x00707330
 007076A6    test al, al
-007076A8    jz 0x007076C0
+007076A8    jz 0x007076C0                                   ; => [ Call: sub_707330 ]
 007076AA    mov dword ptr ds:[esi+0x04], 0x04
 007076B1    mov al, 0x01
 007076B3    pop edi
@@ -92,7 +98,7 @@
 007076B6    ret
 007076B7    call 0x00707390
 007076BC    test al, al
-007076BE    jnz 0x007076C6
+007076BE    jnz 0x007076C6                                  ; => [ Call: sub_707390 ]
 007076C0    xor al, al
 007076C2    pop edi
 007076C3    pop esi

@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_519460
+// 起始地址: 0x519460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00519460    dword 5AB951
 00519464    add byte ptr ds:[eax], al
-00519466    call 0x0050E1C0
+00519466    call 0x0050E1C0                                 ; => [ Call: sub_50e1c0 ]
 0051946B    mov ecx, 0x19
-00519470    call 0x0050E1C0
+00519470    call 0x0050E1C0                                 ; => [ Call: sub_50e1c0 ]
 00519475    mov ecx, dword ptr ds:[0x00CCA784]
 0051947B    xor edx, edx
 0051947D    mov eax, dword ptr ds:[0x00CCA780]
 00519482    shl ecx, 0x0B
 00519485    add eax, 0x58C
-0051948A    add eax, ecx
+0051948A    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0051948C    nop dword ptr ds:[eax], eax
 00519490    cmp dword ptr ds:[eax], 0x00
 00519493    jz 0x005194A0
@@ -29,10 +35,10 @@
 005194CE    push 0x80CD80
 005194D3    mov edx, 0x801800
 005194D8    mov ecx, 0x801AA4
-005194DD    call 0x0063B870
+005194DD    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignAddExtra | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 005194E2    add esp, 0x0C
 005194E5    call 0x0063BC30
 005194EA    test al, al
-005194EC    jz 0x005194EF
+005194EC    jz 0x005194EF                                   ; => [ Call: sub_63bc30 ]
 005194EE    int3
-005194EF    call 0x0063BB00
+005194EF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

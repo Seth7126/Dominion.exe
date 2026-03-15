@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63d0a0
+// 起始地址: 0x63d0a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063D0A0    push ebp
 0063D0A1    mov ebp, esp
 0063D0A3    sub esp, 0x08
@@ -22,7 +28,7 @@
 0063D0D5    mov eax, 0x80000000
 0063D0DA    add eax, 0x23
 0063D0DD    push eax
-0063D0DE    call 0x00759772
+0063D0DE    call 0x00759772                                 ; => [ Call: operator new ]
 0063D0E3    add esp, 0x04
 0063D0E6    test eax, eax
 0063D0E8    jz 0x0063D19E
@@ -43,7 +49,7 @@
 0063D111    lea edx, ds:[edi+0x01]
 0063D114    test edx, edx
 0063D116    jnz 0x0063D11C
-0063D118    xor esi, esi
+0063D118    xor esi, esi                                    ; => [ Call: nullptr ]
 0063D11A    jmp 0x0063D13F
 0063D11C    cmp edx, 0x1000
 0063D122    jb 0x0063D131
@@ -54,7 +60,7 @@
 0063D131    push edx
 0063D132    call 0x00759772
 0063D137    add esp, 0x04
-0063D13A    mov esi, eax
+0063D13A    mov esi, eax                                    ; => [ Call: operator new ]
 0063D13C    mov ecx, dword ptr ss:[ebp-0x04]
 0063D13F    cmp dword ptr ss:[ebp-0x08], 0x0F
 0063D143    lea eax, ds:[ecx+0x01]
@@ -65,7 +71,7 @@
 0063D14F    mov edi, dword ptr ds:[ebx]
 0063D151    push edi
 0063D152    push esi
-0063D153    call 0x00761FBE
+0063D153    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063D158    mov ecx, dword ptr ss:[ebp-0x04]
 0063D15B    add esp, 0x0C
 0063D15E    mov al, byte ptr ss:[ebp+0x10]
@@ -84,7 +90,7 @@
 0063D185    mov edi, edx
 0063D187    push ecx
 0063D188    push edi
-0063D189    call 0x00759661
+0063D189    call 0x00759661                                 ; => [ Call: operator new ]
 0063D18E    add esp, 0x08
 0063D191    mov dword ptr ds:[ebx], esi
 0063D193    mov eax, ebx
@@ -97,7 +103,7 @@
 0063D19E    call dword ptr ds:[0x007755F4]
 0063D1A4    push ebx
 0063D1A5    push esi
-0063D1A6    call 0x00761FBE
+0063D1A6    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063D1AB    mov ecx, dword ptr ss:[ebp-0x04]
 0063D1AE    add esp, 0x0C
 0063D1B1    mov al, byte ptr ss:[ebp+0x10]
@@ -111,5 +117,5 @@
 0063D1C3    mov esp, ebp
 0063D1C5    pop ebp
 0063D1C6    ret 0x0C
-0063D1C9    call 0x005B0860
-0063D1CE    call 0x004F7EE0
+0063D1C9    call 0x005B0860                                 ; => [ Call: sub_5b0860 ]
+0063D1CE    call 0x004F7EE0                                 ; => [ Call: sub_4f7ee0 ]

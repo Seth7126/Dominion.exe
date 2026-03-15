@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c8340
+// 起始地址: 0x5c8340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C8340    push ebp
 005C8341    mov ebp, esp
 005C8343    sub esp, 0x08
@@ -18,14 +24,14 @@
 005C836D    addss xmm0, dword ptr ds:[edi+0x24]
 005C8372    call 0x004EA070
 005C8377    lea ecx, ss:[ebp-0x04]
-005C837A    movss dword ptr ss:[ebp-0x04], xmm0
+005C837A    movss dword ptr ss:[ebp-0x04], xmm0             ; => [ Call: sub_4ea070 | Call: sub_4ea090 ]
 005C837F    call 0x005BC390
 005C8384    mov eax, dword ptr ds:[edi+0x04]
 005C8387    add ebx, 0x04
 005C838A    mulss xmm0, dword ptr ds:[eax+esi*4]
 005C838F    mov eax, dword ptr ss:[ebp-0x08]
 005C8392    mov eax, dword ptr ds:[eax]
-005C8394    movss dword ptr ds:[eax+esi*4], xmm0
+005C8394    movss dword ptr ds:[eax+esi*4], xmm0            ; => [ Call: sub_5bc390 ]
 005C8399    inc esi
 005C839A    cmp esi, dword ptr ss:[ebp+0x08]
 005C839D    jl 0x005C8360

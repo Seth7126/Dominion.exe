@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e3aa0
+// 起始地址: 0x4e3aa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E3AA0    push esi
 004E3AA1    xor eax, eax
 004E3AA3    lea esi, ds:[ecx+0x9C8]
@@ -18,10 +24,10 @@
 004E3AD4    push 0x806FE4
 004E3AD9    mov edx, 0x801800
 004E3ADE    mov ecx, 0x801AA4
-004E3AE3    call 0x0063B870
+004E3AE3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | String: DomConfigEditionFlag | String: Halt ]
 004E3AE8    add esp, 0x0C
 004E3AEB    call 0x0063BC30
 004E3AF0    test al, al
-004E3AF2    jz 0x004E3AF5
+004E3AF2    jz 0x004E3AF5                                   ; => [ Call: sub_63bc30 ]
 004E3AF4    int3
-004E3AF5    call 0x0063BB00
+004E3AF5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

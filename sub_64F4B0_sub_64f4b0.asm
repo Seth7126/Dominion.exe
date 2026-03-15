@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64f4b0
+// 起始地址: 0x64f4b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064F4B0    push ebp
 0064F4B1    mov ebp, esp
 0064F4B3    sub esp, 0x1C
@@ -17,12 +23,12 @@
 0064F4DC    jz 0x0064F4EE
 0064F4DE    sub eax, 0x02
 0064F4E1    jnz 0x0064F569
-0064F4E7    mov edx, 0x8747A8
+0064F4E7    mov edx, 0x8747A8                               ; => [ String: Button ]
 0064F4EC    jmp 0x0064F4F3
-0064F4EE    mov edx, 0x874790
+0064F4EE    mov edx, 0x874790                               ; => [ String: Text ]
 0064F4F3    mov byte ptr ss:[ebp+0x18], 0x01
 0064F4F7    mov ecx, dword ptr ds:[0x00C23BF0]
-0064F4FD    call 0x0064F3F0
+0064F4FD    call 0x0064F3F0                                 ; => [ Data: data_c23bf0 | Call: sub_64f3f0 ]
 0064F502    mov esi, eax
 0064F504    test esi, esi
 0064F506    jz 0x0064F569
@@ -38,7 +44,7 @@
 0064F524    push dword ptr ss:[ebp+0x10]
 0064F527    push dword ptr ss:[ebp+0x0C]
 0064F52A    push eax
-0064F52B    call 0x0064F4B0
+0064F52B    call 0x0064F4B0                                 ; => [ Data: data_8cae70 | Call: sub_6dd140 ]
 0064F530    mov eax, dword ptr ss:[ebp+0x10]
 0064F533    lea ecx, ds:[edi+0x13F8]
 0064F539    add esp, 0x14
@@ -54,7 +60,7 @@
 0064F54E    push ecx
 0064F54F    push dword ptr ss:[ebp-0x08]
 0064F552    mov ecx, edi
-0064F554    call 0x006530A0
+0064F554    call 0x006530A0                                 ; => [ Call: nullptr | Call: sub_6530a0 ]
 0064F559    add esp, 0x18
 0064F55C    mov eax, esi
 0064F55E    pop edi

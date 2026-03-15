@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71d440
+// 起始地址: 0x71d440
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071D440    push ebp
 0071D441    mov ebp, esp
 0071D443    sub esp, 0x1C
@@ -46,7 +52,7 @@
 0071D4C8    push eax
 0071D4C9    push ecx
 0071D4CA    mov ecx, esi
-0071D4CC    call 0x0071BC80
+0071D4CC    call 0x0071BC80                                 ; => [ Call: sub_71bc80 ]
 0071D4D1    add esp, 0x14
 0071D4D4    mov ecx, dword ptr ds:[esi+0xA8]
 0071D4DA    cmp ecx, dword ptr ds:[esi+0xAC]

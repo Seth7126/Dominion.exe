@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5b08b0
+// 起始地址: 0x5b08b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005B08B0    push ebp
 005B08B1    mov ebp, esp
 005B08B3    sub esp, 0x1C
-005B08B6    mov eax, dword ptr ds:[0x008C4040]
+005B08B6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005B08BB    xor eax, ebp
 005B08BD    mov dword ptr ss:[ebp-0x04], eax
 005B08C0    mov eax, dword ptr ss:[ebp+0x08]
@@ -64,7 +70,7 @@
 005B0975    pop esi
 005B0976    xor ecx, ebp
 005B0978    pop ebx
-005B0979    call 0x0075927A
+005B0979    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005B097E    mov esp, ebp
 005B0980    pop ebp
 005B0981    ret

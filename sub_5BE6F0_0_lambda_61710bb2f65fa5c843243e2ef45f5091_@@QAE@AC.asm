@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: ??0<lambda_61710bb2f65fa5c843243e2ef45f5091>@@QAE@ACIAAIAAV?$single_assignment@I@Concurrency@@@Z
+// 起始地址: 0x5be6f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BE6F0    push ebp
 005BE6F1    mov ebp, esp
 005BE6F3    mov eax, dword ptr ss:[ebp+0x08]

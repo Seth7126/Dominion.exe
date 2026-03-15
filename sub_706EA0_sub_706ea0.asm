@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_706ea0
+// 起始地址: 0x706ea0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00706EA0    push ebp
 00706EA1    mov ebp, esp
 00706EA3    push ecx
@@ -7,20 +13,20 @@
 00706EAA    mov edi, edx
 00706EAC    mov esi, ecx
 00706EAE    jz 0x00706EB7
-00706EB0    call 0x00706E20
+00706EB0    call 0x00706E20                                 ; => [ Call: sub_706e20 ]
 00706EB5    jmp 0x00706EBC
-00706EB7    call 0x00706DC0
+00706EB7    call 0x00706DC0                                 ; => [ Call: sub_706dc0 ]
 00706EBC    push dword ptr ds:[esi]
 00706EBE    push 0x01
 00706EC0    push 0x01
 00706EC2    push 0x88D840
-00706EC7    call dword ptr ds:[0x00775630]
+00706EC7    call dword ptr ds:[0x00775630]                  ; => [ Data: data_88d840 ]
 00706ECD    add esp, 0x10
 00706ED0    cmp eax, 0x01
 00706ED3    jnz 0x00706EED
 00706ED5    mov edx, edi
 00706ED7    mov ecx, esi
-00706ED9    call 0x00706C90
+00706ED9    call 0x00706C90                                 ; => [ Call: sub_706c90 ]
 00706EDE    inc dword ptr ds:[esi+0x08]
 00706EE1    pop edi
 00706EE2    mov dword ptr ds:[esi+0x04], 0x01
@@ -33,10 +39,10 @@
 00706EF4    push 0x88D7C4
 00706EF9    mov edx, 0x801800
 00706EFE    mov ecx, 0x88D804
-00706F03    call 0x0063B870
+00706F03    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\XmlWriter.cpp | Data: data_801800 | String: resultCount == len | String: sXmlEmit ]
 00706F08    add esp, 0x0C
 00706F0B    call 0x0063BC30
 00706F10    test al, al
-00706F12    jz 0x00706F15
+00706F12    jz 0x00706F15                                   ; => [ Call: sub_63bc30 ]
 00706F14    int3
-00706F15    call 0x0063BB00
+00706F15    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

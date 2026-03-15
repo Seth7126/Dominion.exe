@@ -1,25 +1,31 @@
+// ============================================================
+// 函数名称: sub_761310
+// 起始地址: 0x761310
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00761310    push ebp
 00761311    mov ebp, esp
 00761313    mov eax, dword ptr ss:[ebp+0x08]
 00761316    push 0x00
 00761318    push dword ptr ds:[eax+0x5C]
-0076131B    call dword ptr ds:[0x00775108]
+0076131B    call dword ptr ds:[0x00775108]                  ; => [ Type: WAIT_EVENT ]
 00761321    test eax, eax
 00761323    jz 0x00761394
 00761325    mov eax, dword ptr ss:[ebp+0x08]
 00761328    push ebx
 00761329    push esi
 0076132A    push edi
-0076132B    lea edx, ds:[eax+0x14]
+0076132B    lea edx, ds:[eax+0x14]                          ; => [ Type: WAVEHDR ]
 0076132E    lea ebx, ds:[eax+0x0C]
 00761331    xor edi, edi
-00761333    mov esi, edx
+00761333    mov esi, edx                                    ; => [ Type: WAVEHDR ]
 00761335    test dword ptr ds:[esi+0x10], 0x10
-0076133C    jnz 0x00761361
+0076133C    jnz 0x00761361                                  ; => [ Field: dwFlags ]
 0076133E    push dword ptr ds:[eax+0x64]
 00761341    mov ecx, dword ptr ds:[eax+0x60]
 00761344    push dword ptr ds:[ebx]
-00761346    call 0x0075B980
+00761346    call 0x0075B980                                 ; => [ Call: sub_75b980 ]
 0076134B    mov eax, dword ptr ss:[ebp+0x08]
 0076134E    push 0x20
 00761350    push esi

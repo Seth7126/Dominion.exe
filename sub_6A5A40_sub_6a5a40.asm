@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a5a40
+// 起始地址: 0x6a5a40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A5A40    push ebp
 006A5A41    mov ebp, esp
 006A5A43    push ecx
@@ -12,7 +18,7 @@
 006A5A54    dec eax
 006A5A55    cmp eax, 0x10
 006A5A58    jnbe 0x006A5B5A
-006A5A5E    movzx eax, byte ptr ds:[eax+0x6A5C60]
+006A5A5E    movzx eax, byte ptr ds:[eax+0x6A5C60]           ; => [ Data: lookup_table_6a5c60 ]
 006A5A65    jmp dword ptr ds:[eax*4+0x6A5C48]
 006A5A6C    lea ecx, ds:[edx+0x24]
 006A5A6F    mov edx, dword ptr ds:[edx+0x34]
@@ -53,7 +59,7 @@
 006A5AD1    pop ebp
 006A5AD2    ret
 006A5AD3    mov eax, dword ptr ds:[edx+0x24]
-006A5AD6    mov esi, 0x801800
+006A5AD6    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 006A5ADB    mov ecx, dword ptr ds:[edx+0x20]
 006A5ADE    test eax, eax
 006A5AE0    cmovnz esi, eax
@@ -74,10 +80,10 @@
 006A5AFB    jnz 0x006A5B06
 006A5AFD    mov ecx, esi
 006A5AFF    call 0x006B7EF0
-006A5B04    mov ecx, eax
+006A5B04    mov ecx, eax                                    ; => [ Call: sub_6b7ef0 ]
 006A5B06    mov edx, ecx
 006A5B08    mov ecx, esi
-006A5B0A    call 0x0069F030
+006A5B0A    call 0x0069F030                                 ; => [ Call: sub_69f030 ]
 006A5B0F    cmp dword ptr ds:[edi], eax
 006A5B11    setz al
 006A5B14    pop edi
@@ -184,10 +190,10 @@
 006A5C21    push 0x879400
 006A5C26    mov edx, 0x801800
 006A5C2B    mov ecx, 0x87948C
-006A5C30    call 0x0063B870
+006A5C30    call 0x0063B870                                 ; => [ String: pDefMap->definitionSize != 0 | Call: sub_63b870 | String: DefinitionGetSize | String: C:\x\ax2017\Engine\Definition.cpp | Data: data_801800 ]
 006A5C35    add esp, 0x0C
 006A5C38    call 0x0063BC30
 006A5C3D    test al, al
-006A5C3F    jz 0x006A5C42
+006A5C3F    jz 0x006A5C42                                   ; => [ Call: sub_63bc30 ]
 006A5C41    int3
-006A5C42    call 0x0063BB00
+006A5C42    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

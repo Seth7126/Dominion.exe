@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67ef30
+// 起始地址: 0x67ef30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067EF30    push ebp
 0067EF31    mov ebp, esp
 0067EF33    sub esp, 0x10
@@ -22,7 +28,7 @@
 0067EF60    lahf
 0067EF61    test ah, 0x44
 0067EF64    jp 0x0067EF6B
-0067EF66    xorps xmm3, xmm3
+0067EF66    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 0067EF69    jmp 0x0067EF95
 0067EF6B    xorps xmm0, xmm0
 0067EF6E    cvtss2sd xmm0, xmm2
@@ -31,7 +37,7 @@
 0067EF7A    cvtps2pd xmm0, xmm1
 0067EF7D    movsd qword ptr ss:[ebp-0x10], xmm0
 0067EF82    fld qword ptr ss:[ebp-0x10]
-0067EF85    call 0x0076236E
+0067EF85    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 0067EF8A    fstp dword ptr ss:[ebp-0x08]
 0067EF8D    movss xmm3, dword ptr ss:[ebp-0x08]
 0067EF92    xorps xmm0, xmm0
@@ -64,7 +70,7 @@
 0067EFE4    movaps xmm2, xmm1
 0067EFE7    movaps xmm0, xmm3
 0067EFEA    xorps xmm1, xmm1
-0067EFED    call 0x004AE110
+0067EFED    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0067EFF2    movss xmm3, dword ptr ss:[ebp-0x0C]
 0067EFF7    movss xmm1, dword ptr ds:[0x00890E18]
 0067EFFF    movss dword ptr ss:[ebp-0x04], xmm0
@@ -77,7 +83,7 @@
 0067F014    movaps xmm2, xmm1
 0067F017    xorps xmm1, xmm1
 0067F01A    movaps xmm0, xmm3
-0067F01D    call 0x004AE110
+0067F01D    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0067F022    xorps xmm0, xmm0
 0067F025    movss xmm2, dword ptr ss:[ebp-0x04]
 0067F02A    ucomiss xmm2, xmm0
@@ -91,7 +97,7 @@
 0067F041    pop esi
 0067F042    mov esp, ebp
 0067F044    pop ebp
-0067F045    ret
+0067F045    ret                                             ; => [ Call: sub_5af6f0 ]
 0067F046    cmp eax, 0x02
 0067F049    jnz 0x0067F0DD
 0067F04F    movss xmm1, dword ptr ds:[esi+0x0C]
@@ -100,7 +106,7 @@
 0067F05A    lahf
 0067F05B    test ah, 0x44
 0067F05E    jp 0x0067F065
-0067F060    xorps xmm3, xmm3
+0067F060    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 0067F063    jmp 0x0067F08F
 0067F065    xorps xmm0, xmm0
 0067F068    cvtss2sd xmm0, xmm2
@@ -109,14 +115,14 @@
 0067F074    cvtps2pd xmm0, xmm1
 0067F077    movsd qword ptr ss:[ebp-0x10], xmm0
 0067F07C    fld qword ptr ss:[ebp-0x10]
-0067F07F    call 0x0076236E
+0067F07F    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 0067F084    fstp dword ptr ss:[ebp-0x08]
 0067F087    movss xmm3, dword ptr ss:[ebp-0x08]
 0067F08C    xorps xmm0, xmm0
 0067F08F    subss xmm3, xmm0
 0067F093    comiss xmm0, xmm3
 0067F096    jb 0x0067F09D
-0067F098    xorps xmm2, xmm2
+0067F098    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 0067F09B    jmp 0x0067F0C0
 0067F09D    movss xmm2, dword ptr ds:[0x00890E18]
 0067F0A5    comiss xmm3, xmm2
@@ -124,7 +130,7 @@
 0067F0AA    mov ecx, 0x18
 0067F0AF    xorps xmm1, xmm1
 0067F0B2    movaps xmm0, xmm3
-0067F0B5    call 0x004AE110
+0067F0B5    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0067F0BA    movaps xmm2, xmm0
 0067F0BD    xorps xmm0, xmm0
 0067F0C0    ucomiss xmm2, xmm0
@@ -138,16 +144,16 @@
 0067F0D8    pop esi
 0067F0D9    mov esp, ebp
 0067F0DB    pop ebp
-0067F0DC    ret
+0067F0DC    ret                                             ; => [ Call: sub_5af6f0 ]
 0067F0DD    push 0x876C20
 0067F0E2    push 0x7F8
 0067F0E7    push 0x8739B4
 0067F0EC    mov edx, 0x801800
 0067F0F1    mov ecx, 0x801AA4
-0067F0F6    call 0x0063B870
+0067F0F6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: GraphEval | String: Halt ]
 0067F0FB    add esp, 0x0C
 0067F0FE    call 0x0063BC30
 0067F103    test al, al
-0067F105    jz 0x0067F108
+0067F105    jz 0x0067F108                                   ; => [ Call: sub_63bc30 ]
 0067F107    int3
-0067F108    call 0x0063BB00
+0067F108    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

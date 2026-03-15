@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c2170
+// 起始地址: 0x6c2170
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C2170    push ebx
 006C2171    mov ebx, esp
 006C2173    sub esp, 0x08
@@ -8,11 +14,11 @@
 006C2180    mov dword ptr ss:[esp+0x04], ebp
 006C2184    mov ebp, esp
 006C2186    mov eax, 0x20F8
-006C218B    call 0x00761E50
+006C218B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 006C2190    mov eax, dword ptr ds:[0x008C4040]
 006C2195    xor eax, ebp
-006C2197    mov dword ptr ss:[ebp-0x04], eax
-006C219A    mov eax, dword ptr ds:[0x0147DED0]
+006C2197    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
+006C219A    mov eax, dword ptr ds:[0x0147DED0]              ; => [ Data: data_147ded0 ]
 006C219F    push esi
 006C21A0    mov esi, dword ptr ds:[ebx+0x08]
 006C21A3    push edi
@@ -27,7 +33,7 @@
 006C21C8    cmp edx, 0xFF
 006C21CE    jnbe 0x006C2493
 006C21D4    cmp byte ptr ds:[edx*8+0x147D4B8], 0x00
-006C21DC    jnz 0x006C2480
+006C21DC    jnz 0x006C2480                                  ; => [ Data: data_147d4b8 ]
 006C21E2    mov edx, dword ptr ss:[ebp-0x2098]
 006C21E8    lea eax, ss:[ebp-0x2090]
 006C21EE    push eax
@@ -37,11 +43,11 @@
 006C21F9    lea edx, ss:[ebp-0x2090]
 006C21FF    mov ecx, edi
 006C2201    push esi
-006C2202    call 0x006BF490
+006C2202    call 0x006BF490                                 ; => [ Call: sub_6bce70 | Call: sub_6bf490 ]
 006C2207    mov eax, dword ptr ds:[edi+0x2E4]
 006C220D    add esp, 0x04
 006C2210    mov ecx, dword ptr ds:[eax]
-006C2212    call 0x005AF880
+006C2212    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006C2217    imul ecx, dword ptr ds:[edi+0x2DC], 0x168
 006C2221    mov eax, dword ptr ds:[eax]
 006C2223    cmp byte ptr ds:[ecx+eax*1+0xF1], 0x00
@@ -50,10 +56,10 @@
 006C2233    mov ecx, dword ptr ds:[eax]
 006C2235    call 0x005AF880
 006C223A    imul ecx, dword ptr ds:[edi+0x2DC], 0x168
-006C2244    mov eax, dword ptr ds:[eax]
+006C2244    mov eax, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006C2246    cmp byte ptr ds:[ecx+eax*1+0xF2], 0x00
 006C224E    jnz 0x006C2284
-006C2250    xor esi, esi
+006C2250    xor esi, esi                                    ; => [ Call: nullptr ]
 006C2252    test esi, esi
 006C2254    jnz 0x006C225E
 006C2256    mov esi, dword ptr ds:[edi+0x2D0]
@@ -68,13 +74,13 @@
 006C227F    add esp, 0x04
 006C2282    jmp 0x006C2252
 006C2284    movups xmm0, xmmword ptr ds:[0x00CF6668]
-006C228B    mov eax, dword ptr ds:[0x00CF6680]
+006C228B    mov eax, dword ptr ds:[0x00CF6680]              ; => [ Data: data_cf6680 ]
 006C2290    xor edi, edi
 006C2292    mov edx, dword ptr ss:[ebp-0x2094]
-006C2298    xor esi, esi
-006C229A    movups xmmword ptr ss:[ebp-0x20B8], xmm0
+006C2298    xor esi, esi                                    ; => [ Call: nullptr ]
+006C229A    movups xmmword ptr ss:[ebp-0x20B8], xmm0        ; => [ Data: data_cf6668 ]
 006C22A1    mov dword ptr ss:[ebp-0x20A0], eax
-006C22A7    movq xmm0, qword ptr ds:[0x00CF6678]
+006C22A7    movq xmm0, qword ptr ds:[0x00CF6678]            ; => [ Data: data_cf6678 ]
 006C22AF    movq qword ptr ss:[ebp-0x20A8], xmm0
 006C22B7    nop word ptr ds:[eax+eax*1], ax
 006C22C0    mov eax, edi
@@ -88,7 +94,7 @@
 006C22DC    jz 0x006C2424
 006C22E2    mov eax, dword ptr ds:[esi+0x2E4]
 006C22E8    mov ecx, dword ptr ds:[eax]
-006C22EA    call 0x005AF880
+006C22EA    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006C22EF    imul ecx, dword ptr ds:[esi+0x2DC], 0x168
 006C22F9    lea edx, ds:[esi+0x288]
 006C22FF    mov eax, dword ptr ds:[eax]
@@ -98,7 +104,7 @@
 006C2315    jnz 0x006C231D
 006C2317    lea eax, ss:[ebp-0x2028]
 006C231D    push eax
-006C231E    call 0x004EB600
+006C231E    call 0x004EB600                                 ; => [ Call: sub_4eb600 ]
 006C2323    movups xmm0, xmmword ptr ss:[ebp-0x20F8]
 006C232A    mov eax, dword ptr ss:[ebp-0x2094]
 006C2330    add esp, 0x04
@@ -109,13 +115,13 @@
 006C2349    movups xmmword ptr ss:[ebp-0x20C8], xmm0
 006C2350    call 0x005AF880
 006C2355    mov edx, dword ptr ss:[ebp-0x2094]
-006C235B    mov eax, dword ptr ds:[eax]
+006C235B    mov eax, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006C235D    imul ecx, dword ptr ds:[edx+0x2DC], 0x168
 006C2367    cmp byte ptr ds:[ecx+eax*1+0xF2], 0x00
 006C236F    jz 0x006C238A
 006C2371    movss xmm2, dword ptr ss:[ebp-0x20C0]
 006C2379    subss xmm2, dword ptr ss:[ebp-0x20A4]
-006C2381    andps xmm2, xmmword ptr ds:[0x008937A0]
+006C2381    andps xmm2, xmmword ptr ds:[0x008937A0]         ; => [ Data: data_8937a0 ]
 006C2388    jmp 0x006C23CE
 006C238A    movss xmm1, dword ptr ss:[ebp-0x20A8]
 006C2392    movss xmm2, dword ptr ss:[ebp-0x20A4]
@@ -134,7 +140,7 @@
 006C23DF    cmp edi, 0x400
 006C23E5    jnz 0x006C22C0
 006C23EB    push 0x87DD18
-006C23F0    call 0x0063B5F0
+006C23F0    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: too many particle to sort ]
 006C23F5    add esp, 0x04
 006C23F8    lea ecx, ds:[edi*8]
 006C23FF    mov eax, ecx
@@ -144,7 +150,7 @@
 006C240C    lea ecx, ss:[ebp-0x2008]
 006C2412    push 0x6C2140
 006C2417    push eax
-006C2418    call 0x006C3490
+006C2418    call 0x006C3490                                 ; => [ Call: sub_6c2140 | Call: sub_6c3490 ]
 006C241D    add esp, 0x08
 006C2420    xor esi, esi
 006C2422    jmp 0x006C2460
@@ -156,7 +162,7 @@
 006C2438    push 0x6C2140
 006C243D    push eax
 006C243E    lea ecx, ss:[ebp-0x2008]
-006C2444    call 0x006C3490
+006C2444    call 0x006C3490                                 ; => [ Call: sub_6c2140 | Call: sub_6c3490 ]
 006C2449    mov eax, dword ptr ss:[ebp-0x2098]
 006C244F    add esp, 0x08
 006C2452    xor esi, esi
@@ -176,7 +182,7 @@
 006C2483    pop edi
 006C2484    xor ecx, ebp
 006C2486    pop esi
-006C2487    call 0x0075927A
+006C2487    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C248C    mov esp, ebp
 006C248E    pop ebp
 006C248F    mov esp, ebx
@@ -187,10 +193,10 @@
 006C249D    push 0x88AF54
 006C24A2    mov edx, 0x801800
 006C24A7    mov ecx, 0x88B534
-006C24AC    call 0x0063B870
+006C24AC    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: emitterIndex >= 0 && emitterIndex < MAX_EMITTERS | String: EditorEmitterIsHidden | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\EditorWindow.cpp ]
 006C24B1    add esp, 0x0C
 006C24B4    call 0x0063BC30
 006C24B9    test al, al
-006C24BB    jz 0x006C24BE
+006C24BB    jz 0x006C24BE                                   ; => [ Call: sub_63bc30 ]
 006C24BD    int3
-006C24BE    call 0x0063BB00
+006C24BE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

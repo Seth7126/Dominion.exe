@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51ecc0
+// 起始地址: 0x51ecc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051ECC0    push ebp
 0051ECC1    mov ebp, esp
 0051ECC3    mov eax, dword ptr ss:[ebp+0x08]
@@ -10,9 +16,9 @@
 0051ECD2    test ecx, ecx
 0051ECD4    jz 0x0051ECE1
 0051ECD6    mov edx, esi
-0051ECD8    call 0x00511D80
+0051ECD8    call 0x00511D80                                 ; => [ Call: sub_511d80 ]
 0051ECDD    test al, al
-0051ECDF    jz 0x0051ED20
+0051ECDF    jz 0x0051ED20                                   ; => [ Call: sub_511d80 ]
 0051ECE1    mov ecx, dword ptr ds:[edi+0x04]
 0051ECE4    mov edx, esi
 0051ECE6    mov ecx, dword ptr ds:[ecx]
@@ -21,7 +27,7 @@
 0051ECEF    jz 0x0051ED20
 0051ECF1    mov edx, 0x18
 0051ECF6    mov ecx, esi
-0051ECF8    call 0x00571B30
+0051ECF8    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0051ECFD    mov ecx, dword ptr ds:[eax+0x98]
 0051ED03    mov eax, dword ptr ds:[eax+0x9C]
 0051ED09    and ecx, 0x7F000400

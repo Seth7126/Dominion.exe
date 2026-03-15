@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6f9e10
+// 起始地址: 0x6f9e10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006F9E10    push ebp
 006F9E11    mov ebp, esp
 006F9E13    and esp, 0xFFFFFFF8
@@ -19,7 +25,7 @@
 006F9E32    add ecx, 0x04
 006F9E35    mov esi, dword ptr ds:[esi+0x04]
 006F9E38    push ebx
-006F9E39    call 0x006F9A30
+006F9E39    call 0x006F9A30                                 ; => [ Call: sub_6f9a30 ]
 006F9E3E    mov edi, eax
 006F9E40    add esp, 0x04
 006F9E43    test edi, edi
@@ -32,7 +38,7 @@
 006F9E54    jz 0x006F9E5F
 006F9E56    push ecx
 006F9E57    lea ecx, ds:[edi+0x08]
-006F9E5A    call 0x0063D850
+006F9E5A    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 006F9E5F    push dword ptr ds:[ebx+0x0C]
 006F9E62    mov ecx, dword ptr ds:[edi+0x0C]
 006F9E65    mov edx, edi

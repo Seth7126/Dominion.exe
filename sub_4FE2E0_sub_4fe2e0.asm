@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4fe2e0
+// 起始地址: 0x4fe2e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FE2E0    dword 19E85756
 004FE2E4    push ecx
 004FE2E5    pop es
@@ -6,12 +12,12 @@
 004FE2EE    cdq
 004FE2EF    idiv dword ptr ds:[ecx+0xD38]
 004FE2F5    mov edi, edx
-004FE2F7    call 0x00573400
+004FE2F7    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FE2FC    mov esi, eax
 004FE2FE    cmp dword ptr ds:[esi], 0x02
 004FE301    jz 0x004FE308
-004FE303    call 0x00591930
-004FE308    call 0x00573400
+004FE303    call 0x00591930                                 ; => [ Call: sub_591930 ]
+004FE308    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FE30D    push 0x00
 004FE30F    push ecx
 004FE310    xor ecx, ecx
@@ -31,4 +37,4 @@
 004FE33A    add esp, 0x18
 004FE33D    pop edi
 004FE33E    pop esi
-004FE33F    ret
+004FE33F    ret                                             ; => [ Call: sub_591310 ]

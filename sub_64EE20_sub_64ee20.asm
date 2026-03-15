@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64ee20
+// 起始地址: 0x64ee20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064EE20    push ebp
 0064EE21    mov ebp, esp
 0064EE23    push ecx
@@ -14,7 +20,7 @@
 0064EE37    nop word ptr ds:[eax+eax*1], ax
 0064EE40    mov ecx, dword ptr ds:[eax+esi*4]
 0064EE43    test ecx, ecx
-0064EE45    mov eax, 0x801800
+0064EE45    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 0064EE4A    cmovnz eax, ecx
 0064EE4D    mov ecx, ebx
 0064EE4F    nop

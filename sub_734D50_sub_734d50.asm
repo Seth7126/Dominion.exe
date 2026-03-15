@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_734d50
+// 起始地址: 0x734d50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00734D50    push ebp
 00734D51    mov ebp, esp
-00734D53    movaps xmm2, xmmword ptr ds:[0x00891410]
+00734D53    movaps xmm2, xmmword ptr ds:[0x00891410]        ; => [ Data: data_891410 ]
 00734D5A    mov edx, ecx
-00734D5C    movaps xmm3, xmmword ptr ds:[0x00891500]
+00734D5C    movaps xmm3, xmmword ptr ds:[0x00891500]        ; => [ Data: data_891500 ]
 00734D63    push ebx
 00734D64    mov ebx, dword ptr ss:[ebp+0x0C]
 00734D67    push edi

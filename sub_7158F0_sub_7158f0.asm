@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7158f0
+// 起始地址: 0x7158f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007158F0    push ebp
 007158F1    mov ebp, esp
 007158F3    mov eax, dword ptr ss:[ebp+0x0C]
@@ -53,7 +59,7 @@
 007159AF    movss dword ptr ds:[ecx+0x0C], xmm4
 007159B4    movss dword ptr ds:[ecx+0x04], xmm0
 007159B9    pop ebp
-007159BA    jmp 0x00752330
+007159BA    jmp 0x00752330                                  ; => [ Call: sub_752330 ]
 007159BF    mov ecx, dword ptr ds:[esi]
 007159C1    mov eax, dword ptr ds:[ecx+0x10]
 007159C4    mov dword ptr ds:[esi+0x08], eax
@@ -79,13 +85,13 @@
 00715A08    jmp 0x00715B2A
 00715A0D    push 0x05
 00715A0F    mov ecx, edi
-00715A11    call 0x00714A40
+00715A11    call 0x00714A40                                 ; => [ Call: sub_714a40 ]
 00715A16    mov ecx, eax
 00715A18    movaps xmm3, xmm6
 00715A1B    mov eax, 0x66666667
 00715A20    mov dword ptr ss:[ebp+0x0C], ecx
 00715A23    imul ecx
-00715A25    xorps xmm1, xmm1
+00715A25    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00715A28    movss xmm0, dword ptr ds:[edi+ecx*4-0x14]
 00715A2E    movss xmm5, dword ptr ds:[edi+ecx*4-0x10]
 00715A34    movss xmm7, dword ptr ds:[edi+ecx*4-0x0C]
@@ -104,7 +110,7 @@
 00715A61    comiss xmm1, xmm3
 00715A64    movss xmm0, dword ptr ds:[edx+ecx*4-0x4C]
 00715A6A    jbe 0x00715A71
-00715A6C    xorps xmm2, xmm2
+00715A6C    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00715A6F    jmp 0x00715A78
 00715A71    movaps xmm2, xmm6
 00715A74    minss xmm2, xmm3
@@ -116,11 +122,11 @@
 00715A84    lahf
 00715A85    test ah, 0x44
 00715A88    jp 0x00715A8F
-00715A8A    xorps xmm2, xmm2
+00715A8A    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00715A8D    jmp 0x00715AD7
 00715A8F    mov eax, dword ptr ss:[ebp+0x08]
 00715A92    add ecx, 0xFFFFFFEE
-00715A95    xorps xmm3, xmm3
+00715A95    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 00715A98    mov ebx, ecx
 00715A9A    cmp ecx, eax
 00715A9C    jnl 0x00715AB5
@@ -170,10 +176,10 @@
 00715B4B    movss dword ptr ds:[ecx+0x0C], xmm5
 00715B50    pop ebx
 00715B51    pop ebp
-00715B52    jmp 0x00752330
+00715B52    jmp 0x00752330                                  ; => [ Call: sub_752330 ]
 00715B57    cmp ecx, ebx
 00715B59    jnz 0x00715B60
-00715B5B    movaps xmm4, xmm1
+00715B5B    movaps xmm4, xmm1                               ; => [ String: 0 | String: zx ]
 00715B5E    jmp 0x00715B6C
 00715B60    movss xmm1, dword ptr ds:[edx+ecx*4-0x08]
 00715B66    movss xmm4, dword ptr ds:[edx+ecx*4-0x04]
@@ -217,4 +223,4 @@
 00715BF6    movss dword ptr ds:[ecx+0x0C], xmm5
 00715BFB    movss dword ptr ds:[ecx], xmm1
 00715BFF    pop ebp
-00715C00    jmp 0x00752330
+00715C00    jmp 0x00752330                                  ; => [ Call: sub_752330 ]

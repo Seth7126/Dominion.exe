@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_56ef50
+// 起始地址: 0x56ef50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056EF50    push esi
 0056EF51    mov esi, ecx
-0056EF53    call 0x00573400
+0056EF53    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056EF58    mov ecx, dword ptr ds:[eax+0x04]
 0056EF5B    mov edx, dword ptr ds:[ecx+0x1504]
 0056EF61    cmp edx, 0x03
@@ -27,7 +33,7 @@
 0056EF9D    push 0x00
 0056EF9F    push 0x1F
 0056EFA1    push eax
-0056EFA2    call 0x0059F9B0
+0056EFA2    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0056EFA7    add esp, 0x24
 0056EFAA    mov eax, esi
 0056EFAC    pop esi

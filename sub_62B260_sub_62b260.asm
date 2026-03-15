@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_62b260
+// 起始地址: 0x62b260
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0062B260    push ebp
 0062B261    mov ebp, esp
 0062B263    sub esp, 0x08
-0062B266    mov eax, dword ptr ds:[0x0147AC2C]
+0062B266    mov eax, dword ptr ds:[0x0147AC2C]              ; => [ Data: data_147ac2c ]
 0062B26B    xor edx, edx
 0062B26D    push ebx
 0062B26E    push esi
@@ -29,15 +35,15 @@
 0062B2A0    lea eax, ss:[ebp-0x04]
 0062B2A3    push eax
 0062B2A4    call 0x006A01A0
-0062B2A9    mov esi, dword ptr ds:[eax+0x04]
+0062B2A9    mov esi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_6a01a0 ]
 0062B2AC    mov eax, dword ptr ds:[esi+0x04]
 0062B2AF    add eax, 0xFFFFFFFE
 0062B2B2    cmp eax, 0x24
 0062B2B5    jnbe 0x0062B3E4
-0062B2BB    movzx eax, byte ptr ds:[eax+0x62B428]
+0062B2BB    movzx eax, byte ptr ds:[eax+0x62B428]           ; => [ Data: lookup_table_62b428 ]
 0062B2C2    jmp dword ptr ds:[eax*4+0x62B414]
 0062B2C9    mov eax, dword ptr ds:[esi+0x20]
-0062B2CC    mov ecx, 0x801800
+0062B2CC    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0062B2D1    test eax, eax
 0062B2D3    push 0x86CF38
 0062B2D8    cmovnz ecx, eax
@@ -45,9 +51,9 @@
 0062B2DC    call ebx
 0062B2DE    add esp, 0x08
 0062B2E1    test eax, eax
-0062B2E3    jnz 0x0062B3D1
+0062B2E3    jnz 0x0062B3D1                                  ; => [ String: card_gen ]
 0062B2E9    mov eax, dword ptr ds:[esi+0x20]
-0062B2EC    mov ecx, 0x801800
+0062B2EC    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0062B2F1    test eax, eax
 0062B2F3    push 0x86CF4C
 0062B2F8    cmovnz ecx, eax
@@ -55,9 +61,9 @@
 0062B2FC    call ebx
 0062B2FE    add esp, 0x08
 0062B301    test eax, eax
-0062B303    jnz 0x0062B3D1
+0062B303    jnz 0x0062B3D1                                  ; => [ String: non_atlas ]
 0062B309    mov eax, dword ptr ds:[esi+0x20]
-0062B30C    mov ecx, 0x801800
+0062B30C    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0062B311    test eax, eax
 0062B313    push 0x805720
 0062B318    cmovnz ecx, eax
@@ -65,9 +71,9 @@
 0062B31C    call ebx
 0062B31E    add esp, 0x08
 0062B321    test eax, eax
-0062B323    jnz 0x0062B3D1
+0062B323    jnz 0x0062B3D1                                  ; => [ String: campaign ]
 0062B329    mov eax, dword ptr ds:[esi+0x20]
-0062B32C    mov ecx, 0x801800
+0062B32C    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0062B331    test eax, eax
 0062B333    push 0x86CF44
 0062B338    cmovnz ecx, eax
@@ -75,10 +81,10 @@
 0062B33C    call ebx
 0062B33E    add esp, 0x08
 0062B341    test eax, eax
-0062B343    jnz 0x0062B3D1
+0062B343    jnz 0x0062B3D1                                  ; => [ String: box_art ]
 0062B349    jmp 0x0062B383
 0062B34B    mov eax, dword ptr ds:[esi+0x20]
-0062B34E    mov ecx, 0x801800
+0062B34E    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0062B353    test eax, eax
 0062B355    push 0x86CF68
 0062B35A    cmovnz ecx, eax
@@ -86,9 +92,9 @@
 0062B35E    call ebx
 0062B360    add esp, 0x08
 0062B363    test eax, eax
-0062B365    jnz 0x0062B383
+0062B365    jnz 0x0062B383                                  ; => [ String: sound_load_always ]
 0062B367    mov eax, dword ptr ds:[esi+0x20]
-0062B36A    mov ecx, 0x801800
+0062B36A    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0062B36F    test eax, eax
 0062B371    push 0x86CF58
 0062B376    cmovnz ecx, eax
@@ -96,15 +102,15 @@
 0062B37A    call ebx
 0062B37C    add esp, 0x08
 0062B37F    test eax, eax
-0062B381    jz 0x0062B3D1
+0062B381    jz 0x0062B3D1                                   ; => [ String: sound_load_game ]
 0062B383    mov ecx, 0x0C
-0062B388    call 0x0064BFD0
+0062B388    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0062B38D    mov edi, eax
 0062B38F    inc dword ptr ds:[edi+0x0C]
 0062B392    cmp dword ptr ds:[edi], 0x00
 0062B395    jnz 0x0062B39E
 0062B397    mov ecx, edi
-0062B399    call 0x0064BE70
+0062B399    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0062B39E    mov ecx, dword ptr ds:[edi]
 0062B3A0    mov edx, dword ptr ss:[ebp-0x08]
 0062B3A3    mov eax, dword ptr ds:[ecx]
@@ -136,10 +142,10 @@
 0062B3EE    push 0x86F1E8
 0062B3F3    mov edx, 0x801800
 0062B3F8    mov ecx, 0x801AA4
-0062B3FD    call 0x0063B870
+0062B3FD    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: Halt | String: GameSpecific_GetAssetsToLoad ]
 0062B402    add esp, 0x0C
-0062B405    call 0x0063BC30
+0062B405    call 0x0063BC30                                 ; => [ Call: sub_63bc30 ]
 0062B40A    test al, al
 0062B40C    jz 0x0062B40F
 0062B40E    int3
-0062B40F    call 0x0063BB00
+0062B40F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

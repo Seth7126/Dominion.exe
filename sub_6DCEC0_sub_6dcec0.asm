@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dcec0
+// 起始地址: 0x6dcec0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DCEC0    push ebp
 006DCEC1    mov ebp, esp
 006DCEC3    sub esp, 0x08
@@ -32,7 +38,7 @@
 006DCEFC    mov edx, ecx
 006DCEFE    push eax
 006DCEFF    mov ecx, ebx
-006DCF01    call 0x006DCB90
+006DCF01    call 0x006DCB90                                 ; => [ Call: sub_6dcb90 ]
 006DCF06    mov ecx, dword ptr ds:[edi]
 006DCF08    add esp, 0x04
 006DCF0B    mov eax, dword ptr ds:[edi+0x08]
@@ -46,7 +52,7 @@
 006DCF1D    lea eax, ds:[esi+0x10]
 006DCF20    push eax
 006DCF21    push esi
-006DCF22    call 0x00761FBE
+006DCF22    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006DCF27    add esp, 0x0C
 006DCF2A    add dword ptr ds:[edi], 0xFFFFFFFF
 006DCF2D    jnz 0x006DCF47

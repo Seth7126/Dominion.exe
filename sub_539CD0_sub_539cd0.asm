@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_539cd0
+// 起始地址: 0x539cd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00539CD0    dword E8EC8B55
 00539CD4    sub byte ptr ds:[edi+0x38830003], dl
 00539CDA    add eax, 0x8B563275
 00539CDF    jo 0x00539CF9
 00539CE1    call 0x00573400
 00539CE6    mov eax, dword ptr ds:[eax+0x04]
-00539CE9    mov eax, dword ptr ds:[eax+0x19E4]
+00539CE9    mov eax, dword ptr ds:[eax+0x19E4]              ; => [ Call: sub_573400 ]
 00539CEF    cmp eax, dword ptr ds:[esi+0x04]
 00539CF2    jz 0x00539CFF
 00539CF4    xorps xmm0, xmm0
@@ -22,10 +28,10 @@
 00539D19    push 0x81EA70
 00539D1E    mov edx, 0x801800
 00539D23    mov ecx, 0x80AEA0
-00539D28    call 0x0063B870
+00539D28    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DomAchievementDataGet | Data: data_801800 | String: c.contextType == CONTEXT_ACHIEVEMENT | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 00539D2D    add esp, 0x0C
 00539D30    call 0x0063BC30
 00539D35    test al, al
-00539D37    jz 0x00539D3A
+00539D37    jz 0x00539D3A                                   ; => [ Call: sub_63bc30 ]
 00539D39    int3
-00539D3A    call 0x0063BB00
+00539D3A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

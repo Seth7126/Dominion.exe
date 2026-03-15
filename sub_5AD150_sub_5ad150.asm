@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ad150
+// 起始地址: 0x5ad150
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AD150    push ebp
 005AD151    mov ebp, esp
 005AD153    push ecx
@@ -17,7 +23,7 @@
 005AD170    pop ebx
 005AD171    mov esp, ebp
 005AD173    pop ebp
-005AD174    ret
+005AD174    ret                                             ; => [ Call: sub_5acff0 ]
 005AD175    mov ecx, dword ptr ss:[ebp+0x10]
 005AD178    mov eax, esi
 005AD17A    shr eax, 0x01
@@ -39,7 +45,7 @@
 005AD1A3    push dword ptr ss:[ebp+0x14]
 005AD1A6    push dword ptr ss:[ebp+0x0C]
 005AD1A9    push dword ptr ss:[ebp+0x08]
-005AD1AC    call 0x005ADAE0
+005AD1AC    call 0x005ADAE0                                 ; => [ Call: sub_5adae0 ]
 005AD1B1    add esp, 0x0C
 005AD1B4    jmp 0x005AD1DB
 005AD1B6    push ecx
@@ -63,7 +69,7 @@
 005AD1E9    push dword ptr ss:[ebp+0x08]
 005AD1EC    push esi
 005AD1ED    push ebx
-005AD1EE    call 0x005ADCB0
+005AD1EE    call 0x005ADCB0                                 ; => [ Call: sub_5adcb0 ]
 005AD1F3    add esp, 0x18
 005AD1F6    pop edi
 005AD1F7    pop esi

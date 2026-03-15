@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4b11c0
+// 起始地址: 0x4b11c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B11C0    push ebp
 004B11C1    mov ebp, esp
 004B11C3    sub esp, 0x41C
@@ -14,7 +20,7 @@
 004B11F0    mov eax, dword ptr ds:[ebx-0x214]
 004B11F6    cmp eax, 0x3E8
 004B11FB    jnz 0x004B128C
-004B1201    mov eax, dword ptr ds:[0x00CC8DC8]
+004B1201    mov eax, dword ptr ds:[0x00CC8DC8]              ; => [ Data: data_cc8dc8 ]
 004B1206    xor ecx, ecx
 004B1208    mov edx, dword ptr ds:[eax+0x1E1A0]
 004B120E    test edx, edx
@@ -26,7 +32,7 @@
 004B1221    add eax, 0x7868
 004B1226    cmp ecx, edx
 004B1228    jl 0x004B1218
-004B122A    xor eax, eax
+004B122A    xor eax, eax                                    ; => [ Call: nullptr ]
 004B122C    mov ecx, dword ptr ds:[eax+0x58E8]
 004B1232    test ecx, ecx
 004B1234    js 0x004B13BC
@@ -38,7 +44,7 @@
 004B124A    lea edi, ss:[ebp-0x210]
 004B1250    mov ecx, 0x81
 004B1255    add esp, 0x04
-004B1258    rep movsd
+004B1258    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_4b1150 ]
 004B125A    mov eax, dword ptr ss:[ebp-0x10]
 004B125D    mov dword ptr ds:[ebx], eax
 004B125F    test eax, eax
@@ -63,7 +69,7 @@
 004B129F    lea edi, ss:[ebp-0x210]
 004B12A5    mov ecx, 0x81
 004B12AA    add esp, 0x04
-004B12AD    rep movsd
+004B12AD    rep movsd                                       ; => [ Call: sub_4b10e0 | Call: __builtin_memcpy ]
 004B12AF    mov eax, dword ptr ss:[ebp-0x10]
 004B12B2    mov dword ptr ds:[ebx], eax
 004B12B4    test eax, eax
@@ -74,7 +80,7 @@
 004B12C5    lea edi, ss:[ebp-0x210]
 004B12CB    mov ecx, 0x81
 004B12D0    add esp, 0x04
-004B12D3    rep movsd
+004B12D3    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_4b1150 ]
 004B12D5    mov eax, dword ptr ss:[ebp-0x10]
 004B12D8    mov dword ptr ds:[ebx], eax
 004B12DA    test eax, eax
@@ -85,7 +91,7 @@
 004B12E8    push eax
 004B12E9    lea eax, ds:[ebx-0x200]
 004B12EF    push eax
-004B12F0    call 0x00761FBE
+004B12F0    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004B12F5    mov ecx, dword ptr ss:[ebp-0x04]
 004B12F8    add esp, 0x0C
 004B12FB    mov eax, dword ptr ss:[ebp-0x08]
@@ -105,50 +111,50 @@
 004B1325    push 0x801AF8
 004B132A    mov edx, 0x801800
 004B132F    mov ecx, 0x801E20
-004B1334    call 0x0063B870
+004B1334    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: source.numSmartplays >= 0 | Data: data_801800 | String: CopySmartplays | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B1339    add esp, 0x0C
 004B133C    call 0x0063BC30
 004B1341    test al, al
-004B1343    jz 0x004B1346
+004B1343    jz 0x004B1346                                   ; => [ Call: sub_63bc30 ]
 004B1345    int3
-004B1346    call 0x0063BB00
+004B1346    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 004B134B    push 0x801E10
 004B1350    push 0x640
 004B1355    push 0x801AF8
 004B135A    mov edx, 0x801800
 004B135F    mov ecx, 0x801E20
-004B1364    call 0x0063B870
+004B1364    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: source.numSmartplays >= 0 | Data: data_801800 | String: CopySmartplays | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B1369    add esp, 0x0C
 004B136C    call 0x0063BC30
 004B1371    test al, al
-004B1373    jz 0x004B1376
+004B1373    jz 0x004B1376                                   ; => [ Call: sub_63bc30 ]
 004B1375    int3
-004B1376    call 0x0063BB00
+004B1376    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 004B137B    push 0x801E10
 004B1380    push 0x640
 004B1385    push 0x801AF8
 004B138A    mov edx, 0x801800
 004B138F    mov ecx, 0x801E20
-004B1394    call 0x0063B870
+004B1394    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: source.numSmartplays >= 0 | Data: data_801800 | String: CopySmartplays | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B1399    add esp, 0x0C
 004B139C    call 0x0063BC30
 004B13A1    test al, al
-004B13A3    jz 0x004B13A6
+004B13A3    jz 0x004B13A6                                   ; => [ Call: sub_63bc30 ]
 004B13A5    int3
-004B13A6    call 0x0063BB00
-004B13AB    push 0x801E10
+004B13A6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+004B13AB    push 0x801E10                                   ; => [ String: CopySmartplays ]
 004B13B0    push 0x640
-004B13B5    mov ecx, 0x801E20
+004B13B5    mov ecx, 0x801E20                               ; => [ String: source.numSmartplays >= 0 ]
 004B13BA    jmp 0x004B13CB
-004B13BC    push 0x801E3C
+004B13BC    push 0x801E3C                                   ; => [ String: GameStartSmartplays ]
 004B13C1    push 0x67E
-004B13C6    mov ecx, 0x801E50
+004B13C6    mov ecx, 0x801E50                               ; => [ String: profile->smartplays.numSmartplays >= 0 ]
 004B13CB    push 0x801AF8
 004B13D0    mov edx, 0x801800
-004B13D5    call 0x0063B870
+004B13D5    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B13DA    add esp, 0x0C
 004B13DD    call 0x0063BC30
 004B13E2    test al, al
-004B13E4    jz 0x004B13E7
+004B13E4    jz 0x004B13E7                                   ; => [ Call: sub_63bc30 ]
 004B13E6    int3
-004B13E7    call 0x0063BB00
+004B13E7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

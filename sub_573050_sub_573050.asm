@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_573050
+// 起始地址: 0x573050
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00573050    push ebp
 00573051    mov ebp, esp
 00573053    and esp, 0xFFFFFFF8
@@ -6,18 +12,18 @@
 0057305F    push ebx
 00573060    push esi
 00573061    push edi
-00573062    mov esi, dword ptr ds:[eax]
+00573062    mov esi, dword ptr ds:[eax]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 00573064    mov edi, ecx
 00573066    mov dword ptr ss:[esp+0x10], edx
 0057306A    mov dword ptr ss:[esp+0x0C], edi
 0057306E    cmp dword ptr ds:[esi+0xF010], 0x200
 00573078    jl 0x0057307F
-0057307A    call 0x00591930
+0057307A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057307F    mov eax, dword ptr ds:[esi+0xF010]
-00573085    cmp eax, dword ptr ds:[0x00CC8DD8]
+00573085    cmp eax, dword ptr ds:[0x00CC8DD8]              ; => [ Data: data_cc8dd8 ]
 0057308B    jl 0x0057319C
 00573091    jnz 0x00573097
-00573093    xor ebx, ebx
+00573093    xor ebx, ebx                                    ; => [ Call: nullptr ]
 00573095    jmp 0x005730A7
 00573097    mov ecx, eax
 00573099    lea ebx, ds:[esi-0x68]
@@ -73,7 +79,7 @@
 00573146    and esi, 0xFFFF
 0057314C    cmp esi, 0x320
 00573152    jb 0x0057315C
-00573154    call 0x00591930
+00573154    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00573159    mov ecx, dword ptr ss:[ebp+0x08]
 0057315C    mov edx, dword ptr ss:[esp+0x0C]
 00573160    imul eax, esi, 0x64
@@ -113,10 +119,10 @@
 005731A6    push 0x8088A8
 005731AB    mov edx, 0x801800
 005731B0    mov ecx, 0x808E88
-005731B5    call 0x0063B870
+005731B5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: curDepth >= origContextDepth | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: IsDomContextStackEmpty ]
 005731BA    add esp, 0x0C
 005731BD    call 0x0063BC30
 005731C2    test al, al
-005731C4    jz 0x005731C7
+005731C4    jz 0x005731C7                                   ; => [ Call: sub_63bc30 ]
 005731C6    int3
-005731C7    call 0x0063BB00
+005731C7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

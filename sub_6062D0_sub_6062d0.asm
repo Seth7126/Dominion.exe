@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6062d0
+// 起始地址: 0x6062d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006062D0    push ebp
 006062D1    mov ebp, esp
 006062D3    sub esp, 0x14
@@ -8,7 +14,7 @@
 006062DD    push edi
 006062DE    cmp ecx, 0x02
 006062E1    jz 0x006062FB
-006062E3    mov eax, 0x7EA630
+006062E3    mov eax, 0x7EA630                               ; => [ Data: data_7ea630 ]
 006062E8    nop dword ptr ds:[eax+eax*1], eax
 006062F0    lea eax, ds:[eax+0x1044]
 006062F6    inc esi
@@ -18,7 +24,7 @@
 00606301    xor ebx, ebx
 00606303    mov dword ptr ss:[ebp-0x04], 0x00
 0060630A    xor edi, edi
-0060630C    lea ecx, ds:[eax+0x7EA630]
+0060630C    lea ecx, ds:[eax+0x7EA630]                      ; => [ Data: data_7ea630 ]
 00606312    mov dword ptr ss:[ebp-0x08], ecx
 00606315    mov eax, ebx
 00606317    shl eax, 0x06
@@ -45,7 +51,7 @@
 00606355    add esi, ebx
 00606357    lea eax, ds:[esi+edi*1]
 0060635A    mov ecx, dword ptr ds:[ecx+eax*4+0x08]
-0060635E    call 0x00571B30
+0060635E    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00606363    mov dword ptr ss:[ebp-0x10], 0x08
 0060636A    mov ecx, dword ptr ds:[eax+0x98]
 00606370    mov eax, dword ptr ds:[eax+0x9C]

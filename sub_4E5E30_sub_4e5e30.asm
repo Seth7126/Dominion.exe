@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4e5e30
+// 起始地址: 0x4e5e30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E5E30    push ebp
 004E5E31    mov ebp, esp
 004E5E33    and esp, 0xFFFFFFF8
 004E5E36    mov eax, 0x3864
-004E5E3B    call 0x00761E50
-004E5E40    mov eax, dword ptr ds:[0x008C4040]
+004E5E3B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+004E5E40    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004E5E45    xor eax, esp
 004E5E47    mov dword ptr ss:[esp+0x3860], eax
 004E5E4E    mov eax, dword ptr ds:[edx]
@@ -24,29 +30,29 @@
 004E5E7B    push eax
 004E5E7C    lea eax, ss:[esp+0x1EE0]
 004E5E83    push eax
-004E5E84    call 0x00761FBE
+004E5E84    call 0x00761FBE                                 ; => [ Call: sub_4dec00 | Call: memcpy ]
 004E5E89    add esp, 0x0C
 004E5E8C    lea eax, ss:[esp+0x548]
 004E5E93    lea edx, ss:[esp+0x1ED8]
 004E5E9A    mov ecx, 0x17
 004E5E9F    push 0x00
 004E5EA1    push eax
-004E5EA2    call 0x005904D0
+004E5EA2    call 0x005904D0                                 ; => [ Call: sub_5904d0 ]
 004E5EA7    add esp, 0x08
 004E5EAA    lea edi, ss:[esp+0x10]
 004E5EAE    mov ecx, 0x14D
 004E5EB3    mov esi, eax
-004E5EB5    rep movsd
+004E5EB5    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004E5EB7    mov edi, ebx
 004E5EB9    lea esi, ss:[esp+0x10]
 004E5EBD    mov ecx, 0x14D
-004E5EC2    rep movsd
+004E5EC2    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004E5EC4    mov ecx, dword ptr ss:[esp+0x386C]
 004E5ECB    pop edi
 004E5ECC    pop esi
 004E5ECD    pop ebx
 004E5ECE    xor ecx, esp
-004E5ED0    call 0x0075927A
+004E5ED0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004E5ED5    mov esp, ebp
 004E5ED7    pop ebp
 004E5ED8    ret

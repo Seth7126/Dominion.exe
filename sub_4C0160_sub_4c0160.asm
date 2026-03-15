@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4c0160
+// 起始地址: 0x4c0160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C0160    push ebp
 004C0161    mov ebp, esp
 004C0163    push ecx
@@ -16,7 +22,7 @@
 004C0179    cmp edx, 0x08
 004C017C    jnz 0x004C01C1
 004C017E    mov ebx, dword ptr ds:[0x0077568C]
-004C0184    xor esi, esi
+004C0184    xor esi, esi                                    ; => [ Call: nullptr ]
 004C0186    mov edi, dword ptr ds:[0x00775680]
 004C018C    nop dword ptr ds:[eax], eax
 004C0190    movsx eax, byte ptr ds:[esi+ecx*1]

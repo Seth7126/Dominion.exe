@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_683de0
+// 起始地址: 0x683de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00683DE0    push ebp
 00683DE1    mov ebp, esp
 00683DE3    sub esp, 0x14
@@ -20,10 +26,10 @@
 00683E2B    subss xmm0, dword ptr ds:[esi+0x1C]
 00683E30    movss dword ptr ds:[esi+0x1C], xmm0
 00683E35    movss xmm0, dword ptr ds:[0x008910E0]
-00683E3D    call 0x004AE0F0
+00683E3D    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 00683E42    movss dword ptr ss:[ebp-0x04], xmm0
 00683E47    movss xmm0, dword ptr ds:[0x008910E0]
-00683E4F    call 0x004AE0D0
+00683E4F    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 00683E54    movss xmm4, dword ptr ss:[ebp-0x04]
 00683E59    movaps xmm5, xmm0
 00683E5C    movaps xmm0, xmm4
@@ -89,10 +95,10 @@
 00683F6E    pop ebp
 00683F6F    ret
 00683F70    movss xmm0, dword ptr ds:[0x00890F28]
-00683F78    call 0x004AE0F0
+00683F78    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 00683F7D    movss dword ptr ss:[ebp-0x04], xmm0
 00683F82    movss xmm0, dword ptr ds:[0x00890F28]
-00683F8A    call 0x004AE0D0
+00683F8A    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 00683F8F    movss xmm5, dword ptr ss:[ebp-0x04]
 00683F94    movaps xmm3, xmm0
 00683F97    movss xmm1, dword ptr ds:[esi]
@@ -175,10 +181,10 @@
 006840E3    subss xmm0, dword ptr ds:[esi+0x1C]
 006840E8    movss dword ptr ds:[esi+0x1C], xmm0
 006840ED    movss xmm0, dword ptr ds:[0x00890E60]
-006840F5    call 0x004AE0F0
+006840F5    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006840FA    movss dword ptr ss:[ebp-0x08], xmm0
 006840FF    movss xmm0, dword ptr ds:[0x00890E60]
-00684107    call 0x004AE0D0
+00684107    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 0068410C    movss xmm1, dword ptr ds:[esi]
 00684110    movaps xmm2, xmm0
 00684113    movss xmm4, dword ptr ds:[esi+0x04]
@@ -264,10 +270,10 @@
 00684265    push 0x876CB0
 0068426A    mov edx, 0x801800
 0068426F    mov ecx, 0x801AA4
-00684274    call 0x0063B870
+00684274    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ImageRotationUVS | Data: data_801800 | String: C:\x\ax2017\Engine\Sprite.cpp | String: Halt ]
 00684279    add esp, 0x0C
 0068427C    call 0x0063BC30
 00684281    test al, al
-00684283    jz 0x00684286
+00684283    jz 0x00684286                                   ; => [ Call: sub_63bc30 ]
 00684285    int3
-00684286    call 0x0063BB00
+00684286    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

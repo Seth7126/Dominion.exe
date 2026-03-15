@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6245e0
+// 起始地址: 0x6245e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006245E0    push ebp
 006245E1    mov ebp, esp
 006245E3    and esp, 0xFFFFFFF8
@@ -12,13 +18,13 @@
 006245FF    push 0x86F1E8
 00624604    mov edx, 0x801800
 00624609    mov ecx, 0x801AA4
-0062460E    call 0x0063B870
+0062460E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: GameSpecific_GetAvatarRange | String: Halt ]
 00624613    add esp, 0x0C
 00624616    call 0x0063BC30
 0062461B    test al, al
-0062461D    jz 0x00624620
+0062461D    jz 0x00624620                                   ; => [ Call: sub_63bc30 ]
 0062461F    int3
-00624620    jmp 0x0063BB00
+00624620    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00624625    mov eax, 0x1F4
 0062462A    lea edx, ds:[eax+0x47]
 0062462D    mov esp, ebp

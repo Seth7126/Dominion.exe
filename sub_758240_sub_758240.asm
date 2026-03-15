@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_758240
+// 起始地址: 0x758240
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00758240    push ebp
 00758241    mov ebp, esp
 00758243    and esp, 0xFFFFFFF8
@@ -28,7 +34,7 @@
 00758294    mov dword ptr ds:[esi+0x790], 0x00
 0075829E    mov dword ptr ds:[esi+0x794], 0x00
 007582A8    mov dword ptr ds:[esi+0x79C], 0x00
-007582B2    movsd qword ptr ds:[esi+0x60], xmm0
+007582B2    movsd qword ptr ds:[esi+0x60], xmm0             ; => [ String: 0 | String: zx ]
 007582B7    pop esi
 007582B8    pop ebx
 007582B9    mov esp, ebp

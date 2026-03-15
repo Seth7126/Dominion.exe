@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4de040
+// 起始地址: 0x4de040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DE040    push ebp
 004DE041    mov ebp, esp
 004DE043    and esp, 0xFFFFFFF8
@@ -15,13 +21,13 @@
 004DE060    lea ecx, ss:[esp+0x1C]
 004DE064    mov dword ptr ss:[esp+0x10], ebx
 004DE068    xor esi, esi
-004DE06A    call 0x004DC550
+004DE06A    call 0x004DC550                                 ; => [ Call: sub_4dc550 ]
 004DE06F    xorps xmm0, xmm0
 004DE072    lea ecx, ss:[esp+0x30]
 004DE076    movlpd qword ptr ss:[esp+0x10], xmm0
 004DE07C    push dword ptr ss:[esp+0x14]
 004DE080    push dword ptr ss:[esp+0x14]
-004DE084    call 0x004DC830
+004DE084    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DE089    mov edi, dword ptr ss:[esp+0x18]
 004DE08D    cmp edi, dword ptr ss:[esp+0x30]
 004DE091    jz 0x004DE10D
@@ -45,7 +51,7 @@
 004DE0C8    push dword ptr ss:[esp+0x2C]
 004DE0CC    lea ecx, ss:[esp+0x1C]
 004DE0D0    push dword ptr ss:[esp+0x2C]
-004DE0D4    call 0x004DC830
+004DE0D4    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DE0D9    mov edi, dword ptr ss:[esp+0x18]
 004DE0DD    cmp edi, dword ptr ss:[esp+0x30]
 004DE0E1    jnz 0x004DE0A0

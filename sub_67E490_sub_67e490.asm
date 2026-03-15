@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67e490
+// 起始地址: 0x67e490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067E490    push ebp
 0067E491    mov ebp, esp
 0067E493    sub esp, 0x48
@@ -10,7 +16,7 @@
 0067E4A1    push edi
 0067E4A2    movss dword ptr ss:[ebp-0x04], xmm1
 0067E4A7    lea edx, ds:[esi+0x3C]
-0067E4AA    call 0x0067EBA0
+0067E4AA    call 0x0067EBA0                                 ; => [ Call: sub_67eba0 ]
 0067E4AF    test al, al
 0067E4B1    jz 0x0067E4BD
 0067E4B3    xorps xmm0, xmm0
@@ -30,7 +36,7 @@
 0067E4D9    mov ecx, ebx
 0067E4DB    call 0x0067EBA0
 0067E4E0    test al, al
-0067E4E2    jz 0x0067E510
+0067E4E2    jz 0x0067E510                                   ; => [ Call: sub_67eba0 ]
 0067E4E4    mov eax, dword ptr ds:[esi+0x80]
 0067E4EA    cmp eax, 0x04
 0067E4ED    jz 0x0067E510
@@ -47,11 +53,11 @@
 0067E507    cmp eax, 0x19
 0067E50A    jnz 0x0067E5DD
 0067E510    mov ecx, esi
-0067E512    call 0x0067D310
+0067E512    call 0x0067D310                                 ; => [ Call: sub_67d310 ]
 0067E517    lea ecx, ss:[ebp-0x48]
 0067E51A    push ecx
 0067E51B    mov ecx, eax
-0067E51D    call 0x0067DC00
+0067E51D    call 0x0067DC00                                 ; => [ Call: sub_67dc00 ]
 0067E522    add esp, 0x04
 0067E525    movups xmm0, xmmword ptr ds:[eax]
 0067E528    movups xmm1, xmmword ptr ds:[eax+0x10]
@@ -106,10 +112,10 @@
 0067E5E7    push 0x8739B4
 0067E5EC    mov edx, 0x801800
 0067E5F1    mov ecx, 0x801AA4
-0067E5F6    call 0x0063B870
+0067E5F6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: PropDynamicSet | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: Halt ]
 0067E5FB    add esp, 0x0C
 0067E5FE    call 0x0063BC30
 0067E603    test al, al
-0067E605    jz 0x0067E608
+0067E605    jz 0x0067E608                                   ; => [ Call: sub_63bc30 ]
 0067E607    int3
-0067E608    call 0x0063BB00
+0067E608    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

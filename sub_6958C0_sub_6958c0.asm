@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_6958c0
+// 起始地址: 0x6958c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006958C0    push ebp
 006958C1    mov ebp, esp
 006958C3    push 0xFFFFFFFF
-006958C5    push 0x76EF95
+006958C5    push 0x76EF95                                   ; => [ Call: sub_76ef95 | Type: EHRegistrationNode ]
 006958CA    mov eax, dword ptr fs:[0x00000000]
-006958D0    push eax
+006958D0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006958D1    sub esp, 0x48
 006958D4    mov eax, dword ptr ds:[0x008C4040]
 006958D9    xor eax, ebp
@@ -11,19 +17,19 @@
 006958DE    push ebx
 006958DF    push esi
 006958E0    push edi
-006958E1    push eax
+006958E1    push eax                                        ; => [ Data: __security_cookie ]
 006958E2    lea eax, ss:[ebp-0x0C]
-006958E5    mov dword ptr fs:[0x00000000], eax
+006958E5    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006958EB    mov ebx, edx
 006958ED    mov esi, ecx
 006958EF    mov ecx, dword ptr ds:[ebx+0x04]
 006958F2    cmp ecx, 0x25
 006958F5    jnbe 0x00695B78
 006958FB    mov eax, dword ptr ds:[0x0147B07C]
-00695900    mov edi, 0x801800
+00695900    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 00695905    shl ecx, 0x05
-00695908    mov edx, edi
-0069590A    add eax, ecx
+00695908    mov edx, edi                                    ; => [ Data: data_801800 ]
+0069590A    add eax, ecx                                    ; => [ Data: data_147b07c ]
 0069590C    lea ecx, ss:[ebp-0x3C]
 0069590F    mov dword ptr ss:[ebp-0x38], eax
 00695912    mov eax, dword ptr ds:[eax+0x1C]
@@ -31,19 +37,19 @@
 00695918    mov eax, dword ptr ds:[ebx+0x20]
 0069591B    test eax, eax
 0069591D    cmovnz edx, eax
-00695920    call 0x0069FEB0
+00695920    call 0x0069FEB0                                 ; => [ Call: sub_69feb0 ]
 00695925    mov ecx, ebx
 00695927    mov dword ptr ss:[ebp-0x04], 0x00
-0069592E    call 0x005AF880
+0069592E    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00695933    mov dword ptr ss:[ebp-0x48], eax
 00695936    mov eax, dword ptr ss:[ebp-0x4C]
 00695939    mov ecx, dword ptr ds:[eax+0x0C]
 0069593C    test ecx, ecx
 0069593E    jnz 0x00695956
-00695940    push 0x87943C
+00695940    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 00695945    push 0x6D
-00695947    push 0x879400
-0069594C    mov ecx, 0x87948C
+00695947    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+0069594C    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 00695951    jmp 0x00695BBC
 00695956    mov dword ptr ss:[ebp-0x1C], ecx
 00695959    mov edx, eax
@@ -55,13 +61,13 @@
 0069596C    mov ecx, dword ptr ss:[ebp-0x48]
 0069596F    push 0x00
 00695971    mov dword ptr ss:[ebp-0x24], 0x00
-00695978    mov dword ptr ss:[ebp-0x20], 0x00
+00695978    mov dword ptr ss:[ebp-0x20], 0x00               ; => [ Call: nullptr ]
 0069597F    mov byte ptr ss:[ebp-0x18], 0x01
-00695983    call 0x00694DA0
+00695983    call 0x00694DA0                                 ; => [ Call: sub_694da0 ]
 00695988    push 0xA8
 0069598D    push 0x00
 0069598F    push esi
-00695990    call 0x00761FC4
+00695990    call 0x00761FC4                                 ; => [ Call: memset ]
 00695995    mov eax, dword ptr ds:[ebx+0x04]
 00695998    add esp, 0x14
 0069599B    mov dword ptr ds:[esi], eax
@@ -83,12 +89,12 @@
 006959C8    cmp byte ptr ds:[eax], 0x00
 006959CB    jz 0x006959E5
 006959CD    lea ecx, ss:[ebp-0x3C]
-006959D0    call 0x0063D4E0
+006959D0    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006959D5    cmp dword ptr ds:[eax+0x08], 0x80
 006959DC    jnl 0x00695BA8
 006959E2    mov eax, dword ptr ss:[ebp-0x3C]
 006959E5    test eax, eax
-006959E7    mov ecx, edi
+006959E7    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006959E9    mov edx, esi
 006959EB    cmovnz ecx, eax
 006959EE    sub edx, ecx
@@ -107,11 +113,11 @@
 00695A0B    jz 0x00695A1A
 00695A0D    cmp byte ptr ds:[eax], 0x00
 00695A10    jz 0x00695A1A
-00695A12    call 0x0063D4E0
+00695A12    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00695A17    inc dword ptr ds:[eax+0x04]
 00695A1A    mov edx, dword ptr ss:[ebp-0x38]
 00695A1D    lea ecx, ss:[ebp-0x44]
-00695A20    call 0x006C4B90
+00695A20    call 0x006C4B90                                 ; => [ Call: sub_6c4b90 ]
 00695A25    mov byte ptr ss:[ebp-0x04], 0x01
 00695A29    mov ecx, esp
 00695A2B    mov eax, dword ptr ds:[ebx+0x04]
@@ -122,22 +128,22 @@
 00695A38    jz 0x00695A47
 00695A3A    cmp byte ptr ds:[eax], 0x00
 00695A3D    jz 0x00695A47
-00695A3F    call 0x0063D4E0
+00695A3F    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00695A44    inc dword ptr ds:[eax+0x04]
 00695A47    mov edx, dword ptr ss:[ebp-0x38]
 00695A4A    lea ecx, ss:[ebp-0x40]
-00695A4D    call 0x006C5090
+00695A4D    call 0x006C5090                                 ; => [ Call: sub_6c5090 ]
 00695A52    mov eax, dword ptr ss:[ebp-0x44]
 00695A55    add esp, 0x04
 00695A58    mov ebx, dword ptr ds:[0x007750B4]
 00695A5E    test eax, eax
-00695A60    mov ecx, edi
+00695A60    mov ecx, edi                                    ; => [ Data: data_801800 ]
 00695A62    cmovnz ecx, eax
 00695A65    lea eax, ss:[ebp-0x34]
 00695A68    push eax
 00695A69    push 0x00
 00695A6B    push ecx
-00695A6C    call ebx
+00695A6C    call ebx                                        ; => [ Type: BOOL ]
 00695A6E    test eax, eax
 00695A70    jnz 0x00695A7A
 00695A72    mov dword ptr ds:[esi+0x18], eax
@@ -166,87 +172,87 @@
 00695AAC    mov dword ptr ds:[esi+0x24], ecx
 00695AAF    mov byte ptr ss:[ebp-0x04], 0x02
 00695AB3    cmp dword ptr ds:[0x00CF65BC], 0x00
-00695ABA    jz 0x00695AEA
+00695ABA    jz 0x00695AEA                                   ; => [ Data: data_cf65bc ]
 00695ABC    mov eax, dword ptr ss:[ebp-0x40]
 00695ABF    test eax, eax
 00695AC1    jz 0x00695AEA
 00695AC3    cmp byte ptr ds:[eax], 0x00
 00695AC6    jz 0x00695AEA
 00695AC8    lea ecx, ss:[ebp-0x40]
-00695ACB    call 0x0063D4E0
+00695ACB    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00695AD0    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00695AD4    jnz 0x00695AEA
 00695AD6    mov edx, dword ptr ds:[eax+0x0C]
 00695AD9    mov ecx, eax
 00695ADB    add edx, 0x10
-00695ADE    call 0x0064C080
-00695AE3    mov dword ptr ss:[ebp-0x40], 0x801800
+00695ADE    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+00695AE3    mov dword ptr ss:[ebp-0x40], 0x801800           ; => [ Data: data_801800 ]
 00695AEA    mov byte ptr ss:[ebp-0x04], 0x03
 00695AEE    cmp dword ptr ds:[0x00CF65BC], 0x00
-00695AF5    jz 0x00695B25
+00695AF5    jz 0x00695B25                                   ; => [ Data: data_cf65bc ]
 00695AF7    mov eax, dword ptr ss:[ebp-0x44]
 00695AFA    test eax, eax
 00695AFC    jz 0x00695B25
 00695AFE    cmp byte ptr ds:[eax], 0x00
 00695B01    jz 0x00695B25
 00695B03    lea ecx, ss:[ebp-0x44]
-00695B06    call 0x0063D4E0
+00695B06    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00695B0B    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00695B0F    jnz 0x00695B25
 00695B11    mov edx, dword ptr ds:[eax+0x0C]
 00695B14    mov ecx, eax
 00695B16    add edx, 0x10
-00695B19    call 0x0064C080
-00695B1E    mov dword ptr ss:[ebp-0x44], 0x801800
+00695B19    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+00695B1E    mov dword ptr ss:[ebp-0x44], 0x801800           ; => [ Data: data_801800 ]
 00695B25    mov dword ptr ss:[ebp-0x04], 0x04
 00695B2C    cmp dword ptr ds:[0x00CF65BC], 0x00
-00695B33    jz 0x00695B5C
+00695B33    jz 0x00695B5C                                   ; => [ Data: data_cf65bc ]
 00695B35    mov eax, dword ptr ss:[ebp-0x3C]
 00695B38    test eax, eax
 00695B3A    jz 0x00695B5C
 00695B3C    cmp byte ptr ds:[eax], 0x00
 00695B3F    jz 0x00695B5C
 00695B41    lea ecx, ss:[ebp-0x3C]
-00695B44    call 0x0063D4E0
+00695B44    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00695B49    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00695B4D    jnz 0x00695B5C
 00695B4F    mov edx, dword ptr ds:[eax+0x0C]
 00695B52    mov ecx, eax
 00695B54    add edx, 0x10
-00695B57    call 0x0064C080
+00695B57    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00695B5C    mov ecx, dword ptr ss:[ebp-0x0C]
-00695B5F    mov dword ptr fs:[0x00000000], ecx
+00695B5F    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00695B66    pop ecx
 00695B67    pop edi
 00695B68    pop esi
 00695B69    pop ebx
 00695B6A    mov ecx, dword ptr ss:[ebp-0x10]
 00695B6D    xor ecx, ebp
-00695B6F    call 0x0075927A
+00695B6F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00695B74    mov esp, ebp
 00695B76    pop ebp
 00695B77    ret
-00695B78    push 0x87CF18
+00695B78    push 0x87CF18                                   ; => [ String: AssetTypeGetInfo ]
 00695B7D    push 0xC3
 00695B82    push 0x87CC50
 00695B87    mov edx, 0x801800
 00695B8C    mov ecx, 0x87CF74
-00695B91    call 0x0063B870
+00695B91    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: assetType >= 0 && assetType < ASSET_TYPE_COUNT | String: C:\x\ax2017\Engine\AssetTypeRegistry.cpp ]
 00695B96    add esp, 0x0C
 00695B99    call 0x0063BC30
 00695B9E    test al, al
-00695BA0    jz 0x00695BA3
+00695BA0    jz 0x00695BA3                                   ; => [ Call: sub_63bc30 ]
 00695BA2    int3
-00695BA3    call 0x0063BB00
-00695BA8    push 0x878B8C
+00695BA3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+00695BA8    push 0x878B8C                                   ; => [ String: DefBinWriteMakeAssetEntry ]
 00695BAD    push 0x45F
-00695BB2    push 0x878868
-00695BB7    mov ecx, 0x878B64
+00695BB2    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp ]
+00695BB7    mov ecx, 0x878B64                               ; => [ String: assetName.Length() < MAX_ASSET_NAME_LEN ]
 00695BBC    mov edx, edi
-00695BBE    call 0x0063B870
+00695BBE    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00695BC3    add esp, 0x0C
 00695BC6    call 0x0063BC30
 00695BCB    test al, al
-00695BCD    jz 0x00695BD0
+00695BCD    jz 0x00695BD0                                   ; => [ Call: sub_63bc30 ]
 00695BCF    int3
-00695BD0    call 0x0063BB00
+00695BD0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_559a20
+// 起始地址: 0x559a20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00559A20    dword 83EC8B55
 00559A24    in al, 0xF8
 00559A26    push esi
 00559A27    push edi
-00559A28    call 0x0056B800
+00559A28    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 00559A2D    mov esi, eax
-00559A2F    call 0x00573400
+00559A2F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00559A34    movzx esi, si
 00559A37    mov edi, dword ptr ds:[eax+0x04]
 00559A3A    cmp esi, 0x320
 00559A40    jb 0x00559A47
-00559A42    call 0x00591930
+00559A42    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00559A47    imul eax, esi, 0x64
 00559A4A    mov eax, dword ptr ds:[eax+edi*1+0x1A50]
 00559A51    cmp eax, 0x3EA
@@ -34,7 +40,7 @@
 00559A8E    mov ecx, 0x3E9
 00559A93    call 0x00568960
 00559A98    add esp, 0x0C
-00559A9B    lea ecx, ds:[esi+eax*1]
+00559A9B    lea ecx, ds:[esi+eax*1]                         ; => [ Call: sub_568960 ]
 00559A9E    mov eax, 0x03
 00559AA3    cmp ecx, eax
 00559AA5    jz 0x00559AAF

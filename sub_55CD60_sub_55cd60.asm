@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_55cd60
+// 起始地址: 0x55cd60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055CD60    dword 83EC8B55
 0055CD64    in al, 0xF8
 0055CD66    mov eax, 0x1910
-0055CD6B    call 0x00761E50
+0055CD6B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0055CD70    push esi
 0055CD71    push edi
 0055CD72    push 0x00
@@ -15,7 +21,7 @@
 0055CD8A    lea edi, ss:[esp+0x08]
 0055CD8E    mov esi, eax
 0055CD90    mov ecx, 0x321
-0055CD95    rep movsd
+0055CD95    rep movsd                                       ; => [ Call: sub_5678e0 | Call: __builtin_memcpy ]
 0055CD97    xor eax, eax
 0055CD99    cmp dword ptr ss:[esp+0xC88], eax
 0055CDA0    pop edi

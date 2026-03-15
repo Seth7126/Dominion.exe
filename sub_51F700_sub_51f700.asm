@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51f700
+// 起始地址: 0x51f700
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051F700    push ebp
 0051F701    mov ebp, esp
 0051F703    and esp, 0xFFFFFFF8
@@ -11,16 +17,16 @@
 0051F719    mov eax, dword ptr ds:[eax+0x90]
 0051F71F    sub eax, 0x03
 0051F722    cmp eax, 0x03
-0051F725    jnbe 0x0051F76F
+0051F725    jnbe 0x0051F76F                                 ; => [ Call: sub_571b30 ]
 0051F727    mov edx, 0x18
 0051F72C    mov ecx, edi
-0051F72E    call 0x00571B30
+0051F72E    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0051F733    mov esi, dword ptr ds:[eax+0x98]
 0051F739    mov eax, dword ptr ds:[eax+0x9C]
 0051F73F    and esi, 0x7F000400
 0051F745    and eax, 0x940
 0051F74A    or esi, eax
-0051F74C    jnz 0x0051F76F
+0051F74C    jnz 0x0051F76F                                  ; => [ Call: sub_571b30 ]
 0051F74E    lea edx, ds:[esi+0x17]
 0051F751    mov ecx, edi
 0051F753    call 0x00571B30

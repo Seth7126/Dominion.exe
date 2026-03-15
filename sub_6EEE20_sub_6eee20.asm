@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6eee20
+// 起始地址: 0x6eee20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EEE20    push ebp
 006EEE21    mov ebp, esp
 006EEE23    sub esp, 0x2C
-006EEE26    movss xmm0, dword ptr ds:[0x0147D480]
-006EEE2E    movss xmm1, dword ptr ds:[0x0147D484]
+006EEE26    movss xmm0, dword ptr ds:[0x0147D480]           ; => [ Data: data_147d480 ]
+006EEE2E    movss xmm1, dword ptr ds:[0x0147D484]           ; => [ Data: data_147d484 ]
 006EEE36    push ebx
 006EEE37    push esi
 006EEE38    push edi
@@ -18,16 +24,16 @@
 006EEE61    lea ecx, ss:[ebp-0x28]
 006EEE64    push ecx
 006EEE65    push eax
-006EEE66    call dword ptr ds:[0x007753C4]
+006EEE66    call dword ptr ds:[0x007753C4]                  ; => [ Data: data_147d470 ]
 006EEE6C    mov esi, dword ptr ds:[0x00775390]
 006EEE72    lea eax, ss:[ebp-0x28]
 006EEE75    push eax
 006EEE76    push dword ptr ds:[0x0147D470]
-006EEE7C    call esi
+006EEE7C    call esi                                        ; => [ Data: data_147d470 ]
 006EEE7E    lea eax, ss:[ebp-0x20]
 006EEE81    push eax
 006EEE82    push dword ptr ds:[0x0147D470]
-006EEE88    call esi
+006EEE88    call esi                                        ; => [ Type: POINT | Data: data_147d470 ]
 006EEE8A    mov ecx, dword ptr ss:[ebp-0x28]
 006EEE8D    mov eax, dword ptr ss:[ebp-0x20]
 006EEE90    add ecx, 0x16
@@ -38,11 +44,11 @@
 006EEE9D    add esi, 0x0A
 006EEEA0    movd xmm1, eax
 006EEEA4    movd xmm0, edi
-006EEEA8    cvtdq2ps xmm1, xmm1
+006EEEA8    cvtdq2ps xmm1, xmm1                             ; => [ Field: x ]
 006EEEAB    cvtdq2ps xmm0, xmm0
 006EEEAE    divss xmm0, xmm1
 006EEEB2    movss xmm1, dword ptr ds:[0x00890E18]
-006EEEBA    call 0x006EED20
+006EEEBA    call 0x006EED20                                 ; => [ Call: sub_6eed20 ]
 006EEEBF    mov eax, dword ptr ss:[ebp-0x1C]
 006EEEC2    sub ebx, esi
 006EEEC4    sub eax, esi
@@ -58,9 +64,9 @@
 006EEEED    subss xmm0, xmm3
 006EEEF1    mulss xmm0, xmm1
 006EEEF5    addss xmm0, dword ptr ss:[ebp-0x04]
-006EEEFA    call 0x006EED20
+006EEEFA    call 0x006EED20                                 ; => [ Call: sub_6eed20 | Field: y ]
 006EEEFF    movaps xmm2, xmm0
-006EEF02    xorps xmm1, xmm1
+006EEF02    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006EEF05    movss xmm0, dword ptr ss:[ebp-0x0C]
 006EEF0A    comiss xmm1, xmm0
 006EEF0D    jnbe 0x006EEF1B
@@ -89,10 +95,10 @@
 006EEF57    push 0x801A4C
 006EEF5C    mov edx, 0x801800
 006EEF61    mov ecx, 0x801A74
-006EEF66    call 0x0063B870
+006EEF66    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: min <= max | String: C:\x\ax2017\Engine\MathFunctions.cpp | String: Clamp ]
 006EEF6B    add esp, 0x0C
 006EEF6E    call 0x0063BC30
 006EEF73    test al, al
-006EEF75    jz 0x006EEF78
+006EEF75    jz 0x006EEF78                                   ; => [ Call: sub_63bc30 ]
 006EEF77    int3
-006EEF78    call 0x0063BB00
+006EEF78    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

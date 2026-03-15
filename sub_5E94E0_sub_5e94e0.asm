@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e94e0
+// 起始地址: 0x5e94e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E94E0    push ebp
 005E94E1    mov ebp, esp
 005E94E3    sub esp, 0x10
@@ -7,10 +13,10 @@
 005E94E9    mov edi, edx
 005E94EB    mov esi, ecx
 005E94ED    mov edx, dword ptr ds:[edi+0x04]
-005E94F0    call 0x004D5D30
+005E94F0    call 0x004D5D30                                 ; => [ Call: sub_4d5d30 ]
 005E94F5    mov edx, dword ptr ds:[edi+0x6C]
 005E94F8    mov ecx, esi
-005E94FA    call 0x004D5D30
+005E94FA    call 0x004D5D30                                 ; => [ Call: sub_4d5d30 ]
 005E94FF    mov eax, dword ptr ds:[edi+0x04]
 005E9502    cmp eax, 0x05
 005E9505    jz 0x005E9538
@@ -24,7 +30,7 @@
 005E9519    nop dword ptr ds:[eax], eax
 005E9520    mov edx, dword ptr ds:[eax]
 005E9522    mov ecx, esi
-005E9524    call 0x004D5D30
+005E9524    call 0x004D5D30                                 ; => [ Call: sub_4d5d30 ]
 005E9529    mov eax, dword ptr ss:[ebp-0x04]
 005E952C    inc ebx
 005E952D    add eax, 0x04
@@ -40,7 +46,7 @@
 005E954E    mov dword ptr ss:[ebp-0x04], eax
 005E9551    mov edx, dword ptr ds:[eax]
 005E9553    mov ecx, esi
-005E9555    call 0x004D5D30
+005E9555    call 0x004D5D30                                 ; => [ Call: sub_4d5d30 ]
 005E955A    mov eax, dword ptr ss:[ebp-0x04]
 005E955D    inc ebx
 005E955E    add eax, 0x04
@@ -62,12 +68,12 @@
 005E958E    cmp eax, 0x1000
 005E9593    cmovnle ecx, eax
 005E9596    mov dword ptr ds:[ebx], ecx
-005E9598    call 0x00687730
+005E9598    call 0x00687730                                 ; => [ Call: sub_687730 ]
 005E959D    push dword ptr ds:[esi+0x10]
 005E95A0    mov dword ptr ss:[ebp-0x0C], eax
 005E95A3    push dword ptr ds:[esi]
 005E95A5    push eax
-005E95A6    call 0x00762362
+005E95A6    call 0x00762362                                 ; => [ Call: memmove ]
 005E95AB    mov eax, dword ptr ds:[esi]
 005E95AD    lea ecx, ds:[esi+0x10]
 005E95B0    add esp, 0x0C
@@ -106,13 +112,13 @@
 005E9608    cmp eax, 0x1000
 005E960D    cmovnle ecx, eax
 005E9610    mov dword ptr ds:[ebx], ecx
-005E9612    call 0x00687730
+005E9612    call 0x00687730                                 ; => [ Call: sub_687730 ]
 005E9617    mov ecx, dword ptr ss:[ebp-0x04]
 005E961A    mov dword ptr ss:[ebp-0x10], eax
 005E961D    push dword ptr ds:[ecx]
 005E961F    push dword ptr ds:[esi]
 005E9621    push eax
-005E9622    call 0x00762362
+005E9622    call 0x00762362                                 ; => [ Call: memmove ]
 005E9627    mov eax, dword ptr ds:[esi]
 005E9629    add esp, 0x0C
 005E962C    mov edx, dword ptr ss:[ebp-0x04]

@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_4d8f30
+// 起始地址: 0x4d8f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D8F30    push esi
 004D8F31    push edi
-004D8F32    mov edi, dword ptr ds:[0x00CC8DC8]
+004D8F32    mov edi, dword ptr ds:[0x00CC8DC8]              ; => [ Data: data_cc8dc8 ]
 004D8F38    xor edx, edx
 004D8F3A    mov esi, dword ptr ds:[edi+0x1E1A0]
 004D8F40    test esi, esi
@@ -23,5 +29,5 @@
 004D8F72    jnz 0x004D8F66
 004D8F74    test esi, esi
 004D8F76    jnle 0x004D8F58
-004D8F78    xor eax, eax
+004D8F78    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 004D8F7A    jmp 0x004D8F5A

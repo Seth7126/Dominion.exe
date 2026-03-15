@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_591880
+// 起始地址: 0x591880
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00591880    push ebp
 00591881    mov ebp, esp
 00591883    push ecx
@@ -19,12 +25,12 @@
 005918CC    mov dword ptr ds:[esi+0x20], eax
 005918CF    mov eax, dword ptr ss:[ebp+0x20]
 005918D2    mov dword ptr ds:[esi+0x10], eax
-005918D5    mov eax, dword ptr fs:[0x0000002C]
+005918D5    mov eax, dword ptr fs:[0x0000002C]              ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 005918DB    mov dword ptr ds:[esi+0x24], ecx
 005918DE    mov eax, dword ptr ds:[eax]
 005918E0    cmp dword ptr ds:[eax+0xF010], 0x02
 005918E7    jnle 0x00591920
-005918E9    call 0x00573400
+005918E9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005918EE    push 0x00
 005918F0    mov edi, eax
 005918F2    push 0x00
@@ -32,7 +38,7 @@
 005918F6    push 0x18
 005918F8    mov edx, dword ptr ds:[edi+0x0C]
 005918FB    mov ecx, dword ptr ds:[edi+0x04]
-005918FE    call 0x00576B30
+005918FE    call 0x00576B30                                 ; => [ Call: sub_576b30 ]
 00591903    add esp, 0x10
 00591906    test eax, eax
 00591908    jnle 0x00591920
@@ -42,7 +48,7 @@
 00591912    push 0x00
 00591914    push 0x00
 00591916    push 0x19
-00591918    call 0x00576B30
+00591918    call 0x00576B30                                 ; => [ Call: sub_576b30 ]
 0059191D    add esp, 0x10
 00591920    pop edi
 00591921    mov dword ptr ds:[esi+0x28], 0x00

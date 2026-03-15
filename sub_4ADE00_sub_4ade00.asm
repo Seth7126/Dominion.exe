@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_4ade00
+// 起始地址: 0x4ade00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ADE00    push ebp
 004ADE01    mov ebp, esp
 004ADE03    mov edx, dword ptr ss:[ebp+0x08]
-004ADE06    mov dword ptr ds:[edx], 0x8DB51C
+004ADE06    mov dword ptr ds:[edx], 0x8DB51C                ; => [ Data: data_8db51c ]
 004ADE0C    mov dword ptr ds:[edx+0x04], 0x00
 004ADE13    imul ecx, dword ptr ds:[0x008DB520], 0xC04
-004ADE1D    mov eax, dword ptr ds:[0x008DB51C]
-004ADE22    add ecx, eax
+004ADE1D    mov eax, dword ptr ds:[0x008DB51C]              ; => [ Data: data_8db51c ]
+004ADE22    add ecx, eax                                    ; => [ Data: data_8db520 ]
 004ADE24    cmp eax, ecx
 004ADE26    jnb 0x004ADE45
 004ADE28    nop dword ptr ds:[eax+eax*1], eax

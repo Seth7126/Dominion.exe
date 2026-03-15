@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6d8320
+// 起始地址: 0x6d8320
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D8320    push ebp
 006D8321    mov ebp, esp
 006D8323    and esp, 0xFFFFFFF8
 006D8326    sub esp, 0x418
-006D832C    mov eax, dword ptr ds:[0x008C4040]
+006D832C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006D8331    xor eax, esp
 006D8333    mov dword ptr ss:[esp+0x414], eax
 006D833A    push esi
@@ -14,27 +20,27 @@
 006D834C    lea ecx, ss:[esp+0x18]
 006D8350    mov dword ptr ss:[esp+0x10], ecx
 006D8354    mov ecx, dword ptr ds:[eax]
-006D8356    call 0x006D7FF0
+006D8356    call 0x006D7FF0                                 ; => [ Call: sub_6d7ff0 ]
 006D835B    cmp dword ptr ds:[0x008CE7CC], 0x6B
-006D8362    jnle 0x006D8378
-006D8364    push 0x88131C
+006D8362    jnle 0x006D8378                                 ; => [ Data: data_8ce7cc ]
+006D8364    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006D8369    push 0x8B
-006D836E    mov ecx, 0x881344
+006D836E    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006D8373    jmp 0x006D863E
 006D8378    mov eax, dword ptr ds:[0x008CE7C8]
-006D837D    mov esi, dword ptr ds:[eax+0x1AC]
+006D837D    mov esi, dword ptr ds:[eax+0x1AC]               ; => [ Data: data_8ce7c8 ]
 006D8383    mov eax, dword ptr ds:[esi+0x0C]
 006D8386    test eax, eax
 006D8388    jnz 0x006D839E
-006D838A    push 0x881518
+006D838A    push 0x881518                                   ; => [ String: AttribTagGetDefMap ]
 006D838F    push 0x1FE
-006D8394    mov ecx, 0x88156C
+006D8394    mov ecx, 0x88156C                               ; => [ String: pAttribField->pDefMap ]
 006D8399    jmp 0x006D863E
 006D839E    cmp dword ptr ds:[eax+0x10], 0x0A
 006D83A2    jz 0x006D83B8
-006D83A4    push 0x8813CC
+006D83A4    push 0x8813CC                                   ; => [ String: AttribMapGetBool ]
 006D83A9    push 0x195
-006D83AE    mov ecx, 0x8813E0
+006D83AE    mov ecx, 0x8813E0                               ; => [ String: AttribTagGetDefMap(pAttribTable, tag)->defType == DT_BOOL ]
 006D83B3    jmp 0x006D863E
 006D83B8    mov edx, dword ptr ss:[esp+0x08]
 006D83BC    xor ecx, ecx
@@ -56,32 +62,32 @@
 006D83EF    push edx
 006D83F0    mov eax, dword ptr ds:[ecx]
 006D83F2    mov eax, dword ptr ds:[eax+0x50]
-006D83F5    call eax
+006D83F5    call eax                                        ; => [ Data: data_147b070 ]
 006D83F7    mov dword ptr ds:[edi+0xE40], eax
 006D83FD    cmp dword ptr ds:[0x008CE7CC], 0x5B
-006D8404    jnle 0x006D8423
-006D8406    push 0x88131C
+006D8404    jnle 0x006D8423                                 ; => [ Data: data_8ce7cc ]
+006D8406    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006D840B    push 0x8B
-006D8410    mov ecx, 0x881344
+006D8410    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006D8415    jmp 0x006D863E
 006D841A    test eax, eax
 006D841C    jz 0x006D83D3
 006D841E    mov eax, dword ptr ds:[eax+0x08]
 006D8421    jmp 0x006D83D6
 006D8423    mov eax, dword ptr ds:[0x008CE7C8]
-006D8428    mov esi, dword ptr ds:[eax+0x16C]
+006D8428    mov esi, dword ptr ds:[eax+0x16C]               ; => [ Data: data_8ce7c8 ]
 006D842E    mov eax, dword ptr ds:[esi+0x0C]
 006D8431    test eax, eax
 006D8433    jnz 0x006D8449
-006D8435    push 0x881518
+006D8435    push 0x881518                                   ; => [ String: AttribTagGetDefMap ]
 006D843A    push 0x1FE
-006D843F    mov ecx, 0x88156C
+006D843F    mov ecx, 0x88156C                               ; => [ String: pAttribField->pDefMap ]
 006D8444    jmp 0x006D863E
 006D8449    cmp dword ptr ds:[eax+0x10], 0x0F
 006D844D    jz 0x006D8463
-006D844F    push 0x8814CC
+006D844F    push 0x8814CC                                   ; => [ String: AttribMapGetAssetPtr ]
 006D8454    push 0x1E9
-006D8459    mov ecx, 0x88152C
+006D8459    mov ecx, 0x88152C                               ; => [ String: AttribTagGetDefMap(pAttribTable, tag)->defType == DT_ASSET_PTR ]
 006D845E    jmp 0x006D863E
 006D8463    mov edx, dword ptr ss:[esp+0x08]
 006D8467    xor ecx, ecx
@@ -99,32 +105,32 @@
 006D8485    mov edx, edi
 006D8487    push 0x00
 006D8489    push eax
-006D848A    call 0x006D7E10
+006D848A    call 0x006D7E10                                 ; => [ Call: sub_6d7e10 ]
 006D848F    add esp, 0x08
 006D8492    cmp dword ptr ds:[0x008CE7CC], 0x5C
-006D8499    jnle 0x006D84B8
-006D849B    push 0x88131C
+006D8499    jnle 0x006D84B8                                 ; => [ Data: data_8ce7cc ]
+006D849B    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006D84A0    push 0x8B
-006D84A5    mov ecx, 0x881344
+006D84A5    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006D84AA    jmp 0x006D863E
 006D84AF    test eax, eax
 006D84B1    jz 0x006D847E
 006D84B3    mov ecx, dword ptr ds:[eax+0x08]
 006D84B6    jmp 0x006D8481
 006D84B8    mov eax, dword ptr ds:[0x008CE7C8]
-006D84BD    mov esi, dword ptr ds:[eax+0x170]
+006D84BD    mov esi, dword ptr ds:[eax+0x170]               ; => [ Data: data_8ce7c8 ]
 006D84C3    mov eax, dword ptr ds:[esi+0x0C]
 006D84C6    test eax, eax
 006D84C8    jnz 0x006D84DE
-006D84CA    push 0x881518
+006D84CA    push 0x881518                                   ; => [ String: AttribTagGetDefMap ]
 006D84CF    push 0x1FE
-006D84D4    mov ecx, 0x88156C
+006D84D4    mov ecx, 0x88156C                               ; => [ String: pAttribField->pDefMap ]
 006D84D9    jmp 0x006D863E
 006D84DE    cmp dword ptr ds:[eax+0x10], 0x0F
 006D84E2    jz 0x006D84F8
-006D84E4    push 0x8814CC
+006D84E4    push 0x8814CC                                   ; => [ String: AttribMapGetAssetPtr ]
 006D84E9    push 0x1E9
-006D84EE    mov ecx, 0x88152C
+006D84EE    mov ecx, 0x88152C                               ; => [ String: AttribTagGetDefMap(pAttribTable, tag)->defType == DT_ASSET_PTR ]
 006D84F3    jmp 0x006D863E
 006D84F8    mov edx, dword ptr ss:[esp+0x08]
 006D84FC    xor ecx, ecx
@@ -142,26 +148,26 @@
 006D851A    push 0x01
 006D851C    push eax
 006D851D    lea edx, ds:[edi+0x3F0]
-006D8523    call 0x006D7E10
+006D8523    call 0x006D7E10                                 ; => [ Call: sub_6d7e10 ]
 006D8528    add esp, 0x08
 006D852B    cmp dword ptr ds:[0x008CE7CC], 0x6A
-006D8532    jnle 0x006D8551
-006D8534    push 0x88131C
+006D8532    jnle 0x006D8551                                 ; => [ Data: data_8ce7cc ]
+006D8534    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006D8539    push 0x8B
-006D853E    mov ecx, 0x881344
+006D853E    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006D8543    jmp 0x006D863E
 006D8548    test eax, eax
 006D854A    jz 0x006D8513
 006D854C    mov ecx, dword ptr ds:[eax+0x08]
 006D854F    jmp 0x006D8516
 006D8551    mov eax, dword ptr ds:[0x008CE7C8]
-006D8556    mov esi, dword ptr ds:[eax+0x1A8]
+006D8556    mov esi, dword ptr ds:[eax+0x1A8]               ; => [ Data: data_8ce7c8 ]
 006D855C    mov eax, dword ptr ds:[esi+0x0C]
 006D855F    test eax, eax
 006D8561    jnz 0x006D8577
-006D8563    push 0x881518
+006D8563    push 0x881518                                   ; => [ String: AttribTagGetDefMap ]
 006D8568    push 0x1FE
-006D856D    mov ecx, 0x88156C
+006D856D    mov ecx, 0x88156C                               ; => [ String: pAttribField->pDefMap ]
 006D8572    jmp 0x006D863E
 006D8577    cmp dword ptr ds:[eax+0x10], 0x01
 006D857B    jnz 0x006D862F
@@ -203,7 +209,7 @@
 006D85DE    lea eax, ds:[edi+eax*4]
 006D85E1    mov dword ptr ds:[eax], esi
 006D85E3    push eax
-006D85E4    call 0x006D8120
+006D85E4    call 0x006D8120                                 ; => [ Call: sub_6d8120 ]
 006D85E9    mov edx, dword ptr ss:[esp+0x0C]
 006D85ED    add esp, 0x04
 006D85F0    test al, al
@@ -216,7 +222,7 @@
 006D8601    pop esi
 006D8602    mov ecx, dword ptr ss:[esp+0x414]
 006D8609    xor ecx, esp
-006D860B    call 0x0075927A
+006D860B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D8610    mov esp, ebp
 006D8612    pop ebp
 006D8613    ret
@@ -225,19 +231,19 @@
 006D8622    pop edi
 006D8623    pop esi
 006D8624    xor ecx, esp
-006D8626    call 0x0075927A
+006D8626    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D862B    mov esp, ebp
 006D862D    pop ebp
 006D862E    ret
-006D862F    push 0x8813BC
+006D862F    push 0x8813BC                                   ; => [ String: AttribMapGetInt ]
 006D8634    push 0x177
-006D8639    mov ecx, 0x881380
+006D8639    mov ecx, 0x881380                               ; => [ String: AttribTagGetDefMap(pAttribTable, tag)->defType == DT_INT ]
 006D863E    push 0x8812F8
 006D8643    mov edx, 0x801800
-006D8648    call 0x0063B870
+006D8648    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\AttribMap.cpp ]
 006D864D    add esp, 0x0C
 006D8650    call 0x0063BC30
 006D8655    test al, al
-006D8657    jz 0x006D865A
+006D8657    jz 0x006D865A                                   ; => [ Call: sub_63bc30 ]
 006D8659    int3
-006D865A    call 0x0063BB00
+006D865A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

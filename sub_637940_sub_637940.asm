@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_637940
+// 起始地址: 0x637940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00637940    push ebp
 00637941    mov ebp, esp
 00637943    push 0xFFFFFFFF
-00637945    push 0x76C265
+00637945    push 0x76C265                                   ; => [ Call: sub_76c265 | Type: EHRegistrationNode ]
 0063794A    mov eax, dword ptr fs:[0x00000000]
-00637950    push eax
+00637950    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00637951    sub esp, 0x2C
 00637954    push ebx
 00637955    push esi
 00637956    push edi
 00637957    mov eax, dword ptr ds:[0x008C4040]
-0063795C    xor eax, ebp
+0063795C    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 0063795E    push eax
 0063795F    lea eax, ss:[ebp-0x0C]
-00637962    mov dword ptr fs:[0x00000000], eax
+00637962    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 00637968    mov esi, edx
 0063796A    mov dword ptr ss:[ebp-0x10], esi
 0063796D    mov edi, ecx
@@ -28,7 +34,7 @@
 0063798D    push esi
 0063798E    mov edx, edi
 00637990    lea ecx, ss:[ebp-0x20]
-00637993    call 0x00638640
+00637993    call 0x00638640                                 ; => [ Call: sub_638640 ]
 00637998    mov eax, ebx
 0063799A    mov ecx, esi
 0063799C    sub ecx, dword ptr ss:[ebp-0x1C]
@@ -75,10 +81,10 @@
 00637A0F    push eax
 00637A10    mov edx, esi
 00637A12    mov ecx, edi
-00637A14    call 0x006384D0
+00637A14    call 0x006384D0                                 ; => [ Call: sub_6384d0 ]
 00637A19    add esp, 0x04
 00637A1C    mov ecx, dword ptr ss:[ebp-0x0C]
-00637A1F    mov dword ptr fs:[0x00000000], ecx
+00637A1F    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00637A26    pop ecx
 00637A27    pop edi
 00637A28    pop esi
@@ -115,7 +121,7 @@
 00637A74    cmp byte ptr ds:[eax], 0x00
 00637A77    jz 0x00637A84
 00637A79    lea ecx, ss:[ebp-0x28]
-00637A7C    call 0x0063D4E0
+00637A7C    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00637A81    inc dword ptr ds:[eax+0x04]
 00637A84    mov eax, dword ptr ds:[ebx]
 00637A86    mov dword ptr ss:[ebp-0x24], eax
@@ -126,25 +132,25 @@
 00637A97    push dword ptr ss:[ebp-0x14]
 00637A9A    mov edx, esi
 00637A9C    mov ecx, edi
-00637A9E    call 0x00639020
+00637A9E    call 0x00639020                                 ; => [ Call: sub_639020 ]
 00637AA3    add esp, 0x0C
 00637AA6    mov dword ptr ss:[ebp-0x04], 0x01
 00637AAD    cmp dword ptr ds:[0x00CF65BC], 0x00
-00637AB4    jz 0x00637AE4
+00637AB4    jz 0x00637AE4                                   ; => [ Data: data_cf65bc ]
 00637AB6    mov eax, dword ptr ss:[ebp-0x28]
 00637AB9    test eax, eax
 00637ABB    jz 0x00637AE4
 00637ABD    cmp byte ptr ds:[eax], 0x00
 00637AC0    jz 0x00637AE4
 00637AC2    lea ecx, ss:[ebp-0x28]
-00637AC5    call 0x0063D4E0
+00637AC5    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00637ACA    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00637ACE    jnz 0x00637AE4
 00637AD0    mov edx, dword ptr ds:[eax+0x0C]
 00637AD3    mov ecx, eax
 00637AD5    add edx, 0x10
-00637AD8    call 0x0064C080
-00637ADD    mov dword ptr ss:[ebp-0x28], 0x801800
+00637AD8    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+00637ADD    mov dword ptr ss:[ebp-0x28], 0x801800           ; => [ Data: data_801800 ]
 00637AE4    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 00637AEB    test esi, esi
 00637AED    jnle 0x00637A60
@@ -176,7 +182,7 @@
 00637B42    cmp byte ptr ds:[eax], 0x00
 00637B45    jz 0x00637B52
 00637B47    lea ecx, ss:[ebp-0x34]
-00637B4A    call 0x0063D4E0
+00637B4A    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00637B4F    inc dword ptr ds:[eax+0x04]
 00637B52    mov eax, dword ptr ds:[esi]
 00637B54    mov dword ptr ss:[ebp-0x30], eax
@@ -186,7 +192,7 @@
 00637B63    mov dword ptr ds:[esi-0x08], eax
 00637B66    lea eax, ds:[edi+0x04]
 00637B69    push eax
-00637B6A    call 0x0063D850
+00637B6A    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 00637B6F    mov eax, dword ptr ds:[edi+0x08]
 00637B72    push dword ptr ss:[ebp+0x0C]
 00637B75    mov ecx, dword ptr ss:[ebp-0x18]
@@ -203,32 +209,32 @@
 00637B91    add eax, edx
 00637B93    xor edx, edx
 00637B95    push eax
-00637B96    call 0x00639020
+00637B96    call 0x00639020                                 ; => [ Call: sub_639020 ]
 00637B9B    add esp, 0x0C
 00637B9E    mov dword ptr ss:[ebp-0x04], 0x03
 00637BA5    cmp dword ptr ds:[0x00CF65BC], 0x00
-00637BAC    jz 0x00637BDC
+00637BAC    jz 0x00637BDC                                   ; => [ Data: data_cf65bc ]
 00637BAE    mov eax, dword ptr ss:[ebp-0x34]
 00637BB1    test eax, eax
 00637BB3    jz 0x00637BDC
 00637BB5    cmp byte ptr ds:[eax], 0x00
 00637BB8    jz 0x00637BDC
 00637BBA    lea ecx, ss:[ebp-0x34]
-00637BBD    call 0x0063D4E0
+00637BBD    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00637BC2    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00637BC6    jnz 0x00637BDC
 00637BC8    mov edx, dword ptr ds:[eax+0x0C]
 00637BCB    mov ecx, eax
 00637BCD    add edx, 0x10
-00637BD0    call 0x0064C080
-00637BD5    mov dword ptr ss:[ebp-0x34], 0x801800
+00637BD0    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+00637BD5    mov dword ptr ss:[ebp-0x34], 0x801800           ; => [ Data: data_801800 ]
 00637BDC    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 00637BE3    sub esi, 0x0C
 00637BE6    lea eax, ds:[ebx+esi*1]
 00637BE9    cmp eax, 0x18
 00637BEC    jnl 0x00637B16
 00637BF2    mov ecx, dword ptr ss:[ebp-0x0C]
-00637BF5    mov dword ptr fs:[0x00000000], ecx
+00637BF5    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00637BFC    pop ecx
 00637BFD    pop edi
 00637BFE    pop esi

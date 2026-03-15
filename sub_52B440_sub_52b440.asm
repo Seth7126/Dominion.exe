@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_52b440
+// 起始地址: 0x52b440
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052B440    dword B9E85756
 0052B444    jnle 0x0052B44A
 0052B446    add byte ptr ds:[ebx+0xC0FBAF8], cl
 0052B44C    add byte ptr ds:[eax], al
 0052B44E    mov esi, dword ptr ds:[edi+0x04]
 0052B451    mov ecx, esi
-0052B453    call 0x0057DA30
+0052B453    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0052B458    mov edx, eax
 0052B45A    mov ecx, 0x07
 0052B45F    add esi, 0x1598
@@ -41,11 +47,11 @@
 0052B4B3    xor esi, esi
 0052B4B5    test esi, esi
 0052B4B7    jz 0x0052B48A
-0052B4B9    call 0x00573400
+0052B4B9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052B4BE    push esi
 0052B4BF    push 0x601
 0052B4C4    mov ecx, dword ptr ds:[eax+0x04]
-0052B4C7    call 0x00583F70
+0052B4C7    call 0x00583F70                                 ; => [ Call: sub_583f70 ]
 0052B4CC    add esp, 0x08
 0052B4CF    xor edx, edx
 0052B4D1    cmp eax, 0x04

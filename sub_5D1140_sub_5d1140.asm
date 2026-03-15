@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d1140
+// 起始地址: 0x5d1140
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D1140    push ebp
 005D1141    mov ebp, esp
 005D1143    and esp, 0xFFFFFFF8
@@ -5,10 +11,10 @@
 005D1147    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 005D1151    push ebx
 005D1152    push esi
-005D1153    mov esi, dword ptr ds:[0x00B809E0]
+005D1153    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005D1159    mov ebx, ecx
 005D115B    push edi
-005D115C    add eax, esi
+005D115C    add eax, esi                                    ; => [ Data: data_b809e4 ]
 005D115E    xor edi, edi
 005D1160    cmp esi, eax
 005D1162    jnb 0x005D1204
@@ -32,7 +38,7 @@
 005D119A    cmp dword ptr ds:[esi+0xA0], ebx
 005D11A0    jnz 0x005D11BB
 005D11A2    cmp dword ptr ds:[esi+0xA4], 0x3EA
-005D11AC    jnz 0x005D11BB
+005D11AC    jnz 0x005D11BB                                  ; => [ Call: sub_5cbb20 ]
 005D11AE    mov ecx, esi
 005D11B0    call 0x005CBB20
 005D11B5    cmp eax, dword ptr ss:[ebp+0x08]
@@ -40,7 +46,7 @@
 005D11BA    inc edi
 005D11BB    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 005D11C5    add esi, 0x1C30
-005D11CB    add eax, dword ptr ds:[0x00B809E0]
+005D11CB    add eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e4 | Data: data_b809e0 ]
 005D11D1    cmp esi, eax
 005D11D3    jnb 0x005D1204
 005D11D5    nop word ptr ds:[eax+eax*1], ax

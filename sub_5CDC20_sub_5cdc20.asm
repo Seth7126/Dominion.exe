@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cdc20
+// 起始地址: 0x5cdc20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CDC22    byte EC
 005CDC23    push ecx
 005CDC24    push esi
@@ -11,12 +17,12 @@
 005CDC36    sub eax, 0x02
 005CDC39    jnz 0x005CDCE8
 005CDC3F    cmp dword ptr ds:[0x00B80B08], 0x2B
-005CDC46    jnz 0x005CDC61
-005CDC48    mov eax, dword ptr ds:[0x00B604E0]
+005CDC46    jnz 0x005CDC61                                  ; => [ Data: data_b80b08 ]
+005CDC48    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005CDC4D    xor ecx, ecx
 005CDC4F    cmp eax, 0xFFFFFFFF
 005CDC52    cmovz eax, ecx
-005CDC55    cmp dword ptr ds:[0x00B80B44], eax
+005CDC55    cmp dword ptr ds:[0x00B80B44], eax              ; => [ Data: data_b80b44 ]
 005CDC5B    jz 0x005CDD1E
 005CDC61    mov al, 0x01
 005CDC63    pop edi
@@ -33,10 +39,10 @@
 005CDC87    mov ecx, dword ptr ds:[ecx+0x1E1A4]
 005CDC8D    call 0x004D8F30
 005CDC92    test byte ptr ds:[eax+0x42BC], 0x01
-005CDC99    jnz 0x005CDC61
+005CDC99    jnz 0x005CDC61                                  ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 005CDC9B    mov ecx, edi
 005CDC9D    call 0x005CC5E0
-005CDCA2    mov ecx, eax
+005CDCA2    mov ecx, eax                                    ; => [ Call: sub_5cc5e0 ]
 005CDCA4    cmp byte ptr ds:[ecx+0x4D0C], 0x00
 005CDCAB    jnz 0x005CDC61
 005CDCAD    xor al, al
@@ -50,9 +56,9 @@
 005CDCC1    pop ebp
 005CDCC2    ret
 005CDCC3    cmp edi, dword ptr ds:[0x00B80B44]
-005CDCC9    jnz 0x005CDC61
+005CDCC9    jnz 0x005CDC61                                  ; => [ Data: data_b80b44 ]
 005CDCCB    mov ecx, dword ptr ds:[0x00B80B08]
-005CDCD1    call 0x005CDA30
+005CDCD1    call 0x005CDA30                                 ; => [ Call: sub_5cda30 | Data: data_b80b08 ]
 005CDCD6    cmp eax, 0x01
 005CDCD9    jz 0x005CDD1E
 005CDCDB    cmp eax, 0x04
@@ -67,7 +73,7 @@
 005CDCFD    jnbe 0x005CDD1E
 005CDCFF    cmp esi, 0x48
 005CDD02    jl 0x005CDD09
-005CDD04    call 0x00591930
+005CDD04    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CDD09    shl esi, 0x04
 005CDD0C    cmp dword ptr ds:[esi+0xB81FFC], 0x1128
 005CDD16    setz al

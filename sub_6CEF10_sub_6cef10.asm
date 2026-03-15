@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6cef10
+// 起始地址: 0x6cef10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CEF10    push ebp
 006CEF11    mov ebp, esp
 006CEF13    sub esp, 0x5C
 006CEF16    mov eax, dword ptr ds:[0x008C4040]
-006CEF1B    xor eax, ebp
+006CEF1B    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 006CEF1D    mov dword ptr ss:[ebp-0x04], eax
 006CEF20    push ebx
 006CEF21    mov ebx, ecx
@@ -12,9 +18,9 @@
 006CEF28    jz 0x006CF2B6
 006CEF2E    sub edx, 0x01
 006CEF31    jz 0x006CEF47
-006CEF33    push 0x87EEC4
+006CEF33    push 0x87EEC4                                   ; => [ String: DistBox ]
 006CEF38    push 0x48A
-006CEF3D    mov ecx, 0x801AA4
+006CEF3D    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006CEF42    jmp 0x006CF57C
 006CEF47    mov edi, dword ptr ss:[ebp+0x10]
 006CEF4A    movss xmm3, dword ptr ds:[0x00890D84]
@@ -59,7 +65,7 @@
 006CEFED    divss xmm1, xmm0
 006CEFF1    movaps xmm0, xmm1
 006CEFF4    movss dword ptr ss:[ebp-0x34], xmm1
-006CEFF9    call 0x004AE0F0
+006CEFF9    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006CEFFE    movaps xmm3, xmm0
 006CF001    movss xmm0, dword ptr ss:[ebp-0x28]
 006CF006    subss xmm0, dword ptr ss:[ebp-0x20]
@@ -67,7 +73,7 @@
 006CF010    mulss xmm0, xmm3
 006CF014    movss dword ptr ss:[ebp-0x24], xmm0
 006CF019    movss xmm0, dword ptr ss:[ebp-0x34]
-006CF01E    call 0x004AE0D0
+006CF01E    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006CF023    movss xmm1, dword ptr ss:[ebp-0x30]
 006CF028    subss xmm1, dword ptr ss:[ebp-0x20]
 006CF02D    movss xmm3, dword ptr ss:[ebp-0x2C]
@@ -177,7 +183,7 @@
 006CF1F0    call 0x004AC580
 006CF1F5    movss xmm1, dword ptr ds:[0x00890E18]
 006CF1FD    lea eax, ss:[ebp-0x58]
-006CF200    divss xmm1, xmm0
+006CF200    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006CF204    push eax
 006CF205    lea edx, ss:[ebp-0x10]
 006CF208    lea ecx, ss:[ebp-0x1C]
@@ -193,7 +199,7 @@
 006CF234    add esp, 0x04
 006CF237    movups xmm0, xmmword ptr ds:[eax]
 006CF23A    movss xmm3, dword ptr ss:[ebp-0x44]
-006CF23F    movups xmmword ptr ds:[esi+0x04], xmm0
+006CF23F    movups xmmword ptr ds:[esi+0x04], xmm0          ; => [ Call: sub_4ac9c0 ]
 006CF243    movss xmm0, dword ptr ds:[edi+0x24]
 006CF248    mulss xmm0, dword ptr ds:[0x00890D84]
 006CF250    movss xmm2, dword ptr ds:[edi+0x08]
@@ -220,7 +226,7 @@
 006CF2A9    pop esi
 006CF2AA    xor ecx, ebp
 006CF2AC    pop ebx
-006CF2AD    call 0x0075927A
+006CF2AD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction | Call: CookieCheckFunction ]
 006CF2B2    mov esp, ebp
 006CF2B4    pop ebp
 006CF2B5    ret
@@ -251,7 +257,7 @@
 006CF30D    comiss xmm4, xmm5
 006CF310    movss dword ptr ds:[esi], xmm4
 006CF314    jnbe 0x006CF371
-006CF316    push 0x87EEC4
+006CF316    push 0x87EEC4                                   ; => [ String: DistBox ]
 006CF31B    push 0x403
 006CF320    jmp 0x006CF577
 006CF325    xorps xmm0, xmm0
@@ -394,15 +400,15 @@
 006CF55C    movss xmm0, dword ptr ds:[esi]
 006CF560    comiss xmm0, dword ptr ds:[0x00890C48]
 006CF567    jnbe 0x006CF2A3
-006CF56D    push 0x87EEC4
+006CF56D    push 0x87EEC4                                   ; => [ String: DistBox ]
 006CF572    push 0x40E
-006CF577    mov ecx, 0x87EEB4
+006CF577    mov ecx, 0x87EEB4                               ; => [ String: retval.s > 0 | String: retval.s > 0 ]
 006CF57C    push 0x87ED1C
 006CF581    mov edx, 0x801800
-006CF586    call 0x0063B870
+006CF586    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: DistBox | String: C:\x\ax2017\Engine\FabDef.cpp ]
 006CF58B    add esp, 0x0C
 006CF58E    call 0x0063BC30
 006CF593    test al, al
-006CF595    jz 0x006CF598
+006CF595    jz 0x006CF598                                   ; => [ Call: sub_63bc30 ]
 006CF597    int3
-006CF598    call 0x0063BB00
+006CF598    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_65b5f0
+// 起始地址: 0x65b5f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065B5F0    push ebp
 0065B5F1    mov ebp, esp
 0065B5F3    sub esp, 0x08
@@ -14,7 +20,7 @@
 0065B620    jz 0x0065B692
 0065B622    sub ecx, 0x01
 0065B625    jz 0x0065B636
-0065B627    push 0x874DE8
+0065B627    push 0x874DE8                                   ; => [ String: GroupAlignment ]
 0065B62C    push 0x24A3
 0065B631    jmp 0x0065B71D
 0065B636    subss xmm1, dword ptr ss:[ebp+0x10]
@@ -24,7 +30,7 @@
 0065B648    jz 0x0065B683
 0065B64A    sub edx, 0x01
 0065B64D    jz 0x0065B65E
-0065B64F    push 0x874DE8
+0065B64F    push 0x874DE8                                   ; => [ String: GroupAlignment ]
 0065B654    push 0x24AF
 0065B659    jmp 0x0065B71D
 0065B65E    movss xmm1, dword ptr ss:[ebp+0x14]
@@ -38,10 +44,10 @@
 0065B67F    mov esp, ebp
 0065B681    pop ebp
 0065B682    ret
-0065B683    push 0x874DE8
+0065B683    push 0x874DE8                                   ; => [ String: GroupAlignment ]
 0065B688    push 0x24A9
 0065B68D    jmp 0x0065B71D
-0065B692    push 0x874DE8
+0065B692    push 0x874DE8                                   ; => [ String: GroupAlignment ]
 0065B697    push 0x249D
 0065B69C    jmp 0x0065B71D
 0065B69E    movaps xmm2, xmm4
@@ -51,7 +57,7 @@
 0065B6AC    jz 0x0065B6DB
 0065B6AE    sub ecx, 0x01
 0065B6B1    jz 0x0065B6BF
-0065B6B3    push 0x874DE8
+0065B6B3    push 0x874DE8                                   ; => [ String: GroupAlignment ]
 0065B6B8    push 0x2489
 0065B6BD    jmp 0x0065B71D
 0065B6BF    subss xmm1, dword ptr ss:[ebp+0x10]
@@ -77,15 +83,15 @@
 0065B70F    mov esp, ebp
 0065B711    pop ebp
 0065B712    ret
-0065B713    push 0x874DE8
+0065B713    push 0x874DE8                                   ; => [ String: GroupAlignment ]
 0065B718    push 0x2495
 0065B71D    push 0x8739B4
 0065B722    mov edx, 0x801800
 0065B727    mov ecx, 0x801AA4
-0065B72C    call 0x0063B870
+0065B72C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: GroupAlignment | String: Halt ]
 0065B731    add esp, 0x0C
 0065B734    call 0x0063BC30
 0065B739    test al, al
-0065B73B    jz 0x0065B73E
+0065B73B    jz 0x0065B73E                                   ; => [ Call: sub_63bc30 ]
 0065B73D    int3
-0065B73E    call 0x0063BB00
+0065B73E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

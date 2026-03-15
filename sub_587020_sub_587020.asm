@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_587020
+// 起始地址: 0x587020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00587020    push ebp
 00587021    mov ebp, esp
 00587023    mov eax, 0x1920
-00587028    call 0x00761E50
+00587028    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0058702D    mov eax, dword ptr ds:[0x008C4040]
 00587032    xor eax, ebp
-00587034    mov dword ptr ss:[ebp-0x08], eax
+00587034    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 00587037    push ebx
 00587038    push esi
 00587039    mov eax, ecx
@@ -19,7 +25,7 @@
 0058705F    push ecx
 00587060    mov ecx, eax
 00587062    xor esi, esi
-00587064    call 0x00575C40
+00587064    call 0x00575C40                                 ; => [ Call: sub_575c40 ]
 00587069    mov edi, eax
 0058706B    add esp, 0x0C
 0058706E    sub edi, 0x01
@@ -28,7 +34,7 @@
 0058707A    mov edx, ebx
 0058707C    push dword ptr ss:[ebp+0x08]
 0058707F    mov ecx, dword ptr ss:[ebp-0x1914]
-00587085    call 0x005759A0
+00587085    call 0x005759A0                                 ; => [ Call: sub_5759a0 ]
 0058708A    add esp, 0x04
 0058708D    test al, al
 0058708F    jz 0x00587099
@@ -45,7 +51,7 @@
 005870B8    mov dword ptr ss:[ebp-0x1918], eax
 005870BE    cmp eax, 0x320
 005870C3    jb 0x005870D0
-005870C5    call 0x00591930
+005870C5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005870CA    mov eax, dword ptr ss:[ebp-0x1918]
 005870D0    mov ecx, dword ptr ss:[ebp-0x1914]
 005870D6    imul eax, eax, 0x64
@@ -69,21 +75,21 @@
 00587124    sar eax, 0x02
 00587127    push ebx
 00587128    push eax
-00587129    call 0x00594620
+00587129    call 0x00594620                                 ; => [ Call: sub_594620 ]
 0058712E    mov edx, dword ptr ss:[ebp-0x191C]
 00587134    lea eax, ss:[ebp-0xC8C]
 0058713A    push 0xC0
 0058713F    push esi
 00587140    push eax
 00587141    mov ecx, ebx
-00587143    call 0x00586880
+00587143    call 0x00586880                                 ; => [ Call: sub_586880 ]
 00587148    mov ecx, dword ptr ss:[ebp-0x08]
 0058714B    add esp, 0x14
 0058714E    xor ecx, ebp
 00587150    pop edi
 00587151    pop esi
 00587152    pop ebx
-00587153    call 0x0075927A
+00587153    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00587158    mov esp, ebp
 0058715A    pop ebp
 0058715B    ret

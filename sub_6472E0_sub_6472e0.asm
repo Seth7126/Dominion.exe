@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_6472e0
+// 起始地址: 0x6472e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006472E0    push ebp
 006472E1    mov ebp, esp
 006472E3    and esp, 0xFFFFFFF8
 006472E6    sub esp, 0xEC
-006472EC    mov eax, dword ptr ds:[0x008C4040]
+006472EC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006472F1    xor eax, esp
 006472F3    mov dword ptr ss:[esp+0xE8], eax
 006472FA    movss xmm0, dword ptr ds:[0x00890E18]
-00647302    mov eax, dword ptr ds:[0x01724A60]
+00647302    mov eax, dword ptr ds:[0x01724A60]              ; => [ Data: data_1724a60 ]
 00647307    push ebx
 00647308    mov ebx, dword ptr ss:[ebp+0x10]
 0064730B    push esi
@@ -17,7 +23,7 @@
 0064731A    mov edx, dword ptr ds:[0x01724A58]
 00647320    mov dword ptr ss:[esp+0x28], esi
 00647324    movq xmm0, qword ptr ds:[esi+0x04]
-00647329    cmovnbe eax, dword ptr ds:[0x01724A68]
+00647329    cmovnbe eax, dword ptr ds:[0x01724A68]          ; => [ Data: data_1724a68 ]
 00647330    push eax
 00647331    mov eax, dword ptr ds:[esi+0x0C]
 00647334    sub esp, 0x0C
@@ -25,8 +31,8 @@
 00647339    movq qword ptr ds:[ecx], xmm0
 0064733D    mov dword ptr ds:[ecx+0x08], eax
 00647340    mov ecx, 0x40
-00647345    call 0x00643BC0
-0064734A    mov eax, dword ptr ds:[0x01476B44]
+00647345    call 0x00643BC0                                 ; => [ Call: sub_643bc0 | Data: data_1724a58 ]
+0064734A    mov eax, dword ptr ds:[0x01476B44]              ; => [ Data: data_1476b44 ]
 0064734F    xor edi, edi
 00647351    add esp, 0x10
 00647354    mov dword ptr ss:[esp+0x4C], edi
@@ -35,7 +41,7 @@
 0064735E    shl ecx, 0x06
 00647361    mov dword ptr ss:[esp+0x64], ecx
 00647365    xor ecx, ecx
-00647367    mov dword ptr ds:[0x01476B44], eax
+00647367    mov dword ptr ds:[0x01476B44], eax              ; => [ Data: data_1476b44 ]
 0064736C    mov dword ptr ss:[esp+0x34], ecx
 00647370    movd xmm0, ecx
 00647374    cvtdq2ps xmm0, xmm0
@@ -43,7 +49,7 @@
 0064737F    mulss xmm0, dword ptr ds:[0x00890F28]
 00647387    cvtps2pd xmm0, xmm0
 0064738A    movsd qword ptr ss:[esp+0x58], xmm0
-00647390    call 0x0076209C
+00647390    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 00647395    mov eax, dword ptr ss:[esp+0x34]
 00647399    cvtsd2ss xmm0, xmm0
 0064739D    inc eax
@@ -56,17 +62,17 @@
 006473C1    mulss xmm0, dword ptr ds:[0x00890F28]
 006473C9    cvtps2pd xmm0, xmm0
 006473CC    movsd qword ptr ss:[esp+0x50], xmm0
-006473D2    call 0x0076209C
+006473D2    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 006473D7    cvtsd2ss xmm0, xmm0
 006473DB    mov dword ptr ss:[esp+0x30], 0x00
 006473E3    mulss xmm0, dword ptr ds:[esi]
 006473E7    movss dword ptr ss:[esp+0x60], xmm0
 006473ED    movsd xmm0, qword ptr ss:[esp+0x58]
-006473F3    call 0x00762096
+006473F3    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006473F8    cvtsd2ss xmm0, xmm0
 006473FC    movss dword ptr ss:[esp+0x68], xmm0
 00647402    movsd xmm0, qword ptr ss:[esp+0x50]
-00647408    call 0x00762096
+00647408    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 0064740D    mov ecx, dword ptr ss:[esp+0x64]
 00647411    lea eax, ds:[edi+edi*2]
 00647414    cvtsd2ss xmm0, xmm0
@@ -82,7 +88,7 @@
 0064743F    mulss xmm0, dword ptr ds:[0x00890F48]
 00647447    cvtps2pd xmm0, xmm0
 0064744A    movsd qword ptr ss:[esp+0x58], xmm0
-00647450    call 0x0076209C
+00647450    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 00647455    mov eax, dword ptr ss:[esp+0x28]
 00647459    cvtsd2ss xmm0, xmm0
 0064745D    mulss xmm0, dword ptr ds:[eax]
@@ -96,19 +102,19 @@
 0064747F    mulss xmm1, dword ptr ds:[0x00890F48]
 00647487    cvtps2pd xmm0, xmm1
 0064748A    movsd qword ptr ss:[esp+0x50], xmm0
-00647490    call 0x0076209C
+00647490    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 00647495    mov eax, dword ptr ss:[esp+0x28]
 00647499    cvtsd2ss xmm0, xmm0
 0064749D    mulss xmm0, dword ptr ds:[eax]
 006474A1    movss dword ptr ss:[esp+0x3C], xmm0
 006474A7    movsd xmm0, qword ptr ss:[esp+0x58]
-006474AD    call 0x00762096
+006474AD    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006474B2    mov eax, dword ptr ss:[esp+0x28]
 006474B6    cvtsd2ss xmm0, xmm0
 006474BA    mulss xmm0, dword ptr ds:[eax]
 006474BE    movss dword ptr ss:[esp+0x0C], xmm0
 006474C4    movsd xmm0, qword ptr ss:[esp+0x50]
-006474CA    call 0x00762096
+006474CA    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006474CF    movss xmm7, dword ptr ss:[esp+0x68]
 006474D5    xorps xmm2, xmm2
 006474D8    mov eax, dword ptr ss:[esp+0x28]
@@ -333,7 +339,7 @@
 0064793A    movaps xmm1, xmm5
 0064793D    mulss xmm1, xmm5
 00647941    addss xmm0, xmm1
-00647945    call 0x004AC580
+00647945    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064794A    movss xmm1, dword ptr ds:[0x00890C78]
 00647952    comiss xmm1, xmm0
 00647955    jbe 0x00647972
@@ -362,7 +368,7 @@
 006479C5    addss xmm0, xmm1
 006479C9    call 0x004AC580
 006479CE    movss xmm1, dword ptr ds:[0x00890E18]
-006479D6    divss xmm1, xmm0
+006479D6    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006479DA    movaps xmm0, xmm1
 006479DD    mulss xmm0, dword ptr ss:[esp+0x2C]
 006479E3    movss dword ptr ss:[esp+0x98], xmm0
@@ -403,7 +409,7 @@
 00647A99    movaps xmm1, xmm2
 00647A9C    mulss xmm1, xmm2
 00647AA0    addss xmm0, xmm1
-00647AA4    call 0x004AC580
+00647AA4    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 00647AA9    movaps xmm1, xmm0
 00647AAC    movss xmm0, dword ptr ds:[0x00890C78]
 00647AB4    comiss xmm0, xmm1
@@ -434,7 +440,7 @@
 00647B2D    addss xmm0, xmm1
 00647B31    call 0x004AC580
 00647B36    movss xmm1, dword ptr ds:[0x00890E18]
-00647B3E    divss xmm1, xmm0
+00647B3E    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 00647B42    movaps xmm0, xmm1
 00647B45    mulss xmm0, dword ptr ss:[esp+0x1C]
 00647B4B    movss dword ptr ss:[esp+0xA8], xmm0
@@ -494,7 +500,7 @@
 00647C91    mov eax, esp
 00647C93    movups xmm0, xmmword ptr ds:[ebx]
 00647C96    movups xmmword ptr ds:[eax], xmm0
-00647C99    call 0x0064B360
+00647C99    call 0x0064B360                                 ; => [ Call: sub_64b360 ]
 00647C9E    mov ebx, eax
 00647CA0    mov dword ptr ds:[esi+0x04], 0x00
 00647CA7    mov edx, ebx
@@ -537,19 +543,19 @@
 00647D26    pop esi
 00647D27    pop ebx
 00647D28    xor ecx, esp
-00647D2A    call 0x0075927A
+00647D2A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00647D2F    mov esp, ebp
 00647D31    pop ebp
 00647D32    ret
-00647D33    push 0x872A20
+00647D33    push 0x872A20                                   ; => [ String: Draw3DSphere ]
 00647D38    push 0x6CE
-00647D3D    push 0x872630
+00647D3D    push 0x872630                                   ; => [ String: C:\x\ax2017\Engine\Draw3d.cpp ]
 00647D42    mov edx, 0x801800
 00647D47    mov ecx, 0x872A30
-00647D4C    call 0x0063B870
+00647D4C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: quadIndex < totalQuads ]
 00647D51    add esp, 0x0C
 00647D54    call 0x0063BC30
 00647D59    test al, al
-00647D5B    jz 0x00647D5E
+00647D5B    jz 0x00647D5E                                   ; => [ Call: sub_63bc30 ]
 00647D5D    int3
-00647D5E    call 0x0063BB00
+00647D5E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

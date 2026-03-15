@@ -1,26 +1,32 @@
+// ============================================================
+// 函数名称: sub_73eb30
+// 起始地址: 0x73eb30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073EB30    push ecx
-0073EB31    mov ecx, dword ptr ds:[0x0147DF90]
+0073EB31    mov ecx, dword ptr ds:[0x0147DF90]              ; => [ Data: data_147df90 ]
 0073EB37    push esi
 0073EB38    push edi
 0073EB39    cmp dword ptr ds:[ecx+0x04], 0x20
 0073EB3D    jz 0x0073EB58
-0073EB3F    push 0x87ECE4
+0073EB3F    push 0x87ECE4                                   ; => [ String: FabDefGet ]
 0073EB44    push 0xEB
-0073EB49    push 0x87ED1C
-0073EB4E    mov ecx, 0x87ECF8
+0073EB49    push 0x87ED1C                                   ; => [ String: C:\x\ax2017\Engine\FabDef.cpp ]
+0073EB4E    mov ecx, 0x87ECF8                               ; => [ String: ptr->assetType == ASSET_TYPE_FAB ]
 0073EB53    jmp 0x0073EBEB
-0073EB58    call 0x005AF880
-0073EB5D    mov ecx, dword ptr ds:[0x0147EF94]
+0073EB58    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
+0073EB5D    mov ecx, dword ptr ds:[0x0147EF94]              ; => [ Data: data_147ef94 ]
 0073EB63    mov edi, eax
 0073EB65    test ecx, ecx
 0073EB67    jle 0x0073EBD7
 0073EB69    xor esi, esi
 0073EB6B    test ecx, ecx
 0073EB6D    jle 0x0073EBCE
-0073EB6F    mov edx, 0x15003F0
+0073EB6F    mov edx, 0x15003F0                              ; => [ Data: data_15003f0 ]
 0073EB74    nop dword ptr ds:[eax], eax
 0073EB78    nop dword ptr ds:[eax+eax*1], eax
-0073EB80    imul ecx, dword ptr ds:[esi*4+0x147DF94], 0xE0
+0073EB80    imul ecx, dword ptr ds:[esi*4+0x147DF94], 0xE0  ; => [ Data: data_147df94 ]
 0073EB8B    lea edx, ds:[edx+0x24]
 0073EB8E    inc esi
 0073EB8F    add ecx, dword ptr ds:[edi]
@@ -37,21 +43,21 @@
 0073EBC0    mov eax, dword ptr ds:[ecx+0x30]
 0073EBC3    mov dword ptr ds:[edx-0x04], eax
 0073EBC6    cmp esi, dword ptr ds:[0x0147EF94]
-0073EBCC    jl 0x0073EB80
+0073EBCC    jl 0x0073EB80                                   ; => [ Data: data_147ef94 ]
 0073EBCE    call 0x0073E8E0
 0073EBD3    pop edi
 0073EBD4    pop esi
 0073EBD5    pop ecx
-0073EBD6    ret
-0073EBD7    push 0x88FB0C
+0073EBD6    ret                                             ; => [ Call: sub_73e8e0 ]
+0073EBD7    push 0x88FB0C                                   ; => [ String: SetDragTranslateOrigins ]
 0073EBDC    push 0x1D7
-0073EBE1    push 0x88FA7C
-0073EBE6    mov ecx, 0x88FAF0
+0073EBE1    push 0x88FA7C                                   ; => [ String: C:\x\ax2017\Engine\Editor\FabEditor.cpp ]
+0073EBE6    mov ecx, 0x88FAF0                               ; => [ String: gFab.s.activeSetCount > 0 ]
 0073EBEB    mov edx, 0x801800
-0073EBF0    call 0x0063B870
+0073EBF0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0073EBF5    add esp, 0x0C
 0073EBF8    call 0x0063BC30
 0073EBFD    test al, al
-0073EBFF    jz 0x0073EC02
+0073EBFF    jz 0x0073EC02                                   ; => [ Call: sub_63bc30 ]
 0073EC01    int3
-0073EC02    call 0x0063BB00
+0073EC02    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

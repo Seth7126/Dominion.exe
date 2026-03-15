@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ab610
+// 起始地址: 0x6ab610
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AB610    push ebp
 006AB611    mov ebp, esp
 006AB613    and esp, 0xFFFFFFC0
@@ -21,7 +27,7 @@
 006AB651    movsd qword ptr ss:[esp+0x60], xmm0
 006AB657    fld qword ptr ss:[esp+0x60]
 006AB65B    fstp qword ptr ss:[esp]
-006AB65E    call 0x0076208A
+006AB65E    call 0x0076208A                                 ; => [ Call: floor ]
 006AB663    movd xmm0, ebx
 006AB667    cvtdq2ps xmm0, xmm0
 006AB66A    fstp dword ptr ss:[esp+0x60]
@@ -32,7 +38,7 @@
 006AB685    movsd qword ptr ss:[esp+0x68], xmm0
 006AB68B    fld qword ptr ss:[esp+0x68]
 006AB68F    fstp qword ptr ss:[esp]
-006AB692    call 0x0076208A
+006AB692    call 0x0076208A                                 ; => [ Call: floor ]
 006AB697    movss xmm1, dword ptr ss:[esp+0x60]
 006AB69D    xorps xmm3, xmm3
 006AB6A0    movss xmm6, dword ptr ds:[0x00890D84]
@@ -134,10 +140,10 @@
 006AB7D1    jmp 0x006AB7D8
 006AB7D3    cmp ecx, edx
 006AB7D5    cmovnle ecx, edx
-006AB7D8    movaps xmm4, xmmword ptr ds:[0x00891990]
+006AB7D8    movaps xmm4, xmmword ptr ds:[0x00891990]        ; => [ Data: data_891990 ]
 006AB7DF    mov edx, edi
 006AB7E1    mov edi, dword ptr ss:[esp+0x58]
-006AB7E5    movaps xmm3, xmmword ptr ds:[0x008936C0]
+006AB7E5    movaps xmm3, xmmword ptr ds:[0x008936C0]        ; => [ Data: data_8936c0 ]
 006AB7EC    mov eax, dword ptr ds:[edx+0x0C]
 006AB7EF    imul eax, ecx
 006AB7F2    add eax, esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_581ab0
+// 起始地址: 0x581ab0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00581AB0    push ebp
 00581AB1    mov ebp, esp
 00581AB3    sub esp, 0x08
@@ -14,7 +20,7 @@
 00581ACE    nop
 00581AD0    cmp ebx, 0x320
 00581AD6    jb 0x00581AE3
-00581AD8    call 0x00591930
+00581AD8    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00581ADD    mov ecx, dword ptr ss:[ebp+0x08]
 00581AE0    mov edx, dword ptr ss:[ebp-0x04]
 00581AE3    cmp esi, ecx
@@ -29,7 +35,7 @@
 00581AFF    push eax
 00581B00    push esi
 00581B01    mov ecx, edi
-00581B03    call 0x00581A00
+00581B03    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581B08    mov ecx, dword ptr ss:[ebp+0x08]
 00581B0B    inc esi
 00581B0C    mov edx, dword ptr ss:[ebp-0x04]

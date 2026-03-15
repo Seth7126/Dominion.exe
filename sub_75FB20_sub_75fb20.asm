@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_75fb20
+// 起始地址: 0x75fb20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075FB20    push ebp
 0075FB21    mov ebp, esp
 0075FB23    mov eax, 0x100C
-0075FB28    call 0x00761E50
+0075FB28    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0075FB2D    mov eax, dword ptr ds:[0x008C4040]
 0075FB32    xor eax, ebp
-0075FB34    mov dword ptr ss:[ebp-0x04], eax
+0075FB34    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 0075FB37    push ebx
 0075FB38    push esi
 0075FB39    push edi
 0075FB3A    xor edi, edi
 0075FB3C    mov esi, ecx
 0075FB3E    mov dword ptr ss:[ebp-0x1008], edi
-0075FB44    call 0x0075AE50
+0075FB44    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075FB49    xor eax, eax
 0075FB4B    cmp dword ptr ds:[esi+0x1C], eax
 0075FB4E    jle 0x0075FB8A
@@ -34,14 +40,14 @@
 0075FB82    jl 0x0075FB60
 0075FB84    mov dword ptr ss:[ebp-0x1008], edi
 0075FB8A    mov ecx, esi
-0075FB8C    call 0x0075EC70
+0075FB8C    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075FB91    push edi
 0075FB92    lea eax, ss:[ebp-0x1004]
 0075FB98    mov ecx, esi
 0075FB9A    push eax
-0075FB9B    call 0x0075FCB0
+0075FB9B    call 0x0075FCB0                                 ; => [ Call: sub_75fcb0 ]
 0075FBA0    mov ecx, esi
-0075FBA2    call 0x0075AE50
+0075FBA2    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075FBA7    xor ebx, ebx
 0075FBA9    test edi, edi
 0075FBAB    jle 0x0075FC88
@@ -55,10 +61,10 @@
 0075FBD6    jz 0x0075FC7F
 0075FBDC    push ecx
 0075FBDD    mov ecx, esi
-0075FBDF    call 0x00761000
+0075FBDF    call 0x00761000                                 ; => [ Call: sub_761000 ]
 0075FBE4    push dword ptr ss:[ebp+ebx*4-0x1004]
 0075FBEB    mov ecx, esi
-0075FBED    call 0x007610D0
+0075FBED    call 0x007610D0                                 ; => [ Call: sub_7610d0 ]
 0075FBF2    mov ecx, dword ptr ss:[ebp-0x100C]
 0075FBF8    movss xmm0, dword ptr ds:[0x00890CA4]
 0075FC00    mov eax, dword ptr ds:[ecx+esi*1+0x1DF4]
@@ -86,7 +92,7 @@
 0075FC61    jz 0x0075FC79
 0075FC63    push dword ptr ss:[ebp+ebx*4-0x1004]
 0075FC6A    mov ecx, esi
-0075FC6C    call 0x00760F30
+0075FC6C    call 0x00760F30                                 ; => [ Call: sub_760f30 ]
 0075FC71    jmp 0x0075FC79
 0075FC73    and eax, 0xFFFFFFDF
 0075FC76    mov dword ptr ds:[edi+0x10], eax
@@ -96,13 +102,13 @@
 0075FC82    jl 0x0075FBC0
 0075FC88    mov ecx, esi
 0075FC8A    mov byte ptr ds:[esi+0x1CDC0], 0x01
-0075FC91    call 0x0075EC70
+0075FC91    call 0x0075EC70                                 ; => [ Call: sub_75ec70 | Type: CRITICAL_SECTION ]
 0075FC96    mov ecx, dword ptr ss:[ebp-0x04]
 0075FC99    pop edi
 0075FC9A    pop esi
 0075FC9B    xor ecx, ebp
 0075FC9D    pop ebx
-0075FC9E    call 0x0075927A
+0075FC9E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075FCA3    mov esp, ebp
 0075FCA5    pop ebp
 0075FCA6    ret

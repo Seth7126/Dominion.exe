@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e0f70
+// 起始地址: 0x6e0f70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E0F70    push ebx
 006E0F71    mov ebx, esp
 006E0F73    sub esp, 0x08
@@ -122,10 +128,10 @@
 006E117C    movss xmm0, dword ptr ds:[0x00890C78]
 006E1184    andps xmm1, xmmword ptr ds:[0x008937A0]
 006E118B    comiss xmm0, xmm1
-006E118E    jnbe 0x006E12A9
+006E118E    jnbe 0x006E12A9                                 ; => [ Data: data_8937a0 ]
 006E1194    lea eax, ss:[ebp-0x58]
 006E1197    push eax
-006E1198    call 0x006E0AE0
+006E1198    call 0x006E0AE0                                 ; => [ Call: sub_6e0ae0 ]
 006E119D    movss xmm4, dword ptr ds:[0x00890E18]
 006E11A5    add esp, 0x04
 006E11A8    divss xmm4, dword ptr ss:[ebp-0x04]
@@ -200,10 +206,10 @@
 006E12B3    push 0x881B48
 006E12B8    mov edx, 0x801800
 006E12BD    mov ecx, 0x8782E8
-006E12C2    call 0x0063B870
+006E12C2    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: 0 | String: Mat4Inverse | String: C:\x\ax2017\Engine\Mat4.cpp ]
 006E12C7    add esp, 0x0C
 006E12CA    call 0x0063BC30
 006E12CF    test al, al
-006E12D1    jz 0x006E12D4
+006E12D1    jz 0x006E12D4                                   ; => [ Call: sub_63bc30 ]
 006E12D3    int3
-006E12D4    call 0x0063BB00
+006E12D4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d7ff0
+// 起始地址: 0x6d7ff0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D7FF0    push ebp
 006D7FF1    mov ebp, esp
 006D7FF3    sub esp, 0x0C
@@ -39,13 +45,13 @@
 006D804D    test ecx, ecx
 006D804F    js 0x006D80CA
 006D8051    cmp ecx, dword ptr ds:[0x008CE7CC]
-006D8057    jnl 0x006D80CA
+006D8057    jnl 0x006D80CA                                  ; => [ Data: data_8ce7cc ]
 006D8059    mov eax, dword ptr ds:[0x008CE7C8]
-006D805E    mov eax, dword ptr ds:[eax+ecx*4]
+006D805E    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_8ce7c8 ]
 006D8061    mov ecx, dword ptr ds:[eax+0x0C]
 006D8064    test ecx, ecx
 006D8066    jz 0x006D80B4
-006D8068    call 0x0069C520
+006D8068    call 0x0069C520                                 ; => [ Call: sub_69c520 ]
 006D806D    test al, al
 006D806F    jnz 0x006D80A3
 006D8071    mov eax, dword ptr ds:[edi]
@@ -69,29 +75,29 @@
 006D809F    mov esp, ebp
 006D80A1    pop ebp
 006D80A2    ret
-006D80A3    push 0x880588
+006D80A3    push 0x880588                                   ; => [ String: sMaterialCopyMap ]
 006D80A8    push 0x22C
-006D80AD    mov ecx, 0x8805A0
+006D80AD    mov ecx, 0x8805A0                               ; => [ String: !DefTypeIsDeepStructure(AttribTagGetDefMap(gMaterialAttribTable, pTagSource->tag)) ]
 006D80B2    jmp 0x006D80EF
-006D80B4    push 0x881518
+006D80B4    push 0x881518                                   ; => [ String: AttribTagGetDefMap ]
 006D80B9    push 0x1FE
-006D80BE    push 0x8812F8
-006D80C3    mov ecx, 0x88156C
+006D80BE    push 0x8812F8                                   ; => [ String: C:\x\ax2017\Engine\AttribMap.cpp ]
+006D80C3    mov ecx, 0x88156C                               ; => [ String: pAttribField->pDefMap ]
 006D80C8    jmp 0x006D80F4
-006D80CA    push 0x88131C
+006D80CA    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006D80CF    push 0x8B
-006D80D4    push 0x8812F8
-006D80D9    mov ecx, 0x881344
+006D80D4    push 0x8812F8                                   ; => [ String: C:\x\ax2017\Engine\AttribMap.cpp ]
+006D80D9    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006D80DE    jmp 0x006D80F4
-006D80E0    push 0x880588
+006D80E0    push 0x880588                                   ; => [ String: sMaterialCopyMap ]
 006D80E5    push 0x226
-006D80EA    mov ecx, 0x88054C
-006D80EF    push 0x88052C
+006D80EA    mov ecx, 0x88054C                               ; => [ String: specialStackAttribMap.attributeCount < MAX_STACK_ATTRIBUTES ]
+006D80EF    push 0x88052C                                   ; => [ String: C:\x\ax2017\Engine\Material.cpp | String: C:\x\ax2017\Engine\Material.cpp ]
 006D80F4    mov edx, 0x801800
-006D80F9    call 0x0063B870
+006D80F9    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006D80FE    add esp, 0x0C
 006D8101    call 0x0063BC30
 006D8106    test al, al
-006D8108    jz 0x006D810B
+006D8108    jz 0x006D810B                                   ; => [ Call: sub_63bc30 ]
 006D810A    int3
-006D810B    call 0x0063BB00
+006D810B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

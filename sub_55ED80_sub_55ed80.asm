@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55ed80
+// 起始地址: 0x55ed80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055ED80    dword 83EC8B55
 0055ED84    in al, 0xF8
 0055ED86    sub esp, 0xC88
@@ -5,17 +11,17 @@
 0055ED8E    push ecx
 0055ED8F    push 0x00
 0055ED91    lea ecx, ds:[edx+0x01]
-0055ED94    call 0x00561E00
-0055ED99    call 0x00573400
+0055ED94    call 0x00561E00                                 ; => [ Call: sub_561e00 ]
+0055ED99    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055ED9E    push 0x00
 0055EDA0    push 0x00
 0055EDA2    push 0x01
 0055EDA4    mov edx, dword ptr ds:[eax+0x0C]
 0055EDA7    mov ecx, dword ptr ds:[eax+0x04]
 0055EDAA    push 0x01
-0055EDAC    call 0x00590760
+0055EDAC    call 0x00590760                                 ; => [ Call: sub_590760 ]
 0055EDB1    add esp, 0x18
-0055EDB4    call 0x00573400
+0055EDB4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055EDB9    mov ecx, dword ptr ds:[eax+0x0C]
 0055EDBC    cmp ecx, 0xFFFFFFFF
 0055EDBF    jz 0x0055EDF6
@@ -33,16 +39,16 @@
 0055EDEF    add esp, 0x0C
 0055EDF2    mov esp, ebp
 0055EDF4    pop ebp
-0055EDF5    ret
+0055EDF5    ret                                             ; => [ Call: sub_4fa160 | Call: sub_56bba0 ]
 0055EDF6    push 0x81EA64
 0055EDFB    push 0x52
 0055EDFD    push 0x81EA70
 0055EE02    mov edx, 0x801800
 0055EE07    mov ecx, 0x813C5C
-0055EE0C    call 0x0063B870
+0055EE0C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0055EE11    add esp, 0x0C
 0055EE14    call 0x0063BC30
 0055EE19    test al, al
-0055EE1B    jz 0x0055EE1E
+0055EE1B    jz 0x0055EE1E                                   ; => [ Call: sub_63bc30 ]
 0055EE1D    int3
-0055EE1E    call 0x0063BB00
+0055EE1E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63d320
+// 起始地址: 0x63d320
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063D320    push ebp
 0063D321    mov ebp, esp
 0063D323    sub esp, 0x08
@@ -25,7 +31,7 @@
 0063D35C    mov eax, 0x80000000
 0063D361    add eax, 0x23
 0063D364    push eax
-0063D365    call 0x00759772
+0063D365    call 0x00759772                                 ; => [ Call: operator new ]
 0063D36A    add esp, 0x04
 0063D36D    test eax, eax
 0063D36F    jz 0x0063D439
@@ -46,7 +52,7 @@
 0063D398    lea ecx, ds:[edi+0x01]
 0063D39B    test ecx, ecx
 0063D39D    jnz 0x0063D3A3
-0063D39F    xor esi, esi
+0063D39F    xor esi, esi                                    ; => [ Call: nullptr ]
 0063D3A1    jmp 0x0063D3C6
 0063D3A3    cmp ecx, 0x1000
 0063D3A9    jb 0x0063D3B8
@@ -57,7 +63,7 @@
 0063D3B8    push ecx
 0063D3B9    call 0x00759772
 0063D3BE    add esp, 0x04
-0063D3C1    mov esi, eax
+0063D3C1    mov esi, eax                                    ; => [ Call: operator new ]
 0063D3C3    mov edx, dword ptr ss:[ebp-0x04]
 0063D3C6    mov eax, dword ptr ss:[ebp-0x08]
 0063D3C9    mov dword ptr ds:[ebx+0x10], eax
@@ -73,11 +79,11 @@
 0063D3E4    mov edi, dword ptr ds:[ebx]
 0063D3E6    push edi
 0063D3E7    push esi
-0063D3E8    call 0x00761FBE
+0063D3E8    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063D3ED    push dword ptr ss:[ebp+0x14]
 0063D3F0    push dword ptr ss:[ebp+0x10]
 0063D3F3    push dword ptr ss:[ebp-0x08]
-0063D3F6    call 0x00761FBE
+0063D3F6    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063D3FB    mov eax, dword ptr ss:[ebp-0x04]
 0063D3FE    add esp, 0x18
 0063D401    mov ecx, dword ptr ss:[ebp+0x08]
@@ -94,7 +100,7 @@
 0063D420    mov edi, edx
 0063D422    push ecx
 0063D423    push edi
-0063D424    call 0x00759661
+0063D424    call 0x00759661                                 ; => [ Call: operator new ]
 0063D429    add esp, 0x08
 0063D42C    mov dword ptr ds:[ebx], esi
 0063D42E    mov eax, ebx
@@ -107,11 +113,11 @@
 0063D439    call dword ptr ds:[0x007755F4]
 0063D43F    push ebx
 0063D440    push esi
-0063D441    call 0x00761FBE
+0063D441    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063D446    push dword ptr ss:[ebp+0x14]
 0063D449    push dword ptr ss:[ebp+0x10]
 0063D44C    push edi
-0063D44D    call 0x00761FBE
+0063D44D    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063D452    mov eax, dword ptr ss:[ebp-0x04]
 0063D455    add esp, 0x18
 0063D458    mov byte ptr ds:[eax], 0x00
@@ -123,5 +129,5 @@
 0063D462    mov esp, ebp
 0063D464    pop ebp
 0063D465    ret 0x10
-0063D468    call 0x005B0860
-0063D46D    call 0x004F7EE0
+0063D468    call 0x005B0860                                 ; => [ Call: sub_5b0860 ]
+0063D46D    call 0x004F7EE0                                 ; => [ Call: sub_4f7ee0 ]

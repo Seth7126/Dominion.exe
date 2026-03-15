@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_7326a0
+// 起始地址: 0x7326a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007326A0    push ebp
 007326A1    mov ebp, esp
 007326A3    push 0xFFFFFFFF
-007326A5    push 0x772A3D
+007326A5    push 0x772A3D                                   ; => [ Call: sub_772a3d | Type: EHRegistrationNode ]
 007326AA    mov eax, dword ptr fs:[0x00000000]
-007326B0    push eax
+007326B0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 007326B1    sub esp, 0xAC
 007326B7    mov eax, dword ptr ds:[0x008C4040]
 007326BC    xor eax, ebp
@@ -11,26 +17,26 @@
 007326C1    push ebx
 007326C2    push esi
 007326C3    push edi
-007326C4    push eax
+007326C4    push eax                                        ; => [ Data: __security_cookie ]
 007326C5    lea eax, ss:[ebp-0x0C]
-007326C8    mov dword ptr fs:[0x00000000], eax
+007326C8    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 007326CE    mov dword ptr ss:[ebp-0xB0], edx
 007326D4    mov edi, ecx
 007326D6    mov dword ptr ss:[ebp-0x04], 0x00
-007326DD    mov ebx, 0x801800
+007326DD    mov ebx, 0x801800                               ; => [ Data: data_801800 ]
 007326E2    mov eax, dword ptr ss:[ebp+0x08]
 007326E5    test eax, eax
 007326E7    push 0x8723C4
 007326EC    cmovnz ebx, eax
 007326EF    push ebx
-007326F0    call dword ptr ds:[0x0077564C]
-007326F6    mov esi, eax
+007326F0    call dword ptr ds:[0x0077564C]                  ; => [ String: rb | Type: FILE ]
+007326F6    mov esi, eax                                    ; => [ Type: FILE ]
 007326F8    add esp, 0x08
 007326FB    test esi, esi
 007326FD    jnz 0x00732713
-007326FF    push 0x88E9D8
+007326FF    push 0x88E9D8                                   ; => [ String: ReadWav ]
 00732704    push 0xA1
-00732709    mov ecx, 0x87AE60
+00732709    mov ecx, 0x87AE60                               ; => [ String: file ]
 0073270E    jmp 0x007329EE
 00732713    push esi
 00732714    push 0x01
@@ -40,10 +46,10 @@
 0073271C    call dword ptr ds:[0x00775618]
 00732722    add esp, 0x10
 00732725    cmp eax, 0x01
-00732728    jz 0x0073274B
+00732728    jz 0x0073274B                                   ; => [ Type: FILE ]
 0073272A    push ebx
 0073272B    push 0x88EA24
-00732730    call 0x0063B5F0
+00732730    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: failed to read wav file (riff): %s ]
 00732735    push esi
 00732736    call dword ptr ds:[0x00775648]
 0073273C    add esp, 0x0C
@@ -61,7 +67,7 @@
 00732769    nop dword ptr ds:[eax], eax
 00732770    mov eax, dword ptr ss:[ebp-0xB8]
 00732776    cmp eax, 0x20746D66
-0073277B    jnz 0x007327D6
+0073277B    jnz 0x007327D6                                  ; => [ Type: FILE ]
 0073277D    mov eax, dword ptr ss:[ebp-0xB4]
 00732783    cmp eax, 0x90
 00732788    jnb 0x007328C2
@@ -103,42 +109,42 @@
 00732813    jz 0x00732770
 00732819    push ebx
 0073281A    push 0x88EA00
-0073281F    call 0x0063B5F0
+0073281F    call 0x0063B5F0                                 ; => [ String: failed to read wav file (wave): %s | Call: sub_63b5f0 ]
 00732824    push esi
 00732825    call dword ptr ds:[0x00775648]
 0073282B    add esp, 0x0C
 0073282E    mov dword ptr ss:[ebp-0x04], 0x02
 00732835    cmp dword ptr ds:[0x00CF65BC], 0x00
-0073283C    jz 0x00732865
+0073283C    jz 0x00732865                                   ; => [ Data: data_cf65bc ]
 0073283E    mov eax, dword ptr ss:[ebp+0x08]
 00732841    test eax, eax
 00732843    jz 0x00732865
 00732845    cmp byte ptr ds:[eax], 0x00
 00732848    jz 0x00732865
 0073284A    lea ecx, ss:[ebp+0x08]
-0073284D    call 0x0063D4E0
+0073284D    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00732852    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00732856    jnz 0x00732865
 00732858    mov edx, dword ptr ds:[eax+0x0C]
 0073285B    mov ecx, eax
 0073285D    add edx, 0x10
-00732860    call 0x0064C080
+00732860    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00732865    xor al, al
 00732867    mov ecx, dword ptr ss:[ebp-0x0C]
-0073286A    mov dword ptr fs:[0x00000000], ecx
+0073286A    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00732871    pop ecx
 00732872    pop edi
 00732873    pop esi
 00732874    pop ebx
 00732875    mov ecx, dword ptr ss:[ebp-0x10]
 00732878    xor ecx, ebp
-0073287A    call 0x0075927A
+0073287A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0073287F    mov esp, ebp
 00732881    pop ebp
 00732882    ret
 00732883    push ebx
 00732884    push 0x88EAB0
-00732889    call 0x0063B5F0
+00732889    call 0x0063B5F0                                 ; => [ String: unsupported wav format: %s | Call: sub_63b5f0 ]
 0073288E    push esi
 0073288F    call dword ptr ds:[0x00775648]
 00732895    add esp, 0x0C
@@ -146,19 +152,19 @@
 0073289F    jmp 0x00732835
 007328A1    push ebx
 007328A2    push 0x88EA48
-007328A7    call 0x0063B5F0
+007328A7    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: failed to read wav format: %s ]
 007328AC    push esi
 007328AD    call dword ptr ds:[0x00775648]
 007328B3    add esp, 0x0C
 007328B6    mov dword ptr ss:[ebp-0x04], 0x03
 007328BD    jmp 0x00732835
-007328C2    push 0x88E9D8
+007328C2    push 0x88E9D8                                   ; => [ String: ReadWav ]
 007328C7    push 0xB8
-007328CC    mov ecx, 0x88EA68
+007328CC    mov ecx, 0x88EA68                               ; => [ String: sizeof(WAVE_FMT_HEADER) > wave.SubchunkSize ]
 007328D1    jmp 0x007329EE
 007328D6    push ebx
 007328D7    push 0x88EACC
-007328DC    call 0x0063B5F0
+007328DC    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: failed to read unknown wav data: %s ]
 007328E1    push esi
 007328E2    call dword ptr ds:[0x00775648]
 007328E8    add esp, 0x0C
@@ -170,7 +176,7 @@
 00732907    mov dword ptr ds:[edi+0x10], 0x01
 0073290E    mov dword ptr ds:[edi+0x14], ecx
 00732911    mov dword ptr ds:[edi+0x0C], ecx
-00732914    call 0x00687730
+00732914    call 0x00687730                                 ; => [ Call: sub_687730 ]
 00732919    push esi
 0073291A    push 0x01
 0073291C    push dword ptr ds:[edi+0x14]
@@ -182,7 +188,7 @@
 0073292F    jz 0x00732966
 00732931    push ebx
 00732932    push 0x88EAF0
-00732937    call 0x0063B5F0
+00732937    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: failed to read wav data: %s ]
 0073293C    mov eax, dword ptr ds:[edi+0x18]
 0073293F    add esp, 0x08
 00732942    test eax, eax
@@ -205,41 +211,41 @@
 0073297D    cmp eax, 0x02
 00732980    jz 0x00732A0F
 00732986    mov eax, dword ptr ss:[ebp+0x08]
-00732989    mov ecx, 0x801800
+00732989    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0073298E    test eax, eax
 00732990    cmovnz ecx, eax
 00732993    push ecx
 00732994    push 0x88EB0C
-00732999    call 0x0063B5F0
+00732999    call 0x0063B5F0                                 ; => [ String: can't convert sound storage type %s | Call: sub_63b5f0 ]
 0073299E    add esp, 0x08
 007329A1    mov dword ptr ss:[ebp-0x04], 0x07
 007329A8    cmp dword ptr ds:[0x00CF65BC], 0x00
-007329AF    jz 0x007329D8
+007329AF    jz 0x007329D8                                   ; => [ Data: data_cf65bc ]
 007329B1    mov eax, dword ptr ss:[ebp+0x08]
 007329B4    test eax, eax
 007329B6    jz 0x007329D8
 007329B8    cmp byte ptr ds:[eax], 0x00
 007329BB    jz 0x007329D8
 007329BD    lea ecx, ss:[ebp+0x08]
-007329C0    call 0x0063D4E0
+007329C0    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 007329C5    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 007329C9    jnz 0x007329D8
 007329CB    mov edx, dword ptr ds:[eax+0x0C]
 007329CE    mov ecx, eax
 007329D0    add edx, 0x10
-007329D3    call 0x0064C080
+007329D3    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 007329D8    mov al, 0x01
 007329DA    jmp 0x00732867
-007329DF    push 0x88E9D8
+007329DF    push 0x88E9D8                                   ; => [ String: ReadWav ]
 007329E4    push 0xCD
-007329E9    mov ecx, 0x88EA94
+007329E9    mov ecx, 0x88EA94                               ; => [ String: pSoundData->bits == NULL ]
 007329EE    push 0x88E964
 007329F3    mov edx, 0x801800
-007329F8    call 0x0063B870
+007329F8    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\SoundImport.cpp | String: ReadWav ]
 007329FD    add esp, 0x0C
 00732A00    call 0x0063BC30
 00732A05    test al, al
-00732A07    jz 0x00732A0A
+00732A07    jz 0x00732A0A                                   ; => [ Call: sub_63bc30 ]
 00732A09    int3
-00732A0A    call 0x0063BB00
-00732A0F    call 0x006FE4C0
+00732A0A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+00732A0F    call 0x006FE4C0                                 ; => [ Call: sub_6fe4c0 ]

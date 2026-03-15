@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_6e1920
+// 起始地址: 0x6e1920
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E1920    mov edx, dword ptr ds:[ecx+0x04]
 006E1923    movsx eax, byte ptr ds:[edx]
 006E1926    sub eax, 0x09
 006E1929    cmp eax, 0x17
 006E192C    jnbe 0x006E1969
 006E192E    nop
-006E1930    movzx eax, byte ptr ds:[eax+0x6E197C]
-006E1937    jmp dword ptr ds:[eax*4+0x6E196C]
+006E1930    movzx eax, byte ptr ds:[eax+0x6E197C]           ; => [ Data: lookup_table_6e197c ]
+006E1937    jmp dword ptr ds:[eax*4+0x6E196C]               ; => [ Data: jump_table_6e196c ]
 006E193E    inc edx
 006E193F    jmp 0x006E195B
 006E1941    cmp byte ptr ds:[edx+0x01], 0x0A

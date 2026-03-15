@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69d380
+// 起始地址: 0x69d380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069D380    push ebp
 0069D381    mov ebp, esp
 0069D383    and esp, 0xFFFFFFF8
@@ -22,7 +28,7 @@
 0069D3AC    mov ecx, ebx
 0069D3AE    cmp eax, dword ptr ds:[edi+0x08]
 0069D3B1    jnl 0x0069D3C9
-0069D3B3    call 0x0069D0F0
+0069D3B3    call 0x0069D0F0                                 ; => [ Call: sub_69d0f0 ]
 0069D3B8    add esp, 0x08
 0069D3BB    mov eax, esi
 0069D3BD    cmp esi, 0xFFFFFFFF
@@ -33,7 +39,7 @@
 0069D3C5    mov esp, ebp
 0069D3C7    pop ebp
 0069D3C8    ret
-0069D3C9    call 0x0069D0F0
+0069D3C9    call 0x0069D0F0                                 ; => [ Call: sub_69d0f0 ]
 0069D3CE    add esp, 0x08
 0069D3D1    pop edi
 0069D3D2    pop esi

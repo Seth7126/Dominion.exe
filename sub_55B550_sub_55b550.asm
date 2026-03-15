@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55b550
+// 起始地址: 0x55b550
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055B550    dword 83EC8B55
 0055B554    in al, 0xF0
 0055B556    mov edx, dword ptr ds:[0x00CCE9B0]
@@ -5,7 +11,7 @@
 0055B55F    push esi
 0055B560    mov esi, dword ptr ss:[ebp+0x08]
 0055B563    mov ecx, esi
-0055B565    call 0x00571B30
+0055B565    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0055B56A    mov ecx, dword ptr ds:[eax+0x98]
 0055B570    mov eax, dword ptr ds:[eax+0x9C]
 0055B576    and ecx, 0x7F000400
@@ -31,7 +37,7 @@
 0055B5DA    push eax
 0055B5DB    call 0x00576C00
 0055B5E0    add esp, 0x08
-0055B5E3    movups xmm0, xmmword ptr ds:[eax]
+0055B5E3    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Data: data_cce9b0 | Call: sub_571b30 ]
 0055B5E6    movaps xmmword ptr ss:[esp+0x10], xmm0
 0055B5EB    psrldq xmm0, 0x08
 0055B5F0    movd eax, xmm0
@@ -42,7 +48,7 @@
 0055B5FE    mov eax, dword ptr ss:[esp+0x10]
 0055B602    cmp eax, 0x05
 0055B605    jl 0x0055B667
-0055B607    jnle 0x0055B667
+0055B607    jnle 0x0055B667                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0055B609    mov edx, dword ptr ds:[0x00CCE9B0]
 0055B60F    mov ecx, esi
 0055B611    call 0x00571B30

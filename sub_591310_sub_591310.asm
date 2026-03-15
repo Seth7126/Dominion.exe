@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_591310
+// 起始地址: 0x591310
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00591310    push ebp
 00591311    mov ebp, esp
 00591313    and esp, 0xFFFFFFF8
@@ -8,7 +14,7 @@
 0059131B    mov ebx, edx
 0059131D    push edi
 0059131E    mov dword ptr ss:[esp+0x0C], eax
-00591322    call 0x005768A0
+00591322    call 0x005768A0                                 ; => [ Call: sub_5768a0 ]
 00591327    mov edi, dword ptr ss:[ebp+0x0C]
 0059132A    mov esi, eax
 0059132C    mov dword ptr ds:[esi+0x14], 0xFFFFFFFF
@@ -66,7 +72,7 @@
 005913D7    push 0x00
 005913D9    push ebx
 005913DA    setz cl
-005913DD    call 0x0061B1B0
+005913DD    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005913E2    add esp, 0x2C
 005913E5    pop edi
 005913E6    pop esi
@@ -79,10 +85,10 @@
 005913F6    push 0x81F4B8
 005913FB    mov edx, 0x801800
 00591400    mov ecx, 0x8208D4
-00591405    call 0x0063B870
+00591405    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: source.which == CARDID_NULL | Data: data_801800 | String: GainTurn | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0059140A    add esp, 0x0C
 0059140D    call 0x0063BC30
 00591412    test al, al
-00591414    jz 0x00591417
+00591414    jz 0x00591417                                   ; => [ Call: sub_63bc30 ]
 00591416    int3
-00591417    call 0x0063BB00
+00591417    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

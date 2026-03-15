@@ -1,12 +1,18 @@
-0052E980    dword 3DFEBE8
+// ============================================================
+// 函数名称: sub_52e980
+// 起始地址: 0x52e980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+0052E980    dword 3DFEBE8                                   ; => [ Call: sub_56c970 ]
 0052E984    add byte ptr ds:[eax+eax*8+0x56C30175], al
-0052E98B    call 0x00573400
+0052E98B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052E990    imul ecx, dword ptr ds:[eax+0x0C], 0x5A30
 0052E997    mov eax, dword ptr ds:[eax+0x04]
 0052E99A    mov esi, dword ptr ds:[ecx+eax*1+0x174F4]
-0052E9A1    call 0x00573400
+0052E9A1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052E9A6    cmp esi, 0x02
-0052E9A9    jnl 0x0052E9D2
+0052E9A9    jnl 0x0052E9D2                                  ; => [ Call: sub_56d6b0 | Call: sub_583fc0 ]
 0052E9AB    mov ecx, dword ptr ds:[eax+0x04]
 0052E9AE    mov edx, dword ptr ds:[eax+0x0C]
 0052E9B1    push 0xA00

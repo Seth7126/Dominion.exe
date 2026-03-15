@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5acc00
+// 起始地址: 0x5acc00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005ACC00    push ebp
 005ACC01    mov ebp, esp
 005ACC03    and esp, 0xFFFFFFF8
@@ -22,7 +28,7 @@
 005ACC3B    mov edx, edi
 005ACC3D    lea ecx, ss:[esp+0x2C]
 005ACC41    push ebx
-005ACC42    call 0x005AD660
+005ACC42    call 0x005AD660                                 ; => [ Call: sub_5ad660 ]
 005ACC47    mov edx, dword ptr ss:[esp+0x30]
 005ACC4B    mov eax, esi
 005ACC4D    sar eax, 0x02
@@ -84,7 +90,7 @@
 005ACD01    add eax, 0x04
 005ACD04    push edi
 005ACD05    push eax
-005ACD06    call 0x00762362
+005ACD06    call 0x00762362                                 ; => [ Call: memmove ]
 005ACD0B    mov ecx, dword ptr ss:[esp+0x28]
 005ACD0F    add esp, 0x0C
 005ACD12    mov dword ptr ds:[edi], ecx
@@ -108,7 +114,7 @@
 005ACD44    mov ecx, edi
 005ACD46    push eax
 005ACD47    push ebx
-005ACD48    call 0x005AE690
+005ACD48    call 0x005AE690                                 ; => [ Call: sub_5ae690 ]
 005ACD4D    add esp, 0x0C
 005ACD50    test esi, esi
 005ACD52    jnle 0x005ACD32
@@ -128,7 +134,7 @@
 005ACD7F    lea eax, ds:[ebx-0x04]
 005ACD82    sar eax, 0x02
 005ACD85    push eax
-005ACD86    call 0x005AE690
+005ACD86    call 0x005AE690                                 ; => [ Call: sub_5ae690 ]
 005ACD8B    add ebx, 0xFFFFFFFC
 005ACD8E    add esp, 0x0C
 005ACD91    mov eax, ebx

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f8ba0
+// 起始地址: 0x5f8ba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F8BA0    push ebp
 005F8BA1    mov ebp, esp
 005F8BA3    push ebx
@@ -23,9 +29,9 @@
 005F8BD3    mov dword ptr ds:[ebx+ecx*8+0x0C], eax
 005F8BD7    mov eax, dword ptr ss:[ebp+0x0C]
 005F8BDA    mov dword ptr ds:[ebx+ecx*8+0x04], eax
-005F8BDE    movups xmmword ptr ds:[ebx+ecx*8+0x10], xmm0
-005F8BE3    movups xmmword ptr ds:[ebx+ecx*8+0x20], xmm0
-005F8BE8    movups xmmword ptr ds:[ebx+ecx*8+0x30], xmm0
+005F8BDE    movups xmmword ptr ds:[ebx+ecx*8+0x10], xmm0    ; => [ String: 0 | String: zx ]
+005F8BE3    movups xmmword ptr ds:[ebx+ecx*8+0x20], xmm0    ; => [ String: 0 | String: zx ]
+005F8BE8    movups xmmword ptr ds:[ebx+ecx*8+0x30], xmm0    ; => [ String: 0 | String: zx ]
 005F8BED    movq qword ptr ds:[ebx+ecx*8+0x40], xmm0
 005F8BF3    cmp esi, dword ptr ds:[edi]
 005F8BF5    jl 0x005F8BB1

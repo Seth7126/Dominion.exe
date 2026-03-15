@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_735eb0
+// 起始地址: 0x735eb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00735EB0    push ebp
 00735EB1    mov ebp, esp
 00735EB3    sub esp, 0x14
@@ -11,7 +17,7 @@
 00735EC3    mov dword ptr ss:[ebp-0x04], esi
 00735EC6    mov edx, dword ptr ds:[esi+0x04]
 00735EC9    mov ecx, dword ptr ds:[esi]
-00735ECB    call 0x006A9660
+00735ECB    call 0x006A9660                                 ; => [ Call: sub_6a9660 ]
 00735ED0    mov ebx, dword ptr ds:[ebx+0x18]
 00735ED3    add esp, 0x04
 00735ED6    mov ecx, eax
@@ -75,7 +81,7 @@
 00735F67    xor ecx, ecx
 00735F69    add esp, 0x08
 00735F6C    test al, al
-00735F6E    setnz cl
+00735F6E    setnz cl                                        ; => [ Call: sub_735680 ]
 00735F71    lea eax, ds:[ecx+0x01]
 00735F74    pop edi
 00735F75    pop esi

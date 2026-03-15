@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_610fb0
+// 起始地址: 0x610fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00610FB0    push ebx
 00610FB1    push esi
 00610FB2    push edi
 00610FB3    mov edi, ecx
 00610FB5    call 0x005CB070
-00610FBA    mov ebx, eax
+00610FBA    mov ebx, eax                                    ; => [ Call: sub_5cb070 ]
 00610FBC    test ebx, ebx
 00610FBE    jz 0x00611080
 00610FC4    mov eax, dword ptr ds:[ebx+0x10]
@@ -19,7 +25,7 @@
 00610FF7    mov ecx, edi
 00610FF9    call 0x005CBB20
 00610FFE    cmp eax, esi
-00611000    jz 0x00611080
+00611000    jz 0x00611080                                   ; => [ Call: sub_5cbb20 ]
 00611002    cmp dword ptr ds:[edi+0x2C], 0x00
 00611006    jnz 0x006110BA
 0061100C    cmp dword ptr ds:[edi+0xA4], 0x3EA
@@ -27,7 +33,7 @@
 0061101C    mov esi, dword ptr ds:[ebx+0x18]
 0061101F    mov ecx, edi
 00611021    call 0x005CBB20
-00611026    cmp eax, esi
+00611026    cmp eax, esi                                    ; => [ Call: sub_5cbb20 ]
 00611028    jmp 0x006110B8
 0061102D    cmp dword ptr ds:[edi+0x2C], 0x00
 00611031    jnz 0x006110BA
@@ -36,12 +42,12 @@
 00611043    cmp dword ptr ds:[ebx+0x0C], 0x0B
 00611047    jnz 0x00611060
 00611049    cmp dword ptr ds:[0x00B80B08], 0x02
-00611050    jnz 0x00611060
+00611050    jnz 0x00611060                                  ; => [ Data: data_b80b08 ]
 00611052    mov edx, dword ptr ds:[ebx+0x18]
 00611055    mov ecx, edi
-00611057    call 0x00610EF0
+00611057    call 0x00610EF0                                 ; => [ Call: sub_610ef0 ]
 0061105C    test al, al
-0061105E    jnz 0x006110BA
+0061105E    jnz 0x006110BA                                  ; => [ Data: data_b80b08 ]
 00611060    cmp dword ptr ds:[edi+0x2C], 0x00
 00611064    jnz 0x00611072
 00611066    cmp dword ptr ds:[edi+0xA4], 0x3EA
@@ -50,7 +56,7 @@
 00611075    mov ecx, edi
 00611077    call 0x00610EF0
 0061107C    test al, al
-0061107E    jz 0x006110BA
+0061107E    jz 0x006110BA                                   ; => [ Call: sub_610ef0 ]
 00611080    mov al, 0x01
 00611082    pop edi
 00611083    pop esi
@@ -62,7 +68,7 @@
 00611096    jmp 0x006110B8
 00611098    xor edx, edx
 0061109A    mov ecx, edi
-0061109C    call 0x00610EF0
+0061109C    call 0x00610EF0                                 ; => [ Call: sub_610ef0 ]
 006110A1    test al, al
 006110A3    jnz 0x00611080
 006110A5    pop edi
@@ -76,6 +82,6 @@
 006110B8    jz 0x00611080
 006110BA    pop edi
 006110BB    pop esi
-006110BC    xor al, al
+006110BC    xor al, al                                      ; => [ Call: nullptr ]
 006110BE    pop ebx
 006110BF    ret

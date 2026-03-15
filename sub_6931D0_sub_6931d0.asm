@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_6931d0
+// 起始地址: 0x6931d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006931D0    push ebp
 006931D1    mov ebp, esp
 006931D3    push esi
 006931D4    push edi
 006931D5    mov edi, dword ptr ss:[ebp+0x08]
 006931D8    mov esi, ecx
-006931DA    mov ecx, 0x801800
+006931DA    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006931DF    mov eax, dword ptr ds:[edi]
 006931E1    test eax, eax
 006931E3    cmovnz ecx, eax
 006931E6    xor edx, edx
-006931E8    call 0x0069C4D0
+006931E8    call 0x0069C4D0                                 ; => [ Call: sub_69c4d0 ]
 006931ED    mov ecx, dword ptr ds:[esi+0x04]
 006931F0    mov esi, dword ptr ds:[esi]
 006931F2    and ecx, eax
@@ -21,7 +27,7 @@
 00693201    mov ecx, edi
 00693203    call 0x0063D7F0
 00693208    test al, al
-0069320A    jz 0x0069321B
+0069320A    jz 0x0069321B                                   ; => [ Call: sub_63d7f0 ]
 0069320C    mov esi, dword ptr ds:[esi+0x20]
 0069320F    test esi, esi
 00693211    jnz 0x00693200

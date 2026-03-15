@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c32a0
+// 起始地址: 0x6c32a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C32A0    push ebp
 006C32A1    mov ebp, esp
 006C32A3    and esp, 0xFFFFFFF8
@@ -6,7 +12,7 @@
 006C32B0    push ebx
 006C32B1    push esi
 006C32B2    push edi
-006C32B3    jz 0x006C33FD
+006C32B3    jz 0x006C33FD                                   ; => [ Data: data_147abe8 ]
 006C32B9    mov edx, dword ptr ss:[ebp+0x0C]
 006C32BC    xor eax, eax
 006C32BE    mov dword ptr ss:[esp+0x10], eax
@@ -35,7 +41,7 @@
 006C32F9    push 0x02
 006C32FB    mov ecx, 0x8CC5F8
 006C3300    mov dword ptr ds:[esi+0x10], eax
-006C3303    call 0x006DCEC0
+006C3303    call 0x006DCEC0                                 ; => [ Data: data_8cc5f8 | Call: sub_6dcec0 ]
 006C3308    add esp, 0x04
 006C330B    mov eax, dword ptr ss:[esp+0x10]
 006C330F    xor edi, edi
@@ -54,7 +60,7 @@
 006C333E    jz 0x006C33CE
 006C3344    call 0x005AF880
 006C3349    xorps xmm0, xmm0
-006C334C    mov ecx, dword ptr ds:[eax]
+006C334C    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006C334E    mov eax, dword ptr ds:[ecx]
 006C3350    movss xmm3, dword ptr ds:[ecx+0x0C]
 006C3355    mulss xmm3, dword ptr ds:[ecx+0x08]
@@ -66,10 +72,10 @@
 006C3371    xorps xmm0, xmm0
 006C3374    cvtsi2sd xmm0, eax
 006C3378    shr eax, 0x1F
-006C337B    mulss xmm2, xmm3
+006C337B    mulss xmm2, xmm3                                ; => [ Data: data_893660 ]
 006C337F    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 006C3388    mulss xmm2, dword ptr ds:[0x00890CE0]
-006C3390    cvtpd2ps xmm1, xmm0
+006C3390    cvtpd2ps xmm1, xmm0                             ; => [ Data: data_893660 ]
 006C3394    xorps xmm0, xmm0
 006C3397    cvtsi2ss xmm0, dword ptr ds:[esi+0xFC]
 006C339F    mulss xmm1, xmm3
@@ -104,10 +110,10 @@
 006C340E    push 0x87DBAC
 006C3413    mov edx, 0x801800
 006C3418    mov ecx, 0x87DE38
-006C341D    call 0x0063B870
+006C341D    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ParticleLoad | Data: data_801800 | String: attribPair.tag >= 0 && attribPair.tag < NUM_PARTICLE_PARAM_TYPES | String: C:\x\ax2017\Engine\Particle.cpp ]
 006C3422    add esp, 0x0C
 006C3425    call 0x0063BC30
 006C342A    test al, al
-006C342C    jz 0x006C342F
+006C342C    jz 0x006C342F                                   ; => [ Call: sub_63bc30 ]
 006C342E    int3
-006C342F    call 0x0063BB00
+006C342F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

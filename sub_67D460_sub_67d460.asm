@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67d460
+// 起始地址: 0x67d460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067D460    push ebp
 0067D461    mov ebp, esp
 0067D463    sub esp, 0x30
@@ -27,7 +33,7 @@
 0067D4B1    subss xmm2, dword ptr ds:[esi+0x118]
 0067D4B9    lea eax, ss:[ebp-0x2C]
 0067D4BC    push eax
-0067D4BD    call 0x0067F110
+0067D4BD    call 0x0067F110                                 ; => [ Call: sub_67f110 ]
 0067D4C2    movss xmm2, dword ptr ss:[ebp-0x08]
 0067D4C7    lea ecx, ds:[esi+0x84]
 0067D4CD    add esp, 0x04
@@ -40,8 +46,8 @@
 0067D4E5    lea ecx, ds:[esi+0x108]
 0067D4EB    add esp, 0x04
 0067D4EE    movups xmm0, xmmword ptr ds:[eax]
-0067D4F1    movups xmmword ptr ss:[ebp-0x1C], xmm0
-0067D4F5    call 0x0064C3C0
+0067D4F1    movups xmmword ptr ss:[ebp-0x1C], xmm0          ; => [ Call: sub_67f110 ]
+0067D4F5    call 0x0064C3C0                                 ; => [ Call: sub_64c3c0 ]
 0067D4FA    movups xmm3, xmmword ptr ss:[ebp-0x1C]
 0067D4FE    mov eax, edi
 0067D500    movups xmm4, xmmword ptr ss:[ebp-0x2C]

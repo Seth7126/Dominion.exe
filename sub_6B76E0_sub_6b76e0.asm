@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b76e0
+// 起始地址: 0x6b76e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B76E0    push ebp
 006B76E1    mov ebp, esp
 006B76E3    and esp, 0xFFFFFFF8
@@ -19,7 +25,7 @@
 006B772B    movss xmm0, dword ptr ds:[edx+0x14]
 006B7730    movss dword ptr ss:[esp+0x2C], xmm0
 006B7736    movaps xmm0, xmmword ptr ds:[0x00891330]
-006B773D    movups xmmword ptr ss:[esp+0x30], xmm0
+006B773D    movups xmmword ptr ss:[esp+0x30], xmm0          ; => [ Data: data_891330 ]
 006B7742    mov dword ptr ss:[esp+0x18], 0x00
 006B774A    movss xmm0, dword ptr ds:[edx+0x18]
 006B774F    movss dword ptr ss:[esp+0x40], xmm0
@@ -34,4 +40,4 @@
 006B7784    add esp, 0x10
 006B7787    mov esp, ebp
 006B7789    pop ebp
-006B778A    ret
+006B778A    ret                                             ; => [ Call: sub_6b7790 ]

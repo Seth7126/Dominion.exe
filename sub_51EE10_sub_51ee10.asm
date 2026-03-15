@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51ee10
+// 起始地址: 0x51ee10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051EE10    push ebp
 0051EE11    mov ebp, esp
 0051EE13    mov eax, dword ptr ss:[ebp+0x08]
@@ -14,7 +20,7 @@
 0051EE29    mov edx, dword ptr ds:[edx+esi*4]
 0051EE2C    call 0x00515B00
 0051EE31    test al, al
-0051EE33    jz 0x0051EE44
+0051EE33    jz 0x0051EE44                                   ; => [ Call: sub_515b00 ]
 0051EE35    inc esi
 0051EE36    cmp esi, dword ptr ds:[edi+0x04]
 0051EE39    jl 0x0051EE24

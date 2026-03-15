@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c94e0
+// 起始地址: 0x5c94e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C94E0    push ebp
 005C94E1    mov ebp, esp
 005C94E3    sub esp, 0x1C
@@ -19,7 +25,7 @@
 005C950C    mov edx, ebx
 005C950E    lea ecx, ss:[ebp-0x18]
 005C9511    push edi
-005C9512    call 0x005C96F0
+005C9512    call 0x005C96F0                                 ; => [ Call: sub_5c96f0 ]
 005C9517    mov edx, dword ptr ss:[ebp-0x18]
 005C951A    mov eax, esi
 005C951C    sar eax, 0x02
@@ -58,7 +64,7 @@
 005C9578    mov dword ptr ss:[ebp-0x10], edi
 005C957B    cmp edi, dword ptr ss:[ebp-0x08]
 005C957E    jz 0x005C9654
-005C9584    mov edx, dword ptr ds:[0x00CCEA08]
+005C9584    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C958A    mov eax, dword ptr ds:[edi]
 005C958C    mov ecx, dword ptr ds:[ebx]
 005C958E    mov dword ptr ss:[ebp-0x0C], edi
@@ -85,7 +91,7 @@
 005C95C6    add eax, 0x04
 005C95C9    push ebx
 005C95CA    push eax
-005C95CB    call 0x00762362
+005C95CB    call 0x00762362                                 ; => [ Call: memmove ]
 005C95D0    mov eax, dword ptr ss:[ebp-0x04]
 005C95D3    add esp, 0x0C
 005C95D6    mov dword ptr ds:[ebx], eax
@@ -109,7 +115,7 @@
 005C9604    mov ecx, ebx
 005C9606    push eax
 005C9607    push edi
-005C9608    call 0x005C9A70
+005C9608    call 0x005C9A70                                 ; => [ Call: sub_5c9a70 ]
 005C960D    add esp, 0x0C
 005C9610    test esi, esi
 005C9612    jnle 0x005C95F4
@@ -130,7 +136,7 @@
 005C9638    lea eax, ds:[edi-0x04]
 005C963B    sar eax, 0x02
 005C963E    push eax
-005C963F    call 0x005C9A70
+005C963F    call 0x005C9A70                                 ; => [ Call: sub_5c9a70 ]
 005C9644    add edi, 0xFFFFFFFC
 005C9647    add esp, 0x0C
 005C964A    mov eax, edi
@@ -145,7 +151,7 @@
 005C965A    ret
 005C965B    mov eax, dword ptr ss:[ebp-0x04]
 005C965E    nop
-005C9660    mov edx, dword ptr ds:[0x00CCEA08]
+005C9660    mov edx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9666    sub edi, 0x04
 005C9669    mov ecx, dword ptr ds:[edi]
 005C966B    mov dword ptr ss:[ebp-0x14], ecx
@@ -186,10 +192,10 @@
 005C96BC    push 0x828508
 005C96C1    mov edx, 0x801800
 005C96C6    mov ecx, 0x828538
-005C96CB    call 0x0063B870
+005C96CB    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ItemCompare | String: C:\x\ax2017\Jams\Dominion\code\PileLayout.cpp | String: gPile.fnItemCompare ]
 005C96D0    add esp, 0x0C
 005C96D3    call 0x0063BC30
 005C96D8    test al, al
-005C96DA    jz 0x005C96DD
+005C96DA    jz 0x005C96DD                                   ; => [ Call: sub_63bc30 ]
 005C96DC    int3
-005C96DD    call 0x0063BB00
+005C96DD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

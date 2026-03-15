@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d2120
+// 起始地址: 0x5d2120
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D2120    push ebp
 005D2121    mov ebp, esp
 005D2123    mov al, byte ptr ss:[ebp+0x0C]
@@ -73,7 +79,7 @@
 005D21C9    pop ebx
 005D21CA    pop ebp
 005D21CB    ret
-005D21CC    push 0x86FB70
+005D21CC    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D21D1    push 0x1D91
 005D21D6    jmp 0x005D293A
 005D21DB    mov ecx, dword ptr ss:[ebp+0x08]
@@ -145,7 +151,7 @@
 005D226D    pop ebx
 005D226E    pop ebp
 005D226F    ret
-005D2270    push 0x86FB70
+005D2270    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2275    push 0x1DA4
 005D227A    jmp 0x005D293A
 005D227F    mov ecx, dword ptr ss:[ebp+0x08]
@@ -215,7 +221,7 @@
 005D230A    pop ebx
 005D230B    pop ebp
 005D230C    ret
-005D230D    push 0x86FB70
+005D230D    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2312    push 0x1DB8
 005D2317    jmp 0x005D293A
 005D231C    test al, al
@@ -262,7 +268,7 @@
 005D237A    pop ebx
 005D237B    pop ebp
 005D237C    ret
-005D237D    push 0x86FB70
+005D237D    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2382    push 0x1DC8
 005D2387    jmp 0x005D293A
 005D238C    test al, al
@@ -313,10 +319,10 @@
 005D23F0    pop ebx
 005D23F1    pop ebp
 005D23F2    ret
-005D23F3    push 0x86FB70
+005D23F3    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D23F8    push 0x1DD9
 005D23FD    jmp 0x005D293A
-005D2402    push 0x86FB70
+005D2402    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2407    push 0x1DDB
 005D240C    jmp 0x005D293A
 005D2411    cmp ecx, 0x0B
@@ -388,7 +394,7 @@
 005D24B3    pop ebx
 005D24B4    pop ebp
 005D24B5    ret
-005D24B6    push 0x86FB70
+005D24B6    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D24BB    push 0x1DF0
 005D24C0    jmp 0x005D293A
 005D24C5    mov eax, dword ptr ss:[ebp+0x08]
@@ -434,7 +440,7 @@
 005D251F    pop ebx
 005D2520    pop ebp
 005D2521    ret
-005D2522    push 0x86FB70
+005D2522    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2527    push 0x1E00
 005D252C    jmp 0x005D293A
 005D2531    mov ecx, dword ptr ss:[ebp+0x08]
@@ -476,7 +482,7 @@
 005D2583    pop ebx
 005D2584    pop ebp
 005D2585    ret
-005D2586    push 0x86FB70
+005D2586    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D258B    push 0x1E0B
 005D2590    jmp 0x005D293A
 005D2595    test al, al
@@ -520,7 +526,7 @@
 005D25EA    pop ebx
 005D25EB    pop ebp
 005D25EC    ret
-005D25ED    push 0x86FB70
+005D25ED    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D25F2    push 0x1E19
 005D25F7    jmp 0x005D293A
 005D25FC    mov eax, dword ptr ss:[ebp+0x08]
@@ -542,10 +548,10 @@
 005D2623    pop ebx
 005D2624    pop ebp
 005D2625    ret
-005D2626    push 0x86FB70
+005D2626    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D262B    push 0x1E1E
 005D2630    jmp 0x005D293A
-005D2635    push 0x86FB70
+005D2635    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D263A    push 0x1E20
 005D263F    jmp 0x005D293A
 005D2644    cmp ecx, 0x0C
@@ -617,7 +623,7 @@
 005D26E5    pop ebx
 005D26E6    pop ebp
 005D26E7    ret
-005D26E8    push 0x86FB70
+005D26E8    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D26ED    push 0x1E35
 005D26F2    jmp 0x005D293A
 005D26F7    mov eax, dword ptr ss:[ebp+0x08]
@@ -651,7 +657,7 @@
 005D2738    pop ebx
 005D2739    pop ebp
 005D273A    ret
-005D273B    push 0x86FB70
+005D273B    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2740    push 0x1E3C
 005D2745    jmp 0x005D293A
 005D274A    mov ecx, dword ptr ss:[ebp+0x08]
@@ -699,7 +705,7 @@
 005D27A8    pop ebx
 005D27A9    pop ebp
 005D27AA    ret
-005D27AB    push 0x86FB70
+005D27AB    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D27B0    push 0x1E45
 005D27B5    jmp 0x005D293A
 005D27BA    mov eax, dword ptr ss:[ebp+0x08]
@@ -721,7 +727,7 @@
 005D27E1    pop ebx
 005D27E2    pop ebp
 005D27E3    ret
-005D27E4    push 0x86FB70
+005D27E4    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D27E9    push 0x1E4A
 005D27EE    jmp 0x005D293A
 005D27F3    mov eax, dword ptr ss:[ebp+0x08]
@@ -743,10 +749,10 @@
 005D281A    pop ebx
 005D281B    pop ebp
 005D281C    ret
-005D281D    push 0x86FB70
+005D281D    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2822    push 0x1E4F
 005D2827    jmp 0x005D293A
-005D282C    push 0x86FB70
+005D282C    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2831    push 0x1E51
 005D2836    jmp 0x005D293A
 005D283B    cmp ecx, 0x0D
@@ -754,7 +760,7 @@
 005D2844    cmp edx, 0x04
 005D2847    jnbe 0x005D2924
 005D284D    jmp dword ptr ds:[edx*4+0x5D299C]
-005D2854    push 0x86FB70
+005D2854    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2859    push 0x1E59
 005D285E    jmp 0x005D293A
 005D2863    mov eax, dword ptr ss:[ebp+0x08]
@@ -782,7 +788,7 @@
 005D2897    pop ebx
 005D2898    pop ebp
 005D2899    ret
-005D289A    push 0x86FB70
+005D289A    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D289F    push 0x1E5F
 005D28A4    jmp 0x005D293A
 005D28A9    mov eax, dword ptr ss:[ebp+0x08]
@@ -798,7 +804,7 @@
 005D28C3    pop ebx
 005D28C4    pop ebp
 005D28C5    ret
-005D28C6    push 0x86FB70
+005D28C6    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D28CB    push 0x1E63
 005D28D0    jmp 0x005D293A
 005D28D2    mov eax, dword ptr ss:[ebp+0x08]
@@ -814,7 +820,7 @@
 005D28EC    pop ebx
 005D28ED    pop ebp
 005D28EE    ret
-005D28EF    push 0x86FB70
+005D28EF    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D28F4    push 0x1E67
 005D28F9    jmp 0x005D293A
 005D28FB    mov eax, dword ptr ss:[ebp+0x08]
@@ -830,21 +836,21 @@
 005D2915    pop ebx
 005D2916    pop ebp
 005D2917    ret
-005D2918    push 0x86FB70
+005D2918    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D291D    push 0x1E6B
 005D2922    jmp 0x005D293A
-005D2924    push 0x86FB70
+005D2924    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2929    push 0x1E6D
 005D292E    jmp 0x005D293A
-005D2930    push 0x86FB70
+005D2930    push 0x86FB70                                   ; => [ String: CalcLayoutStyle ]
 005D2935    push 0x1E72
 005D293A    push 0x86F1E8
 005D293F    mov edx, 0x801800
 005D2944    mov ecx, 0x801AA4
-005D2949    call 0x0063B870
+005D2949    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: CalcLayoutStyle | String: Halt ]
 005D294E    add esp, 0x0C
 005D2951    call 0x0063BC30
 005D2956    test al, al
-005D2958    jz 0x005D295B
+005D2958    jz 0x005D295B                                   ; => [ Call: sub_63bc30 ]
 005D295A    int3
-005D295B    call 0x0063BB00
+005D295B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

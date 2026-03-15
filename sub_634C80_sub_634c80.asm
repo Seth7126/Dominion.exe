@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_634c80
+// 起始地址: 0x634c80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00634C80    push ebp
 00634C81    mov ebp, esp
 00634C83    push ecx
@@ -70,7 +76,7 @@
 00634D1B    add eax, 0x38
 00634D1E    cmp ecx, edx
 00634D20    jl 0x00634D16
-00634D22    xor eax, eax
+00634D22    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 00634D24    pop edi
 00634D25    pop esi
 00634D26    pop ebx

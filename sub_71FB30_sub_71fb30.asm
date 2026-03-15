@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_71fb30
+// 起始地址: 0x71fb30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071FB30    push ebp
 0071FB31    mov ebp, esp
 0071FB33    sub esp, 0x20
-0071FB36    mov eax, dword ptr ds:[0x008C4040]
+0071FB36    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0071FB3B    xor eax, ebp
 0071FB3D    mov dword ptr ss:[ebp-0x04], eax
 0071FB40    mov eax, dword ptr ss:[ebp+0x0C]
@@ -20,7 +26,7 @@
 0071FB56    mov edx, ebx
 0071FB58    mov dword ptr ss:[ebp-0x20], esi
 0071FB5B    mov dword ptr ss:[ebp-0x14], eax
-0071FB5E    call 0x0071F5D0
+0071FB5E    call 0x0071F5D0                                 ; => [ Call: sub_71f5d0 ]
 0071FB63    mov edi, eax
 0071FB65    add esp, 0x14
 0071FB68    test edi, edi
@@ -30,7 +36,7 @@
 0071FB6E    pop ebx
 0071FB6F    mov ecx, dword ptr ss:[ebp-0x04]
 0071FB72    xor ecx, ebp
-0071FB74    call 0x0075927A
+0071FB74    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071FB79    mov esp, ebp
 0071FB7B    pop ebp
 0071FB7C    ret
@@ -48,7 +54,7 @@
 0071FBA0    jnz 0x0071FBA9
 0071FBA2    xor edi, edi
 0071FBA4    jmp 0x0071FCB9
-0071FBA9    xor eax, eax
+0071FBA9    xor eax, eax                                    ; => [ Call: nullptr ]
 0071FBAB    test esi, esi
 0071FBAD    jle 0x0071FCAD
 0071FBB3    cmp esi, 0x04
@@ -61,7 +67,7 @@
 0071FBC9    jnbe 0x0071FBD3
 0071FBCB    cmp edx, edi
 0071FBCD    jnb 0x0071FCA1
-0071FBD3    movups xmm1, xmmword ptr ds:[0x00893290]
+0071FBD3    movups xmm1, xmmword ptr ds:[0x00893290]        ; => [ Data: data_893290 ]
 0071FBDA    cmp esi, 0x20
 0071FBDD    jb 0x0071FC6C
 0071FBE3    mov ecx, esi
@@ -136,13 +142,13 @@
 0071FCB9    mov ebx, dword ptr ss:[ebp-0x1C]
 0071FCBC    mov esi, dword ptr ss:[ebp-0x20]
 0071FCBF    cmp dword ptr ds:[0x0147DEE4], 0x00
-0071FCC6    jz 0x0071FCDB
+0071FCC6    jz 0x0071FCDB                                   ; => [ Data: data_147dee4 ]
 0071FCC8    mov eax, dword ptr ss:[ebp-0x14]
 0071FCCB    mov ecx, edi
 0071FCCD    mov edx, dword ptr ds:[ebx]
 0071FCCF    push dword ptr ds:[eax]
 0071FCD1    push dword ptr ds:[esi]
-0071FCD3    call 0x0071FA40
+0071FCD3    call 0x0071FA40                                 ; => [ Call: sub_71fa40 ]
 0071FCD8    add esp, 0x08
 0071FCDB    mov ecx, dword ptr ss:[ebp-0x04]
 0071FCDE    mov eax, edi
@@ -150,7 +156,7 @@
 0071FCE1    pop esi
 0071FCE2    xor ecx, ebp
 0071FCE4    pop ebx
-0071FCE5    call 0x0075927A
+0071FCE5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071FCEA    mov esp, ebp
 0071FCEC    pop ebp
 0071FCED    ret

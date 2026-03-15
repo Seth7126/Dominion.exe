@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cbb20
+// 起始地址: 0x5cbb20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CBB20    push ebp
 005CBB21    mov ebp, esp
 005CBB23    and esp, 0xFFFFFFF8
@@ -17,7 +23,7 @@
 005CBB49    mov ecx, dword ptr ds:[eax+0x70]
 005CBB4C    test ecx, ecx
 005CBB4E    jz 0x005CBB83
-005CBB50    call 0x005CBA00
+005CBB50    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005CBB55    mov ecx, dword ptr ds:[eax+0x2C]
 005CBB58    test ecx, ecx
 005CBB5A    jnz 0x005CBB31
@@ -25,13 +31,13 @@
 005CBB62    and esi, 0xFFFF
 005CBB68    cmp esi, 0x320
 005CBB6E    jb 0x005CBB75
-005CBB70    call 0x00591930
+005CBB70    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CBB75    imul eax, esi, 0x64
 005CBB78    mov eax, dword ptr ds:[eax+0xB82524]
 005CBB7E    pop esi
 005CBB7F    mov esp, ebp
 005CBB81    pop ebp
-005CBB82    ret
+005CBB82    ret                                             ; => [ Data: data_b82524 ]
 005CBB83    mov eax, edx
 005CBB85    pop esi
 005CBB86    mov esp, ebp
@@ -66,10 +72,10 @@
 005CBBC8    push 0x86F1E8
 005CBBCD    mov edx, 0x801800
 005CBBD2    mov ecx, 0x801AA4
-005CBBD7    call 0x0063B870
+005CBBD7    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: CardWhat | String: Halt ]
 005CBBDC    add esp, 0x0C
 005CBBDF    call 0x0063BC30
 005CBBE4    test al, al
-005CBBE6    jz 0x005CBBE9
+005CBBE6    jz 0x005CBBE9                                   ; => [ Call: sub_63bc30 ]
 005CBBE8    int3
-005CBBE9    call 0x0063BB00
+005CBBE9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

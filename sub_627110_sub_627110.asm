@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_627110
+// 起始地址: 0x627110
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00627110    push ebp
 00627111    mov ebp, esp
 00627113    and esp, 0xFFFFFFF8
@@ -8,7 +14,7 @@
 0062711C    mov edi, dword ptr ss:[ebp+0x08]
 0062711F    mov ebx, edx
 00627121    mov esi, ecx
-00627123    mov ecx, dword ptr ds:[0x00CC8D5C]
+00627123    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 00627129    mov dword ptr ds:[ebx], 0x00
 0062712F    mov dword ptr ds:[edi], 0x00
 00627135    test ecx, ecx
@@ -16,7 +22,7 @@
 0062713D    lea eax, ss:[esp+0x10]
 00627141    add ecx, 0x507C
 00627147    push eax
-00627148    call 0x004BAD70
+00627148    call 0x004BAD70                                 ; => [ Call: sub_4bad70 ]
 0062714D    mov ecx, dword ptr ss:[esp+0x14]
 00627151    cmp ecx, 0xFFFFFFFF
 00627154    jz 0x0062717B
@@ -27,7 +33,7 @@
 00627164    mov ecx, dword ptr ss:[esp+0x10]
 00627168    lea eax, ss:[esp+0x14]
 0062716C    push eax
-0062716D    call 0x004BAF10
+0062716D    call 0x004BAF10                                 ; => [ Call: sub_4baf10 ]
 00627172    mov ecx, dword ptr ss:[esp+0x14]
 00627176    cmp ecx, 0xFFFFFFFF
 00627179    jnz 0x00627160
@@ -83,10 +89,10 @@
 006271F3    push 0x77EB50
 006271F8    mov edx, 0x801800
 006271FD    mov ecx, 0x77EB9C
-00627202    call 0x0063B870
+00627202    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 00627207    add esp, 0x0C
 0062720A    call 0x0063BC30
 0062720F    test al, al
-00627211    jz 0x00627214
+00627211    jz 0x00627214                                   ; => [ Call: sub_63bc30 ]
 00627213    int3
-00627214    call 0x0063BB00
+00627214    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

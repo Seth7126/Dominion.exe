@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4db340
+// 起始地址: 0x4db340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DB340    push ebx
 004DB341    push edi
 004DB342    mov ebx, ecx
@@ -10,7 +16,7 @@
 004DB350    mov ecx, esi
 004DB352    mov edx, 0x0C
 004DB357    mov esi, dword ptr ds:[esi+0x08]
-004DB35A    call 0x0064C080
+004DB35A    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004DB35F    test esi, esi
 004DB361    jnz 0x004DB350
 004DB363    mov eax, dword ptr ds:[ebx]

@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_6b23a0
+// 起始地址: 0x6b23a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B23A0    push ebp
 006B23A1    mov ebp, esp
 006B23A3    sub esp, 0x5C
-006B23A6    mov eax, dword ptr ds:[0x008C4040]
+006B23A6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B23AB    xor eax, ebp
 006B23AD    mov dword ptr ss:[ebp-0x04], eax
 006B23B0    mov eax, dword ptr ss:[ebp+0x08]
 006B23B3    xorps xmm0, xmm0
 006B23B6    push ebx
 006B23B7    mov dword ptr ss:[ebp-0x14], eax
-006B23BA    mov eax, dword ptr ds:[0x00CF65B8]
+006B23BA    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006B23BF    push esi
 006B23C0    mov esi, ecx
 006B23C2    movlpd qword ptr ss:[ebp-0x40], xmm0
@@ -54,9 +60,9 @@
 006B2474    lea ebx, ds:[ebx*2+0x04]
 006B247B    lea ecx, ds:[ecx*2+0x03]
 006B2482    jz 0x006B2498
-006B2484    push 0x87C5B8
+006B2484    push 0x87C5B8                                   ; => [ String: Dx11GraphicsInterface::GraphicsInterfaceAttachSwapChain ]
 006B2489    push 0x9D0
-006B248E    mov ecx, 0x87C624
+006B248E    mov ecx, 0x87C624                               ; => [ String: mainBackBufferAsset == NULL ]
 006B2493    jmp 0x006B25A9
 006B2498    mov edx, dword ptr ss:[ebp-0x44]
 006B249B    push 0x00
@@ -65,26 +71,26 @@
 006B24A0    mov ecx, edi
 006B24A2    call 0x006A1230
 006B24A7    add esp, 0x0C
-006B24AA    mov dword ptr ds:[esi+0x10], eax
+006B24AA    mov dword ptr ds:[esi+0x10], eax                ; => [ Call: sub_6a1230 ]
 006B24AD    lea ecx, ds:[esi+0x38]
-006B24B0    call 0x006B2E00
+006B24B0    call 0x006B2E00                                 ; => [ Call: sub_6b2e00 ]
 006B24B5    mov edi, eax
 006B24B7    mov dword ptr ss:[ebp-0x44], edi
 006B24BA    mov dword ptr ds:[edi], 0x02
 006B24C0    mov ecx, dword ptr ds:[esi+0x10]
 006B24C3    cmp dword ptr ds:[ecx+0x04], 0x03
 006B24C7    jz 0x006B24E2
-006B24C9    push 0x86F01C
+006B24C9    push 0x86F01C                                   ; => [ String: TextureGetDef ]
 006B24CE    push 0x89
-006B24D3    push 0x86F02C
-006B24D8    mov ecx, 0x86F04C
+006B24D3    push 0x86F02C                                   ; => [ String: C:\x\ax2017\Engine\Texture.h ]
+006B24D8    mov ecx, 0x86F04C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_TEXTURE ]
 006B24DD    jmp 0x006B25AE
-006B24E2    call 0x005AF880
+006B24E2    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B24E7    mov ecx, dword ptr ds:[edi+0x248]
 006B24ED    add edi, 0x1C
 006B24F0    add dword ptr ss:[ebp-0x44], 0x30
 006B24F4    mov dword ptr ds:[eax+0x08], ecx
-006B24F7    mov ecx, dword ptr ds:[0x00CF65B8]
+006B24F7    mov ecx, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006B24FD    cmp byte ptr ds:[ecx+0x20], 0x00
 006B2501    jz 0x006B251F
 006B2503    mov edx, dword ptr ds:[ecx+0x18]
@@ -92,8 +98,8 @@
 006B2509    push 0x00
 006B250B    push ebx
 006B250C    push 0x50
-006B250E    call 0x006A1230
-006B2513    mov ecx, dword ptr ds:[0x00CF65B8]
+006B250E    call 0x006A1230                                 ; => [ Call: sub_6a1230 ]
+006B2513    mov ecx, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006B2519    add esp, 0x0C
 006B251C    mov dword ptr ds:[esi+0x14], eax
 006B251F    mov eax, dword ptr ss:[ebp-0x10]
@@ -112,7 +118,7 @@
 006B253E    call dword ptr ds:[eax+0x28]
 006B2541    test eax, eax
 006B2543    jns 0x006B2551
-006B2545    push 0x87C5B8
+006B2545    push 0x87C5B8                                   ; => [ String: Dx11GraphicsInterface::GraphicsInterfaceAttachSwapChain ]
 006B254A    push 0x9EC
 006B254F    jmp 0x006B25A4
 006B2551    mov eax, dword ptr ds:[ebx]
@@ -124,7 +130,7 @@
 006B255E    call dword ptr ds:[ecx+0x24]
 006B2561    test eax, eax
 006B2563    jns 0x006B2571
-006B2565    push 0x87C5B8
+006B2565    push 0x87C5B8                                   ; => [ String: Dx11GraphicsInterface::GraphicsInterfaceAttachSwapChain ]
 006B256A    push 0x9EF
 006B256F    jmp 0x006B25A4
 006B2571    push dword ptr ss:[ebp-0x44]
@@ -142,19 +148,19 @@
 006B258B    pop esi
 006B258C    xor ecx, ebp
 006B258E    pop ebx
-006B258F    call 0x0075927A
+006B258F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B2594    mov esp, ebp
 006B2596    pop ebp
 006B2597    ret 0x08
-006B259A    push 0x87C5B8
+006B259A    push 0x87C5B8                                   ; => [ String: Dx11GraphicsInterface::GraphicsInterfaceAttachSwapChain ]
 006B259F    push 0x9F2
-006B25A4    mov ecx, 0x87BA34
-006B25A9    push 0x87B990
+006B25A4    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
+006B25A9    push 0x87B990                                   ; => [ String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp ]
 006B25AE    mov edx, 0x801800
-006B25B3    call 0x0063B870
+006B25B3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006B25B8    add esp, 0x0C
 006B25BB    call 0x0063BC30
 006B25C0    test al, al
-006B25C2    jz 0x006B25C5
+006B25C2    jz 0x006B25C5                                   ; => [ Call: sub_63bc30 ]
 006B25C4    int3
-006B25C5    call 0x0063BB00
+006B25C5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

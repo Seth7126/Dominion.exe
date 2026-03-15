@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e68f0
+// 起始地址: 0x6e68f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E68F0    push ebp
 006E68F1    mov ebp, esp
 006E68F3    sub esp, 0x18
@@ -19,16 +25,16 @@
 006E691E    call 0x006E8E40
 006E6923    add esp, 0x0C
 006E6926    test al, al
-006E6928    jnz 0x006E6948
+006E6928    jnz 0x006E6948                                  ; => [ Call: sub_6e8e40 ]
 006E692A    mov eax, dword ptr ds:[esi]
-006E692C    mov ecx, 0x801800
+006E692C    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006E6931    mov eax, dword ptr ds:[eax+0x20]
 006E6934    test eax, eax
 006E6936    cmovnz ecx, eax
 006E6939    push ecx
 006E693A    push edi
 006E693B    push 0x882348
-006E6940    call 0x0063B5F0
+006E6940    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: missing flanim action %s in %s ]
 006E6945    add esp, 0x0C
 006E6948    mov ecx, dword ptr ds:[esi]
 006E694A    lea eax, ss:[ebp-0x04]
@@ -38,7 +44,7 @@
 006E6953    push eax
 006E6954    lea eax, ss:[ebp-0x14]
 006E6957    push eax
-006E6958    call 0x006E8E40
+006E6958    call 0x006E8E40                                 ; => [ Call: sub_6e8e40 ]
 006E695D    mov eax, dword ptr ss:[ebp+0x08]
 006E6960    add esp, 0x0C
 006E6963    mov dword ptr ds:[esi+0x18], eax

@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_5421f0
+// 起始地址: 0x5421f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005421F0    dword 83EC8B55
 005421F4    in al, 0xF8
 005421F6    mov eax, 0x25A0
-005421FB    call 0x00761E50
-00542200    mov eax, dword ptr ds:[0x008C4040]
+005421FB    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00542200    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00542205    xor eax, esp
 00542207    mov dword ptr ss:[esp+0x259C], eax
 0054220E    push esi
 0054220F    push edi
-00542210    call 0x00573400
+00542210    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00542215    push 0x0C
 00542217    push 0x00
 00542219    lea ecx, ss:[esp+0x10]
@@ -20,7 +26,7 @@
 0054222D    push 0x01
 0054222F    push 0x3EE
 00542234    push 0x05
-00542236    call 0x00588DB0
+00542236    call 0x00588DB0                                 ; => [ Call: sub_588db0 ]
 0054223B    push 0x05
 0054223D    push 0x07
 0054223F    push 0x0F
@@ -29,7 +35,7 @@
 0054224C    mov ecx, 0x321
 00542251    lea edi, ss:[esp+0x1948]
 00542258    lea edx, ss:[esp+0xCC0]
-0054225F    rep movsd
+0054225F    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00542261    push 0x3EE
 00542266    push edx
 00542267    mov edx, eax
@@ -39,19 +45,19 @@
 00542277    lea edi, ss:[esp+0x40]
 0054227B    mov ecx, 0x321
 00542280    lea edx, ss:[esp+0x40]
-00542284    rep movsd
+00542284    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5671b0 ]
 00542286    lea ecx, ss:[esp+0x1950]
 0054228D    call 0x0056A0A0
 00542292    push 0x18
 00542294    mov edx, 0x3EE
 00542299    lea ecx, ss:[esp+0x1954]
-005422A0    call 0x00569330
+005422A0    call 0x00569330                                 ; => [ Call: sub_569330 | Call: sub_56a0a0 ]
 005422A5    mov ecx, dword ptr ss:[esp+0x25E0]
 005422AC    add esp, 0x3C
 005422AF    pop edi
 005422B0    pop esi
 005422B1    xor ecx, esp
-005422B3    call 0x0075927A
+005422B3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005422B8    mov esp, ebp
 005422BA    pop ebp
 005422BB    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_713a90
+// 起始地址: 0x713a90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00713A90    push ebp
 00713A91    mov ebp, esp
 00713A93    sub esp, 0x10
@@ -19,7 +25,7 @@
 00713AC3    test edx, edx
 00713AC5    jz 0x00713ACE
 00713AC7    mov ecx, esi
-00713AC9    call 0x00713A30
+00713AC9    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 00713ACE    mov dword ptr ds:[edi+0x68], 0x01
 00713AD5    mov eax, dword ptr ds:[esi+0x60]
 00713AD8    cmp dword ptr ds:[esi+0x5C], eax
@@ -64,7 +70,7 @@
 00713B3F    test edx, edx
 00713B41    jz 0x00713B4A
 00713B43    mov ecx, esi
-00713B45    call 0x00713A30
+00713B45    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 00713B4A    mov dword ptr ds:[ebx+0x68], 0x01
 00713B51    mov eax, dword ptr ds:[esi+0x60]
 00713B54    cmp dword ptr ds:[esi+0x5C], eax

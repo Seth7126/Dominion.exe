@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5f8a90
+// 起始地址: 0x5f8a90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F8A90    push ebp
 005F8A91    mov ebp, esp
 005F8A93    mov eax, 0x3328
-005F8A98    call 0x00761E50
+005F8A98    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005F8A9D    mov eax, dword ptr ds:[ecx+0x30]
 005F8AA0    push ebx
 005F8AA1    push esi
@@ -20,7 +26,7 @@
 005F8AC8    push eax
 005F8AC9    lea eax, ss:[ebp-0x1994]
 005F8ACF    push eax
-005F8AD0    call 0x00761FBE
+005F8AD0    call 0x00761FBE                                 ; => [ Call: memcpy | Call: sub_4deeb0 ]
 005F8AD5    add esp, 0x0C
 005F8AD8    lea ecx, ss:[ebp-0xFC0]
 005F8ADE    xor edx, edx

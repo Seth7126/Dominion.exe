@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c6110
+// 起始地址: 0x5c6110
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C6110    push ebp
 005C6111    mov ebp, esp
 005C6113    sub esp, 0x28
@@ -10,20 +16,20 @@
 005C6126    mov dword ptr ss:[ebp-0x04], edx
 005C6129    mov dword ptr ss:[ebp-0x14], ecx
 005C612C    cmp eax, dword ptr ds:[esi+0x08]
-005C6132    jle 0x005C62DB
+005C6132    jle 0x005C62DB                                  ; => [ Type: TEB | Data: data_1a8a0e0 | Field: ThreadLocalStoragePointer ]
 005C6138    push 0x1A8A0E0
-005C613D    call 0x0075970E
+005C613D    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a8a0e0 ]
 005C6142    add esp, 0x04
 005C6145    cmp dword ptr ds:[0x01A8A0E0], 0xFFFFFFFF
-005C614C    jnz 0x005C62DB
+005C614C    jnz 0x005C62DB                                  ; => [ Data: data_1a8a0e0 ]
 005C6152    xor eax, eax
-005C6154    mov dword ptr ds:[0x01A8A0E4], 0xFFFFFFFF
+005C6154    mov dword ptr ds:[0x01A8A0E4], 0xFFFFFFFF       ; => [ Data: data_1a8a0e4 ]
 005C615E    xor ecx, ecx
-005C6160    mov dword ptr ds:[0x01A8A0E8], 0xFFFFFFFF
+005C6160    mov dword ptr ds:[0x01A8A0E8], 0xFFFFFFFF       ; => [ Data: data_1a8a0e8 ]
 005C616A    push ebx
 005C616B    cpuid
 005C616D    mov esi, ebx
-005C616F    mov dword ptr ds:[0x01A8A0EC], 0xFFFFFFFF
+005C616F    mov dword ptr ds:[0x01A8A0EC], 0xFFFFFFFF       ; => [ Data: data_1a8a0ec ]
 005C6179    lea edi, ss:[ebp-0x28]
 005C617C    pop ebx
 005C617D    mov dword ptr ds:[edi], eax
@@ -108,7 +114,7 @@
 005C6287    push eax
 005C6288    lea edx, ss:[ebp-0x0C]
 005C628B    lea ecx, ss:[ebp-0x10]
-005C628E    call 0x005B0B80
+005C628E    call 0x005B0B80                                 ; => [ Call: sub_5b0b80 ]
 005C6293    mov edi, dword ptr ss:[ebp-0x10]
 005C6296    add esp, 0x08
 005C6299    mov ecx, dword ptr ss:[ebp-0x0C]
@@ -119,29 +125,29 @@
 005C62AB    cmovle edi, edx
 005C62AE    test ecx, ecx
 005C62B0    mov edx, 0x40000
-005C62B5    mov dword ptr ds:[0x01A8A0E4], edi
+005C62B5    mov dword ptr ds:[0x01A8A0E4], edi              ; => [ Data: data_1a8a0e4 ]
 005C62BB    cmovle ecx, edx
 005C62BE    test eax, eax
-005C62C0    mov dword ptr ds:[0x01A8A0E8], ecx
+005C62C0    mov dword ptr ds:[0x01A8A0E8], ecx              ; => [ Data: data_1a8a0e8 ]
 005C62C6    mov ecx, 0x200000
 005C62CB    cmovle eax, ecx
-005C62CE    mov dword ptr ds:[0x01A8A0EC], eax
-005C62D3    call 0x007596BD
+005C62CE    mov dword ptr ds:[0x01A8A0EC], eax              ; => [ Data: data_1a8a0ec ]
+005C62D3    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a8a0e0 ]
 005C62D8    add esp, 0x04
 005C62DB    mov ebx, dword ptr ss:[ebp-0x04]
 005C62DE    mov esi, dword ptr ss:[ebp+0x08]
 005C62E1    mov edi, dword ptr ss:[ebp-0x14]
-005C62E4    mov eax, dword ptr ds:[0x01A8A0E8]
+005C62E4    mov eax, dword ptr ds:[0x01A8A0E8]              ; => [ Data: data_1a8a0e8 ]
 005C62E9    mov ecx, dword ptr ds:[ebx]
 005C62EB    mov esi, dword ptr ds:[esi]
 005C62ED    cmp ecx, esi
 005C62EF    mov edi, dword ptr ds:[edi]
-005C62F1    mov edx, dword ptr ds:[0x01A8A0E4]
+005C62F1    mov edx, dword ptr ds:[0x01A8A0E4]              ; => [ Data: data_1a8a0e4 ]
 005C62F7    cmovl ecx, esi
 005C62FA    mov dword ptr ss:[ebp-0x18], eax
 005C62FD    cmp edi, ecx
 005C62FF    mov eax, dword ptr ds:[0x01A8A0EC]
-005C6304    mov dword ptr ss:[ebp-0x08], eax
+005C6304    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: data_1a8a0ec ]
 005C6307    mov eax, edi
 005C6309    cmovl eax, ecx
 005C630C    mov dword ptr ss:[ebp-0x0C], edx
@@ -196,7 +202,7 @@
 005C6390    shl ebx, 0x04
 005C6393    mov eax, 0x480000
 005C6398    xor edx, edx
-005C639A    div ebx
+005C639A    div ebx                                         ; => [ Call: sub_480000 ]
 005C639C    mov dword ptr ss:[ebp-0x14], eax
 005C639F    lea ecx, ds:[edi*8]
 005C63A6    xor edx, edx

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6f53e0
+// 起始地址: 0x6f53e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006F53E0    push ebp
 006F53E1    mov ebp, esp
 006F53E3    sub esp, 0x10
@@ -10,16 +16,16 @@
 006F53EF    mov dword ptr ss:[ebp-0x04], eax
 006F53F2    test ecx, ecx
 006F53F4    jnz 0x006F540A
-006F53F6    push 0x88B7E4
+006F53F6    push 0x88B7E4                                   ; => [ String: GetVAlignment ]
 006F53FB    push 0xF39
-006F5400    mov ecx, 0x88B810
+006F5400    mov ecx, 0x88B810                               ; => [ String: textAlignment != TA_NONE ]
 006F5405    jmp 0x006F548D
 006F540A    dec ecx
-006F540B    mov dword ptr ss:[ebp-0x10], 0x873780
+006F540B    mov dword ptr ss:[ebp-0x10], 0x873780           ; => [ String: Left ]
 006F5412    mov eax, 0x55555556
-006F5417    mov dword ptr ss:[ebp-0x0C], 0x87671C
+006F5417    mov dword ptr ss:[ebp-0x0C], 0x87671C           ; => [ String: Center ]
 006F541E    imul ecx
-006F5420    mov dword ptr ss:[ebp-0x08], 0x873790
+006F5420    mov dword ptr ss:[ebp-0x08], 0x873790           ; => [ String: Right ]
 006F5427    mov ebx, edx
 006F5429    shr ebx, 0x1F
 006F542C    add ebx, edx
@@ -38,7 +44,7 @@
 006F544B    add eax, 0x02
 006F544E    test dl, dl
 006F5450    jnz 0x006F5436
-006F5452    xor eax, eax
+006F5452    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 006F5454    jmp 0x006F545B
 006F5456    sbb eax, eax
 006F5458    or eax, 0x01
@@ -59,15 +65,15 @@
 006F547A    mov esp, ebp
 006F547C    pop ebp
 006F547D    ret
-006F547E    push 0x88B834
+006F547E    push 0x88B834                                   ; => [ String: ToHAlign ]
 006F5483    push 0xF55
-006F5488    mov ecx, 0x801AA4
+006F5488    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006F548D    push 0x88AF54
 006F5492    mov edx, 0x801800
-006F5497    call 0x0063B870
+006F5497    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\EditorWindow.cpp ]
 006F549C    add esp, 0x0C
 006F549F    call 0x0063BC30
 006F54A4    test al, al
-006F54A6    jz 0x006F54A9
+006F54A6    jz 0x006F54A9                                   ; => [ Call: sub_63bc30 ]
 006F54A8    int3
-006F54A9    call 0x0063BB00
+006F54A9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

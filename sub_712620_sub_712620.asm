@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_712620
+// 起始地址: 0x712620
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00712620    push ebp
 00712621    mov ebp, esp
 00712623    sub esp, 0x14
@@ -25,13 +31,13 @@
 00712664    jz 0x00712722
 0071266A    mov esi, dword ptr ds:[edi+0x24]
 0071266D    mov ecx, esi
-0071266F    call 0x00710F50
+0071266F    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 00712674    mov ecx, dword ptr ds:[esi+0x08]
 00712677    mov eax, dword ptr ds:[esi+0x04]
 0071267A    mov dword ptr ds:[eax+ecx*4], 0x02
 00712681    mov ecx, esi
 00712683    inc dword ptr ds:[esi+0x08]
-00712686    call 0x00710F50
+00712686    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 0071268B    mov ecx, dword ptr ds:[esi+0x08]
 0071268E    mov edx, ebx
 00712690    mov eax, dword ptr ds:[esi+0x04]
@@ -40,20 +46,20 @@
 00712698    mov eax, dword ptr ds:[esi]
 0071269A    inc dword ptr ds:[esi+0x08]
 0071269D    mov dword ptr ds:[eax+0x34], 0x01
-007126A4    call 0x00712CB0
+007126A4    call 0x00712CB0                                 ; => [ Call: sub_712cb0 ]
 007126A9    mov dword ptr ss:[ebp-0x04], ebx
 007126AC    mov ebx, dword ptr ds:[ebx+0x08]
 007126AF    test ebx, ebx
 007126B1    jz 0x00712704
 007126B3    mov esi, dword ptr ds:[edi+0x24]
 007126B6    mov ecx, esi
-007126B8    call 0x00710F50
+007126B8    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007126BD    mov ecx, dword ptr ds:[esi+0x08]
 007126C0    mov eax, dword ptr ds:[esi+0x04]
 007126C3    mov dword ptr ds:[eax+ecx*4], 0x02
 007126CA    mov ecx, esi
 007126CC    inc dword ptr ds:[esi+0x08]
-007126CF    call 0x00710F50
+007126CF    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007126D4    mov ecx, dword ptr ds:[esi+0x08]
 007126D7    mov eax, dword ptr ds:[esi+0x04]
 007126DA    mov dword ptr ds:[eax+ecx*4], ebx
@@ -72,7 +78,7 @@
 0071270A    mov ecx, dword ptr ds:[ecx+0x14]
 0071270D    mov dword ptr ds:[eax+ecx*4], 0x00
 00712714    mov ecx, dword ptr ds:[edi+0x24]
-00712717    call 0x00710FD0
+00712717    call 0x00710FD0                                 ; => [ Call: sub_710fd0 ]
 0071271C    mov ecx, dword ptr ss:[ebp-0x08]
 0071271F    mov edx, dword ptr ss:[ebp-0x10]
 00712722    inc ecx
@@ -99,7 +105,7 @@
 00712770    cmp eax, 0x05
 00712773    jnbe 0x00712870
 00712779    jmp dword ptr ds:[eax*4+0x712894]
-00712780    mov ecx, dword ptr ds:[esi+0x10]
+00712780    mov ecx, dword ptr ds:[esi+0x10]                ; => [ Call: nullptr ]
 00712783    test ecx, ecx
 00712785    jz 0x00712795
 00712787    push 0x00
@@ -160,20 +166,20 @@
 007127FC    add esp, 0x10
 007127FF    mov esi, dword ptr ds:[esi+0x6C]
 00712802    push dword ptr ds:[esi+0x08]
-00712805    call dword ptr ds:[0x00800B48]
+00712805    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0071280B    push esi
-0071280C    call dword ptr ds:[0x00800B48]
+0071280C    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00712812    mov esi, dword ptr ss:[ebp-0x08]
 00712815    mov esi, dword ptr ds:[esi+0x70]
 00712818    push dword ptr ds:[esi+0x08]
-0071281B    call dword ptr ds:[0x00800B48]
+0071281B    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00712821    push esi
-00712822    call dword ptr ds:[0x00800B48]
+00712822    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00712828    mov esi, dword ptr ss:[ebp-0x08]
 0071282B    push dword ptr ds:[esi+0x74]
-0071282E    call dword ptr ds:[0x00800B48]
+0071282E    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00712834    push esi
-00712835    call dword ptr ds:[0x00800B48]
+00712835    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0071283B    add esp, 0x18
 0071283E    jmp 0x00712870
 00712840    mov eax, dword ptr ds:[esi+0x10]

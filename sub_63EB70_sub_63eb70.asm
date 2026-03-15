@@ -1,30 +1,36 @@
-0063EB70    mov eax, dword ptr ds:[0x00BF21A0]
+// ============================================================
+// 函数名称: sub_63eb70
+// 起始地址: 0x63eb70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+0063EB70    mov eax, dword ptr ds:[0x00BF21A0]              ; => [ Data: data_bf21a0 ]
 0063EB75    cmp eax, 0x270
 0063EB7A    jb 0x0063EC64
 0063EB80    cmp eax, 0x271
 0063EB85    jnz 0x0063EB91
 0063EB87    mov edx, 0x1571
-0063EB8C    call 0x0063EB10
+0063EB8C    call 0x0063EB10                                 ; => [ Call: sub_63eb10 ]
 0063EB91    xor eax, eax
 0063EB93    nop dword ptr ds:[eax], eax
 0063EB97    nop word ptr ds:[eax+eax*1], ax
-0063EBA0    mov ecx, dword ptr ds:[eax*4+0xBF17E0]
+0063EBA0    mov ecx, dword ptr ds:[eax*4+0xBF17E0]          ; => [ Data: data_bf17e0 ]
 0063EBA7    mov edx, dword ptr ds:[eax*4+0xBF17E4]
 0063EBAE    xor edx, ecx
 0063EBB0    and edx, 0x7FFFFFFF
-0063EBB6    xor edx, ecx
+0063EBB6    xor edx, ecx                                    ; => [ Data: data_bf17e4 ]
 0063EBB8    mov ecx, edx
 0063EBBA    shr edx, 0x01
 0063EBBC    and ecx, 0x01
 0063EBBF    mov ecx, dword ptr ds:[ecx*4+0x871F80]
 0063EBC6    xor ecx, dword ptr ds:[eax*4+0xBF1E14]
 0063EBCD    xor ecx, edx
-0063EBCF    mov dword ptr ds:[eax*4+0xBF17E0], ecx
+0063EBCF    mov dword ptr ds:[eax*4+0xBF17E0], ecx          ; => [ Data: data_bf17e0 | Data: data_bf1e14 | Data: data_871f80 ]
 0063EBD6    inc eax
 0063EBD7    cmp eax, 0xE3
 0063EBDC    jl 0x0063EBA0
 0063EBDE    push esi
-0063EBDF    lea esi, ds:[eax*4+0xBF17E0]
+0063EBDF    lea esi, ds:[eax*4+0xBF17E0]                    ; => [ Data: data_bf17e0 ]
 0063EBE6    push edi
 0063EBE7    mov edi, dword ptr ds:[esi]
 0063EBE9    nop dword ptr ds:[eax], eax
@@ -40,15 +46,15 @@
 0063EC08    mov eax, dword ptr ds:[eax*4+0x871F80]
 0063EC0F    xor eax, dword ptr ds:[esi-0x38C]
 0063EC15    xor eax, ecx
-0063EC17    mov dword ptr ds:[esi], eax
+0063EC17    mov dword ptr ds:[esi], eax                     ; => [ Data: data_871f80 ]
 0063EC19    add esi, 0x04
 0063EC1C    cmp esi, 0xBF219C
-0063EC22    jl 0x0063EBF0
+0063EC22    jl 0x0063EBF0                                   ; => [ Data: data_bf219c ]
 0063EC24    mov ecx, dword ptr ds:[0x00BF219C]
 0063EC2A    xor ecx, dword ptr ds:[0x00BF17E0]
-0063EC30    and ecx, 0x7FFFFFFF
-0063EC36    mov dword ptr ds:[0x00BF21A0], 0x00
-0063EC40    xor ecx, dword ptr ds:[0x00BF219C]
+0063EC30    and ecx, 0x7FFFFFFF                             ; => [ Data: data_bf219c | Data: data_bf17e0 ]
+0063EC36    mov dword ptr ds:[0x00BF21A0], 0x00             ; => [ Data: data_bf21a0 ]
+0063EC40    xor ecx, dword ptr ds:[0x00BF219C]              ; => [ Data: data_bf219c ]
 0063EC46    mov eax, ecx
 0063EC48    shr ecx, 0x01
 0063EC4A    and eax, 0x01
@@ -57,10 +63,10 @@
 0063EC4F    xor ecx, dword ptr ds:[eax*4+0x871F80]
 0063EC56    xor ecx, dword ptr ds:[0x00BF1E10]
 0063EC5C    xor eax, eax
-0063EC5E    mov dword ptr ds:[0x00BF219C], ecx
-0063EC64    mov ecx, dword ptr ds:[eax*4+0xBF17E0]
+0063EC5E    mov dword ptr ds:[0x00BF219C], ecx              ; => [ Data: data_bf219c | Data: data_bf1e10 | Data: data_871f80 ]
+0063EC64    mov ecx, dword ptr ds:[eax*4+0xBF17E0]          ; => [ Data: data_bf17e0 ]
 0063EC6B    inc eax
-0063EC6C    mov dword ptr ds:[0x00BF21A0], eax
+0063EC6C    mov dword ptr ds:[0x00BF21A0], eax              ; => [ Data: data_bf21a0 ]
 0063EC71    mov eax, ecx
 0063EC73    shr eax, 0x0B
 0063EC76    xor ecx, eax

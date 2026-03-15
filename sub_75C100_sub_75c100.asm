@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75c100
+// 起始地址: 0x75c100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075C100    push ebx
 0075C101    mov ebx, esp
 0075C103    sub esp, 0x08
@@ -8,7 +14,7 @@
 0075C110    mov dword ptr ss:[esp+0x04], ebp
 0075C114    mov ebp, esp
 0075C116    sub esp, 0x228
-0075C11C    mov eax, dword ptr ds:[0x008C4040]
+0075C11C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0075C121    xor eax, ebp
 0075C123    mov dword ptr ss:[ebp-0x04], eax
 0075C126    mov ecx, dword ptr ds:[ebx+0x14]
@@ -24,13 +30,13 @@
 0075C14C    mov dword ptr ss:[ebp-0x20C], edi
 0075C152    test al, 0x0F
 0075C154    jz 0x0075C189
-0075C156    push 0x77E93C
+0075C156    push 0x77E93C                                   ; => [ String: ((size_t)aBuffer & 0xf) == 0 ]
 0075C15B    push 0x420
-0075C160    push 0x77E900
+0075C160    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075C165    lea eax, ss:[ebp-0xD0]
 0075C16B    push 0x77E920
 0075C170    push eax
-0075C171    call 0x0063BB20
+0075C171    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075C176    add esp, 0x14
 0075C179    lea eax, ss:[ebp-0xD0]
 0075C17F    push eax
@@ -38,13 +44,13 @@
 0075C182    int3
 0075C189    test cl, 0x0F
 0075C18C    jz 0x0075C1BB
-0075C18E    push 0x77E95C
+0075C18E    push 0x77E95C                                   ; => [ String: ((size_t)aScratch & 0xf) == 0 ]
 0075C193    push 0x421
-0075C198    push 0x77E900
+0075C198    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075C19D    lea eax, ss:[ebp-0xD0]
 0075C1A3    push 0x77E920
 0075C1A8    push eax
-0075C1A9    call 0x0063BB20
+0075C1A9    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075C1AE    add esp, 0x14
 0075C1B1    lea eax, ss:[ebp-0xD0]
 0075C1B7    push eax
@@ -52,13 +58,13 @@
 0075C1BA    int3
 0075C1BB    test byte ptr ss:[ebp-0x1E4], 0x0F
 0075C1C2    jz 0x0075C1F1
-0075C1C4    push 0x77E97C
+0075C1C4    push 0x77E97C                                   ; => [ String: ((size_t)aBufferSize & 0xf) == 0 ]
 0075C1C9    push 0x422
-0075C1CE    push 0x77E900
+0075C1CE    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075C1D3    lea eax, ss:[ebp-0xD0]
 0075C1D9    push 0x77E920
 0075C1DE    push eax
-0075C1DF    call 0x0063BB20
+0075C1DF    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075C1E4    add esp, 0x14
 0075C1E7    lea eax, ss:[ebp-0xD0]
 0075C1ED    push eax
@@ -77,12 +83,12 @@
 0075C213    mov dword ptr ss:[ebp-0x200], esi
 0075C219    shr eax, 0x1F
 0075C21C    add esi, 0x144
-0075C222    rep movsd
+0075C222    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0075C224    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 0075C22D    mov ecx, dword ptr ss:[ebp-0x200]
 0075C233    xor eax, eax
 0075C235    mov esi, dword ptr ds:[ebx+0x1C]
-0075C238    cvtpd2ps xmm2, xmm0
+0075C238    cvtpd2ps xmm2, xmm0                             ; => [ Data: data_893660 ]
 0075C23C    nop dword ptr ds:[eax], eax
 0075C240    movaps xmm0, xmm1
 0075C243    mulss xmm0, dword ptr ds:[ecx]
@@ -2037,12 +2043,12 @@
 0075E88C    lea esi, ds:[esi+ecx*4]
 0075E88F    mov ecx, eax
 0075E891    mov dword ptr ds:[ebx+0x1C], eax
-0075E894    rep movsd
+0075E894    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0075E896    mov ecx, dword ptr ss:[ebp-0x04]
 0075E899    pop edi
 0075E89A    xor ecx, ebp
 0075E89C    pop esi
-0075E89D    call 0x0075927A
+0075E89D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075E8A2    mov esp, ebp
 0075E8A4    pop ebp
 0075E8A5    mov esp, ebx

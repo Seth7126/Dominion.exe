@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6444f0
+// 起始地址: 0x6444f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006444F0    push ebp
 006444F1    mov ebp, esp
 006444F3    sub esp, 0xC4
-006444F9    mov eax, dword ptr ds:[0x008C4040]
+006444F9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006444FE    xor eax, ebp
 00644500    mov dword ptr ss:[ebp-0x08], eax
 00644503    movss xmm0, dword ptr ds:[edx+0x28]
@@ -428,11 +434,11 @@
 00644C4A    movss dword ptr ss:[ebp-0x10], xmm3
 00644C4F    addss xmm4, xmm2
 00644C53    movss dword ptr ss:[ebp-0x18], xmm4
-00644C58    call 0x00643CE0
+00644C58    call 0x00643CE0                                 ; => [ Call: sub_643ce0 ]
 00644C5D    mov ecx, dword ptr ss:[ebp-0x08]
 00644C60    add esp, 0x04
 00644C63    xor ecx, ebp
-00644C65    call 0x0075927A
+00644C65    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00644C6A    mov esp, ebp
 00644C6C    pop ebp
 00644C6D    ret

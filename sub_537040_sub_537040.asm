@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_537040
+// 起始地址: 0x537040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00537040    dword 83EC8B55
 00537044    in al, 0xF8
 00537046    mov eax, 0x259C
@@ -8,13 +14,13 @@
 00537059    mov ecx, 0x3EB
 0053705E    push edi
 0053705F    push eax
-00537060    call 0x00568780
+00537060    call 0x00568780                                 ; => [ Call: __chkstk | Call: sub_568780 ]
 00537065    mov esi, eax
 00537067    lea edi, ss:[esp+0x14]
 0053706B    add esp, 0x04
 0053706E    lea eax, ss:[esp+0x1920]
 00537075    mov ecx, 0x321
-0053707A    rep movsd
+0053707A    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0053707C    push eax
 0053707D    mov ecx, 0x3EC
 00537082    call 0x00568780
@@ -23,7 +29,7 @@
 00537091    cmp dword ptr ss:[esp+0xC90], 0x00
 00537099    mov ecx, 0x321
 0053709E    mov esi, eax
-005370A0    rep movsd
+005370A0    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 005370A2    jnz 0x005370B7
 005370A4    cmp dword ptr ss:[esp+0x1918], 0x00
 005370AC    jnz 0x005370B7
@@ -34,14 +40,14 @@
 005370B3    mov esp, ebp
 005370B5    pop ebp
 005370B6    ret
-005370B7    call 0x0056B800
+005370B7    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 005370BC    mov esi, eax
-005370BE    call 0x00573400
+005370BE    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005370C3    movzx esi, si
 005370C6    mov edi, dword ptr ds:[eax+0x04]
 005370C9    cmp esi, 0x320
 005370CF    jb 0x005370D6
-005370D1    call 0x00591930
+005370D1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005370D6    imul eax, esi, 0x64
 005370D9    xor ebx, ebx
 005370DB    push ecx
@@ -55,7 +61,7 @@
 005370FA    add esp, 0x0C
 005370FD    xor ecx, ecx
 005370FF    cmp eax, ebx
-00537101    setle cl
+00537101    setle cl                                        ; => [ Call: sub_568960 ]
 00537104    pop edi
 00537105    pop esi
 00537106    mov eax, ecx

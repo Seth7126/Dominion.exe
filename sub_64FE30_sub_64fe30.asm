@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_64fe30
+// 起始地址: 0x64fe30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064FE30    push ebp
 0064FE31    mov ebp, esp
 0064FE33    sub esp, 0x0C
 0064FE36    movss xmm1, dword ptr ss:[ebp+0x14]
-0064FE3B    xorps xmm0, xmm0
+0064FE3B    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0064FE3E    comiss xmm0, xmm1
 0064FE41    push ebx
 0064FE42    push esi
@@ -28,7 +34,7 @@
 0064FE7A    push dword ptr ds:[0x01724A80]
 0064FE80    mov edx, ecx
 0064FE82    mov ecx, 0x8CAE70
-0064FE87    call 0x006DD1E0
+0064FE87    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_8cae70 | Data: data_1724a80 ]
 0064FE8C    add esp, 0x08
 0064FE8F    test eax, eax
 0064FE91    jz 0x0064FED6
@@ -98,10 +104,10 @@
 0064FF31    push 0x8739B4
 0064FF36    mov edx, 0x801800
 0064FF3B    mov ecx, 0x874824
-0064FF40    call 0x0063B870
+0064FF40    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: fraction == ClampUnit(fraction) | String: AddMapToMerge ]
 0064FF45    add esp, 0x0C
 0064FF48    call 0x0063BC30
 0064FF4D    test al, al
-0064FF4F    jz 0x0064FF52
+0064FF4F    jz 0x0064FF52                                   ; => [ Call: sub_63bc30 ]
 0064FF51    int3
-0064FF52    call 0x0063BB00
+0064FF52    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

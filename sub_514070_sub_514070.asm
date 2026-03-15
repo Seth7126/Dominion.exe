@@ -1,4 +1,10 @@
-00514070    dword A788158B
+// ============================================================
+// 函数名称: sub_514070
+// 起始地址: 0x514070
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00514070    dword A788158B                                  ; => [ Data: data_cca788 ]
 00514074    int3
 00514075    add byte ptr ds:[esi+0x57], dl
 00514078    test edx, edx
@@ -8,7 +14,7 @@
 00514083    sar ecx, 0x04
 00514086    or ecx, edx
 00514088    and ecx, dword ptr ds:[0x01597E10]
-0051408E    mov ecx, dword ptr ds:[eax+ecx*4]
+0051408E    mov ecx, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 00514091    mov eax, ecx
 00514093    test eax, eax
 00514095    jz 0x005140CF
@@ -25,7 +31,7 @@
 005140AD    mov eax, ecx
 005140AF    jmp 0x005140D5
 005140B1    mov edi, dword ptr ds:[esi]
-005140B3    xor eax, eax
+005140B3    xor eax, eax                                    ; => [ Call: nullptr ]
 005140B5    mov esi, dword ptr ds:[esi+0x04]
 005140B8    test esi, esi
 005140BA    jle 0x005140CF
@@ -53,7 +59,7 @@
 005140E8    test esi, esi
 005140EA    jz 0x005140E0
 005140EC    mov edi, dword ptr ds:[esi]
-005140EE    xor eax, eax
+005140EE    xor eax, eax                                    ; => [ Call: nullptr ]
 005140F0    mov esi, dword ptr ds:[esi+0x04]
 005140F3    test esi, esi
 005140F5    jle 0x005140E0
@@ -78,7 +84,7 @@
 00514117    add ecx, 0x04
 0051411A    jz 0x00514132
 0051411C    mov edx, dword ptr ds:[ecx]
-0051411E    xor eax, eax
+0051411E    xor eax, eax                                    ; => [ Call: nullptr ]
 00514120    mov ecx, dword ptr ds:[ecx+0x04]
 00514123    test ecx, ecx
 00514125    jle 0x00514132

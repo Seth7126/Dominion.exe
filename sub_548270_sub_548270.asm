@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_548270
+// 起始地址: 0x548270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00548270    dword 83EC8B55
 00548274    in al, 0xF8
 00548276    push esi
 00548277    push edi
-00548278    call 0x0056B800
+00548278    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0054827D    mov ecx, eax
 0054827F    call 0x00567520
 00548284    test al, al
-00548286    jz 0x00548290
+00548286    jz 0x00548290                                   ; => [ Call: sub_567520 ]
 00548288    xor al, al
 0054828A    pop edi
 0054828B    pop esi
@@ -15,10 +21,10 @@
 0054828F    ret
 00548290    call 0x00573400
 00548295    movzx esi, word ptr ss:[ebp+0x08]
-00548299    mov edi, dword ptr ds:[eax+0x04]
+00548299    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0054829C    cmp esi, 0x320
 005482A2    jb 0x005482A9
-005482A4    call 0x00591930
+005482A4    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005482A9    imul eax, esi, 0x64
 005482AC    mov ecx, edi
 005482AE    push 0x00
@@ -30,4 +36,4 @@
 005482C5    pop esi
 005482C6    mov esp, ebp
 005482C8    pop ebp
-005482C9    ret
+005482C9    ret                                             ; => [ Call: sub_5754f0 ]

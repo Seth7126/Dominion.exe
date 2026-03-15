@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51ed60
+// 起始地址: 0x51ed60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051ED60    push ebp
 0051ED61    mov ebp, esp
 0051ED63    mov eax, dword ptr ss:[ebp+0x08]
@@ -7,7 +13,7 @@
 0051ED6D    mov edi, ecx
 0051ED6F    mov ebx, dword ptr ds:[eax]
 0051ED71    mov ecx, ebx
-0051ED73    call 0x00571B30
+0051ED73    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0051ED78    mov ecx, dword ptr ds:[eax+0x98]
 0051ED7E    mov eax, dword ptr ds:[eax+0x9C]
 0051ED84    and ecx, 0x7F000400
@@ -24,7 +30,7 @@
 0051EDA5    mov edx, dword ptr ds:[edx+esi*4]
 0051EDA8    call 0x00515B00
 0051EDAD    test al, al
-0051EDAF    jz 0x0051EDC0
+0051EDAF    jz 0x0051EDC0                                   ; => [ Call: sub_515b00 ]
 0051EDB1    inc esi
 0051EDB2    cmp esi, dword ptr ds:[edi+0x04]
 0051EDB5    jl 0x0051EDA0

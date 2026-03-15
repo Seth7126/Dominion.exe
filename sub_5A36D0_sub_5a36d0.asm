@@ -1,33 +1,39 @@
+// ============================================================
+// 函数名称: sub_5a36d0
+// 起始地址: 0x5a36d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A36D0    push ebx
 005A36D1    push esi
 005A36D2    push edi
 005A36D3    mov ecx, 0x21B138
-005A36D8    call 0x0064BFD0
+005A36D8    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 005A36DD    mov esi, eax
 005A36DF    inc dword ptr ds:[esi+0x0C]
 005A36E2    cmp dword ptr ds:[esi+0x10], 0xFFFFFFFF
 005A36E6    jnz 0x005A36F6
 005A36E8    mov ecx, 0x21B138
 005A36ED    call 0x00687730
-005A36F2    mov edi, eax
+005A36F2    mov edi, eax                                    ; => [ Call: sub_687730 ]
 005A36F4    jmp 0x005A3708
 005A36F6    cmp dword ptr ds:[esi], 0x00
 005A36F9    jnz 0x005A3702
 005A36FB    mov ecx, esi
-005A36FD    call 0x0064BE70
+005A36FD    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 005A3702    mov edi, dword ptr ds:[esi]
 005A3704    mov eax, dword ptr ds:[edi]
 005A3706    mov dword ptr ds:[esi], eax
 005A3708    push 0x21B138
 005A370D    push 0x00
 005A370F    push edi
-005A3710    call 0x00761FC4
+005A3710    call 0x00761FC4                                 ; => [ Call: memset ]
 005A3715    add esp, 0x0C
 005A3718    lea eax, ds:[edi+0x5028]
 005A371E    push 0x58
 005A3720    push 0x00
 005A3722    push eax
-005A3723    call 0x00761FC4
+005A3723    call 0x00761FC4                                 ; => [ Call: memset ]
 005A3728    mov esi, dword ptr ds:[0x00775130]
 005A372E    add esp, 0x0C
 005A3731    mov dword ptr ds:[edi+0x21B108], 0x00
@@ -35,12 +41,12 @@
 005A3745    mov dword ptr ds:[edi+0x21B110], 0x00
 005A374F    push 0x400
 005A3754    push 0xB4A5E8
-005A3759    mov dword ptr ds:[0x00B4A618], edi
-005A375F    call esi
+005A3759    mov dword ptr ds:[0x00B4A618], edi              ; => [ Data: data_b4a618 ]
+005A375F    call esi                                        ; => [ Data: data_b4a5e8 ]
 005A3761    push 0x400
 005A3766    push 0xB4A600
-005A376B    call esi
-005A376D    mov esi, dword ptr ds:[0x00B4A618]
+005A376B    call esi                                        ; => [ Data: data_b4a600 ]
+005A376D    mov esi, dword ptr ds:[0x00B4A618]              ; => [ Data: data_b4a618 ]
 005A3773    mov edi, 0x32
 005A3778    mov ecx, 0x5004
 005A377D    lea ebx, ds:[edi-0x19]
@@ -48,7 +54,7 @@
 005A378A    mov dword ptr ds:[esi+0x21B0FC], 0x00
 005A3794    mov dword ptr ds:[esi+0x21B100], 0x400
 005A379E    mov dword ptr ds:[esi+0x21B104], 0x00
-005A37A8    call 0x00687730
+005A37A8    call 0x00687730                                 ; => [ Call: sub_687730 ]
 005A37AD    mov ecx, dword ptr ds:[esi+0x21B0FC]
 005A37B3    mov dword ptr ds:[eax], ecx
 005A37B5    xor ecx, ecx
@@ -64,7 +70,7 @@
 005A37D5    add eax, 0x14
 005A37D8    cmp ecx, dword ptr ds:[esi+0x21B100]
 005A37DE    jl 0x005A37D0
-005A37E0    movaps xmm0, xmmword ptr ds:[0x008935C0]
+005A37E0    movaps xmm0, xmmword ptr ds:[0x008935C0]        ; => [ Data: data_8935c0 ]
 005A37E7    mov ecx, 0x1388
 005A37EC    movss xmm2, dword ptr ds:[0x00890EB8]
 005A37F4    movss xmm3, dword ptr ds:[0x00890E18]
@@ -83,16 +89,16 @@
 005A383B    call 0x0064C020
 005A3840    push 0x4E2
 005A3845    lea ecx, ds:[esi+0x21B108]
-005A384B    mov dword ptr ds:[esi+0x21B108], eax
+005A384B    mov dword ptr ds:[esi+0x21B108], eax            ; => [ Call: sub_64c020 ]
 005A3851    mov dword ptr ds:[esi+0x21B10C], 0x00
 005A385B    mov dword ptr ds:[esi+0x21B110], 0x4E2
-005A3865    call 0x005AC7C0
+005A3865    call 0x005AC7C0                                 ; => [ Call: sub_5ac7c0 ]
 005A386A    cmp dword ptr ds:[0x00B4A5C0], 0x00
-005A3871    jz 0x005A3889
-005A3873    push 0x825754
+005A3871    jz 0x005A3889                                   ; => [ Data: data_b4a5c0 ]
+005A3873    push 0x825754                                   ; => [ String: DataArray<struct CampaignMapTask>::DataArrayInitialize ]
 005A3878    push 0xCE
-005A387D    push 0x80193C
-005A3882    mov ecx, 0x80195C
+005A387D    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+005A3882    mov ecx, 0x80195C                               ; => [ String: mpBlock == NULL ]
 005A3887    jmp 0x005A38DF
 005A3889    push 0x10
 005A388B    push 0xA218
@@ -100,26 +106,26 @@
 005A3896    add esp, 0x08
 005A3899    test eax, eax
 005A389B    jz 0x005A38CE
-005A389D    mov dword ptr ds:[0x00B4A5C0], eax
+005A389D    mov dword ptr ds:[0x00B4A5C0], eax              ; => [ Data: data_b4a5c0 ]
 005A38A2    mov eax, 0x8251B8
 005A38A7    pop edi
 005A38A8    and eax, 0xFFF
-005A38AD    mov dword ptr ds:[0x00B4A5C8], 0x02
+005A38AD    mov dword ptr ds:[0x00B4A5C8], 0x02             ; => [ Data: data_b4a5c8 ]
 005A38B7    or eax, 0xD000
-005A38BC    mov dword ptr ds:[0x00B4A5D8], 0x8251B8
+005A38BC    mov dword ptr ds:[0x00B4A5D8], 0x8251B8         ; => [ String: complete maps | Data: data_b4a5d8 ]
 005A38C6    pop esi
-005A38C7    mov dword ptr ds:[0x00B4A5D4], eax
+005A38C7    mov dword ptr ds:[0x00B4A5D4], eax              ; => [ Data: data_b4a5d4 ]
 005A38CC    pop ebx
 005A38CD    ret
-005A38CE    push 0x8770A0
+005A38CE    push 0x8770A0                                   ; => [ String: XMalloc ]
 005A38D3    push 0x57
-005A38D5    push 0x877080
-005A38DA    mov ecx, 0x8770C8
+005A38D5    push 0x877080                                   ; => [ String: C:\x\ax2017\Engine\xMemory.cpp ]
+005A38DA    mov ecx, 0x8770C8                               ; => [ String: pBuffer ]
 005A38DF    mov edx, 0x801800
-005A38E4    call 0x0063B870
+005A38E4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005A38E9    add esp, 0x0C
 005A38EC    call 0x0063BC30
 005A38F1    test al, al
-005A38F3    jz 0x005A38F6
+005A38F3    jz 0x005A38F6                                   ; => [ Call: sub_63bc30 ]
 005A38F5    int3
-005A38F6    call 0x0063BB00
+005A38F6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

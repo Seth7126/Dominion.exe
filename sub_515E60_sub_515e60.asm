@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_515e60
+// 起始地址: 0x515e60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00515E60    push ebp
 00515E61    mov ebp, esp
 00515E63    and esp, 0xFFFFFFF8
@@ -12,10 +18,10 @@
 00515E77    xor edx, edx
 00515E79    mov dword ptr ds:[eax+0x08], ecx
 00515E7C    mov ecx, 0xCCA794
-00515E81    mov dword ptr ds:[eax], 0x816F04
+00515E81    mov dword ptr ds:[eax], 0x816F04                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_1a26e074cbf2dcc23cd5d8b5a34d12ea>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 00515E87    mov dword ptr ds:[eax+0x04], edi
 00515E8A    mov dword ptr ds:[eax+0x24], eax
-00515E8D    call 0x0050AD20
+00515E8D    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 00515E92    mov ebx, eax
 00515E94    add esp, 0x28
 00515E97    test ebx, ebx
@@ -23,7 +29,7 @@
 00515E9B    push 0x00
 00515E9D    push 0x00
 00515E9F    mov ecx, ebx
-00515EA1    call 0x0050A6A0
+00515EA1    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 00515EA6    add esp, 0x08
 00515EA9    xor esi, esi
 00515EAB    test edi, edi
@@ -35,7 +41,7 @@
 00515EB8    push 0x00
 00515EBA    push ecx
 00515EBB    mov ecx, dword ptr ds:[eax+esi*4]
-00515EBE    call 0x0050AC80
+00515EBE    call 0x0050AC80                                 ; => [ Call: sub_50ac80 ]
 00515EC3    inc esi
 00515EC4    add esp, 0x0C
 00515EC7    cmp esi, edi

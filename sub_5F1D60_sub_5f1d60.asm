@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f1d60
+// 起始地址: 0x5f1d60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F1D60    push ebp
 005F1D61    mov ebp, esp
 005F1D63    sub esp, 0x14
@@ -10,12 +16,12 @@
 005F1D70    call 0x005CF7E0
 005F1D75    mov edx, eax
 005F1D77    mov ecx, ebx
-005F1D79    call 0x00571B30
+005F1D79    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 005F1D7E    mov esi, eax
 005F1D80    call 0x005CF7E0
 005F1D85    mov edx, eax
 005F1D87    mov ecx, edi
-005F1D89    call 0x00571B30
+005F1D89    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 005F1D8E    mov edx, dword ptr ds:[esi+0x98]
 005F1D94    mov ecx, edx
 005F1D96    and ecx, 0x04
@@ -45,7 +51,7 @@
 005F1DD0    pop ebx
 005F1DD1    mov esp, ebp
 005F1DD3    pop ebp
-005F1DD4    ret
+005F1DD4    ret                                             ; => [ Call: sub_58d5a0 ]
 005F1DD5    test al, al
 005F1DD7    jnz 0x005F1E4B
 005F1DD9    mov eax, edx
@@ -100,7 +106,7 @@
 005F1E46    pop ebx
 005F1E47    mov esp, ebp
 005F1E49    pop ebp
-005F1E4A    ret
+005F1E4A    ret                                             ; => [ Call: sub_58d5a0 | Call: sub_58d5a0 ]
 005F1E4B    pop edi
 005F1E4C    pop esi
 005F1E4D    xor al, al

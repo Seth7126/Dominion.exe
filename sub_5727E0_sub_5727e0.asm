@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5727e0
+// 起始地址: 0x5727e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005727E0    push ebp
 005727E1    mov ebp, esp
 005727E3    and esp, 0xFFFFFFF8
@@ -9,13 +15,13 @@
 005727EC    mov edi, ecx
 005727EE    test esi, esi
 005727F0    jnz 0x00572806
-005727F2    push 0x81F958
+005727F2    push 0x81F958                                   ; => [ String: CardCreate ]
 005727F7    push 0x466
-005727FC    mov ecx, 0x80CEF8
+005727FC    mov ecx, 0x80CEF8                               ; => [ String: what != CARD_NONE ]
 00572801    jmp 0x00572944
 00572806    cmp dword ptr ds:[edi+0x1520], 0x320
 00572810    jl 0x00572817
-00572812    call 0x00591930
+00572812    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572817    mov ecx, dword ptr ds:[edi+0x1520]
 0057281D    mov edx, dword ptr ds:[edi+0xD48]
 00572823    imul ebx, ecx, 0x64
@@ -27,7 +33,7 @@
 00572839    mov dword ptr ss:[esp+0x0C], ebx
 0057283D    call 0x00571B30
 00572842    mov ecx, ebx
-00572844    mov dword ptr ds:[ebx], eax
+00572844    mov dword ptr ds:[ebx], eax                     ; => [ Call: sub_571b30 ]
 00572846    sub ecx, edi
 00572848    mov dword ptr ds:[ebx+0x04], esi
 0057284B    mov esi, dword ptr ss:[ebp+0x0C]
@@ -52,7 +58,7 @@
 00572893    push esi
 00572894    mov esi, dword ptr ss:[ebp+0x08]
 00572897    push esi
-00572898    call 0x00572560
+00572898    call 0x00572560                                 ; => [ Call: sub_572560 ]
 0057289D    add esp, 0x08
 005728A0    jmp 0x005728C4
 005728A2    test eax, eax
@@ -60,14 +66,14 @@
 005728A6    push esi
 005728A7    mov esi, dword ptr ss:[ebp+0x08]
 005728AA    push esi
-005728AB    call 0x00572660
+005728AB    call 0x00572660                                 ; => [ Call: sub_572660 ]
 005728B0    add esp, 0x08
 005728B3    jmp 0x005728C4
 005728B5    mov esi, dword ptr ss:[ebp+0x08]
 005728B8    push eax
 005728B9    push 0xFFFFFFFF
 005728BB    push esi
-005728BC    call 0x00572710
+005728BC    call 0x00572710                                 ; => [ Call: sub_572710 ]
 005728C1    add esp, 0x0C
 005728C4    test esi, esi
 005728C6    jz 0x00572935
@@ -94,7 +100,7 @@
 005728F8    push dword ptr ss:[ebp+0x0C]
 005728FB    setz cl
 005728FE    xor edx, edx
-00572900    call 0x0061B1B0
+00572900    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00572905    add esp, 0x2C
 00572908    xor esi, esi
 0057290A    cmp dword ptr ds:[edi+0xD38], esi
@@ -103,7 +109,7 @@
 00572914    push esi
 00572915    mov edx, ebx
 00572917    mov ecx, edi
-00572919    call 0x00581A00
+00572919    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 0057291E    inc esi
 0057291F    add esp, 0x08
 00572922    cmp esi, dword ptr ds:[edi+0xD38]
@@ -115,15 +121,15 @@
 00572931    mov esp, ebp
 00572933    pop ebp
 00572934    ret
-00572935    push 0x81F958
+00572935    push 0x81F958                                   ; => [ String: CardCreate ]
 0057293A    push 0x493
-0057293F    mov ecx, 0x817824
+0057293F    mov ecx, 0x817824                               ; => [ String: where != CW_NONE ]
 00572944    push 0x81F4B8
 00572949    mov edx, 0x801800
-0057294E    call 0x0063B870
+0057294E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CardCreate | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00572953    add esp, 0x0C
 00572956    call 0x0063BC30
 0057295B    test al, al
-0057295D    jz 0x00572960
+0057295D    jz 0x00572960                                   ; => [ Call: sub_63bc30 ]
 0057295F    int3
-00572960    call 0x0063BB00
+00572960    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

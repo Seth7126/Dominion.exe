@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e7db0
+// 起始地址: 0x6e7db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7DB0    push ebp
 006E7DB1    mov ebp, esp
 006E7DB3    mov eax, dword ptr ss:[ebp+0x08]
@@ -29,7 +35,7 @@
 006E7DE9    mov esi, dword ptr ds:[eax+0x28]
 006E7DEC    lea ebx, ds:[edi+0x40]
 006E7DEF    mov edx, dword ptr ds:[edi+0x48]
-006E7DF2    xor eax, eax
+006E7DF2    xor eax, eax                                    ; => [ Call: nullptr ]
 006E7DF4    test edx, edx
 006E7DF6    jle 0x006E7E28
 006E7DF8    mov ecx, dword ptr ds:[ebx]
@@ -43,9 +49,9 @@
 006E7E0C    add edi, 0x48
 006E7E0F    cmp edx, 0xC8
 006E7E15    jl 0x006E7E2B
-006E7E17    push 0x882750
+006E7E17    push 0x882750                                   ; => [ String: FlanimGetOrAddImage ]
 006E7E1C    push 0x564
-006E7E21    mov ecx, 0x882794
+006E7E21    mov ecx, 0x882794                               ; => [ String: pFlanimDef->mImageCount < MAX_IMAGES_IN_FLANIM ]
 006E7E26    jmp 0x006E7E55
 006E7E28    add edi, 0x48
 006E7E2B    mov ecx, dword ptr ds:[ebx]
@@ -65,15 +71,15 @@
 006E7E43    pop esi
 006E7E44    pop ebp
 006E7E45    ret
-006E7E46    push 0x88277C
+006E7E46    push 0x88277C                                   ; => [ String: FlanimCompressGetInt ]
 006E7E4B    push 0x583
-006E7E50    mov ecx, 0x801AA4
+006E7E50    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006E7E55    push 0x882314
 006E7E5A    mov edx, 0x801800
-006E7E5F    call 0x0063B870
+006E7E5F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Flanim.cpp ]
 006E7E64    add esp, 0x0C
 006E7E67    call 0x0063BC30
 006E7E6C    test al, al
-006E7E6E    jz 0x006E7E71
+006E7E6E    jz 0x006E7E71                                   ; => [ Call: sub_63bc30 ]
 006E7E70    int3
-006E7E71    call 0x0063BB00
+006E7E71    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

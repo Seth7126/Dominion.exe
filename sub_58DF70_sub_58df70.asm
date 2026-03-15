@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58df70
+// 起始地址: 0x58df70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058DF70    push ebp
 0058DF71    mov ebp, esp
 0058DF73    sub esp, 0x0C
@@ -9,7 +15,7 @@
 0058DF81    xor edx, edx
 0058DF83    mov dword ptr ss:[ebp-0x04], ecx
 0058DF86    xor edi, edi
-0058DF88    add esi, 0xA0
+0058DF88    add esi, 0xA0                                   ; => [ Data: data_cce9c8 ]
 0058DF8E    nop
 0058DF90    mov ecx, dword ptr ds:[esi]
 0058DF92    test ecx, ecx
@@ -39,21 +45,21 @@
 0058DFCE    push edi
 0058DFCF    push ecx
 0058DFD0    call 0x0058DE90
-0058DFD5    sub esi, eax
+0058DFD5    sub esi, eax                                    ; => [ Call: sub_58de90 | Call: sub_58df00 ]
 0058DFD7    add esp, 0x10
 0058DFDA    mov eax, dword ptr ss:[ebp-0x04]
-0058DFDD    mov ecx, 0x00
+0058DFDD    mov ecx, 0x00                                   ; => [ Call: nullptr ]
 0058DFE2    mov eax, dword ptr ds:[eax]
 0058DFE4    sub eax, esi
 0058DFE6    mov esi, dword ptr ss:[ebp+0x08]
 0058DFE9    cmovns ecx, eax
-0058DFEC    sub ebx, dword ptr ds:[0x00CCE9B8]
+0058DFEC    sub ebx, dword ptr ds:[0x00CCE9B8]              ; => [ Data: data_cce9b8 ]
 0058DFF2    cmp ecx, ebx
 0058DFF4    cmovl ebx, ecx
 0058DFF7    jmp 0x0058E019
 0058DFF9    mov eax, dword ptr ss:[ebp-0x04]
-0058DFFC    mov edx, 0x00
-0058E001    mov ecx, dword ptr ds:[0x00CCE9B8]
+0058DFFC    mov edx, 0x00                                   ; => [ Call: nullptr ]
+0058E001    mov ecx, dword ptr ds:[0x00CCE9B8]              ; => [ Data: data_cce9b8 ]
 0058E007    mov eax, dword ptr ds:[eax]
 0058E009    sub eax, ecx
 0058E00B    cmovns edx, eax
@@ -72,10 +78,10 @@
 0058E030    jnz 0x0058E0CB
 0058E036    cmp edi, 0x800
 0058E03C    jnz 0x0058E0CB
-0058E042    mov dword ptr ds:[0x01A86E30], 0x00
-0058E04C    mov dword ptr ds:[0x01A87AB4], 0x00
-0058E056    mov dword ptr ds:[0x01A88738], 0x00
-0058E060    mov dword ptr ds:[0x01A8A03C], 0x00
+0058E042    mov dword ptr ds:[0x01A86E30], 0x00             ; => [ Data: data_1a86e30 ]
+0058E04C    mov dword ptr ds:[0x01A87AB4], 0x00             ; => [ Data: data_1a87ab4 ]
+0058E056    mov dword ptr ds:[0x01A88738], 0x00             ; => [ Data: data_1a88738 ]
+0058E060    mov dword ptr ds:[0x01A8A03C], 0x00             ; => [ Data: data_1a8a03c ]
 0058E06A    test esi, esi
 0058E06C    jnz 0x0058E0B7
 0058E06E    cmp edi, 0x40
@@ -98,15 +104,15 @@
 0058E09C    push 0x01
 0058E09E    push 0x1A86E30
 0058E0A3    push 0x1A861B0
-0058E0A8    call 0x0058D7A0
+0058E0A8    call 0x0058D7A0                                 ; => [ Call: sub_58d7a0 | Data: data_cce9b0 | Data: data_cce9c8 | Data: data_1a861b0 | Data: data_1a86e30 ]
 0058E0AD    add esp, 0x24
-0058E0B0    mov esi, 0x1A861B0
+0058E0B0    mov esi, 0x1A861B0                              ; => [ Data: data_1a861b0 ]
 0058E0B5    jmp 0x0058E0D1
-0058E0B7    push 0x8205B8
+0058E0B7    push 0x8205B8                                   ; => [ String: MakeSpecificLandscapeDeck ]
 0058E0BC    push 0x420F
-0058E0C1    mov ecx, 0x801AA4
+0058E0C1    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0058E0C6    jmp 0x0058E1B9
-0058E0CB    mov esi, dword ptr ds:[0x00CCE9C0]
+0058E0CB    mov esi, dword ptr ds:[0x00CCE9C0]              ; => [ Data: data_cce9c0 ]
 0058E0D1    cmp dword ptr ds:[esi+0x2588], 0x00
 0058E0D8    jnz 0x0058E0F0
 0058E0DA    cmp dword ptr ds:[esi+0xC80], 0x00
@@ -116,14 +122,14 @@
 0058E0F0    mov edx, dword ptr ds:[0x00CCE9BC]
 0058E0F6    mov ecx, esi
 0058E0F8    push 0x01
-0058E0FA    call 0x0058DCC0
+0058E0FA    call 0x0058DCC0                                 ; => [ Data: data_cce9bc | Call: sub_58dcc0 ]
 0058E0FF    mov dword ptr ss:[ebp-0x08], eax
 0058E102    add esp, 0x04
 0058E105    mov eax, edx
 0058E107    mov edx, dword ptr ds:[0x00CCE9B0]
 0058E10D    mov ecx, eax
 0058E10F    mov dword ptr ss:[ebp-0x04], eax
-0058E112    call 0x00571B30
+0058E112    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0058E117    mov edi, dword ptr ds:[eax+0x98]
 0058E11D    mov ecx, dword ptr ds:[eax+0x9C]
 0058E123    and edi, 0x7F000400
@@ -136,7 +142,7 @@
 0058E13B    jz 0x0058E160
 0058E13D    mov edx, dword ptr ds:[0x00CCE9B0]
 0058E143    mov ecx, dword ptr ss:[ebp-0x04]
-0058E146    call 0x00571B30
+0058E146    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0058E14B    mov ecx, dword ptr ss:[ebp+0x08]
 0058E14E    and ecx, dword ptr ds:[eax+0x98]
 0058E154    mov eax, dword ptr ds:[eax+0x9C]
@@ -145,7 +151,7 @@
 0058E15E    jz 0x0058E16D
 0058E160    mov ecx, dword ptr ss:[ebp-0x04]
 0058E163    xor edx, edx
-0058E165    call 0x0058F080
+0058E165    call 0x0058F080                                 ; => [ Call: sub_58f080 | Call: sub_58f080 ]
 0058E16A    dec ebx
 0058E16B    jmp 0x0058E194
 0058E16D    mov eax, dword ptr ds:[esi+0x3E8C]
@@ -159,22 +165,22 @@
 0058E194    test ebx, ebx
 0058E196    jnz 0x0058E0D1
 0058E19C    mov ecx, esi
-0058E19E    call 0x0058DD90
+0058E19E    call 0x0058DD90                                 ; => [ Call: sub_58dd90 ]
 0058E1A3    pop edi
 0058E1A4    pop esi
 0058E1A5    pop ebx
 0058E1A6    mov esp, ebp
 0058E1A8    pop ebp
 0058E1A9    ret
-0058E1AA    push 0x82050C
+0058E1AA    push 0x82050C                                   ; => [ String: RandomizerDeck_Reject ]
 0058E1AF    push 0x4140
-0058E1B4    mov ecx, 0x820524
+0058E1B4    mov ecx, 0x820524                               ; => [ String: deck.numRejects < MAX_CARDS ]
 0058E1B9    push 0x81F4B8
 0058E1BE    mov edx, 0x801800
-0058E1C3    call 0x0063B870
+0058E1C3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0058E1C8    add esp, 0x0C
 0058E1CB    call 0x0063BC30
 0058E1D0    test al, al
-0058E1D2    jz 0x0058E1D5
+0058E1D2    jz 0x0058E1D5                                   ; => [ Call: sub_63bc30 ]
 0058E1D4    int3
-0058E1D5    call 0x0063BB00
+0058E1D5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

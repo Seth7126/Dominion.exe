@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58dc60
+// 起始地址: 0x58dc60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058DC60    push ebp
 0058DC61    mov ebp, esp
 0058DC63    push ecx
@@ -19,7 +25,7 @@
 0058DC8B    mov eax, dword ptr ds:[eax+0x98]
 0058DC91    and eax, 0x20
 0058DC94    or eax, 0x00
-0058DC97    jz 0x0058DCA4
+0058DC97    jz 0x0058DCA4                                   ; => [ Call: sub_571b30 ]
 0058DC99    dec dword ptr ds:[edi]
 0058DC9B    mov eax, dword ptr ds:[edi]
 0058DC9D    mov eax, dword ptr ds:[ebx+eax*4]

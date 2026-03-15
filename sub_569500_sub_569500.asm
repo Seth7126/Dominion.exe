@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_569500
+// 起始地址: 0x569500
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00569500    push ebp
 00569501    mov ebp, esp
 00569503    and esp, 0xFFFFFFF8
@@ -16,7 +22,7 @@
 0056952C    mov dword ptr ss:[esp+0x1C], eax
 00569530    mov eax, dword ptr ds:[0x007BFAD4]
 00569535    mov dword ptr ss:[esp+0x18], eax
-00569539    call 0x00573400
+00569539    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056953E    mov esi, eax
 00569540    mov eax, dword ptr ds:[esi+0x04]
 00569543    mov dword ptr ss:[esp+0x24], eax
@@ -25,7 +31,7 @@
 0056954E    mov dword ptr ss:[esp+0x14], ecx
 00569552    cmp ecx, 0x320
 00569558    jb 0x00569567
-0056955A    call 0x00591930
+0056955A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056955F    mov eax, dword ptr ss:[esp+0x10]
 00569563    mov ecx, dword ptr ss:[esp+0x14]
 00569567    push dword ptr ss:[esp+0x18]
@@ -46,7 +52,7 @@
 00569593    push eax
 00569594    mov eax, dword ptr ss:[esp+0x5C]
 00569598    mov edx, dword ptr ds:[edx+eax*1+0x1A70]
-0056959F    call 0x00582D10
+0056959F    call 0x00582D10                                 ; => [ Call: nullptr | Call: sub_582d10 ]
 005695A4    inc edi
 005695A5    add esp, 0x38
 005695A8    cmp edi, dword ptr ds:[ebx+0xC80]

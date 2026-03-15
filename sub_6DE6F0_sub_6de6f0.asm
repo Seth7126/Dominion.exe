@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6de6f0
+// 起始地址: 0x6de6f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DE6F0    push ebx
 006DE6F1    mov ebx, esp
 006DE6F3    sub esp, 0x08
@@ -8,9 +14,9 @@
 006DE700    mov dword ptr ss:[esp+0x04], ebp
 006DE704    mov ebp, esp
 006DE706    push 0xFFFFFFFF
-006DE708    push 0x770FE5
+006DE708    push 0x770FE5                                   ; => [ Type: EHRegistrationNode | Call: sub_770fe5 ]
 006DE70D    mov eax, dword ptr fs:[0x00000000]
-006DE713    push eax
+006DE713    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006DE714    push ebx
 006DE715    sub esp, 0x3D0
 006DE71B    mov eax, dword ptr ds:[0x008C4040]
@@ -18,9 +24,9 @@
 006DE722    mov dword ptr ss:[ebp-0x14], eax
 006DE725    push esi
 006DE726    push edi
-006DE727    push eax
+006DE727    push eax                                        ; => [ Data: __security_cookie ]
 006DE728    lea eax, ss:[ebp-0x0C]
-006DE72B    mov dword ptr fs:[0x00000000], eax
+006DE72B    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006DE731    mov dword ptr ss:[ebp-0x30], edx
 006DE734    mov eax, ecx
 006DE736    mov dword ptr ss:[ebp-0x2C], eax
@@ -30,33 +36,33 @@
 006DE73F    push 0x02
 006DE741    mov edx, 0x879C7C
 006DE746    lea ecx, ss:[ebp-0x24]
-006DE749    call 0x0069FD50
+006DE749    call 0x0069FD50                                 ; => [ String: !Null\Null | Call: sub_69fd50 ]
 006DE74E    add esp, 0x04
 006DE751    mov dword ptr ss:[ebp-0x04], esi
 006DE754    lea edx, ds:[esi+0x02]
 006DE757    mov eax, dword ptr ss:[ebp-0x24]
-006DE75A    mov ecx, 0x801800
+006DE75A    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006DE75F    test eax, eax
 006DE761    cmovnz ecx, eax
-006DE764    call 0x0069F030
+006DE764    call 0x0069F030                                 ; => [ Call: sub_69f030 ]
 006DE769    mov esi, eax
 006DE76B    mov dword ptr ss:[ebp-0x04], 0x01
 006DE772    cmp dword ptr ds:[0x00CF65BC], 0x00
-006DE779    jz 0x006DE7A9
+006DE779    jz 0x006DE7A9                                   ; => [ Data: data_cf65bc ]
 006DE77B    mov eax, dword ptr ss:[ebp-0x24]
 006DE77E    test eax, eax
 006DE780    jz 0x006DE7A9
 006DE782    cmp byte ptr ds:[eax], 0x00
 006DE785    jz 0x006DE7A9
 006DE787    lea ecx, ss:[ebp-0x24]
-006DE78A    call 0x0063D4E0
+006DE78A    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006DE78F    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 006DE793    jnz 0x006DE7A9
 006DE795    mov edx, dword ptr ds:[eax+0x0C]
 006DE798    mov ecx, eax
 006DE79A    add edx, 0x10
-006DE79D    call 0x0064C080
-006DE7A2    mov dword ptr ss:[ebp-0x24], 0x801800
+006DE79D    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+006DE7A2    mov dword ptr ss:[ebp-0x24], 0x801800           ; => [ Data: data_801800 ]
 006DE7A9    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 006DE7B0    jmp 0x006DE7BC
 006DE7B2    cmp dword ptr ds:[esi+0x04], 0x02
@@ -68,7 +74,7 @@
 006DE7C6    push 0x01
 006DE7C8    xor dl, dl
 006DE7CA    mov ecx, edi
-006DE7CC    call 0x0069F4A0
+006DE7CC    call 0x0069F4A0                                 ; => [ Call: sub_69f4a0 ]
 006DE7D1    add esp, 0x04
 006DE7D4    mov eax, dword ptr ds:[edi]
 006DE7D6    inc dword ptr ds:[edi+0x1C]
@@ -79,10 +85,10 @@
 006DE7E7    mov dword ptr ss:[ebp-0x3C], edi
 006DE7EA    cmp dword ptr ds:[edx+0x14], 0x00
 006DE7EE    jnle 0x006DE809
-006DE7F0    push 0x872E14
+006DE7F0    push 0x872E14                                   ; => [ String: XArray<struct Mat4>::operator [] ]
 006DE7F5    push 0xB5
-006DE7FA    push 0x816BDC
-006DE7FF    mov ecx, 0x824FD0
+006DE7FA    push 0x816BDC                                   ; => [ String: C:\x\ax2017\Engine\xArray.h ]
+006DE7FF    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 006DE804    jmp 0x006DEBCA
 006DE809    mov eax, dword ptr ds:[edi+0x10]
 006DE80C    mov edx, dword ptr ds:[edx+0x10]
@@ -109,7 +115,7 @@
 006DE859    movss xmm1, dword ptr ds:[edx+0x08]
 006DE85E    mulss xmm1, xmm1
 006DE862    addss xmm0, xmm1
-006DE866    call 0x004AC580
+006DE866    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006DE86B    mov edx, dword ptr ss:[ebp-0x24]
 006DE86E    shufps xmm0, xmm0, 0x00
 006DE872    movups xmm1, xmmword ptr ds:[edx]
@@ -126,7 +132,7 @@
 006DE896    lea eax, ss:[ebp-0xE0]
 006DE89C    mov ecx, edx
 006DE89E    push eax
-006DE89F    call 0x006DB630
+006DE89F    call 0x006DB630                                 ; => [ Call: sub_6db630 ]
 006DE8A4    jmp 0x006DEB18
 006DE8A9    mov edi, dword ptr ss:[ebp-0x34]
 006DE8AC    imul ecx, eax, 0x2C
@@ -140,7 +146,7 @@
 006DE8C5    lea eax, ss:[ebp-0xE0]
 006DE8CB    mov ecx, edx
 006DE8CD    push eax
-006DE8CE    call 0x006DB630
+006DE8CE    call 0x006DB630                                 ; => [ Call: sub_6db630 ]
 006DE8D3    lea edx, ss:[ebp-0xA0]
 006DE8D9    movups xmm0, xmmword ptr ds:[eax]
 006DE8DC    movups xmmword ptr ss:[ebp-0xA0], xmm0
@@ -155,7 +161,7 @@
 006DE909    lea eax, ss:[ebp-0x2A0]
 006DE90F    lea ecx, ds:[edx+0x1C]
 006DE912    push eax
-006DE913    call 0x006C3C80
+006DE913    call 0x006C3C80                                 ; => [ Call: sub_6c3c80 ]
 006DE918    add esp, 0x04
 006DE91B    mov ecx, edx
 006DE91D    movups xmm0, xmmword ptr ds:[eax]
@@ -168,7 +174,7 @@
 006DE941    lea eax, ss:[ebp-0x2E0]
 006DE947    push eax
 006DE948    movups xmmword ptr ss:[ebp-0x1B0], xmm0
-006DE94F    call 0x006875E0
+006DE94F    call 0x006875E0                                 ; => [ Call: sub_6875e0 ]
 006DE954    mov ecx, dword ptr ss:[ebp-0x30]
 006DE957    add esp, 0x04
 006DE95A    movss xmm1, dword ptr ds:[0x00890E18]
@@ -193,7 +199,7 @@
 006DE9BB    push eax
 006DE9BC    lea ecx, ss:[ebp-0x20]
 006DE9BF    movss dword ptr ss:[ebp-0x18], xmm0
-006DE9C4    call 0x006C3C80
+006DE9C4    call 0x006C3C80                                 ; => [ Call: sub_6c3c80 ]
 006DE9C9    add esp, 0x04
 006DE9CC    lea ecx, ds:[edx+0x10]
 006DE9CF    movups xmm0, xmmword ptr ds:[eax]
@@ -206,7 +212,7 @@
 006DE9F0    lea eax, ss:[ebp-0x360]
 006DE9F6    push eax
 006DE9F7    movups xmmword ptr ss:[ebp-0x70], xmm0
-006DE9FB    call 0x006B7C20
+006DE9FB    call 0x006B7C20                                 ; => [ Call: sub_6b7c20 ]
 006DEA00    add esp, 0x04
 006DEA03    lea edx, ss:[ebp-0xA0]
 006DEA09    lea ecx, ss:[ebp-0x120]
@@ -220,7 +226,7 @@
 006DEA33    lea eax, ss:[ebp-0x3A0]
 006DEA39    push eax
 006DEA3A    movups xmmword ptr ss:[ebp-0xF0], xmm0
-006DEA41    call 0x00642E30
+006DEA41    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006DEA46    add esp, 0x04
 006DEA49    lea edx, ss:[ebp-0x160]
 006DEA4F    movups xmm0, xmmword ptr ds:[eax]
@@ -234,7 +240,7 @@
 006DEA79    push eax
 006DEA7A    movups xmmword ptr ss:[ebp-0x170], xmm0
 006DEA81    lea ecx, ss:[ebp-0x1A0]
-006DEA87    call 0x00642E30
+006DEA87    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006DEA8C    add esp, 0x04
 006DEA8F    lea edx, ss:[ebp-0x1E0]
 006DEA95    lea ecx, ss:[ebp-0x220]
@@ -248,7 +254,7 @@
 006DEABF    lea eax, ss:[ebp-0x260]
 006DEAC5    push eax
 006DEAC6    movups xmmword ptr ss:[ebp-0x1F0], xmm0
-006DEACD    call 0x00642E30
+006DEACD    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006DEAD2    lea edx, ss:[ebp-0xE0]
 006DEAD8    movups xmm0, xmmword ptr ds:[eax]
 006DEADB    movups xmmword ptr ss:[ebp-0xE0], xmm0
@@ -262,7 +268,7 @@
 006DEB09    mov ecx, dword ptr ss:[ebp-0x38]
 006DEB0C    add esp, 0x04
 006DEB0F    push eax
-006DEB10    call 0x00642E30
+006DEB10    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006DEB15    mov edx, dword ptr ss:[ebp-0x24]
 006DEB18    movups xmm0, xmmword ptr ds:[eax]
 006DEB1B    mov ecx, dword ptr ss:[ebp-0x2C]
@@ -290,13 +296,13 @@
 006DEB66    jz 0x006DEB6B
 006DEB68    dec dword ptr ds:[esi+0x1C]
 006DEB6B    mov ecx, dword ptr ss:[ebp-0x0C]
-006DEB6E    mov dword ptr fs:[0x00000000], ecx
+006DEB6E    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006DEB75    pop ecx
 006DEB76    pop edi
 006DEB77    pop esi
 006DEB78    mov ecx, dword ptr ss:[ebp-0x14]
 006DEB7B    xor ecx, ebp
-006DEB7D    call 0x0075927A
+006DEB7D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006DEB82    mov esp, ebp
 006DEB84    pop ebp
 006DEB85    mov esp, ebx
@@ -307,22 +313,22 @@
 006DEB90    push 0x82829C
 006DEB95    mov edx, 0x801800
 006DEB9A    mov ecx, 0x8282BC
-006DEB9F    call 0x0063B870
+006DEB9F    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DefAutoLock::DefAutoLock | String: assetPtr && assetPtr->assetType == assetType | Data: data_801800 | String: C:\x\ax2017\Engine\DefLoad.h ]
 006DEBA4    add esp, 0x0C
 006DEBA7    call 0x0063BC30
 006DEBAC    test al, al
-006DEBAE    jz 0x006DEBB1
+006DEBAE    jz 0x006DEBB1                                   ; => [ Call: sub_63bc30 ]
 006DEBB0    int3
-006DEBB1    call 0x0063BB00
-006DEBB6    push 0x881904
+006DEBB1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+006DEBB6    push 0x881904                                   ; => [ String: AnimationCalcFinalPosition ]
 006DEBBB    push 0x2B0
-006DEBC0    push 0x88162C
-006DEBC5    mov ecx, 0x881938
+006DEBC0    push 0x88162C                                   ; => [ String: C:\x\ax2017\Engine\Animation.cpp ]
+006DEBC5    mov ecx, 0x881938                               ; => [ String: pStructBone->parentBoneIndex < i ]
 006DEBCA    mov edx, 0x801800
-006DEBCF    call 0x0063B870
+006DEBCF    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006DEBD4    add esp, 0x0C
 006DEBD7    call 0x0063BC30
 006DEBDC    test al, al
-006DEBDE    jz 0x006DEBE1
+006DEBDE    jz 0x006DEBE1                                   ; => [ Call: sub_63bc30 ]
 006DEBE0    int3
-006DEBE1    call 0x0063BB00
+006DEBE1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e6b50
+// 起始地址: 0x6e6b50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E6B50    push ebp
 006E6B51    mov ebp, esp
 006E6B53    sub esp, 0x10
@@ -26,9 +32,9 @@
 006E6B85    mov esp, ebp
 006E6B87    pop ebp
 006E6B88    ret
-006E6B89    push 0x882430
+006E6B89    push 0x882430                                   ; => [ String: FlanimGetUncompressedParamVec2 ]
 006E6B8E    push 0x32B
-006E6B93    mov ecx, 0x8823E4
+006E6B93    mov ecx, 0x8823E4                               ; => [ String: frameIndex >= 0 && frameIndex < numFrames ]
 006E6B98    jmp 0x006E6C16
 006E6B9A    cmp eax, 0x03
 006E6B9D    jnz 0x006E6C07
@@ -42,9 +48,9 @@
 006E6BB3    lea esi, ds:[ebx+edi*8]
 006E6BB6    test edi, edi
 006E6BB8    jnle 0x006E6BCB
-006E6BBA    push 0x882450
+006E6BBA    push 0x882450                                   ; => [ String: FlanimGetUncompressedConstantVec2 ]
 006E6BBF    push 0x319
-006E6BC4    mov ecx, 0x8823B0
+006E6BC4    mov ecx, 0x8823B0                               ; => [ String: numValues > 0 ]
 006E6BC9    jmp 0x006E6C16
 006E6BCB    mov ecx, 0x01
 006E6BD0    cmp edi, ecx
@@ -68,15 +74,15 @@
 006E6C03    mov esp, ebp
 006E6C05    pop ebp
 006E6C06    ret
-006E6C07    push 0x882430
+006E6C07    push 0x882430                                   ; => [ String: FlanimGetUncompressedParamVec2 ]
 006E6C0C    push 0x335
-006E6C11    mov ecx, 0x801AA4
+006E6C11    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006E6C16    push 0x882314
 006E6C1B    mov edx, 0x801800
-006E6C20    call 0x0063B870
+006E6C20    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Flanim.cpp ]
 006E6C25    add esp, 0x0C
 006E6C28    call 0x0063BC30
 006E6C2D    test al, al
-006E6C2F    jz 0x006E6C32
+006E6C2F    jz 0x006E6C32                                   ; => [ Call: sub_63bc30 ]
 006E6C31    int3
-006E6C32    call 0x0063BB00
+006E6C32    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

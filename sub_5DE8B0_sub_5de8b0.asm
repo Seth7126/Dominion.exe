@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_5de8b0
+// 起始地址: 0x5de8b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DE8B0    imul edx, dword ptr ds:[0x00B809E4], 0x1C30
-005DE8BA    mov eax, dword ptr ds:[0x00B809E0]
-005DE8BF    add edx, eax
+005DE8BA    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+005DE8BF    add edx, eax                                    ; => [ Data: data_b809e4 ]
 005DE8C1    cmp eax, edx
 005DE8C3    jnb 0x005DE92D
 005DE8C5    nop word ptr ds:[eax+eax*1], ax
@@ -32,5 +38,5 @@
 005DE927    ret
 005DE928    cmp eax, 0xFFFFFFFF
 005DE92B    jnz 0x005DE8F0
-005DE92D    xor eax, eax
+005DE92D    xor eax, eax                                    ; => [ Call: nullptr ]
 005DE92F    ret

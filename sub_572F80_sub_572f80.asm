@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_572f80
+// 起始地址: 0x572f80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00572F80    push ebp
 00572F81    mov ebp, esp
 00572F83    and esp, 0xFFFFFFF8
@@ -8,18 +14,18 @@
 00572F8F    push edi
 00572F90    mov edi, dword ptr ds:[eax]
 00572F92    mov ebx, ecx
-00572F94    add edi, 0x10
+00572F94    add edi, 0x10                                   ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 00572F9A    mov dword ptr ss:[esp+0x0C], edx
 00572F9E    cmp dword ptr ds:[edi+0xF000], 0x200
 00572FA8    jl 0x00572FAF
-00572FAA    call 0x00591930
+00572FAA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572FAF    mov ecx, dword ptr ds:[edi+0xF000]
 00572FB5    mov eax, ecx
 00572FB7    shl eax, 0x04
 00572FBA    sub eax, ecx
 00572FBC    test ecx, ecx
 00572FBE    jnz 0x00572FC7
-00572FC0    xor edx, edx
+00572FC0    xor edx, edx                                    ; => [ Call: nullptr ]
 00572FC2    shl eax, 0x03
 00572FC5    jmp 0x00572FCF
 00572FC7    shl eax, 0x03

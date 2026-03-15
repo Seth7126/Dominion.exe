@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d7070
+// 起始地址: 0x6d7070
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D7070    push ebp
 006D7071    mov ebp, esp
 006D7073    sub esp, 0x38
@@ -50,8 +56,8 @@
 006D70E6    xor eax, eax
 006D70E8    mov dword ptr ss:[ebp-0x28], eax
 006D70EB    nop dword ptr ds:[eax+eax*1], eax
-006D70F0    xorps xmm2, xmm2
-006D70F3    xorps xmm3, xmm3
+006D70F0    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+006D70F3    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 006D70F6    movss dword ptr ss:[ebp-0x24], xmm2
 006D70FB    cmp eax, 0x01
 006D70FE    jnz 0x006D7124
@@ -64,7 +70,7 @@
 006D7112    test ecx, ecx
 006D7114    jz 0x006D743C
 006D711A    movss xmm2, dword ptr ss:[ebp-0x24]
-006D711F    xorps xmm3, xmm3
+006D711F    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 006D7122    jmp 0x006D7127
 006D7124    mov ecx, dword ptr ss:[ebp-0x0C]
 006D7127    mov eax, dword ptr ss:[ebp-0x2C]
@@ -171,7 +177,7 @@
 006D72B1    addss xmm0, xmm2
 006D72B5    mulss xmm0, dword ptr ds:[0x00890D84]
 006D72BD    movss dword ptr ss:[esp], xmm0
-006D72C2    call 0x006D6A40
+006D72C2    call 0x006D6A40                                 ; => [ Call: sub_6d6a40 ]
 006D72C7    movss xmm0, dword ptr ss:[ebp-0x14]
 006D72CC    lea edx, ss:[ebp-0x04]
 006D72CF    movss xmm2, dword ptr ss:[ebp-0x1C]
@@ -195,7 +201,7 @@
 006D731F    movss xmm2, dword ptr ss:[ebp-0x38]
 006D7324    mulss xmm1, dword ptr ds:[0x00890D84]
 006D732C    movss dword ptr ss:[esp], xmm1
-006D7331    call 0x006D6A40
+006D7331    call 0x006D6A40                                 ; => [ Call: sub_6d6a40 ]
 006D7336    mov esi, dword ptr ss:[ebp-0x04]
 006D7339    add esp, 0x18
 006D733C    mov ecx, dword ptr ss:[ebp-0x0C]
@@ -240,7 +246,7 @@
 006D73D3    movd xmm0, eax
 006D73D7    cvtdq2ps xmm0, xmm0
 006D73DA    movss dword ptr ss:[esp], xmm0
-006D73DF    call 0x006D6BF0
+006D73DF    call 0x006D6BF0                                 ; => [ Call: sub_6d6bf0 ]
 006D73E4    mov esi, dword ptr ss:[ebp-0x04]
 006D73E7    add esp, 0x20
 006D73EA    mov ecx, dword ptr ss:[ebp-0x0C]
@@ -270,7 +276,7 @@
 006D7437    jmp 0x006D70F0
 006D743C    mov esi, dword ptr ds:[0x00775528]
 006D7442    push 0x00
-006D7444    call esi
+006D7444    call esi                                        ; => [ Call: nullptr ]
 006D7446    add esp, 0x04
 006D7449    push dword ptr ds:[ebx]
 006D744B    call esi

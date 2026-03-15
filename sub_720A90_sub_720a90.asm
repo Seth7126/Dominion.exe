@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_720a90
+// 起始地址: 0x720a90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00720A90    push ebx
 00720A91    mov ebx, esp
 00720A93    sub esp, 0x08
@@ -28,7 +34,7 @@
 00720AD3    add ecx, edi
 00720AD5    push eax
 00720AD6    push ecx
-00720AD7    call 0x00761FC4
+00720AD7    call 0x00761FC4                                 ; => [ Call: memset ]
 00720ADC    mov eax, dword ptr ss:[ebp-0x10]
 00720ADF    add esp, 0x0C
 00720AE2    mov edx, dword ptr ss:[ebp-0x04]
@@ -102,7 +108,7 @@
 00720BA0    push 0xFF
 00720BA5    push eax
 00720BA6    mov dword ptr ds:[eax+esi*4+0x604], 0xFFFFFFFF
-00720BB1    call 0x00761FC4
+00720BB1    call 0x00761FC4                                 ; => [ Call: memset ]
 00720BB6    xor eax, eax
 00720BB8    add esp, 0x0C
 00720BBB    mov dword ptr ss:[ebp-0x08], eax
@@ -135,7 +141,7 @@
 00720C19    dec eax
 00720C1A    or eax, 0xFFFFFFF0
 00720C1D    inc eax
-00720C1E    andps xmm0, xmmword ptr ds:[0x00891990]
+00720C1E    andps xmm0, xmmword ptr ds:[0x00891990]         ; => [ Data: data_891990 ]
 00720C25    mov dword ptr ss:[ebp-0x0C], esi
 00720C28    sub dword ptr ss:[ebp-0x0C], eax
 00720C2B    mov eax, dword ptr ss:[ebp-0x14]
@@ -163,7 +169,7 @@
 00720C69    add eax, ecx
 00720C6B    add eax, edx
 00720C6D    push eax
-00720C6E    call 0x00761FC4
+00720C6E    call 0x00761FC4                                 ; => [ Call: memset ]
 00720C73    mov edx, dword ptr ss:[ebp-0x04]
 00720C76    add esp, 0x0C
 00720C79    mov eax, dword ptr ss:[ebp-0x08]

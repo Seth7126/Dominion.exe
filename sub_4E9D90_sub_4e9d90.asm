@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e9d90
+// 起始地址: 0x4e9d90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E9D90    push edi
 004E9D91    mov edi, ecx
 004E9D93    cmp dword ptr ds:[edi], 0x00
@@ -14,7 +20,7 @@
 004E9DB0    mov ecx, esi
 004E9DB2    mov edx, 0x10
 004E9DB7    mov esi, dword ptr ds:[esi+0x0C]
-004E9DBA    call 0x0064C080
+004E9DBA    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004E9DBF    test esi, esi
 004E9DC1    jnz 0x004E9DB0
 004E9DC3    mov eax, dword ptr ds:[edi]
@@ -28,7 +34,7 @@
 004E9DDD    pop esi
 004E9DDE    pop ebx
 004E9DDF    mov dword ptr ds:[edi+0x08], 0x00
-004E9DE6    call 0x0064C080
+004E9DE6    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004E9DEB    mov dword ptr ds:[edi], 0x00
 004E9DF1    pop edi
 004E9DF2    ret

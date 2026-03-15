@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_64bfd0
+// 起始地址: 0x64bfd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064BFD0    push esi
-0064BFD1    mov esi, dword ptr ds:[0x00CF65BC]
+0064BFD1    mov esi, dword ptr ds:[0x00CF65BC]              ; => [ Data: data_cf65bc ]
 0064BFD7    push edi
 0064BFD8    mov edi, ecx
 0064BFDA    test esi, esi
 0064BFDC    jnz 0x0064BFE9
-0064BFDE    call 0x0064BEF0
-0064BFE3    mov esi, dword ptr ds:[0x00CF65BC]
+0064BFDE    call 0x0064BEF0                                 ; => [ Call: sub_64bef0 ]
+0064BFE3    mov esi, dword ptr ds:[0x00CF65BC]              ; => [ Data: data_cf65bc ]
 0064BFE9    xor eax, eax
 0064BFEB    nop dword ptr ds:[eax+eax*1], eax
 0064BFF0    lea ecx, ds:[eax+0x04]

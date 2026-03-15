@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_640ba0
+// 起始地址: 0x640ba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00640BA0    push ebp
 00640BA1    mov ebp, esp
 00640BA3    sub esp, 0x08
@@ -7,7 +13,7 @@
 00640BAB    mov eax, ecx
 00640BAD    push edi
 00640BAE    mov dword ptr ss:[ebp-0x04], eax
-00640BB1    xor edx, edx
+00640BB1    xor edx, edx                                    ; => [ Call: nullptr ]
 00640BB3    mov edi, dword ptr ds:[esi+0x14]
 00640BB6    mov ecx, edi
 00640BB8    mov ebx, dword ptr ds:[esi+0x18]
@@ -40,7 +46,7 @@
 00640BFA    jmp 0x00640BFF
 00640BFC    mov dword ptr ds:[edx+0x10], eax
 00640BFF    mov edx, 0x14
-00640C04    call 0x0064C080
+00640C04    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00640C09    mov eax, dword ptr ss:[ebp-0x04]
 00640C0C    dec dword ptr ds:[eax+0x40]
 00640C0F    mov dword ptr ds:[esi+0x20], 0x00

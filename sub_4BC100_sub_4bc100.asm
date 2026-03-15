@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4bc100
+// 起始地址: 0x4bc100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BC101    mov ebx, ecx
 004BC103    mov ecx, dword ptr ds:[0x00CC8DC8]
 004BC109    push esi
 004BC10A    push edi
 004BC10B    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-004BC111    call 0x004D8F30
+004BC111    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004BC116    mov esi, dword ptr ds:[ebx+0x11A0]
 004BC11C    xor edx, edx
 004BC11E    mov edi, eax

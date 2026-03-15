@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6636d0
+// 起始地址: 0x6636d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006636D0    push ebp
 006636D1    mov ebp, esp
 006636D3    sub esp, 0x20
@@ -13,11 +19,11 @@
 006636ED    lahf
 006636EE    test ah, 0x44
 006636F1    jp 0x0066371F
-006636F3    xorps xmm1, xmm1
+006636F3    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006636F6    movd xmm0, edi
 006636FA    cvtdq2ps xmm0, xmm0
 006636FD    mulss xmm0, xmm1
-00663701    call 0x004D5CB0
+00663701    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 00663706    xorps xmm1, xmm1
 00663709    comiss xmm1, xmm0
 0066370C    jbe 0x0066382C
@@ -34,7 +40,7 @@
 00663741    cvtss2sd xmm0, xmm2
 00663745    movsd qword ptr ss:[ebp-0x14], xmm0
 0066374A    fld qword ptr ss:[ebp-0x14]
-0066374D    call 0x0076236E
+0066374D    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 00663752    movss xmm2, dword ptr ds:[0x00890E18]
 0066375A    fstp qword ptr ss:[ebp-0x14]
 0066375D    movsd xmm1, qword ptr ss:[ebp-0x14]
@@ -50,7 +56,7 @@
 00663785    cvtss2sd xmm0, xmm2
 00663789    movsd qword ptr ss:[ebp-0x14], xmm0
 0066378E    fld qword ptr ss:[ebp-0x14]
-00663791    call 0x0076236E
+00663791    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 00663796    fstp qword ptr ss:[ebp-0x14]
 00663799    movsd xmm1, qword ptr ss:[ebp-0x14]
 0066379E    cvtpd2ps xmm1, xmm1
@@ -71,21 +77,21 @@
 006637D4    movss xmm2, dword ptr ds:[0x00890E18]
 006637DC    jmp 0x006637F6
 006637DE    movss xmm2, dword ptr ds:[0x00890E18]
-006637E6    xorps xmm1, xmm1
+006637E6    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006637E9    jmp 0x006637F6
 006637EB    movss xmm2, dword ptr ds:[0x00890E18]
 006637F3    movaps xmm1, xmm2
 006637F6    comiss xmm1, xmm0
 006637F9    jnb 0x0066380F
-006637FB    push 0x8753E4
+006637FB    push 0x8753E4                                   ; => [ String: FlipAnimUVs ]
 00663800    push 0x30B9
-00663805    mov ecx, 0x87540C
+00663805    mov ecx, 0x87540C                               ; => [ String: t >= 0 ]
 0066380A    jmp 0x0066393B
 0066380F    comiss xmm2, xmm1
 00663812    jnb 0x006636F6
-00663818    push 0x8753E4
+00663818    push 0x8753E4                                   ; => [ String: FlipAnimUVs ]
 0066381D    push 0x30BA
-00663822    mov ecx, 0x875400
+00663822    mov ecx, 0x875400                               ; => [ String: t <= 1.0 ]
 00663827    jmp 0x0066393B
 0066382C    addss xmm0, dword ptr ds:[0x00890D84]
 00663834    cvttss2si eax, xmm0
@@ -94,30 +100,30 @@
 0066383D    cmovnz esi, eax
 00663840    test esi, esi
 00663842    jns 0x00663858
-00663844    push 0x8753E4
+00663844    push 0x8753E4                                   ; => [ String: FlipAnimUVs ]
 00663849    push 0x30BE
-0066384E    mov ecx, 0x814428
+0066384E    mov ecx, 0x814428                               ; => [ String: idx >= 0 ]
 00663853    jmp 0x0066393B
 00663858    cmp esi, edi
 0066385A    jl 0x00663870
-0066385C    push 0x8753E4
+0066385C    push 0x8753E4                                   ; => [ String: FlipAnimUVs ]
 00663861    push 0x30BF
-00663866    mov ecx, 0x875414
+00663866    mov ecx, 0x875414                               ; => [ String: idx < totalFrames ]
 0066386B    jmp 0x0066393B
 00663870    test ebx, ebx
 00663872    jnle 0x0066388D
-00663874    push 0x876EE4
+00663874    push 0x876EE4                                   ; => [ String: SpriteUVFromStrip ]
 00663879    push 0x574
-0066387E    push 0x876CB0
-00663883    mov ecx, 0x876ED8
+0066387E    push 0x876CB0                                   ; => [ String: C:\x\ax2017\Engine\Sprite.cpp ]
+00663883    mov ecx, 0x876ED8                               ; => [ String: numCols > 0 ]
 00663888    jmp 0x00663940
 0066388D    mov edi, dword ptr ss:[ebp+0x10]
 00663890    test edi, edi
 00663892    jnle 0x006638AD
-00663894    push 0x876EE4
+00663894    push 0x876EE4                                   ; => [ String: SpriteUVFromStrip ]
 00663899    push 0x575
-0066389E    push 0x876CB0
-006638A3    mov ecx, 0x876EF8
+0066389E    push 0x876CB0                                   ; => [ String: C:\x\ax2017\Engine\Sprite.cpp ]
+006638A3    mov ecx, 0x876EF8                               ; => [ String: numRows > 0 ]
 006638A8    jmp 0x00663940
 006638AD    mov eax, esi
 006638AF    movd xmm2, ebx
@@ -158,18 +164,18 @@
 0066391C    mov esp, ebp
 0066391E    pop ebp
 0066391F    ret
-00663920    push 0x8753F0
+00663920    push 0x8753F0                                   ; => [ String: CalcFlipAnimT ]
 00663925    push 0x30AC
 0066392A    jmp 0x00663936
-0066392C    push 0x8753F0
+0066392C    push 0x8753F0                                   ; => [ String: CalcFlipAnimT ]
 00663931    push 0x30AE
-00663936    mov ecx, 0x801AA4
-0066393B    push 0x8739B4
+00663936    mov ecx, 0x801AA4                               ; => [ String: Halt | String: Halt ]
+0066393B    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp | String: C:\x\ax2017\Engine\UI2.cpp | String: C:\x\ax2017\Engine\UI2.cpp | String: C:\x\ax2017\Engine\UI2.cpp | String: C:\x\ax2017\Engine\UI2.cpp | String: C:\x\ax2017\Engine\UI2.cpp ]
 00663940    mov edx, 0x801800
-00663945    call 0x0063B870
+00663945    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0066394A    add esp, 0x0C
 0066394D    call 0x0063BC30
 00663952    test al, al
-00663954    jz 0x00663957
+00663954    jz 0x00663957                                   ; => [ Call: sub_63bc30 ]
 00663956    int3
-00663957    call 0x0063BB00
+00663957    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

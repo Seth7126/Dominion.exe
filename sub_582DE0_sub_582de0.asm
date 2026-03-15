@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_582de0
+// 起始地址: 0x582de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00582DE0    push ebp
 00582DE1    mov ebp, esp
 00582DE3    sub esp, 0x08
@@ -10,7 +16,7 @@
 00582DF1    mov dword ptr ss:[ebp-0x04], edx
 00582DF4    cmp edi, 0x320
 00582DFA    jb 0x00582E04
-00582DFC    call 0x00591930
+00582DFC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00582E01    mov edx, dword ptr ss:[ebp-0x04]
 00582E04    imul eax, edi, 0x64
 00582E07    mov ecx, dword ptr ds:[eax+ebx*1+0x1A50]
@@ -62,10 +68,10 @@
 00582E86    push 0x81F4B8
 00582E8B    mov edx, 0x801800
 00582E90    mov ecx, 0x81F8F8
-00582E95    call 0x0063B870
+00582E95    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: who != PLAYER_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: GetPileHead ]
 00582E9A    add esp, 0x0C
 00582E9D    call 0x0063BC30
 00582EA2    test al, al
-00582EA4    jz 0x00582EA7
+00582EA4    jz 0x00582EA7                                   ; => [ Call: sub_63bc30 ]
 00582EA6    int3
-00582EA7    call 0x0063BB00
+00582EA7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

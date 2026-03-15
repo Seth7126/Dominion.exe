@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_698a30
+// 起始地址: 0x698a30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00698A30    push ebp
 00698A31    mov ebp, esp
 00698A33    and esp, 0xFFFFFFF8
@@ -10,22 +16,22 @@
 00698A40    jz 0x00698BDB
 00698A46    movzx eax, dx
 00698A49    cmp eax, dword ptr ds:[0x00CAF264]
-00698A4F    jnb 0x00698BF5
+00698A4F    jnb 0x00698BF5                                  ; => [ Data: data_caf264 ]
 00698A55    imul edi, eax, 0x438
-00698A5B    add edi, dword ptr ds:[0x00CAF260]
+00698A5B    add edi, dword ptr ds:[0x00CAF260]              ; => [ Data: data_caf260 ]
 00698A61    mov dword ptr ss:[esp+0x18], edi
 00698A65    cmp dword ptr ds:[edi+0x434], edx
-00698A6B    jnz 0x00698BF5
+00698A6B    jnz 0x00698BF5                                  ; => [ Data: data_caf264 ]
 00698A71    mov ecx, dword ptr ds:[edi+0x04]
 00698A74    cmp dword ptr ds:[ecx+0x04], 0x1E
 00698A78    jz 0x00698A93
-00698A7A    push 0x8790A8
+00698A7A    push 0x8790A8                                   ; => [ String: UIDefGet ]
 00698A7F    push 0x127
-00698A84    push 0x878EA8
-00698A89    mov ecx, 0x8790C8
+00698A84    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+00698A89    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 00698A8E    jmp 0x00698C06
 00698A93    call 0x005AF880
-00698A98    mov edx, eax
+00698A98    mov edx, eax                                    ; => [ Call: sub_5af880 ]
 00698A9A    xor eax, eax
 00698A9C    mov dword ptr ss:[esp+0x1C], edx
 00698AA0    mov dword ptr ss:[esp+0x10], eax
@@ -38,7 +44,7 @@
 00698AB7    add esi, ecx
 00698AB9    mov ecx, edi
 00698ABB    push dword ptr ds:[esi+0x08]
-00698ABE    call 0x00698630
+00698ABE    call 0x00698630                                 ; => [ Call: sub_698630 ]
 00698AC3    mov ecx, dword ptr ds:[esi+0x04]
 00698AC6    add esp, 0x04
 00698AC9    mov ebx, eax
@@ -48,7 +54,7 @@
 00698AD7    jz 0x00698B19
 00698AD9    sub ecx, 0x01
 00698ADC    jnz 0x00698B74
-00698AE2    mov eax, dword ptr ds:[0x0147ABE8]
+00698AE2    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 00698AE7    test eax, eax
 00698AE9    jz 0x00698BE2
 00698AEF    mov edx, dword ptr ds:[eax+0x10]
@@ -64,9 +70,9 @@
 00698B0C    jnz 0x00698B74
 00698B0E    test ecx, ecx
 00698B10    jz 0x00698B74
-00698B12    call 0x006B8440
+00698B12    call 0x006B8440                                 ; => [ Call: sub_6b8440 ]
 00698B17    jmp 0x00698B74
-00698B19    mov eax, dword ptr ds:[0x0147ABE8]
+00698B19    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 00698B1E    test eax, eax
 00698B20    jz 0x00698BE2
 00698B26    mov edx, dword ptr ds:[eax+0x0C]
@@ -82,7 +88,7 @@
 00698B49    jnz 0x00698B74
 00698B4B    test ecx, ecx
 00698B4D    jz 0x00698B74
-00698B4F    call 0x006E5C50
+00698B4F    call 0x006E5C50                                 ; => [ Call: sub_6e5c50 ]
 00698B54    jmp 0x00698B74
 00698B56    lea esi, ds:[ebx+0xA4]
 00698B5C    mov edi, 0x1E
@@ -93,46 +99,46 @@
 00698B6E    jnz 0x00698B61
 00698B70    mov edi, dword ptr ss:[esp+0x18]
 00698B74    mov ecx, ebx
-00698B76    call 0x00697ED0
+00698B76    call 0x00697ED0                                 ; => [ Call: sub_697ed0 ]
 00698B7B    movzx eax, word ptr ds:[ebx+0x1D4]
-00698B82    mov ecx, dword ptr ds:[0x00CAF250]
+00698B82    mov ecx, dword ptr ds:[0x00CAF250]              ; => [ Data: data_caf250 ]
 00698B88    mov edx, dword ptr ss:[esp+0x1C]
-00698B8C    mov dword ptr ds:[0x00CAF250], eax
+00698B8C    mov dword ptr ds:[0x00CAF250], eax              ; => [ Data: data_caf250 ]
 00698B91    mov eax, dword ptr ss:[esp+0x10]
 00698B95    mov dword ptr ds:[ebx+0x1D4], ecx
 00698B9B    inc eax
 00698B9C    mov ecx, dword ptr ss:[esp+0x14]
-00698BA0    dec dword ptr ds:[0x00CAF254]
+00698BA0    dec dword ptr ds:[0x00CAF254]                   ; => [ Data: data_caf254 ]
 00698BA6    add ecx, 0x178
 00698BAC    mov dword ptr ss:[esp+0x10], eax
 00698BB0    mov dword ptr ss:[esp+0x14], ecx
 00698BB4    cmp eax, dword ptr ds:[edx+0x08]
 00698BB7    jl 0x00698AB3
 00698BBD    movzx eax, word ptr ds:[edi+0x434]
-00698BC4    mov ecx, dword ptr ds:[0x00CAF26C]
-00698BCA    mov dword ptr ds:[0x00CAF26C], eax
+00698BC4    mov ecx, dword ptr ds:[0x00CAF26C]              ; => [ Data: data_caf26c ]
+00698BCA    mov dword ptr ds:[0x00CAF26C], eax              ; => [ Data: data_caf26c ]
 00698BCF    mov dword ptr ds:[edi+0x434], ecx
-00698BD5    dec dword ptr ds:[0x00CAF270]
+00698BD5    dec dword ptr ds:[0x00CAF270]                   ; => [ Data: data_caf270 ]
 00698BDB    pop edi
 00698BDC    pop esi
 00698BDD    pop ebx
 00698BDE    mov esp, ebp
 00698BE0    pop ebp
 00698BE1    ret
-00698BE2    push 0x871F88
+00698BE2    push 0x871F88                                   ; => [ String: GetGameData ]
 00698BE7    push 0x45
-00698BE9    push 0x871FA0
-00698BEE    mov ecx, 0x871F94
+00698BE9    push 0x871FA0                                   ; => [ String: C:\x\ax2017\Engine\Game.h ]
+00698BEE    mov ecx, 0x871F94                               ; => [ String: gpGameData ]
 00698BF3    jmp 0x00698C06
-00698BF5    push 0x8793D8
+00698BF5    push 0x8793D8                                   ; => [ String: DataArray<struct UIState>::DataArrayGet ]
 00698BFA    push 0x6D
-00698BFC    push 0x80193C
-00698C01    mov ecx, 0x802748
+00698BFC    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00698C01    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00698C06    mov edx, 0x801800
-00698C0B    call 0x0063B870
+00698C0B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00698C10    add esp, 0x0C
 00698C13    call 0x0063BC30
 00698C18    test al, al
-00698C1A    jz 0x00698C1D
+00698C1A    jz 0x00698C1D                                   ; => [ Call: sub_63bc30 ]
 00698C1C    int3
-00698C1D    call 0x0063BB00
+00698C1D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d1980
+// 起始地址: 0x6d1980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D1980    push ebp
 006D1981    mov ebp, esp
 006D1983    sub esp, 0x24
@@ -10,7 +16,7 @@
 006D1998    mov dword ptr ss:[ebp-0x0C], 0x00
 006D199F    lea ecx, ss:[ebp+0x18]
 006D19A2    mov dword ptr ss:[ebp-0x08], 0x00
-006D19A9    call 0x006D1670
+006D19A9    call 0x006D1670                                 ; => [ Call: sub_6d1670 ]
 006D19AE    add esp, 0x04
 006D19B1    xor esi, esi
 006D19B3    movq xmm0, qword ptr ds:[eax]
@@ -21,7 +27,7 @@
 006D19C5    jnl 0x006D19DE
 006D19C7    lea ecx, ss:[ebp-0x18]
 006D19CA    call 0x006D14D0
-006D19CF    mov dword ptr ss:[ebp+esi*4-0x0C], eax
+006D19CF    mov dword ptr ss:[ebp+esi*4-0x0C], eax          ; => [ Call: sub_6d14d0 ]
 006D19D3    inc esi
 006D19D4    cmp esi, 0x02
 006D19D7    jnl 0x006D19DE
@@ -59,7 +65,7 @@
 006D1A34    push eax
 006D1A35    mov edx, 0x13
 006D1A3A    movq qword ptr ss:[ebp-0x18], xmm0
-006D1A3F    call 0x006D1670
+006D1A3F    call 0x006D1670                                 ; => [ Call: sub_6d1670 ]
 006D1A44    add esp, 0x04
 006D1A47    xor esi, esi
 006D1A49    movq xmm0, qword ptr ds:[eax]
@@ -69,7 +75,7 @@
 006D1A58    cmp dword ptr ss:[ebp-0x14], eax
 006D1A5B    jnl 0x006D1A74
 006D1A5D    lea ecx, ss:[ebp-0x18]
-006D1A60    call 0x006D14D0
+006D1A60    call 0x006D14D0                                 ; => [ Call: sub_6d14d0 ]
 006D1A65    mov dword ptr ss:[ebp+esi*4-0x04], eax
 006D1A69    inc esi
 006D1A6A    cmp esi, 0x01
@@ -99,7 +105,7 @@
 006D1AA9    lea eax, ss:[ebp-0x24]
 006D1AAC    push eax
 006D1AAD    lea ecx, ss:[ebp+0x0C]
-006D1AB0    call 0x006D13E0
+006D1AB0    call 0x006D13E0                                 ; => [ Call: sub_6d13e0 ]
 006D1AB5    mov edx, dword ptr ss:[ebp+0x08]
 006D1AB8    add esp, 0x04
 006D1ABB    movq xmm0, qword ptr ds:[eax]

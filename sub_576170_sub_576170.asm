@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_576170
+// 起始地址: 0x576170
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00576170    push ebp
 00576171    mov ebp, esp
 00576173    sub esp, 0xCA8
-00576179    mov eax, dword ptr ds:[0x008C4040]
+00576179    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0057617E    xor eax, ebp
 00576180    mov dword ptr ss:[ebp-0x04], eax
 00576183    push ebx
 00576184    push esi
 00576185    mov esi, dword ptr ss:[ebp+0x08]
-00576188    xor eax, eax
+00576188    xor eax, eax                                    ; => [ Call: nullptr ]
 0057618A    push edi
 0057618B    mov edi, ecx
 0057618D    mov dword ptr ss:[ebp-0xC9C], edx
-00576193    mov dword ptr ss:[ebp-0xC94], eax
+00576193    mov dword ptr ss:[ebp-0xC94], eax               ; => [ Call: nullptr ]
 00576199    mov dword ptr ds:[esi+0x400], 0x00
 005761A3    cmp dword ptr ds:[edi+0x19B8], eax
 005761A9    jle 0x0057627E
@@ -36,9 +42,9 @@
 005761F8    jz 0x00576214
 005761FA    cmp dword ptr ds:[ebx-0x3C], 0xFFFFFFFF
 005761FE    jnz 0x00576265
-00576200    push 0x81FB24
+00576200    push 0x81FB24                                   ; => [ String: CollectRegisteredOngoing ]
 00576205    push 0xDEE
-0057620A    mov ecx, 0x81FB40
+0057620A    mov ecx, 0x81FB40                               ; => [ String: ability.owner != PLAYER_NONE ]
 0057620F    jmp 0x00576519
 00576214    test cl, 0x04
 00576217    jz 0x0057622A
@@ -69,8 +75,8 @@
 00576278    jl 0x005761B5
 0057627E    cmp edx, 0xFFFFFFFF
 00576281    jz 0x005764D0
-00576287    xor eax, eax
-00576289    mov dword ptr ss:[ebp-0xC94], eax
+00576287    xor eax, eax                                    ; => [ Call: nullptr ]
+00576289    mov dword ptr ss:[ebp-0xC94], eax               ; => [ Call: nullptr ]
 0057628F    cmp dword ptr ds:[edi+0xD38], eax
 00576295    jle 0x00576378
 0057629B    lea ecx, ds:[edi+0x1746C]
@@ -85,7 +91,7 @@
 005762C3    mov ecx, edi
 005762C5    push ebx
 005762C6    push eax
-005762C7    call 0x00575F10
+005762C7    call 0x00575F10                                 ; => [ Call: sub_575f10 ]
 005762CC    add esp, 0x0C
 005762CF    cmp eax, 0xFFFFFFFF
 005762D2    jz 0x005762E3
@@ -107,7 +113,7 @@
 00576313    mov ecx, edi
 00576315    push ebx
 00576316    push eax
-00576317    call 0x00575F10
+00576317    call 0x00575F10                                 ; => [ Call: sub_575f10 ]
 0057631C    add esp, 0x0C
 0057631F    cmp eax, 0xFFFFFFFF
 00576322    jz 0x00576333
@@ -160,7 +166,7 @@
 005763E3    mov dword ptr ss:[ebp-0xC98], eax
 005763E9    cmp eax, 0x320
 005763EE    jb 0x005763FB
-005763F0    call 0x00591930
+005763F0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005763F5    mov eax, dword ptr ss:[ebp-0xC98]
 005763FB    mov ecx, dword ptr ss:[ebp-0xC9C]
 00576401    imul eax, eax, 0x64
@@ -175,12 +181,12 @@
 0057642B    mov edx, ecx
 0057642D    mov ecx, edi
 0057642F    push eax
-00576430    call 0x00574A80
+00576430    call 0x00574A80                                 ; => [ Call: sub_574a80 ]
 00576435    add esp, 0x08
 00576438    test al, al
 0057643A    jz 0x005764B5
 0057643C    cmp dword ptr ss:[ebp-0xCA0], 0x00
-00576443    mov dword ptr ss:[ebp-0xC94], 0x00
+00576443    mov dword ptr ss:[ebp-0xC94], 0x00              ; => [ Call: nullptr ]
 0057644D    jle 0x005764B5
 0057644F    nop
 00576450    test ebx, ebx
@@ -190,7 +196,7 @@
 00576461    mov ecx, edi
 00576463    push ebx
 00576464    push dword ptr ss:[ebp-0xC98]
-0057646A    call 0x00575F10
+0057646A    call 0x00575F10                                 ; => [ Call: sub_575f10 ]
 0057646F    add esp, 0x0C
 00576472    cmp eax, 0xFFFFFFFF
 00576475    jz 0x00576486
@@ -200,7 +206,7 @@
 00576486    movzx ebx, bx
 00576489    cmp ebx, 0x320
 0057648F    jb 0x00576496
-00576491    call 0x00591930
+00576491    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576496    imul eax, ebx, 0x64
 00576499    mov ebx, dword ptr ds:[eax+edi*1+0x1AA4]
 005764A0    mov eax, dword ptr ss:[ebp-0xC94]
@@ -219,28 +225,28 @@
 005764D6    pop esi
 005764D7    xor ecx, ebp
 005764D9    pop ebx
-005764DA    call 0x0075927A
+005764DA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005764DF    mov esp, ebp
 005764E1    pop ebp
 005764E2    ret
-005764E3    push 0x81F478
+005764E3    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 005764E8    push 0x14D
-005764ED    push 0x81E978
-005764F2    mov ecx, 0x81F490
+005764ED    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+005764F2    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 005764F7    jmp 0x0057651E
-005764F9    push 0x81F8D0
+005764F9    push 0x81F8D0                                   ; => [ String: GetPileHead ]
 005764FE    push 0x33E
-00576503    mov ecx, 0x81F8F8
+00576503    mov ecx, 0x81F8F8                               ; => [ String: who != PLAYER_NONE ]
 00576508    jmp 0x00576519
-0057650A    push 0x81FBA0
+0057650A    push 0x81FBA0                                   ; => [ String: CollectWhileOwnedOngoing ]
 0057650F    push 0xEB1
-00576514    mov ecx, 0x818878
-00576519    push 0x81F4B8
+00576514    mov ecx, 0x818878                               ; => [ String: card != CARDID_NULL ]
+00576519    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0057651E    mov edx, 0x801800
-00576523    call 0x0063B870
+00576523    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00576528    add esp, 0x0C
 0057652B    call 0x0063BC30
 00576530    test al, al
-00576532    jz 0x00576535
+00576532    jz 0x00576535                                   ; => [ Call: sub_63bc30 ]
 00576534    int3
-00576535    call 0x0063BB00
+00576535    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

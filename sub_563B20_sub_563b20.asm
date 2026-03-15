@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_563b20
+// 起始地址: 0x563b20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00563B20    push ebp
 00563B21    mov ebp, esp
 00563B23    sub esp, 0xCD4
-00563B29    mov eax, dword ptr ds:[0x008C4040]
+00563B29    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00563B2E    xor eax, ebp
 00563B30    mov dword ptr ss:[ebp-0x04], eax
 00563B33    push ebx
@@ -11,10 +17,10 @@
 00563B3D    push edi
 00563B3E    cmp dword ptr ds:[esi+0xC80], 0x00
 00563B45    jz 0x00563C26
-00563B4B    call 0x00563A80
+00563B4B    call 0x00563A80                                 ; => [ Call: sub_563a80 ]
 00563B50    test eax, eax
 00563B52    jnz 0x00563C28
-00563B58    call 0x00573400
+00563B58    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00563B5D    mov ecx, dword ptr ss:[ebp+0x0C]
 00563B60    lea edi, ss:[ebp-0xC90]
 00563B66    mov ebx, eax
@@ -41,7 +47,7 @@
 00563BB6    movups xmmword ptr ss:[ebp-0xCB0], xmm0
 00563BBD    mov dword ptr ss:[ebp-0xCB0], ecx
 00563BC3    mov ecx, 0x321
-00563BC8    rep movsd
+00563BC8    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00563BCA    push dword ptr ss:[ebp-0x10]
 00563BCD    mov ecx, dword ptr ds:[ebx+0x04]
 00563BD0    push eax
@@ -49,18 +55,18 @@
 00563BD3    push dword ptr ss:[ebp+0x08]
 00563BD6    mov dword ptr ss:[ebp-0xCAC], edx
 00563BDC    lea edx, ss:[ebp-0xC9C]
-00563BE2    call 0x005869D0
+00563BE2    call 0x005869D0                                 ; => [ Call: sub_5869d0 ]
 00563BE7    add esp, 0x2C
 00563BEA    cmp eax, 0x01
 00563BED    jle 0x00563C0B
-00563BEF    call 0x00591930
+00563BEF    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00563BF4    mov eax, dword ptr ss:[ebp-0xC90]
 00563BFA    pop edi
 00563BFB    pop esi
 00563BFC    pop ebx
 00563BFD    mov ecx, dword ptr ss:[ebp-0x04]
 00563C00    xor ecx, ebp
-00563C02    call 0x0075927A
+00563C02    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00563C07    mov esp, ebp
 00563C09    pop ebp
 00563C0A    ret
@@ -72,7 +78,7 @@
 00563C17    pop ebx
 00563C18    mov ecx, dword ptr ss:[ebp-0x04]
 00563C1B    xor ecx, ebp
-00563C1D    call 0x0075927A
+00563C1D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00563C22    mov esp, ebp
 00563C24    pop ebp
 00563C25    ret
@@ -82,7 +88,7 @@
 00563C2C    pop esi
 00563C2D    xor ecx, ebp
 00563C2F    pop ebx
-00563C30    call 0x0075927A
+00563C30    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00563C35    mov esp, ebp
 00563C37    pop ebp
 00563C38    ret

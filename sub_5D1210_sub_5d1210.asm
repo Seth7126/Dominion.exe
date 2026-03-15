@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_5d1210
+// 起始地址: 0x5d1210
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D1210    push ebp
 005D1211    mov ebp, esp
 005D1213    push ecx
 005D1214    push ebx
 005D1215    push esi
-005D1216    mov esi, dword ptr ds:[0x00B809E0]
+005D1216    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005D121C    xor eax, eax
 005D121E    push edi
 005D121F    imul edi, dword ptr ds:[0x00B809E4], 0x1C30
 005D1229    mov ebx, edx
 005D122B    mov dword ptr ss:[ebp-0x04], ecx
-005D122E    add edi, esi
+005D122E    add edi, esi                                    ; => [ Data: data_b809e4 ]
 005D1230    cmp esi, edi
 005D1232    jnb 0x005D12C2
 005D1238    nop dword ptr ds:[eax+eax*1], eax

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55be70
+// 起始地址: 0x55be70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055BE70    dword 83EC8B55
 0055BE74    in al, 0xF8
 0055BE76    sub esp, 0xC88
@@ -13,4 +19,4 @@
 0055BEA4    add esp, 0x10
 0055BEA7    mov esp, ebp
 0055BEA9    pop ebp
-0055BEAA    ret
+0055BEAA    ret                                             ; => [ Call: sub_4fa4e0 | Call: sub_4fa550 | Call: sub_56c680 ]

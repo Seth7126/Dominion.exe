@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a3dc0
+// 起始地址: 0x6a3dc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A3DC0    push ebp
 006A3DC1    mov ebp, esp
 006A3DC3    sub esp, 0x0C
@@ -7,7 +13,7 @@
 006A3DCB    mov ebx, edx
 006A3DCD    mov esi, ecx
 006A3DCF    mov eax, dword ptr ds:[eax]
-006A3DD1    mov edx, 0x801800
+006A3DD1    mov edx, 0x801800                               ; => [ Data: data_801800 ]
 006A3DD6    test eax, eax
 006A3DD8    push edi
 006A3DD9    cmovnz edx, eax
@@ -15,8 +21,8 @@
 006A3DDE    mov dword ptr ss:[ebp-0x08], edx
 006A3DE1    cmp dword ptr ds:[esi+0x08], edi
 006A3DE4    jle 0x006A3E1B
-006A3DE6    xor eax, eax
-006A3DE8    mov dword ptr ss:[ebp-0x04], eax
+006A3DE6    xor eax, eax                                    ; => [ Call: nullptr ]
+006A3DE8    mov dword ptr ss:[ebp-0x04], eax                ; => [ Call: nullptr ]
 006A3DEB    nop dword ptr ds:[eax+eax*1], eax
 006A3DF0    mov ecx, dword ptr ds:[esi+0x04]
 006A3DF3    add ecx, eax
@@ -48,15 +54,15 @@
 006A3E31    cmp edx, 0xFFFFFFFF
 006A3E34    jz 0x006A3E21
 006A3E36    mov ecx, esi
-006A3E38    call 0x006DD320
+006A3E38    call 0x006DD320                                 ; => [ Call: sub_6dd320 ]
 006A3E3D    mov edi, eax
 006A3E3F    mov eax, dword ptr ds:[edi+0x10]
 006A3E42    cmp eax, 0x05
 006A3E45    jnz 0x006A3E60
-006A3E47    push 0x87A938
+006A3E47    push 0x87A938                                   ; => [ String: DefParseReadTagValue ]
 006A3E4C    push 0x2BD
-006A3E51    push 0x87A6C8
-006A3E56    mov ecx, 0x801AA4
+006A3E51    push 0x87A6C8                                   ; => [ String: C:\x\ax2017\Engine\DefParseTree.cpp ]
+006A3E56    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006A3E5B    jmp 0x006A3FCD
 006A3E60    test eax, eax
 006A3E62    jle 0x006A3EDC
@@ -72,15 +78,15 @@
 006A3E81    push dword ptr ss:[ebp+0x0C]
 006A3E84    push dword ptr ds:[eax+ecx*4]
 006A3E87    lea ecx, ds:[ebx+0x08]
-006A3E8A    call 0x006A34E0
+006A3E8A    call 0x006A34E0                                 ; => [ Call: sub_6a34e0 ]
 006A3E8F    mov eax, dword ptr ds:[edi+0x0C]
 006A3E92    add esp, 0x08
 006A3E95    test eax, eax
 006A3E97    jnz 0x006A3EAF
-006A3E99    push 0x87943C
+006A3E99    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 006A3E9E    push 0x6D
-006A3EA0    push 0x879400
-006A3EA5    mov ecx, 0x87948C
+006A3EA0    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+006A3EA5    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 006A3EAA    jmp 0x006A3FCD
 006A3EAF    cmp eax, 0x01
 006A3EB2    jnz 0x006A3EC4
@@ -108,8 +114,8 @@
 006A3EE1    jz 0x006A3E99
 006A3EE3    call 0x00687730
 006A3EE8    mov ecx, edi
-006A3EEA    mov dword ptr ds:[ebx+0x08], eax
-006A3EED    call 0x0069C590
+006A3EEA    mov dword ptr ds:[ebx+0x08], eax                ; => [ Call: sub_687730 ]
+006A3EED    call 0x0069C590                                 ; => [ Call: sub_69c590 ]
 006A3EF2    mov ecx, dword ptr ds:[ebx]
 006A3EF4    test al, al
 006A3EF6    jz 0x006A3F28
@@ -122,7 +128,7 @@
 006A3F0E    push dword ptr ss:[ebp+0x0C]
 006A3F11    push dword ptr ds:[eax+ecx*4]
 006A3F14    mov ecx, dword ptr ds:[ebx+0x08]
-006A3F17    call 0x006A34E0
+006A3F17    call 0x006A34E0                                 ; => [ Call: sub_6a34e0 ]
 006A3F1C    add esp, 0x08
 006A3F1F    mov al, 0x01
 006A3F21    pop edi
@@ -142,10 +148,10 @@
 006A3F45    mov esi, dword ptr ds:[edi+0x04]
 006A3F48    test byte ptr ds:[esi+0x28], 0x40
 006A3F4C    jnz 0x006A3F64
-006A3F4E    push 0x87A938
+006A3F4E    push 0x87A938                                   ; => [ String: DefParseReadTagValue ]
 006A3F53    push 0x2E6
-006A3F58    push 0x87A6C8
-006A3F5D    mov ecx, 0x87A8F8
+006A3F58    push 0x87A6C8                                   ; => [ String: C:\x\ax2017\Engine\DefParseTree.cpp ]
+006A3F5D    mov ecx, 0x87A8F8                               ; => [ String: pDefMap->pDTMapFields[0].fieldFlags & DEF_FIELD_FLAG_INLINE_XML ]
 006A3F62    jmp 0x006A3FCD
 006A3F64    mov ecx, dword ptr ds:[ebx+0x08]
 006A3F67    mov edx, edi
@@ -154,13 +160,13 @@
 006A3F71    mov edx, dword ptr ds:[esi+0x0C]
 006A3F74    mov ecx, dword ptr ds:[ebx+0x08]
 006A3F77    push esi
-006A3F78    call 0x006A34E0
+006A3F78    call 0x006A34E0                                 ; => [ Call: sub_69ca80 | Call: sub_6a34e0 ]
 006A3F7D    mov eax, dword ptr ss:[ebp+0x0C]
 006A3F80    mov edx, edi
 006A3F82    mov ecx, dword ptr ds:[ebx+0x08]
 006A3F85    push 0x01
 006A3F87    push dword ptr ds:[eax+0x0C]
-006A3F8A    call 0x006A4770
+006A3F8A    call 0x006A4770                                 ; => [ Call: sub_6a4770 ]
 006A3F8F    add esp, 0x10
 006A3F92    mov al, 0x01
 006A3F94    pop edi
@@ -174,7 +180,7 @@
 006A3FA0    mov ecx, dword ptr ds:[ebx+0x08]
 006A3FA3    push 0x00
 006A3FA5    push dword ptr ds:[eax+0x0C]
-006A3FA8    call 0x006A4770
+006A3FA8    call 0x006A4770                                 ; => [ Call: sub_6a4770 ]
 006A3FAD    add esp, 0x08
 006A3FB0    pop edi
 006A3FB1    pop esi
@@ -183,15 +189,15 @@
 006A3FB5    mov esp, ebp
 006A3FB7    pop ebp
 006A3FB8    ret
-006A3FB9    push 0x88131C
+006A3FB9    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006A3FBE    push 0x8B
-006A3FC3    push 0x8812F8
-006A3FC8    mov ecx, 0x881344
+006A3FC3    push 0x8812F8                                   ; => [ String: C:\x\ax2017\Engine\AttribMap.cpp ]
+006A3FC8    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006A3FCD    mov edx, 0x801800
-006A3FD2    call 0x0063B870
+006A3FD2    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006A3FD7    add esp, 0x0C
 006A3FDA    call 0x0063BC30
 006A3FDF    test al, al
-006A3FE1    jz 0x006A3FE4
+006A3FE1    jz 0x006A3FE4                                   ; => [ Call: sub_63bc30 ]
 006A3FE3    int3
-006A3FE4    call 0x0063BB00
+006A3FE4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

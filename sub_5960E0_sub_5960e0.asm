@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5960e0
+// 起始地址: 0x5960e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005960E0    push ebp
 005960E1    mov ebp, esp
 005960E3    sub esp, 0x14
@@ -17,7 +23,7 @@
 00596103    lea eax, ds:[edi-0x02]
 00596106    mov edx, esi
 00596108    push eax
-00596109    call 0x00596FB0
+00596109    call 0x00596FB0                                 ; => [ Call: sub_596fb0 ]
 0059610E    add esp, 0x08
 00596111    lea ebx, ds:[esi+0x02]
 00596114    mov dword ptr ss:[ebp-0x04], ebx
@@ -31,13 +37,13 @@
 00596125    lea ecx, ss:[ebp+0x0C]
 00596128    call 0x00596040
 0059612D    test al, al
-0059612F    jnz 0x00596145
+0059612F    jnz 0x00596145                                  ; => [ Call: sub_596040 ]
 00596131    push edi
 00596132    push esi
 00596133    lea ecx, ss:[ebp+0x0C]
 00596136    call 0x00596040
 0059613B    test al, al
-0059613D    jnz 0x00596145
+0059613D    jnz 0x00596145                                  ; => [ Call: sub_596040 ]
 0059613F    mov esi, edi
 00596141    cmp ebx, esi
 00596143    jb 0x00596120
@@ -51,13 +57,13 @@
 00596152    lea ecx, ss:[ebp+0x0C]
 00596155    call 0x00596040
 0059615A    test al, al
-0059615C    jnz 0x00596173
+0059615C    jnz 0x00596173                                  ; => [ Call: sub_596040 ]
 0059615E    push ebx
 0059615F    push esi
 00596160    lea ecx, ss:[ebp+0x0C]
 00596163    call 0x00596040
 00596168    test al, al
-0059616A    jnz 0x00596173
+0059616A    jnz 0x00596173                                  ; => [ Call: sub_596040 ]
 0059616C    add ebx, 0x02
 0059616F    cmp ebx, edi
 00596171    jb 0x00596150
@@ -73,13 +79,13 @@
 00596187    lea ecx, ss:[ebp+0x0C]
 0059618A    call 0x00596040
 0059618F    test al, al
-00596191    jnz 0x005961B4
+00596191    jnz 0x005961B4                                  ; => [ Call: sub_596040 ]
 00596193    push esi
 00596194    push edi
 00596195    lea ecx, ss:[ebp+0x0C]
 00596198    call 0x00596040
 0059619D    test al, al
-0059619F    jnz 0x005961BC
+0059619F    jnz 0x005961BC                                  ; => [ Call: sub_596040 ]
 005961A1    cmp ebx, edi
 005961A3    jz 0x005961B1
 005961A5    mov ax, word ptr ds:[edi]
@@ -103,13 +109,13 @@
 005961D4    lea ecx, ss:[ebp+0x0C]
 005961D7    call 0x00596040
 005961DC    test al, al
-005961DE    jnz 0x00596201
+005961DE    jnz 0x00596201                                  ; => [ Call: sub_596040 ]
 005961E0    push edi
 005961E1    push esi
 005961E2    lea ecx, ss:[ebp+0x0C]
 005961E5    call 0x00596040
 005961EA    test al, al
-005961EC    jnz 0x00596210
+005961EC    jnz 0x00596210                                  ; => [ Call: sub_596040 ]
 005961EE    sub esi, 0x02
 005961F1    cmp esi, edi
 005961F3    jz 0x00596201

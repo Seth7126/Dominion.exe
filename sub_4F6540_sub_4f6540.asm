@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f6540
+// 起始地址: 0x4f6540
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F6540    push ebx
 004F6541    mov ebx, esp
 004F6543    sub esp, 0x08
@@ -8,7 +14,7 @@
 004F6550    mov dword ptr ss:[esp+0x04], ebp
 004F6554    mov ebp, esp
 004F6556    sub esp, 0x98
-004F655C    mov eax, dword ptr ds:[0x008C4040]
+004F655C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004F6561    xor eax, ebp
 004F6563    mov dword ptr ss:[ebp-0x04], eax
 004F6566    push esi
@@ -58,7 +64,7 @@
 004F65EB    mov dword ptr ss:[ebp-0x90], edx
 004F65F1    push eax
 004F65F2    mov ecx, edi
-004F65F4    call 0x004F7CB0
+004F65F4    call 0x004F7CB0                                 ; => [ Call: sub_4f7cb0 ]
 004F65F9    mov edx, dword ptr ss:[ebp-0x88]
 004F65FF    mov ecx, esi
 004F6601    mov edi, dword ptr ss:[ebp-0x7C]
@@ -67,7 +73,7 @@
 004F6607    lea eax, ds:[edx+esi*1]
 004F660A    mov edx, esi
 004F660C    push eax
-004F660D    call 0x004F7CB0
+004F660D    call 0x004F7CB0                                 ; => [ Call: sub_4f7cb0 ]
 004F6612    mov eax, dword ptr ss:[ebp-0x80]
 004F6615    mov edx, eax
 004F6617    sub edx, dword ptr ss:[ebp-0x88]
@@ -80,13 +86,13 @@
 004F6632    push edi
 004F6633    push edx
 004F6634    mov edx, esi
-004F6636    call 0x004F7CB0
+004F6636    call 0x004F7CB0                                 ; => [ Call: sub_4f7cb0 ]
 004F663B    add esp, 0x20
 004F663E    jmp 0x004F664F
 004F6640    push dword ptr ss:[ebp-0x80]
 004F6643    mov edx, esi
 004F6645    mov ecx, edi
-004F6647    call 0x004F7CB0
+004F6647    call 0x004F7CB0                                 ; => [ Call: sub_4f7cb0 ]
 004F664C    add esp, 0x08
 004F664F    lea edi, ds:[esi+0x0C]
 004F6652    mov dword ptr ss:[ebp-0x80], edi
@@ -343,7 +349,7 @@
 004F69BD    pop edi
 004F69BE    mov dword ptr ds:[eax], esi
 004F69C0    pop esi
-004F69C1    call 0x0075927A
+004F69C1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F69C6    mov esp, ebp
 004F69C8    pop ebp
 004F69C9    mov esp, ebx

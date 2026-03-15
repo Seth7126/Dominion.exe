@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67a1c0
+// 起始地址: 0x67a1c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067A1C0    push ebx
 0067A1C1    mov ebx, esp
 0067A1C3    sub esp, 0x08
@@ -12,7 +18,7 @@
 0067A1DC    mov ecx, dword ptr ds:[ecx+0x1404]
 0067A1E2    xorps xmm1, xmm1
 0067A1E5    dec ecx
-0067A1E6    xorps xmm2, xmm2
+0067A1E6    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 0067A1E9    movss xmm0, dword ptr ds:[eax+0x04]
 0067A1EE    subss xmm0, dword ptr ds:[edx+0x04]
 0067A1F3    maxss xmm3, xmm0
@@ -27,14 +33,14 @@
 0067A223    jmp dword ptr ds:[eax*4+0x67A2C4]
 0067A22A    xorps xmm1, xmm5
 0067A22D    movaps xmm4, xmm1
-0067A230    xorps xmm1, xmm1
+0067A230    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 0067A233    jmp 0x0067A248
 0067A235    movaps xmm4, xmm1
 0067A238    mulss xmm1, xmm6
 0067A23C    xorps xmm4, xmm5
 0067A23F    mulss xmm4, xmm6
 0067A243    jmp 0x0067A248
-0067A245    xorps xmm4, xmm4
+0067A245    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 0067A248    movzx eax, byte ptr ds:[ecx+0x67A2E8]
 0067A24F    jmp dword ptr ds:[eax*4+0x67A2DC]
 0067A256    xorps xmm3, xmm5
@@ -46,7 +52,7 @@
 0067A267    mulss xmm2, xmm6
 0067A26B    mulss xmm0, xmm6
 0067A26F    jmp 0x0067A277
-0067A271    xorps xmm0, xmm0
+0067A271    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0067A274    movaps xmm2, xmm3
 0067A277    mov eax, dword ptr ds:[ebx+0x0C]
 0067A27A    movss dword ptr ds:[eax], xmm4
@@ -63,10 +69,10 @@
 0067A29E    push 0x8739B4
 0067A2A3    mov edx, 0x801800
 0067A2A8    mov ecx, 0x801AA4
-0067A2AD    call 0x0063B870
+0067A2AD    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: UI2GetScrollExtents | String: Halt ]
 0067A2B2    add esp, 0x0C
 0067A2B5    call 0x0063BC30
 0067A2BA    test al, al
-0067A2BC    jz 0x0067A2BF
+0067A2BC    jz 0x0067A2BF                                   ; => [ Call: sub_63bc30 ]
 0067A2BE    int3
-0067A2BF    jmp 0x0063BB00
+0067A2BF    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

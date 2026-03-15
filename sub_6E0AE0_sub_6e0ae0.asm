@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e0ae0
+// 起始地址: 0x6e0ae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E0AE0    push ebp
 006E0AE1    mov ebp, esp
 006E0AE3    sub esp, 0x40
@@ -80,7 +86,7 @@
 006E0C39    mulss xmm0, dword ptr ss:[ebp-0x38]
 006E0C3E    xorps xmm1, xmmword ptr ds:[0x008937C0]
 006E0C45    subss xmm2, xmm0
-006E0C49    movss dword ptr ds:[eax+0x04], xmm1
+006E0C49    movss dword ptr ds:[eax+0x04], xmm1             ; => [ Data: data_8937c0 ]
 006E0C4E    movaps xmm1, xmm6
 006E0C51    mulss xmm1, dword ptr ss:[ebp-0x08]
 006E0C56    movaps xmm0, xmm3
@@ -102,7 +108,7 @@
 006E0C96    mulss xmm0, dword ptr ss:[ebp-0x04]
 006E0C9B    mulss xmm6, dword ptr ss:[ebp-0x14]
 006E0CA0    xorps xmm1, xmmword ptr ds:[0x008937C0]
-006E0CA7    movss dword ptr ds:[eax+0x0C], xmm1
+006E0CA7    movss dword ptr ds:[eax+0x0C], xmm1             ; => [ Data: data_8937c0 ]
 006E0CAC    movaps xmm1, xmm5
 006E0CAF    mulss xmm1, dword ptr ss:[ebp-0x24]
 006E0CB4    mulss xmm5, dword ptr ss:[ebp-0x14]
@@ -117,7 +123,7 @@
 006E0CDB    subss xmm5, xmm0
 006E0CDF    xorps xmm1, xmmword ptr ds:[0x008937C0]
 006E0CE6    movaps xmm0, xmm4
-006E0CE9    movss dword ptr ds:[eax+0x10], xmm1
+006E0CE9    movss dword ptr ds:[eax+0x10], xmm1             ; => [ Data: data_8937c0 ]
 006E0CEE    mulss xmm0, dword ptr ss:[ebp-0x1C]
 006E0CF3    subss xmm6, xmm3
 006E0CF7    mulss xmm4, dword ptr ss:[ebp-0x24]
@@ -137,7 +143,7 @@
 006E0D37    movaps xmm2, xmm5
 006E0D3A    mulss xmm5, dword ptr ss:[ebp-0x08]
 006E0D3F    mulss xmm2, dword ptr ss:[ebp-0x18]
-006E0D44    movss dword ptr ds:[eax+0x18], xmm6
+006E0D44    movss dword ptr ds:[eax+0x18], xmm6             ; => [ Data: data_8937c0 ]
 006E0D49    movss xmm6, dword ptr ss:[ebp-0x40]
 006E0D4E    mulss xmm0, xmm6
 006E0D52    movaps xmm4, xmm6
@@ -188,7 +194,7 @@
 006E0E1A    movss xmm6, dword ptr ss:[ebp-0x20]
 006E0E1F    xorps xmm2, xmmword ptr ds:[0x008937C0]
 006E0E26    subss xmm7, xmm0
-006E0E2A    movss dword ptr ds:[eax+0x24], xmm2
+006E0E2A    movss dword ptr ds:[eax+0x24], xmm2             ; => [ Data: data_8937c0 ]
 006E0E2F    movss xmm2, dword ptr ss:[ebp-0x30]
 006E0E34    movaps xmm0, xmm7
 006E0E37    mulss xmm7, dword ptr ss:[ebp-0x04]

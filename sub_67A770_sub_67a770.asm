@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67a770
+// 起始地址: 0x67a770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067A770    push ebp
 0067A771    mov ebp, esp
 0067A773    and esp, 0xFFFFFFF8
@@ -10,7 +16,7 @@
 0067A785    jz 0x0067A7AC
 0067A787    push edx
 0067A788    lea edx, ss:[esp+0x0C]
-0067A78C    call 0x0067A650
+0067A78C    call 0x0067A650                                 ; => [ Call: sub_67a650 ]
 0067A791    add esp, 0x04
 0067A794    test al, al
 0067A796    jnz 0x0067A7B2
@@ -23,7 +29,7 @@
 0067A7B1    ret
 0067A7B2    cmp edi, 0x03
 0067A7B5    jnbe 0x0067A854
-0067A7BB    jmp dword ptr ds:[edi*4+0x67A884]
+0067A7BB    jmp dword ptr ds:[edi*4+0x67A884]               ; => [ Call: sub_67a80b | Call: sub_67a7c2 ]
 0067A854    push 0x8768AC
 0067A859    push 0x56EC
 0067A85E    push 0x8739B4

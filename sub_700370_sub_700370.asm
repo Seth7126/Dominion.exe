@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_700370
+// 起始地址: 0x700370
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700370    push ebp
 00700371    mov ebp, esp
 00700373    push ecx
@@ -6,7 +12,7 @@
 00700376    mov esi, ecx
 00700378    push edi
 00700379    lea ecx, ds:[esi+0x424C]
-0070037F    call 0x00706A30
+0070037F    call 0x00706A30                                 ; => [ Call: sub_706a30 ]
 00700384    cmp dword ptr ss:[ebp+0x20], 0x01
 00700388    mov ecx, eax
 0070038A    mov eax, dword ptr ss:[ebp+0x08]
@@ -18,7 +24,7 @@
 007003A2    mov eax, 0x01
 007003A7    mov dword ptr ds:[ecx], 0x00
 007003AD    mov dword ptr ds:[ecx+0x04], 0x02
-007003B4    mov dword ptr ds:[ecx+0xE8], 0x812F
+007003B4    mov dword ptr ds:[ecx+0xE8], 0x812F             ; => [ Call: __builtin_memcpy | String: \x2f\x81\x00\x00\x2f\x81\x00\x00\x2f\x81\x00\x00\x00\x26\x00\x00\x00\x26\x00\x00 ]
 007003BE    mov dword ptr ds:[ecx+0xEC], 0x812F
 007003C8    mov dword ptr ds:[ecx+0xF0], 0x812F
 007003D2    mov dword ptr ds:[ecx+0xF4], 0x2600
@@ -67,7 +73,7 @@
 00700463    ret 0x1C
 00700466    cmp eax, 0x06
 00700469    jnz 0x007004DB
-0070046B    mov eax, dword ptr ds:[0x00CF65B8]
+0070046B    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 00700470    cmp dword ptr ds:[eax+0x1C], 0x00
 00700474    jle 0x007007B7
 0070047A    mov eax, dword ptr ds:[0x0077571C]
@@ -81,7 +87,7 @@
 00700493    push 0x8D41
 00700498    mov eax, dword ptr ds:[eax]
 0070049A    call eax
-0070049C    mov eax, dword ptr ds:[0x00CF65B8]
+0070049C    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 007004A1    push ebx
 007004A2    push edi
 007004A3    push 0x81A5
@@ -105,12 +111,12 @@
 007004D8    ret 0x1C
 007004DB    cmp eax, 0x05
 007004DE    jnz 0x007005CE
-007004E4    mov eax, dword ptr ds:[0x00CF65B8]
+007004E4    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 007004E9    cmp dword ptr ds:[eax+0x1C], 0x00
 007004ED    jnle 0x00700503
-007004EF    push 0x88C92C
+007004EF    push 0x88C92C                                   ; => [ String: OpenGLInterface::CreateTextureBuffer ]
 007004F4    push 0x68C
-007004F9    mov ecx, 0x88C978
+007004F9    mov ecx, 0x88C978                               ; => [ String: gAppInterface->mMultisamples > 0 ]
 007004FE    jmp 0x007007F6
 00700503    lea eax, ss:[ebp+0x20]
 00700506    push eax
@@ -140,7 +146,7 @@
 00700553    push 0x8D41
 00700558    mov eax, dword ptr ds:[eax]
 0070055A    call eax
-0070055C    mov eax, dword ptr ds:[0x00CF65B8]
+0070055C    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 00700561    push ebx
 00700562    push edi
 00700563    push 0x8058
@@ -178,7 +184,7 @@
 007005DA    cmp dword ptr ss:[ebp+0x20], 0x01
 007005DE    mov eax, dword ptr ss:[ebp-0x04]
 007005E1    mov esi, dword ptr ss:[ebp+0x0C]
-007005E4    mov ecx, dword ptr ds:[0x0147DED4]
+007005E4    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 007005EA    mov dword ptr ds:[eax], esi
 007005EC    jnz 0x00700633
 007005EE    cmp dword ptr ds:[ecx+0x4168], esi
@@ -262,7 +268,7 @@
 00700726    mov eax, dword ptr ds:[eax]
 00700728    call eax
 0070072A    mov ecx, dword ptr ss:[ebp+0x1C]
-0070072D    call 0x006FF830
+0070072D    call 0x006FF830                                 ; => [ Call: sub_6ff830 ]
 00700732    push 0x00
 00700734    push dword ptr ds:[eax+0x0C]
 00700737    push dword ptr ds:[eax+0x08]
@@ -288,51 +294,51 @@
 00700777    cmp eax, 0x8CD5
 0070077C    jnz 0x00700817
 00700782    jmp 0x007005BC
-00700787    push 0x88C92C
+00700787    push 0x88C92C                                   ; => [ String: OpenGLInterface::CreateTextureBuffer ]
 0070078C    push 0x710
 00700791    push 0x88C504
 00700796    mov edx, 0x801800
 0070079B    mov ecx, 0x801AA4
-007007A0    call 0x0063B870
+007007A0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: Halt | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 007007A5    add esp, 0x0C
 007007A8    call 0x0063BC30
 007007AD    test al, al
-007007AF    jz 0x007007B2
+007007AF    jz 0x007007B2                                   ; => [ Call: sub_63bc30 ]
 007007B1    int3
-007007B2    call 0x0063BB00
-007007B7    push 0x88C92C
+007007B2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+007007B7    push 0x88C92C                                   ; => [ String: OpenGLInterface::CreateTextureBuffer ]
 007007BC    push 0x673
 007007C1    push 0x88C504
 007007C6    mov edx, 0x801800
 007007CB    mov ecx, 0x88C978
-007007D0    call 0x0063B870
+007007D0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp | String: gAppInterface->mMultisamples > 0 ]
 007007D5    add esp, 0x0C
 007007D8    call 0x0063BC30
 007007DD    test al, al
-007007DF    jz 0x007007E2
+007007DF    jz 0x007007E2                                   ; => [ Call: sub_63bc30 ]
 007007E1    int3
-007007E2    call 0x0063BB00
-007007E7    push 0x88C92C
+007007E2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+007007E7    push 0x88C92C                                   ; => [ String: OpenGLInterface::CreateTextureBuffer ]
 007007EC    push 0x6C4
-007007F1    mov ecx, 0x88C954
+007007F1    mov ecx, 0x88C954                               ; => [ String: status == GL_FRAMEBUFFER_COMPLETE ]
 007007F6    push 0x88C504
 007007FB    mov edx, 0x801800
-00700800    call 0x0063B870
+00700800    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 00700805    add esp, 0x0C
 00700808    call 0x0063BC30
 0070080D    test al, al
-0070080F    jz 0x00700812
+0070080F    jz 0x00700812                                   ; => [ Call: sub_63bc30 ]
 00700811    int3
-00700812    call 0x0063BB00
-00700817    push 0x88C92C
+00700812    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+00700817    push 0x88C92C                                   ; => [ String: OpenGLInterface::CreateTextureBuffer ]
 0070081C    push 0x709
 00700821    push 0x88C504
 00700826    mov edx, 0x801800
 0070082B    mov ecx, 0x88C954
-00700830    call 0x0063B870
+00700830    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: status == GL_FRAMEBUFFER_COMPLETE | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 00700835    add esp, 0x0C
 00700838    call 0x0063BC30
 0070083D    test al, al
-0070083F    jz 0x00700842
+0070083F    jz 0x00700842                                   ; => [ Call: sub_63bc30 ]
 00700841    int3
-00700842    call 0x0063BB00
+00700842    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

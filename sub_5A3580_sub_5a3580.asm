@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a3580
+// 起始地址: 0x5a3580
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A3580    push ebp
 005A3581    mov ebp, esp
 005A3583    sub esp, 0x24
@@ -36,7 +42,7 @@
 005A35EB    push edi
 005A35EC    push ebx
 005A35ED    movss dword ptr ss:[ebp-0x14], xmm0
-005A35F2    call 0x007621D0
+005A35F2    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A35F7    mov edi, eax
 005A35F9    mov esi, edx
 005A35FB    mov eax, dword ptr ss:[ebp-0x04]
@@ -47,7 +53,7 @@
 005A360D    adc esi, dword ptr ds:[eax+0x0C]
 005A3610    push esi
 005A3611    push edi
-005A3612    call 0x007621D0
+005A3612    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A3617    mov ecx, dword ptr ss:[ebp-0x04]
 005A361A    add eax, ebx
 005A361C    mov dword ptr ss:[ebp-0x0C], 0x00
@@ -82,12 +88,12 @@
 005A367D    movss xmm0, dword ptr ds:[0x00890C78]
 005A3685    call 0x004EA070
 005A368A    mulss xmm0, dword ptr ds:[0x008910E4]
-005A3692    call 0x004AC580
+005A3692    call 0x004AC580                                 ; => [ Call: sub_4ea070 | Call: sub_4ac580 ]
 005A3697    mulss xmm0, dword ptr ss:[ebp-0x1C]
 005A369C    movss dword ptr ss:[ebp-0x1C], xmm0
 005A36A1    movss xmm0, dword ptr ss:[ebp-0x0C]
 005A36A6    mulss xmm0, dword ptr ds:[0x00890F48]
-005A36AE    call 0x004AE0D0
+005A36AE    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 005A36B3    mulss xmm0, dword ptr ss:[ebp-0x1C]
 005A36B8    pop edi
 005A36B9    pop esi

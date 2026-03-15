@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_577640
+// 起始地址: 0x577640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00577640    push ebp
 00577641    mov ebp, esp
 00577643    and esp, 0xFFFFFFF8
 00577646    sub esp, 0x424
-0057764C    mov eax, dword ptr ds:[0x008C4040]
+0057764C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00577651    xor eax, esp
 00577653    mov dword ptr ss:[esp+0x420], eax
 0057765A    mov eax, dword ptr ss:[ebp+0x08]
@@ -24,7 +30,7 @@
 00577686    movzx esi, dx
 00577689    cmp esi, 0x320
 0057768F    jb 0x00577696
-00577691    call 0x00591930
+00577691    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577696    mov edx, dword ptr ss:[esp+0x18]
 0057769A    imul eax, esi, 0x64
 0057769D    push ecx
@@ -38,7 +44,7 @@
 005776B6    mov ecx, ebx
 005776B8    push 0x26
 005776BA    push eax
-005776BB    call 0x005846C0
+005776BB    call 0x005846C0                                 ; => [ Call: sub_5846c0 | Call: sub_576540 ]
 005776C0    add esp, 0x14
 005776C3    test al, al
 005776C5    jz 0x005776D9
@@ -70,7 +76,7 @@
 00577719    movzx esi, dx
 0057771C    cmp esi, 0x320
 00577722    jb 0x00577729
-00577724    call 0x00591930
+00577724    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577729    mov edx, dword ptr ss:[esp+0x18]
 0057772D    imul eax, esi, 0x64
 00577730    push ecx
@@ -84,7 +90,7 @@
 00577749    mov ecx, ebx
 0057774B    push 0x26
 0057774D    push eax
-0057774E    call 0x005846C0
+0057774E    call 0x005846C0                                 ; => [ Call: sub_5846c0 | Call: sub_576540 ]
 00577753    add esp, 0x14
 00577756    test al, al
 00577758    jz 0x0057776C
@@ -112,7 +118,7 @@
 0057779D    pop esi
 0057779E    pop ebx
 0057779F    xor ecx, esp
-005777A1    call 0x0075927A
+005777A1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005777A6    mov esp, ebp
 005777A8    pop ebp
 005777A9    ret

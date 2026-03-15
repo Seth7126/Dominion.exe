@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_562730
+// 起始地址: 0x562730
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00562730    push ebp
 00562731    mov ebp, esp
 00562733    and esp, 0xFFFFFFF0
 00562736    sub esp, 0xD08
-0056273C    mov eax, dword ptr ds:[0x008C4040]
+0056273C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00562741    xor eax, esp
 00562743    mov dword ptr ss:[esp+0xD04], eax
 0056274A    push esi
 0056274B    push edi
 0056274C    mov dword ptr ss:[esp+0x14], ecx
-00562750    call 0x00573400
+00562750    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00562755    mov edi, eax
 00562757    mov eax, dword ptr ss:[ebp+0x08]
 0056275A    push eax
@@ -17,7 +23,7 @@
 00562763    mov ecx, dword ptr ds:[edi+0x04]
 00562766    call 0x00590990
 0056276B    mov edx, dword ptr ss:[ebp+0x08]
-0056276E    mov esi, eax
+0056276E    mov esi, eax                                    ; => [ Call: sub_590990 ]
 00562770    mov ecx, dword ptr ss:[esp+0x1C]
 00562774    add esp, 0x08
 00562777    mov dword ptr ds:[edx+0xC80], esi
@@ -37,7 +43,7 @@
 005627A2    push ecx
 005627A3    push ecx
 005627A4    mov ecx, dword ptr ds:[edi+0x04]
-005627A7    movlpd qword ptr ss:[esp+0x40], xmm0
+005627A7    movlpd qword ptr ss:[esp+0x40], xmm0            ; => [ Call: __builtin_memset ]
 005627AD    movlpd qword ptr ss:[esp+0x50], xmm0
 005627B3    movlpd qword ptr ss:[esp+0x64], xmm0
 005627B9    movlpd qword ptr ss:[esp+0x5C], xmm0
@@ -56,7 +62,7 @@
 00562801    push 0x01
 00562803    push dword ptr ds:[edi+0x0C]
 00562806    movaps xmmword ptr ss:[esp+0x9C], xmm0
-0056280E    call 0x005869D0
+0056280E    call 0x005869D0                                 ; => [ Call: sub_5869d0 ]
 00562813    mov edx, dword ptr ss:[ebp+0x08]
 00562816    add esp, 0x2C
 00562819    mov esi, eax
@@ -79,7 +85,7 @@
 00562851    push esi
 00562852    push edx
 00562853    mov edx, eax
-00562855    call 0x00590DE0
+00562855    call 0x00590DE0                                 ; => [ Call: sub_590de0 ]
 0056285A    mov eax, dword ptr ss:[ebp+0x08]
 0056285D    add esp, 0x14
 00562860    mov ecx, dword ptr ss:[esp+0xD0C]
@@ -87,7 +93,7 @@
 00562868    mov dword ptr ds:[eax+0xC80], esi
 0056286E    pop esi
 0056286F    xor ecx, esp
-00562871    call 0x0075927A
+00562871    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00562876    mov esp, ebp
 00562878    pop ebp
 00562879    ret

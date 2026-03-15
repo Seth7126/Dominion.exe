@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_53c450
+// 起始地址: 0x53c450
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053C450    dword 83EC8B55
 0053C454    in al, 0xF8
 0053C456    mov eax, 0x1910
-0053C45B    call 0x00761E50
+0053C45B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0053C460    push esi
 0053C461    push edi
 0053C462    call 0x0056B800
 0053C467    cmp dword ptr ss:[ebp+0x08], eax
-0053C46A    jnz 0x0053C4A5
+0053C46A    jnz 0x0053C4A5                                  ; => [ Call: sub_56b800 ]
 0053C46C    push 0x00
 0053C46E    lea eax, ss:[esp+0xC94]
 0053C475    xor edx, edx
@@ -18,7 +24,7 @@
 0053C486    lea edi, ss:[esp+0x14]
 0053C48A    mov ecx, 0x321
 0053C48F    add esp, 0x0C
-0053C492    rep movsd
+0053C492    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5685f0 ]
 0053C494    cmp dword ptr ss:[esp+0xC88], 0x00
 0053C49C    setnz al
 0053C49F    pop edi

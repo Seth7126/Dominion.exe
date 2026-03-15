@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_583350
+// 起始地址: 0x583350
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00583350    push ebp
 00583351    mov ebp, esp
 00583353    sub esp, 0x8C
-00583359    mov eax, dword ptr ds:[0x008C4040]
+00583359    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0058335E    xor eax, ebp
 00583360    mov dword ptr ss:[ebp-0x04], eax
 00583363    push ebx
@@ -17,7 +23,7 @@
 00583386    cmp eax, 0x06
 00583389    jz 0x005834D2
 0058338F    lea edx, ss:[ebp-0x1C]
-00583392    call 0x0058BC10
+00583392    call 0x0058BC10                                 ; => [ Call: sub_58bc10 ]
 00583397    mov ebx, dword ptr ds:[edi+0xD38]
 0058339D    xor esi, esi
 0058339F    test ebx, ebx
@@ -51,10 +57,10 @@
 005833F7    add edx, ebx
 005833F9    push 0x583320
 005833FE    push eax
-005833FF    call 0x00594410
+005833FF    call 0x00594410                                 ; => [ Call: sub_594410 | Call: sub_583320 ]
 00583404    mov eax, dword ptr ds:[edi+0xD38]
 0058340A    add esp, 0x08
-0058340D    xor ebx, ebx
+0058340D    xor ebx, ebx                                    ; => [ Call: nullptr ]
 0058340F    mov dword ptr ss:[ebp-0x88], eax
 00583415    test eax, eax
 00583417    jle 0x0058346A
@@ -115,7 +121,7 @@
 005834B6    push dword ptr ds:[esi-0x0C]
 005834B9    push 0x00
 005834BB    push dword ptr ds:[esi-0x08]
-005834BE    call 0x0061B1B0
+005834BE    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005834C3    add esp, 0x2C
 005834C6    inc ebx
 005834C7    add esi, 0x10
@@ -126,7 +132,7 @@
 005834D6    pop esi
 005834D7    xor ecx, ebp
 005834D9    pop ebx
-005834DA    call 0x0075927A
+005834DA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005834DF    mov esp, ebp
 005834E1    pop ebp
 005834E2    ret

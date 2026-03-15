@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_615360
+// 起始地址: 0x615360
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00615360    push ebp
 00615361    mov ebp, esp
 00615363    sub esp, 0xE0
-00615369    mov eax, dword ptr ds:[0x008C4040]
+00615369    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0061536E    xor eax, ebp
 00615370    mov dword ptr ss:[ebp-0x08], eax
 00615373    mov eax, dword ptr ss:[ebp+0x0C]
@@ -17,19 +23,19 @@
 0061538E    jnz 0x006153A8
 00615390    test esi, esi
 00615392    jnz 0x006153C0
-00615394    push 0x86862C
+00615394    push 0x86862C                                   ; => [ String: DomCreateToken ]
 00615399    push 0xC43B
-0061539E    mov ecx, 0x820064
+0061539E    mov ecx, 0x820064                               ; => [ String: whereCard != CARDID_NULL ]
 006153A3    jmp 0x00615788
 006153A8    test esi, esi
 006153AA    jz 0x006153C0
-006153AC    push 0x86862C
+006153AC    push 0x86862C                                   ; => [ String: DomCreateToken ]
 006153B1    push 0xC43C
-006153B6    mov ecx, 0x86863C
+006153B6    mov ecx, 0x86863C                               ; => [ String: whereCard == CARDID_NULL ]
 006153BB    jmp 0x00615788
 006153C0    imul ecx, dword ptr ds:[0x00B809E4], 0x1C30
-006153CA    mov eax, dword ptr ds:[0x00B809E0]
-006153CF    add ecx, eax
+006153CA    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+006153CF    add ecx, eax                                    ; => [ Data: data_b809e4 ]
 006153D1    cmp eax, ecx
 006153D3    jnb 0x006153F9
 006153D5    nop word ptr ds:[eax+eax*1], ax
@@ -39,7 +45,7 @@
 006153F5    cmp eax, ecx
 006153F7    jb 0x006153E0
 006153F9    mov ecx, 0xB809E0
-006153FE    call 0x00637730
+006153FE    call 0x00637730                                 ; => [ Data: data_b809e0 | Call: sub_637730 ]
 00615403    mov ecx, dword ptr ss:[ebp-0x74]
 00615406    mov edi, eax
 00615408    mov eax, dword ptr ss:[ebp+0x14]
@@ -76,9 +82,9 @@
 006154A4    jnz 0x006154BE
 006154A6    test esi, esi
 006154A8    jnz 0x006154C6
-006154AA    push 0x868600
+006154AA    push 0x868600                                   ; => [ String: FindToken ]
 006154AF    push 0xC41A
-006154B4    mov ecx, 0x820064
+006154B4    mov ecx, 0x820064                               ; => [ String: whereCard != CARDID_NULL ]
 006154B9    jmp 0x00615788
 006154BE    test esi, esi
 006154C0    jnz 0x00615583
@@ -111,9 +117,9 @@
 0061552A    jz 0x006153F9
 00615530    cmp dword ptr ds:[eax+0x1B0], 0xFFFFFFFF
 00615537    jz 0x0061554D
-00615539    push 0x86862C
+00615539    push 0x86862C                                   ; => [ String: DomCreateToken ]
 0061553E    push 0xC441
-00615543    mov ecx, 0x868674
+00615543    mov ecx, 0x868674                               ; => [ String: existingToken->token.token == (TokenID)-1 ]
 00615548    jmp 0x00615788
 0061554D    cmp dword ptr ds:[eax+0x1BC], 0x474
 00615557    mov ecx, dword ptr ss:[ebp-0x78]
@@ -126,22 +132,22 @@
 00615574    pop ebx
 00615575    mov ecx, dword ptr ss:[ebp-0x08]
 00615578    xor ecx, ebp
-0061557A    call 0x0075927A
+0061557A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0061557F    mov esp, ebp
 00615581    pop ebp
 00615582    ret
-00615583    push 0x868600
+00615583    push 0x868600                                   ; => [ String: FindToken ]
 00615588    push 0xC41B
-0061558D    mov ecx, 0x86863C
+0061558D    mov ecx, 0x86863C                               ; => [ String: whereCard == CARDID_NULL ]
 00615592    jmp 0x00615788
 00615597    mov ecx, 0x603
-0061559C    call 0x005CC6C0
+0061559C    call 0x005CC6C0                                 ; => [ Call: sub_5cc6c0 ]
 006155A1    mov esi, eax
 006155A3    mov edx, esi
 006155A5    mov ecx, dword ptr ds:[esi+0x1C28]
 006155AB    mov dword ptr ds:[edi+0x1B8], ecx
 006155B1    mov ecx, edi
-006155B3    call 0x005CD7D0
+006155B3    call 0x005CD7D0                                 ; => [ Call: sub_5cd7d0 ]
 006155B8    mov edx, dword ptr ds:[esi+0x5C]
 006155BB    mov ecx, 0x07
 006155C0    push 0x00
@@ -151,7 +157,7 @@
 006155C7    lea eax, ss:[ebp-0xDC]
 006155CD    push 0x00
 006155CF    push eax
-006155D0    call 0x005CC540
+006155D0    call 0x005CC540                                 ; => [ Call: sub_5cc540 ]
 006155D5    add esp, 0x18
 006155D8    jmp 0x00615714
 006155DD    cmp ebx, 0x3F1
@@ -169,15 +175,15 @@
 00615604    push 0x00
 00615606    push 0x00
 00615608    push eax
-00615609    call 0x005CC540
+00615609    call 0x005CC540                                 ; => [ Call: sub_5cc540 | Call: sub_5cd0a0 ]
 0061560E    add esp, 0x18
 00615611    jmp 0x00615714
 00615616    cmp ebx, 0x474
 0061561C    jnz 0x006156D2
 00615622    imul ecx, dword ptr ds:[0x00B809E4], 0x1C30
 0061562C    xor edx, edx
-0061562E    mov eax, dword ptr ds:[0x00B809E0]
-00615633    add ecx, eax
+0061562E    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+00615633    add ecx, eax                                    ; => [ Data: data_b809e4 ]
 00615635    cmp eax, ecx
 00615637    jnb 0x006156A0
 00615639    nop dword ptr ds:[eax], eax
@@ -218,7 +224,7 @@
 006156B9    push 0x00
 006156BB    push 0x00
 006156BD    push eax
-006156BE    call 0x005CC540
+006156BE    call 0x005CC540                                 ; => [ Call: sub_5cc540 ]
 006156C3    add esp, 0x18
 006156C6    movups xmm0, xmmword ptr ds:[eax]
 006156C9    movups xmmword ptr ss:[ebp-0x6C], xmm0
@@ -228,7 +234,7 @@
 006156D4    push 0x00
 006156D6    or edx, 0xFFFFFFFF
 006156D9    mov ecx, ebx
-006156DB    call 0x005CC4B0
+006156DB    call 0x005CC4B0                                 ; => [ Call: sub_5cc4b0 ]
 006156E0    mov edx, eax
 006156E2    mov ecx, dword ptr ds:[eax+0x1C28]
 006156E8    mov dword ptr ds:[edi+0x1B8], ecx
@@ -243,7 +249,7 @@
 00615704    push 0x00
 00615706    push eax
 00615707    mov ecx, 0x07
-0061570C    call 0x005CC540
+0061570C    call 0x005CC540                                 ; => [ Call: sub_5cc540 | Call: sub_5cd7d0 ]
 00615711    add esp, 0x20
 00615714    movups xmm0, xmmword ptr ds:[eax]
 00615717    movups xmmword ptr ss:[ebp-0x6C], xmm0
@@ -261,30 +267,30 @@
 00615747    jnz 0x00615758
 00615749    mov edx, dword ptr ds:[edi+0x1B4]
 0061574F    push ecx
-00615750    call 0x005AF980
+00615750    call 0x005AF980                                 ; => [ Call: sub_5af980 ]
 00615755    add esp, 0x04
 00615758    lea ecx, ds:[edi+0x258]
 0061575E    lea edx, ss:[ebp-0x6C]
-00615761    call 0x005CB630
+00615761    call 0x005CB630                                 ; => [ Call: sub_5cb630 ]
 00615766    mov eax, edi
 00615768    mov ecx, dword ptr ss:[ebp-0x08]
 0061576B    pop edi
 0061576C    pop esi
 0061576D    xor ecx, ebp
 0061576F    pop ebx
-00615770    call 0x0075927A
+00615770    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00615775    mov esp, ebp
 00615777    pop ebp
 00615778    ret
-00615779    push 0x86862C
+00615779    push 0x86862C                                   ; => [ String: DomCreateToken ]
 0061577E    push 0xC45D
-00615783    mov ecx, 0x868658
+00615783    mov ecx, 0x868658                               ; => [ String: token == TOKEN_TRADE_ROUTE ]
 00615788    push 0x86F1E8
 0061578D    mov edx, 0x801800
-00615792    call 0x0063B870
+00615792    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 ]
 00615797    add esp, 0x0C
 0061579A    call 0x0063BC30
 0061579F    test al, al
-006157A1    jz 0x006157A4
+006157A1    jz 0x006157A4                                   ; => [ Call: sub_63bc30 ]
 006157A3    int3
-006157A4    call 0x0063BB00
+006157A4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

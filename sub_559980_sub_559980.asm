@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_559980
+// 起始地址: 0x559980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00559980    dword 83EC8B55
 00559984    in al, 0xF8
 00559986    push esi
 00559987    push edi
-00559988    call 0x0056B800
+00559988    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0055998D    mov esi, eax
-0055998F    call 0x00573400
+0055998F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00559994    movzx esi, si
 00559997    mov edi, dword ptr ds:[eax+0x04]
 0055999A    cmp esi, 0x320
 005599A0    jb 0x005599A7
-005599A2    call 0x00591930
+005599A2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005599A7    imul eax, esi, 0x64
 005599AA    mov eax, dword ptr ds:[eax+edi*1+0x1A50]
 005599B1    cmp eax, 0x3EA
@@ -33,7 +39,7 @@
 005599E9    mov edx, 0x1205
 005599EE    mov ecx, 0x3E9
 005599F3    call 0x00568960
-005599F8    add eax, esi
+005599F8    add eax, esi                                    ; => [ Call: sub_568960 ]
 005599FA    add esp, 0x0C
 005599FD    sub eax, 0x02
 00559A00    jz 0x00559A0F

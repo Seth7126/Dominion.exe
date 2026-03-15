@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a3ff0
+// 起始地址: 0x6a3ff0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A3FF0    push ebp
 006A3FF1    mov ebp, esp
 006A3FF3    sub esp, 0x14
@@ -15,22 +21,22 @@
 006A4010    mov ecx, esi
 006A4012    test eax, eax
 006A4014    jnz 0x006A402D
-006A4016    call 0x00687730
+006A4016    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006A401B    push esi
 006A401C    mov edi, eax
 006A401E    push 0x00
 006A4020    push edi
-006A4021    call 0x00761FC4
+006A4021    call 0x00761FC4                                 ; => [ Call: memset ]
 006A4026    add esp, 0x0C
 006A4029    mov dword ptr ds:[ebx], edi
 006A402B    jmp 0x006A4070
 006A402D    mov ebx, dword ptr ds:[ebx]
-006A402F    call 0x00687730
+006A402F    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006A4034    push esi
 006A4035    mov edi, eax
 006A4037    push 0x00
 006A4039    push edi
-006A403A    call 0x00761FC4
+006A403A    call 0x00761FC4                                 ; => [ Call: memset ]
 006A403F    mov eax, dword ptr ss:[ebp-0x04]
 006A4042    add esp, 0x0C
 006A4045    mov dword ptr ds:[eax], edi
@@ -40,7 +46,7 @@
 006A4054    push ecx
 006A4055    push ebx
 006A4056    push edi
-006A4057    call 0x00761FBE
+006A4057    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006A405C    add esp, 0x0C
 006A405F    test ebx, ebx
 006A4061    jz 0x006A406D
@@ -59,9 +65,9 @@
 006A4084    mov dword ptr ss:[ebp-0x0C], eax
 006A4087    test ebx, ebx
 006A4089    jnz 0x006A409F
-006A408B    push 0x87A95C
+006A408B    push 0x87A95C                                   ; => [ String: DefParseReadAttribTree ]
 006A4090    push 0x33A
-006A4095    mov ecx, 0x87A950
+006A4095    mov ecx, 0x87A950                               ; => [ String: pParseTree ]
 006A409A    jmp 0x006A420C
 006A409F    mov eax, dword ptr ss:[ebp+0x08]
 006A40A2    mov eax, dword ptr ds:[eax+0x0C]
@@ -77,7 +83,7 @@
 006A40C0    mov eax, dword ptr ds:[esi]
 006A40C2    mov edi, ecx
 006A40C4    mov esi, dword ptr ds:[esi+0x04]
-006A40C7    mov ecx, 0x801800
+006A40C7    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A40CC    mov edx, dword ptr ds:[ebx+0x04]
 006A40CF    mov eax, dword ptr ds:[eax]
 006A40D1    test eax, eax
@@ -110,12 +116,12 @@
 006A4112    mov esi, ebx
 006A4114    shl esi, 0x04
 006A4117    mov ecx, esi
-006A4119    call 0x00687730
+006A4119    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006A411E    push esi
 006A411F    mov edi, eax
 006A4121    push 0x00
 006A4123    push edi
-006A4124    call 0x00761FC4
+006A4124    call 0x00761FC4                                 ; => [ Call: memset ]
 006A4129    mov ecx, dword ptr ss:[ebp-0x0C]
 006A412C    add esp, 0x0C
 006A412F    mov eax, dword ptr ss:[ebp-0x08]
@@ -141,7 +147,7 @@
 006A4169    mov ecx, dword ptr ds:[esi]
 006A416B    test ecx, ecx
 006A416D    mov dword ptr ss:[ebp+0x0C], eax
-006A4170    mov eax, 0x801800
+006A4170    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 006A4175    cmovnz eax, ecx
 006A4178    mov cl, byte ptr ds:[eax]
 006A417A    cmp cl, byte ptr ds:[edx]
@@ -173,17 +179,17 @@
 006A41BB    push esi
 006A41BC    push ecx
 006A41BD    mov ecx, dword ptr ss:[ebp-0x0C]
-006A41C0    call 0x006A3DC0
+006A41C0    call 0x006A3DC0                                 ; => [ Call: sub_6a3dc0 ]
 006A41C5    add esp, 0x08
 006A41C8    test al, al
 006A41CA    jnz 0x006A41E8
 006A41CC    mov eax, dword ptr ds:[esi]
-006A41CE    mov ecx, 0x801800
+006A41CE    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A41D3    test eax, eax
 006A41D5    cmovnz ecx, eax
 006A41D8    push ecx
 006A41D9    push 0x87A974
-006A41DE    call 0x0063B5F0
+006A41DE    call 0x0063B5F0                                 ; => [ String: unknown tag %s | Call: sub_63b5f0 ]
 006A41E3    add esp, 0x08
 006A41E6    jmp 0x006A41EB
 006A41E8    add edi, 0x10
@@ -196,15 +202,15 @@
 006A41F9    mov esp, ebp
 006A41FB    pop ebp
 006A41FC    ret
-006A41FD    push 0x87A95C
+006A41FD    push 0x87A95C                                   ; => [ String: DefParseReadAttribTree ]
 006A4202    push 0x33B
-006A4207    mov ecx, 0x87A984
+006A4207    mov ecx, 0x87A984                               ; => [ String: pField->pDefMap->defType == DT_ATTRIB_TREE ]
 006A420C    push 0x87A6C8
 006A4211    mov edx, 0x801800
-006A4216    call 0x0063B870
+006A4216    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: DefParseReadAttribTree | String: C:\x\ax2017\Engine\DefParseTree.cpp ]
 006A421B    add esp, 0x0C
 006A421E    call 0x0063BC30
 006A4223    test al, al
-006A4225    jz 0x006A4228
+006A4225    jz 0x006A4228                                   ; => [ Call: sub_63bc30 ]
 006A4227    int3
-006A4228    call 0x0063BB00
+006A4228    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

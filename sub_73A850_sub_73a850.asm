@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73a850
+// 起始地址: 0x73a850
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073A850    push esi
 0073A851    push edi
 0073A852    mov edi, ecx
@@ -8,7 +14,7 @@
 0073A860    mov ecx, esi
 0073A862    mov edx, 0x18
 0073A867    mov esi, dword ptr ds:[esi+0x10]
-0073A86A    call 0x0064C080
+0073A86A    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0073A86F    test esi, esi
 0073A871    jnz 0x0073A860
 0073A873    mov dword ptr ds:[edi+0x08], 0x00

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a5ed0
+// 起始地址: 0x5a5ed0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A5ED0    push ebp
 005A5ED1    mov ebp, esp
 005A5ED3    and esp, 0xFFFFFFF8
@@ -15,7 +21,7 @@
 005A5EFC    lea edx, ds:[ecx+0x175FD0]
 005A5F02    mov ecx, esi
 005A5F04    push ebx
-005A5F05    call 0x005A5840
+005A5F05    call 0x005A5840                                 ; => [ Call: sub_5a5840 ]
 005A5F0A    mov ecx, dword ptr ss:[esp+0x10]
 005A5F0E    add esp, 0x04
 005A5F11    mov byte ptr ds:[ecx+0x175FCC], 0x01
@@ -29,11 +35,11 @@
 005A5F34    lahf
 005A5F35    test ah, 0x44
 005A5F38    jp 0x005A6006
-005A5F3E    movaps xmm6, xmmword ptr ds:[0x00891390]
+005A5F3E    movaps xmm6, xmmword ptr ds:[0x00891390]        ; => [ Data: data_891390 ]
 005A5F45    lea eax, ds:[esi+0x20]
 005A5F48    mov dword ptr ds:[ecx+0x195FD0], 0x3C23D70A
-005A5F52    xorps xmm5, xmm5
-005A5F55    xorps xmm4, xmm4
+005A5F52    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+005A5F55    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005A5F58    mov edx, 0x800
 005A5F5D    nop dword ptr ds:[eax], eax
 005A5F60    movss xmm2, dword ptr ds:[eax+0x0C]
@@ -48,7 +54,7 @@
 005A5F85    unpcklps xmm3, xmm1
 005A5F88    movss xmm1, dword ptr ds:[eax-0x3C]
 005A5F8D    unpcklps xmm1, xmm2
-005A5F90    cmpps xmm0, xmm3, 0x01
+005A5F90    cmpps xmm0, xmm3, 0x01                          ; => [ String: 0 | String: zx ]
 005A5F94    movss xmm3, dword ptr ds:[eax-0x48]
 005A5F99    andps xmm0, xmm6
 005A5F9C    paddd xmm5, xmm0
@@ -58,7 +64,7 @@
 005A5FAB    unpcklps xmm3, xmm1
 005A5FAE    cmpps xmm0, xmm3, 0x01
 005A5FB2    andps xmm0, xmm6
-005A5FB5    paddd xmm4, xmm0
+005A5FB5    paddd xmm4, xmm0                                ; => [ String: 0 | String: zx ]
 005A5FB9    sub edx, 0x01
 005A5FBC    jnz 0x005A5F60
 005A5FBE    paddd xmm4, xmm5
@@ -147,7 +153,7 @@
 005A614C    jnbe 0x005A6154
 005A614E    sqrtsd xmm0, xmm0
 005A6152    jmp 0x005A6159
-005A6154    call 0x00762084
+005A6154    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A6159    mov eax, dword ptr ss:[esp+0x0C]
 005A615D    xorps xmm1, xmm1
 005A6160    mov ecx, dword ptr ss:[esp+0x10]
@@ -164,7 +170,7 @@
 005A61A3    jnbe 0x005A61AB
 005A61A5    sqrtsd xmm0, xmm0
 005A61A9    jmp 0x005A61B0
-005A61AB    call 0x00762084
+005A61AB    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A61B0    mov ecx, dword ptr ss:[esp+0x0C]
 005A61B4    mov eax, dword ptr ss:[esp+0x18]
 005A61B8    cvtsd2ss xmm0, xmm0

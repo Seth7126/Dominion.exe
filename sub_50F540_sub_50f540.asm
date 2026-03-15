@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50f540
+// 起始地址: 0x50f540
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050F540    dword FF63356
 0050F544    pop ds
 0050F545    inc eax
@@ -13,7 +19,7 @@
 0050F561    cmp eax, 0x280
 0050F566    jnl 0x0050F5A4
 0050F568    lea ecx, ds:[edx+0x58C]
-0050F56E    add ecx, eax
+0050F56E    add ecx, eax                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050F570    cmp dword ptr ds:[ecx], 0x00
 0050F573    jz 0x0050F57A
 0050F575    add eax, 0x14
@@ -33,10 +39,10 @@
 0050F5AE    push 0x80CD80
 0050F5B3    mov edx, 0x801800
 0050F5B8    mov ecx, 0x801AA4
-0050F5BD    call 0x0063B870
+0050F5BD    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignAddExtra | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 0050F5C2    add esp, 0x0C
 0050F5C5    call 0x0063BC30
 0050F5CA    test al, al
-0050F5CC    jz 0x0050F5CF
+0050F5CC    jz 0x0050F5CF                                   ; => [ Call: sub_63bc30 ]
 0050F5CE    int3
-0050F5CF    call 0x0063BB00
+0050F5CF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

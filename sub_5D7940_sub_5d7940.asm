@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d7940
+// 起始地址: 0x5d7940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D7940    push ebp
 005D7941    mov ebp, esp
 005D7943    push ecx
@@ -10,13 +16,13 @@
 005D794F    mov dword ptr ss:[ebp-0x04], eax
 005D7952    jnz 0x005D79C1
 005D7954    xor ecx, ecx
-005D7956    mov edi, 0xB7D438
-005D795B    cmp dword ptr ds:[0x00B7F4B8], ecx
+005D7956    mov edi, 0xB7D438                               ; => [ Data: data_b7d438 ]
+005D795B    cmp dword ptr ds:[0x00B7F4B8], ecx              ; => [ Data: data_b7f4b8 ]
 005D7961    mov dword ptr ds:[ebx], ecx
-005D7963    cmovz edi, ecx
+005D7963    cmovz edi, ecx                                  ; => [ Call: nullptr ]
 005D7966    test edi, edi
 005D7968    jz 0x005D79C1
-005D796A    xor esi, esi
+005D796A    xor esi, esi                                    ; => [ Call: nullptr ]
 005D796C    nop dword ptr ds:[eax], eax
 005D7970    mov edx, dword ptr ds:[edi]
 005D7972    xor ecx, ecx
@@ -37,7 +43,7 @@
 005D799A    add edi, 0x08
 005D799D    lea eax, ds:[eax+0xB7D438]
 005D79A3    cmp edi, eax
-005D79A5    jz 0x005D79BC
+005D79A5    jz 0x005D79BC                                   ; => [ Data: data_b7f4b8 | Data: data_b7d438 ]
 005D79A7    inc esi
 005D79A8    mov dword ptr ds:[ebx], esi
 005D79AA    test edi, edi

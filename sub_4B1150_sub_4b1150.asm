@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4b1150
+// 起始地址: 0x4b1150
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B1150    push ebp
 004B1151    mov ebp, esp
 004B1153    push esi
 004B1154    push edi
 004B1155    mov edi, dword ptr ss:[ebp+0x08]
-004B1158    xor esi, esi
+004B1158    xor esi, esi                                    ; => [ Call: nullptr ]
 004B115A    mov dword ptr ds:[edi+0x200], 0x00
 004B1164    xor eax, eax
 004B1166    lea ecx, ds:[esi+0x7E7DC4]
@@ -20,7 +26,7 @@
 004B1189    inc ecx
 004B118A    mov dword ptr ds:[edi+0x200], ecx
 004B1190    mov ecx, dword ptr ds:[esi+0x7E7D30]
-004B1196    mov dword ptr ds:[edx], ecx
+004B1196    mov dword ptr ds:[edx], ecx                     ; => [ Data: data_7e7d30 ]
 004B1198    lea ecx, ds:[eax+eax*2]
 004B119B    mov ecx, dword ptr ds:[esi+ecx*4+0x7E7DBC]
 004B11A2    mov dword ptr ds:[edx+0x04], ecx

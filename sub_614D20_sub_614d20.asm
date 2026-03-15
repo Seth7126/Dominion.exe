@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_614d20
+// 起始地址: 0x614d20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00614D20    push ebp
 00614D21    mov ebp, esp
 00614D23    push ecx
-00614D24    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
+00614D24    imul eax, dword ptr ds:[0x00B809E4], 0x1C30     ; => [ Data: data_b809e4 ]
 00614D2E    push ebx
 00614D2F    mov ebx, dword ptr ss:[ebp+0x0C]
 00614D32    push esi
-00614D33    mov esi, dword ptr ds:[0x00B809E0]
+00614D33    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 00614D39    push edi
 00614D3A    mov edi, edx
 00614D3C    mov dword ptr ds:[ebx], 0x00
@@ -29,7 +35,7 @@
 00614D6E    ret
 00614D6F    cmp esi, 0xFFFFFFFF
 00614D72    jz 0x00614D66
-00614D74    mov ecx, dword ptr ds:[0x00B809E0]
+00614D74    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 00614D7A    nop word ptr ds:[eax+eax*1], ax
 00614D80    cmp dword ptr ds:[esi+0x2C], 0x05
 00614D84    jnz 0x00614F52
@@ -140,13 +146,13 @@
 00614F36    call 0x005916B0
 00614F3B    add esp, 0x04
 00614F3E    cmp eax, dword ptr ss:[ebp+0x08]
-00614F41    jz 0x00614E68
+00614F41    jz 0x00614E68                                   ; => [ Call: sub_5916b0 ]
 00614F47    inc dword ptr ds:[ebx]
-00614F49    mov ecx, dword ptr ds:[0x00B809E0]
+00614F49    mov ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 00614F4F    mov edx, dword ptr ss:[ebp-0x04]
 00614F52    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 00614F5C    add esi, 0x1C30
-00614F62    add eax, ecx
+00614F62    add eax, ecx                                    ; => [ Data: data_b809e4 ]
 00614F64    cmp esi, eax
 00614F66    jnb 0x00614D66
 00614F6C    nop dword ptr ds:[eax], eax
@@ -171,22 +177,22 @@
 00614F9D    mov esp, ebp
 00614F9F    pop ebp
 00614FA0    ret
-00614FA1    push 0x820DDC
+00614FA1    push 0x820DDC                                   ; => [ String: operator == ]
 00614FA6    push 0xC2F3
-00614FAB    mov ecx, 0x801AA4
+00614FAB    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00614FB0    jmp 0x00614FCD
-00614FB2    push 0x8685B8
+00614FB2    push 0x8685B8                                   ; => [ String: AbilityDoesntStack ]
 00614FB7    push 0xC30C
 00614FBC    jmp 0x00614FC8
-00614FBE    push 0x86858C
+00614FBE    push 0x86858C                                   ; => [ String: AbilityOnlyStacksWithSelf ]
 00614FC3    push 0xC2FB
-00614FC8    mov ecx, 0x868568
+00614FC8    mov ecx, 0x868568                               ; => [ String: abilityType.type == CONTEXT_ABILITY ]
 00614FCD    push 0x86F1E8
 00614FD2    mov edx, 0x801800
-00614FD7    call 0x0063B870
+00614FD7    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 ]
 00614FDC    add esp, 0x0C
 00614FDF    call 0x0063BC30
 00614FE4    test al, al
-00614FE6    jz 0x00614FE9
+00614FE6    jz 0x00614FE9                                   ; => [ Call: sub_63bc30 ]
 00614FE8    int3
-00614FE9    call 0x0063BB00
+00614FE9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

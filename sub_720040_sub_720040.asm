@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_720040
+// 起始地址: 0x720040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00720040    push ebp
 00720041    mov ebp, esp
 00720043    and esp, 0xFFFFFFF8
@@ -18,14 +24,14 @@
 00720070    push edi
 00720071    mov edx, ebx
 00720073    lea ecx, ss:[esp+0x1C]
-00720077    call 0x0071FDF0
+00720077    call 0x0071FDF0                                 ; => [ Call: sub_71fdf0 | Data: __security_cookie | Call: sub_71f490 ]
 0072007C    mov ecx, dword ptr ss:[esp+0xD8]
 00720083    add esp, 0x0C
 00720086    pop edi
 00720087    pop esi
 00720088    pop ebx
 00720089    xor ecx, esp
-0072008B    call 0x0075927A
+0072008B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00720090    mov esp, ebp
 00720092    pop ebp
 00720093    ret

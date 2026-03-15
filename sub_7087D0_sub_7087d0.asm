@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_7087d0
+// 起始地址: 0x7087d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007087D0    push ebp
 007087D1    mov ebp, esp
 007087D3    sub esp, 0x104
-007087D9    mov eax, dword ptr ds:[0x008C4040]
+007087D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 007087DE    xor eax, ebp
 007087E0    mov dword ptr ss:[ebp-0x04], eax
 007087E3    push ebx
@@ -11,7 +17,7 @@
 007087E9    push edi
 007087EA    mov edi, dword ptr ss:[ebp+0x08]
 007087ED    push dword ptr ds:[ebx+0x08]
-007087F0    call dword ptr ds:[0x00800B48]
+007087F0    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007087F6    lea edx, ss:[ebp-0x104]
 007087FC    add esp, 0x04
 007087FF    mov ecx, esi
@@ -44,7 +50,7 @@
 00708846    inc ecx
 00708847    test al, al
 00708849    jnz 0x00708844
-0070884B    mov eax, dword ptr ds:[0x0147DED8]
+0070884B    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00708850    lea esi, ss:[ebp-0x104]
 00708856    sub ecx, edx
 00708858    inc ecx
@@ -53,11 +59,11 @@
 0070885D    push 0x58
 0070885F    push 0x88DAD0
 00708864    push ecx
-00708865    call eax
+00708865    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 00708867    add esp, 0x0C
 0070886A    jmp 0x00708876
 0070886C    push ecx
-0070886D    call dword ptr ds:[0x00800B4C]
+0070886D    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00708873    add esp, 0x04
 00708876    mov ecx, eax
 00708878    lea eax, ss:[ebp-0x104]
@@ -73,7 +79,7 @@
 00708894    pop esi
 00708895    xor ecx, ebp
 00708897    pop ebx
-00708898    call 0x0075927A
+00708898    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0070889D    mov esp, ebp
 0070889F    pop ebp
 007088A0    ret

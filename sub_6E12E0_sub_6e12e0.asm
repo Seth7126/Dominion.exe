@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6e12e0
+// 起始地址: 0x6e12e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E12E0    push ebp
 006E12E1    mov ebp, esp
 006E12E3    and esp, 0xFFFFFFF0
 006E12E6    sub esp, 0x20
-006E12E9    mov eax, dword ptr ds:[0x008C4040]
+006E12E9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006E12EE    xor eax, esp
 006E12F0    mov dword ptr ss:[esp+0x1C], eax
 006E12F4    mov eax, dword ptr ss:[ebp+0x08]
@@ -98,7 +104,7 @@
 006E1484    mov byte ptr ds:[ecx+0x28], al
 006E1487    mov ecx, dword ptr ss:[esp+0x1C]
 006E148B    xor ecx, esp
-006E148D    call 0x0075927A
+006E148D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E1492    mov esp, ebp
 006E1494    pop ebp
 006E1495    ret
@@ -107,10 +113,10 @@
 006E149D    push 0x881BB8
 006E14A2    mov edx, 0x801800
 006E14A7    mov ecx, 0x881B84
-006E14AC    call 0x0063B870
+006E14AC    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: tFirst.propegatesScale == tSecond.propegatesScale | String: C:\x\ax2017\Engine\BoneTransform.h | String: BoneTransformLerp ]
 006E14B1    add esp, 0x0C
 006E14B4    call 0x0063BC30
 006E14B9    test al, al
-006E14BB    jz 0x006E14BE
+006E14BB    jz 0x006E14BE                                   ; => [ Call: sub_63bc30 ]
 006E14BD    int3
-006E14BE    call 0x0063BB00
+006E14BE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

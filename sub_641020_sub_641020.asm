@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_641020
+// 起始地址: 0x641020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00641020    push ebp
 00641021    mov ebp, esp
 00641023    sub esp, 0x2C
@@ -150,10 +156,10 @@
 0064119E    push 0x801A4C
 006411A3    mov edx, 0x801800
 006411A8    mov ecx, 0x817280
-006411AD    call 0x0063B870
+006411AD    call 0x0063B870                                 ; => [ String: LogBase2 | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\MathFunctions.cpp | String: n > 0 ]
 006411B2    add esp, 0x0C
 006411B5    call 0x0063BC30
 006411BA    test al, al
-006411BC    jz 0x006411BF
+006411BC    jz 0x006411BF                                   ; => [ Call: sub_63bc30 ]
 006411BE    int3
-006411BF    call 0x0063BB00
+006411BF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

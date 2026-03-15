@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6e62b0
+// 起始地址: 0x6e62b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E62B0    push ebp
 006E62B1    mov ebp, esp
 006E62B3    sub esp, 0xB8
-006E62B9    mov eax, dword ptr ds:[0x008C4040]
+006E62B9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006E62BE    xor eax, ebp
 006E62C0    mov dword ptr ss:[ebp-0x08], eax
 006E62C3    push ebx
@@ -11,7 +17,7 @@
 006E62CC    mov esi, edx
 006E62CE    push eax
 006E62CF    mov edi, ecx
-006E62D1    call 0x006E7C30
+006E62D1    call 0x006E7C30                                 ; => [ Call: sub_6e7c30 ]
 006E62D6    mov ecx, dword ptr ss:[ebp-0x5C]
 006E62D9    add esp, 0x04
 006E62DC    test ecx, ecx
@@ -26,9 +32,9 @@
 006E62F8    lea ecx, ss:[ebp-0x64]
 006E62FB    call 0x006398E0
 006E6300    lea ecx, ds:[esi+0x60]
-006E6303    mov dword ptr ss:[ebp-0xA8], eax
+006E6303    mov dword ptr ss:[ebp-0xA8], eax                ; => [ Call: sub_6398e0 ]
 006E6309    lea edx, ss:[ebp-0xA8]
-006E630F    call 0x006398E0
+006E630F    call 0x006398E0                                 ; => [ Call: sub_6398e0 ]
 006E6314    movzx ecx, byte ptr ds:[edi+0x64]
 006E6318    mov edx, 0xFF
 006E631D    movzx ebx, byte ptr ds:[edi+0x66]
@@ -150,7 +156,7 @@
 006E6534    movss dword ptr ss:[ebp-0x0C], xmm0
 006E6539    movss xmm0, dword ptr ss:[ebp-0xB0]
 006E6541    addss xmm7, dword ptr ds:[eax+0x1C]
-006E6546    mov eax, dword ptr ds:[0x0147ABE4]
+006E6546    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 006E654B    movss xmm2, dword ptr ds:[eax+0x20]
 006E6550    movss xmm1, dword ptr ds:[eax+0x24]
 006E6555    addss xmm0, xmm2
@@ -178,14 +184,14 @@
 006E65B5    movss dword ptr ss:[ebp-0x34], xmm4
 006E65BA    movss dword ptr ss:[ebp-0x30], xmm2
 006E65BF    movss dword ptr ss:[ebp-0x2C], xmm1
-006E65C4    call 0x006867A0
+006E65C4    call 0x006867A0                                 ; => [ Call: sub_6867a0 ]
 006E65C9    add esp, 0x10
 006E65CC    mov ecx, dword ptr ss:[ebp-0x08]
 006E65CF    pop edi
 006E65D0    pop esi
 006E65D1    xor ecx, ebp
 006E65D3    pop ebx
-006E65D4    call 0x0075927A
+006E65D4    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E65D9    mov esp, ebp
 006E65DB    pop ebp
 006E65DC    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75a095
+// 起始地址: 0x75a095
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075A095    push ebp
 0075A096    mov ebp, esp
 0075A098    sub esp, 0x324
@@ -9,12 +15,12 @@
 0075A0AB    mov ecx, dword ptr ss:[ebp+0x08]
 0075A0AE    int 0x29
 0075A0B0    push 0x03
-0075A0B2    call 0x0075A283
+0075A0B2    call 0x0075A283                                 ; => [ Call: sub_75a283 ]
 0075A0B7    mov dword ptr ss:[esp], 0x2CC
 0075A0BE    lea eax, ss:[ebp-0x324]
 0075A0C4    push 0x00
 0075A0C6    push eax
-0075A0C7    call 0x00761FC4
+0075A0C7    call 0x00761FC4                                 ; => [ Call: memset ]
 0075A0CC    add esp, 0x0C
 0075A0CF    mov dword ptr ss:[ebp-0x274], eax
 0075A0D5    mov dword ptr ss:[ebp-0x278], ecx
@@ -41,20 +47,20 @@
 0075A14B    lea eax, ss:[ebp-0x58]
 0075A14E    push 0x00
 0075A150    push eax
-0075A151    call 0x00761FC4
+0075A151    call 0x00761FC4                                 ; => [ Call: memset ]
 0075A156    mov eax, dword ptr ss:[ebp+0x04]
 0075A159    add esp, 0x0C
 0075A15C    mov dword ptr ss:[ebp-0x58], 0x40000015
 0075A163    mov dword ptr ss:[ebp-0x54], 0x01
 0075A16A    mov dword ptr ss:[ebp-0x4C], eax
-0075A16D    call dword ptr ds:[0x007750CC]
+0075A16D    call dword ptr ds:[0x007750CC]                  ; => [ Type: BOOL ]
 0075A173    mov esi, eax
 0075A175    lea eax, ss:[ebp-0x58]
-0075A178    mov dword ptr ss:[ebp-0x08], eax
+0075A178    mov dword ptr ss:[ebp-0x08], eax                ; => [ Type: EXCEPTION_POINTERS | Field: ExceptionRecord ]
 0075A17B    lea eax, ss:[ebp-0x324]
 0075A181    push 0x00
-0075A183    mov dword ptr ss:[ebp-0x04], eax
-0075A186    call dword ptr ds:[0x0077518C]
+0075A183    mov dword ptr ss:[ebp-0x04], eax                ; => [ Field: ContextRecord ]
+0075A186    call dword ptr ds:[0x0077518C]                  ; => [ Call: nullptr ]
 0075A18C    lea eax, ss:[ebp-0x08]
 0075A18F    push eax
 0075A190    call dword ptr ds:[0x007750C4]
@@ -63,7 +69,7 @@
 0075A19A    cmp esi, 0x01
 0075A19D    jz 0x0075A1A7
 0075A19F    push 0x03
-0075A1A1    call 0x0075A283
+0075A1A1    call 0x0075A283                                 ; => [ Call: sub_75a283 ]
 0075A1A6    pop ecx
 0075A1A7    pop esi
 0075A1A8    leave

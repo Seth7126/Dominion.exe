@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_5cb070
+// 起始地址: 0x5cb070
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CB070    push ebp
 005CB071    mov ebp, esp
-005CB073    mov eax, dword ptr ds:[0x00CC8D5C]
+005CB073    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005CB078    sub esp, 0x08
 005CB07B    test eax, eax
 005CB07D    jz 0x005CB0B5
@@ -9,8 +15,8 @@
 005CB088    call 0x004B93F0
 005CB08D    lea edx, ss:[ebp-0x04]
 005CB090    mov ecx, dword ptr ds:[eax+0x1C]
-005CB093    call 0x005B0500
-005CB098    mov ecx, dword ptr ds:[0x00B809D4]
+005CB093    call 0x005B0500                                 ; => [ Call: sub_4b93f0 | Call: sub_5b0500 ]
+005CB098    mov ecx, dword ptr ds:[0x00B809D4]              ; => [ Data: data_b809d4 ]
 005CB09E    cmp ecx, eax
 005CB0A0    jnl 0x005CB0AF
 005CB0A2    imul eax, ecx, 0xA4
@@ -27,10 +33,10 @@
 005CB0BC    push 0x77EB50
 005CB0C1    mov edx, 0x801800
 005CB0C6    mov ecx, 0x77EB9C
-005CB0CB    call 0x0063B870
+005CB0CB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 005CB0D0    add esp, 0x0C
 005CB0D3    call 0x0063BC30
 005CB0D8    test al, al
-005CB0DA    jz 0x005CB0DD
+005CB0DA    jz 0x005CB0DD                                   ; => [ Call: sub_63bc30 ]
 005CB0DC    int3
-005CB0DD    call 0x0063BB00
+005CB0DD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

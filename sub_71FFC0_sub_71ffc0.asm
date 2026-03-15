@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_71ffc0
+// 起始地址: 0x71ffc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071FFC0    push ebp
 0071FFC1    mov ebp, esp
 0071FFC3    and esp, 0xFFFFFFF8
 0071FFC6    sub esp, 0xC4
-0071FFCC    mov eax, dword ptr ds:[0x008C4040]
+0071FFCC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0071FFD1    xor eax, esp
 0071FFD3    mov dword ptr ss:[esp+0xC0], eax
 0071FFDA    push ebx
@@ -23,14 +29,14 @@
 00720008    mov dword ptr ss:[esp+0x3C], 0x00
 00720010    mov dword ptr ss:[esp+0xD0], eax
 00720017    mov dword ptr ss:[esp+0xC8], eax
-0072001E    call 0x0071FDF0
+0072001E    call 0x0071FDF0                                 ; => [ Call: sub_71fdf0 ]
 00720023    mov ecx, dword ptr ss:[esp+0xD8]
 0072002A    add esp, 0x0C
 0072002D    pop edi
 0072002E    pop esi
 0072002F    pop ebx
 00720030    xor ecx, esp
-00720032    call 0x0075927A
+00720032    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00720037    mov esp, ebp
 00720039    pop ebp
 0072003A    ret

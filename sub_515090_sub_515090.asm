@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_515090
+// 起始地址: 0x515090
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00515090    dword 83EC8B55
 00515094    in al, 0xF8
 00515096    sub esp, 0xC88
 0051509C    mov ecx, 0x92E
-005150A1    call 0x0050A580
+005150A1    call 0x0050A580                                 ; => [ Call: sub_50a580 ]
 005150A6    mov ecx, 0x20
-005150AB    call 0x00513D60
+005150AB    call 0x00513D60                                 ; => [ Call: sub_513d60 ]
 005150B0    push 0x5B
 005150B2    lea eax, ss:[esp+0x04]
 005150B6    mov dword ptr ss:[esp+0x04], 0x00
@@ -17,4 +23,4 @@
 005150D8    add esp, 0x10
 005150DB    mov esp, ebp
 005150DD    pop ebp
-005150DE    ret
+005150DE    ret                                             ; => [ Call: sub_5150e0 | Call: sub_513e80 | Call: sub_56c680 ]

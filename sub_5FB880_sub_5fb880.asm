@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5fb880
+// 起始地址: 0x5fb880
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005FB880    push ebp
 005FB881    mov ebp, esp
 005FB883    sub esp, 0xAC
-005FB889    mov eax, dword ptr ds:[0x008C4040]
+005FB889    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005FB88E    xor eax, ebp
 005FB890    mov dword ptr ss:[ebp-0x04], eax
 005FB893    mov eax, ecx
@@ -14,7 +20,7 @@
 005FB8A2    mov edi, 0x01
 005FB8A7    mov dword ptr ss:[ebp-0xA8], ecx
 005FB8AD    xor bl, bl
-005FB8AF    mov eax, 0x77FEA0
+005FB8AF    mov eax, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 005FB8B4    test ecx, edi
 005FB8B6    jz 0x005FB8D1
 005FB8B8    mov ecx, dword ptr ds:[eax]
@@ -28,7 +34,7 @@
 005FB8D1    add eax, 0x04
 005FB8D4    add edi, edi
 005FB8D6    cmp eax, 0x77FEE8
-005FB8DB    jnz 0x005FB8B4
+005FB8DB    jnz 0x005FB8B4                                  ; => [ Data: data_77fee8 ]
 005FB8DD    test bl, bl
 005FB8DF    jz 0x005FB8ED
 005FB8E1    mov dword ptr ss:[ebp+esi*4-0xA4], 0x13
@@ -59,13 +65,13 @@
 005FB92E    nop
 005FB930    mov edi, dword ptr ss:[ebp+edx*4-0xA4]
 005FB937    mov ecx, 0x01
-005FB93C    mov eax, 0x77FEA0
+005FB93C    mov eax, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 005FB941    cmp edi, dword ptr ds:[eax]
 005FB943    jz 0x005FB965
 005FB945    add eax, 0x04
 005FB948    add ecx, ecx
 005FB94A    cmp eax, 0x77FEE8
-005FB94F    jnz 0x005FB941
+005FB94F    jnz 0x005FB941                                  ; => [ Data: data_77fee8 ]
 005FB951    jmp 0x005FB967
 005FB953    xor ebx, ebx
 005FB955    xor edx, edx
@@ -85,7 +91,7 @@
 005FB977    mov dword ptr ds:[eax], ebx
 005FB979    xor ecx, ebp
 005FB97B    pop ebx
-005FB97C    call 0x0075927A
+005FB97C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005FB981    mov esp, ebp
 005FB983    pop ebp
 005FB984    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_697d80
+// 起始地址: 0x697d80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00697D80    push ebp
 00697D81    mov ebp, esp
 00697D83    sub esp, 0x6C
@@ -15,7 +21,7 @@
 00697DA1    js 0x00697DB9
 00697DA3    mov edx, esi
 00697DA5    mov ecx, ebx
-00697DA7    call 0x00697380
+00697DA7    call 0x00697380                                 ; => [ Call: sub_697380 ]
 00697DAC    mov edi, eax
 00697DAE    cmp dword ptr ds:[edi+0x04], 0x06
 00697DB2    jz 0x00697DF4
@@ -46,7 +52,7 @@
 00697DFC    subss xmm0, xmm7
 00697E00    comiss xmm7, xmm0
 00697E03    jb 0x00697E0A
-00697E05    xorps xmm3, xmm3
+00697E05    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 00697E08    jmp 0x00697E2F
 00697E0A    movss xmm2, dword ptr ds:[0x00890E18]
 00697E12    comiss xmm0, xmm2
@@ -56,7 +62,7 @@
 00697E1C    mov ecx, 0x04
 00697E21    xorps xmm1, xmm1
 00697E24    call 0x004AE110
-00697E29    movaps xmm3, xmm0
+00697E29    movaps xmm3, xmm0                               ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 00697E2C    xorps xmm7, xmm7
 00697E2F    movss xmm0, dword ptr ds:[edi+0x80]
 00697E37    xorps xmm2, xmm2

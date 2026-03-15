@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_738db0
+// 起始地址: 0x738db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00738DB0    push ebp
 00738DB1    mov ebp, esp
 00738DB3    and esp, 0xFFFFFFF8
@@ -24,17 +30,17 @@
 00738DEF    lea ecx, ds:[edx+0x01]
 00738DF2    mov edx, eax
 00738DF4    mov dword ptr ss:[esp+0x18], eax
-00738DF8    call 0x00735490
+00738DF8    call 0x00735490                                 ; => [ Call: sub_735490 ]
 00738DFD    test al, al
 00738DFF    jz 0x00738E90
 00738E05    mov ecx, 0x0C
-00738E0A    call 0x0064BFD0
+00738E0A    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00738E0F    mov esi, eax
 00738E11    inc dword ptr ds:[esi+0x0C]
 00738E14    cmp dword ptr ds:[esi], 0x00
 00738E17    jnz 0x00738E20
 00738E19    mov ecx, esi
-00738E1B    call 0x0064BE70
+00738E1B    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00738E20    mov ecx, dword ptr ds:[esi]
 00738E22    mov eax, dword ptr ds:[ecx]
 00738E24    mov dword ptr ds:[esi], eax
@@ -72,7 +78,7 @@
 00738E80    mov dword ptr ds:[eax+0x04], edx
 00738E83    dec dword ptr ds:[eax+0x08]
 00738E86    mov edx, 0x0C
-00738E8B    call 0x0064C080
+00738E8B    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00738E90    mov edx, dword ptr ss:[esp+0x10]
 00738E94    test ebx, ebx
 00738E96    jnz 0x00738DE0
@@ -107,7 +113,7 @@
 00738EF0    mov ecx, eax
 00738EF2    call 0x005AF880
 00738EF7    xorps xmm0, xmm0
-00738EFA    mov ecx, dword ptr ds:[eax]
+00738EFA    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 00738EFC    mov eax, dword ptr ds:[ecx]
 00738EFE    movss xmm2, dword ptr ds:[ecx+0x0C]
 00738F03    mulss xmm2, dword ptr ds:[ecx+0x08]
@@ -128,15 +134,15 @@
 00738F45    comiss xmm1, xmm2
 00738F48    jnbe 0x00738F53
 00738F4A    comiss xmm0, xmm2
-00738F4D    jbe 0x00738FE2
+00738F4D    jbe 0x00738FE2                                  ; => [ Data: data_893660 ]
 00738F53    mov ecx, 0x0C
-00738F58    call 0x0064BFD0
+00738F58    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00738F5D    mov esi, eax
 00738F5F    inc dword ptr ds:[esi+0x0C]
 00738F62    cmp dword ptr ds:[esi], 0x00
 00738F65    jnz 0x00738F6E
 00738F67    mov ecx, esi
-00738F69    call 0x0064BE70
+00738F69    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00738F6E    mov ecx, dword ptr ds:[esi]
 00738F70    mov eax, dword ptr ds:[ecx]
 00738F72    mov dword ptr ds:[esi], eax
@@ -174,7 +180,7 @@
 00738FCE    mov dword ptr ds:[eax+0x04], edx
 00738FD1    dec dword ptr ds:[eax+0x08]
 00738FD4    mov edx, 0x0C
-00738FD9    call 0x0064C080
+00738FD9    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00738FDE    mov esi, dword ptr ss:[esp+0x10]
 00738FE2    test ebx, ebx
 00738FE4    jnz 0x00738ED3
@@ -196,12 +202,12 @@
 0073900F    mov ecx, dword ptr ds:[ecx]
 00739011    mov dword ptr ss:[esp+0x1C], ecx
 00739015    mov ecx, dword ptr ss:[esp+0x10]
-00739019    call 0x00735490
+00739019    call 0x00735490                                 ; => [ Call: sub_735490 ]
 0073901E    test al, al
 00739020    jz 0x0073910D
 00739026    cmp dword ptr ds:[esi+0x04], 0x03
 0073902A    jnz 0x00739087
-0073902C    mov eax, dword ptr ds:[0x0147AC2C]
+0073902C    mov eax, dword ptr ds:[0x0147AC2C]              ; => [ Data: data_147ac2c ]
 00739031    xor ecx, ecx
 00739033    mov ebx, dword ptr ds:[eax+0x04]
 00739036    mov eax, dword ptr ds:[eax]
@@ -218,10 +224,10 @@
 00739050    lea eax, ss:[esp+0x0C]
 00739054    push eax
 00739055    call 0x006A01A0
-0073905A    mov ecx, dword ptr ds:[eax+0x04]
+0073905A    mov ecx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_6a01a0 ]
 0073905D    cmp dword ptr ds:[ecx+0x04], 0x12
 00739061    jnz 0x00739080
-00739063    call 0x005AF880
+00739063    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00739068    xor ecx, ecx
 0073906A    mov edx, dword ptr ds:[eax+0x1C]
 0073906D    test edx, edx
@@ -236,13 +242,13 @@
 00739080    cmp dword ptr ss:[esp+0x0C], 0x00
 00739085    jnz 0x00739050
 00739087    mov ecx, 0x0C
-0073908C    call 0x0064BFD0
+0073908C    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00739091    mov ebx, eax
 00739093    inc dword ptr ds:[ebx+0x0C]
 00739096    cmp dword ptr ds:[ebx], 0x00
 00739099    jnz 0x007390A2
 0073909B    mov ecx, ebx
-0073909D    call 0x0064BE70
+0073909D    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 007390A2    mov ecx, dword ptr ds:[ebx]
 007390A4    mov edx, dword ptr ss:[ebp+0x08]
 007390A7    mov eax, dword ptr ds:[ecx]
@@ -279,7 +285,7 @@
 007390FE    dec dword ptr ds:[edi+0x08]
 00739101    mov edx, 0x0C
 00739106    mov ecx, ebx
-00739108    call 0x0064C080
+00739108    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0073910D    mov ecx, dword ptr ss:[esp+0x1C]
 00739111    test ecx, ecx
 00739113    jnz 0x00739000

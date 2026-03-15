@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5eeeb0
+// 起始地址: 0x5eeeb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EEEB2    byte DC
 005EEEB3    sub esp, 0x08
 005EEEB6    and esp, 0xFFFFFFF0
@@ -9,7 +15,7 @@
 005EEEC6    sub esp, 0x98
 005EEECC    mov eax, dword ptr ds:[0x008C4040]
 005EEED1    xor eax, ebp
-005EEED3    mov dword ptr ss:[ebp-0x04], eax
+005EEED3    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005EEED6    push esi
 005EEED7    mov esi, ecx
 005EEED9    mov dword ptr ss:[ebp-0x84], edx
@@ -20,17 +26,17 @@
 005EEEF0    mov dword ptr ss:[ebp-0x54], edi
 005EEEF3    call 0x005E2C00
 005EEEF8    test al, al
-005EEEFA    jz 0x005EEF18
+005EEEFA    jz 0x005EEF18                                   ; => [ Call: sub_5e2c00 ]
 005EEEFC    cmp dword ptr ds:[edi], 0x03
 005EEEFF    jz 0x005EEF11
 005EEF01    cmp dword ptr ds:[esi+0xA4], 0x3F1
 005EEF0B    jnz 0x005EF7D1
-005EEF11    mov edx, 0x871588
+005EEF11    mov edx, 0x871588                               ; => [ String: btn_icon ]
 005EEF16    jmp 0x005EEF20
-005EEF18    mov edx, 0x801900
+005EEF18    mov edx, 0x801900                               ; => [ String: itemCard ]
 005EEF1D    mov dword ptr ss:[ebp-0x54], edi
 005EEF20    mov ecx, dword ptr ds:[esi+0x1BA0]
-005EEF26    call 0x0067BD70
+005EEF26    call 0x0067BD70                                 ; => [ Call: sub_67bd70 ]
 005EEF2B    mov edi, eax
 005EEF2D    test edi, edi
 005EEF2F    jz 0x005EF7D1
@@ -40,18 +46,18 @@
 005EEF40    imul ecx, eax, 0x18D0
 005EEF46    add ecx, dword ptr ds:[0x00C23BA8]
 005EEF4C    cmp dword ptr ds:[ecx+0x18C8], edi
-005EEF52    jnz 0x005EEF6B
+005EEF52    jnz 0x005EEF6B                                  ; => [ Data: data_c23ba8 | Data: data_c23bac ]
 005EEF54    mov ecx, edi
-005EEF56    call 0x0064E7A0
+005EEF56    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 005EEF5B    movups xmm0, xmmword ptr ds:[eax+0x1620]
 005EEF62    movups xmm1, xmmword ptr ds:[eax+0x1630]
 005EEF69    jmp 0x005EEF79
-005EEF6B    movups xmm0, xmmword ptr ds:[0x00BF21E8]
-005EEF72    movups xmm1, xmmword ptr ds:[0x00BF21F8]
+005EEF6B    movups xmm0, xmmword ptr ds:[0x00BF21E8]        ; => [ Data: data_bf21e8 ]
+005EEF72    movups xmm1, xmmword ptr ds:[0x00BF21F8]        ; => [ Data: data_bf21f8 ]
 005EEF79    mov ecx, edi
 005EEF7B    movups xmmword ptr ss:[ebp-0x30], xmm0
 005EEF7F    movups xmmword ptr ss:[ebp-0x20], xmm1
-005EEF83    call 0x0064E7A0
+005EEF83    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 005EEF88    mov dword ptr ss:[ebp-0x80], 0x00
 005EEF8F    xorps xmm2, xmm2
 005EEF92    mov dword ptr ss:[ebp-0x7C], 0x00
@@ -75,7 +81,7 @@
 005EEFF2    test ecx, ecx
 005EEFF4    jz 0x005EF0FB
 005EEFFA    mov edx, 0x801900
-005EEFFF    call 0x0067BD70
+005EEFFF    call 0x0067BD70                                 ; => [ String: itemCard | Call: sub_67bd70 ]
 005EF004    mov ecx, eax
 005EF006    test ecx, ecx
 005EF008    jz 0x005EF0E8
@@ -89,15 +95,15 @@
 005EF02D    imul eax, eax, 0x18D0
 005EF033    add eax, dword ptr ds:[0x00C23BA8]
 005EF039    cmp dword ptr ds:[eax+0x18C8], ecx
-005EF03F    jnz 0x005EF060
-005EF041    call 0x0064E7A0
+005EF03F    jnz 0x005EF060                                  ; => [ Data: data_c23ba8 | Data: data_c23bac ]
+005EF041    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 005EF046    movss xmm2, dword ptr ss:[ebp-0x70]
 005EF04B    movss xmm3, dword ptr ss:[ebp-0x64]
 005EF050    movups xmm4, xmmword ptr ds:[eax+0x1620]
 005EF057    movups xmm1, xmmword ptr ds:[eax+0x1630]
 005EF05E    jmp 0x005EF06E
-005EF060    movups xmm4, xmmword ptr ds:[0x00BF21E8]
-005EF067    movups xmm1, xmmword ptr ds:[0x00BF21F8]
+005EF060    movups xmm4, xmmword ptr ds:[0x00BF21E8]        ; => [ Data: data_bf21e8 ]
+005EF067    movups xmm1, xmmword ptr ds:[0x00BF21F8]        ; => [ Data: data_bf21f8 ]
 005EF06E    movaps xmm0, xmm1
 005EF071    mov dword ptr ss:[ebp-0x98], 0x00
 005EF07B    shufps xmm0, xmm1, 0x55
@@ -130,12 +136,12 @@
 005EF0FB    mov eax, dword ptr ss:[ebp-0x54]
 005EF0FE    xorps xmm2, xmm2
 005EF101    cmp dword ptr ds:[eax], 0x00
-005EF104    mov ecx, dword ptr ds:[0x00B604E0]
+005EF104    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005EF10A    jnz 0x005EF1A3
 005EF110    xor edx, edx
 005EF112    mov eax, ecx
 005EF114    cmp ecx, 0xFFFFFFFF
-005EF117    cmovz eax, edx
+005EF117    cmovz eax, edx                                  ; => [ Call: nullptr ]
 005EF11A    cmp dword ptr ds:[esi+0xA0], eax
 005EF120    jnz 0x005EF15E
 005EF122    cmp dword ptr ds:[esi+0x1A18], edx
@@ -161,11 +167,11 @@
 005EF184    jnz 0x005EF1B3
 005EF186    xor eax, eax
 005EF188    cmp ecx, 0xFFFFFFFF
-005EF18B    cmovz ecx, eax
+005EF18B    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 005EF18E    call 0x005E4D40
 005EF193    test al, al
-005EF195    jz 0x005EF7D1
-005EF19B    mov ecx, dword ptr ds:[0x00B604E0]
+005EF195    jz 0x005EF7D1                                   ; => [ Call: sub_5e4d40 ]
+005EF19B    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005EF1A1    jmp 0x005EF1B3
 005EF1A3    movss xmm0, dword ptr ss:[ebp-0x74]
 005EF1A8    lea edi, ds:[esi+0xA4]
@@ -181,7 +187,7 @@
 005EF1DB    jnz 0x005EF638
 005EF1E1    xor eax, eax
 005EF1E3    cmp ecx, 0xFFFFFFFF
-005EF1E6    cmovz ecx, eax
+005EF1E6    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 005EF1E9    cmp dword ptr ds:[esi+0xA0], ecx
 005EF1EF    jnz 0x005EF7D1
 005EF1F5    movss xmm0, dword ptr ss:[ebp-0x30]
@@ -283,13 +289,13 @@
 005EF39C    movss dword ptr ss:[ebp-0x58], xmm0
 005EF3A1    addss xmm5, dword ptr ss:[ebp-0x18]
 005EF3A6    movss dword ptr ss:[ebp-0x68], xmm5
-005EF3AB    call 0x005EE900
+005EF3AB    call 0x005EE900                                 ; => [ Call: sub_5ee900 ]
 005EF3B0    movss xmm0, dword ptr ss:[ebp-0x68]
 005EF3B5    mov esi, eax
 005EF3B7    test esi, esi
 005EF3B9    jz 0x005EF3D9
 005EF3BB    mov ecx, esi
-005EF3BD    call 0x005CBA00
+005EF3BD    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005EF3C2    cmp dword ptr ds:[eax+0x1A18], 0x00
 005EF3C9    jz 0x005EF405
 005EF3CB    cmp dword ptr ds:[eax+0x4A0], 0x03
@@ -299,30 +305,30 @@
 005EF3DE    movss xmm5, dword ptr ss:[ebp-0x58]
 005EF3E3    comiss xmm5, xmm2
 005EF3E6    jnb 0x005EF5C6
-005EF3EC    push 0x8604F8
+005EF3EC    push 0x8604F8                                   ; => [ String: CardHitTest ]
 005EF3F1    push 0x6D77
-005EF3F6    push 0x86F1E8
-005EF3FB    mov ecx, 0x86051C
+005EF3F6    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005EF3FB    mov ecx, 0x86051C                               ; => [ String: topLeft.x <= topRight.x ]
 005EF400    jmp 0x005EF7FA
 005EF405    mov ecx, esi
-005EF407    call 0x005CBA00
+005EF407    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005EF40C    movss xmm0, dword ptr ss:[ebp-0x68]
 005EF411    mov ecx, dword ptr ds:[eax+0x1BA0]
 005EF417    test ecx, ecx
 005EF419    jz 0x005EF3D9
 005EF41B    push 0x00
 005EF41D    mov edx, 0x801900
-005EF422    call 0x0066B2B0
+005EF422    call 0x0066B2B0                                 ; => [ String: itemCard | Call: sub_66b2b0 ]
 005EF427    add esp, 0x04
 005EF42A    test eax, eax
 005EF42C    jnz 0x005EF447
-005EF42E    push 0x87696C
+005EF42E    push 0x87696C                                   ; => [ String: UI2GetTransform ]
 005EF433    push 0x5B0E
-005EF438    push 0x8739B4
-005EF43D    mov ecx, 0x87698C
+005EF438    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+005EF43D    mov ecx, 0x87698C                               ; => [ String: handle != UI2_NULL ]
 005EF442    jmp 0x005EF7FA
 005EF447    mov ecx, eax
-005EF449    call 0x0064E7A0
+005EF449    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 005EF44E    movups xmm2, xmmword ptr ds:[eax+0x1620]
 005EF455    movups xmm1, xmmword ptr ds:[eax+0x1630]
 005EF45C    movaps xmm0, xmm2
@@ -531,7 +537,7 @@
 005EF7BF    pop esi
 005EF7C0    mov ecx, dword ptr ss:[ebp-0x04]
 005EF7C3    xor ecx, ebp
-005EF7C5    call 0x0075927A
+005EF7C5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005EF7CA    mov esp, ebp
 005EF7CC    pop ebp
 005EF7CD    mov esp, ebx
@@ -542,21 +548,21 @@
 005EF7D6    pop edi
 005EF7D7    xor ecx, ebp
 005EF7D9    pop esi
-005EF7DA    call 0x0075927A
+005EF7DA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005EF7DF    mov esp, ebp
 005EF7E1    pop ebp
 005EF7E2    mov esp, ebx
 005EF7E4    pop ebx
 005EF7E5    ret
-005EF7E6    push 0x8019F0
+005EF7E6    push 0x8019F0                                   ; => [ String: RectContains ]
 005EF7EB    push 0xA4
-005EF7F0    mov ecx, 0x801A1C
-005EF7F5    push 0x801A00
+005EF7F0    mov ecx, 0x801A1C                               ; => [ String: RectIsNormalized(r) ]
+005EF7F5    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
 005EF7FA    mov edx, 0x801800
-005EF7FF    call 0x0063B870
+005EF7FF    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005EF804    add esp, 0x0C
 005EF807    call 0x0063BC30
 005EF80C    test al, al
-005EF80E    jz 0x005EF811
+005EF80E    jz 0x005EF811                                   ; => [ Call: sub_63bc30 ]
 005EF810    int3
-005EF811    call 0x0063BB00
+005EF811    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

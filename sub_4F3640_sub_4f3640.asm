@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4f3640
+// 起始地址: 0x4f3640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F3640    push ebp
 004F3641    mov ebp, esp
 004F3643    sub esp, 0x3C
-004F3646    mov eax, dword ptr ds:[0x008C4040]
+004F3646    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004F364B    xor eax, ebp
 004F364D    mov dword ptr ss:[ebp-0x04], eax
 004F3650    push ebx
@@ -10,14 +16,14 @@
 004F3655    mov ebx, ecx
 004F3657    push edi
 004F3658    lea edx, ss:[ebp-0x34]
-004F365B    call 0x0058BC10
+004F365B    call 0x0058BC10                                 ; => [ Call: sub_58bc10 ]
 004F3660    mov eax, dword ptr ds:[ebx+0xD38]
 004F3666    test eax, eax
 004F3668    jle 0x004F3674
 004F366A    mov ecx, eax
 004F366C    lea esi, ss:[ebp-0x34]
 004F366F    lea edi, ss:[ebp-0x1C]
-004F3672    rep movsd
+004F3672    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004F3674    push dword ptr ss:[ebp-0x38]
 004F3677    lea ecx, ds:[eax*4]
 004F367E    mov eax, ecx
@@ -26,7 +32,7 @@
 004F3686    add edx, ecx
 004F3688    push eax
 004F3689    lea ecx, ss:[ebp-0x1C]
-004F368C    call 0x004F6220
+004F368C    call 0x004F6220                                 ; => [ Call: sub_4f6220 ]
 004F3691    xor esi, esi
 004F3693    add esp, 0x08
 004F3696    cmp dword ptr ds:[ebx+0xD38], esi
@@ -52,7 +58,7 @@
 004F36CE    pop esi
 004F36CF    xor ecx, ebp
 004F36D1    pop ebx
-004F36D2    call 0x0075927A
+004F36D2    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F36D7    mov esp, ebp
 004F36D9    pop ebp
 004F36DA    ret

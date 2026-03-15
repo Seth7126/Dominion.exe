@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53fb60
+// 起始地址: 0x53fb60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053FB60    dword 6A51D233
 0053FB64    add byte ptr ss:[ebp-0x6C17FDB6], cl
 0053FB6A    and al, byte ptr ds:[edx]
@@ -10,9 +16,9 @@
 0053FB78    mov edx, dword ptr ds:[eax+0x0C]
 0053FB7B    mov ecx, dword ptr ds:[eax+0x04]
 0053FB7E    push 0x01
-0053FB80    call 0x00590760
+0053FB80    call 0x00590760                                 ; => [ Call: sub_590760 ]
 0053FB85    add esp, 0x18
-0053FB88    call 0x00573400
+0053FB88    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0053FB8D    mov ecx, dword ptr ds:[eax+0x0C]
 0053FB90    cmp ecx, 0xFFFFFFFF
 0053FB93    jnz 0x0053FBC2
@@ -21,20 +27,20 @@
 0053FB9C    push 0x81EA70
 0053FBA1    mov edx, 0x801800
 0053FBA6    mov ecx, 0x813C5C
-0053FBAB    call 0x0063B870
+0053FBAB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0053FBB0    add esp, 0x0C
 0053FBB3    call 0x0063BC30
 0053FBB8    test al, al
-0053FBBA    jz 0x0053FBBD
+0053FBBA    jz 0x0053FBBD                                   ; => [ Call: sub_63bc30 ]
 0053FBBC    int3
-0053FBBD    jmp 0x0063BB00
+0053FBBD    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 0053FBC2    mov eax, dword ptr ds:[eax+0x04]
 0053FBC5    imul ecx, ecx, 0x5A30
 0053FBCB    push 0x15
 0053FBCD    or dword ptr ds:[ecx+eax*1+0x17558], 0x02
-0053FBD5    call 0x0056B800
+0053FBD5    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0053FBDA    mov edx, 0x3E9
 0053FBDF    mov ecx, eax
 0053FBE1    call 0x005690C0
 0053FBE6    pop ecx
-0053FBE7    ret
+0053FBE7    ret                                             ; => [ Call: sub_5690c0 ]

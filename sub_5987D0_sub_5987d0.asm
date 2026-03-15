@@ -1,29 +1,35 @@
+// ============================================================
+// 函数名称: sub_5987d0
+// 起始地址: 0x5987d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005987D0    push ebp
 005987D1    mov ebp, esp
 005987D3    push 0xFFFFFFFF
-005987D5    push 0x7677FD
+005987D5    push 0x7677FD                                   ; => [ Type: EHRegistrationNode | Call: __ehhandler$?unlink_sources@?$propagator_block@V?$multi_link_registry@V?$ITarget@I@Concurrency@@@Concurrency@@V?$multi_link_registry@V?$ISource@I@Concurrency@@@2@V?$ordered_message_processor@I@2@@Concurrency@@MAEXXZ ]
 005987DA    mov eax, dword ptr fs:[0x00000000]
-005987E0    push eax
+005987E0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005987E1    sub esp, 0x1C
 005987E4    push ebx
 005987E5    push esi
 005987E6    push edi
 005987E7    mov eax, dword ptr ds:[0x008C4040]
 005987EC    xor eax, ebp
-005987EE    push eax
+005987EE    push eax                                        ; => [ Data: __security_cookie ]
 005987EF    lea eax, ss:[ebp-0x0C]
-005987F2    mov dword ptr fs:[0x00000000], eax
+005987F2    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005987F8    mov eax, edx
 005987FA    mov dword ptr ss:[ebp-0x10], eax
 005987FD    mov dword ptr ss:[ebp-0x24], ecx
 00598800    mov edx, dword ptr ss:[ebp+0x0C]
 00598803    mov ecx, eax
-00598805    call 0x00598510
+00598805    call 0x00598510                                 ; => [ Call: sub_598510 ]
 0059880A    mov dword ptr ss:[ebp-0x18], eax
 0059880D    call 0x005CF7E0
 00598812    mov ecx, dword ptr ss:[ebp+0x0C]
 00598815    mov edx, eax
-00598817    call 0x00571B30
+00598817    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 0059881C    mov ebx, dword ptr ss:[ebp+0x08]
 0059881F    mov edi, eax
 00598821    mov edx, dword ptr ss:[ebp-0x18]
@@ -32,13 +38,13 @@
 0059882A    movzx ecx, cl
 0059882D    push ecx
 0059882E    mov ecx, dword ptr ss:[ebp-0x10]
-00598831    call 0x00693050
+00598831    call 0x00693050                                 ; => [ Call: sub_693050 ]
 00598836    add esp, 0x04
 00598839    mov dword ptr ss:[ebp-0x20], eax
 0059883C    cmp dword ptr ss:[ebp-0x10], 0x11
-00598840    mov eax, 0x878254
-00598845    mov esi, 0x801800
-0059884A    cmovnz eax, esi
+00598840    mov eax, 0x878254                               ; => [ Data: data_878254 ]
+00598845    mov esi, 0x801800                               ; => [ Data: data_801800 ]
+0059884A    cmovnz eax, esi                                 ; => [ Data: data_801800 ]
 0059884D    mov dword ptr ss:[ebp-0x1C], eax
 00598850    cmp ebx, 0x01
 00598853    jle 0x005988DE
@@ -46,7 +52,7 @@
 0059885A    lea eax, ss:[ebp+0x08]
 0059885D    push 0x808880
 00598862    push eax
-00598863    call 0x0063DF30
+00598863    call 0x0063DF30                                 ; => [ String: %d | Call: sub_63df30 ]
 00598868    add esp, 0x0C
 0059886B    push dword ptr ss:[ebp-0x1C]
 0059886E    mov edx, dword ptr ss:[ebp-0x10]
@@ -59,27 +65,27 @@
 00598885    push esi
 00598886    mov esi, dword ptr ss:[ebp-0x24]
 00598889    mov ecx, esi
-0059888B    call 0x00598670
+0059888B    call 0x00598670                                 ; => [ Call: sub_598670 ]
 00598890    add esp, 0x10
 00598893    mov dword ptr ss:[ebp-0x04], 0x01
 0059889A    cmp dword ptr ds:[0x00CF65BC], 0x00
-005988A1    jz 0x005988CA
+005988A1    jz 0x005988CA                                   ; => [ Data: data_cf65bc ]
 005988A3    mov eax, dword ptr ss:[ebp+0x08]
 005988A6    test eax, eax
 005988A8    jz 0x005988CA
 005988AA    cmp byte ptr ds:[eax], 0x00
 005988AD    jz 0x005988CA
 005988AF    lea ecx, ss:[ebp+0x08]
-005988B2    call 0x0063D4E0
+005988B2    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 005988B7    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 005988BB    jnz 0x005988CA
 005988BD    mov edx, dword ptr ds:[eax+0x0C]
 005988C0    mov ecx, eax
 005988C2    add edx, 0x10
-005988C5    call 0x0064C080
+005988C5    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 005988CA    mov eax, esi
 005988CC    mov ecx, dword ptr ss:[ebp-0x0C]
-005988CF    mov dword ptr fs:[0x00000000], ecx
+005988CF    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005988D6    pop ecx
 005988D7    pop edi
 005988D8    pop esi
@@ -106,7 +112,7 @@
 0059891B    mov dword ptr ss:[ebp+0x08], ecx
 0059891E    and eax, 0x1000000
 00598923    or eax, 0x00
-00598926    jz 0x00598932
+00598926    jz 0x00598932                                   ; => [ Data: data_1000000 ]
 00598928    mov esi, 0x03
 0059892D    mov dword ptr ss:[ebp+0x08], ebx
 00598930    jmp 0x00598934
@@ -160,7 +166,7 @@
 005989D2    mov dword ptr ss:[ebp+0x08], ecx
 005989D5    and eax, 0x1000000
 005989DA    or eax, 0x00
-005989DD    jz 0x005989E9
+005989DD    jz 0x005989E9                                   ; => [ Data: data_1000000 ]
 005989DF    mov esi, 0x01
 005989E4    mov dword ptr ss:[ebp+0x08], ebx
 005989E7    jmp 0x005989EB
@@ -222,7 +228,7 @@
 00598A9E    push 0x00
 00598AA0    push 0x02
 00598AA2    push esi
-00598AA3    call 0x00693100
+00598AA3    call 0x00693100                                 ; => [ Call: sub_693100 ]
 00598AA8    mov edx, dword ptr ss:[ebp-0x10]
 00598AAB    add esp, 0x0C
 00598AAE    mov ecx, dword ptr ss:[ebp-0x24]
@@ -230,11 +236,11 @@
 00598AB4    push dword ptr ss:[ebp-0x20]
 00598AB7    push esi
 00598AB8    push eax
-00598AB9    call 0x00598670
+00598AB9    call 0x00598670                                 ; => [ Call: sub_598670 ]
 00598ABE    mov eax, dword ptr ss:[ebp-0x24]
 00598AC1    add esp, 0x10
 00598AC4    mov ecx, dword ptr ss:[ebp-0x0C]
-00598AC7    mov dword ptr fs:[0x00000000], ecx
+00598AC7    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00598ACE    pop ecx
 00598ACF    pop edi
 00598AD0    pop esi

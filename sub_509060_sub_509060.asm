@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_509060
+// 起始地址: 0x509060
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00509060    dword 83EC8B55
 00509064    jnl 0x00509072
 00509066    add dword ptr ds:[ecx+ebx*1+0x68], esi
@@ -6,10 +12,10 @@
 0050906C    add byte ptr ds:[eax], 0x68
 0050906F    jns 0x00509073
 00509071    add byte ptr ds:[eax], al
-00509073    push 0x80AE10
-00509078    mov ecx, 0x80AE74
+00509073    push 0x80AE10                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCards_Base.cpp ]
+00509078    mov ecx, 0x80AE74                               ; => [ String: numCards == 1 ]
 0050907D    jmp 0x00509115
-00509082    call 0x00573400
+00509082    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00509087    cmp dword ptr ds:[eax], 0x05
 0050908A    jnz 0x00509101
 0050908C    push ebx
@@ -20,10 +26,10 @@
 00509095    mov esi, dword ptr ds:[eax]
 00509097    call 0x00573400
 0050909C    movzx esi, si
-0050909F    mov ebx, dword ptr ds:[eax+0x04]
+0050909F    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005090A2    cmp esi, 0x320
 005090A8    jb 0x005090AF
-005090AA    call 0x00591930
+005090AA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005090AF    mov ecx, dword ptr ds:[edi+0x14]
 005090B2    imul eax, esi, 0x64
 005090B5    mov esi, ecx
@@ -63,15 +69,15 @@
 005090FE    pop ebx
 005090FF    pop ebp
 00509100    ret
-00509101    push 0x81EF48
+00509101    push 0x81EF48                                   ; => [ String: DomAchievementDataGet ]
 00509106    push 0x1CB1
-0050910B    push 0x81EA70
-00509110    mov ecx, 0x80AEA0
+0050910B    push 0x81EA70                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
+00509110    mov ecx, 0x80AEA0                               ; => [ String: c.contextType == CONTEXT_ACHIEVEMENT ]
 00509115    mov edx, 0x801800
-0050911A    call 0x0063B870
+0050911A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0050911F    add esp, 0x0C
 00509122    call 0x0063BC30
 00509127    test al, al
-00509129    jz 0x0050912C
+00509129    jz 0x0050912C                                   ; => [ Call: sub_63bc30 ]
 0050912B    int3
-0050912C    call 0x0063BB00
+0050912C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

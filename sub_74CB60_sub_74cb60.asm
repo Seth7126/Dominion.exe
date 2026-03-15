@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_74cb60
+// 起始地址: 0x74cb60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074CB60    push esi
 0074CB61    push 0x104
 0074CB66    push 0x00
 0074CB68    push 0x1A9A490
 0074CB6D    mov esi, ecx
-0074CB6F    call 0x00761FC4
+0074CB6F    call 0x00761FC4                                 ; => [ Data: data_1a9a490 | Call: memset ]
 0074CB74    add esp, 0x0C
 0074CB77    lea eax, ds:[esi+0x1C]
 0074CB7A    push dword ptr ds:[esi+0x3C]
@@ -32,8 +38,8 @@
 0074CBB4    push 0x8900C0
 0074CBB9    push 0x104
 0074CBBE    push 0x1A9A490
-0074CBC3    call 0x0074AFA0
+0074CBC3    call 0x0074AFA0                                 ; => [ Call: sub_74afa0 | Data: data_1a9a490 | String: Height: %d\r\nWidth: %d\r\nEscapement: %d\r\nOrientation:  %d\r\nWeight: %d\r\nItalic: %d\r\nUnderline: %d\r\nStrikeOut: %d\r\nCharSet: %d\r\nOutPrecision: %d\r\nClipPrecision: %d\r\nQuality: %d\r\nPitchAndFamily: %d ]
 0074CBC8    add esp, 0x48
 0074CBCB    mov eax, 0x1A9A490
 0074CBD0    pop esi
-0074CBD1    ret
+0074CBD1    ret                                             ; => [ Data: data_1a9a490 ]

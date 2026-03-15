@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6c7130
+// 起始地址: 0x6c7130
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C7130    push ebp
 006C7131    mov ebp, esp
 006C7133    sub esp, 0x48
-006C7136    mov eax, dword ptr ds:[0x008C4040]
+006C7136    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006C713B    xor eax, ebp
 006C713D    mov dword ptr ss:[ebp-0x08], eax
 006C7140    push ebx
@@ -14,19 +20,19 @@
 006C714D    push eax
 006C714E    push esi
 006C714F    mov dword ptr ss:[ebp-0x2C], ecx
-006C7152    call dword ptr ds:[0x007753C0]
+006C7152    call dword ptr ds:[0x007753C0]                  ; => [ Type: RECT ]
 006C7158    lea eax, ss:[ebp-0x18]
 006C715B    push eax
 006C715C    push esi
-006C715D    call dword ptr ds:[0x007753C4]
+006C715D    call dword ptr ds:[0x007753C4]                  ; => [ Type: RECT ]
 006C7163    mov eax, dword ptr ss:[ebp-0x0C]
 006C7166    sub eax, dword ptr ss:[ebp-0x1C]
-006C7169    sub eax, dword ptr ss:[ebp-0x14]
+006C7169    sub eax, dword ptr ss:[ebp-0x14]                ; => [ Field: top | Field: bottom ]
 006C716C    mov esi, dword ptr ss:[ebp-0x10]
 006C716F    sub esi, dword ptr ss:[ebp-0x20]
-006C7172    sub esi, dword ptr ss:[ebp-0x18]
+006C7172    sub esi, dword ptr ss:[ebp-0x18]                ; => [ Field: left | Field: right ]
 006C7175    mov dword ptr ss:[ebp-0x30], eax
-006C7178    mov eax, dword ptr ds:[0x00CF65B8]
+006C7178    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006C717D    mov dword ptr ss:[ebp-0x44], esi
 006C7180    mov edx, dword ptr ds:[eax+0x14]
 006C7183    mov eax, dword ptr ds:[eax+0x18]
@@ -143,7 +149,7 @@
 006C72CC    pop esi
 006C72CD    xor ecx, ebp
 006C72CF    pop ebx
-006C72D0    call 0x0075927A
+006C72D0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C72D5    mov esp, ebp
 006C72D7    pop ebp
 006C72D8    ret

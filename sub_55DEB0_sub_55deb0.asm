@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55deb0
+// 起始地址: 0x55deb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055DEB0    push ebp
 0055DEB1    mov ebp, esp
 0055DEB3    mov eax, dword ptr ss:[ebp+0x08]
@@ -13,4 +19,4 @@
 0055DEC9    add esp, 0x04
 0055DECC    pop esi
 0055DECD    pop ebp
-0055DECE    ret 0x04
+0055DECE    ret 0x04                                        ; => [ Call: sub_568530 ]

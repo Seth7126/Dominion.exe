@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_593b90
+// 起始地址: 0x593b90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00593B90    push ebp
 00593B91    mov ebp, esp
 00593B93    sub esp, 0x68
-00593B96    mov eax, dword ptr ds:[0x008C4040]
+00593B96    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00593B9B    xor eax, ebp
 00593B9D    mov dword ptr ss:[ebp-0x04], eax
 00593BA0    push esi
@@ -17,7 +23,7 @@
 00593BBE    call 0x00576C00
 00593BC3    mov edx, dword ptr ds:[esi]
 00593BC5    mov ecx, dword ptr ss:[ebp+0x0C]
-00593BC8    movups xmm0, xmmword ptr ds:[eax]
+00593BC8    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Call: sub_571b30 ]
 00593BCB    mov edx, dword ptr ds:[edx+0xD48]
 00593BD1    movups xmmword ptr ss:[ebp-0x50], xmm0
 00593BD5    movups xmmword ptr ss:[ebp-0x3C], xmm0
@@ -27,7 +33,7 @@
 00593BE7    push eax
 00593BE8    call 0x00576C00
 00593BED    add esp, 0x10
-00593BF0    movups xmm0, xmmword ptr ds:[eax]
+00593BF0    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Call: sub_571b30 ]
 00593BF3    mov eax, dword ptr ss:[ebp-0x50]
 00593BF6    mov dword ptr ss:[ebp-0x0C], eax
 00593BF9    movd ecx, xmm0
@@ -72,7 +78,7 @@
 00593C5A    pop esi
 00593C5B    mov ecx, dword ptr ss:[ebp-0x04]
 00593C5E    xor ecx, ebp
-00593C60    call 0x0075927A
+00593C60    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00593C65    mov esp, ebp
 00593C67    pop ebp
 00593C68    ret 0x08
@@ -81,7 +87,7 @@
 00593C6E    pop esi
 00593C6F    mov ecx, dword ptr ss:[ebp-0x04]
 00593C72    xor ecx, ebp
-00593C74    call 0x0075927A
+00593C74    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00593C79    mov esp, ebp
 00593C7B    pop ebp
 00593C7C    ret 0x08
@@ -90,7 +96,7 @@
 00593C84    pop edi
 00593C85    xor ecx, ebp
 00593C87    pop esi
-00593C88    call 0x0075927A
+00593C88    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00593C8D    mov esp, ebp
 00593C8F    pop ebp
 00593C90    ret 0x08

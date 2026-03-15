@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58b620
+// 起始地址: 0x58b620
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058B620    push ecx
 0058B621    push esi
 0058B622    mov esi, ecx
@@ -33,7 +39,7 @@
 0058B697    mov ecx, esi
 0058B699    call 0x0058B5C0
 0058B69E    test al, al
-0058B6A0    jz 0x0058B6C4
+0058B6A0    jz 0x0058B6C4                                   ; => [ Call: sub_58b5c0 ]
 0058B6A2    mov eax, 0x02
 0058B6A7    pop edi
 0058B6A8    pop esi
@@ -43,7 +49,7 @@
 0058B6B0    mov ecx, esi
 0058B6B2    call 0x0058B5C0
 0058B6B7    test al, al
-0058B6B9    jz 0x0058B692
+0058B6B9    jz 0x0058B692                                   ; => [ Call: sub_58b5c0 ]
 0058B6BB    mov eax, 0x01
 0058B6C0    pop edi
 0058B6C1    pop esi

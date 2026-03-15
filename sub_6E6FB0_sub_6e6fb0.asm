@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e6fb0
+// 起始地址: 0x6e6fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E6FB0    push ebp
 006E6FB1    mov ebp, esp
 006E6FB3    and esp, 0xFFFFFFF8
@@ -29,14 +35,14 @@
 006E7009    push edi
 006E700A    mov ecx, eax
 006E700C    mov dword ptr ss:[esp+0x18], eax
-006E7010    call 0x006E6A80
+006E7010    call 0x006E6A80                                 ; => [ Call: sub_6e6a80 ]
 006E7015    mov ecx, dword ptr ss:[ebp+0x0C]
 006E7018    add esp, 0x04
 006E701B    mov edx, 0x05
 006E7020    mov dword ptr ds:[ecx+0x40], eax
 006E7023    mov ecx, dword ptr ss:[esp+0x14]
 006E7027    push edi
-006E7028    call 0x006E6A80
+006E7028    call 0x006E6A80                                 ; => [ Call: sub_6e6a80 ]
 006E702D    mov ecx, dword ptr ss:[ebp+0x0C]
 006E7030    add esp, 0x04
 006E7033    mov edx, 0x06
@@ -44,14 +50,14 @@
 006E703B    mov ecx, dword ptr ss:[esp+0x14]
 006E703F    push edi
 006E7040    call 0x006E6A80
-006E7045    mov ecx, eax
+006E7045    mov ecx, eax                                    ; => [ Call: sub_6e6a80 ]
 006E7047    add esp, 0x04
 006E704A    mov dword ptr ss:[esp+0x20], ecx
 006E704E    test ecx, ecx
 006E7050    jns 0x006E7064
 006E7052    push ecx
 006E7053    push 0x8825B8
-006E7058    call 0x0063B5F0
+006E7058    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: image index <0 (%d) ]
 006E705D    mov ecx, dword ptr ss:[esp+0x28]
 006E7061    add esp, 0x08
 006E7064    mov eax, dword ptr ds:[esi+0x48]
@@ -60,7 +66,7 @@
 006E706B    push eax
 006E706C    push ecx
 006E706D    push 0x882640
-006E7072    call 0x0063B5F0
+006E7072    call 0x0063B5F0                                 ; => [ String: image index >end (%d >= %d) | Call: sub_63b5f0 ]
 006E7077    mov ecx, dword ptr ss:[esp+0x2C]
 006E707B    add esp, 0x0C
 006E707E    test ecx, ecx
@@ -80,7 +86,7 @@
 006E70B1    mov ecx, dword ptr ss:[ebp+0x0C]
 006E70B4    add esp, 0x04
 006E70B7    mov esi, dword ptr ss:[esp+0x10]
-006E70BB    mov dword ptr ds:[ecx+0x50], eax
+006E70BB    mov dword ptr ds:[ecx+0x50], eax                ; => [ Call: sub_6e6a80 ]
 006E70BE    mov eax, dword ptr ss:[esp+0x28]
 006E70C2    mov ecx, dword ptr ss:[esp+0x0C]
 006E70C6    mov edx, dword ptr ds:[eax]
@@ -106,48 +112,48 @@
 006E7116    xor edx, edx
 006E7118    mov ecx, dword ptr ss:[esp+0x1C]
 006E711C    push edi
-006E711D    call 0x006E6B50
+006E711D    call 0x006E6B50                                 ; => [ Call: sub_6e6b50 ]
 006E7122    mov ecx, dword ptr ss:[esp+0x20]
 006E7126    add esp, 0x04
 006E7129    mov dword ptr ss:[esp+0x34], edx
 006E712D    mov edx, 0x02
 006E7132    mov dword ptr ss:[esp+0x30], eax
 006E7136    push edi
-006E7137    call 0x006E6B50
+006E7137    call 0x006E6B50                                 ; => [ Call: sub_6e6b50 ]
 006E713C    mov ecx, dword ptr ss:[esp+0x20]
 006E7140    add esp, 0x04
 006E7143    mov dword ptr ss:[esp+0x24], edx
 006E7147    mov edx, 0x03
 006E714C    mov dword ptr ss:[esp+0x20], eax
 006E7150    push edi
-006E7151    call 0x006E6B50
+006E7151    call 0x006E6B50                                 ; => [ Call: sub_6e6b50 ]
 006E7156    mov dword ptr ss:[esp+0x2C], eax
 006E715A    add esp, 0x04
 006E715D    movss xmm0, dword ptr ss:[esp+0x28]
 006E7163    cvtps2pd xmm0, xmm0
 006E7166    mov dword ptr ss:[esp+0x2C], edx
-006E716A    call 0x0076209C
+006E716A    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 006E716F    cvtsd2ss xmm0, xmm0
 006E7173    mulss xmm0, dword ptr ss:[esp+0x20]
 006E7179    movss dword ptr ss:[esp+0x10], xmm0
 006E717F    movss xmm0, dword ptr ss:[esp+0x28]
 006E7185    cvtps2pd xmm0, xmm0
-006E7188    call 0x00762096
+006E7188    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006E718D    cvtsd2ss xmm0, xmm0
 006E7191    mulss xmm0, dword ptr ss:[esp+0x20]
 006E7197    movss dword ptr ss:[esp+0x1C], xmm0
 006E719D    movss xmm0, dword ptr ss:[esp+0x2C]
 006E71A3    cvtps2pd xmm0, xmm0
-006E71A6    call 0x00762096
+006E71A6    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006E71AB    cvtsd2ss xmm0, xmm0
 006E71AF    xorps xmm0, xmmword ptr ds:[0x008937C0]
-006E71B6    mulss xmm0, dword ptr ss:[esp+0x24]
+006E71B6    mulss xmm0, dword ptr ss:[esp+0x24]             ; => [ Data: data_8937c0 ]
 006E71BC    movss dword ptr ss:[esp+0x0C], xmm0
 006E71C2    movss xmm0, dword ptr ss:[esp+0x2C]
 006E71C8    cvtps2pd xmm0, xmm0
-006E71CB    call 0x0076209C
+006E71CB    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 006E71D0    mov eax, dword ptr ss:[ebp+0x0C]
-006E71D3    xorps xmm3, xmm3
+006E71D3    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 006E71D6    cvtsd2ss xmm0, xmm0
 006E71DA    mov ecx, dword ptr ds:[eax+0x48]
 006E71DD    mulss xmm0, dword ptr ss:[esp+0x24]
@@ -155,15 +161,15 @@
 006E71E9    test ecx, ecx
 006E71EB    jz 0x006E7243
 006E71ED    call 0x005AF880
-006E71F2    xorps xmm3, xmm3
-006E71F5    mov ecx, dword ptr ds:[eax]
+006E71F2    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+006E71F5    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006E71F7    mov eax, dword ptr ds:[ecx]
 006E71F9    movss xmm1, dword ptr ds:[ecx+0x0C]
 006E71FE    mulss xmm1, dword ptr ds:[ecx+0x08]
 006E7203    movd xmm0, eax
 006E7207    cvtdq2pd xmm0, xmm0
 006E720B    shr eax, 0x1F
-006E720E    addsd xmm0, qword ptr ds:[eax*8+0x893660]
+006E720E    addsd xmm0, qword ptr ds:[eax*8+0x893660]       ; => [ Data: data_893660 ]
 006E7217    mov eax, dword ptr ds:[ecx+0x04]
 006E721A    cvtpd2ps xmm5, xmm0
 006E721E    movd xmm0, eax
@@ -173,10 +179,10 @@
 006E722D    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 006E7236    mov eax, dword ptr ss:[ebp+0x0C]
 006E7239    cvtpd2ps xmm6, xmm0
-006E723D    mulss xmm6, xmm1
+006E723D    mulss xmm6, xmm1                                ; => [ Data: data_893660 ]
 006E7241    jmp 0x006E7249
-006E7243    xorps xmm5, xmm5
-006E7246    xorps xmm6, xmm6
+006E7243    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+006E7246    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 006E7249    cmp byte ptr ds:[esi+0x5C], 0x00
 006E724D    jz 0x006E7276
 006E724F    divss xmm5, xmm6
@@ -200,7 +206,7 @@
 006E72A8    movss dword ptr ss:[esp+0x20], xmm1
 006E72AE    movss dword ptr ss:[esp+0x08], xmm7
 006E72B4    jmp 0x006E72C5
-006E72B6    xorps xmm7, xmm7
+006E72B6    xorps xmm7, xmm7                                ; => [ String: 0 | String: zx ]
 006E72B9    movss dword ptr ss:[esp+0x08], xmm3
 006E72BF    movss dword ptr ss:[esp+0x20], xmm5
 006E72C5    movss xmm2, dword ptr ss:[esp+0x0C]
@@ -276,13 +282,13 @@
 006E7427    mov esp, ebp
 006E7429    pop ebp
 006E742A    ret
-006E742B    push 0x8825CC
+006E742B    push 0x8825CC                                   ; => [ String: FlanimGetTransformAtFrame ]
 006E7430    push 0x39C
-006E7435    mov ecx, 0x882550
+006E7435    mov ecx, 0x882550                               ; => [ String: vertexIndex >= 0 && vertexIndex < pFlanimDef->mVertexCount ]
 006E743A    jmp 0x006E7541
-006E743F    push 0x8825CC
+006E743F    push 0x8825CC                                   ; => [ String: FlanimGetTransformAtFrame ]
 006E7444    push 0x398
-006E7449    mov ecx, 0x8825E8
+006E7449    mov ecx, 0x8825E8                               ; => [ String: pLayerDef->mQuad.y == pLayerDef->mQuad.z && pLayerDef->mQuad.z == pLayerDef->mQuad.w ]
 006E744E    jmp 0x006E7541
 006E7453    mov dword ptr ss:[esp+0x20], 0x00
 006E745B    lea edi, ds:[ecx+0x04]
@@ -298,7 +304,7 @@
 006E747D    xor edx, edx
 006E747F    add esi, dword ptr ds:[eax+0x30]
 006E7482    mov ecx, esi
-006E7484    call 0x006E6B50
+006E7484    call 0x006E6B50                                 ; => [ Call: sub_6e6b50 ]
 006E7489    mov dword ptr ss:[esp+0x34], eax
 006E748D    add esp, 0x04
 006E7490    movss xmm0, dword ptr ss:[esp+0x30]
@@ -309,7 +315,7 @@
 006E74A6    movss xmm0, dword ptr ss:[esp+0x34]
 006E74AC    push dword ptr ss:[ebp+0x08]
 006E74AF    movss dword ptr ds:[edi], xmm0
-006E74B3    call 0x006E6B50
+006E74B3    call 0x006E6B50                                 ; => [ Call: sub_6e6b50 ]
 006E74B8    mov ecx, dword ptr ss:[esp+0x24]
 006E74BC    add esp, 0x04
 006E74BF    mov dword ptr ss:[esp+0x14], eax
@@ -331,27 +337,27 @@
 006E74FB    mov esp, ebp
 006E74FD    pop ebp
 006E74FE    ret
-006E74FF    push 0x8825CC
+006E74FF    push 0x8825CC                                   ; => [ String: FlanimGetTransformAtFrame ]
 006E7504    push 0x3DC
-006E7509    mov ecx, 0x882550
+006E7509    mov ecx, 0x882550                               ; => [ String: vertexIndex >= 0 && vertexIndex < pFlanimDef->mVertexCount ]
 006E750E    jmp 0x006E7541
-006E7510    push 0x8825CC
+006E7510    push 0x8825CC                                   ; => [ String: FlanimGetTransformAtFrame ]
 006E7515    push 0x390
-006E751A    mov ecx, 0x8824CC
+006E751A    mov ecx, 0x8824CC                               ; => [ String: imageIndex >=0 && imageIndex < pFlanimDef->mImageCount ]
 006E751F    jmp 0x006E7541
-006E7521    push 0x8825CC
+006E7521    push 0x8825CC                                   ; => [ String: FlanimGetTransformAtFrame ]
 006E7526    push 0x387
-006E752B    mov ecx, 0x882508
+006E752B    mov ecx, 0x882508                               ; => [ String: vertexIndexImage >= 0 && vertexIndexImage < pFlanimDef->mVertexCount ]
 006E7530    jmp 0x006E7541
-006E7532    push 0x8825CC
+006E7532    push 0x8825CC                                   ; => [ String: FlanimGetTransformAtFrame ]
 006E7537    push 0x382
-006E753C    mov ecx, 0x882474
+006E753C    mov ecx, 0x882474                               ; => [ String: layerIndex >= 0 && layerIndex < pFlanimDef->mLayerCount ]
 006E7541    push 0x882314
 006E7546    mov edx, 0x801800
-006E754B    call 0x0063B870
+006E754B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Flanim.cpp | String: FlanimGetTransformAtFrame ]
 006E7550    add esp, 0x0C
 006E7553    call 0x0063BC30
 006E7558    test al, al
-006E755A    jz 0x006E755D
+006E755A    jz 0x006E755D                                   ; => [ Call: sub_63bc30 ]
 006E755C    int3
-006E755D    call 0x0063BB00
+006E755D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

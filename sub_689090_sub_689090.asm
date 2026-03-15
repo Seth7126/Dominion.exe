@@ -1,20 +1,26 @@
+// ============================================================
+// 函数名称: sub_689090
+// 起始地址: 0x689090
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00689090    push ebx
 00689091    push esi
-00689092    mov esi, dword ptr ds:[0x0147ABF4]
+00689092    mov esi, dword ptr ds:[0x0147ABF4]              ; => [ Data: data_147abf4 ]
 00689098    push edi
 00689099    test esi, esi
 0068909B    jnz 0x006890B6
-0068909D    push 0x877468
+0068909D    push 0x877468                                   ; => [ String: NetLocAlloc ]
 006890A2    push 0x138
-006890A7    push 0x8773A8
-006890AC    mov ecx, 0x87744C
+006890A7    push 0x8773A8                                   ; => [ String: C:\x\ax2017\Engine\Network.cpp ]
+006890AC    mov ecx, 0x87744C                               ; => [ String: gNetwork ]
 006890B1    jmp 0x00689175
 006890B6    mov eax, dword ptr ds:[esi+0x10]
 006890B9    cmp eax, dword ptr ds:[esi+0x08]
 006890BC    jb 0x006890D2
-006890BE    push 0x877BF4
+006890BE    push 0x877BF4                                   ; => [ String: DataArray<struct NetLoc>::DataArrayAlloc ]
 006890C3    push 0xF4
-006890C8    mov ecx, 0x8019B8
+006890C8    mov ecx, 0x8019B8                               ; => [ String: mUsedCount < mMaxSize ]
 006890CD    jmp 0x00689170
 006890D2    mov eax, dword ptr ds:[esi+0x0C]
 006890D5    mov ebx, dword ptr ds:[esi+0x04]
@@ -34,8 +40,8 @@
 006890FC    mov dword ptr ds:[esi+0x0C], eax
 006890FF    add edi, dword ptr ds:[esi]
 00689101    push edi
-00689102    call 0x00761FC4
-00689107    mov dword ptr ds:[edi+0x48], 0x00
+00689102    call 0x00761FC4                                 ; => [ Call: memset ]
+00689107    mov dword ptr ds:[edi+0x48], 0x00               ; => [ Call: __builtin_memset ]
 0068910E    add esp, 0x0C
 00689111    mov dword ptr ds:[edi+0x4C], 0x00
 00689118    mov dword ptr ds:[edi+0x50], 0x00
@@ -57,15 +63,15 @@
 0068915E    pop esi
 0068915F    pop ebx
 00689160    ret
-00689161    push 0x877BF4
+00689161    push 0x877BF4                                   ; => [ String: DataArray<struct NetLoc>::DataArrayAlloc ]
 00689166    push 0xF5
-0068916B    mov ecx, 0x8019D0
-00689170    push 0x80193C
+0068916B    mov ecx, 0x8019D0                               ; => [ String: mFreeListHead <= mMaxUsedCount ]
+00689170    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
 00689175    mov edx, 0x801800
-0068917A    call 0x0063B870
+0068917A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0068917F    add esp, 0x0C
 00689182    call 0x0063BC30
 00689187    test al, al
-00689189    jz 0x0068918C
+00689189    jz 0x0068918C                                   ; => [ Call: sub_63bc30 ]
 0068918B    int3
-0068918C    call 0x0063BB00
+0068918C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

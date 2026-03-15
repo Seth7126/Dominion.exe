@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_607040
+// 起始地址: 0x607040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00607040    push ebp
 00607041    mov ebp, esp
 00607043    sub esp, 0x2C
@@ -14,7 +20,7 @@
 00607065    lea edx, ss:[ebp-0x10]
 00607068    mov dword ptr ss:[ebp-0x0C], eax
 0060706B    mov ecx, eax
-0060706D    call 0x00571BC0
+0060706D    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 00607072    xor ebx, ebx
 00607074    mov dword ptr ss:[ebp-0x1C], eax
 00607077    test eax, eax
@@ -27,20 +33,20 @@
 00607087    cmp eax, 0x28D4
 0060708C    jnb 0x00607109
 0060708E    cmp dword ptr ds:[eax+0x78087C], edi
-00607094    jz 0x0060709E
+00607094    jz 0x0060709E                                   ; => [ Data: data_78087c ]
 00607096    inc ecx
 00607097    add eax, 0x10C
 0060709C    jmp 0x00607087
 0060709E    imul eax, ecx, 0x10C
 006070A4    xor esi, esi
 006070A6    mov eax, dword ptr ds:[eax+0x780878]
-006070AC    mov dword ptr ss:[ebp-0x18], eax
+006070AC    mov dword ptr ss:[ebp-0x18], eax                ; => [ Data: data_780878 ]
 006070AF    nop
 006070B0    mov edx, dword ptr ss:[ebp-0x14]
 006070B3    mov ecx, dword ptr ss:[ebp+esi*4-0x18]
 006070B7    call 0x004DB7A0
 006070BC    test al, al
-006070BE    jnz 0x006070EC
+006070BE    jnz 0x006070EC                                  ; => [ Call: sub_4db7a0 ]
 006070C0    inc esi
 006070C1    cmp esi, 0x01
 006070C4    jl 0x006070B0
@@ -81,10 +87,10 @@
 00607113    push 0x806FE4
 00607118    mov edx, 0x801800
 0060711D    mov ecx, 0x801AA4
-00607122    call 0x0063B870
+00607122    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: DomDLCGrantsEntitlement | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | String: Halt ]
 00607127    add esp, 0x0C
 0060712A    call 0x0063BC30
 0060712F    test al, al
-00607131    jz 0x00607134
+00607131    jz 0x00607134                                   ; => [ Call: sub_63bc30 ]
 00607133    int3
-00607134    call 0x0063BB00
+00607134    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7050e0
+// 起始地址: 0x7050e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007050E0    push ebp
 007050E1    mov ebp, esp
 007050E3    mov eax, dword ptr ss:[ebp+0x08]
@@ -23,11 +29,11 @@
 00705129    lea ecx, ds:[eax+eax*2]
 0070512C    shl ecx, 0x06
 0070512F    add esi, 0x4378
-00705135    add esi, ecx
+00705135    add esi, ecx                                    ; => [ Data: data_147ded4 ]
 00705137    xor edx, edx
 00705139    mov ecx, dword ptr ss:[ebp+0x0C]
 0070513C    mov ecx, dword ptr ds:[ecx]
-0070513E    call 0x006D8ED0
+0070513E    call 0x006D8ED0                                 ; => [ Call: sub_6d8ed0 ]
 00705143    mov ecx, eax
 00705145    xor eax, eax
 00705147    cmp dword ptr ds:[esi+0x04], ecx
@@ -55,10 +61,10 @@
 00705176    push 0x88C504
 0070517B    mov edx, 0x801800
 00705180    mov ecx, 0x88C9A0
-00705185    call 0x0063B870
+00705185    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: vertexBufferData->mBufferFormat >= 0 && vertexBufferData->mBufferFormat < VERTEX_FORMAT_COUNT | String: OpenGLInterface::GetSortVertexBuffer | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 0070518A    add esp, 0x0C
 0070518D    call 0x0063BC30
 00705192    test al, al
-00705194    jz 0x00705197
+00705194    jz 0x00705197                                   ; => [ Call: sub_63bc30 ]
 00705196    int3
-00705197    call 0x0063BB00
+00705197    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

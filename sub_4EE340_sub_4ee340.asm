@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ee340
+// 起始地址: 0x4ee340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EE340    push ebp
 004EE341    mov ebp, esp
 004EE343    push ecx
@@ -20,7 +26,7 @@
 004EE36E    add eax, edx
 004EE370    imul eax, eax, 0x2717
 004EE376    sub ecx, eax
-004EE378    mov eax, dword ptr ds:[ecx*4+0x1938E70]
+004EE378    mov eax, dword ptr ds:[ecx*4+0x1938E70]         ; => [ Data: data_1938e70 ]
 004EE37F    test eax, eax
 004EE381    jz 0x004EE391
 004EE383    cmp dword ptr ds:[eax], esi
@@ -30,9 +36,9 @@
 004EE38F    jnz 0x004EE383
 004EE391    push esi
 004EE392    push 0x8089C0
-004EE397    call 0x004F7F30
+004EE397    call 0x004F7F30                                 ; => [ String: Couldn't lookup %d\n | Call: sub_4f7f30 ]
 004EE39C    add esp, 0x08
-004EE39F    xor eax, eax
+004EE39F    xor eax, eax                                    ; => [ Call: nullptr ]
 004EE3A1    xor esi, esi
 004EE3A3    mov ecx, ebx
 004EE3A5    test ebx, ebx

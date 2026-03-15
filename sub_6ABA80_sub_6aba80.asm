@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6aba80
+// 起始地址: 0x6aba80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006ABA80    push ebp
 006ABA81    mov ebp, esp
 006ABA83    and esp, 0xFFFFFFF0
@@ -15,7 +21,7 @@
 006ABAA6    mov dword ptr ss:[esp+0x54], 0x400
 006ABAAE    mov dword ptr ss:[esp+0x58], 0x1800
 006ABAB6    mov dword ptr ss:[esp+0x30], esi
-006ABABA    call 0x006A9570
+006ABABA    call 0x006A9570                                 ; => [ Call: sub_6a9570 ]
 006ABABF    mov edi, eax
 006ABAC1    mov dword ptr ss:[esp+0x5C], edi
 006ABAC5    cmp edi, 0x1000
@@ -28,7 +34,7 @@
 006ABAE4    mov ecx, eax
 006ABAE6    call 0x00687730
 006ABAEB    movss xmm4, dword ptr ds:[0x008937C0]
-006ABAF3    mov ecx, eax
+006ABAF3    mov ecx, eax                                    ; => [ Call: sub_687730 | Call: sub_6a9660 ]
 006ABAF5    movss xmm3, dword ptr ds:[0x00890CA0]
 006ABAFD    xor esi, esi
 006ABAFF    movss xmm2, dword ptr ds:[0x00890E18]
@@ -109,7 +115,7 @@
 006ABC11    addss xmm0, xmm1
 006ABC15    call 0x004AC580
 006ABC1A    movss xmm2, dword ptr ds:[0x00890E18]
-006ABC22    divss xmm2, xmm0
+006ABC22    divss xmm2, xmm0                                ; => [ Call: sub_4ac580 ]
 006ABC26    movaps xmm0, xmm2
 006ABC29    movaps xmm1, xmm2
 006ABC2C    mulss xmm0, dword ptr ss:[esp+0x18]
@@ -124,7 +130,7 @@
 006ABC5A    movss dword ptr ss:[esp+0x10], xmm2
 006ABC60    movsd qword ptr ss:[esp+0x20], xmm0
 006ABC66    fld qword ptr ss:[esp+0x20]
-006ABC6A    call 0x00762368
+006ABC6A    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 006ABC6F    fstp qword ptr ss:[esp+0x20]
 006ABC73    movsd xmm1, qword ptr ss:[esp+0x20]
 006ABC79    cvtpd2ps xmm1, xmm1
@@ -138,7 +144,7 @@
 006ABCA9    movss xmm0, dword ptr ss:[esp+0x18]
 006ABCAF    mulss xmm0, xmm0
 006ABCB3    addss xmm0, xmm1
-006ABCB7    call 0x004AC580
+006ABCB7    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006ABCBC    movaps xmm1, xmm0
 006ABCBF    movss xmm0, dword ptr ds:[0x00890C78]
 006ABCC7    comiss xmm0, xmm1
@@ -165,7 +171,7 @@
 006ABD28    movss xmm5, dword ptr ds:[0x008910DC]
 006ABD30    movss xmm3, dword ptr ds:[0x00890CA0]
 006ABD38    movss xmm6, dword ptr ds:[0x00890C98]
-006ABD40    mov dword ptr ds:[ecx], eax
+006ABD40    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_6ab610 ]
 006ABD42    add ecx, 0x04
 006ABD45    mov dword ptr ss:[esp+0x1C], ecx
 006ABD49    cmp edi, 0x400
@@ -202,7 +208,7 @@
 006ABDBD    push eax
 006ABDBE    push ecx
 006ABDBF    call 0x0063C000
-006ABDC4    push eax
+006ABDC4    push eax                                        ; => [ Call: sub_63c000 ]
 006ABDC5    push 0x87B61C
 006ABDCA    call 0x0063B5F0
 006ABDCF    add esp, 0x10
@@ -210,16 +216,16 @@
 006ABDD3    pop esi
 006ABDD4    mov esp, ebp
 006ABDD6    pop ebp
-006ABDD7    ret
+006ABDD7    ret                                             ; => [ String: ProcessCylinderCubeMap time %d ms | Call: sub_63b5f0 ]
 006ABDD8    push 0x87B5E8
 006ABDDD    push 0x4F1
 006ABDE2    push 0x87B3F4
 006ABDE7    mov edx, 0x801800
 006ABDEC    mov ecx, 0x87B640
-006ABDF1    call 0x0063B870
+006ABDF1    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\TextureImport.cpp | String: ProcessCylinderCubeMap | Data: data_801800 | String: processedImage.pitch == imageWidth * (int)sizeof(uint32) ]
 006ABDF6    add esp, 0x0C
 006ABDF9    call 0x0063BC30
 006ABDFE    test al, al
-006ABE00    jz 0x006ABE03
+006ABE00    jz 0x006ABE03                                   ; => [ Call: sub_63bc30 ]
 006ABE02    int3
-006ABE03    call 0x0063BB00
+006ABE03    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

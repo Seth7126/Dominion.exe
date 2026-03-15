@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56eb20
+// 起始地址: 0x56eb20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056EB20    push ebp
 0056EB21    mov ebp, esp
 0056EB23    and esp, 0xFFFFFFF0
@@ -7,18 +13,18 @@
 0056EB2B    mov dword ptr ss:[esp+0x14], ecx
 0056EB2F    call 0x00573400
 0056EB34    mov eax, dword ptr ds:[eax+0x04]
-0056EB37    mov esi, dword ptr ds:[eax+0x19CC]
-0056EB3D    call 0x00573400
+0056EB37    mov esi, dword ptr ds:[eax+0x19CC]              ; => [ Call: sub_573400 ]
+0056EB3D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056EB42    cmp esi, dword ptr ds:[eax+0x0C]
 0056EB45    jnz 0x0056EC70
-0056EB4B    call 0x00573400
+0056EB4B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056EB50    push 0xA00
 0056EB55    mov dword ptr ss:[esp+0x20], eax
 0056EB59    mov esi, dword ptr ds:[eax+0x0C]
 0056EB5C    mov edx, esi
 0056EB5E    mov edi, dword ptr ds:[eax+0x04]
 0056EB61    mov ecx, edi
-0056EB63    call 0x00583FC0
+0056EB63    call 0x00583FC0                                 ; => [ Call: sub_583fc0 ]
 0056EB68    add esp, 0x04
 0056EB6B    mov dword ptr ss:[esp+0x10], eax
 0056EB6F    mov ecx, edi
@@ -26,7 +32,7 @@
 0056EB73    push 0x00
 0056EB75    push 0x00
 0056EB77    push 0x29
-0056EB79    call 0x00576B30
+0056EB79    call 0x00576B30                                 ; => [ Call: sub_576b30 ]
 0056EB7E    add esp, 0x10
 0056EB81    test eax, eax
 0056EB83    jle 0x0056EB9E
@@ -36,12 +42,12 @@
 0056EB8E    call 0x00583FC0
 0056EB93    mov ecx, dword ptr ss:[esp+0x14]
 0056EB97    add esp, 0x04
-0056EB9A    add ecx, eax
+0056EB9A    add ecx, eax                                    ; => [ Call: sub_583fc0 ]
 0056EB9C    jmp 0x0056EBA2
 0056EB9E    mov ecx, dword ptr ss:[esp+0x10]
 0056EBA2    mov eax, dword ptr ss:[esp+0x14]
 0056EBA6    xorps xmm0, xmm0
-0056EBA9    movlpd qword ptr ss:[esp+0x24], xmm0
+0056EBA9    movlpd qword ptr ss:[esp+0x24], xmm0            ; => [ Call: __builtin_memset ]
 0056EBAF    movlpd qword ptr ss:[esp+0x34], xmm0
 0056EBB5    movlpd qword ptr ss:[esp+0x48], xmm0
 0056EBBB    movlpd qword ptr ss:[esp+0x40], xmm0
@@ -55,7 +61,7 @@
 0056EBEC    movaps xmmword ptr ss:[esp+0x60], xmm0
 0056EBF1    movaps xmm0, xmmword ptr ss:[esp+0x40]
 0056EBF6    movaps xmmword ptr ss:[esp+0x70], xmm0
-0056EBFB    mov dword ptr ss:[esp+0x14], 0x00
+0056EBFB    mov dword ptr ss:[esp+0x14], 0x00               ; => [ Call: nullptr ]
 0056EC03    mov dword ptr ss:[esp+0x18], 0x00
 0056EC0B    test ecx, ecx
 0056EC0D    jz 0x0056EC70
@@ -74,7 +80,7 @@
 0056EC2D    push esi
 0056EC2E    lea edx, ss:[esp+0x30]
 0056EC32    mov ecx, edi
-0056EC34    call 0x00623940
+0056EC34    call 0x00623940                                 ; => [ Call: sub_623940 ]
 0056EC39    add esp, 0x1C
 0056EC3C    mov dword ptr ss:[esp+0x14], eax
 0056EC40    test eax, eax
@@ -93,7 +99,7 @@
 0056EC62    mov edx, esi
 0056EC64    mov ecx, edi
 0056EC66    push 0x00
-0056EC68    call 0x00590760
+0056EC68    call 0x00590760                                 ; => [ Call: sub_590760 | Call: sub_586550 ]
 0056EC6D    add esp, 0x18
 0056EC70    pop edi
 0056EC71    pop esi

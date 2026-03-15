@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7266e0
+// 起始地址: 0x7266e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007266E0    push ebp
 007266E1    mov ebp, esp
 007266E3    sub esp, 0x60
@@ -322,7 +328,7 @@
 00726A97    sub edx, eax
 00726A99    mov dword ptr ss:[ebp-0x30], edx
 00726A9C    nop dword ptr ds:[eax], eax
-00726AA0    xor esi, esi
+00726AA0    xor esi, esi                                    ; => [ Call: nullptr ]
 00726AA2    test ebx, ebx
 00726AA4    jle 0x00726ACF
 00726AA6    mov dword ptr ss:[ebp-0x38], edi
@@ -362,7 +368,7 @@
 00726B09    mov edx, 0x20
 00726B0E    sub edx, ebx
 00726B10    mov dword ptr ss:[ebp-0x38], edx
-00726B13    xor edx, edx
+00726B13    xor edx, edx                                    ; => [ Call: nullptr ]
 00726B15    test ebx, ebx
 00726B17    jle 0x00726C93
 00726B1D    cmp ebx, 0x08
@@ -653,7 +659,7 @@
 00726E57    sub edx, eax
 00726E59    mov dword ptr ss:[ebp-0x30], edx
 00726E5C    nop dword ptr ds:[eax], eax
-00726E60    xor esi, esi
+00726E60    xor esi, esi                                    ; => [ Call: nullptr ]
 00726E62    test ebx, ebx
 00726E64    jle 0x00726E8E
 00726E66    sub edi, ecx
@@ -695,7 +701,7 @@
 00726EC8    test ebx, ebx
 00726ECA    jle 0x00726EF5
 00726ECC    mov eax, edi
-00726ECE    mov edi, dword ptr ss:[ebp-0x5C]
+00726ECE    mov edi, dword ptr ss:[ebp-0x5C]                ; => [ Call: nullptr ]
 00726ED1    sub eax, ecx
 00726ED3    mov dword ptr ss:[ebp-0x58], eax
 00726ED6    lea esi, ds:[edi+ecx*1]
@@ -746,7 +752,7 @@
 00726F5C    push eax
 00726F5D    push edi
 00726F5E    push ecx
-00726F5F    call 0x00761FBE
+00726F5F    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00726F64    add esp, 0x0C
 00726F67    jmp 0x00727285
 00726F6C    xor esi, esi

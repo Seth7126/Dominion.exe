@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a8090
+// 起始地址: 0x5a8090
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A8090    push ebx
 005A8091    mov ebx, esp
 005A8093    sub esp, 0x08
@@ -43,7 +49,7 @@
 005A8133    lea edx, ss:[ebp-0x20]
 005A8136    mov ecx, dword ptr ds:[ebx+0x0C]
 005A8139    push 0x00
-005A813B    call 0x005A11B0
+005A813B    call 0x005A11B0                                 ; => [ Call: sub_5a11b0 ]
 005A8140    add esp, 0x04
 005A8143    test al, al
 005A8145    jnz 0x005A825B
@@ -55,7 +61,7 @@
 005A8160    add esp, 0x04
 005A8163    test al, al
 005A8165    mov eax, dword ptr ss:[ebp-0x04]
-005A8168    jnz 0x005A825E
+005A8168    jnz 0x005A825E                                  ; => [ Call: sub_5a11b0 ]
 005A816E    mov edx, dword ptr ss:[ebp-0x10]
 005A8171    movss xmm4, dword ptr ss:[ebp-0x14]
 005A8176    movss xmm5, dword ptr ss:[ebp-0x18]
@@ -112,7 +118,7 @@
 005A8248    mov eax, dword ptr ss:[ebp-0x04]
 005A824B    mov dword ptr ss:[ebp-0x08], edx
 005A824E    addss xmm0, xmm1
-005A8252    movss dword ptr ds:[esi], xmm0
+005A8252    movss dword ptr ds:[esi], xmm0                  ; => [ Call: sub_4ae0b0 ]
 005A8256    add esi, 0x08
 005A8259    jmp 0x005A8264
 005A825B    mov eax, dword ptr ss:[ebp-0x04]

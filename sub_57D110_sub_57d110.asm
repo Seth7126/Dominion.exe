@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57d110
+// 起始地址: 0x57d110
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057D110    push ebp
 0057D111    mov ebp, esp
 0057D113    sub esp, 0x10
@@ -12,7 +18,7 @@
 0057D12A    mov dword ptr ss:[ebp-0x0C], 0x123E
 0057D131    mov edx, dword ptr ds:[eax+0xD48]
 0057D137    mov ecx, dword ptr ss:[ebp+ebx*4-0x10]
-0057D13B    call 0x00571B30
+0057D13B    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0057D140    mov edi, eax
 0057D142    xor esi, esi
 0057D144    mov edx, dword ptr ds:[edi+0xA8]
@@ -39,7 +45,7 @@
 0057D186    mov edx, esi
 0057D188    mov ecx, dword ptr ss:[ebp+ebx*4-0x10]
 0057D18C    push edi
-0057D18D    call 0x00575E70
+0057D18D    call 0x00575E70                                 ; => [ Call: sub_575e70 ]
 0057D192    mov edx, dword ptr ss:[ebp+0x08]
 0057D195    add esp, 0x04
 0057D198    mov ecx, dword ptr ss:[ebp-0x04]
@@ -52,7 +58,7 @@
 0057D1A5    call 0x0057C810
 0057D1AA    add esp, 0x14
 0057D1AD    test al, al
-0057D1AF    jz 0x0057D1C3
+0057D1AF    jz 0x0057D1C3                                   ; => [ Call: sub_57c810 ]
 0057D1B1    mov ecx, dword ptr ss:[ebp-0x08]
 0057D1B4    mov eax, dword ptr ds:[ecx+0x400]
 0057D1BA    mov dword ptr ds:[ecx+eax*4], esi

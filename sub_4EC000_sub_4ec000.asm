@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4ec000
+// 起始地址: 0x4ec000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EC000    push ebp
 004EC001    mov ebp, esp
 004EC003    mov eax, 0x1C40
-004EC008    call 0x00761E50
+004EC008    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004EC00D    mov eax, dword ptr ds:[0x008C4040]
-004EC012    xor eax, ebp
+004EC012    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004EC014    mov dword ptr ss:[ebp-0x08], eax
 004EC017    push ebx
 004EC018    push esi
@@ -28,7 +34,7 @@
 004EC049    pop ebx
 004EC04A    mov ecx, dword ptr ss:[ebp-0x08]
 004EC04D    xor ecx, ebp
-004EC04F    call 0x0075927A
+004EC04F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004EC054    mov esp, ebp
 004EC056    pop ebp
 004EC057    ret
@@ -76,7 +82,7 @@
 004EC0FE    push eax
 004EC0FF    lea edx, ss:[ebp-0x32C]
 004EC105    lea ecx, ss:[ebp-0xFAC]
-004EC10B    call 0x004EBF20
+004EC10B    call 0x004EBF20                                 ; => [ Call: sub_4ebf20 ]
 004EC110    add esp, 0x08
 004EC113    xor ecx, ecx
 004EC115    test edi, edi
@@ -108,8 +114,8 @@
 004EC18C    pop esi
 004EC18D    xor ecx, ebp
 004EC18F    pop ebx
-004EC190    call 0x0075927A
+004EC190    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004EC195    mov esp, ebp
 004EC197    pop ebp
 004EC198    ret
-004EC199    call 0x007598E1
+004EC199    call 0x007598E1                                 ; => [ Call: ___report_rangecheckfailure ]

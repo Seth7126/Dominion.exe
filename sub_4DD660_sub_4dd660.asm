@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4dd660
+// 起始地址: 0x4dd660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DD660    push ebp
 004DD661    mov ebp, esp
 004DD663    and esp, 0xFFFFFFF0
 004DD666    sub esp, 0x128
-004DD66C    mov eax, dword ptr ds:[0x008C4040]
+004DD66C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004DD671    xor eax, esp
 004DD673    mov dword ptr ss:[esp+0x124], eax
 004DD67A    mov eax, dword ptr ss:[ebp+0x0C]
@@ -15,7 +21,7 @@
 004DD68F    mov ecx, eax
 004DD691    push edi
 004DD692    mov dword ptr ss:[esp+0x0C], eax
-004DD696    call 0x00571B30
+004DD696    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 004DD69B    mov edi, eax
 004DD69D    xor edx, edx
 004DD69F    mov dword ptr ss:[esp+0x08], edi
@@ -52,7 +58,7 @@
 004DD708    lea eax, ss:[esp+0x3C]
 004DD70C    push 0x00
 004DD70E    push eax
-004DD70F    call 0x00761FC4
+004DD70F    call 0x00761FC4                                 ; => [ Call: memset ]
 004DD714    mov ecx, dword ptr ss:[esp+0x18]
 004DD718    add esp, 0x0C
 004DD71B    xor edx, edx
@@ -62,7 +68,7 @@
 004DD728    cmp ecx, 0xD00
 004DD72E    push eax
 004DD72F    lea eax, ss:[esp+0x3C]
-004DD733    cmovnz eax, edx
+004DD733    cmovnz eax, edx                                 ; => [ Call: nullptr ]
 004DD736    push eax
 004DD737    xor eax, eax
 004DD739    cmp ecx, 0xD00
@@ -76,8 +82,8 @@
 004DD758    cmp dword ptr ss:[esp+0x20], 0xD00
 004DD760    mov eax, 0x00
 004DD765    push dword ptr ss:[esp+0x30]
-004DD769    cmovz ecx, eax
-004DD76C    call 0x004DD440
+004DD769    cmovz ecx, eax                                  ; => [ Call: nullptr ]
+004DD76C    call 0x004DD440                                 ; => [ Call: sub_4dd440 ]
 004DD771    add esp, 0x18
 004DD774    xor ecx, ecx
 004DD776    test esi, esi
@@ -102,7 +108,7 @@
 004DD7B8    pop edi
 004DD7B9    pop esi
 004DD7BA    xor ecx, esp
-004DD7BC    call 0x0075927A
+004DD7BC    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004DD7C1    mov esp, ebp
 004DD7C3    pop ebp
 004DD7C4    ret

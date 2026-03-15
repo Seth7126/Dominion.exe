@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57fac0
+// 起始地址: 0x57fac0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057FAC0    push ebp
 0057FAC1    mov ebp, esp
 0057FAC3    push ecx
@@ -14,9 +20,9 @@
 0057FAE4    mov esi, dword ptr ds:[edi+0x5EB68]
 0057FAEA    cmp esi, 0xFFFFFFFF
 0057FAED    jnz 0x0057FB03
-0057FAEF    push 0x81FE74
+0057FAEF    push 0x81FE74                                   ; => [ String: AchivementDataGet ]
 0057FAF4    push 0x251C
-0057FAF9    mov ecx, 0x81FEC4
+0057FAF9    mov ecx, 0x81FEC4                               ; => [ String: g.numAchivementData != -1 ]
 0057FAFE    jmp 0x0057FB9B
 0057FB03    mov ebx, dword ptr ss:[ebp+0x08]
 0057FB06    xor eax, eax
@@ -35,9 +41,9 @@
 0057FB27    mov edx, dword ptr ss:[ebp-0x04]
 0057FB2A    cmp esi, 0x80
 0057FB30    jl 0x0057FB60
-0057FB32    push 0x81FE74
+0057FB32    push 0x81FE74                                   ; => [ String: AchivementDataGet ]
 0057FB37    push 0x2528
-0057FB3C    mov ecx, 0x81FEE0
+0057FB3C    mov ecx, 0x81FEE0                               ; => [ String: g.numAchivementData < MAX_UNIQUE_CARDS_IN_A_GAME ]
 0057FB41    jmp 0x0057FB9B
 0057FB43    imul ecx, eax, 0x31C
 0057FB49    imul eax, dword ptr ss:[ebp-0x04], 0x84
@@ -64,15 +70,15 @@
 0057FB88    mov esp, ebp
 0057FB8A    pop ebp
 0057FB8B    ret
-0057FB8C    push 0x81FE74
+0057FB8C    push 0x81FE74                                   ; => [ String: AchivementDataGet ]
 0057FB91    push 0x251A
-0057FB96    mov ecx, 0x81FE88
+0057FB96    mov ecx, 0x81FE88                               ; => [ String: g.simStyle != SIM_SIMULATION && g.simStyle != SIM_AUTOPLAY ]
 0057FB9B    push 0x81F4B8
 0057FBA0    mov edx, 0x801800
-0057FBA5    call 0x0063B870
+0057FBA5    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: AchivementDataGet | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0057FBAA    add esp, 0x0C
 0057FBAD    call 0x0063BC30
 0057FBB2    test al, al
-0057FBB4    jz 0x0057FBB7
+0057FBB4    jz 0x0057FBB7                                   ; => [ Call: sub_63bc30 ]
 0057FBB6    int3
-0057FBB7    call 0x0063BB00
+0057FBB7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

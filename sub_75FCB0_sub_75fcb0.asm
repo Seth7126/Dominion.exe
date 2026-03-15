@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_75fcb0
+// 起始地址: 0x75fcb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075FCB0    push ebp
 0075FCB1    mov ebp, esp
 0075FCB3    and esp, 0xFFFFFFF0
 0075FCB6    sub esp, 0x128
-0075FCBC    mov eax, dword ptr ds:[0x008C4040]
+0075FCBC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0075FCC1    xor eax, esp
 0075FCC3    mov dword ptr ss:[esp+0x124], eax
 0075FCCA    mov eax, dword ptr ss:[ebp+0x08]
-0075FCCD    xor edx, edx
+0075FCCD    xor edx, edx                                    ; => [ Call: nullptr ]
 0075FCCF    mov dword ptr ss:[esp+0x60], eax
 0075FCD3    mov eax, dword ptr ds:[ecx+0x1058]
 0075FCD9    mov dword ptr ss:[esp+0x40], ecx
@@ -41,16 +47,16 @@
 0075FD51    jnbe 0x0075FD59
 0075FD53    sqrtsd xmm0, xmm0
 0075FD57    jmp 0x0075FD5E
-0075FD59    call 0x00762084
+0075FD59    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0075FD5E    xorps xmm3, xmm3
 0075FD61    cvtsd2ss xmm3, xmm0
-0075FD65    xorps xmm0, xmm0
+0075FD65    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0075FD68    ucomiss xmm3, xmm0
 0075FD6B    lahf
 0075FD6C    test ah, 0x44
 0075FD6F    jp 0x0075FD79
-0075FD71    xorps xmm1, xmm1
-0075FD74    xorps xmm2, xmm2
+0075FD71    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
+0075FD74    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 0075FD77    jmp 0x0075FD97
 0075FD79    movss xmm1, dword ptr ss:[esp+0x30]
 0075FD7F    movss xmm2, dword ptr ss:[esp+0x44]
@@ -114,7 +120,7 @@
 0075FEAB    jnbe 0x0075FEB3
 0075FEAD    sqrtsd xmm0, xmm0
 0075FEB1    jmp 0x0075FEB8
-0075FEB3    call 0x00762084
+0075FEB3    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0075FEB8    test byte ptr ds:[edi+0x1068], 0x04
 0075FEBF    xorps xmm4, xmm4
 0075FEC2    cvtsd2ss xmm4, xmm0
@@ -124,9 +130,9 @@
 0075FED2    lahf
 0075FED3    test ah, 0x44
 0075FED6    jp 0x0075FEE3
-0075FED8    xorps xmm1, xmm1
-0075FEDB    xorps xmm3, xmm3
-0075FEDE    xorps xmm2, xmm2
+0075FED8    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
+0075FEDB    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+0075FEDE    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 0075FEE1    jmp 0x0075FF04
 0075FEE3    movaps xmm2, xmmword ptr ss:[esp+0x50]
 0075FEE8    movss xmm3, dword ptr ds:[edi+0x1D30]
@@ -170,16 +176,16 @@
 0075FF98    jnbe 0x0075FFA0
 0075FF9A    sqrtsd xmm0, xmm0
 0075FF9E    jmp 0x0075FFA5
-0075FFA0    call 0x00762084
+0075FFA0    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0075FFA5    cvtsd2ss xmm0, xmm0
 0075FFA9    xorps xmm4, xmm4
 0075FFAC    ucomiss xmm0, xmm4
 0075FFAF    lahf
 0075FFB0    test ah, 0x44
 0075FFB3    jp 0x0075FFC0
-0075FFB5    xorps xmm6, xmm6
-0075FFB8    xorps xmm7, xmm7
-0075FFBB    xorps xmm1, xmm1
+0075FFB5    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
+0075FFB8    xorps xmm7, xmm7                                ; => [ String: 0 | String: zx ]
+0075FFBB    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 0075FFBE    jmp 0x0075FFDE
 0075FFC0    movss xmm1, dword ptr ss:[esp+0x24]
 0075FFC6    movss xmm7, dword ptr ss:[esp+0x28]
@@ -232,9 +238,9 @@
 007600C0    lahf
 007600C1    test ah, 0x44
 007600C4    jp 0x007600D1
-007600C6    xorps xmm1, xmm1
-007600C9    xorps xmm3, xmm3
-007600CC    xorps xmm2, xmm2
+007600C6    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
+007600C9    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+007600CC    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 007600CF    jmp 0x007600F2
 007600D1    movaps xmm2, xmmword ptr ss:[esp+0x50]
 007600D6    movss xmm3, dword ptr ds:[edi+0x1D30]
@@ -278,16 +284,16 @@
 00760189    jnbe 0x00760191
 0076018B    sqrtsd xmm0, xmm0
 0076018F    jmp 0x00760196
-00760191    call 0x00762084
+00760191    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00760196    cvtsd2ss xmm0, xmm0
 0076019A    xorps xmm4, xmm4
 0076019D    ucomiss xmm0, xmm4
 007601A0    lahf
 007601A1    test ah, 0x44
 007601A4    jp 0x007601B1
-007601A6    xorps xmm2, xmm2
-007601A9    xorps xmm3, xmm3
-007601AC    xorps xmm1, xmm1
+007601A6    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+007601A9    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+007601AC    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 007601AF    jmp 0x007601CF
 007601B1    movss xmm1, dword ptr ss:[esp+0x30]
 007601B7    movss xmm3, dword ptr ss:[esp+0x3C]
@@ -387,7 +393,7 @@
 0076037F    jnbe 0x00760387
 00760381    sqrtsd xmm0, xmm0
 00760385    jmp 0x0076038C
-00760387    call 0x00762084
+00760387    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0076038C    mov ecx, dword ptr ds:[esi+0x30]
 0076038F    cvtsd2ss xmm0, xmm0
 00760393    movss dword ptr ss:[esp+0x1C], xmm0
@@ -423,9 +429,9 @@
 00760413    divss xmm1, dword ptr ds:[esi+0x18]
 00760418    cvtps2pd xmm0, xmm1
 0076041B    movss xmm1, dword ptr ds:[esi+0x20]
-00760420    xorps xmm1, xmmword ptr ds:[0x008937C0]
+00760420    xorps xmm1, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 00760427    cvtss2sd xmm1, xmm1
-0076042B    call 0x00762090
+0076042B    call 0x00762090                                 ; => [ Call: _libm_sse2_pow_precise ]
 00760430    cvtsd2ss xmm0, xmm0
 00760434    mulss xmm0, dword ptr ss:[esp+0x10]
 0076043A    movss dword ptr ss:[esp+0x10], xmm0
@@ -544,7 +550,7 @@
 0076064E    jnbe 0x00760656
 00760650    sqrtsd xmm0, xmm0
 00760654    jmp 0x0076065B
-00760656    call 0x00762084
+00760656    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0076065B    xorps xmm1, xmm1
 0076065E    xorps xmm4, xmm4
 00760661    cvtsd2ss xmm1, xmm0
@@ -552,9 +558,9 @@
 00760668    lahf
 00760669    test ah, 0x44
 0076066C    jp 0x0076067C
-0076066E    xorps xmm7, xmm7
+0076066E    xorps xmm7, xmm7                                ; => [ String: 0 | String: zx ]
 00760671    movss dword ptr ss:[esp+0x20], xmm4
-00760677    xorps xmm2, xmm2
+00760677    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 0076067A    jmp 0x007606A0
 0076067C    movss xmm0, dword ptr ss:[esp+0x20]
 00760682    divss xmm0, xmm1
@@ -616,7 +622,7 @@
 00760764    sub ecx, edx
 00760766    lea edi, ds:[esi+edi*4]
 00760769    xor eax, eax
-0076076B    rep stosd
+0076076B    rep stosd                                       ; => [ Call: __builtin_memset | Call: __builtin_memset ]
 0076076D    mov eax, dword ptr ss:[esp+0x30]
 00760771    mov edi, dword ptr ss:[esp+0x48]
 00760775    inc eax
@@ -628,7 +634,7 @@
 0076078F    pop edi
 00760790    pop esi
 00760791    xor ecx, esp
-00760793    call 0x0075927A
+00760793    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00760798    mov esp, ebp
 0076079A    pop ebp
 0076079B    ret 0x08

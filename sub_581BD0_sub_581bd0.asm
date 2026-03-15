@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_581bd0
+// 起始地址: 0x581bd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00581BD0    push ebp
 00581BD1    mov ebp, esp
 00581BD3    sub esp, 0x10
@@ -9,7 +15,7 @@
 00581BDE    mov dword ptr ss:[ebp-0x04], edx
 00581BE1    cmp edi, 0x320
 00581BE7    jb 0x00581BF1
-00581BE9    call 0x00591930
+00581BE9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00581BEE    mov edx, dword ptr ss:[ebp-0x04]
 00581BF1    imul ebx, edi, 0x64
 00581BF4    add ebx, esi
@@ -20,13 +26,13 @@
 00581C08    cmp eax, 0x0B
 00581C0B    jnbe 0x00581FC1
 00581C11    jmp dword ptr ds:[eax*4+0x581FF4]
-00581C18    xor edi, edi
+00581C18    xor edi, edi                                    ; => [ Call: nullptr ]
 00581C1A    cmp dword ptr ds:[esi+0xD38], edi
 00581C20    jle 0x00581C3B
 00581C22    push 0x06
 00581C24    push edi
 00581C25    mov ecx, esi
-00581C27    call 0x00581A00
+00581C27    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581C2C    mov edx, dword ptr ss:[ebp-0x04]
 00581C2F    inc edi
 00581C30    add esp, 0x08
@@ -62,7 +68,7 @@
 00581C8C    push eax
 00581C8D    push edi
 00581C8E    mov ecx, esi
-00581C90    call 0x00581A00
+00581C90    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581C95    mov edx, dword ptr ss:[ebp-0x04]
 00581C98    inc edi
 00581C99    add esp, 0x08
@@ -70,7 +76,7 @@
 00581C9F    cmp edi, dword ptr ds:[esi+0xD38]
 00581CA5    jl 0x00581C60
 00581CA7    mov ebx, dword ptr ss:[ebp-0x08]
-00581CAA    mov dword ptr ds:[ebx+0x1A80], 0x02
+00581CAA    mov dword ptr ds:[ebx+0x1A80], 0x02             ; => [ Call: nullptr ]
 00581CB4    pop edi
 00581CB5    pop esi
 00581CB6    pop ebx
@@ -99,7 +105,7 @@
 00581CF6    cmovz eax, dword ptr ss:[ebp+0x0C]
 00581CFA    push eax
 00581CFB    push edi
-00581CFC    call 0x00581A00
+00581CFC    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581D01    mov edx, dword ptr ss:[ebp-0x04]
 00581D04    inc edi
 00581D05    add esp, 0x08
@@ -135,7 +141,7 @@
 00581D60    push eax
 00581D61    push edi
 00581D62    mov ecx, esi
-00581D64    call 0x00581A00
+00581D64    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581D69    mov edx, dword ptr ss:[ebp-0x04]
 00581D6C    inc edi
 00581D6D    add esp, 0x08
@@ -155,7 +161,7 @@
 00581D9C    jnz 0x00581DA7
 00581D9E    mov edx, ebx
 00581DA0    mov ecx, esi
-00581DA2    call 0x00581B30
+00581DA2    call 0x00581B30                                 ; => [ Call: sub_581b30 ]
 00581DA7    xor edi, edi
 00581DA9    cmp dword ptr ds:[esi+0xD38], edi
 00581DAF    jle 0x00581DF3
@@ -178,7 +184,7 @@
 00581DDD    mov edx, dword ptr ss:[ebp-0x04]
 00581DE0    push eax
 00581DE1    push edi
-00581DE2    call 0x00581A00
+00581DE2    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581DE7    inc edi
 00581DE8    add esp, 0x08
 00581DEB    cmp edi, dword ptr ds:[esi+0xD38]
@@ -204,7 +210,7 @@
 00581E2C    push 0x06
 00581E2E    push edi
 00581E2F    mov ecx, esi
-00581E31    call 0x00581A00
+00581E31    call 0x00581A00                                 ; => [ Call: sub_581a00 | Call: sub_581a00 ]
 00581E36    add esp, 0x08
 00581E39    mov edx, dword ptr ss:[ebp-0x04]
 00581E3C    inc edi
@@ -240,7 +246,7 @@
 00581E97    push eax
 00581E98    push edi
 00581E99    mov ecx, esi
-00581E9B    call 0x00581A00
+00581E9B    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581EA0    mov eax, dword ptr ss:[ebp-0x0C]
 00581EA3    inc edi
 00581EA4    mov edx, dword ptr ss:[ebp-0x04]
@@ -258,7 +264,7 @@
 00581ECC    cmp eax, 0x03
 00581ECF    jnbe 0x00581ED8
 00581ED1    jmp dword ptr ds:[eax*4+0x582024]
-00581ED8    push 0x820028
+00581ED8    push 0x820028                                   ; => [ String: RevealCard ]
 00581EDD    push 0x29B4
 00581EE2    jmp 0x00581FCB
 00581EE7    cmp dword ptr ds:[ebx+0x1A50], 0x3EA
@@ -266,7 +272,7 @@
 00581EF4    jnz 0x00581EFF
 00581EF6    mov edx, ebx
 00581EF8    mov ecx, esi
-00581EFA    call 0x00581B30
+00581EFA    call 0x00581B30                                 ; => [ Call: sub_581b30 ]
 00581EFF    xor edi, edi
 00581F01    cmp dword ptr ds:[esi+0xD38], edi
 00581F07    jle 0x00581F52
@@ -290,7 +296,7 @@
 00581F3C    mov edx, dword ptr ss:[ebp-0x04]
 00581F3F    push eax
 00581F40    push edi
-00581F41    call 0x00581A00
+00581F41    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581F46    inc edi
 00581F47    add esp, 0x08
 00581F4A    cmp edi, dword ptr ds:[esi+0xD38]
@@ -317,7 +323,7 @@
 00581F92    push eax
 00581F93    push edi
 00581F94    mov ecx, esi
-00581F96    call 0x00581A00
+00581F96    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581F9B    mov edx, dword ptr ss:[ebp-0x04]
 00581F9E    inc edi
 00581F9F    add esp, 0x08
@@ -332,15 +338,15 @@
 00581FBD    mov esp, ebp
 00581FBF    pop ebp
 00581FC0    ret
-00581FC1    push 0x820028
+00581FC1    push 0x820028                                   ; => [ String: RevealCard ]
 00581FC6    push 0x29D1
 00581FCB    push 0x81F4B8
 00581FD0    mov edx, 0x801800
 00581FD5    mov ecx, 0x801AA4
-00581FDA    call 0x0063B870
+00581FDA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RevealCard | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: Halt ]
 00581FDF    add esp, 0x0C
 00581FE2    call 0x0063BC30
 00581FE7    test al, al
-00581FE9    jz 0x00581FEC
+00581FE9    jz 0x00581FEC                                   ; => [ Call: sub_63bc30 ]
 00581FEB    int3
-00581FEC    call 0x0063BB00
+00581FEC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

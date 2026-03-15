@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a6c70
+// 起始地址: 0x6a6c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A6C70    push ebp
 006A6C71    mov ebp, esp
 006A6C73    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 006A6C7D    push edi
 006A6C7E    mov ecx, 0x801800
 006A6C83    mov eax, dword ptr ds:[ebx]
-006A6C85    mov edi, ecx
+006A6C85    mov edi, ecx                                    ; => [ Data: data_801800 ]
 006A6C87    test eax, eax
 006A6C89    cmovnz edi, eax
 006A6C8C    mov eax, dword ptr ds:[esi+0x04]
@@ -18,10 +24,10 @@
 006A6C94    mov ecx, esi
 006A6C96    call 0x007076E0
 006A6C9B    test al, al
-006A6C9D    jz 0x006A6CC6
+006A6C9D    jz 0x006A6CC6                                   ; => [ Call: sub_7076e0 ]
 006A6C9F    mov eax, dword ptr ds:[esi+0x04]
 006A6CA2    cmp eax, 0x04
-006A6CA5    jnz 0x006A6CC6
+006A6CA5    jnz 0x006A6CC6                                  ; => [ Call: sub_7076e0 ]
 006A6CA7    push dword ptr ds:[esi+0x10]
 006A6CAA    push dword ptr ds:[esi+0x0C]
 006A6CAD    push edi
@@ -35,8 +41,8 @@
 006A6CC4    jnz 0x006A6CF7
 006A6CC6    mov edx, esi
 006A6CC8    mov ecx, ebx
-006A6CCA    call 0x006A67A0
-006A6CCF    mov ecx, 0x801800
+006A6CCA    call 0x006A67A0                                 ; => [ Call: sub_6a67a0 ]
+006A6CCF    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A6CD4    test al, al
 006A6CD6    jnz 0x006A6C83
 006A6CD8    mov eax, dword ptr ds:[ebx]
@@ -45,7 +51,7 @@
 006A6CDF    push ecx
 006A6CE0    push 0x87AC80
 006A6CE5    push esi
-006A6CE6    call 0x006A6740
+006A6CE6    call 0x006A6740                                 ; => [ String: failed to read block '%s' | Call: sub_6a6740 ]
 006A6CEB    add esp, 0x0C
 006A6CEE    xor al, al
 006A6CF0    pop edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7078c0
+// 起始地址: 0x7078c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007078C0    push esi
 007078C1    push edi
 007078C2    mov edi, ecx
@@ -8,7 +14,7 @@
 007078D0    mov ecx, esi
 007078D2    mov edx, 0x10
 007078D7    mov esi, dword ptr ds:[esi+0x08]
-007078DA    call 0x0064C080
+007078DA    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 007078DF    test esi, esi
 007078E1    jnz 0x007078D0
 007078E3    mov dword ptr ds:[edi+0x08], 0x00

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57f390
+// 起始地址: 0x57f390
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057F390    push ebp
 0057F391    mov ebp, esp
 0057F393    push ebx
@@ -9,7 +15,7 @@
 0057F39D    and eax, 0x30
 0057F3A0    jnz 0x0057F3DF
 0057F3A2    push esi
-0057F3A3    call 0x005915B0
+0057F3A3    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 0057F3A8    add esp, 0x04
 0057F3AB    cmp eax, 0x806
 0057F3B0    jnle 0x0057F3D8
@@ -29,12 +35,12 @@
 0057F3DF    cmp eax, 0x30
 0057F3E2    jz 0x0057F3CE
 0057F3E4    push esi
-0057F3E5    call 0x005769E0
+0057F3E5    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 0057F3EA    mov edi, eax
 0057F3EC    add esp, 0x04
 0057F3EF    cmp dword ptr ds:[edi], 0x06
 0057F3F2    jz 0x0057F3F9
-0057F3F4    call 0x00591930
+0057F3F4    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057F3F9    test dword ptr ds:[edi+0xAC], 0x100
 0057F403    jz 0x0057F40F
 0057F405    mov eax, 0x05
@@ -47,9 +53,9 @@
 0057F413    mov ecx, ebx
 0057F415    push esi
 0057F416    jnz 0x0057F476
-0057F418    call 0x005915B0
+0057F418    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 0057F41D    add esp, 0x04
-0057F420    xor ecx, ecx
+0057F420    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0057F422    cmp eax, dword ptr ds:[ecx+0x820ECC]
 0057F428    jz 0x0057F46F
 0057F42A    add ecx, 0x04
@@ -57,7 +63,7 @@
 0057F430    jb 0x0057F422
 0057F432    push esi
 0057F433    mov ecx, ebx
-0057F435    call 0x005915B0
+0057F435    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 0057F43A    add esp, 0x04
 0057F43D    cmp eax, 0x806
 0057F442    jnle 0x0057F454
@@ -90,7 +96,7 @@
 0057F47B    add esp, 0x04
 0057F47E    xor ecx, ecx
 0057F480    cmp eax, 0x801
-0057F485    setz cl
+0057F485    setz cl                                         ; => [ Call: sub_5915b0 ]
 0057F488    pop edi
 0057F489    pop esi
 0057F48A    pop ebx

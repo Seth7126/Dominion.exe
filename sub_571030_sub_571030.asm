@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571030
+// 起始地址: 0x571030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571030    push ebp
 00571031    mov ebp, esp
 00571033    and esp, 0xFFFFFFF8
@@ -12,7 +18,7 @@
 00571047    mov ebx, dword ptr ds:[edi+0x04]
 0057104A    cmp esi, 0x320
 00571050    jb 0x00571057
-00571052    call 0x00591930
+00571052    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00571057    imul eax, esi, 0x64
 0057105A    mov ecx, ebx
 0057105C    push 0x00
@@ -22,11 +28,11 @@
 0057106B    call 0x005754F0
 00571070    add esp, 0x08
 00571073    test al, al
-00571075    jz 0x005710AA
+00571075    jz 0x005710AA                                   ; => [ Call: sub_5754f0 ]
 00571077    mov ebx, dword ptr ds:[edi+0x04]
 0057107A    cmp esi, 0x320
 00571080    jb 0x00571087
-00571082    call 0x00591930
+00571082    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00571087    mov eax, dword ptr ds:[edi+0x0C]
 0057108A    xor ecx, ecx
 0057108C    mov edx, dword ptr ss:[esp+0x0C]

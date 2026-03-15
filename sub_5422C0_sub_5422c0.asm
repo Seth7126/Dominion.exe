@@ -1,24 +1,30 @@
+// ============================================================
+// 函数名称: sub_5422c0
+// 起始地址: 0x5422c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005422C0    dword 83EC8B55
 005422C4    in al, 0xF8
 005422C6    mov eax, 0x1910
-005422CB    call 0x00761E50
+005422CB    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005422D0    push esi
 005422D1    xor edx, edx
 005422D3    push edi
 005422D4    push ecx
 005422D5    push 0x00
 005422D7    lea ecx, ds:[edx+0x01]
-005422DA    call 0x00561E00
-005422DF    call 0x00573400
+005422DA    call 0x00561E00                                 ; => [ Call: sub_561e00 ]
+005422DF    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005422E4    push 0x00
 005422E6    push 0x00
 005422E8    push 0x01
 005422EA    mov edx, dword ptr ds:[eax+0x0C]
 005422ED    mov ecx, dword ptr ds:[eax+0x04]
 005422F0    push 0x01
-005422F2    call 0x00590760
+005422F2    call 0x00590760                                 ; => [ Call: sub_590760 ]
 005422F7    add esp, 0x18
-005422FA    call 0x00573400
+005422FA    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005422FF    mov ecx, dword ptr ds:[eax+0x0C]
 00542302    cmp ecx, 0xFFFFFFFF
 00542305    jz 0x00542373
@@ -29,12 +35,12 @@
 0054231D    lea eax, ss:[esp+0xC90]
 00542324    push eax
 00542325    lea ecx, ds:[edx-0x02]
-00542328    call 0x00566E20
+00542328    call 0x00566E20                                 ; => [ Call: sub_566e20 ]
 0054232D    mov ecx, 0x321
 00542332    lea edi, ss:[esp+0x0C]
 00542336    mov esi, eax
 00542338    add esp, 0x04
-0054233B    rep movsd
+0054233B    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0054233D    cmp dword ptr ss:[esp+0xC88], 0x03
 00542345    jnz 0x0054236D
 00542347    push 0x02
@@ -44,7 +50,7 @@
 0054235D    push eax
 0054235E    xor edx, edx
 00542360    mov ecx, 0x4F9EA0
-00542365    call 0x0056BBA0
+00542365    call 0x0056BBA0                                 ; => [ Call: sub_56bba0 | Call: sub_4f9ea0 ]
 0054236A    add esp, 0x0C
 0054236D    pop edi
 0054236E    pop esi
@@ -56,10 +62,10 @@
 0054237A    push 0x81EA70
 0054237F    mov edx, 0x801800
 00542384    mov ecx, 0x813C5C
-00542389    call 0x0063B870
+00542389    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0054238E    add esp, 0x0C
 00542391    call 0x0063BC30
 00542396    test al, al
-00542398    jz 0x0054239B
+00542398    jz 0x0054239B                                   ; => [ Call: sub_63bc30 ]
 0054239A    int3
-0054239B    call 0x0063BB00
+0054239B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

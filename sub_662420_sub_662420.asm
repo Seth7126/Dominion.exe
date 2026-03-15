@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_662420
+// 起始地址: 0x662420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00662420    push ebx
 00662421    mov ebx, esp
 00662423    sub esp, 0x08
@@ -17,9 +23,9 @@
 00662448    mov dword ptr ss:[ebp-0x10], edx
 0066244B    cmp dword ptr ds:[eax+0x18], edx
 0066244E    jle 0x0066279C
-00662454    xor edi, edi
+00662454    xor edi, edi                                    ; => [ Call: nullptr ]
 00662456    xorps xmm3, xmm3
-00662459    mov dword ptr ss:[ebp-0x08], edi
+00662459    mov dword ptr ss:[ebp-0x08], edi                ; => [ Call: nullptr ]
 0066245C    nop dword ptr ds:[eax], eax
 00662460    test edi, edi
 00662462    js 0x006627D1
@@ -33,10 +39,10 @@
 00662483    jmp dword ptr ds:[eax*4+0x662804]
 0066248A    mov edx, dword ptr ds:[edi+edx*1+0x20]
 0066248E    lea ecx, ds:[ebx+0x08]
-00662491    call 0x0065E640
+00662491    call 0x0065E640                                 ; => [ Call: sub_65e640 ]
 00662496    jmp 0x0066277D
 0066249B    movss xmm2, dword ptr ds:[ebx+0x70]
-006624A0    ucomiss xmm2, xmm3
+006624A0    ucomiss xmm2, xmm3                              ; => [ Call: nullptr ]
 006624A3    lahf
 006624A4    test ah, 0x44
 006624A7    jnp 0x0066254C
@@ -56,7 +62,7 @@
 006624E8    movss dword ptr ss:[ebp-0x1C], xmm0
 006624ED    push dword ptr ss:[ebp-0x1C]
 006624F0    push esi
-006624F1    call 0x00661920
+006624F1    call 0x00661920                                 ; => [ Call: sub_661920 | Data: data_8937c0 ]
 006624F6    movss xmm2, dword ptr ds:[ebx+0x70]
 006624FB    lea edx, ds:[ebx+0x08]
 006624FE    mov eax, dword ptr ss:[ebp-0x04]
@@ -75,7 +81,7 @@
 00662536    movss dword ptr ss:[ebp-0x24], xmm1
 0066253B    push dword ptr ss:[ebp-0x24]
 0066253E    push esi
-0066253F    call 0x00661920
+0066253F    call 0x00661920                                 ; => [ Call: sub_661920 ]
 00662544    add esp, 0x0C
 00662547    jmp 0x0066277D
 0066254C    push dword ptr ds:[edi+edx*1+0x14]
@@ -84,7 +90,7 @@
 00662557    add eax, edi
 00662559    lea edx, ds:[ebx+0x08]
 0066255C    push eax
-0066255D    call 0x00661920
+0066255D    call 0x00661920                                 ; => [ Call: sub_661920 ]
 00662562    add esp, 0x0C
 00662565    jmp 0x0066277D
 0066256A    cmp byte ptr ds:[ebx+0x4C], 0x00
@@ -92,7 +98,7 @@
 00662574    mov esi, dword ptr ds:[0x0147B06C]
 0066257A    lea ecx, ss:[ebp-0x50]
 0066257D    mov eax, dword ptr ss:[ebp-0x08]
-00662580    add esi, 0x124
+00662580    add esi, 0x124                                  ; => [ Data: data_147b06c ]
 00662586    mov edi, dword ptr ds:[edi+edx*1+0x20]
 0066258A    push 0x7FEF80
 0066258F    mov dword ptr ss:[ebp-0x48], 0x00
@@ -111,7 +117,7 @@
 006625CF    push eax
 006625D0    mov edx, 0x800248
 006625D5    movss dword ptr ss:[ebp-0x4C], xmm0
-006625DA    call 0x006818C0
+006625DA    call 0x006818C0                                 ; => [ Data: data_800248 | Data: data_7fef80 | Call: sub_6818c0 ]
 006625DF    mov edx, dword ptr ss:[ebp-0x04]
 006625E2    mov ecx, esi
 006625E4    movups xmm0, xmmword ptr ds:[eax]
@@ -124,7 +130,7 @@
 00662608    lea eax, ss:[ebp-0x190]
 0066260E    push eax
 0066260F    movups xmmword ptr ss:[ebp-0xA0], xmm0
-00662616    call 0x00642E30
+00662616    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 0066261B    add esp, 0x0C
 0066261E    lea edx, ss:[ebp-0xD0]
 00662624    lea ecx, ss:[ebp-0x110]
@@ -138,7 +144,7 @@
 0066264E    lea eax, ss:[ebp-0x1D0]
 00662654    push eax
 00662655    movups xmmword ptr ss:[ebp-0xE0], xmm0
-0066265C    call 0x00642E30
+0066265C    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 00662661    add esp, 0x04
 00662664    mov ecx, edi
 00662666    movups xmm0, xmmword ptr ds:[eax]
@@ -149,8 +155,8 @@
 00662678    movups xmmword ptr ds:[esi+0x10], xmm1
 0066267C    movups xmmword ptr ds:[esi+0x20], xmm2
 00662680    movups xmmword ptr ds:[esi+0x30], xmm3
-00662684    call 0x006651E0
-00662689    mov eax, dword ptr ds:[0x0147B06C]
+00662684    call 0x006651E0                                 ; => [ Call: sub_6651e0 ]
+00662689    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 0066268E    movups xmm0, xmmword ptr ss:[ebp-0x60]
 00662692    mov edi, dword ptr ss:[ebp-0x08]
 00662695    movups xmmword ptr ds:[eax+0x124], xmm0
@@ -188,7 +194,7 @@
 00662722    subss xmm1, dword ptr ds:[edi+edx*1+0x24]
 00662728    addss xmm1, dword ptr ds:[edi+edx*1+0x14]
 0066272E    movss dword ptr ss:[ebp-0x30], xmm1
-00662733    call 0x005A0E40
+00662733    call 0x005A0E40                                 ; => [ Call: sub_5a0e40 ]
 00662738    push dword ptr ss:[ebp-0x30]
 0066273B    mov dword ptr ss:[ebp-0x2C], eax
 0066273E    lea eax, ss:[ebp-0x3C]
@@ -207,7 +213,7 @@
 00662767    movss dword ptr ss:[ebp-0x44], xmm1
 0066276C    movss dword ptr ss:[ebp-0x40], xmm0
 00662771    mov ecx, dword ptr ds:[edi+ecx*1+0x20]
-00662775    call 0x00662030
+00662775    call 0x00662030                                 ; => [ Call: sub_662030 ]
 0066277A    add esp, 0x14
 0066277D    mov ecx, dword ptr ss:[ebp-0x04]
 00662780    xorps xmm3, xmm3
@@ -226,25 +232,25 @@
 006627A1    mov esp, ebx
 006627A3    pop ebx
 006627A4    ret
-006627A5    push 0x875320
+006627A5    push 0x875320                                   ; => [ String: DrawLayout ]
 006627AA    push 0x2F14
-006627AF    push 0x8739B4
-006627B4    mov ecx, 0x875360
+006627AF    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+006627B4    mov ecx, 0x875360                               ; => [ String: entry.image.fancy->mHorzOffset == 0 ]
 006627B9    jmp 0x006627E5
-006627BB    push 0x875320
+006627BB    push 0x875320                                   ; => [ String: DrawLayout ]
 006627C0    push 0x2F28
-006627C5    push 0x8739B4
-006627CA    mov ecx, 0x801AA4
+006627C5    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+006627CA    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006627CF    jmp 0x006627E5
-006627D1    push 0x876A2C
+006627D1    push 0x876A2C                                   ; => [ String: XDynArray<struct TextEntry>::operator [] ]
 006627D6    push 0xE2
-006627DB    push 0x824FB0
-006627E0    mov ecx, 0x824FD0
+006627DB    push 0x824FB0                                   ; => [ String: C:\x\ax2017\Engine\xDynArray.h ]
+006627E0    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 006627E5    mov edx, 0x801800
-006627EA    call 0x0063B870
+006627EA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006627EF    add esp, 0x0C
 006627F2    call 0x0063BC30
 006627F7    test al, al
-006627F9    jz 0x006627FC
+006627F9    jz 0x006627FC                                   ; => [ Call: sub_63bc30 ]
 006627FB    int3
-006627FC    call 0x0063BB00
+006627FC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

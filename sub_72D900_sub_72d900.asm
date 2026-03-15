@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_72d900
+// 起始地址: 0x72d900
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072D900    push ebp
 0072D901    mov ebp, esp
 0072D903    sub esp, 0x444
-0072D909    mov eax, dword ptr ds:[0x008C4040]
+0072D909    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0072D90E    xor eax, ebp
 0072D910    mov dword ptr ss:[ebp-0x04], eax
 0072D913    mov eax, dword ptr ss:[ebp+0x08]
@@ -16,9 +22,9 @@
 0072D930    mov dword ptr ss:[ebp-0x414], esi
 0072D936    xor edi, edi
 0072D938    mov dword ptr ss:[ebp-0x430], eax
-0072D93E    call 0x0072D5C0
+0072D93E    call 0x0072D5C0                                 ; => [ Call: sub_72d5c0 ]
 0072D943    mov ecx, eax
-0072D945    mov edx, 0x88DD54
+0072D945    mov edx, 0x88DD54                               ; => [ String: #?RADIANCE ]
 0072D94A    nop word ptr ds:[eax+eax*1], ax
 0072D950    mov bl, byte ptr ds:[eax]
 0072D952    cmp bl, byte ptr ds:[edx]
@@ -38,7 +44,7 @@
 0072D972    or eax, 0x01
 0072D975    test eax, eax
 0072D977    jz 0x0072D9AD
-0072D979    mov eax, 0x88DD68
+0072D979    mov eax, 0x88DD68                               ; => [ String: #?RGBE ]
 0072D97E    nop
 0072D980    mov dl, byte ptr ds:[ecx]
 0072D982    cmp dl, byte ptr ds:[eax]
@@ -60,13 +66,13 @@
 0072D9A7    jnz 0x0072E0BB
 0072D9AD    lea edx, ss:[ebp-0x408]
 0072D9B3    mov ecx, esi
-0072D9B5    call 0x0072D5C0
+0072D9B5    call 0x0072D5C0                                 ; => [ Call: sub_72d5c0 ]
 0072D9BA    mov dword ptr ss:[ebp-0x418], eax
 0072D9C0    cmp byte ptr ds:[eax], 0x00
 0072D9C3    jz 0x0072E0BB
 0072D9C9    mov ebx, 0x01
 0072D9CE    nop
-0072D9D0    mov ecx, 0x88DD70
+0072D9D0    mov ecx, 0x88DD70                               ; => [ String: FORMAT=32-bit_rle_rgbe ]
 0072D9D5    mov dl, byte ptr ds:[eax]
 0072D9D7    cmp dl, byte ptr ds:[ecx]
 0072D9D9    jnz 0x0072D9F5
@@ -87,7 +93,7 @@
 0072D9FC    lea edx, ss:[ebp-0x408]
 0072DA02    mov ecx, esi
 0072DA04    cmovz edi, ebx
-0072DA07    call 0x0072D5C0
+0072DA07    call 0x0072D5C0                                 ; => [ Call: sub_72d5c0 ]
 0072DA0C    mov dword ptr ss:[ebp-0x418], eax
 0072DA12    cmp byte ptr ds:[eax], 0x00
 0072DA15    jnz 0x0072D9D0
@@ -95,7 +101,7 @@
 0072DA19    jz 0x0072E0BB
 0072DA1F    lea edx, ss:[ebp-0x408]
 0072DA25    mov ecx, esi
-0072DA27    call 0x0072D5C0
+0072DA27    call 0x0072D5C0                                 ; => [ Call: sub_72d5c0 ]
 0072DA2C    mov edi, dword ptr ds:[0x00775670]
 0072DA32    push 0x03
 0072DA34    push 0x88DD88
@@ -104,7 +110,7 @@
 0072DA40    call edi
 0072DA42    add esp, 0x0C
 0072DA45    test eax, eax
-0072DA47    jnz 0x0072E0BB
+0072DA47    jnz 0x0072E0BB                                  ; => [ String: -Y ]
 0072DA4D    mov eax, dword ptr ss:[ebp-0x418]
 0072DA53    lea ecx, ss:[ebp-0x418]
 0072DA59    mov ebx, dword ptr ds:[0x007754F8]
@@ -129,14 +135,14 @@
 0072DA96    call edi
 0072DA98    add esp, 0x0C
 0072DA9B    test eax, eax
-0072DA9D    jnz 0x0072E0BB
+0072DA9D    jnz 0x0072E0BB                                  ; => [ String: +X ]
 0072DAA3    mov eax, dword ptr ss:[ebp-0x418]
 0072DAA9    push 0x0A
 0072DAAB    add eax, 0x03
 0072DAAE    push 0x00
 0072DAB0    push eax
 0072DAB1    mov dword ptr ss:[ebp-0x418], eax
-0072DAB7    call ebx
+0072DAB7    call ebx                                        ; => [ Call: nullptr ]
 0072DAB9    mov ecx, dword ptr ss:[ebp-0x438]
 0072DABF    mov ebx, eax
 0072DAC1    mov eax, dword ptr ss:[ebp-0x430]
@@ -174,7 +180,7 @@
 0072DB3D    mov edx, edi
 0072DB3F    mov ecx, ebx
 0072DB41    push 0x03
-0072DB43    call 0x0071F560
+0072DB43    call 0x0071F560                                 ; => [ Call: sub_71f560 ]
 0072DB48    add esp, 0x0C
 0072DB4B    mov dword ptr ss:[ebp-0x424], eax
 0072DB51    test eax, eax
@@ -542,7 +548,7 @@
 0072E037    push 0x03
 0072E039    mov edx, ebx
 0072E03B    mov ecx, esi
-0072E03D    call 0x0072D7D0
+0072E03D    call 0x0072D7D0                                 ; => [ Call: sub_72d7d0 ]
 0072E042    add esp, 0x04
 0072E045    add esi, 0x0C
 0072E048    add ebx, 0x04
@@ -569,7 +575,7 @@
 0072E09D    pop ebx
 0072E09E    mov ecx, dword ptr ss:[ebp-0x04]
 0072E0A1    xor ecx, ebp
-0072E0A3    call 0x0075927A
+0072E0A3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0072E0A8    mov esp, ebp
 0072E0AA    pop ebp
 0072E0AB    ret
@@ -582,7 +588,7 @@
 0072E0C1    pop esi
 0072E0C2    xor ecx, ebp
 0072E0C4    pop ebx
-0072E0C5    call 0x0075927A
+0072E0C5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0072E0CA    mov esp, ebp
 0072E0CC    pop ebp
 0072E0CD    ret
@@ -635,7 +641,7 @@
 0072E172    lea edx, ss:[ebp-0x414]
 0072E178    mov ecx, dword ptr ss:[ebp-0x424]
 0072E17E    push 0x03
-0072E180    call 0x0072D7D0
+0072E180    call 0x0072D7D0                                 ; => [ Call: sub_72d7d0 ]
 0072E185    add esp, 0x04
 0072E188    mov edi, 0x01
 0072E18D    xor ebx, ebx
@@ -652,7 +658,7 @@
 0072E1B0    push 0x04
 0072E1B2    lea edx, ss:[ebp-0x440]
 0072E1B8    mov ecx, esi
-0072E1BA    call 0x00720200
+0072E1BA    call 0x00720200                                 ; => [ Call: sub_720200 ]
 0072E1BF    mov ecx, dword ptr ss:[ebp-0x424]
 0072E1C5    lea edx, ss:[ebp-0x440]
 0072E1CB    mov eax, ebx
@@ -662,7 +668,7 @@
 0072E1D9    add eax, edi
 0072E1DB    lea eax, ds:[eax+eax*2]
 0072E1DE    lea ecx, ds:[ecx+eax*4]
-0072E1E1    call 0x0072D7D0
+0072E1E1    call 0x0072D7D0                                 ; => [ Call: sub_72d7d0 ]
 0072E1E6    mov eax, dword ptr ss:[ebp-0x42C]
 0072E1EC    add esp, 0x04
 0072E1EF    inc edi

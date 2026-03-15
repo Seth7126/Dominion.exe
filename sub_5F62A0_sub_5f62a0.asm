@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f62a0
+// 起始地址: 0x5f62a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F62A0    push ebp
 005F62A1    mov ebp, esp
 005F62A3    sub esp, 0x18
@@ -15,7 +21,7 @@
 005F62C0    mov edx, dword ptr ds:[edi]
 005F62C2    test edx, edx
 005F62C4    jz 0x005F62E3
-005F62C6    xor eax, eax
+005F62C6    xor eax, eax                                    ; => [ Call: nullptr ]
 005F62C8    test ecx, ecx
 005F62CA    jle 0x005F62DA
 005F62CC    nop dword ptr ds:[eax], eax
@@ -40,7 +46,7 @@
 005F62F9    jz 0x005F633B
 005F62FB    lea edx, ss:[ebp-0x14]
 005F62FE    lea ecx, ss:[ebp-0x0C]
-005F6301    call 0x004DAF40
+005F6301    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 005F6306    xor esi, esi
 005F6308    mov dword ptr ss:[ebp-0x10], eax
 005F630B    test eax, eax
@@ -49,7 +55,7 @@
 005F6310    mov eax, dword ptr ss:[ebp-0x0C]
 005F6313    mov edx, dword ptr ss:[ebp-0x08]
 005F6316    mov ecx, dword ptr ds:[eax+esi*4]
-005F6319    call 0x004DB700
+005F6319    call 0x004DB700                                 ; => [ Call: sub_4db700 ]
 005F631E    test al, al
 005F6320    jnz 0x005F6338
 005F6322    inc esi
@@ -71,7 +77,7 @@
 005F6340    add ebx, 0x10
 005F6343    mov dword ptr ds:[edx], eax
 005F6345    mov dword ptr ds:[edx+0x04], 0xFFFFFFFF
-005F634C    mov eax, dword ptr ds:[0x00800188]
+005F634C    mov eax, dword ptr ds:[0x00800188]              ; => [ Call: nullptr ]
 005F6351    mov ecx, dword ptr ds:[0x0080018C]
 005F6357    mov dword ptr ds:[edx+0x08], eax
 005F635A    mov dword ptr ds:[edx+0x0C], ecx

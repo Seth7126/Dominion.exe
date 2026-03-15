@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_654660
+// 起始地址: 0x654660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00654660    push ebp
 00654661    mov ebp, esp
 00654663    sub esp, 0x30
-00654666    mov eax, dword ptr ds:[0x008C4040]
+00654666    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0065466B    xor eax, ebp
 0065466D    mov dword ptr ss:[ebp-0x08], eax
 00654670    push ebx
@@ -13,7 +19,7 @@
 0065467A    push 0x00
 0065467C    push edi
 0065467D    mov dword ptr ss:[ebp-0x0C], edx
-00654680    call 0x00761FC4
+00654680    call 0x00761FC4                                 ; => [ Call: memset ]
 00654685    mov ebx, dword ptr ss:[ebp+0x0C]
 00654688    add esp, 0x0C
 0065468B    movups xmm0, xmmword ptr ds:[ebx]
@@ -61,7 +67,7 @@
 00654735    mulss xmm2, xmm0
 00654739    movss dword ptr ss:[ebp-0x10], xmm1
 0065473E    movss dword ptr ss:[ebp-0x14], xmm2
-00654743    call 0x006B7590
+00654743    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 00654748    movss xmm2, dword ptr ds:[ebx+0x08]
 0065474D    xorps xmm3, xmm3
 00654750    subss xmm2, dword ptr ds:[ebx]
@@ -97,7 +103,7 @@
 006547D8    mulss xmm2, xmm0
 006547DC    movss dword ptr ss:[ebp-0x0C], xmm1
 006547E1    movss dword ptr ss:[ebp-0x20], xmm2
-006547E6    call 0x006B7590
+006547E6    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 006547EB    movss xmm5, dword ptr ss:[ebp-0x0C]
 006547F0    xorps xmm7, xmm7
 006547F3    movss xmm2, dword ptr ds:[ebx]
@@ -154,7 +160,7 @@
 006548D0    pop esi
 006548D1    xor ecx, ebp
 006548D3    pop ebx
-006548D4    call 0x0075927A
+006548D4    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006548D9    mov esp, ebp
 006548DB    pop ebp
 006548DC    ret

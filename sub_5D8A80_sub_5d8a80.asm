@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d8a80
+// 起始地址: 0x5d8a80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D8A80    push ebx
 005D8A81    mov ebx, esp
 005D8A83    sub esp, 0x08
@@ -16,9 +22,9 @@
 005D8AA1    jnz 0x005D8AC4
 005D8AA3    mov eax, dword ptr ds:[ebx+0x08]
 005D8AA6    movups xmm0, xmmword ptr ds:[0x00BF21E8]
-005D8AAD    movups xmmword ptr ds:[eax], xmm0
+005D8AAD    movups xmmword ptr ds:[eax], xmm0               ; => [ Data: data_bf21e8 ]
 005D8AB0    movups xmm0, xmmword ptr ds:[0x00BF21F8]
-005D8AB7    movups xmmword ptr ds:[eax+0x10], xmm0
+005D8AB7    movups xmmword ptr ds:[eax+0x10], xmm0          ; => [ Data: data_bf21f8 ]
 005D8ABB    pop edi
 005D8ABC    pop esi
 005D8ABD    mov esp, ebp
@@ -27,12 +33,12 @@
 005D8AC2    pop ebx
 005D8AC3    ret
 005D8AC4    cmp dword ptr ds:[0x008DB5C4], 0x27
-005D8ACB    jnz 0x005D8AD5
-005D8ACD    mov ecx, dword ptr ds:[0x008DB5C8]
+005D8ACB    jnz 0x005D8AD5                                  ; => [ Data: data_8db5c4 ]
+005D8ACD    mov ecx, dword ptr ds:[0x008DB5C8]              ; => [ Data: data_8db5c8 ]
 005D8AD3    jmp 0x005D8AE4
 005D8AD5    cmp dword ptr ds:[0x008DB5D4], 0x27
-005D8ADC    jnz 0x005D8B20
-005D8ADE    mov ecx, dword ptr ds:[0x008DB5D8]
+005D8ADC    jnz 0x005D8B20                                  ; => [ Data: data_8db5d4 ]
+005D8ADE    mov ecx, dword ptr ds:[0x008DB5D8]              ; => [ Data: data_8db5d8 ]
 005D8AE4    test ecx, ecx
 005D8AE6    jz 0x005D8B20
 005D8AE8    movzx eax, cx
@@ -41,28 +47,28 @@
 005D8AF3    imul eax, eax, 0x18D0
 005D8AF9    add eax, dword ptr ds:[0x00C23BA8]
 005D8AFF    cmp dword ptr ds:[eax+0x18C8], ecx
-005D8B05    jnz 0x005D8B20
-005D8B07    call 0x0064E7A0
+005D8B05    jnz 0x005D8B20                                  ; => [ Data: data_c23ba8 | Data: data_c23bac ]
+005D8B07    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 005D8B0C    movups xmm0, xmmword ptr ds:[eax+0x1620]
 005D8B13    movups xmmword ptr ss:[ebp-0x30], xmm0
 005D8B17    movups xmm0, xmmword ptr ds:[eax+0x1630]
 005D8B1E    jmp 0x005D8B32
 005D8B20    movups xmm0, xmmword ptr ds:[0x00BF21E8]
-005D8B27    movups xmmword ptr ss:[ebp-0x30], xmm0
-005D8B2B    movups xmm0, xmmword ptr ds:[0x00BF21F8]
+005D8B27    movups xmmword ptr ss:[ebp-0x30], xmm0          ; => [ Data: data_bf21e8 | Data: data_bf21e8 | Data: data_bf21e8 ]
+005D8B2B    movups xmm0, xmmword ptr ds:[0x00BF21F8]        ; => [ Data: data_bf21f8 | Data: data_bf21f8 | Data: data_bf21f8 ]
 005D8B32    lea eax, ss:[ebp-0x48]
 005D8B35    mov ecx, esi
 005D8B37    push eax
 005D8B38    movups xmmword ptr ss:[ebp-0x20], xmm0
-005D8B3C    call 0x0064F350
-005D8B41    xorps xmm2, xmm2
+005D8B3C    call 0x0064F350                                 ; => [ Call: sub_64f350 ]
+005D8B41    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 005D8B44    movss xmm6, dword ptr ds:[edi+0x0C]
 005D8B49    movss xmm4, dword ptr ds:[edi+0x08]
 005D8B4E    add esp, 0x04
 005D8B51    movss xmm5, dword ptr ds:[edi+0x04]
 005D8B56    xorps xmm3, xmm3
 005D8B59    movups xmm1, xmmword ptr ds:[eax]
-005D8B5C    mov eax, dword ptr ds:[0x00CF65B8]
+005D8B5C    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 005D8B61    addss xmm4, dword ptr ds:[edi]
 005D8B65    movaps xmm7, xmm1
 005D8B68    mov ecx, dword ptr ds:[ebx+0x0C]
@@ -121,7 +127,7 @@
 005D8C50    movss dword ptr ss:[ebp-0x04], xmm0
 005D8C55    addss xmm5, xmm7
 005D8C59    movss dword ptr ss:[ebp-0x10], xmm4
-005D8C5E    xorps xmm1, xmm1
+005D8C5E    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 005D8C61    movss dword ptr ss:[ebp-0x08], xmm5
 005D8C66    movaps xmm6, xmm5
 005D8C69    movups xmm0, xmmword ptr ss:[ebp-0x10]
@@ -162,7 +168,7 @@
 005D8CEB    movups xmm0, xmmword ptr ss:[ebp-0x30]
 005D8CEF    pop esi
 005D8CF0    movss dword ptr ss:[ebp-0x18], xmm2
-005D8CF5    movups xmmword ptr ds:[eax], xmm0
+005D8CF5    movups xmmword ptr ds:[eax], xmm0               ; => [ Data: data_800248 ]
 005D8CF8    movups xmm0, xmmword ptr ss:[ebp-0x20]
 005D8CFC    movups xmmword ptr ds:[eax+0x10], xmm0
 005D8D00    mov esp, ebp
@@ -175,10 +181,10 @@
 005D8D11    push 0x86F1E8
 005D8D16    mov edx, 0x801800
 005D8D1B    mov ecx, 0x801AA4
-005D8D20    call 0x0063B870
+005D8D20    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: RectAligned | String: Halt ]
 005D8D25    add esp, 0x0C
 005D8D28    call 0x0063BC30
 005D8D2D    test al, al
-005D8D2F    jz 0x005D8D32
+005D8D2F    jz 0x005D8D32                                   ; => [ Call: sub_63bc30 ]
 005D8D31    int3
-005D8D32    call 0x0063BB00
+005D8D32    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

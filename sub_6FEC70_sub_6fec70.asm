@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6fec70
+// 起始地址: 0x6fec70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FEC70    push esi
 006FEC71    mov esi, ecx
 006FEC73    cmp edx, 0x07
 006FEC76    jnbe 0x006FECB9
-006FEC78    mov eax, dword ptr ds:[0x0147DED4]
+006FEC78    mov eax, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 006FEC7D    cmp dword ptr ds:[eax+edx*4+0x40A8], esi
 006FEC84    jz 0x006FECB7
 006FEC86    mov dword ptr ds:[eax+edx*4+0x40A8], esi
@@ -24,10 +30,10 @@
 006FECC3    push 0x88C504
 006FECC8    mov edx, 0x801800
 006FECCD    mov ecx, 0x88C52C
-006FECD2    call 0x0063B870
+006FECD2    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GLDupCheck_glBindTexture | String: textureIndex >= 0 && textureIndex < 8 | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 006FECD7    add esp, 0x0C
 006FECDA    call 0x0063BC30
 006FECDF    test al, al
-006FECE1    jz 0x006FECE4
+006FECE1    jz 0x006FECE4                                   ; => [ Call: sub_63bc30 ]
 006FECE3    int3
-006FECE4    call 0x0063BB00
+006FECE4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69d600
+// 起始地址: 0x69d600
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069D600    push ebp
 0069D601    mov ebp, esp
 0069D603    sub esp, 0x0C
@@ -26,7 +32,7 @@
 0069D63B    push dword ptr ds:[ebx]
 0069D63D    push dword ptr ds:[ebx+0x04]
 0069D640    push 0x879664
-0069D645    call 0x0063B5F0
+0069D645    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: table %s pos %d ]
 0069D64A    add esp, 0x0C
 0069D64D    mov ecx, ebx
 0069D64F    mov edx, 0x04
@@ -35,7 +41,7 @@
 0069D65A    xor eax, esi
 0069D65C    shr esi, 0x08
 0069D65F    movzx eax, al
-0069D662    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D662    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D669    sub edx, 0x01
 0069D66C    jnz 0x0069D654
 0069D66E    mov edx, dword ptr ds:[ebx+0x04]
@@ -52,7 +58,7 @@
 0069D687    xor eax, esi
 0069D689    shr esi, 0x08
 0069D68C    movzx eax, al
-0069D68F    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D68F    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D696    sub ecx, 0x01
 0069D699    jnz 0x0069D681
 0069D69B    push dword ptr ss:[ebp+0x0C]
@@ -62,14 +68,14 @@
 0069D6A7    mov edx, esi
 0069D6A9    call 0x0069D970
 0069D6AE    add esp, 0x08
-0069D6B1    mov esi, eax
+0069D6B1    mov esi, eax                                    ; => [ Call: sub_69d970 ]
 0069D6B3    mov ecx, 0x04
 0069D6B8    movzx eax, byte ptr ds:[edi]
 0069D6BB    lea edi, ds:[edi+0x01]
 0069D6BE    xor eax, esi
 0069D6C0    shr esi, 0x08
 0069D6C3    movzx eax, al
-0069D6C6    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D6C6    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D6CD    sub ecx, 0x01
 0069D6D0    jnz 0x0069D6B8
 0069D6D2    lea ecx, ds:[ebx+0x28]
@@ -80,7 +86,7 @@
 0069D6E6    xor eax, esi
 0069D6E8    shr esi, 0x08
 0069D6EB    movzx eax, al
-0069D6EE    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D6EE    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D6F5    sub edx, 0x01
 0069D6F8    jnz 0x0069D6E0
 0069D6FA    mov eax, dword ptr ds:[ebx+0x28]
@@ -98,7 +104,7 @@
 0069D71A    mov ecx, dword ptr ds:[ebx+0x1C]
 0069D71D    mov edx, esi
 0069D71F    call 0x0069D590
-0069D724    mov esi, eax
+0069D724    mov esi, eax                                    ; => [ Call: sub_69d590 ]
 0069D726    mov edx, dword ptr ss:[ebp-0x0C]
 0069D729    mov eax, dword ptr ss:[ebp-0x04]
 0069D72C    mov ecx, dword ptr ss:[ebp-0x08]

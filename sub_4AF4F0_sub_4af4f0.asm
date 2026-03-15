@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4af4f0
+// 起始地址: 0x4af4f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AF4F0    push ebp
 004AF4F1    mov ebp, esp
 004AF4F3    sub esp, 0x338
-004AF4F9    mov eax, dword ptr ds:[0x008C4040]
+004AF4F9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004AF4FE    xor eax, ebp
 004AF500    mov dword ptr ss:[ebp-0x04], eax
 004AF503    mov eax, dword ptr ss:[ebp+0x08]
@@ -19,19 +25,19 @@
 004AF530    mov edx, dword ptr ds:[esi+0x04]
 004AF533    lea ecx, ss:[ebp-0x338]
 004AF539    push 0x02
-004AF53B    call 0x0067B3B0
+004AF53B    call 0x0067B3B0                                 ; => [ Call: sub_694540 | Call: sub_67b3b0 | Data: data_7ffb70 ]
 004AF540    add esp, 0x10
 004AF543    test al, al
 004AF545    jz 0x004AF58B
-004AF547    call 0x004AF430
-004AF54C    mov dword ptr ds:[eax], 0x07
+004AF547    call 0x004AF430                                 ; => [ Call: sub_4af430 ]
+004AF54C    mov dword ptr ds:[eax], 0x07                    ; => [ Data: data_19e3c20 ]
 004AF552    pop esi
 004AF553    mov ecx, dword ptr ss:[ebp-0x04]
 004AF556    xor ecx, ebp
-004AF558    call 0x0075927A
+004AF558    call 0x0075927A                                 ; => [ Data: data_19e3c20 | Call: CookieCheckFunction ]
 004AF55D    mov esp, ebp
 004AF55F    pop ebp
-004AF560    ret
+004AF560    ret                                             ; => [ Data: data_19e3c20 ]
 004AF561    push 0x07
 004AF563    mov edx, ecx
 004AF565    lea ecx, ss:[ebp-0x338]
@@ -41,12 +47,12 @@
 004AF578    push 0x04
 004AF57A    mov edx, dword ptr ds:[esi+0x04]
 004AF57D    lea ecx, ss:[ebp-0x338]
-004AF583    call 0x0067B3B0
+004AF583    call 0x0067B3B0                                 ; => [ Call: sub_694540 | Data: data_7ffb54 | Call: sub_67b3b0 | Call: sub_694540 | Call: sub_67b3b0 | Data: data_7ffb24 | Call: sub_694540 | Call: sub_67b3b0 | Data: data_7ffba4 | Call: sub_694540 | Call: sub_67b3b0 | Data: data_7ffb94 | Call: sub_694540 | Call: sub_67b3b0 | Data: data_7ffbb4 | Call: sub_694540 | Call: sub_67b3b0 | Data: data_7ffb44 | Call: sub_694540 | Data: data_7ff594 | Call: sub_67b3b0 ]
 004AF588    add esp, 0x10
 004AF58B    mov ecx, dword ptr ss:[ebp-0x04]
 004AF58E    xor ecx, ebp
 004AF590    pop esi
-004AF591    call 0x0075927A
+004AF591    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AF596    mov esp, ebp
 004AF598    pop ebp
 004AF599    ret
@@ -103,10 +109,10 @@
 004AF658    push 0x801AF8
 004AF65D    mov edx, 0x801800
 004AF662    mov ecx, 0x801AA4
-004AF667    call 0x0063B870
+004AF667    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: UIHitAction | Data: data_801800 | String: Halt | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004AF66C    add esp, 0x0C
 004AF66F    call 0x0063BC30
 004AF674    test al, al
-004AF676    jz 0x004AF679
+004AF676    jz 0x004AF679                                   ; => [ Call: sub_63bc30 ]
 004AF678    int3
-004AF679    call 0x0063BB00
+004AF679    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

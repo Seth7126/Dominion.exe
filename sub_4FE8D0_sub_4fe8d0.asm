@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4fe8d0
+// 起始地址: 0x4fe8d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FE8D0    push ebp
 004FE8D1    mov ebp, esp
 004FE8D3    sub esp, 0x0C
@@ -5,14 +11,14 @@
 004FE8D7    push esi
 004FE8D8    push edi
 004FE8D9    mov esi, ecx
-004FE8DB    call 0x00573400
+004FE8DB    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FE8E0    mov ecx, eax
 004FE8E2    mov dword ptr ss:[ebp-0x04], ecx
 004FE8E5    mov edi, dword ptr ds:[ecx+0x04]
 004FE8E8    cmp esi, 0x48
 004FE8EB    jnbe 0x004FE988
 004FE8F1    jl 0x004FE8FB
-004FE8F3    call 0x00591930
+004FE8F3    call 0x00591930                                 ; => [ Call: sub_591930 ]
 004FE8F8    mov ecx, dword ptr ss:[ebp-0x04]
 004FE8FB    add esi, esi
 004FE8FD    mov esi, dword ptr ds:[edi+esi*8+0x152C]
@@ -22,7 +28,7 @@
 004FE90B    movzx edi, si
 004FE90E    cmp edi, 0x320
 004FE914    jb 0x004FE91E
-004FE916    call 0x00591930
+004FE916    call 0x00591930                                 ; => [ Call: sub_591930 ]
 004FE91B    mov ecx, dword ptr ss:[ebp-0x04]
 004FE91E    imul eax, edi, 0x64
 004FE921    mov eax, dword ptr ds:[eax+ebx*1+0x1A4C]
@@ -32,7 +38,7 @@
 004FE933    movzx esi, si
 004FE936    cmp esi, 0x320
 004FE93C    jb 0x004FE949
-004FE93E    call 0x00591930
+004FE93E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 004FE943    mov ecx, dword ptr ss:[ebp-0x04]
 004FE946    mov eax, dword ptr ss:[ebp-0x08]
 004FE949    imul edi, esi, 0x64
@@ -41,7 +47,7 @@
 004FE955    mov ebx, dword ptr ds:[ecx+0x04]
 004FE958    cmp esi, 0x320
 004FE95E    jb 0x004FE96B
-004FE960    call 0x00591930
+004FE960    call 0x00591930                                 ; => [ Call: sub_591930 ]
 004FE965    mov ecx, dword ptr ss:[ebp-0x04]
 004FE968    mov eax, dword ptr ss:[ebp-0x08]
 004FE96B    mov esi, dword ptr ds:[edi+ebx*1+0x1AA4]
@@ -66,15 +72,15 @@
 004FE992    cmp esi, 0x3E8
 004FE998    jnl 0x004FE9A6
 004FE99A    push 0x33D
-004FE99F    mov ecx, 0x81F8DC
+004FE99F    mov ecx, 0x81F8DC                               ; => [ String: where >= START_PLAYER_PILES ]
 004FE9A4    jmp 0x004FE9B0
 004FE9A6    push 0x33E
-004FE9AB    mov ecx, 0x81F8F8
+004FE9AB    mov ecx, 0x81F8F8                               ; => [ String: who != PLAYER_NONE ]
 004FE9B0    push 0x81F4B8
-004FE9B5    call 0x0063B870
+004FE9B5    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GetPileHead | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 004FE9BA    add esp, 0x0C
 004FE9BD    call 0x0063BC30
 004FE9C2    test al, al
-004FE9C4    jz 0x004FE9C7
+004FE9C4    jz 0x004FE9C7                                   ; => [ Call: sub_63bc30 ]
 004FE9C6    int3
-004FE9C7    call 0x0063BB00
+004FE9C7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

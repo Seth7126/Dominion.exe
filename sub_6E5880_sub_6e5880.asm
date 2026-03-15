@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_6e5880
+// 起始地址: 0x6e5880
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E5880    push ebp
 006E5881    mov ebp, esp
 006E5883    sub esp, 0x08
 006E5886    push ebx
 006E5887    push esi
 006E5888    push edi
-006E5889    mov edi, dword ptr ds:[0x0147ABE8]
+006E5889    mov edi, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006E588F    test edi, edi
 006E5891    jz 0x006E59D2
 006E5897    mov edi, dword ptr ds:[edi+0x0C]
-006E589A    xor esi, esi
+006E589A    xor esi, esi                                    ; => [ Call: nullptr ]
 006E589C    nop dword ptr ds:[eax], eax
 006E58A0    test esi, esi
 006E58A2    jnz 0x006E58A8
@@ -25,13 +31,13 @@
 006E58CC    add esi, 0x94
 006E58D2    cmp esi, eax
 006E58D4    jb 0x006E58C0
-006E58D6    mov ebx, dword ptr ds:[0x0147ABE8]
+006E58D6    mov ebx, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006E58DC    mov dword ptr ss:[ebp-0x08], ebx
 006E58DF    test ebx, ebx
 006E58E1    jz 0x006E59D2
 006E58E7    jmp 0x006E58F2
 006E58E9    mov ecx, esi
-006E58EB    call 0x006E5C50
+006E58EB    call 0x006E5C50                                 ; => [ Call: sub_6e5c50 ]
 006E58F0    jmp 0x006E58A0
 006E58F2    mov edi, dword ptr ds:[ebx+0x0C]
 006E58F5    cmp dword ptr ds:[edi], 0x00
@@ -82,7 +88,7 @@
 006E599A    test ecx, ecx
 006E599C    jz 0x006E59AF
 006E599E    mov edx, 0x1C
-006E59A3    call 0x0064C080
+006E59A3    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006E59A8    mov dword ptr ds:[ebx+0x0C], 0x00
 006E59AF    pop edi
 006E59B0    pop esi
@@ -103,10 +109,10 @@
 006E59D9    push 0x871FA0
 006E59DE    mov edx, 0x801800
 006E59E3    mov ecx, 0x871F94
-006E59E8    call 0x0063B870
+006E59E8    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetGameData | Data: data_801800 | String: gpGameData | String: C:\x\ax2017\Engine\Game.h ]
 006E59ED    add esp, 0x0C
 006E59F0    call 0x0063BC30
 006E59F5    test al, al
-006E59F7    jz 0x006E59FA
+006E59F7    jz 0x006E59FA                                   ; => [ Call: sub_63bc30 ]
 006E59F9    int3
-006E59FA    call 0x0063BB00
+006E59FA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

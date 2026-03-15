@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_539480
+// 起始地址: 0x539480
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00539480    dword 83EC8B55
 00539484    in al, 0xF8
 00539486    sub esp, 0x1C
@@ -13,19 +19,19 @@
 005394A1    call 0x00568960
 005394A6    add esp, 0x0C
 005394A9    test eax, eax
-005394AB    jnz 0x005394BF
+005394AB    jnz 0x005394BF                                  ; => [ Call: sub_568960 | Data: __security_cookie ]
 005394AD    xor al, al
 005394AF    pop esi
 005394B0    mov ecx, dword ptr ss:[esp+0x18]
 005394B4    xor ecx, esp
-005394B6    call 0x0075927A
+005394B6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005394BB    mov esp, ebp
 005394BD    pop ebp
 005394BE    ret
 005394BF    call 0x00573400
 005394C4    lea edx, ss:[esp+0x04]
 005394C8    mov ecx, dword ptr ds:[eax+0x04]
-005394CB    call 0x0058BC10
+005394CB    call 0x0058BC10                                 ; => [ Call: sub_58bc10 | Call: sub_573400 ]
 005394D0    push ecx
 005394D1    push 0x00
 005394D3    push 0x00
@@ -40,9 +46,9 @@
 005394F5    pop esi
 005394F6    cmp eax, dword ptr ss:[esp+ecx*4]
 005394F9    mov ecx, dword ptr ss:[esp+0x18]
-005394FD    setnle al
+005394FD    setnle al                                       ; => [ Call: sub_568960 | Call: sub_573400 ]
 00539500    xor ecx, esp
-00539502    call 0x0075927A
+00539502    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00539507    mov esp, ebp
 00539509    pop ebp
 0053950A    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_675c90
+// 起始地址: 0x675c90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00675C90    push ebx
 00675C91    mov ebx, esp
 00675C93    sub esp, 0x08
@@ -9,18 +15,18 @@
 00675CA4    mov ebp, esp
 00675CA6    sub esp, 0x8C
 00675CAC    mov eax, dword ptr ds:[0x008C4040]
-00675CB1    xor eax, ebp
+00675CB1    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 00675CB3    mov dword ptr ss:[ebp-0x04], eax
-00675CB6    mov ecx, dword ptr ds:[0x00C28C58]
+00675CB6    mov ecx, dword ptr ds:[0x00C28C58]              ; => [ Data: data_c28c58 ]
 00675CBC    push esi
 00675CBD    cmp ecx, 0x01
 00675CC0    jle 0x00675F54
 00675CC6    mov eax, dword ptr ds:[0x0147ABE8]
 00675CCB    xor esi, esi
-00675CCD    movss xmm0, dword ptr ds:[eax+0x2C]
+00675CCD    movss xmm0, dword ptr ds:[eax+0x2C]             ; => [ Data: data_147abe8 ]
 00675CD2    movss dword ptr ss:[ebp-0x50], xmm0
-00675CD7    movups xmm0, xmmword ptr ds:[0x007FF530]
-00675CDE    movaps xmmword ptr ss:[ebp-0x70], xmm0
+00675CD7    movups xmm0, xmmword ptr ds:[0x007FF530]        ; => [ Data: data_7ff530 ]
+00675CDE    movaps xmmword ptr ss:[ebp-0x70], xmm0          ; => [ Call: __builtin_memset ]
 00675CE2    movaps xmmword ptr ss:[ebp-0x30], xmm0
 00675CE6    movups xmmword ptr ss:[ebp-0x60], xmm0
 00675CEA    movups xmmword ptr ss:[ebp-0x80], xmm0
@@ -41,7 +47,7 @@
 00675D31    lea ecx, ss:[ebp-0x20]
 00675D34    push ecx
 00675D35    lea ecx, ds:[eax+0x14]
-00675D38    call 0x0064C550
+00675D38    call 0x0064C550                                 ; => [ Call: sub_64c550 | Call: sub_665600 | Data: data_c27c58 ]
 00675D3D    test esi, esi
 00675D3F    jnz 0x00675D7E
 00675D41    movaps xmm0, xmmword ptr ss:[ebp-0x20]
@@ -113,7 +119,7 @@
 00675E42    jbe 0x00675E4C
 00675E44    movaps xmm0, xmmword ptr ss:[ebp-0x20]
 00675E48    movaps xmmword ptr ss:[ebp-0x80], xmm0
-00675E4C    mov ecx, dword ptr ds:[0x00C28C58]
+00675E4C    mov ecx, dword ptr ds:[0x00C28C58]              ; => [ Data: data_c28c58 ]
 00675E52    inc esi
 00675E53    cmp esi, ecx
 00675E55    jl 0x00675D20
@@ -146,7 +152,7 @@
 00675EC4    jle 0x00675F4D
 00675ECA    nop word ptr ds:[eax+eax*1], ax
 00675ED0    mov ecx, dword ptr ds:[esi*4+0xC27C58]
-00675ED7    call 0x00665600
+00675ED7    call 0x00665600                                 ; => [ Call: sub_665600 | Data: data_c27c58 ]
 00675EDC    movss xmm2, dword ptr ss:[ebp-0x50]
 00675EE1    lea ecx, ss:[ebp-0x30]
 00675EE4    movd xmm3, esi
@@ -171,17 +177,17 @@
 00675F2F    movss dword ptr ss:[ebp-0x64], xmm0
 00675F34    movaps xmm0, xmmword ptr ss:[ebp-0x70]
 00675F38    movaps xmmword ptr ss:[ebp-0x30], xmm0
-00675F3C    call 0x00667C30
+00675F3C    call 0x00667C30                                 ; => [ Call: sub_667c30 ]
 00675F41    inc esi
 00675F42    add esp, 0x04
 00675F45    cmp esi, dword ptr ds:[0x00C28C58]
-00675F4B    jl 0x00675ED0
+00675F4B    jl 0x00675ED0                                   ; => [ Data: data_c28c58 ]
 00675F4D    mov cl, 0x01
-00675F4F    call 0x00665770
+00675F4F    call 0x00665770                                 ; => [ Call: sub_665770 ]
 00675F54    mov ecx, dword ptr ss:[ebp-0x04]
 00675F57    xor ecx, ebp
 00675F59    pop esi
-00675F5A    call 0x0075927A
+00675F5A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00675F5F    mov esp, ebp
 00675F61    pop ebp
 00675F62    mov esp, ebx
@@ -192,10 +198,10 @@
 00675F70    push 0x801A00
 00675F75    mov edx, 0x801800
 00675F7A    mov ecx, 0x872EA4
-00675F7F    call 0x0063B870
+00675F7F    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: RectIsNormalized(r0) | Data: data_801800 | String: RectUnion | String: C:\x\ax2017\Engine\Rect.cpp ]
 00675F84    add esp, 0x0C
 00675F87    call 0x0063BC30
 00675F8C    test al, al
-00675F8E    jz 0x00675F91
+00675F8E    jz 0x00675F91                                   ; => [ Call: sub_63bc30 ]
 00675F90    int3
-00675F91    call 0x0063BB00
+00675F91    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

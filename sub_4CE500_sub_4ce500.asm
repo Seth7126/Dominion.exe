@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ce500
+// 起始地址: 0x4ce500
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004CE500    dword 6AEC8B55
 004CE504    jmp far fword ptr ds:[eax+0x30]
 004CE507    xor al, 0x76
@@ -9,18 +15,18 @@
 004CE514    push edi
 004CE515    mov eax, dword ptr ds:[0x008C4040]
 004CE51A    xor eax, ebp
-004CE51C    push eax
+004CE51C    push eax                                        ; => [ Data: __security_cookie ]
 004CE51D    lea eax, ss:[ebp-0x0C]
-004CE520    mov dword ptr fs:[0x00000000], eax
+004CE520    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004CE526    mov ebx, dword ptr ss:[ebp+0x08]
 004CE529    lea ecx, ss:[ebp-0x10]
 004CE52C    mov edx, 0x802BCC
 004CE531    mov esi, dword ptr ds:[ebx+0x04]
-004CE534    call 0x0063D720
+004CE534    call 0x0063D720                                 ; => [ String: btnBack | Call: sub_63d720 ]
 004CE539    mov eax, dword ptr ss:[ebp-0x10]
-004CE53C    mov edi, 0x801800
+004CE53C    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 004CE541    test eax, eax
-004CE543    mov ecx, edi
+004CE543    mov ecx, edi                                    ; => [ Data: data_801800 ]
 004CE545    cmovnz ecx, eax
 004CE548    mov dl, byte ptr ds:[ecx]
 004CE54A    cmp dl, byte ptr ds:[esi]
@@ -51,24 +57,24 @@
 004CE58D    test eax, eax
 004CE58F    jz 0x004CE5B1
 004CE591    cmp byte ptr ds:[eax], 0x00
-004CE594    jz 0x004CE5B1
+004CE594    jz 0x004CE5B1                                   ; => [ Data: data_cf65bc ]
 004CE596    lea ecx, ss:[ebp-0x10]
-004CE599    call 0x0063D4E0
+004CE599    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004CE59E    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004CE5A2    jnz 0x004CE5B1
 004CE5A4    mov edx, dword ptr ds:[eax+0x0C]
 004CE5A7    mov ecx, eax
 004CE5A9    add edx, 0x10
-004CE5AC    call 0x0064C080
+004CE5AC    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004CE5B1    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004CE5B8    test bl, bl
 004CE5BA    jz 0x004CE5C6
-004CE5BC    mov dword ptr ds:[0x008DB660], 0x04
+004CE5BC    mov dword ptr ds:[0x008DB660], 0x04             ; => [ Data: data_8db660 ]
 004CE5C6    mov esi, dword ptr ss:[ebp+0x08]
 004CE5C9    lea ecx, ss:[ebp+0x08]
 004CE5CC    mov edx, 0x804D94
 004CE5D1    mov esi, dword ptr ds:[esi+0x04]
-004CE5D4    call 0x0063D720
+004CE5D4    call 0x0063D720                                 ; => [ String: btnLeaderboard | Call: sub_63d720 ]
 004CE5D9    mov eax, dword ptr ss:[ebp+0x08]
 004CE5DC    test eax, eax
 004CE5DE    cmovnz edi, eax
@@ -94,23 +100,23 @@
 004CE616    test eax, eax
 004CE618    jz 0x004CE63A
 004CE61A    cmp byte ptr ds:[eax], 0x00
-004CE61D    jz 0x004CE63A
+004CE61D    jz 0x004CE63A                                   ; => [ Data: data_cf65bc ]
 004CE61F    lea ecx, ss:[ebp+0x08]
-004CE622    call 0x0063D4E0
+004CE622    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004CE627    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004CE62B    jnz 0x004CE63A
 004CE62D    mov edx, dword ptr ds:[eax+0x0C]
 004CE630    mov ecx, eax
 004CE632    add edx, 0x10
-004CE635    call 0x0064C080
+004CE635    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004CE63A    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004CE641    test esi, esi
 004CE643    jnz 0x004CE654
-004CE645    call 0x004CE1A0
-004CE64A    mov dword ptr ds:[0x008DB660], 0x0D
+004CE645    call 0x004CE1A0                                 ; => [ Call: sub_4ce1a0 ]
+004CE64A    mov dword ptr ds:[0x008DB660], 0x0D             ; => [ Data: data_8db660 ]
 004CE654    xor al, al
 004CE656    mov ecx, dword ptr ss:[ebp-0x0C]
-004CE659    mov dword ptr fs:[0x00000000], ecx
+004CE659    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004CE660    pop ecx
 004CE661    pop edi
 004CE662    pop esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56c680
+// 起始地址: 0x56c680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056C680    push ebp
 0056C681    mov ebp, esp
 0056C683    sub esp, 0x14
@@ -7,7 +13,7 @@
 0056C68A    mov dword ptr ss:[ebp-0x04], ecx
 0056C68D    push edi
 0056C68E    mov dword ptr ss:[ebp-0x14], ebx
-0056C691    call 0x00573400
+0056C691    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056C696    mov edi, eax
 0056C698    mov eax, dword ptr ds:[edi]
 0056C69A    cmp eax, 0x02
@@ -15,7 +21,7 @@
 0056C6A3    mov ecx, dword ptr ds:[edi+0x04]
 0056C6A6    call 0x005768A0
 0056C6AB    mov ecx, dword ptr ds:[edi+0x0C]
-0056C6AE    mov esi, eax
+0056C6AE    mov esi, eax                                    ; => [ Call: sub_5768a0 ]
 0056C6B0    mov dword ptr ds:[esi+0x14], ecx
 0056C6B3    mov dword ptr ds:[esi+0x18], 0xFFFFFFFF
 0056C6BA    mov ecx, dword ptr ds:[edi+0x14]
@@ -33,7 +39,7 @@
 0056C6DA    mov dword ptr ss:[ebp-0x0C], eax
 0056C6DD    cmp ebx, 0x320
 0056C6E3    jb 0x0056C6ED
-0056C6E5    call 0x00591930
+0056C6E5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056C6EA    mov edx, dword ptr ds:[esi+0x1C]
 0056C6ED    mov ecx, dword ptr ss:[ebp-0x0C]
 0056C6F0    imul eax, ebx, 0x64
@@ -46,9 +52,9 @@
 0056C709    mov dword ptr ds:[esi+0x3C], ecx
 0056C70C    test edx, edx
 0056C70E    jnz 0x0056C724
-0056C710    push 0x81ED40
+0056C710    push 0x81ED40                                   ; => [ String: Forever ]
 0056C715    push 0x13B5
-0056C71A    mov ecx, 0x81ECB4
+0056C71A    mov ecx, 0x81ECB4                               ; => [ String: ability.which.which != CARDID_NULL ]
 0056C71F    jmp 0x0056C7E0
 0056C724    mov eax, dword ptr ds:[edi+0x1C]
 0056C727    mov ecx, dword ptr ds:[edi+0x20]
@@ -62,7 +68,7 @@
 0056C741    mov ecx, dword ptr ds:[edi+0x04]
 0056C744    call 0x005768A0
 0056C749    mov ecx, dword ptr ds:[edi+0x0C]
-0056C74C    mov esi, eax
+0056C74C    mov esi, eax                                    ; => [ Call: sub_5768a0 ]
 0056C74E    mov dword ptr ds:[esi+0x14], ecx
 0056C751    mov dword ptr ds:[esi+0x18], 0xFFFFFFFF
 0056C758    mov dword ptr ds:[esi+0x1C], 0x00
@@ -98,16 +104,16 @@
 0056C7CC    pop ebx
 0056C7CD    mov esp, ebp
 0056C7CF    pop ebp
-0056C7D0    ret
-0056C7D1    push 0x81ED40
+0056C7D0    ret                                             ; => [ Call: sub_56b8e0 ]
+0056C7D1    push 0x81ED40                                   ; => [ String: Forever ]
 0056C7D6    push 0x13DE
-0056C7DB    mov ecx, 0x801AA4
+0056C7DB    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0056C7E0    push 0x81EA70
 0056C7E5    mov edx, 0x801800
-0056C7EA    call 0x0063B870
+0056C7EA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp | String: Forever ]
 0056C7EF    add esp, 0x0C
 0056C7F2    call 0x0063BC30
 0056C7F7    test al, al
-0056C7F9    jz 0x0056C7FC
+0056C7F9    jz 0x0056C7FC                                   ; => [ Call: sub_63bc30 ]
 0056C7FB    int3
-0056C7FC    call 0x0063BB00
+0056C7FC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_689230
+// 起始地址: 0x689230
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00689230    push ecx
 00689231    mov eax, dword ptr ds:[ecx+0x38]
 00689234    cmp eax, 0x05
@@ -15,17 +21,17 @@
 00689257    mov edx, 0x3EC
 0068925C    call 0x006891A0
 00689261    pop ecx
-00689262    ret
+00689262    ret                                             ; => [ Call: sub_6891a0 ]
 00689263    cmp eax, 0x01
 00689266    jnz 0x00689274
 00689268    mov edx, 0x5DE
 0068926D    call 0x006891A0
 00689272    pop ecx
-00689273    ret
+00689273    ret                                             ; => [ Call: sub_6891a0 ]
 00689274    cmp eax, 0x03
 00689277    jnz 0x00689283
 00689279    mov edx, 0xFA2
-0068927E    call 0x006891A0
+0068927E    call 0x006891A0                                 ; => [ Call: sub_6891a0 ]
 00689283    pop ecx
 00689284    ret
 00689285    push 0x8774C4
@@ -33,10 +39,10 @@
 0068928F    push 0x8773A8
 00689294    mov edx, 0x801800
 00689299    mov ecx, 0x877510
-0068929E    call 0x0063B870
+0068929E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: loc.connectStatus == NETWORK_CONNECT_OPEN || loc.connectStatus == NETWORK_CONNECT_WAITING || loc.connectStatus == NETWORK_CONNECT_WAITING_SSL | String: NetConnectionClosed | String: C:\x\ax2017\Engine\Network.cpp ]
 006892A3    add esp, 0x0C
 006892A6    call 0x0063BC30
 006892AB    test al, al
-006892AD    jz 0x006892B0
+006892AD    jz 0x006892B0                                   ; => [ Call: sub_63bc30 ]
 006892AF    int3
-006892B0    call 0x0063BB00
+006892B0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

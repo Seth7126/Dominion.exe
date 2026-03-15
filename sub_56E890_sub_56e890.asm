@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56e890
+// 起始地址: 0x56e890
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056E890    push ebp
 0056E891    mov ebp, esp
 0056E893    and esp, 0xFFFFFFF8
@@ -8,14 +14,14 @@
 0056E89D    mov esi, edx
 0056E89F    push edi
 0056E8A0    mov dword ptr ss:[esp+0x10], ebx
-0056E8A4    call 0x00573400
+0056E8A4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056E8A9    mov edi, eax
 0056E8AB    movzx ebx, bx
 0056E8AE    mov eax, dword ptr ds:[edi+0x04]
 0056E8B1    mov dword ptr ss:[esp+0x14], eax
 0056E8B5    cmp ebx, 0x320
 0056E8BB    jb 0x0056E8C2
-0056E8BD    call 0x00591930
+0056E8BD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056E8C2    imul edx, ebx, 0x64
 0056E8C5    mov bl, byte ptr ss:[ebp+0x08]
 0056E8C8    add edx, dword ptr ss:[esp+0x14]
@@ -51,7 +57,7 @@
 0056E91E    push 0x00
 0056E920    push 0x00
 0056E922    push 0x00
-0056E924    push 0x00
+0056E924    push 0x00                                       ; => [ Call: __builtin_memset ]
 0056E926    movzx eax, bl
 0056E929    push eax
 0056E92A    push 0x06
@@ -72,7 +78,7 @@
 0056E951    push 0x00
 0056E953    push 0x00
 0056E955    push 0x00
-0056E957    push 0x00
+0056E957    push 0x00                                       ; => [ Call: __builtin_memset ]
 0056E959    movzx eax, bl
 0056E95C    push eax
 0056E95D    push 0x05
@@ -81,7 +87,7 @@
 0056E966    mov edx, 0x16
 0056E96B    push dword ptr ds:[edi+0x0C]
 0056E96E    setz cl
-0056E971    call 0x0061B1B0
+0056E971    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 | Call: nullptr | Call: sub_61b1b0 ]
 0056E976    add esp, 0x2C
 0056E979    pop edi
 0056E97A    pop esi
@@ -94,10 +100,10 @@
 0056E98A    push 0x81EA70
 0056E98F    mov edx, 0x801800
 0056E994    mov ecx, 0x801AA4
-0056E999    call 0x0063B870
+0056E999    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp | String: SetCardFlag | String: Halt ]
 0056E99E    add esp, 0x0C
 0056E9A1    call 0x0063BC30
 0056E9A6    test al, al
-0056E9A8    jz 0x0056E9AB
+0056E9A8    jz 0x0056E9AB                                   ; => [ Call: sub_63bc30 ]
 0056E9AA    int3
-0056E9AB    call 0x0063BB00
+0056E9AB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

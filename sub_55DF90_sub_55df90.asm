@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55df90
+// 起始地址: 0x55df90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055DF90    dword 83EC8B55
 0055DF94    in al, 0xF8
 0055DF96    xor edx, edx
@@ -5,21 +11,21 @@
 0055DF99    push edi
 0055DF9A    push 0x00
 0055DF9C    lea ecx, ds:[edx+0x02]
-0055DF9F    call 0x00561AF0
+0055DF9F    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 0055DFA4    add esp, 0x04
-0055DFA7    call 0x0056B800
+0055DFA7    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0055DFAC    push ecx
 0055DFAD    mov edx, 0x3E9
 0055DFB2    mov ecx, eax
-0055DFB4    call 0x005624A0
+0055DFB4    call 0x005624A0                                 ; => [ Call: sub_5624a0 ]
 0055DFB9    add esp, 0x04
 0055DFBC    test al, al
 0055DFBE    jz 0x0055E01D
 0055DFC0    mov edx, 0x21
 0055DFC5    lea ecx, ds:[edx+0x16]
-0055DFC8    call 0x0056B490
+0055DFC8    call 0x0056B490                                 ; => [ Call: sub_56b490 ]
 0055DFCD    mov esi, eax
-0055DFCF    call 0x00573400
+0055DFCF    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055DFD4    mov edi, eax
 0055DFD6    mov eax, dword ptr ds:[edi+0x04]
 0055DFD9    test esi, esi
@@ -45,7 +51,7 @@
 0055E00B    mov ecx, dword ptr ds:[edi+0x04]
 0055E00E    push 0x01
 0055E010    push 0x400
-0055E015    call 0x00571FA0
+0055E015    call 0x00571FA0                                 ; => [ Call: sub_571fa0 | Call: nullptr ]
 0055E01A    add esp, 0x24
 0055E01D    pop edi
 0055E01E    pop esi

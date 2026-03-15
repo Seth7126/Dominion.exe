@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ac320
+// 起始地址: 0x4ac320
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AC320    push edi
 004AC321    mov edi, ecx
 004AC323    cmp dword ptr ds:[edi], 0x00
@@ -14,7 +20,7 @@
 004AC340    mov ecx, esi
 004AC342    mov edx, 0x20
 004AC347    mov esi, dword ptr ds:[esi+0x18]
-004AC34A    call 0x0064C080
+004AC34A    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004AC34F    test esi, esi
 004AC351    jnz 0x004AC340
 004AC353    mov eax, dword ptr ds:[edi]
@@ -28,7 +34,7 @@
 004AC36D    pop esi
 004AC36E    pop ebx
 004AC36F    mov dword ptr ds:[edi+0x08], 0x00
-004AC376    call 0x0064C080
+004AC376    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004AC37B    mov dword ptr ds:[edi], 0x00
 004AC381    pop edi
 004AC382    ret

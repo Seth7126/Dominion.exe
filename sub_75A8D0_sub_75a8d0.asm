@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75a8d0
+// 起始地址: 0x75a8d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075A8D0    push ebx
 0075A8D1    mov ebx, esp
 0075A8D3    sub esp, 0x08
@@ -8,7 +14,7 @@
 0075A8E0    mov dword ptr ss:[esp+0x04], ebp
 0075A8E4    mov ebp, esp
 0075A8E6    sub esp, 0xC8
-0075A8EC    mov eax, dword ptr ds:[0x008C4040]
+0075A8EC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0075A8F1    xor eax, ebp
 0075A8F3    mov dword ptr ss:[ebp-0x04], eax
 0075A8F6    mov eax, dword ptr ds:[ebx+0x0C]
@@ -28,7 +34,7 @@
 0075A923    shr esi, 0x02
 0075A926    push edi
 0075A927    mov edi, dword ptr ds:[ebx+0x08]
-0075A92A    addsd xmm0, qword ptr ds:[eax*8+0x893660]
+0075A92A    addsd xmm0, qword ptr ds:[eax*8+0x893660]       ; => [ Data: data_893660 ]
 0075A933    lea eax, ss:[ebp-0x4D]
 0075A936    mov dword ptr ss:[ebp-0x70], esi
 0075A939    and eax, 0xFFFFFFF0
@@ -68,7 +74,7 @@
 0075A9E7    mov eax, dword ptr ss:[ebp-0x60]
 0075A9EA    addss xmm0, xmm1
 0075A9EE    addss xmm1, xmm5
-0075A9F2    mov dword ptr ss:[ebp-0x64], ecx
+0075A9F2    mov dword ptr ss:[ebp-0x64], ecx                ; => [ Call: nullptr ]
 0075A9F5    movss dword ptr ds:[eax+0x08], xmm0
 0075A9FA    mov eax, dword ptr ss:[ebp-0x60]
 0075A9FD    addss xmm1, xmm5
@@ -138,7 +144,7 @@
 0075AAF9    addss xmm1, xmm5
 0075AAFD    shufps xmm3, xmm3, 0x00
 0075AB01    shufps xmm4, xmm4, 0x00
-0075AB05    mov dword ptr ss:[ebp-0x64], ecx
+0075AB05    mov dword ptr ss:[ebp-0x64], ecx                ; => [ Call: nullptr ]
 0075AB08    movss dword ptr ds:[eax+0x08], xmm0
 0075AB0D    mov eax, dword ptr ss:[ebp-0x60]
 0075AB10    addss xmm1, xmm5
@@ -178,7 +184,7 @@
 0075AB81    pop edi
 0075AB82    xor ecx, ebp
 0075AB84    pop esi
-0075AB85    call 0x0075927A
+0075AB85    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075AB8A    mov esp, ebp
 0075AB8C    pop ebp
 0075AB8D    mov esp, ebx

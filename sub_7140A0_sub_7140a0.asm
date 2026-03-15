@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7140a0
+// 起始地址: 0x7140a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007140A0    push ebp
 007140A1    mov ebp, esp
 007140A3    sub esp, 0x18
@@ -43,7 +49,7 @@
 00714105    test edx, edx
 00714107    jz 0x00714110
 00714109    mov ecx, esi
-0071410B    call 0x00713A30
+0071410B    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 00714110    mov dword ptr ds:[ebx+0x68], 0x01
 00714117    lea eax, ds:[esi+0x5C]
 0071411A    mov ecx, dword ptr ds:[esi+0x60]
@@ -92,7 +98,7 @@
 007141A1    jz 0x007141AF
 007141A3    mov edx, eax
 007141A5    mov ecx, esi
-007141A7    call 0x00713A30
+007141A7    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 007141AC    mov edx, dword ptr ss:[ebp-0x10]
 007141AF    mov dword ptr ds:[edx+0x68], 0x01
 007141B6    mov eax, dword ptr ds:[esi+0x60]
@@ -158,7 +164,7 @@
 0071425F    test edx, edx
 00714261    jz 0x0071426A
 00714263    mov ecx, esi
-00714265    call 0x00713A30
+00714265    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 0071426A    mov dword ptr ds:[ebx+0x68], 0x01
 00714271    lea edi, ds:[esi+0x64]
 00714274    mov eax, dword ptr ds:[esi+0x60]
@@ -206,9 +212,9 @@
 007142E5    mov dword ptr ds:[eax+ecx*8+0x04], edx
 007142E9    mov edx, dword ptr ss:[ebp-0x08]
 007142EC    mov dword ptr ds:[eax+ecx*8], 0x03
-007142F3    xor eax, eax
+007142F3    xor eax, eax                                    ; => [ Call: nullptr ]
 007142F5    inc dword ptr ds:[ebx]
-007142F7    mov dword ptr ss:[ebp-0x10], eax
+007142F7    mov dword ptr ss:[ebp-0x10], eax                ; => [ Call: nullptr ]
 007142FA    test edx, edx
 007142FC    jle 0x007140EB
 00714302    mov esi, dword ptr ss:[ebp-0x0C]
@@ -226,7 +232,7 @@
 00714324    jz 0x00714334
 00714326    mov edx, dword ptr ds:[esi+0x0C]
 00714329    mov ecx, dword ptr ds:[esi+0x10]
-0071432C    call 0x00713BA0
+0071432C    call 0x00713BA0                                 ; => [ Call: sub_713ba0 ]
 00714331    mov eax, dword ptr ss:[ebp-0x14]
 00714334    mov dword ptr ds:[esi+0x68], 0x00
 0071433B    inc edi

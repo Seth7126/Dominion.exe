@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63d9d0
+// 起始地址: 0x63d9d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063D9D0    push ebp
 0063D9D1    mov ebp, esp
 0063D9D3    push ecx
@@ -31,9 +37,9 @@
 0063DA10    call 0x005A0D00
 0063DA15    mov ecx, dword ptr ss:[ebp-0x04]
 0063DA18    push eax
-0063DA19    call 0x0063DCD0
+0063DA19    call 0x0063DCD0                                 ; => [ Call: sub_5a0d00 | Call: sub_63dcd0 ]
 0063DA1E    mov ecx, esi
-0063DA20    call 0x005A0DB0
+0063DA20    call 0x005A0DB0                                 ; => [ Call: sub_5a0db0 ]
 0063DA25    inc edi
 0063DA26    mov esi, eax
 0063DA28    cmp edi, ebx
@@ -49,10 +55,10 @@
 0063DA3F    push 0x825090
 0063DA44    mov edx, 0x801800
 0063DA49    mov ecx, 0x8250B0
-0063DA4E    call 0x0063B870
+0063DA4E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Xutf8.cpp | Data: data_801800 | String: !Xutf8_is_invalid_lead_char(str) | String: Xutf8_peek_next ]
 0063DA53    add esp, 0x0C
 0063DA56    call 0x0063BC30
 0063DA5B    test al, al
-0063DA5D    jz 0x0063DA60
+0063DA5D    jz 0x0063DA60                                   ; => [ Call: sub_63bc30 ]
 0063DA5F    int3
-0063DA60    call 0x0063BB00
+0063DA60    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

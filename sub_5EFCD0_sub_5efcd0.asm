@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5efcd0
+// 起始地址: 0x5efcd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EFCD0    push ebp
 005EFCD1    mov ebp, esp
 005EFCD3    push ecx
@@ -9,27 +15,27 @@
 005EFCDF    and esi, 0xFFFF
 005EFCE5    cmp esi, 0x320
 005EFCEB    jb 0x005EFCF2
-005EFCED    call 0x00591930
-005EFCF2    mov ecx, dword ptr ds:[0x00B8097C]
+005EFCED    call 0x00591930                                 ; => [ Call: sub_591930 ]
+005EFCF2    mov ecx, dword ptr ds:[0x00B8097C]              ; => [ Data: data_b8097c ]
 005EFCF8    imul eax, esi, 0x64
 005EFCFB    xor esi, esi
 005EFCFD    mov eax, dword ptr ds:[eax+0xB82524]
-005EFD03    mov dword ptr ss:[ebp-0x04], eax
+005EFD03    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: data_b82524 ]
 005EFD06    test ecx, ecx
 005EFD08    jle 0x005EFD48
 005EFD0A    nop word ptr ds:[eax+eax*1], ax
-005EFD10    mov eax, dword ptr ds:[esi*4+0xB7FCFC]
+005EFD10    mov eax, dword ptr ds:[esi*4+0xB7FCFC]          ; => [ Data: data_b7fcfc ]
 005EFD17    cmp eax, dword ptr ds:[ebx+0x98]
 005EFD1D    jz 0x005EFD43
 005EFD1F    movzx edi, ax
 005EFD22    cmp edi, 0x320
 005EFD28    jb 0x005EFD35
-005EFD2A    call 0x00591930
-005EFD2F    mov ecx, dword ptr ds:[0x00B8097C]
+005EFD2A    call 0x00591930                                 ; => [ Call: sub_591930 ]
+005EFD2F    mov ecx, dword ptr ds:[0x00B8097C]              ; => [ Data: data_b8097c ]
 005EFD35    mov edx, dword ptr ss:[ebp-0x04]
 005EFD38    imul eax, edi, 0x64
 005EFD3B    cmp dword ptr ds:[eax+0xB82524], edx
-005EFD41    jz 0x005EFD51
+005EFD41    jz 0x005EFD51                                   ; => [ Data: data_b82524 ]
 005EFD43    inc esi
 005EFD44    cmp esi, ecx
 005EFD46    jl 0x005EFD10

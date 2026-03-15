@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5777b0
+// 起始地址: 0x5777b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005777B0    push ebp
 005777B1    mov ebp, esp
 005777B3    sub esp, 0x41C
-005777B9    mov eax, dword ptr ds:[0x008C4040]
+005777B9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005777BE    xor eax, ebp
 005777C0    mov dword ptr ss:[ebp-0x04], eax
 005777C3    mov eax, dword ptr ss:[ebp+0x08]
@@ -14,7 +20,7 @@
 005777D2    lea eax, ss:[ebp-0x410]
 005777D8    mov dword ptr ss:[ebp-0x414], ecx
 005777DE    push eax
-005777DF    call 0x00576540
+005777DF    call 0x00576540                                 ; => [ Call: sub_576540 ]
 005777E4    mov ecx, dword ptr ss:[ebp-0x414]
 005777EA    lea ebx, ds:[edi+0x07]
 005777ED    add esp, 0x08
@@ -28,14 +34,14 @@
 00577805    mov dword ptr ss:[ebp-0x418], eax
 0057780B    cmp eax, 0x320
 00577810    jb 0x00577823
-00577812    call 0x00591930
+00577812    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577817    mov eax, dword ptr ss:[ebp-0x418]
 0057781D    mov ecx, dword ptr ss:[ebp-0x414]
 00577823    imul eax, eax, 0x64
 00577826    push dword ptr ds:[eax+ecx*1+0x1A4C]
 0057782D    lea eax, ss:[ebp-0x410]
 00577833    push eax
-00577834    call 0x00577600
+00577834    call 0x00577600                                 ; => [ Call: sub_577600 ]
 00577839    add esp, 0x08
 0057783C    test al, al
 0057783E    jnz 0x0057784C
@@ -54,7 +60,7 @@
 00577861    pop esi
 00577862    xor ecx, ebp
 00577864    pop ebx
-00577865    call 0x0075927A
+00577865    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0057786A    mov esp, ebp
 0057786C    pop ebp
 0057786D    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_666060
+// 起始地址: 0x666060
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00666060    push ebp
 00666061    mov ebp, esp
 00666063    push ecx
@@ -8,14 +14,14 @@
 00666069    movss xmm1, dword ptr ds:[edi+0x14]
 0066606E    comiss xmm1, dword ptr ds:[0x0089115C]
 00666075    jnb 0x00666088
-00666077    push 0x875774
+00666077    push 0x875774                                   ; => [ String: UI2SetTransform ]
 0066607C    push 0x3717
-00666081    mov ecx, 0x875748
+00666081    mov ecx, 0x875748                               ; => [ String: t.t.x >= -1000000.0f ]
 00666086    jmp 0x006660F4
 00666088    movss xmm0, dword ptr ds:[0x008910AC]
 00666090    comiss xmm0, xmm1
 00666093    jb 0x006660E5
-00666095    call 0x0064E7A0
+00666095    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066609A    mov dword ptr ss:[ebp-0x04], eax
 0066609D    mov edx, edi
 0066609F    mov esi, 0x1C
@@ -46,16 +52,16 @@
 006660E0    pop ebx
 006660E1    mov esp, ebp
 006660E3    pop ebp
-006660E4    ret
-006660E5    push 0x875774
+006660E4    ret                                             ; => [ Call: sub_65bf00 ]
+006660E5    push 0x875774                                   ; => [ String: UI2SetTransform ]
 006660EA    push 0x3718
-006660EF    mov ecx, 0x875784
+006660EF    mov ecx, 0x875784                               ; => [ String: t.t.x <= 1000000.0f ]
 006660F4    push 0x8739B4
 006660F9    mov edx, 0x801800
-006660FE    call 0x0063B870
+006660FE    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: UI2SetTransform | String: C:\x\ax2017\Engine\UI2.cpp ]
 00666103    add esp, 0x0C
 00666106    call 0x0063BC30
 0066610B    test al, al
-0066610D    jz 0x00666110
+0066610D    jz 0x00666110                                   ; => [ Call: sub_63bc30 ]
 0066610F    int3
-00666110    call 0x0063BB00
+00666110    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

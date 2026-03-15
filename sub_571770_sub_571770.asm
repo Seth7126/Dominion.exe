@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571770
+// 起始地址: 0x571770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571770    dec ecx
 00571771    cmp ecx, 0x14
 00571774    jnbe 0x0057187D
@@ -70,10 +76,10 @@
 00571887    push 0x81F4B8
 0057188C    mov edx, 0x801800
 00571891    mov ecx, 0x801AA4
-00571896    call 0x0063B870
+00571896    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DomExpGet | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: Halt ]
 0057189B    add esp, 0x0C
 0057189E    call 0x0063BC30
 005718A3    test al, al
-005718A5    jz 0x005718A8
+005718A5    jz 0x005718A8                                   ; => [ Call: sub_63bc30 ]
 005718A7    int3
-005718A8    jmp 0x0063BB00
+005718A8    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

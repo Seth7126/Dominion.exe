@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_697fa0
+// 起始地址: 0x697fa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00697FA0    push ebp
 00697FA1    mov ebp, esp
 00697FA3    and esp, 0xFFFFFFF0
 00697FA6    sub esp, 0xC8
-00697FAC    mov eax, dword ptr ds:[0x008C4040]
+00697FAC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00697FB1    xor eax, esp
 00697FB3    mov dword ptr ss:[esp+0xC4], eax
 00697FBA    mov eax, dword ptr ss:[ebp+0x08]
@@ -31,7 +37,7 @@
 00697FFA    mov ecx, dword ptr ds:[esi+0x98]
 00698000    jmp 0x00698008
 00698002    mov ecx, dword ptr ds:[edx+0x88]
-00698008    xor edi, edi
+00698008    xor edi, edi                                    ; => [ Call: nullptr ]
 0069800A    test eax, eax
 0069800C    cmovz edi, ecx
 0069800F    jnz 0x00698019
@@ -77,8 +83,8 @@
 006980A2    movups xmmword ptr ss:[esp+0x88], xmm0
 006980AA    call 0x00697400
 006980AF    add esp, 0x08
-006980B2    movups xmm0, xmmword ptr ds:[eax]
-006980B5    mov eax, dword ptr ds:[0x00CF65B8]
+006980B2    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_697400 ]
+006980B5    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006980BA    movups xmmword ptr ss:[esp+0x30], xmm0
 006980BF    cmp byte ptr ds:[eax+0x28], 0x00
 006980C3    movss xmm3, dword ptr ss:[esp+0x3C]
@@ -133,20 +139,20 @@
 00698194    jz 0x006982AE
 0069819A    mov eax, dword ptr ds:[0x008002D0]
 0069819F    subss xmm7, xmm6
-006981A3    movups xmm0, xmmword ptr ds:[0x008002B0]
+006981A3    movups xmm0, xmmword ptr ds:[0x008002B0]        ; => [ Data: data_8002b0 ]
 006981AA    mov dword ptr ss:[esp+0xB0], eax
 006981B1    lea edx, ss:[esp+0x90]
 006981B8    mov eax, dword ptr ss:[esp+0x14]
 006981BC    subss xmm5, xmm4
-006981C0    movups xmm1, xmmword ptr ds:[0x008002C0]
+006981C0    movups xmm1, xmmword ptr ds:[0x008002C0]        ; => [ Data: data_8002c0 ]
 006981C7    mov ecx, edi
-006981C9    movaps xmmword ptr ss:[esp+0x90], xmm0
+006981C9    movaps xmmword ptr ss:[esp+0x90], xmm0          ; => [ Call: __builtin_memcpy | String: \x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f ]
 006981D1    movss xmm2, dword ptr ds:[eax+0x0C]
 006981D6    lea eax, ss:[esp+0x28]
 006981DA    mulss xmm0, xmm2
 006981DE    push 0x00
 006981E0    divss xmm7, xmm2
-006981E4    push 0x7FF520
+006981E4    push 0x7FF520                                   ; => [ Data: data_7ff520 ]
 006981E9    push 0x01
 006981EB    push 0x00
 006981ED    push 0x00
@@ -177,13 +183,13 @@
 0069827B    push 0x8002B0
 00698280    movss dword ptr ss:[esp+0xD0], xmm1
 00698289    movss dword ptr ss:[esp+0xD4], xmm0
-00698292    call 0x00685A90
+00698292    call 0x00685A90                                 ; => [ Call: sub_685a90 | Data: data_8002b0 ]
 00698297    add esp, 0x28
 0069829A    pop edi
 0069829B    pop esi
 0069829C    mov ecx, dword ptr ss:[esp+0xC4]
 006982A3    xor ecx, esp
-006982A5    call 0x0075927A
+006982A5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006982AA    mov esp, ebp
 006982AC    pop ebp
 006982AD    ret
@@ -248,7 +254,7 @@
 006983AF    movaps xmm0, xmmword ptr ss:[esp+0x40]
 006983B4    movaps xmmword ptr ss:[esp+0x80], xmm0
 006983BC    jnz 0x00698411
-006983BE    mov eax, dword ptr ds:[0x0147ABE4]
+006983BE    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 006983C3    cmp dword ptr ds:[eax+0x38], 0x00
 006983C7    jz 0x00698408
 006983C9    lea ecx, ss:[esp+0x40]
@@ -259,7 +265,7 @@
 006983D6    push eax
 006983D7    lea edx, ss:[esp+0x8C]
 006983DE    lea ecx, ss:[esp+0x3C]
-006983E2    call 0x00682670
+006983E2    call 0x00682670                                 ; => [ Call: sub_682670 ]
 006983E7    add esp, 0x0C
 006983EA    test al, al
 006983EC    jz 0x006985A5
@@ -273,14 +279,14 @@
 0069840C    jmp 0x0069858A
 00698411    mov ecx, edi
 00698413    call 0x005AF880
-00698418    mov ecx, dword ptr ds:[eax]
+00698418    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 0069841A    mov eax, dword ptr ds:[ecx]
 0069841C    movss xmm1, dword ptr ds:[ecx+0x0C]
 00698421    mulss xmm1, dword ptr ds:[ecx+0x08]
 00698426    movd xmm0, eax
 0069842A    cvtdq2pd xmm0, xmm0
 0069842E    shr eax, 0x1F
-00698431    addsd xmm0, qword ptr ds:[eax*8+0x893660]
+00698431    addsd xmm0, qword ptr ds:[eax*8+0x893660]       ; => [ Data: data_893660 ]
 0069843A    mov eax, dword ptr ds:[ecx+0x04]
 0069843D    mov ecx, dword ptr ss:[esp+0x58]
 00698441    cvtpd2ps xmm3, xmm0
@@ -293,7 +299,7 @@
 00698463    cvtpd2ps xmm2, xmm0
 00698467    movss xmm0, dword ptr ss:[esp+0x14]
 0069846D    subss xmm0, dword ptr ss:[esp+0x20]
-00698473    mulss xmm2, xmm1
+00698473    mulss xmm2, xmm1                                ; => [ Data: data_893660 ]
 00698477    movss xmm1, dword ptr ss:[esp+0x24]
 0069847D    subss xmm1, dword ptr ss:[esp+0x1C]
 00698483    movss dword ptr ss:[esp+0x14], xmm0
@@ -305,7 +311,7 @@
 0069849F    mulss xmm2, xmm1
 006984A3    movss dword ptr ss:[esp+0x68], xmm3
 006984A9    movss dword ptr ss:[esp+0x6C], xmm2
-006984AF    call 0x006B7590
+006984AF    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 006984B4    movss xmm5, dword ptr ss:[esp+0x68]
 006984BA    xorps xmm6, xmm6
 006984BD    movss xmm4, dword ptr ss:[esp+0x6C]
@@ -314,7 +320,7 @@
 006984CA    mov dword ptr ss:[esp+0x58], eax
 006984CE    movss xmm3, dword ptr ss:[esp+0x58]
 006984D4    mulss xmm3, dword ptr ss:[esp+0x24]
-006984DA    mov eax, dword ptr ds:[0x0147ABE4]
+006984DA    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 006984DF    mov dword ptr ss:[esp+0x5C], edx
 006984E3    mulss xmm0, dword ptr ss:[esp+0x58]
 006984E9    cmp dword ptr ds:[eax+0x38], 0x00
@@ -346,7 +352,7 @@
 0069855B    push eax
 0069855C    lea edx, ss:[esp+0x8C]
 00698563    lea ecx, ss:[esp+0x4C]
-00698567    call 0x00682670
+00698567    call 0x00682670                                 ; => [ Call: sub_682670 ]
 0069856C    add esp, 0x0C
 0069856F    test al, al
 00698571    jz 0x006985A5
@@ -363,13 +369,13 @@
 00698593    lea eax, ss:[esp+0x88]
 0069859A    push eax
 0069859B    mov ecx, edi
-0069859D    call 0x006827E0
+0069859D    call 0x006827E0                                 ; => [ Call: sub_6827e0 | Call: sub_6827e0 | Call: sub_6827e0 ]
 006985A2    add esp, 0x0C
 006985A5    mov ecx, dword ptr ss:[esp+0xCC]
 006985AC    pop edi
 006985AD    pop esi
 006985AE    xor ecx, esp
-006985B0    call 0x0075927A
+006985B0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006985B5    mov esp, ebp
 006985B7    pop ebp
 006985B8    ret

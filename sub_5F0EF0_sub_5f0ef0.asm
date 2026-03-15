@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f0ef0
+// 起始地址: 0x5f0ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F0EF0    push ebp
 005F0EF1    mov ebp, esp
 005F0EF3    cmp edx, 0x3EC
@@ -36,13 +42,13 @@
 005F0F5F    push 0x86F1E8
 005F0F64    mov edx, 0x801800
 005F0F69    mov ecx, 0x801AA4
-005F0F6E    call 0x0063B870
+005F0F6E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: OkWhereLabel | String: Halt ]
 005F0F73    add esp, 0x0C
 005F0F76    call 0x0063BC30
 005F0F7B    test al, al
-005F0F7D    jz 0x005F0F80
+005F0F7D    jz 0x005F0F80                                   ; => [ Call: sub_63bc30 ]
 005F0F7F    int3
-005F0F80    jmp 0x0063BB00
+005F0F80    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 005F0F85    mov eax, 0x2F
 005F0F8A    pop ebp
 005F0F8B    ret

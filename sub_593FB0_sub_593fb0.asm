@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_593fb0
+// 起始地址: 0x593fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00593FB0    push ebp
 00593FB1    mov ebp, esp
 00593FB3    push ecx
@@ -7,7 +13,7 @@
 00593FB8    mov ebx, ecx
 00593FBA    push edi
 00593FBB    mov dword ptr ss:[ebp-0x04], eax
-00593FBE    mov edi, 0x7BFAF0
+00593FBE    mov edi, 0x7BFAF0                               ; => [ Data: data_7bfaf0 ]
 00593FC3    xor ecx, ecx
 00593FC5    mov esi, dword ptr ds:[edi-0x04]
 00593FC8    xor edx, edx
@@ -42,4 +48,4 @@
 00594003    mov eax, dword ptr ds:[eax*8+0x7BFAE8]
 0059400A    mov esp, ebp
 0059400C    pop ebp
-0059400D    ret
+0059400D    ret                                             ; => [ Data: data_7bfae8 ]

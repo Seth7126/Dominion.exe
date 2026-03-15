@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6db2f0
+// 起始地址: 0x6db2f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DB2F0    push ebp
 006DB2F1    mov ebp, esp
 006DB2F3    sub esp, 0x14
-006DB2F6    mov eax, dword ptr ds:[0x0147ABE8]
+006DB2F6    mov eax, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006DB2FB    push ebx
 006DB2FC    mov ebx, ecx
 006DB2FE    mov dword ptr ss:[ebp-0x10], ebx
@@ -12,10 +18,10 @@
 006DB307    jz 0x006DB461
 006DB30D    mov ecx, dword ptr ds:[eax]
 006DB30F    xor edx, edx
-006DB311    xorps xmm2, xmm2
+006DB311    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 006DB314    mov dword ptr ss:[ebp-0x04], ecx
 006DB317    mov dword ptr ss:[ebp-0x0C], edx
-006DB31A    xor esi, esi
+006DB31A    xor esi, esi                                    ; => [ Call: nullptr ]
 006DB31C    movss dword ptr ss:[ebp-0x08], xmm2
 006DB321    jmp 0x006DB326
 006DB323    mov ebx, dword ptr ss:[ebp-0x10]
@@ -90,7 +96,7 @@
 006DB3ED    mov ecx, dword ptr ss:[ebp-0x04]
 006DB3F0    mov edx, dword ptr ss:[ebp-0x0C]
 006DB3F3    test al, al
-006DB3F5    jz 0x006DB323
+006DB3F5    jz 0x006DB323                                   ; => [ Call: sub_6da9e0 ]
 006DB3FB    test bl, bl
 006DB3FD    mov ebx, dword ptr ss:[ebp-0x10]
 006DB400    jz 0x006DB425
@@ -104,7 +110,7 @@
 006DB417    mov ecx, dword ptr ss:[ebp-0x04]
 006DB41A    mov edx, dword ptr ss:[ebp-0x0C]
 006DB41D    test al, al
-006DB41F    jz 0x006DB326
+006DB41F    jz 0x006DB326                                   ; => [ Call: sub_6daff0 ]
 006DB425    mov edx, dword ptr ss:[ebp-0x0C]
 006DB428    movss xmm0, dword ptr ss:[ebp-0x14]
 006DB42D    test edx, edx
@@ -131,10 +137,10 @@
 006DB468    push 0x871FA0
 006DB46D    mov edx, 0x801800
 006DB472    mov ecx, 0x871F94
-006DB477    call 0x0063B870
+006DB477    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetGameData | Data: data_801800 | String: gpGameData | String: C:\x\ax2017\Engine\Game.h ]
 006DB47C    add esp, 0x0C
 006DB47F    call 0x0063BC30
 006DB484    test al, al
-006DB486    jz 0x006DB489
+006DB486    jz 0x006DB489                                   ; => [ Call: sub_63bc30 ]
 006DB488    int3
-006DB489    call 0x0063BB00
+006DB489    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

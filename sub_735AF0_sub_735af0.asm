@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_735af0
+// 起始地址: 0x735af0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00735AF0    push ebp
 00735AF1    mov ebp, esp
 00735AF3    sub esp, 0x40
@@ -9,7 +15,7 @@
 00735B00    push edi
 00735B01    mov dword ptr ss:[ebp-0x04], ebx
 00735B04    mov ecx, dword ptr ds:[esi+0x30]
-00735B07    call 0x006A9450
+00735B07    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735B0C    mov ecx, dword ptr ss:[ebp-0x0C]
 00735B0F    mov edi, eax
 00735B11    mov edx, dword ptr ds:[esi+0x38]
@@ -33,7 +39,7 @@
 00735B45    add ecx, dword ptr ds:[esi+0x3C]
 00735B48    mov dword ptr ss:[ebp-0x3C], ecx
 00735B4B    mov ecx, dword ptr ss:[ebp-0x0C]
-00735B4E    call 0x006A9DE0
+00735B4E    call 0x006A9DE0                                 ; => [ Call: sub_6a9de0 ]
 00735B53    mov eax, dword ptr ds:[esi+0x50]
 00735B56    mov ecx, dword ptr ds:[ebx]
 00735B58    lea ebx, ds:[esi+0x38]
@@ -64,8 +70,8 @@
 00735B95    cmp dword ptr ss:[ebp-0x24], edx
 00735B98    jle 0x00735C33
 00735B9E    mov ecx, dword ptr ss:[ebp-0x10]
-00735BA1    xor eax, eax
-00735BA3    mov dword ptr ss:[ebp+0x08], eax
+00735BA1    xor eax, eax                                    ; => [ Call: nullptr ]
+00735BA3    mov dword ptr ss:[ebp+0x08], eax                ; => [ Call: nullptr ]
 00735BA6    test ecx, ecx
 00735BA8    jle 0x00735C16
 00735BAA    nop word ptr ds:[eax+eax*1], ax
@@ -74,7 +80,7 @@
 00735BB5    add edi, eax
 00735BB7    mov ebx, dword ptr ds:[ecx]
 00735BB9    mov ecx, dword ptr ds:[esi+0x30]
-00735BBC    call 0x006A9450
+00735BBC    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735BC1    cmp eax, 0x04
 00735BC4    jnz 0x00735E74
 00735BCA    mov eax, dword ptr ds:[esi+0x38]
@@ -83,7 +89,7 @@
 00735BD3    lea eax, ds:[eax+ebx*4]
 00735BD6    add eax, dword ptr ds:[esi+0x3C]
 00735BD9    mov dword ptr ss:[ebp-0x08], eax
-00735BDC    call 0x006A9450
+00735BDC    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735BE1    cmp eax, 0x04
 00735BE4    jnz 0x00735E74
 00735BEA    mov eax, dword ptr ds:[esi+0x38]
@@ -119,8 +125,8 @@
 00735C3B    test ecx, ecx
 00735C3D    jle 0x00735CE2
 00735C43    mov ecx, dword ptr ss:[ebp-0x10]
-00735C46    xor eax, eax
-00735C48    mov dword ptr ss:[ebp+0x08], eax
+00735C46    xor eax, eax                                    ; => [ Call: nullptr ]
+00735C48    mov dword ptr ss:[ebp+0x08], eax                ; => [ Call: nullptr ]
 00735C4B    test ecx, ecx
 00735C4D    jle 0x00735CC2
 00735C4F    nop
@@ -131,7 +137,7 @@
 00735C5B    mov ebx, dword ptr ds:[ecx]
 00735C5D    mov ecx, dword ptr ds:[esi+0x30]
 00735C60    add ebx, eax
-00735C62    call 0x006A9450
+00735C62    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735C67    cmp eax, 0x04
 00735C6A    jnz 0x00735E74
 00735C70    mov eax, dword ptr ds:[esi+0x38]
@@ -142,7 +148,7 @@
 00735C7F    add eax, ecx
 00735C81    mov ecx, dword ptr ds:[esi+0x30]
 00735C84    mov dword ptr ss:[ebp-0x24], eax
-00735C87    call 0x006A9450
+00735C87    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735C8C    cmp eax, 0x04
 00735C8F    jnz 0x00735E74
 00735C95    mov eax, dword ptr ds:[esi+0x38]
@@ -208,7 +214,7 @@
 00735D44    add ecx, eax
 00735D46    mov dword ptr ss:[ebp-0x1C], ecx
 00735D49    mov ecx, dword ptr ds:[esi+0x30]
-00735D4C    call 0x006A9450
+00735D4C    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735D51    cmp eax, 0x04
 00735D54    jnz 0x00735E74
 00735D5A    mov ebx, dword ptr ds:[ebx]
@@ -219,7 +225,7 @@
 00735D68    mov dword ptr ss:[ebp-0x1C], eax
 00735D6B    add ebx, eax
 00735D6D    add ebx, dword ptr ds:[esi+0x3C]
-00735D70    call 0x006A9450
+00735D70    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735D75    cmp eax, 0x04
 00735D78    jnz 0x00735E74
 00735D7E    sub edi, dword ptr ss:[ebp-0x20]
@@ -266,7 +272,7 @@
 00735DF7    mov eax, dword ptr ss:[ebp-0x0C]
 00735DFA    mov ebx, dword ptr ds:[eax+0x08]
 00735DFD    add ebx, dword ptr ds:[edx]
-00735DFF    call 0x006A9450
+00735DFF    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735E04    cmp eax, 0x04
 00735E07    jnz 0x00735E74
 00735E09    mov eax, dword ptr ss:[ebp+0x08]
@@ -277,7 +283,7 @@
 00735E1C    add edi, ecx
 00735E1E    mov ecx, dword ptr ds:[esi+0x30]
 00735E21    add edi, dword ptr ds:[esi+0x3C]
-00735E24    call 0x006A9450
+00735E24    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00735E29    cmp eax, 0x04
 00735E2C    jnz 0x00735E74
 00735E2E    mov eax, dword ptr ss:[ebp+0x08]
@@ -314,10 +320,10 @@
 00735E7E    push 0x88F010
 00735E83    mov edx, 0x801800
 00735E88    mov ecx, 0x88F03C
-00735E8D    call 0x0063B870
+00735E8D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: AtlasGetPixel | String: atlasBytesPerPixel == 4 | String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
 00735E92    add esp, 0x0C
 00735E95    call 0x0063BC30
 00735E9A    test al, al
-00735E9C    jz 0x00735E9F
+00735E9C    jz 0x00735E9F                                   ; => [ Call: sub_63bc30 ]
 00735E9E    int3
-00735E9F    call 0x0063BB00
+00735E9F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

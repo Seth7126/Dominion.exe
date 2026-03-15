@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4bb4c0
+// 起始地址: 0x4bb4c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BB4C0    push ebp
 004BB4C1    mov ebp, esp
 004BB4C3    push ebx
@@ -23,13 +29,13 @@
 004BB4FA    test eax, eax
 004BB4FC    jnz 0x004BB4F0
 004BB4FE    mov ecx, 0x9C
-004BB503    call 0x0064BFD0
+004BB503    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 004BB508    mov esi, eax
 004BB50A    inc dword ptr ds:[esi+0x0C]
 004BB50D    cmp dword ptr ds:[esi], 0x00
 004BB510    jnz 0x004BB519
 004BB512    mov ecx, esi
-004BB514    call 0x0064BE70
+004BB514    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 004BB519    mov edx, dword ptr ds:[esi]
 004BB51B    mov ecx, 0x25
 004BB520    mov eax, dword ptr ds:[edx]
@@ -38,7 +44,7 @@
 004BB526    lea edi, ds:[edx+0x04]
 004BB529    mov esi, dword ptr ss:[ebp+0x0C]
 004BB52C    mov dword ptr ds:[edx], eax
-004BB52E    rep movsd
+004BB52E    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004BB530    mov eax, dword ptr ds:[ebx]
 004BB532    mov ecx, dword ptr ss:[ebp+0x08]
 004BB535    pop edi
@@ -54,7 +60,7 @@
 004BB54D    mov esi, dword ptr ss:[ebp+0x0C]
 004BB550    lea edi, ds:[eax+0x04]
 004BB553    mov ecx, 0x25
-004BB558    rep movsd
+004BB558    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004BB55A    pop edi
 004BB55B    pop esi
 004BB55C    pop ebx

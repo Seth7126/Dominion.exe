@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5bbfb0
+// 起始地址: 0x5bbfb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BBFB0    push ebp
 005BBFB1    mov ebp, esp
 005BBFB3    mov eax, dword ptr ss:[ebp+0x08]
@@ -6,7 +12,7 @@
 005BBFBA    push esi
 005BBFBB    push edi
 005BBFBC    mov edi, ecx
-005BBFBE    movups xmmword ptr ds:[edi], xmm0
+005BBFBE    movups xmmword ptr ds:[edi], xmm0               ; => [ Call: __builtin_memset ]
 005BBFC1    mov dword ptr ds:[edi+0x10], 0x00
 005BBFC8    mov dword ptr ds:[edi+0x14], 0x00
 005BBFCF    cmp dword ptr ds:[eax+0x14], 0x0F
@@ -36,7 +42,7 @@
 005BC019    mov esi, 0x7FFFFFFF
 005BC01E    add ecx, 0x23
 005BC021    push ecx
-005BC022    call 0x00759772
+005BC022    call 0x00759772                                 ; => [ Call: operator new ]
 005BC027    mov ecx, eax
 005BC029    add esp, 0x04
 005BC02C    test ecx, ecx
@@ -59,7 +65,7 @@
 005BC05A    jmp 0x005BC021
 005BC05C    call dword ptr ds:[0x007755F4]
 005BC062    push eax
-005BC063    call 0x00759772
+005BC063    call 0x00759772                                 ; => [ Call: operator new ]
 005BC068    add esp, 0x04
 005BC06B    lea ecx, ds:[ebx+0x01]
 005BC06E    mov dword ptr ds:[edi], eax
@@ -68,7 +74,7 @@
 005BC074    mov dword ptr ds:[edi+0x10], ebx
 005BC077    push eax
 005BC078    mov dword ptr ds:[edi+0x14], esi
-005BC07B    call 0x00761FBE
+005BC07B    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BC080    add esp, 0x0C
 005BC083    mov eax, edi
 005BC085    pop edi
@@ -76,5 +82,5 @@
 005BC087    pop ebx
 005BC088    pop ebp
 005BC089    ret 0x04
-005BC08C    call 0x005B0860
-005BC091    call 0x004F7EE0
+005BC08C    call 0x005B0860                                 ; => [ Call: sub_5b0860 ]
+005BC091    call 0x004F7EE0                                 ; => [ Call: sub_4f7ee0 ]

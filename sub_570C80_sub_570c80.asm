@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_570c80
+// 起始地址: 0x570c80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00570C80    push ebp
 00570C81    mov ebp, esp
 00570C83    sub esp, 0x0C
@@ -22,10 +28,10 @@
 00570CB0    mov edi, dword ptr ds:[ecx+esi*4]
 00570CB3    call 0x00573400
 00570CB8    mov ecx, dword ptr ss:[ebp+0x08]
-00570CBB    mov ebx, dword ptr ds:[eax+0x04]
+00570CBB    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00570CBE    cmp cx, 0x320
 00570CC3    jb 0x00570CCA
-00570CC5    call 0x00591930
+00570CC5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00570CCA    mov eax, dword ptr ss:[ebp-0x04]
 00570CCD    cmp dword ptr ds:[eax+ebx*1+0x1A4C], edi
 00570CD4    jz 0x00570CEA

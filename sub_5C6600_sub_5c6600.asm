@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c6600
+// 起始地址: 0x5c6600
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C6600    push ebp
 005C6601    mov ebp, esp
 005C6603    push esi
@@ -15,7 +21,7 @@
 005C6623    movss xmm0, dword ptr ds:[eax+esi*4]
 005C6628    call 0x004EA090
 005C662D    mov eax, dword ptr ds:[ebx]
-005C662F    movss dword ptr ds:[eax+esi*4], xmm0
+005C662F    movss dword ptr ds:[eax+esi*4], xmm0            ; => [ Call: sub_4ea090 ]
 005C6634    inc esi
 005C6635    mov eax, dword ptr ss:[ebp+0x08]
 005C6638    cmp esi, edi

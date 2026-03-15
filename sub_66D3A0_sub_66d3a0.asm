@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66d3a0
+// 起始地址: 0x66d3a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066D3A0    push ebp
 0066D3A1    mov ebp, esp
 0066D3A3    sub esp, 0x08
@@ -7,7 +13,7 @@
 0066D3AA    lea edx, ss:[ebp-0x04]
 0066D3AD    push edi
 0066D3AE    mov edi, ecx
-0066D3B0    call 0x00667790
+0066D3B0    call 0x00667790                                 ; => [ Call: sub_667790 ]
 0066D3B5    test eax, eax
 0066D3B7    jz 0x0066D419
 0066D3B9    push dword ptr ss:[ebp+0x10]
@@ -28,7 +34,7 @@
 0066D3E4    jz 0x0066D419
 0066D3E6    nop word ptr ds:[eax+eax*1], ax
 0066D3F0    mov ecx, dword ptr ds:[edi+esi*4+0x179C]
-0066D3F7    call 0x0064E7A0
+0066D3F7    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066D3FC    push dword ptr ss:[ebp+0x10]
 0066D3FF    mov edx, ebx
 0066D401    mov ecx, eax

@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_52f7b0
+// 起始地址: 0x52f7b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052F7B0    dword B8EC8B55
 0052F7B4    adc byte ptr ds:[ecx], bl
 0052F7B6    add byte ptr ds:[eax], al
-0052F7B8    call 0x00761E50
+0052F7B8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0052F7BD    mov eax, dword ptr ds:[0x008C4040]
 0052F7C2    xor eax, ebp
-0052F7C4    mov dword ptr ss:[ebp-0x04], eax
+0052F7C4    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 0052F7C7    push esi
 0052F7C8    push edi
 0052F7C9    lea edx, ss:[ebp-0x1910]
 0052F7CF    lea ecx, ss:[ebp-0xC90]
-0052F7D5    call 0x0056D830
+0052F7D5    call 0x0056D830                                 ; => [ Call: sub_56d830 ]
 0052F7DA    mov edi, eax
 0052F7DC    xor esi, esi
 0052F7DE    xorps xmm0, xmm0
@@ -50,7 +56,7 @@
 0052F848    pop edi
 0052F849    xor ecx, ebp
 0052F84B    pop esi
-0052F84C    call 0x0075927A
+0052F84C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0052F851    mov esp, ebp
 0052F853    pop ebp
 0052F854    ret

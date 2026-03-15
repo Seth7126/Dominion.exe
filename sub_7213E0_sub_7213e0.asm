@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7213e0
+// 起始地址: 0x7213e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007213E0    push ebp
 007213E1    mov ebp, esp
 007213E3    sub esp, 0x10
@@ -28,7 +34,7 @@
 00721431    cmp dword ptr ds:[esi+0x47C0], 0x10
 00721438    jnl 0x00721441
 0072143A    mov ecx, esi
-0072143C    call 0x00720CA0
+0072143C    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00721441    mov eax, dword ptr ds:[esi+0x47BC]
 00721447    mov ecx, dword ptr ss:[ebp+0x0C]
 0072144A    mov edi, dword ptr ds:[esi+0x47C0]
@@ -58,7 +64,7 @@
 0072149D    cmp edi, 0x10
 007214A0    jnl 0x007214A9
 007214A2    mov ecx, esi
-007214A4    call 0x00720CA0
+007214A4    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 007214A9    mov edx, dword ptr ds:[esi+0x47BC]
 007214AF    mov eax, edx
 007214B1    mov edi, dword ptr ss:[ebp+0x08]
@@ -95,7 +101,7 @@
 00721520    shr eax, cl
 00721522    mov ecx, dword ptr ss:[ebp+0x08]
 00721525    and eax, dword ptr ds:[edx*4+0x801050]
-0072152C    add eax, dword ptr ds:[ecx+edx*4+0x64C]
+0072152C    add eax, dword ptr ds:[ecx+edx*4+0x64C]         ; => [ Data: data_801050 ]
 00721533    mov ecx, edx
 00721535    mov edx, dword ptr ds:[esi+0x47BC]
 0072153B    shl edx, cl
@@ -121,7 +127,7 @@
 00721581    cmp edi, eax
 00721583    jnl 0x0072158F
 00721585    mov ecx, esi
-00721587    call 0x00720CA0
+00721587    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 0072158C    mov eax, dword ptr ss:[ebp-0x10]
 0072158F    mov edi, dword ptr ds:[esi+0x47BC]
 00721595    mov ecx, eax
@@ -129,7 +135,7 @@
 00721599    sar edi, 0x1F
 0072159C    rol edx, cl
 0072159E    not edi
-007215A0    mov ecx, dword ptr ds:[eax*4+0x801050]
+007215A0    mov ecx, dword ptr ds:[eax*4+0x801050]          ; => [ Data: data_801050 ]
 007215A7    mov eax, ecx
 007215A9    not eax
 007215AB    and eax, edx
@@ -143,7 +149,7 @@
 007215CC    add di, dx
 007215CF    shl di, cl
 007215D2    mov ecx, dword ptr ss:[ebp-0x04]
-007215D5    mov word ptr ds:[ecx+eax*2], di
+007215D5    mov word ptr ds:[ecx+eax*2], di                 ; => [ Data: data_801010 ]
 007215D9    cmp ebx, dword ptr ds:[esi+0x47D4]
 007215DF    jle 0x00721431
 007215E5    pop edi
@@ -161,9 +167,9 @@
 00721602    cmp edi, ecx
 00721604    jnl 0x00721610
 00721606    mov ecx, esi
-00721608    call 0x00720CA0
+00721608    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 0072160D    mov ecx, dword ptr ss:[ebp-0x08]
-00721610    mov ebx, dword ptr ds:[ecx*4+0x801050]
+00721610    mov ebx, dword ptr ds:[ecx*4+0x801050]          ; => [ Data: data_801050 ]
 00721617    mov eax, ebx
 00721619    mov edx, dword ptr ds:[esi+0x47BC]
 0072161F    not eax
@@ -210,7 +216,7 @@
 007216A1    cmp dword ptr ds:[esi+0x47C0], 0x01
 007216A8    jnl 0x007216B4
 007216AA    mov ecx, esi
-007216AC    call 0x00720CA0
+007216AC    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 007216B1    mov edx, dword ptr ss:[ebp-0x0C]
 007216B4    mov ecx, dword ptr ds:[esi+0x47BC]
 007216BA    dec dword ptr ds:[esi+0x47C0]
@@ -244,7 +250,7 @@
 00721703    cmp dword ptr ds:[esi+0x47C0], 0x10
 0072170A    jnl 0x00721713
 0072170C    mov ecx, esi
-0072170E    call 0x00720CA0
+0072170E    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00721713    mov edx, dword ptr ds:[esi+0x47BC]
 00721719    mov eax, edx
 0072171B    mov ecx, dword ptr ss:[ebp+0x08]
@@ -286,7 +292,7 @@
 007217A6    shr eax, cl
 007217A8    mov ecx, dword ptr ss:[ebp+0x08]
 007217AB    and eax, dword ptr ds:[edi*4+0x801050]
-007217B2    add eax, dword ptr ds:[ecx+edi*4+0x64C]
+007217B2    add eax, dword ptr ds:[ecx+edi*4+0x64C]         ; => [ Data: data_801050 ]
 007217B9    mov ecx, dword ptr ss:[ebp-0x08]
 007217BC    sub ecx, edi
 007217BE    mov dword ptr ds:[esi+0x47C0], ecx
@@ -314,12 +320,12 @@
 00721808    cmp dword ptr ss:[ebp-0x08], edi
 0072180B    jnl 0x00721814
 0072180D    mov ecx, esi
-0072180F    call 0x00720CA0
+0072180F    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00721814    mov edx, dword ptr ds:[esi+0x47BC]
 0072181A    mov ecx, edi
 0072181C    sub dword ptr ds:[esi+0x47C0], edi
 00721822    rol edx, cl
-00721824    mov ecx, dword ptr ds:[edi*4+0x801050]
+00721824    mov ecx, dword ptr ds:[edi*4+0x801050]          ; => [ Data: data_801050 ]
 0072182B    mov eax, ecx
 0072182D    not eax
 0072182F    and eax, edx
@@ -333,7 +339,7 @@
 0072184F    cmp dword ptr ss:[ebp-0x08], eax
 00721852    jnl 0x0072185B
 00721854    mov ecx, esi
-00721856    call 0x00720CA0
+00721856    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 0072185B    mov ecx, dword ptr ds:[esi+0x47BC]
 00721861    dec dword ptr ds:[esi+0x47C0]
 00721867    lea eax, ds:[ecx+ecx*1]
@@ -358,7 +364,7 @@
 007218A5    cmp dword ptr ds:[esi+0x47C0], 0x01
 007218AC    jnl 0x007218B8
 007218AE    mov ecx, esi
-007218B0    call 0x00720CA0
+007218B0    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 007218B5    mov edx, dword ptr ss:[ebp-0x08]
 007218B8    mov ecx, dword ptr ds:[esi+0x47BC]
 007218BE    dec dword ptr ds:[esi+0x47C0]

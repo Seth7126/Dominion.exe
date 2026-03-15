@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e9f80
+// 起始地址: 0x4e9f80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E9F80    push ebp
 004E9F81    mov ebp, esp
 004E9F83    push ecx
@@ -6,12 +12,12 @@
 004E9F86    push edi
 004E9F87    mov edi, dword ptr ss:[ebp+0x08]
 004E9F8A    mov ebx, ecx
-004E9F8C    mov ecx, 0x801800
+004E9F8C    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 004E9F91    mov eax, dword ptr ds:[edi]
 004E9F93    test eax, eax
 004E9F95    cmovnz ecx, eax
 004E9F98    xor edx, edx
-004E9F9A    call 0x0069C4D0
+004E9F9A    call 0x0069C4D0                                 ; => [ Call: sub_69c4d0 ]
 004E9F9F    mov ecx, dword ptr ds:[ebx+0x04]
 004E9FA2    and ecx, eax
 004E9FA4    mov eax, dword ptr ds:[ebx]
@@ -22,11 +28,11 @@
 004E9FB1    jz 0x004EA000
 004E9FB3    mov edi, dword ptr ds:[edi]
 004E9FB5    mov eax, dword ptr ds:[esi]
-004E9FB7    mov ecx, 0x801800
+004E9FB7    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 004E9FBC    test eax, eax
 004E9FBE    cmovnz ecx, eax
 004E9FC1    test edi, edi
-004E9FC3    mov eax, 0x801800
+004E9FC3    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 004E9FC8    cmovnz eax, edi
 004E9FCB    nop dword ptr ds:[eax+eax*1], eax
 004E9FD0    mov dl, byte ptr ds:[eax]
@@ -51,13 +57,13 @@
 004E9FFC    test esi, esi
 004E9FFE    jnz 0x004E9FB5
 004EA000    mov ecx, 0x0C
-004EA005    call 0x0064BFD0
+004EA005    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 004EA00A    mov esi, eax
 004EA00C    inc dword ptr ds:[esi+0x0C]
 004EA00F    cmp dword ptr ds:[esi], 0x00
 004EA012    jnz 0x004EA01B
 004EA014    mov ecx, esi
-004EA016    call 0x0064BE70
+004EA016    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 004EA01B    mov edi, dword ptr ds:[esi]
 004EA01D    mov eax, dword ptr ds:[edi]
 004EA01F    mov dword ptr ds:[esi], eax
@@ -69,7 +75,7 @@
 004EA02C    cmp byte ptr ds:[eax], 0x00
 004EA02F    jz 0x004EA03B
 004EA031    mov ecx, edi
-004EA033    call 0x0063D4E0
+004EA033    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004EA038    inc dword ptr ds:[eax+0x04]
 004EA03B    mov eax, dword ptr ss:[ebp+0x0C]
 004EA03E    mov ecx, dword ptr ss:[ebp-0x04]

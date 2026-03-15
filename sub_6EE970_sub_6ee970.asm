@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ee970
+// 起始地址: 0x6ee970
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006EE970    push ebx
 006EE971    mov ebx, esp
 006EE973    sub esp, 0x08
@@ -12,14 +18,14 @@
 006EE98A    push edi
 006EE98B    mov dword ptr ss:[ebp-0x04], edx
 006EE98E    mov dword ptr ss:[ebp-0x08], ecx
-006EE991    call 0x006EE800
+006EE991    call 0x006EE800                                 ; => [ Call: sub_6ee800 ]
 006EE996    mov edi, eax
 006EE998    mov dword ptr ss:[ebp-0x0C], edi
 006EE99B    test edi, edi
 006EE99D    jnz 0x006EE9B3
-006EE99F    push 0x88B1BC
+006EE99F    push 0x88B1BC                                   ; => [ String: NodeGraphGetMinMax ]
 006EE9A4    push 0x2A2
-006EE9A9    mov ecx, 0x88B1B4
+006EE9A9    mov ecx, 0x88B1B4                               ; => [ String: pTrack ]
 006EE9AE    jmp 0x006EEAE3
 006EE9B3    cmp dword ptr ds:[edi+0x08], 0x00
 006EE9B7    jle 0x006EEAD4
@@ -61,7 +67,7 @@
 006EEA24    movaps xmm0, xmmword ptr ds:[0x00893760]
 006EEA2B    xorps xmm4, xmm5
 006EEA2E    movss xmm2, dword ptr ds:[0x008910A8]
-006EEA36    movups xmmword ptr ss:[ebp-0x3C], xmm6
+006EEA36    movups xmmword ptr ss:[ebp-0x3C], xmm6          ; => [ String: \x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\xa0\x40\x00\x00\x20\x41\x00\x00\x48\x42\x00\x00\xc8\x42\x00\x00\xfa\x43\x00\x00\x7a\x44\x00\x40\x9c\x45\x00\x40\x1c\x46\x00\x50\x43\x47\x00\x50\xc3\x47 | Call: __builtin_memcpy ]
 006EEA3A    movups xmmword ptr ss:[ebp-0x2C], xmm7
 006EEA3E    movups xmmword ptr ss:[ebp-0x1C], xmm0
 006EEA42    movaps xmm1, xmm2
@@ -78,7 +84,7 @@
 006EEA6E    xor eax, eax
 006EEA70    movss dword ptr ds:[edx], xmm1
 006EEA74    movss xmm1, dword ptr ds:[ecx]
-006EEA78    movups xmmword ptr ss:[ebp-0x3C], xmm6
+006EEA78    movups xmmword ptr ss:[ebp-0x3C], xmm6          ; => [ String: \x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\xa0\x40\x00\x00\x20\x41\x00\x00\x48\x42\x00\x00\xc8\x42\x00\x00\xfa\x43\x00\x00\x7a\x44\x00\x40\x9c\x45\x00\x40\x1c\x46\x00\x50\x43\x47\x00\x50\xc3\x47 | Call: __builtin_memcpy ]
 006EEA7C    movups xmmword ptr ss:[ebp-0x2C], xmm7
 006EEA80    movups xmmword ptr ss:[ebp-0x1C], xmm0
 006EEA84    movss xmm0, dword ptr ss:[ebp+eax*4-0x3C]
@@ -100,7 +106,7 @@
 006EEAA8    lahf
 006EEAA9    test ah, 0x44
 006EEAAC    jp 0x006EEA64
-006EEAAE    xorps xmm1, xmm1
+006EEAAE    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006EEAB1    jmp 0x006EEA67
 006EEAB3    movaps xmm2, xmm0
 006EEAB6    ucomiss xmm2, xmm3
@@ -116,15 +122,15 @@
 006EEAD0    mov esp, ebx
 006EEAD2    pop ebx
 006EEAD3    ret
-006EEAD4    push 0x88B1BC
+006EEAD4    push 0x88B1BC                                   ; => [ String: NodeGraphGetMinMax ]
 006EEAD9    push 0x2A4
-006EEADE    mov ecx, 0x88B1E4
+006EEADE    mov ecx, 0x88B1E4                               ; => [ String: pTrack->paramCount > 0 ]
 006EEAE3    push 0x88AF54
 006EEAE8    mov edx, 0x801800
-006EEAED    call 0x0063B870
+006EEAED    call 0x0063B870                                 ; => [ String: NodeGraphGetMinMax | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\EditorWindow.cpp ]
 006EEAF2    add esp, 0x0C
 006EEAF5    call 0x0063BC30
 006EEAFA    test al, al
-006EEAFC    jz 0x006EEAFF
+006EEAFC    jz 0x006EEAFF                                   ; => [ Call: sub_63bc30 ]
 006EEAFE    int3
-006EEAFF    call 0x0063BB00
+006EEAFF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

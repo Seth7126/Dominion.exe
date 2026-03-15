@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_694be0
+// 起始地址: 0x694be0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00694BE0    push ebp
 00694BE1    mov ebp, esp
 00694BE3    sub esp, 0x0C
@@ -30,7 +36,7 @@
 00694C21    pop ebp
 00694C22    ret
 00694C23    mov ecx, dword ptr ss:[ebp+0x08]
-00694C26    call 0x006DD320
+00694C26    call 0x006DD320                                 ; => [ Call: sub_6dd320 ]
 00694C2B    mov esi, eax
 00694C2D    mov dword ptr ss:[ebp-0x0C], esi
 00694C30    mov eax, dword ptr ds:[esi+0x10]
@@ -47,7 +53,7 @@
 00694C50    add edx, eax
 00694C52    mov eax, dword ptr ds:[ecx+0x20]
 00694C55    test eax, eax
-00694C57    mov ecx, 0x801800
+00694C57    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 00694C5C    push edi
 00694C5D    cmovnz ecx, eax
 00694C60    call 0x00694890
@@ -57,15 +63,15 @@
 00694C6A    pop ebx
 00694C6B    mov esp, ebp
 00694C6D    pop ebp
-00694C6E    ret
+00694C6E    ret                                             ; => [ Call: sub_694890 ]
 00694C6F    mov ecx, esi
-00694C71    call 0x0069C520
+00694C71    call 0x0069C520                                 ; => [ Call: sub_69c520 ]
 00694C76    test al, al
 00694C78    jz 0x00694D63
 00694C7E    cmp dword ptr ss:[ebp+0x08], 0x08
 00694C82    jnz 0x00694CAD
 00694C84    mov eax, dword ptr ds:[ebx]
-00694C86    mov ecx, 0x801800
+00694C86    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 00694C8B    mov edx, dword ptr ss:[ebp-0x04]
 00694C8E    test byte ptr ds:[ebx+0x28], 0x10
 00694C92    push edi
@@ -80,25 +86,25 @@
 00694CA8    pop ebx
 00694CA9    mov esp, ebp
 00694CAB    pop ebp
-00694CAC    ret
+00694CAC    ret                                             ; => [ Call: sub_694890 ]
 00694CAD    mov eax, dword ptr ds:[esi+0x10]
 00694CB0    dec eax
 00694CB1    cmp eax, 0x10
 00694CB4    jnbe 0x00694CCF
-00694CB6    push 0x878A78
+00694CB6    push 0x878A78                                   ; => [ String: DefBinSerializeTagValue ]
 00694CBB    push 0x222
-00694CC0    push 0x878868
-00694CC5    mov ecx, 0x878A5C
+00694CC0    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp ]
+00694CC5    mov ecx, 0x878A5C                               ; => [ String: !DefTypeIsBuiltIn(pDefMap) ]
 00694CCA    jmp 0x00694D7B
 00694CCF    mov eax, dword ptr ds:[edi+0x10]
 00694CD2    test eax, eax
 00694CD4    jz 0x00694CF4
 00694CD6    cmp dword ptr ds:[eax], 0x00
 00694CD9    jz 0x00694CF4
-00694CDB    push 0x878A78
+00694CDB    push 0x878A78                                   ; => [ String: DefBinSerializeTagValue ]
 00694CE0    push 0x225
-00694CE5    push 0x878868
-00694CEA    mov ecx, 0x8788F8
+00694CE5    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp ]
+00694CEA    mov ecx, 0x8788F8                               ; => [ String: !tSerializer.pDataSizeWithoutHWBuffers || *tSerializer.pDataSizeWithoutHWBuffers == 0 ]
 00694CEF    jmp 0x00694D7B
 00694CF4    mov ebx, dword ptr ds:[edi+0x08]
 00694CF7    mov al, byte ptr ds:[edi+0x0C]
@@ -128,7 +134,7 @@
 00694D35    push ecx
 00694D36    add eax, ebx
 00694D38    push eax
-00694D39    call 0x00761FBE
+00694D39    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00694D3E    mov eax, dword ptr ss:[ebp-0x08]
 00694D41    add esp, 0x0C
 00694D44    mov ecx, dword ptr ss:[ebp-0x04]
@@ -139,7 +145,7 @@
 00694D50    push 0x00
 00694D52    mov dword ptr ds:[edi+0x04], ebx
 00694D55    mov dword ptr ds:[edi+0x08], eax
-00694D58    call 0x00694DA0
+00694D58    call 0x00694DA0                                 ; => [ Call: sub_694da0 ]
 00694D5D    add esp, 0x08
 00694D60    mov dword ptr ds:[edi+0x04], esi
 00694D63    pop edi
@@ -148,15 +154,15 @@
 00694D66    mov esp, ebp
 00694D68    pop ebp
 00694D69    ret
-00694D6A    push 0x87943C
+00694D6A    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 00694D6F    push 0x6D
-00694D71    push 0x879400
-00694D76    mov ecx, 0x87948C
+00694D71    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+00694D76    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 00694D7B    mov edx, 0x801800
-00694D80    call 0x0063B870
+00694D80    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00694D85    add esp, 0x0C
 00694D88    call 0x0063BC30
 00694D8D    test al, al
-00694D8F    jz 0x00694D92
+00694D8F    jz 0x00694D92                                   ; => [ Call: sub_63bc30 ]
 00694D91    int3
-00694D92    call 0x0063BB00
+00694D92    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

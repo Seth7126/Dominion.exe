@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_535490
+// 起始地址: 0x535490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00535490    dword 83EC8B55
 00535494    in al, 0xF8
 00535496    push ecx
@@ -5,13 +11,13 @@
 00535498    call 0x0056B800
 0053549D    mov esi, dword ptr ss:[ebp+0x08]
 005354A0    cmp esi, eax
-005354A2    jnz 0x005354D8
+005354A2    jnz 0x005354D8                                  ; => [ Call: sub_56b800 | Call: sub_567520 ]
 005354A4    mov ecx, esi
 005354A6    call 0x00567520
 005354AB    test al, al
 005354AD    jnz 0x005354D8
 005354AF    mov ecx, esi
-005354B1    call 0x0056F260
+005354B1    call 0x0056F260                                 ; => [ Call: sub_56f260 ]
 005354B6    test al, al
 005354B8    jz 0x005354D8
 005354BA    push ecx
@@ -22,7 +28,7 @@
 005354C6    call 0x00568960
 005354CB    add esp, 0x0C
 005354CE    test eax, eax
-005354D0    setnz al
+005354D0    setnz al                                        ; => [ Call: sub_568960 ]
 005354D3    pop esi
 005354D4    mov esp, ebp
 005354D6    pop ebp

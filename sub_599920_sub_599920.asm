@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_599920
+// 起始地址: 0x599920
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00599920    push ebp
 00599921    mov ebp, esp
 00599923    sub esp, 0x10
@@ -15,7 +21,7 @@
 0059993E    jz 0x0059996B
 00599940    sub eax, 0x01
 00599943    jz 0x00599954
-00599945    push 0x824B28
+00599945    push 0x824B28                                   ; => [ String: GetWhereLikeTranslation ]
 0059994A    push 0x556
 0059994F    jmp 0x00599A6F
 00599954    cmp dword ptr ds:[edi+0x04], 0x401
@@ -57,7 +63,7 @@
 005999DF    jmp 0x005999E6
 005999E1    mov edx, 0x97
 005999E6    mov ecx, ebx
-005999E8    call 0x00599650
+005999E8    call 0x00599650                                 ; => [ Call: sub_599650 ]
 005999ED    cmp dword ptr ds:[edi], 0x00
 005999F0    mov edx, eax
 005999F2    mov ebx, 0x03
@@ -77,20 +83,20 @@
 00599A28    mov ebx, 0x01
 00599A2D    mov edi, dword ptr ss:[ebp-0x04]
 00599A30    mov eax, dword ptr ds:[edx]
-00599A32    mov esi, 0x801800
+00599A32    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 00599A37    byte 6A
 00599A38    add byte ptr ss:[ebp+0x6ACF8BC0], al
 00599A3E    add dl, byte ptr ds:[ebx+0x0F]
 00599A41    inc ebp
 00599A42    byte F0
-00599A43    call 0x00693100
+00599A43    call 0x00693100                                 ; => [ Call: sub_693100 ]
 00599A48    mov ecx, dword ptr ss:[ebp-0x08]
 00599A4B    add esp, 0x08
 00599A4E    mov edx, edi
 00599A50    push esi
 00599A51    push ebx
 00599A52    push eax
-00599A53    call 0x00598720
+00599A53    call 0x00598720                                 ; => [ Call: sub_598720 ]
 00599A58    mov eax, dword ptr ss:[ebp-0x08]
 00599A5B    add esp, 0x10
 00599A5E    pop edi
@@ -99,15 +105,15 @@
 00599A61    mov esp, ebp
 00599A63    pop ebp
 00599A64    ret
-00599A65    push 0x824B28
+00599A65    push 0x824B28                                   ; => [ String: GetWhereLikeTranslation ]
 00599A6A    push 0x52B
 00599A6F    push 0x82487C
 00599A74    mov edx, 0x801800
 00599A79    mov ecx, 0x801AA4
-00599A7E    call 0x0063B870
+00599A7E    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomLog.cpp | Call: sub_63b870 | Data: data_801800 | String: GetWhereLikeTranslation | String: Halt ]
 00599A83    add esp, 0x0C
 00599A86    call 0x0063BC30
 00599A8B    test al, al
-00599A8D    jz 0x00599A90
+00599A8D    jz 0x00599A90                                   ; => [ Call: sub_63bc30 ]
 00599A8F    int3
-00599A90    call 0x0063BB00
+00599A90    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

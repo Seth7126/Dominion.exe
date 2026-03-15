@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6e7830
+// 起始地址: 0x6e7830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7830    push ebp
 006E7831    mov ebp, esp
 006E7833    and esp, 0xFFFFFFF0
 006E7836    sub esp, 0xE8
 006E783C    mov eax, dword ptr ds:[0x008C4040]
 006E7841    xor eax, esp
-006E7843    mov dword ptr ss:[esp+0xE4], eax
+006E7843    mov dword ptr ss:[esp+0xE4], eax                ; => [ Data: __security_cookie ]
 006E784A    push esi
 006E784B    mov esi, dword ptr ss:[ebp+0x0C]
 006E784E    push edi
@@ -19,13 +25,13 @@
 006E786C    mov eax, dword ptr ds:[edi]
 006E786E    push esi
 006E786F    push eax
-006E7870    call 0x006E6FB0
+006E7870    call 0x006E6FB0                                 ; => [ Call: sub_6e6fb0 ]
 006E7875    add esp, 0x08
 006E7878    pop edi
 006E7879    pop esi
 006E787A    mov ecx, dword ptr ss:[esp+0xE4]
 006E7881    xor ecx, esp
-006E7883    call 0x0075927A
+006E7883    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E7888    mov esp, ebp
 006E788A    pop ebp
 006E788B    ret
@@ -33,13 +39,13 @@
 006E7890    push eax
 006E7891    mov eax, dword ptr ds:[edi]
 006E7893    push eax
-006E7894    call 0x006E6FB0
+006E7894    call 0x006E6FB0                                 ; => [ Call: sub_6e6fb0 ]
 006E7899    mov edx, dword ptr ss:[esp+0x20]
 006E789D    lea eax, ss:[esp+0x88]
 006E78A4    mov ecx, dword ptr ss:[esp+0x24]
 006E78A8    push eax
 006E78A9    push dword ptr ds:[edi+0x04]
-006E78AC    call 0x006E6FB0
+006E78AC    call 0x006E6FB0                                 ; => [ Call: sub_6e6fb0 ]
 006E78B1    add esp, 0x10
 006E78B4    cmp dword ptr ss:[esp+0x68], 0x00
 006E78B9    jz 0x006E79F9
@@ -47,7 +53,7 @@
 006E78C7    jz 0x006E79F9
 006E78CD    lea edx, ss:[esp+0x80]
 006E78D4    lea ecx, ss:[esp+0x20]
-006E78D8    call 0x006E7570
+006E78D8    call 0x006E7570                                 ; => [ Call: sub_6e7570 ]
 006E78DD    movss xmm4, dword ptr ds:[edi+0x08]
 006E78E2    shufps xmm4, xmm4, 0x00
 006E78E6    test al, al
@@ -92,11 +98,11 @@
 006E79B2    movaps xmm2, xmm4
 006E79B5    call 0x005AF6F0
 006E79BA    lea edx, ss:[esp+0xC4]
-006E79C1    mov dword ptr ds:[esi+0x40], eax
+006E79C1    mov dword ptr ds:[esi+0x40], eax                ; => [ Call: sub_5af6f0 ]
 006E79C4    lea ecx, ss:[esp+0x64]
 006E79C8    call 0x005AF6F0
 006E79CD    mov ecx, dword ptr ss:[esp+0x6C]
-006E79D1    mov dword ptr ds:[esi+0x44], eax
+006E79D1    mov dword ptr ds:[esi+0x44], eax                ; => [ Call: sub_5af6f0 ]
 006E79D4    mov eax, dword ptr ss:[esp+0x68]
 006E79D8    mov dword ptr ds:[esi+0x48], eax
 006E79DB    mov eax, dword ptr ss:[esp+0x70]
@@ -106,7 +112,7 @@
 006E79E6    pop esi
 006E79E7    mov ecx, dword ptr ss:[esp+0xE4]
 006E79EE    xor ecx, esp
-006E79F0    call 0x0075927A
+006E79F0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E79F5    mov esp, ebp
 006E79F7    pop ebp
 006E79F8    ret
@@ -126,7 +132,7 @@
 006E7A33    movq qword ptr ds:[esi+0x50], xmm0
 006E7A38    pop esi
 006E7A39    xor ecx, esp
-006E7A3B    call 0x0075927A
+006E7A3B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E7A40    mov esp, ebp
 006E7A42    pop ebp
 006E7A43    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4eb2f0
+// 起始地址: 0x4eb2f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EB2F0    push ebp
 004EB2F1    mov ebp, esp
 004EB2F3    and esp, 0xFFFFFFF0
@@ -10,10 +16,10 @@
 004EB30D    mulss xmm0, dword ptr ds:[0x00890CB4]
 004EB315    mulss xmm0, dword ptr ds:[0x00890D84]
 004EB31D    movss dword ptr ss:[esp+0x0C], xmm0
-004EB323    call 0x004AE0F0
+004EB323    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 004EB328    movss dword ptr ss:[esp+0x14], xmm0
 004EB32E    movss xmm0, dword ptr ss:[esp+0x0C]
-004EB334    call 0x004AE0D0
+004EB334    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 004EB339    movss dword ptr ss:[esp+0x18], xmm0
 004EB33F    movss xmm0, dword ptr ds:[esi]
 004EB343    addss xmm0, xmm0
@@ -21,10 +27,10 @@
 004EB34F    mulss xmm0, dword ptr ds:[0x00890CB4]
 004EB357    mulss xmm0, dword ptr ds:[0x00890D84]
 004EB35F    movss dword ptr ss:[esp+0x0C], xmm0
-004EB365    call 0x004AE0F0
+004EB365    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 004EB36A    movss dword ptr ss:[esp+0x08], xmm0
 004EB370    movss xmm0, dword ptr ss:[esp+0x0C]
-004EB376    call 0x004AE0D0
+004EB376    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 004EB37B    movss dword ptr ss:[esp+0x0C], xmm0
 004EB381    movss xmm0, dword ptr ds:[esi+0x04]
 004EB386    addss xmm0, xmm0
@@ -32,10 +38,10 @@
 004EB392    mulss xmm0, dword ptr ds:[0x00890CB4]
 004EB39A    mulss xmm0, dword ptr ds:[0x00890D84]
 004EB3A2    movss dword ptr ss:[esp+0x10], xmm0
-004EB3A8    call 0x004AE0F0
+004EB3A8    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 004EB3AD    movss dword ptr ss:[esp+0x1C], xmm0
 004EB3B3    movss xmm0, dword ptr ss:[esp+0x10]
-004EB3B9    call 0x004AE0D0
+004EB3B9    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 004EB3BE    movss xmm2, dword ptr ss:[esp+0x08]
 004EB3C4    movaps xmm4, xmm0
 004EB3C7    movss xmm3, dword ptr ss:[esp+0x0C]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571a30
+// 起始地址: 0x571a30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571A30    push ebp
 00571A31    mov ebp, esp
 00571A33    sub esp, 0x0C
@@ -21,7 +27,7 @@
 00571A5C    mov dword ptr ss:[ebp-0x0C], esi
 00571A5F    call 0x00571770
 00571A64    test eax, eax
-00571A66    jnz 0x00571A74
+00571A66    jnz 0x00571A74                                  ; => [ Call: sub_571770 ]
 00571A68    mov eax, 0x931208
 00571A6D    pop edi
 00571A6E    pop esi
@@ -63,7 +69,7 @@
 00571ABD    push dword ptr ds:[ecx+0x8C]
 00571AC3    push ebx
 00571AC4    push 0x81F53C
-00571AC9    call 0x0063B5F0
+00571AC9    call 0x0063B5F0                                 ; => [ String: can't find card %d cardcur %d version %d | Call: sub_63b5f0 ]
 00571ACE    imul eax, dword ptr ss:[ebp-0x0C], 0x698
 00571AD5    add esp, 0x10
 00571AD8    pop edi
@@ -73,19 +79,19 @@
 00571ADE    mov esp, ebp
 00571AE0    pop ebp
 00571AE1    ret
-00571AE2    push 0x81F568
+00571AE2    push 0x81F568                                   ; => [ String: DomDefGetSlow ]
 00571AE7    push 0x170
-00571AEC    mov ecx, 0x81F5A4
+00571AEC    mov ecx, 0x81F5A4                               ; => [ String: idx != newIdx ]
 00571AF1    jmp 0x00571B02
-00571AF3    push 0x81F568
+00571AF3    push 0x81F568                                   ; => [ String: DomDefGetSlow ]
 00571AF8    push 0x16D
-00571AFD    mov ecx, 0x81F578
+00571AFD    mov ecx, 0x81F578                               ; => [ String: defs[idx].edition.replacementCard != what ]
 00571B02    push 0x81F4B8
 00571B07    mov edx, 0x801800
-00571B0C    call 0x0063B870
+00571B0C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomDefGetSlow ]
 00571B11    add esp, 0x0C
 00571B14    call 0x0063BC30
 00571B19    test al, al
-00571B1B    jz 0x00571B1E
+00571B1B    jz 0x00571B1E                                   ; => [ Call: sub_63bc30 ]
 00571B1D    int3
-00571B1E    call 0x0063BB00
+00571B1E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

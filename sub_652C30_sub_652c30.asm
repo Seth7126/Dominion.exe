@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_652c30
+// 起始地址: 0x652c30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00652C30    push ebp
 00652C31    mov ebp, esp
 00652C33    sub esp, 0x868
-00652C39    mov eax, dword ptr ds:[0x008C4040]
+00652C39    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00652C3E    xor eax, ebp
 00652C40    mov dword ptr ss:[ebp-0x08], eax
 00652C43    mov eax, dword ptr ss:[ebp+0x0C]
@@ -24,9 +30,9 @@
 00652C7F    mov dword ptr ss:[ebp-0x814], ecx
 00652C85    mov dword ptr ss:[ebp-0x810], eax
 00652C8B    jl 0x00652CA1
-00652C8D    push 0x874910
+00652C8D    push 0x874910                                   ; => [ String: UI2MergeAttribMapFractional ]
 00652C92    push 0x15C5
-00652C97    mov ecx, 0x8748F0
+00652C97    mov ecx, 0x8748F0                               ; => [ String: attribMap.attributeCount < 1000 ]
 00652C9C    jmp 0x00653075
 00652CA1    xor esi, esi
 00652CA3    cmp dword ptr ds:[edi], eax
@@ -56,7 +62,7 @@
 00652CFB    push dword ptr ss:[ebp-0x858]
 00652D01    push edx
 00652D02    mov edx, esi
-00652D04    call 0x00650190
+00652D04    call 0x00650190                                 ; => [ Call: sub_650190 ]
 00652D09    movss xmm6, dword ptr ss:[ebp+0x20]
 00652D0E    add esp, 0x2C
 00652D11    mov edx, dword ptr ss:[ebp-0x85C]
@@ -89,7 +95,7 @@
 00652DA3    mulss xmm3, xmm6
 00652DA7    addss xmm1, xmm0
 00652DAB    xorps xmm0, xmm0
-00652DAE    movlpd qword ptr ss:[ebp-0x850], xmm0
+00652DAE    movlpd qword ptr ss:[ebp-0x850], xmm0           ; => [ Call: __builtin_memset ]
 00652DB6    movlpd qword ptr ss:[ebp-0x848], xmm0
 00652DBE    addss xmm3, xmm2
 00652DC2    movlpd qword ptr ss:[ebp-0x840], xmm0
@@ -107,7 +113,7 @@
 00652E11    movq xmm0, qword ptr ss:[ebp-0x824]
 00652E19    movq qword ptr ds:[ecx+0x6C], xmm0
 00652E1E    xorps xmm0, xmm0
-00652E21    movlpd qword ptr ss:[ebp-0x850], xmm0
+00652E21    movlpd qword ptr ss:[ebp-0x850], xmm0           ; => [ Call: __builtin_memset ]
 00652E29    movlpd qword ptr ss:[ebp-0x848], xmm0
 00652E31    movlpd qword ptr ss:[ebp-0x840], xmm0
 00652E39    movlpd qword ptr ss:[ebp-0x838], xmm0
@@ -126,7 +132,7 @@
 00652E9D    movq xmm0, qword ptr ss:[ebp-0x824]
 00652EA5    movq qword ptr ds:[ecx+0xA8], xmm0
 00652EAD    xorps xmm0, xmm0
-00652EB0    movlpd qword ptr ss:[ebp-0x850], xmm0
+00652EB0    movlpd qword ptr ss:[ebp-0x850], xmm0           ; => [ Call: __builtin_memset ]
 00652EB8    movlpd qword ptr ss:[ebp-0x848], xmm0
 00652EC0    movlpd qword ptr ss:[ebp-0x840], xmm0
 00652EC8    movlpd qword ptr ss:[ebp-0x838], xmm0
@@ -145,7 +151,7 @@
 00652F30    xorps xmm0, xmm0
 00652F33    mov dword ptr ss:[ebp-0x828], 0x00
 00652F3D    subss xmm3, xmm5
-00652F41    movlpd qword ptr ss:[ebp-0x850], xmm0
+00652F41    movlpd qword ptr ss:[ebp-0x850], xmm0           ; => [ Call: __builtin_memset ]
 00652F49    movlpd qword ptr ss:[ebp-0x848], xmm0
 00652F51    movlpd qword ptr ss:[ebp-0x840], xmm0
 00652F59    movlpd qword ptr ss:[ebp-0x838], xmm0
@@ -188,7 +194,7 @@
 00653029    push dword ptr ss:[ebp-0x864]
 0065302F    push ecx
 00653030    mov ecx, edi
-00653032    call 0x006530A0
+00653032    call 0x006530A0                                 ; => [ Call: nullptr | Call: sub_6530a0 ]
 00653037    mov ecx, dword ptr ss:[ebp-0x814]
 0065303D    inc esi
 0065303E    add esp, 0x18
@@ -199,22 +205,22 @@
 0065304D    pop esi
 0065304E    xor ecx, ebp
 00653050    pop ebx
-00653051    call 0x0075927A
+00653051    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00653056    mov esp, ebp
 00653058    pop ebp
 00653059    ret
-0065305A    push 0x874910
+0065305A    push 0x874910                                   ; => [ String: UI2MergeAttribMapFractional ]
 0065305F    push 0x15DC
 00653064    jmp 0x00653070
-00653066    push 0x874910
+00653066    push 0x874910                                   ; => [ String: UI2MergeAttribMapFractional ]
 0065306B    push 0x15EC
-00653070    mov ecx, 0x801AA4
+00653070    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00653075    push 0x8739B4
 0065307A    mov edx, 0x801800
-0065307F    call 0x0063B870
+0065307F    call 0x0063B870                                 ; => [ String: UI2MergeAttribMapFractional | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\UI2.cpp ]
 00653084    add esp, 0x0C
 00653087    call 0x0063BC30
 0065308C    test al, al
-0065308E    jz 0x00653091
+0065308E    jz 0x00653091                                   ; => [ Call: sub_63bc30 ]
 00653090    int3
-00653091    call 0x0063BB00
+00653091    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

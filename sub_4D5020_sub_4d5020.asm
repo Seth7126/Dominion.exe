@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_4d5020
+// 起始地址: 0x4d5020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D5020    push ebp
 004D5021    mov ebp, esp
 004D5023    push 0xFFFFFFFF
-004D5025    push 0x7637DD
+004D5025    push 0x7637DD                                   ; => [ Call: __ehhandler$?propagate_message@?$single_assignment@I@Concurrency@@MAE?AW4message_status@2@PAV?$message@I@2@PAV?$ISource@I@2@@Z | Type: EHRegistrationNode ]
 004D502A    mov eax, dword ptr fs:[0x00000000]
-004D5030    push eax
+004D5030    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 004D5031    sub esp, 0x30
 004D5034    push ebx
 004D5035    push esi
 004D5036    push edi
 004D5037    mov eax, dword ptr ds:[0x008C4040]
-004D503C    xor eax, ebp
+004D503C    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004D503E    push eax
 004D503F    lea eax, ss:[ebp-0x0C]
-004D5042    mov dword ptr fs:[0x00000000], eax
+004D5042    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004D5048    mov dword ptr ss:[ebp-0x18], edx
 004D504B    mov esi, ecx
 004D504D    mov dword ptr ss:[ebp-0x14], esi
@@ -33,7 +39,7 @@
 004D507A    cmp byte ptr ds:[eax], 0x00
 004D507D    jz 0x004D508A
 004D507F    lea ecx, ss:[ebp-0x34]
-004D5082    call 0x0063D4E0
+004D5082    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004D5087    inc dword ptr ds:[eax+0x04]
 004D508A    mov eax, dword ptr ds:[ebx+0x0C]
 004D508D    mov ecx, dword ptr ds:[ebx+0x1C]
@@ -63,7 +69,7 @@
 004D50D4    mov dword ptr ds:[esi-0x04], eax
 004D50D7    lea eax, ds:[esi-0x20]
 004D50DA    push eax
-004D50DB    call 0x0063D850
+004D50DB    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D50E0    mov eax, dword ptr ds:[esi-0x1C]
 004D50E3    mov dword ptr ds:[esi+0x04], eax
 004D50E6    mov eax, dword ptr ds:[esi-0x18]
@@ -91,7 +97,7 @@
 004D511D    mov dword ptr ds:[edi+0x04], eax
 004D5120    lea eax, ds:[esi+0x08]
 004D5123    push eax
-004D5124    call 0x0063D850
+004D5124    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D5129    mov eax, dword ptr ds:[esi+0x0C]
 004D512C    mov dword ptr ds:[edi+0x0C], eax
 004D512F    mov eax, dword ptr ds:[esi+0x10]
@@ -116,7 +122,7 @@
 004D5160    mov dword ptr ds:[edi+0x04], eax
 004D5163    lea eax, ss:[ebp-0x34]
 004D5166    push eax
-004D5167    call 0x0063D850
+004D5167    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D516C    mov eax, dword ptr ss:[ebp-0x30]
 004D516F    mov ecx, dword ptr ss:[ebp-0x20]
 004D5172    mov dword ptr ds:[edi+0x0C], eax
@@ -127,20 +133,20 @@
 004D5181    mov dword ptr ds:[edi+0x18], eax
 004D5184    mov dword ptr ss:[ebp-0x04], 0x01
 004D518B    cmp dword ptr ds:[0x00CF65BC], 0x00
-004D5192    jz 0x004D51BB
+004D5192    jz 0x004D51BB                                   ; => [ Data: data_cf65bc ]
 004D5194    mov eax, dword ptr ss:[ebp-0x34]
 004D5197    test eax, eax
 004D5199    jz 0x004D51BB
 004D519B    cmp byte ptr ds:[eax], 0x00
 004D519E    jz 0x004D51BB
 004D51A0    lea ecx, ss:[ebp-0x34]
-004D51A3    call 0x0063D4E0
+004D51A3    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004D51A8    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004D51AC    jnz 0x004D51BB
 004D51AE    mov edx, dword ptr ds:[eax+0x0C]
 004D51B1    mov ecx, eax
 004D51B3    add edx, 0x10
-004D51B6    call 0x0064C080
+004D51B6    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004D51BB    mov edx, dword ptr ss:[ebp-0x18]
 004D51BE    add ebx, 0x20
 004D51C1    mov esi, dword ptr ss:[ebp-0x14]
@@ -149,7 +155,7 @@
 004D51CD    jnz 0x004D5063
 004D51D3    mov eax, edx
 004D51D5    mov ecx, dword ptr ss:[ebp-0x0C]
-004D51D8    mov dword ptr fs:[0x00000000], ecx
+004D51D8    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004D51DF    pop ecx
 004D51E0    pop edi
 004D51E1    pop esi

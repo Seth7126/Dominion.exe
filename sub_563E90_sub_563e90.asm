@@ -1,21 +1,27 @@
+// ============================================================
+// 函数名称: sub_563e90
+// 起始地址: 0x563e90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00563E90    push ebp
 00563E91    mov ebp, esp
 00563E93    and esp, 0xFFFFFFF0
 00563E96    sub esp, 0x78
 00563E99    push esi
 00563E9A    push edi
-00563E9B    call 0x00573400
+00563E9B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00563EA0    mov esi, eax
 00563EA2    cmp dword ptr ds:[esi], 0x02
 00563EA5    jz 0x00563EAC
-00563EA7    call 0x00591930
+00563EA7    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00563EAC    mov edi, dword ptr ds:[esi+0x10]
 00563EAF    mov edx, edi
 00563EB1    mov ecx, dword ptr ds:[esi+0x04]
 00563EB4    push 0x3E9
 00563EB9    mov dword ptr ss:[esp+0x18], edi
 00563EBD    mov dword ptr ss:[esp+0x14], edi
-00563EC1    call 0x00582DE0
+00563EC1    call 0x00582DE0                                 ; => [ Call: sub_582de0 ]
 00563EC6    add esp, 0x04
 00563EC9    test al, al
 00563ECB    jz 0x00563ED5
@@ -33,7 +39,7 @@
 00563EE2    push ecx
 00563EE3    push 0x15
 00563EE5    push eax
-00563EE6    call 0x00591880
+00563EE6    call 0x00591880                                 ; => [ Call: sub_591880 ]
 00563EEB    mov edi, dword ptr ds:[esi+0x0C]
 00563EEE    add esp, 0x1C
 00563EF1    movups xmm0, xmmword ptr ds:[eax]
@@ -50,7 +56,7 @@
 00563F1A    movups xmmword ptr ss:[esp+0x40], xmm0
 00563F1F    cmp ax, 0x320
 00563F23    jb 0x00563F2A
-00563F25    call 0x00591930
+00563F25    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00563F2A    cmp edi, dword ptr ds:[esi+0x19CC]
 00563F30    jnz 0x00563F3A
 00563F32    mov eax, dword ptr ds:[esi+0x19D0]
@@ -73,7 +79,7 @@
 00563F5C    push edi
 00563F5D    lea edx, ss:[esp+0x48]
 00563F61    mov ecx, esi
-00563F63    call 0x00623300
+00563F63    call 0x00623300                                 ; => [ Call: sub_623300 ]
 00563F68    add esp, 0x30
 00563F6B    test eax, eax
 00563F6D    jz 0x00563F87
@@ -86,7 +92,7 @@
 00563F82    pop esi
 00563F83    mov esp, ebp
 00563F85    pop ebp
-00563F86    ret
+00563F86    ret                                             ; => [ Call: sub_5624a0 ]
 00563F87    mov al, byte ptr ss:[esp+0x0F]
 00563F8B    pop edi
 00563F8C    pop esi

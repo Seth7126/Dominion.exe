@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_52bca0
+// 起始地址: 0x52bca0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052BCA0    dword 83EC8B55
 0052BCA4    in al, 0xF8
 0052BCA6    push ecx
@@ -8,7 +14,7 @@
 0052BCB5    call 0x00568960
 0052BCBA    add esp, 0x0C
 0052BCBD    test eax, eax
-0052BCBF    setnle al
+0052BCBF    setnle al                                       ; => [ Call: sub_568960 ]
 0052BCC2    mov esp, ebp
 0052BCC4    pop ebp
 0052BCC5    ret

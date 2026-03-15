@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_514340
+// 起始地址: 0x514340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00514340    dword 83EC8B55
 00514344    in al, 0xF8
 00514346    push ecx
 00514347    push esi
 00514348    mov ecx, 0x1A
-0051434D    call 0x00513D60
-00514352    call 0x00573400
+0051434D    call 0x00513D60                                 ; => [ Call: sub_513d60 ]
+00514352    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00514357    cmp dword ptr ds:[eax], 0x04
 0051435A    jnz 0x00514388
 0051435C    mov esi, dword ptr ds:[eax+0x10]
-0051435F    call 0x00573400
+0051435F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00514364    push 0x00
 00514366    push 0x00
 00514368    push 0xFFFFFFFF
@@ -25,16 +31,16 @@
 00514383    pop esi
 00514384    mov esp, ebp
 00514386    pop ebp
-00514387    ret
+00514387    ret                                             ; => [ Call: sub_5911e0 ]
 00514388    push 0x813AF4
 0051438D    push 0xC59
 00514392    push 0x80CD80
 00514397    mov edx, 0x801800
 0051439C    mov ecx, 0x813B08
-005143A1    call 0x0063B870
+005143A1    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: StampGetPileSetup | String: c.contextType == CONTEXT_SETUP ]
 005143A6    add esp, 0x0C
 005143A9    call 0x0063BC30
 005143AE    test al, al
-005143B0    jz 0x005143B3
+005143B0    jz 0x005143B3                                   ; => [ Call: sub_63bc30 ]
 005143B2    int3
-005143B3    call 0x0063BB00
+005143B3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

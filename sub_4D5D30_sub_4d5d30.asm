@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4d5d30
+// 起始地址: 0x4d5d30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D5D30    push ebp
 004D5D31    mov ebp, esp
 004D5D33    push ecx
@@ -16,12 +22,12 @@
 004D5D52    push ebx
 004D5D53    cmovnle ecx, eax
 004D5D56    mov dword ptr ds:[esi+0x08], ecx
-004D5D59    call 0x00687730
+004D5D59    call 0x00687730                                 ; => [ Call: sub_687730 ]
 004D5D5E    push dword ptr ds:[esi+0x10]
 004D5D61    mov ebx, eax
 004D5D63    push dword ptr ds:[esi]
 004D5D65    push ebx
-004D5D66    call 0x00762362
+004D5D66    call 0x00762362                                 ; => [ Call: memmove ]
 004D5D6B    mov eax, dword ptr ds:[esi]
 004D5D6D    lea edx, ds:[esi+0x10]
 004D5D70    add esp, 0x0C

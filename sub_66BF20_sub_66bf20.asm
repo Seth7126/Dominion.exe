@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66bf20
+// 起始地址: 0x66bf20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066BF20    push ebx
 0066BF21    mov ebx, esp
 0066BF23    sub esp, 0x08
@@ -8,9 +14,9 @@
 0066BF30    mov dword ptr ss:[esp+0x04], ebp
 0066BF34    mov ebp, esp
 0066BF36    push 0xFFFFFFFF
-0066BF38    push 0x76D409
+0066BF38    push 0x76D409                                   ; => [ Call: sub_76d409 | Type: EHRegistrationNode ]
 0066BF3D    mov eax, dword ptr fs:[0x00000000]
-0066BF43    push eax
+0066BF43    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0066BF44    push ebx
 0066BF45    sub esp, 0x438
 0066BF4B    mov eax, dword ptr ds:[0x008C4040]
@@ -18,18 +24,18 @@
 0066BF52    mov dword ptr ss:[ebp-0x14], eax
 0066BF55    push esi
 0066BF56    push edi
-0066BF57    push eax
+0066BF57    push eax                                        ; => [ Data: __security_cookie ]
 0066BF58    lea eax, ss:[ebp-0x0C]
-0066BF5B    mov dword ptr fs:[0x00000000], eax
+0066BF5B    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0066BF61    mov esi, ecx
 0066BF63    lea eax, ss:[ebp-0x448]
 0066BF69    push eax
 0066BF6A    call 0x0066BD20
 0066BF6F    add esp, 0x04
 0066BF72    mov ecx, esi
-0066BF74    movups xmm0, xmmword ptr ds:[eax]
+0066BF74    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_66bd20 ]
 0066BF77    movups xmmword ptr ss:[ebp-0x430], xmm0
-0066BF7E    call 0x0064E7A0
+0066BF7E    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066BF83    movups xmm0, xmmword ptr ss:[ebp-0x430]
 0066BF8A    mov edi, eax
 0066BF8C    psrldq xmm0, 0x04
@@ -39,7 +45,7 @@
 0066BF9E    jnbe 0x0066C38A
 0066BFA4    movzx ecx, byte ptr ds:[ecx+0x66C404]
 0066BFAB    jmp dword ptr ds:[ecx*4+0x66C3EC]
-0066BFB2    mov dword ptr ds:[0x01A99260], 0x801800
+0066BFB2    mov dword ptr ds:[0x01A99260], 0x801800         ; => [ Data: data_801800 | Data: data_1a99260 ]
 0066BFBC    lea esi, ds:[edi+0x179C]
 0066BFC2    mov edi, dword ptr ds:[edi+0x189C]
 0066BFC8    test edi, edi
@@ -49,8 +55,8 @@
 0066BFD3    mov dword ptr ss:[ebp-0x41C], eax
 0066BFD9    nop dword ptr ds:[eax], eax
 0066BFE0    mov ecx, dword ptr ds:[esi]
-0066BFE2    call 0x0064E7A0
-0066BFE7    mov ecx, 0x801800
+0066BFE2    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+0066BFE7    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0066BFEC    lea esi, ds:[esi+0x04]
 0066BFEF    mov eax, dword ptr ds:[eax+0x15E0]
 0066BFF5    test eax, eax
@@ -59,15 +65,15 @@
 0066C000    mov dword ptr ds:[eax+esi*1-0x04], ecx
 0066C004    sub edi, 0x01
 0066C007    jnz 0x0066BFE0
-0066C009    mov eax, 0x1A99260
+0066C009    mov eax, 0x1A99260                              ; => [ Data: data_1a99260 ]
 0066C00E    mov ecx, dword ptr ss:[ebp-0x0C]
-0066C011    mov dword ptr fs:[0x00000000], ecx
+0066C011    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0066C018    pop ecx
 0066C019    pop edi
 0066C01A    pop esi
 0066C01B    mov ecx, dword ptr ss:[ebp-0x14]
 0066C01E    xor ecx, ebp
-0066C020    call 0x0075927A
+0066C020    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066C025    mov esp, ebp
 0066C027    pop ebp
 0066C028    mov esp, ebx
@@ -78,12 +84,12 @@
 0066C034    jz 0x0066C0AA
 0066C036    cmp dword ptr ds:[ecx+0x04], 0x23
 0066C03A    jz 0x0066C055
-0066C03C    push 0x87AED4
+0066C03C    push 0x87AED4                                   ; => [ String: SpineDefGet ]
 0066C041    push 0x1BD
-0066C046    push 0x87ADA4
-0066C04B    mov ecx, 0x87AEF8
+0066C046    push 0x87ADA4                                   ; => [ String: C:\x\ax2017\Engine\Spine.cpp ]
+0066C04B    mov ecx, 0x87AEF8                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SPINE ]
 0066C050    jmp 0x0066C39E
-0066C055    call 0x005AF880
+0066C055    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0066C05A    mov esi, eax
 0066C05C    mov ecx, dword ptr ds:[esi+0x28]
 0066C05F    mov edx, dword ptr ds:[ecx+0x44]
@@ -98,19 +104,19 @@
 0066C077    mov eax, dword ptr ds:[eax+0x48]
 0066C07A    mov eax, dword ptr ds:[eax+ecx*4]
 0066C07D    mov eax, dword ptr ds:[eax]
-0066C07F    mov dword ptr ds:[ecx*4+0x1A99360], eax
+0066C07F    mov dword ptr ds:[ecx*4+0x1A99360], eax         ; => [ Data: data_1a99360 ]
 0066C086    inc ecx
 0066C087    cmp ecx, edx
 0066C089    jl 0x0066C074
 0066C08B    mov eax, 0x3E
 0066C090    cmp edx, eax
 0066C092    cmovl eax, edx
-0066C095    mov dword ptr ds:[eax*4+0x1A99364], 0x00
-0066C0A0    mov eax, 0x1A99360
+0066C095    mov dword ptr ds:[eax*4+0x1A99364], 0x00        ; => [ Data: data_1a99364 ]
+0066C0A0    mov eax, 0x1A99360                              ; => [ Data: data_1a99360 ]
 0066C0A5    jmp 0x0066C00E
 0066C0AA    cmp dword ptr ds:[edi+0x1490], 0x00
 0066C0B1    jz 0x0066C380
-0066C0B7    push 0x875EBC
+0066C0B7    push 0x875EBC                                   ; => [ String: FieldGetComboOptions ]
 0066C0BC    push 0x40DA
 0066C0C1    jmp 0x0066C394
 0066C0C6    mov ecx, dword ptr ds:[edi+0x1478]
@@ -118,12 +124,12 @@
 0066C0CE    jz 0x0066C146
 0066C0D0    cmp dword ptr ds:[ecx+0x04], 0x23
 0066C0D4    jz 0x0066C0EF
-0066C0D6    push 0x87AED4
+0066C0D6    push 0x87AED4                                   ; => [ String: SpineDefGet ]
 0066C0DB    push 0x1BD
-0066C0E0    push 0x87ADA4
-0066C0E5    mov ecx, 0x87AEF8
+0066C0E0    push 0x87ADA4                                   ; => [ String: C:\x\ax2017\Engine\Spine.cpp ]
+0066C0E5    mov ecx, 0x87AEF8                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SPINE ]
 0066C0EA    jmp 0x0066C39E
-0066C0EF    call 0x005AF880
+0066C0EF    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0066C0F4    mov esi, eax
 0066C0F6    mov ecx, dword ptr ds:[esi+0x28]
 0066C0F9    mov edx, dword ptr ds:[ecx+0x30]
@@ -139,30 +145,30 @@
 0066C113    mov eax, dword ptr ds:[eax+0x34]
 0066C116    mov eax, dword ptr ds:[eax+ecx*4]
 0066C119    mov eax, dword ptr ds:[eax]
-0066C11B    mov dword ptr ds:[ecx*4+0x1A99460], eax
+0066C11B    mov dword ptr ds:[ecx*4+0x1A99460], eax         ; => [ Data: data_1a99460 ]
 0066C122    inc ecx
 0066C123    cmp ecx, edx
 0066C125    jl 0x0066C110
 0066C127    mov eax, 0x3E
 0066C12C    cmp edx, eax
 0066C12E    cmovl eax, edx
-0066C131    mov dword ptr ds:[eax*4+0x1A99464], 0x00
-0066C13C    mov eax, 0x1A99460
+0066C131    mov dword ptr ds:[eax*4+0x1A99464], 0x00        ; => [ Data: data_1a99464 ]
+0066C13C    mov eax, 0x1A99460                              ; => [ Data: data_1a99460 ]
 0066C141    jmp 0x0066C00E
 0066C146    cmp dword ptr ds:[edi+0x1490], 0x00
 0066C14D    jz 0x0066C380
-0066C153    push 0x875EBC
+0066C153    push 0x875EBC                                   ; => [ String: FieldGetComboOptions ]
 0066C158    push 0x40F1
 0066C15D    jmp 0x0066C394
 0066C162    push 0x69
-0066C164    push dword ptr ds:[0x01724A80]
+0066C164    push dword ptr ds:[0x01724A80]                  ; => [ Data: data_1724a80 ]
 0066C16A    mov ecx, edi
-0066C16C    mov dword ptr ds:[0x01A99560], 0x801800
+0066C16C    mov dword ptr ds:[0x01A99560], 0x801800         ; => [ Data: data_801800 | Data: data_1a99560 ]
 0066C176    mov esi, 0x01
-0066C17B    call 0x0064CC90
+0066C17B    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 0066C180    mov edx, eax
 0066C182    mov ecx, 0x8CAE70
-0066C187    call 0x006DD1E0
+0066C187    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_8cae70 ]
 0066C18C    mov edi, eax
 0066C18E    add esp, 0x08
 0066C191    test edi, edi
@@ -188,11 +194,11 @@
 0066C1CC    push 0x66BDD0
 0066C1D1    push eax
 0066C1D2    lea ecx, ss:[ebp-0x418]
-0066C1D8    call 0x004D4E30
+0066C1D8    call 0x004D4E30                                 ; => [ Call: sub_4d4e30 | Call: sub_66bdd0 ]
 0066C1DD    add esp, 0x08
 0066C1E0    cmp dword ptr ds:[edi+0x08], 0x00
 0066C1E4    jle 0x0066C214
-0066C1E6    xor ecx, ecx
+0066C1E6    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0066C1E8    nop dword ptr ds:[eax+eax*1], eax
 0066C1F0    mov edx, esi
 0066C1F2    cmp ecx, 0x3FC
@@ -203,11 +209,11 @@
 0066C20C    add ecx, 0x04
 0066C20F    cmp edx, dword ptr ds:[edi+0x08]
 0066C212    jl 0x0066C1F0
-0066C214    mov dword ptr ds:[esi*4+0x1A99560], 0x00
-0066C21F    mov eax, 0x1A99560
+0066C214    mov dword ptr ds:[esi*4+0x1A99560], 0x00        ; => [ Data: data_1a99560 ]
+0066C21F    mov eax, 0x1A99560                              ; => [ Data: data_1a99560 ]
 0066C224    jmp 0x0066C00E
 0066C229    cmp dword ptr ds:[0x00C23BF0], 0x00
-0066C230    jz 0x0066C380
+0066C230    jz 0x0066C380                                   ; => [ Data: data_c23bf0 ]
 0066C236    mov eax, dword ptr ds:[edi+0x15F8]
 0066C23C    cmp eax, 0x03
 0066C23F    jnz 0x0066C2A8
@@ -215,23 +221,23 @@
 0066C247    mov ecx, dword ptr ds:[eax]
 0066C249    mov eax, dword ptr ds:[0x01A99960]
 0066C24E    cmp eax, dword ptr ds:[ecx+0x08]
-0066C254    jle 0x0066C29E
+0066C254    jle 0x0066C29E                                  ; => [ Field: ThreadLocalStoragePointer | Data: data_1a99960 ]
 0066C256    push 0x1A99960
-0066C25B    call 0x0075970E
+0066C25B    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a99960 ]
 0066C260    add esp, 0x04
 0066C263    cmp dword ptr ds:[0x01A99960], 0xFFFFFFFF
-0066C26A    jnz 0x0066C29E
+0066C26A    jnz 0x0066C29E                                  ; => [ Data: data_1a99960 ]
 0066C26C    mov dword ptr ss:[ebp-0x04], 0x00
 0066C273    mov edx, dword ptr ds:[edi+0x15F8]
 0066C279    mov ecx, dword ptr ds:[0x00C23BF0]
 0066C27F    push 0x1A99968
 0066C284    call 0x0066BE10
 0066C289    add esp, 0x04
-0066C28C    mov byte ptr ds:[0x01A99964], al
+0066C28C    mov byte ptr ds:[0x01A99964], al                ; => [ Data: data_c23bf0 | Call: sub_66be10 | Data: data_1a99964 | Data: data_1a99968 ]
 0066C291    push 0x1A99960
-0066C296    call 0x007596BD
+0066C296    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a99960 ]
 0066C29B    add esp, 0x04
-0066C29E    mov eax, 0x1A99968
+0066C29E    mov eax, 0x1A99968                              ; => [ Data: data_1a99968 ]
 0066C2A3    jmp 0x0066C00E
 0066C2A8    cmp eax, 0x05
 0066C2AB    jnz 0x0066C314
@@ -239,23 +245,23 @@
 0066C2B3    mov ecx, dword ptr ds:[eax]
 0066C2B5    mov eax, dword ptr ds:[0x01A99B68]
 0066C2BA    cmp eax, dword ptr ds:[ecx+0x08]
-0066C2C0    jle 0x0066C30A
+0066C2C0    jle 0x0066C30A                                  ; => [ Data: data_1a99b68 | Field: ThreadLocalStoragePointer ]
 0066C2C2    push 0x1A99B68
-0066C2C7    call 0x0075970E
+0066C2C7    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a99b68 ]
 0066C2CC    add esp, 0x04
 0066C2CF    cmp dword ptr ds:[0x01A99B68], 0xFFFFFFFF
-0066C2D6    jnz 0x0066C30A
+0066C2D6    jnz 0x0066C30A                                  ; => [ Data: data_1a99b68 ]
 0066C2D8    mov dword ptr ss:[ebp-0x04], 0x01
 0066C2DF    mov edx, dword ptr ds:[edi+0x15F8]
 0066C2E5    mov ecx, dword ptr ds:[0x00C23BF0]
 0066C2EB    push 0x1A99B70
 0066C2F0    call 0x0066BE10
 0066C2F5    add esp, 0x04
-0066C2F8    mov byte ptr ds:[0x01A99B6C], al
+0066C2F8    mov byte ptr ds:[0x01A99B6C], al                ; => [ Data: data_c23bf0 | Call: sub_66be10 | Data: data_1a99b70 | Data: data_1a99b6c ]
 0066C2FD    push 0x1A99B68
-0066C302    call 0x007596BD
+0066C302    call 0x007596BD                                 ; => [ Data: data_1a99b68 | Call: __Init_thread_footer ]
 0066C307    add esp, 0x04
-0066C30A    mov eax, 0x1A99B70
+0066C30A    mov eax, 0x1A99B70                              ; => [ Data: data_1a99b70 ]
 0066C30F    jmp 0x0066C00E
 0066C314    cmp eax, 0x01
 0066C317    jnz 0x0066C380
@@ -263,47 +269,47 @@
 0066C31F    mov ecx, dword ptr ds:[eax]
 0066C321    mov eax, dword ptr ds:[0x01A99D70]
 0066C326    cmp eax, dword ptr ds:[ecx+0x08]
-0066C32C    jle 0x0066C376
+0066C32C    jle 0x0066C376                                  ; => [ Data: data_1a99d70 | Field: ThreadLocalStoragePointer ]
 0066C32E    push 0x1A99D70
-0066C333    call 0x0075970E
+0066C333    call 0x0075970E                                 ; => [ Data: data_1a99d70 | Call: sub_75970e ]
 0066C338    add esp, 0x04
 0066C33B    cmp dword ptr ds:[0x01A99D70], 0xFFFFFFFF
-0066C342    jnz 0x0066C376
+0066C342    jnz 0x0066C376                                  ; => [ Data: data_1a99d70 ]
 0066C344    mov dword ptr ss:[ebp-0x04], 0x02
 0066C34B    mov edx, dword ptr ds:[edi+0x15F8]
 0066C351    mov ecx, dword ptr ds:[0x00C23BF0]
 0066C357    push 0x1A99D78
 0066C35C    call 0x0066BE10
 0066C361    add esp, 0x04
-0066C364    mov byte ptr ds:[0x01A99D74], al
+0066C364    mov byte ptr ds:[0x01A99D74], al                ; => [ Data: data_c23bf0 | Data: data_1a99d74 | Call: sub_66be10 | Data: data_1a99d78 ]
 0066C369    push 0x1A99D70
-0066C36E    call 0x007596BD
+0066C36E    call 0x007596BD                                 ; => [ Data: data_1a99d70 | Call: __Init_thread_footer ]
 0066C373    add esp, 0x04
-0066C376    mov eax, 0x1A99D78
+0066C376    mov eax, 0x1A99D78                              ; => [ Data: data_1a99d78 ]
 0066C37B    jmp 0x0066C00E
-0066C380    mov eax, 0xCB4548
+0066C380    mov eax, 0xCB4548                               ; => [ Data: data_cb4548 ]
 0066C385    jmp 0x0066C00E
-0066C38A    push 0x875EBC
+0066C38A    push 0x875EBC                                   ; => [ String: FieldGetComboOptions ]
 0066C38F    push 0x4130
-0066C394    push 0x8739B4
-0066C399    mov ecx, 0x801AA4
+0066C394    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0066C399    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0066C39E    mov edx, 0x801800
-0066C3A3    call 0x0063B870
+0066C3A3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0066C3A8    add esp, 0x0C
 0066C3AB    call 0x0063BC30
 0066C3B0    test al, al
-0066C3B2    jz 0x0066C3B5
+0066C3B2    jz 0x0066C3B5                                   ; => [ Call: sub_63bc30 ]
 0066C3B4    int3
-0066C3B5    call 0x0063BB00
+0066C3B5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 0066C3BA    push 0x875EBC
 0066C3BF    push 0x4101
 0066C3C4    push 0x8739B4
 0066C3C9    mov edx, 0x801800
 0066C3CE    mov ecx, 0x875EE8
-0066C3D3    call 0x0063B870
+0066C3D3    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | String: numStates < MAX_STATES | Data: data_801800 | String: FieldGetComboOptions ]
 0066C3D8    add esp, 0x0C
 0066C3DB    call 0x0063BC30
 0066C3E0    test al, al
-0066C3E2    jz 0x0066C3E5
+0066C3E2    jz 0x0066C3E5                                   ; => [ Call: sub_63bc30 ]
 0066C3E4    int3
-0066C3E5    call 0x0063BB00
+0066C3E5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

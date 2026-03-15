@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_751f30
+// 起始地址: 0x751f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00751F30    push ebp
 00751F31    mov ebp, esp
 00751F33    and esp, 0xFFFFFFF0
@@ -9,8 +15,8 @@
 00751F44    lea edx, ds:[ecx+0x10]
 00751F47    mov ecx, dword ptr ss:[ebp+0x08]
 00751F4A    push eax
-00751F4B    call 0x00697400
-00751F50    push dword ptr ds:[0x01597CBC]
+00751F4B    call 0x00697400                                 ; => [ Call: sub_697400 ]
+00751F50    push dword ptr ds:[0x01597CBC]                  ; => [ Type: _EXCEPTION_REGISTRATION_RECORD | Data: data_1597cbc ]
 00751F56    mov ecx, dword ptr ss:[ebp+0x08]
 00751F59    lea edx, ss:[esp+0x0C]
 00751F5D    movups xmm0, xmmword ptr ds:[eax]
@@ -19,4 +25,4 @@
 00751F6A    add esp, 0x0C
 00751F6D    mov esp, ebp
 00751F6F    pop ebp
-00751F70    ret
+00751F70    ret                                             ; => [ Call: sub_6eb800 ]

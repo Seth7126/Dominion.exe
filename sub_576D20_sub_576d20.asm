@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_576d20
+// 起始地址: 0x576d20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00576D20    push ebp
 00576D21    mov ebp, esp
 00576D23    sub esp, 0x08
@@ -18,16 +24,16 @@
 00576D45    push eax
 00576D46    test al, 0x30
 00576D48    jnz 0x00576D67
-00576D4A    call 0x00576940
+00576D4A    call 0x00576940                                 ; => [ Call: sub_576940 ]
 00576D4F    mov edi, eax
 00576D51    add esp, 0x04
 00576D54    cmp dword ptr ds:[edi+0x4C], 0x03
 00576D58    jz 0x00576D5F
-00576D5A    call 0x00591930
+00576D5A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576D5F    mov eax, dword ptr ds:[edi+0x50]
 00576D62    mov edi, dword ptr ss:[ebp-0x04]
 00576D65    jmp 0x00576D72
-00576D67    call 0x005769E0
+00576D67    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 00576D6C    add esp, 0x04
 00576D6F    mov eax, dword ptr ds:[eax+0x14]
 00576D72    cmp eax, dword ptr ss:[ebp+0x08]
@@ -38,16 +44,16 @@
 00576D7F    push eax
 00576D80    test al, 0x30
 00576D82    jnz 0x00576DA1
-00576D84    call 0x00576940
+00576D84    call 0x00576940                                 ; => [ Call: sub_576940 ]
 00576D89    mov edi, eax
 00576D8B    add esp, 0x04
 00576D8E    cmp dword ptr ds:[edi+0x4C], 0x03
 00576D92    jz 0x00576D99
-00576D94    call 0x00591930
+00576D94    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576D99    mov eax, dword ptr ds:[edi+0x54]
 00576D9C    mov edi, dword ptr ss:[ebp-0x04]
 00576D9F    jmp 0x00576DAF
-00576DA1    call 0x005769E0
+00576DA1    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 00576DA6    add esp, 0x04
 00576DA9    mov eax, dword ptr ds:[eax+0x9C]
 00576DAF    add ebx, eax

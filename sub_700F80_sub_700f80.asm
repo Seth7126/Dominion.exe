@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_700f80
+// 起始地址: 0x700f80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700F80    push ebp
 00700F81    mov ebp, esp
 00700F83    mov eax, dword ptr ss:[ebp+0x08]
@@ -36,7 +42,7 @@
 00700FF6    mov dword ptr ds:[esi+0x148], ecx
 00700FFC    xor ecx, ecx
 00700FFE    dec dword ptr ds:[edi+0x425C]
-00701004    call 0x00700C30
+00701004    call 0x00700C30                                 ; => [ Call: sub_700c30 ]
 00701009    pop esi
 0070100A    pop edi
 0070100B    pop ebp

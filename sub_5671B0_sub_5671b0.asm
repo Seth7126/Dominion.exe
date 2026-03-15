@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5671b0
+// 起始地址: 0x5671b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005671B0    push ebp
 005671B1    mov ebp, esp
 005671B3    and esp, 0xFFFFFFF0
@@ -13,7 +19,7 @@
 005671D0    push 0xC84
 005671D5    push edx
 005671D6    push esi
-005671D7    call 0x00761FC4
+005671D7    call 0x00761FC4                                 ; => [ Call: memset ]
 005671DC    add esp, 0x0C
 005671DF    mov eax, esi
 005671E1    pop edi
@@ -29,7 +35,7 @@
 005671F4    mov dword ptr ss:[esp+0x1C], eax
 005671F8    lea eax, ss:[esp+0x4C]
 005671FC    movlpd qword ptr ss:[esp+0x20], xmm0
-00567202    movlpd qword ptr ss:[esp+0x30], xmm0
+00567202    movlpd qword ptr ss:[esp+0x30], xmm0            ; => [ Call: __builtin_memset ]
 00567208    movlpd qword ptr ss:[esp+0x44], xmm0
 0056720E    movlpd qword ptr ss:[esp+0x3C], xmm0
 00567214    push eax
@@ -51,8 +57,8 @@
 00567259    mov edi, dword ptr ss:[ebp+0x08]
 0056725C    mov esi, eax
 0056725E    mov ecx, 0x321
-00567263    rep movsd
-00567265    call 0x00573400
+00567263    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
+00567265    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056726A    push dword ptr ds:[0x007BFAD4]
 00567270    mov esi, dword ptr ss:[ebp+0x08]
 00567273    push dword ptr ds:[0x007BFAD0]
@@ -66,7 +72,7 @@
 0056728A    push dword ptr ss:[ebp+0x0C]
 0056728D    push dword ptr ds:[esi+0xC80]
 00567293    push esi
-00567294    call 0x00582EB0
+00567294    call 0x00582EB0                                 ; => [ Call: nullptr | Call: sub_582eb0 ]
 00567299    add esp, 0x44
 0056729C    mov eax, esi
 0056729E    pop edi

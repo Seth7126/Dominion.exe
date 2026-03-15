@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_68ca30
+// 起始地址: 0x68ca30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0068CA30    push ebp
 0068CA31    mov ebp, esp
 0068CA33    push 0xFFFFFFFF
-0068CA35    push 0x76E078
+0068CA35    push 0x76E078                                   ; => [ Call: __ehhandler$?accumulate_inheritable_handles@@YA_NQAPAEQAI_N@Z | Type: EHRegistrationNode ]
 0068CA3A    mov eax, dword ptr fs:[0x00000000]
-0068CA40    push eax
+0068CA40    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0068CA41    push ecx
 0068CA42    push esi
 0068CA43    push edi
 0068CA44    mov eax, dword ptr ds:[0x008C4040]
 0068CA49    xor eax, ebp
-0068CA4B    push eax
+0068CA4B    push eax                                        ; => [ Data: __security_cookie ]
 0068CA4C    lea eax, ss:[ebp-0x0C]
-0068CA4F    mov dword ptr fs:[0x00000000], eax
+0068CA4F    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0068CA55    mov esi, ecx
 0068CA57    mov dword ptr ss:[ebp-0x10], esi
 0068CA5A    mov edi, dword ptr ss:[ebp+0x08]
@@ -21,7 +27,7 @@
 0068CA63    jz 0x0068CA72
 0068CA65    cmp byte ptr ds:[eax], 0x00
 0068CA68    jz 0x0068CA72
-0068CA6A    call 0x0063D4E0
+0068CA6A    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068CA6F    inc dword ptr ds:[eax+0x04]
 0068CA72    mov dword ptr ss:[ebp-0x04], 0x00
 0068CA79    lea ecx, ds:[esi+0x04]
@@ -31,7 +37,7 @@
 0068CA83    jz 0x0068CA92
 0068CA85    cmp byte ptr ds:[eax], 0x00
 0068CA88    jz 0x0068CA92
-0068CA8A    call 0x0063D4E0
+0068CA8A    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068CA8F    inc dword ptr ds:[eax+0x04]
 0068CA92    mov byte ptr ss:[ebp-0x04], 0x01
 0068CA96    lea ecx, ds:[esi+0x08]
@@ -41,7 +47,7 @@
 0068CAA0    jz 0x0068CAAF
 0068CAA2    cmp byte ptr ds:[eax], 0x00
 0068CAA5    jz 0x0068CAAF
-0068CAA7    call 0x0063D4E0
+0068CAA7    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0068CAAC    inc dword ptr ds:[eax+0x04]
 0068CAAF    mov eax, dword ptr ds:[edi+0x0C]
 0068CAB2    mov dword ptr ds:[esi+0x0C], eax
@@ -57,7 +63,7 @@
 0068CAD3    mov byte ptr ds:[esi+0x1A], al
 0068CAD6    mov eax, esi
 0068CAD8    mov ecx, dword ptr ss:[ebp-0x0C]
-0068CADB    mov dword ptr fs:[0x00000000], ecx
+0068CADB    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0068CAE2    pop ecx
 0068CAE3    pop edi
 0068CAE4    pop esi

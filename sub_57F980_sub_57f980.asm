@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57f980
+// 起始地址: 0x57f980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057F980    push ebp
 0057F981    mov ebp, esp
 0057F983    sub esp, 0x0C
@@ -9,7 +15,7 @@
 0057F98D    push eax
 0057F98E    mov edx, 0x3E9
 0057F993    mov dword ptr ss:[ebp-0x08], eax
-0057F996    call 0x005722C0
+0057F996    call 0x005722C0                                 ; => [ Call: sub_5722c0 ]
 0057F99B    add esp, 0x04
 0057F99E    mov esi, dword ptr ds:[eax]
 0057F9A0    test esi, esi
@@ -17,7 +23,7 @@
 0057F9A4    movzx edi, si
 0057F9A7    cmp edi, 0x320
 0057F9AD    jb 0x0057F9B4
-0057F9AF    call 0x00591930
+0057F9AF    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057F9B4    imul eax, edi, 0x64
 0057F9B7    mov edi, dword ptr ds:[eax+ebx*1+0x1AA4]
 0057F9BE    jmp 0x0057F9C2
@@ -41,12 +47,12 @@
 0057F9EF    mov ecx, ebx
 0057F9F1    call 0x00578E10
 0057F9F6    test al, al
-0057F9F8    jnz 0x0057FA0A
+0057F9F8    jnz 0x0057FA0A                                  ; => [ Call: sub_578e10 ]
 0057F9FA    mov eax, 0x01
 0057F9FF    jmp 0x0057FA0C
 0057FA01    mov edx, esi
 0057FA03    mov ecx, ebx
-0057FA05    call 0x00578E10
+0057FA05    call 0x00578E10                                 ; => [ Call: sub_578e10 ]
 0057FA0A    xor eax, eax
 0057FA0C    mov edx, dword ptr ds:[ebx+0x19CC]
 0057FA12    mov ecx, ebx
@@ -54,7 +60,7 @@
 0057FA16    push eax
 0057FA17    push 0x01
 0057FA19    push esi
-0057FA1A    call 0x00578D00
+0057FA1A    call 0x00578D00                                 ; => [ Call: nullptr | Call: sub_578d00 ]
 0057FA1F    add esp, 0x10
 0057FA22    mov esi, edi
 0057FA24    test edi, edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57b720
+// 起始地址: 0x57b720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057B720    push ebp
 0057B721    mov ebp, esp
 0057B723    sub esp, 0x08
@@ -87,17 +93,17 @@
 0057B809    pop ebp
 0057B80A    ret
 0057B80B    push esi
-0057B80C    call 0x005915B0
+0057B80C    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 0057B811    add esp, 0x04
 0057B814    mov dword ptr ss:[ebp-0x04], eax
 0057B817    cmp dword ptr ss:[ebp+0x08], 0x00
 0057B81B    mov ecx, ebx
 0057B81D    push esi
 0057B81E    jnz 0x0057B82D
-0057B820    call 0x00576940
+0057B820    call 0x00576940                                 ; => [ Call: sub_576940 ]
 0057B825    mov ecx, dword ptr ds:[eax+0x84]
 0057B82B    jmp 0x0057B838
-0057B82D    call 0x005769E0
+0057B82D    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 0057B832    mov ecx, dword ptr ds:[eax+0xB0]
 0057B838    mov edx, dword ptr ss:[ebp-0x04]
 0057B83B    add esp, 0x04
@@ -111,4 +117,4 @@
 0057B84C    pop ebx
 0057B84D    mov esp, ebp
 0057B84F    pop ebp
-0057B850    ret
+0057B850    ret                                             ; => [ Call: sub_579b90 ]

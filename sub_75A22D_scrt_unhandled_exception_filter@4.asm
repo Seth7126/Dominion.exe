@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: ___scrt_unhandled_exception_filter@4
+// 起始地址: 0x75a22d
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075A22D    push ebp
 0075A22E    mov ebp, esp
 0075A230    push esi
@@ -23,8 +29,8 @@
 0075A268    pop ebp
 0075A269    ret 0x04
 0075A26C    call 0x00761FCA
-0075A271    mov dword ptr ds:[eax], esi
+0075A271    mov dword ptr ds:[eax], esi                     ; => [ Call: __current_exception ]
 0075A273    mov esi, dword ptr ds:[edi+0x04]
 0075A276    call 0x00761FD0
-0075A27B    mov dword ptr ds:[eax], esi
-0075A27D    call 0x00761FFA
+0075A27B    mov dword ptr ds:[eax], esi                     ; => [ Call: __current_exception_context ]
+0075A27D    call 0x00761FFA                                 ; => [ Call: terminate ]

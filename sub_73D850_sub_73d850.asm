@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73d850
+// 起始地址: 0x73d850
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073D850    push ebp
 0073D851    mov ebp, esp
 0073D853    sub esp, 0x14
@@ -10,26 +16,26 @@
 0073D860    mov dword ptr ss:[ebp-0x08], eax
 0073D863    cmp dword ptr ds:[ecx+0x04], 0x18
 0073D867    jnz 0x0073D8D7
-0073D869    call 0x005AF880
+0073D869    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0073D86E    mov ecx, eax
 0073D870    xor edi, edi
 0073D872    mov dword ptr ss:[ebp-0x10], ecx
 0073D875    cmp dword ptr ds:[ecx+0x28], edi
 0073D878    jle 0x0073D8D0
 0073D87A    xor esi, esi
-0073D87C    xor eax, eax
-0073D87E    mov dword ptr ss:[ebp-0x04], eax
+0073D87C    xor eax, eax                                    ; => [ Call: nullptr ]
+0073D87E    mov dword ptr ss:[ebp-0x04], eax                ; => [ Call: nullptr ]
 0073D881    mov ebx, dword ptr ds:[ecx+0x20]
 0073D884    add ebx, eax
 0073D886    push 0x88FA0C
 0073D88B    push dword ptr ds:[ebx]
-0073D88D    call dword ptr ds:[0x00775458]
+0073D88D    call dword ptr ds:[0x00775458]                  ; => [ String: eyelid ]
 0073D893    add esp, 0x08
 0073D896    test eax, eax
 0073D898    jnz 0x0073D8AE
 0073D89A    push 0x88FA04
 0073D89F    push dword ptr ds:[ebx]
-0073D8A1    call dword ptr ds:[0x00775458]
+0073D8A1    call dword ptr ds:[0x00775458]                  ; => [ String: eye_lid ]
 0073D8A7    add esp, 0x08
 0073D8AA    test eax, eax
 0073D8AC    jz 0x0073D8BB
@@ -56,10 +62,10 @@
 0073D8E1    push 0x87A2E0
 0073D8E6    mov edx, 0x801800
 0073D8EB    mov ecx, 0x87A4C0
-0073D8F0    call 0x0063B870
+0073D8F0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: assetPtr->assetType == ASSET_TYPE_FLANIM | Data: data_801800 | String: FlanimGetDef | String: C:\x\ax2017\Engine\AssetUtils.cpp ]
 0073D8F5    add esp, 0x0C
 0073D8F8    call 0x0063BC30
 0073D8FD    test al, al
-0073D8FF    jz 0x0073D902
+0073D8FF    jz 0x0073D902                                   ; => [ Call: sub_63bc30 ]
 0073D901    int3
-0073D902    call 0x0063BB00
+0073D902    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

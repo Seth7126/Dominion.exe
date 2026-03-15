@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_76e175
+// 起始地址: 0x76e175
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0076E175    nop
 0076E176    nop
 0076E177    mov edx, dword ptr ss:[esp+0x08]
 0076E17B    lea eax, ds:[edx+0x0C]
 0076E17E    mov ecx, dword ptr ds:[edx-0x20]
 0076E181    xor ecx, eax
-0076E183    call 0x0075927A
+0076E183    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0076E188    mov eax, 0x8BA464
-0076E18D    jmp 0x00761FA6
+0076E18D    jmp 0x00761FA6                                  ; => [ Call: __CxxFrameHandler3 | Data: data_8ba464 ]

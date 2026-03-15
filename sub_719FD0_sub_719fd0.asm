@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_719fd0
+// 起始地址: 0x719fd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00719FD0    push ebp
 00719FD1    mov ebp, esp
 00719FD3    sub esp, 0x3C
@@ -22,7 +28,7 @@
 0071A012    mov eax, dword ptr ds:[ebx+0xCB3CB0]
 0071A018    push ecx
 0071A019    movss dword ptr ss:[esp], xmm1
-0071A01E    call eax
+0071A01E    call eax                                        ; => [ Data: data_cb3cb0 ]
 0071A020    fmul dword ptr ss:[ebp-0x04]
 0071A023    xor esi, esi
 0071A025    add esp, 0x04
@@ -43,7 +49,7 @@
 0071A06A    mov ecx, dword ptr ss:[ebp-0x18]
 0071A06D    imul eax, esi
 0071A070    divss xmm0, dword ptr ss:[ebp-0x04]
-0071A075    lea eax, ds:[ecx+eax*4]
+0071A075    lea eax, ds:[ecx+eax*4]                         ; => [ Call: sub_7198c0 ]
 0071A078    push eax
 0071A079    push edi
 0071A07A    sub esp, 0x0C
@@ -57,12 +63,12 @@
 0071A0A2    movsd qword ptr ss:[ebp-0x38], xmm0
 0071A0A7    fld qword ptr ss:[ebp-0x38]
 0071A0AA    fstp qword ptr ss:[esp]
-0071A0AD    call 0x0076208A
+0071A0AD    call 0x0076208A                                 ; => [ Call: floor ]
 0071A0B2    add esp, 0x08
 0071A0B5    call 0x007622D0
 0071A0BA    movss xmm0, dword ptr ss:[ebp-0x14]
 0071A0BF    subss xmm0, dword ptr ss:[ebp-0x10]
-0071A0C4    push eax
+0071A0C4    push eax                                        ; => [ Call: sub_7622d0 ]
 0071A0C5    sub esp, 0x08
 0071A0C8    addss xmm0, dword ptr ss:[ebp+0x0C]
 0071A0CD    divss xmm0, dword ptr ss:[ebp-0x04]
@@ -71,13 +77,13 @@
 0071A0DD    movsd qword ptr ss:[ebp-0x38], xmm0
 0071A0E2    fld qword ptr ss:[ebp-0x38]
 0071A0E5    fstp qword ptr ss:[esp]
-0071A0E8    call 0x0076208A
+0071A0E8    call 0x0076208A                                 ; => [ Call: floor ]
 0071A0ED    add esp, 0x08
-0071A0F0    call 0x007622D0
+0071A0F0    call 0x007622D0                                 ; => [ Call: sub_7622d0 ]
 0071A0F5    movss xmm1, dword ptr ss:[ebp-0x04]
 0071A0FA    mov edx, eax
 0071A0FC    mov ecx, ebx
-0071A0FE    call 0x007199F0
+0071A0FE    call 0x007199F0                                 ; => [ Call: sub_7199f0 ]
 0071A103    inc esi
 0071A104    add esp, 0x10
 0071A107    add edi, 0x08
@@ -93,7 +99,7 @@
 0071A11D    call 0x00719800
 0071A122    mov ecx, dword ptr ss:[ebp+0x10]
 0071A125    movss xmm0, dword ptr ss:[ebp-0x04]
-0071A12A    cdq
+0071A12A    cdq                                             ; => [ Call: sub_719800 ]
 0071A12B    sub eax, edx
 0071A12D    sar eax, 0x01
 0071A12F    push ecx
@@ -101,7 +107,7 @@
 0071A135    lea esi, ds:[ecx+eax*2]
 0071A138    mov eax, dword ptr ds:[ebx+0xCB3CB0]
 0071A13E    mov dword ptr ss:[ebp-0x10], esi
-0071A141    call eax
+0071A141    call eax                                        ; => [ Data: data_cb3cb0 ]
 0071A143    fdiv dword ptr ss:[ebp-0x04]
 0071A146    xor ebx, ebx
 0071A148    add esp, 0x04
@@ -113,7 +119,7 @@
 0071A160    movss xmm1, dword ptr ss:[ebp-0x04]
 0071A165    mov ecx, dword ptr ss:[ebp+0x08]
 0071A168    call 0x00719800
-0071A16D    cdq
+0071A16D    cdq                                             ; => [ Call: sub_719800 ]
 0071A16E    mov ecx, ebx
 0071A170    sub eax, edx
 0071A172    sub esp, 0x08
@@ -131,7 +137,7 @@
 0071A1A7    movsd qword ptr ss:[ebp-0x38], xmm0
 0071A1AC    fld qword ptr ss:[ebp-0x38]
 0071A1AF    fstp qword ptr ss:[esp]
-0071A1B2    call 0x0076208A
+0071A1B2    call 0x0076208A                                 ; => [ Call: floor ]
 0071A1B7    movss xmm0, dword ptr ss:[ebp-0x08]
 0071A1BC    addss xmm0, dword ptr ss:[ebp-0x1C]
 0071A1C1    fstp qword ptr ss:[ebp-0x38]
@@ -142,7 +148,7 @@
 0071A1D9    movsd qword ptr ss:[ebp-0x28], xmm0
 0071A1DE    fld qword ptr ss:[ebp-0x28]
 0071A1E1    fstp qword ptr ss:[esp]
-0071A1E4    call 0x0076208A
+0071A1E4    call 0x0076208A                                 ; => [ Call: floor ]
 0071A1E9    movss xmm1, dword ptr ss:[ebp-0x08]
 0071A1EE    add esp, 0x08
 0071A1F1    mulss xmm1, dword ptr ss:[ebp-0x04]
@@ -154,7 +160,7 @@
 0071A20B    movss xmm1, dword ptr ss:[ebp-0x04]
 0071A210    call 0x007198C0
 0071A215    mov ecx, dword ptr ss:[ebp-0x18]
-0071A218    imul eax, ebx
+0071A218    imul eax, ebx                                   ; => [ Call: sub_7198c0 ]
 0071A21B    mov dword ptr ds:[edi+ebx*8+0x04], esi
 0071A21F    lea edx, ds:[ecx+eax*4]
 0071A222    cvttsd2si eax, qword ptr ss:[ebp-0x38]
@@ -176,7 +182,7 @@
 0071A260    addss xmm0, dword ptr ds:[0x00890D84]
 0071A268    subss xmm0, dword ptr ss:[ebp-0x08]
 0071A26D    movss dword ptr ss:[esp], xmm0
-0071A272    call eax
+0071A272    call eax                                        ; => [ Data: data_cb3cac ]
 0071A274    fmul dword ptr ss:[ebp-0x04]
 0071A277    add esp, 0x08
 0071A27A    cvttsd2si eax, qword ptr ss:[ebp-0x38]
@@ -215,7 +221,7 @@
 0071A2D7    push dword ptr ss:[ebp+0x10]
 0071A2DA    mov edx, dword ptr ss:[ebp-0x18]
 0071A2DD    push dword ptr ss:[ebp+0x08]
-0071A2E0    call 0x00719BE0
+0071A2E0    call 0x00719BE0                                 ; => [ Call: sub_719be0 ]
 0071A2E5    add esp, 0x0C
 0071A2E8    pop edi
 0071A2E9    pop esi

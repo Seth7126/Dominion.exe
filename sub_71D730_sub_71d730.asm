@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71d730
+// 起始地址: 0x71d730
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071D730    push ebp
 0071D731    mov ebp, esp
 0071D733    push ecx
@@ -10,11 +16,11 @@
 0071D741    call 0x00719800
 0071D746    movss xmm1, dword ptr ds:[edi+0x3C]
 0071D74B    mov ecx, dword ptr ds:[edi+0x54]
-0071D74E    cdq
+0071D74E    cdq                                             ; => [ Call: sub_719800 ]
 0071D74F    sub eax, edx
 0071D751    sar eax, 0x01
 0071D753    mov dword ptr ss:[ebp-0x04], eax
-0071D756    call 0x00719800
+0071D756    call 0x00719800                                 ; => [ Call: sub_719800 ]
 0071D75B    movss xmm1, dword ptr ds:[edi+0x38]
 0071D760    xor ecx, ecx
 0071D762    movss xmm0, dword ptr ds:[0x00890E18]
@@ -29,7 +35,7 @@
 0071D77E    mov ecx, dword ptr ds:[edi+0x50]
 0071D781    call 0x00719800
 0071D786    movss xmm0, dword ptr ds:[0x00890E18]
-0071D78E    cdq
+0071D78E    cdq                                             ; => [ Call: sub_719800 ]
 0071D78F    sub eax, edx
 0071D791    sar eax, 0x01
 0071D793    lea eax, ds:[esi+eax*2]
@@ -45,7 +51,7 @@
 0071D7B3    jmp 0x0071D7C5
 0071D7B5    mov ecx, dword ptr ds:[edi+0x54]
 0071D7B8    call 0x00719800
-0071D7BD    cdq
+0071D7BD    cdq                                             ; => [ Call: sub_719800 ]
 0071D7BE    sub eax, edx
 0071D7C0    sar eax, 0x01
 0071D7C2    lea eax, ds:[esi+eax*2]
@@ -58,7 +64,7 @@
 0071D7E2    mov eax, dword ptr ds:[edi+0x98]
 0071D7E8    shl eax, 0x03
 0071D7EB    mov dword ptr ds:[edi+0xBC], eax
-0071D7F1    call 0x007198C0
+0071D7F1    call 0x007198C0                                 ; => [ Call: sub_7198c0 ]
 0071D7F6    movss xmm1, dword ptr ds:[edi+0x3C]
 0071D7FB    mov ecx, dword ptr ds:[edi+0x54]
 0071D7FE    imul eax, esi
@@ -68,7 +74,7 @@
 0071D810    mov eax, dword ptr ds:[edi+0x9C]
 0071D816    shl eax, 0x03
 0071D819    mov dword ptr ds:[edi+0xC4], eax
-0071D81F    call 0x007198C0
+0071D81F    call 0x007198C0                                 ; => [ Call: sub_7198c0 ]
 0071D824    mov ecx, dword ptr ds:[edi+0x04]
 0071D827    mov ebx, eax
 0071D829    mov eax, dword ptr ss:[ebp-0x04]

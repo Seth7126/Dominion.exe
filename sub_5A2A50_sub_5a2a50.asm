@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a2a50
+// 起始地址: 0x5a2a50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A2A50    push ebp
 005A2A51    mov ebp, esp
 005A2A53    and esp, 0xFFFFFFF8
@@ -15,7 +21,7 @@
 005A2A71    mov eax, dword ptr ds:[edx+eax*4]
 005A2A74    mov dword ptr ds:[edx+0x04], eax
 005A2A77    mov edx, 0x01
-005A2A7C    call 0x005A1AF0
+005A2A7C    call 0x005A1AF0                                 ; => [ Call: sub_5a1af0 ]
 005A2A81    mov edx, dword ptr ss:[esp+0x18]
 005A2A85    mov esi, dword ptr ds:[edx+0x08]
 005A2A88    mov ecx, dword ptr ds:[edx+0x18]
@@ -35,7 +41,7 @@
 005A2AB6    mov ecx, dword ptr ds:[esi]
 005A2AB8    mov eax, dword ptr ds:[ecx+eax*4]
 005A2ABB    jmp 0x005A2AC3
-005A2ABD    xor eax, eax
+005A2ABD    xor eax, eax                                    ; => [ Call: nullptr ]
 005A2ABF    mov dword ptr ss:[esp+0x10], ecx
 005A2AC3    movss xmm0, dword ptr ds:[edx+0x0C]
 005A2AC8    movss xmm1, dword ptr ds:[edx+0x10]
@@ -61,7 +67,7 @@
 005A2B16    test ah, 0x44
 005A2B19    jnp 0x005A2B2A
 005A2B1B    mov ecx, edi
-005A2B1D    call 0x005A2040
+005A2B1D    call 0x005A2040                                 ; => [ Call: sub_5a2040 ]
 005A2B22    movss xmm1, dword ptr ds:[0x00891164]
 005A2B2A    mov eax, dword ptr ss:[esp+0x10]
 005A2B2E    mov edx, dword ptr ds:[esi]
@@ -84,7 +90,7 @@
 005A2B68    test ah, 0x44
 005A2B6B    jnp 0x005A2B74
 005A2B6D    mov ecx, edi
-005A2B6F    call 0x005A2040
+005A2B6F    call 0x005A2040                                 ; => [ Call: sub_5a2040 ]
 005A2B74    mov eax, dword ptr ss:[esp+0x28]
 005A2B78    mov dword ptr ds:[edi+0x10], eax
 005A2B7B    mov eax, dword ptr ds:[edi+0x14]
@@ -121,9 +127,9 @@
 005A2BDC    setnbe al
 005A2BDF    test eax, eax
 005A2BE1    jz 0x005A2BEA
-005A2BE3    call 0x005A1A90
+005A2BE3    call 0x005A1A90                                 ; => [ Call: sub_5a1a90 ]
 005A2BE8    jmp 0x005A2BEF
-005A2BEA    call 0x005A1AF0
+005A2BEA    call 0x005A1AF0                                 ; => [ Call: sub_5a1af0 ]
 005A2BEF    mov eax, dword ptr ss:[esp+0x14]
 005A2BF3    mov dword ptr ds:[esi+0x1C], eax
 005A2BF6    mov edx, dword ptr ss:[esp+0x18]
@@ -163,7 +169,7 @@
 005A2C6F    mov ecx, edi
 005A2C71    call 0x005A1830
 005A2C76    mov ecx, dword ptr ds:[edi+0x04]
-005A2C79    mov edx, eax
+005A2C79    mov edx, eax                                    ; => [ Call: sub_5a1830 ]
 005A2C7B    add esp, 0x04
 005A2C7E    mov dword ptr ss:[esp+0x34], edx
 005A2C82    mov dword ptr ds:[edx], ecx
@@ -178,7 +184,7 @@
 005A2C9B    mov ecx, edi
 005A2C9D    call 0x005A1410
 005A2CA2    mov edx, dword ptr ss:[esp+0x34]
-005A2CA6    mov esi, eax
+005A2CA6    mov esi, eax                                    ; => [ Call: sub_5a1410 ]
 005A2CA8    mov ecx, dword ptr ss:[esp+0x2C]
 005A2CAC    movss xmm0, dword ptr ss:[esp+0x20]
 005A2CB2    movss xmm1, dword ptr ds:[0x00891164]
@@ -211,7 +217,7 @@
 005A2D16    test ah, 0x44
 005A2D19    jnp 0x005A2D22
 005A2D1B    mov ecx, edi
-005A2D1D    call 0x005A2040
+005A2D1D    call 0x005A2040                                 ; => [ Call: sub_5a2040 ]
 005A2D22    lea eax, ss:[esp+0x2C]
 005A2D26    mov edx, esi
 005A2D28    push eax
@@ -219,7 +225,7 @@
 005A2D2B    call 0x005A1C20
 005A2D30    add esp, 0x04
 005A2D33    test eax, eax
-005A2D35    jz 0x005A2E2A
+005A2D35    jz 0x005A2E2A                                   ; => [ Call: sub_5a1c20 ]
 005A2D3B    mov eax, dword ptr ds:[edi+0x14]
 005A2D3E    mov dword ptr ss:[esp+0x10], eax
 005A2D42    cmp dword ptr ds:[eax+0x04], 0x01
@@ -254,9 +260,9 @@
 005A2D9C    setnbe al
 005A2D9F    test eax, eax
 005A2DA1    jz 0x005A2DAA
-005A2DA3    call 0x005A1A90
+005A2DA3    call 0x005A1A90                                 ; => [ Call: sub_5a1a90 ]
 005A2DA8    jmp 0x005A2DAF
-005A2DAA    call 0x005A1AF0
+005A2DAA    call 0x005A1AF0                                 ; => [ Call: sub_5a1af0 ]
 005A2DAF    mov eax, dword ptr ss:[esp+0x24]
 005A2DB3    mov dword ptr ds:[ebx+0x1C], eax
 005A2DB6    mov eax, dword ptr ss:[esp+0x1C]
@@ -277,7 +283,7 @@
 005A2DF7    jnbe 0x005A2DFF
 005A2DF9    sqrtsd xmm0, xmm0
 005A2DFD    jmp 0x005A2E04
-005A2DFF    call 0x00762084
+005A2DFF    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A2E04    cvtsd2ss xmm0, xmm0
 005A2E08    addss xmm0, dword ptr ss:[esp+0x30]
 005A2E0E    movss dword ptr ds:[ebx+0x14], xmm0
@@ -287,12 +293,12 @@
 005A2E1C    mov dword ptr ds:[ecx+0x04], eax
 005A2E1F    mov eax, dword ptr ds:[ecx+0x08]
 005A2E22    mov dword ptr ds:[eax+edx*4], ebx
-005A2E25    call 0x005A1A90
+005A2E25    call 0x005A1A90                                 ; => [ Call: sub_5a1a90 ]
 005A2E2A    mov edx, dword ptr ss:[esp+0x28]
 005A2E2E    lea eax, ss:[esp+0x2C]
 005A2E32    push eax
 005A2E33    mov ecx, esi
-005A2E35    call 0x005A1C20
+005A2E35    call 0x005A1C20                                 ; => [ Call: sub_5a1c20 ]
 005A2E3A    add esp, 0x04
 005A2E3D    test eax, eax
 005A2E3F    jz 0x005A2EB5
@@ -314,7 +320,7 @@
 005A2E82    jnbe 0x005A2E8A
 005A2E84    sqrtsd xmm0, xmm0
 005A2E88    jmp 0x005A2E8F
-005A2E8A    call 0x00762084
+005A2E8A    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A2E8F    cvtsd2ss xmm0, xmm0
 005A2E93    addss xmm0, dword ptr ss:[esp+0x30]
 005A2E99    movss dword ptr ds:[esi+0x14], xmm0
@@ -324,7 +330,7 @@
 005A2EA7    mov dword ptr ds:[ecx+0x04], eax
 005A2EAA    mov eax, dword ptr ds:[ecx+0x08]
 005A2EAD    mov dword ptr ds:[eax+edx*4], esi
-005A2EB0    call 0x005A1A90
+005A2EB0    call 0x005A1A90                                 ; => [ Call: sub_5a1a90 ]
 005A2EB5    pop edi
 005A2EB6    pop esi
 005A2EB7    pop ebx

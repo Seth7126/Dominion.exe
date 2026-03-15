@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cb630
+// 起始地址: 0x5cb630
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CB630    push ebp
 005CB631    mov ebp, esp
 005CB633    sub esp, 0x8C
@@ -22,20 +28,20 @@
 005CB67E    jz 0x005CB690
 005CB680    lea ecx, ds:[ebx+0x250]
 005CB686    mov edx, 0x01
-005CB68B    call 0x00633AA0
+005CB68B    call 0x00633AA0                                 ; => [ Call: sub_633aa0 ]
 005CB690    lea edi, ds:[ebx+0x08]
 005CB693    mov dword ptr ds:[ebx+0x17C0], 0x00
 005CB69D    mov ecx, 0x22
 005CB6A2    lea esi, ss:[ebp-0x88]
-005CB6A8    rep movsd
+005CB6A8    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB6AA    lea edi, ds:[ebx+0x90]
 005CB6B0    mov ecx, 0x22
 005CB6B5    lea esi, ss:[ebp-0x88]
-005CB6BB    rep movsd
+005CB6BB    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB6BD    lea edi, ds:[ebx+0x118]
 005CB6C3    mov ecx, 0x22
 005CB6C8    lea esi, ss:[ebp-0x88]
-005CB6CE    rep movsd
+005CB6CE    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005CB6D0    pop edi
 005CB6D1    pop esi
 005CB6D2    pop ebx

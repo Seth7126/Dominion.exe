@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_642130
+// 起始地址: 0x642130
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00642130    push ebp
 00642131    mov ebp, esp
 00642133    sub esp, 0xE0
@@ -13,7 +19,7 @@
 0064214F    cmp dword ptr ds:[edi+0x04], 0x25
 00642153    jnz 0x0064238D
 00642159    mov ecx, edi
-0064215B    call 0x005AF880
+0064215B    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00642160    movss xmm4, dword ptr ss:[ebp-0x08]
 00642165    movaps xmm1, xmm4
 00642168    movss xmm2, dword ptr ss:[ebp+0x14]
@@ -50,7 +56,7 @@
 006421D1    call 0x006417E0
 006421D6    mulss xmm0, dword ptr ds:[0x00890D84]
 006421DE    add esp, 0x04
-006421E1    call 0x004D5CB0
+006421E1    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 | String: 0 | String: zx | Call: sub_6417e0 ]
 006421E6    movss xmm2, dword ptr ss:[ebp-0x0C]
 006421EB    movss xmm4, dword ptr ss:[ebp-0x08]
 006421F0    subss xmm2, xmm0
@@ -70,7 +76,7 @@
 00642218    movss xmm2, dword ptr ss:[ebp-0x0C]
 0064221D    add esp, 0x04
 00642220    subss xmm2, xmm0
-00642224    movss dword ptr ss:[ebp-0x0C], xmm2
+00642224    movss dword ptr ss:[ebp-0x0C], xmm2             ; => [ String: 0 | String: zx | Call: sub_6417e0 ]
 00642229    cmp esi, 0x04
 0064222C    jz 0x00642238
 0064222E    cmp esi, 0x05
@@ -84,7 +90,7 @@
 0064224C    call 0x004D5CB0
 00642251    movss xmm1, dword ptr ss:[ebp-0x10]
 00642256    subss xmm1, xmm0
-0064225A    movss dword ptr ss:[ebp-0x10], xmm1
+0064225A    movss dword ptr ss:[ebp-0x10], xmm1             ; => [ Call: sub_4d5cb0 | Call: sub_6419c0 ]
 0064225F    cmp esi, 0x07
 00642262    jz 0x0064226E
 00642264    cmp esi, 0x08
@@ -96,7 +102,7 @@
 00642275    call 0x006419C0
 0064227A    movss xmm1, dword ptr ss:[ebp-0x10]
 0064227F    subss xmm1, xmm0
-00642283    movss dword ptr ss:[ebp-0x10], xmm1
+00642283    movss dword ptr ss:[ebp-0x10], xmm1             ; => [ Call: sub_6419c0 ]
 00642288    movss xmm1, dword ptr ds:[0x008910B8]
 00642290    mov ecx, edi
 00642292    movss xmm0, dword ptr ss:[ebp-0x0C]
@@ -117,14 +123,14 @@
 006422ED    mov esi, dword ptr ss:[ebp-0x14]
 006422F0    mov ecx, esi
 006422F2    push eax
-006422F3    movss dword ptr ss:[ebp-0x40], xmm0
+006422F3    movss dword ptr ss:[ebp-0x40], xmm0             ; => [ Call: sub_6419c0 ]
 006422F8    movups xmm0, xmmword ptr ss:[ebp-0x5C]
-006422FC    movups xmmword ptr ss:[ebp-0x7C], xmm1
+006422FC    movups xmmword ptr ss:[ebp-0x7C], xmm1          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 00642300    movups xmmword ptr ss:[ebp-0x9C], xmm0
 00642307    movups xmm0, xmmword ptr ss:[ebp-0x4C]
 0064230B    movups xmmword ptr ss:[ebp-0x6C], xmm2
 0064230F    movups xmmword ptr ss:[ebp-0x8C], xmm0
-00642316    call 0x00642E30
+00642316    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 0064231B    movss xmm1, dword ptr ds:[esi+0x14]
 00642320    push dword ptr ss:[ebp-0x18]
 00642323    mulss xmm1, xmm1
@@ -139,7 +145,7 @@
 0064234C    movss xmm0, dword ptr ds:[esi]
 00642350    mulss xmm0, xmm0
 00642354    addss xmm0, xmm1
-00642358    call 0x004AC580
+00642358    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064235D    mulss xmm0, dword ptr ds:[0x00890DB8]
 00642365    lea edx, ss:[ebp-0x9C]
 0064236B    push ecx
@@ -155,16 +161,16 @@
 00642388    pop ebx
 00642389    mov esp, ebp
 0064238B    pop ebp
-0064238C    ret
+0064238C    ret                                             ; => [ Call: sub_641d40 ]
 0064238D    push 0x872364
 00642392    push 0x1EF
 00642397    push 0x8720A4
 0064239C    mov edx, 0x801800
 006423A1    mov ecx, 0x87233C
-006423A6    call 0x0063B870
+006423A6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: TTFontGet | Data: data_801800 | String: C:\x\ax2017\Engine\TTFont.cpp | String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006423AB    add esp, 0x0C
 006423AE    call 0x0063BC30
 006423B3    test al, al
-006423B5    jz 0x006423B8
+006423B5    jz 0x006423B8                                   ; => [ Call: sub_63bc30 ]
 006423B7    int3
-006423B8    call 0x0063BB00
+006423B8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

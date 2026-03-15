@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_600ad0
+// 起始地址: 0x600ad0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00600AD0    push ebp
 00600AD1    mov ebp, esp
 00600AD3    and esp, 0xFFFFFFF8
@@ -12,9 +18,9 @@
 00600AE6    mov dword ptr ds:[ebx], 0x00
 00600AEC    mov dword ptr ds:[edx], 0x00
 00600AF2    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
-00600AFC    mov esi, dword ptr ds:[0x00B809E0]
+00600AFC    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 00600B02    mov dword ptr ss:[esp+0x10], edx
-00600B06    add eax, esi
+00600B06    add eax, esi                                    ; => [ Data: data_b809e4 ]
 00600B08    cmp esi, eax
 00600B0A    jnb 0x00600C5C
 00600B10    test dword ptr ds:[esi+0x1C28], 0xFFFF0000
@@ -38,16 +44,16 @@
 00600B51    jnz 0x00600C1A
 00600B57    cmp dword ptr ds:[esi+0xA4], 0x3EB
 00600B61    jnz 0x00600C1A
-00600B67    mov eax, dword ptr ds:[0x00B604E0]
+00600B67    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 00600B6C    xor ecx, ecx
 00600B6E    cmp eax, 0xFFFFFFFF
 00600B71    cmovz eax, ecx
 00600B74    cmp dword ptr ds:[esi+0xA0], eax
 00600B7A    jnz 0x00600C1A
 00600B80    mov ecx, esi
-00600B82    call 0x005CBB20
+00600B82    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 00600B87    test eax, eax
-00600B89    jz 0x00600C1A
+00600B89    jz 0x00600C1A                                   ; => [ Call: sub_5754f0 ]
 00600B8F    push 0x1000
 00600B94    push 0x00
 00600B96    mov edx, eax
@@ -58,7 +64,7 @@
 00600BA7    jz 0x00600C1A
 00600BA9    inc dword ptr ds:[ebx]
 00600BAB    mov ecx, esi
-00600BAD    call 0x005CBB20
+00600BAD    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 00600BB2    mov edx, dword ptr ss:[esp+0x10]
 00600BB6    mov ebx, eax
 00600BB8    mov ecx, dword ptr ds:[edx]
@@ -73,14 +79,14 @@
 00600BCB    call 0x005EFE00
 00600BD0    add esp, 0x04
 00600BD3    test al, al
-00600BD5    jz 0x00600BF2
-00600BD7    mov ecx, dword ptr ds:[0x00B604E0]
+00600BD5    jz 0x00600BF2                                   ; => [ Call: nullptr | Call: sub_5efe00 ]
+00600BD7    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 00600BDD    xor eax, eax
 00600BDF    cmp ecx, 0xFFFFFFFF
 00600BE2    cmovz ecx, eax
 00600BE5    call 0x005E4D40
 00600BEA    test al, al
-00600BEC    jnz 0x00600BF2
+00600BEC    jnz 0x00600BF2                                  ; => [ Call: sub_5e4d40 ]
 00600BEE    mov al, 0x01
 00600BF0    jmp 0x00600BF4
 00600BF2    xor al, al
@@ -99,7 +105,7 @@
 00600C16    mov ebx, dword ptr ss:[esp+0x14]
 00600C1A    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 00600C24    add esi, 0x1C30
-00600C2A    add eax, dword ptr ds:[0x00B809E0]
+00600C2A    add eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e4 | Data: data_b809e0 ]
 00600C30    cmp esi, eax
 00600C32    jnb 0x00600C5C
 00600C34    test dword ptr ds:[esi+0x1C28], 0xFFFF0000

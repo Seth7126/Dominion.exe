@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_75ed90
+// 起始地址: 0x75ed90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075ED90    mov dword ptr ds:[ecx+0x24], 0x00
 0075ED97    mov eax, ecx
 0075ED99    mov dword ptr ds:[ecx+0x20], 0x3F800000
 0075EDA0    mov dword ptr ds:[ecx+0x28], 0x3F800000
 0075EDA7    mov dword ptr ds:[ecx+0x1C], 0x49742400
 0075EDAE    mov dword ptr ds:[ecx+0x18], 0x00
-0075EDB5    mov dword ptr ds:[ecx], 0x00
+0075EDB5    mov dword ptr ds:[ecx], 0x00                    ; => [ Call: __builtin_memset ]
 0075EDBB    mov dword ptr ds:[ecx+0x04], 0x00
 0075EDC2    mov dword ptr ds:[ecx+0x08], 0x00
 0075EDC9    mov dword ptr ds:[ecx+0x0C], 0x00
 0075EDD0    mov dword ptr ds:[ecx+0x10], 0x00
 0075EDD7    mov dword ptr ds:[ecx+0x14], 0x00
 0075EDDE    mov dword ptr ds:[ecx+0x3C], 0x00
-0075EDE5    mov dword ptr ds:[ecx+0x2C], 0x00
+0075EDE5    mov dword ptr ds:[ecx+0x2C], 0x00               ; => [ Call: __builtin_memset ]
 0075EDEC    mov dword ptr ds:[ecx+0x34], 0x00
 0075EDF3    mov dword ptr ds:[ecx+0x30], 0x00
 0075EDFA    mov dword ptr ds:[ecx+0x38], 0x00

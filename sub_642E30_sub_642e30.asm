@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_642e30
+// 起始地址: 0x642e30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00642E30    push ebp
 00642E31    mov ebp, esp
 00642E33    and esp, 0xFFFFFFF8
 00642E36    sub esp, 0x40
 00642E39    lea eax, ss:[esp]
 00642E3C    push eax
-00642E3D    call 0x00642AE0
+00642E3D    call 0x00642AE0                                 ; => [ Call: sub_642ae0 ]
 00642E42    mov ecx, dword ptr ss:[ebp+0x08]
 00642E45    add esp, 0x04
 00642E48    movups xmm0, xmmword ptr ds:[eax]

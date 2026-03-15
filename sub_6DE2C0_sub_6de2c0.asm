@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6de2c0
+// 起始地址: 0x6de2c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DE2C0    push ebp
 006DE2C1    mov ebp, esp
 006DE2C3    and esp, 0xFFFFFFF8
 006DE2C6    sub esp, 0x64
-006DE2C9    mov eax, dword ptr ds:[0x008C4040]
+006DE2C9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006DE2CE    xor eax, esp
 006DE2D0    mov dword ptr ss:[esp+0x60], eax
 006DE2D4    mov eax, dword ptr ds:[ecx+0x10]
@@ -61,7 +67,7 @@
 006DE37D    push eax
 006DE37E    mov edx, esi
 006DE380    movaps xmm1, xmm2
-006DE383    call 0x006DDC00
+006DE383    call 0x006DDC00                                 ; => [ Call: sub_6ddc00 ]
 006DE388    movss xmm0, dword ptr ss:[esp+0x14]
 006DE38E    add esp, 0x04
 006DE391    mulss xmm0, dword ptr ss:[esp+0x1C]
@@ -155,7 +161,7 @@
 006DE548    pop esi
 006DE549    pop ebx
 006DE54A    xor ecx, esp
-006DE54C    call 0x0075927A
+006DE54C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006DE551    mov esp, ebp
 006DE553    pop ebp
 006DE554    ret
@@ -164,10 +170,10 @@
 006DE55F    push 0x88162C
 006DE564    mov edx, 0x801800
 006DE569    mov ecx, 0x8818AC
-006DE56E    call 0x0063B870
+006DE56E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Animation.cpp | String: maskCount > 0 | Data: data_801800 | String: BoneGetMaskWeight ]
 006DE573    add esp, 0x0C
 006DE576    call 0x0063BC30
 006DE57B    test al, al
-006DE57D    jz 0x006DE580
+006DE57D    jz 0x006DE580                                   ; => [ Call: sub_63bc30 ]
 006DE57F    int3
-006DE580    call 0x0063BB00
+006DE580    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

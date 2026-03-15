@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e3e50
+// 起始地址: 0x5e3e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E3E50    push ebp
 005E3E51    mov ebp, esp
 005E3E53    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 005E3E59    mov ebx, ecx
 005E3E5B    xor ecx, ecx
 005E3E5D    push edi
-005E3E5E    call 0x005E3C60
+005E3E5E    call 0x005E3C60                                 ; => [ Call: sub_5e3c60 ]
 005E3E63    mov edi, eax
 005E3E65    xor edx, edx
 005E3E67    mov esi, dword ptr ds:[edi+0x200]
@@ -31,7 +37,7 @@
 005E3E9A    pop ebx
 005E3E9B    mov esp, ebp
 005E3E9D    pop ebp
-005E3E9E    ret
+005E3E9E    ret                                             ; => [ Call: sub_5e3da0 ]
 005E3E9F    mov eax, dword ptr ss:[ebp+0x08]
 005E3EA2    mov dword ptr ds:[ecx+0x04], eax
 005E3EA5    xor ecx, ecx
@@ -41,4 +47,4 @@
 005E3EAE    pop ebx
 005E3EAF    mov esp, ebp
 005E3EB1    pop ebp
-005E3EB2    ret
+005E3EB2    ret                                             ; => [ Call: sub_5e3da0 ]

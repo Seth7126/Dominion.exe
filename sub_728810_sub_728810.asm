@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_728810
+// 起始地址: 0x728810
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00728810    push ebp
 00728811    mov ebp, esp
 00728813    sub esp, 0x08
@@ -71,24 +77,24 @@
 007288E3    cmp al, 0x4D
 007288E5    jnz 0x0072894B
 007288E7    mov ecx, edi
-007288E9    call 0x007203E0
+007288E9    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 007288EE    mov ecx, edi
-007288F0    call 0x007203E0
+007288F0    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 007288F5    mov ecx, edi
-007288F7    call 0x007203E0
+007288F7    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 007288FC    mov ecx, edi
-007288FE    call 0x007203E0
+007288FE    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728903    mov ecx, edi
-00728905    call 0x007203E0
+00728905    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072890A    mov ecx, edi
-0072890C    call 0x007203E0
+0072890C    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728911    mov ecx, edi
-00728913    call 0x007203E0
+00728913    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728918    mov ecx, edi
 0072891A    mov esi, eax
 0072891C    call 0x007203E0
 00728921    shl eax, 0x10
-00728924    add eax, esi
+00728924    add eax, esi                                    ; => [ Call: sub_7203e0 ]
 00728926    cmp eax, 0x0C
 00728929    jz 0x0072893F
 0072892B    cmp eax, 0x28

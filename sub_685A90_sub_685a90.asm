@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_685a90
+// 起始地址: 0x685a90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00685A90    push ebp
 00685A91    mov ebp, esp
 00685A93    sub esp, 0xBC
 00685A99    mov eax, dword ptr ds:[0x008C4040]
 00685A9E    xor eax, ebp
-00685AA0    mov dword ptr ss:[ebp-0x04], eax
+00685AA0    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 00685AA3    push ebx
 00685AA4    mov ebx, dword ptr ss:[ebp+0x18]
 00685AA7    xorps xmm1, xmm1
@@ -21,9 +27,9 @@
 00685ACE    lahf
 00685ACF    test ah, 0x44
 00685AD2    jnp 0x00685AE8
-00685AD4    push 0x876F84
+00685AD4    push 0x876F84                                   ; => [ String: DrawParented9SliceImage ]
 00685AD9    push 0xC6F
-00685ADE    mov ecx, 0x876FB8
+00685ADE    mov ecx, 0x876FB8                               ; => [ String: aParentToScreen.m10 == 0.0f ]
 00685AE3    jmp 0x00685C35
 00685AE8    movss xmm0, dword ptr ds:[esi+0x04]
 00685AED    ucomiss xmm0, xmm1
@@ -47,7 +53,7 @@
 00685B41    movss dword ptr ss:[ebp-0x18], xmm1
 00685B46    movss dword ptr ss:[ebp-0x20], xmm4
 00685B4B    movss dword ptr ss:[ebp-0x14], xmm0
-00685B50    call 0x004AC390
+00685B50    call 0x004AC390                                 ; => [ Call: sub_4ac390 ]
 00685B55    movups xmm0, xmmword ptr ss:[ebp-0x60]
 00685B59    mov eax, dword ptr ss:[ebp-0x40]
 00685B5C    lea edx, ss:[ebp-0x28]
@@ -58,7 +64,7 @@
 00685B6C    movups xmm0, xmmword ptr ss:[ebp-0x50]
 00685B70    push 0x8002B0
 00685B75    movups xmmword ptr ss:[ebp-0x18], xmm0
-00685B79    call 0x004AC390
+00685B79    call 0x004AC390                                 ; => [ Call: sub_4ac390 | Data: data_8002b0 ]
 00685B7E    movups xmm0, xmmword ptr ss:[ebp-0x60]
 00685B82    mov eax, dword ptr ss:[ebp-0x40]
 00685B85    lea ecx, ss:[ebp-0x28]
@@ -69,7 +75,7 @@
 00685B98    movups xmm0, xmmword ptr ss:[ebp-0x50]
 00685B9C    push eax
 00685B9D    movups xmmword ptr ss:[ebp-0x18], xmm0
-00685BA1    call 0x005B07E0
+00685BA1    call 0x005B07E0                                 ; => [ Call: sub_5b07e0 ]
 00685BA6    movss xmm1, dword ptr ss:[ebp+0x10]
 00685BAB    add esp, 0x04
 00685BAE    mulss xmm1, dword ptr ds:[esi]
@@ -101,26 +107,26 @@
 00685C04    lea eax, ss:[ebp-0x38]
 00685C07    movss dword ptr ss:[ebp-0x2C], xmm0
 00685C0C    push eax
-00685C0D    call 0x00684C00
+00685C0D    call 0x00684C00                                 ; => [ Call: nullptr | Call: sub_684c00 | Data: data_19e2744 | Data: data_7ff520 | Data: data_7ff530 ]
 00685C12    mov ecx, dword ptr ss:[ebp-0x04]
 00685C15    add esp, 0x2C
 00685C18    xor ecx, ebp
 00685C1A    pop edi
 00685C1B    pop esi
 00685C1C    pop ebx
-00685C1D    call 0x0075927A
+00685C1D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00685C22    mov esp, ebp
 00685C24    pop ebp
 00685C25    ret
-00685C26    push 0x876F84
+00685C26    push 0x876F84                                   ; => [ String: DrawParented9SliceImage ]
 00685C2B    push 0xC70
-00685C30    mov ecx, 0x876F9C
+00685C30    mov ecx, 0x876F9C                               ; => [ String: aParentToScreen.m01 == 0.0f ]
 00685C35    push 0x876CB0
 00685C3A    mov edx, 0x801800
-00685C3F    call 0x0063B870
+00685C3F    call 0x0063B870                                 ; => [ String: DrawParented9SliceImage | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Sprite.cpp ]
 00685C44    add esp, 0x0C
 00685C47    call 0x0063BC30
 00685C4C    test al, al
-00685C4E    jz 0x00685C51
+00685C4E    jz 0x00685C51                                   ; => [ Call: sub_63bc30 ]
 00685C50    int3
-00685C51    call 0x0063BB00
+00685C51    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4ef660
+// 起始地址: 0x4ef660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EF662    byte EC
 004EF663    sub esp, 0x42C
 004EF669    mov eax, dword ptr ds:[0x008C4040]
 004EF66E    xor eax, ebp
-004EF670    mov dword ptr ss:[ebp-0x04], eax
+004EF670    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 004EF673    push ebx
 004EF674    push esi
 004EF675    push edi
@@ -116,7 +122,7 @@
 004EF830    mov ecx, dword ptr ds:[edi-0x04]
 004EF833    mov ebx, edi
 004EF835    mov edx, ecx
-004EF837    mov dword ptr ss:[ebp-0x410], 0x00
+004EF837    mov dword ptr ss:[ebp-0x410], 0x00              ; => [ Call: nullptr ]
 004EF841    sar edx, 0x08
 004EF844    mov al, cl
 004EF846    mov byte ptr ss:[ebp+esi*1-0x408], dl
@@ -199,17 +205,17 @@
 004EF99C    lea eax, ss:[ebp-0x428]
 004EF9A2    push eax
 004EF9A3    lea ecx, ss:[ebp-0x408]
-004EF9A9    call 0x0063A3B0
+004EF9A9    call 0x0063A3B0                                 ; => [ Call: sub_63a3b0 ]
 004EF9AE    mov ecx, dword ptr ss:[ebp-0x428]
 004EF9B4    add esp, 0x08
 004EF9B7    mov eax, dword ptr ss:[ebp-0x424]
 004EF9BD    cmp ecx, dword ptr ds:[0x019E1780]
 004EF9C3    jnz 0x004EF9D1
 004EF9C5    cmp eax, dword ptr ds:[0x019E1784]
-004EF9CB    jz 0x004EFC76
+004EF9CB    jz 0x004EFC76                                   ; => [ Data: data_19e1780 | Data: data_19e1784 ]
 004EF9D1    cmp dword ptr ds:[edi+0x1520], 0x01
-004EF9D8    mov dword ptr ds:[0x019E1780], ecx
-004EF9DE    mov dword ptr ds:[0x019E1784], eax
+004EF9D8    mov dword ptr ds:[0x019E1780], ecx              ; => [ Data: data_19e1780 ]
+004EF9DE    mov dword ptr ds:[0x019E1784], eax              ; => [ Data: data_19e1784 ]
 004EF9E3    mov dword ptr ss:[ebp-0x424], 0x01
 004EF9ED    jle 0x004EFC76
 004EF9F3    lea esi, ds:[edi+0x64]
@@ -225,7 +231,7 @@
 004EFA1B    imul eax, eax, 0x2717
 004EFA21    mov ecx, edx
 004EFA23    sub ecx, eax
-004EFA25    mov ebx, dword ptr ds:[ecx*4+0x1938E70]
+004EFA25    mov ebx, dword ptr ds:[ecx*4+0x1938E70]         ; => [ Data: data_1938e70 ]
 004EFA2C    mov dword ptr ss:[ebp-0x40C], ebx
 004EFA32    test ebx, ebx
 004EFA34    jz 0x004EFA4A
@@ -237,12 +243,12 @@
 004EFA48    jnz 0x004EFA36
 004EFA4A    push edx
 004EFA4B    push 0x8089C0
-004EFA50    call 0x004F7F30
+004EFA50    call 0x004F7F30                                 ; => [ String: Couldn't lookup %d\n | Call: sub_4f7f30 ]
 004EFA55    add esp, 0x08
-004EFA58    xor ebx, ebx
-004EFA5A    mov dword ptr ss:[ebp-0x40C], ebx
+004EFA58    xor ebx, ebx                                    ; => [ Call: nullptr ]
+004EFA5A    mov dword ptr ss:[ebp-0x40C], ebx               ; => [ Call: nullptr ]
 004EFA60    xorps xmm0, xmm0
-004EFA63    movups xmmword ptr ds:[ebx+0x10], xmm0
+004EFA63    movups xmmword ptr ds:[ebx+0x10], xmm0          ; => [ Call: __builtin_memset ]
 004EFA67    mov dword ptr ds:[ebx+0x20], 0x00
 004EFA6E    mov eax, dword ptr ds:[edi+0xE64]
 004EFA74    mov edx, dword ptr ds:[esi+0x1A4C]
@@ -250,7 +256,7 @@
 004EFA80    cmp edx, eax
 004EFA82    jz 0x004EFA93
 004EFA84    mov ecx, edi
-004EFA86    call 0x0057DA30
+004EFA86    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 004EFA8B    cmp eax, dword ptr ss:[ebp-0x414]
 004EFA91    jnz 0x004EFA97
 004EFA93    mov byte ptr ds:[ebx+0x10], 0x01
@@ -260,7 +266,7 @@
 004EFAA9    cmp edx, eax
 004EFAAB    jz 0x004EFABC
 004EFAAD    mov ecx, edi
-004EFAAF    call 0x0057DA30
+004EFAAF    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 004EFAB4    cmp eax, dword ptr ss:[ebp-0x414]
 004EFABA    jnz 0x004EFAC0
 004EFABC    mov byte ptr ds:[ebx+0x12], 0x01
@@ -270,7 +276,7 @@
 004EFAD2    cmp edx, eax
 004EFAD4    jz 0x004EFAE5
 004EFAD6    mov ecx, edi
-004EFAD8    call 0x0057DA30
+004EFAD8    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 004EFADD    cmp eax, dword ptr ss:[ebp-0x414]
 004EFAE3    jnz 0x004EFAE9
 004EFAE5    mov byte ptr ds:[ebx+0x22], 0x01
@@ -280,7 +286,7 @@
 004EFAFB    cmp edx, eax
 004EFAFD    jz 0x004EFB0E
 004EFAFF    mov ecx, edi
-004EFB01    call 0x0057DA30
+004EFB01    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 004EFB06    cmp eax, dword ptr ss:[ebp-0x414]
 004EFB0C    jnz 0x004EFB12
 004EFB0E    mov byte ptr ds:[ebx+0x23], 0x01
@@ -302,7 +308,7 @@
 004EFB58    jz 0x004EFB73
 004EFB5A    mov ecx, dword ptr ss:[ebp-0x42C]
 004EFB60    call 0x0057DA30
-004EFB65    cmp eax, esi
+004EFB65    cmp eax, esi                                    ; => [ Call: sub_57da30 ]
 004EFB67    mov eax, dword ptr ss:[ebp-0x41C]
 004EFB6D    jnz 0x004EFC1C
 004EFB73    mov eax, dword ptr ds:[eax]
@@ -374,7 +380,7 @@
 004EFC7A    pop esi
 004EFC7B    xor ecx, ebp
 004EFC7D    pop ebx
-004EFC7E    call 0x0075927A
+004EFC7E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004EFC83    mov esp, ebp
 004EFC85    pop ebp
 004EFC86    ret
@@ -383,10 +389,10 @@
 004EFC91    push 0x8088A8
 004EFC96    mov edx, 0x801800
 004EFC9B    mov ecx, 0x801AA4
-004EFCA0    call 0x0063B870
+004EFCA0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | String: GatherTraits | Data: data_801800 | String: Halt ]
 004EFCA5    add esp, 0x0C
 004EFCA8    call 0x0063BC30
 004EFCAD    test al, al
-004EFCAF    jz 0x004EFCB2
+004EFCAF    jz 0x004EFCB2                                   ; => [ Call: sub_63bc30 ]
 004EFCB1    int3
-004EFCB2    call 0x0063BB00
+004EFCB2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

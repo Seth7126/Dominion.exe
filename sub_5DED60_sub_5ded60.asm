@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ded60
+// 起始地址: 0x5ded60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DED60    push esi
 005DED61    mov esi, ecx
 005DED63    cmp dword ptr ds:[esi+0x2C], 0x01
@@ -23,13 +29,13 @@
 005DEDB5    mov ecx, esi
 005DEDB7    call 0x005DC910
 005DEDBC    test al, al
-005DEDBE    jz 0x005DEDFD
-005DEDC0    call 0x005DED20
+005DEDBE    jz 0x005DEDFD                                   ; => [ Call: sub_5dc910 ]
+005DEDC0    call 0x005DED20                                 ; => [ Call: sub_5ded20 ]
 005DEDC5    test al, al
 005DEDC7    jz 0x005DEF71
 005DEDCD    push 0x00
 005DEDCF    push 0x2000000
-005DEDD4    call 0x005CBAA0
+005DEDD4    call 0x005CBAA0                                 ; => [ Call: sub_5cbaa0 ]
 005DEDD9    add esp, 0x08
 005DEDDC    test al, al
 005DEDDE    jnz 0x005DEF71
@@ -39,22 +45,22 @@
 005DEDED    call 0x005CBAA0
 005DEDF2    add esp, 0x08
 005DEDF5    test al, al
-005DEDF7    jnz 0x005DEF71
+005DEDF7    jnz 0x005DEF71                                  ; => [ Data: data_1000000 | Call: sub_5cbaa0 ]
 005DEDFD    mov ecx, esi
 005DEDFF    call 0x005DC840
 005DEE04    test al, al
-005DEE06    jz 0x005DEED8
+005DEE06    jz 0x005DEED8                                   ; => [ Call: sub_5dc840 ]
 005DEE0C    mov edx, 0x02
 005DEE11    call 0x005DC910
 005DEE16    test al, al
-005DEE18    jnz 0x005DEED8
+005DEE18    jnz 0x005DEED8                                  ; => [ Call: sub_5dc910 ]
 005DEE1E    mov ecx, dword ptr ds:[esi+0x9C]
-005DEE24    call 0x005CBA00
+005DEE24    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005DEE29    cmp dword ptr ds:[eax+0x2C], 0x03
 005DEE2D    jz 0x005DEEF0
-005DEE33    push 0x86F520
+005DEE33    push 0x86F520                                   ; => [ String: PileIsOpen ]
 005DEE38    push 0xAF0
-005DEE3D    mov ecx, 0x86F4A8
+005DEE3D    mov ecx, 0x86F4A8                               ; => [ String: gfx.type == DOMGFX_PILE ]
 005DEE42    jmp 0x005DEF87
 005DEE47    cmp dword ptr ds:[esi+0x2E8], 0x01
 005DEE4E    jnz 0x005DEDB0
@@ -65,7 +71,7 @@
 005DEE6E    cmp dword ptr ds:[esi+0x420], 0x1D
 005DEE75    jnz 0x005DEDB0
 005DEE7B    mov ecx, dword ptr ds:[esi+0x37C]
-005DEE81    call 0x005DE8B0
+005DEE81    call 0x005DE8B0                                 ; => [ Call: sub_5de8b0 ]
 005DEE86    mov esi, eax
 005DEE88    test esi, esi
 005DEE8A    jz 0x005DEEDC
@@ -86,16 +92,16 @@
 005DEED8    xor eax, eax
 005DEEDA    pop esi
 005DEEDB    ret
-005DEEDC    push 0x871958
+005DEEDC    push 0x871958                                   ; => [ String: LookupCard ]
 005DEEE1    push 0x3D96
-005DEEE6    mov ecx, 0x871964
+005DEEE6    mov ecx, 0x871964                               ; => [ Data: data_871964 ]
 005DEEEB    jmp 0x005DEF87
 005DEEF0    mov eax, dword ptr ds:[eax+0x1C28]
-005DEEF6    cmp eax, dword ptr ds:[0x00B7FCF4]
+005DEEF6    cmp eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 005DEEFC    jmp 0x005DEED2
 005DEEFE    mov eax, dword ptr ds:[esi+0x1C28]
 005DEF04    cmp eax, dword ptr ds:[0x00B7D434]
-005DEF0A    jz 0x005DEED8
+005DEF0A    jz 0x005DEED8                                   ; => [ Data: data_b7d434 ]
 005DEF0C    cmp dword ptr ds:[esi+0x1A18], 0x00
 005DEF13    jz 0x005DEF39
 005DEF15    cmp dword ptr ds:[esi+0x2E8], 0x01
@@ -129,15 +135,15 @@
 005DEF71    mov eax, 0x01
 005DEF76    pop esi
 005DEF77    ret
-005DEF78    push 0x85E564
+005DEF78    push 0x85E564                                   ; => [ String: CalcCardSize ]
 005DEF7D    push 0x3E7D
-005DEF82    mov ecx, 0x86F474
+005DEF82    mov ecx, 0x86F474                               ; => [ String: gfx.type == DOMGFX_CARD ]
 005DEF87    push 0x86F1E8
 005DEF8C    mov edx, 0x801800
-005DEF91    call 0x0063B870
+005DEF91    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 ]
 005DEF96    add esp, 0x0C
 005DEF99    call 0x0063BC30
 005DEF9E    test al, al
-005DEFA0    jz 0x005DEFA3
+005DEFA0    jz 0x005DEFA3                                   ; => [ Call: sub_63bc30 ]
 005DEFA2    int3
-005DEFA3    call 0x0063BB00
+005DEFA3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

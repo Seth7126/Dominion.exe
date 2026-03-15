@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_547560
+// 起始地址: 0x547560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00547560    push ebp
 00547561    mov ebp, esp
 00547563    and esp, 0xFFFFFFF8
@@ -14,7 +20,7 @@
 00547581    xor eax, eax
 00547583    and esi, 0x20000
 00547589    or eax, esi
-0054758B    jnz 0x0054762D
+0054758B    jnz 0x0054762D                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 00547591    mov edx, dword ptr ds:[0x00CCE9B0]
 00547597    mov ecx, edi
 00547599    call 0x00571B30
@@ -27,14 +33,14 @@
 005475B6    mov ecx, edi
 005475B8    call 0x00571B30
 005475BD    mov eax, dword ptr ds:[eax+0x98]
-005475C3    and eax, 0x04
+005475C3    and eax, 0x04                                   ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 005475C6    or eax, 0x00
 005475C9    jnz 0x005475E6
 005475CB    mov edx, dword ptr ds:[0x00CCE9B0]
 005475D1    mov ecx, edi
 005475D3    call 0x00571B30
 005475D8    mov eax, dword ptr ds:[eax+0x98]
-005475DE    and eax, 0x02
+005475DE    and eax, 0x02                                   ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 005475E1    or eax, 0x00
 005475E4    jz 0x0054762D
 005475E6    lea eax, ds:[ebx-0x1147]

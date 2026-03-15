@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_7608e0
+// 起始地址: 0x7608e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007608E0    push ebp
 007608E1    mov ebp, esp
 007608E3    and esp, 0xFFFFFFF8
 007608E6    sub esp, 0xDC
-007608EC    mov eax, dword ptr ds:[0x008C4040]
+007608EC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 007608F1    xor eax, esp
 007608F3    mov dword ptr ss:[esp+0xD8], eax
 007608FA    push ebx
@@ -13,13 +19,13 @@
 00760906    mov esi, ecx
 00760908    cmp edi, 0x400
 0076090E    jb 0x00760936
-00760910    push 0x77EA10
+00760910    push 0x77EA10                                   ; => [ String: aVoice < VOICE_COUNT ]
 00760915    push 0x47
-00760917    push 0x77EA28
+00760917    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 0076091C    lea eax, ss:[esp+0x24]
 00760920    push 0x77E920
 00760925    push eax
-00760926    call 0x0063BB20
+00760926    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0076092B    add esp, 0x14
 0076092E    lea eax, ss:[esp+0x18]
 00760932    push eax
@@ -27,13 +33,13 @@
 00760935    int3
 00760936    cmp byte ptr ds:[esi+0x08], 0x00
 0076093A    jnz 0x00760962
-0076093C    push 0x77E9B8
+0076093C    push 0x77E9B8                                   ; => [ String: mInsideAudioThreadMutex ]
 00760941    push 0x48
-00760943    push 0x77EA28
+00760943    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00760948    lea eax, ss:[esp+0x24]
 0076094C    push 0x77E920
 00760951    push eax
-00760952    call 0x0063BB20
+00760952    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00760957    add esp, 0x14
 0076095A    lea eax, ss:[esp+0x18]
 0076095E    push eax
@@ -49,11 +55,11 @@
 00760983    mulsd xmm0, qword ptr ds:[0x0077EA60]
 0076098B    mulsd xmm0, qword ptr ds:[0x0077EA58]
 00760993    movsd qword ptr ss:[esp+0x10], xmm0
-00760999    call 0x0076209C
+00760999    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 0076099E    cvtsd2ss xmm0, xmm0
 007609A2    movss dword ptr ss:[esp+0x0C], xmm0
 007609A8    movsd xmm0, qword ptr ss:[esp+0x10]
-007609AE    call 0x00762096
+007609AE    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 007609B3    mov eax, dword ptr ds:[esi+edi*4+0x50]
 007609B7    xorps xmm1, xmm1
 007609BA    cvtsd2ss xmm1, xmm0
@@ -77,7 +83,7 @@
 00760A09    jnbe 0x00760A11
 00760A0B    sqrtsd xmm0, xmm0
 00760A0F    jmp 0x00760A16
-00760A11    call 0x00762084
+00760A11    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00760A16    movss xmm1, dword ptr ds:[0x00890E18]
 00760A1E    cvtsd2ss xmm0, xmm0
 00760A22    divss xmm1, xmm0
@@ -99,7 +105,7 @@
 00760A6D    jnbe 0x00760A75
 00760A6F    sqrtsd xmm0, xmm0
 00760A73    jmp 0x00760A7A
-00760A75    call 0x00762084
+00760A75    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00760A7A    movss xmm1, dword ptr ds:[0x00890E18]
 00760A82    cvtsd2ss xmm0, xmm0
 00760A86    divss xmm1, xmm0
@@ -121,7 +127,7 @@
 00760AD2    pop esi
 00760AD3    pop ebx
 00760AD4    xor ecx, esp
-00760AD6    call 0x0075927A
+00760AD6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00760ADB    mov esp, ebp
 00760ADD    pop ebp
 00760ADE    ret 0x08

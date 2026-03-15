@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5108a0
+// 起始地址: 0x5108a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005108A0    push ebp
 005108A1    mov ebp, esp
 005108A3    push ebx
@@ -8,7 +14,7 @@
 005108AA    cmp esi, 0x48
 005108AD    jnbe 0x005108F1
 005108AF    jl 0x005108B6
-005108B1    call 0x00591930
+005108B1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005108B6    add esi, esi
 005108B8    mov eax, dword ptr ds:[ebx+esi*8+0x152C]
 005108BF    xor esi, esi
@@ -20,7 +26,7 @@
 005108CE    inc esi
 005108CF    cmp edi, 0x320
 005108D5    jb 0x005108DC
-005108D7    call 0x00591930
+005108D7    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005108DC    imul ecx, edi, 0x64
 005108DF    mov eax, dword ptr ds:[ecx+ebx*1+0x1AA4]
 005108E6    test eax, eax
@@ -36,15 +42,15 @@
 005108FB    cmp esi, 0x3E8
 00510901    jnl 0x0051090F
 00510903    push 0x33D
-00510908    mov ecx, 0x81F8DC
+00510908    mov ecx, 0x81F8DC                               ; => [ String: where >= START_PLAYER_PILES ]
 0051090D    jmp 0x00510919
 0051090F    push 0x33E
-00510914    mov ecx, 0x81F8F8
+00510914    mov ecx, 0x81F8F8                               ; => [ String: who != PLAYER_NONE ]
 00510919    push 0x81F4B8
-0051091E    call 0x0063B870
+0051091E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GetPileHead | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00510923    add esp, 0x0C
 00510926    call 0x0063BC30
 0051092B    test al, al
-0051092D    jz 0x00510930
+0051092D    jz 0x00510930                                   ; => [ Call: sub_63bc30 ]
 0051092F    int3
-00510930    call 0x0063BB00
+00510930    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

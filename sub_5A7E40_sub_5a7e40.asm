@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a7e40
+// 起始地址: 0x5a7e40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A7E40    push ebp
 005A7E41    mov ebp, esp
 005A7E43    sub esp, 0x38
@@ -13,7 +19,7 @@
 005A7E5D    cmp dword ptr ds:[eax+0xB4A620], ecx
 005A7E63    jnz 0x005A8058
 005A7E69    xor ebx, ebx
-005A7E6B    lea eax, ds:[eax+0xB4A648]
+005A7E6B    lea eax, ds:[eax+0xB4A648]                      ; => [ Data: data_b4a648 ]
 005A7E71    cmp dword ptr ds:[eax-0x10], 0x00
 005A7E75    jz 0x005A7EA0
 005A7E77    cmp dword ptr ds:[eax], 0x00
@@ -85,7 +91,7 @@
 005A7F39    mov edx, dword ptr ss:[ebp+0x08]
 005A7F3C    divss xmm2, dword ptr ds:[eax+0x04]
 005A7F41    mulss xmm2, xmm0
-005A7F45    call 0x005A7D30
+005A7F45    call 0x005A7D30                                 ; => [ Call: sub_5a7d30 ]
 005A7F4A    mov dword ptr ss:[ebp-0x28], eax
 005A7F4D    cmp eax, 0xFFFFFFFF
 005A7F50    jz 0x005A8051
@@ -95,7 +101,7 @@
 005A7F60    push 0x4C957F2D
 005A7F65    push esi
 005A7F66    push edi
-005A7F67    call 0x007621D0
+005A7F67    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A7F6C    mov ecx, dword ptr ss:[ebp-0x08]
 005A7F6F    mov dword ptr ss:[ebp-0x20], 0x00
 005A7F76    add eax, dword ptr ds:[ecx+0x08]
@@ -147,7 +153,7 @@
 005A8024    push 0x03
 005A8026    movss dword ptr ss:[ebp-0x38], xmm0
 005A802B    movss dword ptr ss:[ebp-0x34], xmm1
-005A8030    call 0x005A1010
+005A8030    call 0x005A1010                                 ; => [ Call: sub_5a1010 ]
 005A8035    add esp, 0x04
 005A8038    mov eax, dword ptr ss:[ebp-0x18]
 005A803B    lea edi, ds:[esi+0x10]
@@ -168,10 +174,10 @@
 005A8062    push 0x8250E0
 005A8067    mov edx, 0x801800
 005A806C    mov ecx, 0x8253B8
-005A8071    call 0x0063B870
+005A8071    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: TerrainElementDefGet | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: TERRAIN_ELEMENT_DEFS[idx].terrain == element ]
 005A8076    add esp, 0x0C
 005A8079    call 0x0063BC30
 005A807E    test al, al
-005A8080    jz 0x005A8083
+005A8080    jz 0x005A8083                                   ; => [ Call: sub_63bc30 ]
 005A8082    int3
-005A8083    call 0x0063BB00
+005A8083    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

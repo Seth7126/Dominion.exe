@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_612810
+// 起始地址: 0x612810
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00612810    push ebp
 00612811    mov ebp, esp
 00612813    and esp, 0xFFFFFFF8
-00612816    mov eax, dword ptr ds:[0x00B604E0]
+00612816    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 0061281B    xor ecx, ecx
 0061281D    cmp eax, 0xFFFFFFFF
-00612820    cmovz eax, ecx
+00612820    cmovz eax, ecx                                  ; => [ Call: nullptr ]
 00612823    cmp dword ptr ds:[0x00B80B48], eax
-00612829    jnz 0x00612888
+00612829    jnz 0x00612888                                  ; => [ Data: data_b80b48 ]
 0061282B    mov ecx, dword ptr ds:[0x00B80B08]
-00612831    call 0x005CDA30
+00612831    call 0x005CDA30                                 ; => [ Call: sub_5cda30 | Data: data_b80b08 ]
 00612836    cmp eax, 0x02
 00612839    jnz 0x00612888
 0061283B    mov ecx, dword ptr ds:[0x00B80B44]
@@ -16,12 +22,12 @@
 00612846    push 0x00
 00612848    push 0x00
 0061284A    push 0x00
-0061284C    call 0x005CE6D0
+0061284C    call 0x005CE6D0                                 ; => [ Data: data_b80b44 | Call: sub_5ce6d0 ]
 00612851    mov ecx, dword ptr ds:[0x00B7FCF4]
 00612857    add esp, 0x0C
 0061285A    cmp ecx, dword ptr ds:[eax+0x1C28]
-00612860    jz 0x00612888
-00612862    mov ecx, dword ptr ds:[0x00B604E0]
+00612860    jz 0x00612888                                   ; => [ Data: data_b7fcf4 ]
+00612862    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 00612868    xor eax, eax
 0061286A    cmp ecx, 0xFFFFFFFF
 0061286D    mov edx, 0x3EC
@@ -31,7 +37,7 @@
 00612877    call 0x005D1210
 0061287C    add esp, 0x08
 0061287F    test eax, eax
-00612881    setnz al
+00612881    setnz al                                        ; => [ Call: sub_5d1210 ]
 00612884    mov esp, ebp
 00612886    pop ebp
 00612887    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64cd30
+// 起始地址: 0x64cd30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064CD30    push ebp
 0064CD31    mov ebp, esp
 0064CD33    push ecx
@@ -16,7 +22,7 @@
 0064CD4F    jz 0x0064CD73
 0064CD51    sub edx, 0x01
 0064CD54    mov ecx, 0x801AA4
-0064CD59    push 0x876B20
+0064CD59    push 0x876B20                                   ; => [ String: EvalValEval ]
 0064CD5E    mov edx, 0x801800
 0064CD63    jz 0x0064CD6C
 0064CD65    push 0xCA9
@@ -31,7 +37,7 @@
 0064CD80    jnz 0x0064CDCA
 0064CD82    mov eax, dword ptr ds:[ecx+0x0C]
 0064CD85    test eax, eax
-0064CD87    mov ecx, 0x801800
+0064CD87    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0064CD8C    cmovnz ecx, eax
 0064CD8F    push ecx
 0064CD90    call dword ptr ds:[0x007754F4]
@@ -50,21 +56,21 @@
 0064CDB6    mov esp, ebp
 0064CDB8    pop ebp
 0064CDB9    ret
-0064CDBA    call 0x0067D600
+0064CDBA    call 0x0067D600                                 ; => [ Call: sub_67d600 ]
 0064CDBF    movd xmm0, eax
 0064CDC3    cvtdq2ps xmm0, xmm0
 0064CDC6    mov esp, ebp
 0064CDC8    pop ebp
 0064CDC9    ret
-0064CDCA    push 0x8742E8
+0064CDCA    push 0x8742E8                                   ; => [ String: EvalValGet ]
 0064CDCF    push 0x8E0
 0064CDD4    mov edx, 0x801800
 0064CDD9    mov ecx, 0x801AA4
 0064CDDE    push 0x8739B4
-0064CDE3    call 0x0063B870
+0064CDE3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\UI2.cpp | String: Halt ]
 0064CDE8    add esp, 0x0C
 0064CDEB    call 0x0063BC30
 0064CDF0    test al, al
-0064CDF2    jz 0x0064CDF5
+0064CDF2    jz 0x0064CDF5                                   ; => [ Call: sub_63bc30 ]
 0064CDF4    int3
-0064CDF5    call 0x0063BB00
+0064CDF5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

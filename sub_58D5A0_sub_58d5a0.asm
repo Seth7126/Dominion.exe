@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_58d5a0
+// 起始地址: 0x58d5a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058D5A0    push ebp
 0058D5A1    mov ebp, esp
 0058D5A3    sub esp, 0x70
-0058D5A6    mov eax, dword ptr ds:[0x008C4040]
+0058D5A6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0058D5AB    xor eax, ebp
 0058D5AD    mov dword ptr ss:[ebp-0x04], eax
 0058D5B0    mov ecx, dword ptr ss:[ebp+0x08]
 0058D5B3    mov edx, 0x18
 0058D5B8    push esi
 0058D5B9    push edi
-0058D5BA    call 0x00571B30
+0058D5BA    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058D5BF    mov ecx, dword ptr ss:[ebp+0x0C]
 0058D5C2    mov edx, 0x18
 0058D5C7    mov dword ptr ss:[ebp-0x14], eax
-0058D5CA    call 0x00571B30
+0058D5CA    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058D5CF    mov ecx, dword ptr ss:[ebp+0x08]
 0058D5D2    mov edx, 0x18
 0058D5D7    mov dword ptr ss:[ebp-0x10], eax
@@ -23,7 +29,7 @@
 0058D5E9    call 0x00576C00
 0058D5EE    mov ecx, dword ptr ss:[ebp+0x0C]
 0058D5F1    mov edx, 0x18
-0058D5F6    movups xmm0, xmmword ptr ds:[eax]
+0058D5F6    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Call: sub_571b30 ]
 0058D5F9    movups xmmword ptr ss:[ebp-0x58], xmm0
 0058D5FD    movups xmmword ptr ss:[ebp-0x44], xmm0
 0058D601    call 0x00571B30
@@ -32,7 +38,7 @@
 0058D60F    push eax
 0058D610    call 0x00576C00
 0058D615    add esp, 0x10
-0058D618    movups xmm0, xmmword ptr ds:[eax]
+0058D618    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Call: sub_571b30 ]
 0058D61B    mov eax, dword ptr ss:[ebp-0x58]
 0058D61E    mov dword ptr ss:[ebp-0x0C], eax
 0058D621    movd ecx, xmm0
@@ -93,7 +99,7 @@
 0058D6B8    pop esi
 0058D6B9    mov ecx, dword ptr ss:[ebp-0x04]
 0058D6BC    xor ecx, ebp
-0058D6BE    call 0x0075927A
+0058D6BE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0058D6C3    mov esp, ebp
 0058D6C5    pop ebp
 0058D6C6    ret
@@ -105,7 +111,7 @@
 0058D6D2    pop esi
 0058D6D3    mov ecx, dword ptr ss:[ebp-0x04]
 0058D6D6    xor ecx, ebp
-0058D6D8    call 0x0075927A
+0058D6D8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0058D6DD    mov esp, ebp
 0058D6DF    pop ebp
 0058D6E0    ret
@@ -114,7 +120,7 @@
 0058D6E4    pop esi
 0058D6E5    mov ecx, dword ptr ss:[ebp-0x04]
 0058D6E8    xor ecx, ebp
-0058D6EA    call 0x0075927A
+0058D6EA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0058D6EF    mov esp, ebp
 0058D6F1    pop ebp
 0058D6F2    ret
@@ -123,7 +129,7 @@
 0058D6F8    pop edi
 0058D6F9    xor ecx, ebp
 0058D6FB    pop esi
-0058D6FC    call 0x0075927A
+0058D6FC    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0058D701    mov esp, ebp
 0058D703    pop ebp
 0058D704    ret

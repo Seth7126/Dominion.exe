@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75f500
+// 起始地址: 0x75f500
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F500    push ebp
 0075F501    mov ebp, esp
 0075F503    sub esp, 0x08
@@ -9,10 +15,10 @@
 0075F50E    mov edi, ecx
 0075F510    mov dword ptr ss:[ebp-0x08], esi
 0075F513    mov dword ptr ss:[ebp-0x04], ebx
-0075F516    call 0x0075AE50
+0075F516    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075F51B    push esi
 0075F51C    mov ecx, edi
-0075F51E    call 0x00761E10
+0075F51E    call 0x00761E10                                 ; => [ Call: sub_761e10 ]
 0075F523    test eax, eax
 0075F525    lea esi, ss:[ebp-0x08]
 0075F528    cmovnz esi, eax
@@ -21,7 +27,7 @@
 0075F52F    jz 0x0075F569
 0075F531    push eax
 0075F532    mov ecx, edi
-0075F534    call 0x0075FA60
+0075F534    call 0x0075FA60                                 ; => [ Call: sub_75fa60 ]
 0075F539    cmp eax, 0xFFFFFFFF
 0075F53C    jz 0x0075F55F
 0075F53E    push dword ptr ds:[edi+0x2C]
@@ -39,7 +45,7 @@
 0075F565    test eax, eax
 0075F567    jnz 0x0075F531
 0075F569    mov ecx, edi
-0075F56B    call 0x0075EC70
+0075F56B    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075F570    pop edi
 0075F571    pop esi
 0075F572    mov eax, ebx

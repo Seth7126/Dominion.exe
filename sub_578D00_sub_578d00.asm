@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_578d00
+// 起始地址: 0x578d00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00578D00    push ebp
 00578D01    mov ebp, esp
 00578D03    cmp dword ptr ss:[ebp+0x08], 0x00
@@ -7,13 +13,13 @@
 00578D13    push 0x81F4B8
 00578D18    mov edx, 0x801800
 00578D1D    mov ecx, 0x814060
-00578D22    call 0x0063B870
+00578D22    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: SetCardParam | String: which != CARDID_NULL | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00578D27    add esp, 0x0C
 00578D2A    call 0x0063BC30
 00578D2F    test al, al
-00578D31    jz 0x00578D34
+00578D31    jz 0x00578D34                                   ; => [ Call: sub_63bc30 ]
 00578D33    int3
-00578D34    jmp 0x0063BB00
+00578D34    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00578D39    mov eax, dword ptr ds:[ecx+0x1504]
 00578D3F    cmp eax, 0x03
 00578D42    jz 0x00578D7F
@@ -37,7 +43,7 @@
 00578D6E    push dword ptr ss:[ebp+0x08]
 00578D71    push edx
 00578D72    mov edx, 0x16
-00578D77    call 0x0061B1B0
+00578D77    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00578D7C    add esp, 0x2C
 00578D7F    pop ebp
 00578D80    ret

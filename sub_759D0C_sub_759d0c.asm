@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_759d0c
+// 起始地址: 0x759d0c
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00759D0C    push ebp
 00759D0D    mov ebp, esp
-00759D0F    and dword ptr ds:[0x00CC8D30], 0x00
+00759D0F    and dword ptr ds:[0x00CC8D30], 0x00             ; => [ Data: data_cc8d30 ]
 00759D16    sub esp, 0x28
-00759D19    or dword ptr ds:[0x008C4010], 0x01
+00759D19    or dword ptr ds:[0x008C4010], 0x01              ; => [ Data: data_8c4010 ]
 00759D20    push 0x0A
 00759D22    call dword ptr ds:[0x00775190]
 00759D28    test eax, eax
@@ -63,7 +69,7 @@
 00759DBE    jz 0x00759DC7
 00759DC0    cmp eax, 0x30670
 00759DC5    jnz 0x00759DCE
-00759DC7    or dword ptr ds:[0x00CC8D34], 0x01
+00759DC7    or dword ptr ds:[0x00CC8D34], 0x01              ; => [ Data: data_cc8d34 ]
 00759DCE    mov edx, dword ptr ss:[ebp-0x20]
 00759DD1    xor ebx, ebx
 00759DD3    and dword ptr ss:[ebp-0x14], ebx
@@ -91,7 +97,7 @@
 00759E0B    mov dword ptr ss:[ebp-0x14], eax
 00759E0E    test ebx, 0x200
 00759E14    jz 0x00759E1D
-00759E16    or dword ptr ds:[0x00CC8D34], 0x02
+00759E16    or dword ptr ds:[0x00CC8D34], 0x02              ; => [ Data: data_cc8d34 ]
 00759E1D    cmp dword ptr ss:[ebp-0x28], 0x01
 00759E21    jl 0x00759E47
 00759E23    push 0x07
@@ -131,21 +137,21 @@
 00759E6C    mov edx, dword ptr ss:[ebp-0x0C]
 00759E6F    mov eax, dword ptr ds:[0x008C4010]
 00759E74    mov ecx, dword ptr ds:[0x008C4008]
-00759E7A    or eax, 0x02
-00759E7D    mov esi, dword ptr ds:[0x008C400C]
-00759E83    and ecx, 0xFFFFFFFE
-00759E86    mov dword ptr ds:[0x00CC8D30], 0x01
-00759E90    mov dword ptr ds:[0x008C4010], eax
-00759E95    mov dword ptr ds:[0x008C4008], ecx
-00759E9B    mov dword ptr ds:[0x008C400C], esi
+00759E7A    or eax, 0x02                                    ; => [ Data: data_8c4010 ]
+00759E7D    mov esi, dword ptr ds:[0x008C400C]              ; => [ Data: data_8c400c ]
+00759E83    and ecx, 0xFFFFFFFE                             ; => [ Data: data_8c4008 ]
+00759E86    mov dword ptr ds:[0x00CC8D30], 0x01             ; => [ Data: data_cc8d30 ]
+00759E90    mov dword ptr ds:[0x008C4010], eax              ; => [ Data: data_8c4010 ]
+00759E95    mov dword ptr ds:[0x008C4008], ecx              ; => [ Data: data_8c4008 ]
+00759E9B    mov dword ptr ds:[0x008C400C], esi              ; => [ Data: data_8c400c ]
 00759EA1    test edx, 0x100000
 00759EA7    jz 0x0075A032
 00759EAD    or eax, 0x04
-00759EB0    mov dword ptr ds:[0x00CC8D30], 0x02
+00759EB0    mov dword ptr ds:[0x00CC8D30], 0x02             ; => [ Data: data_cc8d30 ]
 00759EBA    and ecx, 0xFFFFFFEF
-00759EBD    mov dword ptr ds:[0x008C4010], eax
-00759EC2    mov dword ptr ds:[0x008C4008], ecx
-00759EC8    mov dword ptr ds:[0x008C400C], esi
+00759EBD    mov dword ptr ds:[0x008C4010], eax              ; => [ Data: data_8c4010 ]
+00759EC2    mov dword ptr ds:[0x008C4008], ecx              ; => [ Data: data_8c4008 ]
+00759EC8    mov dword ptr ds:[0x008C400C], esi              ; => [ Data: data_8c400c ]
 00759ECE    test edx, 0x8000000
 00759ED4    jz 0x0075A032
 00759EDA    test edx, 0x10000000
@@ -164,21 +170,21 @@
 00759F07    cmp ecx, esi
 00759F09    jnz 0x0075A032
 00759F0F    mov eax, dword ptr ds:[0x008C4010]
-00759F14    or eax, 0x08
-00759F17    mov dword ptr ds:[0x00CC8D30], 0x03
-00759F21    mov dword ptr ds:[0x008C4010], eax
+00759F14    or eax, 0x08                                    ; => [ Data: data_8c4010 ]
+00759F17    mov dword ptr ds:[0x00CC8D30], 0x03             ; => [ Data: data_cc8d30 ]
+00759F21    mov dword ptr ds:[0x008C4010], eax              ; => [ Data: data_8c4010 ]
 00759F26    test bl, 0x20
 00759F29    jz 0x00759FA4
-00759F2B    mov ecx, dword ptr ds:[0x008C400C]
+00759F2B    mov ecx, dword ptr ds:[0x008C400C]              ; => [ Data: data_8c400c ]
 00759F31    or eax, 0x20
-00759F34    mov dword ptr ds:[0x008C4010], eax
+00759F34    mov dword ptr ds:[0x008C4010], eax              ; => [ Data: data_8c4010 ]
 00759F39    mov edx, 0xD0030000
 00759F3E    mov eax, dword ptr ds:[0x008C4008]
 00759F43    and ebx, edx
-00759F45    and eax, 0xFFFFFFFD
-00759F48    mov dword ptr ds:[0x00CC8D30], 0x05
-00759F52    mov dword ptr ds:[0x008C4008], eax
-00759F57    mov dword ptr ds:[0x008C400C], ecx
+00759F45    and eax, 0xFFFFFFFD                             ; => [ Data: data_8c4008 ]
+00759F48    mov dword ptr ds:[0x00CC8D30], 0x05             ; => [ Data: data_cc8d30 ]
+00759F52    mov dword ptr ds:[0x008C4008], eax              ; => [ Data: data_8c4008 ]
+00759F57    mov dword ptr ds:[0x008C400C], ecx              ; => [ Data: data_8c400c ]
 00759F5D    cmp ebx, edx
 00759F5F    jnz 0x00759FAF
 00759F61    mov eax, dword ptr ss:[ebp-0x10]
@@ -190,21 +196,21 @@
 00759F72    jnz 0x00759FA4
 00759F74    cmp ecx, esi
 00759F76    jnz 0x00759FA4
-00759F78    mov eax, dword ptr ds:[0x008C4008]
-00759F7D    or dword ptr ds:[0x008C4010], 0x40
+00759F78    mov eax, dword ptr ds:[0x008C4008]              ; => [ Data: data_8c4008 ]
+00759F7D    or dword ptr ds:[0x008C4010], 0x40              ; => [ Data: data_8c4010 ]
 00759F84    and eax, 0xFFFFFFDB
-00759F87    mov ecx, dword ptr ds:[0x008C400C]
-00759F8D    mov dword ptr ds:[0x00CC8D30], 0x06
-00759F97    mov dword ptr ds:[0x008C4008], eax
-00759F9C    mov dword ptr ds:[0x008C400C], ecx
+00759F87    mov ecx, dword ptr ds:[0x008C400C]              ; => [ Data: data_8c400c ]
+00759F8D    mov dword ptr ds:[0x00CC8D30], 0x06             ; => [ Data: data_cc8d30 ]
+00759F97    mov dword ptr ds:[0x008C4008], eax              ; => [ Data: data_8c4008 ]
+00759F9C    mov dword ptr ds:[0x008C400C], ecx              ; => [ Data: data_8c400c ]
 00759FA2    jmp 0x00759FAF
-00759FA4    mov ecx, dword ptr ds:[0x008C400C]
-00759FAA    mov eax, dword ptr ds:[0x008C4008]
+00759FA4    mov ecx, dword ptr ds:[0x008C400C]              ; => [ Data: data_8c400c | Data: data_8c400c ]
+00759FAA    mov eax, dword ptr ds:[0x008C4008]              ; => [ Data: data_8c4008 | Data: data_8c4008 ]
 00759FAF    test dword ptr ss:[ebp-0x14], 0x800000
 00759FB6    jz 0x00759FC8
 00759FB8    and eax, 0xFEFFFFFF
-00759FBD    mov dword ptr ds:[0x008C400C], ecx
-00759FC3    mov dword ptr ds:[0x008C4008], eax
+00759FBD    mov dword ptr ds:[0x008C400C], ecx              ; => [ Data: data_8c400c ]
+00759FC3    mov dword ptr ds:[0x008C4008], eax              ; => [ Data: data_8c4008 ]
 00759FC8    test dword ptr ss:[ebp-0x18], 0x80000
 00759FCF    jz 0x0075A032
 00759FD1    mov eax, dword ptr ss:[ebp-0x10]
@@ -221,19 +227,19 @@
 00759FEC    shr edi, 0x10
 00759FEF    and eax, 0x400FF
 00759FF4    and edi, 0x07
-00759FF7    mov dword ptr ds:[0x00CC8D2C], eax
+00759FF7    mov dword ptr ds:[0x00CC8D2C], eax              ; => [ Data: data_cc8d2c ]
 00759FFC    or edi, 0x1000028
 0075A002    not ecx
-0075A004    and ecx, dword ptr ds:[0x008C400C]
+0075A004    and ecx, dword ptr ds:[0x008C400C]              ; => [ Data: data_8c400c ]
 0075A00A    not edi
-0075A00C    and edi, dword ptr ds:[0x008C4008]
-0075A012    mov dword ptr ds:[0x008C4008], edi
-0075A018    mov dword ptr ds:[0x008C400C], ecx
+0075A00C    and edi, dword ptr ds:[0x008C4008]              ; => [ Data: data_8c4008 ]
+0075A012    mov dword ptr ds:[0x008C4008], edi              ; => [ Data: data_8c4008 ]
+0075A018    mov dword ptr ds:[0x008C400C], ecx              ; => [ Data: data_8c400c ]
 0075A01E    cmp eax, 0x01
 0075A021    jbe 0x0075A032
 0075A023    and edi, 0xFFFFFFBF
-0075A026    mov dword ptr ds:[0x008C400C], ecx
-0075A02C    mov dword ptr ds:[0x008C4008], edi
+0075A026    mov dword ptr ds:[0x008C400C], ecx              ; => [ Data: data_8c400c ]
+0075A02C    mov dword ptr ds:[0x008C4008], edi              ; => [ Data: data_8c4008 ]
 0075A032    pop edi
 0075A033    pop esi
 0075A034    pop ebx

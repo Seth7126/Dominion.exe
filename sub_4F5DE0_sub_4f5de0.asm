@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4f5de0
+// 起始地址: 0x4f5de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F5DE0    push ebp
 004F5DE1    mov ebp, esp
 004F5DE3    and esp, 0xFFFFFFF8
 004F5DE6    sub esp, 0x24
-004F5DE9    mov eax, dword ptr ds:[0x008C4040]
+004F5DE9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004F5DEE    xor eax, esp
 004F5DF0    mov dword ptr ss:[esp+0x20], eax
 004F5DF4    push ebx
@@ -22,7 +28,7 @@
 004F5E1C    mov edx, edi
 004F5E1E    lea ecx, ss:[esp+0x14]
 004F5E22    push ebx
-004F5E23    call 0x004F69D0
+004F5E23    call 0x004F69D0                                 ; => [ Call: sub_4f69d0 ]
 004F5E28    mov eax, esi
 004F5E2A    mov ecx, ebx
 004F5E2C    sub ecx, dword ptr ss:[esp+0x1C]
@@ -87,7 +93,7 @@
 004F5EE5    add eax, 0x0C
 004F5EE8    push edi
 004F5EE9    push eax
-004F5EEA    call 0x00762362
+004F5EEA    call 0x00762362                                 ; => [ Call: memmove ]
 004F5EEF    movq xmm0, qword ptr ss:[esp+0x1C]
 004F5EF5    add esp, 0x0C
 004F5EF8    mov eax, dword ptr ss:[esp+0x18]
@@ -121,7 +127,7 @@
 004F5F4E    push eax
 004F5F4F    push ecx
 004F5F50    mov ecx, edi
-004F5F52    call 0x004F7550
+004F5F52    call 0x004F7550                                 ; => [ Call: sub_4f7550 ]
 004F5F57    mov ecx, dword ptr ss:[esp+0x24]
 004F5F5B    add esp, 0x0C
 004F5F5E    test esi, esi
@@ -163,7 +169,7 @@
 004F5FD4    add eax, edx
 004F5FD6    xor edx, edx
 004F5FD8    push eax
-004F5FD9    call 0x004F7550
+004F5FD9    call 0x004F7550                                 ; => [ Call: sub_4f7550 ]
 004F5FDE    add esp, 0x0C
 004F5FE1    mov ebx, dword ptr ss:[esp+0x10]
 004F5FE5    sub esi, 0x0C
@@ -175,7 +181,7 @@
 004F5FF1    pop ebx
 004F5FF2    mov ecx, dword ptr ss:[esp+0x20]
 004F5FF6    xor ecx, esp
-004F5FF8    call 0x0075927A
+004F5FF8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F5FFD    mov esp, ebp
 004F5FFF    pop ebp
 004F6000    ret
@@ -202,7 +208,7 @@
 004F6044    pop esi
 004F6045    pop ebx
 004F6046    xor ecx, esp
-004F6048    call 0x0075927A
+004F6048    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F604D    mov esp, ebp
 004F604F    pop ebp
 004F6050    ret

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4fc530
+// 起始地址: 0x4fc530
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FC530    dword E8EC8B55
 004FC534    cmp byte ptr ds:[edi+eax*1], al
 004FC537    add byte ptr ds:[eax+eax*8-0x3CA2FD8B], al
-004FC53E    call 0x00573400
+004FC53E    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FC543    imul ecx, dword ptr ds:[eax+0x0C], 0x5A30
 004FC54A    mov eax, dword ptr ds:[eax+0x04]
 004FC54D    cmp dword ptr ds:[eax+ecx*1+0x1754C], 0x00

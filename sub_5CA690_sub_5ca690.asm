@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ca690
+// 起始地址: 0x5ca690
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CA690    push ebp
 005CA691    mov ebp, esp
 005CA693    sub esp, 0x08
@@ -27,7 +33,7 @@
 005CA6D9    add esp, 0x04
 005CA6DC    push 0x0C
 005CA6DE    push esi
-005CA6DF    call 0x00759661
+005CA6DF    call 0x00759661                                 ; => [ Call: operator new ]
 005CA6E4    add esp, 0x08
 005CA6E7    mov esi, dword ptr ds:[edi+0x0C]
 005CA6EA    test esi, esi
@@ -40,7 +46,7 @@
 005CA6F9    add esp, 0x04
 005CA6FC    push 0x08
 005CA6FE    push esi
-005CA6FF    call 0x00759661
+005CA6FF    call 0x00759661                                 ; => [ Call: operator new ]
 005CA704    add esp, 0x08
 005CA707    mov esi, dword ptr ds:[edi+0x08]
 005CA70A    push edi
@@ -56,7 +62,7 @@
 005CA722    mov ecx, 0x10000
 005CA727    mov dword ptr ds:[eax+0x15D7E78], 0x00
 005CA731    xor eax, eax
-005CA733    rep stosd
+005CA733    rep stosd                                       ; => [ Call: __builtin_memset ]
 005CA735    pop edi
 005CA736    mov esp, ebp
 005CA738    pop ebp

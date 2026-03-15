@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_68a300
+// 起始地址: 0x68a300
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0068A300    push ebp
 0068A301    mov ebp, esp
 0068A303    sub esp, 0x14
@@ -26,7 +32,7 @@
 0068A34A    add eax, esi
 0068A34C    push eax
 0068A34D    push dword ptr ss:[ebp-0x04]
-0068A350    call 0x00761FBE
+0068A350    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0068A355    mov edx, dword ptr ss:[ebp+0x08]
 0068A358    add esp, 0x0C
 0068A35B    mov eax, dword ptr ds:[esi+0xFDEC]
@@ -55,27 +61,27 @@
 0068A39A    mov ecx, dword ptr ss:[ebp-0x08]
 0068A39D    mov edx, 0x0C
 0068A3A2    dec dword ptr ds:[edi+0x4C]
-0068A3A5    call 0x0064C080
-0068A3AA    mov ecx, dword ptr ds:[0x0147ABF4]
+0068A3A5    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+0068A3AA    mov ecx, dword ptr ds:[0x0147ABF4]              ; => [ Data: data_147abf4 ]
 0068A3B0    lea eax, ss:[ebp-0x10]
 0068A3B3    push eax
 0068A3B4    mov dword ptr ss:[ebp-0x10], esi
 0068A3B7    lea ecx, ds:[ecx+0x44]
-0068A3BA    call 0x0068B830
+0068A3BA    call 0x0068B830                                 ; => [ Call: sub_68b830 ]
 0068A3BF    mov edx, dword ptr ss:[ebp+0x08]
 0068A3C2    test ebx, ebx
 0068A3C4    jz 0x0068A471
 0068A3CA    jmp 0x0068A320
-0068A3CF    push 0x8776BC
+0068A3CF    push 0x8776BC                                   ; => [ String: NetBufferGetReceiveData ]
 0068A3D4    push 0x3D2
-0068A3D9    mov ecx, 0x8776A0
+0068A3D9    mov ecx, 0x8776A0                               ; => [ String: netBuffer->mDataSize > 0 ]
 0068A3DE    jmp 0x0068A480
 0068A3E3    mov eax, dword ptr ds:[esi+0xFDE8]
 0068A3E9    push edx
 0068A3EA    add eax, esi
 0068A3EC    push eax
 0068A3ED    push dword ptr ss:[ebp-0x04]
-0068A3F0    call 0x00761FBE
+0068A3F0    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0068A3F5    add esp, 0x0C
 0068A3F8    cmp byte ptr ss:[ebp+0x0C], 0x00
 0068A3FC    jz 0x0068A455
@@ -101,13 +107,13 @@
 0068A430    mov dword ptr ds:[edi+0x48], eax
 0068A433    dec dword ptr ds:[edi+0x4C]
 0068A436    mov edx, 0x0C
-0068A43B    call 0x0064C080
-0068A440    mov ecx, dword ptr ds:[0x0147ABF4]
+0068A43B    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+0068A440    mov ecx, dword ptr ds:[0x0147ABF4]              ; => [ Data: data_147abf4 ]
 0068A446    lea eax, ss:[ebp+0x08]
 0068A449    push eax
 0068A44A    mov dword ptr ss:[ebp+0x08], esi
 0068A44D    lea ecx, ds:[ecx+0x44]
-0068A450    call 0x0068B830
+0068A450    call 0x0068B830                                 ; => [ Call: sub_68b830 ]
 0068A455    pop edi
 0068A456    pop esi
 0068A457    pop ebx
@@ -123,15 +129,15 @@
 0068A46D    mov esp, ebp
 0068A46F    pop ebp
 0068A470    ret
-0068A471    push 0x8776BC
+0068A471    push 0x8776BC                                   ; => [ String: NetBufferGetReceiveData ]
 0068A476    push 0x3E0
-0068A47B    mov ecx, 0x801AA4
+0068A47B    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0068A480    push 0x8773A8
 0068A485    mov edx, 0x801800
-0068A48A    call 0x0063B870
+0068A48A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: NetBufferGetReceiveData | String: C:\x\ax2017\Engine\Network.cpp ]
 0068A48F    add esp, 0x0C
 0068A492    call 0x0063BC30
 0068A497    test al, al
-0068A499    jz 0x0068A49C
+0068A499    jz 0x0068A49C                                   ; => [ Call: sub_63bc30 ]
 0068A49B    int3
-0068A49C    call 0x0063BB00
+0068A49C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

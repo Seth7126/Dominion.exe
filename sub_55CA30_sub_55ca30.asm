@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55ca30
+// 起始地址: 0x55ca30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055CA30    dword 83DC8B53
 0055CA34    in al, dx
 0055CA35    or byte ptr ds:[ebx-0x3B7C071C], al
@@ -6,36 +12,36 @@
 0055CA40    mov dword ptr ss:[esp+0x04], ebp
 0055CA44    mov ebp, esp
 0055CA46    push 0xFFFFFFFF
-0055CA48    push 0x766D8B
+0055CA48    push 0x766D8B                                   ; => [ Type: EHRegistrationNode | Call: sub_766d8b ]
 0055CA4D    mov eax, dword ptr fs:[0x00000000]
-0055CA53    push eax
+0055CA53    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0055CA54    push ebx
 0055CA55    mov eax, 0x19D8
-0055CA5A    call 0x00761E50
+0055CA5A    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0055CA5F    mov eax, dword ptr ds:[0x008C4040]
-0055CA64    xor eax, ebp
+0055CA64    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 0055CA66    mov dword ptr ss:[ebp-0x14], eax
 0055CA69    push esi
 0055CA6A    push edi
 0055CA6B    push eax
 0055CA6C    lea eax, ss:[ebp-0x0C]
-0055CA6F    mov dword ptr fs:[0x00000000], eax
-0055CA75    call 0x00573400
+0055CA6F    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
+0055CA75    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055CA7A    lea ecx, ss:[ebp-0x19E8]
 0055CA80    push 0x04
 0055CA82    push ecx
 0055CA83    mov edx, dword ptr ds:[eax+0x0C]
 0055CA86    mov ecx, dword ptr ds:[eax+0x04]
-0055CA89    call 0x005777B0
+0055CA89    call 0x005777B0                                 ; => [ Call: sub_5777b0 ]
 0055CA8E    mov ecx, 0x321
 0055CA93    mov dword ptr ss:[ebp-0xD68], eax
 0055CA99    lea esi, ss:[ebp-0x19E8]
-0055CA9F    mov dword ptr ss:[ebp-0xD00], 0x81E1C8
+0055CA9F    mov dword ptr ss:[ebp-0xD00], 0x81E1C8          ; => [ Data: std::_Func_impl_no_alloc<class <lambda_2fe39af6da7bb77bb369a9ba5dbe4f0a>,bool,enum CardID>::`vftable'{for `std::_Func_base<bool,enum CardID>'} | Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_2fe39af6da7bb77bb369a9ba5dbe4f0a>,bool,enum CardID>::VTable ]
 0055CAA9    lea edi, ss:[ebp-0xCA0]
 0055CAAF    add esp, 0x08
-0055CAB2    rep movsd
+0055CAB2    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0055CAB4    lea ecx, ss:[ebp-0xD00]
-0055CABA    mov dword ptr ss:[ebp-0xCDC], ecx
+0055CABA    mov dword ptr ss:[ebp-0xCDC], ecx               ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_2fe39af6da7bb77bb369a9ba5dbe4f0a>,bool,enum CardID>::VTable ]
 0055CAC0    lea ecx, ss:[ebp-0xCA4]
 0055CAC6    mov dword ptr ss:[ebp-0x04], 0x00
 0055CACD    push ecx
@@ -53,12 +59,12 @@
 0055CAF8    push esi
 0055CAF9    mov eax, dword ptr ds:[eax]
 0055CAFB    call eax
-0055CAFD    mov dword ptr ds:[esi+0x24], eax
+0055CAFD    mov dword ptr ds:[esi+0x24], eax                ; => [ Field: vFunc_0 ]
 0055CB00    mov eax, dword ptr ss:[ebp-0xD68]
 0055CB06    mov edx, eax
 0055CB08    mov byte ptr ss:[ebp-0x04], 0x00
 0055CB0C    mov ecx, edi
-0055CB0E    call 0x0057EB70
+0055CB0E    call 0x0057EB70                                 ; => [ Call: GSI1::OffForSym ]
 0055CB13    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 0055CB1A    add esp, 0x30
 0055CB1D    mov ecx, dword ptr ss:[ebp-0xCDC]
@@ -72,14 +78,14 @@
 0055CB36    setnz al
 0055CB39    movzx eax, al
 0055CB3C    push eax
-0055CB3D    call dword ptr ds:[edx+0x10]
+0055CB3D    call dword ptr ds:[edx+0x10]                    ; => [ Field: vFunc_4 ]
 0055CB40    test esi, esi
 0055CB42    jz 0x0055CC74
 0055CB48    xorps xmm0, xmm0
 0055CB4B    mov dword ptr ss:[ebp-0xCCC], 0x00
 0055CB55    movlpd qword ptr ss:[ebp-0xCD4], xmm0
 0055CB5D    lea eax, ss:[ebp-0xD30]
-0055CB63    movlpd qword ptr ss:[ebp-0xCC4], xmm0
+0055CB63    movlpd qword ptr ss:[ebp-0xCC4], xmm0           ; => [ Call: __builtin_memset ]
 0055CB6B    lea ecx, ss:[ebp-0xCA0]
 0055CB71    movlpd qword ptr ss:[ebp-0xCB0], xmm0
 0055CB79    mov edx, 0x07
@@ -96,12 +102,12 @@
 0055CBBE    movups xmmword ptr ss:[ebp-0xD20], xmm0
 0055CBC5    movups xmm0, xmmword ptr ss:[ebp-0xCB8]
 0055CBCC    movups xmmword ptr ss:[ebp-0xD10], xmm0
-0055CBD3    call 0x00563C40
+0055CBD3    call 0x00563C40                                 ; => [ Call: sub_563c40 ]
 0055CBD8    mov esi, eax
 0055CBDA    add esp, 0x0C
 0055CBDD    test esi, esi
 0055CBDF    jz 0x0055CC74
-0055CBE5    call 0x00573400
+0055CBE5    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055CBEA    push 0x04
 0055CBEC    push 0x00
 0055CBEE    push 0x00
@@ -111,18 +117,18 @@
 0055CBFB    push 0x00
 0055CBFD    push 0x476
 0055CC02    push esi
-0055CC03    call 0x00583720
+0055CC03    call 0x00583720                                 ; => [ Call: nullptr | Call: sub_583720 ]
 0055CC08    add esp, 0x1C
 0055CC0B    test al, al
 0055CC0D    jz 0x0055CC74
-0055CC0F    call 0x00573400
+0055CC0F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055CC14    movzx esi, si
 0055CC17    mov ecx, dword ptr ds:[eax+0x0C]
 0055CC1A    mov edi, dword ptr ds:[eax+0x04]
 0055CC1D    mov dword ptr ss:[ebp-0xCA4], ecx
 0055CC23    cmp esi, 0x320
 0055CC29    jb 0x0055CC36
-0055CC2B    call 0x00591930
+0055CC2B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0055CC30    mov ecx, dword ptr ss:[ebp-0xCA4]
 0055CC36    imul eax, esi, 0x64
 0055CC39    mov edx, edi
@@ -130,7 +136,7 @@
 0055CC3D    push dword ptr ds:[eax+edi*1+0x1A4C]
 0055CC44    push ecx
 0055CC45    lea ecx, ss:[ebp-0xCA4]
-0055CC4B    call 0x00576E90
+0055CC4B    call 0x00576E90                                 ; => [ Call: sub_576e90 ]
 0055CC50    add esp, 0x0C
 0055CC53    lea eax, ss:[ebp-0xD48]
 0055CC59    push dword ptr ss:[ebp-0xCA4]
@@ -139,15 +145,15 @@
 0055CC65    add esp, 0x08
 0055CC68    movups xmm0, xmmword ptr ds:[eax]
 0055CC6B    movd ecx, xmm0
-0055CC6F    call 0x00562240
+0055CC6F    call 0x00562240                                 ; => [ Call: sub_576c00 | Call: sub_562240 ]
 0055CC74    mov ecx, dword ptr ss:[ebp-0x0C]
-0055CC77    mov dword ptr fs:[0x00000000], ecx
+0055CC77    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0055CC7E    pop ecx
 0055CC7F    pop edi
 0055CC80    pop esi
 0055CC81    mov ecx, dword ptr ss:[ebp-0x14]
 0055CC84    xor ecx, ebp
-0055CC86    call 0x0075927A
+0055CC86    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0055CC8B    mov esp, ebp
 0055CC8D    pop ebp
 0055CC8E    mov esp, ebx

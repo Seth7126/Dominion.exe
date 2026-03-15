@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c3d60
+// 起始地址: 0x5c3d60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C3D60    push ebx
 005C3D61    mov ebx, esp
 005C3D63    sub esp, 0x08
@@ -121,15 +127,15 @@
 005C3EF0    xorps xmm0, xmm0
 005C3EF3    xor edx, edx
 005C3EF5    movaps xmmword ptr ss:[ebp-0xC0], xmm0
-005C3EFC    xorps xmm3, xmm3
+005C3EFC    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 005C3EFF    movaps xmmword ptr ss:[ebp-0xE0], xmm3
-005C3F06    xorps xmm2, xmm2
-005C3F09    movaps xmmword ptr ss:[ebp-0xF0], xmm0
-005C3F10    xorps xmm4, xmm4
+005C3F06    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+005C3F09    movaps xmmword ptr ss:[ebp-0xF0], xmm0          ; => [ Call: __builtin_memset ]
+005C3F10    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005C3F13    movaps xmmword ptr ss:[ebp-0xD0], xmm0
-005C3F1A    xorps xmm5, xmm5
+005C3F1A    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 005C3F1D    mov dword ptr ss:[ebp-0x04], edx
-005C3F20    xorps xmm6, xmm6
+005C3F20    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 005C3F23    cmp esi, 0x04
 005C3F26    jl 0x005C404F
 005C3F2C    mov edi, dword ptr ss:[ebp-0xA4]
@@ -514,10 +520,10 @@
 005C44A0    mov dword ptr ss:[ebp-0x14], esi
 005C44A3    mov esi, dword ptr ss:[ebp-0x18]
 005C44A6    xor ecx, ecx
-005C44A8    xorps xmm3, xmm3
-005C44AB    xorps xmm4, xmm4
-005C44AE    xorps xmm5, xmm5
-005C44B1    xorps xmm6, xmm6
+005C44A8    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C44AB    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
+005C44AE    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+005C44B1    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 005C44B4    cmp esi, 0x04
 005C44B7    jl 0x005C452B
 005C44B9    mov edi, dword ptr ss:[ebp-0x2C]
@@ -709,8 +715,8 @@
 005C4702    jmp 0x005C4707
 005C4704    mov edi, dword ptr ss:[ebp-0x0C]
 005C4707    xor ecx, ecx
-005C4709    xorps xmm3, xmm3
-005C470C    xorps xmm4, xmm4
+005C4709    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C470C    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005C470F    cmp esi, 0x04
 005C4712    jl 0x005C475C
 005C4714    mov edx, dword ptr ds:[ebx+0x0C]
@@ -820,7 +826,7 @@
 005C485C    sub edx, dword ptr ss:[ebp-0x14]
 005C485F    mov dword ptr ss:[ebp-0x68], edx
 005C4862    xor edx, edx
-005C4864    xorps xmm3, xmm3
+005C4864    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 005C4867    cmp esi, 0x04
 005C486A    jl 0x005C489C
 005C486C    mov ecx, dword ptr ds:[ebx+0x0C]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67d310
+// 起始地址: 0x67d310
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067D310    push ebp
 0067D311    mov ebp, esp
 0067D313    push ecx
@@ -24,11 +30,11 @@
 0067D349    ret
 0067D34A    subss xmm2, dword ptr ds:[esi+0x88]
 0067D352    movaps xmm1, xmm2
-0067D355    call 0x0067ECB0
+0067D355    call 0x0067ECB0                                 ; => [ Call: sub_67ecb0 ]
 0067D35A    movss xmm1, dword ptr ss:[ebp-0x04]
 0067D35F    lea ecx, ds:[esi+0x3C]
 0067D362    mov ebx, eax
-0067D364    call 0x0067ECB0
+0067D364    call 0x0067ECB0                                 ; => [ Call: sub_67ecb0 ]
 0067D369    movss xmm1, dword ptr ss:[ebp-0x04]
 0067D36E    mov ecx, edi
 0067D370    mov esi, eax
@@ -36,7 +42,7 @@
 0067D377    sub esi, ebx
 0067D379    movd xmm1, esi
 0067D37D    cvtdq2ps xmm1, xmm1
-0067D380    mulss xmm0, xmm1
+0067D380    mulss xmm0, xmm1                                ; => [ Call: sub_64c3c0 ]
 0067D384    xorps xmm1, xmm1
 0067D387    comiss xmm1, xmm0
 0067D38A    jbe 0x0067D3A1

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_60a160
+// 起始地址: 0x60a160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060A160    push ebp
 0060A161    mov ebp, esp
 0060A163    push ebx
@@ -11,20 +17,20 @@
 0060A178    jl 0x0060A205
 0060A17E    mov ecx, dword ptr ds:[0x00CC8DC8]
 0060A184    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-0060A18A    call 0x004D8F30
+0060A18A    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 0060A18F    mov ecx, dword ptr ds:[edi]
 0060A191    cmp ecx, dword ptr ds:[eax+0x4250]
 0060A197    jz 0x0060A20C
 0060A199    mov ecx, dword ptr ds:[0x00CC8DC8]
 0060A19F    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-0060A1A5    call 0x004D8F30
+0060A1A5    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 0060A1AA    mov ebx, dword ptr ds:[esi]
 0060A1AC    cmp ebx, dword ptr ds:[eax+0x4250]
 0060A1B2    jz 0x0060A205
 0060A1B4    mov eax, dword ptr ds:[esi+0x04]
-0060A1B7    mov ecx, 0x801800
+0060A1B7    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0060A1BC    test eax, eax
-0060A1BE    mov edx, ecx
+0060A1BE    mov edx, ecx                                    ; => [ Data: data_801800 ]
 0060A1C0    cmovnz edx, eax
 0060A1C3    mov eax, dword ptr ds:[edi+0x04]
 0060A1C6    test eax, eax
@@ -42,7 +48,7 @@
 0060A1E5    add edx, 0x02
 0060A1E8    test al, al
 0060A1EA    jnz 0x0060A1D0
-0060A1EC    xor eax, eax
+0060A1EC    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 0060A1EE    jmp 0x0060A1F5
 0060A1F0    sbb eax, eax
 0060A1F2    or eax, 0x01

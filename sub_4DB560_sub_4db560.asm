@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4db560
+// 起始地址: 0x4db560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DB560    push ebx
 004DB561    push esi
 004DB562    xor esi, esi
@@ -6,19 +12,19 @@
 004DB567    xor eax, eax
 004DB569    nop dword ptr ds:[eax], eax
 004DB570    cmp dword ptr ds:[eax+0x780878], ecx
-004DB576    jz 0x004DB596
+004DB576    jz 0x004DB596                                   ; => [ Data: data_780878 ]
 004DB578    add eax, 0x10C
 004DB57D    inc esi
 004DB57E    cmp eax, 0x28D4
 004DB583    jb 0x004DB570
-004DB585    mov edi, 0x780884
-004DB58A    mov ecx, 0x78087C
-004DB58F    mov eax, 0x780880
+004DB585    mov edi, 0x780884                               ; => [ Data: data_780884 ]
+004DB58A    mov ecx, 0x78087C                               ; => [ Data: data_78087c ]
+004DB58F    mov eax, 0x780880                               ; => [ Data: data_780880 ]
 004DB594    jmp 0x004DB5AE
 004DB596    imul eax, esi, 0x10C
-004DB59C    lea edi, ds:[eax+0x780884]
-004DB5A2    lea ecx, ds:[eax+0x78087C]
-004DB5A8    lea eax, ds:[eax+0x780880]
+004DB59C    lea edi, ds:[eax+0x780884]                      ; => [ Data: data_780884 ]
+004DB5A2    lea ecx, ds:[eax+0x78087C]                      ; => [ Data: data_78087c ]
+004DB5A8    lea eax, ds:[eax+0x780880]                      ; => [ Data: data_780880 ]
 004DB5AE    mov eax, dword ptr ds:[eax]
 004DB5B0    cmp eax, 0x01
 004DB5B3    jz 0x004DB5E0

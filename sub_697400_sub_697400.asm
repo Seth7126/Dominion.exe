@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_697400
+// 起始地址: 0x697400
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00697400    push ebp
 00697401    mov ebp, esp
 00697403    sub esp, 0x14
@@ -21,7 +27,7 @@
 0069742C    lea eax, ss:[ebp-0x10]
 0069742F    push eax
 00697430    movups xmmword ptr ds:[esi+0x10], xmm0
-00697434    call 0x00696F80
+00697434    call 0x00696F80                                 ; => [ Call: sub_696f80 ]
 00697439    add esp, 0x2C
 0069743C    movups xmm1, xmmword ptr ds:[eax]
 0069743F    movaps xmm2, xmm1
@@ -76,15 +82,15 @@
 0069750B    mov esp, ebp
 0069750D    pop ebp
 0069750E    ret
-0069750F    push 0x86E3C4
+0069750F    push 0x86E3C4                                   ; => [ String: RectBottomRight ]
 00697514    push 0x12D
-00697519    push 0x801A00
+00697519    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
 0069751E    mov edx, 0x801800
 00697523    mov ecx, 0x801A1C
-00697528    call 0x0063B870
+00697528    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectIsNormalized(r) ]
 0069752D    add esp, 0x0C
 00697530    call 0x0063BC30
 00697535    test al, al
-00697537    jz 0x0069753A
+00697537    jz 0x0069753A                                   ; => [ Call: sub_63bc30 ]
 00697539    int3
-0069753A    call 0x0063BB00
+0069753A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

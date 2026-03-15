@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_476920
+// 起始地址: 0x476920
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00476920    mov edx, 0x03
 00476925    mov ecx, 0x832FB0
-0047692A    call 0x0069F030
-0047692F    mov dword ptr ds:[0x0171D878], eax
+0047692A    call 0x0069F030                                 ; => [ String: res/card_gen/seaside/wharf.texture | Call: sub_69f030 ]
+0047692F    mov dword ptr ds:[0x0171D878], eax              ; => [ Data: data_171d878 ]
 00476934    ret

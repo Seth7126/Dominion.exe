@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_643ae0
+// 起始地址: 0x643ae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00643AE0    push ecx
-00643AE1    mov eax, dword ptr ds:[0x00CF6B14]
+00643AE1    mov eax, dword ptr ds:[0x00CF6B14]              ; => [ Data: data_cf6b14 ]
 00643AE6    test eax, eax
 00643AE8    jnz 0x00643B12
-00643AEA    call 0x005AF880
+00643AEA    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00643AEF    cmp byte ptr ds:[eax+0x11], 0x00
 00643AF3    mov cl, byte ptr ds:[eax+0x10]
 00643AF6    jnz 0x00643B03
@@ -22,10 +28,10 @@
 00643B1E    push 0x872630
 00643B23    mov edx, 0x801800
 00643B28    mov ecx, 0x801AA4
-00643B2D    call 0x0063B870
+00643B2D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Draw3d.cpp | String: GetSortLayerFromMaterial | String: Halt ]
 00643B32    add esp, 0x0C
 00643B35    call 0x0063BC30
 00643B3A    test al, al
-00643B3C    jz 0x00643B3F
+00643B3C    jz 0x00643B3F                                   ; => [ Call: sub_63bc30 ]
 00643B3E    int3
-00643B3F    call 0x0063BB00
+00643B3F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

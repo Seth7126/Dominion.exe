@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_722830
+// 起始地址: 0x722830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00722830    push ebx
 00722831    mov ebx, esp
 00722833    sub esp, 0x08
@@ -8,7 +14,7 @@
 00722840    mov dword ptr ss:[esp+0x04], ebp
 00722844    mov ebp, esp
 00722846    sub esp, 0xB8
-0072284C    mov eax, dword ptr ds:[0x008C4040]
+0072284C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00722851    xor eax, ebp
 00722853    mov dword ptr ss:[ebp-0x04], eax
 00722856    push esi
@@ -79,7 +85,7 @@
 00722990    call 0x00720E90
 00722995    add esp, 0x14
 00722998    test eax, eax
-0072299A    jz 0x00723117
+0072299A    jz 0x00723117                                   ; => [ Call: sub_720e90 ]
 007229A0    mov eax, dword ptr ss:[ebp-0x98]
 007229A6    lea edx, ss:[ebp-0x90]
 007229AC    push edx
@@ -99,7 +105,7 @@
 007229E5    cmp dword ptr ds:[esi+0x47C0], 0x18
 007229EC    jnl 0x007229F5
 007229EE    mov ecx, esi
-007229F0    call 0x00720CA0
+007229F0    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 007229F5    mov al, byte ptr ds:[esi+0x47C4]
 007229FB    add al, 0x30
 007229FD    cmp al, 0x07
@@ -133,14 +139,14 @@
 00722AA6    pop esi
 00722AA7    mov ecx, dword ptr ss:[ebp-0x04]
 00722AAA    xor ecx, ebp
-00722AAC    call 0x0075927A
+00722AAC    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00722AB1    mov esp, ebp
 00722AB3    pop ebp
 00722AB4    mov esp, ebx
 00722AB6    pop ebx
 00722AB7    ret
-00722AB8    xor eax, eax
-00722ABA    mov dword ptr ss:[ebp-0x98], eax
+00722AB8    xor eax, eax                                    ; => [ Call: nullptr ]
+00722ABA    mov dword ptr ss:[ebp-0x98], eax                ; => [ Call: nullptr ]
 00722AC0    cmp dword ptr ds:[esi+0x4690], eax
 00722AC6    jle 0x00722AA0
 00722AC8    nop dword ptr ds:[eax+eax*1], eax
@@ -203,7 +209,7 @@
 00722BD2    call 0x00720E90
 00722BD7    add esp, 0x14
 00722BDA    test eax, eax
-00722BDC    jz 0x00723117
+00722BDC    jz 0x00723117                                   ; => [ Call: sub_720e90 ]
 00722BE2    mov ecx, dword ptr ss:[ebp-0xA0]
 00722BE8    lea edx, ss:[ebp-0x90]
 00722BEE    push edx
@@ -244,7 +250,7 @@
 00722C8F    cmp dword ptr ds:[esi+0x47C0], 0x18
 00722C96    jnl 0x00722C9F
 00722C98    mov ecx, esi
-00722C9A    call 0x00720CA0
+00722C9A    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00722C9F    mov al, byte ptr ds:[esi+0x47C4]
 00722CA5    add al, 0x30
 00722CA7    cmp al, 0x07
@@ -310,7 +316,7 @@
 00722DE8    add eax, 0x04
 00722DEB    add eax, esi
 00722DED    push eax
-00722DEE    call 0x007211F0
+00722DEE    call 0x007211F0                                 ; => [ Call: sub_7211f0 ]
 00722DF3    jmp 0x00722E1E
 00722DF5    mov ecx, dword ptr ds:[ecx+esi*1+0x46B0]
 00722DFC    mov eax, ecx
@@ -323,7 +329,7 @@
 00722E11    add eax, 0x1A44
 00722E16    add eax, esi
 00722E18    push eax
-00722E19    call 0x007213E0
+00722E19    call 0x007213E0                                 ; => [ Call: sub_7213e0 ]
 00722E1E    add esp, 0x08
 00722E21    test eax, eax
 00722E23    jz 0x00723117
@@ -333,7 +339,7 @@
 00722E3C    cmp dword ptr ds:[esi+0x47C0], 0x18
 00722E43    jnl 0x00722E4C
 00722E45    mov ecx, esi
-00722E47    call 0x00720CA0
+00722E47    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00722E4C    mov al, byte ptr ds:[esi+0x47C4]
 00722E52    add al, 0x30
 00722E54    cmp al, 0x07
@@ -410,7 +416,7 @@
 00722FD3    add ecx, esi
 00722FD5    push ecx
 00722FD6    mov ecx, esi
-00722FD8    call 0x007211F0
+00722FD8    call 0x007211F0                                 ; => [ Call: sub_7211f0 ]
 00722FDD    add esp, 0x08
 00722FE0    test eax, eax
 00722FE2    jz 0x00723117
@@ -440,7 +446,7 @@
 00723059    cmp dword ptr ds:[esi+0x47C0], 0x18
 00723060    jnl 0x00723069
 00723062    mov ecx, esi
-00723064    call 0x00720CA0
+00723064    call 0x00720CA0                                 ; => [ Call: sub_720ca0 ]
 00723069    mov al, byte ptr ds:[esi+0x47C4]
 0072306F    add al, 0x30
 00723071    cmp al, 0x07
@@ -474,7 +480,7 @@
 0072311C    pop edi
 0072311D    xor ecx, ebp
 0072311F    pop esi
-00723120    call 0x0075927A
+00723120    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00723125    mov esp, ebp
 00723127    pop ebp
 00723128    mov esp, ebx

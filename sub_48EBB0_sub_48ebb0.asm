@@ -1,4 +1,10 @@
+// ============================================================
+// 函数名称: sub_48ebb0
+// 起始地址: 0x48ebb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0048EBB0    push 0x864550
 0048EBB5    mov ecx, 0xBE4F54
 0048EBBA    call 0x004ACB80
-0048EBBF    ret
+0048EBBF    ret                                             ; => [ Call: sub_4acb80 | Data: data_be4f54 | String: drop_no_highlight ]

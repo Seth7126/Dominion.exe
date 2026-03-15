@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_565ce0
+// 起始地址: 0x565ce0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00565CE0    dword 100B956
 00565CE4    add byte ptr ds:[eax], al
-00565CE6    call 0x00563590
+00565CE6    call 0x00563590                                 ; => [ Call: sub_563590 ]
 00565CEB    mov esi, eax
 00565CED    test esi, esi
 00565CEF    jz 0x00565D1F
-00565CF1    call 0x00573400
+00565CF1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00565CF6    push 0x04
 00565CF8    push 0x00
 00565CFA    push 0x00
@@ -17,7 +23,7 @@
 00565D0F    call 0x00583720
 00565D14    add esp, 0x1C
 00565D17    test al, al
-00565D19    jnz 0x00565D1F
+00565D19    jnz 0x00565D1F                                  ; => [ Call: nullptr | Call: sub_583720 ]
 00565D1B    xor eax, eax
 00565D1D    pop esi
 00565D1E    ret

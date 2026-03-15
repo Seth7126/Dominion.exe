@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_4b8fd0
+// 起始地址: 0x4b8fd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B8FD0    push ebp
 004B8FD1    mov ebp, esp
 004B8FD3    and esp, 0xFFFFFFF8
 004B8FD6    sub esp, 0x30
 004B8FD9    push esi
 004B8FDA    mov esi, ecx
-004B8FDC    mov dword ptr ss:[esp+0x04], 0x00
+004B8FDC    mov dword ptr ss:[esp+0x04], 0x00               ; => [ Call: nullptr ]
 004B8FE4    mov ecx, dword ptr ds:[0x00CC8DC8]
 004B8FEA    push edi
 004B8FEB    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-004B8FF1    call 0x004D8F30
+004B8FF1    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004B8FF6    mov edi, eax
 004B8FF8    mov dword ptr ss:[esp+0x10], esi
 004B8FFC    xor edx, edx
@@ -25,13 +31,13 @@
 004B9026    xor eax, edx
 004B9028    shr edx, 0x08
 004B902B    movzx eax, al
-004B902E    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+004B902E    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 004B9035    sub ecx, 0x01
 004B9038    jnz 0x004B9020
 004B903A    lea esi, ds:[edi+0x56E8]
 004B9040    mov dword ptr ss:[esp+0x24], edx
 004B9044    mov dword ptr ss:[esp+0x28], esi
-004B9048    xor eax, eax
+004B9048    xor eax, eax                                    ; => [ Call: nullptr ]
 004B904A    mov ecx, dword ptr ds:[edi+0x58E8]
 004B9050    mov dword ptr ss:[esp+0x30], ecx
 004B9054    lea edx, ds:[ecx*8]
@@ -43,10 +49,10 @@
 004B9066    xor ecx, eax
 004B9068    shr eax, 0x08
 004B906B    movzx ecx, cl
-004B906E    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+004B906E    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 004B9075    sub edx, 0x01
 004B9078    jnz 0x004B9060
-004B907A    mov ecx, dword ptr ds:[0x00CC8D5C]
+004B907A    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B9080    mov dword ptr ss:[esp+0x34], eax
 004B9084    test ecx, ecx
 004B9086    jz 0x004B90AF
@@ -57,7 +63,7 @@
 004B9095    push eax
 004B9096    push dword ptr ds:[0x01597D20]
 004B909C    mov edx, 0xF42AB
-004B90A1    call 0x0068B720
+004B90A1    call 0x0068B720                                 ; => [ Call: sub_68b720 | Data: data_1597d20 ]
 004B90A6    add esp, 0x08
 004B90A9    pop edi
 004B90AA    pop esi
@@ -69,10 +75,10 @@
 004B90B6    push 0x77EB50
 004B90BB    mov edx, 0x801800
 004B90C0    mov ecx, 0x77EB9C
-004B90C5    call 0x0063B870
+004B90C5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004B90CA    add esp, 0x0C
 004B90CD    call 0x0063BC30
 004B90D2    test al, al
-004B90D4    jz 0x004B90D7
+004B90D4    jz 0x004B90D7                                   ; => [ Call: sub_63bc30 ]
 004B90D6    int3
-004B90D7    call 0x0063BB00
+004B90D7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

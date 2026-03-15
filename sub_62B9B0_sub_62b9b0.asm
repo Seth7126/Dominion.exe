@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_62b9b0
+// 起始地址: 0x62b9b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0062B9B0    push 0x86D0A4
 0062B9B5    call 0x0063B7F0
 0062B9BA    push 0x86D03C
@@ -5,10 +11,10 @@
 0062B9C4    push 0x86F1E8
 0062B9C9    mov edx, 0x801800
 0062B9CE    mov ecx, 0x801AA4
-0062B9D3    call 0x0063B870
+0062B9D3    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: dom item data failed: pile | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | String: DomPileData | Data: data_801800 | Call: sub_63b7f0 | String: Halt ]
 0062B9D8    add esp, 0x10
 0062B9DB    call 0x0063BC30
 0062B9E0    test al, al
-0062B9E2    jz 0x0062B9E5
+0062B9E2    jz 0x0062B9E5                                   ; => [ Call: sub_63bc30 ]
 0062B9E4    int3
-0062B9E5    jmp 0x0063BB00
+0062B9E5    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

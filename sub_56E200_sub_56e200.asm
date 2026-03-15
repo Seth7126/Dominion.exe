@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56e200
+// 起始地址: 0x56e200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056E200    push ebp
 0056E201    mov ebp, esp
 0056E203    and esp, 0xFFFFFFF8
@@ -5,11 +11,11 @@
 0056E209    push esi
 0056E20A    push edi
 0056E20B    mov edi, ecx
-0056E20D    call 0x00573400
+0056E20D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056E212    mov dword ptr ss:[esp+0x0C], eax
 0056E216    call 0x00573400
 0056E21B    xor esi, esi
-0056E21D    mov eax, dword ptr ds:[eax+0x04]
+0056E21D    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056E220    mov edx, dword ptr ds:[eax+0x1520]
 0056E226    test edx, edx
 0056E228    jle 0x0056E240
@@ -25,7 +31,7 @@
 0056E242    call 0x00573400
 0056E247    xor edi, edi
 0056E249    xor ecx, ecx
-0056E24B    mov eax, dword ptr ds:[eax+0x04]
+0056E24B    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056E24E    mov edx, dword ptr ss:[esp+0x0C]
 0056E252    imul ecx, ecx, 0x64
 0056E255    mov edx, dword ptr ds:[edx+0x0C]
@@ -38,11 +44,11 @@
 0056E272    mov eax, dword ptr ds:[0x007BFAD4]
 0056E277    mov dword ptr ss:[esp+0x08], eax
 0056E27B    call 0x00573400
-0056E280    mov eax, dword ptr ds:[eax+0x04]
+0056E280    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056E283    mov dword ptr ss:[esp+0x0C], eax
 0056E287    cmp edi, 0x320
 0056E28D    jb 0x0056E298
-0056E28F    call 0x00591930
+0056E28F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056E294    mov eax, dword ptr ss:[esp+0x0C]
 0056E298    push dword ptr ss:[esp+0x08]
 0056E29C    mov edx, dword ptr ss:[esp+0x20]
@@ -54,7 +60,7 @@
 0056E2B1    push 0x00
 0056E2B3    push 0x3F1
 0056E2B8    push dword ptr ss:[esp+0x30]
-0056E2BC    call 0x00565FF0
+0056E2BC    call 0x00565FF0                                 ; => [ Call: nullptr | Call: sub_565ff0 ]
 0056E2C1    add esp, 0x1C
 0056E2C4    pop edi
 0056E2C5    pop esi
@@ -64,11 +70,11 @@
 0056E2CA    call 0x00573400
 0056E2CF    movzx edi, si
 0056E2D2    mov ecx, edi
-0056E2D4    mov eax, dword ptr ds:[eax+0x04]
+0056E2D4    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056E2D7    mov dword ptr ss:[esp+0x08], eax
 0056E2DB    cmp edi, 0x320
 0056E2E1    jb 0x0056E24E
-0056E2E7    call 0x00591930
+0056E2E7    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056E2EC    mov eax, dword ptr ss:[esp+0x08]
 0056E2F0    mov ecx, edi
 0056E2F2    jmp 0x0056E24E

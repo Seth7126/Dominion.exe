@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b5ae0
+// 起始地址: 0x6b5ae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B5AE0    push ebx
 006B5AE1    mov ebx, esp
 006B5AE3    sub esp, 0x08
@@ -18,18 +24,18 @@
 006B5B10    lea edi, ds:[eax+0x58]
 006B5B13    lea ecx, ds:[eax+0x48]
 006B5B16    mov edx, edi
-006B5B18    call 0x006398E0
+006B5B18    call 0x006398E0                                 ; => [ Call: sub_6398e0 ]
 006B5B1D    mov ecx, dword ptr ss:[ebp-0x04]
 006B5B20    mov esi, eax
 006B5B22    add ecx, 0x4C
 006B5B25    mov dword ptr ss:[ebp-0x20], esi
 006B5B28    mov edx, edi
-006B5B2A    call 0x006398E0
+006B5B2A    call 0x006398E0                                 ; => [ Call: sub_6398e0 ]
 006B5B2F    mov edi, eax
 006B5B31    mov eax, dword ptr ss:[ebp-0x04]
 006B5B34    lea ecx, ds:[eax+0x50]
 006B5B37    lea edx, ds:[eax+0x58]
-006B5B3A    call 0x006398E0
+006B5B3A    call 0x006398E0                                 ; => [ Call: sub_6398e0 ]
 006B5B3F    mov dword ptr ss:[ebp-0x14], eax
 006B5B42    mov eax, dword ptr ss:[ebp-0x04]
 006B5B45    movd xmm2, dword ptr ds:[eax+0x44]
@@ -51,7 +57,7 @@
 006B5B83    ucomiss xmm3, xmm0
 006B5B86    lahf
 006B5B87    test ah, 0x44
-006B5B8A    mov eax, 0x801800
+006B5B8A    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 006B5B8F    jnp 0x006B628E
 006B5B95    movaps xmm0, xmm1
 006B5B98    test edx, edx
@@ -67,12 +73,12 @@
 006B5BBE    mulss xmm0, dword ptr ds:[edi+0x3C]
 006B5BC3    movss dword ptr ss:[ebp-0x08], xmm0
 006B5BC8    jz 0x006B5BE3
-006B5BCA    push 0x872364
+006B5BCA    push 0x872364                                   ; => [ String: TTFontGet ]
 006B5BCF    push 0x1EF
-006B5BD4    push 0x8720A4
-006B5BD9    mov ecx, 0x87233C
+006B5BD4    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+006B5BD9    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006B5BDE    jmp 0x006B6550
-006B5BE3    call 0x005AF880
+006B5BE3    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B5BE8    movss xmm1, dword ptr ss:[ebp-0x08]
 006B5BED    movss xmm3, dword ptr ss:[ebp-0x1C]
 006B5BF2    mov dword ptr ss:[ebp-0x68], 0x3F800000
@@ -110,14 +116,14 @@
 006B5C8F    lea edx, ss:[ebp-0xA8]
 006B5C95    push eax
 006B5C96    lea ecx, ds:[edi+0x64]
-006B5C99    movss dword ptr ss:[ebp-0x4C], xmm0
+006B5C99    movss dword ptr ss:[ebp-0x4C], xmm0             ; => [ Call: sub_6419c0 ]
 006B5C9E    movups xmm0, xmmword ptr ss:[ebp-0x68]
-006B5CA2    movups xmmword ptr ss:[ebp-0x88], xmm1
+006B5CA2    movups xmmword ptr ss:[ebp-0x88], xmm1          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B5CA9    movups xmmword ptr ss:[ebp-0xA8], xmm0
 006B5CB0    movups xmm0, xmmword ptr ss:[ebp-0x58]
 006B5CB4    movups xmmword ptr ss:[ebp-0x78], xmm2
 006B5CB8    movups xmmword ptr ss:[ebp-0x98], xmm0
-006B5CBF    call 0x00642E30
+006B5CBF    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006B5CC4    movss xmm1, dword ptr ds:[edi+0x78]
 006B5CC9    mulss xmm1, xmm1
 006B5CCD    movups xmm0, xmmword ptr ds:[eax]
@@ -133,7 +139,7 @@
 006B5CF9    movss xmm0, dword ptr ds:[edi+0x64]
 006B5CFE    mulss xmm0, xmm0
 006B5D02    addss xmm0, xmm1
-006B5D06    call 0x004AC580
+006B5D06    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006B5D0B    mulss xmm0, dword ptr ds:[0x00890DB8]
 006B5D13    lea edx, ss:[ebp-0xA8]
 006B5D19    push ecx
@@ -142,10 +148,10 @@
 006B5D22    mulss xmm0, dword ptr ss:[ebp-0x08]
 006B5D27    movss dword ptr ss:[esp], xmm0
 006B5D2C    push dword ptr ss:[ebp-0x14]
-006B5D2F    call 0x00641D40
+006B5D2F    call 0x00641D40                                 ; => [ Call: sub_641d40 ]
 006B5D34    movss xmm0, dword ptr ds:[edi+0x40]
 006B5D39    add esp, 0x10
-006B5D3C    xorps xmm0, xmmword ptr ds:[0x008937C0]
+006B5D3C    xorps xmm0, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 006B5D43    movss xmm1, dword ptr ss:[ebp-0x18]
 006B5D48    mov eax, dword ptr ss:[ebp-0x24]
 006B5D4B    addss xmm1, xmm0
@@ -154,7 +160,7 @@
 006B5D59    addss xmm1, xmm0
 006B5D5D    movss dword ptr ss:[ebp-0x04], xmm1
 006B5D62    mov eax, dword ptr ds:[eax]
-006B5D64    mov ecx, 0x801800
+006B5D64    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006B5D69    movss xmm0, dword ptr ds:[edi+0x28]
 006B5D6E    test eax, eax
 006B5D70    mulss xmm0, dword ptr ds:[edi+0x3C]
@@ -165,13 +171,13 @@
 006B5D81    movss dword ptr ss:[ebp-0x08], xmm0
 006B5D86    cmp dword ptr ds:[eax+0x04], 0x25
 006B5D8A    jz 0x006B5DA5
-006B5D8C    push 0x872364
+006B5D8C    push 0x872364                                   ; => [ String: TTFontGet ]
 006B5D91    push 0x1EF
-006B5D96    push 0x8720A4
-006B5D9B    mov ecx, 0x87233C
+006B5D96    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+006B5D9B    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006B5DA0    jmp 0x006B6550
 006B5DA5    mov ecx, eax
-006B5DA7    call 0x005AF880
+006B5DA7    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B5DAC    movss xmm1, dword ptr ss:[ebp-0x08]
 006B5DB1    movss xmm3, dword ptr ss:[ebp-0x14]
 006B5DB6    mov dword ptr ss:[ebp-0x68], 0x3F800000
@@ -207,16 +213,16 @@
 006B5E45    push eax
 006B5E46    lea edx, ss:[ebp-0xA8]
 006B5E4C    lea ecx, ds:[edi+0x64]
-006B5E4F    movss dword ptr ss:[ebp-0x4C], xmm0
+006B5E4F    movss dword ptr ss:[ebp-0x4C], xmm0             ; => [ Call: sub_6419c0 ]
 006B5E54    movups xmm0, xmmword ptr ss:[ebp-0x68]
 006B5E58    movups xmmword ptr ss:[ebp-0xA8], xmm0
 006B5E5F    movups xmm0, xmmword ptr ss:[ebp-0x58]
 006B5E63    movups xmmword ptr ss:[ebp-0x98], xmm0
 006B5E6A    movaps xmm0, xmmword ptr ds:[0x00891330]
-006B5E71    movups xmmword ptr ss:[ebp-0x88], xmm0
+006B5E71    movups xmmword ptr ss:[ebp-0x88], xmm0          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B5E78    movaps xmm0, xmmword ptr ds:[0x00893530]
 006B5E7F    movups xmmword ptr ss:[ebp-0x78], xmm0
-006B5E83    call 0x00642E30
+006B5E83    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006B5E88    movss xmm1, dword ptr ds:[edi+0x78]
 006B5E8D    mulss xmm1, xmm1
 006B5E91    movups xmm0, xmmword ptr ds:[eax]
@@ -232,7 +238,7 @@
 006B5EBD    movss xmm0, dword ptr ds:[edi+0x64]
 006B5EC2    mulss xmm0, xmm0
 006B5EC6    addss xmm0, xmm1
-006B5ECA    call 0x004AC580
+006B5ECA    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006B5ECF    mulss xmm0, dword ptr ds:[0x00890DB8]
 006B5ED7    lea edx, ss:[ebp-0xA8]
 006B5EDD    push ecx
@@ -241,18 +247,18 @@
 006B5EE6    mulss xmm0, dword ptr ss:[ebp-0x08]
 006B5EEB    movss dword ptr ss:[esp], xmm0
 006B5EF0    push dword ptr ss:[ebp-0x1C]
-006B5EF3    call 0x00641D40
+006B5EF3    call 0x00641D40                                 ; => [ Call: sub_641d40 ]
 006B5EF8    movss xmm0, dword ptr ds:[edi+0x40]
 006B5EFD    add esp, 0x10
 006B5F00    xorps xmm0, xmmword ptr ds:[0x008937C0]
 006B5F07    movss xmm2, dword ptr ss:[ebp-0x18]
-006B5F0C    addss xmm2, xmm0
+006B5F0C    addss xmm2, xmm0                                ; => [ Data: data_8937c0 ]
 006B5F10    movss xmm0, dword ptr ss:[ebp-0x0C]
 006B5F15    addss xmm0, dword ptr ds:[edi+0x40]
 006B5F1A    movss dword ptr ss:[ebp-0x14], xmm2
 006B5F1F    movss dword ptr ss:[ebp-0x04], xmm0
 006B5F24    mov eax, dword ptr ss:[ebp-0x24]
-006B5F27    mov ecx, 0x801800
+006B5F27    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006B5F2C    movss xmm0, dword ptr ds:[edi+0x28]
 006B5F31    mulss xmm0, dword ptr ds:[edi+0x3C]
 006B5F36    mov eax, dword ptr ds:[eax]
@@ -264,13 +270,13 @@
 006B5F48    mov dword ptr ss:[ebp-0x08], eax
 006B5F4B    cmp dword ptr ds:[eax+0x04], 0x25
 006B5F4F    jz 0x006B5F6A
-006B5F51    push 0x872364
+006B5F51    push 0x872364                                   ; => [ String: TTFontGet ]
 006B5F56    push 0x1EF
-006B5F5B    push 0x8720A4
-006B5F60    mov ecx, 0x87233C
+006B5F5B    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+006B5F60    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006B5F65    jmp 0x006B6550
 006B5F6A    mov ecx, eax
-006B5F6C    call 0x005AF880
+006B5F6C    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B5F71    movss xmm1, dword ptr ss:[ebp-0x10]
 006B5F76    movss xmm3, dword ptr ss:[ebp-0x14]
 006B5F7B    mov dword ptr ss:[ebp-0x68], 0x3F800000
@@ -306,16 +312,16 @@
 006B600A    push eax
 006B600B    lea edx, ss:[ebp-0xA8]
 006B6011    lea ecx, ds:[edi+0x64]
-006B6014    movss dword ptr ss:[ebp-0x4C], xmm0
+006B6014    movss dword ptr ss:[ebp-0x4C], xmm0             ; => [ Call: sub_6419c0 ]
 006B6019    movups xmm0, xmmword ptr ss:[ebp-0x68]
 006B601D    movups xmmword ptr ss:[ebp-0xA8], xmm0
 006B6024    movups xmm0, xmmword ptr ss:[ebp-0x58]
 006B6028    movups xmmword ptr ss:[ebp-0x98], xmm0
 006B602F    movaps xmm0, xmmword ptr ds:[0x00891330]
-006B6036    movups xmmword ptr ss:[ebp-0x88], xmm0
+006B6036    movups xmmword ptr ss:[ebp-0x88], xmm0          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B603D    movaps xmm0, xmmword ptr ds:[0x00893530]
 006B6044    movups xmmword ptr ss:[ebp-0x78], xmm0
-006B6048    call 0x00642E30
+006B6048    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006B604D    movss xmm1, dword ptr ds:[edi+0x78]
 006B6052    mulss xmm1, xmm1
 006B6056    movups xmm0, xmmword ptr ds:[eax]
@@ -331,7 +337,7 @@
 006B6082    movss xmm0, dword ptr ds:[edi+0x64]
 006B6087    mulss xmm0, xmm0
 006B608B    addss xmm0, xmm1
-006B608F    call 0x004AC580
+006B608F    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006B6094    mulss xmm0, dword ptr ds:[0x00890DB8]
 006B609C    lea edx, ss:[ebp-0xA8]
 006B60A2    push ecx
@@ -340,18 +346,18 @@
 006B60AB    mulss xmm0, dword ptr ss:[ebp-0x10]
 006B60B0    movss dword ptr ss:[esp], xmm0
 006B60B5    push dword ptr ss:[ebp-0x1C]
-006B60B8    call 0x00641D40
+006B60B8    call 0x00641D40                                 ; => [ Call: sub_641d40 ]
 006B60BD    movss xmm0, dword ptr ds:[edi+0x40]
 006B60C2    add esp, 0x10
 006B60C5    movss xmm2, dword ptr ss:[ebp-0x18]
 006B60CA    movss xmm1, dword ptr ss:[ebp-0x0C]
 006B60CF    xorps xmm0, xmmword ptr ds:[0x008937C0]
 006B60D6    addss xmm2, dword ptr ds:[edi+0x40]
-006B60DB    addss xmm1, xmm0
+006B60DB    addss xmm1, xmm0                                ; => [ Data: data_8937c0 ]
 006B60DF    movss dword ptr ss:[ebp-0x18], xmm2
 006B60E4    movss dword ptr ss:[ebp-0x0C], xmm1
 006B60E9    mov eax, dword ptr ss:[ebp-0x24]
-006B60EC    mov ecx, 0x801800
+006B60EC    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006B60F1    movss xmm0, dword ptr ds:[edi+0x28]
 006B60F6    mulss xmm0, dword ptr ds:[edi+0x3C]
 006B60FB    mov eax, dword ptr ds:[eax]
@@ -363,13 +369,13 @@
 006B610D    mov dword ptr ss:[ebp-0x08], eax
 006B6110    cmp dword ptr ds:[eax+0x04], 0x25
 006B6114    jz 0x006B612F
-006B6116    push 0x872364
+006B6116    push 0x872364                                   ; => [ String: TTFontGet ]
 006B611B    push 0x1EF
-006B6120    push 0x8720A4
-006B6125    mov ecx, 0x87233C
+006B6120    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+006B6125    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006B612A    jmp 0x006B6550
 006B612F    mov ecx, eax
-006B6131    call 0x005AF880
+006B6131    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B6136    movss xmm1, dword ptr ss:[ebp-0x10]
 006B613B    movss xmm2, dword ptr ss:[ebp-0x18]
 006B6140    mov dword ptr ss:[ebp-0x68], 0x3F800000
@@ -405,16 +411,16 @@
 006B61CF    push eax
 006B61D0    lea edx, ss:[ebp-0xA8]
 006B61D6    lea ecx, ds:[edi+0x64]
-006B61D9    movss dword ptr ss:[ebp-0x4C], xmm0
+006B61D9    movss dword ptr ss:[ebp-0x4C], xmm0             ; => [ Call: sub_6419c0 ]
 006B61DE    movups xmm0, xmmword ptr ss:[ebp-0x68]
 006B61E2    movups xmmword ptr ss:[ebp-0xA8], xmm0
 006B61E9    movups xmm0, xmmword ptr ss:[ebp-0x58]
 006B61ED    movups xmmword ptr ss:[ebp-0x98], xmm0
 006B61F4    movaps xmm0, xmmword ptr ds:[0x00891330]
-006B61FB    movups xmmword ptr ss:[ebp-0x88], xmm0
+006B61FB    movups xmmword ptr ss:[ebp-0x88], xmm0          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B6202    movaps xmm0, xmmword ptr ds:[0x00893530]
 006B6209    movups xmmword ptr ss:[ebp-0x78], xmm0
-006B620D    call 0x00642E30
+006B620D    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006B6212    movss xmm1, dword ptr ds:[edi+0x78]
 006B6217    mulss xmm1, xmm1
 006B621B    movups xmm0, xmmword ptr ds:[eax]
@@ -430,7 +436,7 @@
 006B6247    movss xmm0, dword ptr ds:[edi+0x64]
 006B624C    mulss xmm0, xmm0
 006B6250    addss xmm0, xmm1
-006B6254    call 0x004AC580
+006B6254    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006B6259    mulss xmm0, dword ptr ds:[0x00890DB8]
 006B6261    lea edx, ss:[ebp-0xA8]
 006B6267    push ecx
@@ -447,7 +453,7 @@
 006B6289    pop ebp
 006B628A    mov esp, ebx
 006B628C    pop ebx
-006B628D    ret
+006B628D    ret                                             ; => [ Call: sub_641d40 ]
 006B628E    movss xmm0, dword ptr ds:[edi+0x3C]
 006B6293    test edx, edx
 006B6295    mulss xmm0, dword ptr ds:[edi+0x28]
@@ -456,12 +462,12 @@
 006B62A1    mov dword ptr ss:[ebp-0x14], eax
 006B62A4    movss dword ptr ss:[ebp-0x08], xmm0
 006B62A9    jz 0x006B62C4
-006B62AB    push 0x872364
+006B62AB    push 0x872364                                   ; => [ String: TTFontGet ]
 006B62B0    push 0x1EF
-006B62B5    push 0x8720A4
-006B62BA    mov ecx, 0x87233C
+006B62B5    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+006B62BA    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006B62BF    jmp 0x006B6550
-006B62C4    call 0x005AF880
+006B62C4    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B62C9    movss xmm1, dword ptr ss:[ebp-0x08]
 006B62CE    movss xmm2, dword ptr ss:[ebp-0x18]
 006B62D3    mov dword ptr ss:[ebp-0x68], 0x3F800000
@@ -499,14 +505,14 @@
 006B6370    lea edx, ss:[ebp-0xA8]
 006B6376    push eax
 006B6377    lea ecx, ds:[edi+0x64]
-006B637A    movss dword ptr ss:[ebp-0x4C], xmm0
+006B637A    movss dword ptr ss:[ebp-0x4C], xmm0             ; => [ Call: sub_6419c0 ]
 006B637F    movups xmm0, xmmword ptr ss:[ebp-0x68]
-006B6383    movups xmmword ptr ss:[ebp-0x88], xmm1
+006B6383    movups xmmword ptr ss:[ebp-0x88], xmm1          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B638A    movups xmmword ptr ss:[ebp-0xA8], xmm0
 006B6391    movups xmm0, xmmword ptr ss:[ebp-0x58]
 006B6395    movups xmmword ptr ss:[ebp-0x78], xmm2
 006B6399    movups xmmword ptr ss:[ebp-0x98], xmm0
-006B63A0    call 0x00642E30
+006B63A0    call 0x00642E30                                 ; => [ Call: sub_642e30 ]
 006B63A5    movss xmm1, dword ptr ds:[edi+0x78]
 006B63AA    mulss xmm1, xmm1
 006B63AE    movups xmm0, xmmword ptr ds:[eax]
@@ -522,7 +528,7 @@
 006B63DA    movss xmm0, dword ptr ds:[edi+0x64]
 006B63DF    mulss xmm0, xmm0
 006B63E3    addss xmm0, xmm1
-006B63E7    call 0x004AC580
+006B63E7    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006B63EC    mulss xmm0, dword ptr ds:[0x00890DB8]
 006B63F4    lea edx, ss:[ebp-0xA8]
 006B63FA    push ecx
@@ -539,15 +545,15 @@
 006B641C    pop ebp
 006B641D    mov esp, ebx
 006B641F    pop ebx
-006B6420    ret
+006B6420    ret                                             ; => [ Call: sub_641d40 ]
 006B6421    mov ecx, dword ptr ds:[eax+0x34]
 006B6424    cmp dword ptr ds:[ecx+0x04], 0x12
 006B6428    jnz 0x006B653C
-006B642E    call 0x005AF880
+006B642E    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B6433    movss xmm2, dword ptr ss:[ebp-0x18]
 006B6438    lea edx, ss:[ebp-0xA8]
 006B643E    movss xmm3, dword ptr ss:[ebp-0x0C]
-006B6443    mov ecx, 0x801800
+006B6443    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006B6448    mov dword ptr ss:[ebp-0x64], 0x00
 006B644F    addss xmm2, dword ptr ds:[eax+0x14]
 006B6454    addss xmm3, dword ptr ds:[eax+0x18]
@@ -574,9 +580,9 @@
 006B64B0    movaps xmm1, xmmword ptr ds:[0x00891330]
 006B64B7    movups xmmword ptr ss:[ebp-0xA8], xmm0
 006B64BE    movups xmm0, xmmword ptr ss:[ebp-0x58]
-006B64C2    movups xmmword ptr ss:[ebp-0x88], xmm1
+006B64C2    movups xmmword ptr ss:[ebp-0x88], xmm1          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006B64C9    movups xmmword ptr ss:[ebp-0x98], xmm0
-006B64D0    call 0x00642AE0
+006B64D0    call 0x00642AE0                                 ; => [ Call: sub_642ae0 ]
 006B64D5    mov ecx, dword ptr ss:[ebp-0x1C]
 006B64D8    lea edx, ss:[ebp-0xA8]
 006B64DE    movups xmm0, xmmword ptr ds:[eax]
@@ -598,7 +604,7 @@
 006B6526    push edi
 006B6527    push esi
 006B6528    push dword ptr ds:[eax+0x34]
-006B652B    call 0x006B3D40
+006B652B    call 0x006B3D40                                 ; => [ Call: sub_6b3d40 ]
 006B6530    add esp, 0x24
 006B6533    pop edi
 006B6534    pop esi
@@ -607,15 +613,15 @@
 006B6538    mov esp, ebx
 006B653A    pop ebx
 006B653B    ret
-006B653C    push 0x87A4B4
+006B653C    push 0x87A4B4                                   ; => [ String: FontGetDef ]
 006B6541    push 0x2E6
-006B6546    push 0x87A2E0
-006B654B    mov ecx, 0x87A48C
+006B6546    push 0x87A2E0                                   ; => [ String: C:\x\ax2017\Engine\AssetUtils.cpp ]
+006B654B    mov ecx, 0x87A48C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_FONT ]
 006B6550    mov edx, 0x801800
-006B6555    call 0x0063B870
+006B6555    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006B655A    add esp, 0x0C
 006B655D    call 0x0063BC30
 006B6562    test al, al
-006B6564    jz 0x006B6567
+006B6564    jz 0x006B6567                                   ; => [ Call: sub_63bc30 ]
 006B6566    int3
-006B6567    call 0x0063BB00
+006B6567    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

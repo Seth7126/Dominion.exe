@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_614ff0
+// 起始地址: 0x614ff0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00614FF0    push ebp
 00614FF1    mov ebp, esp
 00614FF3    push ecx
@@ -6,11 +12,11 @@
 00614FF6    push edi
 00614FF7    mov edi, dword ptr ss:[ebp+0x08]
 00614FFA    mov ecx, edi
-00614FFC    call 0x005CBB20
+00614FFC    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 00615001    mov ebx, dword ptr ss:[ebp+0x0C]
 00615004    mov esi, eax
 00615006    mov ecx, ebx
-00615008    call 0x005CBB20
+00615008    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 0061500D    cmp esi, eax
 0061500F    jnl 0x00615019
 00615011    mov al, 0x01
@@ -43,10 +49,10 @@
 00615044    push 0x86F1E8
 00615049    mov edx, 0x801800
 0061504E    mov ecx, 0x8685DC
-00615053    call 0x0063B870
+00615053    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SortAbilities | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: g0->ability.id != g1->ability.id ]
 00615058    add esp, 0x0C
 0061505B    call 0x0063BC30
 00615060    test al, al
-00615062    jz 0x00615065
+00615062    jz 0x00615065                                   ; => [ Call: sub_63bc30 ]
 00615064    int3
-00615065    call 0x0063BB00
+00615065    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_510640
+// 起始地址: 0x510640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00510640    dword 81EC8B55
 00510644    in al, dx
 00510645    mov byte ptr ds:[eax+eax*1], cl
@@ -7,7 +13,7 @@
 00510653    push esi
 00510654    push edi
 00510655    xor edi, edi
-00510657    call 0x00573400
+00510657    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0051065C    mov esi, eax
 0051065E    mov edx, 0x100
 00510663    push 0x00
@@ -20,7 +26,7 @@
 00510676    sub ecx, dword ptr ds:[esi+0x04]
 00510679    mov eax, 0x51EB851F
 0051067E    sub ecx, 0x1A48
-00510684    imul ecx
+00510684    imul ecx                                        ; => [ Call: sub_5727e0 ]
 00510686    sar edx, 0x05
 00510689    mov eax, edx
 0051068B    shr eax, 0x1F
@@ -29,7 +35,7 @@
 00510697    inc edi
 00510698    cmp edi, 0x0A
 0051069B    jl 0x00510657
-0051069D    mov eax, dword ptr fs:[0x0000002C]
+0051069D    mov eax, dword ptr fs:[0x0000002C]              ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 005106A3    mov ecx, dword ptr ds:[eax]
 005106A5    add ecx, 0x10
 005106AB    mov edx, dword ptr ds:[ecx+0xF000]
@@ -65,13 +71,13 @@
 00510706    push 0x43
 00510708    push eax
 00510709    or edx, 0xFFFFFFFF
-0051070C    call 0x0059F9B0
+0051070C    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 00510711    add esp, 0x24
 00510714    mov ecx, dword ptr ss:[ebp-0x04]
 00510717    pop edi
 00510718    xor ecx, ebp
 0051071A    pop esi
-0051071B    call 0x0075927A
+0051071B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00510720    mov esp, ebp
 00510722    pop ebp
 00510723    ret
@@ -80,10 +86,10 @@
 0051072E    push 0x81F4B8
 00510733    mov edx, 0x801800
 00510738    mov ecx, 0x81F9F0
-0051073D    call 0x0063B870
+0051073D    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DomGetContext | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00510742    add esp, 0x0C
 00510745    call 0x0063BC30
 0051074A    test al, al
-0051074C    jz 0x0051074F
+0051074C    jz 0x0051074F                                   ; => [ Call: sub_63bc30 ]
 0051074E    int3
-0051074F    call 0x0063BB00
+0051074F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

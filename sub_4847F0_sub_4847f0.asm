@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_4847f0
+// 起始地址: 0x4847f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004847F0    mov edx, 0x22
 004847F5    mov ecx, 0x854244
-004847FA    call 0x0069F030
-004847FF    mov dword ptr ds:[0x0171E8F4], eax
+004847FA    call 0x0069F030                                 ; => [ String: res/ui2/rules_guilds_1.ui2 | Call: sub_69f030 ]
+004847FF    mov dword ptr ds:[0x0171E8F4], eax              ; => [ Data: data_171e8f4 ]
 00484804    ret

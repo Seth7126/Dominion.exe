@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5fb990
+// 起始地址: 0x5fb990
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005FB990    push ebp
 005FB991    mov ebp, esp
 005FB993    sub esp, 0x0C
@@ -67,18 +73,18 @@
 005FBA2F    mov dword ptr ds:[edi], esi
 005FBA31    cmp esi, 0x13
 005FBA34    jnz 0x005FBA3D
-005FBA36    call 0x005F6FA0
+005FBA36    call 0x005F6FA0                                 ; => [ Call: sub_5f6fa0 ]
 005FBA3B    jmp 0x005FBA6D
 005FBA3D    mov ecx, dword ptr ds:[0x00CC8DC8]
 005FBA43    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-005FBA49    call 0x004D8F30
+005FBA49    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 005FBA4E    cmp dword ptr ds:[eax+esi*4+0x7310], 0x00
 005FBA56    jz 0x005FBA61
 005FBA58    mov eax, dword ptr ds:[eax+esi*4+0x73B0]
 005FBA5F    jmp 0x005FBA6D
 005FBA61    mov edx, esi
 005FBA63    mov ecx, 0x17
-005FBA68    call 0x004DC4A0
+005FBA68    call 0x004DC4A0                                 ; => [ Call: sub_4dc4a0 ]
 005FBA6D    mov edx, dword ptr ss:[ebp-0x08]
 005FBA70    mov dword ptr ds:[edi+0x04], eax
 005FBA73    mov dword ptr ds:[edi+0x08], 0x00
@@ -95,7 +101,7 @@
 005FBA9D    mov ecx, dword ptr ds:[0x00CC8DC8]
 005FBAA3    mov esi, dword ptr ds:[esi+0x04]
 005FBAA6    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-005FBAAC    call 0x004D8F30
+005FBAAC    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 005FBAB1    mov ecx, dword ptr ss:[ebp+0x08]
 005FBAB4    mov edx, dword ptr ss:[ebp-0x08]
 005FBAB7    mov dword ptr ds:[eax+ecx*4+0x7310], 0x01
@@ -107,7 +113,7 @@
 005FBAD2    movups xmmword ptr ds:[edx+edi*8], xmm0
 005FBAD6    mov dword ptr ds:[edx+eax*8], 0x00
 005FBADD    mov ecx, dword ptr ss:[ebp+0x0C]
-005FBAE0    call 0x005F6360
+005FBAE0    call 0x005F6360                                 ; => [ Call: sub_5f6360 ]
 005FBAE5    mov ecx, dword ptr ss:[ebp-0x08]
 005FBAE8    shl ebx, 0x04
 005FBAEB    mov eax, ebx
@@ -122,4 +128,4 @@
 005FBB03    pop ebx
 005FBB04    mov esp, ebp
 005FBB06    pop ebp
-005FBB07    ret
+005FBB07    ret                                             ; => [ Call: sub_5fb770 | Call: sub_594410 ]

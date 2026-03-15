@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5af3b0
+// 起始地址: 0x5af3b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AF3B0    push ebp
 005AF3B1    mov ebp, esp
 005AF3B3    sub esp, 0x14
@@ -149,7 +155,7 @@
 005AF531    pop ebx
 005AF532    mov esp, ebp
 005AF534    pop ebp
-005AF535    ret
+005AF535    ret                                             ; => [ Call: sub_5af580 ]
 005AF536    cmp eax, 0x06
 005AF539    jnl 0x005AF56A
 005AF53B    jmp 0x005AF542

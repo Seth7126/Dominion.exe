@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4af000
+// 起始地址: 0x4af000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AF000    push ebp
 004AF001    mov ebp, esp
 004AF003    push ecx
-004AF004    mov edx, dword ptr ds:[0x00CC8D5C]
+004AF004    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004AF00A    mov byte ptr ss:[ebp-0x01], cl
 004AF00D    push esi
 004AF00E    test edx, edx
@@ -9,7 +15,7 @@
 004AF016    cmp dword ptr ds:[edx+0x18], 0x03
 004AF01A    jnz 0x004AF06E
 004AF01C    mov eax, dword ptr ds:[edx+0x14]
-004AF01F    mov ecx, dword ptr ds:[0x0147ABF4]
+004AF01F    mov ecx, dword ptr ds:[0x0147ABF4]              ; => [ Data: data_147abf4 ]
 004AF025    test eax, eax
 004AF027    jz 0x004AF06E
 004AF029    movzx esi, ax
@@ -24,14 +30,14 @@
 004AF03F    push 0xF42B2
 004AF044    mov edx, 0x01
 004AF049    lea ecx, ds:[esi+0x50]
-004AF04C    call 0x00689E00
+004AF04C    call 0x00689E00                                 ; => [ Call: sub_689e00 ]
 004AF051    add esp, 0x04
 004AF054    lea eax, ss:[ebp-0x01]
 004AF057    mov edx, 0x01
 004AF05C    lea ecx, ds:[esi+0x50]
 004AF05F    push eax
-004AF060    call 0x00689BE0
-004AF065    mov edx, dword ptr ds:[0x00CC8D5C]
+004AF060    call 0x00689BE0                                 ; => [ Call: sub_689be0 ]
+004AF065    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004AF06B    add esp, 0x04
 004AF06E    test edx, edx
 004AF070    jz 0x004AF0A3
@@ -53,10 +59,10 @@
 004AF0AA    push 0x77EB50
 004AF0AF    mov edx, 0x801800
 004AF0B4    mov ecx, 0x77EB9C
-004AF0B9    call 0x0063B870
+004AF0B9    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004AF0BE    add esp, 0x0C
 004AF0C1    call 0x0063BC30
 004AF0C6    test al, al
-004AF0C8    jz 0x004AF0CB
+004AF0C8    jz 0x004AF0CB                                   ; => [ Call: sub_63bc30 ]
 004AF0CA    int3
-004AF0CB    call 0x0063BB00
+004AF0CB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

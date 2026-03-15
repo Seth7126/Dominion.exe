@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_573260
+// 起始地址: 0x573260
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00573260    push ebp
 00573261    mov ebp, esp
 00573263    and esp, 0xFFFFFFF8
@@ -6,18 +12,18 @@
 0057326F    push ebx
 00573270    push esi
 00573271    push edi
-00573272    mov esi, dword ptr ds:[eax]
+00573272    mov esi, dword ptr ds:[eax]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 00573274    mov edi, ecx
 00573276    mov dword ptr ss:[esp+0x14], edx
 0057327A    mov dword ptr ss:[esp+0x1C], edi
 0057327E    cmp dword ptr ds:[esi+0xF010], 0x200
 00573288    jl 0x0057328F
-0057328A    call 0x00591930
+0057328A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057328F    mov eax, dword ptr ds:[esi+0xF010]
-00573295    cmp eax, dword ptr ds:[0x00CC8DD8]
+00573295    cmp eax, dword ptr ds:[0x00CC8DD8]              ; => [ Data: data_cc8dd8 ]
 0057329B    jl 0x00573377
 005732A1    jnz 0x005732A7
-005732A3    xor ebx, ebx
+005732A3    xor ebx, ebx                                    ; => [ Call: nullptr ]
 005732A5    jmp 0x005732B7
 005732A7    mov ecx, eax
 005732A9    lea ebx, ds:[esi-0x68]
@@ -48,7 +54,7 @@
 00573308    lea eax, ds:[ebx+0x01]
 0057330B    mov dword ptr ds:[edi+0x1A0C], eax
 00573311    call 0x005916D0
-00573316    cdq
+00573316    cdq                                             ; => [ Call: sub_5916d0 ]
 00573317    xor ecx, ecx
 00573319    mov edi, eax
 0057331B    add esp, 0x04
@@ -64,7 +70,7 @@
 00573334    mov dword ptr ds:[ebx+0x44], 0x00
 0057333B    mov dword ptr ds:[ebx+0x24], 0x00
 00573342    call 0x005916D0
-00573347    mov dword ptr ds:[ebx+0x30], eax
+00573347    mov dword ptr ds:[ebx+0x30], eax                ; => [ Call: sub_5916d0 ]
 0057334A    add esp, 0x04
 0057334D    mov eax, dword ptr ss:[esp+0x10]
 00573351    mov dword ptr ds:[ebx+0x34], 0x00
@@ -92,10 +98,10 @@
 00573381    push 0x8088A8
 00573386    mov edx, 0x801800
 0057338B    mov ecx, 0x808E88
-00573390    call 0x0063B870
+00573390    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: curDepth >= origContextDepth | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: IsDomContextStackEmpty ]
 00573395    add esp, 0x0C
 00573398    call 0x0063BC30
 0057339D    test al, al
-0057339F    jz 0x005733A2
+0057339F    jz 0x005733A2                                   ; => [ Call: sub_63bc30 ]
 005733A1    int3
-005733A2    call 0x0063BB00
+005733A2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

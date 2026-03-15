@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6939d0
+// 起始地址: 0x6939d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006939D0    push ebp
 006939D1    mov ebp, esp
 006939D3    sub esp, 0x08
@@ -200,7 +206,7 @@
 00693BA6    add eax, 0xFFFFFFFE
 00693BA9    cmp eax, 0x0E
 00693BAC    jnbe 0x00693BCD
-00693BAE    movzx eax, byte ptr ds:[eax+0x693F74]
+00693BAE    movzx eax, byte ptr ds:[eax+0x693F74]           ; => [ Data: lookup_table_693f74 ]
 00693BB5    jmp dword ptr ds:[eax*4+0x693F60]
 00693BBC    dword 8BFC75FF
 00693BC0    ror dword ptr ds:[ebx-0x17D89532], 0x01
@@ -216,7 +222,7 @@
 00693BD6    mov edx, ecx
 00693BD8    mov ecx, esi
 00693BDA    push 0x29
-00693BDC    call 0x00693960
+00693BDC    call 0x00693960                                 ; => [ Call: sub_693960 ]
 00693BE1    add esp, 0x08
 00693BE4    pop edi
 00693BE5    pop esi
@@ -227,7 +233,7 @@
 00693BED    mov edx, ecx
 00693BEF    mov ecx, esi
 00693BF1    push 0x28
-00693BF3    call 0x00693960
+00693BF3    call 0x00693960                                 ; => [ Call: sub_693960 ]
 00693BF8    add esp, 0x08
 00693BFB    pop edi
 00693BFC    pop esi
@@ -238,7 +244,7 @@
 00693C04    mov edx, ecx
 00693C06    mov ecx, esi
 00693C08    push 0x2A
-00693C0A    call 0x00693960
+00693C0A    call 0x00693960                                 ; => [ Call: sub_693960 ]
 00693C0F    add esp, 0x08
 00693C12    pop edi
 00693C13    pop esi
@@ -356,8 +362,8 @@
 00693D28    cmp eax, 0xFC
 00693D2D    jnbe 0x00693BCD
 00693D33    movzx eax, byte ptr ds:[eax+0x693F9C]
-00693D3A    jmp dword ptr ds:[eax*4+0x693F84]
-00693D41    dword 84134E88
+00693D3A    jmp dword ptr ds:[eax*4+0x693F84]               ; => [ Data: jump_table_693f84 ]
+00693D41    dword 84134E88                                  ; => [ Data: lookup_table_693f9c ]
 00693D45    leave
 00693D46    jz 0x00693BCD
 00693D4C    mov byte ptr ds:[esi+0x37], cl
@@ -366,7 +372,7 @@
 00693D51    mov esp, ebp
 00693D53    pop ebp
 00693D54    ret
-00693D55    mov byte ptr ds:[esi+0x14], cl
+00693D55    mov byte ptr ds:[esi+0x14], cl                  ; => [ Data: lookup_table_693f9c ]
 00693D58    test cl, cl
 00693D5A    jz 0x00693BCD
 00693D60    mov byte ptr ds:[esi+0x38], cl
@@ -375,7 +381,7 @@
 00693D65    mov esp, ebp
 00693D67    pop ebp
 00693D68    ret
-00693D69    mov byte ptr ds:[esi+0x15], cl
+00693D69    mov byte ptr ds:[esi+0x15], cl                  ; => [ Data: lookup_table_693f9c ]
 00693D6C    test cl, cl
 00693D6E    jz 0x00693BCD
 00693D74    mov byte ptr ds:[esi+0x39], cl
@@ -384,7 +390,7 @@
 00693D79    mov esp, ebp
 00693D7B    pop ebp
 00693D7C    ret
-00693D7D    mov byte ptr ds:[esi+0x17], cl
+00693D7D    mov byte ptr ds:[esi+0x17], cl                  ; => [ Data: lookup_table_693f9c ]
 00693D80    test cl, cl
 00693D82    jz 0x00693BCD
 00693D88    mov byte ptr ds:[esi+0x3B], cl
@@ -393,7 +399,7 @@
 00693D8D    mov esp, ebp
 00693D8F    pop ebp
 00693D90    ret
-00693D91    mov byte ptr ds:[esi+0x16], cl
+00693D91    mov byte ptr ds:[esi+0x16], cl                  ; => [ Data: lookup_table_693f9c ]
 00693D94    test cl, cl
 00693D96    jz 0x00693BCD
 00693D9C    mov byte ptr ds:[esi+0x3A], cl

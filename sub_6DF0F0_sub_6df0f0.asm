@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6df0f0
+// 起始地址: 0x6df0f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DF0F0    push ebp
 006DF0F1    mov ebp, esp
 006DF0F3    and esp, 0xFFFFFFF0
 006DF0F6    sub esp, 0x1A8
-006DF0FC    mov eax, dword ptr ds:[0x008C4040]
+006DF0FC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006DF101    xor eax, esp
 006DF103    mov dword ptr ss:[esp+0x1A4], eax
 006DF10A    mov eax, dword ptr ss:[ebp+0x0C]
@@ -133,10 +139,10 @@
 006DF33E    movss xmm1, dword ptr ds:[0x00890C78]
 006DF346    andps xmm0, xmmword ptr ds:[0x008937A0]
 006DF34D    comiss xmm1, xmm0
-006DF350    jnbe 0x006E068E
+006DF350    jnbe 0x006E068E                                 ; => [ Data: data_8937a0 ]
 006DF356    lea eax, ss:[esp+0x150]
 006DF35D    push eax
-006DF35E    call 0x006E0F70
+006DF35E    call 0x006E0F70                                 ; => [ Call: sub_6e0f70 ]
 006DF363    mov edx, edi
 006DF365    mov dword ptr ss:[esp+0x60], 0x00
 006DF36D    add esp, 0x04
@@ -482,7 +488,7 @@
 006DFA09    movaps xmm0, xmm5
 006DFA0C    call 0x004AC580
 006DFA11    movss xmm2, dword ptr ds:[0x00890E18]
-006DFA19    divss xmm2, xmm0
+006DFA19    divss xmm2, xmm0                                ; => [ Call: sub_4ac580 ]
 006DFA1D    movss xmm0, dword ptr ss:[esp+0x38]
 006DFA23    movaps xmm4, xmm2
 006DFA26    movaps xmm1, xmm2
@@ -494,7 +500,7 @@
 006DFA47    movss dword ptr ss:[esp+0x18], xmm2
 006DFA4D    call 0x004AC580
 006DFA52    movss xmm5, dword ptr ds:[0x00890E18]
-006DFA5A    divss xmm5, xmm0
+006DFA5A    divss xmm5, xmm0                                ; => [ Call: sub_4ac580 ]
 006DFA5E    movaps xmm7, xmmword ptr ss:[esp+0x190]
 006DFA66    movss xmm4, dword ptr ss:[esp+0x28]
 006DFA6C    movaps xmm6, xmm5
@@ -525,12 +531,12 @@
 006DFADD    comiss xmm1, xmm0
 006DFAE0    jbe 0x006DFAF1
 006DFAE2    xorps xmm2, xmmword ptr ds:[0x008937C0]
-006DFAE9    movaps xmm5, xmm2
-006DFAEC    xorps xmm2, xmm2
+006DFAE9    movaps xmm5, xmm2                               ; => [ Data: data_8937c0 ]
+006DFAEC    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 006DFAEF    jmp 0x006DFAFE
 006DFAF1    movaps xmm4, xmm7
-006DFAF4    xorps xmm5, xmm5
-006DFAF7    xorps xmm4, xmmword ptr ds:[0x008937C0]
+006DFAF4    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+006DFAF7    xorps xmm4, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 006DFAFE    movaps xmm0, xmm2
 006DFB01    movss dword ptr ss:[esp+0x20], xmm0
 006DFB07    movaps xmm0, xmm5
@@ -562,7 +568,7 @@
 006DFB79    movaps xmm1, xmm4
 006DFB7C    mulss xmm1, xmm4
 006DFB80    addss xmm0, xmm1
-006DFB84    call 0x004AC580
+006DFB84    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006DFB89    movss xmm5, dword ptr ss:[esp+0x44]
 006DFB8F    movss xmm2, dword ptr ss:[esp+0x18]
 006DFB95    divss xmm5, xmm0
@@ -1080,7 +1086,7 @@
 006E05A2    addss xmm0, xmm1
 006E05A6    call 0x004AC580
 006E05AB    movss xmm1, dword ptr ds:[0x00890E18]
-006E05B3    divss xmm1, xmm0
+006E05B3    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006E05B7    movss xmm0, dword ptr ss:[esp+0x34]
 006E05BD    mulss xmm0, xmm1
 006E05C1    movss dword ptr ss:[esp+0x1A0], xmm0
@@ -1101,7 +1107,7 @@
 006E0616    call 0x004AC580
 006E061B    movss xmm1, dword ptr ds:[0x00890E18]
 006E0623    lea eax, ss:[esp+0xC0]
-006E062A    divss xmm1, xmm0
+006E062A    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006E062E    lea edx, ss:[esp+0x1A0]
 006E0635    lea ecx, ss:[esp+0x190]
 006E063C    push eax
@@ -1116,7 +1122,7 @@
 006E066D    movss dword ptr ss:[esp+0x19C], xmm0
 006E0676    call 0x004AC9C0
 006E067B    add esp, 0x04
-006E067E    movups xmm0, xmmword ptr ds:[eax]
+006E067E    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_4ac9c0 ]
 006E0681    mov eax, dword ptr ss:[esp+0x58]
 006E0685    imul eax, dword ptr ds:[eax+edi*4-0x04], 0x2C
 006E068A    movups xmmword ptr ds:[eax+esi*1], xmm0
@@ -1124,7 +1130,7 @@
 006E0695    pop edi
 006E0696    pop esi
 006E0697    xor ecx, esp
-006E0699    call 0x0075927A
+006E0699    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E069E    mov esp, ebp
 006E06A0    pop ebp
 006E06A1    ret
@@ -1133,10 +1139,10 @@
 006E06AC    push 0x88162C
 006E06B1    mov edx, 0x801800
 006E06B6    mov ecx, 0x881A30
-006E06BB    call 0x0063B870
+006E06BB    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Animation.cpp | String: i == 0 || boneIndicies[i-1] == defBones[boneIndicies[i]].parentBoneIndex ]
 006E06C0    add esp, 0x0C
 006E06C3    call 0x0063BC30
 006E06C8    test al, al
-006E06CA    jz 0x006E06CD
+006E06CA    jz 0x006E06CD                                   ; => [ Call: sub_63bc30 ]
 006E06CC    int3
-006E06CD    call 0x0063BB00
+006E06CD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

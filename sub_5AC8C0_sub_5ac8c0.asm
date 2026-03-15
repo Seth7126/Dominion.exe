@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ac8c0
+// 起始地址: 0x5ac8c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AC8C0    push ebp
 005AC8C1    mov ebp, esp
 005AC8C3    sub esp, 0x0C
@@ -6,7 +12,7 @@
 005AC8C8    mov ebx, ecx
 005AC8CA    mov dword ptr ss:[ebp-0x08], 0xFFFFFFFC
 005AC8D1    sub dword ptr ss:[ebp-0x08], ebx
-005AC8D4    xor edx, edx
+005AC8D4    xor edx, edx                                    ; => [ Call: nullptr ]
 005AC8D6    push edi
 005AC8D7    xor edi, edi
 005AC8D9    mov dword ptr ss:[ebp-0x04], 0xFFFFFFF8

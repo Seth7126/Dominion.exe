@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73ac00
+// 起始地址: 0x73ac00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073AC00    push ebp
 0073AC01    mov ebp, esp
 0073AC03    sub esp, 0x20
@@ -16,7 +22,7 @@
 0073AC21    mov dword ptr ss:[ebp-0x14], edi
 0073AC24    mov dword ptr ss:[ebp-0x0C], esi
 0073AC27    call 0x006A9450
-0073AC2C    imul eax, ebx
+0073AC2C    imul eax, ebx                                   ; => [ Call: sub_6a9450 ]
 0073AC2F    mov edx, edi
 0073AC31    push esi
 0073AC32    mov ecx, ebx
@@ -24,13 +30,13 @@
 0073AC37    call 0x006A9660
 0073AC3C    add esp, 0x04
 0073AC3F    mov ecx, eax
-0073AC41    call 0x00687730
+0073AC41    call 0x00687730                                 ; => [ Call: sub_687730 | Call: sub_6a9660 ]
 0073AC46    mov dword ptr ss:[ebp-0x1C], eax
 0073AC49    test eax, eax
 0073AC4B    jz 0x0073AD5D
 0073AC51    mov ecx, dword ptr ss:[ebp-0x08]
 0073AC54    lea edx, ss:[ebp-0x1C]
-0073AC57    call 0x00735A50
+0073AC57    call 0x00735A50                                 ; => [ Call: sub_735a50 ]
 0073AC5C    test al, al
 0073AC5E    jnz 0x0073AC67
 0073AC60    pop edi
@@ -84,8 +90,8 @@
 0073ACEE    mov ecx, eax
 0073ACF0    call 0x00687730
 0073ACF5    mov ecx, esi
-0073ACF7    mov dword ptr ds:[ebx], eax
-0073ACF9    call 0x006A9450
+0073ACF7    mov dword ptr ds:[ebx], eax                     ; => [ Call: sub_687730 | Call: sub_6a9660 ]
+0073ACF9    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 0073ACFE    sub esp, 0x20
 0073AD01    mov edx, dword ptr ss:[ebp-0x1C]
 0073AD04    push eax
@@ -100,7 +106,7 @@
 0073AD30    push ecx
 0073AD31    push dword ptr ss:[ebp-0x14]
 0073AD34    push edi
-0073AD35    call 0x0071DDA0
+0073AD35    call 0x0071DDA0                                 ; => [ Call: sub_71dda0 ]
 0073AD3A    add esp, 0x54
 0073AD3D    mov al, 0x01
 0073AD3F    pop edi
@@ -126,10 +132,10 @@
 0073AD67    push 0x88F010
 0073AD6C    mov edx, 0x801800
 0073AD71    mov ecx, 0x88F5CC
-0073AD76    call 0x0063B870
+0073AD76    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: AtlasLoadTextureIntoImageData | Data: data_801800 | String: destSpec.pImage | String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
 0073AD7B    add esp, 0x0C
 0073AD7E    call 0x0063BC30
 0073AD83    test al, al
-0073AD85    jz 0x0073AD88
+0073AD85    jz 0x0073AD88                                   ; => [ Call: sub_63bc30 ]
 0073AD87    int3
-0073AD88    call 0x0063BB00
+0073AD88    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

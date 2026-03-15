@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_668650
+// 起始地址: 0x668650
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00668650    push ebp
 00668651    mov ebp, esp
 00668653    push ecx
@@ -7,10 +13,10 @@
 0066865E    movss xmm4, dword ptr ds:[ecx+0x04]
 00668663    movss xmm2, dword ptr ds:[ecx]
 00668667    movaps xmm3, xmm4
-0066866A    movss xmm6, dword ptr ds:[0x00C27C4C]
-00668672    movss xmm7, dword ptr ds:[0x00C27C50]
+0066866A    movss xmm6, dword ptr ds:[0x00C27C4C]           ; => [ Data: data_c27c4c ]
+00668672    movss xmm7, dword ptr ds:[0x00C27C50]           ; => [ Data: data_c27c50 ]
 0066867A    subss xmm2, xmm6
-0066867E    movss xmm5, dword ptr ds:[0x00C27C48]
+0066867E    movss xmm5, dword ptr ds:[0x00C27C48]           ; => [ Data: data_c27c48 ]
 00668686    subss xmm3, xmm7
 0066868A    movss xmm1, dword ptr ds:[ecx+0x08]
 0066868F    comiss xmm1, dword ptr ds:[ecx]
@@ -31,7 +37,7 @@
 006686C2    movss dword ptr ds:[eax+0x04], xmm3
 006686C7    movss dword ptr ds:[eax+0x08], xmm1
 006686CC    movss dword ptr ds:[eax+0x0C], xmm0
-006686D1    call 0x0075927A
+006686D1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006686D6    mov esp, ebp
 006686D8    pop ebp
 006686D9    ret
@@ -40,10 +46,10 @@
 006686E4    push 0x801A00
 006686E9    mov edx, 0x801800
 006686EE    mov ecx, 0x801A1C
-006686F3    call 0x0063B870
+006686F3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectBottomRight | String: C:\x\ax2017\Engine\Rect.cpp | Data: __security_cookie | String: RectIsNormalized(r) ]
 006686F8    add esp, 0x0C
 006686FB    call 0x0063BC30
 00668700    test al, al
-00668702    jz 0x00668705
+00668702    jz 0x00668705                                   ; => [ Call: sub_63bc30 ]
 00668704    int3
-00668705    call 0x0063BB00
+00668705    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

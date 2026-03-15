@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_5caff0
+// 起始地址: 0x5caff0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CAFF0    push ebp
 005CAFF1    mov ebp, esp
 005CAFF3    push 0xFFFFFFFF
-005CAFF5    push 0x769AD0
+005CAFF5    push 0x769AD0                                   ; => [ Type: EHRegistrationNode | Call: __ehhandler$??_G?$basic_ios@_WU?$char_traits@_W@std@@@std@@UAEPAXI@Z ]
 005CAFFA    mov eax, dword ptr fs:[0x00000000]
-005CB000    push eax
+005CB000    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005CB001    push esi
 005CB002    mov eax, dword ptr ds:[0x008C4040]
 005CB007    xor eax, ebp
-005CB009    push eax
-005CB00A    lea eax, ss:[ebp-0x0C]
-005CB00D    mov dword ptr fs:[0x00000000], eax
+005CB009    push eax                                        ; => [ Data: __security_cookie ]
+005CB00A    lea eax, ss:[ebp-0x0C]                          ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+005CB00D    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005CB013    mov esi, ecx
 005CB015    mov dword ptr ss:[ebp-0x04], 0x00
 005CB01C    cmp dword ptr ds:[0x00CF65BC], 0x00
-005CB023    jz 0x005CB04D
+005CB023    jz 0x005CB04D                                   ; => [ Data: data_cf65bc ]
 005CB025    mov ecx, dword ptr ds:[esi]
 005CB027    test ecx, ecx
 005CB029    jz 0x005CB04D
@@ -22,10 +28,10 @@
 005CB035    lea edx, ds:[eax*8]
 005CB03C    sub edx, eax
 005CB03E    shl edx, 0x03
-005CB041    call 0x0064C080
+005CB041    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 005CB046    mov dword ptr ds:[esi+0x08], 0x00
 005CB04D    mov ecx, dword ptr ss:[ebp-0x0C]
-005CB050    mov dword ptr fs:[0x00000000], ecx
+005CB050    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005CB057    pop ecx
 005CB058    pop esi
 005CB059    mov esp, ebp

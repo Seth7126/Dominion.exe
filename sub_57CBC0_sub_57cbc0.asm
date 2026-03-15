@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57cbc0
+// 起始地址: 0x57cbc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057CBC0    push ebp
 0057CBC1    mov ebp, esp
 0057CBC3    sub esp, 0x14
@@ -92,7 +98,7 @@
 0057CCD8    mov ecx, dword ptr ss:[ebp-0x04]
 0057CCDB    add esp, 0x14
 0057CCDE    test al, al
-0057CCE0    jz 0x0057CCF9
+0057CCE0    jz 0x0057CCF9                                   ; => [ Call: sub_57c810 ]
 0057CCE2    mov edx, dword ptr ss:[ebp-0x08]
 0057CCE5    mov eax, dword ptr ds:[edx+0x400]
 0057CCEB    mov dword ptr ds:[edx+eax*4], esi
@@ -110,19 +116,19 @@
 0057CD12    mov esp, ebp
 0057CD14    pop ebp
 0057CD15    ret
-0057CD16    push 0x81F478
+0057CD16    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 0057CD1B    push 0x14D
-0057CD20    mov ecx, 0x81F490
+0057CD20    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 0057CD25    jmp 0x0057CD36
-0057CD27    push 0x81F408
+0057CD27    push 0x81F408                                   ; => [ String: AbilityID::set_trigger_card_id ]
 0057CD2C    push 0xFF
-0057CD31    mov ecx, 0x81F428
+0057CD31    mov ecx, 0x81F428                               ; => [ String: x >= 0 ]
 0057CD36    push 0x81E978
 0057CD3B    mov edx, 0x801800
-0057CD40    call 0x0063B870
+0057CD40    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 0057CD45    add esp, 0x0C
 0057CD48    call 0x0063BC30
 0057CD4D    test al, al
-0057CD4F    jz 0x0057CD52
+0057CD4F    jz 0x0057CD52                                   ; => [ Call: sub_63bc30 ]
 0057CD51    int3
-0057CD52    call 0x0063BB00
+0057CD52    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

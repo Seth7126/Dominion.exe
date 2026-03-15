@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_58ac40
+// 起始地址: 0x58ac40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058AC40    push ebp
 0058AC41    mov ebp, esp
 0058AC43    mov eax, 0x1D2C
-0058AC48    call 0x00761E50
+0058AC48    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0058AC4D    mov eax, dword ptr ds:[0x008C4040]
 0058AC52    xor eax, ebp
-0058AC54    mov dword ptr ss:[ebp-0x04], eax
+0058AC54    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 0058AC57    push ebx
 0058AC58    mov ebx, dword ptr ss:[ebp+0x08]
 0058AC5B    mov eax, ecx
@@ -19,7 +25,7 @@
 0058AC72    mov dword ptr ss:[ebp-0x1D14], eax
 0058AC78    mov dword ptr ss:[ebp-0x1D20], ebx
 0058AC7E    mov dword ptr ss:[ebp-0x1D18], edi
-0058AC84    call 0x00576540
+0058AC84    call 0x00576540                                 ; => [ Call: sub_576540 ]
 0058AC89    xor esi, esi
 0058AC8B    add esp, 0x08
 0058AC8E    cmp dword ptr ds:[edi], esi
@@ -30,7 +36,7 @@
 0058ACA6    mov dword ptr ss:[ebp-0x1D28], eax
 0058ACAC    cmp ebx, 0x320
 0058ACB2    jb 0x0058ACB9
-0058ACB4    call 0x00591930
+0058ACB4    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058ACB9    mov ecx, dword ptr ss:[ebp-0x1D14]
 0058ACBF    imul eax, ebx, 0x64
 0058ACC2    add eax, ecx
@@ -43,7 +49,7 @@
 0058ACEA    push 0x00
 0058ACEC    push 0x19
 0058ACEE    push eax
-0058ACEF    call 0x005846C0
+0058ACEF    call 0x005846C0                                 ; => [ Call: sub_5846c0 ]
 0058ACF4    mov ecx, dword ptr ss:[ebp-0x1D14]
 0058ACFA    add esp, 0x14
 0058ACFD    test al, al
@@ -60,7 +66,7 @@
 0058AD33    push 0x00
 0058AD35    push 0x18
 0058AD37    push eax
-0058AD38    call 0x005846C0
+0058AD38    call 0x005846C0                                 ; => [ Call: sub_5846c0 ]
 0058AD3D    add esp, 0x14
 0058AD40    test al, al
 0058AD42    jz 0x0058ADB8
@@ -68,7 +74,7 @@
 0058AD4A    mov ecx, dword ptr ss:[ebp-0x1D14]
 0058AD50    push 0x00
 0058AD52    push 0x04
-0058AD54    call 0x005757F0
+0058AD54    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 0058AD59    add esp, 0x08
 0058AD5C    test al, al
 0058AD5E    jz 0x0058ADB8
@@ -79,12 +85,12 @@
 0058AD73    push eax
 0058AD74    push ecx
 0058AD75    mov ecx, dword ptr ss:[ebp-0x1D14]
-0058AD7B    call 0x00586C00
+0058AD7B    call 0x00586C00                                 ; => [ Call: sub_586c00 ]
 0058AD80    add esp, 0x0C
 0058AD83    mov edi, eax
 0058AD85    cmp ebx, 0x320
 0058AD8B    jb 0x0058AD92
-0058AD8D    call 0x00591930
+0058AD8D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058AD92    mov eax, dword ptr ss:[ebp-0x1D2C]
 0058AD98    xor ecx, ecx
 0058AD9A    mov eax, dword ptr ds:[eax+0x1A4C]
@@ -120,7 +126,7 @@
 0058ADFE    pop esi
 0058ADFF    xor ecx, ebp
 0058AE01    pop ebx
-0058AE02    call 0x0075927A
+0058AE02    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0058AE07    mov esp, ebp
 0058AE09    pop ebp
 0058AE0A    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56b270
+// 起始地址: 0x56b270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056B270    push ebp
 0056B271    mov ebp, esp
 0056B273    and esp, 0xFFFFFFF8
@@ -6,16 +12,16 @@
 0056B27A    push esi
 0056B27B    push edi
 0056B27C    mov dword ptr ss:[esp+0x14], edx
-0056B280    call 0x00573400
+0056B280    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056B285    mov esi, dword ptr ds:[eax+0x04]
 0056B288    mov edi, dword ptr ds:[eax+0x0C]
 0056B28B    cmp dword ptr ds:[esi+0x19A4], 0x100
 0056B295    jl 0x0056B29C
-0056B297    call 0x00591930
+0056B297    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056B29C    push 0xB01
 0056B2A1    mov edx, edi
 0056B2A3    mov ecx, esi
-0056B2A5    call 0x00571EE0
+0056B2A5    call 0x00571EE0                                 ; => [ Call: sub_571ee0 ]
 0056B2AA    add esp, 0x04
 0056B2AD    cmp eax, 0xFFFFFFFF
 0056B2B0    jnz 0x0056B2CF
@@ -26,7 +32,7 @@
 0056B2BB    push 0x00
 0056B2BD    push 0x476
 0056B2C2    push 0xB01
-0056B2C7    call 0x00571DA0
+0056B2C7    call 0x00571DA0                                 ; => [ Call: nullptr | Call: sub_571da0 ]
 0056B2CC    add esp, 0x1C
 0056B2CF    mov dword ptr ss:[esp+0x10], eax
 0056B2D3    shl eax, 0x05
@@ -58,7 +64,7 @@
 0056B31F    setz cl
 0056B322    mov edx, 0x15
 0056B327    push edi
-0056B328    call 0x0061B1B0
+0056B328    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 0056B32D    add esp, 0x2C
 0056B330    test byte ptr ss:[esp+0x14], 0x02
 0056B335    jnz 0x0056B394
@@ -90,7 +96,7 @@
 0056B387    push 0x0E
 0056B389    push eax
 0056B38A    mov ecx, esi
-0056B38C    call 0x0059F9B0
+0056B38C    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 0056B391    add esp, 0x24
 0056B394    pop edi
 0056B395    pop esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_60f100
+// 起始地址: 0x60f100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060F100    push ebp
 0060F101    mov ebp, esp
 0060F103    sub esp, 0x1C
@@ -6,7 +12,7 @@
 0060F108    push edi
 0060F109    mov dword ptr ss:[ebp-0x04], ecx
 0060F10C    xor ebx, ebx
-0060F10E    mov edi, 0x77FCA8
+0060F10E    mov edi, 0x77FCA8                               ; => [ Data: data_77fca8 ]
 0060F113    cmp dword ptr ds:[edi+0x04], 0x00
 0060F117    jz 0x0060F1A7
 0060F11D    mov eax, dword ptr ds:[edi]
@@ -15,7 +21,7 @@
 0060F125    jz 0x0060F15A
 0060F127    lea edx, ss:[ebp-0x18]
 0060F12A    lea ecx, ss:[ebp-0x0C]
-0060F12D    call 0x004DAF40
+0060F12D    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 0060F132    xor esi, esi
 0060F134    mov dword ptr ss:[ebp-0x10], eax
 0060F137    test eax, eax
@@ -26,7 +32,7 @@
 0060F146    mov ecx, dword ptr ds:[eax+esi*4]
 0060F149    call 0x004DB700
 0060F14E    test al, al
-0060F150    jnz 0x0060F15A
+0060F150    jnz 0x0060F15A                                  ; => [ Call: sub_4db700 ]
 0060F152    inc esi
 0060F153    cmp esi, dword ptr ss:[ebp-0x10]
 0060F156    jl 0x0060F140
@@ -41,7 +47,7 @@
 0060F16C    lea edx, ss:[ebp-0x1C]
 0060F16F    lea ecx, ss:[ebp-0x14]
 0060F172    mov dword ptr ss:[ebp-0x10], eax
-0060F175    call 0x004DAF40
+0060F175    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 0060F17A    xor esi, esi
 0060F17C    mov dword ptr ss:[ebp-0x08], eax
 0060F17F    test eax, eax
@@ -51,7 +57,7 @@
 0060F189    mov ecx, dword ptr ds:[eax+esi*4]
 0060F18C    call 0x004DB650
 0060F191    test al, al
-0060F193    jnz 0x0060F19D
+0060F193    jnz 0x0060F19D                                  ; => [ Call: sub_4db650 ]
 0060F195    inc esi
 0060F196    cmp esi, dword ptr ss:[ebp-0x08]
 0060F199    jl 0x0060F183
@@ -62,7 +68,7 @@
 0060F1A6    inc ebx
 0060F1A7    add edi, 0x1C
 0060F1AA    cmp edi, 0x77FEA0
-0060F1B0    jl 0x0060F113
+0060F1B0    jl 0x0060F113                                   ; => [ Data: data_77fea0 ]
 0060F1B6    pop edi
 0060F1B7    pop esi
 0060F1B8    mov eax, ebx

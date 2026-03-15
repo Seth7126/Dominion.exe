@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_703ed0
+// 起始地址: 0x703ed0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00703ED0    push ebp
 00703ED1    mov ebp, esp
 00703ED3    sub esp, 0x0C
-00703ED6    mov eax, dword ptr ds:[0x008C4040]
+00703ED6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00703EDB    xor eax, ebp
 00703EDD    mov dword ptr ss:[ebp-0x04], eax
 00703EE0    mov eax, dword ptr ds:[0x007757C4]
@@ -40,7 +46,7 @@
 00703F34    cmp dword ptr ss:[ebp-0x08], 0x01
 00703F38    jz 0x00703FA0
 00703F3A    lea eax, ss:[ebp-0x0C]
-00703F3D    mov dword ptr ss:[ebp-0x0C], 0x00
+00703F3D    mov dword ptr ss:[ebp-0x0C], 0x00               ; => [ Call: nullptr ]
 00703F44    push eax
 00703F45    mov eax, dword ptr ds:[0x007757BC]
 00703F4A    push 0x8B84
@@ -51,7 +57,7 @@
 00703F57    test ebx, ebx
 00703F59    jz 0x00703F80
 00703F5B    mov eax, ebx
-00703F5D    call 0x00762210
+00703F5D    call 0x00762210                                 ; => [ Call: __alloca_probe_16 ]
 00703F62    mov eax, dword ptr ds:[0x007757D0]
 00703F67    mov esi, esp
 00703F69    push esi
@@ -62,7 +68,7 @@
 00703F70    call eax
 00703F72    push esi
 00703F73    push 0x88CF7C
-00703F78    call 0x0063B5F0
+00703F78    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Could not link program:\n%s\n ]
 00703F7D    add esp, 0x08
 00703F80    mov eax, dword ptr ds:[0x007757D4]
 00703F85    push edi
@@ -75,7 +81,7 @@
 00703F91    pop ebx
 00703F92    mov ecx, dword ptr ss:[ebp-0x04]
 00703F95    xor ecx, ebp
-00703F97    call 0x0075927A
+00703F97    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00703F9C    mov esp, ebp
 00703F9E    pop ebp
 00703F9F    ret
@@ -86,7 +92,7 @@
 00703FA7    pop ebx
 00703FA8    mov ecx, dword ptr ss:[ebp-0x04]
 00703FAB    xor ecx, ebp
-00703FAD    call 0x0075927A
+00703FAD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00703FB2    mov esp, ebp
 00703FB4    pop ebp
 00703FB5    ret

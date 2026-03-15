@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_755e10
+// 起始地址: 0x755e10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00755E10    push ebp
 00755E11    mov ebp, esp
 00755E13    sub esp, 0x1C
@@ -17,7 +23,7 @@
 00755E45    movss dword ptr ss:[ebp-0x04], xmm0
 00755E4A    jnz 0x00755E53
 00755E4C    mov ecx, ebx
-00755E4E    call 0x00710B10
+00755E4E    call 0x00710B10                                 ; => [ Call: sub_710b10 ]
 00755E53    xor ecx, ecx
 00755E55    mov dword ptr ss:[ebp-0x0C], ecx
 00755E58    cmp dword ptr ds:[edi+0x04], ecx
@@ -28,7 +34,7 @@
 00755E6A    cmp dword ptr ds:[esi+0x4C], 0x00
 00755E6E    jnz 0x00755E7A
 00755E70    mov ecx, esi
-00755E72    call 0x00710B10
+00755E72    call 0x00710B10                                 ; => [ Call: sub_710b10 ]
 00755E77    xorps xmm3, xmm3
 00755E7A    movss xmm5, dword ptr ss:[ebp-0x10]
 00755E7F    movss xmm4, dword ptr ds:[esi+0x38]
@@ -141,7 +147,7 @@
 00756028    movss dword ptr ss:[esp+0x08], xmm0
 0075602E    movss dword ptr ss:[esp+0x04], xmm5
 00756034    movss dword ptr ss:[esp], xmm4
-00756039    call 0x00710240
+00756039    call 0x00710240                                 ; => [ Call: sub_710240 ]
 0075603E    mov ecx, dword ptr ss:[ebp-0x0C]
 00756041    add esp, 0x10
 00756044    inc ecx

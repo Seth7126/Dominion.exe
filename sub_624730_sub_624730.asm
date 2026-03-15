@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_624730
+// 起始地址: 0x624730
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00624730    push ebp
 00624731    mov ebp, esp
 00624733    push ecx
 00624734    push esi
 00624735    call 0x004B9370
 0062473A    test al, al
-0062473C    jz 0x00624852
-00624742    mov eax, dword ptr ds:[0x00CC8D5C]
+0062473C    jz 0x00624852                                   ; => [ Call: sub_4b9370 ]
+00624742    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 00624747    test eax, eax
 00624749    jnz 0x00624761
-0062474B    push 0x77EB90
+0062474B    push 0x77EB90                                   ; => [ String: GetClient ]
 00624750    push 0x7B
-00624752    push 0x77EB50
-00624757    mov ecx, 0x77EB9C
+00624752    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+00624757    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 0062475C    jmp 0x0062486D
 00624761    cmp dword ptr ds:[eax+0x5068], 0x01
 00624768    jnz 0x00624782
@@ -20,10 +26,10 @@
 00624772    mov ecx, dword ptr ds:[eax+0x1C]
 00624775    call 0x005B0500
 0062477A    test eax, eax
-0062477C    jnle 0x00624852
+0062477C    jnle 0x00624852                                 ; => [ Call: sub_4b93f0 | Call: sub_5b0500 ]
 00624782    cmp byte ptr ds:[0x00B824DC], 0x00
-00624789    jnz 0x006247CA
-0062478B    call 0x004B9480
+00624789    jnz 0x006247CA                                  ; => [ Data: data_b824dc ]
+0062478B    call 0x004B9480                                 ; => [ Call: sub_4b9480 ]
 00624790    xor ecx, ecx
 00624792    mov esi, dword ptr ds:[eax+0x11A8]
 00624798    test esi, esi
@@ -41,10 +47,10 @@
 006247B8    add edx, 0x22C
 006247BE    cmp ecx, esi
 006247C0    jl 0x006247A0
-006247C2    mov ecx, dword ptr ds:[0x00CC8D5C]
+006247C2    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 006247C8    jmp 0x006247E6
-006247CA    call 0x004B9480
-006247CF    mov ecx, dword ptr ds:[0x00CC8D5C]
+006247CA    call 0x004B9480                                 ; => [ Call: sub_4b9480 ]
+006247CF    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 006247D5    test ecx, ecx
 006247D7    jz 0x0062474B
 006247DD    cmp dword ptr ds:[ecx+0x5068], 0x02
@@ -55,16 +61,16 @@
 006247F4    lea edx, ss:[ebp-0x04]
 006247F7    call 0x005A0C70
 006247FC    cmp eax, 0xFFFFFFFF
-006247FF    jz 0x00624852
-00624801    call 0x004B9480
-00624806    mov ecx, dword ptr ds:[0x00CC8D5C]
+006247FF    jz 0x00624852                                   ; => [ Call: sub_5a0c70 ]
+00624801    call 0x004B9480                                 ; => [ Call: sub_4b9480 ]
+00624806    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 0062480C    mov esi, eax
 0062480E    test ecx, ecx
 00624810    jz 0x0062474B
 00624816    cmp dword ptr ds:[ecx+0x5068], 0x00
 0062481D    jz 0x00624859
 0062481F    mov ecx, 0xBDFB60
-00624824    call 0x004E3A30
+00624824    call 0x004E3A30                                 ; => [ Call: sub_4e3a30 ]
 00624829    test eax, eax
 0062482B    jz 0x00624852
 0062482D    cmp eax, 0x01
@@ -90,15 +96,15 @@
 00624855    mov esp, ebp
 00624857    pop ebp
 00624858    ret
-00624859    push 0x871028
+00624859    push 0x871028                                   ; => [ String: GetActiveConfig ]
 0062485E    push 0x33B6
-00624863    push 0x86F1E8
-00624868    mov ecx, 0x871038
+00624863    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+00624868    mov ecx, 0x871038                               ; => [ String: c.activeGame.gameType != GAME_NONE ]
 0062486D    mov edx, 0x801800
-00624872    call 0x0063B870
+00624872    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00624877    add esp, 0x0C
 0062487A    call 0x0063BC30
 0062487F    test al, al
-00624881    jz 0x00624884
+00624881    jz 0x00624884                                   ; => [ Call: sub_63bc30 ]
 00624883    int3
-00624884    call 0x0063BB00
+00624884    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

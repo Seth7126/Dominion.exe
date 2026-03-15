@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_649e10
+// 起始地址: 0x649e10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00649E10    push ebx
 00649E11    mov ebx, esp
 00649E13    sub esp, 0x08
@@ -8,7 +14,7 @@
 00649E20    mov dword ptr ss:[esp+0x04], ebp
 00649E24    mov ebp, esp
 00649E26    sub esp, 0x40
-00649E29    mov eax, dword ptr ds:[0x008C4040]
+00649E29    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00649E2E    xor eax, ebp
 00649E30    mov dword ptr ss:[ebp-0x04], eax
 00649E33    push esi
@@ -130,9 +136,9 @@
 00649FFE    mov eax, dword ptr ss:[ebp-0x10]
 0064A001    mov dword ptr ds:[edi+0x08], eax
 0064A004    jmp 0x0064A1E4
-0064A009    push 0x872DF4
+0064A009    push 0x872DF4                                   ; => [ String: BillboardAxes ]
 0064A00E    push 0xB62
-0064A013    mov ecx, 0x872DE8
+0064A013    mov ecx, 0x872DE8                               ; => [ String: fwd == V0 ]
 0064A018    jmp 0x0064A3CA
 0064A01D    movq qword ptr ds:[edi], xmm2
 0064A021    mov dword ptr ds:[edi+0x08], eax
@@ -257,7 +263,7 @@
 0064A200    movss xmm1, dword ptr ds:[edi+0x08]
 0064A205    mulss xmm1, xmm1
 0064A209    addss xmm0, xmm1
-0064A20D    call 0x004AC580
+0064A20D    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064A212    movss xmm1, dword ptr ds:[0x00890C78]
 0064A21A    movaps xmm2, xmm0
 0064A21D    comiss xmm1, xmm2
@@ -287,7 +293,7 @@
 0064A285    addss xmm0, xmm1
 0064A289    call 0x004AC580
 0064A28E    movss xmm1, dword ptr ds:[0x00890E18]
-0064A296    divss xmm1, xmm0
+0064A296    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 0064A29A    movups xmm0, xmmword ptr ss:[ebp-0x18]
 0064A29E    movss xmm2, dword ptr ss:[ebp-0x3C]
 0064A2A3    movss xmm3, dword ptr ss:[ebp-0x40]
@@ -309,7 +315,7 @@
 0064A2E2    movss xmm1, dword ptr ds:[esi+0x08]
 0064A2E7    mulss xmm1, xmm1
 0064A2EB    addss xmm0, xmm1
-0064A2EF    call 0x004AC580
+0064A2EF    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0064A2F4    movaps xmm1, xmm0
 0064A2F7    movss xmm0, dword ptr ds:[0x00890C78]
 0064A2FF    comiss xmm0, xmm1
@@ -339,7 +345,7 @@
 0064A367    addss xmm0, xmm1
 0064A36B    call 0x004AC580
 0064A370    movss xmm1, dword ptr ds:[0x00890E18]
-0064A378    divss xmm1, xmm0
+0064A378    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 0064A37C    movups xmm0, xmmword ptr ss:[ebp-0x18]
 0064A380    movss xmm2, dword ptr ss:[ebp-0x3C]
 0064A385    movss xmm3, dword ptr ss:[ebp-0x40]
@@ -355,21 +361,21 @@
 0064A3AA    pop edi
 0064A3AB    mov dword ptr ds:[esi+0x08], eax
 0064A3AE    pop esi
-0064A3AF    call 0x0075927A
+0064A3AF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0064A3B4    mov esp, ebp
 0064A3B6    pop ebp
 0064A3B7    mov esp, ebx
 0064A3B9    pop ebx
 0064A3BA    ret
-0064A3BB    push 0x872DF4
+0064A3BB    push 0x872DF4                                   ; => [ String: BillboardAxes ]
 0064A3C0    push 0xB78
-0064A3C5    mov ecx, 0x801AA4
+0064A3C5    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0064A3CA    push 0x872630
 0064A3CF    mov edx, 0x801800
-0064A3D4    call 0x0063B870
+0064A3D4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Draw3d.cpp | String: BillboardAxes ]
 0064A3D9    add esp, 0x0C
 0064A3DC    call 0x0063BC30
 0064A3E1    test al, al
-0064A3E3    jz 0x0064A3E6
+0064A3E3    jz 0x0064A3E6                                   ; => [ Call: sub_63bc30 ]
 0064A3E5    int3
-0064A3E6    call 0x0063BB00
+0064A3E6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

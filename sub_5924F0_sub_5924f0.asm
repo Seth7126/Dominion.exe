@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5924f0
+// 起始地址: 0x5924f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005924F0    push ebp
 005924F1    mov ebp, esp
 005924F3    mov eax, 0x1908
-005924F8    call 0x00761E50
+005924F8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005924FD    mov eax, dword ptr ds:[0x008C4040]
 00592502    xor eax, ebp
-00592504    mov dword ptr ss:[ebp-0x04], eax
+00592504    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 00592507    mov ecx, dword ptr ss:[ebp+0x08]
 0059250A    lea eax, ss:[ebp-0xC84]
 00592510    mov edx, dword ptr ss:[ebp+0x0C]
@@ -14,7 +20,7 @@
 00592518    push eax
 00592519    lea eax, ss:[ebp-0x1904]
 0059251F    push eax
-00592520    call 0x00591B80
+00592520    call 0x00591B80                                 ; => [ Call: sub_591b80 ]
 00592525    mov esi, eax
 00592527    add esp, 0x08
 0059252A    xor edx, edx
@@ -28,11 +34,11 @@
 00592542    dec eax
 00592543    or eax, 0xFFFFFFF8
 00592546    inc eax
-00592547    movaps xmm3, xmmword ptr ds:[0x00891390]
+00592547    movaps xmm3, xmmword ptr ds:[0x00891390]        ; => [ Data: data_891390 ]
 0059254E    mov edx, esi
 00592550    sub edx, eax
-00592552    xorps xmm2, xmm2
-00592555    xorps xmm1, xmm1
+00592552    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+00592555    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00592558    lea eax, ss:[ebp-0xC84]
 0059255E    nop
 00592560    movups xmm0, xmmword ptr ds:[eax+ecx*4]
@@ -67,7 +73,7 @@
 005925CA    xor ecx, ebp
 005925CC    pop edi
 005925CD    pop esi
-005925CE    call 0x0075927A
+005925CE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005925D3    mov esp, ebp
 005925D5    pop ebp
 005925D6    ret

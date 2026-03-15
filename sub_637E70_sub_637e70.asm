@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_637e70
+// 起始地址: 0x637e70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00637E70    push ebp
 00637E71    mov ebp, esp
 00637E73    and esp, 0xFFFFFFF0
 00637E76    sub esp, 0x68
-00637E79    mov eax, dword ptr ds:[0x008C4040]
+00637E79    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00637E7E    xor eax, esp
 00637E80    mov dword ptr ss:[esp+0x64], eax
 00637E84    push esi
@@ -24,7 +30,7 @@
 00637EBB    push edi
 00637EBC    mov edx, esi
 00637EBE    lea ecx, ss:[esp+0x18]
-00637EC2    call 0x00638820
+00637EC2    call 0x00638820                                 ; => [ Call: sub_638820 ]
 00637EC7    mov ecx, dword ptr ss:[ebp+0x08]
 00637ECA    add esp, 0x08
 00637ECD    mov eax, ecx
@@ -106,7 +112,7 @@
 00637FC5    add eax, 0x38
 00637FC8    push esi
 00637FC9    push eax
-00637FCA    call 0x00762362
+00637FCA    call 0x00762362                                 ; => [ Call: memmove ]
 00637FCF    movups xmm0, xmmword ptr ss:[esp+0x2C]
 00637FD4    add esp, 0x0C
 00637FD7    movups xmmword ptr ds:[esi], xmm0
@@ -151,7 +157,7 @@
 0063805A    movups xmmword ptr ss:[esp+0x4C], xmm0
 0063805F    movq xmm0, qword ptr ds:[edi+0x30]
 00638064    movq qword ptr ss:[esp+0x5C], xmm0
-0063806A    call 0x006393E0
+0063806A    call 0x006393E0                                 ; => [ Call: sub_6393e0 ]
 0063806F    mov edx, dword ptr ss:[esp+0x28]
 00638073    add esp, 0x0C
 00638076    mov ecx, dword ptr ss:[esp+0x08]
@@ -207,7 +213,7 @@
 00638119    movups xmmword ptr ds:[edi+0x20], xmm0
 0063811D    movq xmm0, qword ptr ds:[esi+0x30]
 00638122    movq qword ptr ds:[edi+0x30], xmm0
-00638127    call 0x006393E0
+00638127    call 0x006393E0                                 ; => [ Call: sub_6393e0 ]
 0063812C    add esp, 0x0C
 0063812F    mov ecx, dword ptr ss:[esp+0x08]
 00638133    sub edi, 0x38
@@ -221,7 +227,7 @@
 0063814E    pop esi
 0063814F    mov ecx, dword ptr ss:[esp+0x64]
 00638153    xor ecx, esp
-00638155    call 0x0075927A
+00638155    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0063815A    mov esp, ebp
 0063815C    pop ebp
 0063815D    ret
@@ -271,7 +277,7 @@
 006381F6    pop edi
 006381F7    pop esi
 006381F8    xor ecx, esp
-006381FA    call 0x0075927A
+006381FA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006381FF    mov esp, ebp
 00638201    pop ebp
 00638202    ret

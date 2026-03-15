@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56ce60
+// 起始地址: 0x56ce60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056CE60    push ebp
 0056CE61    mov ebp, esp
 0056CE63    and esp, 0xFFFFFFF8
@@ -7,16 +13,16 @@
 0056CE6B    mov ebx, ecx
 0056CE6D    push edi
 0056CE6E    mov dword ptr ss:[esp+0x14], ebx
-0056CE72    call 0x00573400
+0056CE72    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056CE77    mov esi, dword ptr ds:[eax+0x04]
 0056CE7A    mov edi, dword ptr ds:[eax+0x0C]
 0056CE7D    cmp dword ptr ds:[esi+0x19A4], 0x100
 0056CE87    jl 0x0056CE8E
-0056CE89    call 0x00591930
+0056CE89    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056CE8E    push ebx
 0056CE8F    mov edx, edi
 0056CE91    mov ecx, esi
-0056CE93    call 0x00571EE0
+0056CE93    call 0x00571EE0                                 ; => [ Call: sub_571ee0 ]
 0056CE98    add esp, 0x04
 0056CE9B    mov dword ptr ss:[esp+0x10], eax
 0056CE9F    cmp eax, 0xFFFFFFFF
@@ -28,7 +34,7 @@
 0056CEAD    push 0x00
 0056CEAF    push 0x476
 0056CEB4    push ebx
-0056CEB5    call 0x00571DA0
+0056CEB5    call 0x00571DA0                                 ; => [ Call: nullptr | Call: sub_571da0 ]
 0056CEBA    add esp, 0x1C
 0056CEBD    mov dword ptr ss:[esp+0x10], eax
 0056CEC1    mov ebx, eax
@@ -62,7 +68,7 @@
 0056CF2B    push 0x01
 0056CF2D    push dword ptr ss:[esp+0x34]
 0056CF31    push dword ptr ds:[ebx+0x152CC]
-0056CF37    call 0x0061B1B0
+0056CF37    call 0x0061B1B0                                 ; => [ Call: sub_61b1b0 ]
 0056CF3C    add esp, 0x2C
 0056CF3F    mov eax, dword ptr ds:[esi+0x1504]
 0056CF45    cmp eax, 0x03
@@ -90,7 +96,7 @@
 0056CF88    push 0x00
 0056CF8A    push 0x0B
 0056CF8C    push eax
-0056CF8D    call 0x0059F9B0
+0056CF8D    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0056CF92    add esp, 0x24
 0056CF95    mov eax, dword ptr ss:[esp+0x10]
 0056CF99    cmp dword ptr ds:[ebx+0x152D0], 0x3F1
@@ -98,7 +104,7 @@
 0056CFA5    push 0x3F1
 0056CFAA    mov edx, eax
 0056CFAC    mov ecx, esi
-0056CFAE    call 0x00584790
+0056CFAE    call 0x00584790                                 ; => [ Call: sub_584790 ]
 0056CFB3    add esp, 0x04
 0056CFB6    pop edi
 0056CFB7    pop esi

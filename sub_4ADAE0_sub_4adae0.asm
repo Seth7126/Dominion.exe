@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4adae0
+// 起始地址: 0x4adae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ADAE0    push ebp
 004ADAE1    mov ebp, esp
 004ADAE3    and esp, 0xFFFFFFF0
 004ADAE6    sub esp, 0x68
-004ADAE9    mov eax, dword ptr ds:[0x008C4040]
+004ADAE9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004ADAEE    xor eax, esp
 004ADAF0    mov dword ptr ss:[esp+0x64], eax
 004ADAF4    mov eax, dword ptr ss:[ebp+0x08]
@@ -44,7 +50,7 @@
 004ADB9E    test eax, eax
 004ADBA0    jz 0x004ADCCE
 004ADBA6    mov ecx, eax
-004ADBA8    call 0x0064E7A0
+004ADBA8    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004ADBAD    mov dword ptr ss:[esp+0x10], 0x00
 004ADBB5    lea edx, ss:[esp+0x50]
 004ADBB9    mov dword ptr ss:[esp+0x14], 0x00
@@ -57,7 +63,7 @@
 004ADBE7    movaps xmm0, xmmword ptr ss:[esp+0x10]
 004ADBEC    push eax
 004ADBED    movaps xmmword ptr ss:[esp+0x54], xmm0
-004ADBF2    call 0x00655430
+004ADBF2    call 0x00655430                                 ; => [ Call: sub_655430 ]
 004ADBF7    add esp, 0x04
 004ADBFA    cmp dword ptr ds:[edi+0x258], 0x01
 004ADC01    movups xmm0, xmmword ptr ds:[eax]
@@ -66,14 +72,14 @@
 004ADC0B    mov ecx, dword ptr ss:[esp+0x08]
 004ADC0F    mov edx, 0x801900
 004ADC14    push 0x00
-004ADC16    call 0x0066B2B0
+004ADC16    call 0x0066B2B0                                 ; => [ String: itemCard | Call: sub_66b2b0 ]
 004ADC1B    add esp, 0x04
 004ADC1E    test eax, eax
 004ADC20    jnz 0x004ADC2B
-004ADC22    movups xmm0, xmmword ptr ds:[0x007FF520]
+004ADC22    movups xmm0, xmmword ptr ds:[0x007FF520]        ; => [ Data: data_7ff520 ]
 004ADC29    jmp 0x004ADC82
 004ADC2B    mov ecx, eax
-004ADC2D    call 0x0064E7A0
+004ADC2D    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004ADC32    mov dword ptr ss:[esp+0x20], 0x00
 004ADC3A    lea edx, ss:[esp+0x50]
 004ADC3E    mov dword ptr ss:[esp+0x24], 0x00
@@ -86,7 +92,7 @@
 004ADC6C    movaps xmm0, xmmword ptr ss:[esp+0x20]
 004ADC71    push eax
 004ADC72    movaps xmmword ptr ss:[esp+0x54], xmm0
-004ADC77    call 0x00655430
+004ADC77    call 0x00655430                                 ; => [ Call: sub_655430 ]
 004ADC7C    add esp, 0x04
 004ADC7F    movups xmm0, xmmword ptr ds:[eax]
 004ADC82    movaps xmmword ptr ss:[esp+0x50], xmm0
@@ -117,7 +123,7 @@
 004ADCDF    pop esi
 004ADCE0    mov ecx, dword ptr ss:[esp+0x64]
 004ADCE4    xor ecx, esp
-004ADCE6    call 0x0075927A
+004ADCE6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004ADCEB    mov esp, ebp
 004ADCED    pop ebp
 004ADCEE    ret
@@ -129,12 +135,12 @@
 004ADCFD    call 0x0064E7A0
 004ADD02    mov ecx, dword ptr ds:[eax+0x1694]
 004ADD08    mov eax, edi
-004ADD0A    mov dword ptr ds:[edi+0x08], ecx
+004ADD0A    mov dword ptr ds:[edi+0x08], ecx                ; => [ Call: sub_64e7a0 ]
 004ADD0D    mov ecx, dword ptr ss:[esp+0x6C]
 004ADD11    pop edi
 004ADD12    pop esi
 004ADD13    xor ecx, esp
-004ADD15    call 0x0075927A
+004ADD15    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004ADD1A    mov esp, ebp
 004ADD1C    pop ebp
 004ADD1D    ret
@@ -143,10 +149,10 @@
 004ADD28    push 0x801A00
 004ADD2D    mov edx, 0x801800
 004ADD32    mov ecx, 0x801A1C
-004ADD37    call 0x0063B870
+004ADD37    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectContains | String: C:\x\ax2017\Engine\Rect.cpp | String: RectIsNormalized(r) ]
 004ADD3C    add esp, 0x0C
 004ADD3F    call 0x0063BC30
 004ADD44    test al, al
-004ADD46    jz 0x004ADD49
+004ADD46    jz 0x004ADD49                                   ; => [ Call: sub_63bc30 ]
 004ADD48    int3
-004ADD49    call 0x0063BB00
+004ADD49    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

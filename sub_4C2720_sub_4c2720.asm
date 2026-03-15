@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4c2720
+// 起始地址: 0x4c2720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C2720    push ebp
 004C2721    mov ebp, esp
 004C2723    sub esp, 0x0C
@@ -6,14 +12,14 @@
 004C2728    push edi
 004C2729    mov edi, edx
 004C272B    mov dword ptr ss:[ebp-0x0C], ecx
-004C272E    mov edx, dword ptr ds:[0x00CC8D5C]
+004C272E    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C2734    mov dword ptr ss:[ebp-0x08], edi
 004C2737    test edx, edx
 004C2739    jnz 0x004C2751
-004C273B    push 0x77EB90
+004C273B    push 0x77EB90                                   ; => [ String: GetClient ]
 004C2740    push 0x7B
-004C2742    push 0x77EB50
-004C2747    mov ecx, 0x77EB9C
+004C2742    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+004C2747    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 004C274C    jmp 0x004C2800
 004C2751    cmp byte ptr ds:[edx+0x502C], 0x00
 004C2758    lea eax, ds:[edx+0x5028]
@@ -30,7 +36,7 @@
 004C2776    sar eax, 0x05
 004C2779    push 0x4C2650
 004C277E    push eax
-004C277F    call 0x004D4B70
+004C277F    call 0x004D4B70                                 ; => [ Call: sub_4d4b70 | Call: sub_4c2650 ]
 004C2784    mov eax, dword ptr ss:[ebp-0x04]
 004C2787    add esp, 0x08
 004C278A    jmp 0x004C278F
@@ -42,7 +48,7 @@
 004C279B    jle 0x004C27CE
 004C279D    nop dword ptr ds:[eax], eax
 004C27A0    mov ecx, dword ptr ds:[esi+0x10]
-004C27A3    call 0x004C25D0
+004C27A3    call 0x004C25D0                                 ; => [ Call: sub_4c25d0 ]
 004C27A8    mov edx, dword ptr ss:[ebp-0x08]
 004C27AB    mov ecx, dword ptr ds:[edx]
 004C27AD    cmp dword ptr ss:[ebp-0x0C], eax
@@ -68,21 +74,21 @@
 004C27D3    mov esp, ebp
 004C27D5    pop ebp
 004C27D6    ret
-004C27D7    push 0x8039DC
+004C27D7    push 0x8039DC                                   ; => [ String: CalcFriendsForTab ]
 004C27DC    push 0x13F1
-004C27E1    mov ecx, 0x8039F0
+004C27E1    mov ecx, 0x8039F0                               ; => [ String: num == 0 ]
 004C27E6    jmp 0x004C27FB
 004C27E8    test edi, edi
 004C27EA    jnz 0x004C27CE
-004C27EC    push 0x8039DC
+004C27EC    push 0x8039DC                                   ; => [ String: CalcFriendsForTab ]
 004C27F1    push 0x13FB
-004C27F6    mov ecx, 0x8039FC
-004C27FB    push 0x80292C
+004C27F6    mov ecx, 0x8039FC                               ; => [ String: num != 0 ]
+004C27FB    push 0x80292C                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp ]
 004C2800    mov edx, 0x801800
-004C2805    call 0x0063B870
+004C2805    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004C280A    add esp, 0x0C
 004C280D    call 0x0063BC30
 004C2812    test al, al
-004C2814    jz 0x004C2817
+004C2814    jz 0x004C2817                                   ; => [ Call: sub_63bc30 ]
 004C2816    int3
-004C2817    call 0x0063BB00
+004C2817    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

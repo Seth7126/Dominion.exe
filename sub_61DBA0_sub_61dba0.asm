@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_61dba0
+// 起始地址: 0x61dba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0061DBA0    cmp dword ptr ds:[0x01723FF4], 0x01
 0061DBA7    push esi
 0061DBA8    push edi
 0061DBA9    mov esi, edx
 0061DBAB    mov edi, ecx
-0061DBAD    jz 0x0061DBB4
+0061DBAD    jz 0x0061DBB4                                   ; => [ Data: data_1723ff4 ]
 0061DBAF    xor al, al
 0061DBB1    pop edi
 0061DBB2    pop esi
 0061DBB3    ret
 0061DBB4    mov ecx, dword ptr ds:[0x00CC8DC8]
 0061DBBA    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-0061DBC0    call 0x004D8F30
-0061DBC5    mov edx, dword ptr ds:[0x01723FF8]
+0061DBC0    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
+0061DBC5    mov edx, dword ptr ds:[0x01723FF8]              ; => [ Data: data_1723ff8 ]
 0061DBCB    mov ecx, edx
 0061DBCD    sar ecx, 0x04
 0061DBD0    or ecx, edx
@@ -41,10 +47,10 @@
 0061DC14    push 0x86F1E8
 0061DC19    mov edx, 0x801800
 0061DC1E    mov ecx, 0x86AB2C
-0061DC23    call 0x0063B870
+0061DC23    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: IsWeeklyCampaign | String: &status == &weeklyStatus->status ]
 0061DC28    add esp, 0x0C
 0061DC2B    call 0x0063BC30
 0061DC30    test al, al
-0061DC32    jz 0x0061DC35
+0061DC32    jz 0x0061DC35                                   ; => [ Call: sub_63bc30 ]
 0061DC34    int3
-0061DC35    call 0x0063BB00
+0061DC35    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4afaf0
+// 起始地址: 0x4afaf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AFAF0    push ebp
 004AFAF1    mov ebp, esp
 004AFAF3    sub esp, 0x358
 004AFAF9    mov eax, dword ptr ds:[0x008C4040]
-004AFAFE    xor eax, ebp
+004AFAFE    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004AFB00    mov dword ptr ss:[ebp-0x08], eax
 004AFB03    push ebx
 004AFB04    push esi
@@ -16,19 +22,19 @@
 004AFB18    push 0x7FFB70
 004AFB1D    mov edx, ebx
 004AFB1F    lea ecx, ss:[ebp-0x33C]
-004AFB25    call 0x00694540
+004AFB25    call 0x00694540                                 ; => [ Call: sub_694540 | Data: data_7ffb70 ]
 004AFB2A    add esp, 0x08
 004AFB2D    cmp byte ptr ss:[ebp-0x338], 0x00
 004AFB34    jnz 0x004AFB50
 004AFB36    mov edx, esi
 004AFB38    mov ecx, ebx
-004AFB3A    call 0x004AF740
+004AFB3A    call 0x004AF740                                 ; => [ Call: sub_4af740 ]
 004AFB3F    pop edi
 004AFB40    pop esi
 004AFB41    pop ebx
 004AFB42    mov ecx, dword ptr ss:[ebp-0x08]
 004AFB45    xor ecx, ebp
-004AFB47    call 0x0075927A
+004AFB47    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AFB4C    mov esp, ebp
 004AFB4E    pop ebp
 004AFB4F    ret
@@ -54,7 +60,7 @@
 004AFB89    add esp, 0x08
 004AFB8C    test al, al
 004AFB8E    jz 0x004AFBBE
-004AFB90    mov eax, dword ptr ds:[0x00CC8D5C]
+004AFB90    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004AFB95    test eax, eax
 004AFB97    jz 0x004AFEAB
 004AFB9D    mov ecx, dword ptr ds:[eax]
@@ -86,7 +92,7 @@
 004AFBED    add esp, 0x08
 004AFBF0    test al, al
 004AFBF2    jnz 0x004AFC37
-004AFBF4    mov eax, dword ptr ds:[0x00CC8D5C]
+004AFBF4    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004AFBF9    test eax, eax
 004AFBFB    jz 0x004AFEAB
 004AFC01    mov ecx, dword ptr ds:[eax]
@@ -105,7 +111,7 @@
 004AFC28    pop ebx
 004AFC29    mov ecx, dword ptr ss:[ebp-0x08]
 004AFC2C    xor ecx, ebp
-004AFC2E    call 0x0075927A
+004AFC2E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AFC33    mov esp, ebp
 004AFC35    pop ebp
 004AFC36    ret
@@ -115,7 +121,7 @@
 004AFC4A    mov ecx, ebx
 004AFC4C    movss xmm0, dword ptr ds:[esi+0x7C]
 004AFC51    movss dword ptr ss:[ebp-0x340], xmm0
-004AFC59    call 0x006938E0
+004AFC59    call 0x006938E0                                 ; => [ Call: sub_6938e0 ]
 004AFC5E    mov eax, dword ptr ds:[edi+0x04]
 004AFC61    mov dword ptr ds:[esi+0x3C], eax
 004AFC64    mov eax, dword ptr ds:[edi+0x08]
@@ -141,10 +147,10 @@
 004AFCAE    movss xmm4, dword ptr ds:[esi+0x74]
 004AFCB3    movss xmm1, dword ptr ss:[ebp-0x340]
 004AFCBB    subss xmm1, xmm4
-004AFCBF    call 0x004AE0B0
+004AFCBF    call 0x004AE0B0                                 ; => [ Call: sub_4ae0b0 ]
 004AFCC4    movaps xmm2, xmm0
 004AFCC7    movaps xmm0, xmm1
-004AFCCA    call 0x004AE0B0
+004AFCCA    call 0x004AE0B0                                 ; => [ Call: sub_4ae0b0 ]
 004AFCCF    comiss xmm2, xmm0
 004AFCD2    jbe 0x004AFCD9
 004AFCD4    movaps xmm3, xmm2
@@ -177,7 +183,7 @@
 004AFD37    comiss xmm0, xmm1
 004AFD3A    jbe 0x004AFD4A
 004AFD3C    test byte ptr ds:[esi+0x04], 0x80
-004AFD40    jz 0x004AFD4A
+004AFD40    jz 0x004AFD4A                                   ; => [ Call: sub_4ae0b0 ]
 004AFD42    mov dword ptr ds:[esi], 0x03
 004AFD48    jmp 0x004AFD74
 004AFD4A    test byte ptr ds:[esi+0x04], 0x08
@@ -189,7 +195,7 @@
 004AFD62    push 0x7FFB14
 004AFD67    push 0x00
 004AFD69    lea edx, ds:[esi+0x08]
-004AFD6C    call 0x0061C270
+004AFD6C    call 0x0061C270                                 ; => [ Call: nullptr | Data: data_7ffb14 | Call: sub_61c270 ]
 004AFD71    add esp, 0x10
 004AFD74    mov eax, dword ptr ds:[esi]
 004AFD76    cmp eax, 0x06
@@ -248,7 +254,7 @@
 004AFE71    push eax
 004AFE72    jz 0x004AFE56
 004AFE74    push 0x01
-004AFE76    call 0x0061C270
+004AFE76    call 0x0061C270                                 ; => [ Call: sub_61c270 ]
 004AFE7B    add esp, 0x10
 004AFE7E    movss xmm0, dword ptr ss:[ebp-0x344]
 004AFE86    movss dword ptr ds:[esi+0x78], xmm0
@@ -260,7 +266,7 @@
 004AFE9E    pop esi
 004AFE9F    xor ecx, ebp
 004AFEA1    pop ebx
-004AFEA2    call 0x0075927A
+004AFEA2    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AFEA7    mov esp, ebp
 004AFEA9    pop ebp
 004AFEAA    ret
@@ -269,10 +275,10 @@
 004AFEB2    push 0x77EB50
 004AFEB7    mov edx, 0x801800
 004AFEBC    mov ecx, 0x77EB9C
-004AFEC1    call 0x0063B870
+004AFEC1    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004AFEC6    add esp, 0x0C
 004AFEC9    call 0x0063BC30
 004AFECE    test al, al
-004AFED0    jz 0x004AFED3
+004AFED0    jz 0x004AFED3                                   ; => [ Call: sub_63bc30 ]
 004AFED2    int3
-004AFED3    call 0x0063BB00
+004AFED3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cea30
+// 起始地址: 0x5cea30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CEA30    push ebp
 005CEA31    mov ebp, esp
 005CEA33    push ecx
@@ -20,7 +26,7 @@
 005CEA72    push ecx
 005CEA73    mov ecx, dword ptr ss:[ebp-0x04]
 005CEA76    push edi
-005CEA77    call 0x005CE8E0
+005CEA77    call 0x005CE8E0                                 ; => [ Call: sub_5ce8e0 ]
 005CEA7C    add esp, 0x0C
 005CEA7F    inc dword ptr ds:[esi+0x810]
 005CEA85    xor eax, eax

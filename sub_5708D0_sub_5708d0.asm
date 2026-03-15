@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5708d0
+// 起始地址: 0x5708d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005708D0    push ebp
 005708D1    mov ebp, esp
 005708D3    and esp, 0xFFFFFFF8
@@ -14,17 +20,17 @@
 005708E8    call 0x00568380
 005708ED    add esp, 0x04
 005708F0    test al, al
-005708F2    jz 0x00570940
+005708F2    jz 0x00570940                                   ; => [ Call: sub_568380 ]
 005708F4    mov eax, dword ptr ds:[esi+0x08]
 005708F7    mov ebx, dword ptr ds:[eax]
 005708F9    mov eax, dword ptr ds:[eax+0x04]
 005708FC    mov dword ptr ss:[esp+0x0C], eax
 00570900    call 0x00573400
 00570905    movzx edi, di
-00570908    mov esi, dword ptr ds:[eax+0x04]
+00570908    mov esi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0057090B    cmp edi, 0x320
 00570911    jb 0x00570918
-00570913    call 0x00591930
+00570913    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00570918    push dword ptr ss:[esp+0x0C]
 0057091C    imul eax, edi, 0x64
 0057091F    mov ecx, esi
@@ -33,7 +39,7 @@
 00570929    call 0x005754F0
 0057092E    add esp, 0x08
 00570931    test al, al
-00570933    jz 0x00570940
+00570933    jz 0x00570940                                   ; => [ Call: sub_5754f0 ]
 00570935    mov al, 0x01
 00570937    pop edi
 00570938    pop esi

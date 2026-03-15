@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_699790
+// 起始地址: 0x699790
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00699790    push ebx
 00699791    mov ebx, esp
 00699793    sub esp, 0x08
@@ -9,7 +15,7 @@
 006997A4    mov ebp, esp
 006997A6    sub esp, 0x1A8
 006997AC    mov eax, dword ptr ds:[0x008C4040]
-006997B1    xor eax, ebp
+006997B1    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 006997B3    mov dword ptr ss:[ebp-0x04], eax
 006997B6    push esi
 006997B7    mov esi, dword ptr ds:[ebx+0x0C]
@@ -40,7 +46,7 @@
 0069980F    pop esi
 00699810    mov ecx, dword ptr ss:[ebp-0x04]
 00699813    xor ecx, ebp
-00699815    call 0x0075927A
+00699815    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0069981A    mov esp, ebp
 0069981C    pop ebp
 0069981D    mov esp, ebx
@@ -51,7 +57,7 @@
 0069982A    subss xmm0, xmm3
 0069982E    comiss xmm3, xmm0
 00699831    jb 0x00699838
-00699833    xorps xmm5, xmm5
+00699833    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx | String: 0 | String: zx ]
 00699836    jmp 0x0069987E
 00699838    comiss xmm0, xmm4
 0069983B    jb 0x00699865
@@ -75,7 +81,7 @@
 00699868    xorps xmm1, xmm1
 0069986B    call 0x004AE110
 00699870    movss xmm4, dword ptr ds:[0x00890E18]
-00699878    movaps xmm5, xmm0
+00699878    movaps xmm5, xmm0                               ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0069987B    xorps xmm3, xmm3
 0069987E    movss xmm0, dword ptr ds:[edi+0x80]
 00699886    xorps xmm1, xmm1
@@ -120,7 +126,7 @@
 0069993C    addss xmm1, dword ptr ds:[edi+0x74]
 00699941    comiss xmm3, xmm1
 00699944    jbe 0x0069994B
-00699946    xorps xmm0, xmm0
+00699946    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 00699949    jmp 0x00699952
 0069994B    movaps xmm0, xmm4
 0069994E    minss xmm0, xmm1
@@ -139,7 +145,7 @@
 00699980    movups xmm3, xmmword ptr ss:[ebp-0x108]
 00699987    add esp, 0x08
 0069998A    movups xmm2, xmmword ptr ss:[ebp-0xF8]
-00699991    movups xmm1, xmmword ptr ds:[eax]
+00699991    movups xmm1, xmmword ptr ds:[eax]               ; => [ Call: sub_697400 ]
 00699994    movups xmm4, xmmword ptr ss:[ebp-0x68]
 00699998    movaps xmm0, xmm1
 0069999B    movaps xmm5, xmm1
@@ -188,8 +194,8 @@
 00699A90    addss xmm0, xmm2
 00699A94    movups xmmword ptr ss:[ebp-0xD8], xmm4
 00699A9B    movups xmmword ptr ss:[ebp-0xD8], xmm4
-00699AA2    addss xmm0, xmm5
-00699AA6    addss xmm1, xmm2
+00699AA2    addss xmm0, xmm5                                ; => [ Data: data_8937c0 ]
+00699AA6    addss xmm1, xmm2                                ; => [ Data: data_8937c0 ]
 00699AAA    movups xmmword ptr ss:[ebp-0x168], xmm4
 00699AB1    shufps xmm4, xmm4, 0xFF
 00699AB5    movss dword ptr ss:[ebp-0xD4], xmm0
@@ -254,7 +260,7 @@
 00699BED    movups xmmword ptr ds:[eax+0x30], xmm3
 00699BF1    movups xmmword ptr ds:[eax+0x40], xmm4
 00699BF5    movups xmmword ptr ds:[eax+0x50], xmm5
-00699BF9    call 0x0075927A
+00699BF9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00699BFE    mov esp, ebp
 00699C00    pop ebp
 00699C01    mov esp, ebx
@@ -265,10 +271,10 @@
 00699C0F    push 0x878EA8
 00699C14    mov edx, 0x801800
 00699C19    mov ecx, 0x879144
-00699C1E    call 0x0063B870
+00699C1E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: el.type == UI_GROUP | String: C:\x\ax2017\Engine\UIDef.cpp | String: UIElementGroupTransform ]
 00699C23    add esp, 0x0C
 00699C26    call 0x0063BC30
 00699C2B    test al, al
-00699C2D    jz 0x00699C30
+00699C2D    jz 0x00699C30                                   ; => [ Call: sub_63bc30 ]
 00699C2F    int3
-00699C30    call 0x0063BB00
+00699C30    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

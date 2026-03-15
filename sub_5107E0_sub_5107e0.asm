@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_5107e0
+// 起始地址: 0x5107e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005107E0    dword 51EC8B55
 005107E4    push esi
 005107E5    call 0x0056B780
 005107EA    mov edx, 0x461
 005107EF    mov ecx, eax
 005107F1    call 0x0050FC20
-005107F6    mov dword ptr ss:[ebp-0x04], eax
-005107F9    call 0x00573400
+005107F6    mov dword ptr ss:[ebp-0x04], eax                ; => [ Call: sub_50fc20 | Call: sub_56b780 ]
+005107F9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005107FE    mov ecx, dword ptr ds:[eax+0x04]
 00510801    mov edx, dword ptr ds:[ecx+0x1504]
 00510807    cmp edx, 0x03
@@ -33,7 +39,7 @@
 00510848    push 0x00
 0051084A    push 0x43
 0051084C    push eax
-0051084D    call 0x0059F9B0
+0051084D    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 00510852    add esp, 0x24
 00510855    pop esi
 00510856    mov esp, ebp

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ddd90
+// 起始地址: 0x4ddd90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DDD90    push ebp
 004DDD91    mov ebp, esp
 004DDD93    and esp, 0xFFFFFFF8
@@ -19,24 +25,24 @@
 004DDDC1    lea ecx, ss:[esp+0x30]
 004DDDC5    push eax
 004DDDC6    mov dword ptr ss:[esp+0x18], esi
-004DDDCA    call 0x004DC550
+004DDDCA    call 0x004DC550                                 ; => [ Call: sub_4dc550 ]
 004DDDCF    xorps xmm0, xmm0
 004DDDD2    lea ecx, ss:[esp+0x88]
 004DDDD9    movlpd qword ptr ss:[esp+0x10], xmm0
 004DDDDF    push dword ptr ss:[esp+0x14]
 004DDDE3    push dword ptr ss:[esp+0x14]
-004DDDE7    call 0x004DC830
+004DDDE7    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DDDEC    mov esi, dword ptr ss:[esp+0x30]
 004DDDF0    cmp esi, dword ptr ss:[esp+0x88]
 004DDDF7    jz 0x004DE030
 004DDDFD    mov ebx, dword ptr ds:[0x00775674]
 004DDE03    mov eax, dword ptr ss:[esp+0x18]
-004DDE07    mov ecx, 0x77FCA8
+004DDE07    mov ecx, 0x77FCA8                               ; => [ Data: data_77fca8 ]
 004DDE0C    mov edx, dword ptr ss:[esp+0x24]
 004DDE10    shl eax, 0x04
 004DDE13    add edx, 0x9C8
 004DDE19    add eax, edx
-004DDE1B    mov dword ptr ss:[esp+0x1C], ecx
+004DDE1B    mov dword ptr ss:[esp+0x1C], ecx                ; => [ Data: data_77fca8 ]
 004DDE1F    mov dword ptr ss:[esp+0x20], eax
 004DDE23    mov ecx, dword ptr ds:[ecx+0x10]
 004DDE26    mov edi, ecx
@@ -73,13 +79,13 @@
 004DDE81    lea eax, ss:[esp+0x48]
 004DDE85    push eax
 004DDE86    mov dword ptr ds:[esi+0x04], 0x00
-004DDE8D    call 0x004DC550
+004DDE8D    call 0x004DC550                                 ; => [ Call: sub_4dc550 ]
 004DDE92    xorps xmm0, xmm0
 004DDE95    lea ecx, ss:[esp+0x70]
 004DDE99    movlpd qword ptr ss:[esp+0x10], xmm0
 004DDE9F    push dword ptr ss:[esp+0x14]
 004DDEA3    push dword ptr ss:[esp+0x14]
-004DDEA7    call 0x004DC830
+004DDEA7    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DDEAC    mov edi, dword ptr ss:[esp+0x58]
 004DDEB0    cmp edi, dword ptr ss:[esp+0x70]
 004DDEB4    jz 0x004DDF5D
@@ -91,7 +97,7 @@
 004DDECB    call dword ptr ds:[0x00775674]
 004DDED1    add esp, 0x0C
 004DDED4    test eax, eax
-004DDED6    jnz 0x004DDEE4
+004DDED6    jnz 0x004DDEE4                                  ; => [ String: Black Market ]
 004DDED8    or dword ptr ds:[esi+0x04], 0x01
 004DDEDC    mov ebx, dword ptr ds:[0x00775674]
 004DDEE2    jmp 0x004DDF3E
@@ -101,7 +107,7 @@
 004DDEEB    call dword ptr ds:[0x00775674]
 004DDEF1    add esp, 0x0C
 004DDEF4    test eax, eax
-004DDEF6    jnz 0x004DDF04
+004DDEF6    jnz 0x004DDF04                                  ; => [ String: Promo Pack 1 ]
 004DDEF8    or dword ptr ds:[esi+0x04], 0x02
 004DDEFC    mov ebx, dword ptr ds:[0x00775674]
 004DDF02    jmp 0x004DDF3E
@@ -111,7 +117,7 @@
 004DDF0B    call dword ptr ds:[0x00775674]
 004DDF11    add esp, 0x0C
 004DDF14    test eax, eax
-004DDF16    jnz 0x004DDF24
+004DDF16    jnz 0x004DDF24                                  ; => [ String: Promo Pack 2 ]
 004DDF18    or dword ptr ds:[esi+0x04], 0x04
 004DDF1C    mov ebx, dword ptr ds:[0x00775674]
 004DDF22    jmp 0x004DDF3E
@@ -122,12 +128,12 @@
 004DDF31    call ebx
 004DDF33    add esp, 0x0C
 004DDF36    test eax, eax
-004DDF38    jnz 0x004DDF3E
+004DDF38    jnz 0x004DDF3E                                  ; => [ String: Promo Marchland ]
 004DDF3A    or dword ptr ds:[esi+0x04], 0x08
 004DDF3E    push dword ptr ss:[esp+0x6C]
 004DDF42    lea ecx, ss:[esp+0x5C]
 004DDF46    push dword ptr ss:[esp+0x6C]
-004DDF4A    call 0x004DC830
+004DDF4A    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DDF4F    mov edi, dword ptr ss:[esp+0x58]
 004DDF53    cmp edi, dword ptr ss:[esp+0x70]
 004DDF57    jnz 0x004DDEC0
@@ -139,8 +145,8 @@
 004DDF77    add eax, edi
 004DDF79    mov dword ptr ss:[esp+0x2C], eax
 004DDF7D    call 0x004DC4A0
-004DDF82    mov dword ptr ds:[esi+0x04], eax
-004DDF85    mov edi, 0x8087D4
+004DDF82    mov dword ptr ds:[esi+0x04], eax                ; => [ Call: sub_4dc4a0 ]
+004DDF85    mov edi, 0x8087D4                               ; => [ Data: data_8087d4 ]
 004DDF8A    nop word ptr ds:[eax+eax*1], ax
 004DDF90    mov eax, dword ptr ds:[edi+0x04]
 004DDF93    mov edx, dword ptr ds:[edi]
@@ -162,7 +168,7 @@
 004DDFBA    jz 0x004DDFC9
 004DDFBC    add edi, 0x08
 004DDFBF    cmp edi, 0x8087EC
-004DDFC5    jnz 0x004DDF90
+004DDFC5    jnz 0x004DDF90                                  ; => [ String: MoveToLinear ]
 004DDFC7    jmp 0x004DDFD0
 004DDFC9    mov eax, dword ptr ss:[esp+0x10]
 004DDFCD    mov dword ptr ds:[esi+0x04], eax
@@ -170,7 +176,7 @@
 004DDFD4    mov dword ptr ss:[esp+0x50], 0x00
 004DDFDC    lea ecx, ss:[esp+0x38]
 004DDFE0    mov dword ptr ss:[esp+0x54], 0x0A
-004DDFE8    call 0x004DE040
+004DDFE8    call 0x004DE040                                 ; => [ Call: sub_4de040 ]
 004DDFED    mov dword ptr ds:[esi+0x08], eax
 004DDFF0    mov dword ptr ds:[esi+0x0C], edx
 004DDFF3    mov esi, dword ptr ss:[esp+0x30]
@@ -178,11 +184,11 @@
 004DDFFB    add ecx, 0x1C
 004DDFFE    mov dword ptr ss:[esp+0x1C], ecx
 004DE002    cmp ecx, 0x77FEA0
-004DE008    jl 0x004DDE23
+004DE008    jl 0x004DDE23                                   ; => [ Data: data_77fea0 ]
 004DE00E    push dword ptr ss:[esp+0x44]
 004DE012    lea ecx, ss:[esp+0x34]
 004DE016    push dword ptr ss:[esp+0x44]
-004DE01A    call 0x004DC830
+004DE01A    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DE01F    mov esi, dword ptr ss:[esp+0x30]
 004DE023    cmp esi, dword ptr ss:[esp+0x88]
 004DE02A    jnz 0x004DDE03

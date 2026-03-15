@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_483990
+// 起始地址: 0x483990
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00483990    mov edx, 0x1F
 00483995    mov ecx, 0x853180
-0048399A    call 0x0069F030
-0048399F    mov dword ptr ds:[0x0171E794], eax
+0048399A    call 0x0069F030                                 ; => [ String: res/translation/cs-cz.translation | Call: sub_69f030 ]
+0048399F    mov dword ptr ds:[0x0171E794], eax              ; => [ Data: data_171e794 ]
 004839A4    ret

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4ad010
+// 起始地址: 0x4ad010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AD010    push ebp
 004AD011    mov ebp, esp
 004AD013    and esp, 0xFFFFFFF0
 004AD016    sub esp, 0x98
-004AD01C    mov eax, dword ptr ds:[0x008C4040]
+004AD01C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004AD021    xor eax, esp
 004AD023    mov dword ptr ss:[esp+0x94], eax
 004AD02A    push esi
@@ -12,10 +18,10 @@
 004AD034    cmp edx, eax
 004AD036    jnz 0x004AD0EA
 004AD03C    cmp byte ptr ds:[esi+0xBDC], 0x00
-004AD043    movss xmm0, dword ptr ds:[0x008C4634]
+004AD043    movss xmm0, dword ptr ds:[0x008C4634]           ; => [ Data: data_8c4634 ]
 004AD04B    movss xmm1, dword ptr ds:[esi+0xBE0]
 004AD053    jz 0x004AD09E
-004AD055    xorps xmm2, xmm2
+004AD055    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 004AD058    ucomiss xmm1, xmm2
 004AD05B    lahf
 004AD05C    test ah, 0x44
@@ -31,7 +37,7 @@
 004AD08B    pop esi
 004AD08C    mov ecx, dword ptr ss:[esp+0x94]
 004AD093    xor ecx, esp
-004AD095    call 0x0075927A
+004AD095    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AD09A    mov esp, ebp
 004AD09C    pop ebp
 004AD09D    ret
@@ -42,7 +48,7 @@
 004AD0AD    jnp 0x004AD266
 004AD0B3    mulss xmm0, dword ptr ds:[0x00890F38]
 004AD0BB    addss xmm0, xmm1
-004AD0BF    xorps xmm1, xmm1
+004AD0BF    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 004AD0C2    comiss xmm1, xmm0
 004AD0C5    jnbe 0x004AD0CE
 004AD0C7    movaps xmm1, xmm2
@@ -52,7 +58,7 @@
 004AD0D7    pop esi
 004AD0D8    mov ecx, dword ptr ss:[esp+0x94]
 004AD0DF    xor ecx, esp
-004AD0E1    call 0x0075927A
+004AD0E1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AD0E6    mov esp, ebp
 004AD0E8    pop ebp
 004AD0E9    ret
@@ -62,7 +68,7 @@
 004AD0FA    mov byte ptr ds:[esi+0xBDC], 0x00
 004AD101    mov dword ptr ds:[esi+0xBE0], 0x00
 004AD10B    jmp 0x004AD110
-004AD10D    xorps xmm1, xmm1
+004AD10D    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 004AD110    movss xmm0, dword ptr ds:[esi+0xBD8]
 004AD118    mov dword ptr ds:[esi+0xBE4], eax
 004AD11E    movss dword ptr ds:[esi+0xBE8], xmm0
@@ -74,7 +80,7 @@
 004AD147    call 0x0064E7A0
 004AD14C    or edx, 0xFFFFFFFF
 004AD14F    mov ecx, eax
-004AD151    call 0x0066B600
+004AD151    call 0x0066B600                                 ; => [ Call: sub_66b600 | Call: sub_64e7a0 ]
 004AD156    mov edi, dword ptr ds:[esi+0xBD4]
 004AD15C    mov byte ptr ds:[esi+0xBF0], 0x00
 004AD163    cmp edi, 0xFFFFFFFF
@@ -90,7 +96,7 @@
 004AD180    sub eax, edx
 004AD182    mov edi, eax
 004AD184    mov ecx, dword ptr ds:[esi+0xBEC]
-004AD18A    call 0x0064E7A0
+004AD18A    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004AD18F    push 0x00
 004AD191    lea ecx, ss:[esp+0x54]
 004AD195    mov dword ptr ss:[esp+0x0C], eax
@@ -101,7 +107,7 @@
 004AD1A1    lea ecx, ss:[esp+0x1C]
 004AD1A5    push ecx
 004AD1A6    mov ecx, eax
-004AD1A8    call 0x00656980
+004AD1A8    call 0x00656980                                 ; => [ Call: sub_656980 ]
 004AD1AD    mov ecx, dword ptr ss:[esp+0x18]
 004AD1B1    mov edx, 0x01
 004AD1B6    push 0x00
@@ -115,7 +121,7 @@
 004AD1D2    push eax
 004AD1D3    lea eax, ss:[esp+0x4C]
 004AD1D7    push eax
-004AD1D8    call 0x00656980
+004AD1D8    call 0x00656980                                 ; => [ Call: sub_656980 ]
 004AD1DD    movaps xmm2, xmmword ptr ss:[esp+0x30]
 004AD1E2    add esp, 0x20
 004AD1E5    mov ecx, dword ptr ss:[esp+0x08]
@@ -153,7 +159,7 @@
 004AD26D    pop edi
 004AD26E    pop esi
 004AD26F    xor ecx, esp
-004AD271    call 0x0075927A
+004AD271    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AD276    mov esp, ebp
 004AD278    pop ebp
 004AD279    ret
@@ -162,10 +168,10 @@
 004AD284    push 0x8739B4
 004AD289    mov edx, 0x801800
 004AD28E    mov ecx, 0x801AA4
-004AD293    call 0x0063B870
+004AD293    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: UI2TableGetRangeTarget | String: Halt ]
 004AD298    add esp, 0x0C
 004AD29B    call 0x0063BC30
 004AD2A0    test al, al
-004AD2A2    jz 0x004AD2A5
+004AD2A2    jz 0x004AD2A5                                   ; => [ Call: sub_63bc30 ]
 004AD2A4    int3
-004AD2A5    call 0x0063BB00
+004AD2A5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

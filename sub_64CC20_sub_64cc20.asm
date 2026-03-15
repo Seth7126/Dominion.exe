@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64cc20
+// 起始地址: 0x64cc20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064CC20    push ebp
 0064CC21    mov ebp, esp
 0064CC23    push ecx
@@ -12,7 +18,7 @@
 0064CC34    jz 0x0064CC43
 0064CC36    cmp byte ptr ds:[eax], 0x00
 0064CC39    jz 0x0064CC43
-0064CC3B    call 0x0063D4E0
+0064CC3B    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0064CC40    inc dword ptr ds:[eax+0x04]
 0064CC43    mov eax, dword ptr ds:[edi+0x04]
 0064CC46    mov dword ptr ds:[esi+0x04], eax

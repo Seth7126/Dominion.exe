@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_69e480
+// 起始地址: 0x69e480
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069E480    push ecx
 0069E481    mov eax, dword ptr ds:[ecx]
-0069E483    mov edx, dword ptr ds:[0x0147AC28]
+0069E483    mov edx, dword ptr ds:[0x0147AC28]              ; => [ Data: data_147ac28 ]
 0069E489    add eax, 0xFFFFFFF3
 0069E48C    cmp eax, 0x0B
 0069E48F    jnbe 0x0069E4C3
@@ -21,7 +27,7 @@
 0069E4C8    cmp byte ptr ds:[eax+0x22], 0x00
 0069E4CC    jz 0x0069E4EC
 0069E4CE    cmp dword ptr ds:[ecx], 0x01
-0069E4D1    jnz 0x0069E4EC
+0069E4D1    jnz 0x0069E4EC                                  ; => [ Data: data_147abe8 ]
 0069E4D3    mov eax, dword ptr ds:[ecx+0x04]
 0069E4D6    cmp eax, 0x74
 0069E4D9    jz 0x0069E4E5
@@ -31,9 +37,9 @@
 0069E4E3    jnz 0x0069E4EC
 0069E4E5    call 0x0069E1F0
 0069E4EA    pop ecx
-0069E4EB    ret
+0069E4EB    ret                                             ; => [ Call: sub_69e1f0 ]
 0069E4EC    push ecx
 0069E4ED    lea ecx, ds:[edx+0x10]
 0069E4F0    call 0x0069E9C0
 0069E4F5    pop ecx
-0069E4F6    ret
+0069E4F6    ret                                             ; => [ Call: sub_69e9c0 ]

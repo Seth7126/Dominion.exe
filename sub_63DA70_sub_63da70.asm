@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63da70
+// 起始地址: 0x63da70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063DA70    push ebp
 0063DA71    mov ebp, esp
 0063DA73    push ecx
@@ -29,7 +35,7 @@
 0063DAAB    call 0x005A0D00
 0063DAB0    push eax
 0063DAB1    mov ecx, ebx
-0063DAB3    call 0x0063DCD0
+0063DAB3    call 0x0063DCD0                                 ; => [ Call: sub_5a0d00 | Call: sub_63dcd0 ]
 0063DAB8    mov cl, byte ptr ds:[esi]
 0063DABA    mov dword ptr ss:[ebp+0x08], esi
 0063DABD    cmp cl, 0x80
@@ -46,7 +52,7 @@
 0063DAD5    cmp cl, 0xF0
 0063DAD8    jnz 0x0063DAF1
 0063DADA    lea ecx, ss:[ebp+0x08]
-0063DADD    call 0x005A0D00
+0063DADD    call 0x005A0D00                                 ; => [ Call: sub_5a0d00 ]
 0063DAE2    mov esi, dword ptr ss:[ebp+0x08]
 0063DAE5    cmp esi, edi
 0063DAE7    jb 0x0063DA85
@@ -61,10 +67,10 @@
 0063DAFB    push 0x825090
 0063DB00    mov edx, 0x801800
 0063DB05    mov ecx, 0x8250B0
-0063DB0A    call 0x0063B870
+0063DB0A    call 0x0063B870                                 ; => [ String: Xutf8_next | Call: sub_63b870 | String: C:\x\ax2017\Engine\Xutf8.cpp | Data: data_801800 | String: !Xutf8_is_invalid_lead_char(str) ]
 0063DB0F    add esp, 0x0C
 0063DB12    call 0x0063BC30
 0063DB17    test al, al
-0063DB19    jz 0x0063DB1C
+0063DB19    jz 0x0063DB1C                                   ; => [ Call: sub_63bc30 ]
 0063DB1B    int3
-0063DB1C    call 0x0063BB00
+0063DB1C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

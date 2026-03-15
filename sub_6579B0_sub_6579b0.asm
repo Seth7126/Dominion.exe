@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6579b0
+// 起始地址: 0x6579b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006579B0    push ebp
 006579B1    mov ebp, esp
 006579B3    mov ecx, dword ptr ss:[ebp+0x08]
@@ -15,7 +21,7 @@
 006579EA    mov eax, dword ptr ds:[ecx+0x15F8]
 006579F0    test eax, eax
 006579F2    jnz 0x00657A03
-006579F4    push 0x874BB0
+006579F4    push 0x874BB0                                   ; => [ String: UI2MergeRec ]
 006579F9    push 0x1DC9
 006579FE    jmp 0x00657C54
 00657A03    mov edx, dword ptr ds:[esi+0x15F8]
@@ -23,30 +29,30 @@
 00657A0B    jz 0x00657A25
 00657A0D    cmp edx, eax
 00657A0F    jz 0x00657A25
-00657A11    push 0x874BB0
+00657A11    push 0x874BB0                                   ; => [ String: UI2MergeRec ]
 00657A16    push 0x1DCA
-00657A1B    mov ecx, 0x874BC8
+00657A1B    mov ecx, 0x874BC8                               ; => [ String: item.type == UI_NONE || item.type == templ.type ]
 00657A20    jmp 0x00657C59
 00657A25    mov dword ptr ds:[esi+0x15F8], eax
 00657A2B    lea eax, ds:[ecx+0x15E0]
 00657A31    push eax
 00657A32    lea ecx, ds:[esi+0x15E0]
-00657A38    call 0x0063D850
+00657A38    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 00657A3D    mov eax, dword ptr ss:[ebp+0x08]
 00657A40    mov ecx, dword ptr ds:[eax+0x18A0]
 00657A46    test ecx, ecx
 00657A48    jz 0x00657AA4
-00657A4A    call 0x0064E7A0
+00657A4A    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00657A4F    mov ecx, dword ptr ds:[esi+0x18A0]
 00657A55    mov edi, eax
 00657A57    test ecx, ecx
 00657A59    jnz 0x00657A72
 00657A5B    mov ecx, esi
-00657A5D    call 0x0064E660
+00657A5D    call 0x0064E660                                 ; => [ Call: sub_64e660 ]
 00657A62    mov ecx, dword ptr ds:[eax+0x18C8]
 00657A68    mov byte ptr ds:[eax+0x05], 0x01
 00657A6C    mov dword ptr ds:[esi+0x18A0], ecx
-00657A72    call 0x0064E7A0
+00657A72    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00657A77    mov ecx, dword ptr ds:[esi+0x16B0]
 00657A7D    mov edx, eax
 00657A7F    push 0x01
@@ -66,17 +72,17 @@
 00657AB1    mov ecx, dword ptr ds:[eax+edi*1]
 00657AB4    test ecx, ecx
 00657AB6    jz 0x00657B44
-00657ABC    call 0x0064E7A0
+00657ABC    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00657AC1    mov ecx, dword ptr ds:[edi]
 00657AC3    mov dword ptr ss:[ebp-0x04], eax
 00657AC6    test ecx, ecx
 00657AC8    jnz 0x00657AE0
 00657ACA    mov ecx, esi
-00657ACC    call 0x0064E660
+00657ACC    call 0x0064E660                                 ; => [ Call: sub_64e660 ]
 00657AD1    mov ecx, dword ptr ds:[eax+0x18C8]
 00657AD7    mov byte ptr ds:[eax+0x18B8], 0x01
 00657ADE    mov dword ptr ds:[edi], ecx
-00657AE0    call 0x0064E7A0
+00657AE0    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00657AE5    mov ecx, dword ptr ds:[esi+0x16B0]
 00657AEB    mov edx, eax
 00657AED    push 0x01
@@ -101,7 +107,7 @@
 00657B3B    cmp ebx, 0x05
 00657B3E    jl 0x00657AB1
 00657B44    mov eax, dword ptr ss:[ebp+0x08]
-00657B47    xor edi, edi
+00657B47    xor edi, edi                                    ; => [ Call: nullptr ]
 00657B49    mov ecx, dword ptr ds:[eax+0x189C]
 00657B4F    mov dword ptr ss:[ebp-0x0C], ecx
 00657B52    test ecx, ecx
@@ -117,14 +123,14 @@
 00657B80    jz 0x00657C26
 00657B86    movzx eax, dx
 00657B89    cmp eax, dword ptr ds:[0x00C23BAC]
-00657B8F    jnb 0x00657C13
+00657B8F    jnb 0x00657C13                                  ; => [ Data: data_c23bac ]
 00657B95    imul ebx, eax, 0x18D0
-00657B9B    add ebx, dword ptr ds:[0x00C23BA8]
+00657B9B    add ebx, dword ptr ds:[0x00C23BA8]              ; => [ Data: data_c23ba8 ]
 00657BA1    cmp dword ptr ds:[ebx+0x18C8], edx
 00657BA7    jnz 0x00657C13
 00657BA9    mov edx, edi
 00657BAB    mov ecx, esi
-00657BAD    call 0x0064ECE0
+00657BAD    call 0x0064ECE0                                 ; => [ Type: _EXCEPTION_REGISTRATION_RECORD | Call: sub_64ece0 ]
 00657BB2    mov ecx, dword ptr ds:[esi+0x16B0]
 00657BB8    mov edx, eax
 00657BBA    push 0x01
@@ -147,37 +153,37 @@
 00657BED    mov esp, ebp
 00657BEF    pop ebp
 00657BF0    ret
-00657BF1    push 0x874BB0
+00657BF1    push 0x874BB0                                   ; => [ String: UI2MergeRec ]
 00657BF6    push 0x1DFB
-00657BFB    mov ecx, 0x874C10
+00657BFB    mov ecx, 0x874C10                               ; => [ String: child.type == UI_GROUP ]
 00657C00    jmp 0x00657C59
-00657C02    push 0x874BB0
+00657C02    push 0x874BB0                                   ; => [ String: UI2MergeRec ]
 00657C07    push 0x1DFA
-00657C0C    mov ecx, 0x874C28
+00657C0C    mov ecx, 0x874C28                               ; => [ String: childTempl.type == UI_GROUP ]
 00657C11    jmp 0x00657C59
-00657C13    push 0x876B2C
+00657C13    push 0x876B2C                                   ; => [ String: DataArray<struct UI2>::DataArrayGet ]
 00657C18    push 0x6D
-00657C1A    push 0x80193C
-00657C1F    mov ecx, 0x802748
+00657C1A    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00657C1F    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00657C24    jmp 0x00657C5E
-00657C26    push 0x876B2C
+00657C26    push 0x876B2C                                   ; => [ String: DataArray<struct UI2>::DataArrayGet ]
 00657C2B    push 0x6C
-00657C2D    push 0x80193C
-00657C32    mov ecx, 0x802734
+00657C2D    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00657C32    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 00657C37    jmp 0x00657C5E
-00657C39    push 0x874BB0
+00657C39    push 0x874BB0                                   ; => [ String: UI2MergeRec ]
 00657C3E    push 0x1E03
-00657C43    mov ecx, 0x874C60
+00657C43    mov ecx, 0x874C60                               ; => [ String: templ.type != UI_TABLE ]
 00657C48    jmp 0x00657C59
-00657C4A    push 0x874BB0
+00657C4A    push 0x874BB0                                   ; => [ String: UI2MergeRec ]
 00657C4F    push 0x1E02
-00657C54    mov ecx, 0x874BF8
-00657C59    push 0x8739B4
+00657C54    mov ecx, 0x874BF8                               ; => [ String: templ.type != UI_NONE ]
+00657C59    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp | String: C:\x\ax2017\Engine\UI2.cpp ]
 00657C5E    mov edx, 0x801800
-00657C63    call 0x0063B870
+00657C63    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00657C68    add esp, 0x0C
 00657C6B    call 0x0063BC30
 00657C70    test al, al
-00657C72    jz 0x00657C75
+00657C72    jz 0x00657C75                                   ; => [ Call: sub_63bc30 ]
 00657C74    int3
-00657C75    call 0x0063BB00
+00657C75    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

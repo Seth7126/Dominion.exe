@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_65e740
+// 起始地址: 0x65e740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065E740    push ebp
 0065E741    mov ebp, esp
 0065E743    sub esp, 0x28
@@ -11,7 +17,7 @@
 0065E756    jz 0x0065E980
 0065E75C    mov ecx, dword ptr ss:[ebp+0x08]
 0065E75F    mov ecx, dword ptr ds:[ecx+0x10]
-0065E762    call 0x006B7590
+0065E762    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 0065E767    cmp dword ptr ds:[esi+0x18], 0x00
 0065E76B    movss xmm1, dword ptr ds:[edi+0x04]
 0065E770    subss xmm1, dword ptr ss:[ebp-0x0C]
@@ -41,7 +47,7 @@
 0065E7C7    jmp 0x0065E794
 0065E7C9    movups xmm0, xmmword ptr ds:[0x007FF530]
 0065E7D0    xor ebx, ebx
-0065E7D2    movups xmmword ptr ds:[esi+0x20], xmm0
+0065E7D2    movups xmmword ptr ds:[esi+0x20], xmm0          ; => [ Data: data_7ff530 ]
 0065E7D6    test edi, edi
 0065E7D8    jle 0x0065E980
 0065E7DE    xor ecx, ecx
@@ -172,20 +178,20 @@
 0065E983    mov esp, ebp
 0065E985    pop ebp
 0065E986    ret
-0065E987    push 0x872E98
+0065E987    push 0x872E98                                   ; => [ String: RectUnion ]
 0065E98C    push 0xDB
-0065E991    push 0x801A00
-0065E996    mov ecx, 0x872EA4
+0065E991    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
+0065E996    mov ecx, 0x872EA4                               ; => [ String: RectIsNormalized(r0) ]
 0065E99B    jmp 0x0065E9B1
-0065E99D    push 0x876A2C
+0065E99D    push 0x876A2C                                   ; => [ String: XDynArray<struct TextEntry>::operator [] ]
 0065E9A2    push 0xD4
-0065E9A7    push 0x824FB0
-0065E9AC    mov ecx, 0x824FD0
+0065E9A7    push 0x824FB0                                   ; => [ String: C:\x\ax2017\Engine\xDynArray.h ]
+0065E9AC    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 0065E9B1    mov edx, 0x801800
-0065E9B6    call 0x0063B870
+0065E9B6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0065E9BB    add esp, 0x0C
 0065E9BE    call 0x0063BC30
 0065E9C3    test al, al
-0065E9C5    jz 0x0065E9C8
+0065E9C5    jz 0x0065E9C8                                   ; => [ Call: sub_63bc30 ]
 0065E9C7    int3
-0065E9C8    call 0x0063BB00
+0065E9C8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

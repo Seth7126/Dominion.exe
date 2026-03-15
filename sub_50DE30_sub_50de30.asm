@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_50de30
+// 起始地址: 0x50de30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050DE30    dword 83EC8B55
 0050DE34    in al, 0xF8
 0050DE36    sub esp, 0xC88
 0050DE3C    mov ecx, 0x34
-0050DE41    call 0x00513D60
+0050DE41    call 0x00513D60                                 ; => [ Call: sub_513d60 ]
 0050DE46    push 0x01
 0050DE48    lea eax, ss:[esp+0x04]
 0050DE4C    mov dword ptr ss:[esp+0x04], 0x00
@@ -15,4 +21,4 @@
 0050DE6B    add esp, 0x10
 0050DE6E    mov esp, ebp
 0050DE70    pop ebp
-0050DE71    ret
+0050DE71    ret                                             ; => [ Call: sub_50de80 | Call: sub_56c680 ]

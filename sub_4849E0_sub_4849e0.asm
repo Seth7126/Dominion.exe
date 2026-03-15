@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_4849e0
+// 起始地址: 0x4849e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004849E0    mov edx, 0x22
 004849E5    mov ecx, 0x854448
-004849EA    call 0x0069F030
-004849EF    mov dword ptr ds:[0x0171E930], eax
+004849EA    call 0x0069F030                                 ; => [ String: res/ui2/rules_renaissance_1.ui2 | Call: sub_69f030 ]
+004849EF    mov dword ptr ds:[0x0171E930], eax              ; => [ Data: data_171e930 ]
 004849F4    ret

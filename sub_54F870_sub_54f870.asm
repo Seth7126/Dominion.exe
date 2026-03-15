@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_54f870
+// 起始地址: 0x54f870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0054F870    push ebp
 0054F871    mov ebp, esp
 0054F873    and esp, 0xFFFFFFF0
@@ -7,7 +13,7 @@
 0054F883    xorps xmm0, xmm0
 0054F886    mov dword ptr ss:[esp+0x34], 0x00
 0054F88E    push esi
-0054F88F    movlpd qword ptr ss:[esp+0x30], xmm0
+0054F88F    movlpd qword ptr ss:[esp+0x30], xmm0            ; => [ Call: __builtin_memset ]
 0054F895    mov edx, 0x01
 0054F89A    movlpd qword ptr ss:[esp+0x40], xmm0
 0054F8A0    movlpd qword ptr ss:[esp+0x54], xmm0
@@ -25,18 +31,18 @@
 0054F8E0    push 0x0B
 0054F8E2    push eax
 0054F8E3    movaps xmmword ptr ss:[esp+0x8C], xmm0
-0054F8EB    call 0x00563C40
+0054F8EB    call 0x00563C40                                 ; => [ Call: sub_563c40 ]
 0054F8F0    add esp, 0x0C
 0054F8F3    mov edi, eax
 0054F8F5    mov dword ptr ss:[esp+0x14], edi
-0054F8F9    call 0x00573400
+0054F8F9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0054F8FE    movzx edi, di
 0054F901    mov esi, dword ptr ds:[eax+0x04]
 0054F904    mov eax, dword ptr ds:[eax+0x0C]
 0054F907    mov dword ptr ss:[esp+0x1C], eax
 0054F90B    cmp edi, 0x320
 0054F911    jb 0x0054F918
-0054F913    call 0x00591930
+0054F913    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054F918    mov ecx, dword ptr ss:[esp+0x14]
 0054F91C    xorps xmm0, xmm0
 0054F91F    mov edx, dword ptr ss:[esp+0x1C]
@@ -60,4 +66,4 @@
 0054F95D    pop esi
 0054F95E    mov esp, ebp
 0054F960    pop ebp
-0054F961    ret
+0054F961    ret                                             ; => [ Call: sub_586320 ]

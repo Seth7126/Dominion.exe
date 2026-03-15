@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4ad2b0
+// 起始地址: 0x4ad2b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AD2B0    push ebp
 004AD2B1    mov ebp, esp
 004AD2B3    and esp, 0xFFFFFFF8
 004AD2B6    sub esp, 0x14
-004AD2B9    mulss xmm2, dword ptr ds:[0x008C4634]
+004AD2B9    mulss xmm2, dword ptr ds:[0x008C4634]           ; => [ Data: data_8c4634 ]
 004AD2C1    push ebx
 004AD2C2    mov ebx, dword ptr ss:[ebp+0x08]
 004AD2C5    push esi
@@ -22,7 +28,7 @@
 004AD2F6    movss dword ptr ss:[esp+0x18], xmm2
 004AD2FC    mulss xmm1, xmm2
 004AD300    addss xmm0, xmm1
-004AD304    call 0x004AC580
+004AD304    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 004AD309    movss xmm3, dword ptr ss:[esp+0x10]
 004AD30F    movaps xmm1, xmm0
 004AD312    comiss xmm3, xmm1

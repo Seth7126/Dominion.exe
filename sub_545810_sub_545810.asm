@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_545810
+// 起始地址: 0x545810
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00545810    dword DBEAE856
 00545814    add al, byte ptr ds:[eax]
-00545816    mov esi, dword ptr ds:[eax+0x0C]
+00545816    mov esi, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_573400 ]
 00545819    call 0x00573400
 0054581E    xor ecx, ecx
-00545820    mov eax, dword ptr ds:[eax+0x04]
+00545820    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00545823    mov edx, dword ptr ds:[eax+0x1520]
 00545829    test edx, edx
 0054582B    jle 0x0054584D
@@ -20,10 +26,10 @@
 00545849    test ecx, ecx
 0054584B    jnz 0x0054589F
 0054584D    call 0x00573400
-00545852    mov esi, dword ptr ds:[eax+0x0C]
+00545852    mov esi, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_573400 ]
 00545855    call 0x00573400
 0054585A    xor ecx, ecx
-0054585C    mov eax, dword ptr ds:[eax+0x04]
+0054585C    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0054585F    mov edx, dword ptr ds:[eax+0x1520]
 00545865    test edx, edx
 00545867    jle 0x00545894
@@ -39,11 +45,11 @@
 00545883    jl 0x00545870
 00545885    mov ecx, 0xD4B
 0054588A    pop esi
-0054588B    jmp 0x0056E060
+0054588B    jmp 0x0056E060                                  ; => [ Call: sub_56e060 ]
 00545890    test ecx, ecx
 00545892    jnz 0x0054589F
 00545894    mov ecx, 0xD4B
 00545899    pop esi
-0054589A    jmp 0x0056E060
+0054589A    jmp 0x0056E060                                  ; => [ Call: sub_56e060 ]
 0054589F    pop esi
 005458A0    ret

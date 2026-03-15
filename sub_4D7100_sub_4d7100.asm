@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4d7100
+// 起始地址: 0x4d7100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D7100    push ebp
 004D7101    mov ebp, esp
 004D7103    push ebx
@@ -8,14 +14,14 @@
 004D710B    push 0x1C0
 004D7110    push 0x00
 004D7112    push edi
-004D7113    call 0x00761FC4
+004D7113    call 0x00761FC4                                 ; => [ Call: memset ]
 004D7118    mov eax, dword ptr ds:[esi+0x08]
 004D711B    add esp, 0x0C
 004D711E    mov dword ptr ds:[edi+0x188], eax
 004D7124    mov eax, dword ptr ds:[esi+0x0C]
 004D7127    mov ecx, dword ptr ds:[esi+0x10]
 004D712A    mov dword ptr ds:[edi+0x190], ecx
-004D7130    mov ecx, 0x801800
+004D7130    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 004D7135    mov dword ptr ds:[edi+0x18C], eax
 004D713B    mov eax, dword ptr ds:[esi+0x14]
 004D713E    mov dword ptr ds:[edi+0x194], eax
@@ -35,7 +41,7 @@
 004D717D    test eax, eax
 004D717F    cmovnz ecx, eax
 004D7182    mov dword ptr ds:[edi+0x1B0], ecx
-004D7188    mov ecx, 0x801800
+004D7188    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 004D718D    mov eax, dword ptr ds:[esi+0x34]
 004D7190    test eax, eax
 004D7192    cmovnz ecx, eax
@@ -82,10 +88,10 @@
 004D720A    push 0x806734
 004D720F    mov edx, 0x801800
 004D7214    mov ecx, 0x8067FC
-004D7219    call 0x0063B870
+004D7219    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSettings.cpp | String: ToSetupSave | Data: data_801800 | String: setupSave.players[k].smartplays.numSmartplays >= 0 ]
 004D721E    add esp, 0x0C
 004D7221    call 0x0063BC30
 004D7226    test al, al
-004D7228    jz 0x004D722B
+004D7228    jz 0x004D722B                                   ; => [ Call: sub_63bc30 ]
 004D722A    int3
-004D722B    call 0x0063BB00
+004D722B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

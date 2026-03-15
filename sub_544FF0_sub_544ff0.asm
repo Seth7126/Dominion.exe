@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_544ff0
+// 起始地址: 0x544ff0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00544FF0    dword 83EC8B55
 00544FF4    in al, 0xF0
 00544FF6    sub esp, 0x60
@@ -5,7 +11,7 @@
 00544FFC    mov dword ptr ss:[esp+0x0C], 0x00
 00545004    movlpd qword ptr ss:[esp+0x04], xmm0
 0054500A    lea ecx, ss:[esp+0x30]
-0054500E    movlpd qword ptr ss:[esp+0x14], xmm0
+0054500E    movlpd qword ptr ss:[esp+0x14], xmm0            ; => [ Call: __builtin_memset ]
 00545014    movlpd qword ptr ss:[esp+0x28], xmm0
 0054501A    movlpd qword ptr ss:[esp+0x20], xmm0
 00545020    mov dword ptr ss:[esp], 0xAF
@@ -19,7 +25,7 @@
 0054504F    push 0x00
 00545051    push 0x02
 00545053    movaps xmmword ptr ss:[esp+0x58], xmm0
-00545058    call 0x00563050
+00545058    call 0x00563050                                 ; => [ Call: sub_563050 ]
 0054505D    add esp, 0x08
 00545060    test eax, eax
 00545062    jz 0x0054507C
@@ -28,7 +34,7 @@
 00545067    xor edx, edx
 00545069    mov ecx, 0x476
 0054506E    mov dword ptr ds:[eax], 0x04
-00545074    call 0x00564CE0
+00545074    call 0x00564CE0                                 ; => [ Call: sub_564ce0 ]
 00545079    add esp, 0x04
 0054507C    mov esp, ebp
 0054507E    pop ebp

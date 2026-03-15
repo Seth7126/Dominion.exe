@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_566bb0
+// 起始地址: 0x566bb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00566BB0    push ebp
 00566BB1    mov ebp, esp
 00566BB3    and esp, 0xFFFFFFF8
@@ -7,24 +13,24 @@
 00566BBB    push edi
 00566BBC    mov dword ptr ss:[esp+0x10], edx
 00566BC0    mov edi, ecx
-00566BC2    call 0x00573400
+00566BC2    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00566BC7    movzx esi, di
 00566BCA    mov ebx, dword ptr ds:[eax+0x04]
 00566BCD    mov eax, dword ptr ds:[eax+0x0C]
 00566BD0    mov dword ptr ss:[esp+0x14], eax
 00566BD4    cmp esi, 0x320
 00566BDA    jb 0x00566BE1
-00566BDC    call 0x00591930
+00566BDC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00566BE1    imul eax, esi, 0x64
 00566BE4    mov eax, dword ptr ds:[eax+ebx*1+0x1A54]
 00566BEB    mov dword ptr ss:[esp+0x20], edi
 00566BEF    mov dword ptr ss:[esp+0x24], eax
-00566BF3    call 0x0056B800
+00566BF3    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 00566BF8    mov edi, eax
 00566BFA    movzx esi, di
 00566BFD    cmp esi, 0x320
 00566C03    jb 0x00566C0A
-00566C05    call 0x00591930
+00566C05    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00566C0A    mov edx, dword ptr ss:[esp+0x14]
 00566C0E    xorps xmm0, xmm0
 00566C11    imul ecx, esi, 0x64
@@ -49,4 +55,4 @@
 00566C4C    pop ebx
 00566C4D    mov esp, ebp
 00566C4F    pop ebp
-00566C50    ret
+00566C50    ret                                             ; => [ Call: sub_586320 ]

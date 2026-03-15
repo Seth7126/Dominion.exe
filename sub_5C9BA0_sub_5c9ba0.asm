@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c9ba0
+// 起始地址: 0x5c9ba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C9BA0    push ebp
 005C9BA1    mov ebp, esp
 005C9BA3    push ecx
@@ -6,7 +12,7 @@
 005C9BA6    push edi
 005C9BA7    mov esi, edx
 005C9BA9    mov edi, ecx
-005C9BAB    mov ecx, dword ptr ds:[0x00CCEA08]
+005C9BAB    mov ecx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9BB1    mov eax, dword ptr ds:[esi]
 005C9BB3    mov ebx, dword ptr ds:[edi]
 005C9BB5    mov dword ptr ss:[ebp-0x04], eax
@@ -27,7 +33,7 @@
 005C9BD9    mov dword ptr ds:[esi], eax
 005C9BDB    mov dword ptr ds:[edi], ecx
 005C9BDD    mov eax, dword ptr ss:[ebp+0x08]
-005C9BE0    mov ecx, dword ptr ds:[0x00CCEA08]
+005C9BE0    mov ecx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9BE6    mov ebx, dword ptr ds:[esi]
 005C9BE8    mov eax, dword ptr ds:[eax]
 005C9BEA    mov dword ptr ss:[ebp-0x04], eax
@@ -47,7 +53,7 @@
 005C9C09    mov eax, dword ptr ds:[esi]
 005C9C0B    mov ebx, dword ptr ds:[ecx]
 005C9C0D    mov dword ptr ds:[ecx], eax
-005C9C0F    mov ecx, dword ptr ds:[0x00CCEA08]
+005C9C0F    mov ecx, dword ptr ds:[0x00CCEA08]              ; => [ Data: data_ccea08 ]
 005C9C15    mov dword ptr ds:[esi], ebx
 005C9C17    mov eax, dword ptr ds:[edi]
 005C9C19    mov dword ptr ss:[ebp-0x04], eax
@@ -78,10 +84,10 @@
 005C9C4B    push 0x828508
 005C9C50    mov edx, 0x801800
 005C9C55    mov ecx, 0x828538
-005C9C5A    call 0x0063B870
+005C9C5A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ItemCompare | String: C:\x\ax2017\Jams\Dominion\code\PileLayout.cpp | String: gPile.fnItemCompare ]
 005C9C5F    add esp, 0x0C
 005C9C62    call 0x0063BC30
 005C9C67    test al, al
-005C9C69    jz 0x005C9C6C
+005C9C69    jz 0x005C9C6C                                   ; => [ Call: sub_63bc30 ]
 005C9C6B    int3
-005C9C6C    call 0x0063BB00
+005C9C6C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

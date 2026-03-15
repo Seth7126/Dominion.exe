@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_609870
+// 起始地址: 0x609870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00609870    push ebp
 00609871    mov ebp, esp
 00609873    sub esp, 0x54
-00609876    mov eax, dword ptr ds:[0x008C4040]
+00609876    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0060987B    xor eax, ebp
 0060987D    mov dword ptr ss:[ebp-0x04], eax
 00609880    push ebx
@@ -9,10 +15,10 @@
 00609882    push edi
 00609883    mov edi, ecx
 00609885    xor eax, eax
-00609887    mov ecx, dword ptr ds:[0x00CCF6C0]
+00609887    mov ecx, dword ptr ds:[0x00CCF6C0]              ; => [ Data: data_ccf6c0 ]
 0060988D    mov esi, 0x01
 00609892    xor bl, bl
-00609894    mov edx, 0x77FEA0
+00609894    mov edx, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 00609899    nop dword ptr ds:[eax], eax
 006098A0    test ecx, esi
 006098A2    jz 0x006098BA
@@ -23,26 +29,26 @@
 006098AD    jmp 0x006098B4
 006098AF    mov dword ptr ss:[ebp+eax*4-0x50], ecx
 006098B3    inc eax
-006098B4    mov ecx, dword ptr ds:[0x00CCF6C0]
+006098B4    mov ecx, dword ptr ds:[0x00CCF6C0]              ; => [ Data: data_ccf6c0 ]
 006098BA    add edx, 0x04
 006098BD    add esi, esi
 006098BF    cmp edx, 0x77FEE8
-006098C5    jnz 0x006098A0
+006098C5    jnz 0x006098A0                                  ; => [ Data: data_77fee8 ]
 006098C7    test bl, bl
 006098C9    jz 0x006098D4
 006098CB    mov dword ptr ss:[ebp+eax*4-0x50], 0x13
 006098D3    inc eax
 006098D4    test edi, edi
 006098D6    jns 0x006098E9
-006098D8    push 0x8655A0
+006098D8    push 0x8655A0                                   ; => [ String: MissingContentIndexToDlc ]
 006098DD    push 0xA7FF
-006098E2    mov ecx, 0x8655F0
+006098E2    mov ecx, 0x8655F0                               ; => [ String: index >= 0 ]
 006098E7    jmp 0x00609932
 006098E9    cmp edi, eax
 006098EB    jl 0x006098FE
-006098ED    push 0x8655A0
+006098ED    push 0x8655A0                                   ; => [ String: MissingContentIndexToDlc ]
 006098F2    push 0xA800
-006098F7    mov ecx, 0x8655D8
+006098F7    mov ecx, 0x8655D8                               ; => [ String: index < numExpansions ]
 006098FC    jmp 0x00609932
 006098FE    mov ecx, dword ptr ss:[ebp+edi*4-0x50]
 00609902    cmp ecx, 0x13
@@ -51,24 +57,24 @@
 0060990C    xor ecx, ecx
 0060990E    pop edi
 0060990F    pop esi
-00609910    mov edx, dword ptr ds:[eax]
+00609910    mov edx, dword ptr ds:[eax]                     ; => [ Call: sub_609800 ]
 00609912    mov eax, ecx
 00609914    mov ecx, dword ptr ss:[ebp-0x04]
 00609917    xor ecx, ebp
 00609919    pop ebx
-0060991A    call 0x0075927A
+0060991A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0060991F    mov esp, ebp
 00609921    pop ebp
 00609922    ret
-00609923    push 0x8655A0
+00609923    push 0x8655A0                                   ; => [ String: MissingContentIndexToDlc ]
 00609928    push 0xA804
-0060992D    mov ecx, 0x801AA4
+0060992D    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00609932    push 0x86F1E8
 00609937    mov edx, 0x801800
-0060993C    call 0x0063B870
+0060993C    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: MissingContentIndexToDlc ]
 00609941    add esp, 0x0C
 00609944    call 0x0063BC30
 00609949    test al, al
-0060994B    jz 0x0060994E
+0060994B    jz 0x0060994E                                   ; => [ Call: sub_63bc30 ]
 0060994D    int3
-0060994E    call 0x0063BB00
+0060994E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4ddbb0
+// 起始地址: 0x4ddbb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DDBB0    push ebp
 004DDBB1    mov ebp, esp
 004DDBB3    and esp, 0xFFFFFFF8
 004DDBB6    mov eax, 0x3364
-004DDBBB    call 0x00761E50
+004DDBBB    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004DDBC0    push ebx
 004DDBC1    push esi
 004DDBC2    push edi
@@ -13,7 +19,7 @@
 004DDBD1    push ebx
 004DDBD2    mov dword ptr ss:[esp+0x1C], ebx
 004DDBD6    mov dword ptr ss:[esp+0x28], esi
-004DDBDA    call 0x00761FBE
+004DDBDA    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004DDBDF    mov al, byte ptr ds:[esi]
 004DDBE1    add esp, 0x0C
 004DDBE4    test al, al
@@ -33,13 +39,13 @@
 004DDC11    mov dword ptr ss:[esp+0x18], ecx
 004DDC15    push eax
 004DDC16    lea ecx, ss:[esp+0x24]
-004DDC1A    call 0x004DC550
+004DDC1A    call 0x004DC550                                 ; => [ Call: sub_4dc550 ]
 004DDC1F    xorps xmm0, xmm0
 004DDC22    lea ecx, ss:[esp+0x38]
-004DDC26    movlpd qword ptr ss:[esp+0x14], xmm0
+004DDC26    movlpd qword ptr ss:[esp+0x14], xmm0            ; => [ Call: __builtin_memset ]
 004DDC2C    push dword ptr ss:[esp+0x18]
 004DDC30    push dword ptr ss:[esp+0x18]
-004DDC34    call 0x004DC830
+004DDC34    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DDC39    mov edi, dword ptr ss:[esp+0x20]
 004DDC3D    cmp edi, dword ptr ss:[esp+0x38]
 004DDC41    jz 0x004DDD2D
@@ -52,32 +58,32 @@
 004DDC5B    call esi
 004DDC5D    add esp, 0x0C
 004DDC60    test eax, eax
-004DDC62    jz 0x004DDCFC
+004DDC62    jz 0x004DDCFC                                   ; => [ String: Colonies ]
 004DDC68    push ebx
 004DDC69    push 0x8071A4
 004DDC6E    push edi
 004DDC6F    call esi
 004DDC71    add esp, 0x0C
 004DDC74    test eax, eax
-004DDC76    jz 0x004DDCFC
+004DDC76    jz 0x004DDCFC                                   ; => [ String: Colony ]
 004DDC7C    push ebx
 004DDC7D    push 0x8071AC
 004DDC82    push edi
 004DDC83    call esi
 004DDC85    add esp, 0x0C
 004DDC88    test eax, eax
-004DDC8A    jz 0x004DDCFC
+004DDC8A    jz 0x004DDCFC                                   ; => [ String: Platinum ]
 004DDC8C    push ebx
 004DDC8D    push 0x8071B8
 004DDC92    push edi
-004DDC93    call esi
+004DDC93    call esi                                        ; => [ String: No Colonies ]
 004DDC95    add esp, 0x0C
 004DDC98    test eax, eax
 004DDC9A    jz 0x004DDCEC
 004DDC9C    push ebx
 004DDC9D    push 0x8071C4
 004DDCA2    push edi
-004DDCA3    call esi
+004DDCA3    call esi                                        ; => [ String: No Platinum ]
 004DDCA5    add esp, 0x0C
 004DDCA8    test eax, eax
 004DDCAA    jz 0x004DDCEC
@@ -87,7 +93,7 @@
 004DDCB3    call esi
 004DDCB5    add esp, 0x0C
 004DDCB8    test eax, eax
-004DDCBA    jnz 0x004DDCCC
+004DDCBA    jnz 0x004DDCCC                                  ; => [ String: Shelters ]
 004DDCBC    mov ebx, dword ptr ss:[esp+0x10]
 004DDCC0    mov dword ptr ds:[ebx+0xC00], 0x01
 004DDCCA    jmp 0x004DDD0A
@@ -98,7 +104,7 @@
 004DDCD5    mov ebx, dword ptr ss:[esp+0x1C]
 004DDCD9    add esp, 0x0C
 004DDCDC    test eax, eax
-004DDCDE    jnz 0x004DDD0A
+004DDCDE    jnz 0x004DDD0A                                  ; => [ String: No Shelters ]
 004DDCE0    mov dword ptr ds:[ebx+0xC00], 0x02
 004DDCEA    jmp 0x004DDD0A
 004DDCEC    mov ebx, dword ptr ss:[esp+0x10]
@@ -109,7 +115,7 @@
 004DDD0A    push dword ptr ss:[esp+0x34]
 004DDD0E    lea ecx, ss:[esp+0x24]
 004DDD12    push dword ptr ss:[esp+0x34]
-004DDD16    call 0x004DC830
+004DDD16    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004DDD1B    mov edi, dword ptr ss:[esp+0x20]
 004DDD1F    cmp edi, dword ptr ss:[esp+0x38]
 004DDD23    jnz 0x004DDC50
@@ -124,7 +130,7 @@
 004DDD3F    pop ebx
 004DDD40    mov esp, ebp
 004DDD42    pop ebp
-004DDD43    ret
+004DDD43    ret                                             ; => [ Call: sub_4dd810 ]
 004DDD44    lea eax, ss:[esp+0x19E0]
 004DDD4B    mov edx, 0x17
 004DDD50    push 0x1990
@@ -134,13 +140,13 @@
 004DDD5E    push eax
 004DDD5F    lea eax, ss:[esp+0x58]
 004DDD63    push eax
-004DDD64    call 0x00761FBE
+004DDD64    call 0x00761FBE                                 ; => [ Call: memcpy | Call: sub_4deeb0 ]
 004DDD69    add esp, 0x0C
 004DDD6C    lea eax, ss:[esp+0x50]
 004DDD70    push 0x1990
 004DDD75    push eax
 004DDD76    push ebx
-004DDD77    call 0x00761FBE
+004DDD77    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004DDD7C    add esp, 0x0C
 004DDD7F    pop edi
 004DDD80    pop esi

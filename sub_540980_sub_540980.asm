@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_540980
+// 起始地址: 0x540980
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00540980    push esi
 00540981    push edi
 00540982    mov edi, ecx
 00540984    mov ecx, 0x100
-00540989    call 0x00563590
+00540989    call 0x00563590                                 ; => [ Call: sub_563590 ]
 0054098E    mov esi, eax
 00540990    test esi, esi
 00540992    jz 0x005409CA
-00540994    call 0x00573400
+00540994    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00540999    push 0x04
 0054099B    push 0x00
 0054099D    push 0x00
@@ -19,7 +25,7 @@
 005409B2    call 0x00583720
 005409B7    add esp, 0x1C
 005409BA    test al, al
-005409BC    jnz 0x005409CA
+005409BC    jnz 0x005409CA                                  ; => [ Call: nullptr | Call: sub_583720 ]
 005409BE    mov eax, dword ptr ds:[edi+0x04]
 005409C1    pop edi
 005409C2    pop esi

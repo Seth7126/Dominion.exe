@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5887c0
+// 起始地址: 0x5887c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005887C0    push ebp
 005887C1    mov ebp, esp
 005887C3    sub esp, 0x10
@@ -9,9 +15,9 @@
 005887CF    push edi
 005887D0    cmp esi, 0xFFFFFFFF
 005887D3    jnz 0x005887E9
-005887D5    push 0x81F8D0
+005887D5    push 0x81F8D0                                   ; => [ String: GetPileHead ]
 005887DA    push 0x33E
-005887DF    mov ecx, 0x81F8F8
+005887DF    mov ecx, 0x81F8F8                               ; => [ String: who != PLAYER_NONE ]
 005887E4    jmp 0x00588989
 005887E9    imul edi, esi, 0x5A30
 005887EF    add edi, ebx
@@ -22,10 +28,10 @@
 00588801    jnz 0x0058881A
 00588803    cmp dword ptr ds:[edi+0x172D8], 0x00
 0058880A    jz 0x0058881A
-0058880C    call 0x00588490
+0058880C    call 0x00588490                                 ; => [ Call: sub_588490 ]
 00588811    cmp dword ptr ds:[edi+0x172D4], 0x00
 00588818    jnz 0x00588823
-0058881A    xor eax, eax
+0058881A    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 0058881C    pop edi
 0058881D    pop esi
 0058881E    pop ebx
@@ -39,7 +45,7 @@
 00588838    jz 0x00588969
 0058883E    test byte ptr ds:[ebx+0xD44], 0x80
 00588845    jnz 0x00588969
-0058884B    call 0x005B06A0
+0058884B    call 0x005B06A0                                 ; => [ Call: sub_5b06a0 ]
 00588850    mov edx, dword ptr ds:[edi+0x17568]
 00588856    mov ecx, esi
 00588858    shl ecx, 0x08
@@ -58,7 +64,7 @@
 00588883    mov dword ptr ss:[ebp-0x10], edi
 00588886    cmp edi, 0x320
 0058888C    jb 0x00588893
-0058888E    call 0x00591930
+0058888E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00588893    mov eax, dword ptr ss:[ebp-0x0C]
 00588896    imul edi, edi, 0x64
 00588899    add edi, ebx
@@ -69,9 +75,9 @@
 005888AB    jnz 0x00588880
 005888AD    cmp dword ptr ds:[ebx+0x1504], 0x03
 005888B4    jz 0x00588969
-005888BA    push 0x82035C
+005888BA    push 0x82035C                                   ; => [ String: TryDoCampaignDraw ]
 005888BF    push 0x3660
-005888C4    mov ecx, 0x801AA4
+005888C4    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005888C9    jmp 0x00588989
 005888CE    push 0x00
 005888D0    mov edx, esi
@@ -81,12 +87,12 @@
 005888DC    mov edx, 0x3EB
 005888E1    mov ecx, ebx
 005888E3    push dword ptr ss:[ebp-0x04]
-005888E6    call 0x005722C0
+005888E6    call 0x005722C0                                 ; => [ Call: nullptr | Call: sub_5722c0 | Call: sub_5723a0 ]
 005888EB    add esp, 0x04
 005888EE    mov dword ptr ss:[ebp-0x0C], eax
 005888F1    cmp dword ptr ss:[ebp-0x10], 0x320
 005888F8    jb 0x005888FF
-005888FA    call 0x00591930
+005888FA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005888FF    mov edx, dword ptr ds:[ebx+0x19AC]
 00588905    mov eax, dword ptr ss:[ebp-0x04]
 00588908    lea ecx, ds:[edx+0x01]
@@ -105,9 +111,9 @@
 00588944    mov eax, dword ptr ss:[ebp-0x08]
 00588947    cmp dword ptr ds:[eax+0x172D4], esi
 0058894D    jz 0x00588960
-0058894F    push 0x820370
+0058894F    push 0x820370                                   ; => [ String: TopDeckCard ]
 00588954    push 0x3678
-00588959    mov ecx, 0x82037C
+00588959    mov ecx, 0x82037C                               ; => [ String: GetPileHead(g, CW_PLAYER_DECK, who) == forceDraw ]
 0058895E    jmp 0x00588989
 00588960    pop edi
 00588961    mov eax, esi
@@ -120,15 +126,15 @@
 0058896C    mov eax, dword ptr ds:[eax+0x172D4]
 00588972    test eax, eax
 00588974    jnz 0x0058881C
-0058897A    push 0x820370
+0058897A    push 0x820370                                   ; => [ String: TopDeckCard ]
 0058897F    push 0x367D
-00588984    mov ecx, 0x820014
+00588984    mov ecx, 0x820014                               ; => [ String: id != CARDID_NULL ]
 00588989    push 0x81F4B8
 0058898E    mov edx, 0x801800
-00588993    call 0x0063B870
+00588993    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00588998    add esp, 0x0C
 0058899B    call 0x0063BC30
 005889A0    test al, al
-005889A2    jz 0x005889A5
+005889A2    jz 0x005889A5                                   ; => [ Call: sub_63bc30 ]
 005889A4    int3
-005889A5    call 0x0063BB00
+005889A5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

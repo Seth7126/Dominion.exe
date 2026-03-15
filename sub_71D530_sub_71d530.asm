@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71d530
+// 起始地址: 0x71d530
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071D530    push ebp
 0071D531    mov ebp, esp
 0071D533    sub esp, 0x2C
@@ -13,7 +19,7 @@
 0071D54A    movss dword ptr ss:[ebp-0x04], xmm0
 0071D54F    movss dword ptr ss:[esp], xmm0
 0071D554    mov eax, dword ptr ds:[eax*8+0xCB3CB0]
-0071D55B    call eax
+0071D55B    call eax                                        ; => [ Data: data_cb3cb0 ]
 0071D55D    fdiv dword ptr ss:[ebp-0x04]
 0071D560    add esp, 0x04
 0071D563    mov ebx, dword ptr ds:[esi+0x94]
@@ -38,7 +44,7 @@
 0071D5B2    movsd qword ptr ss:[ebp-0x28], xmm0
 0071D5B7    fld qword ptr ss:[ebp-0x28]
 0071D5BA    fstp qword ptr ss:[esp]
-0071D5BD    call 0x0076208A
+0071D5BD    call 0x0076208A                                 ; => [ Call: floor ]
 0071D5C2    movss xmm0, dword ptr ss:[ebp-0x10]
 0071D5C7    addss xmm0, dword ptr ss:[ebp-0x08]
 0071D5CC    fstp qword ptr ss:[ebp-0x28]
@@ -50,7 +56,7 @@
 0071D5E9    movsd qword ptr ss:[ebp-0x20], xmm0
 0071D5EE    fld qword ptr ss:[ebp-0x20]
 0071D5F1    fstp qword ptr ss:[esp]
-0071D5F4    call 0x0076208A
+0071D5F4    call 0x0076208A                                 ; => [ Call: floor ]
 0071D5F9    fstp qword ptr ss:[ebp-0x20]
 0071D5FC    cvttsd2si eax, qword ptr ss:[ebp-0x20]
 0071D601    add esp, 0x08
@@ -60,10 +66,10 @@
 0071D60F    jnl 0x0071D70F
 0071D615    mov edx, edi
 0071D617    mov ecx, esi
-0071D619    call 0x0071D440
+0071D619    call 0x0071D440                                 ; => [ Call: sub_71d440 ]
 0071D61E    mov edx, ebx
 0071D620    mov ecx, esi
-0071D622    call 0x0071A2F0
+0071D622    call 0x0071A2F0                                 ; => [ Call: sub_71a2f0 ]
 0071D627    mov eax, dword ptr ds:[esi+0x40]
 0071D62A    imul eax, dword ptr ds:[esi+0x14]
 0071D62E    mov edi, dword ptr ds:[esi+0x7C]
@@ -71,7 +77,7 @@
 0071D634    push eax
 0071D635    push 0x00
 0071D637    push edi
-0071D638    call 0x00761FC4
+0071D638    call 0x00761FC4                                 ; => [ Call: memset ]
 0071D63D    movss xmm0, dword ptr ds:[esi+0x38]
 0071D642    xor eax, eax
 0071D644    add esp, 0x0C
@@ -81,9 +87,9 @@
 0071D652    setnbe al
 0071D655    test eax, eax
 0071D657    jz 0x0071D660
-0071D659    call 0x0071B360
+0071D659    call 0x0071B360                                 ; => [ Call: sub_71b360 ]
 0071D65E    jmp 0x0071D665
-0071D660    call 0x0071B6C0
+0071D660    call 0x0071B6C0                                 ; => [ Call: sub_71b6c0 ]
 0071D665    mov ebx, dword ptr ds:[esi+0xB0]
 0071D66B    test ebx, ebx
 0071D66D    jns 0x0071D6A2
@@ -94,7 +100,7 @@
 0071D68A    push 0x00
 0071D68C    push dword ptr ds:[esi+0xB4]
 0071D692    mov dword ptr ds:[esi+0xA8], eax
-0071D698    call 0x00761FC4
+0071D698    call 0x00761FC4                                 ; => [ Call: memset ]
 0071D69D    add esp, 0x0C
 0071D6A0    xor ebx, ebx
 0071D6A2    cvttsd2si eax, qword ptr ss:[ebp-0x20]
@@ -118,7 +124,7 @@
 0071D6E3    push 0x00
 0071D6E5    lea eax, ds:[ecx+eax*4]
 0071D6E8    push eax
-0071D6E9    call 0x00761FC4
+0071D6E9    call 0x00761FC4                                 ; => [ Call: memset ]
 0071D6EE    cvttsd2si eax, qword ptr ss:[ebp-0x20]
 0071D6F3    mov ecx, dword ptr ss:[ebp-0x10]
 0071D6F6    add esp, 0x0C
@@ -128,7 +134,7 @@
 0071D703    mov ebx, dword ptr ss:[ebp-0x0C]
 0071D706    mov ecx, esi
 0071D708    mov edx, ebx
-0071D70A    call 0x0071D090
+0071D70A    call 0x0071D090                                 ; => [ Call: sub_71d090 ]
 0071D70F    inc ebx
 0071D710    mov dword ptr ss:[ebp-0x0C], ebx
 0071D713    cmp ebx, dword ptr ss:[ebp-0x18]
@@ -141,4 +147,4 @@
 0071D728    pop ebx
 0071D729    mov esp, ebp
 0071D72B    pop ebp
-0071D72C    ret
+0071D72C    ret                                             ; => [ Call: sub_71d440 ]

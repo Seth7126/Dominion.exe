@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_707900
+// 起始地址: 0x707900
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707900    push ebp
 00707901    mov ebp, esp
 00707903    push esi
@@ -14,14 +20,14 @@
 0070791A    call eax
 0070791C    add esp, 0x08
 0070791F    push dword ptr ds:[esi+0x08]
-00707922    call dword ptr ds:[0x00800B48]
+00707922    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00707928    push dword ptr ds:[esi]
-0070792A    call dword ptr ds:[0x00800B48]
+0070792A    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00707930    push dword ptr ds:[esi+0x14]
-00707933    call dword ptr ds:[0x00800B48]
+00707933    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00707939    push esi
 0070793A    call dword ptr ds:[0x00800B48]
 00707940    add esp, 0x10
 00707943    pop esi
 00707944    pop ebp
-00707945    ret
+00707945    ret                                             ; => [ Call: free ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5185f0
+// 起始地址: 0x5185f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005185F0    dword 840D8B51
 005185F4    cmpsd
 005185F5    int3
@@ -5,7 +11,7 @@
 005185F8    shl byte ptr ds:[ecx+0xCCA780], cl
 005185FE    shl ecx, 0x0B
 00518601    add eax, 0x58C
-00518606    add eax, ecx
+00518606    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00518608    cmp dword ptr ds:[eax], 0x00
 0051860B    jz 0x0051861B
 0051860D    inc edx
@@ -23,7 +29,7 @@
 00518645    mov eax, dword ptr ds:[0x00CCA780]
 0051864A    shl ecx, 0x0B
 0051864D    add eax, 0x58C
-00518652    add eax, ecx
+00518652    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00518654    cmp dword ptr ds:[eax], 0x00
 00518657    jz 0x00518664
 00518659    inc edx
@@ -41,7 +47,7 @@
 0051868E    mov eax, dword ptr ds:[0x00CCA780]
 00518693    shl ecx, 0x0B
 00518696    add eax, 0x58C
-0051869B    add eax, ecx
+0051869B    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0051869D    nop dword ptr ds:[eax], eax
 005186A0    cmp dword ptr ds:[eax], 0x00
 005186A3    jz 0x005186B0
@@ -62,10 +68,10 @@
 005186DE    push 0x80CD80
 005186E3    mov edx, 0x801800
 005186E8    mov ecx, 0x801AA4
-005186ED    call 0x0063B870
+005186ED    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignAddExtra | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 005186F2    add esp, 0x0C
 005186F5    call 0x0063BC30
 005186FA    test al, al
-005186FC    jz 0x005186FF
+005186FC    jz 0x005186FF                                   ; => [ Call: sub_63bc30 ]
 005186FE    int3
-005186FF    call 0x0063BB00
+005186FF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

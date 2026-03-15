@@ -1,16 +1,22 @@
+// ============================================================
+// 函数名称: sub_74a660
+// 起始地址: 0x74a660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074A660    push esi
 0074A661    xor esi, esi
 0074A663    cmp dword ptr ds:[0x0151345C], esi
-0074A669    jle 0x0074A68D
+0074A669    jle 0x0074A68D                                  ; => [ Data: data_151345c ]
 0074A66B    nop dword ptr ds:[eax+eax*1], eax
 0074A670    mov ecx, dword ptr ds:[esi*4+0x151245C]
 0074A677    xor edx, edx
 0074A679    call 0x00744F10
 0074A67E    cmp byte ptr ds:[eax+0x44], 0x01
-0074A682    jz 0x0074A691
+0074A682    jz 0x0074A691                                   ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074A684    inc esi
 0074A685    cmp esi, dword ptr ds:[0x0151345C]
-0074A68B    jl 0x0074A670
+0074A68B    jl 0x0074A670                                   ; => [ Data: data_151345c ]
 0074A68D    xor al, al
 0074A68F    pop esi
 0074A690    ret

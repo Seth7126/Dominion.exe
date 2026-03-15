@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6409e0
+// 起始地址: 0x6409e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006409E0    push ebp
 006409E1    mov ebp, esp
 006409E3    and esp, 0xFFFFFFF8
 006409E6    sub esp, 0x18
-006409E9    xor eax, eax
+006409E9    xor eax, eax                                    ; => [ Call: nullptr ]
 006409EB    push esi
 006409EC    push edi
 006409ED    mov edi, ecx
@@ -43,7 +49,7 @@
 00640A65    mov ecx, esi
 00640A67    mov edx, 0x14
 00640A6C    mov esi, dword ptr ds:[esi+0x10]
-00640A6F    call 0x0064C080
+00640A6F    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00640A74    test esi, esi
 00640A76    jnz 0x00640A65
 00640A78    mov ecx, dword ptr ss:[esp+0x0C]
@@ -78,7 +84,7 @@
 00640AE4    lea eax, ss:[esp+0x14]
 00640AE8    push eax
 00640AE9    push 0x00
-00640AEB    call 0x006411D0
+00640AEB    call 0x006411D0                                 ; => [ Call: sub_6411d0 ]
 00640AF0    mov dword ptr ds:[edi+0x18], eax
 00640AF3    pop edi
 00640AF4    pop esi

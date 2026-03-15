@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_486bb0
+// 起始地址: 0x486bb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00486BB0    mov edx, 0x03
 00486BB5    mov ecx, 0x857D78
-00486BBA    call 0x0069F030
-00486BBF    mov dword ptr ds:[0x0171EC70], eax
+00486BBA    call 0x0069F030                                 ; => [ String: res/ui_art/campaign/doodads/used/town_2_m.texture | Call: sub_69f030 ]
+00486BBF    mov dword ptr ds:[0x0171EC70], eax              ; => [ Data: data_171ec70 ]
 00486BC4    ret

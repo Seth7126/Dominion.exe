@@ -1,38 +1,44 @@
+// ============================================================
+// 函数名称: sub_757270
+// 起始地址: 0x757270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00757270    push ebp
 00757271    mov ebp, esp
 00757273    push 0xFFFFFFFF
-00757275    push 0x7732F1
+00757275    push 0x7732F1                                   ; => [ Call: sub_7732f1 | Type: EHRegistrationNode ]
 0075727A    mov eax, dword ptr fs:[0x00000000]
-00757280    push eax
+00757280    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00757281    sub esp, 0x2F8
 00757287    mov eax, dword ptr ds:[0x008C4040]
-0075728C    xor eax, ebp
+0075728C    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 0075728E    mov dword ptr ss:[ebp-0x10], eax
 00757291    push esi
 00757292    push edi
 00757293    push eax
-00757294    lea eax, ss:[ebp-0x0C]
-00757297    mov dword ptr fs:[0x00000000], eax
+00757294    lea eax, ss:[ebp-0x0C]                          ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+00757297    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0075729D    mov edi, ecx
 0075729F    mov ecx, dword ptr ds:[edi+0x68]
 007572A2    mov esi, dword ptr ss:[ebp+0x08]
 007572A5    mov dword ptr ss:[ebp-0x2FC], esi
 007572AB    cmp dword ptr ds:[ecx+0x04], 0x15
 007572AF    jnz 0x007575BD
-007572B5    call 0x005AF880
+007572B5    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 007572BA    mov dword ptr ss:[ebp-0x2F4], eax
 007572C0    mov ecx, dword ptr ds:[eax+0x38]
 007572C3    mov ecx, dword ptr ds:[ecx+0x08]
-007572C6    mov dword ptr ds:[edi+0x14], ecx
+007572C6    mov dword ptr ds:[edi+0x14], ecx                ; => [ Field: Next ]
 007572C9    mov ecx, dword ptr ds:[eax+0x38]
 007572CC    movd xmm0, dword ptr ds:[ecx]
 007572D0    cvtdq2ps xmm0, xmm0
-007572D3    movss dword ptr ds:[edi+0x0C], xmm0
+007572D3    movss dword ptr ds:[edi+0x0C], xmm0             ; => [ Field: Next ]
 007572D8    cmp dword ptr ds:[esi+0x04], 0x15
 007572DC    jnz 0x007575BD
 007572E2    mov ecx, esi
 007572E4    call 0x005AF880
-007572E9    mov esi, dword ptr ds:[eax+0x38]
+007572E9    mov esi, dword ptr ds:[eax+0x38]                ; => [ Call: sub_5af880 ]
 007572EC    mov eax, dword ptr ds:[esi+0x04]
 007572EF    cdq
 007572F0    and edx, 0x07
@@ -67,7 +73,7 @@
 00757350    imul ecx, esi
 00757353    mov eax, dword ptr ds:[eax+0x38]
 00757356    mov eax, dword ptr ds:[eax+0x04]
-00757359    cdq
+00757359    cdq                                             ; => [ Field: Handler ]
 0075735A    and edx, 0x07
 0075735D    add eax, edx
 0075735F    sar eax, 0x03
@@ -78,21 +84,21 @@
 00757372    shl ecx, 0x02
 00757375    call 0x00687730
 0075737A    mov esi, dword ptr ss:[ebp-0x2F4]
-00757380    mov dword ptr ds:[edi+0x6C], eax
+00757380    mov dword ptr ds:[edi+0x6C], eax                ; => [ Call: sub_687730 ]
 00757383    mov eax, dword ptr ds:[esi+0x38]
-00757386    mov eax, dword ptr ds:[eax+0x10]
+00757386    mov eax, dword ptr ds:[eax+0x10]                ; => [ Field: Next ]
 00757389    cmp eax, 0x01
 0075738C    jnz 0x0075749C
 00757392    mov eax, dword ptr fs:[0x0000002C]
 00757398    mov ecx, dword ptr ds:[eax]
 0075739A    mov eax, dword ptr ds:[0x01A9B264]
 0075739F    cmp eax, dword ptr ds:[ecx+0x08]
-007573A5    jle 0x007573F5
-007573A7    push 0x1A9B264
-007573AC    call 0x0075970E
+007573A5    jle 0x007573F5                                  ; => [ Field: ThreadLocalStoragePointer | Data: data_1a9b264 ]
+007573A7    push 0x1A9B264                                  ; => [ Data: data_1a9b264 ]
+007573AC    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a9b264 ]
 007573B1    add esp, 0x04
 007573B4    cmp dword ptr ds:[0x01A9B264], 0xFFFFFFFF
-007573BB    jnz 0x007573F5
+007573BB    jnz 0x007573F5                                  ; => [ Data: data_1a9b264 ]
 007573BD    push 0x10
 007573BF    push 0x5DC00
 007573C4    mov dword ptr ss:[ebp-0x04], 0x00
@@ -100,10 +106,10 @@
 007573D1    add esp, 0x08
 007573D4    test eax, eax
 007573D6    jz 0x007575ED
-007573DC    push 0x1A9B264
-007573E1    mov dword ptr ds:[0x01A9B268], eax
+007573DC    push 0x1A9B264                                  ; => [ Data: data_1a9b264 ]
+007573E1    mov dword ptr ds:[0x01A9B268], eax              ; => [ Data: data_1a9b268 ]
 007573E6    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-007573ED    call 0x007596BD
+007573ED    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a9b264 ]
 007573F2    add esp, 0x04
 007573F5    mov eax, dword ptr ds:[esi+0x38]
 007573F8    mov edx, dword ptr ds:[0x01A9B268]
@@ -111,12 +117,12 @@
 00757404    push dword ptr ds:[eax+0x18]
 00757407    push dword ptr ds:[eax+0x0C]
 0075740A    push 0x00
-0075740C    call 0x0069F3E0
+0075740C    call 0x0069F3E0                                 ; => [ Data: data_1a9b268 | Call: sub_69f3e0 ]
 00757411    xor esi, esi
 00757413    add esp, 0x0C
 00757416    cmp dword ptr ds:[edi+0x70], esi
 00757419    jle 0x0075747F
-0075741B    mov eax, dword ptr ds:[0x01A9B268]
+0075741B    mov eax, dword ptr ds:[0x01A9B268]              ; => [ Data: data_1a9b268 ]
 00757420    movss xmm1, dword ptr ds:[0x00890E18]
 00757428    mov ecx, dword ptr ss:[ebp-0x2F8]
 0075742E    mov dword ptr ss:[ebp-0x2F4], eax
@@ -144,13 +150,13 @@
 0075747A    cmp esi, dword ptr ds:[edi+0x70]
 0075747D    jl 0x00757434
 0075747F    mov ecx, dword ptr ss:[ebp-0x0C]
-00757482    mov dword ptr fs:[0x00000000], ecx
+00757482    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00757489    pop ecx
 0075748A    pop edi
 0075748B    pop esi
 0075748C    mov ecx, dword ptr ss:[ebp-0x10]
 0075748F    xor ecx, ebp
-00757491    call 0x0075927A
+00757491    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00757496    mov esp, ebp
 00757498    pop ebp
 00757499    ret 0x04
@@ -169,7 +175,7 @@
 007574CF    push 0x00
 007574D1    push eax
 007574D2    push eax
-007574D3    call dword ptr ds:[0x00775874]
+007574D3    call dword ptr ds:[0x00775874]                  ; => [ Data: data_800a2c ]
 007574D9    add esp, 0x20
 007574DC    test eax, eax
 007574DE    js 0x0075761A
@@ -201,7 +207,7 @@
 00757548    add ecx, dword ptr ss:[ebp-0x2F4]
 0075754E    lea eax, ds:[eax+ecx*4]
 00757551    push eax
-00757552    call 0x00761FBE
+00757552    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00757557    mov eax, dword ptr ss:[ebp-0x300]
 0075755D    inc esi
 0075755E    add esp, 0x0C
@@ -227,57 +233,57 @@
 007575AF    call dword ptr ds:[0x00775860]
 007575B5    add esp, 0x04
 007575B8    jmp 0x0075747F
-007575BD    push 0x877324
+007575BD    push 0x877324                                   ; => [ String: SoundGetDef ]
 007575C2    push 0x356
-007575C7    push 0x8772E4
+007575C7    push 0x8772E4                                   ; => [ String: C:\x\ax2017\Engine\Sound.cpp ]
 007575CC    mov edx, 0x801800
 007575D1    mov ecx, 0x877344
-007575D6    call 0x0063B870
+007575D6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 007575DB    add esp, 0x0C
 007575DE    call 0x0063BC30
 007575E3    test al, al
-007575E5    jz 0x007575E8
+007575E5    jz 0x007575E8                                   ; => [ Call: sub_63bc30 ]
 007575E7    int3
-007575E8    call 0x0063BB00
-007575ED    push 0x8770A0
+007575E8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+007575ED    push 0x8770A0                                   ; => [ String: XMalloc ]
 007575F2    push 0x57
-007575F4    push 0x877080
+007575F4    push 0x877080                                   ; => [ String: C:\x\ax2017\Engine\xMemory.cpp ]
 007575F9    mov edx, 0x801800
 007575FE    mov ecx, 0x8770C8
-00757603    call 0x0063B870
+00757603    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: pBuffer ]
 00757608    add esp, 0x0C
 0075760B    call 0x0063BC30
 00757610    test al, al
-00757612    jz 0x00757615
+00757612    jz 0x00757615                                   ; => [ Call: sub_63bc30 ]
 00757614    int3
-00757615    call 0x0063BB00
+00757615    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 0075761A    push eax
 0075761B    lea ecx, ds:[esi+0x20]
 0075761E    call 0x0063D7E0
-00757623    push eax
-00757624    push 0x88C36C
+00757623    push eax                                        ; => [ Call: sub_63d7e0 ]
+00757624    push 0x88C36C                                   ; => [ String: failed to read ogg %s %d ]
 00757629    call 0x0063B5F0
-0075762E    push 0x88C388
+0075762E    push 0x88C388                                   ; => [ String: SoundOggReaderOpen ]
 00757633    push 0x171
-00757638    push 0x88C304
+00757638    push 0x88C304                                   ; => [ String: C:\x\ax2017\Engine\SoundOgg.cpp ]
 0075763D    mov edx, 0x801800
 00757642    mov ecx, 0x801AA4
-00757647    call 0x0063B870
+00757647    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\SoundOgg.cpp | Data: data_801800 | Call: sub_63b5f0 | String: SoundOggReaderOpen | String: Halt ]
 0075764C    add esp, 0x18
 0075764F    call 0x0063BC30
 00757654    test al, al
-00757656    jz 0x00757659
+00757656    jz 0x00757659                                   ; => [ Call: sub_63bc30 ]
 00757658    int3
-00757659    call 0x0063BB00
-0075765E    push 0x88C3A8
+00757659    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+0075765E    push 0x88C3A8                                   ; => [ String: SoundOggReadFrameFloat ]
 00757663    push 0x1A1
-00757668    push 0x88C304
+00757668    push 0x88C304                                   ; => [ String: C:\x\ax2017\Engine\SoundOgg.cpp ]
 0075766D    mov edx, 0x801800
 00757672    mov ecx, 0x88C39C
-00757677    call 0x0063B870
+00757677    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: result >= 0 ]
 0075767C    add esp, 0x0C
 0075767F    call 0x0063BC30
 00757684    test al, al
-00757686    jz 0x00757689
+00757686    jz 0x00757689                                   ; => [ Call: sub_63bc30 ]
 00757688    int3
-00757689    call 0x0063BB00
+00757689    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

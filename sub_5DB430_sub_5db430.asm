@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5db430
+// 起始地址: 0x5db430
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DB430    push ebp
 005DB431    mov ebp, esp
 005DB433    sub esp, 0x0C
@@ -6,14 +12,14 @@
 005DB438    push edi
 005DB439    mov esi, ecx
 005DB43B    call 0x005CB070
-005DB440    mov ecx, eax
+005DB440    mov ecx, eax                                    ; => [ Call: sub_5cb070 ]
 005DB442    mov dword ptr ss:[ebp-0x08], ecx
 005DB445    test ecx, ecx
 005DB447    jz 0x005DB6DC
 005DB44D    cmp dword ptr ds:[ecx+0x1C], 0x00
 005DB451    jz 0x005DB6DC
 005DB457    lea edx, ds:[ecx+0x20]
-005DB45A    mov dword ptr ss:[ebp-0x0C], 0x00
+005DB45A    mov dword ptr ss:[ebp-0x0C], 0x00               ; => [ Call: nullptr ]
 005DB461    mov dword ptr ss:[ebp-0x04], edx
 005DB464    mov edi, dword ptr ds:[edx]
 005DB466    test edi, edi
@@ -30,12 +36,12 @@
 005DB48F    and ebx, 0xFFFF
 005DB495    cmp ebx, 0x320
 005DB49B    jb 0x005DB4A8
-005DB49D    call 0x00591930
+005DB49D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB4A2    mov ecx, dword ptr ss:[ebp-0x08]
 005DB4A5    mov edx, dword ptr ss:[ebp-0x04]
 005DB4A8    imul eax, ebx, 0x64
 005DB4AB    cmp dword ptr ds:[eax+0xB82524], edi
-005DB4B1    jnz 0x005DB6C6
+005DB4B1    jnz 0x005DB6C6                                  ; => [ Data: data_b82524 ]
 005DB4B7    cmp dword ptr ds:[esi+0xA4], 0x3EA
 005DB4C1    jmp 0x005DB6C4
 005DB4C6    cmp eax, 0x03
@@ -49,12 +55,12 @@
 005DB4E4    and ebx, 0xFFFF
 005DB4EA    cmp ebx, 0x320
 005DB4F0    jb 0x005DB4FD
-005DB4F2    call 0x00591930
+005DB4F2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB4F7    mov ecx, dword ptr ss:[ebp-0x08]
 005DB4FA    mov edx, dword ptr ss:[ebp-0x04]
 005DB4FD    imul eax, ebx, 0x64
 005DB500    cmp dword ptr ds:[eax+0xB82524], edi
-005DB506    jnz 0x005DB6C6
+005DB506    jnz 0x005DB6C6                                  ; => [ Data: data_b82524 ]
 005DB50C    cmp dword ptr ds:[esi+0xA4], 0x3EA
 005DB516    jmp 0x005DB6C4
 005DB51B    cmp eax, 0x03
@@ -68,12 +74,12 @@
 005DB53F    and ebx, 0xFFFF
 005DB545    cmp ebx, 0x320
 005DB54B    jb 0x005DB558
-005DB54D    call 0x00591930
+005DB54D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB552    mov ecx, dword ptr ss:[ebp-0x08]
 005DB555    mov edx, dword ptr ss:[ebp-0x04]
 005DB558    imul eax, ebx, 0x64
 005DB55B    cmp dword ptr ds:[eax+0xB82524], edi
-005DB561    jnz 0x005DB6C6
+005DB561    jnz 0x005DB6C6                                  ; => [ Data: data_b82524 ]
 005DB567    cmp dword ptr ds:[esi+0xA4], 0x3EB
 005DB571    jmp 0x005DB6C4
 005DB576    cmp dword ptr ds:[esi+0x2C], 0x00
@@ -82,12 +88,12 @@
 005DB586    and ebx, 0xFFFF
 005DB58C    cmp ebx, 0x320
 005DB592    jb 0x005DB59F
-005DB594    call 0x00591930
+005DB594    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB599    mov ecx, dword ptr ss:[ebp-0x08]
 005DB59C    mov edx, dword ptr ss:[ebp-0x04]
 005DB59F    imul eax, ebx, 0x64
 005DB5A2    cmp dword ptr ds:[eax+0xB82524], edi
-005DB5A8    jnz 0x005DB6C6
+005DB5A8    jnz 0x005DB6C6                                  ; => [ Data: data_b82524 ]
 005DB5AE    cmp dword ptr ds:[esi+0xA4], 0x3EA
 005DB5B8    jmp 0x005DB6C4
 005DB5BD    cmp dword ptr ds:[esi+0x2C], 0x00
@@ -96,13 +102,13 @@
 005DB5CD    and ebx, 0xFFFF
 005DB5D3    cmp ebx, 0x320
 005DB5D9    jb 0x005DB5E6
-005DB5DB    call 0x00591930
+005DB5DB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB5E0    mov ecx, dword ptr ss:[ebp-0x08]
 005DB5E3    mov edx, dword ptr ss:[ebp-0x04]
 005DB5E6    imul eax, ebx, 0x64
 005DB5E9    cmp dword ptr ds:[eax+0xB82524], edi
-005DB5EF    jnz 0x005DB6C6
-005DB5F5    mov eax, dword ptr ds:[0x00B604E0]
+005DB5EF    jnz 0x005DB6C6                                  ; => [ Data: data_b82524 ]
+005DB5F5    mov eax, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005DB5FA    xor edi, edi
 005DB5FC    cmp eax, 0xFFFFFFFF
 005DB5FF    cmovz eax, edi
@@ -116,12 +122,12 @@
 005DB62D    and ebx, 0xFFFF
 005DB633    cmp ebx, 0x320
 005DB639    jb 0x005DB646
-005DB63B    call 0x00591930
+005DB63B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB640    mov ecx, dword ptr ss:[ebp-0x08]
 005DB643    mov edx, dword ptr ss:[ebp-0x04]
 005DB646    imul eax, ebx, 0x64
 005DB649    cmp dword ptr ds:[eax+0xB82524], edi
-005DB64F    jnz 0x005DB6C6
+005DB64F    jnz 0x005DB6C6                                  ; => [ Data: data_b82524 ]
 005DB651    cmp dword ptr ds:[esi+0xA4], 0x3E9
 005DB65B    jmp 0x005DB6C4
 005DB65D    cmp dword ptr ds:[esi+0x2C], 0x03
@@ -149,11 +155,11 @@
 005DB6A2    and ebx, 0xFFFF
 005DB6A8    cmp ebx, 0x320
 005DB6AE    jb 0x005DB6BB
-005DB6B0    call 0x00591930
+005DB6B0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005DB6B5    mov ecx, dword ptr ss:[ebp-0x08]
 005DB6B8    mov edx, dword ptr ss:[ebp-0x04]
 005DB6BB    imul eax, ebx, 0x64
-005DB6BE    cmp dword ptr ds:[eax+0xB82524], edi
+005DB6BE    cmp dword ptr ds:[eax+0xB82524], edi            ; => [ Data: data_b82524 ]
 005DB6C4    jz 0x005DB6E5
 005DB6C6    mov eax, dword ptr ss:[ebp-0x0C]
 005DB6C9    add edx, 0x04
@@ -181,10 +187,10 @@
 005DB6F8    push 0x86F1E8
 005DB6FD    mov edx, 0x801800
 005DB702    mov ecx, 0x801AA4
-005DB707    call 0x0063B870
+005DB707    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: TutorialGlow | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: Halt ]
 005DB70C    add esp, 0x0C
 005DB70F    call 0x0063BC30
 005DB714    test al, al
-005DB716    jz 0x005DB719
+005DB716    jz 0x005DB719                                   ; => [ Call: sub_63bc30 ]
 005DB718    int3
-005DB719    call 0x0063BB00
+005DB719    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

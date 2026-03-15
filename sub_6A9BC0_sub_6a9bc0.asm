@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a9bc0
+// 起始地址: 0x6a9bc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A9BC0    push ebp
 006A9BC1    mov ebp, esp
 006A9BC3    dec edx
@@ -162,18 +168,18 @@
 006A9D4A    pop esi
 006A9D4B    pop ebp
 006A9D4C    ret
-006A9D4D    push 0x87B2C0
+006A9D4D    push 0x87B2C0                                   ; => [ String: ImageRgbaToPixel ]
 006A9D52    push 0x1B6
 006A9D57    jmp 0x006A9D63
-006A9D59    push 0x87B2C0
+006A9D59    push 0x87B2C0                                   ; => [ String: ImageRgbaToPixel ]
 006A9D5E    push 0x1B9
 006A9D63    push 0x87B1B4
 006A9D68    mov edx, 0x801800
 006A9D6D    mov ecx, 0x801AA4
-006A9D72    call 0x0063B870
+006A9D72    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ImageRgbaToPixel | String: C:\x\ax2017\Engine\ImageUtils.cpp | String: Halt ]
 006A9D77    add esp, 0x0C
 006A9D7A    call 0x0063BC30
 006A9D7F    test al, al
-006A9D81    jz 0x006A9D84
+006A9D81    jz 0x006A9D84                                   ; => [ Call: sub_63bc30 ]
 006A9D83    int3
-006A9D84    call 0x0063BB00
+006A9D84    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

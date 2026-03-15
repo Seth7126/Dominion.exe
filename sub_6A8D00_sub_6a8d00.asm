@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a8d00
+// 起始地址: 0x6a8d00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A8D00    push ebp
 006A8D01    mov ebp, esp
 006A8D03    and esp, 0xFFFFFFF8
@@ -5,7 +11,7 @@
 006A8D09    push esi
 006A8D0A    push edi
 006A8D0B    mov dword ptr ss:[esp+0x08], edx
-006A8D0F    call 0x006A82E0
+006A8D0F    call 0x006A82E0                                 ; => [ Call: sub_6a82e0 ]
 006A8D14    mov dword ptr ss:[esp+0x0C], eax
 006A8D18    xor esi, esi
 006A8D1A    mov eax, dword ptr ds:[eax+0x04]
@@ -55,7 +61,7 @@
 006A8D86    cmp dword ptr ds:[ecx+0x04], 0x00
 006A8D8A    jnz 0x006A901E
 006A8D90    mov eax, dword ptr ds:[esi+0x18]
-006A8D93    xorps xmm4, xmm4
+006A8D93    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 006A8D96    test eax, eax
 006A8D98    jz 0x006A8D9D
 006A8D9A    movups xmm4, xmmword ptr ds:[eax]
@@ -90,7 +96,7 @@
 006A8E1B    jnbe 0x006A8E23
 006A8E1D    sqrtsd xmm0, xmm0
 006A8E21    jmp 0x006A8E28
-006A8E23    call 0x00762084
+006A8E23    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006A8E28    mov eax, dword ptr ss:[esp+0x08]
 006A8E2C    cvtsd2ss xmm0, xmm0
 006A8E30    mulss xmm0, dword ptr ds:[eax+0x20]
@@ -107,7 +113,7 @@
 006A8E5D    jnbe 0x006A8E65
 006A8E5F    sqrtsd xmm0, xmm0
 006A8E63    jmp 0x006A8E6A
-006A8E65    call 0x00762084
+006A8E65    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006A8E6A    mov eax, dword ptr ss:[esp+0x08]
 006A8E6E    cvtsd2ss xmm0, xmm0
 006A8E72    mulss xmm0, dword ptr ds:[eax+0x24]
@@ -121,7 +127,7 @@
 006A8E96    cvtps2pd xmm0, xmm0
 006A8E99    movsd qword ptr ss:[esp+0x10], xmm0
 006A8E9F    fld qword ptr ss:[esp+0x10]
-006A8EA3    call 0x00762368
+006A8EA3    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 006A8EA8    mov eax, dword ptr ss:[esp+0x08]
 006A8EAC    fstp qword ptr ss:[esp+0x10]
 006A8EB0    movsd xmm0, qword ptr ss:[esp+0x10]
@@ -133,25 +139,25 @@
 006A8ECF    mov eax, dword ptr ds:[0x019E3BA0]
 006A8ED4    movss dword ptr ss:[esp+0x0C], xmm0
 006A8EDA    cmp eax, dword ptr ds:[ecx+0x08]
-006A8EE0    jle 0x006A8F15
+006A8EE0    jle 0x006A8F15                                  ; => [ Type: TEB | Data: data_19e3ba0 | Field: ThreadLocalStoragePointer ]
 006A8EE2    push 0x19E3BA0
-006A8EE7    call 0x0075970E
+006A8EE7    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_19e3ba0 ]
 006A8EEC    add esp, 0x04
 006A8EEF    cmp dword ptr ds:[0x019E3BA0], 0xFFFFFFFF
-006A8EF6    jnz 0x006A8F0F
+006A8EF6    jnz 0x006A8F0F                                  ; => [ Data: data_19e3ba0 ]
 006A8EF8    push 0x19E3BA0
-006A8EFD    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35
-006A8F07    call 0x007596BD
+006A8EFD    mov dword ptr ds:[0x019E3B9C], 0x3C8EFA35       ; => [ Data: data_19e3b9c ]
+006A8F07    call 0x007596BD                                 ; => [ Data: data_19e3ba0 | Call: __Init_thread_footer ]
 006A8F0C    add esp, 0x04
 006A8F0F    movss xmm0, dword ptr ss:[esp+0x0C]
-006A8F15    mulss xmm0, dword ptr ds:[0x019E3B9C]
+006A8F15    mulss xmm0, dword ptr ds:[0x019E3B9C]           ; => [ Data: data_19e3b9c ]
 006A8F1D    movss dword ptr ss:[esp+0x0C], xmm0
-006A8F23    call 0x004AE0F0
+006A8F23    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006A8F28    movss dword ptr ss:[esp+0x10], xmm0
 006A8F2E    movss xmm0, dword ptr ss:[esp+0x0C]
 006A8F34    call 0x004AE0D0
 006A8F39    movss xmm1, dword ptr ss:[esp+0x10]
-006A8F3F    movss dword ptr ds:[edi+0x0C], xmm0
+006A8F3F    movss dword ptr ds:[edi+0x0C], xmm0             ; => [ Call: sub_4ae0d0 ]
 006A8F44    movss dword ptr ds:[edi+0x08], xmm1
 006A8F49    mov eax, dword ptr ds:[0x007FFB14]
 006A8F4E    mov ecx, dword ptr ds:[0x007FFB18]
@@ -169,7 +175,7 @@
 006A8F7C    jnbe 0x006A8F84
 006A8F7E    sqrtsd xmm0, xmm0
 006A8F82    jmp 0x006A8F89
-006A8F84    call 0x00762084
+006A8F84    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006A8F89    mov eax, dword ptr ss:[esp+0x08]
 006A8F8D    movss xmm1, dword ptr ds:[esi+0x60]
 006A8F92    cvtsd2ss xmm0, xmm0
@@ -185,7 +191,7 @@
 006A8FBC    jnbe 0x006A8FC4
 006A8FBE    sqrtsd xmm0, xmm0
 006A8FC2    jmp 0x006A8FC9
-006A8FC4    call 0x00762084
+006A8FC4    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006A8FC9    mov ecx, dword ptr ss:[esp+0x08]
 006A8FCD    xorps xmm1, xmm1
 006A8FD0    movss xmm2, dword ptr ds:[esi+0x64]
@@ -197,7 +203,7 @@
 006A8FEE    addss xmm0, dword ptr ss:[esp+0x10]
 006A8FF4    addss xmm2, xmm1
 006A8FF8    addss xmm0, dword ptr ds:[edi]
-006A8FFC    addss xmm2, dword ptr ds:[edi+0x04]
+006A8FFC    addss xmm2, dword ptr ds:[edi+0x04]             ; => [ Data: data_8937c0 ]
 006A9001    movss dword ptr ds:[edi], xmm0
 006A9005    movss dword ptr ds:[edi+0x04], xmm2
 006A900A    mov eax, dword ptr ds:[ecx+0x2C]
@@ -215,10 +221,10 @@
 006A9028    push 0x87ADA4
 006A902D    mov edx, 0x801800
 006A9032    mov ecx, 0x801AA4
-006A9037    call 0x0063B870
+006A9037    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Spine.cpp | Data: data_801800 | String: SpineGetSlotInfoByName | String: Halt ]
 006A903C    add esp, 0x0C
 006A903F    call 0x0063BC30
 006A9044    test al, al
-006A9046    jz 0x006A9049
+006A9046    jz 0x006A9049                                   ; => [ Call: sub_63bc30 ]
 006A9048    int3
-006A9049    call 0x0063BB00
+006A9049    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_703c40
+// 起始地址: 0x703c40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00703C40    push ebp
 00703C41    mov ebp, esp
 00703C43    sub esp, 0xEC
-00703C49    mov eax, dword ptr ds:[0x008C4040]
+00703C49    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00703C4E    xor eax, ebp
 00703C50    mov dword ptr ss:[ebp-0x04], eax
 00703C53    push ebx
@@ -33,10 +39,10 @@
 00703CB4    mov ecx, edi
 00703CB6    call 0x00687730
 00703CBB    push edi
-00703CBC    mov esi, eax
+00703CBC    mov esi, eax                                    ; => [ Call: sub_687730 ]
 00703CBE    push 0x00
 00703CC0    push esi
-00703CC1    call 0x00761FC4
+00703CC1    call 0x00761FC4                                 ; => [ Call: memset ]
 00703CC6    mov ecx, dword ptr ss:[ebp-0xD0]
 00703CCC    add esp, 0x0C
 00703CCF    xor eax, eax
@@ -78,9 +84,9 @@
 00703D55    mov byte ptr ds:[eax], 0x00
 00703D58    xor esi, esi
 00703D5A    cmp dword ptr ds:[0x008CE7C4], esi
-00703D60    jle 0x00703D91
+00703D60    jle 0x00703D91                                  ; => [ Data: data_8ce7c4 ]
 00703D62    xor edi, edi
-00703D64    mov ebx, dword ptr ds:[0x008CE7C0]
+00703D64    mov ebx, dword ptr ds:[0x008CE7C0]              ; => [ Data: data_8ce7c0 ]
 00703D6A    lea eax, ss:[ebp-0x68]
 00703D6D    push eax
 00703D6E    push dword ptr ds:[ebx+edi*1+0x04]
@@ -91,12 +97,12 @@
 00703D7F    inc esi
 00703D80    add edi, 0x3C
 00703D83    cmp esi, dword ptr ds:[0x008CE7C4]
-00703D89    jl 0x00703D64
+00703D89    jl 0x00703D64                                   ; => [ Data: data_8ce7c4 ]
 00703D8B    mov ebx, dword ptr ss:[ebp-0xD4]
 00703D91    lea eax, ss:[ebp-0x68]
 00703D94    push eax
 00703D95    push 0x88CEA8
-00703D9A    call 0x0063B5F0
+00703D9A    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Unknown shader constant '%s' ]
 00703D9F    add esp, 0x08
 00703DA2    mov eax, dword ptr ss:[ebp-0xE4]
 00703DA8    inc eax
@@ -117,7 +123,7 @@
 00703DDD    pop esi
 00703DDE    xor ecx, ebp
 00703DE0    pop ebx
-00703DE1    call 0x0075927A
+00703DE1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00703DE6    mov esp, ebp
 00703DE8    pop ebp
 00703DE9    ret
@@ -127,9 +133,9 @@
 00703DF2    test edx, edx
 00703DF4    js 0x00703E97
 00703DFA    cmp edx, dword ptr ds:[0x008CE7CC]
-00703E00    jnl 0x00703E97
+00703E00    jnl 0x00703E97                                  ; => [ Data: data_8ce7cc ]
 00703E06    mov eax, dword ptr ds:[0x008CE7C8]
-00703E0B    mov eax, dword ptr ds:[eax+edx*4]
+00703E0B    mov eax, dword ptr ds:[eax+edx*4]               ; => [ Data: data_8ce7c8 ]
 00703E0E    mov edi, dword ptr ds:[eax+0x0C]
 00703E11    test edi, edi
 00703E13    jz 0x00703E86
@@ -163,19 +169,19 @@
 00703E78    cmovle eax, ecx
 00703E7B    mov dword ptr ds:[edx+0x100], eax
 00703E81    jmp 0x00703DA2
-00703E86    push 0x881518
+00703E86    push 0x881518                                   ; => [ String: AttribTagGetDefMap ]
 00703E8B    push 0x1FE
-00703E90    mov ecx, 0x88156C
+00703E90    mov ecx, 0x88156C                               ; => [ String: pAttribField->pDefMap ]
 00703E95    jmp 0x00703EA6
-00703E97    push 0x88131C
+00703E97    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 00703E9C    push 0x8B
-00703EA1    mov ecx, 0x881344
+00703EA1    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 00703EA6    push 0x8812F8
 00703EAB    mov edx, 0x801800
-00703EB0    call 0x0063B870
+00703EB0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\AttribMap.cpp ]
 00703EB5    add esp, 0x0C
 00703EB8    call 0x0063BC30
 00703EBD    test al, al
-00703EBF    jz 0x00703EC2
+00703EBF    jz 0x00703EC2                                   ; => [ Call: sub_63bc30 ]
 00703EC1    int3
-00703EC2    call 0x0063BB00
+00703EC2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

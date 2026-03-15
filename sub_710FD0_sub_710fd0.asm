@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_710fd0
+// 起始地址: 0x710fd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00710FD0    push ebp
 00710FD1    mov ebp, esp
 00710FD3    sub esp, 0x08
@@ -20,7 +26,7 @@
 00711010    cmp eax, 0x05
 00711013    jnbe 0x00711110
 00711019    jmp dword ptr ds:[eax*4+0x711134]
-00711020    mov ecx, dword ptr ds:[esi+0x10]
+00711020    mov ecx, dword ptr ds:[esi+0x10]                ; => [ Call: nullptr ]
 00711023    test ecx, ecx
 00711025    jz 0x00711035
 00711027    push 0x00
@@ -81,20 +87,20 @@
 0071109C    add esp, 0x10
 0071109F    mov esi, dword ptr ds:[esi+0x6C]
 007110A2    push dword ptr ds:[esi+0x08]
-007110A5    call dword ptr ds:[0x00800B48]
+007110A5    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007110AB    push esi
-007110AC    call dword ptr ds:[0x00800B48]
+007110AC    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007110B2    mov esi, dword ptr ss:[ebp-0x04]
 007110B5    mov esi, dword ptr ds:[esi+0x70]
 007110B8    push dword ptr ds:[esi+0x08]
-007110BB    call dword ptr ds:[0x00800B48]
+007110BB    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007110C1    push esi
-007110C2    call dword ptr ds:[0x00800B48]
+007110C2    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007110C8    mov esi, dword ptr ss:[ebp-0x04]
 007110CB    push dword ptr ds:[esi+0x74]
-007110CE    call dword ptr ds:[0x00800B48]
+007110CE    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007110D4    push esi
-007110D5    call dword ptr ds:[0x00800B48]
+007110D5    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007110DB    add esp, 0x18
 007110DE    jmp 0x00711110
 007110E0    mov eax, dword ptr ds:[esi+0x10]

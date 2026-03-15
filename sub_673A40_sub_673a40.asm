@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_673a40
+// 起始地址: 0x673a40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00673A40    push ebp
 00673A41    mov ebp, esp
 00673A43    sub esp, 0x08
@@ -6,7 +12,7 @@
 00673A48    push edi
 00673A49    mov edi, edx
 00673A4B    mov esi, ecx
-00673A4D    call 0x0064E7A0
+00673A4D    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00673A52    cmp byte ptr ds:[eax+0x171C], 0x00
 00673A59    jnz 0x00673A9B
 00673A5B    mov ebx, dword ptr ss:[ebp+0x08]
@@ -15,7 +21,7 @@
 00673A62    mov dword ptr ds:[edi+eax*4], esi
 00673A65    inc eax
 00673A66    mov dword ptr ds:[ebx], eax
-00673A68    call 0x0064E7A0
+00673A68    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00673A6D    xor esi, esi
 00673A6F    mov dword ptr ss:[ebp-0x08], eax
 00673A72    mov ecx, dword ptr ds:[eax+0x189C]

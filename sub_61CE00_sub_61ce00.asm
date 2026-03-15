@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_61ce00
+// 起始地址: 0x61ce00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0061CE00    push ebp
 0061CE01    mov ebp, esp
 0061CE03    push ecx
@@ -7,7 +13,7 @@
 0061CE07    mov dword ptr ss:[ebp-0x04], edx
 0061CE0A    mov ebx, ecx
 0061CE0C    xor edx, edx
-0061CE0E    mov edi, 0x7E7D30
+0061CE0E    mov edi, 0x7E7D30                               ; => [ Data: data_7e7d30 ]
 0061CE13    xor eax, eax
 0061CE15    lea esi, ds:[edi+0x04]
 0061CE18    mov ecx, dword ptr ds:[esi]
@@ -40,10 +46,10 @@
 0061CE5A    push 0x86F1E8
 0061CE5F    mov edx, 0x801800
 0061CE64    mov ecx, 0x86AA04
-0061CE69    call 0x0063B870
+0061CE69    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: numDefs < MAX_LANDSCAPE_CARDS | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: GetSmartplayDefs ]
 0061CE6E    add esp, 0x0C
 0061CE71    call 0x0063BC30
 0061CE76    test al, al
-0061CE78    jz 0x0061CE7B
+0061CE78    jz 0x0061CE7B                                   ; => [ Call: sub_63bc30 ]
 0061CE7A    int3
-0061CE7B    call 0x0063BB00
+0061CE7B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

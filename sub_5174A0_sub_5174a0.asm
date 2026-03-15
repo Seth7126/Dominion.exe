@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5174a0
+// 起始地址: 0x5174a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005174A0    dword 83EC8B55
 005174A4    byte EC
 005174A5    byte 10
@@ -6,13 +12,13 @@
 005174A8    xor ecx, ecx
 005174AA    call 0x0050ED40
 005174AF    push 0x00
-005174B1    mov dword ptr ss:[ebp-0x04], eax
+005174B1    mov dword ptr ss:[ebp-0x04], eax                ; => [ Call: sub_50ed40 ]
 005174B4    lea ecx, ss:[ebp-0x04]
 005174B7    lea eax, ss:[ebp-0x0C]
 005174BA    mov edx, 0x01
 005174BF    push 0x01
 005174C1    push eax
-005174C2    call 0x00515C00
+005174C2    call 0x00515C00                                 ; => [ Call: nullptr | Call: sub_515c00 ]
 005174C7    mov edi, eax
 005174C9    add esp, 0x0C
 005174CC    test edi, edi
@@ -25,7 +31,7 @@
 005174DC    push 0x00
 005174DE    push ecx
 005174DF    mov ecx, dword ptr ss:[ebp-0x04]
-005174E2    call 0x0050AC80
+005174E2    call 0x0050AC80                                 ; => [ Call: sub_50ac80 ]
 005174E7    inc esi
 005174E8    add esp, 0x0C
 005174EB    cmp esi, edi

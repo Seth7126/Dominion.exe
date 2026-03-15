@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_595ce0
+// 起始地址: 0x595ce0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00595CE0    push ebp
 00595CE1    mov ebp, esp
 00595CE3    sub esp, 0x14
@@ -49,14 +55,14 @@
 00595D63    lea edx, ds:[edi+ecx*1]
 00595D66    push eax
 00595D67    mov dword ptr ss:[ebp-0x0C], edx
-00595D6A    call 0x00597600
+00595D6A    call 0x00597600                                 ; => [ Call: sub_597600 ]
 00595D6F    push dword ptr ss:[ebp+0x0C]
 00595D72    lea eax, ds:[edi+esi*1]
 00595D75    mov ecx, esi
 00595D77    push eax
 00595D78    sub ecx, edi
 00595D7A    mov edx, esi
-00595D7C    call 0x00597600
+00595D7C    call 0x00597600                                 ; => [ Call: sub_597600 ]
 00595D81    mov ecx, dword ptr ss:[ebp-0x10]
 00595D84    mov eax, ecx
 00595D86    sub eax, edi
@@ -66,7 +72,7 @@
 00595D8D    sub ecx, ebx
 00595D8F    mov dword ptr ss:[ebp-0x10], eax
 00595D92    mov edx, eax
-00595D94    call 0x00597600
+00595D94    call 0x00597600                                 ; => [ Call: sub_597600 ]
 00595D99    mov eax, dword ptr ss:[ebp-0x10]
 00595D9C    add esp, 0x18
 00595D9F    mov ecx, dword ptr ss:[ebp-0x0C]
@@ -75,7 +81,7 @@
 00595DA6    push edi
 00595DA7    push eax
 00595DA8    mov edx, esi
-00595DAA    call 0x00597600
+00595DAA    call 0x00597600                                 ; => [ Call: sub_597600 ]
 00595DAF    add esp, 0x08
 00595DB2    lea ebx, ds:[esi+0x1C]
 00595DB5    mov dword ptr ss:[ebp-0x08], ebx

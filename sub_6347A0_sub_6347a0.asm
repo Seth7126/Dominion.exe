@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6347a0
+// 起始地址: 0x6347a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006347A0    push ebp
 006347A1    mov ebp, esp
 006347A3    and esp, 0xFFFFFFF0
 006347A6    sub esp, 0xD8
-006347AC    mov eax, dword ptr ds:[0x008C4040]
+006347AC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006347B1    xor eax, esp
 006347B3    mov dword ptr ss:[esp+0xD4], eax
 006347BA    push esi
@@ -12,8 +18,8 @@
 006347C0    lea edx, ss:[esp+0x34]
 006347C4    mov dword ptr ss:[esp+0x2C], esi
 006347C8    mov dword ptr ss:[esp+0x30], edi
-006347CC    call 0x00633D60
-006347D1    mov ecx, dword ptr ds:[0x0171E998]
+006347CC    call 0x00633D60                                 ; => [ Call: sub_633d60 ]
+006347D1    mov ecx, dword ptr ds:[0x0171E998]              ; => [ Data: data_171e998 ]
 006347D7    mov dword ptr ss:[esp+0x10], eax
 006347DB    movss xmm0, dword ptr ss:[esp+0x10]
 006347E1    mov dword ptr ss:[esp+0x14], edx
@@ -23,20 +29,20 @@
 006347FB    mov dword ptr ds:[esi+0xAC], 0x00
 00634805    test ecx, ecx
 00634807    jnz 0x00634827
-00634809    push 0x874440
+00634809    push 0x874440                                   ; => [ String: UI2DefGet ]
 0063480E    push 0xC16
-00634813    push 0x8739B4
-00634818    mov edx, 0x874424
-0063481D    mov ecx, 0x874470
+00634813    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+00634818    mov edx, 0x874424                               ; => [ String: UI2DefGet on null pointer ]
+0063481D    mov ecx, 0x874470                               ; => [ Data: data_874470 ]
 00634822    jmp 0x00634C67
 00634827    cmp dword ptr ds:[ecx+0x04], 0x22
 0063482B    jz 0x00634846
-0063482D    push 0x874440
+0063482D    push 0x874440                                   ; => [ String: UI2DefGet ]
 00634832    push 0xC17
-00634837    push 0x8739B4
-0063483C    mov ecx, 0x87444C
+00634837    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0063483C    mov ecx, 0x87444C                               ; => [ String: ptr->assetType == ASSET_TYPE_UI2 ]
 00634841    jmp 0x00634C62
-00634846    call 0x005AF880
+00634846    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0063484B    mov ecx, dword ptr ds:[esi+0xAC]
 00634851    mov dword ptr ss:[esp+0x10], 0x00
 00634859    mov dword ptr ss:[esp+0x14], 0x00
@@ -49,9 +55,9 @@
 00634881    movaps xmmword ptr ss:[esp+0x10], xmm1
 00634886    mov dword ptr ss:[esp+0x0C], ecx
 0063488A    movups xmm0, xmmword ptr ds:[0x00BF21E8]
-00634891    movups xmmword ptr ss:[esp+0xB0], xmm0
+00634891    movups xmmword ptr ss:[esp+0xB0], xmm0          ; => [ Data: data_bf21e8 ]
 00634899    movups xmm0, xmmword ptr ds:[0x00BF21F8]
-006348A0    movups xmmword ptr ss:[esp+0xC0], xmm0
+006348A0    movups xmmword ptr ss:[esp+0xC0], xmm0          ; => [ Data: data_bf21f8 ]
 006348A8    movss xmm0, dword ptr ss:[esp+0x3C]
 006348AE    movss dword ptr ss:[esp+0xB0], xmm0
 006348B7    cmp ecx, 0x2B
@@ -68,7 +74,7 @@
 006348D9    push eax
 006348DA    push dword ptr ds:[0x0171E9A0]
 006348E0    mov ecx, 0x86E008
-006348E5    call 0x00654CE0
+006348E5    call 0x00654CE0                                 ; => [ Call: nullptr | Data: data_171e9a0 | String: twitter-player | Call: sub_654ce0 ]
 006348EA    mov ecx, dword ptr ds:[esi]
 006348EC    add esp, 0x18
 006348EF    test ecx, ecx
@@ -79,20 +85,20 @@
 006348FE    imul eax, eax, 0x18D0
 00634904    add eax, dword ptr ds:[0x00C23BA8]
 0063490A    cmp dword ptr ds:[eax+0x18C8], ecx
-00634910    jnz 0x00634927
-00634912    call 0x0064E7A0
+00634910    jnz 0x00634927                                  ; => [ Data: data_c23ba8 | Data: data_c23bac ]
+00634912    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00634917    movups xmm0, xmmword ptr ds:[eax+0x1620]
 0063491E    movups xmm1, xmmword ptr ds:[eax+0x1630]
 00634925    jmp 0x00634935
-00634927    movups xmm1, xmmword ptr ds:[0x00BF21F8]
-0063492E    movups xmm0, xmmword ptr ds:[0x00BF21E8]
+00634927    movups xmm1, xmmword ptr ds:[0x00BF21F8]        ; => [ Data: data_bf21f8 ]
+0063492E    movups xmm0, xmmword ptr ds:[0x00BF21E8]        ; => [ Data: data_bf21e8 ]
 00634935    lea eax, ss:[esp+0x90]
 0063493C    movaps xmmword ptr ss:[esp+0x90], xmm0
 00634944    push eax
 00634945    lea edx, ss:[esp+0xB4]
 0063494C    movaps xmmword ptr ss:[esp+0xA4], xmm1
 00634954    lea ecx, ss:[esp+0x74]
-00634958    call 0x004EB600
+00634958    call 0x004EB600                                 ; => [ Call: sub_4eb600 ]
 0063495D    movaps xmm0, xmmword ptr ss:[esp+0x74]
 00634962    lea edx, ss:[esp+0x94]
 00634969    mov ecx, dword ptr ds:[esi]
@@ -105,10 +111,10 @@
 0063498D    mov edx, 0xBF1768
 00634992    push 0xFFFFFFFF
 00634994    push dword ptr ds:[edi+0x60]
-00634997    call 0x00666120
+00634997    call 0x00666120                                 ; => [ Call: sub_666060 | Data: data_bf1768 | Call: sub_666120 ]
 0063499C    mov ecx, dword ptr ds:[esi]
 0063499E    xorps xmm1, xmm1
-006349A1    call 0x0065D6E0
+006349A1    call 0x0065D6E0                                 ; => [ String: 0 | Call: sub_65d6e0 | String: zx ]
 006349A6    push 0x00
 006349A8    push 0x00
 006349AA    push 0x00
@@ -118,7 +124,7 @@
 006349B3    push eax
 006349B4    push dword ptr ds:[0x0171E9A0]
 006349BA    mov ecx, 0x86E008
-006349BF    call 0x00654CE0
+006349BF    call 0x00654CE0                                 ; => [ Call: nullptr | Data: data_171e9a0 | String: twitter-player | Call: sub_654ce0 ]
 006349C4    mov ecx, dword ptr ds:[esi]
 006349C6    lea edx, ss:[esp+0xB0]
 006349CD    call 0x00666060
@@ -126,8 +132,8 @@
 006349D4    mov edx, 0xBF1768
 006349D9    push 0xFFFFFFFF
 006349DB    push dword ptr ds:[edi+0x60]
-006349DE    call 0x00666120
-006349E3    xor esi, esi
+006349DE    call 0x00666120                                 ; => [ Call: sub_666060 | Data: data_bf1768 | Call: sub_666120 ]
+006349E3    xor esi, esi                                    ; => [ Call: nullptr ]
 006349E5    add esp, 0x28
 006349E8    cmp dword ptr ds:[edi+0x60], esi
 006349EB    jle 0x00634A3B
@@ -136,20 +142,20 @@
 006349F5    mov edx, 0x86B500
 006349FA    mov ecx, dword ptr ss:[esp+0x0C]
 006349FE    mov ecx, dword ptr ds:[eax+ecx*4]
-00634A01    call 0x0067BD70
+00634A01    call 0x0067BD70                                 ; => [ String: tbl_players | Call: sub_67bd70 ]
 00634A06    test eax, eax
 00634A08    jz 0x00634A21
 00634A0A    mov ecx, eax
-00634A0C    call 0x0064E7A0
+00634A0C    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00634A11    test esi, esi
 00634A13    js 0x00634AAB
 00634A19    push esi
 00634A1A    mov ecx, eax
-00634A1C    call 0x0064C870
+00634A1C    call 0x0064C870                                 ; => [ Call: sub_64c870 ]
 00634A21    mov edx, dword ptr ss:[esp+0x08]
 00634A25    mov ecx, eax
 00634A27    push esi
-00634A28    call 0x00634160
+00634A28    call 0x00634160                                 ; => [ Call: sub_634160 ]
 00634A2D    add dword ptr ss:[esp+0x0C], 0x10
 00634A32    inc esi
 00634A33    add esp, 0x04
@@ -159,7 +165,7 @@
 00634A3F    xorps xmm1, xmm1
 00634A42    mov esi, dword ptr ss:[esp+0x2C]
 00634A46    mov ecx, dword ptr ds:[esi+eax*4]
-00634A49    call 0x0065D6E0
+00634A49    call 0x0065D6E0                                 ; => [ String: 0 | Call: sub_65d6e0 | String: zx ]
 00634A4E    cmp dword ptr ds:[edi+0x106C], 0x00
 00634A55    mov dword ptr ss:[esp+0x10], 0x00
 00634A5D    jle 0x00634C27
@@ -171,22 +177,22 @@
 00634A7F    lea eax, ds:[ecx+0x01]
 00634A82    mov dword ptr ds:[esi+0xAC], eax
 00634A88    lea esi, ds:[esi+ecx*4]
-00634A8B    mov eax, dword ptr ds:[0x00CC8D5C]
+00634A8B    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 00634A90    test eax, eax
 00634A92    jz 0x00634C3B
 00634A98    cmp dword ptr ds:[eax+0x5068], 0x00
 00634A9F    jz 0x00634AC4
 00634AA1    call 0x004B9480
-00634AA6    mov edx, dword ptr ds:[eax+0x30]
+00634AA6    mov edx, dword ptr ds:[eax+0x30]                ; => [ Call: sub_4b9480 ]
 00634AA9    jmp 0x00634AC9
-00634AAB    push 0x87697C
+00634AAB    push 0x87697C                                   ; => [ String: UI2GetHandle ]
 00634AB0    push 0x5A8B
-00634AB5    push 0x8739B4
-00634ABA    mov ecx, 0x814428
+00634AB5    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+00634ABA    mov ecx, 0x814428                               ; => [ String: idx >= 0 ]
 00634ABF    jmp 0x00634C62
 00634AC4    mov edx, 0x18
 00634AC9    mov ecx, dword ptr ds:[edi+0x08]
-00634ACC    call 0x00571B30
+00634ACC    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00634AD1    mov edx, dword ptr ds:[edi+0x04]
 00634AD4    movd xmm0, dword ptr ds:[edi]
 00634AD8    mov dword ptr ss:[esp+0xAC], 0x00
@@ -200,21 +206,21 @@
 00634B03    cvtdq2ps xmm0, xmm0
 00634B06    jz 0x00634B3F
 00634B08    mulss xmm0, dword ptr ss:[esp+0x58]
-00634B0E    mov eax, dword ptr ds:[0x0171E99C]
+00634B0E    mov eax, dword ptr ds:[0x0171E99C]              ; => [ Data: data_171e99c ]
 00634B13    mulss xmm1, dword ptr ss:[esp+0x54]
 00634B19    addss xmm0, dword ptr ss:[esp+0x44]
 00634B1F    movss dword ptr ss:[esp+0xA8], xmm0
 00634B28    movups xmm0, xmmword ptr ds:[0x00800248]
-00634B2F    movups xmmword ptr ss:[esp+0x94], xmm0
+00634B2F    movups xmmword ptr ss:[esp+0x94], xmm0          ; => [ Data: data_800248 ]
 00634B37    movss xmm0, dword ptr ss:[esp+0x5C]
 00634B3D    jmp 0x00634B74
 00634B3F    mulss xmm0, dword ptr ss:[esp+0x4C]
-00634B45    mov eax, dword ptr ds:[0x0171E998]
+00634B45    mov eax, dword ptr ds:[0x0171E998]              ; => [ Data: data_171e998 ]
 00634B4A    mulss xmm1, dword ptr ss:[esp+0x48]
 00634B50    addss xmm0, dword ptr ss:[esp+0x44]
 00634B56    movss dword ptr ss:[esp+0xA8], xmm0
 00634B5F    movups xmm0, xmmword ptr ds:[0x00800248]
-00634B66    movups xmmword ptr ss:[esp+0x94], xmm0
+00634B66    movups xmmword ptr ss:[esp+0x94], xmm0          ; => [ Data: data_800248 ]
 00634B6E    movss xmm0, dword ptr ss:[esp+0x50]
 00634B74    addss xmm1, dword ptr ss:[esp+0x40]
 00634B7A    movss dword ptr ss:[esp+0x90], xmm0
@@ -234,19 +240,19 @@
 00634BC5    push ecx
 00634BC6    push eax
 00634BC7    mov ecx, 0x86DFF8
-00634BCC    call 0x00654CE0
+00634BCC    call 0x00654CE0                                 ; => [ Call: nullptr | String: twitter-card | Call: sub_654ce0 ]
 00634BD1    mov ecx, dword ptr ds:[esi]
 00634BD3    lea edx, ss:[esp+0xC8]
-00634BDA    call 0x00666060
+00634BDA    call 0x00666060                                 ; => [ Call: sub_666060 ]
 00634BDF    mov eax, dword ptr ss:[esp+0x48]
 00634BE3    mov edx, edi
 00634BE5    mov ecx, dword ptr ds:[esi]
 00634BE7    push dword ptr ds:[eax+0x60]
-00634BEA    call 0x006342F0
+00634BEA    call 0x006342F0                                 ; => [ Call: sub_6342f0 ]
 00634BEF    mov ecx, dword ptr ds:[esi]
 00634BF1    add esp, 0x1C
 00634BF4    xorps xmm1, xmm1
-00634BF7    call 0x0065D6E0
+00634BF7    call 0x0065D6E0                                 ; => [ String: 0 | Call: sub_65d6e0 | String: zx ]
 00634BFC    sub dword ptr ss:[esp+0x0C], 0x01
 00634C01    mov eax, dword ptr ss:[esp+0x08]
 00634C05    jnz 0x00634BB8
@@ -262,24 +268,24 @@
 00634C2E    pop edi
 00634C2F    pop esi
 00634C30    xor ecx, esp
-00634C32    call 0x0075927A
+00634C32    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00634C37    mov esp, ebp
 00634C39    pop ebp
 00634C3A    ret
-00634C3B    push 0x77EB90
+00634C3B    push 0x77EB90                                   ; => [ String: GetClient ]
 00634C40    push 0x7B
-00634C42    push 0x77EB50
-00634C47    mov ecx, 0x77EB9C
+00634C42    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+00634C47    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 00634C4C    jmp 0x00634C62
-00634C4E    push 0x86DF5C
+00634C4E    push 0x86DF5C                                   ; => [ String: TwitterUIs::alloc ]
 00634C53    push 0x112DF
-00634C58    mov ecx, 0x86DF7C
-00634C5D    push 0x86F1E8
-00634C62    mov edx, 0x801800
-00634C67    call 0x0063B870
+00634C58    mov ecx, 0x86DF7C                               ; => [ String: numUIs < MAX_TWITTER_UIS ]
+00634C5D    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+00634C62    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+00634C67    call 0x0063B870                                 ; => [ Call: sub_63b870 ]
 00634C6C    add esp, 0x0C
 00634C6F    call 0x0063BC30
 00634C74    test al, al
-00634C76    jz 0x00634C79
+00634C76    jz 0x00634C79                                   ; => [ Call: sub_63bc30 ]
 00634C78    int3
-00634C79    call 0x0063BB00
+00634C79    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

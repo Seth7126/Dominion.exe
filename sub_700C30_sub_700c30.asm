@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_700c30
+// 起始地址: 0x700c30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700C30    push ebp
 00700C31    mov ebp, esp
 00700C33    push ecx
@@ -5,9 +11,9 @@
 00700C35    push esi
 00700C36    push edi
 00700C37    mov dword ptr ss:[ebp-0x04], ecx
-00700C3A    xor esi, esi
+00700C3A    xor esi, esi                                    ; => [ Call: nullptr ]
 00700C3C    nop dword ptr ds:[eax], eax
-00700C40    mov edx, dword ptr ds:[0x0147DED4]
+00700C40    mov edx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700C46    test esi, esi
 00700C48    jnz 0x00700C52
 00700C4A    mov esi, dword ptr ds:[edx+0x424C]

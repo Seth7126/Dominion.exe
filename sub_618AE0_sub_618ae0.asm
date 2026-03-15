@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_618ae0
+// 起始地址: 0x618ae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00618AE0    push ebp
 00618AE1    mov ebp, esp
 00618AE3    sub esp, 0x20
@@ -7,13 +13,13 @@
 00618AE9    mov ebx, edx
 00618AEB    mov dword ptr ss:[ebp-0x10], ecx
 00618AEE    call 0x004B9480
-00618AF3    add eax, 0x20
+00618AF3    add eax, 0x20                                   ; => [ Call: sub_4b9480 ]
 00618AF6    mov dword ptr ss:[ebp-0x0C], eax
 00618AF9    test byte ptr ds:[eax], 0x01
 00618AFC    jnz 0x00618CA0
 00618B02    lea edx, ss:[ebp-0x18]
 00618B05    lea ecx, ss:[ebp-0x08]
-00618B08    call 0x004DAF40
+00618B08    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 00618B0D    mov edi, eax
 00618B0F    xor esi, esi
 00618B11    test edi, edi
@@ -22,7 +28,7 @@
 00618B20    mov eax, dword ptr ss:[ebp-0x08]
 00618B23    mov edx, ebx
 00618B25    mov ecx, dword ptr ds:[eax+esi*4]
-00618B28    call 0x004DB7A0
+00618B28    call 0x004DB7A0                                 ; => [ Call: sub_4db7a0 ]
 00618B2D    test al, al
 00618B2F    jnz 0x00618B3D
 00618B31    inc esi
@@ -44,7 +50,7 @@
 00618B4F    movzx eax, al
 00618B52    dec edx
 00618B53    push eax
-00618B54    call 0x004C38B0
+00618B54    call 0x004C38B0                                 ; => [ Call: sub_4c38b0 ]
 00618B59    mov esi, dword ptr ss:[ebp-0x10]
 00618B5C    add esp, 0x04
 00618B5F    mov edi, eax
@@ -53,7 +59,7 @@
 00618B66    xor ecx, ecx
 00618B68    jmp 0x00618BCD
 00618B6A    mov ecx, esi
-00618B6C    call 0x00618A60
+00618B6C    call 0x00618A60                                 ; => [ Call: sub_618a60 ]
 00618B71    mov dword ptr ss:[ebp-0x10], eax
 00618B74    test eax, eax
 00618B76    jnz 0x00618B7C
@@ -97,7 +103,7 @@
 00618BE7    cmp edi, ecx
 00618BE9    jl 0x00618CA0
 00618BEF    mov ecx, esi
-00618BF1    call 0x00618A60
+00618BF1    call 0x00618A60                                 ; => [ Call: sub_618a60 ]
 00618BF6    mov ecx, eax
 00618BF8    test ecx, ecx
 00618BFA    jz 0x00618C32
@@ -114,11 +120,11 @@
 00618C11    imul eax, eax, 0x9C
 00618C17    sub edx, eax
 00618C19    add edx, 0xF4628
-00618C1F    call 0x004BAC10
-00618C24    mov ecx, dword ptr ds:[0x00CC8DC8]
+00618C1F    call 0x004BAC10                                 ; => [ Call: sub_4bac10 ]
+00618C24    mov ecx, dword ptr ds:[0x00CC8DC8]              ; => [ Data: data_cc8dc8 ]
 00618C2A    add esp, 0x08
-00618C2D    call 0x004D8AD0
-00618C32    mov eax, dword ptr ds:[0x00CC8D5C]
+00618C2D    call 0x004D8AD0                                 ; => [ Call: sub_4d8ad0 ]
+00618C32    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 00618C37    test eax, eax
 00618C39    jz 0x00618CA7
 00618C3B    cmp byte ptr ss:[ebp+0x10], 0x00
@@ -127,7 +133,7 @@
 00618C45    jz 0x00618CA0
 00618C47    cmp esi, dword ptr ds:[eax+0x7590]
 00618C4D    jnz 0x00618CA0
-00618C4F    mov ecx, dword ptr ds:[0x00BE22F8]
+00618C4F    mov ecx, dword ptr ds:[0x00BE22F8]              ; => [ Data: data_be22f8 ]
 00618C55    cmp ecx, 0x08
 00618C58    jnz 0x00618C6E
 00618C5A    push 0x868C58
@@ -138,15 +144,15 @@
 00618C69    pop ebx
 00618C6A    mov esp, ebp
 00618C6C    pop ebp
-00618C6D    ret
+00618C6D    ret                                             ; => [ String: too many achievement popups | Call: sub_63b5f0 ]
 00618C6E    lea eax, ds:[ecx+ecx*4]
 00618C71    inc ecx
-00618C72    mov dword ptr ds:[0x00BE22F8], ecx
-00618C78    mov dword ptr ds:[eax*4+0xBE2258], esi
-00618C7F    mov dword ptr ds:[eax*4+0xBE225C], ebx
-00618C86    mov dword ptr ds:[eax*4+0xBE2260], edi
-00618C8D    mov byte ptr ds:[eax*4+0xBE2264], 0x00
-00618C95    mov dword ptr ds:[eax*4+0xBE2268], 0x404CCCCD
+00618C72    mov dword ptr ds:[0x00BE22F8], ecx              ; => [ Data: data_be22f8 ]
+00618C78    mov dword ptr ds:[eax*4+0xBE2258], esi          ; => [ Data: data_be2258 ]
+00618C7F    mov dword ptr ds:[eax*4+0xBE225C], ebx          ; => [ Data: data_be225c ]
+00618C86    mov dword ptr ds:[eax*4+0xBE2260], edi          ; => [ Data: data_be2260 ]
+00618C8D    mov byte ptr ds:[eax*4+0xBE2264], 0x00          ; => [ Data: data_be2264 ]
+00618C95    mov dword ptr ds:[eax*4+0xBE2268], 0x404CCCCD   ; => [ Data: data_be2268 ]
 00618CA0    pop edi
 00618CA1    pop esi
 00618CA2    pop ebx
@@ -158,10 +164,10 @@
 00618CAE    push 0x77EB50
 00618CB3    mov edx, 0x801800
 00618CB8    mov ecx, 0x77EB9C
-00618CBD    call 0x0063B870
+00618CBD    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 00618CC2    add esp, 0x0C
 00618CC5    call 0x0063BC30
 00618CCA    test al, al
-00618CCC    jz 0x00618CCF
+00618CCC    jz 0x00618CCF                                   ; => [ Call: sub_63bc30 ]
 00618CCE    int3
-00618CCF    call 0x0063BB00
+00618CCF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

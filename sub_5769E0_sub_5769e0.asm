@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5769e0
+// 起始地址: 0x5769e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005769E0    push ebp
 005769E1    mov ebp, esp
 005769E3    push esi
@@ -7,18 +13,18 @@
 005769EB    shr eax, 0x04
 005769EE    and eax, 0x03
 005769F1    jnz 0x00576A07
-005769F3    call 0x00591930
-005769F8    push 0x81FC30
+005769F3    call 0x00591930                                 ; => [ Call: sub_591930 ]
+005769F8    push 0x81FC30                                   ; => [ String: AbilityGetStatic ]
 005769FD    push 0xF40
 00576A02    jmp 0x00576AF1
 00576A07    jmp dword ptr ds:[eax*4+0x576B18]
 00576A0E    dword 3024C68B
 00576A12    cmp al, 0x10
 00576A14    jz 0x00576A2F
-00576A16    push 0x81E9E4
+00576A16    push 0x81E9E4                                   ; => [ String: AbilityID::static_ability_card_id ]
 00576A1B    push 0x11E
-00576A20    push 0x81E978
-00576A25    mov ecx, 0x81EA08
+00576A20    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+00576A25    mov ecx, 0x81EA08                               ; => [ String: type() == ABILITY_CARD_STATIC ]
 00576A2A    jmp 0x00576AFB
 00576A2F    mov eax, esi
 00576A31    and esi, 0x0F
@@ -36,10 +42,10 @@
 00576A5A    and al, 0x30
 00576A5C    cmp al, 0x20
 00576A5E    jz 0x00576A79
-00576A60    push 0x81E9A4
+00576A60    push 0x81E9A4                                   ; => [ String: AbilityID::static_ability_card_enum ]
 00576A65    push 0x111
-00576A6A    push 0x81E978
-00576A6F    mov ecx, 0x81E9C8
+00576A6A    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+00576A6F    mov ecx, 0x81E9C8                               ; => [ String: type() == ABILITY_CARD_ENUM ]
 00576A74    jmp 0x00576AFB
 00576A79    mov ecx, esi
 00576A7B    shr ecx, 0x12
@@ -50,15 +56,15 @@
 00576A92    add eax, ecx
 00576A94    pop esi
 00576A95    pop ebp
-00576A96    ret
+00576A96    ret                                             ; => [ Call: sub_571b30 ]
 00576A97    mov eax, esi
 00576A99    and eax, 0x30
 00576A9C    cmp al, 0x30
 00576A9E    jz 0x00576AB6
-00576AA0    push 0x81EA28
+00576AA0    push 0x81EA28                                   ; => [ String: AbilityID::static_ability_token_id ]
 00576AA5    push 0x12A
-00576AAA    push 0x81E978
-00576AAF    mov ecx, 0x81EA4C
+00576AAA    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+00576AAF    mov ecx, 0x81EA4C                               ; => [ String: type() == ABILITY_TOKEN ]
 00576AB4    jmp 0x00576AFB
 00576AB6    mov ecx, esi
 00576AB8    shr ecx, 0x12
@@ -67,24 +73,24 @@
 00576AC5    call 0x00571910
 00576ACA    and esi, 0x0F
 00576ACD    imul esi, esi, 0xB4
-00576AD3    add esi, eax
+00576AD3    add esi, eax                                    ; => [ Call: sub_571910 ]
 00576AD5    cmp dword ptr ds:[esi+0x1C], 0x06
 00576AD9    jz 0x00576AE0
-00576ADB    call 0x00591930
+00576ADB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576AE0    cmp dword ptr ds:[esi+0x20], 0x07
 00576AE4    jz 0x00576AEB
-00576AE6    call 0x00591930
+00576AE6    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576AEB    lea eax, ds:[esi+0x1C]
 00576AEE    pop esi
 00576AEF    pop ebp
 00576AF0    ret
-00576AF1    push 0x81F4B8
-00576AF6    mov ecx, 0x801AA4
+00576AF1    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+00576AF6    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00576AFB    mov edx, 0x801800
-00576B00    call 0x0063B870
+00576B00    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00576B05    add esp, 0x0C
 00576B08    call 0x0063BC30
 00576B0D    test al, al
-00576B0F    jz 0x00576B12
+00576B0F    jz 0x00576B12                                   ; => [ Call: sub_63bc30 ]
 00576B11    int3
-00576B12    call 0x0063BB00
+00576B12    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

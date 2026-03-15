@@ -1,23 +1,29 @@
+// ============================================================
+// 函数名称: sub_6b7f40
+// 起始地址: 0x6b7f40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B7F40    push ebp
 006B7F41    mov ebp, esp
 006B7F43    push 0xFFFFFFFF
-006B7F45    push 0x763270
+006B7F45    push 0x763270                                   ; => [ Call: __ehhandler$___std_smf_ellint_2@16 | Type: EHRegistrationNode ]
 006B7F4A    mov eax, dword ptr fs:[0x00000000]
-006B7F50    push eax
+006B7F50    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006B7F51    push ecx
 006B7F52    push ebx
 006B7F53    push esi
 006B7F54    push edi
 006B7F55    mov eax, dword ptr ds:[0x008C4040]
 006B7F5A    xor eax, ebp
-006B7F5C    push eax
-006B7F5D    lea eax, ss:[ebp-0x0C]
-006B7F60    mov dword ptr fs:[0x00000000], eax
-006B7F66    mov edi, dword ptr ds:[0x0147ABE8]
+006B7F5C    push eax                                        ; => [ Data: __security_cookie ]
+006B7F5D    lea eax, ss:[ebp-0x0C]                          ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+006B7F60    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
+006B7F66    mov edi, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006B7F6C    test edi, edi
 006B7F6E    jz 0x006B80B0
 006B7F74    mov edi, dword ptr ds:[edi+0x10]
-006B7F77    xor esi, esi
+006B7F77    xor esi, esi                                    ; => [ Call: nullptr ]
 006B7F79    nop dword ptr ds:[eax], eax
 006B7F80    test esi, esi
 006B7F82    jnz 0x006B7F88
@@ -33,13 +39,13 @@
 006B7F9E    add esi, 0x7C
 006B7FA1    cmp esi, eax
 006B7FA3    jb 0x006B7F95
-006B7FA5    mov esi, dword ptr ds:[0x0147ABE8]
+006B7FA5    mov esi, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006B7FAB    mov dword ptr ss:[ebp-0x10], esi
 006B7FAE    test esi, esi
 006B7FB0    jz 0x006B80B0
 006B7FB6    jmp 0x006B7FC1
 006B7FB8    mov ecx, esi
-006B7FBA    call 0x006B8440
+006B7FBA    call 0x006B8440                                 ; => [ Call: sub_6b8440 ]
 006B7FBF    jmp 0x006B7F80
 006B7FC1    mov ebx, dword ptr ds:[esi+0x10]
 006B7FC4    cmp dword ptr ds:[ebx], 0x00
@@ -48,7 +54,7 @@
 006B7FD0    xor esi, esi
 006B7FD2    mov ecx, eax
 006B7FD4    lea edx, ds:[ebx+0x0C]
-006B7FD7    mov edi, edx
+006B7FD7    mov edi, edx                                    ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
 006B7FD9    test esi, esi
 006B7FDB    jnz 0x006B7FE1
 006B7FDD    mov esi, dword ptr ds:[ebx]
@@ -87,10 +93,10 @@
 006B8059    test ecx, ecx
 006B805B    jz 0x006B806E
 006B805D    mov edx, 0x30
-006B8062    call 0x0064C080
+006B8062    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006B8067    mov dword ptr ds:[esi+0x10], 0x00
 006B806E    mov ecx, dword ptr ss:[ebp-0x0C]
-006B8071    mov dword ptr fs:[0x00000000], ecx
+006B8071    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006B8078    pop ecx
 006B8079    pop edi
 006B807A    pop esi
@@ -100,7 +106,7 @@
 006B807F    ret
 006B8080    lea ecx, ds:[esi+0x08]
 006B8083    mov dword ptr ss:[ebp-0x04], 0x00
-006B808A    call 0x006C3440
+006B808A    call 0x006C3440                                 ; => [ Call: sub_6c3440 ]
 006B808F    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 006B8096    movzx eax, word ptr ds:[esi+0x78]
 006B809A    mov ecx, dword ptr ds:[ebx+0x0C]
@@ -115,10 +121,10 @@
 006B80B7    push 0x871FA0
 006B80BC    mov edx, 0x801800
 006B80C1    mov ecx, 0x871F94
-006B80C6    call 0x0063B870
+006B80C6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetGameData | Data: data_801800 | String: gpGameData | String: C:\x\ax2017\Engine\Game.h ]
 006B80CB    add esp, 0x0C
 006B80CE    call 0x0063BC30
 006B80D3    test al, al
-006B80D5    jz 0x006B80D8
+006B80D5    jz 0x006B80D8                                   ; => [ Call: sub_63bc30 ]
 006B80D7    int3
-006B80D8    call 0x0063BB00
+006B80D8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

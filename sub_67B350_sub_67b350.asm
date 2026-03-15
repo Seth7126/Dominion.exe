@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67b350
+// 起始地址: 0x67b350
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067B350    push ecx
 0067B351    mov eax, dword ptr ds:[ecx+0x1718]
 0067B357    push esi
@@ -10,7 +16,7 @@
 0067B370    push dword ptr ds:[ecx+0x15E4]
 0067B376    mov ecx, dword ptr ds:[eax+0x18C8]
 0067B37C    mov edx, edi
-0067B37E    call 0x0066B2B0
+0067B37E    call 0x0066B2B0                                 ; => [ Call: sub_66b2b0 ]
 0067B383    add esp, 0x04
 0067B386    test eax, eax
 0067B388    jnz 0x0067B3A2
@@ -29,4 +35,4 @@
 0067B3A9    pop edi
 0067B3AA    pop esi
 0067B3AB    pop ecx
-0067B3AC    ret
+0067B3AC    ret                                             ; => [ Call: sub_64e7a0 ]

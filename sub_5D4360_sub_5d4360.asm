@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d4360
+// 起始地址: 0x5d4360
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D4360    push ebp
 005D4361    mov ebp, esp
 005D4363    and esp, 0xFFFFFFF8
@@ -8,7 +14,7 @@
 005D436D    mov edx, dword ptr ds:[esi+0x5C]
 005D4370    push dword ptr ds:[esi+0x60]
 005D4373    mov ecx, dword ptr ds:[esi+0x58]
-005D4376    call 0x005D1210
+005D4376    call 0x005D1210                                 ; => [ Call: sub_5d1210 ]
 005D437B    mov ecx, dword ptr ds:[esi+0x5C]
 005D437E    add esp, 0x08
 005D4381    mov edx, dword ptr ds:[esi+0x30]
@@ -37,7 +43,7 @@
 005D43C1    jnbe 0x005D44A9
 005D43C7    movzx eax, byte ptr ds:[ecx+0x5D4514]
 005D43CE    jmp dword ptr ds:[eax*4+0x5D44F4]
-005D43D5    mov eax, dword ptr ds:[0x00B80B08]
+005D43D5    mov eax, dword ptr ds:[0x00B80B08]              ; => [ Data: data_b80b08 ]
 005D43DA    cmp eax, 0x27
 005D43DD    jnz 0x005D43EA
 005D43DF    mov eax, 0x0B
@@ -63,8 +69,8 @@
 005D4408    pop ebp
 005D4409    ret
 005D440A    cmp dword ptr ds:[0x00B80AFC], 0x02
-005D4411    jnz 0x005D442A
-005D4413    cmp dword ptr ds:[0x00B80B08], 0x126
+005D4411    jnz 0x005D442A                                  ; => [ Data: data_b80afc ]
+005D4413    cmp dword ptr ds:[0x00B80B08], 0x126            ; => [ Data: data_b80b08 ]
 005D441D    jnz 0x005D442A
 005D441F    mov eax, 0x05
 005D4424    pop edi
@@ -79,12 +85,12 @@
 005D4433    pop ebp
 005D4434    ret
 005D4435    cmp dword ptr ds:[0x00B80AFC], 0x02
-005D443C    jnz 0x005D442A
-005D443E    cmp dword ptr ds:[0x00B80B08], 0x125
+005D443C    jnz 0x005D442A                                  ; => [ Data: data_b80afc ]
+005D443E    cmp dword ptr ds:[0x00B80B08], 0x125            ; => [ Data: data_b80b08 ]
 005D4448    jmp 0x005D441D
 005D444A    cmp dword ptr ds:[0x00B80AFC], 0x02
-005D4451    jz 0x005D441F
-005D4453    mov eax, dword ptr ds:[0x00B80B08]
+005D4451    jz 0x005D441F                                   ; => [ Data: data_b80afc ]
+005D4453    mov eax, dword ptr ds:[0x00B80B08]              ; => [ Data: data_b80b08 ]
 005D4458    cmp eax, 0x27
 005D445B    jz 0x005D43DF
 005D445D    cmp eax, 0x7B
@@ -101,7 +107,7 @@
 005D4484    mov esp, ebp
 005D4486    pop ebp
 005D4487    ret
-005D4488    mov eax, dword ptr ds:[0x00B80B08]
+005D4488    mov eax, dword ptr ds:[0x00B80B08]              ; => [ Data: data_b80b08 ]
 005D448D    cmp eax, 0x33
 005D4490    jz 0x005D449E
 005D4492    cmp eax, 0x34

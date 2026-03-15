@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_7018c0
+// 起始地址: 0x7018c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007018C0    push ebp
 007018C1    mov ebp, esp
-007018C3    mov eax, dword ptr ds:[0x0147DED4]
+007018C3    mov eax, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 007018C8    mov ecx, dword ptr ss:[ebp+0x14]
 007018CB    mov edx, dword ptr ss:[ebp+0x10]
 007018CE    push esi

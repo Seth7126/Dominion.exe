@@ -1,3 +1,9 @@
-004045D0    mov eax, dword ptr ds:[0x01597DA8]
-004045D5    mov dword ptr ds:[0x01597DAC], eax
+// ============================================================
+// 函数名称: sub_4045d0
+// 起始地址: 0x4045d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+004045D0    mov eax, dword ptr ds:[0x01597DA8]              ; => [ Data: data_1597da8 ]
+004045D5    mov dword ptr ds:[0x01597DAC], eax              ; => [ Data: data_1597dac ]
 004045DA    ret

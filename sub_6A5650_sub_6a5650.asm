@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a5650
+// 起始地址: 0x6a5650
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A5650    push ebp
 006A5651    mov ebp, esp
 006A5653    sub esp, 0x08
@@ -21,7 +27,7 @@
 006A5684    mov eax, dword ptr ds:[eax+edx*4]
 006A5687    mov eax, dword ptr ds:[eax+0x04]
 006A568A    mov dword ptr ss:[ebp+0x08], eax
-006A568D    call 0x006DD320
+006A568D    call 0x006DD320                                 ; => [ Call: sub_6dd320 ]
 006A5692    byte 8B
 006A5693    byte D8
 006A5694    byte 8B
@@ -43,7 +49,7 @@
 006A56BF    push dword ptr ds:[eax+0x28]
 006A56C2    push dword ptr ss:[ebp+0x08]
 006A56C5    push ebx
-006A56C6    call 0x006A4D40
+006A56C6    call 0x006A4D40                                 ; => [ Call: sub_6a4d40 ]
 006A56CB    add esp, 0x10
 006A56CE    pop edi
 006A56CF    pop esi
@@ -52,7 +58,7 @@
 006A56D3    pop ebp
 006A56D4    ret
 006A56D5    mov ecx, ebx
-006A56D7    call 0x0069C590
+006A56D7    call 0x0069C590                                 ; => [ Call: sub_69c590 ]
 006A56DC    test al, al
 006A56DE    jz 0x006A56FF
 006A56E0    mov esi, dword ptr ss:[ebp-0x08]
@@ -62,7 +68,7 @@
 006A56EA    push dword ptr ss:[ebp+0x08]
 006A56ED    mov edx, dword ptr ds:[esi]
 006A56EF    push ebx
-006A56F0    call 0x006A4D40
+006A56F0    call 0x006A4D40                                 ; => [ Call: nullptr | Call: sub_6a4d40 ]
 006A56F5    add esp, 0x10
 006A56F8    pop edi
 006A56F9    pop esi
@@ -82,10 +88,10 @@
 006A5716    mov eax, dword ptr ds:[ebx+0x04]
 006A5719    test byte ptr ds:[eax+0x28], 0x40
 006A571D    jnz 0x006A5735
-006A571F    push 0x87AAE4
+006A571F    push 0x87AAE4                                   ; => [ String: DefParseTreeMakeFromDefinitionTagValue ]
 006A5724    push 0x702
-006A5729    push 0x87A6C8
-006A572E    mov ecx, 0x87A8F8
+006A5729    push 0x87A6C8                                   ; => [ String: C:\x\ax2017\Engine\DefParseTree.cpp ]
+006A572E    mov ecx, 0x87A8F8                               ; => [ String: pDefMap->pDTMapFields[0].fieldFlags & DEF_FIELD_FLAG_INLINE_XML ]
 006A5733    jmp 0x006A578D
 006A5735    mov edx, dword ptr ds:[edi+0x08]
 006A5738    mov ecx, dword ptr ss:[ebp-0x04]
@@ -93,7 +99,7 @@
 006A573D    push 0x00
 006A573F    push dword ptr ss:[ebp+0x08]
 006A5742    push dword ptr ds:[eax+0x0C]
-006A5745    call 0x006A4D40
+006A5745    call 0x006A4D40                                 ; => [ Call: nullptr | Call: sub_6a4d40 ]
 006A574A    add esp, 0x10
 006A574D    pop edi
 006A574E    pop esi
@@ -108,8 +114,8 @@
 006A5762    push 0x00
 006A5764    push ebx
 006A5765    mov edx, esi
-006A5767    mov ecx, dword ptr ds:[eax+0x0C]
-006A576A    call 0x006A6290
+006A5767    mov ecx, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_6a4b50 ]
+006A576A    call 0x006A6290                                 ; => [ Call: nullptr | Call: sub_6a6290 ]
 006A576F    add esp, 0x08
 006A5772    pop edi
 006A5773    pop esi
@@ -117,15 +123,15 @@
 006A5775    mov esp, ebp
 006A5777    pop ebp
 006A5778    ret
-006A5779    push 0x88131C
+006A5779    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 006A577E    push 0x8B
-006A5783    mov ecx, 0x881344
-006A5788    push 0x8812F8
+006A5783    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
+006A5788    push 0x8812F8                                   ; => [ String: C:\x\ax2017\Engine\AttribMap.cpp ]
 006A578D    mov edx, 0x801800
-006A5792    call 0x0063B870
+006A5792    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006A5797    add esp, 0x0C
 006A579A    call 0x0063BC30
 006A579F    test al, al
-006A57A1    jz 0x006A57A4
+006A57A1    jz 0x006A57A4                                   ; => [ Call: sub_63bc30 ]
 006A57A3    int3
-006A57A4    call 0x0063BB00
+006A57A4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4eae20
+// 起始地址: 0x4eae20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EAE20    push ebp
 004EAE21    mov ebp, esp
 004EAE23    and esp, 0xFFFFFFF0
 004EAE26    sub esp, 0x48
-004EAE29    mov eax, dword ptr ds:[0x008C4040]
+004EAE29    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004EAE2E    xor eax, esp
 004EAE30    mov dword ptr ss:[esp+0x44], eax
 004EAE34    movss xmm4, dword ptr ds:[ecx+0x14]
@@ -52,7 +58,7 @@
 004EAEE4    pop esi
 004EAEE5    mov ecx, dword ptr ss:[esp+0x44]
 004EAEE9    xor ecx, esp
-004EAEEB    call 0x0075927A
+004EAEEB    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004EAEF0    mov esp, ebp
 004EAEF2    pop ebp
 004EAEF3    ret
@@ -152,9 +158,9 @@
 004EB083    lahf
 004EB084    test ah, 0x44
 004EB087    jnp 0x004EB09D
-004EB089    push 0x808848
+004EB089    push 0x808848                                   ; => [ String: MoveToDampened ]
 004EB08E    push 0x11C
-004EB093    mov ecx, 0x808858
+004EB093    mov ecx, 0x808858                               ; => [ String: tar.r.x == 0 ]
 004EB098    jmp 0x004EB2C2
 004EB09D    movss xmm0, dword ptr ds:[esi+0x08]
 004EB0A2    ucomiss xmm0, xmm1
@@ -165,7 +171,7 @@
 004EB0B3    lea eax, ss:[esp+0x30]
 004EB0B7    push eax
 004EB0B8    mov ecx, esi
-004EB0BA    call 0x004EB460
+004EB0BA    call 0x004EB460                                 ; => [ Call: sub_4eb460 ]
 004EB0BF    add esp, 0x04
 004EB0C2    mov ecx, esi
 004EB0C4    movq xmm0, qword ptr ds:[eax]
@@ -174,7 +180,7 @@
 004EB0CF    lea eax, ss:[esp+0x20]
 004EB0D3    push eax
 004EB0D4    movq qword ptr ss:[esp+0x44], xmm0
-004EB0DA    call 0x004EB460
+004EB0DA    call 0x004EB460                                 ; => [ Call: sub_4eb460 ]
 004EB0DF    movss xmm3, dword ptr ds:[edi+0x08]
 004EB0E4    add esp, 0x04
 004EB0E7    movq xmm0, qword ptr ds:[eax]
@@ -202,10 +208,10 @@
 004EB15B    mulss xmm4, dword ptr ds:[0x00890D84]
 004EB163    movaps xmm0, xmm4
 004EB166    movss dword ptr ss:[esp+0x0C], xmm4
-004EB16C    call 0x004AE0F0
+004EB16C    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 004EB171    movss dword ptr ss:[esp+0x14], xmm0
 004EB177    movss xmm0, dword ptr ss:[esp+0x0C]
-004EB17D    call 0x004AE0D0
+004EB17D    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 004EB182    movss dword ptr ss:[esp+0x18], xmm0
 004EB188    movss xmm0, dword ptr ss:[esp+0x40]
 004EB18E    addss xmm0, xmm0
@@ -214,9 +220,9 @@
 004EB1A2    mulss xmm0, dword ptr ds:[0x00890D84]
 004EB1AA    movss dword ptr ss:[esp+0x0C], xmm0
 004EB1B0    call 0x004AE0F0
-004EB1B5    movss dword ptr ss:[esp+0x08], xmm0
+004EB1B5    movss dword ptr ss:[esp+0x08], xmm0             ; => [ Call: sub_4ae0f0 ]
 004EB1BB    movss xmm0, dword ptr ss:[esp+0x0C]
-004EB1C1    call 0x004AE0D0
+004EB1C1    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 004EB1C6    movss dword ptr ss:[esp+0x10], xmm0
 004EB1CC    movss xmm0, dword ptr ss:[esp+0x44]
 004EB1D2    addss xmm0, xmm0
@@ -224,10 +230,10 @@
 004EB1DE    mulss xmm0, dword ptr ds:[0x00890CB4]
 004EB1E6    mulss xmm0, dword ptr ds:[0x00890D84]
 004EB1EE    movss dword ptr ss:[esp+0x0C], xmm0
-004EB1F4    call 0x004AE0F0
+004EB1F4    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 004EB1F9    movss dword ptr ss:[esp+0x1C], xmm0
 004EB1FF    movss xmm0, dword ptr ss:[esp+0x0C]
-004EB205    call 0x004AE0D0
+004EB205    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 004EB20A    movss xmm2, dword ptr ss:[esp+0x08]
 004EB210    movaps xmm4, xmm0
 004EB213    movss xmm3, dword ptr ss:[esp+0x10]
@@ -265,19 +271,19 @@
 004EB2A4    movups xmmword ptr ds:[esi], xmm0
 004EB2A7    pop esi
 004EB2A8    xor ecx, esp
-004EB2AA    call 0x0075927A
+004EB2AA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004EB2AF    mov esp, ebp
 004EB2B1    pop ebp
 004EB2B2    ret
-004EB2B3    push 0x808848
+004EB2B3    push 0x808848                                   ; => [ String: MoveToDampened ]
 004EB2B8    push 0x11D
-004EB2BD    mov ecx, 0x808868
+004EB2BD    mov ecx, 0x808868                               ; => [ String: tar.r.y == 0 ]
 004EB2C2    push 0x8087FC
 004EB2C7    mov edx, 0x801800
-004EB2CC    call 0x0063B870
+004EB2CC    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: MoveToDampened | String: C:\x\ax2017\Jams\Dominion\code\CardMotion.cpp ]
 004EB2D1    add esp, 0x0C
 004EB2D4    call 0x0063BC30
 004EB2D9    test al, al
-004EB2DB    jz 0x004EB2DE
+004EB2DB    jz 0x004EB2DE                                   ; => [ Call: sub_63bc30 ]
 004EB2DD    int3
-004EB2DE    call 0x0063BB00
+004EB2DE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4fa380
+// 起始地址: 0x4fa380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FA380    dword 83EC8B55
 004FA384    in al, 0xF8
 004FA386    xor edx, edx
 004FA388    push 0x00
 004FA38A    lea ecx, ds:[edx+0x02]
-004FA38D    call 0x00561AF0
+004FA38D    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 004FA392    add esp, 0x04
 004FA395    mov edx, 0x476
 004FA39A    mov ecx, 0x82
@@ -13,4 +19,4 @@
 004FA3A8    add esp, 0x08
 004FA3AB    mov esp, ebp
 004FA3AD    pop ebp
-004FA3AE    ret
+004FA3AE    ret                                             ; => [ Call: sub_5636e0 ]

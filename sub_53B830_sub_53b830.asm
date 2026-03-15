@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53b830
+// 起始地址: 0x53b830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053B830    dword 7BCAE856
 0053B834    add eax, dword ptr ds:[eax]
 0053B836    mov ecx, dword ptr ds:[eax+0x04]
@@ -13,4 +19,4 @@
 0053B855    pop esi
 0053B856    mov eax, dword ptr ds:[eax+0x04]
 0053B859    mov eax, dword ptr ds:[ecx+eax*1+0x17540]
-0053B860    ret
+0053B860    ret                                             ; => [ Call: sub_573400 ]

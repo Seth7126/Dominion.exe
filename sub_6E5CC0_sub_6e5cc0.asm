@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6e5cc0
+// 起始地址: 0x6e5cc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E5CC0    push ebp
 006E5CC1    mov ebp, esp
 006E5CC3    and esp, 0xFFFFFFF0
 006E5CC6    sub esp, 0x168
-006E5CCC    mov eax, dword ptr ds:[0x008C4040]
+006E5CCC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006E5CD1    xor eax, esp
 006E5CD3    mov dword ptr ss:[esp+0x164], eax
 006E5CDA    push esi
@@ -80,7 +86,7 @@
 006E5DB7    mov ecx, dword ptr ds:[edi]
 006E5DB9    cmp dword ptr ds:[ecx+0x04], 0x18
 006E5DBD    jnz 0x006E617C
-006E5DC3    call 0x005AF880
+006E5DC3    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006E5DC8    xor esi, esi
 006E5DCA    mov dword ptr ss:[esp+0x1C], eax
 006E5DCE    mov dword ptr ss:[esp+0x14], esi
@@ -99,7 +105,7 @@
 006E5DFF    mov edx, dword ptr ds:[edi+0x10]
 006E5E02    mov ecx, dword ptr ds:[edi+0x0C]
 006E5E05    push eax
-006E5E06    call 0x006E69B0
+006E5E06    call 0x006E69B0                                 ; => [ Call: sub_6e69b0 ]
 006E5E0B    add esp, 0x04
 006E5E0E    cmp byte ptr ds:[edi+0x8D], 0x00
 006E5E15    jz 0x006E5E1F
@@ -110,29 +116,29 @@
 006E5E2B    lea eax, ss:[esp+0x78]
 006E5E2F    mov edx, esi
 006E5E31    push eax
-006E5E32    call 0x006E7700
+006E5E32    call 0x006E7700                                 ; => [ Call: sub_6e7700 ]
 006E5E37    movss xmm0, dword ptr ss:[esp+0x118]
 006E5E40    cvtps2pd xmm0, xmm0
-006E5E43    call 0x0076209C
+006E5E43    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 006E5E48    cvtsd2ss xmm0, xmm0
 006E5E4C    mulss xmm0, dword ptr ss:[esp+0x110]
 006E5E55    movss dword ptr ss:[esp+0x28], xmm0
 006E5E5B    movss xmm0, dword ptr ss:[esp+0x118]
 006E5E64    cvtps2pd xmm0, xmm0
-006E5E67    call 0x00762096
+006E5E67    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006E5E6C    cvtsd2ss xmm0, xmm0
 006E5E70    mulss xmm0, dword ptr ss:[esp+0x110]
 006E5E79    movss dword ptr ss:[esp+0x30], xmm0
 006E5E7F    movss xmm0, dword ptr ss:[esp+0x11C]
 006E5E88    cvtps2pd xmm0, xmm0
-006E5E8B    call 0x00762096
+006E5E8B    call 0x00762096                                 ; => [ Call: _libm_sse2_sin_precise ]
 006E5E90    cvtsd2ss xmm0, xmm0
 006E5E94    xorps xmm0, xmmword ptr ds:[0x008937C0]
-006E5E9B    mulss xmm0, dword ptr ss:[esp+0x114]
+006E5E9B    mulss xmm0, dword ptr ss:[esp+0x114]            ; => [ Data: data_8937c0 ]
 006E5EA4    movss dword ptr ss:[esp+0x2C], xmm0
 006E5EAA    movss xmm0, dword ptr ss:[esp+0x11C]
 006E5EB3    cvtps2pd xmm0, xmm0
-006E5EB6    call 0x0076209C
+006E5EB6    call 0x0076209C                                 ; => [ Call: _libm_sse2_cos_precise ]
 006E5EBB    xorps xmm1, xmm1
 006E5EBE    mov dword ptr ss:[esp+0x40], 0x00
 006E5EC6    cvtsd2ss xmm1, xmm0
@@ -158,10 +164,10 @@
 006E5F42    movaps xmm0, xmmword ptr ss:[esp+0x4C]
 006E5F47    movaps xmmword ptr ss:[esp+0xCC], xmm0
 006E5F4F    movaps xmm0, xmmword ptr ds:[0x00891330]
-006E5F56    movaps xmmword ptr ss:[esp+0xDC], xmm0
+006E5F56    movaps xmmword ptr ss:[esp+0xDC], xmm0          ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 006E5F5E    movaps xmm0, xmmword ptr ds:[0x00893530]
 006E5F65    movaps xmmword ptr ss:[esp+0xEC], xmm0
-006E5F6D    call 0x00642AE0
+006E5F6D    call 0x00642AE0                                 ; => [ Call: sub_642ae0 ]
 006E5F72    mov esi, eax
 006E5F74    add esp, 0x0C
 006E5F77    movups xmm3, xmmword ptr ds:[esi]
@@ -199,7 +205,7 @@
 006E5FFE    jnbe 0x006E6006
 006E6000    sqrtsd xmm0, xmm0
 006E6004    jmp 0x006E600B
-006E6006    call 0x00762084
+006E6006    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 006E600B    movss xmm4, dword ptr ds:[0x00890E18]
 006E6013    lea eax, ss:[esp+0xF0]
 006E601A    cvtsd2ss xmm0, xmm0
@@ -248,12 +254,12 @@
 006E6112    mov ecx, dword ptr ss:[esp+0x30]
 006E6116    lea edx, ss:[esp+0x144]
 006E611D    movups xmm0, xmmword ptr ds:[eax]
-006E6120    movups xmmword ptr ss:[esp+0x38], xmm0
+006E6120    movups xmmword ptr ss:[esp+0x38], xmm0          ; => [ Call: sub_4ac5b0 ]
 006E6125    movaps xmm0, xmmword ptr ss:[esp+0x34]
 006E612A    movaps xmmword ptr ss:[esp+0x144], xmm0
 006E6132    movaps xmm0, xmmword ptr ss:[esp+0x44]
 006E6137    movaps xmmword ptr ss:[esp+0x154], xmm0
-006E613F    call 0x006FE2F0
+006E613F    call 0x006FE2F0                                 ; => [ Call: sub_6fe2f0 ]
 006E6144    mov esi, dword ptr ss:[esp+0x18]
 006E6148    add esp, 0x04
 006E614B    mov ecx, dword ptr ss:[esp+0x18]
@@ -268,7 +274,7 @@
 006E616F    pop edi
 006E6170    pop esi
 006E6171    xor ecx, esp
-006E6173    call 0x0075927A
+006E6173    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E6178    mov esp, ebp
 006E617A    pop ebp
 006E617B    ret
@@ -277,10 +283,10 @@
 006E6186    push 0x87A2E0
 006E618B    mov edx, 0x801800
 006E6190    mov ecx, 0x87A4C0
-006E6195    call 0x0063B870
+006E6195    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: assetPtr->assetType == ASSET_TYPE_FLANIM | Data: data_801800 | String: FlanimGetDef | String: C:\x\ax2017\Engine\AssetUtils.cpp ]
 006E619A    add esp, 0x0C
 006E619D    call 0x0063BC30
 006E61A2    test al, al
-006E61A4    jz 0x006E61A7
+006E61A4    jz 0x006E61A7                                   ; => [ Call: sub_63bc30 ]
 006E61A6    int3
-006E61A7    call 0x0063BB00
+006E61A7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

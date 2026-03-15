@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6fba80
+// 起始地址: 0x6fba80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FBA80    push ebp
 006FBA81    mov ebp, esp
 006FBA83    push ecx
-006FBA84    mov eax, dword ptr ds:[0x0147DEC8]
+006FBA84    mov eax, dword ptr ds:[0x0147DEC8]              ; => [ Data: data_147dec8 ]
 006FBA89    push ebx
 006FBA8A    push esi
 006FBA8B    push edi
@@ -12,13 +18,13 @@
 006FBA9A    mov dword ptr ss:[ebp-0x04], ecx
 006FBA9D    jz 0x006FBB00
 006FBA9F    mov ecx, 0x0C
-006FBAA4    call 0x0064BFD0
+006FBAA4    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 006FBAA9    mov edi, eax
 006FBAAB    inc dword ptr ds:[edi+0x0C]
 006FBAAE    cmp dword ptr ds:[edi], 0x00
 006FBAB1    jnz 0x006FBABA
 006FBAB3    mov ecx, edi
-006FBAB5    call 0x0064BE70
+006FBAB5    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 006FBABA    mov ecx, dword ptr ds:[edi]
 006FBABC    xorps xmm0, xmm0
 006FBABF    mov eax, dword ptr ds:[ecx]
@@ -36,11 +42,11 @@
 006FBAE1    jz 0x006FBAF2
 006FBAE3    mov dword ptr ds:[eax+0x04], ecx
 006FBAE6    inc dword ptr ds:[esi+0x08]
-006FBAE9    mov eax, dword ptr ds:[0x0147DEC8]
+006FBAE9    mov eax, dword ptr ds:[0x0147DEC8]              ; => [ Data: data_147dec8 ]
 006FBAEE    mov dword ptr ds:[edi], ecx
 006FBAF0    jmp 0x006FBB03
 006FBAF2    inc dword ptr ds:[esi+0x08]
-006FBAF5    mov eax, dword ptr ds:[0x0147DEC8]
+006FBAF5    mov eax, dword ptr ds:[0x0147DEC8]              ; => [ Data: data_147dec8 ]
 006FBAFA    mov dword ptr ds:[esi], ecx
 006FBAFC    mov dword ptr ds:[edi], ecx
 006FBAFE    jmp 0x006FBB03
@@ -52,14 +58,14 @@
 006FBB12    mov dword ptr ss:[ebp-0x04], eax
 006FBB15    jz 0x006FBB77
 006FBB17    mov ecx, 0x0C
-006FBB1C    call 0x0064BFD0
+006FBB1C    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 006FBB21    mov ebx, eax
 006FBB23    mov edx, edi
 006FBB25    inc dword ptr ds:[ebx+0x0C]
 006FBB28    cmp dword ptr ds:[ebx], 0x00
 006FBB2B    jnz 0x006FBB37
 006FBB2D    mov ecx, ebx
-006FBB2F    call 0x0064BE70
+006FBB2F    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 006FBB34    lea edx, ds:[esi+0x04]
 006FBB37    mov ecx, dword ptr ds:[ebx]
 006FBB39    xorps xmm0, xmm0

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6b9630
+// 起始地址: 0x6b9630
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B9630    push ebp
 006B9631    mov ebp, esp
 006B9633    sub esp, 0x4C
-006B9636    mov eax, dword ptr ds:[0x008C4040]
+006B9636    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006B963B    xor eax, ebp
 006B963D    mov dword ptr ss:[ebp-0x04], eax
 006B9640    push ebx
@@ -10,7 +16,7 @@
 006B9645    mov esi, edx
 006B9647    push edi
 006B9648    push eax
-006B9649    call 0x006BCB90
+006B9649    call 0x006BCB90                                 ; => [ Call: sub_6bcb90 ]
 006B964E    movss xmm7, dword ptr ss:[ebp+0x14]
 006B9653    add esp, 0x04
 006B9656    mov edx, 0x10
@@ -78,7 +84,7 @@
 006B9745    push eax
 006B9746    lea eax, ds:[esi+0x44]
 006B9749    push eax
-006B974A    call 0x00762362
+006B974A    call 0x00762362                                 ; => [ Call: memmove ]
 006B974F    mov ecx, dword ptr ds:[esi+0x284]
 006B9755    add esp, 0x0C
 006B9758    sub ecx, edi
@@ -135,7 +141,7 @@
 006B9834    mulss xmm1, xmm1
 006B9838    addss xmm0, xmm2
 006B983C    addss xmm0, xmm1
-006B9840    call 0x004AC580
+006B9840    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006B9845    divss xmm0, dword ptr ss:[ebp+0x14]
 006B984A    movss dword ptr ds:[esi+0x60], xmm0
 006B984F    mov ecx, dword ptr ss:[ebp-0x04]
@@ -143,7 +149,7 @@
 006B9853    pop esi
 006B9854    xor ecx, ebp
 006B9856    pop ebx
-006B9857    call 0x0075927A
+006B9857    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006B985C    mov esp, ebp
 006B985E    pop ebp
 006B985F    ret
@@ -152,10 +158,10 @@
 006B986A    push 0x87DBAC
 006B986F    mov edx, 0x801800
 006B9874    mov ecx, 0x87DBF8
-006B9879    call 0x0063B870
+006B9879    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: trailNumSegments >= 2 | Data: data_801800 | String: RibbonUpdate | String: C:\x\ax2017\Engine\Particle.cpp ]
 006B987E    add esp, 0x0C
 006B9881    call 0x0063BC30
 006B9886    test al, al
-006B9888    jz 0x006B988B
+006B9888    jz 0x006B988B                                   ; => [ Call: sub_63bc30 ]
 006B988A    int3
-006B988B    call 0x0063BB00
+006B988B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

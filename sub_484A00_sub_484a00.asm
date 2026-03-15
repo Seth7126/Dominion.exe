@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_484a00
+// 起始地址: 0x484a00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00484A00    mov edx, 0x22
 00484A05    mov ecx, 0x854468
-00484A0A    call 0x0069F030
-00484A0F    mov dword ptr ds:[0x0171E934], eax
+00484A0A    call 0x0069F030                                 ; => [ String: res/ui2/rules_renaissance_2.ui2 | Call: sub_69f030 ]
+00484A0F    mov dword ptr ds:[0x0171E934], eax              ; => [ Data: data_171e934 ]
 00484A14    ret

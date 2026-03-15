@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4f7410
+// 起始地址: 0x4f7410
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F7410    push ebp
 004F7411    mov ebp, esp
 004F7413    sub esp, 0x30
-004F7416    mov eax, dword ptr ds:[0x008C4040]
+004F7416    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004F741B    xor eax, ebp
 004F741D    mov dword ptr ss:[ebp-0x04], eax
 004F7420    push ebx
@@ -105,7 +111,7 @@
 004F753B    mov dword ptr ds:[ecx+0x08], eax
 004F753E    mov ecx, dword ptr ss:[ebp-0x04]
 004F7541    xor ecx, ebp
-004F7543    call 0x0075927A
+004F7543    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F7548    mov esp, ebp
 004F754A    pop ebp
 004F754B    ret

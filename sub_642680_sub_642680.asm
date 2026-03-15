@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_642680
+// 起始地址: 0x642680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00642680    push ebp
 00642681    mov ebp, esp
 00642683    sub esp, 0x78
@@ -10,15 +16,15 @@
 00642692    mov dword ptr ss:[ebp-0x14], ebx
 00642695    cmp dword ptr ds:[esi+0x04], 0x25
 00642699    jz 0x006426AF
-0064269B    push 0x872364
+0064269B    push 0x872364                                   ; => [ String: TTFontGet ]
 006426A0    push 0x1EF
-006426A5    mov ecx, 0x87233C
+006426A5    mov ecx, 0x87233C                               ; => [ String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 006426AA    jmp 0x00642ABC
-006426AF    call 0x005AF880
+006426AF    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006426B4    mov edi, eax
 006426B6    mov ecx, esi
 006426B8    mov dword ptr ss:[ebp-0x20], edi
-006426BB    call 0x006423C0
+006426BB    call 0x006423C0                                 ; => [ Call: sub_6423c0 ]
 006426C0    movd xmm0, dword ptr ds:[0x00BF21A8]
 006426C8    mov edx, eax
 006426CA    movss xmm1, dword ptr ss:[ebp-0x18]
@@ -29,7 +35,7 @@
 006426DD    mov dword ptr ss:[ebp-0x10], edx
 006426E0    mov dword ptr ss:[ebp-0x08], eax
 006426E3    comiss xmm1, xmm0
-006426E6    jbe 0x00642772
+006426E6    jbe 0x00642772                                  ; => [ Data: data_bf21a8 ]
 006426EC    movd xmm0, dword ptr ds:[edx+0x84]
 006426F4    cvtdq2ps xmm0, xmm0
 006426F7    divss xmm1, xmm0
@@ -57,12 +63,12 @@
 00642737    or eax, ecx
 00642739    add eax, 0x01
 0064273C    jnz 0x00642757
-0064273E    push 0x8725BC
+0064273E    push 0x8725BC                                   ; => [ String: LogBase2 ]
 00642743    push 0xA7
-00642748    push 0x801A4C
-0064274D    mov ecx, 0x817280
+00642748    push 0x801A4C                                   ; => [ String: C:\x\ax2017\Engine\MathFunctions.cpp ]
+0064274D    mov ecx, 0x817280                               ; => [ String: n > 0 ]
 00642752    jmp 0x00642AC1
-00642757    xor ecx, ecx
+00642757    xor ecx, ecx                                    ; => [ Call: nullptr ]
 00642759    cmp eax, 0x01
 0064275C    jbe 0x00642768
 0064275E    nop
@@ -98,7 +104,7 @@
 006427B4    mov eax, dword ptr ds:[eax+0x50]
 006427B7    test eax, eax
 006427B9    jnz 0x006427A2
-006427BB    xor eax, eax
+006427BB    xor eax, eax                                    ; => [ Call: nullptr ]
 006427BD    mov dword ptr ss:[ebp-0x0C], eax
 006427C0    test eax, eax
 006427C2    jnz 0x00642A90
@@ -106,7 +112,7 @@
 006427CB    mov edx, ebx
 006427CD    mov dword ptr ss:[ebp-0x74], ebx
 006427D0    mov dword ptr ss:[ebp-0x70], edi
-006427D3    call 0x006D1FD0
+006427D3    call 0x006D1FD0                                 ; => [ Call: sub_6d1fd0 ]
 006427D8    mov dword ptr ss:[ebp-0x6C], eax
 006427DB    lea ecx, ds:[edi-0x01]
 006427DE    mov eax, dword ptr ss:[ebp-0x08]
@@ -183,8 +189,8 @@
 006428C6    push eax
 006428C7    sub esp, 0x08
 006428CA    mov dword ptr ss:[esp+0x04], 0x00
-006428D2    mov dword ptr ss:[esp], 0x00
-006428D9    call 0x006D4820
+006428D2    mov dword ptr ss:[esp], 0x00                    ; => [ Call: nullptr ]
+006428D9    call 0x006D4820                                 ; => [ Call: sub_6d4820 ]
 006428DE    movss xmm1, dword ptr ds:[0x00890E18]
 006428E6    add esp, 0x18
 006428E9    divss xmm1, dword ptr ss:[ebp-0x1C]
@@ -230,13 +236,13 @@
 0064297E    jnz 0x00642967
 00642980    mov ecx, 0x54
 00642985    call 0x0064BFD0
-0064298A    mov edx, eax
+0064298A    mov edx, eax                                    ; => [ Call: sub_64bfd0 ]
 0064298C    mov dword ptr ss:[ebp-0x1C], edx
 0064298F    inc dword ptr ds:[edx+0x0C]
 00642992    cmp dword ptr ds:[edx], 0x00
 00642995    jnz 0x006429A1
 00642997    mov ecx, edx
-00642999    call 0x0064BE70
+00642999    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0064299E    mov edx, dword ptr ss:[ebp-0x1C]
 006429A1    mov ecx, dword ptr ds:[edx]
 006429A3    movq xmm0, qword ptr ss:[ebp-0x2C]
@@ -278,7 +284,7 @@
 00642A21    mov eax, dword ptr ds:[eax+0x50]
 00642A24    test eax, eax
 00642A26    jnz 0x00642A13
-00642A28    xor eax, eax
+00642A28    xor eax, eax                                    ; => [ Call: nullptr ]
 00642A2A    jmp 0x00642A5D
 00642A2C    movups xmm0, xmmword ptr ss:[ebp-0x74]
 00642A30    mov eax, dword ptr ss:[ebp-0x34]
@@ -307,7 +313,7 @@
 00642A78    mov eax, esp
 00642A7A    movq qword ptr ds:[eax], xmm0
 00642A7E    mov dword ptr ds:[eax+0x08], esi
-00642A81    call 0x00642450
+00642A81    call 0x00642450                                 ; => [ Call: sub_642450 ]
 00642A86    add esp, 0x1C
 00642A89    pop edi
 00642A8A    pop esi
@@ -320,7 +326,7 @@
 00642A94    lea ecx, ds:[edx+0x80]
 00642A9A    call 0x006406E0
 00642A9F    test al, al
-00642AA1    jz 0x00642A5A
+00642AA1    jz 0x00642A5A                                   ; => [ Call: sub_6406e0 ]
 00642AA3    mov eax, dword ptr ss:[ebp-0x0C]
 00642AA6    pop edi
 00642AA7    pop esi
@@ -328,15 +334,15 @@
 00642AA9    mov esp, ebp
 00642AAB    pop ebp
 00642AAC    ret
-00642AAD    push 0x872450
+00642AAD    push 0x872450                                   ; => [ String: TTFontUnicodeToGlyph ]
 00642AB2    push 0x3B9
-00642AB7    mov ecx, 0x8724D8
-00642ABC    push 0x8720A4
+00642AB7    mov ecx, 0x8724D8                               ; => [ String: mip >= 1 ]
+00642ABC    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
 00642AC1    mov edx, 0x801800
-00642AC6    call 0x0063B870
+00642AC6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00642ACB    add esp, 0x0C
 00642ACE    call 0x0063BC30
 00642AD3    test al, al
-00642AD5    jz 0x00642AD8
+00642AD5    jz 0x00642AD8                                   ; => [ Call: sub_63bc30 ]
 00642AD7    int3
-00642AD8    call 0x0063BB00
+00642AD8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

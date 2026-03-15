@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_75a28b
+// 起始地址: 0x75a28b
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075A28B    push ebp
 0075A28C    mov ebp, esp
 0075A28E    sub esp, 0x14
 0075A291    lea eax, ss:[ebp-0x0C]
 0075A294    xorps xmm0, xmm0
 0075A297    push eax
-0075A298    movlpd qword ptr ss:[ebp-0x0C], xmm0
+0075A298    movlpd qword ptr ss:[ebp-0x0C], xmm0            ; => [ Type: FILETIME | Call: __builtin_memset ]
 0075A29D    call dword ptr ds:[0x00775180]
 0075A2A3    mov eax, dword ptr ss:[ebp-0x08]
 0075A2A6    xor eax, dword ptr ss:[ebp-0x0C]
-0075A2A9    mov dword ptr ss:[ebp-0x04], eax
+0075A2A9    mov dword ptr ss:[ebp-0x04], eax                ; => [ Field: dwHighDateTime | Field: dwLowDateTime ]
 0075A2AC    call dword ptr ds:[0x007750E4]
 0075A2B2    xor dword ptr ss:[ebp-0x04], eax
 0075A2B5    call dword ptr ds:[0x007750DC]

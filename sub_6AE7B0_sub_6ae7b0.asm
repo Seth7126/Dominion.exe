@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6ae7b0
+// 起始地址: 0x6ae7b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AE7B0    push ebp
 006AE7B1    mov ebp, esp
 006AE7B3    and esp, 0xFFFFFFF8
 006AE7B6    sub esp, 0x2C
-006AE7B9    mov eax, dword ptr ds:[0x008C4040]
+006AE7B9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006AE7BE    xor eax, esp
 006AE7C0    mov dword ptr ss:[esp+0x28], eax
 006AE7C4    mov eax, dword ptr ss:[ebp+0x0C]
@@ -19,7 +25,7 @@
 006AE7ED    mov edi, ecx
 006AE7EF    test bl, bl
 006AE7F1    jz 0x006AE80B
-006AE7F3    xor esi, esi
+006AE7F3    xor esi, esi                                    ; => [ Call: nullptr ]
 006AE7F5    mov dword ptr ss:[esp+0x20], 0x02
 006AE7FD    mov dword ptr ss:[esp+0x28], 0x10000
 006AE805    test edx, edx
@@ -27,9 +33,9 @@
 006AE809    jmp 0x006AE828
 006AE80B    test edx, edx
 006AE80D    jnz 0x006AE820
-006AE80F    push 0x87BB30
+006AE80F    push 0x87BB30                                   ; => [ String: Dx11GraphicsInterface::CreateIndexBuffer ]
 006AE814    push 0x1A3
-006AE819    mov ecx, 0x87BB24
+006AE819    mov ecx, 0x87BB24                               ; => [ String: pIndices ]
 006AE81E    jmp 0x006AE895
 006AE820    mov dword ptr ss:[esp+0x20], 0x00
 006AE828    movlpd qword ptr ss:[esp+0x14], xmm0
@@ -47,7 +53,7 @@
 006AE84A    test eax, eax
 006AE84C    js 0x006AE886
 006AE84E    lea ecx, ds:[edi+0x38]
-006AE851    call 0x006B2E00
+006AE851    call 0x006B2E00                                 ; => [ Call: sub_6b2e00 ]
 006AE856    mov ecx, dword ptr ss:[esp+0x0C]
 006AE85A    pop edi
 006AE85B    pop esi
@@ -60,19 +66,19 @@
 006AE86D    mov dword ptr ds:[eax], 0x01
 006AE873    xor ecx, esp
 006AE875    mov eax, dword ptr ds:[eax+0x248]
-006AE87B    call 0x0075927A
+006AE87B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006AE880    mov esp, ebp
 006AE882    pop ebp
 006AE883    ret 0x14
-006AE886    push 0x87BB30
+006AE886    push 0x87BB30                                   ; => [ String: Dx11GraphicsInterface::CreateIndexBuffer ]
 006AE88B    push 0x1B4
-006AE890    mov ecx, 0x87BA34
+006AE890    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
 006AE895    push 0x87B990
 006AE89A    mov edx, 0x801800
-006AE89F    call 0x0063B870
+006AE89F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Dx11GraphicsInterface::CreateIndexBuffer ]
 006AE8A4    add esp, 0x0C
 006AE8A7    call 0x0063BC30
 006AE8AC    test al, al
-006AE8AE    jz 0x006AE8B1
+006AE8AE    jz 0x006AE8B1                                   ; => [ Call: sub_63bc30 ]
 006AE8B0    int3
-006AE8B1    call 0x0063BB00
+006AE8B1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

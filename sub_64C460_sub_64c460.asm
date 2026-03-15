@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64c460
+// 起始地址: 0x64c460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064C460    push ebx
 0064C461    sub ecx, 0x07
 0064C464    jz 0x0064C477
@@ -14,7 +20,7 @@
 0064C47F    comiss xmm2, xmm3
 0064C482    movss xmm1, dword ptr ds:[0x0089102C]
 0064C48A    jbe 0x0064C491
-0064C48C    xorps xmm0, xmm0
+0064C48C    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0064C48F    jmp 0x0064C498
 0064C491    movaps xmm0, xmm1
 0064C494    minss xmm0, xmm3
@@ -28,7 +34,7 @@
 0064C4B4    comiss xmm2, xmm4
 0064C4B7    cvttss2si eax, xmm0
 0064C4BB    jbe 0x0064C4C2
-0064C4BD    xorps xmm0, xmm0
+0064C4BD    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0064C4C0    jmp 0x0064C4C9
 0064C4C2    movaps xmm0, xmm1
 0064C4C5    minss xmm0, xmm4
@@ -41,7 +47,7 @@
 0064C4DD    comiss xmm2, xmm4
 0064C4E0    cvttss2si ecx, xmm0
 0064C4E4    jbe 0x0064C4EB
-0064C4E6    xorps xmm0, xmm0
+0064C4E6    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0064C4E9    jmp 0x0064C4F2
 0064C4EB    movaps xmm0, xmm1
 0064C4EE    minss xmm0, xmm4
@@ -54,7 +60,7 @@
 0064C505    movss xmm0, dword ptr ds:[edx+0x04]
 0064C50A    comiss xmm2, xmm0
 0064C50D    jbe 0x0064C514
-0064C50F    xorps xmm1, xmm1
+0064C50F    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 0064C512    jmp 0x0064C518
 0064C514    minss xmm1, xmm0
 0064C518    comiss xmm2, xmm1

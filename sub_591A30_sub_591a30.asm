@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_591a30
+// 起始地址: 0x591a30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00591A30    push ebp
 00591A31    mov ebp, esp
 00591A33    sub esp, 0x10
@@ -16,7 +22,7 @@
 00591A53    mov dword ptr ss:[ebp-0x08], eax
 00591A56    cmp eax, 0x320
 00591A5B    jb 0x00591A6E
-00591A5D    call 0x00591930
+00591A5D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00591A62    mov ecx, dword ptr ss:[ebp-0x04]
 00591A65    mov eax, dword ptr ss:[ebp-0x08]
 00591A68    mov esi, dword ptr ds:[ecx+0x1520]

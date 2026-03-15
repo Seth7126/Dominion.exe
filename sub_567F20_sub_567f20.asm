@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_567f20
+// 起始地址: 0x567f20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00567F20    push ebp
 00567F21    mov ebp, esp
 00567F23    and esp, 0xFFFFFFF0
 00567F26    mov eax, 0x19A8
-00567F2B    call 0x00761E50
-00567F30    mov eax, dword ptr ds:[0x008C4040]
+00567F2B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00567F30    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00567F35    xor eax, esp
 00567F37    mov dword ptr ss:[esp+0x19A4], eax
 00567F3E    push esi
@@ -12,25 +18,25 @@
 00567F42    mov esi, ecx
 00567F44    call 0x00567520
 00567F49    test al, al
-00567F4B    jnz 0x005680D4
+00567F4B    jnz 0x005680D4                                  ; => [ Call: sub_567520 ]
 00567F51    push 0xC7C
 00567F56    lea eax, ss:[esp+0xD28]
 00567F5D    mov dword ptr ss:[esp+0xD24], esi
 00567F64    push 0x00
 00567F66    push eax
-00567F67    call 0x00761FC4
+00567F67    call 0x00761FC4                                 ; => [ Call: memset ]
 00567F6C    xorps xmm0, xmm0
 00567F6F    mov dword ptr ss:[esp+0x19AC], 0x01
 00567F7A    add esp, 0x0C
 00567F7D    movlpd qword ptr ss:[esp+0x34], xmm0
 00567F83    mov dword ptr ss:[esp+0x3C], 0x00
-00567F8B    movlpd qword ptr ss:[esp+0x44], xmm0
+00567F8B    movlpd qword ptr ss:[esp+0x44], xmm0            ; => [ Call: __builtin_memset ]
 00567F91    mov dword ptr ss:[esp+0x4C], 0x00
 00567F99    movlpd qword ptr ss:[esp+0x58], xmm0
 00567F9F    mov dword ptr ss:[esp+0x30], edi
 00567FA3    mov dword ptr ss:[esp+0x40], esi
 00567FA7    movlpd qword ptr ss:[esp+0x50], xmm0
-00567FAD    call 0x00573400
+00567FAD    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00567FB2    movaps xmm0, xmmword ptr ss:[esp+0x30]
 00567FB7    lea esi, ss:[esp+0xD20]
 00567FBE    movaps xmmword ptr ss:[esp+0x60], xmm0
@@ -46,7 +52,7 @@
 00567FF3    mov dword ptr ss:[esp+0x10], eax
 00567FF7    mov eax, dword ptr ds:[eax]
 00567FF9    push 0x00
-00567FFB    rep movsd
+00567FFB    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00567FFD    mov ecx, dword ptr ss:[esp+0x14]
 00568001    push 0x00
 00568003    push 0x0B
@@ -66,14 +72,14 @@
 0056802E    push dword ptr ds:[ecx+0x0C]
 00568031    mov ecx, dword ptr ds:[ecx+0x04]
 00568034    lea edx, ss:[esp+0x44]
-00568038    call 0x005869D0
+00568038    call 0x005869D0                                 ; => [ Call: sub_5869d0 ]
 0056803D    add esp, 0x2C
 00568040    test eax, eax
 00568042    jz 0x005680D4
 00568048    cmp eax, 0x01
 0056804B    jz 0x00568052
-0056804D    call 0x00591930
-00568052    call 0x00573400
+0056804D    call 0x00591930                                 ; => [ Call: sub_591930 ]
+00568052    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00568057    mov edi, dword ptr ss:[esp+0x98]
 0056805E    movzx esi, di
 00568061    mov ecx, dword ptr ds:[eax+0x04]
@@ -82,7 +88,7 @@
 0056806B    mov dword ptr ss:[esp+0x18], eax
 0056806F    cmp esi, 0x320
 00568075    jb 0x00568080
-00568077    call 0x00591930
+00568077    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056807C    mov ecx, dword ptr ss:[esp+0x10]
 00568080    mov edx, dword ptr ss:[esp+0x18]
 00568084    xorps xmm0, xmm0
@@ -99,14 +105,14 @@
 005680B0    push eax
 005680B1    lea eax, ss:[esp+0x2C]
 005680B5    push eax
-005680B6    call 0x00586320
+005680B6    call 0x00586320                                 ; => [ Call: sub_586320 ]
 005680BB    add esp, 0x10
 005680BE    mov al, 0x01
 005680C0    pop edi
 005680C1    pop esi
 005680C2    mov ecx, dword ptr ss:[esp+0x19A4]
 005680C9    xor ecx, esp
-005680CB    call 0x0075927A
+005680CB    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005680D0    mov esp, ebp
 005680D2    pop ebp
 005680D3    ret
@@ -115,7 +121,7 @@
 005680DD    pop edi
 005680DE    pop esi
 005680DF    xor ecx, esp
-005680E1    call 0x0075927A
+005680E1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005680E6    mov esp, ebp
 005680E8    pop ebp
 005680E9    ret

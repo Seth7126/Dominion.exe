@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_6dc2d0
+// 起始地址: 0x6dc2d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DC2D0    push ebp
 006DC2D1    mov ebp, esp
 006DC2D3    and esp, 0xFFFFFFF0
 006DC2D6    sub esp, 0x70
-006DC2D9    mov eax, dword ptr ds:[0x008C4040]
+006DC2D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006DC2DE    xor eax, esp
 006DC2E0    mov dword ptr ss:[esp+0x6C], eax
 006DC2E4    lea eax, ss:[esp+0x20]
 006DC2E8    push eax
-006DC2E9    call 0x006DC9A0
+006DC2E9    call 0x006DC9A0                                 ; => [ Call: sub_6dc9a0 ]
 006DC2EE    mov ecx, eax
 006DC2F0    add esp, 0x04
 006DC2F3    movups xmm2, xmmword ptr ds:[ecx]
@@ -86,7 +92,7 @@
 006DC435    mov dword ptr ds:[eax+0x34], 0x00
 006DC43C    mov dword ptr ds:[eax+0x38], 0x00
 006DC443    mov dword ptr ds:[eax+0x3C], 0x3F800000
-006DC44A    call 0x0075927A
+006DC44A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006DC44F    mov esp, ebp
 006DC451    pop ebp
 006DC452    ret

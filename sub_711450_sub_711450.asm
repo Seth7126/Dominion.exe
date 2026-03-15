@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_711450
+// 起始地址: 0x711450
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00711450    push ebp
 00711451    mov ebp, esp
 00711453    sub esp, 0x1C
@@ -35,7 +41,7 @@
 007114BF    comiss xmm1, xmm4
 007114C2    movss dword ptr ds:[edi+0x3C], xmm1
 007114C7    jnbe 0x0071156E
-007114CD    xorps xmm1, xmmword ptr ds:[0x008937C0]
+007114CD    xorps xmm1, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 007114D4    movss dword ptr ss:[ebp-0x10], xmm1
 007114D9    mov dword ptr ds:[edi+0x3C], 0x00
 007114E0    mov esi, dword ptr ds:[edi+0x04]
@@ -50,7 +56,7 @@
 00711508    lahf
 00711509    test ah, 0x44
 0071150C    jp 0x00711513
-0071150E    xorps xmm0, xmm0
+0071150E    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 00711511    jmp 0x00711520
 00711513    divss xmm0, xmm3
 00711517    addss xmm0, xmm2
@@ -61,7 +67,7 @@
 0071152D    push 0x01
 0071152F    push esi
 00711530    movss dword ptr ds:[edi+0x40], xmm1
-00711535    call 0x007128B0
+00711535    call 0x007128B0                                 ; => [ Call: sub_7128b0 ]
 0071153A    movss xmm2, dword ptr ss:[ebp-0x0C]
 0071153F    lea eax, ds:[esi+0x08]
 00711542    add esp, 0x08
@@ -88,7 +94,7 @@
 00711587    pop esi
 00711588    mov esp, ebp
 0071158A    pop ebp
-0071158B    ret
+0071158B    ret                                             ; => [ Call: sub_710fd0 ]
 0071158C    comiss xmm0, dword ptr ds:[edi+0x4C]
 00711590    jb 0x007115F1
 00711592    cmp dword ptr ds:[edi+0x08], 0x00
@@ -98,13 +104,13 @@
 0071159E    mov dword ptr ds:[eax+edx*4], 0x00
 007115A5    mov esi, dword ptr ds:[ecx+0x24]
 007115A8    mov ecx, esi
-007115AA    call 0x00710F50
+007115AA    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007115AF    mov ecx, dword ptr ds:[esi+0x08]
 007115B2    mov eax, dword ptr ds:[esi+0x04]
 007115B5    mov dword ptr ds:[eax+ecx*4], 0x02
 007115BC    mov ecx, esi
 007115BE    inc dword ptr ds:[esi+0x08]
-007115C1    call 0x00710F50
+007115C1    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007115C6    mov ecx, dword ptr ds:[esi+0x08]
 007115C9    mov edx, edi
 007115CB    mov eax, dword ptr ds:[esi+0x04]
@@ -114,7 +120,7 @@
 007115D6    mov esi, dword ptr ss:[ebp-0x04]
 007115D9    mov ecx, esi
 007115DB    mov dword ptr ds:[eax+0x34], 0x01
-007115E2    call 0x00712CB0
+007115E2    call 0x00712CB0                                 ; => [ Call: sub_712cb0 ]
 007115E7    movss xmm2, dword ptr ss:[ebp-0x0C]
 007115EC    jmp 0x0071156B
 007115F1    cmp dword ptr ds:[edi+0x08], 0x00
@@ -122,7 +128,7 @@
 007115FB    mov esi, dword ptr ss:[ebp-0x04]
 007115FE    mov edx, edi
 00711600    mov ecx, esi
-00711602    call 0x007116D0
+00711602    call 0x007116D0                                 ; => [ Call: sub_7116d0 ]
 00711607    test eax, eax
 00711609    jz 0x0071168F
 0071160F    mov eax, dword ptr ds:[edi+0x08]
@@ -135,13 +141,13 @@
 00711629    nop dword ptr ds:[eax], eax
 00711630    mov esi, dword ptr ds:[esi+0x24]
 00711633    mov ecx, esi
-00711635    call 0x00710F50
+00711635    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 0071163A    mov ecx, dword ptr ds:[esi+0x08]
 0071163D    mov eax, dword ptr ds:[esi+0x04]
 00711640    mov dword ptr ds:[eax+ecx*4], 0x02
 00711647    mov ecx, esi
 00711649    inc dword ptr ds:[esi+0x08]
-0071164C    call 0x00710F50
+0071164C    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 00711651    mov ecx, dword ptr ds:[esi+0x08]
 00711654    mov eax, dword ptr ds:[esi+0x04]
 00711657    mov dword ptr ds:[eax+ecx*4], edi

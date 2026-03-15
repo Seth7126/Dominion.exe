@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_67aa30
+// 起始地址: 0x67aa30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067AA30    push ebp
 0067AA31    mov ebp, esp
 0067AA33    sub esp, 0xA0
-0067AA39    mov eax, dword ptr ds:[0x008C4040]
+0067AA39    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0067AA3E    xor eax, ebp
 0067AA40    mov dword ptr ss:[ebp-0x08], eax
 0067AA43    push ebx
@@ -32,7 +38,7 @@
 0067AAA0    push eax
 0067AAA1    lea eax, ss:[ebp-0x7C]
 0067AAA4    push eax
-0067AAA5    call 0x00656980
+0067AAA5    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0067AAAA    push 0x00
 0067AAAC    mov edx, 0x01
 0067AAB1    mov ecx, ebx
@@ -46,7 +52,7 @@
 0067AAC6    lea eax, ss:[ebp-0x4C]
 0067AAC9    push eax
 0067AACA    movups xmmword ptr ss:[ebp-0x6C], xmm0
-0067AACE    call 0x00656980
+0067AACE    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0067AAD3    add esp, 0x20
 0067AAD6    movups xmm0, xmmword ptr ds:[eax]
 0067AAD9    movss xmm6, dword ptr ds:[eax+0x18]
@@ -58,7 +64,7 @@
 0067AAF9    jmp 0x0067AB14
 0067AAFB    cmp eax, 0x03
 0067AAFE    jnz 0x0067AC3E
-0067AB04    call 0x00657FC0
+0067AB04    call 0x00657FC0                                 ; => [ Call: sub_657fc0 ]
 0067AB09    mov dword ptr ss:[ebp-0x0C], edx
 0067AB0C    movss xmm6, dword ptr ss:[ebp-0x0C]
 0067AB11    mov dword ptr ss:[ebp-0x10], eax
@@ -103,31 +109,31 @@
 0067ABB8    mulss xmm2, xmm5
 0067ABBC    movss dword ptr ss:[ebp-0x10], xmm0
 0067ABC1    movss dword ptr ss:[ebp-0x0C], xmm2
-0067ABC6    call 0x0067A8A0
+0067ABC6    call 0x0067A8A0                                 ; => [ Call: sub_67a8a0 ]
 0067ABCB    pop edi
 0067ABCC    pop esi
 0067ABCD    pop ebx
 0067ABCE    mov ecx, dword ptr ss:[ebp-0x08]
 0067ABD1    xor ecx, ebp
-0067ABD3    call 0x0075927A
+0067ABD3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067ABD8    mov esp, ebp
 0067ABDA    pop ebp
 0067ABDB    ret
 0067ABDC    cmp eax, 0x05
 0067ABDF    jnz 0x0067AC06
 0067ABE1    mov dword ptr ds:[esi+0x1388], 0x00
-0067ABEB    mov dword ptr ds:[0x00C23BE4], 0x00
+0067ABEB    mov dword ptr ds:[0x00C23BE4], 0x00             ; => [ Data: data_c23be4 ]
 0067ABF5    pop edi
 0067ABF6    pop esi
 0067ABF7    pop ebx
 0067ABF8    mov ecx, dword ptr ss:[ebp-0x08]
 0067ABFB    xor ecx, ebp
-0067ABFD    call 0x0075927A
+0067ABFD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067AC02    mov esp, ebp
 0067AC04    pop ebp
 0067AC05    ret
 0067AC06    mov eax, dword ptr ds:[esi+0x18C8]
-0067AC0C    mov dword ptr ds:[0x00C23BE4], eax
+0067AC0C    mov dword ptr ds:[0x00C23BE4], eax              ; => [ Data: data_c23be4 ]
 0067AC11    mov dword ptr ds:[esi+0x1388], 0x02
 0067AC1B    mov ecx, dword ptr ds:[edi+0x14]
 0067AC1E    mov eax, dword ptr ds:[edi+0x10]
@@ -138,7 +144,7 @@
 0067AC31    xor ecx, ebp
 0067AC33    pop esi
 0067AC34    pop ebx
-0067AC35    call 0x0075927A
+0067AC35    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067AC3A    mov esp, ebp
 0067AC3C    pop ebp
 0067AC3D    ret
@@ -147,10 +153,10 @@
 0067AC48    push 0x8739B4
 0067AC4D    mov edx, 0x801800
 0067AC52    mov ecx, 0x801AA4
-0067AC57    call 0x0063B870
+0067AC57    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: UI2TableScroll | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: Halt ]
 0067AC5C    add esp, 0x0C
 0067AC5F    call 0x0063BC30
 0067AC64    test al, al
-0067AC66    jz 0x0067AC69
+0067AC66    jz 0x0067AC69                                   ; => [ Call: sub_63bc30 ]
 0067AC68    int3
-0067AC69    call 0x0063BB00
+0067AC69    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

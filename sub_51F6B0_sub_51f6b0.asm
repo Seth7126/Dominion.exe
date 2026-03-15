@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51f6b0
+// 起始地址: 0x51f6b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051F6B0    push ebp
 0051F6B1    mov ebp, esp
 0051F6B3    and esp, 0xFFFFFFF8
@@ -13,4 +19,4 @@
 0051F6D9    add esp, 0x0C
 0051F6DC    mov esp, ebp
 0051F6DE    pop ebp
-0051F6DF    ret
+0051F6DF    ret                                             ; => [ Call: sub_56bba0 | Call: sub_50ce00 ]

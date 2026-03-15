@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_588340
+// 起始地址: 0x588340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00588340    push ebp
 00588341    mov ebp, esp
 00588343    push ecx
@@ -36,12 +42,12 @@
 005883A6    push 0x00
 005883A8    push 0x04
 005883AA    push eax
-005883AB    call 0x0059F9B0
+005883AB    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 005883B0    add esp, 0x24
 005883B3    push ebx
 005883B4    mov edx, 0x3EB
 005883B9    mov ecx, edi
-005883BB    call 0x00572EE0
+005883BB    call 0x00572EE0                                 ; => [ Call: sub_572ee0 ]
 005883C0    mov esi, dword ptr ds:[esi+edi*1+0x172D4]
 005883C7    add esp, 0x04
 005883CA    test esi, esi
@@ -49,13 +55,13 @@
 005883D2    movzx ebx, si
 005883D5    cmp ebx, 0x320
 005883DB    jb 0x005883E2
-005883DD    call 0x00591930
+005883DD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005883E2    mov ecx, dword ptr ss:[ebp-0x04]
 005883E5    imul ebx, ebx, 0x64
 005883E8    mov dword ptr ds:[ebx+edi*1+0x1A50], 0x3EB
 005883F3    cmp dword ptr ds:[ebx+edi*1+0x1A70], ecx
 005883FA    jz 0x00588404
-005883FC    call 0x00591930
+005883FC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00588401    mov ecx, dword ptr ss:[ebp-0x04]
 00588404    mov eax, dword ptr ds:[edi+0x1504]
 0058840A    cmp eax, 0x03
@@ -80,7 +86,7 @@
 0058843B    push esi
 0058843C    push ecx
 0058843D    setz cl
-00588440    call 0x0061B1B0
+00588440    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00588445    add esp, 0x2C
 00588448    mov esi, dword ptr ds:[ebx+edi*1+0x1AA4]
 0058844F    test esi, esi
@@ -96,10 +102,10 @@
 00588468    push 0x81F4B8
 0058846D    mov edx, 0x801800
 00588472    mov ecx, 0x81F8F8
-00588477    call 0x0063B870
+00588477    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: who != PLAYER_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: GetPileHead ]
 0058847C    add esp, 0x0C
 0058847F    call 0x0063BC30
 00588484    test al, al
-00588486    jz 0x00588489
+00588486    jz 0x00588489                                   ; => [ Call: sub_63bc30 ]
 00588488    int3
-00588489    call 0x0063BB00
+00588489    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

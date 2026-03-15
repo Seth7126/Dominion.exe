@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4db260
+// 起始地址: 0x4db260
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DB260    push ebx
 004DB261    push edi
 004DB262    mov ebx, ecx
@@ -10,7 +16,7 @@
 004DB270    mov ecx, esi
 004DB272    mov edx, 0x18
 004DB277    mov esi, dword ptr ds:[esi+0x10]
-004DB27A    call 0x0064C080
+004DB27A    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004DB27F    test esi, esi
 004DB281    jnz 0x004DB270
 004DB283    mov eax, dword ptr ds:[ebx]

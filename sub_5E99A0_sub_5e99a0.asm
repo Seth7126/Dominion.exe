@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e99a0
+// 起始地址: 0x5e99a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E99A0    push ebp
 005E99A1    mov ebp, esp
 005E99A3    sub esp, 0x08
@@ -16,7 +22,7 @@
 005E99C4    jnz 0x005E99E5
 005E99C6    mov ecx, dword ptr ds:[0x00CC8DC8]
 005E99CC    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-005E99D2    call 0x004D8F30
+005E99D2    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 005E99D7    mov ecx, dword ptr ds:[esi+0x04]
 005E99DA    mov edx, dword ptr ss:[ebp-0x04]
 005E99DD    cmp ecx, dword ptr ds:[eax+0x4250]

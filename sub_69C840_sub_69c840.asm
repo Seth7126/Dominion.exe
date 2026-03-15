@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69c840
+// 起始地址: 0x69c840
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069C840    push ebp
 0069C841    mov ebp, esp
 0069C843    sub esp, 0x08
@@ -15,7 +21,7 @@
 0069C85D    call 0x0069C590
 0069C862    test al, al
 0069C864    mov eax, dword ptr ss:[ebp+0x08]
-0069C867    jnz 0x0069C876
+0069C867    jnz 0x0069C876                                  ; => [ Call: sub_69c590 ]
 0069C869    mov ecx, dword ptr ds:[eax]
 0069C86B    lea eax, ds:[ecx-0x01]
 0069C86E    cmp eax, 0x10
@@ -39,7 +45,7 @@
 0069C89F    pop ebx
 0069C8A0    mov esp, ebp
 0069C8A2    pop ebp
-0069C8A3    ret
+0069C8A3    ret                                             ; => [ Call: memcpy ]
 0069C8A4    lea eax, ds:[ecx-0x05]
 0069C8A7    cmp eax, 0x0C
 0069C8AA    jnbe 0x0069C98D
@@ -67,7 +73,7 @@
 0069C8DE    pop ebp
 0069C8DF    ret
 0069C8E0    mov edx, dword ptr ds:[esi+0x18]
-0069C8E3    call 0x0069D4C0
+0069C8E3    call 0x0069D4C0                                 ; => [ Call: sub_69d4c0 ]
 0069C8E8    mov dword ptr ds:[edi], eax
 0069C8EA    pop edi
 0069C8EB    pop esi
@@ -81,9 +87,9 @@
 0069C8FB    mov dword ptr ss:[ebp+0x08], eax
 0069C8FE    test eax, eax
 0069C900    jnz 0x0069C913
-0069C902    push 0x87943C
+0069C902    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 0069C907    push 0x6D
-0069C909    mov ecx, 0x87948C
+0069C909    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 0069C90E    jmp 0x0069C99C
 0069C913    xor ebx, ebx
 0069C915    cmp dword ptr ds:[esi+0x1C], ebx
@@ -91,7 +97,7 @@
 0069C91A    nop word ptr ds:[eax+eax*1], ax
 0069C920    mov edx, esi
 0069C922    mov ecx, edi
-0069C924    call 0x0069CA00
+0069C924    call 0x0069CA00                                 ; => [ Call: sub_69ca00 ]
 0069C929    add edi, dword ptr ss:[ebp+0x08]
 0069C92C    inc ebx
 0069C92D    cmp ebx, dword ptr ds:[esi+0x1C]
@@ -117,12 +123,12 @@
 0069C94F    mov ecx, dword ptr ds:[ebx+eax*1]
 0069C952    test ecx, ecx
 0069C954    jnz 0x0069C967
-0069C956    push 0x8794D8
+0069C956    push 0x8794D8                                   ; => [ String: DefinitionSetHashFromName ]
 0069C95B    push 0xC2
-0069C960    mov ecx, 0x805554
+0069C960    mov ecx, 0x805554                               ; => [ String: name ]
 0069C965    jmp 0x0069C99C
 0069C967    xor edx, edx
-0069C969    call 0x0069C4D0
+0069C969    call 0x0069C4D0                                 ; => [ Call: sub_69c4d0 ]
 0069C96E    mov dword ptr ds:[esi+ebx*1], eax
 0069C971    pop edi
 0069C972    pop esi
@@ -133,7 +139,7 @@
 0069C978    mov edx, dword ptr ss:[ebp-0x04]
 0069C97B    mov ecx, edi
 0069C97D    push esi
-0069C97E    call 0x0069C750
+0069C97E    call 0x0069C750                                 ; => [ Call: sub_69c750 ]
 0069C983    add esp, 0x04
 0069C986    pop edi
 0069C987    pop esi
@@ -141,16 +147,16 @@
 0069C989    mov esp, ebp
 0069C98B    pop ebp
 0069C98C    ret
-0069C98D    dword 87951868
+0069C98D    dword 87951868                                  ; => [ String: DefinitionFillSubFieldWithDefaults ]
 0069C991    byte 0
 0069C992    push 0x14C
-0069C997    mov ecx, 0x801AA4
+0069C997    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0069C99C    push 0x879400
 0069C9A1    mov edx, 0x801800
-0069C9A6    call 0x0063B870
+0069C9A6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Definition.cpp ]
 0069C9AB    add esp, 0x0C
 0069C9AE    call 0x0063BC30
 0069C9B3    test al, al
-0069C9B5    jz 0x0069C9B8
+0069C9B5    jz 0x0069C9B8                                   ; => [ Call: sub_63bc30 ]
 0069C9B7    int3
-0069C9B8    call 0x0063BB00
+0069C9B8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

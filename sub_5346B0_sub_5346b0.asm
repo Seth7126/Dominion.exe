@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5346b0
+// 起始地址: 0x5346b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005346B0    dword 83EC8B55
 005346B4    in al, 0xF0
 005346B6    mov eax, 0x19A8
-005346BB    call 0x00761E50
-005346C0    mov eax, dword ptr ds:[0x008C4040]
+005346BB    call 0x00761E50                                 ; => [ Call: __chkstk ]
+005346C0    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005346C5    xor eax, esp
 005346C7    mov dword ptr ss:[esp+0x19A4], eax
 005346CE    push esi
@@ -13,9 +19,9 @@
 005346DB    push 0x04
 005346DD    push eax
 005346DE    mov ecx, 0x3EC
-005346E3    call 0x005685F0
+005346E3    call 0x005685F0                                 ; => [ Call: sub_5685f0 ]
 005346E8    add esp, 0x0C
-005346EB    mov dword ptr ss:[esp+0x1C], 0x00
+005346EB    mov dword ptr ss:[esp+0x1C], 0x00               ; => [ Call: __builtin_memset ]
 005346F3    xorps xmm0, xmm0
 005346F6    mov dword ptr ss:[esp+0x10], 0x63
 005346FE    mov esi, eax
@@ -34,7 +40,7 @@
 00534735    push eax
 00534736    movaps xmmword ptr ss:[esp+0x50], xmm0
 0053473B    lea eax, ss:[esp+0xA8]
-00534742    rep movsd
+00534742    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00534744    push 0x10
 00534746    push dword ptr ss:[esp+0x19B4]
 0053474D    mov dword ptr ss:[esp+0x44], 0x00
@@ -50,14 +56,14 @@
 00534781    lea edi, ss:[esp+0xD20]
 00534788    mov esi, eax
 0053478A    mov ecx, 0x321
-0053478F    rep movsd
-00534791    call 0x00573400
+0053478F    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
+00534791    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00534796    push 0x48
 00534798    mov esi, eax
 0053479A    lea eax, ss:[esp+0x44]
 0053479E    push 0x00
 005347A0    push eax
-005347A1    call 0x00761FC4
+005347A1    call 0x00761FC4                                 ; => [ Call: memset ]
 005347A6    mov edx, dword ptr ds:[esi+0x0C]
 005347A9    lea eax, ss:[esp+0xD2C]
 005347B0    mov ecx, dword ptr ds:[esi+0x04]
@@ -82,17 +88,17 @@
 005347F8    push 0x00
 005347FA    push 0x02
 005347FC    push 0x3EB
-00534801    call 0x00566140
+00534801    call 0x00566140                                 ; => [ Call: nullptr | Call: sub_566140 | Call: sub_580700 ]
 00534806    add esp, 0x18
-00534809    call 0x00573400
+00534809    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0053480E    mov edx, dword ptr ds:[eax+0x0C]
 00534811    mov ecx, dword ptr ds:[eax+0x04]
-00534814    call 0x00588340
+00534814    call 0x00588340                                 ; => [ Call: sub_588340 ]
 00534819    mov ecx, dword ptr ss:[esp+0x19AC]
 00534820    pop edi
 00534821    pop esi
 00534822    xor ecx, esp
-00534824    call 0x0075927A
+00534824    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00534829    mov esp, ebp
 0053482B    pop ebp
 0053482C    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_515c00
+// 起始地址: 0x515c00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00515C00    push ebp
 00515C01    mov ebp, esp
 00515C03    and esp, 0xFFFFFFF8
@@ -17,10 +23,10 @@
 00515C2A    jnl 0x00515DF4
 00515C30    mov ecx, dword ptr ds:[0x00CCA784]
 00515C36    mov esi, dword ptr ds:[0x00CCA780]
-00515C3C    mov eax, dword ptr ds:[0x00CCA788]
+00515C3C    mov eax, dword ptr ds:[0x00CCA788]              ; => [ Data: data_cca788 ]
 00515C41    add esi, 0x0C
 00515C44    shl ecx, 0x0B
-00515C47    add esi, ecx
+00515C47    add esi, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00515C49    mov dword ptr ss:[esp+0x0C], eax
 00515C4D    mov dword ptr ss:[esp+0x1C], esi
 00515C51    test eax, eax
@@ -31,7 +37,7 @@
 00515C5B    nop dword ptr ds:[eax+eax*1], eax
 00515C60    mov ecx, dword ptr ds:[edi+esi*4]
 00515C63    mov edx, eax
-00515C65    call 0x00511D80
+00515C65    call 0x00511D80                                 ; => [ Call: sub_511d80 ]
 00515C6A    test al, al
 00515C6C    jz 0x00515E24
 00515C72    mov eax, dword ptr ss:[esp+0x0C]
@@ -48,7 +54,7 @@
 00515C8B    pop ebx
 00515C8C    mov ecx, dword ptr ss:[esp+0x40]
 00515C90    xor ecx, esp
-00515C92    call 0x0075927A
+00515C92    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00515C97    mov esp, ebp
 00515C99    pop ebp
 00515C9A    ret
@@ -68,7 +74,7 @@
 00515CB5    pop ebx
 00515CB6    mov ecx, dword ptr ss:[esp+0x40]
 00515CBA    xor ecx, esp
-00515CBC    call 0x0075927A
+00515CBC    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00515CC1    mov esp, ebp
 00515CC3    pop ebp
 00515CC4    ret
@@ -96,7 +102,7 @@
 00515CFA    mov ecx, dword ptr ds:[eax+esi*4]
 00515CFD    call 0x00511D80
 00515D02    test al, al
-00515D04    jz 0x00515D1E
+00515D04    jz 0x00515D1E                                   ; => [ Call: sub_511d80 ]
 00515D06    inc esi
 00515D07    cmp esi, ebx
 00515D09    jl 0x00515CF4
@@ -123,7 +129,7 @@
 00515D43    pop ebx
 00515D44    mov ecx, dword ptr ss:[esp+0x40]
 00515D48    xor ecx, esp
-00515D4A    call 0x0075927A
+00515D4A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00515D4F    mov esp, ebp
 00515D51    pop ebp
 00515D52    ret
@@ -138,16 +144,16 @@
 00515D68    xor edx, edx
 00515D6A    mov eax, esp
 00515D6C    mov ecx, 0xCCA794
-00515D71    mov dword ptr ds:[eax], 0x816F20
+00515D71    mov dword ptr ds:[eax], 0x816F20                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_b31a5b2b521240410850fc6073e679cf>,bool,enum DomCardEnum>::`vftable'{for `std::_Func_base<bool,enum DomCardEnum>'} ]
 00515D77    mov dword ptr ds:[eax+0x04], ebx
 00515D7A    mov dword ptr ds:[eax+0x08], edi
 00515D7D    mov dword ptr ds:[eax+0x24], eax
-00515D80    call 0x0050AD20
+00515D80    call 0x0050AD20                                 ; => [ Call: sub_50ad20 | Data: data_cca794 ]
 00515D85    mov esi, eax
 00515D87    push 0x00
 00515D89    push 0x00
 00515D8B    mov ecx, esi
-00515D8D    call 0x0050A6A0
+00515D8D    call 0x0050A6A0                                 ; => [ Call: sub_50a6a0 ]
 00515D92    mov eax, dword ptr ss:[esp+0x40]
 00515D96    add esp, 0x30
 00515D99    mov edx, dword ptr ss:[esp+0x0C]
@@ -165,13 +171,13 @@
 00515DBB    push esi
 00515DBC    push eax
 00515DBD    mov ecx, 0xCC8DE0
-00515DC2    call 0x0063EDA0
+00515DC2    call 0x0063EDA0                                 ; => [ Call: sub_63eda0 | Data: data_cc8de0 ]
 00515DC7    lea ecx, ds:[esi*4]
 00515DCE    push ecx
 00515DCF    lea eax, ss:[esp+0x30]
 00515DD3    push eax
 00515DD4    push dword ptr ss:[esp+0x30]
-00515DD8    call 0x00761FBE
+00515DD8    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00515DDD    mov ecx, dword ptr ss:[esp+0x60]
 00515DE1    add esp, 0x14
 00515DE4    mov eax, esi
@@ -179,7 +185,7 @@
 00515DE7    pop esi
 00515DE8    pop ebx
 00515DE9    xor ecx, esp
-00515DEB    call 0x0075927A
+00515DEB    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00515DF0    mov esp, ebp
 00515DF2    pop ebp
 00515DF3    ret
@@ -188,22 +194,22 @@
 00515DFE    push 0x80CD80
 00515E03    mov edx, 0x801800
 00515E08    mov ecx, 0x813770
-00515E0D    call 0x0063B870
+00515E0D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: RandomStampTargetPiles | Data: __security_cookie | String: numRequested < NUM_KINGDOM_PILES ]
 00515E12    add esp, 0x0C
 00515E15    call 0x0063BC30
 00515E1A    test al, al
-00515E1C    jz 0x00515E1F
+00515E1C    jz 0x00515E1F                                   ; => [ Call: sub_63bc30 ]
 00515E1E    int3
-00515E1F    call 0x0063BB00
+00515E1F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 00515E24    push 0x814328
 00515E29    push 0x1A34
 00515E2E    push 0x80CD80
 00515E33    mov edx, 0x801800
 00515E38    mov ecx, 0x814340
-00515E3D    call 0x0063B870
+00515E3D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CanDoCardStamp(stamps[i], what) | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: RandomStampTargetPiles ]
 00515E42    add esp, 0x0C
 00515E45    call 0x0063BC30
 00515E4A    test al, al
-00515E4C    jz 0x00515E4F
+00515E4C    jz 0x00515E4F                                   ; => [ Call: sub_63bc30 ]
 00515E4E    int3
-00515E4F    call 0x0063BB00
+00515E4F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

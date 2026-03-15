@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4ec7c0
+// 起始地址: 0x4ec7c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EC7C0    push ebp
 004EC7C1    mov ebp, esp
 004EC7C3    sub esp, 0x1C
-004EC7C6    mov edx, dword ptr ds:[0x01777938]
+004EC7C6    mov edx, dword ptr ds:[0x01777938]              ; => [ Data: data_1777938 ]
 004EC7CC    push ebx
 004EC7CD    push esi
-004EC7CE    mov esi, dword ptr ds:[0x0177793C]
+004EC7CE    mov esi, dword ptr ds:[0x0177793C]              ; => [ Data: data_177793c ]
 004EC7D4    mov ebx, edx
 004EC7D6    push edi
 004EC7D7    mov eax, esi
@@ -20,28 +26,28 @@
 004EC7FA    push esi
 004EC7FB    push edx
 004EC7FC    shr ebx, 0x1B
-004EC7FF    call 0x007621D0
-004EC804    add eax, dword ptr ds:[0x01777940]
+004EC7FF    call 0x007621D0                                 ; => [ Call: __allmul ]
+004EC804    add eax, dword ptr ds:[0x01777940]              ; => [ Data: data_1777940 ]
 004EC80A    push 0x5851F42D
-004EC80F    adc edx, dword ptr ds:[0x01777944]
+004EC80F    adc edx, dword ptr ds:[0x01777944]              ; => [ Data: data_1777940 | Data: data_1777944 ]
 004EC815    push 0x4C957F2D
 004EC81A    push edx
 004EC81B    push eax
 004EC81C    mov dword ptr ss:[ebp-0x0C], eax
 004EC81F    mov dword ptr ss:[ebp-0x04], edx
-004EC822    call 0x007621D0
+004EC822    call 0x007621D0                                 ; => [ Call: __allmul ]
 004EC827    add eax, dword ptr ds:[0x01777940]
 004EC82D    mov esi, dword ptr ss:[ebp-0x04]
 004EC830    mov ecx, esi
-004EC832    adc edx, dword ptr ds:[0x01777944]
+004EC832    adc edx, dword ptr ds:[0x01777944]              ; => [ Data: data_1777940 | Data: data_1777944 ]
 004EC838    mov edi, dword ptr ss:[ebp-0x0C]
-004EC83B    mov dword ptr ds:[0x01777938], eax
+004EC83B    mov dword ptr ds:[0x01777938], eax              ; => [ Data: data_1777940 | Data: data_1777938 ]
 004EC840    mov eax, esi
 004EC842    shrd edi, eax, 0x1B
 004EC846    mov eax, dword ptr ss:[ebp-0x14]
 004EC849    shr ecx, 0x0D
 004EC84C    xor edi, ecx
-004EC84E    mov dword ptr ds:[0x0177793C], edx
+004EC84E    mov dword ptr ds:[0x0177793C], edx              ; => [ Data: data_177793c ]
 004EC854    mov ecx, ebx
 004EC856    shr esi, 0x1B
 004EC859    neg ecx

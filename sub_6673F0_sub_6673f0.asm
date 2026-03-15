@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6673f0
+// 起始地址: 0x6673f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006673F0    push ebp
 006673F1    mov ebp, esp
 006673F3    push ecx
@@ -50,7 +56,7 @@
 00667469    imul ecx, eax, 0x18D0
 0066746F    add ecx, dword ptr ds:[0x00C23BA8]
 00667475    cmp dword ptr ds:[ecx+0x18C8], edx
-0066747B    jnz 0x0066749E
+0066747B    jnz 0x0066749E                                  ; => [ Data: data_c23ba8 | Data: data_c23bac ]
 0066747D    push dword ptr ss:[ebp+0x0C]
 00667480    mov edx, edi
 00667482    push dword ptr ss:[ebp+0x08]
@@ -67,19 +73,19 @@
 0066749A    mov esp, ebp
 0066749C    pop ebp
 0066749D    ret
-0066749E    push 0x876B2C
+0066749E    push 0x876B2C                                   ; => [ String: DataArray<struct UI2>::DataArrayGet ]
 006674A3    push 0x6D
-006674A5    mov ecx, 0x802748
+006674A5    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 006674AA    jmp 0x006674B8
-006674AC    push 0x876B2C
+006674AC    push 0x876B2C                                   ; => [ String: DataArray<struct UI2>::DataArrayGet ]
 006674B1    push 0x6C
-006674B3    mov ecx, 0x802734
+006674B3    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 006674B8    push 0x80193C
 006674BD    mov edx, 0x801800
-006674C2    call 0x0063B870
+006674C2    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\DataArray.h | String: DataArray<struct UI2>::DataArrayGet ]
 006674C7    add esp, 0x0C
 006674CA    call 0x0063BC30
 006674CF    test al, al
-006674D1    jz 0x006674D4
+006674D1    jz 0x006674D4                                   ; => [ Call: sub_63bc30 ]
 006674D3    int3
-006674D4    call 0x0063BB00
+006674D4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_695020
+// 起始地址: 0x695020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00695020    push ebp
 00695021    mov ebp, esp
 00695023    sub esp, 0x1C
@@ -10,7 +16,7 @@
 00695031    mov dword ptr ss:[ebp-0x04], ecx
 00695034    push 0xFA
 00695039    push esi
-0069503A    call 0x00761FC4
+0069503A    call 0x00761FC4                                 ; => [ Call: memset ]
 0069503F    mov edi, dword ptr ds:[ebx+0x0C]
 00695042    add esp, 0x0C
 00695045    test edi, edi
@@ -18,7 +24,7 @@
 00695049    push edi
 0069504A    push dword ptr ss:[ebp-0x04]
 0069504D    push esi
-0069504E    call 0x00761FBE
+0069504E    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00695053    mov ecx, dword ptr ss:[ebp-0x04]
 00695056    lea eax, ss:[ebp-0x18]
 00695059    add esp, 0x0C
@@ -37,16 +43,16 @@
 00695083    pop ebx
 00695084    mov esp, ebp
 00695086    pop ebp
-00695087    ret
+00695087    ret                                             ; => [ Call: sub_694da0 ]
 00695088    push 0x87943C
 0069508D    push 0x6D
 0069508F    push 0x879400
 00695094    mov edx, 0x801800
 00695099    mov ecx, 0x87948C
-0069509E    call 0x0063B870
+0069509E    call 0x0063B870                                 ; => [ String: pDefMap->definitionSize != 0 | Call: sub_63b870 | String: DefinitionGetSize | String: C:\x\ax2017\Engine\Definition.cpp | Data: data_801800 ]
 006950A3    add esp, 0x0C
 006950A6    call 0x0063BC30
 006950AB    test al, al
-006950AD    jz 0x006950B0
+006950AD    jz 0x006950B0                                   ; => [ Call: sub_63bc30 ]
 006950AF    int3
-006950B0    call 0x0063BB00
+006950B0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

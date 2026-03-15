@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_639300
+// 起始地址: 0x639300
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00639300    push ebp
 00639301    mov ebp, esp
 00639303    push 0xFFFFFFFF
-00639305    push 0x76C2CD
+00639305    push 0x76C2CD                                   ; => [ Type: EHRegistrationNode | Call: __ehhandler$?_main@@YAHXZ ]
 0063930A    mov eax, dword ptr fs:[0x00000000]
-00639310    push eax
+00639310    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00639311    sub esp, 0x1C
 00639314    push ebx
 00639315    push esi
 00639316    push edi
 00639317    mov eax, dword ptr ds:[0x008C4040]
 0063931C    xor eax, ebp
-0063931E    push eax
+0063931E    push eax                                        ; => [ Data: __security_cookie ]
 0063931F    lea eax, ss:[ebp-0x0C]
-00639322    mov dword ptr fs:[0x00000000], eax
+00639322    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 00639328    mov dword ptr ss:[ebp-0x10], edx
 0063932B    mov esi, ecx
 0063932D    mov dword ptr ss:[ebp-0x18], esi
@@ -28,7 +34,7 @@
 00639348    cmp byte ptr ds:[ebx], 0x00
 0063934B    jz 0x0063935B
 0063934D    lea ecx, ss:[ebp-0x24]
-00639350    call 0x0063D4E0
+00639350    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00639355    mov edx, dword ptr ss:[ebp-0x10]
 00639358    inc dword ptr ds:[eax+0x04]
 0063935B    mov edi, dword ptr ds:[esi+0x08]
@@ -39,7 +45,7 @@
 0063936D    mov dword ptr ds:[esi], eax
 0063936F    lea esi, ds:[edx+0x04]
 00639372    push esi
-00639373    call 0x0063D850
+00639373    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 00639378    mov edx, dword ptr ss:[ebp-0x10]
 0063937B    mov ecx, dword ptr ss:[ebp-0x18]
 0063937E    mov eax, dword ptr ds:[edx+0x08]
@@ -49,7 +55,7 @@
 00639389    mov dword ptr ds:[edx], eax
 0063938B    lea eax, ss:[ebp-0x24]
 0063938E    push eax
-0063938F    call 0x0063D850
+0063938F    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 00639394    mov eax, dword ptr ss:[ebp-0x10]
 00639397    mov dword ptr ds:[eax+0x08], edi
 0063939A    mov dword ptr ss:[ebp-0x04], 0x01
@@ -58,17 +64,17 @@
 006393AA    test ebx, ebx
 006393AC    jz 0x006393CE
 006393AE    cmp byte ptr ds:[ebx], 0x00
-006393B1    jz 0x006393CE
+006393B1    jz 0x006393CE                                   ; => [ Data: data_cf65bc ]
 006393B3    lea ecx, ss:[ebp-0x24]
-006393B6    call 0x0063D4E0
+006393B6    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006393BB    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 006393BF    jnz 0x006393CE
 006393C1    mov edx, dword ptr ds:[eax+0x0C]
 006393C4    mov ecx, eax
 006393C6    add edx, 0x10
-006393C9    call 0x0064C080
+006393C9    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006393CE    mov ecx, dword ptr ss:[ebp-0x0C]
-006393D1    mov dword ptr fs:[0x00000000], ecx
+006393D1    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006393D8    pop ecx
 006393D9    pop edi
 006393DA    pop esi

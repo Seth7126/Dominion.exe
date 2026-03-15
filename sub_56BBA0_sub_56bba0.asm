@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56bba0
+// 起始地址: 0x56bba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056BBA0    push ebp
 0056BBA1    mov ebp, esp
 0056BBA3    sub esp, 0x20
@@ -6,7 +12,7 @@
 0056BBA8    push edi
 0056BBA9    mov dword ptr ss:[ebp-0x1C], edx
 0056BBAC    mov dword ptr ss:[ebp-0x18], ecx
-0056BBAF    call 0x00573400
+0056BBAF    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056BBB4    mov edi, eax
 0056BBB6    mov esi, dword ptr ds:[edi+0x28]
 0056BBB9    mov eax, dword ptr ds:[edi]
@@ -25,7 +31,7 @@
 0056BBDD    mov dword ptr ss:[ebp-0x0C], eax
 0056BBE0    cmp esi, 0x320
 0056BBE6    jb 0x0056BBED
-0056BBE8    call 0x00591930
+0056BBE8    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056BBED    mov ecx, dword ptr ss:[ebp-0x0C]
 0056BBF0    imul eax, esi, 0x64
 0056BBF3    mov eax, dword ptr ds:[eax+ecx*1+0x1A4C]
@@ -36,20 +42,20 @@
 0056BC08    push dword ptr ds:[edi+0x10]
 0056BC0B    mov ecx, dword ptr ds:[edi+0x04]
 0056BC0E    lea ebx, ds:[edi+0x04]
-0056BC11    call 0x005916D0
+0056BC11    call 0x005916D0                                 ; => [ Call: sub_5916d0 ]
 0056BC16    mov ecx, dword ptr ds:[ebx]
 0056BC18    add esp, 0x04
 0056BC1B    mov dword ptr ss:[ebp-0x04], eax
 0056BC1E    mov dword ptr ss:[ebp-0x08], edx
 0056BC21    push dword ptr ds:[edi+0x10]
-0056BC24    call 0x005915B0
+0056BC24    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 0056BC29    add esp, 0x04
 0056BC2C    mov dword ptr ss:[ebp-0x0C], eax
 0056BC2F    test byte ptr ds:[edi+0x10], 0x30
 0056BC33    jnz 0x0056BC4E
 0056BC35    push dword ptr ds:[edi+0x10]
 0056BC38    mov ecx, dword ptr ds:[ebx]
-0056BC3A    call 0x00576940
+0056BC3A    call 0x00576940                                 ; => [ Call: sub_576940 ]
 0056BC3F    add esp, 0x04
 0056BC42    mov ecx, dword ptr ds:[eax+0x38]
 0056BC45    mov eax, dword ptr ds:[eax+0x3C]
@@ -58,11 +64,11 @@
 0056BC4E    mov ecx, dword ptr ds:[ebx]
 0056BC50    cmp dword ptr ds:[ecx+0x19B8], 0x100
 0056BC5A    jl 0x0056BC70
-0056BC5C    push 0x81EC60
+0056BC5C    push 0x81EC60                                   ; => [ String: StartOfNextTurn ]
 0056BC61    push 0x11AA
-0056BC66    mov ecx, 0x81EC34
+0056BC66    mov ecx, 0x81EC34                               ; => [ String: c.g->numScheduledAbilities < MAX_ABILITIES ]
 0056BC6B    jmp 0x0056BD3D
-0056BC70    call 0x005768A0
+0056BC70    call 0x005768A0                                 ; => [ Call: sub_5768a0 ]
 0056BC75    mov ecx, dword ptr ds:[edi+0x0C]
 0056BC78    mov esi, eax
 0056BC7A    mov eax, dword ptr ss:[ebp-0x04]
@@ -117,16 +123,16 @@
 0056BD29    pop ebx
 0056BD2A    mov esp, ebp
 0056BD2C    pop ebp
-0056BD2D    ret
-0056BD2E    push 0x81EC60
+0056BD2D    ret                                             ; => [ Call: sub_56b8e0 ]
+0056BD2E    push 0x81EC60                                   ; => [ String: StartOfNextTurn ]
 0056BD33    push 0x11A0
-0056BD38    mov ecx, 0x801AA4
+0056BD38    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0056BD3D    push 0x81EA70
 0056BD42    mov edx, 0x801800
-0056BD47    call 0x0063B870
+0056BD47    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp | String: StartOfNextTurn ]
 0056BD4C    add esp, 0x0C
 0056BD4F    call 0x0063BC30
 0056BD54    test al, al
-0056BD56    jz 0x0056BD59
+0056BD56    jz 0x0056BD59                                   ; => [ Call: sub_63bc30 ]
 0056BD58    int3
-0056BD59    call 0x0063BB00
+0056BD59    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

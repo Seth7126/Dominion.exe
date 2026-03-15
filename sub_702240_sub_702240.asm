@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_702240
+// 起始地址: 0x702240
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00702240    push ebp
 00702241    mov ebp, esp
 00702243    push ebx
@@ -36,7 +42,7 @@
 007022B9    cmovz ecx, eax
 007022BC    cmp edx, 0x2E
 007022BF    jnbe 0x007023D9
-007022C5    movzx eax, byte ptr ds:[edx+0x7024B4]
+007022C5    movzx eax, byte ptr ds:[edx+0x7024B4]           ; => [ Data: lookup_table_7024b4 ]
 007022CC    jmp dword ptr ds:[eax*4+0x70249C]
 007022D3    mov eax, dword ptr ds:[ebx+0x04]
 007022D6    cmp dword ptr ds:[esi+0xE8], eax

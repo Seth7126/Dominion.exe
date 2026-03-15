@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5957f0
+// 起始地址: 0x5957f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005957F0    push ebp
 005957F1    mov ebp, esp
 005957F3    sub esp, 0x24
@@ -31,14 +37,14 @@
 0059583E    mov ecx, dword ptr ss:[ebp-0x08]
 00595841    push eax
 00595842    mov dword ptr ss:[ebp-0x0C], edx
-00595845    call 0x00597480
+00595845    call 0x00597480                                 ; => [ Call: sub_597480 ]
 0059584A    lea eax, ds:[ebx+edi*1]
 0059584D    mov ecx, edi
 0059584F    push esi
 00595850    push eax
 00595851    sub ecx, ebx
 00595853    mov edx, edi
-00595855    call 0x00597480
+00595855    call 0x00597480                                 ; => [ Call: sub_597480 ]
 0059585A    mov eax, dword ptr ss:[ebp+0x08]
 0059585D    add eax, 0xFFFFFFFC
 00595860    mov ebx, eax
@@ -53,13 +59,13 @@
 00595876    mov edx, edi
 00595878    push esi
 00595879    push ebx
-0059587A    call 0x00597480
+0059587A    call 0x00597480                                 ; => [ Call: sub_597480 ]
 0059587F    add esp, 0x20
 00595882    jmp 0x00595892
 00595884    push ecx
 00595885    mov ecx, dword ptr ss:[ebp-0x08]
 00595888    mov edx, edi
-0059588A    call 0x00597480
+0059588A    call 0x00597480                                 ; => [ Call: sub_597480 ]
 0059588F    add esp, 0x08
 00595892    lea edx, ds:[edi+0x04]
 00595895    mov dword ptr ss:[ebp-0x04], edx
@@ -73,7 +79,7 @@
 005958AF    mov dword ptr ss:[ebp-0x0C], eax
 005958B2    cmp ebx, 0x320
 005958B8    jb 0x005958C2
-005958BA    call 0x00591930
+005958BA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005958BF    mov ecx, dword ptr ss:[ebp-0x10]
 005958C2    imul eax, ebx, 0x64
 005958C5    mov ebx, dword ptr ds:[eax+esi*1+0x1A4C]
@@ -81,7 +87,7 @@
 005958CF    mov dword ptr ss:[ebp-0x14], eax
 005958D2    cmp eax, 0x320
 005958D7    jb 0x005958E4
-005958D9    call 0x00591930
+005958D9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005958DE    mov eax, dword ptr ss:[ebp-0x14]
 005958E1    mov ecx, dword ptr ss:[ebp-0x10]
 005958E4    imul eax, eax, 0x64
@@ -97,7 +103,7 @@
 00595902    mov dword ptr ss:[ebp-0x0C], eax
 00595905    cmp ebx, 0x320
 0059590B    jb 0x00595915
-0059590D    call 0x00591930
+0059590D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595912    mov ecx, dword ptr ss:[ebp-0x10]
 00595915    imul eax, ebx, 0x64
 00595918    mov ebx, dword ptr ds:[eax+esi*1+0x1A4C]
@@ -105,7 +111,7 @@
 00595922    mov dword ptr ss:[ebp-0x14], eax
 00595925    cmp eax, 0x320
 0059592A    jb 0x00595937
-0059592C    call 0x00591930
+0059592C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595931    mov eax, dword ptr ss:[ebp-0x14]
 00595934    mov ecx, dword ptr ss:[ebp-0x10]
 00595937    imul eax, eax, 0x64
@@ -129,7 +135,7 @@
 00595971    mov dword ptr ss:[ebp-0x0C], eax
 00595974    cmp ebx, 0x320
 0059597A    jb 0x00595984
-0059597C    call 0x00591930
+0059597C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595981    mov ecx, dword ptr ss:[ebp-0x10]
 00595984    imul eax, ebx, 0x64
 00595987    mov ebx, dword ptr ds:[eax+esi*1+0x1A4C]
@@ -137,7 +143,7 @@
 00595991    mov dword ptr ss:[ebp-0x14], eax
 00595994    cmp eax, 0x320
 00595999    jb 0x005959A6
-0059599B    call 0x00591930
+0059599B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005959A0    mov eax, dword ptr ss:[ebp-0x14]
 005959A3    mov ecx, dword ptr ss:[ebp-0x10]
 005959A6    imul eax, eax, 0x64
@@ -154,7 +160,7 @@
 005959C6    mov dword ptr ss:[ebp-0x0C], eax
 005959C9    cmp ebx, 0x320
 005959CF    jb 0x005959D9
-005959D1    call 0x00591930
+005959D1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005959D6    mov ecx, dword ptr ss:[ebp-0x10]
 005959D9    imul eax, ebx, 0x64
 005959DC    mov ebx, dword ptr ds:[eax+esi*1+0x1A4C]
@@ -162,7 +168,7 @@
 005959E6    mov dword ptr ss:[ebp-0x14], eax
 005959E9    cmp eax, 0x320
 005959EE    jb 0x005959FB
-005959F0    call 0x00591930
+005959F0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005959F5    mov eax, dword ptr ss:[ebp-0x14]
 005959F8    mov ecx, dword ptr ss:[ebp-0x10]
 005959FB    imul eax, eax, 0x64
@@ -196,7 +202,7 @@
 00595A4D    mov dword ptr ss:[ebp-0x14], eax
 00595A50    cmp eax, 0x320
 00595A55    jb 0x00595A62
-00595A57    call 0x00591930
+00595A57    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595A5C    mov eax, dword ptr ss:[ebp-0x14]
 00595A5F    mov edx, dword ptr ss:[ebp-0x10]
 00595A62    imul eax, eax, 0x64
@@ -206,7 +212,7 @@
 00595A72    mov dword ptr ss:[ebp-0x18], eax
 00595A75    cmp eax, 0x320
 00595A7A    jb 0x00595A8A
-00595A7C    call 0x00591930
+00595A7C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595A81    mov ecx, dword ptr ss:[ebp-0x14]
 00595A84    mov eax, dword ptr ss:[ebp-0x18]
 00595A87    mov edx, dword ptr ss:[ebp-0x10]
@@ -224,7 +230,7 @@
 00595AB2    mov dword ptr ss:[ebp-0x1C], eax
 00595AB5    cmp eax, 0x320
 00595ABA    jb 0x00595AC7
-00595ABC    call 0x00591930
+00595ABC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595AC1    mov eax, dword ptr ss:[ebp-0x1C]
 00595AC4    mov edx, dword ptr ss:[ebp-0x10]
 00595AC7    imul eax, eax, 0x64
@@ -234,7 +240,7 @@
 00595AD7    mov dword ptr ss:[ebp-0x18], eax
 00595ADA    cmp eax, 0x320
 00595ADF    jb 0x00595AEF
-00595AE1    call 0x00591930
+00595AE1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595AE6    mov ecx, dword ptr ss:[ebp-0x1C]
 00595AE9    mov eax, dword ptr ss:[ebp-0x18]
 00595AEC    mov edx, dword ptr ss:[ebp-0x10]
@@ -274,7 +280,7 @@
 00595B50    mov dword ptr ss:[ebp-0x1C], eax
 00595B53    cmp eax, 0x320
 00595B58    jb 0x00595B62
-00595B5A    call 0x00591930
+00595B5A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595B5F    mov eax, dword ptr ss:[ebp-0x1C]
 00595B62    mov edx, dword ptr ss:[ebp-0x14]
 00595B65    imul eax, eax, 0x64
@@ -284,7 +290,7 @@
 00595B75    mov dword ptr ss:[ebp-0x18], eax
 00595B78    cmp eax, 0x320
 00595B7D    jb 0x00595B8D
-00595B7F    call 0x00591930
+00595B7F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595B84    mov ecx, dword ptr ss:[ebp-0x1C]
 00595B87    mov eax, dword ptr ss:[ebp-0x18]
 00595B8A    mov edx, dword ptr ss:[ebp-0x14]
@@ -303,7 +309,7 @@
 00595BB4    mov dword ptr ss:[ebp-0x20], eax
 00595BB7    cmp eax, 0x320
 00595BBC    jb 0x00595BC9
-00595BBE    call 0x00591930
+00595BBE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595BC3    mov eax, dword ptr ss:[ebp-0x20]
 00595BC6    mov edx, dword ptr ss:[ebp-0x14]
 00595BC9    imul eax, eax, 0x64
@@ -313,7 +319,7 @@
 00595BD9    mov dword ptr ss:[ebp-0x1C], eax
 00595BDC    cmp eax, 0x320
 00595BE1    jb 0x00595BF1
-00595BE3    call 0x00591930
+00595BE3    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00595BE8    mov ecx, dword ptr ss:[ebp-0x20]
 00595BEB    mov eax, dword ptr ss:[ebp-0x1C]
 00595BEE    mov edx, dword ptr ss:[ebp-0x14]

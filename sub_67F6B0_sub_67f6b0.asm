@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67f6b0
+// 起始地址: 0x67f6b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067F6B0    push ebp
 0067F6B1    mov ebp, esp
 0067F6B3    sub esp, 0x14
@@ -20,7 +26,7 @@
 0067F6E0    lahf
 0067F6E1    test ah, 0x44
 0067F6E4    jp 0x0067F6EB
-0067F6E6    xorps xmm4, xmm4
+0067F6E6    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 0067F6E9    jmp 0x0067F715
 0067F6EB    xorps xmm0, xmm0
 0067F6EE    cvtss2sd xmm0, xmm2
@@ -29,7 +35,7 @@
 0067F6FA    cvtps2pd xmm0, xmm1
 0067F6FD    movsd qword ptr ss:[ebp-0x10], xmm0
 0067F702    fld qword ptr ss:[ebp-0x10]
-0067F705    call 0x0076236E
+0067F705    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 0067F70A    fstp dword ptr ss:[ebp-0x08]
 0067F70D    movss xmm4, dword ptr ss:[ebp-0x08]
 0067F712    xorps xmm0, xmm0
@@ -62,7 +68,7 @@
 0067F764    movaps xmm2, xmm3
 0067F767    xorps xmm1, xmm1
 0067F76A    movaps xmm0, xmm4
-0067F76D    call 0x004AE110
+0067F76D    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0067F772    movss xmm3, dword ptr ds:[0x00890E18]
 0067F77A    movss xmm4, dword ptr ss:[ebp-0x0C]
 0067F77F    movss dword ptr ss:[ebp-0x04], xmm0
@@ -91,7 +97,7 @@
 0067F7BC    movaps xmm2, xmm3
 0067F7BF    xorps xmm1, xmm1
 0067F7C2    movaps xmm0, xmm4
-0067F7C5    call 0x004AE110
+0067F7C5    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0067F7CA    movaps xmm3, xmm0
 0067F7CD    movss xmm0, dword ptr ds:[esi]
 0067F7D1    movss xmm1, dword ptr ds:[esi+0x04]
@@ -115,7 +121,7 @@
 0067F80F    movss xmm1, dword ptr ds:[esi+0x0C]
 0067F814    xorps xmm3, xmm3
 0067F817    ucomiss xmm1, xmm3
-0067F81A    xorps xmm0, xmm0
+0067F81A    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0067F81D    lahf
 0067F81E    test ah, 0x44
 0067F821    jnp 0x0067F84A
@@ -125,7 +131,7 @@
 0067F82F    cvtps2pd xmm0, xmm1
 0067F832    movsd qword ptr ss:[ebp-0x10], xmm0
 0067F837    fld qword ptr ss:[ebp-0x10]
-0067F83A    call 0x0076236E
+0067F83A    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 0067F83F    fstp dword ptr ss:[ebp-0x08]
 0067F842    movss xmm0, dword ptr ss:[ebp-0x08]
 0067F847    xorps xmm3, xmm3
@@ -139,7 +145,7 @@
 0067F863    jmp 0x0067F875
 0067F865    mov ecx, 0x18
 0067F86A    xorps xmm1, xmm1
-0067F86D    call 0x004AE110
+0067F86D    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0067F872    movaps xmm3, xmm0
 0067F875    movss xmm0, dword ptr ds:[esi+0x10]
 0067F87A    subss xmm0, dword ptr ds:[esi]
@@ -154,10 +160,10 @@
 0067F895    push 0x8739B4
 0067F89A    mov edx, 0x801800
 0067F89F    mov ecx, 0x801AA4
-0067F8A4    call 0x0063B870
+0067F8A4    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: GraphEval | String: Halt ]
 0067F8A9    add esp, 0x0C
 0067F8AC    call 0x0063BC30
 0067F8B1    test al, al
-0067F8B3    jz 0x0067F8B6
+0067F8B3    jz 0x0067F8B6                                   ; => [ Call: sub_63bc30 ]
 0067F8B5    int3
-0067F8B6    call 0x0063BB00
+0067F8B6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

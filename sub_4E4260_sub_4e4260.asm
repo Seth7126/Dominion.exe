@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e4260
+// 起始地址: 0x4e4260
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E4260    push ebp
 004E4261    mov ebp, esp
 004E4263    push ecx
@@ -15,7 +21,7 @@
 004E4279    nop dword ptr ds:[eax], eax
 004E4280    mov edi, dword ptr ds:[esi]
 004E4282    mov ecx, 0x01
-004E4287    mov eax, 0x77FEA0
+004E4287    mov eax, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 004E428C    nop dword ptr ds:[eax], eax
 004E4290    mov edx, dword ptr ds:[eax]
 004E4292    cmp edi, edx
@@ -23,7 +29,7 @@
 004E4296    add eax, 0x04
 004E4299    add ecx, ecx
 004E429B    cmp eax, 0x77FEE8
-004E42A0    jnz 0x004E4290
+004E42A0    jnz 0x004E4290                                  ; => [ Data: data_77fee8 ]
 004E42A2    mov eax, dword ptr ss:[ebp-0x04]
 004E42A5    jmp 0x004E42BC
 004E42A7    mov eax, dword ptr ss:[ebp-0x04]

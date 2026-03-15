@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_476200
+// 起始地址: 0x476200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00476200    mov edx, 0x03
 00476205    mov ecx, 0x832660
-0047620A    call 0x0069F030
-0047620F    mov dword ptr ds:[0x0171D794], eax
+0047620A    call 0x0069F030                                 ; => [ String: res/card_gen/rising_sun/kitsune.texture | Call: sub_69f030 ]
+0047620F    mov dword ptr ds:[0x0171D794], eax              ; => [ Data: data_171d794 ]
 00476214    ret

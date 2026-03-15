@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5716d0
+// 起始地址: 0x5716d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005716D0    push ebp
 005716D1    mov ebp, esp
 005716D3    mov eax, dword ptr ds:[ecx+0x1504]
@@ -33,7 +39,7 @@
 00571729    push dword ptr ss:[ebp+0x0C]
 0057172C    push edi
 0057172D    push esi
-0057172E    call 0x0059F9B0
+0057172E    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 00571733    add esp, 0x24
 00571736    pop edi
 00571737    pop esi
@@ -44,10 +50,10 @@
 00571741    push 0x81F4B8
 00571746    mov edx, 0x801800
 0057174B    mov ecx, 0x81F4E4
-00571750    call 0x0063B870
+00571750    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: arg1 != 0 | Data: data_801800 | String: NotifyLog | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00571755    add esp, 0x0C
 00571758    call 0x0063BC30
 0057175D    test al, al
-0057175F    jz 0x00571762
+0057175F    jz 0x00571762                                   ; => [ Call: sub_63bc30 ]
 00571761    int3
-00571762    call 0x0063BB00
+00571762    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5121c0
+// 起始地址: 0x5121c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005121C0    push ebp
 005121C1    mov ebp, esp
 005121C3    sub esp, 0x14
@@ -7,7 +13,7 @@
 005121CA    mov dword ptr ss:[ebp-0x10], edx
 005121CD    push edi
 005121CE    mov ecx, 0x1194
-005121D3    call 0x00516F30
+005121D3    call 0x00516F30                                 ; => [ Call: sub_516f30 ]
 005121D8    mov ecx, eax
 005121DA    xor esi, esi
 005121DC    mov edi, ecx
@@ -36,7 +42,7 @@
 00512217    mov ecx, dword ptr ds:[edx+edi*4]
 0051221A    lea eax, ds:[edx+edi*4]
 0051221D    mov dword ptr ss:[ebp-0x0C], eax
-00512220    call 0x00516F30
+00512220    call 0x00516F30                                 ; => [ Call: sub_516f30 ]
 00512225    mov esi, eax
 00512227    xor ecx, ecx
 00512229    lea edx, ds:[esi+0x0C]
@@ -70,7 +76,7 @@
 0051227B    imul eax, ecx, 0x26C
 00512281    mov ecx, dword ptr ds:[eax+esi*1+0x270]
 00512288    mov edx, dword ptr ds:[eax+esi*1+0x10]
-0051228C    xor eax, eax
+0051228C    xor eax, eax                                    ; => [ Call: nullptr ]
 0051228E    test ecx, ecx
 00512290    jle 0x0051229C
 00512292    cmp dword ptr ds:[edx+eax*4], ebx

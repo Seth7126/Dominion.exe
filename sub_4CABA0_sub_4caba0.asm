@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4caba0
+// 起始地址: 0x4caba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004CABA0    dword 83EC8B55
 004CABA4    in al, 0xF8
 004CABA6    sub esp, 0x08
@@ -7,4 +13,4 @@
 004CABBB    call 0x004C9D30
 004CABC0    mov esp, ebp
 004CABC2    pop ebp
-004CABC3    ret
+004CABC3    ret                                             ; => [ Call: sub_4c9d30 ]

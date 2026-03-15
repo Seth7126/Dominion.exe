@@ -1,22 +1,28 @@
+// ============================================================
+// 函数名称: sub_6ca700
+// 起始地址: 0x6ca700
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CA700    push ebp
 006CA701    mov ebp, esp
 006CA703    push 0xFFFFFFFF
-006CA705    push 0x770A50
+006CA705    push 0x770A50                                   ; => [ Type: EHRegistrationNode | Call: sub_770a50 ]
 006CA70A    mov eax, dword ptr fs:[0x00000000]
-006CA710    push eax
+006CA710    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006CA711    sub esp, 0x4D4
 006CA717    mov eax, dword ptr ds:[0x008C4040]
-006CA71C    xor eax, ebp
+006CA71C    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 006CA71E    mov dword ptr ss:[ebp-0x10], eax
 006CA721    push ebx
 006CA722    push esi
 006CA723    push edi
 006CA724    push eax
-006CA725    lea eax, ss:[ebp-0x0C]
-006CA728    mov dword ptr fs:[0x00000000], eax
+006CA725    lea eax, ss:[ebp-0x0C]                          ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+006CA728    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006CA72E    cmp ecx, 0x27
 006CA731    jnbe 0x006CAA73
-006CA737    mov edx, dword ptr ds:[0x0147D19C]
+006CA737    mov edx, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CA73D    imul ebx, ecx, 0x4A490
 006CA743    add ebx, edx
 006CA745    cmp byte ptr ds:[ebx+0x4A48C], 0x00
@@ -72,12 +78,12 @@
 006CA829    mov ecx, dword ptr ds:[eax]
 006CA82B    mov eax, dword ptr ds:[0x01A98F58]
 006CA830    cmp eax, dword ptr ds:[ecx+0x08]
-006CA836    jle 0x006CA88D
+006CA836    jle 0x006CA88D                                  ; => [ Field: ThreadLocalStoragePointer | Data: data_1a98f58 ]
 006CA838    push 0x1A98F58
-006CA83D    call 0x0075970E
+006CA83D    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a98f58 ]
 006CA842    add esp, 0x04
 006CA845    cmp dword ptr ds:[0x01A98F58], 0xFFFFFFFF
-006CA84C    jnz 0x006CA88D
+006CA84C    jnz 0x006CA88D                                  ; => [ Data: data_1a98f58 ]
 006CA84E    lea eax, ss:[ebp-0x4E0]
 006CA854    push eax
 006CA855    call dword ptr ds:[0x007750B0]
@@ -87,18 +93,18 @@
 006CA86C    movss xmm1, dword ptr ds:[0x00890E18]
 006CA874    divss xmm1, xmm0
 006CA878    push 0x1A98F58
-006CA87D    movss dword ptr ds:[0x01A98F5C], xmm1
-006CA885    call 0x007596BD
+006CA87D    movss dword ptr ds:[0x01A98F5C], xmm1           ; => [ Data: data_1a98f5c | Call: __ultof3 ]
+006CA885    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a98f58 ]
 006CA88A    add esp, 0x04
 006CA88D    mov ecx, dword ptr ss:[ebp-0x4CC]
 006CA893    sub ecx, dword ptr ss:[ebp-0x4D0]
 006CA899    mov edx, dword ptr ss:[ebp-0x4D4]
 006CA89F    sbb edx, dword ptr ss:[ebp-0x4C8]
-006CA8A5    call 0x00761F30
+006CA8A5    call 0x00761F30                                 ; => [ Call: __ultof3 ]
 006CA8AA    mov ecx, dword ptr ds:[edi]
 006CA8AC    movaps xmm1, xmm0
 006CA8AF    mulss xmm1, dword ptr ds:[0x00891064]
-006CA8B7    mulss xmm1, dword ptr ds:[0x01A98F5C]
+006CA8B7    mulss xmm1, dword ptr ds:[0x01A98F5C]           ; => [ Data: data_1a98f5c ]
 006CA8BF    cmp ecx, 0xF9F
 006CA8C5    jnbe 0x006CA9AA
 006CA8CB    add ecx, ecx
@@ -135,19 +141,19 @@
 006CA974    jz 0x006CAA50
 006CA97A    test esi, esi
 006CA97C    jz 0x006CAA50
-006CA982    push 0x87E764
+006CA982    push 0x87E764                                   ; => [ String: ProfilerCalcFuncData ]
 006CA987    push 0x1BA
-006CA98C    mov ecx, 0x87E8BC
+006CA98C    mov ecx, 0x87E8BC                               ; => [ String: stackSize == 0 ]
 006CA991    jmp 0x006CAA82
-006CA996    push 0x87E764
+006CA996    push 0x87E764                                   ; => [ String: ProfilerCalcFuncData ]
 006CA99B    push 0x18D
-006CA9A0    mov ecx, 0x87E77C
+006CA9A0    mov ecx, 0x87E77C                               ; => [ String: stackSize < PROFILER_MAX_STACK_SIZE ]
 006CA9A5    jmp 0x006CAA82
-006CA9AA    push 0x87E764
+006CA9AA    push 0x87E764                                   ; => [ String: ProfilerCalcFuncData ]
 006CA9AF    push 0x19E
-006CA9B4    mov ecx, 0x87E808
+006CA9B4    mov ecx, 0x87E808                               ; => [ String: profileEvent->mFuncPointIndex >= 0 && profileEvent->mFuncPointIndex < PROFILER_MAX_FUNC_POINTS ]
 006CA9B9    jmp 0x006CAA82
-006CA9BE    mov eax, dword ptr ds:[0x0147D19C]
+006CA9BE    mov eax, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CA9C3    lea ecx, ds:[edx*8]
 006CA9CA    sub ecx, edx
 006CA9CC    push dword ptr ds:[eax+ecx*4+0xB9B688]
@@ -162,45 +168,45 @@
 006CA9F8    push 0x87E740
 006CA9FD    mov ecx, eax
 006CA9FF    mov dword ptr ss:[ebp-0x04], 0x00
-006CAA06    call 0x0063D7E0
+006CAA06    call 0x0063D7E0                                 ; => [ Call: sub_63d7e0 | Call: sub_63df30 | String: Mismatched profiler event '%s%s' ]
 006CAA0B    mov edx, eax
 006CAA0D    mov ecx, 0x87E868
-006CAA12    call 0x0063B870
+006CAA12    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Engine\PerfEvent.cpp | Call: sub_63b870 | String: ProfilerCalcFuncData | String: eventStart->mFuncPointIndex == profileEvent->mFuncPointIndex ]
 006CAA17    add esp, 0x0C
 006CAA1A    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 006CAA21    lea ecx, ss:[ebp-0x4C8]
-006CAA27    call 0x0063D770
+006CAA27    call 0x0063D770                                 ; => [ Call: sub_63d770 ]
 006CAA2C    jmp 0x006CAA94
-006CAA2E    push 0x87E764
+006CAA2E    push 0x87E764                                   ; => [ String: ProfilerCalcFuncData ]
 006CAA33    push 0x195
-006CAA38    mov ecx, 0x87E7F8
+006CAA38    mov ecx, 0x87E7F8                               ; => [ String: stackSize > 0 ]
 006CAA3D    jmp 0x006CAA82
-006CAA3F    push 0x87E764
+006CAA3F    push 0x87E764                                   ; => [ String: ProfilerCalcFuncData ]
 006CAA44    push 0x1B4
-006CAA49    mov ecx, 0x801AA4
+006CAA49    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006CAA4E    jmp 0x006CAA82
 006CAA50    mov byte ptr ds:[ebx+0x4A48C], 0x01
 006CAA57    mov ecx, dword ptr ss:[ebp-0x0C]
-006CAA5A    mov dword ptr fs:[0x00000000], ecx
+006CAA5A    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006CAA61    pop ecx
 006CAA62    pop edi
 006CAA63    pop esi
 006CAA64    pop ebx
 006CAA65    mov ecx, dword ptr ss:[ebp-0x10]
 006CAA68    xor ecx, ebp
-006CAA6A    call 0x0075927A
+006CAA6A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006CAA6F    mov esp, ebp
 006CAA71    pop ebp
 006CAA72    ret
-006CAA73    push 0x87E764
+006CAA73    push 0x87E764                                   ; => [ String: ProfilerCalcFuncData ]
 006CAA78    push 0x170
-006CAA7D    mov ecx, 0x87E7A0
+006CAA7D    mov ecx, 0x87E7A0                               ; => [ String: frameIndex >= 0 && frameIndex < PROFILER_MAX_FRAMES ]
 006CAA82    push 0x87E740
 006CAA87    mov edx, 0x801800
-006CAA8C    call 0x0063B870
+006CAA8C    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Engine\PerfEvent.cpp | Call: sub_63b870 | Data: data_801800 | String: ProfilerCalcFuncData ]
 006CAA91    add esp, 0x0C
 006CAA94    call 0x0063BC30
 006CAA99    test al, al
-006CAA9B    jz 0x006CAA9E
+006CAA9B    jz 0x006CAA9E                                   ; => [ Call: sub_63bc30 ]
 006CAA9D    int3
-006CAA9E    call 0x0063BB00
+006CAA9E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

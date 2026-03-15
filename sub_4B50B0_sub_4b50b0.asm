@@ -1,16 +1,22 @@
+// ============================================================
+// 函数名称: sub_4b50b0
+// 起始地址: 0x4b50b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B50B0    push ebp
 004B50B1    mov ebp, esp
 004B50B3    and esp, 0xFFFFFFF8
 004B50B6    sub esp, 0x0C
 004B50B9    push esi
 004B50BA    mov esi, ecx
-004B50BC    mov ecx, dword ptr ds:[0x00CC8D5C]
+004B50BC    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B50C2    test ecx, ecx
 004B50C4    jz 0x004B510D
 004B50C6    lea eax, ss:[esp+0x08]
 004B50CA    add ecx, 0x507C
 004B50D0    push eax
-004B50D1    call 0x004BAD70
+004B50D1    call 0x004BAD70                                 ; => [ Call: sub_4bad70 ]
 004B50D6    mov eax, dword ptr ss:[esp+0x0C]
 004B50DA    cmp eax, 0xFFFFFFFF
 004B50DD    jz 0x004B50FB
@@ -20,7 +26,7 @@
 004B50E4    mov ecx, dword ptr ss:[esp+0x08]
 004B50E8    lea eax, ss:[esp+0x0C]
 004B50EC    push eax
-004B50ED    call 0x004BAF10
+004B50ED    call 0x004BAF10                                 ; => [ Call: sub_4baf10 ]
 004B50F2    mov eax, dword ptr ss:[esp+0x0C]
 004B50F6    cmp eax, 0xFFFFFFFF
 004B50F9    jnz 0x004B50E0
@@ -39,10 +45,10 @@
 004B5114    push 0x77EB50
 004B5119    mov edx, 0x801800
 004B511E    mov ecx, 0x77EB9C
-004B5123    call 0x0063B870
+004B5123    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004B5128    add esp, 0x0C
 004B512B    call 0x0063BC30
 004B5130    test al, al
-004B5132    jz 0x004B5135
+004B5132    jz 0x004B5135                                   ; => [ Call: sub_63bc30 ]
 004B5134    int3
-004B5135    call 0x0063BB00
+004B5135    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

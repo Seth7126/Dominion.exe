@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5aa1e0
+// 起始地址: 0x5aa1e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AA1E0    push ebp
 005AA1E1    mov ebp, esp
 005AA1E3    sub esp, 0x74
@@ -9,11 +15,11 @@
 005AA1F6    mov edi, ecx
 005AA1F8    mov dword ptr ss:[ebp-0x20], edx
 005AA1FB    mov dword ptr ss:[ebp-0x08], edi
-005AA1FE    mov dword ptr ss:[ebp-0x1C], eax
+005AA1FE    mov dword ptr ss:[ebp-0x1C], eax                ; => [ Data: data_8d2fcc ]
 005AA201    call 0x004AC580
 005AA206    movss xmm1, dword ptr ds:[0x00890D08]
 005AA20E    lea esi, ds:[edi+0x10]
-005AA211    divss xmm1, xmm0
+005AA211    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 005AA215    mov eax, 0xFFFFFFF0
 005AA21A    mov dword ptr ss:[ebp-0x04], 0xEFFC0
 005AA221    sub eax, edi
@@ -49,12 +55,12 @@
 005AA2AE    add esp, 0x04
 005AA2B1    xorps xmm3, xmm3
 005AA2B4    test al, al
-005AA2B6    jnz 0x005AA74A
+005AA2B6    jnz 0x005AA74A                                  ; => [ Call: sub_5a11b0 ]
 005AA2BC    mov eax, dword ptr ss:[ebp-0x24]
 005AA2BF    xor edx, edx
 005AA2C1    add eax, ebx
-005AA2C3    xorps xmm5, xmm5
-005AA2C6    xorps xmm6, xmm6
+005AA2C3    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+005AA2C6    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 005AA2C9    movq xmm0, qword ptr ds:[eax+esi*1]
 005AA2CE    mov eax, dword ptr ds:[eax+esi*1+0x08]
 005AA2D2    mov dword ptr ss:[ebp-0x68], eax
@@ -109,7 +115,7 @@
 005AA391    call 0x004AE0B0
 005AA396    movss xmm1, dword ptr ds:[0x00890D3C]
 005AA39E    comiss xmm1, xmm0
-005AA3A1    jnbe 0x005AA74A
+005AA3A1    jnbe 0x005AA74A                                 ; => [ Call: sub_4ae0b0 ]
 005AA3A7    mov esi, dword ptr ss:[ebp-0x08]
 005AA3AA    mov edi, dword ptr ds:[edi]
 005AA3AC    push 0x5851F42D
@@ -117,7 +123,7 @@
 005AA3B6    mov esi, dword ptr ds:[esi+0x04]
 005AA3B9    push esi
 005AA3BA    push edi
-005AA3BB    call 0x007621D0
+005AA3BB    call 0x007621D0                                 ; => [ Call: __allmul ]
 005AA3C0    mov ecx, dword ptr ss:[ebp-0x08]
 005AA3C3    movss xmm0, dword ptr ss:[ebp-0x10]
 005AA3C8    cvtps2pd xmm0, xmm0
@@ -143,13 +149,13 @@
 005AA3FE    and eax, 0x7FFFFF
 005AA403    or eax, 0x3F800000
 005AA408    mov dword ptr ss:[ebp-0x2C], eax
-005AA40B    call 0x00762386
+005AA40B    call 0x00762386                                 ; => [ Call: _libm_sse2_atan_precise ]
 005AA410    xorps xmm1, xmm1
 005AA413    cvtsd2ss xmm1, xmm0
 005AA417    movss xmm0, dword ptr ss:[ebp-0x18]
 005AA41C    divss xmm0, dword ptr ds:[0x00890FF0]
 005AA424    movss dword ptr ss:[ebp-0x28], xmm1
-005AA429    call 0x004EA090
+005AA429    call 0x004EA090                                 ; => [ Call: sub_4ea090 ]
 005AA42E    movss xmm7, dword ptr ds:[0x00890E18]
 005AA436    movaps xmm4, xmm0
 005AA439    movss xmm0, dword ptr ss:[ebp-0x28]
@@ -173,11 +179,11 @@
 005AA489    movaps xmm1, xmm7
 005AA48C    addss xmm1, xmm7
 005AA490    comiss xmm0, xmm1
-005AA493    jbe 0x005AA629
+005AA493    jbe 0x005AA629                                  ; => [ Call: sub_4ae0b0 ]
 005AA499    divss xmm2, xmm7
 005AA49D    movaps xmm0, xmm2
 005AA4A0    call 0x004AE0B0
-005AA4A5    call 0x004D5CB0
+005AA4A5    call 0x004D5CB0                                 ; => [ Call: sub_4ae0b0 | Call: sub_4d5cb0 ]
 005AA4AA    xorps xmm3, xmm3
 005AA4AD    comiss xmm3, xmm0
 005AA4B0    jbe 0x005AA4BC
@@ -204,12 +210,12 @@
 005AA50A    xorps xmm1, xmm1
 005AA50D    mov ecx, edi
 005AA50F    call 0x005A3580
-005AA514    mulss xmm0, dword ptr ss:[ebp-0x14]
+005AA514    mulss xmm0, dword ptr ss:[ebp-0x14]             ; => [ String: 0 | String: zx | Call: sub_5a3580 ]
 005AA519    xorps xmm1, xmm1
 005AA51C    mov ecx, edi
 005AA51E    movss xmm2, dword ptr ds:[0x00890E18]
 005AA526    movss dword ptr ss:[ebp-0x2C], xmm0
-005AA52B    call 0x005A3580
+005AA52B    call 0x005A3580                                 ; => [ String: 0 | String: zx | Call: sub_5a3580 ]
 005AA530    movss xmm1, dword ptr ss:[ebp-0x2C]
 005AA535    mulss xmm0, dword ptr ss:[ebp-0x14]
 005AA53A    addss xmm1, dword ptr ds:[ebx]
@@ -253,7 +259,7 @@
 005AA5DA    jnbe 0x005AA618
 005AA5DC    comiss xmm0, xmm5
 005AA5DF    jnbe 0x005AA618
-005AA5E1    push dword ptr ds:[0x0171ECD8]
+005AA5E1    push dword ptr ds:[0x0171ECD8]                  ; => [ Data: data_171ecd8 ]
 005AA5E7    lea eax, ss:[ebp-0x1C]
 005AA5EA    push dword ptr ds:[0x0171D8E0]
 005AA5F0    lea edx, ss:[ebp-0x40]
@@ -262,7 +268,7 @@
 005AA5FB    push eax
 005AA5FC    push ecx
 005AA5FD    lea ecx, ss:[ebp-0x48]
-005AA600    call 0x005A93D0
+005AA600    call 0x005A93D0                                 ; => [ Call: sub_5a93d0 | Data: data_171d8e0 ]
 005AA605    movss xmm6, dword ptr ds:[0x00890EB0]
 005AA60D    add esp, 0x14
 005AA610    movss xmm5, dword ptr ds:[0x00890E00]
@@ -311,7 +317,7 @@
 005AA6C9    jnbe 0x005AA707
 005AA6CB    comiss xmm0, xmm5
 005AA6CE    jnbe 0x005AA707
-005AA6D0    push dword ptr ds:[0x0171ECD8]
+005AA6D0    push dword ptr ds:[0x0171ECD8]                  ; => [ Data: data_171ecd8 ]
 005AA6D6    lea eax, ss:[ebp-0x1C]
 005AA6D9    push dword ptr ds:[0x0171D8E0]
 005AA6DF    lea edx, ss:[ebp-0x50]
@@ -320,7 +326,7 @@
 005AA6EA    push eax
 005AA6EB    push ecx
 005AA6EC    lea ecx, ss:[ebp-0x58]
-005AA6EF    call 0x005A93D0
+005AA6EF    call 0x005A93D0                                 ; => [ Call: sub_5a93d0 | Data: data_171d8e0 ]
 005AA6F4    movss xmm5, dword ptr ds:[0x00890E00]
 005AA6FC    add esp, 0x14
 005AA6FF    movss xmm6, dword ptr ds:[0x00890EB0]

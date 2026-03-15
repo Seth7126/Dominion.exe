@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_724580
+// 起始地址: 0x724580
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00724580    push ebx
 00724581    push esi
 00724582    push edi
@@ -8,12 +14,12 @@
 0072459B    mov byte ptr ds:[edi+0x47C4], 0xFF
 007245A2    call 0x00722720
 007245A7    cmp al, 0xD8
-007245A9    jnz 0x00724675
+007245A9    jnz 0x00724675                                  ; => [ Call: sub_722720 ]
 007245AF    cmp ebx, 0x01
 007245B2    jz 0x0072466C
 007245B8    mov ecx, edi
 007245BA    call 0x00722720
-007245BF    movzx ecx, al
+007245BF    movzx ecx, al                                   ; => [ Call: sub_722720 ]
 007245C2    cmp ecx, 0xC0
 007245C8    jz 0x00724648
 007245CA    nop word ptr ds:[eax+eax*1], ax
@@ -25,10 +31,10 @@
 007245E2    mov ecx, edi
 007245E4    call 0x007232B0
 007245E9    test eax, eax
-007245EB    jz 0x00724675
+007245EB    jz 0x00724675                                   ; => [ Call: sub_7232b0 ]
 007245F1    mov ecx, edi
 007245F3    call 0x00722720
-007245F8    movzx ecx, al
+007245F8    movzx ecx, al                                   ; => [ Call: sub_722720 ]
 007245FB    cmp ecx, 0xFF
 00724601    jnz 0x00724640
 00724603    mov esi, dword ptr ds:[edi]
@@ -47,7 +53,7 @@
 0072462C    jnb 0x00724675
 0072462E    mov ecx, edi
 00724630    call 0x00722720
-00724635    movzx ecx, al
+00724635    movzx ecx, al                                   ; => [ Call: sub_722720 ]
 00724638    cmp ecx, 0xFF
 0072463E    jz 0x00724603
 00724640    cmp ecx, 0xC0
@@ -58,7 +64,7 @@
 00724652    mov ecx, edi
 00724654    setz al
 00724657    mov dword ptr ds:[edi+0x47CC], eax
-0072465D    call 0x00723FC0
+0072465D    call 0x00723FC0                                 ; => [ Call: sub_723fc0 ]
 00724662    neg eax
 00724664    pop edi
 00724665    sbb eax, eax

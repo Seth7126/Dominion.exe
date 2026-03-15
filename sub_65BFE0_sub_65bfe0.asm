@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_65bfe0
+// 起始地址: 0x65bfe0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065BFE0    push ebp
 0065BFE1    mov ebp, esp
 0065BFE3    sub esp, 0x3C
-0065BFE6    mov eax, dword ptr ds:[0x008C4040]
+0065BFE6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0065BFEB    xor eax, ebp
 0065BFED    mov dword ptr ss:[ebp-0x04], eax
 0065BFF0    mov eax, dword ptr ds:[0x0147ABE8]
@@ -15,7 +21,7 @@
 0065C004    lea ecx, ss:[ebp-0x38]
 0065C007    push ecx
 0065C008    lea ecx, ds:[edi+0x14]
-0065C00B    call 0x0064C550
+0065C00B    call 0x0064C550                                 ; => [ Call: sub_64c550 | Data: data_147abe8 ]
 0065C010    movss xmm1, dword ptr ds:[eax+0x08]
 0065C015    subss xmm1, dword ptr ds:[eax]
 0065C019    movss xmm2, dword ptr ds:[eax+0x0C]
@@ -101,7 +107,7 @@
 0065C1AC    push dword ptr ss:[ebp-0x10]
 0065C1AF    push dword ptr ss:[ebp-0x14]
 0065C1B2    push eax
-0065C1B3    call 0x00655800
+0065C1B3    call 0x00655800                                 ; => [ Call: sub_655800 ]
 0065C1B8    mov ecx, dword ptr ss:[ebp-0x04]
 0065C1BB    add esp, 0x0C
 0065C1BE    xor ecx, ebp
@@ -121,11 +127,11 @@
 0065C202    mulss xmm1, xmm0
 0065C206    pop esi
 0065C207    mulss xmm2, dword ptr ds:[0x00CF65EC]
-0065C20F    mulss xmm1, dword ptr ds:[0x00CF65EC]
-0065C217    movss dword ptr ds:[ebx], xmm2
+0065C20F    mulss xmm1, dword ptr ds:[0x00CF65EC]           ; => [ Data: data_cf65e0 ]
+0065C217    movss dword ptr ds:[ebx], xmm2                  ; => [ Data: data_cf65e0 ]
 0065C21B    movss dword ptr ds:[ebx+0x04], xmm1
 0065C220    pop ebx
-0065C221    call 0x0075927A
+0065C221    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0065C226    mov esp, ebp
 0065C228    pop ebp
 0065C229    ret

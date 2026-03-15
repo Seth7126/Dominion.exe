@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6aa0d0
+// 起始地址: 0x6aa0d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AA0D0    push ebx
 006AA0D1    push esi
 006AA0D2    push edi
@@ -9,7 +15,7 @@
 006AA0E1    jz 0x006AA107
 006AA0E3    mov ebx, dword ptr ds:[0x00775688]
 006AA0E9    lea edi, ds:[eax+0x01]
-006AA0EC    mov esi, 0x800258
+006AA0EC    mov esi, 0x800258                               ; => [ Data: data_800258 ]
 006AA0F1    push edi
 006AA0F2    push dword ptr ds:[esi+0x04]
 006AA0F5    call ebx

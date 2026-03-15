@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5ded20
+// 起始地址: 0x5ded20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005DED20    push ebp
 005DED21    mov ebp, esp
 005DED23    and esp, 0xFFFFFFF8
-005DED26    mov eax, dword ptr ds:[0x00CF65B8]
+005DED26    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 005DED2B    xorps xmm1, xmm1
 005DED2E    movd xmm2, dword ptr ds:[eax+0x14]
 005DED33    movd xmm0, dword ptr ds:[eax+0x18]

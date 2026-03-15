@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6419c0
+// 起始地址: 0x6419c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006419C0    push ebp
 006419C1    mov ebp, esp
 006419C3    push ecx
@@ -5,7 +11,7 @@
 006419C8    push esi
 006419C9    movss dword ptr ss:[ebp-0x04], xmm1
 006419CE    jnz 0x00641A0E
-006419D0    call 0x005AF880
+006419D0    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006419D5    movss xmm1, dword ptr ss:[ebp-0x04]
 006419DA    mov ecx, dword ptr ds:[eax+0x38]
 006419DD    mov esi, dword ptr ds:[ecx+0x14]
@@ -29,10 +35,10 @@
 00641A18    push 0x8720A4
 00641A1D    mov edx, 0x801800
 00641A22    mov ecx, 0x87233C
-00641A27    call 0x0063B870
+00641A27    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: TTFontGet | Data: data_801800 | String: C:\x\ax2017\Engine\TTFont.cpp | String: ttf->assetType == ASSET_TYPE_TRUETYPE ]
 00641A2C    add esp, 0x0C
 00641A2F    call 0x0063BC30
 00641A34    test al, al
-00641A36    jz 0x00641A39
+00641A36    jz 0x00641A39                                   ; => [ Call: sub_63bc30 ]
 00641A38    int3
-00641A39    call 0x0063BB00
+00641A39    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

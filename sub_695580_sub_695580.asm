@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_695580
+// 起始地址: 0x695580
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00695580    push ebp
 00695581    mov ebp, esp
 00695583    sub esp, 0x10
@@ -64,14 +70,14 @@
 00695623    jnz 0x0069562E
 00695625    mov ecx, esi
 00695627    call 0x006B7EF0
-0069562C    mov edx, eax
+0069562C    mov edx, eax                                    ; => [ Call: sub_6b7ef0 ]
 0069562E    mov ecx, esi
 00695630    call 0x0069F030
 00695635    mov ecx, dword ptr ss:[ebp-0x0C]
-00695638    mov dword ptr ds:[ecx], eax
+00695638    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_69f030 | Call: sub_69f030 ]
 0069563A    jmp 0x006957FC
 0069563F    mov ecx, eax
-00695641    call 0x0069C520
+00695641    call 0x0069C520                                 ; => [ Call: sub_69c520 ]
 00695646    test al, al
 00695648    jnz 0x006956A8
 0069564A    mov eax, dword ptr ds:[esi+0x0C]
@@ -90,10 +96,10 @@
 00695680    jz 0x006957FC
 00695686    cmp eax, 0x03
 00695689    jz 0x006957FC
-0069568F    push 0x878888
+0069568F    push 0x878888                                   ; => [ String: DefBinShallowDefTypeFixup ]
 00695694    push 0x147
-00695699    mov edx, 0x8788DC
-0069569E    mov ecx, 0x874B64
+00695699    mov edx, 0x8788DC                               ; => [ String: Unable to fixup data type ]
+0069569E    mov ecx, 0x874B64                               ; => [ String: HaltMsg ]
 006956A3    jmp 0x00695841
 006956A8    cmp edi, 0x11
 006956AB    jz 0x0069585D
@@ -107,7 +113,7 @@
 006956C2    push dword ptr ds:[eax+ebx*1]
 006956C5    push dword ptr ss:[ebp+0x0C]
 006956C8    push esi
-006956C9    call 0x006952C0
+006956C9    call 0x006952C0                                 ; => [ Call: sub_6952c0 ]
 006956CE    jmp 0x00695760
 006956D3    cmp edi, 0x06
 006956D6    jnz 0x006956E7
@@ -157,7 +163,7 @@
 00695755    push esi
 00695756    push 0x01
 00695758    mov ecx, dword ptr ss:[ebp-0x04]
-0069575B    call 0x006950C0
+0069575B    call 0x006950C0                                 ; => [ Call: nullptr | Call: sub_6950c0 ]
 00695760    add esp, 0x10
 00695763    test al, al
 00695765    jnz 0x006957FC
@@ -178,7 +184,7 @@
 00695785    call 0x00695390
 0069578A    add esp, 0x0C
 0069578D    test al, al
-0069578F    jz 0x0069576B
+0069578F    jz 0x0069576B                                   ; => [ Call: sub_695390 ]
 00695791    jmp 0x006957FC
 00695793    mov ecx, dword ptr ss:[ebp-0x0C]
 00695796    mov eax, dword ptr ds:[ecx+0x10]
@@ -202,7 +208,7 @@
 006957C3    call 0x00695870
 006957C8    add esp, 0x0C
 006957CB    test al, al
-006957CD    jz 0x0069576B
+006957CD    jz 0x0069576B                                   ; => [ Call: sub_695870 ]
 006957CF    jmp 0x006957FC
 006957D1    mov eax, dword ptr ds:[esi]
 006957D3    mov edx, dword ptr ds:[eax+ebx*1]
@@ -234,23 +240,23 @@
 00695811    mov esp, ebp
 00695813    pop ebp
 00695814    ret
-00695815    push 0x87943C
+00695815    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 0069581A    push 0x6D
-0069581C    push 0x879400
-00695821    mov edx, 0x801800
-00695826    mov ecx, 0x87948C
+0069581C    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+00695821    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+00695826    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 0069582B    jmp 0x00695846
-0069582D    push 0x878B4C
+0069582D    push 0x878B4C                                   ; => [ String: DefBinReadFixupField ]
 00695832    push 0x416
-00695837    mov edx, 0x801800
-0069583C    mov ecx, 0x878B2C
-00695841    push 0x878868
-00695846    call 0x0063B870
+00695837    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+0069583C    mov ecx, 0x878B2C                               ; => [ String: !DefTypeIsBuiltIn(pFieldDefMap) ]
+00695841    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp ]
+00695846    call 0x0063B870                                 ; => [ Call: sub_63b870 ]
 0069584B    add esp, 0x0C
 0069584E    call 0x0063BC30
 00695853    test al, al
-00695855    jz 0x00695858
+00695855    jz 0x00695858                                   ; => [ Call: sub_63bc30 ]
 00695857    int3
-00695858    call 0x0063BB00
+00695858    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 0069585D    sub esp, 0x0C
-00695860    call 0x00695290
+00695860    call 0x00695290                                 ; => [ Call: sub_695290 ]

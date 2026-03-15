@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69d590
+// 起始地址: 0x69d590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069D590    push ebx
 0069D591    mov ebx, ecx
 0069D593    push esi
@@ -13,7 +19,7 @@
 0069D5AD    xor eax, edx
 0069D5AF    shr edx, 0x08
 0069D5B2    movzx eax, al
-0069D5B5    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+0069D5B5    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D5BC    sub edi, 0x01
 0069D5BF    jnz 0x0069D5A7
 0069D5C1    mov ecx, esi
@@ -29,7 +35,7 @@
 0069D5D7    xor eax, edx
 0069D5D9    shr edx, 0x08
 0069D5DC    movzx eax, al
-0069D5DF    xor edx, dword ptr ds:[eax*4+0x7FFD70]
+0069D5DF    xor edx, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D5E6    sub ecx, 0x01
 0069D5E9    jnz 0x0069D5D1
 0069D5EB    mov esi, dword ptr ds:[ebx+0x0C]

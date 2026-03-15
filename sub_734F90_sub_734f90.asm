@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_734f90
+// 起始地址: 0x734f90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00734F90    push ebp
 00734F91    mov ebp, esp
 00734F93    sub esp, 0x34
@@ -21,7 +27,7 @@
 00734FC4    mov eax, dword ptr ss:[ebp-0x0C]
 00734FC7    mov esi, ecx
 00734FC9    mov dword ptr ss:[ebp-0x08], ebx
-00734FCC    mov dword ptr ss:[ebp-0x04], 0x00
+00734FCC    mov dword ptr ss:[ebp-0x04], 0x00               ; => [ Call: nullptr ]
 00734FD3    mov dword ptr ss:[ebp-0x34], edi
 00734FD6    mov ecx, dword ptr ds:[eax]
 00734FD8    add eax, 0x10
@@ -44,7 +50,7 @@
 00735007    movzx eax, cx
 0073500A    push edi
 0073500B    push eax
-0073500C    call 0x00734EB0
+0073500C    call 0x00734EB0                                 ; => [ Call: sub_734eb0 ]
 00735011    add esp, 0x0C
 00735014    mov ecx, eax
 00735016    cmp dword ptr ss:[ebp-0x08], 0x00
@@ -127,7 +133,7 @@
 007350EA    push edx
 007350EB    push ebx
 007350EC    mov edx, ecx
-007350EE    call 0x00734EB0
+007350EE    call 0x00734EB0                                 ; => [ Call: sub_734eb0 ]
 007350F3    mov ecx, dword ptr ss:[ebp+0x0C]
 007350F6    add esp, 0x0C
 007350F9    add ecx, eax

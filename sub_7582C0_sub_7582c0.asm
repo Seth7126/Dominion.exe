@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_7582c0
+// 起始地址: 0x7582c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007582C0    push ebp
 007582C1    mov ebp, esp
 007582C3    push esi
 007582C4    mov esi, ecx
 007582C6    push edi
 007582C7    xor edi, edi
-007582C9    mov dword ptr ds:[esi], 0x890A58
+007582C9    mov dword ptr ds:[esi], 0x890A58                ; => [ Data: data_890a58 ]
 007582CF    cmp dword ptr ds:[esi+0x788], edi
 007582D5    jle 0x007582FA
 007582D7    push ebx
@@ -19,12 +25,12 @@
 007582F7    jl 0x007582E0
 007582F9    pop ebx
 007582FA    mov ecx, esi
-007582FC    call 0x0075F040
+007582FC    call 0x0075F040                                 ; => [ Call: sub_75f040 ]
 00758301    test byte ptr ss:[ebp+0x08], 0x01
 00758305    jz 0x00758315
 00758307    push 0x7A0
 0075830C    push esi
-0075830D    call 0x00759661
+0075830D    call 0x00759661                                 ; => [ Call: operator new ]
 00758312    add esp, 0x08
 00758315    pop edi
 00758316    mov eax, esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571fa0
+// 起始地址: 0x571fa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571FA0    push ebp
 00571FA1    mov ebp, esp
 00571FA3    mov eax, dword ptr ss:[ebp+0x0C]
@@ -14,15 +20,15 @@
 00571FBE    jnz 0x00571FD8
 00571FC0    test esi, esi
 00571FC2    jnz 0x00571FD8
-00571FC4    push 0x81F89C
+00571FC4    push 0x81F89C                                   ; => [ String: AddTokens ]
 00571FC9    push 0x271
-00571FCE    mov ecx, 0x81F8A8
+00571FCE    mov ecx, 0x81F8A8                               ; => [ String: who != PLAYER_NONE || where != CW_NONE ]
 00571FD3    jmp 0x00572294
 00571FD8    cmp esi, 0x476
 00571FDE    jnz 0x00571FF2
 00571FE0    cmp ebx, 0xFFFFFFFF
 00571FE3    jnz 0x00571FED
-00571FE5    call 0x00591930
+00571FE5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00571FEA    mov eax, dword ptr ss:[ebp+0x0C]
 00571FED    mov esi, 0x3F1
 00571FF2    test eax, eax
@@ -33,19 +39,19 @@
 00571FFD    push dword ptr ss:[ebp+0x14]
 00572000    push esi
 00572001    push dword ptr ss:[ebp+0x08]
-00572004    call 0x00571F30
+00572004    call 0x00571F30                                 ; => [ Call: sub_571f30 ]
 00572009    mov esi, eax
 0057200B    add esp, 0x14
 0057200E    cmp esi, 0xFFFFFFFF
 00572011    jnz 0x00572018
-00572013    call 0x00591930
+00572013    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572018    push dword ptr ss:[ebp+0x28]
 0057201B    mov ecx, dword ptr ss:[ebp+0x0C]
 0057201E    mov edx, esi
 00572020    push dword ptr ss:[ebp+0x20]
 00572023    push ecx
 00572024    mov ecx, edi
-00572026    call 0x00571CB0
+00572026    call 0x00571CB0                                 ; => [ Call: sub_571cb0 ]
 0057202B    add esp, 0x0C
 0057202E    jmp 0x0057226E
 00572033    mov eax, dword ptr ss:[ebp+0x08]
@@ -77,7 +83,7 @@
 00572089    push dword ptr ss:[ebp+0x14]
 0057208C    push esi
 0057208D    push eax
-0057208E    call 0x00571F30
+0057208E    call 0x00571F30                                 ; => [ Call: sub_571f30 ]
 00572093    add esp, 0x14
 00572096    mov ecx, edi
 00572098    cmp eax, 0xFFFFFFFF
@@ -88,7 +94,7 @@
 005720A9    push dword ptr ss:[ebp+0x14]
 005720AC    push esi
 005720AD    push dword ptr ss:[ebp+0x08]
-005720B0    call 0x00571DA0
+005720B0    call 0x00571DA0                                 ; => [ Call: sub_571da0 ]
 005720B5    add esp, 0x1C
 005720B8    cmp esi, 0x3F1
 005720BE    jnz 0x0057213A
@@ -122,7 +128,7 @@
 00572128    push 0x0B
 0057212A    push edx
 0057212B    mov edx, eax
-0057212D    call 0x0059F9B0
+0057212D    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00572132    add esp, 0x24
 00572135    jmp 0x0057226E
 0057213A    mov ecx, dword ptr ss:[ebp+0x08]
@@ -158,7 +164,7 @@
 005721A3    movzx esi, ax
 005721A6    cmp esi, 0x320
 005721AC    jb 0x005721B6
-005721AE    call 0x00591930
+005721AE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005721B3    mov ecx, dword ptr ss:[ebp+0x08]
 005721B6    mov edx, dword ptr ss:[ebp-0x04]
 005721B9    cmp edx, 0xFFFFFFFF
@@ -177,7 +183,7 @@
 005721E1    push 0x00
 005721E3    push dword ptr ss:[ebp+0x20]
 005721E6    push ebx
-005721E7    call 0x00571CB0
+005721E7    call 0x00571CB0                                 ; => [ Call: sub_571cb0 ]
 005721EC    add esp, 0x0C
 005721EF    cmp esi, 0x3F1
 005721F5    jz 0x0057226E
@@ -202,7 +208,7 @@
 0057222F    movzx esi, ax
 00572232    cmp esi, 0x320
 00572238    jb 0x00572242
-0057223A    call 0x00591930
+0057223A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057223F    mov ecx, dword ptr ss:[ebp+0x08]
 00572242    mov edx, dword ptr ss:[ebp-0x04]
 00572245    cmp edx, 0xFFFFFFFF
@@ -219,27 +225,27 @@
 00572260    push edx
 00572261    mov edx, dword ptr ss:[ebp-0x08]
 00572264    mov ecx, edi
-00572266    call 0x005716D0
+00572266    call 0x005716D0                                 ; => [ Call: nullptr | Call: sub_5716d0 ]
 0057226B    add esp, 0x20
 0057226E    cmp dword ptr ss:[ebp+0x08], 0x601
 00572275    jnz 0x0057227E
 00572277    mov ecx, edi
-00572279    call 0x00583350
+00572279    call 0x00583350                                 ; => [ Call: sub_583350 ]
 0057227E    pop edi
 0057227F    pop esi
 00572280    pop ebx
 00572281    mov esp, ebp
 00572283    pop ebp
 00572284    ret
-00572285    push 0x81FC88
-0057228A    mov ecx, 0x81FC98
+00572285    push 0x81FC88                                   ; => [ String: BoardPileWhat ]
+0057228A    mov ecx, 0x81FC98                               ; => [ String: where >= CW_BOARD_STANDARD_START && where < END_BOARD_PILES ]
 0057228F    push 0x1118
 00572294    push 0x81F4B8
 00572299    mov edx, 0x801800
-0057229E    call 0x0063B870
+0057229E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 005722A3    add esp, 0x0C
 005722A6    call 0x0063BC30
 005722AB    test al, al
-005722AD    jz 0x005722B0
+005722AD    jz 0x005722B0                                   ; => [ Call: sub_63bc30 ]
 005722AF    int3
-005722B0    call 0x0063BB00
+005722B0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

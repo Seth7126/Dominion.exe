@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a1470
+// 起始地址: 0x6a1470
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A1470    push ebp
 006A1471    mov ebp, esp
 006A1473    sub esp, 0x08
@@ -8,7 +14,7 @@
 006A147D    push edi
 006A147E    cmp dword ptr ds:[esi+0x04], 0x03
 006A1482    jnz 0x006A164E
-006A1488    call 0x005AF880
+006A1488    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006A148D    mov edi, dword ptr ds:[eax]
 006A148F    test edi, edi
 006A1491    jz 0x006A14CD
@@ -18,18 +24,18 @@
 006A149A    cmp dword ptr ds:[edi+0x30], 0x01
 006A149E    jnz 0x006A14D6
 006A14A0    mov eax, dword ptr ds:[esi+0x20]
-006A14A3    mov ecx, 0x801800
+006A14A3    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A14A8    test eax, eax
 006A14AA    cmovnz ecx, eax
 006A14AD    push ecx
-006A14AE    push 0x87A1D0
-006A14B3    call 0x0063B5F0
+006A14AE    push 0x87A1D0                                   ; => [ String: reimporting atlased font texture %s ]
+006A14B3    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 ]
 006A14B8    mov ecx, esi
 006A14BA    call 0x0069EC60
 006A14BF    push 0x00
 006A14C1    mov dl, 0x01
 006A14C3    mov ecx, esi
-006A14C5    call 0x0069F4A0
+006A14C5    call 0x0069F4A0                                 ; => [ Call: sub_69f4a0 | Call: sub_69ec60 ]
 006A14CA    add esp, 0x0C
 006A14CD    xor al, al
 006A14CF    pop edi
@@ -41,16 +47,16 @@
 006A14D6    cmp dword ptr ds:[ecx+0x04], 0x03
 006A14DA    jnz 0x006A164E
 006A14E0    call 0x005AF880
-006A14E5    mov ebx, dword ptr ds:[eax]
+006A14E5    mov ebx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006A14E7    mov eax, dword ptr ds:[edi+0x30]
 006A14EA    cmp eax, dword ptr ds:[ebx+0x30]
 006A14ED    jz 0x006A1504
 006A14EF    mov eax, dword ptr ds:[esi+0x20]
-006A14F2    mov ecx, 0x801800
+006A14F2    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A14F7    test eax, eax
 006A14F9    cmovnz ecx, eax
 006A14FC    push ecx
-006A14FD    push 0x87A2A0
+006A14FD    push 0x87A2A0                                   ; => [ String: didn't find asset in atlas forcing a reimport %s ]
 006A1502    jmp 0x006A14B3
 006A1504    mov eax, dword ptr ds:[ebx]
 006A1506    xorps xmm0, xmm0
@@ -67,7 +73,7 @@
 006A1534    mov eax, dword ptr ds:[ebx+0x04]
 006A1537    cvtsi2ss xmm3, edx
 006A153B    cvtpd2ps xmm0, xmm0
-006A153F    divss xmm1, xmm0
+006A153F    divss xmm1, xmm0                                ; => [ Data: data_893660 ]
 006A1543    xorps xmm0, xmm0
 006A1546    cvtsi2sd xmm0, eax
 006A154A    shr eax, 0x1F
@@ -75,7 +81,7 @@
 006A1551    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 006A155A    mov eax, dword ptr ds:[edi]
 006A155C    cvtpd2ps xmm0, xmm0
-006A1560    divss xmm2, xmm0
+006A1560    divss xmm2, xmm0                                ; => [ Data: data_893660 ]
 006A1564    xorps xmm0, xmm0
 006A1567    cvtsi2sd xmm0, eax
 006A156B    shr eax, 0x1F
@@ -95,7 +101,7 @@
 006A159C    mulss xmm4, xmm1
 006A15A0    addsd xmm0, qword ptr ds:[eax*8+0x893660]
 006A15A9    mov eax, dword ptr ss:[ebp+0x08]
-006A15AC    subss xmm4, xmm5
+006A15AC    subss xmm4, xmm5                                ; => [ Data: data_893660 ]
 006A15B0    cvtpd2ps xmm1, xmm0
 006A15B4    xorps xmm0, xmm0
 006A15B7    cvtsi2ss xmm0, edx
@@ -104,7 +110,7 @@
 006A15C2    mulss xmm0, dword ptr ds:[ecx]
 006A15C6    addss xmm0, xmm5
 006A15CA    mulss xmm1, xmm2
-006A15CE    subss xmm1, xmm3
+006A15CE    subss xmm1, xmm3                                ; => [ Data: data_893660 ]
 006A15D2    movss dword ptr ds:[eax], xmm0
 006A15D6    movaps xmm0, xmm1
 006A15D9    mulss xmm0, dword ptr ds:[ecx+0x04]
@@ -142,10 +148,10 @@
 006A1658    push 0x86F02C
 006A165D    mov edx, 0x801800
 006A1662    mov ecx, 0x86F04C
-006A1667    call 0x0063B870
+006A1667    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Texture.h | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_TEXTURE | String: TextureGetDef ]
 006A166C    add esp, 0x0C
 006A166F    call 0x0063BC30
 006A1674    test al, al
-006A1676    jz 0x006A1679
+006A1676    jz 0x006A1679                                   ; => [ Call: sub_63bc30 ]
 006A1678    int3
-006A1679    call 0x0063BB00
+006A1679    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

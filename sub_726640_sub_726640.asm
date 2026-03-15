@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_726640
+// 起始地址: 0x726640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00726640    push ebx
 00726641    push esi
 00726642    push edi
 00726643    mov esi, ecx
-00726645    xor edi, edi
+00726645    xor edi, edi                                    ; => [ Call: nullptr ]
 00726647    nop word ptr ds:[eax+eax*1], ax
 00726650    mov eax, dword ptr ds:[esi+0xA8]
 00726656    cmp eax, dword ptr ds:[esi+0xAC]

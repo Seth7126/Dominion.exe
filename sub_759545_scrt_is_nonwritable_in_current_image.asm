@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: ___scrt_is_nonwritable_in_current_image
+// 起始地址: 0x759545
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00759545    push 0x08
 00759547    push 0x8C0468
 0075954C    call 0x0075A040
@@ -16,7 +22,7 @@
 0075958A    sub eax, ecx
 0075958C    push eax
 0075958D    push ecx
-0075958E    call 0x00759411
+0075958E    call 0x00759411                                 ; => [ Call: sub_759411 | Data: __dos_header ]
 00759593    pop ecx
 00759594    pop ecx
 00759595    test eax, eax
@@ -29,7 +35,7 @@
 007595C0    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFE
 007595C7    xor al, al
 007595C9    mov ecx, dword ptr ss:[ebp-0x10]
-007595CC    mov dword ptr fs:[0x00000000], ecx
+007595CC    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 007595D3    pop ecx
 007595D4    pop edi
 007595D5    pop esi

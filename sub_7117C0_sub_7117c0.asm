@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7117c0
+// 起始地址: 0x7117c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007117C0    push ebp
 007117C1    mov ebp, esp
 007117C3    sub esp, 0x3C
@@ -38,7 +44,7 @@
 0071182D    jz 0x00711838
 0071182F    mov edx, ebx
 00711831    mov ecx, eax
-00711833    call 0x00712E80
+00711833    call 0x00712E80                                 ; => [ Call: sub_712e80 ]
 00711838    mov eax, dword ptr ds:[esi]
 0071183A    test eax, eax
 0071183C    jnz 0x00711820
@@ -70,7 +76,7 @@
 00711882    sub ebx, esi
 00711884    mov edx, dword ptr ds:[esi+ebx*1]
 00711887    cmp dword ptr ds:[edx], 0x04
-0071188A    jnz 0x0071189E
+0071188A    jnz 0x0071189E                                  ; => [ Call: sub_712da0 ]
 0071188C    mov edx, dword ptr ds:[edx+0x10]
 0071188F    mov ecx, dword ptr ss:[ebp-0x10]
 00711892    call 0x00712DA0
@@ -122,7 +128,7 @@
 00711929    push edx
 0071192A    mov edx, esi
 0071192C    mov ecx, ebx
-0071192E    call 0x00711B80
+0071192E    call 0x00711B80                                 ; => [ Call: sub_711b80 ]
 00711933    mulss xmm0, dword ptr ss:[ebp-0x04]
 00711938    add esp, 0x08
 0071193B    movss xmm1, dword ptr ds:[esi+0x40]
@@ -154,7 +160,7 @@
 0071199A    cvtps2pd xmm0, xmm2
 0071199D    movsd qword ptr ss:[ebp-0x38], xmm0
 007119A2    fld qword ptr ss:[ebp-0x38]
-007119A5    call 0x0076236E
+007119A5    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 007119AA    movss xmm3, dword ptr ss:[ebp-0x18]
 007119AF    fstp qword ptr ss:[ebp-0x38]
 007119B2    movsd xmm0, qword ptr ss:[ebp-0x38]
@@ -190,7 +196,7 @@
 00711A18    jnz 0x00711A27
 00711A1A    lea edx, ds:[ecx+ecx*1]
 00711A1D    mov ecx, esi
-00711A1F    call 0x00712D20
+00711A1F    call 0x00712D20                                 ; => [ Call: sub_712d20 ]
 00711A24    mov ecx, dword ptr ss:[ebp-0x14]
 00711A27    mov eax, dword ptr ds:[esi+0x74]
 00711A2A    xor edi, edi
@@ -219,7 +225,7 @@
 00711A78    movss dword ptr ss:[esp], xmm0
 00711A7D    mov edx, ecx
 00711A7F    push dword ptr ss:[ebp-0x0C]
-00711A82    call 0x00711F40
+00711A82    call 0x00711F40                                 ; => [ Call: sub_711f40 ]
 00711A87    add esp, 0x18
 00711A8A    jmp 0x00711B26
 00711A8F    mov edx, dword ptr ss:[ebp-0x10]
@@ -280,7 +286,7 @@
 00711B32    movss xmm2, dword ptr ss:[ebp-0x08]
 00711B37    mov edx, esi
 00711B39    mov ecx, ebx
-00711B3B    call 0x00712420
+00711B3B    call 0x00712420                                 ; => [ Call: sub_712420 ]
 00711B40    movss xmm0, dword ptr ss:[ebp-0x08]
 00711B45    mov edi, dword ptr ss:[ebp-0x24]
 00711B48    mov dword ptr ds:[ebx+0x1C], 0x00
@@ -293,7 +299,7 @@
 00711B61    cmp edi, dword ptr ss:[ebp-0x3C]
 00711B64    jl 0x007118E0
 00711B6A    mov ecx, dword ptr ds:[ebx+0x24]
-00711B6D    call 0x00710FD0
+00711B6D    call 0x00710FD0                                 ; => [ Call: sub_710fd0 ]
 00711B72    mov eax, dword ptr ss:[ebp-0x28]
 00711B75    pop edi
 00711B76    pop esi

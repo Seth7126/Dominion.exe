@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5393d0
+// 起始地址: 0x5393d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005393D0    dword 83EC8B55
 005393D4    in al, 0xF8
 005393D6    sub esp, 0x20
@@ -14,26 +20,26 @@
 005393F2    call 0x00568960
 005393F7    add esp, 0x0C
 005393FA    test eax, eax
-005393FC    jnz 0x00539411
+005393FC    jnz 0x00539411                                  ; => [ Call: sub_568960 | Data: __security_cookie ]
 005393FE    xor al, al
 00539400    pop edi
 00539401    pop esi
 00539402    mov ecx, dword ptr ss:[esp+0x1C]
 00539406    xor ecx, esp
-00539408    call 0x0075927A
+00539408    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0053940D    mov esp, ebp
 0053940F    pop ebp
 00539410    ret
 00539411    call 0x00573400
 00539416    lea edx, ss:[esp+0x0C]
 0053941A    mov ecx, dword ptr ds:[eax+0x04]
-0053941D    call 0x0058BC10
+0053941D    call 0x0058BC10                                 ; => [ Call: sub_58bc10 | Call: sub_573400 ]
 00539422    push ecx
 00539423    push 0x00
 00539425    push 0x00
 00539427    mov edx, 0x311
 0053942C    xor ecx, ecx
-0053942E    call 0x00568960
+0053942E    call 0x00568960                                 ; => [ Call: sub_568960 ]
 00539433    add esp, 0x08
 00539436    mov edx, 0x102
 0053943B    xor ecx, ecx
@@ -51,9 +57,9 @@
 0053945C    pop esi
 0053945D    cmp eax, dword ptr ss:[esp+ecx*4+0x04]
 00539461    mov ecx, dword ptr ss:[esp+0x1C]
-00539465    setnle al
+00539465    setnle al                                       ; => [ Call: sub_568960 | Call: sub_573400 ]
 00539468    xor ecx, esp
-0053946A    call 0x0075927A
+0053946A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0053946F    mov esp, ebp
 00539471    pop ebp
 00539472    ret

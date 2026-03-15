@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_707dc0
+// 起始地址: 0x707dc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707DC0    push ebp
 00707DC1    mov ebp, esp
 00707DC3    and esp, 0xFFFFFFF8
 00707DC6    sub esp, 0x5C
 00707DC9    mov eax, dword ptr ds:[0x008C4040]
 00707DCE    xor eax, esp
-00707DD0    mov dword ptr ss:[esp+0x58], eax
+00707DD0    mov dword ptr ss:[esp+0x58], eax                ; => [ Data: __security_cookie ]
 00707DD4    push ebx
 00707DD5    push esi
 00707DD6    mov esi, ecx
@@ -30,23 +36,23 @@
 00707E09    mov dword ptr ss:[esp+0x30], 0x01
 00707E11    cmp al, 0x5C
 00707E13    jnz 0x00707E1D
-00707E15    mov dword ptr ss:[esp+0x30], 0x00
-00707E1D    mov eax, dword ptr ds:[0x0147DED8]
-00707E22    xor edi, edi
-00707E24    mov dword ptr ss:[esp+0x34], edi
-00707E28    mov dword ptr ss:[esp+0x38], edi
+00707E15    mov dword ptr ss:[esp+0x30], 0x00               ; => [ Call: nullptr | Call: nullptr | Call: nullptr ]
+00707E1D    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
+00707E22    xor edi, edi                                    ; => [ Call: nullptr ]
+00707E24    mov dword ptr ss:[esp+0x34], edi                ; => [ Call: nullptr ]
+00707E28    mov dword ptr ss:[esp+0x38], edi                ; => [ Call: nullptr ]
 00707E2C    test eax, eax
 00707E2E    jz 0x00707E49
 00707E30    push 0xB4
 00707E35    push 0x88DA14
 00707E3A    push 0x0C
 00707E3C    call eax
-00707E3E    mov ecx, eax
+00707E3E    mov ecx, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 00707E40    add esp, 0x0C
 00707E43    mov dword ptr ss:[esp+0x28], ecx
 00707E47    jmp 0x00707E5A
 00707E49    push 0x0C
-00707E4B    call dword ptr ds:[0x00800B4C]
+00707E4B    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00707E51    add esp, 0x04
 00707E54    mov dword ptr ss:[esp+0x28], eax
 00707E58    mov ecx, eax
@@ -70,7 +76,7 @@
 00707E90    jnz 0x00707E84
 00707E92    lea ecx, ss:[esp+0x18]
 00707E96    mov dword ptr ss:[esp+0x1C], esi
-00707E9A    call 0x00707BE0
+00707E9A    call 0x00707BE0                                 ; => [ Call: sub_707be0 ]
 00707E9F    cmp esi, ebx
 00707EA1    jz 0x00707EA8
 00707EA3    inc esi
@@ -79,29 +85,29 @@
 00707EAC    sub eax, dword ptr ss:[esp+0x18]
 00707EB0    mov dword ptr ss:[esp+0x20], eax
 00707EB4    jnz 0x00707EBA
-00707EB6    xor edi, edi
+00707EB6    xor edi, edi                                    ; => [ Call: nullptr ]
 00707EB8    jmp 0x00707E78
 00707EBA    test edi, edi
 00707EBC    jnz 0x00708234
-00707EC2    mov ecx, dword ptr ds:[0x0147DED8]
+00707EC2    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00707EC8    inc eax
 00707EC9    test ecx, ecx
 00707ECB    jz 0x00707EDF
 00707ECD    push 0x87
 00707ED2    push 0x88DA14
 00707ED7    push eax
-00707ED8    call ecx
+00707ED8    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 00707EDA    add esp, 0x0C
 00707EDD    jmp 0x00707EE9
 00707EDF    push eax
-00707EE0    call dword ptr ds:[0x00800B4C]
+00707EE0    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00707EE6    add esp, 0x04
 00707EE9    mov esi, dword ptr ss:[esp+0x20]
 00707EED    mov ebx, eax
 00707EEF    push esi
 00707EF0    push dword ptr ss:[esp+0x1C]
 00707EF4    push ebx
-00707EF5    call 0x00761FBE
+00707EF5    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00707EFA    mov ecx, ebx
 00707EFC    mov byte ptr ds:[ebx+esi*1], 0x00
 00707F00    add esp, 0x0C
@@ -115,7 +121,7 @@
 00707F13    mov edi, dword ptr ss:[esp+0x3C]
 00707F17    inc eax
 00707F18    add eax, ecx
-00707F1A    mov ecx, dword ptr ds:[0x0147DED8]
+00707F1A    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00707F20    add eax, edi
 00707F22    test ecx, ecx
 00707F24    jz 0x00707F3E
@@ -123,19 +129,19 @@
 00707F2B    push 0x88DA14
 00707F30    push eax
 00707F31    call ecx
-00707F33    mov esi, eax
+00707F33    mov esi, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 00707F35    add esp, 0x0C
 00707F38    mov dword ptr ss:[esp+0x20], esi
 00707F3C    jmp 0x00707F4E
 00707F3E    push eax
-00707F3F    call dword ptr ds:[0x00800B4C]
+00707F3F    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00707F45    add esp, 0x04
 00707F48    mov dword ptr ss:[esp+0x20], eax
 00707F4C    mov esi, eax
 00707F4E    push edi
 00707F4F    push dword ptr ss:[esp+0x44]
 00707F53    push esi
-00707F54    call 0x00761FBE
+00707F54    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00707F59    mov eax, dword ptr ss:[esp+0x3C]
 00707F5D    add esp, 0x0C
 00707F60    test eax, eax
@@ -151,22 +157,22 @@
 00707F77    mov byte ptr ds:[edx+ecx*1-0x01], al
 00707F7B    test al, al
 00707F7D    jnz 0x00707F72
-00707F7F    mov eax, dword ptr ds:[0x0147DED8]
+00707F7F    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00707F84    test eax, eax
 00707F86    jz 0x00707F98
 00707F88    push 0x23
 00707F8A    push 0x88DA14
 00707F8F    push 0x2C
-00707F91    call eax
+00707F91    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 00707F93    add esp, 0x0C
 00707F96    jmp 0x00707FA3
 00707F98    push 0x2C
-00707F9A    call dword ptr ds:[0x00800B4C]
+00707F9A    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00707FA0    add esp, 0x04
 00707FA3    mov edi, eax
 00707FA5    test edi, edi
 00707FA7    jz 0x00707FEF
-00707FA9    mov dword ptr ds:[edi+0x04], 0x00
+00707FA9    mov dword ptr ds:[edi+0x04], 0x00               ; => [ Call: __builtin_memset ]
 00707FB0    mov dword ptr ds:[edi+0x08], 0x00
 00707FB7    mov dword ptr ds:[edi+0x0C], 0x00
 00707FBE    mov dword ptr ds:[edi+0x10], 0x00
@@ -185,7 +191,7 @@
 00708002    inc ecx
 00708003    test al, al
 00708005    jnz 0x00708000
-00708007    mov eax, dword ptr ds:[0x0147DED8]
+00708007    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070800C    sub ecx, edx
 0070800E    inc ecx
 0070800F    mov esi, ebx
@@ -194,11 +200,11 @@
 00708015    push 0x25
 00708017    push 0x88DA14
 0070801C    push ecx
-0070801D    call eax
+0070801D    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 0070801F    add esp, 0x0C
 00708022    jmp 0x0070802E
 00708024    push ecx
-00708025    call dword ptr ds:[0x00800B4C]
+00708025    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070802B    add esp, 0x04
 0070802E    mov ecx, eax
 00708030    mov dword ptr ds:[edi+0x04], ecx
@@ -209,7 +215,7 @@
 0070803E    test al, al
 00708040    jnz 0x00708035
 00708042    push ebx
-00708043    call dword ptr ds:[0x00800B48]
+00708043    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00708049    mov eax, dword ptr ss:[esp+0x38]
 0070804D    add esp, 0x04
 00708050    test eax, eax
@@ -224,7 +230,7 @@
 00708068    mov edx, ebx
 0070806A    mov dword ptr ss:[esp+0x38], edi
 0070806E    lea ecx, ss:[esp+0x18]
-00708072    call 0x00707CD0
+00708072    call 0x00707CD0                                 ; => [ Call: sub_707cd0 ]
 00708077    add esp, 0x04
 0070807A    sub eax, 0x00
 0070807D    jz 0x00708675
@@ -252,7 +258,7 @@
 007080BD    call 0x00707CD0
 007080C2    add esp, 0x04
 007080C5    test eax, eax
-007080C7    jz 0x00708675
+007080C7    jz 0x00708675                                   ; => [ Call: sub_707cd0 ]
 007080CD    mov ebx, dword ptr ss:[esp+0x48]
 007080D1    mov esi, 0x07
 007080D6    mov eax, dword ptr ss:[esp+0x44]
@@ -261,7 +267,7 @@
 007080E0    push ebx
 007080E1    push eax
 007080E2    push dword ptr ds:[esi*4+0xCB3C6C]
-007080E9    call dword ptr ss:[esp+0x38]
+007080E9    call dword ptr ss:[esp+0x38]                    ; => [ Data: data_cb3c6c ]
 007080ED    add esp, 0x0C
 007080F0    test eax, eax
 007080F2    jz 0x00708101
@@ -278,7 +284,7 @@
 00708111    call 0x00707CD0
 00708116    add esp, 0x04
 00708119    test eax, eax
-0070811B    jz 0x00708675
+0070811B    jz 0x00708675                                   ; => [ Call: sub_707cd0 ]
 00708121    mov ebx, dword ptr ss:[esp+0x48]
 00708125    mov esi, 0x07
 0070812A    mov eax, dword ptr ss:[esp+0x44]
@@ -286,7 +292,7 @@
 00708130    push ebx
 00708131    push eax
 00708132    push dword ptr ds:[esi*4+0xCB3C8C]
-00708139    call dword ptr ss:[esp+0x38]
+00708139    call dword ptr ss:[esp+0x38]                    ; => [ Data: data_cb3c8c ]
 0070813D    add esp, 0x0C
 00708140    test eax, eax
 00708142    jz 0x00708151
@@ -303,7 +309,7 @@
 00708163    push ebx
 00708164    push eax
 00708165    push dword ptr ds:[esi*4+0xCB3C8C]
-0070816C    call dword ptr ss:[esp+0x38]
+0070816C    call dword ptr ss:[esp+0x38]                    ; => [ Data: data_cb3c8c ]
 00708170    add esp, 0x0C
 00708173    test eax, eax
 00708175    jz 0x00708184
@@ -320,7 +326,7 @@
 00708194    call 0x00707C50
 00708199    add esp, 0x04
 0070819C    test eax, eax
-0070819E    jz 0x00708675
+0070819E    jz 0x00708675                                   ; => [ Call: sub_707c50 ]
 007081A4    mov ebx, dword ptr ss:[esp+0x2C]
 007081A8    mov dword ptr ds:[edi+0x14], 0x01
 007081AF    mov dword ptr ds:[edi+0x18], 0x01
@@ -333,7 +339,7 @@
 007081C7    call ebx
 007081C9    add esp, 0x0C
 007081CC    test eax, eax
-007081CE    jz 0x00708210
+007081CE    jz 0x00708210                                   ; => [ String: none ]
 007081D0    mov eax, dword ptr ss:[esp+0x1C]
 007081D4    mov ecx, dword ptr ss:[esp+0x18]
 007081D8    sub eax, ecx
@@ -352,30 +358,30 @@
 007081F9    call ebx
 007081FB    add esp, 0x0C
 007081FE    test eax, eax
-00708200    jnz 0x00708210
+00708200    jnz 0x00708210                                  ; => [ String: xy ]
 00708202    mov dword ptr ds:[edi+0x18], 0x02
 00708209    mov dword ptr ds:[edi+0x14], 0x02
 00708210    mov esi, dword ptr ss:[esp+0x20]
 00708214    mov ecx, edi
 00708216    mov edx, esi
-00708218    call 0x006A73C0
+00708218    call 0x006A73C0                                 ; => [ Call: sub_6a73c0 ]
 0070821D    push esi
-0070821E    call dword ptr ds:[0x00800B48]
+0070821E    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00708224    mov esi, dword ptr ss:[esp+0x18]
 00708228    add esp, 0x04
 0070822B    mov ebx, dword ptr ss:[esp+0x24]
 0070822F    jmp 0x00707E78
-00708234    mov eax, dword ptr ds:[0x0147DED8]
+00708234    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00708239    test eax, eax
 0070823B    jz 0x0070824D
 0070823D    push 0x32
 0070823F    push 0x88DA14
 00708244    push 0x54
-00708246    call eax
+00708246    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 00708248    add esp, 0x0C
 0070824B    jmp 0x00708258
 0070824D    push 0x54
-0070824F    call dword ptr ds:[0x00800B4C]
+0070824F    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00708255    add esp, 0x04
 00708258    mov esi, eax
 0070825A    test esi, esi
@@ -383,7 +389,7 @@
 0070825E    push 0x54
 00708260    push 0x00
 00708262    push esi
-00708263    call 0x00761FC4
+00708263    call 0x00761FC4                                 ; => [ Call: memset ]
 00708268    add esp, 0x0C
 0070826B    mov eax, dword ptr ss:[esp+0x38]
 0070826F    test eax, eax
@@ -392,7 +398,7 @@
 00708276    jmp 0x0070827F
 00708278    mov eax, dword ptr ss:[esp+0x28]
 0070827C    mov dword ptr ds:[eax+0x04], esi
-0070827F    mov ecx, dword ptr ds:[0x0147DED8]
+0070827F    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00708285    mov dword ptr ds:[esi+0x4C], edi
 00708288    mov ebx, dword ptr ss:[esp+0x1C]
 0070828C    sub ebx, dword ptr ss:[esp+0x18]
@@ -403,17 +409,17 @@
 0070829B    push 0x87
 007082A0    push 0x88DA14
 007082A5    push eax
-007082A6    call ecx
+007082A6    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 007082A8    add esp, 0x0C
 007082AB    jmp 0x007082B7
 007082AD    push eax
-007082AE    call dword ptr ds:[0x00800B4C]
+007082AE    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007082B4    add esp, 0x04
 007082B7    push ebx
 007082B8    push dword ptr ss:[esp+0x1C]
 007082BC    mov dword ptr ss:[esp+0x28], eax
 007082C0    push eax
-007082C1    call 0x00761FBE
+007082C1    call 0x00761FBE                                 ; => [ Call: memcpy ]
 007082C6    mov eax, dword ptr ss:[esp+0x2C]
 007082CA    lea ecx, ss:[esp+0x20]
 007082CE    mov edx, dword ptr ss:[esp+0x30]
@@ -425,7 +431,7 @@
 007082E0    call 0x00707C50
 007082E5    add esp, 0x04
 007082E8    test eax, eax
-007082EA    jz 0x00708675
+007082EA    jz 0x00708675                                   ; => [ Call: sub_707c50 ]
 007082F0    mov eax, dword ptr ss:[esp+0x1C]
 007082F4    mov ecx, dword ptr ss:[esp+0x18]
 007082F8    sub eax, ecx
@@ -436,7 +442,7 @@
 00708305    call ebx
 00708307    add esp, 0x0C
 0070830A    test eax, eax
-0070830C    jnz 0x00708315
+0070830C    jnz 0x00708315                                  ; => [ String: true ]
 0070830E    mov eax, 0x5A
 00708313    jmp 0x00708341
 00708315    mov eax, dword ptr ss:[esp+0x1C]
@@ -445,7 +451,7 @@
 0070831F    push eax
 00708320    push ecx
 00708321    push 0x88DAC4
-00708326    call ebx
+00708326    call ebx                                        ; => [ String: false ]
 00708328    add esp, 0x0C
 0070832B    test eax, eax
 0070832D    jz 0x00708341
@@ -468,7 +474,7 @@
 0070835E    call 0x00707CD0
 00708363    add esp, 0x04
 00708366    cmp eax, 0x02
-00708369    jnz 0x00708675
+00708369    jnz 0x00708675                                  ; => [ Call: sub_707cd0 ]
 0070836F    push 0x0A
 00708371    lea eax, ss:[esp+0x4C]
 00708375    push eax
@@ -490,7 +496,7 @@
 007083A4    call 0x00707CD0
 007083A9    add esp, 0x04
 007083AC    cmp eax, 0x02
-007083AF    jnz 0x00708675
+007083AF    jnz 0x00708675                                  ; => [ Call: sub_707cd0 ]
 007083B5    push 0x0A
 007083B7    lea eax, ss:[esp+0x4C]
 007083BB    push eax
@@ -546,23 +552,23 @@
 00708463    cvtdq2ps xmm1, xmm1
 00708466    divss xmm1, xmm0
 0070846A    movss dword ptr ds:[esi+0x20], xmm1
-0070846F    call 0x00707CD0
+0070846F    call 0x00707CD0                                 ; => [ Call: sub_707cd0 ]
 00708474    add esp, 0x04
 00708477    test eax, eax
 00708479    jz 0x00708675
 0070847F    cmp eax, 0x04
 00708482    jnz 0x007085D9
-00708488    mov eax, dword ptr ds:[0x0147DED8]
+00708488    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070848D    test eax, eax
 0070848F    jz 0x007084A4
 00708491    push 0x113
 00708496    push 0x88DA14
 0070849B    push 0x10
-0070849D    call eax
+0070849D    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 0070849F    add esp, 0x0C
 007084A2    jmp 0x007084AF
 007084A4    push 0x10
-007084A6    call dword ptr ds:[0x00800B4C]
+007084A6    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007084AC    add esp, 0x04
 007084AF    mov dword ptr ds:[esi+0x44], eax
 007084B2    lea eax, ss:[esp+0x48]
@@ -601,23 +607,23 @@
 00708513    lea eax, ss:[esp+0x44]
 00708517    push eax
 00708518    lea ecx, ss:[esp+0x18]
-0070851C    call 0x00707CD0
+0070851C    call 0x00707CD0                                 ; => [ Call: sub_707cd0 ]
 00708521    add esp, 0x04
 00708524    test eax, eax
 00708526    jz 0x00708675
 0070852C    cmp eax, 0x04
 0070852F    jnz 0x007085D9
-00708535    mov eax, dword ptr ds:[0x0147DED8]
+00708535    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070853A    test eax, eax
 0070853C    jz 0x00708551
 0070853E    push 0x11C
 00708543    push 0x88DA14
 00708548    push 0x10
-0070854A    call eax
+0070854A    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Atlas.c ]
 0070854C    add esp, 0x0C
 0070854F    jmp 0x0070855C
 00708551    push 0x10
-00708553    call dword ptr ds:[0x00800B4C]
+00708553    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00708559    add esp, 0x04
 0070855C    mov dword ptr ds:[esi+0x48], eax
 0070855F    lea eax, ss:[esp+0x48]
@@ -659,7 +665,7 @@
 007085C9    call 0x00707CD0
 007085CE    add esp, 0x04
 007085D1    test eax, eax
-007085D3    jz 0x00708675
+007085D3    jz 0x00708675                                   ; => [ Call: sub_707cd0 ]
 007085D9    push 0x0A
 007085DB    lea eax, ss:[esp+0x4C]
 007085DF    push eax
@@ -678,7 +684,7 @@
 00708607    mov edx, ebx
 00708609    lea ecx, ss:[esp+0x14]
 0070860D    push eax
-0070860E    call 0x00707CD0
+0070860E    call 0x00707CD0                                 ; => [ Call: sub_707cd0 ]
 00708613    add esp, 0x04
 00708616    lea eax, ss:[esp+0x48]
 0070861A    push 0x0A
@@ -701,7 +707,7 @@
 0070864B    call 0x00707C50
 00708650    add esp, 0x04
 00708653    test eax, eax
-00708655    jz 0x00708675
+00708655    jz 0x00708675                                   ; => [ Call: sub_707c50 ]
 00708657    push 0x0A
 00708659    lea eax, ss:[esp+0x20]
 0070865D    push eax
@@ -712,14 +718,14 @@
 0070866C    mov esi, dword ptr ss:[esp+0x14]
 00708670    jmp 0x00707E78
 00708675    mov ecx, dword ptr ss:[esp+0x28]
-00708679    call 0x007086B0
+00708679    call 0x007086B0                                 ; => [ Call: sub_7086b0 ]
 0070867E    xor eax, eax
 00708680    pop edi
 00708681    pop esi
 00708682    pop ebx
 00708683    mov ecx, dword ptr ss:[esp+0x58]
 00708687    xor ecx, esp
-00708689    call 0x0075927A
+00708689    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0070868E    mov esp, ebp
 00708690    pop ebp
 00708691    ret
@@ -729,7 +735,7 @@
 0070869B    pop esi
 0070869C    pop ebx
 0070869D    xor ecx, esp
-0070869F    call 0x0075927A
+0070869F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 007086A4    mov esp, ebp
 007086A6    pop ebp
 007086A7    ret

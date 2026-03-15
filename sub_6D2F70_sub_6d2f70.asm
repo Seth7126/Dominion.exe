@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d2f70
+// 起始地址: 0x6d2f70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D2F70    push esi
 006D2F71    mov esi, ecx
 006D2F73    movss xmm1, dword ptr ds:[esi+0x08]
@@ -16,7 +22,7 @@
 006D2F9A    cvttss2si edx, xmm1
 006D2F9E    jz 0x006D2FAF
 006D2FA0    push edi
-006D2FA1    call 0x006D2E70
+006D2FA1    call 0x006D2E70                                 ; => [ Call: sub_6d2e70 ]
 006D2FA6    add esp, 0x04
 006D2FA9    inc dword ptr ds:[esi+0x2C]
 006D2FAC    pop edi

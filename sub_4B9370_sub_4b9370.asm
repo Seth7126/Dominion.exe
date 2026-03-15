@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_4b9370
+// 起始地址: 0x4b9370
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B9370    push ecx
-004B9371    mov ecx, dword ptr ds:[0x00CC8D5C]
+004B9371    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B9377    test ecx, ecx
 004B9379    jz 0x004B93BB
 004B937B    mov eax, dword ptr ds:[ecx+0x5068]
@@ -28,10 +34,10 @@
 004B93C2    push 0x77EB50
 004B93C7    mov edx, 0x801800
 004B93CC    mov ecx, 0x77EB9C
-004B93D1    call 0x0063B870
+004B93D1    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004B93D6    add esp, 0x0C
 004B93D9    call 0x0063BC30
 004B93DE    test al, al
-004B93E0    jz 0x004B93E3
+004B93E0    jz 0x004B93E3                                   ; => [ Call: sub_63bc30 ]
 004B93E2    int3
-004B93E3    call 0x0063BB00
+004B93E3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

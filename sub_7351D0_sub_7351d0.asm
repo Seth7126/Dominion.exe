@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7351d0
+// 起始地址: 0x7351d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007351D0    push ebp
 007351D1    mov ebp, esp
 007351D3    sub esp, 0x3C
@@ -24,7 +30,7 @@
 0073520F    push 0x10
 00735211    push ebx
 00735212    push esi
-00735213    call dword ptr ds:[0x007756AC]
+00735213    call dword ptr ds:[0x007756AC]                  ; => [ Call: sub_735160 ]
 00735219    lea edi, ds:[esi+0x0A]
 0073521C    mov ecx, ebx
 0073521E    mov dword ptr ss:[ebp-0x24], edi
@@ -48,7 +54,7 @@
 0073525A    push ebx
 0073525B    push ecx
 0073525C    mov ecx, edi
-0073525E    call 0x00734F90
+0073525E    call 0x00734F90                                 ; => [ Call: sub_734f90 ]
 00735263    add esp, 0x08
 00735266    mov edx, dword ptr ds:[eax+0x08]
 00735269    movq xmm0, qword ptr ds:[eax]
@@ -115,7 +121,7 @@
 0073531C    movzx eax, word ptr ss:[ebp-0x2C]
 00735320    mov word ptr ds:[esi], ax
 00735323    jmp 0x0073533A
-00735325    xor eax, eax
+00735325    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr | Call: nullptr ]
 00735327    jmp 0x0073530D
 00735329    mov dword ptr ds:[esi-0x02], 0xFFFFFFFF
 00735330    jmp 0x0073533A
@@ -131,7 +137,7 @@
 00735351    push 0x10
 00735353    push ebx
 00735354    push dword ptr ss:[ebp-0x18]
-00735357    call dword ptr ds:[0x007756AC]
+00735357    call dword ptr ds:[0x007756AC]                  ; => [ Call: sub_7351a0 ]
 0073535D    mov edi, dword ptr ss:[ebp-0x24]
 00735360    add esp, 0x10
 00735363    mov edx, 0xFFFF
@@ -161,12 +167,12 @@
 007353A0    push ebx
 007353A1    push esi
 007353A2    mov esi, dword ptr ds:[0x007756AC]
-007353A8    call esi
+007353A8    call esi                                        ; => [ Call: sub_735160 ]
 007353AA    push 0x7351A0
 007353AF    push 0x10
 007353B1    push ebx
 007353B2    push dword ptr ss:[ebp-0x18]
-007353B5    call esi
+007353B5    call esi                                        ; => [ Call: sub_7351a0 ]
 007353B7    add esp, 0x20
 007353BA    mov eax, edi
 007353BC    pop edi

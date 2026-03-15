@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a5670
+// 起始地址: 0x5a5670
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A5670    push ebp
 005A5671    mov ebp, esp
 005A5673    mov eax, 0x10008
-005A5678    call 0x00761E50
+005A5678    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A567D    mov eax, dword ptr ds:[0x008C4040]
 005A5682    xor eax, ebp
-005A5684    mov dword ptr ss:[ebp-0x04], eax
+005A5684    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005A5687    movss xmm1, dword ptr ds:[0x00890CF0]
 005A568F    xor edx, edx
 005A5691    movss xmm4, dword ptr ds:[0x00890EB0]
@@ -113,7 +119,7 @@
 005A582C    jl 0x005A57D0
 005A582E    mov ecx, dword ptr ss:[ebp-0x04]
 005A5831    xor ecx, ebp
-005A5833    call 0x0075927A
+005A5833    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A5838    mov esp, ebp
 005A583A    pop ebp
 005A583B    ret

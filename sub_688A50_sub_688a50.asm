@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_688a50
+// 起始地址: 0x688a50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00688A50    push ecx
 00688A51    push esi
 00688A52    push edi
 00688A53    mov edi, ecx
-00688A55    xor esi, esi
+00688A55    xor esi, esi                                    ; => [ Call: nullptr ]
 00688A57    nop word ptr ds:[eax+eax*1], ax
-00688A60    mov edx, dword ptr ds:[0x0147ABF0]
+00688A60    mov edx, dword ptr ds:[0x0147ABF0]              ; => [ Data: data_147abf0 ]
 00688A66    test esi, esi
 00688A68    jnz 0x00688A6E
 00688A6A    mov esi, dword ptr ds:[edx]
@@ -31,8 +37,8 @@
 00688A9D    mov ecx, dword ptr ds:[0x0147ABEC]
 00688AA3    push esi
 00688AA4    mov eax, dword ptr ds:[ecx]
-00688AA6    call dword ptr ds:[eax+0x28]
+00688AA6    call dword ptr ds:[eax+0x28]                    ; => [ Data: data_147abec ]
 00688AA9    mov ecx, esi
 00688AAB    mov byte ptr ds:[esi+0x5A], 0x00
-00688AAF    call 0x00688260
+00688AAF    call 0x00688260                                 ; => [ Call: sub_688260 ]
 00688AB4    jmp 0x00688A60

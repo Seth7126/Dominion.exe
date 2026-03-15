@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69dd70
+// 起始地址: 0x69dd70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069DD70    push ebp
 0069DD71    mov ebp, esp
 0069DD73    sub esp, 0x08
@@ -42,7 +48,7 @@
 0069DDD0    jnz 0x0069DD90
 0069DDD2    pop edi
 0069DDD3    pop esi
-0069DDD4    xor eax, eax
+0069DDD4    xor eax, eax                                    ; => [ Call: nullptr ]
 0069DDD6    pop ebx
 0069DDD7    mov esp, ebp
 0069DDD9    pop ebp

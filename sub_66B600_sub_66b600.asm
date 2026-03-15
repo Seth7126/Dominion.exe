@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66b600
+// 起始地址: 0x66b600
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066B600    push ebx
 0066B601    mov ebx, esp
 0066B603    sub esp, 0x08
@@ -8,7 +14,7 @@
 0066B610    mov dword ptr ss:[esp+0x04], ebp
 0066B614    mov ebp, esp
 0066B616    sub esp, 0xC8
-0066B61C    mov eax, dword ptr ds:[0x008C4040]
+0066B61C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0066B621    xor eax, ebp
 0066B623    mov dword ptr ss:[ebp-0x04], eax
 0066B626    push esi
@@ -28,7 +34,7 @@
 0066B664    movups xmm0, xmmword ptr ss:[ebp-0x20]
 0066B668    mov dword ptr ss:[ebp-0x74], esi
 0066B66B    movups xmmword ptr ss:[ebp-0x20], xmm0
-0066B66F    call 0x00655430
+0066B66F    call 0x00655430                                 ; => [ Call: sub_655430 ]
 0066B674    add esp, 0x04
 0066B677    movups xmm0, xmmword ptr ds:[eax]
 0066B67A    movaps xmm1, xmm0
@@ -46,9 +52,9 @@
 0066B6AD    mov dword ptr ss:[ebp-0x74], esi
 0066B6B0    test esi, esi
 0066B6B2    jns 0x0066B6CA
-0066B6B4    push 0x87437C
+0066B6B4    push 0x87437C                                   ; => [ String: UI2::countChildren ]
 0066B6B9    push 0xBA8
-0066B6BE    mov ecx, 0x874310
+0066B6BE    mov ecx, 0x874310                               ; => [ String: numChildren >= 0 ]
 0066B6C3    jmp 0x0066B910
 0066B6C8    test esi, esi
 0066B6CA    jnz 0x0066B6EA
@@ -58,7 +64,7 @@
 0066B6D8    pop esi
 0066B6D9    mov ecx, dword ptr ss:[ebp-0x04]
 0066B6DC    xor ecx, ebp
-0066B6DE    call 0x0075927A
+0066B6DE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B6E3    mov esp, ebp
 0066B6E5    pop ebp
 0066B6E6    mov esp, ebx
@@ -73,7 +79,7 @@
 0066B6FA    pop esi
 0066B6FB    mov ecx, dword ptr ss:[ebp-0x04]
 0066B6FE    xor ecx, ebp
-0066B700    call 0x0075927A
+0066B700    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B705    mov esp, ebp
 0066B707    pop ebp
 0066B708    mov esp, ebx
@@ -88,7 +94,7 @@
 0066B719    push eax
 0066B71A    lea eax, ss:[ebp-0x30]
 0066B71D    push eax
-0066B71E    call 0x00656980
+0066B71E    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0066B723    push 0x00
 0066B725    mov edx, 0x01
 0066B72A    mov ecx, edi
@@ -102,7 +108,7 @@
 0066B73F    lea eax, ss:[ebp-0x70]
 0066B742    push eax
 0066B743    movups xmmword ptr ss:[ebp-0x20], xmm0
-0066B747    call 0x00656980
+0066B747    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0066B74C    movups xmm1, xmmword ptr ss:[ebp-0x20]
 0066B750    add esp, 0x20
 0066B753    movups xmm0, xmmword ptr ds:[eax]
@@ -129,7 +135,7 @@
 0066B7A3    pop esi
 0066B7A4    mov ecx, dword ptr ss:[ebp-0x04]
 0066B7A7    xor ecx, ebp
-0066B7A9    call 0x0075927A
+0066B7A9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B7AE    mov esp, ebp
 0066B7B0    pop ebp
 0066B7B1    mov esp, ebx
@@ -140,7 +146,7 @@
 0066B7C4    divss xmm0, xmm2
 0066B7C8    subss xmm0, dword ptr ds:[0x00890C78]
 0066B7D0    addss xmm0, dword ptr ds:[0x00890E18]
-0066B7D8    call 0x004D5CB0
+0066B7D8    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 | Data: data_8937c0 ]
 0066B7DD    xorps xmm1, xmm1
 0066B7E0    comiss xmm1, xmm0
 0066B7E3    jbe 0x0066B7EF
@@ -156,7 +162,7 @@
 0066B81F    call 0x004D5CF0
 0066B824    xorps xmm1, xmm1
 0066B827    comiss xmm1, xmm0
-0066B82A    jbe 0x0066B84E
+0066B82A    jbe 0x0066B84E                                  ; => [ Call: sub_4d5cf0 ]
 0066B82C    subss xmm0, dword ptr ds:[0x00890D84]
 0066B834    mov eax, esi
 0066B836    cvttss2si edx, xmm0
@@ -165,7 +171,7 @@
 0066B83C    pop esi
 0066B83D    mov ecx, dword ptr ss:[ebp-0x04]
 0066B840    xor ecx, ebp
-0066B842    call 0x0075927A
+0066B842    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B847    mov esp, ebp
 0066B849    pop ebp
 0066B84A    mov esp, ebx
@@ -179,7 +185,7 @@
 0066B85E    pop esi
 0066B85F    mov ecx, dword ptr ss:[ebp-0x04]
 0066B862    xor ecx, ebp
-0066B864    call 0x0075927A
+0066B864    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B869    mov esp, ebp
 0066B86B    pop ebp
 0066B86C    mov esp, ebx
@@ -190,12 +196,12 @@
 0066B87B    movaps xmm1, xmm2
 0066B87E    xorps xmm1, xmmword ptr ds:[0x008937C0]
 0066B885    divss xmm1, xmm3
-0066B889    maxss xmm0, xmm1
+0066B889    maxss xmm0, xmm1                                ; => [ Data: data_8937c0 ]
 0066B88D    movss dword ptr ss:[ebp-0x74], xmm0
 0066B892    movups xmm0, xmmword ptr ss:[ebp-0x90]
 0066B899    subss xmm0, xmm2
 0066B89D    divss xmm0, xmm3
-0066B8A1    call 0x004D5CF0
+0066B8A1    call 0x004D5CF0                                 ; => [ Call: sub_4d5cf0 ]
 0066B8A6    xorps xmm1, xmm1
 0066B8A9    comiss xmm1, xmm0
 0066B8AC    jbe 0x0066B8B8
@@ -204,7 +210,7 @@
 0066B8B8    addss xmm0, dword ptr ds:[0x00890D84]
 0066B8C0    cvttss2si esi, xmm0
 0066B8C4    movss xmm0, dword ptr ss:[ebp-0x74]
-0066B8C9    call 0x004D5CB0
+0066B8C9    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 0066B8CE    xorps xmm1, xmm1
 0066B8D1    comiss xmm1, xmm0
 0066B8D4    jbe 0x0066B8E0
@@ -217,21 +223,21 @@
 0066B8EE    xor ecx, ebp
 0066B8F0    cvttss2si eax, xmm0
 0066B8F4    pop esi
-0066B8F5    call 0x0075927A
+0066B8F5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B8FA    mov esp, ebp
 0066B8FC    pop ebp
 0066B8FD    mov esp, ebx
 0066B8FF    pop ebx
 0066B900    ret
-0066B901    push 0x875D8C
+0066B901    push 0x875D8C                                   ; => [ String: UI2TableGetRangeInt ]
 0066B906    push 0x3FD0
-0066B90B    mov ecx, 0x801AA4
+0066B90B    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0066B910    push 0x8739B4
 0066B915    mov edx, 0x801800
-0066B91A    call 0x0063B870
+0066B91A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\UI2.cpp ]
 0066B91F    add esp, 0x0C
 0066B922    call 0x0063BC30
 0066B927    test al, al
-0066B929    jz 0x0066B92C
+0066B929    jz 0x0066B92C                                   ; => [ Call: sub_63bc30 ]
 0066B92B    int3
-0066B92C    call 0x0063BB00
+0066B92C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

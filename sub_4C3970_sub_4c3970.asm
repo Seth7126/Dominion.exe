@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4c3970
+// 起始地址: 0x4c3970
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C3970    push ebp
 004C3971    mov ebp, esp
 004C3973    push ecx
@@ -45,7 +51,7 @@
 004C39D7    cmp dword ptr ds:[edi+0x08], 0xFFFFFFFF
 004C39DB    jz 0x004C3A0D
 004C39DD    call 0x0061DAD0
-004C39E2    mov dword ptr ds:[eax], esi
+004C39E2    mov dword ptr ds:[eax], esi                     ; => [ Call: sub_61dad0 ]
 004C39E4    xor eax, eax
 004C39E6    cmp dword ptr ds:[edi+0x04], 0x02
 004C39EA    setz al
@@ -70,10 +76,10 @@
 004C3A17    push 0x80292C
 004C3A1C    mov edx, 0x801800
 004C3A21    mov ecx, 0x803BA4
-004C3A26    call 0x0063B870
+004C3A26    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ApplyWeeklyResult | Data: data_801800 | String: status.completionLevel != DBAI_NONE | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp ]
 004C3A2B    add esp, 0x0C
 004C3A2E    call 0x0063BC30
 004C3A33    test al, al
-004C3A35    jz 0x004C3A38
+004C3A35    jz 0x004C3A38                                   ; => [ Call: sub_63bc30 ]
 004C3A37    int3
-004C3A38    call 0x0063BB00
+004C3A38    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

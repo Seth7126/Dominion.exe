@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ff0e0
+// 起始地址: 0x4ff0e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FF0E0    dword 83EC8B55
 004FF0E4    in al, 0xF8
 004FF0E6    sub esp, 0xC88
@@ -12,4 +18,4 @@
 004FF109    add esp, 0x0C
 004FF10C    mov esp, ebp
 004FF10E    pop ebp
-004FF10F    ret
+004FF10F    ret                                             ; => [ Call: sub_56bba0 | Call: sub_4ff110 ]

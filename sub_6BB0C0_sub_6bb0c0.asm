@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_6bb0c0
+// 起始地址: 0x6bb0c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BB0C0    push ebp
 006BB0C1    mov ebp, esp
 006BB0C3    sub esp, 0x0C
 006BB0C6    call 0x0063EB70
 006BB0CB    and eax, 0x7FFFFF
-006BB0D0    or eax, 0x3F800000
+006BB0D0    or eax, 0x3F800000                              ; => [ Call: sub_63eb70 ]
 006BB0D5    mov dword ptr ss:[ebp-0x0C], eax
 006BB0D8    call 0x0063EB70
 006BB0DD    and eax, 0x7FFFFF
@@ -15,11 +21,11 @@
 006BB0FC    movss xmm3, dword ptr ss:[ebp-0x08]
 006BB101    or eax, 0x3F800000
 006BB106    movss xmm4, dword ptr ss:[ebp-0x0C]
-006BB10B    subss xmm3, xmm5
+006BB10B    subss xmm3, xmm5                                ; => [ Call: sub_63eb70 ]
 006BB10F    mov dword ptr ss:[ebp-0x04], eax
 006BB112    subss xmm4, xmm5
 006BB116    movss xmm2, dword ptr ss:[ebp-0x04]
-006BB11B    subss xmm2, xmm5
+006BB11B    subss xmm2, xmm5                                ; => [ Call: sub_63eb70 ]
 006BB11F    addss xmm3, xmm3
 006BB123    addss xmm4, xmm4
 006BB127    addss xmm2, xmm2
@@ -42,7 +48,7 @@
 006BB16C    nop dword ptr ds:[eax], eax
 006BB170    call 0x0063EB70
 006BB175    and eax, 0x7FFFFF
-006BB17A    or eax, 0x3F800000
+006BB17A    or eax, 0x3F800000                              ; => [ Call: sub_63eb70 ]
 006BB17F    mov dword ptr ss:[ebp-0x0C], eax
 006BB182    call 0x0063EB70
 006BB187    and eax, 0x7FFFFF
@@ -52,12 +58,12 @@
 006BB199    movss xmm3, dword ptr ss:[ebp-0x08]
 006BB19E    and eax, 0x7FFFFF
 006BB1A3    movss xmm4, dword ptr ss:[ebp-0x0C]
-006BB1A8    subss xmm3, xmm5
+006BB1A8    subss xmm3, xmm5                                ; => [ Call: sub_63eb70 ]
 006BB1AC    or eax, 0x3F800000
 006BB1B1    subss xmm4, xmm5
 006BB1B5    mov dword ptr ss:[ebp-0x04], eax
 006BB1B8    movss xmm2, dword ptr ss:[ebp-0x04]
-006BB1BD    subss xmm2, xmm5
+006BB1BD    subss xmm2, xmm5                                ; => [ Call: sub_63eb70 ]
 006BB1C1    addss xmm3, xmm3
 006BB1C5    addss xmm4, xmm4
 006BB1C9    addss xmm2, xmm2
@@ -87,7 +93,7 @@
 006BB227    addss xmm0, xmm1
 006BB22B    call 0x004AC580
 006BB230    movss xmm1, dword ptr ds:[0x00890E18]
-006BB238    divss xmm1, xmm0
+006BB238    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006BB23C    mov eax, dword ptr ss:[ebp+0x08]
 006BB23F    movaps xmm0, xmm1
 006BB242    mulss xmm0, dword ptr ss:[ebp-0x0C]

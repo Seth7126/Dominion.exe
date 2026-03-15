@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_719be0
+// 起始地址: 0x719be0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00719BE0    push ebp
 00719BE1    mov ebp, esp
 00719BE3    and esp, 0xFFFFFFC0
@@ -20,7 +26,7 @@
 00719C15    jmp 0x00719C32
 00719C17    movaps xmm1, xmm0
 00719C1A    mov ecx, esi
-00719C1C    call 0x00719800
+00719C1C    call 0x00719800                                 ; => [ Call: sub_719800 ]
 00719C21    mov ecx, dword ptr ss:[ebp+0x0C]
 00719C24    movss xmm0, dword ptr ss:[esp+0x18]
 00719C2A    cdq
@@ -30,14 +36,14 @@
 00719C32    movaps xmm1, xmm0
 00719C35    mov dword ptr ss:[esp+0x24], eax
 00719C39    mov ecx, esi
-00719C3B    call 0x007198C0
+00719C3B    call 0x007198C0                                 ; => [ Call: sub_7198c0 ]
 00719C40    mov ecx, dword ptr ss:[esp+0x24]
 00719C44    xor esi, esi
 00719C46    mov dword ptr ss:[esp+0x38], eax
 00719C4A    mov eax, dword ptr ss:[ebp+0x10]
 00719C4D    test eax, eax
 00719C4F    jle 0x00719D26
-00719C55    xorps xmm0, xmm0
+00719C55    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 00719C58    xor edi, edi
 00719C5A    movss dword ptr ss:[esp+0x20], xmm0
 00719C60    test ecx, ecx
@@ -58,7 +64,7 @@
 00719C99    imul eax, edi
 00719C9C    sub eax, dword ptr ss:[esp+0x30]
 00719CA0    add eax, esi
-00719CA2    addss xmm0, dword ptr ds:[ebx+eax*4]
+00719CA2    addss xmm0, dword ptr ds:[ebx+eax*4]            ; => [ Call: sub_7198c0 ]
 00719CA7    mov eax, dword ptr ss:[esp+0x1C]
 00719CAB    movss dword ptr ss:[esp+0x20], xmm0
 00719CB1    inc edi
@@ -85,7 +91,7 @@
 00719CFA    mov ecx, dword ptr ss:[esp+0x24]
 00719CFE    imul eax, edi
 00719D01    sub eax, dword ptr ss:[esp+0x30]
-00719D05    add eax, esi
+00719D05    add eax, esi                                    ; => [ Call: sub_7198c0 ]
 00719D07    mulss xmm0, dword ptr ds:[ebx+eax*4]
 00719D0C    movss dword ptr ds:[ebx+eax*4], xmm0
 00719D11    mov eax, dword ptr ss:[esp+0x1C]
@@ -113,7 +119,7 @@
 00719D5F    mov ecx, dword ptr ss:[esp+0x20]
 00719D63    xorps xmm1, xmm1
 00719D66    imul eax, ecx
-00719D69    movss xmm0, dword ptr ds:[ebx+eax*4]
+00719D69    movss xmm0, dword ptr ds:[ebx+eax*4]            ; => [ Call: sub_7198c0 ]
 00719D6E    ucomiss xmm0, xmm1
 00719D71    lahf
 00719D72    test ah, 0x44
@@ -126,7 +132,7 @@
 00719D89    xorps xmm1, xmm1
 00719D8C    imul eax, ecx
 00719D8F    add eax, edi
-00719D91    movss xmm0, dword ptr ds:[ebx+eax*4]
+00719D91    movss xmm0, dword ptr ds:[ebx+eax*4]            ; => [ Call: sub_7198c0 ]
 00719D96    ucomiss xmm0, xmm1
 00719D99    lahf
 00719D9A    test ah, 0x44
@@ -148,7 +154,7 @@
 00719DC3    cmp dword ptr ss:[esp+0x38], ecx
 00719DC7    cmovl ecx, dword ptr ss:[esp+0x38]
 00719DCC    cmp dword ptr ss:[esp+0x3C], 0x00
-00719DD1    mov eax, dword ptr ds:[eax*8+0xCB3CB0]
+00719DD1    mov eax, dword ptr ds:[eax*8+0xCB3CB0]          ; => [ Data: data_cb3cb0 ]
 00719DD8    mov dword ptr ss:[esp+0x30], ecx
 00719DDC    mov dword ptr ss:[esp+0x28], eax
 00719DE0    push ecx
@@ -172,7 +178,7 @@
 00719E2C    movsd qword ptr ss:[esp+0x30], xmm0
 00719E32    fld qword ptr ss:[esp+0x30]
 00719E36    fstp qword ptr ss:[esp]
-00719E39    call 0x0076239E
+00719E39    call 0x0076239E                                 ; => [ Call: ceil ]
 00719E3E    xor ebx, ebx
 00719E40    add esp, 0x08
 00719E43    fstp qword ptr ss:[esp+0x28]
@@ -190,12 +196,12 @@
 00719E70    imul esi, dword ptr ss:[esp+0x20]
 00719E75    mov ecx, dword ptr ss:[ebp+0x08]
 00719E78    add esi, edi
-00719E7A    add esi, ebx
+00719E7A    add esi, ebx                                    ; => [ Call: sub_7198c0 ]
 00719E7C    call 0x007198C0
 00719E81    imul eax, dword ptr ss:[esp+0x20]
 00719E86    mov edx, dword ptr ss:[esp+0x34]
 00719E8A    mov ecx, dword ptr ds:[edx+esi*4]
-00719E8D    add eax, ebx
+00719E8D    add eax, ebx                                    ; => [ Call: sub_7198c0 ]
 00719E8F    inc ebx
 00719E90    mov dword ptr ds:[edx+eax*4], ecx
 00719E93    cvttsd2si ecx, qword ptr ss:[esp+0x28]
@@ -214,7 +220,7 @@
 00719EC4    cmp edx, 0x08
 00719EC7    jb 0x00719FA2
 00719ECD    cmp dword ptr ds:[0x00CC8D30], 0x02
-00719ED4    jl 0x00719FA2
+00719ED4    jl 0x00719FA2                                   ; => [ Data: data_cc8d30 ]
 00719EDA    mov eax, edx
 00719EDC    and eax, 0x80000007
 00719EE1    jns 0x00719EE8
@@ -264,7 +270,7 @@
 00719F96    cmp ecx, ebx
 00719F98    jl 0x00719F00
 00719F9E    cmp ecx, edx
-00719FA0    jnl 0x00719FC2
+00719FA0    jnl 0x00719FC2                                  ; => [ Data: data_cc8d30 ]
 00719FA2    mov edi, dword ptr ss:[ebp+0x10]
 00719FA5    lea esi, ds:[esi+ecx*8]
 00719FA8    dec edi

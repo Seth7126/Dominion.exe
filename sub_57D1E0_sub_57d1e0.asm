@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_57d1e0
+// 起始地址: 0x57d1e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057D1E0    push ebp
 0057D1E1    mov ebp, esp
 0057D1E3    mov eax, 0x10A0
-0057D1E8    call 0x00761E50
+0057D1E8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0057D1ED    mov eax, dword ptr ds:[0x008C4040]
 0057D1F2    xor eax, ebp
-0057D1F4    mov dword ptr ss:[ebp-0x08], eax
+0057D1F4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 0057D1F7    push ebx
 0057D1F8    mov ebx, edx
 0057D1FA    mov dword ptr ss:[ebp-0x109C], ecx
@@ -13,7 +19,7 @@
 0057D202    lea edx, ss:[ebp-0x108C]
 0057D208    mov dword ptr ss:[ebp-0x1094], ebx
 0057D20E    mov ecx, ebx
-0057D210    call 0x00577870
+0057D210    call 0x00577870                                 ; => [ Call: sub_577870 ]
 0057D215    mov ecx, eax
 0057D217    xor eax, eax
 0057D219    mov dword ptr ss:[ebp-0x10A0], ecx
@@ -25,7 +31,7 @@
 0057D237    mov ecx, eax
 0057D239    mov edx, dword ptr ds:[ebx+0xD48]
 0057D23F    mov dword ptr ss:[ebp-0x1098], eax
-0057D245    call 0x00571B30
+0057D245    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0057D24A    mov esi, eax
 0057D24C    xor ebx, ebx
 0057D24E    xor ecx, ecx
@@ -57,7 +63,7 @@
 0057D2A0    push dword ptr ss:[ebp+0x10]
 0057D2A3    mov edx, dword ptr ss:[ebp+edi*4-0x40C]
 0057D2AA    mov ecx, dword ptr ss:[ebp-0x1098]
-0057D2B0    call 0x00575E70
+0057D2B0    call 0x00575E70                                 ; => [ Call: sub_575e70 ]
 0057D2B5    mov edx, dword ptr ss:[ebp+0x08]
 0057D2B8    add esp, 0x04
 0057D2BB    mov ecx, dword ptr ss:[ebp-0x1094]
@@ -67,7 +73,7 @@
 0057D2C8    push dword ptr ss:[ebp+0x14]
 0057D2CB    push dword ptr ss:[ebp+0x10]
 0057D2CE    push esi
-0057D2CF    call 0x0057C810
+0057D2CF    call 0x0057C810                                 ; => [ Call: sub_57c810 ]
 0057D2D4    add esp, 0x14
 0057D2D7    test al, al
 0057D2D9    jz 0x0057D2F0
@@ -89,7 +95,7 @@
 0057D318    pop esi
 0057D319    xor ecx, ebp
 0057D31B    pop ebx
-0057D31C    call 0x0075927A
+0057D31C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0057D321    mov esp, ebp
 0057D323    pop ebp
 0057D324    ret

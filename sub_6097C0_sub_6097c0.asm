@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_6097c0
+// 起始地址: 0x6097c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006097C0    push ebp
 006097C1    mov ebp, esp
 006097C3    and esp, 0xFFFFFFF8
 006097C6    mov ecx, dword ptr ds:[ecx]
 006097C8    sub esp, 0x08
-006097CB    call 0x00609650
+006097CB    call 0x00609650                                 ; => [ Call: sub_609650 ]
 006097D0    test eax, eax
 006097D2    jz 0x006097F0
 006097D4    lea ecx, ss:[esp]
@@ -14,7 +20,7 @@
 006097E9    setnz al
 006097EC    mov esp, ebp
 006097EE    pop ebp
-006097EF    ret
+006097EF    ret                                             ; => [ Call: sub_4da5d0 ]
 006097F0    xor al, al
 006097F2    mov esp, ebp
 006097F4    pop ebp

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ae950
+// 起始地址: 0x6ae950
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AE950    push ebp
 006AE951    mov ebp, esp
 006AE953    mov eax, dword ptr ss:[ebp+0x08]
@@ -35,10 +41,10 @@
 006AE9AF    push 0x87B990
 006AE9B4    mov edx, 0x801800
 006AE9B9    mov ecx, 0x87BA44
-006AE9BE    call 0x0063B870
+006AE9BE    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: bufferData->mBufferType == DX11BUFFER_INDEX | String: Dx11GraphicsInterface::ReleaseIndexBuffer | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp ]
 006AE9C3    add esp, 0x0C
 006AE9C6    call 0x0063BC30
 006AE9CB    test al, al
-006AE9CD    jz 0x006AE9D0
+006AE9CD    jz 0x006AE9D0                                   ; => [ Call: sub_63bc30 ]
 006AE9CF    int3
-006AE9D0    call 0x0063BB00
+006AE9D0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

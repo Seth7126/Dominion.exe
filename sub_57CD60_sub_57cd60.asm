@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57cd60
+// 起始地址: 0x57cd60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057CD60    push ebp
 0057CD61    mov ebp, esp
 0057CD63    sub esp, 0x08
@@ -25,7 +31,7 @@
 0057CDA6    jnz 0x0057CDE8
 0057CDA8    push ecx
 0057CDA9    mov edx, ebx
-0057CDAB    call 0x00575DE0
+0057CDAB    call 0x00575DE0                                 ; => [ Call: sub_575de0 ]
 0057CDB0    mov edx, dword ptr ss:[ebp+0x08]
 0057CDB3    add esp, 0x04
 0057CDB6    mov ecx, dword ptr ss:[ebp-0x08]
@@ -40,7 +46,7 @@
 0057CDCF    add esp, 0x14
 0057CDD2    mov edx, dword ptr ss:[ebp-0x04]
 0057CDD5    test al, al
-0057CDD7    jz 0x0057CDE8
+0057CDD7    jz 0x0057CDE8                                   ; => [ Call: sub_57c810 ]
 0057CDD9    mov eax, dword ptr ds:[edi+0x400]
 0057CDDF    mov dword ptr ds:[edi+eax*4], esi
 0057CDE2    inc dword ptr ds:[edi+0x400]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_509fe0
+// 起始地址: 0x509fe0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00509FE0    push ebp
 00509FE1    mov ebp, esp
 00509FE3    and esp, 0xFFFFFFF8
@@ -6,8 +12,8 @@
 00509FEA    push edi
 00509FEB    call 0x00573400
 00509FF0    imul edi, dword ptr ds:[eax+0x0C], 0xC84
-00509FF7    add edi, esi
-00509FF9    call 0x00573400
+00509FF7    add edi, esi                                    ; => [ Call: sub_573400 ]
+00509FF9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00509FFE    push dword ptr ds:[0x007BFAD4]
 0050A004    push dword ptr ds:[0x007BFAD0]
 0050A00A    mov edx, dword ptr ds:[eax+0x0C]
@@ -26,4 +32,4 @@
 0050A02F    pop esi
 0050A030    mov esp, ebp
 0050A032    pop ebp
-0050A033    ret
+0050A033    ret                                             ; => [ Call: nullptr | Call: sub_582eb0 ]

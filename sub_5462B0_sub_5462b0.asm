@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_5462b0
+// 起始地址: 0x5462b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005462B0    dword 83EC8B55
 005462B4    in al, 0xF8
 005462B6    push ecx
 005462B7    push esi
 005462B8    call 0x00573400
-005462BD    mov esi, dword ptr ds:[eax+0x0C]
+005462BD    mov esi, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_573400 ]
 005462C0    call 0x00573400
 005462C5    xor ecx, ecx
-005462C7    mov eax, dword ptr ds:[eax+0x04]
+005462C7    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005462CA    mov edx, dword ptr ds:[eax+0x1520]
 005462D0    test edx, edx
 005462D2    jle 0x005462FB
@@ -24,10 +30,10 @@
 005462F7    test ecx, ecx
 005462F9    jnz 0x0054633F
 005462FB    call 0x00573400
-00546300    mov esi, dword ptr ds:[eax+0x0C]
+00546300    mov esi, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_573400 ]
 00546303    call 0x00573400
 00546308    xor ecx, ecx
-0054630A    mov eax, dword ptr ds:[eax+0x04]
+0054630A    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0054630D    mov edx, dword ptr ds:[eax+0x1520]
 00546313    test edx, edx
 00546315    jle 0x00546335
@@ -42,7 +48,7 @@
 00546331    cmp ecx, edx
 00546333    jl 0x00546320
 00546335    mov ecx, 0xD4D
-0054633A    call 0x0056E060
+0054633A    call 0x0056E060                                 ; => [ Call: sub_56e060 ]
 0054633F    pop esi
 00546340    mov esp, ebp
 00546342    pop ebp
@@ -50,10 +56,10 @@
 00546344    test ecx, ecx
 00546346    jz 0x00546335
 00546348    call 0x00573400
-0054634D    mov esi, dword ptr ds:[eax+0x0C]
+0054634D    mov esi, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_573400 ]
 00546350    call 0x00573400
 00546355    xor ecx, ecx
-00546357    mov eax, dword ptr ds:[eax+0x04]
+00546357    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0054635A    mov edx, dword ptr ds:[eax+0x1520]
 00546360    test edx, edx
 00546362    jle 0x00546385
@@ -76,11 +82,11 @@
 0054639C    push 0x00
 0054639E    push 0x06
 005463A0    push 0xFFFFFFFF
-005463A2    call 0x00565FF0
+005463A2    call 0x00565FF0                                 ; => [ Call: nullptr | Call: sub_565ff0 ]
 005463A7    add esp, 0x1C
 005463AA    mov ecx, 0xD4E
 005463AF    call 0x0056E060
 005463B4    pop esi
 005463B5    mov esp, ebp
 005463B7    pop ebp
-005463B8    ret
+005463B8    ret                                             ; => [ Call: sub_56e060 ]

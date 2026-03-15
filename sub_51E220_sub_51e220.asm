@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_51e220
+// 起始地址: 0x51e220
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051E220    push ebp
 0051E221    mov ebp, esp
 0051E223    push 0xFFFFFFFF
-0051E225    push 0x7656A0
+0051E225    push 0x7656A0                                   ; => [ Call: __ehhandler$?MainCppEH@@YGHPBGP6GHHQAPAG@ZH1@Z | Type: EHRegistrationNode ]
 0051E22A    mov eax, dword ptr fs:[0x00000000]
-0051E230    push eax
+0051E230    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0051E231    sub esp, 0x08
 0051E234    push ebx
 0051E235    push esi
 0051E236    push edi
 0051E237    mov eax, dword ptr ds:[0x008C4040]
 0051E23C    xor eax, ebp
-0051E23E    push eax
-0051E23F    lea eax, ss:[ebp-0x0C]
-0051E242    mov dword ptr fs:[0x00000000], eax
+0051E23E    push eax                                        ; => [ Data: __security_cookie ]
+0051E23F    lea eax, ss:[ebp-0x0C]                          ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
+0051E242    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0051E248    mov ebx, ecx
 0051E24A    cmp dword ptr ds:[ebx], 0x00
 0051E24D    jz 0x0051E2ED
@@ -29,18 +35,18 @@
 0051E275    mov edi, dword ptr ds:[edi+0x10]
 0051E278    mov dword ptr ss:[ebp-0x04], 0x00
 0051E27F    cmp dword ptr ds:[0x00CF65BC], 0x00
-0051E286    jz 0x0051E2A1
+0051E286    jz 0x0051E2A1                                   ; => [ Data: data_cf65bc ]
 0051E288    mov ecx, dword ptr ds:[esi+0x04]
 0051E28B    test ecx, ecx
 0051E28D    jz 0x0051E2A1
 0051E28F    mov edx, dword ptr ds:[esi+0x0C]
 0051E292    shl edx, 0x02
 0051E295    mov dword ptr ds:[esi+0x08], 0x00
-0051E29C    call 0x0064C080
+0051E29C    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0051E2A1    mov edx, 0x14
 0051E2A6    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 0051E2AD    mov ecx, esi
-0051E2AF    call 0x0064C080
+0051E2AF    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0051E2B4    test edi, edi
 0051E2B6    jnz 0x0051E273
 0051E2B8    mov ecx, dword ptr ss:[ebp-0x14]
@@ -55,10 +61,10 @@
 0051E2D2    mov ecx, dword ptr ds:[ebx]
 0051E2D4    lea edx, ds:[edx*4+0x04]
 0051E2DB    mov dword ptr ds:[ebx+0x08], 0x00
-0051E2E2    call 0x0064C080
+0051E2E2    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0051E2E7    mov dword ptr ds:[ebx], 0x00
 0051E2ED    mov ecx, dword ptr ss:[ebp-0x0C]
-0051E2F0    mov dword ptr fs:[0x00000000], ecx
+0051E2F0    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0051E2F7    pop ecx
 0051E2F8    pop edi
 0051E2F9    pop esi

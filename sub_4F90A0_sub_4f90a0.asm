@@ -1,22 +1,28 @@
+// ============================================================
+// 函数名称: sub_4f90a0
+// 起始地址: 0x4f90a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F90A0    dword 6AEC8B55
 004F90A4    jmp far fword ptr ds:[eax+0x35]
 004F90A7    dec ebp
 004F90A8    jbe 0x004F90AA
 004F90AA    mov eax, dword ptr fs:[0x00000000]
-004F90B0    push eax
+004F90B0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 004F90B1    sub esp, 0xCEC
 004F90B7    push ebx
 004F90B8    push esi
 004F90B9    push edi
 004F90BA    mov eax, dword ptr ds:[0x008C4040]
 004F90BF    xor eax, ebp
-004F90C1    push eax
+004F90C1    push eax                                        ; => [ Data: __security_cookie ]
 004F90C2    lea eax, ss:[ebp-0x0C]
-004F90C5    mov dword ptr fs:[0x00000000], eax
+004F90C5    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004F90CB    xorps xmm0, xmm0
 004F90CE    mov dword ptr ss:[ebp-0x14], 0x104
 004F90D5    movlpd qword ptr ss:[ebp-0x1C], xmm0
-004F90DA    call 0x00573400
+004F90DA    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004F90DF    lea ecx, ss:[ebp-0xCF8]
 004F90E5    push ecx
 004F90E6    push 0x461
@@ -26,14 +32,14 @@
 004F90F6    mov ecx, dword ptr ss:[ebp-0x1C]
 004F90F9    add esp, 0x08
 004F90FC    or ecx, dword ptr ss:[ebp-0x18]
-004F90FF    mov esi, eax
+004F90FF    mov esi, eax                                    ; => [ Call: sub_590990 ]
 004F9101    mov dword ptr ss:[ebp-0x78], esi
 004F9104    jz 0x004F9181
 004F9106    lea eax, ss:[ebp-0x1C]
-004F9109    mov dword ptr ss:[ebp-0x48], 0x81F114
+004F9109    mov dword ptr ss:[ebp-0x48], 0x81F114           ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_27f5207e4f31665c1a246b29a8d87f28>,bool,enum CardID>::VTable | Data: std::_Func_impl_no_alloc<class <lambda_27f5207e4f31665c1a246b29a8d87f28>,bool,enum CardID>::`vftable'{for `std::_Func_base<bool,enum CardID>'} ]
 004F9110    mov dword ptr ss:[ebp-0x44], eax
 004F9113    lea eax, ss:[ebp-0x48]
-004F9116    mov dword ptr ss:[ebp-0x24], eax
+004F9116    mov dword ptr ss:[ebp-0x24], eax                ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_27f5207e4f31665c1a246b29a8d87f28>,bool,enum CardID>::VTable ]
 004F9119    lea eax, ss:[ebp-0x10]
 004F911C    mov dword ptr ss:[ebp-0x04], 0x00
 004F9123    push eax
@@ -49,7 +55,7 @@
 004F9144    jz 0x004F914E
 004F9146    mov eax, dword ptr ds:[ecx]
 004F9148    push edi
-004F9149    call dword ptr ds:[eax]
+004F9149    call dword ptr ds:[eax]                         ; => [ Field: vFunc_0 ]
 004F914B    mov dword ptr ds:[edi+0x24], eax
 004F914E    mov edx, esi
 004F9150    mov byte ptr ss:[ebp-0x04], 0x00
@@ -58,7 +64,7 @@
 004F915B    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004F9162    add esp, 0x30
 004F9165    mov ecx, dword ptr ss:[ebp-0x24]
-004F9168    mov esi, eax
+004F9168    mov esi, eax                                    ; => [ Call: GSI1::OffForSym ]
 004F916A    mov dword ptr ss:[ebp-0x78], esi
 004F916D    test ecx, ecx
 004F916F    jz 0x004F9181
@@ -66,16 +72,16 @@
 004F9173    mov edx, dword ptr ds:[eax+0x10]
 004F9176    lea eax, ss:[ebp-0x48]
 004F9179    cmp ecx, eax
-004F917B    setnz al
+004F917B    setnz al                                        ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_27f5207e4f31665c1a246b29a8d87f28>,bool,enum CardID>::VTable ]
 004F917E    push eax
-004F917F    call edx
+004F917F    call edx                                        ; => [ Field: vFunc_4 ]
 004F9181    cmp dword ptr ss:[ebp-0x14], 0x00
 004F9185    jz 0x004F9211
 004F918B    lea eax, ss:[ebp-0x14]
-004F918E    mov dword ptr ss:[ebp-0x70], 0x81F0F8
+004F918E    mov dword ptr ss:[ebp-0x70], 0x81F0F8           ; => [ Data: std::_Func_impl_no_alloc<class <lambda_fb776da0643d44ac1bad3b8864e8b093>,bool,enum CardID>::`vftable'{for `std::_Func_base<bool,enum CardID>'} | Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_fb776da0643d44ac1bad3b8864e8b093>,bool,enum CardID>::VTable ]
 004F9195    mov dword ptr ss:[ebp-0x6C], eax
 004F9198    lea eax, ss:[ebp-0x70]
-004F919B    mov dword ptr ss:[ebp-0x4C], eax
+004F919B    mov dword ptr ss:[ebp-0x4C], eax                ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_fb776da0643d44ac1bad3b8864e8b093>,bool,enum CardID>::VTable ]
 004F919E    lea eax, ss:[ebp-0x10]
 004F91A1    mov dword ptr ss:[ebp-0x04], 0x03
 004F91A8    push eax
@@ -91,12 +97,12 @@
 004F91C9    jz 0x004F91D3
 004F91CB    mov eax, dword ptr ds:[ecx]
 004F91CD    push edi
-004F91CE    call dword ptr ds:[eax]
+004F91CE    call dword ptr ds:[eax]                         ; => [ Field: vFunc_0 ]
 004F91D0    mov dword ptr ds:[edi+0x24], eax
 004F91D3    mov edx, esi
 004F91D5    mov byte ptr ss:[ebp-0x04], 0x03
 004F91D9    mov ecx, ebx
-004F91DB    call 0x0057EB70
+004F91DB    call 0x0057EB70                                 ; => [ Call: GSI1::OffForSym ]
 004F91E0    mov ecx, dword ptr ss:[ebp-0x4C]
 004F91E3    add esp, 0x30
 004F91E6    mov edi, eax
@@ -108,10 +114,10 @@
 004F91F3    setnz dl
 004F91F6    movzx edx, dl
 004F91F9    push edx
-004F91FA    call dword ptr ds:[esi+0x10]
+004F91FA    call dword ptr ds:[esi+0x10]                    ; => [ Field: vFunc_4 ]
 004F91FD    mov eax, edi
 004F91FF    mov ecx, dword ptr ss:[ebp-0x0C]
-004F9202    mov dword ptr fs:[0x00000000], ecx
+004F9202    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004F9209    pop ecx
 004F920A    pop edi
 004F920B    pop esi
@@ -121,7 +127,7 @@
 004F9210    ret
 004F9211    mov eax, esi
 004F9213    mov ecx, dword ptr ss:[ebp-0x0C]
-004F9216    mov dword ptr fs:[0x00000000], ecx
+004F9216    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004F921D    pop ecx
 004F921E    pop edi
 004F921F    pop esi

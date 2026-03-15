@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66d010
+// 起始地址: 0x66d010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066D010    push ebp
 0066D011    mov ebp, esp
 0066D013    and esp, 0xFFFFFFF0
@@ -5,13 +11,13 @@
 0066D019    mov eax, edx
 0066D01B    mov dword ptr ss:[esp+0x10], eax
 0066D01F    push esi
-0066D020    mov esi, 0x801800
+0066D020    mov esi, 0x801800                               ; => [ Data: data_801800 ]
 0066D025    mov eax, dword ptr ds:[eax]
 0066D027    test eax, eax
 0066D029    push edi
 0066D02A    cmovnz esi, eax
 0066D02D    mov edi, ecx
-0066D02F    mov eax, 0x801800
+0066D02F    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 0066D034    mov cl, byte ptr ds:[esi]
 0066D036    cmp cl, byte ptr ds:[eax]
 0066D038    jnz 0x0066D054
@@ -31,14 +37,14 @@
 0066D059    test eax, eax
 0066D05B    jz 0x0066D192
 0066D061    mov ecx, edi
-0066D063    call 0x0064CC90
+0066D063    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 0066D068    mov esi, eax
-0066D06A    mov ecx, 0x8CAE70
+0066D06A    mov ecx, 0x8CAE70                               ; => [ Data: data_8cae70 ]
 0066D06F    push 0x69
 0066D071    push dword ptr ds:[0x01724A80]
 0066D077    mov edx, esi
 0066D079    call 0x006DD1E0
-0066D07E    mov edi, eax
+0066D07E    mov edi, eax                                    ; => [ Call: sub_6dd1e0 | Data: data_8cae70 | Data: data_1724a80 ]
 0066D080    add esp, 0x08
 0066D083    mov dword ptr ss:[esp+0x14], edi
 0066D087    test edi, edi
@@ -52,7 +58,7 @@
 0066D09E    mov dword ptr ss:[esp+0x1C], edx
 0066D0A2    mov ecx, dword ptr ds:[edi]
 0066D0A4    test edx, edx
-0066D0A6    mov eax, 0x801800
+0066D0A6    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 0066D0AB    cmovnz eax, edx
 0066D0AE    nop
 0066D0B0    mov dl, byte ptr ds:[ecx]
@@ -88,25 +94,25 @@
 0066D0FE    push eax
 0066D0FF    push 0x69
 0066D101    mov edx, esi
-0066D103    movaps xmmword ptr ss:[esp+0x2C], xmm0
+0066D103    movaps xmmword ptr ss:[esp+0x2C], xmm0          ; => [ String: 0 | String: zx ]
 0066D108    call 0x006DCC50
 0066D10D    add esp, 0x0C
 0066D110    mov edx, esi
-0066D112    mov ecx, 0x8CAE70
+0066D112    mov ecx, 0x8CAE70                               ; => [ Data: data_8cae70 ]
 0066D117    push 0x69
 0066D119    push dword ptr ds:[0x01724A80]
 0066D11F    call 0x006DD1E0
 0066D124    add esp, 0x08
-0066D127    mov edi, eax
+0066D127    mov edi, eax                                    ; => [ Call: sub_6dd1e0 | Call: sub_6dcc50 | Data: data_8cae70 | Data: data_1724a80 ]
 0066D129    push dword ptr ds:[edi+0x08]
 0066D12C    xor edx, edx
 0066D12E    push ecx
 0066D12F    mov ecx, dword ptr ds:[0x01724A80]
-0066D135    call 0x0069DD00
+0066D135    call 0x0069DD00                                 ; => [ Call: sub_69dd00 | Data: data_1724a80 ]
 0066D13A    add esp, 0x04
 0066D13D    mov edx, eax
 0066D13F    mov ecx, edi
-0066D141    call 0x006FB630
+0066D141    call 0x006FB630                                 ; => [ Call: sub_6fb630 ]
 0066D146    mov eax, dword ptr ds:[edi+0x08]
 0066D149    add esp, 0x04
 0066D14C    mov edi, dword ptr ds:[edi]
@@ -114,7 +120,7 @@
 0066D151    mov eax, dword ptr ss:[esp+0x18]
 0066D155    shl ecx, 0x04
 0066D158    add edi, ecx
-0066D15A    mov ecx, 0x801800
+0066D15A    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 0066D15F    mov eax, dword ptr ds:[eax]
 0066D161    test eax, eax
 0066D163    cmovnz ecx, eax
@@ -129,12 +135,12 @@
 0066D177    sub esi, ecx
 0066D179    inc esi
 0066D17A    mov ecx, esi
-0066D17C    call 0x00687730
+0066D17C    call 0x00687730                                 ; => [ Call: sub_687730 ]
 0066D181    push esi
 0066D182    push dword ptr ss:[esp+0x20]
 0066D186    mov dword ptr ds:[edi-0x30], eax
 0066D189    push eax
-0066D18A    call 0x00761FBE
+0066D18A    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0066D18F    add esp, 0x0C
 0066D192    pop edi
 0066D193    pop esi

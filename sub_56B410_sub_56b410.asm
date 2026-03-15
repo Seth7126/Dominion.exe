@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56b410
+// 起始地址: 0x56b410
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056B410    push ebp
 0056B411    mov ebp, esp
 0056B413    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 0056B41B    push edi
 0056B41C    mov edi, edx
 0056B41E    mov ebx, ecx
-0056B420    call 0x00573400
+0056B420    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056B425    mov esi, dword ptr ds:[eax]
 0056B427    mov ecx, dword ptr ds:[eax+0x0C]
 0056B42A    mov dword ptr ss:[esp+0x10], esi
@@ -39,7 +45,7 @@
 0056B46C    mov ecx, eax
 0056B46E    call 0x00623B70
 0056B473    add esp, 0x28
-0056B476    mov esi, eax
+0056B476    mov esi, eax                                    ; => [ Call: sub_623b70 ]
 0056B478    test esi, esi
 0056B47A    jz 0x0056B485
 0056B47C    mov eax, dword ptr ds:[ebx]

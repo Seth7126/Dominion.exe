@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6de150
+// 起始地址: 0x6de150
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DE150    push ebp
 006DE151    mov ebp, esp
 006DE153    and esp, 0xFFFFFFF0
 006DE156    sub esp, 0x88
-006DE15C    mov eax, dword ptr ds:[0x008C4040]
+006DE15C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006DE161    xor eax, esp
 006DE163    mov dword ptr ss:[esp+0x84], eax
 006DE16A    mov eax, dword ptr ss:[ebp+0x08]
@@ -36,7 +42,7 @@
 006DE1D3    lea eax, ss:[esp+0x60]
 006DE1D7    push eax
 006DE1D8    mov edx, edi
-006DE1DA    call 0x006DDC00
+006DE1DA    call 0x006DDC00                                 ; => [ Call: sub_6ddc00 ]
 006DE1DF    mov eax, dword ptr ss:[esp+0x18]
 006DE1E3    lea edx, ss:[esp+0x34]
 006DE1E7    add esp, 0x04
@@ -51,7 +57,7 @@
 006DE20B    push eax
 006DE20C    mov ecx, eax
 006DE20E    movq qword ptr ss:[esp+0x54], xmm0
-006DE214    call 0x006DDEB0
+006DE214    call 0x006DDEB0                                 ; => [ Call: sub_6ddeb0 ]
 006DE219    movss xmm0, dword ptr ss:[esp+0x24]
 006DE21F    add esp, 0x04
 006DE222    ucomiss xmm0, dword ptr ds:[0x00890E18]
@@ -63,7 +69,7 @@
 006DE235    push eax
 006DE236    add edx, dword ptr ss:[esp+0x28]
 006DE23A    mov ecx, edx
-006DE23C    call 0x006DDEB0
+006DE23C    call 0x006DDEB0                                 ; => [ Call: sub_6ddeb0 ]
 006DE241    movss xmm1, dword ptr ss:[esp+0x2C]
 006DE247    add esp, 0x04
 006DE24A    mov ecx, dword ptr ss:[esp+0x14]
@@ -80,7 +86,7 @@
 006DE276    pop edi
 006DE277    pop esi
 006DE278    xor ecx, esp
-006DE27A    call 0x0075927A
+006DE27A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006DE27F    mov esp, ebp
 006DE281    pop ebp
 006DE282    ret
@@ -89,10 +95,10 @@
 006DE28D    push 0x88162C
 006DE292    mov edx, 0x801800
 006DE297    mov ecx, 0x881870
-006DE29C    call 0x0063B870
+006DE29C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Animation.cpp | String: AnimDefAccumDifferenceBonePosition | Data: data_801800 | String: fractionWeight == 1.0f ]
 006DE2A1    add esp, 0x0C
 006DE2A4    call 0x0063BC30
 006DE2A9    test al, al
-006DE2AB    jz 0x006DE2AE
+006DE2AB    jz 0x006DE2AE                                   ; => [ Call: sub_63bc30 ]
 006DE2AD    int3
-006DE2AE    call 0x0063BB00
+006DE2AE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

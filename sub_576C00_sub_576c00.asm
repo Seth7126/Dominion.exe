@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_576c00
+// 起始地址: 0x576c00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00576C00    push ebp
 00576C01    mov ebp, esp
 00576C03    mov edx, dword ptr ss:[ebp+0x08]
 00576C06    xorps xmm0, xmm0
 00576C09    mov ecx, dword ptr ss:[ebp+0x0C]
 00576C0C    movzx eax, cl
-00576C0F    movups xmmword ptr ds:[edx], xmm0
+00576C0F    movups xmmword ptr ds:[edx], xmm0               ; => [ Call: __builtin_memset ]
 00576C12    mov dword ptr ds:[edx+0x10], 0x00
 00576C19    mov dword ptr ds:[edx], eax
 00576C1B    mov eax, ecx

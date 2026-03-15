@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72a480
+// 起始地址: 0x72a480
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072A480    push ebp
 0072A481    mov ebp, esp
 0072A483    sub esp, 0x50
@@ -140,10 +146,10 @@
 0072A60D    mov ecx, esi
 0072A60F    mov dword ptr ss:[ebp-0x34], eax
 0072A612    mov dword ptr ss:[ebp-0x0C], eax
-0072A615    call 0x007203E0
+0072A615    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072A61A    mov ecx, esi
 0072A61C    mov dword ptr ss:[ebp-0x50], eax
-0072A61F    call 0x007203E0
+0072A61F    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072A624    mov ecx, dword ptr ds:[ebx]
 0072A626    mov dword ptr ss:[ebp-0x28], eax
 0072A629    cmp ecx, dword ptr ds:[esi+0xAC]
@@ -184,14 +190,14 @@
 0072A685    movzx edi, dl
 0072A688    mov ecx, esi
 0072A68A    mov dword ptr ss:[ebp-0x08], edi
-0072A68D    call 0x007203E0
+0072A68D    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072A692    mov ecx, esi
-0072A694    call 0x007203E0
+0072A694    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072A699    mov ecx, esi
-0072A69B    call 0x007203E0
+0072A69B    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072A6A0    mov ecx, esi
 0072A6A2    mov dword ptr ss:[ebp-0x18], eax
-0072A6A5    call 0x007203E0
+0072A6A5    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072A6AA    mov ecx, dword ptr ds:[esi+0xAC]
 0072A6B0    mov dword ptr ss:[ebp-0x10], eax
 0072A6B3    mov eax, dword ptr ds:[ebx]
@@ -278,7 +284,7 @@
 0072A798    cmp dword ptr ss:[ebp-0x34], 0x08
 0072A79C    mov ecx, dword ptr ss:[ebp-0x0C]
 0072A79F    movzx eax, dl
-0072A7A2    mov dword ptr ss:[ebp-0x30], 0x00
+0072A7A2    mov dword ptr ss:[ebp-0x30], 0x00               ; => [ Call: nullptr ]
 0072A7A9    mov dword ptr ss:[ebp-0x2C], 0x00
 0072A7B0    mov dword ptr ss:[ebp-0x38], 0x00
 0072A7B7    mov dword ptr ss:[ebp-0x40], 0x00
@@ -296,30 +302,30 @@
 0072A7E3    cmp eax, 0x18
 0072A7E6    jnbe 0x0072A849
 0072A7E8    movzx eax, byte ptr ds:[eax+0x72AE20]
-0072A7EF    jmp dword ptr ds:[eax*4+0x72AE10]
-0072A7F6    mov dword ptr ss:[ebp-0x08], 0x01
+0072A7EF    jmp dword ptr ds:[eax*4+0x72AE10]               ; => [ Data: jump_table_72ae10 ]
+0072A7F6    mov dword ptr ss:[ebp-0x08], 0x01               ; => [ Data: lookup_table_72ae50 | Data: lookup_table_72ae20 ]
 0072A7FD    jmp 0x0072A850
 0072A7FF    shr edi, 0x03
-0072A802    mov dword ptr ss:[ebp-0x08], edi
+0072A802    mov dword ptr ss:[ebp-0x08], edi                ; => [ Data: lookup_table_72ae20 ]
 0072A805    jmp 0x0072A850
 0072A807    mov eax, dword ptr ss:[ebp-0x3C]
 0072A80A    add eax, 0xFFFFFFF8
 0072A80D    cmp eax, 0x18
 0072A810    jnbe 0x0072A849
 0072A812    movzx eax, byte ptr ds:[eax+0x72AE50]
-0072A819    jmp dword ptr ds:[eax*4+0x72AE3C]
+0072A819    jmp dword ptr ds:[eax*4+0x72AE3C]               ; => [ Data: jump_table_72ae3c ]
 0072A820    cmp ecx, 0x03
-0072A823    jnz 0x0072A82E
+0072A823    jnz 0x0072A82E                                  ; => [ Data: lookup_table_72ae50 ]
 0072A825    mov dword ptr ss:[ebp-0x08], 0x02
 0072A82C    jmp 0x0072A850
-0072A82E    mov dword ptr ss:[ebp-0x08], 0x03
+0072A82E    mov dword ptr ss:[ebp-0x08], 0x03               ; => [ Data: lookup_table_72ae50 | Data: lookup_table_72ae20 ]
 0072A835    mov dword ptr ss:[ebp-0x0C], 0x01
 0072A83C    jmp 0x0072A857
 0072A83E    mov eax, dword ptr ss:[ebp-0x1C]
 0072A841    shr eax, 0x03
-0072A844    mov dword ptr ss:[ebp-0x08], eax
+0072A844    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: lookup_table_72ae50 ]
 0072A847    jmp 0x0072A850
-0072A849    mov dword ptr ss:[ebp-0x08], 0x00
+0072A849    mov dword ptr ss:[ebp-0x08], 0x00               ; => [ Data: lookup_table_72ae50 | Data: lookup_table_72ae20 ]
 0072A850    mov dword ptr ss:[ebp-0x0C], 0x00
 0072A857    mov ecx, dword ptr ss:[ebp-0x08]
 0072A85A    test ecx, ecx
@@ -433,7 +439,7 @@
 0072A9A6    push eax
 0072A9A7    mov edx, ebx
 0072A9A9    mov ecx, esi
-0072A9AB    call 0x00720200
+0072A9AB    call 0x00720200                                 ; => [ Call: sub_720200 ]
 0072A9B0    mov eax, dword ptr ss:[ebp-0x38]
 0072A9B3    add esp, 0x04
 0072A9B6    sub ebx, eax
@@ -447,7 +453,7 @@
 0072A9D0    push eax
 0072A9D1    mov edx, edi
 0072A9D3    mov ecx, esi
-0072A9D5    call 0x00720200
+0072A9D5    call 0x00720200                                 ; => [ Call: sub_720200 ]
 0072A9DA    mov eax, dword ptr ss:[ebp-0x38]
 0072A9DD    add esp, 0x04
 0072A9E0    add edi, eax
@@ -513,7 +519,7 @@
 0072AA9E    mov byte ptr ss:[ebp-0x01], cl
 0072AAA1    mov edx, ebx
 0072AAA3    mov ecx, esi
-0072AAA5    call 0x0072A400
+0072AAA5    call 0x0072A400                                 ; => [ Call: sub_72a400 ]
 0072AAAA    add ebx, edi
 0072AAAC    sub dword ptr ss:[ebp-0x3C], 0x01
 0072AAB0    jnz 0x0072AAA1
@@ -529,7 +535,7 @@
 0072AAC8    call 0x00720200
 0072AACD    add esp, 0x04
 0072AAD0    test eax, eax
-0072AAD2    jnz 0x0072AAF3
+0072AAD2    jnz 0x0072AAF3                                  ; => [ Call: sub_720200 ]
 0072AAD4    mov esi, dword ptr ds:[0x00775528]
 0072AADA    push edi
 0072AADB    call esi
@@ -650,7 +656,7 @@
 0072AC39    movzx eax, cl
 0072AC3C    jmp 0x0072AC45
 0072AC3E    mov ecx, esi
-0072AC40    call 0x007203E0
+0072AC40    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072AC45    xor ecx, ecx
 0072AC47    cmp eax, dword ptr ss:[ebp-0x28]
 0072AC4A    cmovl ecx, eax
@@ -663,14 +669,14 @@
 0072AC5E    push eax
 0072AC5F    lea eax, ss:[ebp-0x2C]
 0072AC62    push eax
-0072AC63    call 0x00761FBE
+0072AC63    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0072AC68    add esp, 0x0C
 0072AC6B    jmp 0x0072AD0A
 0072AC70    cmp dword ptr ss:[ebp-0x0C], 0x00
 0072AC74    jz 0x0072AC85
 0072AC76    lea edx, ss:[ebp-0x2C]
 0072AC79    mov ecx, esi
-0072AC7B    call 0x0072A400
+0072AC7B    call 0x0072A400                                 ; => [ Call: sub_72a400 ]
 0072AC80    jmp 0x0072AD0A
 0072AC85    xor ebx, ebx
 0072AC87    test edi, edi
@@ -727,7 +733,7 @@
 0072AD1D    lea ecx, ss:[ebp-0x2C]
 0072AD20    push ecx
 0072AD21    push eax
-0072AD22    call 0x00761FBE
+0072AD22    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0072AD27    mov eax, dword ptr ss:[ebp-0x20]
 0072AD2A    add esp, 0x0C
 0072AD2D    mov ecx, dword ptr ss:[ebp-0x1C]
@@ -748,7 +754,7 @@
 0072AD57    mov esi, dword ptr ss:[ebp-0x10]
 0072AD5A    mov edx, edi
 0072AD5C    xor eax, eax
-0072AD5E    xor ebx, ebx
+0072AD5E    xor ebx, ebx                                    ; => [ Call: nullptr ]
 0072AD60    imul edx, dword ptr ss:[ebp-0x18]
 0072AD64    mov dword ptr ss:[ebp-0x50], edx
 0072AD67    mov edi, edx

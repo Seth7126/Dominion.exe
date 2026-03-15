@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a8290
+// 起始地址: 0x5a8290
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A8290    push ebp
 005A8291    mov ebp, esp
 005A8293    mov eax, 0x200E8
-005A8298    call 0x00761E50
+005A8298    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A829D    mov eax, dword ptr ds:[0x008C4040]
 005A82A2    xor eax, ebp
-005A82A4    mov dword ptr ss:[ebp-0x08], eax
+005A82A4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 005A82A7    mov eax, dword ptr ss:[ebp+0x10]
 005A82AA    push ebx
 005A82AB    mov ebx, dword ptr ss:[ebp+0x08]
@@ -18,16 +24,16 @@
 005A82C7    mov dword ptr ss:[ebp-0x200C0], ebx
 005A82CD    cmp eax, 0x14
 005A82D0    jle 0x005A82E6
-005A82D2    push 0x825418
+005A82D2    push 0x825418                                   ; => [ String: PlaceTrees ]
 005A82D7    push 0xA74
-005A82DC    mov ecx, 0x825424
+005A82DC    mov ecx, 0x825424                               ; => [ String: params.sources <= MAX_TREE_SPAWNS ]
 005A82E1    jmp 0x005A865C
 005A82E6    xor esi, esi
 005A82E8    test eax, eax
 005A82EA    jle 0x005A8335
 005A82EC    mov ebx, dword ptr ss:[ebp-0x200B4]
 005A82F2    mov ecx, edi
-005A82F4    call 0x005A41C0
+005A82F4    call 0x005A41C0                                 ; => [ Call: sub_5a41c0 ]
 005A82F9    mov dword ptr ss:[ebp-0x200C8], eax
 005A82FF    movss xmm0, dword ptr ss:[ebp-0x200C8]
 005A8307    mov eax, dword ptr ds:[ebx+0x08]
@@ -45,7 +51,7 @@
 005A833D    push eax
 005A833E    lea ecx, ds:[edi+0x10]
 005A8341    lea edx, ss:[ebp-0xAC]
-005A8347    call 0x005A8090
+005A8347    call 0x005A8090                                 ; => [ Call: sub_5a8090 ]
 005A834C    add esp, 0x0C
 005A834F    mov dword ptr ss:[ebp-0x200BC], eax
 005A8355    lea edx, ds:[eax*8]
@@ -56,7 +62,7 @@
 005A836D    add edx, eax
 005A836F    push ecx
 005A8370    mov ecx, eax
-005A8372    call 0x005ACE10
+005A8372    call 0x005ACE10                                 ; => [ Call: sub_5ace10 ]
 005A8377    mov ecx, dword ptr ss:[ebp+0x0C]
 005A837A    add esp, 0x08
 005A837D    lea eax, ds:[ecx-0x01]
@@ -64,12 +70,12 @@
 005A8386    mov dword ptr ss:[ebp-0x200CC], eax
 005A838C    cmp dword ptr ds:[eax+0xB4A620], ecx
 005A8392    jz 0x005A83A8
-005A8394    push 0x8253A0
+005A8394    push 0x8253A0                                   ; => [ String: TerrainElementDefGet ]
 005A8399    push 0x9B0
-005A839E    mov ecx, 0x8253B8
+005A839E    mov ecx, 0x8253B8                               ; => [ String: TERRAIN_ELEMENT_DEFS[idx].terrain == element ]
 005A83A3    jmp 0x005A865C
 005A83A8    xor ecx, ecx
-005A83AA    lea eax, ds:[eax+0xB4A648]
+005A83AA    lea eax, ds:[eax+0xB4A648]                      ; => [ Data: data_b4a648 ]
 005A83B0    mov dword ptr ss:[ebp-0x200B0], ecx
 005A83B6    cmp dword ptr ds:[eax-0x10], 0x00
 005A83BA    jz 0x005A84FF
@@ -135,7 +141,7 @@
 005A84C0    push 0x00
 005A84C2    movaps xmm2, xmm0
 005A84C5    movss dword ptr ss:[ebp-0x200E0], xmm0
-005A84CD    call 0x005A11B0
+005A84CD    call 0x005A11B0                                 ; => [ Call: sub_5a11b0 ]
 005A84D2    add esp, 0x04
 005A84D5    test al, al
 005A84D7    jz 0x005A850C
@@ -160,7 +166,7 @@
 005A851E    mov esi, dword ptr ds:[esi+0x04]
 005A8521    push esi
 005A8522    push edi
-005A8523    call 0x007621D0
+005A8523    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A8528    mov ecx, dword ptr ss:[ebp-0x200B8]
 005A852E    mov dword ptr ss:[ebp-0x200D0], 0x00
 005A8538    add eax, dword ptr ds:[ecx+0x08]
@@ -215,7 +221,7 @@
 005A85FA    lea edx, ss:[ebp-0x200E8]
 005A8600    mov ecx, dword ptr ss:[ebp-0x200C0]
 005A8606    push eax
-005A8607    call 0x005A1010
+005A8607    call 0x005A1010                                 ; => [ Call: sub_5a1010 ]
 005A860C    add esp, 0x04
 005A860F    xorps xmm2, xmm2
 005A8612    inc ebx
@@ -233,19 +239,19 @@
 005A8640    pop esi
 005A8641    xor ecx, ebp
 005A8643    pop ebx
-005A8644    call 0x0075927A
+005A8644    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A8649    mov esp, ebp
 005A864B    pop ebp
 005A864C    ret
-005A864D    push 0x825418
+005A864D    push 0x825418                                   ; => [ String: PlaceTrees ]
 005A8652    push 0xA86
-005A8657    mov ecx, 0x825448
+005A8657    mov ecx, 0x825448                               ; => [ String: numElements > 0 ]
 005A865C    push 0x8250E0
 005A8661    mov edx, 0x801800
-005A8666    call 0x0063B870
+005A8666    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp ]
 005A866B    add esp, 0x0C
 005A866E    call 0x0063BC30
 005A8673    test al, al
-005A8675    jz 0x005A8678
+005A8675    jz 0x005A8678                                   ; => [ Call: sub_63bc30 ]
 005A8677    int3
-005A8678    call 0x0063BB00
+005A8678    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

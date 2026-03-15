@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69e9c0
+// 起始地址: 0x69e9c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069E9C0    push ebp
 0069E9C1    mov ebp, esp
 0069E9C3    push ebx
@@ -5,19 +11,19 @@
 0069E9C5    push edi
 0069E9C6    mov edi, ecx
 0069E9C8    mov ecx, 0x28
-0069E9CD    call 0x0064BFD0
+0069E9CD    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0069E9D2    mov ebx, eax
 0069E9D4    inc dword ptr ds:[ebx+0x0C]
 0069E9D7    cmp dword ptr ds:[ebx], 0x00
 0069E9DA    jnz 0x0069E9E3
 0069E9DC    mov ecx, ebx
-0069E9DE    call 0x0064BE70
+0069E9DE    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0069E9E3    mov esi, dword ptr ds:[ebx]
 0069E9E5    xorps xmm0, xmm0
 0069E9E8    mov eax, dword ptr ds:[esi]
 0069E9EA    mov dword ptr ds:[ebx], eax
 0069E9EC    mov ebx, dword ptr ss:[ebp+0x08]
-0069E9EF    movups xmmword ptr ds:[esi], xmm0
+0069E9EF    movups xmmword ptr ds:[esi], xmm0               ; => [ Call: __builtin_memset ]
 0069E9F2    movups xmmword ptr ds:[esi+0x10], xmm0
 0069E9F6    movq qword ptr ds:[esi+0x20], xmm0
 0069E9FB    mov eax, dword ptr ds:[ebx]
@@ -39,7 +45,7 @@
 0069EA27    jz 0x0069EA36
 0069EA29    cmp byte ptr ds:[eax], 0x00
 0069EA2C    jz 0x0069EA36
-0069EA2E    call 0x0063D4E0
+0069EA2E    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 0069EA33    inc dword ptr ds:[eax+0x04]
 0069EA36    mov al, byte ptr ds:[ebx+0x1C]
 0069EA39    mov byte ptr ds:[esi+0x1C], al

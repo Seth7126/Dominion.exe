@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5122d0
+// 起始地址: 0x5122d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005122D0    push ebp
 005122D1    mov ebp, esp
 005122D3    sub esp, 0x14
@@ -8,7 +14,7 @@
 005122E3    add eax, 0x0C
 005122E6    shl esi, 0x0B
 005122E9    xor ebx, ebx
-005122EB    add eax, esi
+005122EB    add eax, esi                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 005122ED    mov dword ptr ss:[ebp-0x0C], edx
 005122F0    push edi
 005122F1    mov dword ptr ss:[ebp-0x04], ecx
@@ -22,7 +28,7 @@
 0051230A    mov ecx, edi
 0051230C    call 0x005121C0
 00512311    test al, al
-00512313    jz 0x00512327
+00512313    jz 0x00512327                                   ; => [ Call: sub_5121c0 ]
 00512315    mov ecx, dword ptr ss:[ebp-0x04]
 00512318    mov eax, ebx
 0051231A    mov edx, dword ptr ss:[ebp-0x0C]

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6be800
+// 起始地址: 0x6be800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BE800    push ebp
 006BE801    mov ebp, esp
 006BE803    sub esp, 0x6C
 006BE806    movss xmm1, dword ptr ss:[ebp+0x10]
 006BE80B    xorps xmm2, xmm2
 006BE80E    mov eax, dword ptr ss:[ebp+0x0C]
-006BE811    movups xmm0, xmmword ptr ds:[0x00800248]
+006BE811    movups xmm0, xmmword ptr ds:[0x00800248]        ; => [ Data: data_800248 ]
 006BE818    push ebx
 006BE819    ucomiss xmm1, xmm2
 006BE81C    push esi
@@ -37,9 +43,9 @@
 006BE887    movaps xmm0, xmm1
 006BE88A    movss dword ptr ss:[ebp+0x10], xmm1
 006BE88F    call 0x004AE0F0
-006BE894    movss dword ptr ss:[ebp-0x04], xmm0
+006BE894    movss dword ptr ss:[ebp-0x04], xmm0             ; => [ Call: sub_4ae0f0 ]
 006BE899    movss xmm0, dword ptr ss:[ebp+0x10]
-006BE89E    call 0x004AE0D0
+006BE89E    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006BE8A3    movss xmm3, dword ptr ss:[ebp-0x0C]
 006BE8A8    xorps xmm2, xmm2
 006BE8AB    ucomiss xmm3, xmm2

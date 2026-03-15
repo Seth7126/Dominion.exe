@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5742f0
+// 起始地址: 0x5742f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005742F0    push ebp
 005742F1    mov ebp, esp
 005742F3    and esp, 0xFFFFFFF8
@@ -26,7 +32,7 @@
 00574333    mov ecx, ebx
 00574335    push 0x00
 00574337    push dword ptr ss:[ebp+0x08]
-0057433A    call 0x005735A0
+0057433A    call 0x005735A0                                 ; => [ Call: nullptr | Call: sub_5735a0 | Call: sub_573c80 ]
 0057433F    add esp, 0x18
 00574342    mov eax, esi
 00574344    pop esi
@@ -39,10 +45,10 @@
 00574354    push 0x81F4B8
 00574359    mov edx, 0x801800
 0057435E    mov ecx, 0x801AA4
-00574363    call 0x0063B870
+00574363    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: NextAvailableNonSupplyPile | String: Halt ]
 00574368    add esp, 0x0C
 0057436B    call 0x0063BC30
 00574370    test al, al
-00574372    jz 0x00574375
+00574372    jz 0x00574375                                   ; => [ Call: sub_63bc30 ]
 00574374    int3
-00574375    call 0x0063BB00
+00574375    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

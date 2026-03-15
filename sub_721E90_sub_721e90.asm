@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_721e90
+// 起始地址: 0x721e90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00721E90    dword 83EC8B55
 00721E94    in al, 0xF0
 00721E96    sub esp, 0xF0
@@ -11,15 +17,15 @@
 00721EB5    punpcklwd xmm6, xmmword ptr ds:[eax+0x60]
 00721EBA    punpckhwd xmm7, xmmword ptr ds:[eax+0x60]
 00721EBF    movaps xmm0, xmm6
-00721EC2    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]
+00721EC2    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]       ; => [ Data: data_8938e0 ]
 00721ECA    movups xmm3, xmmword ptr ds:[eax+0x30]
-00721ECE    pmaddwd xmm6, xmmword ptr ds:[0x008932B0]
+00721ECE    pmaddwd xmm6, xmmword ptr ds:[0x008932B0]       ; => [ Data: data_8932b0 ]
 00721ED6    movups xmm4, xmmword ptr ds:[eax+0x10]
 00721EDA    movups xmm5, xmmword ptr ds:[eax+0x50]
 00721EDE    movaps xmmword ptr ss:[esp+0x80], xmm0
 00721EE6    movaps xmm0, xmm7
-00721EE9    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]
-00721EF1    pmaddwd xmm7, xmmword ptr ds:[0x008932B0]
+00721EE9    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]       ; => [ Data: data_8938e0 ]
+00721EF1    pmaddwd xmm7, xmmword ptr ds:[0x008932B0]       ; => [ Data: data_8932b0 ]
 00721EF9    movaps xmmword ptr ss:[esp+0x20], xmm6
 00721EFE    movaps xmm6, xmm5
 00721F01    punpcklwd xmm6, xmm4
@@ -29,22 +35,22 @@
 00721F12    movaps xmmword ptr ss:[esp+0xA0], xmm7
 00721F1A    psubw xmm2, xmmword ptr ds:[eax+0x40]
 00721F1F    movaps xmm7, xmm5
-00721F22    punpcklwd xmm1, xmm0
+00721F22    punpcklwd xmm1, xmm0                            ; => [ String: 0 | String: zx ]
 00721F26    paddw xmm5, xmm3
 00721F2A    psrad xmm1, 0x04
 00721F2F    punpckhwd xmm7, xmm4
 00721F33    movaps xmmword ptr ss:[esp+0x50], xmm1
 00721F38    xorps xmm1, xmm1
-00721F3B    punpckhwd xmm1, xmm0
+00721F3B    punpckhwd xmm1, xmm0                            ; => [ String: 0 | String: zx ]
 00721F3F    xorps xmm0, xmm0
 00721F42    punpcklwd xmm0, xmm2
-00721F46    psrad xmm0, 0x04
+00721F46    psrad xmm0, 0x04                                ; => [ String: 0 | String: zx ]
 00721F4B    psrad xmm1, 0x04
 00721F50    movaps xmmword ptr ss:[esp+0x40], xmm0
 00721F55    xorps xmm0, xmm0
 00721F58    punpckhwd xmm0, xmm2
 00721F5C    movaps xmm2, xmmword ptr ss:[esp+0x10]
-00721F61    psrad xmm0, 0x04
+00721F61    psrad xmm0, 0x04                                ; => [ String: 0 | String: zx ]
 00721F66    movaps xmmword ptr ss:[esp+0x90], xmm1
 00721F6E    movaps xmmword ptr ss:[esp+0xD0], xmm0
 00721F76    movaps xmm0, xmm2
@@ -54,55 +60,55 @@
 00721F85    punpckhwd xmm0, xmm3
 00721F89    paddw xmm2, xmm4
 00721F8D    movaps xmm3, xmmword ptr ss:[esp+0x60]
-00721F92    pmaddwd xmm3, xmmword ptr ds:[0x008938C0]
+00721F92    pmaddwd xmm3, xmmword ptr ds:[0x008938C0]       ; => [ Data: data_8938c0 ]
 00721F9A    movaps xmmword ptr ss:[esp+0x70], xmm0
 00721F9F    movaps xmm0, xmm2
 00721FA2    punpcklwd xmm0, xmm5
 00721FA6    movaps xmm1, xmm0
 00721FA9    punpckhwd xmm2, xmm5
-00721FAD    pmaddwd xmm1, xmmword ptr ds:[0x008932E0]
+00721FAD    pmaddwd xmm1, xmmword ptr ds:[0x008932E0]       ; => [ Data: data_8932e0 ]
 00721FB5    movaps xmm5, xmm6
-00721FB8    pmaddwd xmm5, xmmword ptr ds:[0x00893900]
-00721FC0    pmaddwd xmm0, xmmword ptr ds:[0x008938D0]
+00721FB8    pmaddwd xmm5, xmmword ptr ds:[0x00893900]       ; => [ Data: data_893900 ]
+00721FC0    pmaddwd xmm0, xmmword ptr ds:[0x008938D0]       ; => [ Data: data_8938d0 ]
 00721FC8    movaps xmmword ptr ss:[esp+0x10], xmm2
-00721FCD    pmaddwd xmm2, xmmword ptr ds:[0x008932E0]
+00721FCD    pmaddwd xmm2, xmmword ptr ds:[0x008932E0]       ; => [ Data: data_8932e0 ]
 00721FD5    movaps xmm4, xmmword ptr ss:[esp+0x10]
 00721FDA    paddd xmm3, xmm1
-00721FDE    pmaddwd xmm4, xmmword ptr ds:[0x008938D0]
+00721FDE    pmaddwd xmm4, xmmword ptr ds:[0x008938D0]       ; => [ Data: data_8938d0 ]
 00721FE6    movaps xmmword ptr ss:[esp+0xE0], xmm3
 00721FEE    paddd xmm5, xmm0
 00721FF2    movaps xmm3, xmmword ptr ss:[esp+0x70]
-00721FF7    pmaddwd xmm3, xmmword ptr ds:[0x008938C0]
+00721FF7    pmaddwd xmm3, xmmword ptr ds:[0x008938C0]       ; => [ Data: data_8938c0 ]
 00721FFF    movaps xmmword ptr ss:[esp+0xC0], xmm5
 00722007    movaps xmm5, xmmword ptr ss:[esp+0x60]
-0072200C    pmaddwd xmm5, xmmword ptr ds:[0x008932C0]
+0072200C    pmaddwd xmm5, xmmword ptr ds:[0x008932C0]       ; => [ Data: data_8932c0 ]
 00722014    paddd xmm3, xmm2
 00722018    movaps xmmword ptr ss:[esp+0xB0], xmm3
 00722020    movaps xmm3, xmm7
-00722023    pmaddwd xmm3, xmmword ptr ds:[0x00893900]
+00722023    pmaddwd xmm3, xmmword ptr ds:[0x00893900]       ; => [ Data: data_893900 ]
 0072202B    paddd xmm5, xmm0
 0072202F    paddd xmm3, xmm4
-00722033    pmaddwd xmm7, xmmword ptr ds:[0x008932D0]
-0072203B    pmaddwd xmm6, xmmword ptr ds:[0x008932D0]
+00722033    pmaddwd xmm7, xmmword ptr ds:[0x008932D0]       ; => [ Data: data_8932d0 ]
+0072203B    pmaddwd xmm6, xmmword ptr ds:[0x008932D0]       ; => [ Data: data_8932d0 ]
 00722043    movaps xmmword ptr ss:[esp+0x60], xmm5
 00722048    movaps xmm5, xmmword ptr ss:[esp+0x70]
-0072204D    pmaddwd xmm5, xmmword ptr ds:[0x008932C0]
+0072204D    pmaddwd xmm5, xmmword ptr ds:[0x008932C0]       ; => [ Data: data_8932c0 ]
 00722055    paddd xmm7, xmm2
 00722059    movaps xmm2, xmmword ptr ss:[esp+0x50]
 0072205E    paddd xmm2, xmmword ptr ss:[esp+0x20]
 00722064    paddd xmm6, xmm1
-00722068    paddd xmm2, xmmword ptr ds:[0x00891B30]
+00722068    paddd xmm2, xmmword ptr ds:[0x00891B30]         ; => [ Data: data_891b30 ]
 00722070    movaps xmm1, xmmword ptr ss:[esp+0x90]
 00722078    movaps xmm0, xmm2
 0072207B    paddd xmm1, xmmword ptr ss:[esp+0xA0]
 00722084    paddd xmm0, xmm6
-00722088    paddd xmm1, xmmword ptr ds:[0x00891B30]
+00722088    paddd xmm1, xmmword ptr ds:[0x00891B30]         ; => [ Data: data_891b30 ]
 00722090    paddd xmm5, xmm4
 00722094    psrad xmm0, 0x0A
 00722099    psubd xmm2, xmm6
 0072209D    movaps xmm6, xmmword ptr ss:[esp+0x40]
 007220A2    paddd xmm6, xmmword ptr ss:[esp+0x80]
-007220AB    paddd xmm6, xmmword ptr ds:[0x00891B30]
+007220AB    paddd xmm6, xmmword ptr ds:[0x00891B30]         ; => [ Data: data_891b30 ]
 007220B3    movaps xmmword ptr ss:[esp], xmm0
 007220B7    movaps xmm0, xmm1
 007220BA    movaps xmm4, xmmword ptr ss:[esp]
@@ -116,7 +122,7 @@
 007220E1    packssdw xmm2, xmm1
 007220E5    movaps xmm1, xmm7
 007220E8    paddd xmm1, xmmword ptr ss:[esp+0x30]
-007220EE    paddd xmm1, xmmword ptr ds:[0x00891B30]
+007220EE    paddd xmm1, xmmword ptr ds:[0x00891B30]         ; => [ Data: data_891b30 ]
 007220F6    psubd xmm7, xmmword ptr ss:[esp+0x30]
 007220FC    movaps xmm0, xmm1
 007220FF    movaps xmmword ptr ss:[esp], xmm4
@@ -136,7 +142,7 @@
 00722147    movaps xmm1, xmmword ptr ss:[esp+0x40]
 0072214C    psubd xmm1, xmmword ptr ss:[esp+0x80]
 00722155    movaps xmmword ptr ss:[esp+0x70], xmm2
-0072215A    movaps xmm2, xmmword ptr ds:[0x00891B30]
+0072215A    movaps xmm2, xmmword ptr ds:[0x00891B30]        ; => [ Data: data_891b30 ]
 00722161    paddd xmm7, xmm2
 00722165    movaps xmmword ptr ss:[esp+0x10], xmm4
 0072216A    paddd xmm1, xmm2
@@ -221,19 +227,19 @@
 007222D7    punpcklwd xmm1, xmm0
 007222DB    punpckhwd xmm4, xmm0
 007222DF    movaps xmm0, xmm1
-007222E2    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]
-007222EA    pmaddwd xmm1, xmmword ptr ds:[0x008932B0]
+007222E2    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]       ; => [ Data: data_8938e0 ]
+007222EA    pmaddwd xmm1, xmmword ptr ds:[0x008932B0]       ; => [ Data: data_8932b0 ]
 007222F2    movaps xmmword ptr ss:[esp+0xB0], xmm0
 007222FA    movaps xmm0, xmm4
-007222FD    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]
-00722305    pmaddwd xmm4, xmmword ptr ds:[0x008932B0]
+007222FD    pmaddwd xmm0, xmmword ptr ds:[0x008938E0]       ; => [ Data: data_8938e0 ]
+00722305    pmaddwd xmm4, xmmword ptr ds:[0x008932B0]       ; => [ Data: data_8932b0 ]
 0072230D    movaps xmmword ptr ss:[esp+0xA0], xmm1
 00722315    xorps xmm1, xmm1
 00722318    movaps xmmword ptr ss:[esp+0xE0], xmm0
 00722320    movaps xmm0, xmm2
 00722323    paddw xmm0, xmm3
 00722327    movaps xmmword ptr ss:[esp+0x80], xmm4
-0072232F    punpcklwd xmm1, xmm0
+0072232F    punpcklwd xmm1, xmm0                            ; => [ String: 0 | String: zx ]
 00722333    psubw xmm3, xmm2
 00722337    psrad xmm1, 0x04
 0072233C    xorps xmm2, xmm2
@@ -241,10 +247,10 @@
 00722344    xorps xmm1, xmm1
 00722347    punpckhwd xmm1, xmm0
 0072234B    xorps xmm0, xmm0
-0072234E    psrad xmm1, 0x04
-00722353    punpcklwd xmm0, xmm3
+0072234E    psrad xmm1, 0x04                                ; => [ String: 0 | String: zx ]
+00722353    punpcklwd xmm0, xmm3                            ; => [ String: 0 | String: zx ]
 00722357    movaps xmmword ptr ss:[esp+0x40], xmm1
-0072235C    punpckhwd xmm2, xmm3
+0072235C    punpckhwd xmm2, xmm3                            ; => [ String: 0 | String: zx ]
 00722360    movaps xmm3, xmmword ptr ss:[esp]
 00722364    psrad xmm0, 0x04
 00722369    movaps xmm4, xmm3
@@ -265,27 +271,27 @@
 007223A5    punpckhwd xmm3, xmm5
 007223A9    movaps xmmword ptr ss:[esp+0x50], xmm2
 007223AE    movaps xmm2, xmm3
-007223B1    pmaddwd xmm3, xmmword ptr ds:[0x008938D0]
+007223B1    pmaddwd xmm3, xmmword ptr ds:[0x008938D0]       ; => [ Data: data_8938d0 ]
 007223B9    punpcklwd xmm0, xmm5
 007223BD    movaps xmm5, xmmword ptr ss:[esp+0x70]
 007223C2    movaps xmm1, xmm0
-007223C5    pmaddwd xmm1, xmmword ptr ds:[0x008932E0]
-007223CD    pmaddwd xmm0, xmmword ptr ds:[0x008938D0]
+007223C5    pmaddwd xmm1, xmmword ptr ds:[0x008932E0]       ; => [ Data: data_8932e0 ]
+007223CD    pmaddwd xmm0, xmmword ptr ds:[0x008938D0]       ; => [ Data: data_8938d0 ]
 007223D5    movaps xmmword ptr ss:[esp], xmm3
-007223D9    pmaddwd xmm2, xmmword ptr ds:[0x008932E0]
+007223D9    pmaddwd xmm2, xmmword ptr ds:[0x008932E0]       ; => [ Data: data_8932e0 ]
 007223E1    punpcklwd xmm4, xmm7
 007223E5    movaps xmm7, xmm5
-007223E8    pmaddwd xmm7, xmmword ptr ds:[0x008938C0]
+007223E8    pmaddwd xmm7, xmmword ptr ds:[0x008938C0]       ; => [ Data: data_8938c0 ]
 007223F0    movaps xmm3, xmm4
-007223F3    pmaddwd xmm3, xmmword ptr ds:[0x008938C0]
-007223FB    pmaddwd xmm4, xmmword ptr ds:[0x008932C0]
-00722403    pmaddwd xmm5, xmmword ptr ds:[0x008932C0]
+007223F3    pmaddwd xmm3, xmmword ptr ds:[0x008938C0]       ; => [ Data: data_8938c0 ]
+007223FB    pmaddwd xmm4, xmmword ptr ds:[0x008932C0]       ; => [ Data: data_8932c0 ]
+00722403    pmaddwd xmm5, xmmword ptr ds:[0x008932C0]       ; => [ Data: data_8932c0 ]
 0072240B    paddd xmm7, xmm2
 0072240F    paddd xmm3, xmm1
 00722413    movaps xmmword ptr ss:[esp+0x90], xmm3
 0072241B    paddd xmm4, xmm0
 0072241F    movaps xmm3, xmmword ptr ss:[esp+0x60]
-00722424    pmaddwd xmm3, xmmword ptr ds:[0x00893900]
+00722424    pmaddwd xmm3, xmmword ptr ds:[0x00893900]       ; => [ Data: data_893900 ]
 0072242C    paddd xmm5, xmmword ptr ss:[esp]
 00722431    movaps xmmword ptr ss:[esp+0xD0], xmm4
 00722439    movaps xmm4, xmmword ptr ss:[esp+0x30]
@@ -293,18 +299,18 @@
 00722447    paddd xmm3, xmm0
 0072244B    movaps xmmword ptr ss:[esp+0x70], xmm5
 00722450    movaps xmm0, xmmword ptr ss:[esp+0x60]
-00722455    pmaddwd xmm0, xmmword ptr ds:[0x008932D0]
+00722455    pmaddwd xmm0, xmmword ptr ds:[0x008932D0]       ; => [ Data: data_8932d0 ]
 0072245D    movaps xmmword ptr ss:[esp+0xC0], xmm3
 00722465    movaps xmm3, xmmword ptr ss:[esp+0x10]
 0072246A    movaps xmm6, xmm3
-0072246D    pmaddwd xmm3, xmmword ptr ds:[0x008932D0]
-00722475    pmaddwd xmm6, xmmword ptr ds:[0x00893900]
+0072246D    pmaddwd xmm3, xmmword ptr ds:[0x008932D0]       ; => [ Data: data_8932d0 ]
+00722475    pmaddwd xmm6, xmmword ptr ds:[0x00893900]       ; => [ Data: data_893900 ]
 0072247D    paddd xmm0, xmm1
 00722481    movaps xmm1, xmmword ptr ss:[esp+0x20]
 00722486    paddd xmm1, xmmword ptr ss:[esp+0xB0]
 0072248F    movaps xmmword ptr ss:[esp+0x60], xmm0
 00722494    paddd xmm3, xmm2
-00722498    movaps xmm2, xmmword ptr ds:[0x008932A0]
+00722498    movaps xmm2, xmmword ptr ds:[0x008932A0]        ; => [ Data: data_8932a0 ]
 0072249F    paddd xmm6, xmmword ptr ss:[esp]
 007224A4    paddd xmm1, xmm2
 007224A8    movaps xmmword ptr ss:[esp], xmm1
@@ -317,11 +323,11 @@
 007224D1    movaps xmmword ptr ss:[esp+0x20], xmm1
 007224D6    paddd xmm3, xmm2
 007224DA    movaps xmm0, xmmword ptr ss:[esp+0x20]
-007224DF    movaps xmm1, xmmword ptr ds:[0x008932A0]
+007224DF    movaps xmm1, xmmword ptr ds:[0x008932A0]        ; => [ Data: data_8932a0 ]
 007224E6    movaps xmm2, xmmword ptr ss:[esp+0x50]
 007224EB    paddd xmm0, xmm1
 007224EF    paddd xmm2, xmmword ptr ss:[esp+0xE0]
-007224F8    paddd xmm2, xmmword ptr ds:[0x008932A0]
+007224F8    paddd xmm2, xmmword ptr ds:[0x008932A0]         ; => [ Data: data_8932a0 ]
 00722500    movaps xmmword ptr ss:[esp+0x20], xmm0
 00722505    movaps xmm0, xmmword ptr ss:[esp+0x50]
 0072250A    psubd xmm0, xmmword ptr ss:[esp+0xE0]

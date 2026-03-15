@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56f910
+// 起始地址: 0x56f910
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056F910    push ebp
 0056F911    mov ebp, esp
 0056F913    and esp, 0xFFFFFFF8
@@ -7,14 +13,14 @@
 0056F91B    push edi
 0056F91C    mov dword ptr ss:[esp+0x14], edx
 0056F920    mov dword ptr ss:[esp+0x10], ecx
-0056F924    call 0x00573400
+0056F924    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056F929    mov edi, eax
 0056F92B    mov ecx, edi
 0056F92D    mov esi, dword ptr ds:[edi+0x0C]
 0056F930    mov ebx, dword ptr ds:[edi+0x04]
 0056F933    call 0x00591540
 0056F938    cmp eax, esi
-0056F93A    jz 0x0056F945
+0056F93A    jz 0x0056F945                                   ; => [ Call: sub_591540 ]
 0056F93C    xor al, al
 0056F93E    pop edi
 0056F93F    pop esi
@@ -26,7 +32,7 @@
 0056F949    movzx esi, ax
 0056F94C    cmp esi, 0x320
 0056F952    jb 0x0056F959
-0056F954    call 0x00591930
+0056F954    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056F959    imul eax, esi, 0x64
 0056F95C    mov ecx, ebx
 0056F95E    push 0x00
@@ -35,7 +41,7 @@
 0056F969    call 0x005754F0
 0056F96E    add esp, 0x08
 0056F971    test al, al
-0056F973    jz 0x0056F93C
+0056F973    jz 0x0056F93C                                   ; => [ Call: sub_5754f0 ]
 0056F975    mov ecx, dword ptr ds:[edi+0x64]
 0056F978    mov eax, dword ptr ss:[esp+0x14]
 0056F97C    dec eax

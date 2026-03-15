@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_54c380
+// 起始地址: 0x54c380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0054C380    push ebp
 0054C381    mov ebp, esp
 0054C383    and esp, 0xFFFFFFF8
@@ -6,19 +12,19 @@
 0054C38A    push esi
 0054C38B    push edi
 0054C38C    call 0x00573400
-0054C391    mov edi, dword ptr ds:[eax+0x58]
+0054C391    mov edi, dword ptr ds:[eax+0x58]                ; => [ Call: sub_573400 ]
 0054C394    mov eax, dword ptr ds:[0x007BFA28]
 0054C399    mov dword ptr ss:[esp+0x14], eax
 0054C39D    mov eax, dword ptr ds:[0x007BFA2C]
 0054C3A2    mov dword ptr ss:[esp+0x10], eax
-0054C3A6    call 0x00573400
+0054C3A6    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0054C3AB    mov esi, eax
 0054C3AD    movzx ebx, di
 0054C3B0    mov eax, dword ptr ds:[esi+0x04]
 0054C3B3    mov dword ptr ss:[esp+0x0C], eax
 0054C3B7    cmp ebx, 0x320
 0054C3BD    jb 0x0054C3C8
-0054C3BF    call 0x00591930
+0054C3BF    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054C3C4    mov eax, dword ptr ss:[esp+0x0C]
 0054C3C8    push dword ptr ss:[esp+0x10]
 0054C3CC    mov ecx, dword ptr ds:[esi+0x04]
@@ -37,7 +43,7 @@
 0054C3F5    push 0x0B
 0054C3F7    push 0x468
 0054C3FC    push edi
-0054C3FD    call 0x00582D10
+0054C3FD    call 0x00582D10                                 ; => [ Call: nullptr | Call: sub_582d10 ]
 0054C402    add esp, 0x38
 0054C405    pop edi
 0054C406    pop esi

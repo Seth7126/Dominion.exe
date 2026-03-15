@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_700ed0
+// 起始地址: 0x700ed0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00700ED0    push ebp
 00700ED1    mov ebp, esp
 00700ED3    push ecx
-00700ED4    mov eax, dword ptr ds:[0x0147DED4]
+00700ED4    mov eax, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00700ED9    push esi
 00700EDA    push edi
 00700EDB    mov esi, ecx
@@ -12,7 +18,7 @@
 00700EF5    push 0x00
 00700EF7    mov eax, dword ptr ds:[eax]
 00700EF9    call eax
-00700EFB    mov eax, dword ptr ds:[0x0147B06C]
+00700EFB    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00700F00    inc dword ptr ds:[eax+0x14]
 00700F03    lea eax, ss:[ebp-0x04]
 00700F06    push eax
@@ -26,7 +32,7 @@
 00700F1F    mov eax, dword ptr ds:[eax]
 00700F21    call eax
 00700F23    lea ecx, ds:[esi+0x424C]
-00700F29    call 0x00706A30
+00700F29    call 0x00706A30                                 ; => [ Call: sub_706a30 ]
 00700F2E    mov dl, byte ptr ss:[ebp+0x14]
 00700F31    mov edi, eax
 00700F33    mov ecx, dword ptr ss:[ebp-0x04]

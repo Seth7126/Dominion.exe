@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_597760
+// 起始地址: 0x597760
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00597760    push ebp
 00597761    mov ebp, esp
 00597763    push 0xFFFFFFFF
-00597765    push 0x76765E
+00597765    push 0x76765E                                   ; => [ Call: __ehhandler$?Grow@?$Mailbox@V_UnrealizedChore@details@Concurrency@@@details@Concurrency@@AAEPAUSegment@123@PAU4123@@Z | Type: EHRegistrationNode ]
 0059776A    mov eax, dword ptr fs:[0x00000000]
-00597770    push eax
+00597770    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00597771    sub esp, 0x10
 00597774    push ebx
 00597775    push esi
 00597776    push edi
 00597777    mov eax, dword ptr ds:[0x008C4040]
 0059777C    xor eax, ebp
-0059777E    push eax
+0059777E    push eax                                        ; => [ Data: __security_cookie ]
 0059777F    lea eax, ss:[ebp-0x0C]
-00597782    mov dword ptr fs:[0x00000000], eax
+00597782    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 00597788    mov edi, edx
 0059778A    mov dword ptr ss:[ebp-0x18], ecx
 0059778D    mov dword ptr ss:[ebp-0x04], 0x00
@@ -38,7 +44,7 @@
 005977C3    cmp bl, 0xF0
 005977C6    jnz 0x0059785E
 005977CC    lea ecx, ss:[ebp-0x14]
-005977CF    call 0x005A0D00
+005977CF    call 0x005A0D00                                 ; => [ Call: sub_5a0d00 ]
 005977D4    mov esi, dword ptr ss:[ebp-0x14]
 005977D7    mov eax, dword ptr ss:[ebp-0x10]
 005977DA    inc eax
@@ -68,23 +74,23 @@
 00597812    cmp cl, 0xF0
 00597815    jnz 0x0059785E
 00597817    lea ecx, ss:[ebp-0x14]
-0059781A    call 0x005A0D00
+0059781A    call 0x005A0D00                                 ; => [ Call: sub_5a0d00 ]
 0059781F    mov edi, dword ptr ss:[ebp-0x14]
 00597822    inc ebx
 00597823    cmp ebx, dword ptr ss:[ebp-0x10]
 00597826    jnz 0x005977F1
 00597828    mov ebx, dword ptr ss:[ebp-0x18]
-0059782B    mov dword ptr ds:[ebx], 0x801800
+0059782B    mov dword ptr ds:[ebx], 0x801800                ; => [ Data: data_801800 ]
 00597831    sub esi, edi
 00597833    mov dword ptr ss:[ebp-0x04], 0x00
 0059783A    push esi
 0059783B    push edi
 0059783C    mov ecx, ebx
 0059783E    mov dword ptr ss:[ebp-0x1C], 0x01
-00597845    call 0x0063DA70
+00597845    call 0x0063DA70                                 ; => [ Call: sub_63da70 ]
 0059784A    mov eax, ebx
 0059784C    mov ecx, dword ptr ss:[ebp-0x0C]
-0059784F    mov dword ptr fs:[0x00000000], ecx
+0059784F    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00597856    pop ecx
 00597857    pop edi
 00597858    pop esi
@@ -97,10 +103,10 @@
 00597868    push 0x825090
 0059786D    mov edx, 0x801800
 00597872    mov ecx, 0x8250B0
-00597877    call 0x0063B870
+00597877    call 0x0063B870                                 ; => [ String: Xutf8_next | Call: sub_63b870 | String: C:\x\ax2017\Engine\Xutf8.cpp | Data: data_801800 | String: !Xutf8_is_invalid_lead_char(str) ]
 0059787C    add esp, 0x0C
 0059787F    call 0x0063BC30
 00597884    test al, al
-00597886    jz 0x00597889
+00597886    jz 0x00597889                                   ; => [ Call: sub_63bc30 ]
 00597888    int3
-00597889    call 0x0063BB00
+00597889    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

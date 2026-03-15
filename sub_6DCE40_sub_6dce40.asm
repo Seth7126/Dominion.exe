@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dce40
+// 起始地址: 0x6dce40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DCE40    push ebp
 006DCE41    mov ebp, esp
 006DCE43    and esp, 0xFFFFFFF8
@@ -15,7 +21,7 @@
 006DCE64    pop esi
 006DCE65    mov esp, ebp
 006DCE67    pop ebp
-006DCE68    ret
+006DCE68    ret                                             ; => [ Call: sub_6dcc50 ]
 006DCE69    xorps xmm0, xmm0
 006DCE6C    movlpd qword ptr ss:[esp+0x08], xmm0
 006DCE72    mov esi, dword ptr ss:[esp+0x0C]
@@ -28,4 +34,4 @@
 006DCE87    pop esi
 006DCE88    mov esp, ebp
 006DCE8A    pop ebp
-006DCE8B    ret
+006DCE8B    ret                                             ; => [ Call: nullptr | Call: sub_6dcc50 ]

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4f1fb0
+// 起始地址: 0x4f1fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F1FB0    push ebp
 004F1FB1    mov ebp, esp
 004F1FB3    sub esp, 0xC9C
-004F1FB9    mov eax, dword ptr ds:[0x008C4040]
+004F1FB9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004F1FBE    xor eax, ebp
 004F1FC0    mov dword ptr ss:[ebp-0x04], eax
 004F1FC3    push ebx
@@ -12,17 +18,17 @@
 004F1FCA    mov dword ptr ss:[ebp-0xC94], ebx
 004F1FD0    cmp dword ptr ds:[esi+0x40], 0x02
 004F1FD4    jnz 0x004F1FDB
-004F1FD6    call 0x004F19C0
+004F1FD6    call 0x004F19C0                                 ; => [ Call: sub_4f19c0 ]
 004F1FDB    cmp dword ptr ds:[esi+0x40], 0x03
 004F1FDF    jnz 0x004F1FEA
 004F1FE1    mov edx, esi
 004F1FE3    mov ecx, ebx
-004F1FE5    call 0x004F1D90
+004F1FE5    call 0x004F1D90                                 ; => [ Call: sub_4f1d90 ]
 004F1FEA    cmp dword ptr ds:[esi+0x40], 0x01
 004F1FEE    jnz 0x004F214D
 004F1FF4    mov edi, dword ptr ds:[esi+0x50]
 004F1FF7    cmp edi, dword ptr ds:[esi+0x4C]
-004F1FFA    jnz 0x004F214D
+004F1FFA    jnz 0x004F214D                                  ; => [ Call: sub_4f1f40 ]
 004F2000    mov edx, edi
 004F2002    mov ecx, ebx
 004F2004    call 0x004F1F40
@@ -123,7 +129,7 @@
 004F2158    cmp edx, dword ptr ds:[esi+0x4C]
 004F215B    jnz 0x004F22BF
 004F2161    mov ecx, ebx
-004F2163    call 0x004F1F40
+004F2163    call 0x004F1F40                                 ; => [ Call: sub_4f1f40 ]
 004F2168    mov ecx, dword ptr ds:[esi+0x60]
 004F216B    add eax, 0xFFFFFFFB
 004F216E    cmp ecx, eax
@@ -136,7 +142,7 @@
 004F2181    pop ebx
 004F2182    mov ecx, dword ptr ss:[ebp-0x04]
 004F2185    xor ecx, ebp
-004F2187    call 0x0075927A
+004F2187    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F218C    mov esp, ebp
 004F218E    pop ebp
 004F218F    ret
@@ -200,7 +206,7 @@
 004F225F    mov edx, dword ptr ds:[eax+0xD48]
 004F2265    mov ecx, dword ptr ds:[ecx]
 004F2267    call 0x00571B30
-004F226C    mov eax, dword ptr ds:[eax+0x90]
+004F226C    mov eax, dword ptr ds:[eax+0x90]                ; => [ Call: sub_571b30 ]
 004F2272    mov ecx, eax
 004F2274    sar ecx, 0x18
 004F2277    test eax, 0x10000
@@ -229,7 +235,7 @@
 004F22C3    pop esi
 004F22C4    xor ecx, ebp
 004F22C6    pop ebx
-004F22C7    call 0x0075927A
+004F22C7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F22CC    mov esp, ebp
 004F22CE    pop ebp
 004F22CF    ret

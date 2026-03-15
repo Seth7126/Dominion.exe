@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_594a00
+// 起始地址: 0x594a00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00594A00    push ebp
 00594A01    mov ebp, esp
 00594A03    sub esp, 0x34
@@ -18,7 +24,7 @@
 00594A2D    push esi
 00594A2E    mov edx, ebx
 00594A30    lea ecx, ss:[ebp-0x14]
-00594A33    call 0x00595CE0
+00594A33    call 0x00595CE0                                 ; => [ Call: sub_595ce0 ]
 00594A38    mov ecx, dword ptr ss:[ebp+0x08]
 00594A3B    add esp, 0x08
 00594A3E    mov eax, ecx
@@ -93,7 +99,7 @@
 00594B06    add eax, 0x1C
 00594B09    push ebx
 00594B0A    push eax
-00594B0B    call 0x00762362
+00594B0B    call 0x00762362                                 ; => [ Call: memmove ]
 00594B10    movups xmm0, xmmword ptr ss:[ebp-0x30]
 00594B14    mov eax, dword ptr ss:[ebp-0x18]
 00594B17    add esp, 0x0C
@@ -136,7 +142,7 @@
 00594B84    push ecx
 00594B85    mov ecx, ebx
 00594B87    movq qword ptr ss:[ebp-0x20], xmm0
-00594B8C    call 0x00596D90
+00594B8C    call 0x00596D90                                 ; => [ Call: sub_596d90 ]
 00594B91    mov eax, dword ptr ss:[ebp-0x0C]
 00594B94    add esp, 0x0C
 00594B97    mov ecx, dword ptr ss:[ebp-0x08]
@@ -184,7 +190,7 @@
 00594C15    add eax, edx
 00594C17    xor edx, edx
 00594C19    push eax
-00594C1A    call 0x00596D90
+00594C1A    call 0x00596D90                                 ; => [ Call: sub_596d90 ]
 00594C1F    mov ecx, dword ptr ss:[ebp-0x08]
 00594C22    add esp, 0x0C
 00594C25    mov esi, dword ptr ss:[ebp-0x10]

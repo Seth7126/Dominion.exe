@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4c52c0
+// 起始地址: 0x4c52c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C52C0    push ebx
 004C52C1    push esi
 004C52C2    push edi
 004C52C3    mov edi, ecx
-004C52C5    call 0x004BC100
+004C52C5    call 0x004BC100                                 ; => [ Call: sub_4bc100 ]
 004C52CA    mov esi, dword ptr ds:[edi+0x24]
 004C52CD    mov ecx, edi
 004C52CF    mov ebx, eax
@@ -10,7 +16,7 @@
 004C52D6    mov ecx, dword ptr ds:[edi+0x3C]
 004C52D9    mov edx, eax
 004C52DB    mov eax, 0x10624DD3
-004C52E0    imul edx
+004C52E0    imul edx                                        ; => [ Call: sub_64b4d0 ]
 004C52E2    sar edx, 0x06
 004C52E5    mov eax, edx
 004C52E7    shr eax, 0x1F
@@ -123,7 +129,7 @@
 004C53FE    jz 0x004C544B
 004C5400    sub esi, 0x01
 004C5403    jz 0x004C5414
-004C5405    push 0x803D00
+004C5405    push 0x803D00                                   ; => [ String: GetMultiplayerGameState ]
 004C540A    push 0x1934
 004C540F    jmp 0x004C54DE
 004C5414    mov eax, dword ptr ds:[ebx+0x20]
@@ -207,15 +213,15 @@
 004C54D1    pop esi
 004C54D2    pop ebx
 004C54D3    ret
-004C54D4    push 0x803D00
+004C54D4    push 0x803D00                                   ; => [ String: GetMultiplayerGameState ]
 004C54D9    push 0x194D
 004C54DE    push 0x80292C
 004C54E3    mov edx, 0x801800
 004C54E8    mov ecx, 0x801AA4
-004C54ED    call 0x0063B870
+004C54ED    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp | String: GetMultiplayerGameState | String: Halt ]
 004C54F2    add esp, 0x0C
 004C54F5    call 0x0063BC30
 004C54FA    test al, al
-004C54FC    jz 0x004C54FF
+004C54FC    jz 0x004C54FF                                   ; => [ Call: sub_63bc30 ]
 004C54FE    int3
-004C54FF    call 0x0063BB00
+004C54FF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_696f80
+// 起始地址: 0x696f80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00696F80    push ebp
 00696F81    mov ebp, esp
 00696F83    sub esp, 0x38
@@ -57,7 +63,7 @@
 00697063    movss dword ptr ss:[esp+0x08], xmm5
 00697069    movss dword ptr ss:[esp+0x04], xmm6
 0069706F    movss dword ptr ss:[esp], xmm7
-00697074    call 0x00696E90
+00697074    call 0x00696E90                                 ; => [ Call: sub_696e90 ]
 00697079    movss xmm1, dword ptr ss:[ebp+0x2C]
 0069707E    xor ecx, ecx
 00697080    mov esi, dword ptr ss:[ebp-0x04]
@@ -79,7 +85,7 @@
 006970CE    movss xmm0, dword ptr ds:[edi]
 006970D2    movss dword ptr ss:[esp], xmm0
 006970D7    call 0x00696E90
-006970DC    movss dword ptr ss:[ebp-0x2C], xmm0
+006970DC    movss dword ptr ss:[ebp-0x2C], xmm0             ; => [ Call: sub_696e90 ]
 006970E1    jmp 0x0069719C
 006970E6    movss xmm0, dword ptr ss:[ebp+0x2C]
 006970EB    movaps xmm2, xmm4
@@ -95,7 +101,7 @@
 00697118    movss dword ptr ss:[esp+0x08], xmm5
 0069711E    movss dword ptr ss:[esp+0x04], xmm6
 00697124    movss dword ptr ss:[esp], xmm7
-00697129    call 0x00696E90
+00697129    call 0x00696E90                                 ; => [ Call: sub_696e90 ]
 0069712E    mov eax, dword ptr ss:[ebp-0x04]
 00697131    movaps xmm1, xmm0
 00697134    movss xmm0, dword ptr ss:[ebp+0x24]
@@ -119,7 +125,7 @@
 0069718A    movss dword ptr ss:[esp], xmm0
 0069718F    call 0x00696E90
 00697194    mov esi, dword ptr ss:[ebp-0x04]
-00697197    movss dword ptr ss:[ebp-0x34], xmm0
+00697197    movss dword ptr ss:[ebp-0x34], xmm0             ; => [ Call: sub_696e90 ]
 0069719C    mov ecx, dword ptr ss:[ebp+0x20]
 0069719F    add esp, 0x18
 006971A2    movss xmm1, dword ptr ds:[ebx+0x0C]
@@ -143,7 +149,7 @@
 006971F6    movss dword ptr ss:[esp+0x08], xmm4
 006971FC    movss dword ptr ss:[esp+0x04], xmm5
 00697202    movss dword ptr ss:[esp], xmm6
-00697207    call 0x00696E90
+00697207    call 0x00696E90                                 ; => [ Call: sub_696e90 ]
 0069720C    movss xmm1, dword ptr ss:[ebp+0x30]
 00697211    xor ecx, ecx
 00697213    mov eax, dword ptr ss:[ebp-0x04]
@@ -165,7 +171,7 @@
 00697262    movss xmm0, dword ptr ds:[edi+0x04]
 00697267    movss dword ptr ss:[esp], xmm0
 0069726C    call 0x00696E90
-00697271    movaps xmm1, xmm0
+00697271    movaps xmm1, xmm0                               ; => [ Call: sub_696e90 ]
 00697274    movss xmm0, dword ptr ss:[ebp-0x30]
 00697279    movss dword ptr ss:[ebp-0x28], xmm1
 0069727E    jmp 0x00697342
@@ -183,7 +189,7 @@
 006972B9    movss dword ptr ss:[esp+0x08], xmm4
 006972BF    movss dword ptr ss:[esp+0x04], xmm5
 006972C5    movss dword ptr ss:[esp], xmm6
-006972CA    call 0x00696E90
+006972CA    call 0x00696E90                                 ; => [ Call: sub_696e90 ]
 006972CF    mov eax, dword ptr ss:[ebp-0x04]
 006972D2    movaps xmm1, xmm0
 006972D5    movss xmm0, dword ptr ss:[ebp+0x28]
@@ -205,7 +211,7 @@
 00697323    movss dword ptr ss:[esp+0x04], xmm0
 00697329    movss xmm0, dword ptr ds:[edi+0x04]
 0069732E    movss dword ptr ss:[esp], xmm0
-00697333    call 0x00696E90
+00697333    call 0x00696E90                                 ; => [ Call: sub_696e90 ]
 00697338    movss xmm1, dword ptr ss:[ebp-0x28]
 0069733D    movss dword ptr ss:[ebp-0x30], xmm0
 00697342    movss xmm2, dword ptr ss:[ebp-0x2C]
@@ -227,7 +233,7 @@
 00697369    movups xmm0, xmmword ptr ds:[0x007FF530]
 00697370    pop edi
 00697371    pop esi
-00697372    movups xmmword ptr ds:[eax], xmm0
+00697372    movups xmmword ptr ds:[eax], xmm0               ; => [ Data: data_7ff530 ]
 00697375    pop ebx
 00697376    mov esp, ebp
 00697378    pop ebp

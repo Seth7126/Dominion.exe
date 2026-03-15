@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_528630
+// 起始地址: 0x528630
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00528630    push ebp
 00528631    mov ebp, esp
 00528633    and esp, 0xFFFFFFF8
 00528636    push ecx
 00528637    push esi
 00528638    mov esi, dword ptr ds:[ecx+0x04]
-0052863B    call 0x00573400
+0052863B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00528640    push dword ptr ds:[0x007BFAD4]
 00528646    push dword ptr ds:[0x007BFAD0]
 0052864C    mov edx, dword ptr ds:[eax+0x0C]
@@ -22,4 +28,4 @@
 00528670    pop esi
 00528671    mov esp, ebp
 00528673    pop ebp
-00528674    ret
+00528674    ret                                             ; => [ Call: nullptr | Call: sub_582eb0 ]

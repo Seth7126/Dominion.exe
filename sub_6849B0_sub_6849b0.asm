@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6849b0
+// 起始地址: 0x6849b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006849B0    push ebx
 006849B1    mov ebx, esp
 006849B3    sub esp, 0x08
@@ -8,7 +14,7 @@
 006849C0    mov dword ptr ss:[esp+0x04], ebp
 006849C4    mov ebp, esp
 006849C6    sub esp, 0x88
-006849CC    mov eax, dword ptr ds:[0x008C4040]
+006849CC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006849D1    xor eax, ebp
 006849D3    mov dword ptr ss:[ebp-0x04], eax
 006849D6    movups xmm7, xmmword ptr ds:[edx]
@@ -116,22 +122,22 @@
 00684B87    call 0x005AF880
 00684B8C    push 0x53
 00684B8E    mov ecx, 0x8CE7BC
-00684B93    mov eax, dword ptr ds:[eax+0x08]
+00684B93    mov eax, dword ptr ds:[eax+0x08]                ; => [ Call: sub_5af880 ]
 00684B96    mov edx, dword ptr ds:[eax+0x08]
 00684B99    add edx, 0x08
 00684B9C    call 0x006DD280
-00684BA1    mov esi, eax
+00684BA1    mov esi, eax                                    ; => [ Call: sub_6dd280 | Data: data_8ce7bc ]
 00684BA3    add esp, 0x04
 00684BA6    test esi, esi
-00684BA8    cmovz esi, dword ptr ds:[0x01724A58]
+00684BA8    cmovz esi, dword ptr ds:[0x01724A58]            ; => [ Data: data_1724a58 ]
 00684BAF    mov ecx, edi
 00684BB1    call 0x005AF880
 00684BB6    push 0x54
 00684BB8    mov ecx, 0x8CE7BC
-00684BBD    mov eax, dword ptr ds:[eax+0x08]
+00684BBD    mov eax, dword ptr ds:[eax+0x08]                ; => [ Call: sub_5af880 ]
 00684BC0    mov edx, dword ptr ds:[eax+0x08]
 00684BC3    add edx, 0x08
-00684BC6    call 0x006DD280
+00684BC6    call 0x006DD280                                 ; => [ Call: sub_6dd280 | Data: data_8ce7bc ]
 00684BCB    mov edx, dword ptr ds:[ebx+0x08]
 00684BCE    lea ecx, ss:[ebp-0x34]
 00684BD1    push edi
@@ -143,13 +149,13 @@
 00684BDB    push eax
 00684BDC    push dword ptr ds:[ebx+0x10]
 00684BDF    push dword ptr ss:[ebp-0x64]
-00684BE2    call 0x00646580
+00684BE2    call 0x00646580                                 ; => [ Call: sub_646580 ]
 00684BE7    mov ecx, dword ptr ss:[ebp-0x04]
 00684BEA    add esp, 0x20
 00684BED    xor ecx, ebp
 00684BEF    pop edi
 00684BF0    pop esi
-00684BF1    call 0x0075927A
+00684BF1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00684BF6    mov esp, ebp
 00684BF8    pop ebp
 00684BF9    mov esp, ebx

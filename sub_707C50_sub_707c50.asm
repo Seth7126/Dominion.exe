@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_707c50
+// 起始地址: 0x707c50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707C50    push ebp
 00707C51    mov ebp, esp
 00707C53    push ebx
@@ -25,7 +31,7 @@
 00707C80    jnz 0x00707C70
 00707C82    mov ecx, edi
 00707C84    mov dword ptr ds:[edi+0x04], eax
-00707C87    call 0x00707BE0
+00707C87    call 0x00707BE0                                 ; => [ Call: sub_707be0 ]
 00707C8C    mov eax, dword ptr ds:[esi]
 00707C8E    cmp eax, ebx
 00707C90    jz 0x00707C95
@@ -50,7 +56,7 @@
 00707CB2    ret
 00707CB3    mov ecx, edi
 00707CB5    mov dword ptr ds:[edi], eax
-00707CB7    call 0x00707BE0
+00707CB7    call 0x00707BE0                                 ; => [ Call: sub_707be0 ]
 00707CBC    pop edi
 00707CBD    pop esi
 00707CBE    mov eax, 0x01

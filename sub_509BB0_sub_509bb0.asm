@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_509bb0
+// 起始地址: 0x509bb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00509BB0    dword 83EC8B55
 00509BB4    jnl 0x00509BC2
 00509BB6    add dword ptr ds:[ecx+ebx*1+0x68], esi
@@ -21,10 +27,10 @@
 00509BE5    mov esi, dword ptr ds:[eax]
 00509BE7    call 0x00573400
 00509BEC    movzx esi, si
-00509BEF    mov ebx, dword ptr ds:[eax+0x04]
+00509BEF    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00509BF2    cmp esi, 0x320
 00509BF8    jb 0x00509BFF
-00509BFA    call 0x00591930
+00509BFA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00509BFF    mov ecx, dword ptr ds:[edi+0x14]
 00509C02    imul eax, esi, 0x64
 00509C05    mov esi, ecx
@@ -64,15 +70,15 @@
 00509C4E    pop ebx
 00509C4F    pop ebp
 00509C50    ret
-00509C51    push 0x81EF48
+00509C51    push 0x81EF48                                   ; => [ String: DomAchievementDataGet ]
 00509C56    push 0x1CB1
-00509C5B    push 0x81EA70
-00509C60    mov ecx, 0x80AEA0
+00509C5B    push 0x81EA70                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
+00509C60    mov ecx, 0x80AEA0                               ; => [ String: c.contextType == CONTEXT_ACHIEVEMENT ]
 00509C65    mov edx, 0x801800
-00509C6A    call 0x0063B870
+00509C6A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00509C6F    add esp, 0x0C
 00509C72    call 0x0063BC30
 00509C77    test al, al
-00509C79    jz 0x00509C7C
+00509C79    jz 0x00509C7C                                   ; => [ Call: sub_63bc30 ]
 00509C7B    int3
-00509C7C    call 0x0063BB00
+00509C7C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

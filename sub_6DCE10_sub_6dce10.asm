@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dce10
+// 起始地址: 0x6dce10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DCE10    push ebp
 006DCE11    mov ebp, esp
 006DCE13    and esp, 0xFFFFFFF8
@@ -15,4 +21,4 @@
 006DCE2D    pop esi
 006DCE2E    mov esp, ebp
 006DCE30    pop ebp
-006DCE31    ret
+006DCE31    ret                                             ; => [ Call: sub_6dcc50 ]

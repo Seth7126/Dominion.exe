@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7074e0
+// 起始地址: 0x7074e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007074E0    push ebp
 007074E1    mov ebp, esp
 007074E3    sub esp, 0x0C
@@ -6,7 +12,7 @@
 007074E9    mov esi, ecx
 007074EB    call 0x00707330
 007074F0    test al, al
-007074F2    jz 0x0070750F
+007074F2    jz 0x0070750F                                   ; => [ Call: sub_707330 ]
 007074F4    cmp dword ptr ds:[esi+0x124], 0x00
 007074FB    jnz 0x007075A0
 00707501    mov dword ptr ds:[esi+0x04], 0x05
@@ -19,14 +25,14 @@
 00707511    mov ecx, esi
 00707513    call 0x00707330
 00707518    test al, al
-0070751A    jz 0x007075A0
+0070751A    jz 0x007075A0                                   ; => [ Call: sub_707330 ]
 00707520    mov dl, 0x2F
 00707522    mov ecx, esi
 00707524    call 0x00707330
 00707529    mov ecx, esi
 0070752B    test al, al
-0070752D    jz 0x00707582
-0070752F    call 0x00707390
+0070752D    jz 0x00707582                                   ; => [ Call: sub_707330 ]
+0070752F    call 0x00707390                                 ; => [ Call: sub_707390 ]
 00707534    test al, al
 00707536    jz 0x007075A0
 00707538    cmp dword ptr ds:[esi+0x124], 0x00
@@ -42,23 +48,23 @@
 0070755C    test eax, eax
 0070755E    jnz 0x007075A0
 00707560    mov ecx, esi
-00707562    call 0x007072D0
+00707562    call 0x007072D0                                 ; => [ Call: sub_7072d0 ]
 00707567    mov dl, 0x3E
 00707569    mov ecx, esi
 0070756B    call 0x00707330
 00707570    test al, al
-00707572    jz 0x007075A0
+00707572    jz 0x007075A0                                   ; => [ Call: sub_707330 ]
 00707574    mov dword ptr ds:[esi+0x04], 0x04
 0070757B    mov al, 0x01
 0070757D    pop esi
 0070757E    mov esp, ebp
 00707580    pop ebp
 00707581    ret
-00707582    call 0x007072D0
+00707582    call 0x007072D0                                 ; => [ Call: sub_7072d0 ]
 00707587    mov ecx, esi
 00707589    call 0x00707390
 0070758E    test al, al
-00707590    jz 0x007075A0
+00707590    jz 0x007075A0                                   ; => [ Call: sub_707390 ]
 00707592    mov dword ptr ds:[esi+0x04], 0x01
 00707599    mov al, 0x01
 0070759B    pop esi
@@ -75,10 +81,10 @@
 007075AE    push 0x86E34C
 007075B3    mov edx, 0x801800
 007075B8    mov ecx, 0x877B90
-007075BD    call 0x0063B870
+007075BD    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: XList<struct XmlReadToken>::GetTail | String: C:\x\ax2017\Engine\xList.h | Data: data_801800 | String: mpTail != NULL ]
 007075C2    add esp, 0x0C
 007075C5    call 0x0063BC30
 007075CA    test al, al
-007075CC    jz 0x007075CF
+007075CC    jz 0x007075CF                                   ; => [ Call: sub_63bc30 ]
 007075CE    int3
-007075CF    call 0x0063BB00
+007075CF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

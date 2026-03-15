@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6afc20
+// 起始地址: 0x6afc20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AFC20    push ebp
 006AFC21    mov ebp, esp
 006AFC23    push ecx
@@ -65,10 +71,10 @@
 006AFCCE    push 0x87B990
 006AFCD3    mov edx, 0x801800
 006AFCD8    mov ecx, 0x801AA4
-006AFCDD    call 0x0063B870
+006AFCDD    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: Dx11GraphicsInterface::ReleaseShaderBuffer | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: Halt ]
 006AFCE2    add esp, 0x0C
 006AFCE5    call 0x0063BC30
 006AFCEA    test al, al
-006AFCEC    jz 0x006AFCEF
+006AFCEC    jz 0x006AFCEF                                   ; => [ Call: sub_63bc30 ]
 006AFCEE    int3
-006AFCEF    call 0x0063BB00
+006AFCEF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

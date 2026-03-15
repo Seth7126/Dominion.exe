@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69d970
+// 起始地址: 0x69d970
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069D970    push ebp
 0069D971    mov ebp, esp
 0069D973    and esp, 0xFFFFFFF8
@@ -27,7 +33,7 @@
 0069D9AB    xor eax, esi
 0069D9AD    shr esi, 0x08
 0069D9B0    movzx eax, al
-0069D9B3    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D9B3    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D9BA    sub ecx, 0x01
 0069D9BD    jnz 0x0069D9A5
 0069D9BF    mov eax, esi
@@ -47,13 +53,13 @@
 0069D9DC    test eax, eax
 0069D9DE    jnz 0x0069D9D1
 0069D9E0    mov ecx, 0x0C
-0069D9E5    call 0x0064BFD0
+0069D9E5    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0069D9EA    mov ebx, eax
 0069D9EC    inc dword ptr ds:[ebx+0x0C]
 0069D9EF    cmp dword ptr ds:[ebx], 0x00
 0069D9F2    jnz 0x0069D9FB
 0069D9F4    mov ecx, ebx
-0069D9F6    call 0x0064BE70
+0069D9F6    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0069D9FB    mov ecx, dword ptr ds:[ebx]
 0069D9FD    mov edx, dword ptr ss:[ebp+0x08]
 0069DA00    mov eax, dword ptr ds:[ecx]
@@ -77,7 +83,7 @@
 0069DA37    push dword ptr ds:[ebx]
 0069DA39    push dword ptr ds:[edi]
 0069DA3B    push 0x879738
-0069DA40    call 0x0063B5F0
+0069DA40    call 0x0063B5F0                                 ; => [ String: def %s size %d | Call: sub_63b5f0 ]
 0069DA45    add esp, 0x0C
 0069DA48    mov ecx, 0x04
 0069DA4D    nop dword ptr ds:[eax], eax
@@ -86,7 +92,7 @@
 0069DA56    xor eax, esi
 0069DA58    shr esi, 0x08
 0069DA5B    movzx eax, al
-0069DA5E    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069DA5E    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069DA65    sub ecx, 0x01
 0069DA68    jnz 0x0069DA50
 0069DA6A    lea ecx, ds:[edi+0x18]
@@ -96,7 +102,7 @@
 0069DA78    xor eax, esi
 0069DA7A    shr esi, 0x08
 0069DA7D    movzx eax, al
-0069DA80    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069DA80    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069DA87    sub edx, 0x01
 0069DA8A    jnz 0x0069DA72
 0069DA8C    lea ecx, ds:[edi+0x1C]
@@ -106,7 +112,7 @@
 0069DA9A    xor eax, esi
 0069DA9C    shr esi, 0x08
 0069DA9F    movzx eax, al
-0069DAA2    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069DAA2    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069DAA9    sub edx, 0x01
 0069DAAC    jnz 0x0069DA94
 0069DAAE    mov edx, dword ptr ds:[edi]
@@ -123,7 +129,7 @@
 0069DAC6    xor eax, esi
 0069DAC8    shr esi, 0x08
 0069DACB    movzx eax, al
-0069DACE    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069DACE    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069DAD5    sub ecx, 0x01
 0069DAD8    jnz 0x0069DAC0
 0069DADA    cmp dword ptr ds:[edi+0x08], 0x00
@@ -145,7 +151,7 @@
 0069DB03    mov dword ptr ss:[esp+0x14], eax
 0069DB07    call 0x0069D750
 0069DB0C    add esp, 0x08
-0069DB0F    mov esi, eax
+0069DB0F    mov esi, eax                                    ; => [ Call: sub_69d750 ]
 0069DB11    cmp byte ptr ss:[ebp+0x0C], 0x00
 0069DB15    jz 0x0069DB2E
 0069DB17    mov eax, dword ptr ss:[esp+0x0C]
@@ -153,7 +159,7 @@
 0069DB1C    push dword ptr ds:[eax+0x04]
 0069DB1F    push dword ptr ds:[edi]
 0069DB21    push 0x87971C
-0069DB26    call 0x0063B5F0
+0069DB26    call 0x0063B5F0                                 ; => [ String: def %s field %s %x | Call: sub_63b5f0 ]
 0069DB2B    add esp, 0x10
 0069DB2E    mov edx, 0xFFFFFFFF
 0069DB33    cmp ebx, 0xFFFFFFFF

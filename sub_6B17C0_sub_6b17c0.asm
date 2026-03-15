@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b17c0
+// 起始地址: 0x6b17c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B17C0    push ebp
 006B17C1    mov ebp, esp
 006B17C3    sub esp, 0x10
@@ -18,7 +24,7 @@
 006B17EF    push edi
 006B17F0    push 0x00
 006B17F2    push 0x04
-006B17F4    mov eax, dword ptr ds:[eax+0x08]
+006B17F4    mov eax, dword ptr ds:[eax+0x08]                ; => [ Data: data_147b078 ]
 006B17F7    push 0x00
 006B17F9    push edx
 006B17FA    push eax
@@ -26,9 +32,9 @@
 006B17FD    call dword ptr ds:[ecx+0x38]
 006B1800    test eax, eax
 006B1802    jns 0x006B1818
-006B1804    push 0x87C3E4
+006B1804    push 0x87C3E4                                   ; => [ String: Dx11SetRenderState ]
 006B1809    push 0x837
-006B180E    mov ecx, 0x87BA34
+006B180E    mov ecx, 0x87BA34                               ; => [ String: SUCCEEDED(hr) ]
 006B1813    jmp 0x006B18BF
 006B1818    xor edi, edi
 006B181A    cmp dword ptr ds:[ebx+0x04], edi
@@ -37,7 +43,7 @@
 006B1822    push dword ptr ss:[ebp-0x10]
 006B1825    mov edx, dword ptr ss:[ebp+0x0C]
 006B1828    mov ecx, esi
-006B182A    call 0x006B0DF0
+006B182A    call 0x006B0DF0                                 ; => [ Call: sub_6b0df0 ]
 006B182F    add esp, 0x04
 006B1832    test al, al
 006B1834    jnz 0x006B1849
@@ -46,7 +52,7 @@
 006B183B    push ecx
 006B183C    mov ecx, dword ptr ss:[ebp-0x04]
 006B183F    push dword ptr ds:[eax]
-006B1841    call 0x006B1510
+006B1841    call 0x006B1510                                 ; => [ Call: sub_6b1510 ]
 006B1846    add esp, 0x08
 006B1849    inc edi
 006B184A    add esi, 0x14
@@ -60,7 +66,7 @@
 006B185F    mov eax, dword ptr ds:[0x0147B078]
 006B1864    push 0x00
 006B1866    push edx
-006B1867    mov eax, dword ptr ds:[eax+0x08]
+006B1867    mov eax, dword ptr ds:[eax+0x08]                ; => [ Data: data_147b078 ]
 006B186A    push eax
 006B186B    mov ecx, dword ptr ds:[eax]
 006B186D    call dword ptr ds:[ecx+0x3C]
@@ -71,7 +77,7 @@
 006B187C    push edi
 006B187D    push 0x01
 006B187F    push 0x00
-006B1881    mov eax, dword ptr ds:[eax+0x08]
+006B1881    mov eax, dword ptr ds:[eax+0x08]                ; => [ Data: data_147b078 ]
 006B1884    push eax
 006B1885    mov ecx, dword ptr ds:[eax]
 006B1887    call dword ptr ds:[ecx+0x1C]
@@ -87,7 +93,7 @@
 006B189B    push edi
 006B189C    push 0x01
 006B189E    push 0x00
-006B18A0    mov eax, dword ptr ds:[eax+0x08]
+006B18A0    mov eax, dword ptr ds:[eax+0x08]                ; => [ Data: data_147b078 ]
 006B18A3    push eax
 006B18A4    mov ecx, dword ptr ds:[eax]
 006B18A6    call dword ptr ds:[ecx+0x40]
@@ -97,15 +103,15 @@
 006B18AC    mov esp, ebp
 006B18AE    pop ebp
 006B18AF    ret
-006B18B0    push 0x87C3E4
+006B18B0    push 0x87C3E4                                   ; => [ String: Dx11SetRenderState ]
 006B18B5    push 0x854
-006B18BA    mov ecx, 0x801AA4
+006B18BA    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006B18BF    push 0x87B990
 006B18C4    mov edx, 0x801800
-006B18C9    call 0x0063B870
+006B18C9    call 0x0063B870                                 ; => [ String: Dx11SetRenderState | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp ]
 006B18CE    add esp, 0x0C
 006B18D1    call 0x0063BC30
 006B18D6    test al, al
-006B18D8    jz 0x006B18DB
+006B18D8    jz 0x006B18DB                                   ; => [ Call: sub_63bc30 ]
 006B18DA    int3
-006B18DB    call 0x0063BB00
+006B18DB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

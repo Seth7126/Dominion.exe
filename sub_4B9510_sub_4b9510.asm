@@ -1,4 +1,10 @@
-004B9510    mov eax, dword ptr ds:[0x00CC8D5C]
+// ============================================================
+// 函数名称: sub_4b9510
+// 起始地址: 0x4b9510
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+004B9510    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004B9515    push esi
 004B9516    test eax, eax
 004B9518    jz 0x004B9565
@@ -7,7 +13,7 @@
 004B9523    xor al, al
 004B9525    pop esi
 004B9526    ret
-004B9527    call 0x004B9480
+004B9527    call 0x004B9480                                 ; => [ Call: sub_4b9480 ]
 004B952C    xor edx, edx
 004B952E    mov esi, dword ptr ds:[eax+0x11A8]
 004B9534    test esi, esi
@@ -32,10 +38,10 @@
 004B956C    push 0x77EB50
 004B9571    mov edx, 0x801800
 004B9576    mov ecx, 0x77EB9C
-004B957B    call 0x0063B870
+004B957B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004B9580    add esp, 0x0C
 004B9583    call 0x0063BC30
 004B9588    test al, al
-004B958A    jz 0x004B958D
+004B958A    jz 0x004B958D                                   ; => [ Call: sub_63bc30 ]
 004B958C    int3
-004B958D    call 0x0063BB00
+004B958D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

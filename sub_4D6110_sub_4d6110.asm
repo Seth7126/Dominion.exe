@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4d6110
+// 起始地址: 0x4d6110
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D6110    push ebp
 004D6111    mov ebp, esp
 004D6113    push ecx
@@ -15,7 +21,7 @@
 004D6130    push 0x10
 004D6132    push 0x801800
 004D6137    push edi
-004D6138    call dword ptr ds:[0x00775678]
+004D6138    call dword ptr ds:[0x00775678]                  ; => [ Data: data_801800 ]
 004D613E    mov byte ptr ds:[edi+0x0F], 0x00
 004D6142    add esp, 0x0C
 004D6145    mov eax, dword ptr ds:[esi]

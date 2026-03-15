@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_4ba570
+// 起始地址: 0x4ba570
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BA570    push ebp
 004BA571    mov ebp, esp
 004BA573    and esp, 0xFFFFFFF8
 004BA576    push ecx
-004BA577    mov edx, dword ptr ds:[0x00CC8D5C]
+004BA577    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004BA57D    push ebx
 004BA57E    mov ebx, ecx
 004BA580    push esi
 004BA581    push edi
 004BA582    test edx, edx
 004BA584    jnz 0x004BA59C
-004BA586    push 0x77EB90
+004BA586    push 0x77EB90                                   ; => [ String: GetClient ]
 004BA58B    push 0x7B
-004BA58D    push 0x77EB50
-004BA592    mov ecx, 0x77EB9C
+004BA58D    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+004BA592    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 004BA597    jmp 0x004BA6C9
 004BA59C    mov eax, dword ptr ds:[edx+0x7754]
 004BA5A2    mov esi, eax
@@ -48,9 +54,9 @@
 004BA604    mov eax, dword ptr ds:[edx+0x7764]
 004BA60A    cmp eax, dword ptr ds:[edx+0x775C]
 004BA610    jb 0x004BA63A
-004BA612    push 0x8027E4
+004BA612    push 0x8027E4                                   ; => [ String: DataArray<struct ServerNotification>::DataArrayAlloc ]
 004BA617    push 0xF4
-004BA61C    mov ecx, 0x8019B8
+004BA61C    mov ecx, 0x8019B8                               ; => [ String: mUsedCount < mMaxSize ]
 004BA621    jmp 0x004BA6C4
 004BA626    cmp eax, 0xFFFFFFFF
 004BA629    jnz 0x004BA5E0
@@ -98,15 +104,15 @@
 004BA6B1    mov esp, ebp
 004BA6B3    pop ebp
 004BA6B4    ret
-004BA6B5    push 0x8027E4
+004BA6B5    push 0x8027E4                                   ; => [ String: DataArray<struct ServerNotification>::DataArrayAlloc ]
 004BA6BA    push 0xF5
-004BA6BF    mov ecx, 0x8019D0
-004BA6C4    push 0x80193C
+004BA6BF    mov ecx, 0x8019D0                               ; => [ String: mFreeListHead <= mMaxUsedCount ]
+004BA6C4    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
 004BA6C9    mov edx, 0x801800
-004BA6CE    call 0x0063B870
+004BA6CE    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004BA6D3    add esp, 0x0C
 004BA6D6    call 0x0063BC30
 004BA6DB    test al, al
-004BA6DD    jz 0x004BA6E0
+004BA6DD    jz 0x004BA6E0                                   ; => [ Call: sub_63bc30 ]
 004BA6DF    int3
-004BA6E0    call 0x0063BB00
+004BA6E0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_596c20
+// 起始地址: 0x596c20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00596C20    push ebp
 00596C21    mov ebp, esp
 00596C23    sub esp, 0x20
@@ -27,7 +33,7 @@
 00596C64    mov dword ptr ss:[ebp-0x14], eax
 00596C67    cmp esi, 0x320
 00596C6D    jb 0x00596C77
-00596C6F    call 0x00591930
+00596C6F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00596C74    mov ecx, dword ptr ss:[ebp-0x04]
 00596C77    mov edx, dword ptr ss:[ebp-0x08]
 00596C7A    imul eax, esi, 0x64
@@ -36,7 +42,7 @@
 00596C87    mov dword ptr ss:[ebp-0x10], eax
 00596C8A    cmp eax, 0x320
 00596C8F    jb 0x00596C9F
-00596C91    call 0x00591930
+00596C91    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00596C96    mov eax, dword ptr ss:[ebp-0x10]
 00596C99    mov ecx, dword ptr ss:[ebp-0x04]
 00596C9C    mov edx, dword ptr ss:[ebp-0x08]
@@ -84,7 +90,7 @@
 00596D16    mov dword ptr ss:[ebp-0x20], eax
 00596D19    cmp eax, 0x320
 00596D1E    jb 0x00596D2B
-00596D20    call 0x00591930
+00596D20    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00596D25    mov edx, dword ptr ss:[ebp-0x08]
 00596D28    mov eax, dword ptr ss:[ebp-0x20]
 00596D2B    mov ecx, dword ptr ss:[ebp+0x08]
@@ -95,7 +101,7 @@
 00596D3E    mov dword ptr ss:[ebp-0x1C], eax
 00596D41    cmp eax, 0x320
 00596D46    jb 0x00596D53
-00596D48    call 0x00591930
+00596D48    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00596D4D    mov ecx, dword ptr ss:[ebp-0x20]
 00596D50    mov eax, dword ptr ss:[ebp-0x1C]
 00596D53    mov edx, dword ptr ss:[ebp+0x08]

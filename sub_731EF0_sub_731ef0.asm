@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_731ef0
+// 起始地址: 0x731ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00731EF0    push ebp
 00731EF1    mov ebp, esp
 00731EF3    sub esp, 0x14
-00731EF6    mov eax, dword ptr ds:[0x008C4040]
+00731EF6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00731EFB    xor eax, ebp
 00731EFD    mov dword ptr ss:[ebp-0x04], eax
 00731F00    movq xmm0, qword ptr ds:[0x007FEFA4]
@@ -213,7 +219,7 @@
 0073222D    addss xmm4, dword ptr ss:[ebp-0x14]
 00732232    movss dword ptr ds:[eax+0x04], xmm1
 00732237    movss dword ptr ds:[eax+0x08], xmm4
-0073223C    call 0x0075927A
+0073223C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00732241    mov esp, ebp
 00732243    pop ebp
 00732244    ret

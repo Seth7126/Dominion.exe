@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_666fd0
+// 起始地址: 0x666fd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00666FD0    push ebp
 00666FD1    mov ebp, esp
 00666FD3    sub esp, 0x80C
-00666FD9    mov eax, dword ptr ds:[0x008C4040]
+00666FD9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00666FDE    xor eax, ebp
 00666FE0    mov dword ptr ss:[ebp-0x04], eax
 00666FE3    push ebx
@@ -13,12 +19,12 @@
 00666FF7    push 0x00
 00666FF9    push eax
 00666FFA    mov edi, ecx
-00666FFC    call 0x00761FC4
+00666FFC    call 0x00761FC4                                 ; => [ Call: memset ]
 00667001    push 0x400
 00667006    lea eax, ss:[ebp-0x408]
 0066700C    push 0x00
 0066700E    push eax
-0066700F    call 0x00761FC4
+0066700F    call 0x00761FC4                                 ; => [ Call: memset ]
 00667014    mov ebx, dword ptr ds:[edi+0x08]
 00667017    add esp, 0x18
 0066701A    xor eax, eax
@@ -59,7 +65,7 @@
 00667080    pop ebx
 00667081    mov ecx, dword ptr ss:[ebp-0x04]
 00667084    xor ecx, ebp
-00667086    call 0x0075927A
+00667086    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066708B    mov esp, ebp
 0066708D    pop ebp
 0066708E    ret
@@ -69,7 +75,7 @@
 00667095    pop esi
 00667096    xor ecx, ebp
 00667098    pop ebx
-00667099    call 0x0075927A
+00667099    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066709E    mov esp, ebp
 006670A0    pop ebp
 006670A1    ret
@@ -78,10 +84,10 @@
 006670AC    push 0x8739B4
 006670B1    mov edx, 0x801800
 006670B6    mov ecx, 0x874238
-006670BB    call 0x0063B870
+006670BB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: AttribTreeFindParent | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: indent == 0 ]
 006670C0    add esp, 0x0C
 006670C3    call 0x0063BC30
 006670C8    test al, al
-006670CA    jz 0x006670CD
+006670CA    jz 0x006670CD                                   ; => [ Call: sub_63bc30 ]
 006670CC    int3
-006670CD    call 0x0063BB00
+006670CD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

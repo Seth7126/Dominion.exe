@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f7f70
+// 起始地址: 0x4f7f70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F7F70    push ebp
 004F7F71    mov ebp, esp
 004F7F73    and esp, 0xFFFFFFF8
@@ -8,10 +14,10 @@
 004F7F7F    push ecx
 004F7F80    call 0x004F7F60
 004F7F85    mov ecx, dword ptr ds:[eax]
-004F7F87    push dword ptr ds:[eax+0x04]
+004F7F87    push dword ptr ds:[eax+0x04]                    ; => [ Data: data_19e399c ]
 004F7F8A    or ecx, 0x02
 004F7F8D    push ecx
-004F7F8E    call dword ptr ds:[0x00775640]
+004F7F8E    call dword ptr ds:[0x00775640]                  ; => [ Call: nullptr | Data: data_19e3998 ]
 004F7F94    or ecx, 0xFFFFFFFF
 004F7F97    add esp, 0x1C
 004F7F9A    test eax, eax

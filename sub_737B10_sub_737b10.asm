@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_737b10
+// 起始地址: 0x737b10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00737B10    push ebp
 00737B11    mov ebp, esp
 00737B13    sub esp, 0x10
@@ -42,9 +48,9 @@
 00737B77    mov eax, edi
 00737B79    test ecx, ecx
 00737B7B    jns 0x00737B45
-00737B7D    push 0x88F64C
+00737B7D    push 0x88F64C                                   ; => [ String: XArray<struct AtlasFontLayerItem>::operator [] ]
 00737B82    push 0xB5
-00737B87    mov ecx, 0x824FD0
+00737B87    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 00737B8C    jmp 0x00737CB6
 00737B91    mov ecx, dword ptr ss:[ebp+0x0C]
 00737B94    movups xmm0, xmmword ptr ds:[eax+0x08]
@@ -62,9 +68,9 @@
 00737BAE    mov dword ptr ds:[eax], 0x00
 00737BB4    test edx, edx
 00737BB6    jle 0x00737C1A
-00737BB8    xor ecx, ecx
-00737BBA    xor eax, eax
-00737BBC    mov dword ptr ss:[ebp-0x0C], eax
+00737BB8    xor ecx, ecx                                    ; => [ Call: nullptr ]
+00737BBA    xor eax, eax                                    ; => [ Call: nullptr ]
+00737BBC    mov dword ptr ss:[ebp-0x0C], eax                ; => [ Call: nullptr ]
 00737BBF    lea edi, ds:[ecx+0x1C]
 00737BC2    cmp eax, esi
 00737BC4    jnl 0x00737B7D
@@ -91,18 +97,18 @@
 00737BFC    mov dword ptr ss:[ebp-0x0C], edi
 00737BFF    test eax, eax
 00737C01    jns 0x00737BC2
-00737C03    push 0x88F64C
+00737C03    push 0x88F64C                                   ; => [ String: XArray<struct AtlasFontLayerItem>::operator [] ]
 00737C08    push 0xB5
-00737C0D    mov ecx, 0x824FD0
+00737C0D    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 00737C12    jmp 0x00737CB6
 00737C17    lea edi, ds:[ebx+0x0C]
 00737C1A    mov esi, dword ptr ss:[ebp-0x04]
 00737C1D    cmp dword ptr ds:[esi+0x04], 0x12
 00737C21    jz 0x00737C3C
-00737C23    push 0x87A4B4
+00737C23    push 0x87A4B4                                   ; => [ String: FontGetDef ]
 00737C28    push 0x2E6
-00737C2D    push 0x87A2E0
-00737C32    mov ecx, 0x87A48C
+00737C2D    push 0x87A2E0                                   ; => [ String: C:\x\ax2017\Engine\AssetUtils.cpp ]
+00737C32    mov ecx, 0x87A48C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_FONT ]
 00737C37    jmp 0x00737CBB
 00737C3C    mov ecx, esi
 00737C3E    call 0x005AF880
@@ -110,7 +116,7 @@
 00737C46    mov eax, dword ptr ds:[eax+0x20]
 00737C49    lea ecx, ds:[ecx+ecx*2]
 00737C4C    add ecx, ecx
-00737C4E    mov eax, dword ptr ds:[eax+ecx*8]
+00737C4E    mov eax, dword ptr ds:[eax+ecx*8]               ; => [ Call: sub_5af880 ]
 00737C51    mov dword ptr ss:[ebp-0x0C], eax
 00737C54    mov eax, dword ptr ds:[ebx+0x04]
 00737C57    cmp eax, dword ptr ds:[ebx+0x08]
@@ -127,7 +133,7 @@
 00737C78    mov dword ptr ds:[eax+edx*4-0x18], ecx
 00737C7C    lea edx, ds:[esi-0x14]
 00737C7F    mov ecx, dword ptr ss:[ebp-0x0C]
-00737C82    call 0x00736270
+00737C82    call 0x00736270                                 ; => [ Call: sub_736270 ]
 00737C87    mov eax, dword ptr ds:[ebx+0x04]
 00737C8A    add esp, 0x04
 00737C8D    mov ecx, dword ptr ss:[ebp+0x0C]
@@ -143,15 +149,15 @@
 00737CA3    mov esp, ebp
 00737CA5    pop ebp
 00737CA6    ret
-00737CA7    push 0x88F5FC
+00737CA7    push 0x88F5FC                                   ; => [ String: XArray<struct AtlasFontLayerItem>::Alloc ]
 00737CAC    push 0xA1
-00737CB1    mov ecx, 0x816BF8
-00737CB6    push 0x816BDC
+00737CB1    mov ecx, 0x816BF8                               ; => [ String: mSize < mSizeReserved ]
+00737CB6    push 0x816BDC                                   ; => [ String: C:\x\ax2017\Engine\xArray.h | String: C:\x\ax2017\Engine\xArray.h ]
 00737CBB    mov edx, 0x801800
-00737CC0    call 0x0063B870
+00737CC0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00737CC5    add esp, 0x0C
 00737CC8    call 0x0063BC30
 00737CCD    test al, al
-00737CCF    jz 0x00737CD2
+00737CCF    jz 0x00737CD2                                   ; => [ Call: sub_63bc30 ]
 00737CD1    int3
-00737CD2    call 0x0063BB00
+00737CD2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

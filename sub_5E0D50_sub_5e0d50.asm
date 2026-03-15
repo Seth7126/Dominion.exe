@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e0d50
+// 起始地址: 0x5e0d50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E0D50    push ebp
 005E0D51    mov ebp, esp
 005E0D53    and esp, 0xFFFFFFF8
@@ -12,7 +18,7 @@
 005E0D64    cmp dword ptr ds:[ecx*8+0x86EE48], edi
 005E0D6B    jnz 0x005E0D76
 005E0D6D    cmp dword ptr ds:[ecx*8+0x86EE4C], ebx
-005E0D74    jz 0x005E0D7F
+005E0D74    jz 0x005E0D7F                                   ; => [ Data: data_86ee48 | Data: data_86ee4c ]
 005E0D76    inc ecx
 005E0D77    cmp ecx, 0x09
 005E0D7A    jl 0x005E0D64
@@ -25,7 +31,7 @@
 005E0D90    cmp dword ptr ds:[edx*8+0x86EE48], esi
 005E0D97    jnz 0x005E0DA2
 005E0D99    cmp dword ptr ds:[edx*8+0x86EE4C], eax
-005E0DA0    jz 0x005E0DAB
+005E0DA0    jz 0x005E0DAB                                   ; => [ Data: data_86ee48 | Data: data_86ee4c ]
 005E0DA2    inc edx
 005E0DA3    cmp edx, 0x09
 005E0DA6    jl 0x005E0D90

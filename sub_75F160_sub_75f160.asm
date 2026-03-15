@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75f160
+// 起始地址: 0x75f160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F160    push ebp
 0075F161    mov ebp, esp
 0075F163    mov edx, dword ptr ss:[ebp+0x08]
@@ -14,7 +20,7 @@
 0075F183    xorps xmm0, xmm0
 0075F186    mov eax, dword ptr ds:[edx+0x14]
 0075F189    mov dword ptr ds:[ebx+0x48], eax
-0075F18C    movups xmmword ptr ds:[ebx+0x58], xmm0
+0075F18C    movups xmmword ptr ds:[ebx+0x58], xmm0          ; => [ String: 0 | String: zx ]
 0075F190    movsd xmm0, qword ptr ds:[edx+0x60]
 0075F195    movsd qword ptr ds:[ebx+0x1B8], xmm0
 0075F19D    test byte ptr ds:[edi], 0x01

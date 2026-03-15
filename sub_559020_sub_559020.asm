@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_559020
+// 起始地址: 0x559020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00559020    push ebp
 00559021    mov ebp, esp
 00559023    mov eax, dword ptr ss:[ebp+0x08]
 00559026    push esi
 00559027    mov esi, dword ptr ds:[eax]
-00559029    call 0x00573400
+00559029    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055902E    xor edx, edx
 00559030    imul ecx, dword ptr ds:[eax+0x0C], 0x5A30
 00559037    mov eax, dword ptr ds:[eax+0x04]

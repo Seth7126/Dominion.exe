@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7070e0
+// 起始地址: 0x7070e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007070E0    push ebp
 007070E1    mov ebp, esp
 007070E3    and esp, 0xFFFFFFF8
@@ -13,8 +19,8 @@
 007070FA    call 0x0069DEC0
 007070FF    add esp, 0x04
 00707102    test al, al
-00707104    jz 0x00707180
-00707106    mov ebx, dword ptr ss:[esp+0x18]
+00707104    jz 0x00707180                                   ; => [ Type: FILE | Type: FILE | Call: sub_69dec0 ]
+00707106    mov ebx, dword ptr ss:[esp+0x18]                ; => [ Type: FILE ]
 0070710A    mov esi, dword ptr ds:[0x00775620]
 00707110    push 0x02
 00707112    push 0x00
@@ -26,7 +32,7 @@
 00707121    add esp, 0x04
 00707124    mov dword ptr ss:[esp+0x0C], eax
 00707128    lea ecx, ds:[eax+0x01]
-0070712B    call 0x00687730
+0070712B    call 0x00687730                                 ; => [ Call: sub_687730 ]
 00707130    push 0x00
 00707132    push dword ptr ss:[esp+0x20]
 00707136    mov dword ptr ss:[esp+0x18], eax
@@ -34,7 +40,7 @@
 0070713B    mov dword ptr ds:[edi], eax
 0070713D    call esi
 0070713F    add esp, 0x0C
-00707142    push ebx
+00707142    push ebx                                        ; => [ Type: FILE ]
 00707143    test eax, eax
 00707145    jnz 0x00707161
 00707147    mov esi, dword ptr ss:[esp+0x10]
@@ -54,7 +60,7 @@
 00707170    push eax
 00707171    call dword ptr ds:[0x00775524]
 00707177    add esp, 0x04
-0070717A    mov dword ptr ds:[edi], 0x00
+0070717A    mov dword ptr ds:[edi], 0x00                    ; => [ Call: nullptr ]
 00707180    xor al, al
 00707182    pop edi
 00707183    pop esi
@@ -66,7 +72,7 @@
 0070718F    mov eax, dword ptr ds:[edi]
 00707191    add esp, 0x04
 00707194    mov dword ptr ds:[edi+0x118], 0x01
-0070719E    mov ecx, 0x801800
+0070719E    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 007071A3    mov edx, edi
 007071A5    mov byte ptr ds:[eax+esi*1], 0x00
 007071A9    mov eax, dword ptr ds:[edi]
@@ -83,7 +89,7 @@
 007071CC    test al, al
 007071CE    jnz 0x007071C3
 007071D0    mov ecx, edi
-007071D2    call 0x007072D0
+007071D2    call 0x007072D0                                 ; => [ Call: sub_7072d0 ]
 007071D7    mov eax, dword ptr ds:[edi+0x04]
 007071DA    test eax, eax
 007071DC    jz 0x00707222
@@ -103,7 +109,7 @@
 00707214    test ecx, ecx
 00707216    jz 0x00707222
 00707218    mov edx, 0x10
-0070721D    call 0x0064C080
+0070721D    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00707222    mov ecx, edi
 00707224    call 0x007074E0
 00707229    test al, al
@@ -113,22 +119,22 @@
 00707230    pop ebx
 00707231    mov esp, ebp
 00707233    pop ebp
-00707234    ret
+00707234    ret                                             ; => [ Call: sub_7074e0 | Call: sub_7074e0 ]
 00707235    cmp eax, 0x01
 00707238    jnz 0x007072A7
 0070723A    lea ecx, ds:[eax+0x0F]
-0070723D    call 0x0064BFD0
+0070723D    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00707242    mov esi, eax
 00707244    inc dword ptr ds:[esi+0x0C]
 00707247    cmp dword ptr ds:[esi], 0x00
 0070724A    jnz 0x00707253
 0070724C    mov ecx, esi
-0070724E    call 0x0064BE70
+0070724E    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00707253    mov edx, dword ptr ds:[esi]
 00707255    xorps xmm0, xmm0
 00707258    mov eax, dword ptr ds:[edx]
 0070725A    mov dword ptr ds:[esi], eax
-0070725C    movups xmmword ptr ds:[edx], xmm0
+0070725C    movups xmmword ptr ds:[edx], xmm0               ; => [ String: 0 | String: zx ]
 0070725F    mov eax, dword ptr ds:[edi+0x0C]
 00707262    mov ecx, dword ptr ds:[edi+0x10]
 00707265    mov dword ptr ds:[edx], eax
@@ -152,7 +158,7 @@
 007072A2    pop ebx
 007072A3    mov esp, ebp
 007072A5    pop ebp
-007072A6    ret
+007072A6    ret                                             ; => [ Call: sub_7075e0 ]
 007072A7    cmp eax, 0x02
 007072AA    jnz 0x00707180
 007072B0    mov ecx, edi
@@ -164,4 +170,4 @@
 007072BE    pop ebx
 007072BF    mov esp, ebp
 007072C1    pop ebp
-007072C2    ret
+007072C2    ret                                             ; => [ Call: sub_7075e0 ]

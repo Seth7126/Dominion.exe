@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7348a0
+// 起始地址: 0x7348a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007348A0    push ebp
 007348A1    mov ebp, esp
 007348A3    push esi
@@ -5,7 +11,7 @@
 007348A5    mov edi, dword ptr ss:[ebp+0x08]
 007348A8    mov ecx, 0x01
 007348AD    mov edx, dword ptr ds:[edi]
-007348AF    call 0x00734530
+007348AF    call 0x00734530                                 ; => [ Type: SOCKET | Call: sub_734530 ]
 007348B4    mov esi, eax
 007348B6    cmp esi, 0xFFFFFFFF
 007348B9    jz 0x007348E1
@@ -15,7 +21,7 @@
 007348C1    push esi
 007348C2    call dword ptr ds:[0x00775498]
 007348C8    cmp eax, 0xFFFFFFFF
-007348CB    jnz 0x007348EA
+007348CB    jnz 0x007348EA                                  ; => [ Type: WSA_ERROR ]
 007348CD    call dword ptr ds:[0x007754DC]
 007348D3    cmp eax, 0x2733
 007348D8    jz 0x007348EA

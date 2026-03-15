@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a1550
+// 起始地址: 0x5a1550
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A1550    dword F3EC8B55
 005A1554    movups xmm4, xmmword ptr ds:[0x00890E18]
 005A155B    mov ecx, dword ptr ss:[ebp+0x08]
@@ -35,7 +41,7 @@
 005A15CC    movss xmm0, dword ptr ds:[edi+0x0C]
 005A15D1    xor esi, esi
 005A15D3    test eax, eax
-005A15D5    cmovz edx, esi
+005A15D5    cmovz edx, esi                                  ; => [ Call: nullptr ]
 005A15D8    lea esi, ds:[edi+0x0C]
 005A15DB    ucomiss xmm0, xmm3
 005A15DE    lahf
@@ -50,7 +56,7 @@
 005A15F3    xor ebx, ebx
 005A15F5    xor eax, eax
 005A15F7    test eax, eax
-005A15F9    cmovz esi, ebx
+005A15F9    cmovz esi, ebx                                  ; => [ Call: nullptr ]
 005A15FC    pop ebx
 005A15FD    jmp 0x005A1667
 005A15FF    push ebx
@@ -78,7 +84,7 @@
 005A163F    movss xmm0, dword ptr ds:[edi+0x14]
 005A1644    xor esi, esi
 005A1646    test eax, eax
-005A1648    cmovz edx, esi
+005A1648    cmovz edx, esi                                  ; => [ Call: nullptr ]
 005A164B    lea esi, ds:[edi+0x14]
 005A164E    ucomiss xmm0, xmm3
 005A1651    lahf
@@ -89,7 +95,7 @@
 005A165F    lahf
 005A1660    test ah, 0x44
 005A1663    jp 0x005A1667
-005A1665    xor esi, esi
+005A1665    xor esi, esi                                    ; => [ Call: nullptr ]
 005A1667    ucomiss xmm2, xmm4
 005A166A    lahf
 005A166B    test ah, 0x44

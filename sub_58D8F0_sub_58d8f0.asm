@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58d8f0
+// 起始地址: 0x58d8f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058D8F0    push ebp
 0058D8F1    mov ebp, esp
 0058D8F3    push esi
@@ -19,7 +25,7 @@
 0058D91D    add esp, 0x24
 0058D920    pop esi
 0058D921    pop ebp
-0058D922    ret
+0058D922    ret                                             ; => [ Call: sub_58d7a0 ]
 0058D923    test esi, esi
 0058D925    setz al
 0058D928    cmp esi, 0x01
@@ -34,16 +40,16 @@
 0058D941    add esp, 0x24
 0058D944    pop esi
 0058D945    pop ebp
-0058D946    ret
+0058D946    ret                                             ; => [ Call: sub_58d7a0 ]
 0058D947    push 0x820480
 0058D94C    push 0x3E56
 0058D951    push 0x81F4B8
 0058D956    mov edx, 0x801800
 0058D95B    mov ecx, 0x8204A4
-0058D960    call 0x0063B870
+0058D960    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: AddExpansionCards | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: editionFlag != USE_LATEST ]
 0058D965    add esp, 0x0C
 0058D968    call 0x0063BC30
 0058D96D    test al, al
-0058D96F    jz 0x0058D972
+0058D96F    jz 0x0058D972                                   ; => [ Call: sub_63bc30 ]
 0058D971    int3
-0058D972    call 0x0063BB00
+0058D972    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

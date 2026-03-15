@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_6750c0
+// 起始地址: 0x6750c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006750C0    push ebp
 006750C1    mov ebp, esp
 006750C3    push ecx
 006750C4    mov eax, dword ptr ds:[ecx+0x18C8]
-006750CA    mov ecx, dword ptr ds:[0x00C23BA8]
+006750CA    mov ecx, dword ptr ds:[0x00C23BA8]              ; => [ Data: data_c23ba8 ]
 006750D0    push ebx
 006750D1    push esi
 006750D2    imul esi, dword ptr ds:[0x00C23BAC], 0x18D0
 006750DC    mov dword ptr ss:[ebp-0x04], eax
-006750DF    xor eax, eax
+006750DF    xor eax, eax                                    ; => [ Call: nullptr ]
 006750E1    push edi
-006750E2    add esi, ecx
+006750E2    add esi, ecx                                    ; => [ Data: data_c23bac ]
 006750E4    jmp 0x006750EC
-006750E6    mov ecx, dword ptr ds:[0x00C23BA8]
+006750E6    mov ecx, dword ptr ds:[0x00C23BA8]              ; => [ Data: data_c23ba8 ]
 006750EC    test eax, eax
 006750EE    jnz 0x006750F4
 006750F0    mov eax, ecx
@@ -50,9 +56,9 @@
 00675147    jz 0x00675115
 00675149    movzx eax, di
 0067514C    cmp eax, dword ptr ds:[0x00C23BAC]
-00675152    jnb 0x00675168
+00675152    jnb 0x00675168                                  ; => [ Data: data_c23bac ]
 00675154    imul eax, eax, 0x18D0
-0067515A    add eax, dword ptr ds:[0x00C23BA8]
+0067515A    add eax, dword ptr ds:[0x00C23BA8]              ; => [ Data: data_c23ba8 ]
 00675160    cmp dword ptr ds:[eax+0x18C8], edi
 00675166    jz 0x00675117
 00675168    push 0x876B2C
@@ -60,10 +66,10 @@
 0067516F    push 0x80193C
 00675174    mov edx, 0x801800
 00675179    mov ecx, 0x802748
-0067517E    call 0x0063B870
+0067517E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\DataArray.h | String: DataArrayTryToGet(id) != NULL | Data: data_801800 | String: DataArray<struct UI2>::DataArrayGet ]
 00675183    add esp, 0x0C
 00675186    call 0x0063BC30
 0067518B    test al, al
-0067518D    jz 0x00675190
+0067518D    jz 0x00675190                                   ; => [ Call: sub_63bc30 ]
 0067518F    int3
-00675190    call 0x0063BB00
+00675190    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

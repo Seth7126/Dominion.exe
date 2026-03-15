@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_75aec0
+// 起始地址: 0x75aec0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075AEC0    push ebp
 0075AEC1    mov ebp, esp
 0075AEC3    sub esp, 0x1D0
-0075AEC9    mov eax, dword ptr ds:[0x008C4040]
+0075AEC9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0075AECE    xor eax, ebp
 0075AED0    mov dword ptr ss:[ebp-0x04], eax
 0075AED3    push ebx
@@ -10,13 +16,13 @@
 0075AED6    mov edi, ecx
 0075AED8    cmp dword ptr ds:[edi+0x18], 0x100
 0075AEDF    jb 0x0075AF12
-0075AEE1    push 0x77E9A0
+0075AEE1    push 0x77E9A0                                   ; => [ String: mMaxActiveVoices < 256 ]
 0075AEE6    push 0x77C
-0075AEEB    push 0x77E900
+0075AEEB    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075AEF0    lea eax, ss:[ebp-0x1CC]
 0075AEF6    push 0x77E920
 0075AEFB    push eax
-0075AEFC    call 0x0063BB20
+0075AEFC    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075AF01    add esp, 0x14
 0075AF04    lea eax, ss:[ebp-0x1CC]
 0075AF0A    push eax
@@ -27,7 +33,7 @@
 0075AF1B    push esi
 0075AF1C    push 0x00
 0075AF1E    push eax
-0075AF1F    call 0x00761FC4
+0075AF1F    call 0x00761FC4                                 ; => [ Call: memset ]
 0075AF24    add esp, 0x0C
 0075AF27    xor ebx, ebx
 0075AF29    test esi, esi
@@ -93,13 +99,13 @@
 0075B005    jmp 0x0075B03D
 0075B007    cmp esi, 0xFFFFFFFF
 0075B00A    jnz 0x0075B03D
-0075B00C    push 0x86F6F4
+0075B00C    push 0x86F6F4                                   ; => [ String: found != -1 ]
 0075B011    push 0x7A3
-0075B016    push 0x77E900
+0075B016    push 0x77E900                                   ; => [ String: D:\soloud\src\core\soloud.cpp ]
 0075B01B    lea eax, ss:[ebp-0x1CC]
 0075B021    push 0x77E920
 0075B026    push eax
-0075B027    call 0x0063BB20
+0075B027    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 0075B02C    add esp, 0x14
 0075B02F    lea eax, ss:[ebp-0x1CC]
 0075B035    push eax
@@ -125,13 +131,13 @@
 0075B07B    mov eax, dword ptr ds:[edi+0x4C]
 0075B07E    mov eax, dword ptr ds:[eax+esi*4]
 0075B081    push dword ptr ds:[eax+0x1A4]
-0075B087    call 0x00761FC4
+0075B087    call 0x00761FC4                                 ; => [ Call: memset ]
 0075B08C    mov eax, dword ptr ds:[edi+0x4C]
 0075B08F    push 0x4000
 0075B094    push 0x00
 0075B096    mov eax, dword ptr ds:[eax+esi*4]
 0075B099    push dword ptr ds:[eax+0x1A8]
-0075B09F    call 0x00761FC4
+0075B09F    call 0x00761FC4                                 ; => [ Call: memset ]
 0075B0A4    mov edx, dword ptr ss:[ebp-0x1D0]
 0075B0AA    lea ecx, ds:[esi+0x01]
 0075B0AD    add esp, 0x18
@@ -145,7 +151,7 @@
 0075B0CA    pop esi
 0075B0CB    xor ecx, ebp
 0075B0CD    pop ebx
-0075B0CE    call 0x0075927A
+0075B0CE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075B0D3    mov esp, ebp
 0075B0D5    pop ebp
 0075B0D6    ret

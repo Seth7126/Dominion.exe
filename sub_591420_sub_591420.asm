@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_591420
+// 起始地址: 0x591420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00591420    shl edx, 0x05
 00591423    mov eax, dword ptr ds:[edx+ecx*1+0x152C8]
 0059142A    cmp eax, 0xB00
@@ -10,18 +16,18 @@
 00591441    jz 0x0059147C
 00591443    sub eax, 0x01
 00591446    jnz 0x005914EC
-0059144C    push 0x8208F0
+0059144C    push 0x8208F0                                   ; => [ String: TokenCardSource ]
 00591451    push 0x4CD6
 00591456    push 0x81F4B8
 0059145B    mov edx, 0x801800
 00591460    mov ecx, 0x801AA4
-00591465    call 0x0063B870
+00591465    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: TokenCardSource | String: Halt ]
 0059146A    add esp, 0x0C
 0059146D    call 0x0063BC30
 00591472    test al, al
-00591474    jz 0x00591477
+00591474    jz 0x00591477                                   ; => [ Call: sub_63bc30 ]
 00591476    int3
-00591477    jmp 0x0063BB00
+00591477    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 0059147C    mov eax, 0x400
 00591481    ret
 00591482    mov eax, 0x603
@@ -56,9 +62,9 @@
 005914E1    jz 0x0059144C
 005914E7    sub eax, 0x01
 005914EA    jz 0x005914FB
-005914EC    push 0x8208F0
+005914EC    push 0x8208F0                                   ; => [ String: TokenCardSource ]
 005914F1    push 0x4CD3
 005914F6    jmp 0x00591456
-005914FB    push 0x8208F0
+005914FB    push 0x8208F0                                   ; => [ String: TokenCardSource ]
 00591500    push 0x4CD0
 00591505    jmp 0x00591456

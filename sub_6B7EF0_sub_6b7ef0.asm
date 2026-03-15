@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b7ef0
+// 起始地址: 0x6b7ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B7EF0    push ebx
 006B7EF1    push esi
 006B7EF2    push edi
@@ -9,7 +15,7 @@
 006B7F01    jz 0x006B7F27
 006B7F03    mov ebx, dword ptr ds:[0x00775688]
 006B7F09    lea edi, ds:[eax+0x01]
-006B7F0C    mov esi, 0x800338
+006B7F0C    mov esi, 0x800338                               ; => [ Data: data_800338 ]
 006B7F11    push edi
 006B7F12    push dword ptr ds:[esi+0x04]
 006B7F15    call ebx

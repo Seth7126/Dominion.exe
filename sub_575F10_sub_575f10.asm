@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_575f10
+// 起始地址: 0x575f10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00575F10    push ebp
 00575F11    mov ebp, esp
 00575F13    sub esp, 0x08
@@ -27,10 +33,10 @@
 00575F63    jz 0x00575F83
 00575F65    cmp edx, 0xFFFFFFFF
 00575F68    jnz 0x00575FB1
-00575F6A    push 0x81FB7C
+00575F6A    push 0x81FB7C                                   ; => [ String: CardHasOngoing ]
 00575F6F    push 0xE2E
-00575F74    push 0x81F4B8
-00575F79    mov ecx, 0x808A68
+00575F74    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+00575F79    mov ecx, 0x808A68                               ; => [ String: owner != PLAYER_NONE ]
 00575F7E    jmp 0x00576017
 00575F83    test byte ptr ds:[eax+0x154], 0x04
 00575F8A    jz 0x00575F9D
@@ -59,9 +65,9 @@
 00575FD6    and eax, 0x0F
 00575FD9    cmp eax, edi
 00575FDB    jz 0x00575FEE
-00575FDD    push 0x81F3E8
+00575FDD    push 0x81F3E8                                   ; => [ String: AbilityID::set_idx ]
 00575FE2    push 0xF0
-00575FE7    mov ecx, 0x81F3FC
+00575FE7    mov ecx, 0x81F3FC                               ; => [ String: idx() == x ]
 00575FEC    jmp 0x00576012
 00575FEE    mov ecx, dword ptr ss:[ebp+0x0C]
 00575FF1    shl ecx, 0x12
@@ -71,15 +77,15 @@
 00575FFB    shr ecx, 0x12
 00575FFE    cmp ecx, dword ptr ss:[ebp+0x0C]
 00576001    jz 0x00575FCD
-00576003    push 0x81F478
+00576003    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 00576008    push 0x14D
-0057600D    mov ecx, 0x81F490
-00576012    push 0x81E978
+0057600D    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
+00576012    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 00576017    mov edx, 0x801800
-0057601C    call 0x0063B870
+0057601C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00576021    add esp, 0x0C
 00576024    call 0x0063BC30
 00576029    test al, al
-0057602B    jz 0x0057602E
+0057602B    jz 0x0057602E                                   ; => [ Call: sub_63bc30 ]
 0057602D    int3
-0057602E    call 0x0063BB00
+0057602E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

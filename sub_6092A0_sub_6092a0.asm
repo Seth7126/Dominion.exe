@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_6092a0
+// 起始地址: 0x6092a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006092A0    push ebp
 006092A1    mov ebp, esp
 006092A3    and esp, 0xFFFFFFF8
 006092A6    mov eax, 0x3324
-006092AB    call 0x00761E50
+006092AB    call 0x00761E50                                 ; => [ Call: __chkstk ]
 006092B0    push ebx
 006092B1    push esi
 006092B2    push edi
 006092B3    mov ebx, ecx
 006092B5    xor esi, esi
-006092B7    call 0x004BBDB0
+006092B7    call 0x004BBDB0                                 ; => [ Call: sub_4bbdb0 ]
 006092BC    lea ecx, ss:[esp+0x19A0]
 006092C3    push 0x1990
 006092C8    push ecx
@@ -18,7 +24,7 @@
 006092D3    push eax
 006092D4    lea eax, ss:[esp+0x18]
 006092D8    push eax
-006092D9    call 0x00761FBE
+006092D9    call 0x00761FBE                                 ; => [ Call: memcpy | Call: sub_4e49d0 ]
 006092DE    add esp, 0x0C
 006092E1    xor edi, edi
 006092E3    cmp dword ptr ss:[esp+0x10], esi

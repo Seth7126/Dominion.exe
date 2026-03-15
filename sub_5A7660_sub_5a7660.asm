@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5a7660
+// 起始地址: 0x5a7660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A7660    push ebp
 005A7661    mov ebp, esp
 005A7663    sub esp, 0x80
-005A7669    mov eax, dword ptr ds:[0x008C4040]
+005A7669    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A766E    xor eax, ebp
 005A7670    mov dword ptr ss:[ebp-0x08], eax
 005A7673    mov eax, dword ptr ss:[ebp+0x08]
@@ -19,7 +25,7 @@
 005A7695    push esi
 005A7696    push ebx
 005A7697    mov edx, eax
-005A7699    call 0x005A7460
+005A7699    call 0x005A7460                                 ; => [ Call: sub_5a7460 ]
 005A769E    mov ecx, dword ptr ss:[ebp-0x50]
 005A76A1    lea edx, ss:[ebp-0x38]
 005A76A4    movss xmm2, dword ptr ds:[0x00890D0C]
@@ -31,7 +37,7 @@
 005A76BF    mov ecx, dword ptr ss:[ebp-0x60]
 005A76C2    movss dword ptr ss:[ebp-0x38], xmm0
 005A76C7    movss dword ptr ss:[ebp-0x34], xmm1
-005A76CC    call 0x005A1010
+005A76CC    call 0x005A1010                                 ; => [ Call: sub_5a1010 ]
 005A76D1    add dword ptr ss:[ebp-0x50], 0x04
 005A76D5    lea eax, ds:[edi+0x175FD0]
 005A76DB    inc esi
@@ -248,7 +254,7 @@
 005A79E5    push eax
 005A79E6    lea eax, ss:[ebp-0x2C]
 005A79E9    push eax
-005A79EA    call 0x00762362
+005A79EA    call 0x00762362                                 ; => [ Call: memmove ]
 005A79EF    add esp, 0x0C
 005A79F2    mov dword ptr ss:[ebp-0x30], esi
 005A79F5    jmp 0x005A7A07
@@ -410,7 +416,7 @@
 005A7C47    lea edx, ss:[ebp-0x38]
 005A7C4A    mov ecx, dword ptr ss:[ebp-0x60]
 005A7C4D    push 0x01
-005A7C4F    call 0x005A11B0
+005A7C4F    call 0x005A11B0                                 ; => [ Call: sub_5a11b0 ]
 005A7C54    add esp, 0x04
 005A7C57    test al, al
 005A7C59    jnz 0x005A7C61
@@ -475,7 +481,7 @@
 005A7D23    pop esi
 005A7D24    xor ecx, ebp
 005A7D26    pop ebx
-005A7D27    call 0x0075927A
+005A7D27    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A7D2C    mov esp, ebp
 005A7D2E    pop ebp
 005A7D2F    ret

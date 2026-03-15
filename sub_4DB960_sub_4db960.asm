@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4db960
+// 起始地址: 0x4db960
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DB962    byte DC
 004DB963    sub esp, 0x08
 004DB966    and esp, 0xFFFFFFF8
@@ -9,14 +15,14 @@
 004DB976    sub esp, 0x60
 004DB979    mov eax, dword ptr ds:[0x008C4040]
 004DB97E    xor eax, ebp
-004DB980    mov dword ptr ss:[ebp-0x04], eax
+004DB980    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 004DB983    push esi
 004DB984    push edi
 004DB985    mov edi, ecx
 004DB987    mov dword ptr ss:[ebp-0x54], edx
-004DB98A    xor edx, edx
+004DB98A    xor edx, edx                                    ; => [ Call: nullptr ]
 004DB98C    mov dword ptr ss:[ebp-0x44], edi
-004DB98F    mov dword ptr ss:[ebp-0x28], edx
+004DB98F    mov dword ptr ss:[ebp-0x28], edx                ; => [ Call: nullptr ]
 004DB992    xor esi, esi
 004DB994    lea eax, ds:[edi+0x20]
 004DB997    cmp dword ptr ds:[eax-0x20], 0x00
@@ -43,14 +49,14 @@
 004DB9CF    mov dword ptr ss:[ebp-0x3C], 0x00
 004DB9D6    test edx, edx
 004DB9D8    jle 0x004DBB7D
-004DB9DE    movups xmm0, xmmword ptr ds:[0x00891400]
+004DB9DE    movups xmm0, xmmword ptr ds:[0x00891400]        ; => [ Data: data_891400 ]
 004DB9E5    mov eax, dword ptr ss:[ebp-0x28]
 004DB9E8    mov ecx, edx
-004DB9EA    movups xmm1, xmmword ptr ds:[0x00891510]
+004DB9EA    movups xmm1, xmmword ptr ds:[0x00891510]        ; => [ Data: data_891510 ]
 004DB9F1    shl ecx, 0x04
 004DB9F4    lea edx, ds:[edi+0x04]
 004DB9F7    add ecx, edi
-004DB9F9    mov dword ptr ss:[ebp-0x2C], 0x00
+004DB9F9    mov dword ptr ss:[ebp-0x2C], 0x00               ; => [ Call: nullptr ]
 004DBA00    mov esi, edi
 004DBA02    mov dword ptr ss:[ebp-0x30], ecx
 004DBA05    mov dword ptr ss:[ebp-0x34], esi
@@ -72,7 +78,7 @@
 004DBA3D    jz 0x004DBA7B
 004DBA3F    lea edx, ss:[ebp-0x5C]
 004DBA42    lea ecx, ss:[ebp-0x50]
-004DBA45    call 0x004DAF40
+004DBA45    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004DBA4A    mov edi, eax
 004DBA4C    xor esi, esi
 004DBA4E    test edi, edi
@@ -82,7 +88,7 @@
 004DBA58    mov ecx, dword ptr ds:[eax+esi*4]
 004DBA5B    call 0x004DB7A0
 004DBA60    test al, al
-004DBA62    jnz 0x004DBA75
+004DBA62    jnz 0x004DBA75                                  ; => [ Call: sub_4db7a0 ]
 004DBA64    inc esi
 004DBA65    cmp esi, edi
 004DBA67    jl 0x004DBA52
@@ -103,7 +109,7 @@
 004DBA8E    mov ecx, dword ptr ss:[ebp-0x30]
 004DBA91    mov esi, dword ptr ss:[ebp-0x34]
 004DBA94    mov edi, dword ptr ss:[ebp-0x2C]
-004DBA97    movups xmm1, xmmword ptr ds:[0x00891510]
+004DBA97    movups xmm1, xmmword ptr ds:[0x00891510]        ; => [ Data: data_891510 ]
 004DBA9E    jnz 0x004DBB58
 004DBAA4    movups xmm0, xmmword ptr ds:[ecx-0x10]
 004DBAA8    dec dword ptr ss:[ebp-0x3C]
@@ -125,7 +131,7 @@
 004DBAD8    mov ecx, dword ptr ds:[eax+esi*4]
 004DBADB    call 0x004DB700
 004DBAE0    test al, al
-004DBAE2    jnz 0x004DBB24
+004DBAE2    jnz 0x004DBB24                                  ; => [ Call: sub_4db700 ]
 004DBAE4    inc esi
 004DBAE5    cmp esi, dword ptr ds:[ebx+0x08]
 004DBAE8    jl 0x004DBAD3
@@ -152,11 +158,11 @@
 004DBB26    mov ecx, 0x17
 004DBB2B    call 0x004DC4A0
 004DBB30    test eax, eax
-004DBB32    jnz 0x004DBB90
+004DBB32    jnz 0x004DBB90                                  ; => [ Call: sub_4dc4a0 ]
 004DBB34    mov eax, dword ptr ss:[ebp-0x2C]
 004DBB37    mov ecx, dword ptr ss:[ebp-0x44]
 004DBB3A    mov dword ptr ds:[eax+ecx*1+0x04], 0x00
-004DBB42    movups xmm1, xmmword ptr ds:[0x00891510]
+004DBB42    movups xmm1, xmmword ptr ds:[0x00891510]        ; => [ Data: data_891510 ]
 004DBB49    mov esi, dword ptr ss:[ebp-0x34]
 004DBB4C    mov ecx, dword ptr ss:[ebp-0x30]
 004DBB4F    mov eax, dword ptr ss:[ebp-0x28]
@@ -164,7 +170,7 @@
 004DBB55    mov edi, dword ptr ss:[ebp-0x2C]
 004DBB58    inc dword ptr ss:[ebp-0x3C]
 004DBB5B    add edi, 0x10
-004DBB5E    movups xmm0, xmmword ptr ds:[0x00891400]
+004DBB5E    movups xmm0, xmmword ptr ds:[0x00891400]        ; => [ Data: data_891400 ]
 004DBB65    add esi, 0x10
 004DBB68    mov dword ptr ss:[ebp-0x2C], edi
 004DBB6B    add edx, 0x10
@@ -176,7 +182,7 @@
 004DBB80    pop edi
 004DBB81    xor ecx, ebp
 004DBB83    pop esi
-004DBB84    call 0x0075927A
+004DBB84    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004DBB89    mov esp, ebp
 004DBB8B    pop ebp
 004DBB8C    mov esp, ebx
@@ -184,7 +190,7 @@
 004DBB8F    ret
 004DBB90    lea edx, ss:[ebp-0x60]
 004DBB93    lea ecx, ss:[ebp-0x58]
-004DBB96    call 0x004DAF40
+004DBB96    call 0x004DAF40                                 ; => [ Call: sub_4daf40 ]
 004DBB9B    xor esi, esi
 004DBB9D    mov dword ptr ss:[ebp-0x48], eax
 004DBBA0    test eax, eax
@@ -194,7 +200,7 @@
 004DBBA9    mov ecx, dword ptr ds:[eax+esi*4]
 004DBBAC    call 0x004DB650
 004DBBB1    test al, al
-004DBBB3    jnz 0x004DBB42
+004DBBB3    jnz 0x004DBB42                                  ; => [ Call: sub_4db650 ]
 004DBBB5    inc esi
 004DBBB6    cmp esi, dword ptr ss:[ebp-0x48]
 004DBBB9    jl 0x004DBBA4

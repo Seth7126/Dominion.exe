@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e1770
+// 起始地址: 0x5e1770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E1770    push ebp
 005E1771    mov ebp, esp
 005E1773    push ecx
@@ -8,7 +14,7 @@
 005E177A    jz 0x005E1796
 005E177C    mov esi, dword ptr ss:[ebp+0x08]
 005E177F    nop
-005E1780    call 0x005CBA00
+005E1780    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005E1785    mov ecx, dword ptr ds:[esi]
 005E1787    mov dword ptr ds:[edi+ecx*4], eax
 005E178A    inc dword ptr ds:[esi]

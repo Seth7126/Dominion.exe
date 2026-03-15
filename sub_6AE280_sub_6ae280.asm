@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6ae280
+// 起始地址: 0x6ae280
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AE280    push esi
 006AE281    mov esi, ecx
 006AE283    cmp dword ptr ds:[esi+0x38], 0x00
 006AE287    jz 0x006AE30F
-006AE28D    xor eax, eax
+006AE28D    xor eax, eax                                    ; => [ Call: nullptr ]
 006AE28F    nop
 006AE290    test eax, eax
 006AE292    jnz 0x006AE299
@@ -27,7 +33,7 @@
 006AE2DB    push edx
 006AE2DC    call dword ptr ds:[0x00775524]
 006AE2E2    add esp, 0x04
-006AE2E5    mov dword ptr ds:[esi+0x38], 0x00
+006AE2E5    mov dword ptr ds:[esi+0x38], 0x00               ; => [ Call: __builtin_memset ]
 006AE2EC    mov dword ptr ds:[esi+0x3C], 0x00
 006AE2F3    mov dword ptr ds:[esi+0x40], 0x00
 006AE2FA    mov dword ptr ds:[esi+0x44], 0x00
@@ -46,12 +52,12 @@
 006AE324    mov eax, dword ptr ds:[ecx]
 006AE326    push ecx
 006AE327    call dword ptr ds:[eax+0x08]
-006AE32A    mov ecx, dword ptr ds:[0x0147B078]
+006AE32A    mov ecx, dword ptr ds:[0x0147B078]              ; => [ Data: data_147b078 ]
 006AE330    test ecx, ecx
 006AE332    jz 0x006AE348
 006AE334    mov edx, 0x64
-006AE339    call 0x0064C080
-006AE33E    mov dword ptr ds:[0x0147B078], 0x00
+006AE339    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+006AE33E    mov dword ptr ds:[0x0147B078], 0x00             ; => [ Data: data_147b078 ]
 006AE348    ret
 006AE349    movzx ecx, word ptr ds:[eax+0x248]
 006AE350    mov edx, dword ptr ds:[esi+0x44]

@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_506f60
+// 起始地址: 0x506f60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00506F60    dword 53EC8B55
 00506F64    push esi
 00506F65    call 0x00573400
 00506F6A    mov eax, dword ptr ds:[eax+0x04]
 00506F6D    mov eax, dword ptr ds:[eax+0xD38]
 00506F73    lea eax, ds:[eax+eax*4]
-00506F76    lea esi, ds:[eax*2-0x0A]
-00506F7D    call 0x00573400
+00506F76    lea esi, ds:[eax*2-0x0A]                        ; => [ Call: sub_573400 ]
+00506F7D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00506F82    mov ebx, eax
 00506F84    test esi, esi
 00506F86    jle 0x00506FAB
@@ -17,7 +23,7 @@
 00506F98    push 0x00
 00506F9A    push 0xFFFFFFFF
 00506F9C    push edi
-00506F9D    call 0x005727E0
+00506F9D    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 00506FA2    add esp, 0x0C
 00506FA5    sub esi, 0x01
 00506FA8    jnz 0x00506F90

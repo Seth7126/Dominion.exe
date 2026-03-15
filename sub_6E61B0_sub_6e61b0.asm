@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_6e61b0
+// 起始地址: 0x6e61b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E61B0    push ebp
 006E61B1    mov ebp, esp
 006E61B3    push ecx
 006E61B4    cmp dword ptr ds:[0x0147ABE8], 0x00
-006E61BB    jz 0x006E6229
+006E61BB    jz 0x006E6229                                   ; => [ Data: data_147abe8 ]
 006E61BD    mov ecx, dword ptr ss:[ebp+0x08]
 006E61C0    mov edx, 0x18
 006E61C5    push edi
-006E61C6    call 0x0069F030
-006E61CB    mov edi, dword ptr ds:[0x0147ABE8]
+006E61C6    call 0x0069F030                                 ; => [ Call: sub_69f030 ]
+006E61CB    mov edi, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006E61D1    mov ecx, eax
 006E61D3    mov dword ptr ss:[ebp-0x04], ecx
 006E61D6    test edi, edi
@@ -16,7 +22,7 @@
 006E61E1    push ebx
 006E61E2    mov ebx, dword ptr ss:[ebp+0x0C]
 006E61E5    push esi
-006E61E6    xor esi, esi
+006E61E6    xor esi, esi                                    ; => [ Call: nullptr ]
 006E61E8    jmp 0x006E61F3
 006E61F0    mov ecx, dword ptr ss:[ebp-0x04]
 006E61F3    test esi, esi
@@ -48,7 +54,7 @@
 006E6238    cmp eax, dword ptr ds:[ebx+0x28]
 006E623B    jz 0x006E6250
 006E623D    mov ecx, esi
-006E623F    call 0x006E5A00
+006E623F    call 0x006E5A00                                 ; => [ Call: sub_6e5a00 ]
 006E6244    mov eax, dword ptr ds:[esi+0x6C]
 006E6247    cmp dword ptr ds:[esi+0x78], eax
 006E624A    jl 0x006E6250
@@ -74,10 +80,10 @@
 006E6287    push 0x871FA0
 006E628C    mov edx, 0x801800
 006E6291    mov ecx, 0x871F94
-006E6296    call 0x0063B870
+006E6296    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetGameData | Data: data_801800 | String: gpGameData | String: C:\x\ax2017\Engine\Game.h ]
 006E629B    add esp, 0x0C
 006E629E    call 0x0063BC30
 006E62A3    test al, al
-006E62A5    jz 0x006E62A8
+006E62A5    jz 0x006E62A8                                   ; => [ Call: sub_63bc30 ]
 006E62A7    int3
-006E62A8    call 0x0063BB00
+006E62A8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

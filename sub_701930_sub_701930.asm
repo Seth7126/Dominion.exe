@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_701930
+// 起始地址: 0x701930
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00701930    push ebp
 00701931    mov ebp, esp
 00701933    and esp, 0xFFFFFFF8
-00701936    mov eax, dword ptr ds:[0x0147DED4]
+00701936    mov eax, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 0070193B    mov ecx, dword ptr ss:[ebp+0x14]
 0070193E    mov edx, dword ptr ss:[ebp+0x10]
 00701941    push esi

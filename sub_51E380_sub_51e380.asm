@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_51e380
+// 起始地址: 0x51e380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051E380    push ebp
 0051E381    mov ebp, esp
 0051E383    mov eax, dword ptr ss:[ebp+0x08]
 0051E386    mov edx, 0x18
 0051E38B    mov ecx, dword ptr ds:[eax]
-0051E38D    call 0x00571B30
+0051E38D    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0051E392    mov ecx, dword ptr ds:[eax+0x98]
 0051E398    mov eax, dword ptr ds:[eax+0x9C]
 0051E39E    and ecx, 0x7F000400

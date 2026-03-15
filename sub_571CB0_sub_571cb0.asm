@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571cb0
+// 起始地址: 0x571cb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571CB0    push ebp
 00571CB1    mov ebp, esp
 00571CB3    push ebx
@@ -34,7 +40,7 @@
 00571D11    push edx
 00571D12    push dword ptr ds:[edi+0x152CC]
 00571D18    mov edx, 0x14
-00571D1D    call 0x0061B1B0
+00571D1D    call 0x0061B1B0                                 ; => [ Call: sub_61b1b0 ]
 00571D22    add esp, 0x2C
 00571D25    mov edx, dword ptr ds:[edi+0x152CC]
 00571D2B    cmp edx, 0xFFFFFFFF
@@ -69,7 +75,7 @@
 00571D84    mov ecx, esi
 00571D86    push 0x0B
 00571D88    push eax
-00571D89    call 0x0059F9B0
+00571D89    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00571D8E    add esp, 0x24
 00571D91    pop edi
 00571D92    pop esi

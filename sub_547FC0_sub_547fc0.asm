@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_547fc0
+// 起始地址: 0x547fc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00547FC0    dword 83EC8B55
 00547FC4    in al, 0xF8
 00547FC6    sub esp, 0xC88
 00547FCC    xor edx, edx
 00547FCE    push 0x00
 00547FD0    lea ecx, ds:[edx+0x02]
-00547FD3    call 0x00561AF0
+00547FD3    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 00547FD8    add esp, 0x04
 00547FDB    mov dword ptr ss:[esp], 0x00
 00547FE2    lea eax, ss:[esp]
@@ -18,4 +24,4 @@
 00547FFB    add esp, 0x10
 00547FFE    mov esp, ebp
 00548000    pop ebp
-00548001    ret
+00548001    ret                                             ; => [ Call: sub_56ba40 | Call: sub_548010 ]

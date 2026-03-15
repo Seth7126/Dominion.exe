@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_65a660
+// 起始地址: 0x65a660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065A660    push ebp
 0065A661    mov ebp, esp
 0065A663    and esp, 0xFFFFFFF0
 0065A666    sub esp, 0xE8
-0065A66C    mov eax, dword ptr ds:[0x008C4040]
+0065A66C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0065A671    xor eax, esp
 0065A673    mov dword ptr ss:[esp+0xE4], eax
 0065A67A    mov eax, dword ptr ss:[ebp+0x08]
@@ -16,12 +22,12 @@
 0065A693    mov dword ptr ss:[esp+0x14], eax
 0065A697    test eax, eax
 0065A699    jz 0x0065A727
-0065A69F    call 0x0064CC90
+0065A69F    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 0065A6A4    push 0x110
 0065A6A9    push dword ptr ds:[0x017774F4]
 0065A6AF    mov edx, eax
 0065A6B1    mov ecx, 0x8CAE70
-0065A6B6    call 0x006DD1E0
+0065A6B6    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_17774f4 | Data: data_8cae70 ]
 0065A6BB    add esp, 0x08
 0065A6BE    test eax, eax
 0065A6C0    jz 0x0065A727
@@ -36,7 +42,7 @@
 0065A6DB    mov dword ptr ss:[esp+0x0C], ecx
 0065A6DF    lea edi, ds:[eax+0x08]
 0065A6E2    test ecx, ecx
-0065A6E4    mov eax, 0x801800
+0065A6E4    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 0065A6E9    cmovnz eax, ecx
 0065A6EC    mov ecx, dword ptr ds:[edi]
 0065A6EE    nop
@@ -52,7 +58,7 @@
 0065A705    add eax, 0x02
 0065A708    test dl, dl
 0065A70A    jnz 0x0065A6F0
-0065A70C    xor eax, eax
+0065A70C    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 0065A70E    jmp 0x0065A715
 0065A710    sbb eax, eax
 0065A712    or eax, 0x01
@@ -68,7 +74,7 @@
 0065A72A    pop esi
 0065A72B    mov ecx, dword ptr ss:[esp+0xE4]
 0065A732    xor ecx, esp
-0065A734    call 0x0075927A
+0065A734    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0065A739    mov esp, ebp
 0065A73B    pop ebp
 0065A73C    ret
@@ -81,7 +87,7 @@
 0065A74F    call 0x006A8D00
 0065A754    add esp, 0x04
 0065A757    test al, al
-0065A759    jz 0x0065A727
+0065A759    jz 0x0065A727                                   ; => [ Call: sub_6a8d00 ]
 0065A75B    mov eax, dword ptr ss:[esp+0x18]
 0065A75F    movss xmm2, dword ptr ds:[eax+0x16CC]
 0065A767    movss xmm3, dword ptr ds:[eax+0x16D0]
@@ -114,7 +120,7 @@
 0065A7F2    jnbe 0x0065A7FA
 0065A7F4    sqrtsd xmm0, xmm0
 0065A7F8    jmp 0x0065A7FF
-0065A7FA    call 0x00762084
+0065A7FA    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0065A7FF    cvtsd2ss xmm0, xmm0
 0065A803    xorps xmm1, xmm1
 0065A806    movss dword ptr ss:[esp+0x08], xmm0
@@ -126,14 +132,14 @@
 0065A82C    jnbe 0x0065A834
 0065A82E    sqrtsd xmm0, xmm0
 0065A832    jmp 0x0065A839
-0065A834    call 0x00762084
+0065A834    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 0065A839    cvtsd2ss xmm0, xmm0
 0065A83D    xorps xmm1, xmm1
 0065A840    comiss xmm1, dword ptr ss:[esp+0x80]
 0065A848    movss dword ptr ss:[esp+0x0C], xmm0
 0065A84E    jbe 0x0065A85D
 0065A850    xorps xmm0, xmmword ptr ds:[0x008937C0]
-0065A857    movss dword ptr ss:[esp+0x0C], xmm0
+0065A857    movss dword ptr ss:[esp+0x0C], xmm0             ; => [ Data: data_8937c0 ]
 0065A85D    movss xmm4, dword ptr ss:[esp+0x08]
 0065A863    lea eax, ss:[esp+0x50]
 0065A867    movss xmm3, dword ptr ds:[esi+0x1630]
@@ -198,28 +204,28 @@
 0065A996    movaps xmmword ptr ss:[esp+0x54], xmm0
 0065A99B    movaps xmm0, xmmword ptr ss:[esp+0x34]
 0065A9A0    movaps xmmword ptr ss:[esp+0x64], xmm0
-0065A9A5    movups xmm0, xmmword ptr ds:[0x00800248]
+0065A9A5    movups xmm0, xmmword ptr ds:[0x00800248]        ; => [ Data: data_800248 ]
 0065A9AC    mov dword ptr ss:[esp+0x24], 0x3F800000
 0065A9B4    mov dword ptr ss:[esp+0x40], 0x80000000
 0065A9BC    movups xmmword ptr ss:[esp+0x28], xmm0
 0065A9C1    movss xmm0, dword ptr ss:[esp+0x18]
 0065A9C7    xorps xmm0, xmmword ptr ds:[0x008937C0]
-0065A9CE    movss dword ptr ss:[esp+0x38], xmm0
+0065A9CE    movss dword ptr ss:[esp+0x38], xmm0             ; => [ Data: data_8937c0 ]
 0065A9D4    movss xmm0, dword ptr ss:[esp+0x4C]
 0065A9DA    xorps xmm0, xmmword ptr ds:[0x008937C0]
-0065A9E1    movss dword ptr ss:[esp+0x3C], xmm0
+0065A9E1    movss dword ptr ss:[esp+0x3C], xmm0             ; => [ Data: data_8937c0 ]
 0065A9E7    movaps xmm0, xmmword ptr ss:[esp+0x24]
 0065A9EC    movaps xmmword ptr ss:[esp+0xC4], xmm0
 0065A9F4    movaps xmm0, xmmword ptr ss:[esp+0x34]
 0065A9F9    movaps xmmword ptr ss:[esp+0xD4], xmm0
-0065AA01    call 0x004EB600
+0065AA01    call 0x004EB600                                 ; => [ Call: sub_4eb600 ]
 0065AA06    add esp, 0x04
 0065AA09    push 0xB0
 0065AA0E    mov esi, dword ptr ss:[esp+0x50]
 0065AA12    push 0x00
 0065AA14    lea eax, ds:[esi+0x20]
 0065AA17    push eax
-0065AA18    call 0x00761FC4
+0065AA18    call 0x00761FC4                                 ; => [ Call: memset ]
 0065AA1D    movups xmm0, xmmword ptr ss:[esp+0x2C]
 0065AA22    add esp, 0x0C
 0065AA25    movups xmmword ptr ds:[esi], xmm0
@@ -240,7 +246,7 @@
 0065AA6E    movups xmmword ptr ds:[esi+0x64], xmm0
 0065AA72    pop esi
 0065AA73    xor ecx, esp
-0065AA75    call 0x0075927A
+0065AA75    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0065AA7A    mov esp, ebp
 0065AA7C    pop ebp
 0065AA7D    ret
@@ -249,10 +255,10 @@
 0065AA88    push 0x8739B4
 0065AA8D    mov edx, 0x801800
 0065AA92    mov ecx, 0x874D9C
-0065AA97    call 0x0063B870
+0065AA97    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | String: HasSpineSlotBinding | Data: data_801800 | String: bindingInfo.transform.t.x < 10000.0f ]
 0065AA9C    add esp, 0x0C
 0065AA9F    call 0x0063BC30
 0065AAA4    test al, al
-0065AAA6    jz 0x0065AAA9
+0065AAA6    jz 0x0065AAA9                                   ; => [ Call: sub_63bc30 ]
 0065AAA8    int3
-0065AAA9    call 0x0063BB00
+0065AAA9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

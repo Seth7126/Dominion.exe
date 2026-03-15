@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_640590
+// 起始地址: 0x640590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00640590    push ebp
 00640591    mov ebp, esp
 00640593    push ecx
@@ -31,18 +37,18 @@
 006405D3    cmovl ebx, eax
 006405D6    test ebx, ebx
 006405D8    jnz 0x006405F0
-006405DA    push 0x872558
+006405DA    push 0x872558                                   ; => [ String: XMap<struct TTFKey,unsigned int>::SetNumBuckets ]
 006405DF    push 0x73
-006405E1    push 0x802620
-006405E6    mov ecx, 0x80263C
+006405E1    push 0x802620                                   ; => [ String: C:\x\ax2017\Engine\xMap.h ]
+006405E6    mov ecx, 0x80263C                               ; => [ String: bucketCount > 0 ]
 006405EB    jmp 0x006406B5
 006405F0    mov edi, dword ptr ss:[ebp-0x04]
 006405F3    cmp dword ptr ds:[edi+0x38], 0x00
 006405F7    jz 0x0064060F
-006405F9    push 0x872558
+006405F9    push 0x872558                                   ; => [ String: XMap<struct TTFKey,unsigned int>::SetNumBuckets ]
 006405FE    push 0x74
-00640600    push 0x802620
-00640605    mov ecx, 0x80264C
+00640600    push 0x802620                                   ; => [ String: C:\x\ax2017\Engine\xMap.h ]
+00640605    mov ecx, 0x80264C                               ; => [ String: mNodeBuckets == NULL ]
 0064060A    jmp 0x006406B5
 0064060F    lea ecx, ds:[ebx-0x01]
 00640612    mov eax, ecx
@@ -61,27 +67,27 @@
 0064062F    shr esi, 0x10
 00640632    or esi, ecx
 00640634    lea ecx, ds:[esi*4+0x04]
-0064063B    call 0x0064C020
+0064063B    call 0x0064C020                                 ; => [ Call: sub_64c020 ]
 00640640    mov dword ptr ds:[edi+0x38], eax
 00640643    add ebx, ebx
 00640645    mov dword ptr ds:[edi+0x3C], esi
 00640648    cmp dword ptr ds:[edi+0x1C], 0x00
 0064064C    jz 0x0064065F
-0064064E    push 0x872498
+0064064E    push 0x872498                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayInitialize ]
 00640653    push 0xCE
-00640658    mov ecx, 0x80195C
+00640658    mov ecx, 0x80195C                               ; => [ String: mpBlock == NULL ]
 0064065D    jmp 0x006406B0
 0064065F    cmp ebx, 0x10000
 00640665    jnbe 0x006406A1
 00640667    lea ecx, ds:[ebx+ebx*8]
 0064066A    shl ecx, 0x03
 0064066D    call 0x00687730
-00640672    mov dword ptr ds:[edi+0x1C], eax
+00640672    mov dword ptr ds:[edi+0x1C], eax                ; => [ Call: sub_687730 ]
 00640675    mov ecx, edi
 00640677    mov eax, 0x87209C
 0064067C    mov dword ptr ds:[edi+0x24], ebx
 0064067F    and eax, 0xFFF
-00640684    mov dword ptr ds:[edi+0x34], 0x87209C
+00640684    mov dword ptr ds:[edi+0x34], 0x87209C           ; => [ String: regions ]
 0064068B    or eax, 0xD000
 00640690    mov dword ptr ds:[edi+0x30], eax
 00640693    call 0x006409E0
@@ -90,16 +96,16 @@
 0064069A    pop ebx
 0064069B    mov esp, ebp
 0064069D    pop ebp
-0064069E    ret 0x10
-006406A1    push 0x872498
+0064069E    ret 0x10                                        ; => [ Call: sub_6409e0 ]
+006406A1    push 0x872498                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayInitialize ]
 006406A6    push 0xCF
-006406AB    mov ecx, 0x80196C
-006406B0    push 0x80193C
+006406AB    mov ecx, 0x80196C                               ; => [ String: maxSize <= DATA_ARRAY_MAX_SIZE ]
+006406B0    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
 006406B5    mov edx, 0x801800
-006406BA    call 0x0063B870
+006406BA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006406BF    add esp, 0x0C
 006406C2    call 0x0063BC30
 006406C7    test al, al
-006406C9    jz 0x006406CC
+006406C9    jz 0x006406CC                                   ; => [ Call: sub_63bc30 ]
 006406CB    int3
-006406CC    call 0x0063BB00
+006406CC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

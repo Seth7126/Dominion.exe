@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a5cd0
+// 起始地址: 0x5a5cd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A5CD0    push ebp
 005A5CD1    mov ebp, esp
 005A5CD3    mov eax, 0x1001C
-005A5CD8    call 0x00761E50
+005A5CD8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A5CDD    mov eax, dword ptr ds:[0x008C4040]
 005A5CE2    xor eax, ebp
-005A5CE4    mov dword ptr ss:[ebp-0x04], eax
+005A5CE4    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005A5CE7    movss xmm6, dword ptr ds:[0x00890D84]
 005A5CEF    mov ecx, edx
 005A5CF1    push ebx
@@ -30,8 +36,8 @@
 005A5D40    add eax, 0x3FFF0
 005A5D45    xor ebx, ebx
 005A5D47    movss dword ptr ss:[ebp+edx*4-0x10004], xmm4
-005A5D50    movaps xmm3, xmm5
-005A5D53    movaps xmm2, xmm5
+005A5D50    movaps xmm3, xmm5                               ; => [ String: 0 | String: zx ]
+005A5D53    movaps xmm2, xmm5                               ; => [ String: 0 | String: zx ]
 005A5D56    lea esi, ds:[ecx+eax*4]
 005A5D59    mov eax, dword ptr ds:[esi]
 005A5D5B    cmp eax, 0xFFFFFFFF
@@ -125,7 +131,7 @@
 005A5EBD    pop esi
 005A5EBE    xor ecx, ebp
 005A5EC0    pop ebx
-005A5EC1    call 0x0075927A
+005A5EC1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A5EC6    mov esp, ebp
 005A5EC8    pop ebp
 005A5EC9    ret

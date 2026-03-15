@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_609650
+// 起始地址: 0x609650
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00609650    push ecx
 00609651    push esi
 00609652    mov esi, ecx
 00609654    mov ecx, dword ptr ds:[0x00CC8DC8]
 0060965A    push edi
 0060965B    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-00609661    call 0x004D8F30
+00609661    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 00609666    mov edi, eax
 00609668    mov edx, esi
 0060966A    sar edx, 0x04
@@ -19,7 +25,7 @@
 00609686    mov ecx, dword ptr ds:[ecx+0x08]
 00609689    test ecx, ecx
 0060968B    jnz 0x00609682
-0060968D    mov ecx, dword ptr ds:[0x00CC8D5C]
+0060968D    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 00609693    test ecx, ecx
 00609695    jz 0x006096DF
 00609697    jmp 0x006096A6
@@ -36,7 +42,7 @@
 006096B3    jz 0x006096D9
 006096B5    push eax
 006096B6    add ecx, 0x75B8
-006096BC    call 0x004BADC0
+006096BC    call 0x004BADC0                                 ; => [ Call: sub_4badc0 ]
 006096C1    test eax, eax
 006096C3    jz 0x006096D9
 006096C5    mov ecx, dword ptr ds:[edi+0x42CC]
@@ -57,10 +63,10 @@
 006096E6    push 0x77EB50
 006096EB    mov edx, 0x801800
 006096F0    mov ecx, 0x77EB9C
-006096F5    call 0x0063B870
+006096F5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 006096FA    add esp, 0x0C
 006096FD    call 0x0063BC30
 00609702    test al, al
-00609704    jz 0x00609707
+00609704    jz 0x00609707                                   ; => [ Call: sub_63bc30 ]
 00609706    int3
-00609707    call 0x0063BB00
+00609707    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

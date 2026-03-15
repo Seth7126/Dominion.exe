@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_720200
+// 起始地址: 0x720200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00720200    push ebp
 00720201    mov ebp, esp
 00720203    sub esp, 0x0C
@@ -21,7 +27,7 @@
 00720233    push eax
 00720234    push ecx
 00720235    push edx
-00720236    call 0x00761FBE
+00720236    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0072023B    mov eax, dword ptr ss:[ebp-0x04]
 0072023E    sub edi, eax
 00720240    add eax, dword ptr ss:[ebp-0x08]
@@ -51,7 +57,7 @@
 00720270    push edi
 00720271    push ecx
 00720272    push edx
-00720273    call 0x00761FBE
+00720273    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00720278    add esp, 0x0C
 0072027B    mov eax, 0x01
 00720280    add dword ptr ds:[esi], edi

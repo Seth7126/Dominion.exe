@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_6d0bc0
+// 起始地址: 0x6d0bc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D0BC0    push ebp
 006D0BC1    mov ebp, esp
 006D0BC3    and esp, 0xFFFFFFF0
 006D0BC6    sub esp, 0x98
-006D0BCC    mov eax, dword ptr ds:[0x008C4040]
+006D0BCC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006D0BD1    xor eax, esp
 006D0BD3    mov dword ptr ss:[esp+0x94], eax
 006D0BDA    push esi
 006D0BDB    push edi
 006D0BDC    push ecx
 006D0BDD    mov edi, edx
-006D0BDF    call 0x006D1370
+006D0BDF    call 0x006D1370                                 ; => [ Call: sub_6d1370 ]
 006D0BE4    mov esi, eax
 006D0BE6    mov ecx, dword ptr ds:[esi]
 006D0BE8    cmp dword ptr ds:[ecx+0x04], 0x20
@@ -20,7 +26,7 @@
 006D0BFF    add ecx, dword ptr ds:[eax]
 006D0C01    lea eax, ss:[esp+0x10]
 006D0C05    push eax
-006D0C06    call 0x006CD460
+006D0C06    call 0x006CD460                                 ; => [ Call: sub_6cd460 | Call: sub_5af880 ]
 006D0C0B    add esp, 0x04
 006D0C0E    lea edx, ds:[esi+0x3C]
 006D0C11    lea ecx, ss:[esp+0x60]
@@ -32,7 +38,7 @@
 006D0C2B    lea eax, ss:[esp+0x38]
 006D0C2F    push eax
 006D0C30    movq qword ptr ss:[esp+0x84], xmm0
-006D0C39    call 0x006DB9E0
+006D0C39    call 0x006DB9E0                                 ; => [ Call: sub_6db9e0 ]
 006D0C3E    mov ecx, dword ptr ss:[ebp+0x08]
 006D0C41    add esp, 0x04
 006D0C44    movups xmm0, xmmword ptr ds:[eax]
@@ -46,7 +52,7 @@
 006D0C5B    movq qword ptr ds:[ecx+0x20], xmm0
 006D0C60    mov ecx, dword ptr ss:[esp+0x94]
 006D0C67    xor ecx, esp
-006D0C69    call 0x0075927A
+006D0C69    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D0C6E    mov esp, ebp
 006D0C70    pop ebp
 006D0C71    ret
@@ -55,10 +61,10 @@
 006D0C7C    push 0x87ED1C
 006D0C81    mov edx, 0x801800
 006D0C86    mov ecx, 0x87ECF8
-006D0C8B    call 0x0063B870
+006D0C8B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\FabDef.cpp | String: FabDefGet | String: ptr->assetType == ASSET_TYPE_FAB | Data: data_801800 ]
 006D0C90    add esp, 0x0C
 006D0C93    call 0x0063BC30
 006D0C98    test al, al
-006D0C9A    jz 0x006D0C9D
+006D0C9A    jz 0x006D0C9D                                   ; => [ Call: sub_63bc30 ]
 006D0C9C    int3
-006D0C9D    call 0x0063BB00
+006D0C9D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

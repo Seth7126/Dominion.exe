@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67d3c0
+// 起始地址: 0x67d3c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067D3C0    push ebp
 0067D3C1    mov ebp, esp
 0067D3C3    sub esp, 0x10
@@ -28,13 +34,13 @@
 0067D40C    call 0x0067EF30
 0067D411    movss xmm1, dword ptr ss:[ebp-0x04]
 0067D416    lea ecx, ds:[edi+0x3C]
-0067D419    mov esi, eax
+0067D419    mov esi, eax                                    ; => [ Call: sub_67ef30 ]
 0067D41B    mov dword ptr ss:[ebp-0x0C], esi
 0067D41E    call 0x0067EF30
 0067D423    movss xmm1, dword ptr ss:[ebp-0x04]
 0067D428    lea ecx, ds:[edi+0x78]
-0067D42B    mov dword ptr ss:[ebp-0x08], eax
-0067D42E    call 0x0064C3C0
+0067D42B    mov dword ptr ss:[ebp-0x08], eax                ; => [ Call: sub_67ef30 ]
+0067D42E    call 0x0064C3C0                                 ; => [ Call: sub_64c3c0 ]
 0067D433    ucomiss xmm0, dword ptr ds:[0x00890C48]
 0067D43A    lahf
 0067D43B    test ah, 0x44
@@ -43,7 +49,7 @@
 0067D443    lea edx, ss:[ebp-0x08]
 0067D446    lea ecx, ss:[ebp-0x0C]
 0067D449    call 0x005AF6F0
-0067D44E    mov esi, eax
+0067D44E    mov esi, eax                                    ; => [ Call: sub_5af6f0 ]
 0067D450    mov eax, dword ptr ss:[ebp+0x08]
 0067D453    pop edi
 0067D454    mov dword ptr ds:[eax], esi

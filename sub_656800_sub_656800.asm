@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_656800
+// 起始地址: 0x656800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00656800    push ebp
 00656801    mov ebp, esp
 00656803    sub esp, 0x08
@@ -100,10 +106,10 @@
 006568C9    mov esp, ebp
 006568CB    pop ebp
 006568CC    ret
-006568CD    push 0x874B28
+006568CD    push 0x874B28                                   ; => [ String: TableIndextToSlot ]
 006568D2    push 0x1CA1
-006568D7    mov edx, 0x801800
-006568DC    mov ecx, 0x801AA4
+006568D7    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+006568DC    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006568E1    jmp 0x0065694C
 006568E3    mov edx, dword ptr ds:[ecx+0x04]
 006568E6    mov eax, edx
@@ -150,15 +156,15 @@
 00656934    mov esp, ebp
 00656936    pop ebp
 00656937    ret
-00656938    push 0x874B28
+00656938    push 0x874B28                                   ; => [ String: TableIndextToSlot ]
 0065693D    push 0x1CAF
-00656942    mov edx, 0x874B6C
-00656947    mov ecx, 0x874B64
+00656942    mov edx, 0x874B6C                               ; => [ String: unexpected table alignment ]
+00656947    mov ecx, 0x874B64                               ; => [ String: HaltMsg ]
 0065694C    push 0x8739B4
-00656951    call 0x0063B870
+00656951    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: TableIndextToSlot | String: C:\x\ax2017\Engine\UI2.cpp ]
 00656956    add esp, 0x0C
 00656959    call 0x0063BC30
 0065695E    test al, al
-00656960    jz 0x00656963
+00656960    jz 0x00656963                                   ; => [ Call: sub_63bc30 ]
 00656962    int3
-00656963    call 0x0063BB00
+00656963    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

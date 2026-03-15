@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c67c0
+// 起始地址: 0x5c67c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C67C0    push ebx
 005C67C1    mov ebx, esp
 005C67C3    sub esp, 0x08
@@ -75,28 +81,28 @@
 005C6890    mov ecx, edx
 005C6892    add edi, 0xFFFFFFFE
 005C6895    mov edx, dword ptr ss:[ebp-0x6C]
-005C6898    xorps xmm3, xmm3
-005C689B    xorps xmm0, xmm0
-005C689E    movaps xmmword ptr ss:[ebp-0x110], xmm3
-005C68A5    xorps xmm1, xmm1
+005C6898    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C689B    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
+005C689E    movaps xmmword ptr ss:[ebp-0x110], xmm3         ; => [ Call: __builtin_memset ]
+005C68A5    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 005C68A8    movaps xmmword ptr ss:[ebp-0xE0], xmm0
 005C68AF    prefetcht0 byte ptr ds:[ecx]
-005C68B2    xorps xmm2, xmm2
+005C68B2    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 005C68B5    mov eax, dword ptr ds:[edx+0x04]
-005C68B8    xorps xmm6, xmm6
+005C68B8    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 005C68BB    imul edi, eax
-005C68BE    xorps xmm7, xmm7
+005C68BE    xorps xmm7, xmm7                                ; => [ String: 0 | String: zx ]
 005C68C1    mov edx, dword ptr ds:[edx]
-005C68C3    xorps xmm4, xmm4
+005C68C3    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005C68C6    movaps xmmword ptr ss:[ebp-0xF0], xmm1
 005C68CD    movaps xmmword ptr ss:[ebp-0x100], xmm2
-005C68D4    movaps xmmword ptr ss:[ebp-0x140], xmm6
+005C68D4    movaps xmmword ptr ss:[ebp-0x140], xmm6         ; => [ Call: __builtin_memset ]
 005C68DB    add edi, dword ptr ss:[ebp-0x44]
 005C68DE    mov dword ptr ss:[ebp-0x74], edi
 005C68E1    mov edi, dword ptr ss:[ebp-0x60]
 005C68E4    movaps xmmword ptr ss:[ebp-0x130], xmm7
 005C68EB    movaps xmmword ptr ss:[ebp-0xA0], xmm3
-005C68F2    movaps xmmword ptr ss:[ebp-0xB0], xmm4
+005C68F2    movaps xmmword ptr ss:[ebp-0xB0], xmm4          ; => [ Call: __builtin_memset ]
 005C68F9    lea esi, ds:[edi-0x01]
 005C68FC    imul esi, eax
 005C68FF    add esi, dword ptr ss:[ebp-0x44]
@@ -418,7 +424,7 @@
 005C6E7A    nop word ptr ds:[eax+eax*1], ax
 005C6E80    mov ecx, dword ptr ss:[ebp-0x6C]
 005C6E83    mov eax, edx
-005C6E85    xorps xmm3, xmm3
+005C6E85    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 005C6E88    mov edx, dword ptr ds:[ecx+0x04]
 005C6E8B    imul edx, dword ptr ss:[ebp-0x48]
 005C6E8F    mov ecx, dword ptr ds:[ecx]
@@ -548,11 +554,11 @@
 005C7033    prefetcht0 byte ptr ds:[ecx]
 005C7036    mov eax, ecx
 005C7038    mov ecx, edx
-005C703A    xorps xmm4, xmm4
+005C703A    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005C703D    xor edx, edx
-005C703F    xorps xmm3, xmm3
-005C7042    xorps xmm5, xmm5
-005C7045    xorps xmm2, xmm2
+005C703F    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C7042    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+005C7045    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 005C7048    mov dword ptr ss:[ebp-0x4C], edx
 005C704B    cmp dword ptr ss:[ebp-0x5C], edx
 005C704E    jle 0x005C70BD
@@ -618,14 +624,14 @@
 005C7119    lea edx, ss:[ebp-0x280]
 005C711F    mulps xmm1, xmmword ptr ss:[ebp-0x120]
 005C7126    addps xmm0, xmm1
-005C7129    movaps xmmword ptr ss:[ebp-0x280], xmm0
+005C7129    movaps xmmword ptr ss:[ebp-0x280], xmm0         ; => [ Call: sub_5b0c90 ]
 005C7130    mov ecx, dword ptr ds:[edi+0x04]
 005C7133    mov eax, dword ptr ds:[edi]
 005C7135    push ecx
 005C7136    imul ecx, dword ptr ss:[ebp-0x50]
 005C713A    add ecx, dword ptr ss:[ebp-0x54]
 005C713D    lea ecx, ds:[eax+ecx*4]
-005C7140    call 0x005B0CB0
+005C7140    call 0x005B0CB0                                 ; => [ Call: sub_5b0cb0 ]
 005C7145    mov edx, dword ptr ss:[ebp-0x54]
 005C7148    lea eax, ds:[esi*4]
 005C714F    mov ecx, dword ptr ss:[ebp-0x74]
@@ -669,7 +675,7 @@
 005C71D0    prefetcht0 byte ptr ds:[edx]
 005C71D3    xor eax, eax
 005C71D5    mov dword ptr ss:[ebp-0x64], eax
-005C71D8    xorps xmm2, xmm2
+005C71D8    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 005C71DB    cmp esi, 0x04
 005C71DE    jl 0x005C725D
 005C71E0    mov eax, dword ptr ss:[ebp-0x44]

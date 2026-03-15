@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_712da0
+// 起始地址: 0x712da0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00712DA0    push ebp
 00712DA1    mov ebp, esp
 00712DA3    sub esp, 0x14
@@ -35,7 +41,7 @@
 00712DE4    inc edi
 00712DE5    cmp dword ptr ds:[ecx+0x30], edi
 00712DE8    jnl 0x00712E65
-00712DEA    mov ecx, dword ptr ds:[0x0147DED8]
+00712DEA    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00712DF0    lea eax, ds:[edi+edi*1]
 00712DF3    mov dword ptr ss:[ebp-0x08], eax
 00712DF6    shl eax, 0x02
@@ -44,11 +50,11 @@
 00712DFD    push 0x387
 00712E02    push 0x88DC70
 00712E07    push eax
-00712E08    call ecx
+00712E08    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\AnimationState.c ]
 00712E0A    add esp, 0x0C
 00712E0D    jmp 0x00712E19
 00712E0F    push eax
-00712E10    call dword ptr ds:[0x00800B4C]
+00712E10    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00712E16    add esp, 0x04
 00712E19    mov edi, eax
 00712E1B    test edi, edi
@@ -58,7 +64,7 @@
 00712E29    push eax
 00712E2A    push 0x00
 00712E2C    push edi
-00712E2D    call 0x00761FC4
+00712E2D    call 0x00761FC4                                 ; => [ Call: memset ]
 00712E32    mov esi, dword ptr ss:[ebp-0x04]
 00712E35    add esp, 0x0C
 00712E38    add esi, 0x2C
@@ -68,9 +74,9 @@
 00712E43    push eax
 00712E44    push dword ptr ds:[ebx]
 00712E46    push edi
-00712E47    call 0x00761FBE
+00712E47    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00712E4C    push dword ptr ds:[ebx]
-00712E4E    call dword ptr ds:[0x00800B48]
+00712E4E    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00712E54    mov eax, dword ptr ss:[ebp-0x04]
 00712E57    add esp, 0x10
 00712E5A    mov ecx, dword ptr ss:[ebp-0x08]

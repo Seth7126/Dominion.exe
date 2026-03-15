@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: ___scrt_initialize_crt
+// 起始地址: 0x759485
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00759485    push ebp
 00759486    mov ebp, esp
 00759488    cmp dword ptr ss:[ebp+0x08], 0x00
 0075948C    jnz 0x00759495
-0075948E    mov byte ptr ds:[0x00CC89E8], 0x01
-00759495    call 0x00759D0C
+0075948E    mov byte ptr ds:[0x00CC89E8], 0x01              ; => [ Data: data_cc89e8 ]
+00759495    call 0x00759D0C                                 ; => [ Call: sub_759d0c ]
 0075949A    call 0x004AB040
 0075949F    test al, al
-007594A1    jnz 0x007594A7
+007594A1    jnz 0x007594A7                                  ; => [ Call: sub_4ab040 ]
 007594A3    xor al, al
 007594A5    pop ebp
 007594A6    ret

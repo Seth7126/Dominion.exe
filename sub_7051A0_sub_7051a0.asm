@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7051a0
+// 起始地址: 0x7051a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007051A0    push ebp
 007051A1    mov ebp, esp
 007051A3    mov edx, dword ptr ss:[ebp+0x08]
@@ -6,9 +12,9 @@
 007051A9    push edi
 007051AA    test edx, edx
 007051AC    jnz 0x007051BF
-007051AE    push 0x88D514
+007051AE    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 007051B3    push 0x6C
-007051B5    mov ecx, 0x802734
+007051B5    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 007051BA    jmp 0x007052A7
 007051BF    movzx eax, dx
 007051C2    cmp eax, dword ptr ds:[esi+0x4250]
@@ -23,7 +29,7 @@
 007051ED    js 0x00705285
 007051F3    cmp edi, dword ptr ds:[esi+0x08]
 007051F6    jnle 0x00705285
-007051FC    mov ecx, dword ptr ds:[0x0147DED4]
+007051FC    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00705202    mov eax, dword ptr ds:[esi]
 00705204    cmp dword ptr ds:[ecx+0x409C], eax
 0070520A    jz 0x00705229
@@ -33,15 +39,15 @@
 00705218    push 0x8892
 0070521D    mov eax, dword ptr ds:[eax]
 0070521F    call eax
-00705221    mov eax, dword ptr ds:[0x0147B06C]
+00705221    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 00705226    inc dword ptr ds:[eax+0x10]
 00705229    mov eax, dword ptr ds:[esi+0xD8]
 0070522F    test eax, eax
 00705231    jnz 0x00705249
-00705233    push 0x88D298
+00705233    push 0x88D298                                   ; => [ String: OpenGLInterface::UnlockVertexBuffer ]
 00705238    push 0x142B
-0070523D    push 0x88C504
-00705242    mov ecx, 0x88D2C8
+0070523D    push 0x88C504                                   ; => [ String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
+00705242    mov ecx, 0x88D2C8                               ; => [ String: bufferData->mBufferPtr ]
 00705247    jmp 0x007052AC
 00705249    push eax
 0070524A    mov eax, dword ptr ds:[0x00775788]
@@ -63,20 +69,20 @@
 00705280    pop esi
 00705281    pop ebp
 00705282    ret 0x08
-00705285    push 0x88D298
+00705285    push 0x88D298                                   ; => [ String: OpenGLInterface::UnlockVertexBuffer ]
 0070528A    push 0x1415
-0070528F    push 0x88C504
-00705294    mov ecx, 0x88D260
+0070528F    push 0x88C504                                   ; => [ String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
+00705294    mov ecx, 0x88D260                               ; => [ String: bytesUsed >= 0 && bytesUsed <= bufferData->mBufferSize ]
 00705299    jmp 0x007052AC
-0070529B    push 0x88D514
+0070529B    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 007052A0    push 0x6D
-007052A2    mov ecx, 0x802748
-007052A7    push 0x80193C
+007052A2    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
+007052A7    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h | String: C:\x\ax2017\Engine\DataArray.h ]
 007052AC    mov edx, 0x801800
-007052B1    call 0x0063B870
+007052B1    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 007052B6    add esp, 0x0C
 007052B9    call 0x0063BC30
 007052BE    test al, al
-007052C0    jz 0x007052C3
+007052C0    jz 0x007052C3                                   ; => [ Call: sub_63bc30 ]
 007052C2    int3
-007052C3    call 0x0063BB00
+007052C3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

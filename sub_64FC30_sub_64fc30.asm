@@ -1,25 +1,31 @@
+// ============================================================
+// 函数名称: sub_64fc30
+// 起始地址: 0x64fc30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064FC30    push ebp
 0064FC31    mov ebp, esp
 0064FC33    push 0xFFFFFFFF
-0064FC35    push 0x76CD3F
+0064FC35    push 0x76CD3F                                   ; => [ Call: sub_76cd3f | Type: EHRegistrationNode ]
 0064FC3A    mov eax, dword ptr fs:[0x00000000]
-0064FC40    push eax
+0064FC40    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0064FC41    sub esp, 0x0C
 0064FC44    push ebx
 0064FC45    push esi
 0064FC46    push edi
 0064FC47    mov eax, dword ptr ds:[0x008C4040]
 0064FC4C    xor eax, ebp
-0064FC4E    push eax
+0064FC4E    push eax                                        ; => [ Data: __security_cookie ]
 0064FC4F    lea eax, ss:[ebp-0x0C]
-0064FC52    mov dword ptr fs:[0x00000000], eax
+0064FC52    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 0064FC58    mov esi, ecx
-0064FC5A    mov edi, dword ptr ds:[0x01A98FC8]
+0064FC5A    mov edi, dword ptr ds:[0x01A98FC8]              ; => [ Data: data_1a98fc8 ]
 0064FC60    test edi, edi
 0064FC62    jnz 0x0064FCAE
 0064FC64    push 0x0C
 0064FC66    call 0x00759772
-0064FC6B    mov edi, eax
+0064FC6B    mov edi, eax                                    ; => [ Call: operator new ]
 0064FC6D    add esp, 0x04
 0064FC70    mov dword ptr ss:[ebp-0x14], edi
 0064FC73    mov dword ptr ss:[ebp-0x04], 0x00
@@ -29,9 +35,9 @@
 0064FC8C    mov dword ptr ds:[edi+0x08], 0x00
 0064FC93    call 0x0064C020
 0064FC98    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-0064FC9F    mov dword ptr ds:[edi], eax
+0064FC9F    mov dword ptr ds:[edi], eax                     ; => [ Call: sub_64c020 ]
 0064FCA1    mov dword ptr ds:[edi+0x04], 0x3FFF
-0064FCA8    mov dword ptr ds:[0x01A98FC8], edi
+0064FCA8    mov dword ptr ds:[0x01A98FC8], edi              ; => [ Data: data_1a98fc8 ]
 0064FCAE    mov ecx, dword ptr ds:[edi+0x04]
 0064FCB1    mov eax, esi
 0064FCB3    shr eax, 0x04
@@ -48,18 +54,18 @@
 0064FCD1    test eax, eax
 0064FCD3    jnz 0x0064FCC6
 0064FCD5    mov ecx, 0x14
-0064FCDA    call 0x0064BFD0
+0064FCDA    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0064FCDF    mov edi, eax
 0064FCE1    inc dword ptr ds:[edi+0x0C]
 0064FCE4    cmp dword ptr ds:[edi], 0x00
 0064FCE7    jnz 0x0064FCF0
 0064FCE9    mov ecx, edi
-0064FCEB    call 0x0064BE70
+0064FCEB    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0064FCF0    mov ebx, dword ptr ds:[edi]
 0064FCF2    mov dword ptr ss:[ebp-0x10], ebx
 0064FCF5    mov eax, dword ptr ds:[ebx]
 0064FCF7    mov dword ptr ds:[edi], eax
-0064FCF9    mov dword ptr ds:[ebx], 0x00
+0064FCF9    mov dword ptr ds:[ebx], 0x00                    ; => [ Call: __builtin_memset ]
 0064FCFF    mov dword ptr ds:[ebx+0x04], 0x00
 0064FD06    mov dword ptr ds:[ebx+0x0C], 0x00
 0064FD0D    mov dword ptr ds:[ebx+0x10], 0x00
@@ -69,7 +75,7 @@
 0064FD25    mov dword ptr ds:[ebx+0x10], 0x00
 0064FD2C    mov ecx, 0x800
 0064FD31    mov dword ptr ss:[ebp-0x04], 0x01
-0064FD38    call 0x0064C020
+0064FD38    call 0x0064C020                                 ; => [ Call: sub_64c020 ]
 0064FD3D    xor edi, edi
 0064FD3F    mov dword ptr ds:[ebx+0x08], eax
 0064FD42    mov dword ptr ds:[ebx+0x0C], 0x1FF
@@ -81,14 +87,14 @@
 0064FD59    mov ecx, dword ptr ss:[ebp-0x10]
 0064FD5C    add edx, ebx
 0064FD5E    push edi
-0064FD5F    call 0x0064F5D0
+0064FD5F    call 0x0064F5D0                                 ; => [ Call: sub_64f5d0 ]
 0064FD64    inc edi
 0064FD65    add esp, 0x04
 0064FD68    add ebx, 0x30
 0064FD6B    cmp edi, dword ptr ds:[esi+0x08]
 0064FD6E    jl 0x0064FD57
 0064FD70    mov ebx, dword ptr ss:[ebp-0x10]
-0064FD73    mov ecx, dword ptr ds:[0x01A98FC8]
+0064FD73    mov ecx, dword ptr ds:[0x01A98FC8]              ; => [ Data: data_1a98fc8 ]
 0064FD79    mov dword ptr ss:[ebp-0x10], ecx
 0064FD7C    mov eax, dword ptr ds:[ecx+0x04]
 0064FD7F    and eax, dword ptr ss:[ebp-0x14]
@@ -104,13 +110,13 @@
 0064FD9C    test eax, eax
 0064FD9E    jnz 0x0064FD95
 0064FDA0    mov ecx, 0x0C
-0064FDA5    call 0x0064BFD0
+0064FDA5    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0064FDAA    mov edi, eax
 0064FDAC    inc dword ptr ds:[edi+0x0C]
 0064FDAF    cmp dword ptr ds:[edi], 0x00
 0064FDB2    jnz 0x0064FDBB
 0064FDB4    mov ecx, edi
-0064FDB6    call 0x0064BE70
+0064FDB6    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0064FDBB    mov edx, dword ptr ds:[edi]
 0064FDBD    mov eax, dword ptr ds:[edx]
 0064FDBF    mov dword ptr ds:[edi], eax
@@ -126,7 +132,7 @@
 0064FDD9    inc dword ptr ds:[eax+0x08]
 0064FDDC    mov eax, ebx
 0064FDDE    mov ecx, dword ptr ss:[ebp-0x0C]
-0064FDE1    mov dword ptr fs:[0x00000000], ecx
+0064FDE1    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0064FDE8    pop ecx
 0064FDE9    pop edi
 0064FDEA    pop esi
@@ -138,7 +144,7 @@
 0064FDF3    jz 0x0064FCD5
 0064FDF9    mov eax, dword ptr ds:[eax]
 0064FDFB    mov ecx, dword ptr ss:[ebp-0x0C]
-0064FDFE    mov dword ptr fs:[0x00000000], ecx
+0064FDFE    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0064FE05    pop ecx
 0064FE06    pop edi
 0064FE07    pop esi
@@ -149,7 +155,7 @@
 0064FE0D    mov dword ptr ds:[eax+0x04], ebx
 0064FE10    mov eax, ebx
 0064FE12    mov ecx, dword ptr ss:[ebp-0x0C]
-0064FE15    mov dword ptr fs:[0x00000000], ecx
+0064FE15    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0064FE1C    pop ecx
 0064FE1D    pop edi
 0064FE1E    pop esi

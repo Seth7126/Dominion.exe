@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_474850
+// 起始地址: 0x474850
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00474850    mov edx, 0x03
 00474855    mov ecx, 0x830234
-0047485A    call 0x0069F030
-0047485F    mov dword ptr ds:[0x0171D46C], eax
+0047485A    call 0x0069F030                                 ; => [ String: res/card_gen/plunder/cheap.texture | Call: sub_69f030 ]
+0047485F    mov dword ptr ds:[0x0171D46C], eax              ; => [ Data: data_171d46c ]
 00474864    ret

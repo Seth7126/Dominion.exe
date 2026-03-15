@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_65e640
+// 起始地址: 0x65e640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065E640    cmp dword ptr ds:[edx+0x08], 0x00
 0065E644    xorps xmm1, xmm1
 0065E647    jnz 0x0065E68B
@@ -55,13 +61,13 @@
 0065E6E2    push 0x8739B4
 0065E6E7    mov edx, 0x801800
 0065E6EC    mov ecx, 0x874F1C
-0065E6F1    call 0x0063B870
+0065E6F1    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | String: escape.ttfontPixelHeight != 0 | String: MergeFancyFont | Data: data_801800 ]
 0065E6F6    add esp, 0x0C
 0065E6F9    call 0x0063BC30
 0065E6FE    test al, al
-0065E700    jz 0x0065E703
+0065E700    jz 0x0065E703                                   ; => [ Call: sub_63bc30 ]
 0065E702    int3
-0065E703    jmp 0x0063BB00
+0065E703    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 0065E708    mov dword ptr ds:[ecx+0x04], 0x00
 0065E70F    jmp 0x0065E718
 0065E711    mov dword ptr ds:[ecx+0x60], 0x00

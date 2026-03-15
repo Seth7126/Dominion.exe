@@ -1,4 +1,10 @@
-00758B50    mov eax, dword ptr ds:[0x0147DED8]
+// ============================================================
+// 函数名称: sub_758b50
+// 起始地址: 0x758b50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00758B50    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00758B55    push esi
 00758B56    push edi
 00758B57    mov edi, ecx
@@ -7,11 +13,11 @@
 00758B5D    push 0x32
 00758B5F    push 0x890B20
 00758B64    push 0x30
-00758B66    call eax
+00758B66    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\PointAttachment.c ]
 00758B68    add esp, 0x0C
 00758B6B    jmp 0x00758B78
 00758B6D    push 0x30
-00758B6F    call dword ptr ds:[0x00800B4C]
+00758B6F    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00758B75    add esp, 0x04
 00758B78    mov esi, eax
 00758B7A    test esi, esi
@@ -19,14 +25,14 @@
 00758B7E    push 0x30
 00758B80    push 0x00
 00758B82    push esi
-00758B83    call 0x00761FC4
+00758B83    call 0x00761FC4                                 ; => [ Call: memset ]
 00758B88    add esp, 0x0C
 00758B8B    push 0x758B10
 00758B90    push 0x758AD0
 00758B95    push 0x05
 00758B97    mov edx, edi
 00758B99    mov ecx, esi
-00758B9B    call 0x00752290
+00758B9B    call 0x00752290                                 ; => [ Call: sub_758ad0 | Call: sub_752290 | Call: sub_758b10 ]
 00758BA0    add esp, 0x0C
 00758BA3    mov eax, esi
 00758BA5    pop edi

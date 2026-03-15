@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72c960
+// 起始地址: 0x72c960
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072C960    push ebp
 0072C961    mov ebp, esp
 0072C963    sub esp, 0x2C
@@ -225,7 +231,7 @@
 0072CC0E    jz 0x0072C9D2
 0072CC14    mov ecx, dword ptr ss:[ebp-0x08]
 0072CC17    mov edx, edi
-0072CC19    call 0x0072C860
+0072CC19    call 0x0072C860                                 ; => [ Call: sub_72c860 ]
 0072CC1E    mov edx, dword ptr ss:[ebp-0x14]
 0072CC21    mov ecx, dword ptr ss:[ebp-0x04]
 0072CC24    test ebx, edx

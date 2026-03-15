@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_572560
+// 起始地址: 0x572560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00572560    push ebp
 00572561    mov ebp, esp
 00572563    push ecx
@@ -10,7 +16,7 @@
 0057256F    mov dword ptr ss:[ebp-0x04], edx
 00572572    mov edx, edi
 00572574    push esi
-00572575    call 0x00572350
+00572575    call 0x00572350                                 ; => [ Call: sub_572350 ]
 0057257A    mov dword ptr ss:[ebp+0x08], eax
 0057257D    add esp, 0x04
 00572580    mov eax, dword ptr ss:[ebp-0x04]
@@ -18,7 +24,7 @@
 00572586    mov dword ptr ss:[ebp+0x0C], eax
 00572589    cmp eax, 0x320
 0057258E    jb 0x00572598
-00572590    call 0x00591930
+00572590    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572595    mov eax, dword ptr ss:[ebp+0x0C]
 00572598    imul edx, eax, 0x64
 0057259B    add edx, ebx
@@ -42,9 +48,9 @@
 005725F2    mov dword ptr ds:[edx+0x1A78], esi
 005725F8    cmp dword ptr ds:[eax], 0x00
 005725FB    jz 0x0057260E
-005725FD    push 0x81F918
+005725FD    push 0x81F918                                   ; => [ String: CardAddTail ]
 00572602    push 0x422
-00572607    mov ecx, 0x81F924
+00572607    mov ecx, 0x81F924                               ; => [ String: tailId == CARDID_NULL ]
 0057260C    jmp 0x00572632
 0057260E    mov ecx, dword ptr ss:[ebp-0x04]
 00572611    mov dword ptr ds:[eax], ecx
@@ -56,15 +62,15 @@
 0057261F    mov esp, ebp
 00572621    pop ebp
 00572622    ret
-00572623    push 0x81F918
+00572623    push 0x81F918                                   ; => [ String: CardAddTail ]
 00572628    push 0x425
-0057262D    mov ecx, 0x81F93C
+0057262D    mov ecx, 0x81F93C                               ; => [ String: card.next == CARDID_NULL ]
 00572632    push 0x81F4B8
 00572637    mov edx, 0x801800
-0057263C    call 0x0063B870
+0057263C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: CardAddTail ]
 00572641    add esp, 0x0C
 00572644    call 0x0063BC30
 00572649    test al, al
-0057264B    jz 0x0057264E
+0057264B    jz 0x0057264E                                   ; => [ Call: sub_63bc30 ]
 0057264D    int3
-0057264E    call 0x0063BB00
+0057264E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d0cb0
+// 起始地址: 0x6d0cb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D0CB0    push ebx
 006D0CB1    mov ebx, esp
 006D0CB3    sub esp, 0x08
@@ -8,7 +14,7 @@
 006D0CC0    mov dword ptr ss:[esp+0x04], ebp
 006D0CC4    mov ebp, esp
 006D0CC6    sub esp, 0xB8
-006D0CCC    mov eax, dword ptr ds:[0x008C4040]
+006D0CCC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006D0CD1    xor eax, ebp
 006D0CD3    mov dword ptr ss:[ebp-0x04], eax
 006D0CD6    push esi
@@ -17,11 +23,11 @@
 006D0CDC    push edi
 006D0CDD    push eax
 006D0CDE    mov dword ptr ss:[ebp-0x50], eax
-006D0CE1    call 0x006D1370
+006D0CE1    call 0x006D1370                                 ; => [ Call: sub_6d1370 ]
 006D0CE6    mov ecx, dword ptr ds:[eax]
 006D0CE8    cmp dword ptr ds:[ecx+0x04], 0x20
 006D0CEC    jnz 0x006D0FE3
-006D0CF2    call 0x005AF880
+006D0CF2    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006D0CF7    movss xmm0, dword ptr ds:[0x00891090]
 006D0CFF    or ecx, 0xFFFFFFFF
 006D0D02    xor esi, esi
@@ -39,7 +45,7 @@
 006D0D30    lea eax, ss:[ebp-0xB8]
 006D0D36    push eax
 006D0D37    mov edx, esi
-006D0D39    call 0x006D0BC0
+006D0D39    call 0x006D0BC0                                 ; => [ Call: sub_6d0bc0 ]
 006D0D3E    mov ecx, dword ptr ss:[ebp-0x54]
 006D0D41    add esp, 0x04
 006D0D44    movups xmm5, xmmword ptr ds:[eax]
@@ -99,7 +105,7 @@
 006D0E1E    movss xmm3, dword ptr ss:[ebp-0x58]
 006D0E23    movups xmmword ptr ss:[ebp-0x78], xmm4
 006D0E27    movss xmm4, dword ptr ds:[0x00890E18]
-006D0E2F    divss xmm4, dword ptr ds:[0x00BF21E8]
+006D0E2F    divss xmm4, dword ptr ds:[0x00BF21E8]           ; => [ Data: data_bf21e8 ]
 006D0E37    subss xmm1, dword ptr ss:[ebp-0x48]
 006D0E3C    movss dword ptr ss:[ebp-0x34], xmm0
 006D0E41    movss xmm0, dword ptr ss:[ebp-0x38]
@@ -186,7 +192,7 @@
 006D0F91    call 0x006E8F30
 006D0F96    add esp, 0x04
 006D0F99    test al, al
-006D0F9B    jz 0x006D0FB8
+006D0F9B    jz 0x006D0FB8                                   ; => [ Call: sub_6e8f30 ]
 006D0F9D    movss xmm0, dword ptr ss:[ebp-0x60]
 006D0FA2    movss xmm1, dword ptr ss:[ebp-0x4C]
 006D0FA7    comiss xmm1, xmm0
@@ -206,7 +212,7 @@
 006D0FD3    pop edi
 006D0FD4    xor ecx, ebp
 006D0FD6    pop esi
-006D0FD7    call 0x0075927A
+006D0FD7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D0FDC    mov esp, ebp
 006D0FDE    pop ebp
 006D0FDF    mov esp, ebx
@@ -217,10 +223,10 @@
 006D0FED    push 0x87ED1C
 006D0FF2    mov edx, 0x801800
 006D0FF7    mov ecx, 0x87ECF8
-006D0FFC    call 0x0063B870
+006D0FFC    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\FabDef.cpp | String: FabDefGet | String: ptr->assetType == ASSET_TYPE_FAB | Data: data_801800 ]
 006D1001    add esp, 0x0C
 006D1004    call 0x0063BC30
 006D1009    test al, al
-006D100B    jz 0x006D100E
+006D100B    jz 0x006D100E                                   ; => [ Call: sub_63bc30 ]
 006D100D    int3
-006D100E    call 0x0063BB00
+006D100E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

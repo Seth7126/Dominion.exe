@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_632db0
+// 起始地址: 0x632db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00632DB0    push ebx
 00632DB1    mov ebx, ecx
 00632DB3    push esi
@@ -8,17 +14,17 @@
 00632DBF    nop
 00632DC0    movzx eax, si
 00632DC3    cmp eax, dword ptr ds:[0x00B809E4]
-00632DC9    jnb 0x00632E07
+00632DC9    jnb 0x00632E07                                  ; => [ Data: data_b809e4 ]
 00632DCB    imul edi, eax, 0x1C30
-00632DD1    add edi, dword ptr ds:[0x00B809E0]
+00632DD1    add edi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 00632DD7    cmp dword ptr ds:[edi+0x1C28], esi
 00632DDD    jnz 0x00632E07
 00632DDF    mov esi, dword ptr ds:[edi+0x244]
 00632DE5    mov edx, ebx
 00632DE7    mov ecx, edi
-00632DE9    call 0x005CD880
+00632DE9    call 0x005CD880                                 ; => [ Call: sub_5cd880 ]
 00632DEE    mov ecx, edi
-00632DF0    call 0x005CB5A0
+00632DF0    call 0x005CB5A0                                 ; => [ Call: sub_5cb5a0 ]
 00632DF5    test esi, esi
 00632DF7    jnz 0x00632DC0
 00632DF9    pop edi
@@ -31,10 +37,10 @@
 00632E0E    push 0x80193C
 00632E13    mov edx, 0x801800
 00632E18    mov ecx, 0x802748
-00632E1D    call 0x0063B870
+00632E1D    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\DataArray.h | String: DataArrayTryToGet(id) != NULL | Data: data_801800 | String: DataArray<struct DomGfx>::DataArrayGet ]
 00632E22    add esp, 0x0C
 00632E25    call 0x0063BC30
 00632E2A    test al, al
-00632E2C    jz 0x00632E2F
+00632E2C    jz 0x00632E2F                                   ; => [ Call: sub_63bc30 ]
 00632E2E    int3
-00632E2F    call 0x0063BB00
+00632E2F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

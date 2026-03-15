@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_640df0
+// 起始地址: 0x640df0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00640DF0    push ebp
 00640DF1    mov ebp, esp
 00640DF3    sub esp, 0x7C
-00640DF6    mov eax, dword ptr ds:[0x008C4040]
+00640DF6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00640DFB    xor eax, ebp
 00640DFD    mov dword ptr ss:[ebp-0x04], eax
 00640E00    mov eax, ecx
@@ -114,7 +120,7 @@
 00640F34    push edi
 00640F35    push ecx
 00640F36    mov ecx, dword ptr ss:[ebp-0x6C]
-00640F39    call 0x006411D0
+00640F39    call 0x006411D0                                 ; => [ Call: sub_6411d0 ]
 00640F3E    mov ecx, dword ptr ss:[ebp-0x70]
 00640F41    lea esi, ds:[esi+0x04]
 00640F44    mov dword ptr ds:[esi-0x04], eax
@@ -141,23 +147,23 @@
 00640F7E    jnz 0x00640FE5
 00640F80    mov eax, dword ptr ss:[ebp-0x6C]
 00640F83    jmp 0x00640E20
-00640F88    push 0x8724E4
+00640F88    push 0x8724E4                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayGet ]
 00640F8D    push 0x6D
-00640F8F    push 0x80193C
-00640F94    mov ecx, 0x802748
+00640F8F    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00640F94    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00640F99    jmp 0x00640FF9
-00640F9B    push 0x8724E4
+00640F9B    push 0x8724E4                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayGet ]
 00640FA0    push 0x6C
-00640FA2    push 0x80193C
-00640FA7    mov ecx, 0x802734
+00640FA2    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00640FA7    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 00640FAC    jmp 0x00640FF9
-00640FAE    push 0x8721AC
+00640FAE    push 0x8721AC                                   ; => [ String: RegionAllocator::PartitionSubdivide ]
 00640FB3    push 0xE1
-00640FB8    mov ecx, 0x8721EC
+00640FB8    mov ecx, 0x8721EC                               ; => [ String: r.mip > 1 ]
 00640FBD    jmp 0x00640FF4
-00640FBF    push 0x8721AC
+00640FBF    push 0x8721AC                                   ; => [ String: RegionAllocator::PartitionSubdivide ]
 00640FC4    push 0xE0
-00640FC9    mov ecx, 0x8721F8
+00640FC9    mov ecx, 0x8721F8                               ; => [ String: r.mip > mip ]
 00640FCE    jmp 0x00640FF4
 00640FD0    mov eax, ecx
 00640FD2    mov ecx, dword ptr ss:[ebp-0x04]
@@ -165,19 +171,19 @@
 00640FD6    pop esi
 00640FD7    xor ecx, ebp
 00640FD9    pop ebx
-00640FDA    call 0x0075927A
+00640FDA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00640FDF    mov esp, ebp
 00640FE1    pop ebp
 00640FE2    ret 0x08
-00640FE5    push 0x8721AC
+00640FE5    push 0x8721AC                                   ; => [ String: RegionAllocator::PartitionSubdivide ]
 00640FEA    push 0xDE
-00640FEF    mov ecx, 0x872108
-00640FF4    push 0x8720A4
+00640FEF    mov ecx, 0x872108                               ; => [ String: r.alloc == ALLOC_NONE ]
+00640FF4    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
 00640FF9    mov edx, 0x801800
-00640FFE    call 0x0063B870
+00640FFE    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00641003    add esp, 0x0C
 00641006    call 0x0063BC30
 0064100B    test al, al
-0064100D    jz 0x00641010
+0064100D    jz 0x00641010                                   ; => [ Call: sub_63bc30 ]
 0064100F    int3
-00641010    call 0x0063BB00
+00641010    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

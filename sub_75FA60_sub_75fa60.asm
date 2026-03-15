@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75fa60
+// 起始地址: 0x75fa60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075FA60    push ebp
 0075FA61    mov ebp, esp
 0075FA63    push esi
@@ -5,7 +11,7 @@
 0075FA67    push edi
 0075FA68    push esi
 0075FA69    mov edi, ecx
-0075FA6B    call 0x00761E10
+0075FA6B    call 0x00761E10                                 ; => [ Call: sub_761e10 ]
 0075FA70    test eax, eax
 0075FA72    jz 0x0075FA76
 0075FA74    mov esi, dword ptr ds:[eax]

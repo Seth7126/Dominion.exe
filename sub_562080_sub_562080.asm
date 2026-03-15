@@ -1,23 +1,29 @@
+// ============================================================
+// 函数名称: sub_562080
+// 起始地址: 0x562080
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00562080    push ebx
 00562081    push esi
 00562082    push edi
 00562083    mov ebx, edx
 00562085    mov edi, ecx
-00562087    call 0x00573400
+00562087    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056208C    mov esi, eax
 0056208E    xor eax, eax
 00562090    test bl, 0x01
 00562093    jz 0x0056209A
-00562095    call 0x0056B780
+00562095    call 0x0056B780                                 ; => [ Call: sub_56b780 ]
 0056209A    mov edx, dword ptr ds:[esi+0x0C]
 0056209D    mov ecx, dword ptr ds:[esi+0x04]
 005620A0    push 0x00
 005620A2    push eax
 005620A3    push edi
 005620A4    push 0x02
-005620A6    call 0x00590760
+005620A6    call 0x00590760                                 ; => [ Call: sub_590760 ]
 005620AB    add esp, 0x10
-005620AE    call 0x00573400
+005620AE    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005620B3    mov ecx, dword ptr ds:[eax+0x0C]
 005620B6    cmp ecx, 0xFFFFFFFF
 005620B9    jz 0x005620D0
@@ -33,10 +39,10 @@
 005620D7    push 0x81EA70
 005620DC    mov edx, 0x801800
 005620E1    mov ecx, 0x813C5C
-005620E6    call 0x0063B870
+005620E6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 005620EB    add esp, 0x0C
 005620EE    call 0x0063BC30
 005620F3    test al, al
-005620F5    jz 0x005620F8
+005620F5    jz 0x005620F8                                   ; => [ Call: sub_63bc30 ]
 005620F7    int3
-005620F8    call 0x0063BB00
+005620F8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

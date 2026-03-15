@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5221c0
+// 起始地址: 0x5221c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005221C0    dword 83EC8B55
 005221C4    in al, 0xF8
 005221C6    mov eax, 0x25A0
-005221CB    call 0x00761E50
-005221D0    mov eax, dword ptr ds:[0x008C4040]
+005221CB    call 0x00761E50                                 ; => [ Call: __chkstk ]
+005221D0    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005221D5    xor eax, esp
 005221D7    mov dword ptr ss:[esp+0x259C], eax
 005221DE    push esi
@@ -16,13 +22,13 @@
 005221F6    lea edi, ss:[esp+0xC98]
 005221FD    mov ecx, 0x321
 00522202    lea edx, ss:[esp+0x1920]
-00522209    rep movsd
+00522209    rep movsd                                       ; => [ Data: data_7bf970 | Call: __builtin_memcpy | Call: sub_566240 ]
 0052220B    lea ecx, ss:[esp+0xC98]
-00522212    call 0x00561A00
+00522212    call 0x00561A00                                 ; => [ Call: sub_561a00 ]
 00522217    mov edx, 0x3EE
 0052221C    lea ecx, ss:[esp+0xC98]
-00522223    call 0x00569500
-00522228    call 0x00573400
+00522223    call 0x00569500                                 ; => [ Call: sub_569500 ]
+00522228    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052222D    push dword ptr ds:[0x007BFAD4]
 00522233    lea ecx, ss:[esp+0x1924]
 0052223A    push dword ptr ds:[0x007BFAD0]
@@ -36,13 +42,13 @@
 00522252    push dword ptr ss:[esp+0x25C0]
 00522259    push ecx
 0052225A    mov ecx, dword ptr ds:[eax+0x04]
-0052225D    call 0x00582EB0
+0052225D    call 0x00582EB0                                 ; => [ Call: nullptr | Call: sub_582eb0 ]
 00522262    mov ecx, dword ptr ss:[esp+0x25D4]
 00522269    add esp, 0x30
 0052226C    pop edi
 0052226D    pop esi
 0052226E    xor ecx, esp
-00522270    call 0x0075927A
+00522270    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00522275    mov esp, ebp
 00522277    pop ebp
 00522278    ret

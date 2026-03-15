@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_61cd10
+// 起始地址: 0x61cd10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0061CD10    push ebx
 0061CD11    push esi
 0061CD12    mov esi, ecx
@@ -14,14 +20,14 @@
 0061CD3A    dec eax
 0061CD3B    cmp dword ptr ds:[esi+0x1A1C], eax
 0061CD41    jl 0x0061CDA7
-0061CD43    call 0x004B9480
+0061CD43    call 0x004B9480                                 ; => [ Call: sub_4b9480 ]
 0061CD48    xor edi, edi
 0061CD4A    mov ebx, eax
 0061CD4C    cmp dword ptr ds:[esi+0xD38], edi
 0061CD52    jle 0x0061CDA7
 0061CD54    mov edx, edi
 0061CD56    mov ecx, ebx
-0061CD58    call 0x004D5DB0
+0061CD58    call 0x004D5DB0                                 ; => [ Call: sub_4d5db0 ]
 0061CD5D    inc edi
 0061CD5E    mov ecx, dword ptr ds:[eax+0x14]
 0061CD61    mov dword ptr ds:[eax+0x10], ecx
@@ -35,7 +41,7 @@
 0061CD73    call 0x004B9480
 0061CD78    mov edx, edi
 0061CD7A    mov ecx, eax
-0061CD7C    call 0x004D5DB0
+0061CD7C    call 0x004D5DB0                                 ; => [ Call: sub_4d5db0 | Call: sub_4b9480 ]
 0061CD81    cmp dword ptr ds:[esi+0x1508], 0x02
 0061CD88    jnz 0x0061CDA7
 0061CD8A    cmp edi, dword ptr ds:[esi+0x150C]

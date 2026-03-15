@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51f270
+// 起始地址: 0x51f270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051F270    push ebp
 0051F271    mov ebp, esp
 0051F273    and esp, 0xFFFFFFF8
@@ -6,12 +12,12 @@
 0051F27A    call 0x00573400
 0051F27F    mov eax, dword ptr ds:[eax+0x04]
 0051F282    test byte ptr ds:[eax+0xD44], 0x40
-0051F289    jz 0x0051F296
+0051F289    jz 0x0051F296                                   ; => [ Call: sub_573400 ]
 0051F28B    call 0x00573400
-0051F290    cmp dword ptr ds:[eax+0x0C], 0x01
+0051F290    cmp dword ptr ds:[eax+0x0C], 0x01               ; => [ Call: sub_573400 ]
 0051F294    jmp 0x0051F29F
 0051F296    call 0x00573400
-0051F29B    cmp dword ptr ds:[eax+0x0C], 0x00
+0051F29B    cmp dword ptr ds:[eax+0x0C], 0x00               ; => [ Call: sub_573400 ]
 0051F29F    jz 0x0051F2B0
 0051F2A1    xor edx, edx
 0051F2A3    lea ecx, ds:[edx+0x0A]
@@ -19,8 +25,8 @@
 0051F2AB    pop esi
 0051F2AC    mov esp, ebp
 0051F2AE    pop ebp
-0051F2AF    ret
-0051F2B0    call 0x00573400
+0051F2AF    ret                                             ; => [ Call: sub_562100 ]
+0051F2B0    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0051F2B5    push 0x1509
 0051F2BA    push ecx
 0051F2BB    mov esi, eax
@@ -35,7 +41,7 @@
 0051F2D7    push eax
 0051F2D8    push edx
 0051F2D9    movlpd qword ptr ss:[esp+0x28], xmm0
-0051F2DF    call 0x00591310
+0051F2DF    call 0x00591310                                 ; => [ Call: sub_591310 ]
 0051F2E4    mov edx, dword ptr ds:[esi+0x0C]
 0051F2E7    lea eax, ss:[esp+0x28]
 0051F2EB    add esp, 0x18
@@ -55,4 +61,4 @@
 0051F317    pop esi
 0051F318    mov esp, ebp
 0051F31A    pop ebp
-0051F31B    ret
+0051F31B    ret                                             ; => [ Call: sub_591310 ]

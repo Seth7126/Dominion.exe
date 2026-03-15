@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_719720
+// 起始地址: 0x719720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00719720    push ebp
 00719721    mov ebp, esp
 00719723    movss xmm2, dword ptr ss:[ebp+0x08]
-00719728    andps xmm2, xmmword ptr ds:[0x008937A0]
+00719728    andps xmm2, xmmword ptr ds:[0x008937A0]         ; => [ Data: data_8937a0 ]
 0071972F    movss xmm0, dword ptr ds:[0x00890E18]
 00719737    comiss xmm0, xmm2
 0071973A    jbe 0x00719771

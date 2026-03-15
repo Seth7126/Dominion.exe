@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7289c0
+// 起始地址: 0x7289c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007289C0    push ebp
 007289C1    mov ebp, esp
 007289C3    sub esp, 0x0C
@@ -84,29 +90,29 @@
 00728AAE    cmp al, 0x4D
 00728AB0    jnz 0x00728E3D
 00728AB6    mov ecx, esi
-00728AB8    call 0x007203E0
+00728AB8    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728ABD    mov ecx, esi
-00728ABF    call 0x007203E0
+00728ABF    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728AC4    mov ecx, esi
-00728AC6    call 0x007203E0
+00728AC6    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728ACB    mov ecx, esi
-00728ACD    call 0x007203E0
+00728ACD    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728AD2    mov ecx, esi
-00728AD4    call 0x007203E0
+00728AD4    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728AD9    mov ecx, esi
 00728ADB    mov edi, eax
 00728ADD    call 0x007203E0
 00728AE2    shl eax, 0x10
 00728AE5    mov ecx, esi
 00728AE7    add eax, edi
-00728AE9    mov dword ptr ds:[ebx+0x04], eax
-00728AEC    call 0x007203E0
+00728AE9    mov dword ptr ds:[ebx+0x04], eax                ; => [ Call: sub_7203e0 ]
+00728AEC    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728AF1    mov ecx, esi
 00728AF3    mov edi, eax
 00728AF5    call 0x007203E0
 00728AFA    mov ebx, eax
 00728AFC    shl ebx, 0x10
-00728AFF    add ebx, edi
+00728AFF    add ebx, edi                                    ; => [ Call: sub_7203e0 ]
 00728B01    mov edi, dword ptr ss:[ebp-0x08]
 00728B04    mov dword ptr ds:[edi+0x08], ebx
 00728B07    mov dword ptr ds:[edi+0x18], 0x00
@@ -124,63 +130,63 @@
 00728B47    cmp ebx, 0x7C
 00728B4A    jnz 0x00728E3D
 00728B50    mov ecx, esi
-00728B52    call 0x007203E0
+00728B52    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728B57    mov ecx, esi
 00728B59    mov edi, eax
 00728B5B    call 0x007203E0
 00728B60    shl eax, 0x10
 00728B63    mov ecx, esi
 00728B65    add eax, edi
-00728B67    mov dword ptr ds:[esi], eax
-00728B69    call 0x007203E0
+00728B67    mov dword ptr ds:[esi], eax                     ; => [ Call: sub_7203e0 ]
+00728B69    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728B6E    mov ecx, esi
 00728B70    mov edi, eax
 00728B72    call 0x007203E0
 00728B77    shl eax, 0x10
-00728B7A    add eax, edi
+00728B7A    add eax, edi                                    ; => [ Call: sub_7203e0 ]
 00728B7C    mov edi, dword ptr ss:[ebp-0x08]
 00728B7F    mov ecx, esi
 00728B81    mov dword ptr ds:[esi+0x04], eax
 00728B84    call 0x007203E0
 00728B89    cmp eax, 0x01
-00728B8C    jnz 0x00728E3D
+00728B8C    jnz 0x00728E3D                                  ; => [ Call: sub_7203e0 ]
 00728B92    mov ecx, esi
 00728B94    call 0x007203E0
-00728B99    mov dword ptr ds:[edi], eax
+00728B99    mov dword ptr ds:[edi], eax                     ; => [ Call: sub_7203e0 ]
 00728B9B    cmp ebx, 0x0C
 00728B9E    jz 0x00728E31
 00728BA4    mov ecx, esi
-00728BA6    call 0x007203E0
+00728BA6    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BAB    mov ecx, esi
 00728BAD    mov edi, eax
 00728BAF    call 0x007203E0
 00728BB4    shl eax, 0x10
-00728BB7    add eax, edi
+00728BB7    add eax, edi                                    ; => [ Call: sub_7203e0 ]
 00728BB9    mov dword ptr ss:[ebp-0x0C], eax
 00728BBC    cmp eax, 0x01
 00728BBF    jz 0x00728E3D
 00728BC5    cmp eax, 0x02
 00728BC8    jz 0x00728E3D
 00728BCE    mov ecx, esi
-00728BD0    call 0x007203E0
+00728BD0    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BD5    mov ecx, esi
-00728BD7    call 0x007203E0
+00728BD7    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BDC    mov ecx, esi
-00728BDE    call 0x007203E0
+00728BDE    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BE3    mov ecx, esi
-00728BE5    call 0x007203E0
+00728BE5    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BEA    mov ecx, esi
-00728BEC    call 0x007203E0
+00728BEC    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BF1    mov ecx, esi
-00728BF3    call 0x007203E0
+00728BF3    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BF8    mov ecx, esi
-00728BFA    call 0x007203E0
+00728BFA    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728BFF    mov ecx, esi
-00728C01    call 0x007203E0
+00728C01    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C06    mov ecx, esi
-00728C08    call 0x007203E0
+00728C08    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C0D    mov ecx, esi
-00728C0F    call 0x007203E0
+00728C0F    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C14    cmp ebx, 0x28
 00728C17    jz 0x00728D67
 00728C1D    cmp ebx, 0x38
@@ -190,70 +196,70 @@
 00728C2B    cmp ebx, 0x7C
 00728C2E    jnz 0x00728E3D
 00728C34    mov ecx, esi
-00728C36    call 0x007203E0
+00728C36    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C3B    mov ecx, esi
 00728C3D    mov edi, eax
 00728C3F    call 0x007203E0
 00728C44    mov ecx, dword ptr ss:[ebp-0x08]
 00728C47    shl eax, 0x10
 00728C4A    add eax, edi
-00728C4C    mov dword ptr ds:[ecx+0x0C], eax
+00728C4C    mov dword ptr ds:[ecx+0x0C], eax                ; => [ Call: sub_7203e0 ]
 00728C4F    mov ecx, esi
-00728C51    call 0x007203E0
+00728C51    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C56    mov ecx, esi
 00728C58    mov edi, eax
 00728C5A    call 0x007203E0
 00728C5F    mov ecx, dword ptr ss:[ebp-0x08]
 00728C62    shl eax, 0x10
 00728C65    add eax, edi
-00728C67    mov dword ptr ds:[ecx+0x10], eax
+00728C67    mov dword ptr ds:[ecx+0x10], eax                ; => [ Call: sub_7203e0 ]
 00728C6A    mov ecx, esi
-00728C6C    call 0x007203E0
+00728C6C    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C71    mov ecx, esi
 00728C73    mov edi, eax
 00728C75    call 0x007203E0
 00728C7A    mov ecx, dword ptr ss:[ebp-0x08]
 00728C7D    shl eax, 0x10
 00728C80    add eax, edi
-00728C82    mov dword ptr ds:[ecx+0x14], eax
+00728C82    mov dword ptr ds:[ecx+0x14], eax                ; => [ Call: sub_7203e0 ]
 00728C85    mov ecx, esi
-00728C87    call 0x007203E0
+00728C87    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728C8C    mov ecx, esi
 00728C8E    mov edi, eax
 00728C90    call 0x007203E0
 00728C95    mov ecx, dword ptr ss:[ebp-0x08]
 00728C98    shl eax, 0x10
 00728C9B    add eax, edi
-00728C9D    mov dword ptr ds:[ecx+0x18], eax
+00728C9D    mov dword ptr ds:[ecx+0x18], eax                ; => [ Call: sub_7203e0 ]
 00728CA0    mov ecx, esi
-00728CA2    call 0x007203E0
+00728CA2    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CA7    mov ecx, esi
-00728CA9    call 0x007203E0
+00728CA9    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CAE    mov edi, 0x0C
 00728CB3    mov ecx, esi
-00728CB5    call 0x007203E0
+00728CB5    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CBA    mov ecx, esi
-00728CBC    call 0x007203E0
+00728CBC    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CC1    sub edi, 0x01
 00728CC4    jnz 0x00728CB3
 00728CC6    cmp ebx, 0x7C
 00728CC9    jnz 0x00728E31
 00728CCF    mov ecx, esi
-00728CD1    call 0x007203E0
+00728CD1    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CD6    mov ecx, esi
-00728CD8    call 0x007203E0
+00728CD8    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CDD    mov ecx, esi
-00728CDF    call 0x007203E0
+00728CDF    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CE4    mov ecx, esi
-00728CE6    call 0x007203E0
+00728CE6    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CEB    mov ecx, esi
-00728CED    call 0x007203E0
+00728CED    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CF2    mov ecx, esi
-00728CF4    call 0x007203E0
+00728CF4    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728CF9    mov ecx, esi
-00728CFB    call 0x007203E0
+00728CFB    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D00    mov ecx, esi
-00728D02    call 0x007203E0
+00728D02    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D07    lea eax, ds:[edi+0x01]
 00728D0A    pop edi
 00728D0B    pop esi
@@ -266,25 +272,25 @@
 00728D1A    mov ecx, esi
 00728D1C    call 0x007203E0
 00728D21    mov ecx, esi
-00728D23    mov dword ptr ds:[esi], eax
-00728D25    call 0x007203E0
+00728D23    mov dword ptr ds:[esi], eax                     ; => [ Call: sub_7203e0 ]
+00728D25    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D2A    jmp 0x00728B7F
 00728D2F    mov ecx, esi
-00728D31    call 0x007203E0
+00728D31    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D36    mov ecx, esi
-00728D38    call 0x007203E0
+00728D38    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D3D    mov ecx, esi
-00728D3F    call 0x007203E0
+00728D3F    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D44    mov ecx, esi
-00728D46    call 0x007203E0
+00728D46    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D4B    mov ecx, esi
-00728D4D    call 0x007203E0
+00728D4D    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D52    mov ecx, esi
-00728D54    call 0x007203E0
+00728D54    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D59    mov ecx, esi
-00728D5B    call 0x007203E0
+00728D5B    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D60    mov ecx, esi
-00728D62    call 0x007203E0
+00728D62    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728D67    mov ebx, dword ptr ss:[ebp-0x08]
 00728D6A    mov ecx, dword ptr ds:[ebx]
 00728D6C    cmp ecx, 0x10
@@ -327,26 +333,26 @@
 00728DD8    cmp eax, 0x03
 00728DDB    jnz 0x00728E3D
 00728DDD    mov ecx, esi
-00728DDF    call 0x007203E0
+00728DDF    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728DE4    mov ecx, esi
 00728DE6    mov edi, eax
 00728DE8    call 0x007203E0
 00728DED    shl eax, 0x10
 00728DF0    mov ecx, esi
 00728DF2    add eax, edi
-00728DF4    mov dword ptr ds:[ebx+0x0C], eax
-00728DF7    call 0x007203E0
+00728DF4    mov dword ptr ds:[ebx+0x0C], eax                ; => [ Call: sub_7203e0 ]
+00728DF7    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728DFC    mov ecx, esi
 00728DFE    mov edi, eax
 00728E00    call 0x007203E0
 00728E05    shl eax, 0x10
 00728E08    mov ecx, esi
 00728E0A    add eax, edi
-00728E0C    mov dword ptr ds:[ebx+0x10], eax
-00728E0F    call 0x007203E0
+00728E0C    mov dword ptr ds:[ebx+0x10], eax                ; => [ Call: sub_7203e0 ]
+00728E0F    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728E14    mov ecx, esi
 00728E16    mov edi, eax
-00728E18    call 0x007203E0
+00728E18    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 00728E1D    mov ecx, dword ptr ds:[ebx+0x10]
 00728E20    shl eax, 0x10
 00728E23    add eax, edi

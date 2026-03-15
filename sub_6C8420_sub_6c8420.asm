@@ -1,20 +1,26 @@
+// ============================================================
+// 函数名称: sub_6c8420
+// 起始地址: 0x6c8420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C8420    push ebp
 006C8421    mov ebp, esp
 006C8423    sub esp, 0x20
-006C8426    mov eax, dword ptr ds:[0x008C4040]
+006C8426    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006C842B    xor eax, ebp
 006C842D    mov dword ptr ss:[ebp-0x04], eax
 006C8430    lea eax, ss:[ebp-0x14]
 006C8433    push eax
 006C8434    push dword ptr ds:[0x0147B084]
-006C843A    call dword ptr ds:[0x007753C0]
-006C8440    mov edx, dword ptr ss:[ebp-0x0C]
+006C843A    call dword ptr ds:[0x007753C0]                  ; => [ Type: RECT | Data: data_147b084 ]
+006C8440    mov edx, dword ptr ss:[ebp-0x0C]                ; => [ Field: right ]
 006C8443    test edx, edx
 006C8445    jz 0x006C84AF
-006C8447    mov ecx, dword ptr ss:[ebp-0x08]
+006C8447    mov ecx, dword ptr ss:[ebp-0x08]                ; => [ Field: bottom ]
 006C844A    test ecx, ecx
 006C844C    jz 0x006C84AF
-006C844E    mov eax, dword ptr ds:[0x00CF65B8]
+006C844E    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006C8453    xorps xmm1, xmm1
 006C8456    xorps xmm0, xmm0
 006C8459    cvtsi2ss xmm0, dword ptr ss:[ebp+0x08]
@@ -37,7 +43,7 @@
 006C849E    mov edx, dword ptr ss:[ebp-0x18]
 006C84A1    mov ecx, dword ptr ss:[ebp-0x04]
 006C84A4    xor ecx, ebp
-006C84A6    call 0x0075927A
+006C84A6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C84AB    mov esp, ebp
 006C84AD    pop ebp
 006C84AE    ret
@@ -45,7 +51,7 @@
 006C84B2    mov eax, dword ptr ds:[0x007FFB14]
 006C84B7    xor ecx, ebp
 006C84B9    mov edx, dword ptr ds:[0x007FFB18]
-006C84BF    call 0x0075927A
+006C84BF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C84C4    mov esp, ebp
 006C84C6    pop ebp
 006C84C7    ret

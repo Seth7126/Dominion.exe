@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f1f40
+// 起始地址: 0x4f1f40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F1F40    push ebp
 004F1F41    mov ebp, esp
 004F1F43    sub esp, 0x14
@@ -10,7 +16,7 @@
 004F1F58    push edi
 004F1F59    xor edi, edi
 004F1F5B    mov dword ptr ss:[ebp-0x04], ebx
-004F1F5E    movups xmmword ptr ss:[ebp-0x14], xmm0
+004F1F5E    movups xmmword ptr ss:[ebp-0x14], xmm0          ; => [ Data: data_891f90 ]
 004F1F62    imul edx, edx, 0x168C
 004F1F68    nop dword ptr ds:[eax+eax*1], eax
 004F1F70    add eax, edx

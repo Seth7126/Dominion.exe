@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72c440
+// 起始地址: 0x72c440
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072C440    push ebp
 0072C441    mov ebp, esp
 0072C443    sub esp, 0x14
@@ -210,9 +216,9 @@
 0072C69E    mov ecx, esi
 0072C6A0    call 0x007203E0
 0072C6A5    mov ecx, dword ptr ss:[ebp-0x08]
-0072C6A8    mov dword ptr ds:[ecx], eax
+0072C6A8    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_7203e0 ]
 0072C6AA    mov ecx, esi
-0072C6AC    call 0x007203E0
+0072C6AC    call 0x007203E0                                 ; => [ Call: sub_7203e0 ]
 0072C6B1    mov edx, dword ptr ss:[ebp-0x08]
 0072C6B4    mov dword ptr ds:[edx+0x04], eax
 0072C6B7    mov eax, dword ptr ds:[edi]
@@ -365,7 +371,7 @@
 0072C832    push 0xFFFFFFFF
 0072C834    push eax
 0072C835    mov ecx, esi
-0072C837    call 0x0072C280
+0072C837    call 0x0072C280                                 ; => [ Call: sub_72c280 ]
 0072C83C    add esp, 0x08
 0072C83F    pop edi
 0072C840    pop esi

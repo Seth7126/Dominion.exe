@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_472500
+// 起始地址: 0x472500
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00472500    mov edx, 0x03
 00472505    mov ecx, 0x82D170
-0047250A    call 0x0069F030
-0047250F    mov dword ptr ds:[0x0171D008], eax
+0047250A    call 0x0069F030                                 ; => [ String: res/card_gen/empires/fortune.texture | Call: sub_69f030 ]
+0047250F    mov dword ptr ds:[0x0171D008], eax              ; => [ Data: data_171d008 ]
 00472514    ret

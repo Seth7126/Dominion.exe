@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_474790
+// 起始地址: 0x474790
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00474790    mov edx, 0x03
 00474795    mov ecx, 0x830148
-0047479A    call 0x0069F030
-0047479F    mov dword ptr ds:[0x0171D454], eax
+0047479A    call 0x0069F030                                 ; => [ String: res/card_gen/plunder/amphora.texture | Call: sub_69f030 ]
+0047479F    mov dword ptr ds:[0x0171D454], eax              ; => [ Data: data_171d454 ]
 004747A4    ret

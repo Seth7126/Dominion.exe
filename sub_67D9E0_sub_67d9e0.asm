@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67d9e0
+// 起始地址: 0x67d9e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067D9E0    push ebp
 0067D9E1    mov ebp, esp
 0067D9E3    sub esp, 0x08
@@ -6,7 +12,7 @@
 0067D9E8    mov esi, dword ptr ss:[ebp+0x08]
 0067D9EB    push edi
 0067D9EC    mov edi, ecx
-0067D9EE    mov dword ptr ds:[esi], 0x00
+0067D9EE    mov dword ptr ds:[esi], 0x00                    ; => [ Call: __builtin_memset ]
 0067D9F4    mov dword ptr ds:[esi+0x04], 0x00
 0067D9FB    mov dword ptr ds:[esi+0x08], 0x00
 0067DA02    mov dword ptr ds:[esi+0x0C], 0x00
@@ -40,11 +46,11 @@
 0067DA8B    mov dword ptr ds:[esi], eax
 0067DA8D    mov ecx, dword ptr ds:[edi]
 0067DA8F    call 0x0064C460
-0067DA94    mov dword ptr ds:[esi-0x0C], eax
+0067DA94    mov dword ptr ds:[esi-0x0C], eax                ; => [ Call: sub_64c460 ]
 0067DA97    lea edx, ds:[ebx+0x18]
 0067DA9A    mov ecx, dword ptr ds:[edi]
 0067DA9C    call 0x0064C460
-0067DAA1    mov dword ptr ds:[esi-0x08], eax
+0067DAA1    mov dword ptr ds:[esi-0x08], eax                ; => [ Call: sub_64c460 ]
 0067DAA4    lea ebx, ds:[ebx+0x34]
 0067DAA7    mov eax, dword ptr ss:[ebp-0x04]
 0067DAAA    lea esi, ds:[esi+0x10]
@@ -64,11 +70,11 @@
 0067DAC9    lea edx, ds:[edi+0x0C]
 0067DACC    mov ecx, dword ptr ds:[edi]
 0067DACE    call 0x0064C460
-0067DAD3    mov dword ptr ds:[esi], eax
+0067DAD3    mov dword ptr ds:[esi], eax                     ; => [ Call: sub_64c460 ]
 0067DAD5    lea edx, ds:[edi+0x20]
 0067DAD8    mov ecx, dword ptr ds:[edi]
 0067DADA    call 0x0064C460
-0067DADF    mov dword ptr ds:[esi+0x04], eax
+0067DADF    mov dword ptr ds:[esi+0x04], eax                ; => [ Call: sub_64c460 ]
 0067DAE2    pop edi
 0067DAE3    mov eax, esi
 0067DAE5    pop esi
@@ -81,10 +87,10 @@
 0067DAF5    push 0x8739B4
 0067DAFA    mov edx, 0x801800
 0067DAFF    mov ecx, 0x876C00
-0067DB04    call 0x0063B870
+0067DB04    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: PropGraphSet | String: expr.numKeys <= MAX_GRAPH_KEYS ]
 0067DB09    add esp, 0x0C
 0067DB0C    call 0x0063BC30
 0067DB11    test al, al
-0067DB13    jz 0x0067DB16
+0067DB13    jz 0x0067DB16                                   ; => [ Call: sub_63bc30 ]
 0067DB15    int3
-0067DB16    call 0x0063BB00
+0067DB16    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

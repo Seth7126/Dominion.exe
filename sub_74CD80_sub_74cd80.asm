@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_74cd80
+// 起始地址: 0x74cd80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074CD80    push ebp
 0074CD81    mov ebp, esp
-0074CD83    push ecx
+0074CD83    push ecx                                        ; => [ Type: HWND ]
 0074CD84    mov edx, dword ptr ss:[ebp+0x08]
 0074CD87    push ebx
 0074CD88    push esi
@@ -22,7 +28,7 @@
 0074CDAB    call edi
 0074CDAD    test eax, eax
 0074CDAF    jle 0x0074CDF8
-0074CDB1    xor esi, esi
+0074CDB1    xor esi, esi                                    ; => [ Type: WPARAM ]
 0074CDB3    push esi
 0074CDB4    push esi
 0074CDB5    push 0x18B
@@ -34,7 +40,7 @@
 0074CDC3    push esi
 0074CDC4    push 0x199
 0074CDC9    push ebx
-0074CDCA    call edi
+0074CDCA    call edi                                        ; => [ Type: LRESULT ]
 0074CDCC    cmp eax, 0xFFFFFFFF
 0074CDCF    jz 0x0074CDE7
 0074CDD1    test eax, eax
@@ -52,7 +58,7 @@
 0074CDF1    inc esi
 0074CDF2    call edi
 0074CDF4    cmp esi, eax
-0074CDF6    jl 0x0074CDC1
+0074CDF6    jl 0x0074CDC1                                   ; => [ Type: LRESULT ]
 0074CDF8    pop edi
 0074CDF9    pop esi
 0074CDFA    or eax, 0xFFFFFFFF

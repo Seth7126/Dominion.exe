@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ce1b0
+// 起始地址: 0x5ce1b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CE1B0    push ebp
 005CE1B1    mov ebp, esp
 005CE1B3    push ecx
@@ -8,12 +14,12 @@
 005CE1B9    mov edi, ecx
 005CE1BB    mov edx, dword ptr ds:[edi+0x1C28]
 005CE1C1    mov ecx, dword ptr ds:[esi+0x1C28]
-005CE1C7    call 0x005C8FD0
+005CE1C7    call 0x005C8FD0                                 ; => [ Call: sub_5c8fd0 ]
 005CE1CC    cmp dword ptr ds:[edi+0x2C], 0x00
 005CE1D0    jz 0x005CE1E6
-005CE1D2    push 0x86F700
+005CE1D2    push 0x86F700                                   ; => [ String: PileRemoveCard ]
 005CE1D7    push 0x1066
-005CE1DC    mov ecx, 0x86F474
+005CE1DC    mov ecx, 0x86F474                               ; => [ String: gfx.type == DOMGFX_CARD ]
 005CE1E1    jmp 0x005CE2D4
 005CE1E6    cmp dword ptr ds:[edi+0xA4], 0x00
 005CE1ED    jz 0x005CE2BF
@@ -26,7 +32,7 @@
 005CE205    jz 0x005CE21A
 005CE207    mov ecx, dword ptr ds:[ecx]
 005CE209    call 0x005CBA00
-005CE20E    lea ecx, ds:[eax+0x1B94]
+005CE20E    lea ecx, ds:[eax+0x1B94]                        ; => [ Call: sub_5cba00 ]
 005CE214    mov eax, dword ptr ds:[ecx]
 005CE216    test eax, eax
 005CE218    jnz 0x005CE203
@@ -37,7 +43,7 @@
 005CE22A    jz 0x005CE24D
 005CE22C    nop dword ptr ds:[eax], eax
 005CE230    mov ecx, eax
-005CE232    call 0x005CBA00
+005CE232    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005CE237    dec dword ptr ds:[eax+0xB4]
 005CE23D    dec dword ptr ds:[eax+0xB0]
 005CE243    mov eax, dword ptr ds:[eax+0x1B94]
@@ -54,7 +60,7 @@
 005CE281    push 0x00
 005CE283    mov edx, edi
 005CE285    mov ecx, esi
-005CE287    call 0x005CDEE0
+005CE287    call 0x005CDEE0                                 ; => [ Call: sub_5cdee0 ]
 005CE28C    add esp, 0x04
 005CE28F    cmp byte ptr ss:[ebp+0x0C], 0x00
 005CE293    jnz 0x005CE2BF
@@ -67,24 +73,24 @@
 005CE2A9    cmp ecx, 0x3E9
 005CE2AF    jnz 0x005CE2BF
 005CE2B1    mov ecx, esi
-005CE2B3    call 0x005CD3E0
+005CE2B3    call 0x005CD3E0                                 ; => [ Call: sub_5cd3e0 ]
 005CE2B8    mov ecx, esi
-005CE2BA    call 0x005CB5A0
+005CE2BA    call 0x005CB5A0                                 ; => [ Call: sub_5cb5a0 ]
 005CE2BF    pop edi
 005CE2C0    pop esi
 005CE2C1    pop ebx
 005CE2C2    pop ecx
 005CE2C3    pop ebp
 005CE2C4    ret
-005CE2C5    push 0x86F700
+005CE2C5    push 0x86F700                                   ; => [ String: PileRemoveCard ]
 005CE2CA    push 0x10CE
-005CE2CF    mov ecx, 0x86F710
+005CE2CF    mov ecx, 0x86F710                               ; => [ String: gfxPile.pile.count >= 0 ]
 005CE2D4    push 0x86F1E8
 005CE2D9    mov edx, 0x801800
-005CE2DE    call 0x0063B870
+005CE2DE    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: PileRemoveCard ]
 005CE2E3    add esp, 0x0C
 005CE2E6    call 0x0063BC30
 005CE2EB    test al, al
-005CE2ED    jz 0x005CE2F0
+005CE2ED    jz 0x005CE2F0                                   ; => [ Call: sub_63bc30 ]
 005CE2EF    int3
-005CE2F0    call 0x0063BB00
+005CE2F0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

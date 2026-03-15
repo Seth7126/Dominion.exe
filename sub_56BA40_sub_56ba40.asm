@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56ba40
+// 起始地址: 0x56ba40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056BA42    byte EC
 0056BA43    sub esp, 0x0C
 0056BA46    push ebx
@@ -5,7 +11,7 @@
 0056BA48    push edi
 0056BA49    mov dword ptr ss:[ebp-0x08], edx
 0056BA4C    mov dword ptr ss:[ebp-0x0C], ecx
-0056BA4F    call 0x00573400
+0056BA4F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056BA54    mov ebx, eax
 0056BA56    mov eax, dword ptr ds:[ebx]
 0056BA58    cmp eax, 0x02
@@ -18,18 +24,18 @@
 0056BA6B    jnz 0x0056BB68
 0056BA71    push dword ptr ds:[ebx+0x10]
 0056BA74    mov ecx, dword ptr ds:[ebx+0x04]
-0056BA77    call 0x005916D0
+0056BA77    call 0x005916D0                                 ; => [ Call: sub_5916d0 ]
 0056BA7C    add esp, 0x04
 0056BA7F    mov dword ptr ss:[ebp-0x04], edx
 0056BA82    mov esi, eax
 0056BA84    mov ecx, dword ptr ds:[ebx+0x04]
 0056BA87    cmp dword ptr ds:[ecx+0x19B8], 0x100
 0056BA91    jl 0x0056BAA7
-0056BA93    push 0x81EC28
+0056BA93    push 0x81EC28                                   ; => [ String: NextTime ]
 0056BA98    push 0x1163
-0056BA9D    mov ecx, 0x81EC34
+0056BA9D    mov ecx, 0x81EC34                               ; => [ String: c.g->numScheduledAbilities < MAX_ABILITIES ]
 0056BAA2    jmp 0x0056BB77
-0056BAA7    call 0x005768A0
+0056BAA7    call 0x005768A0                                 ; => [ Call: sub_5768a0 ]
 0056BAAC    mov ecx, dword ptr ds:[ebx+0x0C]
 0056BAAF    mov edi, eax
 0056BAB1    mov eax, dword ptr ss:[ebp-0x04]
@@ -86,16 +92,16 @@
 0056BB63    pop ebx
 0056BB64    mov esp, ebp
 0056BB66    pop ebp
-0056BB67    ret
-0056BB68    push 0x81EC28
+0056BB67    ret                                             ; => [ Call: sub_56b8e0 ]
+0056BB68    push 0x81EC28                                   ; => [ String: NextTime ]
 0056BB6D    push 0x115D
-0056BB72    mov ecx, 0x801AA4
+0056BB72    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0056BB77    push 0x81EA70
 0056BB7C    mov edx, 0x801800
-0056BB81    call 0x0063B870
+0056BB81    call 0x0063B870                                 ; => [ String: NextTime | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0056BB86    add esp, 0x0C
 0056BB89    call 0x0063BC30
 0056BB8E    test al, al
-0056BB90    jz 0x0056BB93
+0056BB90    jz 0x0056BB93                                   ; => [ Call: sub_63bc30 ]
 0056BB92    int3
-0056BB93    call 0x0063BB00
+0056BB93    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

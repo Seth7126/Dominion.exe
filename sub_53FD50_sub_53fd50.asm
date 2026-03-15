@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53fd50
+// 起始地址: 0x53fd50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053FD50    dword 83EC8B55
 0053FD54    in al, 0xF0
 0053FD56    sub esp, 0x4C
@@ -51,7 +57,7 @@
 0053FE28    push eax
 0053FE29    call 0x00576C00
 0053FE2E    add esp, 0x08
-0053FE31    movups xmm0, xmmword ptr ds:[eax]
+0053FE31    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Data: data_cce9b0 | Call: sub_571b30 ]
 0053FE34    movaps xmmword ptr ss:[esp+0x10], xmm0
 0053FE39    psrldq xmm0, 0x08
 0053FE3E    movd eax, xmm0
@@ -63,7 +69,7 @@
 0053FE50    cmp eax, 0x02
 0053FE53    jl 0x0053FE99
 0053FE55    cmp eax, 0x03
-0053FE58    jnle 0x0053FE99
+0053FE58    jnle 0x0053FE99                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0053FE5A    mov edx, dword ptr ds:[0x00CCE9B0]
 0053FE60    mov ecx, esi
 0053FE62    call 0x00571B30

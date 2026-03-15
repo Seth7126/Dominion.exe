@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_5cc410
+// 起始地址: 0x5cc410
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CC410    push ebp
 005CC411    mov ebp, esp
-005CC413    mov eax, dword ptr ds:[0x00B809E0]
+005CC413    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CC418    push ebx
 005CC419    push esi
 005CC41A    imul esi, dword ptr ds:[0x00B809E4], 0x1C30
 005CC424    mov ebx, ecx
 005CC426    push edi
 005CC427    mov edi, edx
-005CC429    add esi, eax
+005CC429    add esi, eax                                    ; => [ Data: data_b809e4 ]
 005CC42B    cmp eax, esi
 005CC42D    jnb 0x005CC4A1
 005CC42F    nop
@@ -53,7 +59,7 @@
 005CC49B    ret
 005CC49C    cmp eax, 0xFFFFFFFF
 005CC49F    jnz 0x005CC457
-005CC4A1    xor eax, eax
+005CC4A1    xor eax, eax                                    ; => [ Call: nullptr ]
 005CC4A3    pop edi
 005CC4A4    pop esi
 005CC4A5    pop ebx

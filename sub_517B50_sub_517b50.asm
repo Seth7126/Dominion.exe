@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_517b50
+// 起始地址: 0x517b50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00517B50    dword 51EC8B55
-00517B54    mov ecx, dword ptr ds:[0x00CCA790]
+00517B54    mov ecx, dword ptr ds:[0x00CCA790]              ; => [ Data: data_cca790 ]
 00517B5A    push ebx
 00517B5B    push esi
 00517B5C    push edi
@@ -9,21 +15,21 @@
 00517B68    mov esi, dword ptr ds:[0x00CCA780]
 00517B6E    shl ecx, 0x0B
 00517B71    add esi, 0x540
-00517B77    add esi, ecx
+00517B77    add esi, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00517B79    jmp 0x00517B90
 00517B7B    mov eax, dword ptr ds:[0x00CCA780]
 00517B80    lea esi, ds:[ecx+0xA02]
-00517B86    lea esi, ds:[eax+esi*8]
+00517B86    lea esi, ds:[eax+esi*8]                         ; => [ Data: data_cca780 ]
 00517B89    nop dword ptr ds:[eax], eax
 00517B90    mov ecx, 0x848
 00517B95    call 0x00516F30
 00517B9A    lea edx, ss:[ebp-0x04]
 00517B9D    mov ecx, eax
-00517B9F    call 0x0050AF00
+00517B9F    call 0x0050AF00                                 ; => [ Call: sub_516f30 | Call: sub_50af00 ]
 00517BA4    mov edx, dword ptr ss:[ebp-0x04]
 00517BA7    mov ecx, 0xCC8DE0
 00517BAC    push eax
-00517BAD    call 0x0050AF60
+00517BAD    call 0x0050AF60                                 ; => [ Call: sub_50af60 | Data: data_cc8de0 ]
 00517BB2    add esp, 0x04
 00517BB5    mov dword ptr ds:[esi], eax
 00517BB7    sub eax, 0x866
@@ -34,14 +40,14 @@
 00517BC8    jmp 0x00517BD1
 00517BCA    xor ecx, ecx
 00517BCC    call 0x0050ED40
-00517BD1    mov dword ptr ds:[esi+0x04], eax
-00517BD4    mov edi, dword ptr ds:[0x00CCA790]
+00517BD1    mov dword ptr ds:[esi+0x04], eax                ; => [ Call: sub_50ed40 | Call: sub_50ecc0 ]
+00517BD4    mov edi, dword ptr ds:[0x00CCA790]              ; => [ Data: data_cca790 ]
 00517BDA    xor edx, edx
 00517BDC    cmp edi, 0x02
 00517BDF    jnz 0x00517C0C
 00517BE1    mov eax, dword ptr ds:[0x00CCA780]
 00517BE6    mov edi, dword ptr ds:[esi]
-00517BE8    add eax, 0x5014
+00517BE8    add eax, 0x5014                                 ; => [ Data: data_cca780 ]
 00517BED    nop dword ptr ds:[eax], eax
 00517BF0    cmp dword ptr ds:[eax-0x04], edi
 00517BF3    jnz 0x00517BFC
@@ -58,7 +64,7 @@
 00517C08    mov esp, ebp
 00517C0A    pop ebp
 00517C0B    ret
-00517C0C    mov ebx, dword ptr ds:[0x00CCA780]
+00517C0C    mov ebx, dword ptr ds:[0x00CCA780]              ; => [ Data: data_cca780 ]
 00517C12    test edi, edi
 00517C14    jle 0x00517C3E
 00517C16    lea ecx, ds:[ebx+0x5014]
@@ -76,7 +82,7 @@
 00517C3A    cmp edx, edi
 00517C3C    jl 0x00517C20
 00517C3E    mov ecx, dword ptr ds:[0x00CCA784]
-00517C44    shl ecx, 0x0B
+00517C44    shl ecx, 0x0B                                   ; => [ Data: data_cca784 ]
 00517C47    mov eax, dword ptr ds:[ecx+ebx*1+0x540]
 00517C4E    test eax, eax
 00517C50    jz 0x00517C66

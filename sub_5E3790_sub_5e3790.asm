@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e3790
+// 起始地址: 0x5e3790
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E3790    push ebp
 005E3791    mov ebp, esp
 005E3793    push ecx
@@ -13,11 +19,11 @@
 005E37AB    mov eax, dword ptr ds:[esi+0x178]
 005E37B1    test eax, eax
 005E37B3    jz 0x005E390B
-005E37B9    mov edx, dword ptr ds:[0x00B809E4]
+005E37B9    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
 005E37BF    movzx ecx, ax
 005E37C2    cmp ecx, edx
 005E37C4    jnb 0x005E390B
-005E37CA    mov edi, dword ptr ds:[0x00B809E0]
+005E37CA    mov edi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005E37D0    imul ebx, ecx, 0x1C30
 005E37D6    add ebx, edi
 005E37D8    cmp dword ptr ds:[ebx+0x1C28], eax
@@ -41,20 +47,20 @@
 005E3831    mov ecx, dword ptr ds:[eax+0x68]
 005E3834    test ecx, ecx
 005E3836    jnz 0x005E384C
-005E3838    push 0x85F514
+005E3838    push 0x85F514                                   ; => [ String: CalcCardFaceup ]
 005E383D    push 0x4AFC
-005E3842    mov ecx, 0x85F530
+005E3842    mov ecx, 0x85F530                               ; => [ String: sourcePile->pile.cardId ]
 005E3847    jmp 0x005E3C32
-005E384C    call 0x005DE8B0
+005E384C    call 0x005DE8B0                                 ; => [ Call: sub_5de8b0 ]
 005E3851    test eax, eax
 005E3853    jnz 0x005E3869
-005E3855    push 0x871958
+005E3855    push 0x871958                                   ; => [ String: LookupCard ]
 005E385A    push 0x3D96
-005E385F    mov ecx, 0x871964
+005E385F    mov ecx, 0x871964                               ; => [ Data: data_871964 ]
 005E3864    jmp 0x005E3C32
 005E3869    mov ecx, eax
-005E386B    call 0x005CBB20
-005E3870    mov edi, dword ptr ds:[0x00B604E0]
+005E386B    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
+005E3870    mov edi, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005E3876    xor ecx, ecx
 005E3878    cmp edi, 0xFFFFFFFF
 005E387B    mov edx, edi
@@ -93,11 +99,11 @@
 005E38E9    cmp dword ptr ds:[ebx+0xA0], edx
 005E38EF    jnz 0x005E3A5F
 005E38F5    jmp 0x005E3911
-005E38F7    push 0x85F514
+005E38F7    push 0x85F514                                   ; => [ String: CalcCardFaceup ]
 005E38FC    push 0x4AFB
-005E3901    mov ecx, 0x85F548
+005E3901    mov ecx, 0x85F548                               ; => [ String: sourcePile ]
 005E3906    jmp 0x005E3C32
-005E390B    mov edi, dword ptr ds:[0x00B604E0]
+005E390B    mov edi, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005E3911    cmp dword ptr ds:[esi+0x2C], 0x00
 005E3915    jnz 0x005E3C1A
 005E391B    mov ebx, dword ptr ds:[esi+0xA4]
@@ -106,8 +112,8 @@
 005E3927    jnbe 0x005E394C
 005E3929    cmp ebx, 0x48
 005E392C    jl 0x005E3939
-005E392E    call 0x00591930
-005E3933    mov edi, dword ptr ds:[0x00B604E0]
+005E392E    call 0x00591930                                 ; => [ Call: sub_591930 ]
+005E3933    mov edi, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005E3939    shl ebx, 0x04
 005E393C    cmp dword ptr ds:[ebx+0xB81FFC], 0x1301
 005E3946    jz 0x005E3C1A
@@ -140,7 +146,7 @@
 005E39D3    cmp edi, 0xFFFFFFFF
 005E39D6    jz 0x005E3C1A
 005E39DC    mov ecx, dword ptr ds:[0x00B80B08]
-005E39E2    call 0x005CDA30
+005E39E2    call 0x005CDA30                                 ; => [ Call: sub_5cda30 | Data: data_b80b08 ]
 005E39E7    cmp eax, 0x01
 005E39EA    jnz 0x005E3A09
 005E39EC    cmp dword ptr ds:[esi+0xA4], 0x3EB
@@ -160,13 +166,13 @@
 005E3A18    jnz 0x005E3A22
 005E3A1A    cmp dword ptr ds:[esi+0xA0], edi
 005E3A20    jz 0x005E3A5F
-005E3A22    xor ecx, ecx
-005E3A24    xor edx, edx
+005E3A22    xor ecx, ecx                                    ; => [ Call: nullptr ]
+005E3A24    xor edx, edx                                    ; => [ Call: nullptr ]
 005E3A26    cmp dword ptr ds:[esi+0x1A18], ecx
 005E3A2C    jnz 0x005E3A6E
 005E3A2E    cmp dword ptr ds:[esi+0x2C], ecx
 005E3A31    jz 0x005E3A42
-005E3A33    push 0x85F4FC
+005E3A33    push 0x85F4FC                                   ; => [ String: GetCardWhere ]
 005E3A38    push 0x4A88
 005E3A3D    jmp 0x005E3C2D
 005E3A42    cmp dword ptr ds:[esi+0x370], 0x01
@@ -192,18 +198,18 @@
 005E3A78    cmp eax, 0x3EB
 005E3A7D    jnz 0x005E3B90
 005E3A83    mov ecx, esi
-005E3A85    call 0x005CBB20
+005E3A85    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 005E3A8A    test eax, eax
 005E3A8C    jz 0x005E3AAC
 005E3A8E    push 0x1000
 005E3A93    push 0x00
 005E3A95    mov edx, eax
 005E3A97    mov ecx, 0xB80AD8
-005E3A9C    call 0x005754F0
+005E3A9C    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 005E3AA1    add esp, 0x08
 005E3AA4    test al, al
 005E3AA6    jnz 0x005E3C1A
-005E3AAC    mov ecx, dword ptr ds:[0x00B604E0]
+005E3AAC    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005E3AB2    xor eax, eax
 005E3AB4    cmp ecx, 0xFFFFFFFF
 005E3AB7    mov edx, 0x44E
@@ -213,8 +219,8 @@
 005E3AC1    call 0x005D1210
 005E3AC6    add esp, 0x08
 005E3AC9    test eax, eax
-005E3ACB    jnle 0x005E3C1A
-005E3AD1    mov ecx, dword ptr ds:[0x00B604E0]
+005E3ACB    jnle 0x005E3C1A                                 ; => [ Call: sub_5d1210 ]
+005E3AD1    mov ecx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005E3AD7    xor eax, eax
 005E3AD9    cmp ecx, 0xFFFFFFFF
 005E3ADC    mov edx, 0x44D
@@ -224,32 +230,32 @@
 005E3AE6    call 0x005D1210
 005E3AEB    add esp, 0x08
 005E3AEE    test eax, eax
-005E3AF0    jnz 0x005E3C1A
+005E3AF0    jnz 0x005E3C1A                                  ; => [ Call: sub_5d1210 ]
 005E3AF6    mov ecx, dword ptr ds:[esi+0x9C]
-005E3AFC    call 0x005CBA00
-005E3B01    mov ecx, dword ptr ds:[0x00CC8D5C]
+005E3AFC    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
+005E3B01    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005E3B07    mov edi, eax
 005E3B09    test ecx, ecx
 005E3B0B    jnz 0x005E3B23
-005E3B0D    push 0x77EB90
+005E3B0D    push 0x77EB90                                   ; => [ String: GetClient ]
 005E3B12    push 0x7B
-005E3B14    push 0x77EB50
-005E3B19    mov ecx, 0x77EB9C
+005E3B14    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+005E3B19    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 005E3B1E    jmp 0x005E3C37
 005E3B23    cmp dword ptr ds:[ecx+0x5068], 0x00
 005E3B2A    jnz 0x005E3B40
-005E3B2C    push 0x871028
+005E3B2C    push 0x871028                                   ; => [ String: GetActiveConfig ]
 005E3B31    push 0x33B6
-005E3B36    mov ecx, 0x871038
+005E3B36    mov ecx, 0x871038                               ; => [ String: c.activeGame.gameType != GAME_NONE ]
 005E3B3B    jmp 0x005E3C32
 005E3B40    mov ecx, 0xBDFB60
-005E3B45    call 0x005DA050
+005E3B45    call 0x005DA050                                 ; => [ Call: sub_5da050 ]
 005E3B4A    cmp eax, 0x02
 005E3B4D    jz 0x005E3C1A
 005E3B53    test eax, eax
 005E3B55    jz 0x005E3A5F
 005E3B5B    mov ecx, edi
-005E3B5D    call 0x005CDE50
+005E3B5D    call 0x005CDE50                                 ; => [ Call: sub_5cde50 ]
 005E3B62    mov ecx, dword ptr ds:[esi+ebx*4+0xE4]
 005E3B69    cmp eax, 0x04
 005E3B6C    jnz 0x005E3B7F
@@ -277,7 +283,7 @@
 005E3BA2    jz 0x005E3A5F
 005E3BA8    mov eax, dword ptr ds:[esi+0x1C28]
 005E3BAE    cmp eax, dword ptr ds:[0x00B7FCD0]
-005E3BB4    jz 0x005E3C1A
+005E3BB4    jz 0x005E3C1A                                   ; => [ Data: data_b7fcd0 ]
 005E3BB6    test edx, edx
 005E3BB8    jz 0x005E3BE2
 005E3BBA    cmp edx, 0x45F
@@ -321,15 +327,15 @@
 005E3C1F    mov esp, ebp
 005E3C21    pop ebp
 005E3C22    ret
-005E3C23    push 0x85F524
+005E3C23    push 0x85F524                                   ; => [ String: IsCardKnown ]
 005E3C28    push 0x4A96
-005E3C2D    mov ecx, 0x86F474
-005E3C32    push 0x86F1E8
+005E3C2D    mov ecx, 0x86F474                               ; => [ String: gfx.type == DOMGFX_CARD | String: gfx.type == DOMGFX_CARD ]
+005E3C32    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
 005E3C37    mov edx, 0x801800
-005E3C3C    call 0x0063B870
+005E3C3C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005E3C41    add esp, 0x0C
 005E3C44    call 0x0063BC30
 005E3C49    test al, al
-005E3C4B    jz 0x005E3C4E
+005E3C4B    jz 0x005E3C4E                                   ; => [ Call: sub_63bc30 ]
 005E3C4D    int3
-005E3C4E    call 0x0063BB00
+005E3C4E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

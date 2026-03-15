@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_576540
+// 起始地址: 0x576540
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00576540    push ebp
 00576541    mov ebp, esp
 00576543    sub esp, 0xCAC
-00576549    mov eax, dword ptr ds:[0x008C4040]
+00576549    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0057654E    xor eax, ebp
 00576550    mov dword ptr ss:[ebp-0x04], eax
 00576553    mov eax, dword ptr ss:[ebp+0x08]
@@ -33,9 +39,9 @@
 005765B8    jz 0x005765D4
 005765BA    cmp dword ptr ds:[edi-0x44], 0xFFFFFFFF
 005765BE    jnz 0x00576617
-005765C0    push 0x81FB60
+005765C0    push 0x81FB60                                   ; => [ String: CollectRegisteredAllOngoing ]
 005765C5    push 0xE13
-005765CA    mov ecx, 0x81FB40
+005765CA    mov ecx, 0x81FB40                               ; => [ String: ability.owner != PLAYER_NONE ]
 005765CF    jmp 0x00576870
 005765D4    test cl, 0x04
 005765D7    jz 0x005765EA
@@ -67,10 +73,10 @@
 00576641    lea ecx, ds:[esi+0x1746C]
 00576647    mov dword ptr ss:[ebp-0xC9C], ecx
 0057664D    jmp 0x00576676
-0057664F    push 0x81F478
+0057664F    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 00576654    push 0x14D
-00576659    push 0x81E978
-0057665E    mov ecx, 0x81F490
+00576659    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+0057665E    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 00576663    jmp 0x00576875
 00576670    mov eax, dword ptr ss:[ebp-0xC94]
 00576676    cmp ebx, 0xFFFFFFFF
@@ -84,7 +90,7 @@
 00576692    push edx
 00576693    mov edx, esi
 00576695    mov ecx, eax
-00576697    call 0x00576040
+00576697    call 0x00576040                                 ; => [ Call: sub_576040 ]
 0057669C    mov edx, dword ptr ss:[ebp-0xC98]
 005766A2    add esp, 0x0C
 005766A5    imul eax, edi, 0x64
@@ -101,7 +107,7 @@
 005766CC    push ebx
 005766CD    push edx
 005766CE    mov edx, esi
-005766D0    call 0x00576040
+005766D0    call 0x00576040                                 ; => [ Call: sub_576040 ]
 005766D5    mov edx, dword ptr ss:[ebp-0xC98]
 005766DB    add esp, 0x0C
 005766DE    imul eax, edi, 0x64
@@ -147,7 +153,7 @@
 00576780    movzx ebx, di
 00576783    cmp ebx, 0x320
 00576789    jb 0x00576790
-0057678B    call 0x00591930
+0057678B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576790    imul eax, ebx, 0x64
 00576793    mov ecx, dword ptr ds:[eax+esi*1+0x1A4C]
 0057679A    mov eax, dword ptr ss:[ebp-0xC98]
@@ -161,7 +167,7 @@
 005767C1    push ecx
 005767C2    mov edx, eax
 005767C4    mov ecx, esi
-005767C6    call 0x00574A80
+005767C6    call 0x00574A80                                 ; => [ Call: sub_574a80 ]
 005767CB    add esp, 0x08
 005767CE    test al, al
 005767D0    jz 0x00576824
@@ -176,12 +182,12 @@
 005767EC    push edi
 005767ED    push dword ptr ss:[ebp-0xC9C]
 005767F3    push dword ptr ss:[ebp-0xC98]
-005767F9    call 0x00576040
+005767F9    call 0x00576040                                 ; => [ Call: sub_576040 ]
 005767FE    movzx edi, di
 00576801    add esp, 0x0C
 00576804    cmp edi, 0x320
 0057680A    jb 0x00576811
-0057680C    call 0x00591930
+0057680C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00576811    imul eax, edi, 0x64
 00576814    inc ebx
 00576815    mov edi, dword ptr ds:[eax+esi*1+0x1AA4]
@@ -197,23 +203,23 @@
 00576843    pop esi
 00576844    xor ecx, ebp
 00576846    pop ebx
-00576847    call 0x0075927A
+00576847    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0057684C    mov esp, ebp
 0057684E    pop ebp
 0057684F    ret
-00576850    push 0x81F8D0
+00576850    push 0x81F8D0                                   ; => [ String: GetPileHead ]
 00576855    push 0x33E
-0057685A    mov ecx, 0x81F8F8
+0057685A    mov ecx, 0x81F8F8                               ; => [ String: who != PLAYER_NONE ]
 0057685F    jmp 0x00576870
-00576861    push 0x81FBBC
+00576861    push 0x81FBBC                                   ; => [ String: CollectWhileOwnedAllOngoing ]
 00576866    push 0xED0
-0057686B    mov ecx, 0x818878
-00576870    push 0x81F4B8
+0057686B    mov ecx, 0x818878                               ; => [ String: card != CARDID_NULL ]
+00576870    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00576875    mov edx, 0x801800
-0057687A    call 0x0063B870
+0057687A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0057687F    add esp, 0x0C
 00576882    call 0x0063BC30
 00576887    test al, al
-00576889    jz 0x0057688C
+00576889    jz 0x0057688C                                   ; => [ Call: sub_63bc30 ]
 0057688B    int3
-0057688C    call 0x0063BB00
+0057688C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

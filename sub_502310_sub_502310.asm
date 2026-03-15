@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_502310
+// 起始地址: 0x502310
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00502310    dword 83EC8B55
 00502314    in al, 0xF8
 00502316    mov eax, 0x190C
-0050231B    call 0x00761E50
-00502320    mov eax, dword ptr ds:[0x008C4040]
+0050231B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00502320    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00502325    xor eax, esp
 00502327    mov dword ptr ss:[esp+0x1908], eax
 0050232E    push ebx
@@ -10,7 +16,7 @@
 00502330    push edi
 00502331    lea edx, ss:[esp+0xC90]
 00502338    lea ecx, ss:[esp+0x10]
-0050233C    call 0x0056D830
+0050233C    call 0x0056D830                                 ; => [ Call: sub_56d830 ]
 00502341    xor edi, edi
 00502343    mov dword ptr ss:[esp+0x0C], eax
 00502347    xor esi, esi
@@ -18,7 +24,7 @@
 0050234B    jle 0x00502383
 0050234D    nop dword ptr ds:[eax], eax
 00502350    mov ebx, dword ptr ss:[esp+esi*4+0x10]
-00502354    call 0x00573400
+00502354    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00502359    test ebx, ebx
 0050235B    jnz 0x00502361
 0050235D    xor al, al
@@ -27,7 +33,7 @@
 00502364    mov edx, ebx
 00502366    push 0x00
 00502368    push 0x08
-0050236A    call 0x005754F0
+0050236A    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 0050236F    add esp, 0x08
 00502372    test al, al
 00502374    lea ecx, ds:[edi+0x01]
@@ -42,7 +48,7 @@
 0050238D    pop esi
 0050238E    pop ebx
 0050238F    xor ecx, esp
-00502391    call 0x0075927A
+00502391    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00502396    mov esp, ebp
 00502398    pop ebp
 00502399    ret

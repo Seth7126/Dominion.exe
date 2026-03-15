@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_667680
+// 起始地址: 0x667680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00667680    push ebp
 00667681    mov ebp, esp
 00667683    push ecx
@@ -7,10 +13,10 @@
 00667687    push 0x69
 00667689    push dword ptr ds:[0x01724A80]
 0066768F    mov edi, edx
-00667691    call 0x0064CC90
+00667691    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 00667696    mov edx, eax
 00667698    mov ecx, 0x8CAE70
-0066769D    call 0x006DD1E0
+0066769D    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_8cae70 | Data: data_1724a80 ]
 006676A2    add esp, 0x08
 006676A5    test eax, eax
 006676A7    jz 0x00667704
@@ -24,7 +30,7 @@
 006676B9    nop dword ptr ds:[eax], eax
 006676C0    mov ecx, dword ptr ds:[edi]
 006676C2    test edx, edx
-006676C4    mov eax, 0x801800
+006676C4    mov eax, 0x801800                               ; => [ Data: data_801800 ]
 006676C9    cmovnz eax, edx
 006676CC    nop dword ptr ds:[eax], eax
 006676D0    mov dl, byte ptr ds:[eax]

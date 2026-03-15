@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_574380
+// 起始地址: 0x574380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00574380    push ebp
 00574381    mov ebp, esp
 00574383    push ecx
@@ -25,7 +31,7 @@
 005743C0    sub esp, 0x08
 005743C3    mov edx, 0xD30
 005743C8    push ebx
-005743C9    call 0x005742F0
+005743C9    call 0x005742F0                                 ; => [ Call: sub_5742f0 ]
 005743CE    add esp, 0x0C
 005743D1    cmp byte ptr ds:[ebx+0x03], 0x00
 005743D5    jz 0x00574415
@@ -46,7 +52,7 @@
 00574405    mov edx, 0xD3D
 0057440A    mov ecx, edi
 0057440C    push ebx
-0057440D    call 0x005742F0
+0057440D    call 0x005742F0                                 ; => [ Call: sub_5742f0 ]
 00574412    add esp, 0x0C
 00574415    cmp byte ptr ds:[ebx], 0x00
 00574418    jz 0x00574451
@@ -65,7 +71,7 @@
 00574443    jnz 0x00574451
 00574445    mov edx, 0x500
 0057444A    mov ecx, edi
-0057444C    call 0x00574250
+0057444C    call 0x00574250                                 ; => [ Call: sub_574250 ]
 00574451    cmp byte ptr ds:[ebx+0x01], 0x00
 00574455    jz 0x0057448E
 00574457    mov ecx, 0x07
@@ -83,10 +89,10 @@
 00574480    jnz 0x0057448E
 00574482    mov edx, 0x923
 00574487    mov ecx, edi
-00574489    call 0x00574250
+00574489    call 0x00574250                                 ; => [ Call: sub_574250 ]
 0057448E    cmp dword ptr ds:[ebx+0x4C], 0x00
 00574492    jz 0x005745B4
-00574498    xor eax, eax
+00574498    xor eax, eax                                    ; => [ Call: nullptr ]
 0057449A    lea ecx, ds:[edi+0x1280]
 005744A0    mov edx, dword ptr ds:[ecx]
 005744A2    test edx, edx
@@ -155,7 +161,7 @@
 00574570    push dword ptr ss:[ebp-0x04]
 00574573    mov ecx, edi
 00574575    push 0xE01
-0057457A    call 0x00571FA0
+0057457A    call 0x00571FA0                                 ; => [ Call: sub_571fa0 ]
 0057457F    add esp, 0x24
 00574582    jmp 0x005745A2
 00574584    sub esp, 0x0C
@@ -165,7 +171,7 @@
 0057458E    push 0x00
 00574590    push 0x3F1
 00574595    push 0xE01
-0057459A    call 0x00571DA0
+0057459A    call 0x00571DA0                                 ; => [ Call: nullptr | Call: sub_571da0 ]
 0057459F    add esp, 0x1C
 005745A2    inc esi
 005745A3    mov eax, 0x3F1

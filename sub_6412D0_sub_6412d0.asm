@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6412d0
+// 起始地址: 0x6412d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006412D0    push ebp
 006412D1    mov ebp, esp
 006412D3    sub esp, 0x28
@@ -28,21 +34,21 @@
 0064131A    push eax
 0064131B    push eax
 0064131C    call 0x00641020
-00641321    mov dword ptr ds:[esi], eax
+00641321    mov dword ptr ds:[esi], eax                     ; => [ Call: sub_641020 ]
 00641323    mov ecx, ebx
 00641325    push 0x00
 00641327    lea eax, ss:[ebp-0x18]
 0064132A    push eax
 0064132B    push dword ptr ds:[esi+0x28]
 0064132E    call 0x006411D0
-00641333    mov dword ptr ds:[esi+0x30], eax
+00641333    mov dword ptr ds:[esi+0x30], eax                ; => [ Call: sub_6411d0 ]
 00641336    mov ecx, ebx
 00641338    push 0x00
 0064133A    lea eax, ss:[ebp-0x28]
 0064133D    push eax
 0064133E    push dword ptr ds:[esi+0x28]
 00641341    call 0x006411D0
-00641346    mov dword ptr ds:[esi+0x2C], eax
+00641346    mov dword ptr ds:[esi+0x2C], eax                ; => [ Call: sub_6411d0 ]
 00641349    mov edx, dword ptr ds:[esi]
 0064134B    mov ebx, dword ptr ss:[ebp+0x0C]
 0064134E    cmp edx, ebx
@@ -91,10 +97,10 @@
 006413B8    cmp eax, ebx
 006413BA    jz 0x0064142D
 006413BC    jnle 0x006413D4
-006413BE    push 0x872268
+006413BE    push 0x872268                                   ; => [ String: RegionAllocator::FindNewRegionRec ]
 006413C3    push 0x187
-006413C8    push 0x8720A4
-006413CD    mov ecx, 0x8721F8
+006413C8    push 0x8720A4                                   ; => [ String: C:\x\ax2017\Engine\TTFont.cpp ]
+006413CD    mov ecx, 0x8721F8                               ; => [ String: r.mip > mip ]
 006413D2    jmp 0x00641449
 006413D4    cmp dword ptr ds:[esi+0x20], 0x02
 006413D8    jnz 0x00641400
@@ -140,15 +146,15 @@
 00641432    mov esp, ebp
 00641434    pop ebp
 00641435    ret 0x0C
-00641438    push 0x8724E4
+00641438    push 0x8724E4                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayGet ]
 0064143D    push 0x6D
-0064143F    push 0x80193C
-00641444    mov ecx, 0x802748
+0064143F    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+00641444    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00641449    mov edx, 0x801800
-0064144E    call 0x0063B870
+0064144E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00641453    add esp, 0x0C
 00641456    call 0x0063BC30
 0064145B    test al, al
-0064145D    jz 0x00641460
+0064145D    jz 0x00641460                                   ; => [ Call: sub_63bc30 ]
 0064145F    int3
-00641460    call 0x0063BB00
+00641460    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

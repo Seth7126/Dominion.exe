@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51ddf0
+// 起始地址: 0x51ddf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051DDF0    push ebp
 0051DDF1    mov ebp, esp
 0051DDF3    sub esp, 0x38
@@ -26,13 +32,13 @@
 0051DE3A    push 0x00
 0051DE3C    push eax
 0051DE3D    mov dword ptr ss:[ebp-0x30], ecx
-0051DE40    call 0x00761FC4
+0051DE40    call 0x00761FC4                                 ; => [ Call: memset ]
 0051DE45    mov edx, dword ptr ss:[ebp-0x14]
 0051DE48    lea edi, ds:[ebx+0x04]
 0051DE4B    add esp, 0x0C
 0051DE4E    mov dword ptr ds:[ebx], esi
 0051DE50    push edi
-0051DE51    call 0x0051DB30
+0051DE51    call 0x0051DB30                                 ; => [ Call: sub_51db30 ]
 0051DE56    mov ebx, eax
 0051DE58    add esp, 0x04
 0051DE5B    cmp ebx, 0x01
@@ -46,7 +52,7 @@
 0051DE78    push dword ptr ss:[ebp+0x08]
 0051DE7B    mov dword ptr ss:[ebp-0x1C], 0x05
 0051DE82    mov dword ptr ss:[ebp-0x18], 0x06
-0051DE89    call 0x007621D0
+0051DE89    call 0x007621D0                                 ; => [ Call: __allmul ]
 0051DE8E    add eax, 0x8AF
 0051DE93    mov dword ptr ss:[ebp-0x34], eax
 0051DE96    mov eax, dword ptr ss:[ebp-0x08]
@@ -88,7 +94,7 @@
 0051DF05    push dword ptr ss:[ebp+0x08]
 0051DF08    mov dword ptr ss:[ebp-0x1C], 0x02
 0051DF0F    mov dword ptr ss:[ebp-0x18], 0x03
-0051DF16    call 0x007621D0
+0051DF16    call 0x007621D0                                 ; => [ Call: __allmul ]
 0051DF1B    add eax, 0x8AF
 0051DF20    mov dword ptr ss:[ebp-0x34], eax
 0051DF23    mov eax, dword ptr ss:[ebp-0x08]
@@ -118,7 +124,7 @@
 0051DF63    push eax
 0051DF64    push ebx
 0051DF65    lea ecx, ss:[ebp-0x34]
-0051DF68    call 0x0051CF60
+0051DF68    call 0x0051CF60                                 ; => [ Call: sub_51cf60 ]
 0051DF6D    mov ecx, dword ptr ss:[ebp-0x10]
 0051DF70    add esp, 0x10
 0051DF73    xor esi, esi
@@ -129,7 +135,7 @@
 0051DF7F    push eax
 0051DF80    push esi
 0051DF81    lea ecx, ss:[ebp-0x34]
-0051DF84    call 0x0051D200
+0051DF84    call 0x0051D200                                 ; => [ Call: sub_51d200 ]
 0051DF89    add esp, 0x0C
 0051DF8C    mov dword ptr ds:[edi], eax
 0051DF8E    test eax, eax
@@ -155,7 +161,7 @@
 0051DFBD    push dword ptr ss:[ebp+0x08]
 0051DFC0    mov dword ptr ss:[ebp-0x1C], 0x04
 0051DFC7    mov dword ptr ss:[ebp-0x18], 0x05
-0051DFCE    call 0x007621D0
+0051DFCE    call 0x007621D0                                 ; => [ Call: __allmul ]
 0051DFD3    add eax, 0x8AF
 0051DFD8    mov dword ptr ss:[ebp-0x08], 0x00
 0051DFDF    mov dword ptr ss:[ebp-0x34], eax
@@ -184,10 +190,10 @@
 0051E022    push 0x80CD80
 0051E027    mov edx, 0x801800
 0051E02C    mov ecx, 0x816A60
-0051E031    call 0x0063B870
+0051E031    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: MapParamsFromCampaign | String: retval.suggestedDoodads[i] > 0 ]
 0051E036    add esp, 0x0C
 0051E039    call 0x0063BC30
 0051E03E    test al, al
-0051E040    jz 0x0051E043
+0051E040    jz 0x0051E043                                   ; => [ Call: sub_63bc30 ]
 0051E042    int3
-0051E043    call 0x0063BB00
+0051E043    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_752e10
+// 起始地址: 0x752e10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00752E10    push ebx
 00752E11    mov ebx, ecx
 00752E13    push esi
 00752E14    push edi
 00752E15    mov ecx, dword ptr ds:[ebx]
-00752E17    call 0x00752F80
+00752E17    call 0x00752F80                                 ; => [ Call: sub_752f80 ]
 00752E1C    mov edx, dword ptr ds:[ebx+0x30]
 00752E1F    mov esi, eax
 00752E21    mov dword ptr ds:[esi+0x30], edx
@@ -38,7 +44,7 @@
 00752E76    inc ecx
 00752E77    test al, al
 00752E79    jnz 0x00752E74
-00752E7B    mov eax, dword ptr ds:[0x0147DED8]
+00752E7B    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00752E80    sub ecx, edx
 00752E82    inc ecx
 00752E83    test eax, eax
@@ -46,11 +52,11 @@
 00752E87    push 0x6A
 00752E89    push 0x8904F0
 00752E8E    push ecx
-00752E8F    call eax
+00752E8F    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\MeshAttachment.c ]
 00752E91    add esp, 0x0C
 00752E94    jmp 0x00752EA0
 00752E96    push ecx
-00752E97    call dword ptr ds:[0x00800B4C]
+00752E97    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00752E9D    add esp, 0x04
 00752EA0    mov ecx, eax
 00752EA2    mov dword ptr ds:[esi+0x64], ecx
@@ -106,7 +112,7 @@
 00752F5C    mov eax, dword ptr ds:[ecx+0x9C]
 00752F62    mov dword ptr ds:[esi+0x9C], eax
 00752F68    mov ecx, esi
-00752F6A    call 0x00753020
+00752F6A    call 0x00753020                                 ; => [ Call: sub_753020 ]
 00752F6F    pop edi
 00752F70    mov eax, esi
 00752F72    pop esi

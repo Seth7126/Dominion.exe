@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_511ed0
+// 起始地址: 0x511ed0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00511ED0    push ebp
 00511ED1    mov ebp, esp
 00511ED3    sub esp, 0x124
-00511ED9    mov eax, dword ptr ds:[0x008C4040]
+00511ED9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00511EDE    xor eax, ebp
 00511EE0    mov dword ptr ss:[ebp-0x04], eax
 00511EE3    mov edx, dword ptr ds:[0x00CCA784]
@@ -11,14 +17,14 @@
 00511EF2    add eax, 0x0C
 00511EF5    push esi
 00511EF6    mov byte ptr ss:[ebp-0x109], cl
-00511EFC    add eax, edx
+00511EFC    add eax, edx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00511EFE    push edi
 00511EFF    mov ecx, 0x1B58
 00511F04    mov dword ptr ss:[ebp-0x11C], eax
 00511F0A    call 0x00516F30
 00511F0F    lea edx, ss:[ebp-0x118]
 00511F15    mov ecx, eax
-00511F17    call 0x0050AF00
+00511F17    call 0x0050AF00                                 ; => [ Call: sub_516f30 | Call: sub_50af00 ]
 00511F1C    xor esi, esi
 00511F1E    mov dword ptr ss:[ebp-0x120], eax
 00511F24    xor edi, edi
@@ -30,7 +36,7 @@
 00511F40    add ebx, 0x04
 00511F43    mov ecx, dword ptr ds:[ebx]
 00511F45    xor edx, edx
-00511F47    call 0x00511D80
+00511F47    call 0x00511D80                                 ; => [ Call: sub_511d80 ]
 00511F4C    test al, al
 00511F4E    jz 0x00511FAB
 00511F50    cmp byte ptr ss:[ebp-0x109], 0x00
@@ -44,7 +50,7 @@
 00511F6B    jz 0x00511F84
 00511F6D    mov ecx, dword ptr ds:[ebx]
 00511F6F    inc esi
-00511F70    call 0x00511D80
+00511F70    call 0x00511D80                                 ; => [ Call: sub_511d80 ]
 00511F75    test al, al
 00511F77    lea ecx, ds:[edi+0x01]
 00511F7A    cmovz ecx, edi
@@ -77,24 +83,24 @@
 00511FD2    mov eax, dword ptr ss:[ebp+eax*4-0x108]
 00511FD9    xor ecx, ebp
 00511FDB    pop ebx
-00511FDC    mov eax, dword ptr ds:[eax+0x04]
-00511FDF    call 0x0075927A
+00511FDC    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_63ed10 | Data: data_cc8de0 ]
+00511FDF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00511FE4    mov esp, ebp
 00511FE6    pop ebp
 00511FE7    ret
-00511FE8    push 0x813F28
+00511FE8    push 0x813F28                                   ; => [ String: RandomCardStamp ]
 00511FED    push 0x13C0
-00511FF2    mov ecx, 0x813F38
+00511FF2    mov ecx, 0x813F38                               ; => [ String: numFilteredEntries < 64 ]
 00511FF7    jmp 0x00512008
-00511FF9    push 0x813F28
+00511FF9    push 0x813F28                                   ; => [ String: RandomCardStamp ]
 00511FFE    push 0x13C4
-00512003    mov ecx, 0x813F50
+00512003    mov ecx, 0x813F50                               ; => [ String: numFilteredEntries > 0 ]
 00512008    push 0x80CD80
 0051200D    mov edx, 0x801800
-00512012    call 0x0063B870
+00512012    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RandomCardStamp | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 00512017    add esp, 0x0C
 0051201A    call 0x0063BC30
 0051201F    test al, al
-00512021    jz 0x00512024
+00512021    jz 0x00512024                                   ; => [ Call: sub_63bc30 ]
 00512023    int3
-00512024    call 0x0063BB00
+00512024    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

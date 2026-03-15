@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_4fe9d0
+// 起始地址: 0x4fe9d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FE9D0    push ebp
 004FE9D1    mov ebp, esp
 004FE9D3    and esp, 0xFFFFFFF0
 004FE9D6    mov eax, 0x1988
-004FE9DB    call 0x00761E50
-004FE9E0    mov eax, dword ptr ds:[0x008C4040]
+004FE9DB    call 0x00761E50                                 ; => [ Call: __chkstk ]
+004FE9E0    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004FE9E5    xor eax, esp
 004FE9E7    mov dword ptr ss:[esp+0x1984], eax
 004FE9EE    push esi
 004FE9EF    push edi
-004FE9F0    call 0x00573400
+004FE9F0    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FE9F5    xor edi, edi
 004FE9F7    mov dword ptr ss:[esp+0x1C], eax
 004FE9FB    mov ecx, dword ptr ds:[eax+0x04]
@@ -47,7 +53,7 @@
 004FEA62    xor ecx, ecx
 004FEA64    call 0x004FE8D0
 004FEA69    test al, al
-004FEA6B    jz 0x004FEA7D
+004FEA6B    jz 0x004FEA7D                                   ; => [ Call: sub_4fe8d0 ]
 004FEA6D    mov ecx, dword ptr ss:[esp+0x10]
 004FEA71    mov dword ptr ss:[esp+ecx*4+0x88], esi
 004FEA78    inc ecx
@@ -57,9 +63,9 @@
 004FEA82    mov dword ptr ss:[esp+0x14], eax
 004FEA86    cmp eax, edi
 004FEA88    jl 0x004FEA30
-004FEA8A    call 0x0056B800
+004FEA8A    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 004FEA8F    mov esi, eax
-004FEA91    call 0x00573400
+004FEA91    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FEA96    push 0x00
 004FEA98    push dword ptr ds:[eax+0x2C]
 004FEA9B    push dword ptr ds:[eax+0x28]
@@ -68,7 +74,7 @@
 004FEAA3    push ecx
 004FEAA4    push 0xED
 004FEAA9    push eax
-004FEAAA    call 0x00591880
+004FEAAA    call 0x00591880                                 ; => [ Call: sub_591880 ]
 004FEAAF    add esp, 0x1C
 004FEAB2    movups xmm0, xmmword ptr ds:[eax]
 004FEAB5    movups xmmword ptr ss:[esp+0x20], xmm0
@@ -76,7 +82,7 @@
 004FEABE    movups xmmword ptr ss:[esp+0x30], xmm0
 004FEAC3    movups xmm0, xmmword ptr ds:[eax+0x20]
 004FEAC7    movups xmmword ptr ss:[esp+0x40], xmm0
-004FEACC    call 0x00573400
+004FEACC    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FEAD1    mov ecx, dword ptr ds:[eax]
 004FEAD3    mov esi, dword ptr ds:[eax+0x04]
 004FEAD6    mov dword ptr ss:[esp+0x14], ecx
@@ -105,7 +111,7 @@
 004FEB18    push 0x08
 004FEB1A    lea edx, ss:[esp+0x3C]
 004FEB1E    mov ecx, esi
-004FEB20    call 0x00623B70
+004FEB20    call 0x00623B70                                 ; => [ Call: nullptr | Call: sub_623b70 ]
 004FEB25    add esp, 0x28
 004FEB28    test eax, eax
 004FEB2A    jz 0x004FEBC5
@@ -128,11 +134,11 @@
 004FEB64    mov edx, dword ptr ds:[esi+0x0C]
 004FEB67    push ecx
 004FEB68    mov ecx, dword ptr ds:[esi+0x04]
-004FEB6B    call 0x005937C0
+004FEB6B    call 0x005937C0                                 ; => [ Call: sub_5937c0 ]
 004FEB70    add esp, 0x04
-004FEB73    call 0x00573400
+004FEB73    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004FEB78    mov esi, eax
-004FEB7A    call 0x0056B800
+004FEB7A    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 004FEB7F    mov ecx, dword ptr ds:[esi+0x04]
 004FEB82    mov ecx, dword ptr ds:[ecx+0x1504]
 004FEB88    cmp ecx, 0x03
@@ -157,13 +163,13 @@
 004FEBB2    cmp ecx, 0x02
 004FEBB5    mov edx, 0x24
 004FEBBA    setz cl
-004FEBBD    call 0x0061B1B0
+004FEBBD    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 004FEBC2    add esp, 0x2C
 004FEBC5    mov ecx, dword ptr ss:[esp+0x198C]
 004FEBCC    pop edi
 004FEBCD    pop esi
 004FEBCE    xor ecx, esp
-004FEBD0    call 0x0075927A
+004FEBD0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004FEBD5    mov esp, ebp
 004FEBD7    pop ebp
 004FEBD8    ret

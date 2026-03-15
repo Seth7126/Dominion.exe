@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_702b00
+// 起始地址: 0x702b00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00702B00    push ebp
 00702B01    mov ebp, esp
 00702B03    push ecx
@@ -69,7 +75,7 @@
 00702C04    cmp ecx, edx
 00702C06    jl 0x00702BF7
 00702C08    push 0x88CB40
-00702C0D    call 0x0063B5F0
+00702C0D    call 0x0063B5F0                                 ; => [ String: opengl material param issue: mip filter is ignored when min filter is missing | Call: sub_63b5f0 ]
 00702C12    add esp, 0x04
 00702C15    xor al, al
 00702C17    pop edi
@@ -98,7 +104,7 @@
 00702C4F    mov ecx, 0x8CE7BC
 00702C54    push eax
 00702C55    mov edx, ebx
-00702C57    call 0x006DCF50
+00702C57    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702C5C    mov ecx, dword ptr ds:[edi]
 00702C5E    add esp, 0x04
 00702C61    mov esi, eax
@@ -136,8 +142,8 @@
 00702CC5    push ecx
 00702CC6    mov edx, ebx
 00702CC8    mov ecx, 0x8CE7BC
-00702CCD    call 0x006DCF50
-00702CD2    mov ecx, dword ptr ds:[0x00CF65B8]
+00702CCD    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
+00702CD2    mov ecx, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 00702CD8    add esp, 0x04
 00702CDB    mov dword ptr ds:[edi+0x08], 0x00
 00702CE2    cmp byte ptr ds:[ecx+0x21], 0x00
@@ -145,7 +151,7 @@
 00702CE8    test eax, eax
 00702CEA    jz 0x00702CFF
 00702CEC    push 0x88CBA4
-00702CF1    call 0x0063B5F0
+00702CF1    call 0x0063B5F0                                 ; => [ String: Material Mipmap ignored because it's not enabled in the app | Call: sub_63b5f0 ]
 00702CF6    add esp, 0x04
 00702CF9    jmp 0x00702CFF
 00702CFB    test eax, eax
@@ -208,7 +214,7 @@
 00702DB2    push eax
 00702DB3    mov edx, ebx
 00702DB5    mov ecx, 0x8CE7BC
-00702DBA    call 0x006DCF50
+00702DBA    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702DBF    add esp, 0x04
 00702DC2    cmp eax, 0x01
 00702DC5    jnz 0x00702DD0
@@ -222,19 +228,19 @@
 00702DE5    push 0x4D
 00702DE7    mov edx, ebx
 00702DE9    mov ecx, 0x8CE7BC
-00702DEE    call 0x006DCFF0
+00702DEE    call 0x006DCFF0                                 ; => [ Call: sub_6dcff0 | Data: data_8ce7bc ]
 00702DF3    add esp, 0x04
 00702DF6    test al, al
 00702DF8    jnz 0x0070326A
 00702DFE    push 0x03
 00702E00    mov edx, ebx
 00702E02    mov ecx, 0x8CE7BC
-00702E07    call 0x006DCF50
+00702E07    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702E0C    push 0x04
 00702E0E    mov edx, ebx
 00702E10    mov ecx, 0x8CE7BC
 00702E15    mov edi, eax
-00702E17    call 0x006DCF50
+00702E17    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702E1C    mov esi, eax
 00702E1E    add esp, 0x08
 00702E21    mov eax, dword ptr ss:[ebp+0x10]
@@ -243,11 +249,11 @@
 00702E29    mov dword ptr ss:[ebp+0x08], eax
 00702E2C    call 0x007027A0
 00702E31    mov ecx, dword ptr ss:[ebp+0x08]
-00702E34    mov dword ptr ds:[ecx], eax
+00702E34    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_7027a0 ]
 00702E36    mov ecx, esi
 00702E38    call 0x007027A0
 00702E3D    mov edi, dword ptr ss:[ebp+0x10]
-00702E40    mov dword ptr ds:[edi+0x08], eax
+00702E40    mov dword ptr ds:[edi+0x08], eax                ; => [ Call: sub_7027a0 ]
 00702E43    lea esi, ds:[edi+0x04]
 00702E46    jmp 0x00702E4E
 00702E48    lea esi, ds:[edi+0x04]
@@ -267,7 +273,7 @@
 00702E6D    cmp ecx, edx
 00702E6F    jl 0x00702E60
 00702E71    push 0x88CCD8
-00702E76    call 0x0063B5F0
+00702E76    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: opengl material param issue: dest blend is ignored when src blend is missing ]
 00702E7B    add esp, 0x04
 00702E7E    xor al, al
 00702E80    pop edi
@@ -281,47 +287,47 @@
 00702E92    push 0x4D
 00702E94    mov edx, ebx
 00702E96    mov ecx, 0x8CE7BC
-00702E9B    call 0x006DCFF0
+00702E9B    call 0x006DCFF0                                 ; => [ Call: sub_6dcff0 | Data: data_8ce7bc ]
 00702EA0    add esp, 0x04
 00702EA3    test al, al
 00702EA5    jz 0x0070326A
 00702EAB    push 0x03
 00702EAD    mov edx, ebx
 00702EAF    mov ecx, 0x8CE7BC
-00702EB4    call 0x006DCF50
+00702EB4    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702EB9    push 0x04
 00702EBB    mov edx, ebx
 00702EBD    mov dword ptr ss:[ebp-0x04], eax
 00702EC0    mov ecx, 0x8CE7BC
-00702EC5    call 0x006DCF50
+00702EC5    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702ECA    mov edx, dword ptr ss:[ebp+0x0C]
 00702ECD    mov ecx, 0x8CE7BC
 00702ED2    push 0x4E
 00702ED4    mov ebx, eax
-00702ED6    call 0x006DCF50
+00702ED6    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702EDB    mov edx, dword ptr ss:[ebp+0x0C]
 00702EDE    mov ecx, 0x8CE7BC
 00702EE3    push 0x4F
 00702EE5    mov edi, eax
-00702EE7    call 0x006DCF50
+00702EE7    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702EEC    mov ecx, dword ptr ss:[ebp-0x04]
 00702EEF    add esp, 0x10
 00702EF2    mov esi, eax
 00702EF4    call 0x007027A0
 00702EF9    mov ecx, dword ptr ss:[ebp+0x08]
-00702EFC    mov dword ptr ds:[ecx], eax
+00702EFC    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_7027a0 ]
 00702EFE    mov ecx, ebx
 00702F00    call 0x007027A0
 00702F05    mov ecx, dword ptr ss:[ebp+0x10]
-00702F08    mov dword ptr ds:[ecx+0x08], eax
+00702F08    mov dword ptr ds:[ecx+0x08], eax                ; => [ Call: sub_7027a0 ]
 00702F0B    mov ecx, edi
 00702F0D    call 0x007027A0
 00702F12    mov edi, dword ptr ss:[ebp+0x10]
 00702F15    mov ecx, esi
-00702F17    mov dword ptr ds:[edi+0x0C], eax
+00702F17    mov dword ptr ds:[edi+0x0C], eax                ; => [ Call: sub_7027a0 ]
 00702F1A    call 0x007027A0
 00702F1F    lea esi, ds:[edi+0x04]
-00702F22    mov dword ptr ds:[edi+0x10], eax
+00702F22    mov dword ptr ds:[edi+0x10], eax                ; => [ Call: sub_7027a0 ]
 00702F25    mov dword ptr ss:[ebp+0x08], esi
 00702F28    mov eax, dword ptr ds:[edi]
 00702F2A    cmp eax, 0x4F
@@ -340,7 +346,7 @@
 00702F4D    cmp ecx, edx
 00702F4F    jl 0x00702F40
 00702F51    push 0x88CC78
-00702F56    call 0x0063B5F0
+00702F56    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: opengl material param issue: dest blend alpha is ignored when src blend alpha is missing ]
 00702F5B    add esp, 0x04
 00702F5E    xor al, al
 00702F60    pop edi
@@ -361,7 +367,7 @@
 00702F88    mov ecx, eax
 00702F8A    call 0x007028E0
 00702F8F    pop edi
-00702F90    mov dword ptr ds:[esi], eax
+00702F90    mov dword ptr ds:[esi], eax                     ; => [ Call: sub_6dcf50 | Data: data_8ce7bc | Call: sub_7028e0 ]
 00702F92    mov al, 0x01
 00702F94    pop esi
 00702F95    pop ebx
@@ -391,27 +397,27 @@
 00702FD2    lea esi, ds:[edi+0x04]
 00702FD5    mov ecx, eax
 00702FD7    mov dword ptr ss:[ebp+0x08], esi
-00702FDA    call 0x00702870
+00702FDA    call 0x00702870                                 ; => [ Call: sub_6dcf50 | Call: sub_702870 | Data: data_8ce7bc ]
 00702FDF    mov dword ptr ds:[esi], eax
 00702FE1    cmp dword ptr ds:[edi], 0x50
 00702FE4    jnz 0x00703025
 00702FE6    push 0x17
 00702FE8    mov edx, ebx
 00702FEA    mov ecx, 0x8CE7BC
-00702FEF    call 0x006DCF50
+00702FEF    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00702FF4    push 0x50
 00702FF6    mov edx, ebx
 00702FF8    mov ecx, 0x8CE7BC
 00702FFD    mov edi, eax
-00702FFF    call 0x006DCF50
+00702FFF    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00703004    add esp, 0x08
 00703007    mov ecx, edi
 00703009    mov esi, eax
 0070300B    call 0x00702870
 00703010    mov ecx, dword ptr ss:[ebp+0x08]
-00703013    mov dword ptr ds:[ecx], eax
+00703013    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_702870 ]
 00703015    mov ecx, esi
-00703017    call 0x00702870
+00703017    call 0x00702870                                 ; => [ Call: sub_702870 ]
 0070301C    mov edi, dword ptr ss:[ebp+0x10]
 0070301F    mov dword ptr ds:[edi+0x08], eax
 00703022    lea esi, ds:[edi+0x04]
@@ -421,17 +427,17 @@
 0070302C    push ecx
 0070302D    mov edx, ebx
 0070302F    mov ecx, 0x8CE7BC
-00703034    call 0x006DCF50
+00703034    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00703039    push 0x07
 0070303B    mov edx, ebx
 0070303D    mov ecx, 0x8CE7BC
 00703042    mov esi, eax
-00703044    call 0x006DCF50
+00703044    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00703049    add esp, 0x08
 0070304C    mov ecx, esi
 0070304E    mov ebx, eax
 00703050    call 0x007028E0
-00703055    mov dword ptr ds:[edi+0x04], eax
+00703055    mov dword ptr ds:[edi+0x04], eax                ; => [ Call: sub_7028e0 ]
 00703058    movzx eax, bl
 0070305B    movd xmm0, eax
 0070305F    cvtdq2ps xmm0, xmm0
@@ -460,7 +466,7 @@
 0070309D    cmp ecx, edx
 0070309F    jl 0x00703090
 007030A1    push 0x88CD80
-007030A6    call 0x0063B5F0
+007030A6    call 0x0063B5F0                                 ; => [ String: opengl material param issue: alpha ref is ignored when alpha func is missing | Call: sub_63b5f0 ]
 007030AB    add esp, 0x04
 007030AE    xor al, al
 007030B0    pop edi
@@ -497,7 +503,7 @@
 00703103    cmp ecx, edx
 00703105    jl 0x007030F6
 00703107    push 0x88CD28
-0070310C    call 0x0063B5F0
+0070310C    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: opengl material param issue: stencil ref is ignored when stencil func is missing ]
 00703111    add esp, 0x04
 00703114    xor al, al
 00703116    pop edi
@@ -529,7 +535,7 @@
 00703153    cmp ecx, edx
 00703155    jl 0x00703146
 00703157    push 0x88CE10
-0070315C    call 0x0063B5F0
+0070315C    call 0x0063B5F0                                 ; => [ String: opengl material param issue: stencil mask is ignored when stencil func is missing | Call: sub_63b5f0 ]
 00703161    add esp, 0x04
 00703164    xor al, al
 00703166    pop edi
@@ -561,7 +567,7 @@
 007031A8    add esp, 0x04
 007031AB    movss dword ptr ss:[ebp+0x0C], xmm0
 007031B0    mov eax, dword ptr ss:[ebp+0x0C]
-007031B3    mov dword ptr ds:[edi+0x04], eax
+007031B3    mov dword ptr ds:[edi+0x04], eax                ; => [ Call: sub_6dd090 | Data: data_8ce7bc ]
 007031B6    mov al, 0x01
 007031B8    pop edi
 007031B9    pop esi
@@ -572,12 +578,12 @@
 007031C1    test ecx, ecx
 007031C3    js 0x007031F0
 007031C5    cmp ecx, dword ptr ds:[0x008CE7CC]
-007031CB    jnl 0x007031F0
+007031CB    jnl 0x007031F0                                  ; => [ Data: data_8ce7cc ]
 007031CD    mov eax, dword ptr ds:[0x008CE7C8]
 007031D2    mov eax, dword ptr ds:[eax+ecx*4]
-007031D5    push dword ptr ds:[eax+0x04]
+007031D5    push dword ptr ds:[eax+0x04]                    ; => [ Data: data_8ce7c8 ]
 007031D8    push 0x88CDD0
-007031DD    call 0x0063B5F0
+007031DD    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: opengl material param issue: we don't support %s in opengl ]
 007031E2    add esp, 0x08
 007031E5    xor al, al
 007031E7    pop edi
@@ -586,31 +592,31 @@
 007031EA    mov esp, ebp
 007031EC    pop ebp
 007031ED    ret 0x0C
-007031F0    push 0x88131C
+007031F0    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 007031F5    push 0x8B
-007031FA    push 0x8812F8
-007031FF    mov ecx, 0x881344
+007031FA    push 0x8812F8                                   ; => [ String: C:\x\ax2017\Engine\AttribMap.cpp ]
+007031FF    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 00703204    jmp 0x00703308
 00703209    push ecx
 0070320A    mov edx, ebx
 0070320C    mov ecx, 0x8CE7BC
-00703211    call 0x006DCF50
+00703211    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00703216    mov edx, dword ptr ss:[ebp+0x0C]
 00703219    mov ecx, 0x8CE7BC
 0070321E    push 0x0F
 00703220    mov ebx, eax
-00703222    call 0x006DCF50
+00703222    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00703227    mov edx, dword ptr ss:[ebp+0x0C]
 0070322A    mov ecx, 0x8CE7BC
 0070322F    push 0x10
 00703231    mov edi, eax
-00703233    call 0x006DCF50
+00703233    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 00703238    add esp, 0x0C
 0070323B    mov ecx, ebx
 0070323D    mov esi, eax
 0070323F    call 0x007028E0
 00703244    mov ecx, dword ptr ss:[ebp+0x08]
-00703247    mov dword ptr ds:[ecx], eax
+00703247    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_7028e0 ]
 00703249    mov al, 0x01
 0070324B    mov ecx, dword ptr ss:[ebp+0x10]
 0070324E    mov dword ptr ds:[ecx+0x08], edi
@@ -622,7 +628,7 @@
 00703259    pop ebp
 0070325A    ret 0x0C
 0070325D    push 0x88CC48
-00703262    call 0x0063B5F0
+00703262    call 0x0063B5F0                                 ; => [ String: opengl material param issue: invalid min filter | Call: sub_63b5f0 | String: opengl material param issue: invalid min filter | Call: sub_63b5f0 | String: opengl material param issue: invalid min filter | Call: sub_63b5f0 ]
 00703267    add esp, 0x04
 0070326A    pop edi
 0070326B    pop esi
@@ -632,7 +638,7 @@
 00703271    pop ebp
 00703272    ret 0x0C
 00703275    push 0x88CC18
-0070327A    call 0x0063B5F0
+0070327A    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: opengl material param issue: invalid mip filter ]
 0070327F    add esp, 0x04
 00703282    xor al, al
 00703284    pop edi
@@ -641,13 +647,13 @@
 00703287    mov esp, ebp
 00703289    pop ebp
 0070328A    ret 0x0C
-0070328D    push 0x88CBE0
+0070328D    push 0x88CBE0                                   ; => [ String: OpenGLInterface::RenderStateSpecialValueFromConstant ]
 00703292    push 0xE51
 00703297    jmp 0x007032FE
 00703299    push dword ptr ss:[ebp+0x08]
 0070329C    mov edx, dword ptr ss:[ebp+0x0C]
 0070329F    mov ecx, 0x8CE7BC
-007032A4    call 0x006DCF50
+007032A4    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8ce7bc ]
 007032A9    add esp, 0x04
 007032AC    sub eax, 0x01
 007032AF    jz 0x007032E1
@@ -682,15 +688,15 @@
 007032EE    mov esp, ebp
 007032F0    pop ebp
 007032F1    ret 0x0C
-007032F4    push 0x88CADC
+007032F4    push 0x88CADC                                   ; => [ String: GLWrapModeFromDx ]
 007032F9    push 0xD72
-007032FE    mov ecx, 0x801AA4
-00703303    push 0x88C504
+007032FE    mov ecx, 0x801AA4                               ; => [ String: Halt ]
+00703303    push 0x88C504                                   ; => [ String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 00703308    mov edx, 0x801800
-0070330D    call 0x0063B870
+0070330D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00703312    add esp, 0x0C
 00703315    call 0x0063BC30
 0070331A    test al, al
-0070331C    jz 0x0070331F
+0070331C    jz 0x0070331F                                   ; => [ Call: sub_63bc30 ]
 0070331E    int3
-0070331F    call 0x0063BB00
+0070331F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

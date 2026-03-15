@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_597240
+// 起始地址: 0x597240
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00597240    push ebp
 00597241    mov ebp, esp
 00597243    sub esp, 0x14
@@ -26,7 +32,7 @@
 0059727C    call 0x00593B90
 00597281    mov edx, dword ptr ss:[ebp-0x04]
 00597284    test al, al
-00597286    jz 0x00597292
+00597286    jz 0x00597292                                   ; => [ Call: sub_593b90 ]
 00597288    mov ecx, dword ptr ds:[edx+ebx*1]
 0059728B    mov eax, dword ptr ds:[ebx]
 0059728D    mov dword ptr ds:[edx+ebx*1], eax
@@ -37,7 +43,7 @@
 0059729B    push dword ptr ds:[ebx+eax*8]
 0059729E    call 0x00593B90
 005972A3    test al, al
-005972A5    jz 0x005972E4
+005972A5    jz 0x005972E4                                   ; => [ Call: sub_593b90 ]
 005972A7    mov edx, dword ptr ss:[ebp-0x08]
 005972AA    mov ecx, dword ptr ds:[ebx+edx*8]
 005972AD    lea eax, ds:[edx*4]
@@ -51,7 +57,7 @@
 005972CA    call 0x00593B90
 005972CF    mov edx, dword ptr ss:[ebp-0x04]
 005972D2    test al, al
-005972D4    jz 0x005972E7
+005972D4    jz 0x005972E7                                   ; => [ Call: sub_593b90 ]
 005972D6    mov eax, edx
 005972D8    mov ecx, dword ptr ds:[eax+ebx*1]
 005972DB    mov eax, dword ptr ds:[ebx]
@@ -68,7 +74,7 @@
 005972F6    push dword ptr ds:[edi]
 005972F8    call 0x00593B90
 005972FD    test al, al
-005972FF    jz 0x0059730C
+005972FF    jz 0x0059730C                                   ; => [ Call: sub_593b90 ]
 00597301    mov edx, dword ptr ss:[ebp-0x10]
 00597304    mov ecx, dword ptr ds:[edi]
 00597306    mov eax, dword ptr ds:[edx]
@@ -80,7 +86,7 @@
 00597314    push dword ptr ds:[eax+edi*1]
 00597317    call 0x00593B90
 0059731C    test al, al
-0059731E    jz 0x0059734A
+0059731E    jz 0x0059734A                                   ; => [ Call: sub_593b90 ]
 00597320    mov edx, dword ptr ss:[ebp-0x04]
 00597323    mov eax, dword ptr ds:[edi]
 00597325    mov ecx, dword ptr ds:[edx+edi*1]
@@ -92,7 +98,7 @@
 00597333    lea ecx, ss:[ebp-0x0C]
 00597336    call 0x00593B90
 0059733B    test al, al
-0059733D    jz 0x0059734A
+0059733D    jz 0x0059734A                                   ; => [ Call: sub_593b90 ]
 0059733F    mov edx, dword ptr ss:[ebp-0x10]
 00597342    mov ecx, dword ptr ds:[edi]
 00597344    mov eax, dword ptr ds:[edx]
@@ -112,7 +118,7 @@
 00597368    push dword ptr ds:[edx]
 0059736A    push dword ptr ds:[ecx]
 0059736C    lea ecx, ss:[ebp-0x10]
-0059736F    call 0x00593B90
+0059736F    call 0x00593B90                                 ; => [ Call: sub_593b90 ]
 00597374    mov edx, dword ptr ss:[ebp-0x0C]
 00597377    test al, al
 00597379    jz 0x00597389
@@ -128,7 +134,7 @@
 00597391    push dword ptr ds:[eax]
 00597393    call 0x00593B90
 00597398    test al, al
-0059739A    jz 0x005973D3
+0059739A    jz 0x005973D3                                   ; => [ Call: sub_593b90 ]
 0059739C    mov eax, dword ptr ss:[ebp+0x08]
 0059739F    mov edx, dword ptr ss:[ebp-0x0C]
 005973A2    mov esi, dword ptr ss:[ebp+0x08]
@@ -143,7 +149,7 @@
 005973B6    call 0x00593B90
 005973BB    mov esi, dword ptr ss:[ebp+0x0C]
 005973BE    test al, al
-005973C0    jz 0x005973D3
+005973C0    jz 0x005973D3                                   ; => [ Call: sub_593b90 ]
 005973C2    mov edx, dword ptr ss:[ebp-0x0C]
 005973C5    mov eax, dword ptr ss:[ebp-0x04]
 005973C8    mov ecx, dword ptr ds:[edx]
@@ -159,7 +165,7 @@
 005973E2    push dword ptr ds:[edi]
 005973E4    call 0x00593B90
 005973E9    test al, al
-005973EB    jz 0x005973F5
+005973EB    jz 0x005973F5                                   ; => [ Call: sub_593b90 ]
 005973ED    mov ecx, dword ptr ds:[edi]
 005973EF    mov eax, dword ptr ds:[esi]
 005973F1    mov dword ptr ds:[edi], eax
@@ -168,7 +174,7 @@
 005973F8    lea ecx, ss:[ebp+0x08]
 005973FB    push dword ptr ds:[edi]
 005973FD    push dword ptr ds:[ebx]
-005973FF    call 0x00593B90
+005973FF    call 0x00593B90                                 ; => [ Call: sub_593b90 ]
 00597404    test al, al
 00597406    jz 0x00597479
 00597408    mov ecx, dword ptr ds:[ebx]
@@ -178,7 +184,7 @@
 00597410    push dword ptr ds:[esi]
 00597412    push ecx
 00597413    lea ecx, ss:[ebp+0x08]
-00597416    call 0x00593B90
+00597416    call 0x00593B90                                 ; => [ Call: sub_593b90 ]
 0059741B    test al, al
 0059741D    jz 0x00597479
 0059741F    mov ecx, dword ptr ds:[edi]
@@ -197,7 +203,7 @@
 00597436    mov dword ptr ss:[ebp+0x08], eax
 00597439    call 0x00593B90
 0059743E    test al, al
-00597440    jz 0x0059744A
+00597440    jz 0x0059744A                                   ; => [ Call: sub_593b90 ]
 00597442    mov ecx, dword ptr ds:[edi]
 00597444    mov eax, dword ptr ds:[ebx]
 00597446    mov dword ptr ds:[edi], eax
@@ -205,7 +211,7 @@
 0059744A    push dword ptr ds:[edi]
 0059744C    lea ecx, ss:[ebp+0x08]
 0059744F    push dword ptr ds:[esi]
-00597451    call 0x00593B90
+00597451    call 0x00593B90                                 ; => [ Call: sub_593b90 ]
 00597456    test al, al
 00597458    jz 0x00597479
 0059745A    mov ecx, dword ptr ds:[esi]
@@ -215,7 +221,7 @@
 00597462    push dword ptr ds:[ebx]
 00597464    push ecx
 00597465    lea ecx, ss:[ebp+0x08]
-00597468    call 0x00593B90
+00597468    call 0x00593B90                                 ; => [ Call: sub_593b90 ]
 0059746D    test al, al
 0059746F    jz 0x00597479
 00597471    mov ecx, dword ptr ds:[edi]

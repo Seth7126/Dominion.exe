@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ca510
+// 起始地址: 0x5ca510
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CA510    push ebp
 005CA511    mov ebp, esp
 005CA513    sub esp, 0x88
@@ -5,14 +11,14 @@
 005CA520    mov eax, dword ptr ss:[ebp+0x08]
 005CA523    push esi
 005CA524    mov esi, dword ptr ss:[ebp+0x10]
-005CA527    movups xmmword ptr ss:[ebp-0x54], xmm0
+005CA527    movups xmmword ptr ss:[ebp-0x54], xmm0          ; => [ Call: __builtin_memcpy | String: \x9a\x99\x19\x3f\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x9a\x99\x19\x3f\x00\x00\x00\x00 ]
 005CA52B    mov dword ptr ds:[ecx], esi
 005CA52D    movaps xmm0, xmmword ptr ds:[0x00891320]
 005CA534    mov dword ptr ds:[ecx+0x08], edx
 005CA537    cmp dword ptr ds:[eax+0xD38], 0x02
 005CA53E    push edi
 005CA53F    mov dword ptr ss:[ebp-0x80], 0x46998800
-005CA546    mov dword ptr ss:[ebp-0x7C], 0x3F52617C
+005CA546    mov dword ptr ss:[ebp-0x7C], 0x3F52617C         ; => [ String: |aR? | Call: __builtin_strncpy ]
 005CA54D    mov byte ptr ss:[ebp-0x5C], 0x00
 005CA551    mov dword ptr ss:[ebp-0x78], 0x38D1B717
 005CA558    mov dword ptr ss:[ebp-0x74], 0x1E
@@ -57,14 +63,14 @@
 005CA635    mov dword ptr ss:[ebp-0x68], 0x00
 005CA63C    mov ecx, dword ptr ss:[ebp+0x0C]
 005CA63F    lea edx, ss:[ebp-0x88]
-005CA645    call 0x004F5450
+005CA645    call 0x004F5450                                 ; => [ Call: sub_4f5450 ]
 005CA64A    mov edx, 0x24
 005CA64F    mov ecx, 0x837EC0
 005CA654    call 0x0069F030
 005CA659    mov edx, 0x24
 005CA65E    mov ecx, 0x837ED8
-005CA663    mov edi, eax
-005CA665    call 0x0069F030
+005CA663    mov edi, eax                                    ; => [ String: res/net/dominion.net2 | Call: sub_69f030 ]
+005CA665    call 0x0069F030                                 ; => [ String: res/net/dominion_tiny.net2 | Call: sub_69f030 ]
 005CA66A    test esi, esi
 005CA66C    jz 0x005CA673
 005CA66E    cmp esi, 0x03
@@ -77,4 +83,4 @@
 005CA680    pop esi
 005CA681    mov esp, ebp
 005CA683    pop ebp
-005CA684    ret
+005CA684    ret                                             ; => [ Call: sub_5b14c0 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_587410
+// 起始地址: 0x587410
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00587410    push ebp
 00587411    mov ebp, esp
 00587413    push ecx
@@ -12,18 +18,18 @@
 00587423    and edi, 0x02
 00587426    jnz 0x00587437
 00587428    mov dword ptr ds:[esi+0x19EC], 0x03
-00587432    call 0x005749D0
+00587432    call 0x005749D0                                 ; => [ Call: sub_5749d0 ]
 00587437    mov eax, dword ptr ss:[ebp+0x08]
 0058743A    movzx eax, ax
 0058743D    mov dword ptr ss:[ebp+0x0C], eax
 00587440    cmp eax, 0x320
 00587445    jb 0x0058744F
-00587447    call 0x00591930
+00587447    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058744C    mov eax, dword ptr ss:[ebp+0x0C]
 0058744F    mov edx, dword ptr ds:[esi+0xD48]
 00587455    imul eax, eax, 0x64
 00587458    mov ecx, dword ptr ds:[eax+esi*1+0x1A4C]
-0058745F    call 0x00571B30
+0058745F    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00587464    mov ecx, dword ptr ds:[eax+0x98]
 0058746A    mov eax, dword ptr ds:[eax+0x9C]
 00587470    and ecx, 0x7F000400
@@ -44,7 +50,7 @@
 00587497    pop ebx
 00587498    mov esp, ebp
 0058749A    pop ebp
-0058749B    ret
+0058749B    ret                                             ; => [ Call: sub_584b10 ]
 0058749C    mov edx, dword ptr ss:[ebp-0x04]
 0058749F    mov ecx, esi
 005874A1    shr ebx, 0x01
@@ -60,16 +66,16 @@
 005874B9    pop ebx
 005874BA    mov esp, ebp
 005874BC    pop ebp
-005874BD    ret
+005874BD    ret                                             ; => [ Call: sub_585010 ]
 005874BE    push 0x820234
 005874C3    push 0x3331
 005874C8    push 0x81F4B8
 005874CD    mov edx, 0x801800
 005874D2    mov ecx, 0x820244
-005874D7    call 0x0063B870
+005874D7    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: BuyCardRegular | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: !(flags & BUYFLAG_BLACK_MARKET) ]
 005874DC    add esp, 0x0C
 005874DF    call 0x0063BC30
 005874E4    test al, al
-005874E6    jz 0x005874E9
+005874E6    jz 0x005874E9                                   ; => [ Call: sub_63bc30 ]
 005874E8    int3
-005874E9    call 0x0063BB00
+005874E9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

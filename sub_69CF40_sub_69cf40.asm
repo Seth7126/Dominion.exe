@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69cf40
+// 起始地址: 0x69cf40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069CF40    push ebp
 0069CF41    mov ebp, esp
 0069CF43    sub esp, 0x10
@@ -9,7 +15,7 @@
 0069CF4E    mov edi, ecx
 0069CF50    mov ecx, dword ptr ds:[ebx+0x18]
 0069CF53    mov dword ptr ss:[ebp-0x08], esi
-0069CF56    call 0x0069C520
+0069CF56    call 0x0069C520                                 ; => [ Call: sub_69c520 ]
 0069CF5B    test al, al
 0069CF5D    jz 0x0069D002
 0069CF63    mov eax, dword ptr ds:[ebx+0x18]
@@ -17,9 +23,9 @@
 0069CF69    mov dword ptr ss:[ebp-0x0C], eax
 0069CF6C    test eax, eax
 0069CF6E    jnz 0x0069CF81
-0069CF70    push 0x87943C
+0069CF70    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 0069CF75    push 0x6D
-0069CF77    mov ecx, 0x87948C
+0069CF77    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 0069CF7C    jmp 0x0069D029
 0069CF81    mov dword ptr ss:[ebp-0x04], 0x00
 0069CF88    test esi, esi
@@ -44,12 +50,12 @@
 0069CFB7    sub eax, edx
 0069CFB9    lea esi, ds:[eax+0x01]
 0069CFBC    mov ecx, esi
-0069CFBE    call 0x00687730
+0069CFBE    call 0x00687730                                 ; => [ Call: sub_687730 ]
 0069CFC3    push esi
 0069CFC4    push ebx
 0069CFC5    push eax
 0069CFC6    mov dword ptr ds:[edi], eax
-0069CFC8    call 0x00761FBE
+0069CFC8    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0069CFCD    mov ebx, dword ptr ss:[ebp+0x08]
 0069CFD0    add esp, 0x0C
 0069CFD3    mov esi, dword ptr ss:[ebp-0x08]
@@ -61,7 +67,7 @@
 0069CFE1    mov ecx, edi
 0069CFE3    push eax
 0069CFE4    push dword ptr ss:[ebp+0x0C]
-0069CFE7    call 0x0069D380
+0069CFE7    call 0x0069D380                                 ; => [ Call: sub_69d380 ]
 0069CFEC    add esp, 0x08
 0069CFEF    mov ecx, dword ptr ss:[ebp-0x04]
 0069CFF2    add edi, dword ptr ss:[ebp-0x0C]
@@ -77,19 +83,19 @@
 0069D005    mov esp, ebp
 0069D007    pop ebp
 0069D008    ret
-0069D009    push 0x8795E0
+0069D009    push 0x8795E0                                   ; => [ String: DefDeepCopyString ]
 0069D00E    push 0x25B
-0069D013    mov ecx, 0x8795D0
+0069D013    mov ecx, 0x8795D0                               ; => [ String: pExistingString ]
 0069D018    jmp 0x0069D029
-0069D01A    push 0x8795F4
+0069D01A    push 0x8795F4                                   ; => [ String: DefDeepCopyArray ]
 0069D01F    push 0x2B4
-0069D024    mov ecx, 0x878958
+0069D024    mov ecx, 0x878958                               ; => [ String: !DefTypeIsBuiltIn(pField->pSubDefMap) ]
 0069D029    push 0x879400
 0069D02E    mov edx, 0x801800
-0069D033    call 0x0063B870
+0069D033    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Definition.cpp ]
 0069D038    add esp, 0x0C
 0069D03B    call 0x0063BC30
 0069D040    test al, al
-0069D042    jz 0x0069D045
+0069D042    jz 0x0069D045                                   ; => [ Call: sub_63bc30 ]
 0069D044    int3
-0069D045    call 0x0063BB00
+0069D045    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

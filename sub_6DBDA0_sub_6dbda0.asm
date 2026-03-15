@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dbda0
+// 起始地址: 0x6dbda0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DBDA0    push ebx
 006DBDA1    mov ebx, esp
 006DBDA3    sub esp, 0x08
@@ -136,7 +142,7 @@
 006DBFC3    movss xmm3, dword ptr ss:[ebp-0x44]
 006DBFC8    addss xmm1, xmm0
 006DBFCC    xorps xmm1, xmmword ptr ds:[0x008937C0]
-006DBFD3    movss dword ptr ss:[ebp-0x14], xmm1
+006DBFD3    movss dword ptr ss:[ebp-0x14], xmm1             ; => [ Data: data_8937c0 ]
 006DBFD8    movups xmm0, xmmword ptr ss:[ebp-0x20]
 006DBFDC    movss xmm1, dword ptr ss:[ebp-0x04]
 006DBFE1    movups xmmword ptr ds:[esi+0x50], xmm0

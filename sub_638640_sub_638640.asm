@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_638640
+// 起始地址: 0x638640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00638640    push ebp
 00638641    mov ebp, esp
 00638643    sub esp, 0x1C
@@ -25,7 +31,7 @@
 00638677    mov edx, esi
 00638679    push eax
 0063867A    mov ecx, ebx
-0063867C    call 0x00639150
+0063867C    call 0x00639150                                 ; => [ Call: sub_639150 ]
 00638681    add esp, 0x08
 00638684    lea ebx, ds:[esi+0x0C]
 00638687    mov dword ptr ss:[ebp-0x04], ebx
@@ -96,7 +102,7 @@
 00638717    jz 0x00638727
 00638719    mov edx, edi
 0063871B    mov ecx, ebx
-0063871D    call 0x00639300
+0063871D    call 0x00639300                                 ; => [ Call: sub_639300 ]
 00638722    mov ebx, dword ptr ss:[ebp-0x14]
 00638725    jmp 0x00638729
 00638727    mov ebx, eax
@@ -131,7 +137,7 @@
 0063876D    jz 0x00638778
 0063876F    mov edx, edi
 00638771    mov ecx, esi
-00638773    call 0x00639300
+00638773    call 0x00639300                                 ; => [ Call: sub_639300 ]
 00638778    sub ebx, 0x0C
 0063877B    sub edi, 0x0C
 0063877E    cmp dword ptr ss:[ebp-0x0C], ebx
@@ -151,7 +157,7 @@
 006387A3    jz 0x006387AE
 006387A5    mov edx, ebx
 006387A7    mov ecx, esi
-006387A9    call 0x00639300
+006387A9    call 0x00639300                                 ; => [ Call: sub_639300 ]
 006387AE    mov ecx, dword ptr ss:[ebp-0x18]
 006387B1    add ebx, 0x0C
 006387B4    mov edx, dword ptr ss:[ebp-0x14]
@@ -167,12 +173,12 @@
 006387CF    jz 0x006387DA
 006387D1    mov edx, esi
 006387D3    mov ecx, eax
-006387D5    call 0x00639300
+006387D5    call 0x00639300                                 ; => [ Call: sub_639300 ]
 006387DA    sub ebx, 0x0C
 006387DD    mov ecx, esi
 006387DF    mov edx, ebx
 006387E1    mov dword ptr ss:[ebp-0x04], ebx
-006387E4    call 0x00639300
+006387E4    call 0x00639300                                 ; => [ Call: sub_639300 ]
 006387E9    mov eax, dword ptr ss:[ebp-0x08]
 006387EC    mov ecx, dword ptr ss:[ebp+0x08]
 006387EF    jmp 0x006386F3
@@ -181,7 +187,7 @@
 006387F9    mov edx, eax
 006387FB    add edi, 0x0C
 006387FE    mov dword ptr ss:[ebp-0x10], edi
-00638801    call 0x00639300
+00638801    call 0x00639300                                 ; => [ Call: sub_639300 ]
 00638806    mov eax, dword ptr ss:[ebp-0x08]
 00638809    mov ecx, dword ptr ss:[ebp+0x08]
 0063880C    jmp 0x006386F3

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c6590
+// 起始地址: 0x5c6590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C6590    push ebp
 005C6591    mov ebp, esp
 005C6593    sub esp, 0x08
@@ -18,14 +24,14 @@
 005C65BD    addss xmm0, dword ptr ds:[edi+0x1C]
 005C65C2    call 0x004EA070
 005C65C7    lea ecx, ss:[ebp-0x04]
-005C65CA    movss dword ptr ss:[ebp-0x04], xmm0
+005C65CA    movss dword ptr ss:[ebp-0x04], xmm0             ; => [ Call: sub_4ea070 | Call: sub_4ea090 ]
 005C65CF    call 0x005BC390
 005C65D4    mov eax, dword ptr ds:[edi+0x04]
 005C65D7    add ebx, 0x04
 005C65DA    mulss xmm0, dword ptr ds:[eax+esi*4]
 005C65DF    mov eax, dword ptr ss:[ebp-0x08]
 005C65E2    mov eax, dword ptr ds:[eax]
-005C65E4    movss dword ptr ds:[eax+esi*4], xmm0
+005C65E4    movss dword ptr ds:[eax+esi*4], xmm0            ; => [ Call: sub_5bc390 ]
 005C65E9    inc esi
 005C65EA    cmp esi, dword ptr ss:[ebp+0x08]
 005C65ED    jl 0x005C65B0

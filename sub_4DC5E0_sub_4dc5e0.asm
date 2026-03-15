@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4dc5e0
+// 起始地址: 0x4dc5e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DC5E0    push ebp
 004DC5E1    mov ebp, esp
 004DC5E3    sub esp, 0x0C
@@ -22,7 +28,7 @@
 004DC60F    call dword ptr ds:[0x00775454]
 004DC615    add esp, 0x08
 004DC618    test eax, eax
-004DC61A    jz 0x004DC639
+004DC61A    jz 0x004DC639                                   ; => [ String: ():, \t\r\n ]
 004DC61C    mov edi, dword ptr ss:[ebp-0x04]
 004DC61F    inc esi
 004DC620    cmp esi, ebx

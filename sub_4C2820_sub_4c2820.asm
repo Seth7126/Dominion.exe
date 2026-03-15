@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_4c2820
+// 起始地址: 0x4c2820
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C2820    push ebp
 004C2821    mov ebp, esp
 004C2823    sub esp, 0x20
 004C2826    push ebx
 004C2827    push esi
-004C2828    mov esi, dword ptr ds:[0x00CC8D5C]
+004C2828    mov esi, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C282E    mov dword ptr ss:[ebp-0x18], edx
 004C2831    mov dword ptr ss:[ebp-0x20], ecx
 004C2834    push edi
 004C2835    test esi, esi
 004C2837    jnz 0x004C284F
-004C2839    push 0x77EB90
+004C2839    push 0x77EB90                                   ; => [ String: GetClient ]
 004C283E    push 0x7B
-004C2840    push 0x77EB50
-004C2845    mov ecx, 0x77EB9C
+004C2840    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+004C2845    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 004C284A    jmp 0x004C2A85
 004C284F    mov eax, dword ptr ss:[ebp+0x08]
 004C2852    mov ebx, edx
@@ -25,9 +31,9 @@
 004C2864    jz 0x004C287F
 004C2866    cmp ecx, 0x03
 004C2869    jz 0x004C287F
-004C286B    push 0x803A08
+004C286B    push 0x803A08                                   ; => [ String: ModifyFriendRange ]
 004C2870    push 0x1420
-004C2875    mov ecx, 0x803A1C
+004C2875    mov ecx, 0x803A1C                               ; => [ String: tab == FRIENDSTAB_REJECTS || tab == FRIENDSTAB_BLOCKS ]
 004C287A    jmp 0x004C2A80
 004C287F    cmp dword ptr ds:[edi+0x5028], 0x00
 004C2886    jle 0x004C294F
@@ -74,7 +80,7 @@
 004C28FD    mov dword ptr ds:[edi+0x04], eax
 004C2900    lea eax, ds:[esi+0x30]
 004C2903    push eax
-004C2904    call 0x0063D850
+004C2904    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004C2909    mov eax, dword ptr ds:[esi+0x34]
 004C290C    mov dword ptr ds:[edi+0x0C], eax
 004C290F    mov eax, dword ptr ds:[esi+0x38]
@@ -93,7 +99,7 @@
 004C2934    mov dword ptr ss:[ebp-0x10], eax
 004C2937    cmp esi, dword ptr ds:[edi+0x5028]
 004C293D    jl 0x004C2897
-004C2943    mov esi, dword ptr ds:[0x00CC8D5C]
+004C2943    mov esi, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C2949    mov edx, dword ptr ss:[ebp-0x18]
 004C294C    mov ebx, dword ptr ss:[ebp-0x0C]
 004C294F    mov byte ptr ds:[edi+0x502C], 0x00
@@ -103,7 +109,7 @@
 004C2960    cmp ecx, 0x03
 004C2963    jnbe 0x004C2A35
 004C2969    mov eax, dword ptr ss:[ebp-0x0C]
-004C296C    jmp dword ptr ds:[ecx*4+0x4C2AA4]
+004C296C    jmp dword ptr ds:[ecx*4+0x4C2AA4]               ; => [ Data: jump_table_4c2aa4 ]
 004C2973    test esi, esi
 004C2975    jz 0x004C2839
 004C297B    cmp ebx, dword ptr ds:[esi+0x5030]
@@ -129,10 +135,10 @@
 004C29C1    mov edi, dword ptr ss:[ebp-0x1C]
 004C29C4    cmp edi, dword ptr ds:[eax+0x04]
 004C29C7    mov edi, dword ptr ss:[ebp-0x08]
-004C29CA    jnb 0x004C2A17
+004C29CA    jnb 0x004C2A17                                  ; => [ Data: data_147abf4 ]
 004C29CC    imul eax, dword ptr ss:[ebp-0x1C], 0x64
 004C29D0    mov edi, dword ptr ds:[0x0147ABF4]
-004C29D6    add eax, dword ptr ds:[edi]
+004C29D6    add eax, dword ptr ds:[edi]                     ; => [ Data: data_147abf4 ]
 004C29D8    mov edi, dword ptr ss:[ebp-0x08]
 004C29DB    cmp dword ptr ds:[eax+0x60], edx
 004C29DE    jnz 0x004C2A17
@@ -142,14 +148,14 @@
 004C29E7    mov edx, 0x08
 004C29EC    push 0xF42CC
 004C29F1    mov ecx, esi
-004C29F3    call 0x00689E00
+004C29F3    call 0x00689E00                                 ; => [ Call: sub_689e00 ]
 004C29F8    add esp, 0x04
 004C29FB    lea eax, ss:[ebp-0x14]
 004C29FE    mov edx, 0x08
 004C2A03    mov ecx, esi
 004C2A05    push eax
-004C2A06    call 0x00689BE0
-004C2A0B    mov esi, dword ptr ds:[0x00CC8D5C]
+004C2A06    call 0x00689BE0                                 ; => [ Call: sub_689be0 ]
+004C2A0B    mov esi, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C2A11    add esp, 0x04
 004C2A14    mov ecx, dword ptr ss:[ebp-0x20]
 004C2A17    mov eax, dword ptr ss:[ebp-0x0C]
@@ -163,10 +169,10 @@
 004C2A2E    sub ecx, 0x01
 004C2A31    jnz 0x004C2A71
 004C2A33    jmp 0x004C2A4B
-004C2A35    push 0x802544
+004C2A35    push 0x802544                                   ; => [ String: HasFriendsPageAlready ]
 004C2A3A    push 0x1659
-004C2A3F    push 0x801AF8
-004C2A44    mov ecx, 0x801AA4
+004C2A3F    push 0x801AF8                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
+004C2A44    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004C2A49    jmp 0x004C2A85
 004C2A4B    mov dword ptr ds:[edi+0x5038], edx
 004C2A51    mov dword ptr ds:[edi+0x503C], ebx
@@ -184,15 +190,15 @@
 004C2A6D    mov esp, ebp
 004C2A6F    pop ebp
 004C2A70    ret
-004C2A71    push 0x803A08
+004C2A71    push 0x803A08                                   ; => [ String: ModifyFriendRange ]
 004C2A76    push 0x144D
-004C2A7B    mov ecx, 0x801AA4
-004C2A80    push 0x80292C
+004C2A7B    mov ecx, 0x801AA4                               ; => [ String: Halt ]
+004C2A80    push 0x80292C                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp ]
 004C2A85    mov edx, 0x801800
-004C2A8A    call 0x0063B870
+004C2A8A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004C2A8F    add esp, 0x0C
 004C2A92    call 0x0063BC30
 004C2A97    test al, al
-004C2A99    jz 0x004C2A9C
+004C2A99    jz 0x004C2A9C                                   ; => [ Call: sub_63bc30 ]
 004C2A9B    int3
-004C2A9C    call 0x0063BB00
+004C2A9C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

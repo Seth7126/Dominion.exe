@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66d420
+// 起始地址: 0x66d420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066D420    push ebp
 0066D421    mov ebp, esp
 0066D423    and esp, 0xFFFFFFF8
@@ -15,11 +21,11 @@
 0066D446    jnz 0x0066D44C
 0066D448    xor eax, eax
 0066D44A    jmp 0x0066D462
-0066D44C    call 0x0064CC90
+0066D44C    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 0066D451    push 0x6F
 0066D453    mov edx, eax
 0066D455    mov ecx, 0x8CAE70
-0066D45A    call 0x006DD140
+0066D45A    call 0x006DD140                                 ; => [ Data: data_8cae70 | Call: sub_6dd140 ]
 0066D45F    add esp, 0x04
 0066D462    cmp byte ptr ds:[eax], 0x00
 0066D465    mov dword ptr ss:[esp+0x10], eax
@@ -32,13 +38,13 @@
 0066D47B    mov ebx, dword ptr ss:[esp+0x10]
 0066D47F    nop
 0066D480    mov ecx, dword ptr ds:[edi+esi*4+0x179C]
-0066D487    call 0x0064E7A0
+0066D487    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066D48C    push ebx
 0066D48D    push ecx
 0066D48E    push dword ptr ss:[esp+0x20]
 0066D492    lea edx, ss:[esp+0x20]
 0066D496    mov ecx, eax
-0066D498    call 0x0066D3A0
+0066D498    call 0x0066D3A0                                 ; => [ Call: sub_66d3a0 ]
 0066D49D    inc esi
 0066D49E    add esp, 0x0C
 0066D4A1    cmp esi, dword ptr ss:[esp+0x1C]

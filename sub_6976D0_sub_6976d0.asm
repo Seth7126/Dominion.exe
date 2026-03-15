@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6976d0
+// 起始地址: 0x6976d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006976D0    push ebp
 006976D1    mov ebp, esp
 006976D3    movss xmm7, dword ptr ss:[ebp+0x20]
@@ -50,7 +56,7 @@
 0069779C    lahf
 0069779D    test ah, 0x44
 006977A0    jp 0x006977A7
-006977A2    xorps xmm0, xmm0
+006977A2    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 006977A5    jmp 0x006977AE
 006977A7    movaps xmm0, xmm4
 006977AA    divss xmm0, xmm1
@@ -58,7 +64,7 @@
 006977B1    lahf
 006977B2    test ah, 0x44
 006977B5    jp 0x006977BC
-006977B7    xorps xmm5, xmm5
+006977B7    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 006977BA    jmp 0x006977C4
 006977BC    movaps xmm5, xmm3
 006977BF    divss xmm5, dword ptr ss:[ebp-0x10]
@@ -92,12 +98,12 @@
 00697826    jbe 0x0069782F
 00697828    divss xmm4, dword ptr ss:[ebp+0x14]
 0069782D    jmp 0x00697832
-0069782F    xorps xmm4, xmm4
+0069782F    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 00697832    comiss xmm7, xmm6
 00697835    jbe 0x0069783E
 00697837    divss xmm3, dword ptr ss:[ebp-0x14]
 0069783C    jmp 0x00697841
-0069783E    xorps xmm3, xmm3
+0069783E    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 00697841    divss xmm6, xmm5
 00697845    movaps xmm0, xmm5
 00697848    movaps xmm1, xmm5
@@ -119,10 +125,10 @@
 00697883    push 0x878EA8
 00697888    mov edx, 0x801800
 0069788D    mov ecx, 0x874B3C
-00697892    call 0x0063B870
+00697892    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\UIDef.cpp | String: minSpacing.x >= 0 || minSpacing.y >= 0 | String: CalcSpacing ]
 00697897    add esp, 0x0C
 0069789A    call 0x0063BC30
 0069789F    test al, al
-006978A1    jz 0x006978A4
+006978A1    jz 0x006978A4                                   ; => [ Call: sub_63bc30 ]
 006978A3    int3
-006978A4    call 0x0063BB00
+006978A4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_59d570
+// 起始地址: 0x59d570
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0059D570    push ebp
 0059D571    mov ebp, esp
 0059D573    sub esp, 0x0C
@@ -15,13 +21,13 @@
 0059D590    movzx edi, word ptr ds:[ebx+esi*4]
 0059D594    cmp edi, 0x320
 0059D59A    jb 0x0059D5A7
-0059D59C    call 0x00591930
+0059D59C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0059D5A1    mov eax, dword ptr ss:[ebp-0x04]
 0059D5A4    mov ecx, dword ptr ss:[ebp-0x08]
 0059D5A7    imul edx, edi, 0x64
 0059D5AA    mov edx, dword ptr ds:[edx+ecx*1+0x1A4C]
 0059D5B1    mov ecx, eax
-0059D5B3    call 0x0059D430
+0059D5B3    call 0x0059D430                                 ; => [ Call: sub_59d430 ]
 0059D5B8    mov eax, dword ptr ss:[ebp-0x04]
 0059D5BB    inc esi
 0059D5BC    mov ecx, dword ptr ss:[ebp-0x08]

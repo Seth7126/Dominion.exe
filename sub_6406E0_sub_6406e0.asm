@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6406e0
+// 起始地址: 0x6406e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006406E0    push ebp
 006406E1    mov ebp, esp
 006406E3    sub esp, 0x08
@@ -39,9 +45,9 @@
 00640732    mov edx, dword ptr ds:[edx]
 00640734    test edx, edx
 00640736    jnz 0x00640746
-00640738    push 0x8724E4
+00640738    push 0x8724E4                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayGet ]
 0064073D    push 0x6C
-0064073F    mov ecx, 0x802734
+0064073F    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 00640744    jmp 0x0064078D
 00640746    mov ebx, dword ptr ss:[ebp-0x04]
 00640749    movzx eax, dx
@@ -58,7 +64,7 @@
 00640769    push dword ptr ds:[ecx+0x24]
 0064076C    push dword ptr ds:[ecx+0x28]
 0064076F    mov ecx, ebx
-00640771    call 0x00640B10
+00640771    call 0x00640B10                                 ; => [ Call: sub_640b10 ]
 00640776    pop edi
 00640777    pop esi
 00640778    mov al, 0x01
@@ -66,15 +72,15 @@
 0064077B    mov esp, ebp
 0064077D    pop ebp
 0064077E    ret 0x04
-00640781    push 0x8724E4
+00640781    push 0x8724E4                                   ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayGet ]
 00640786    push 0x6D
-00640788    mov ecx, 0x802748
+00640788    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 0064078D    push 0x80193C
 00640792    mov edx, 0x801800
-00640797    call 0x0063B870
+00640797    call 0x0063B870                                 ; => [ String: DataArray<struct RegionAllocator::Region>::DataArrayGet | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\DataArray.h ]
 0064079C    add esp, 0x0C
 0064079F    call 0x0063BC30
 006407A4    test al, al
-006407A6    jz 0x006407A9
+006407A6    jz 0x006407A9                                   ; => [ Call: sub_63bc30 ]
 006407A8    int3
-006407A9    call 0x0063BB00
+006407A9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

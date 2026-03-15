@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5bc200
+// 起始地址: 0x5bc200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BC200    push ebp
 005BC201    mov ebp, esp
 005BC203    sub esp, 0x28
-005BC206    mov eax, dword ptr ds:[0x008C4040]
+005BC206    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005BC20B    xor eax, ebp
 005BC20D    mov dword ptr ss:[ebp-0x04], eax
 005BC210    push ebx
@@ -48,7 +54,7 @@
 005BC270    jnz 0x005BC250
 005BC272    xorps xmm0, xmm0
 005BC275    lea eax, ss:[ebp-0x07]
-005BC278    movups xmmword ptr ds:[esi], xmm0
+005BC278    movups xmmword ptr ds:[esi], xmm0               ; => [ Call: __builtin_memset ]
 005BC27B    mov dword ptr ds:[esi+0x10], 0x00
 005BC282    mov dword ptr ds:[esi+0x14], 0x00
 005BC289    cmp edi, eax
@@ -62,7 +68,7 @@
 005BC2A2    pop ebx
 005BC2A3    mov ecx, dword ptr ss:[ebp-0x04]
 005BC2A6    xor ecx, ebp
-005BC2A8    call 0x0075927A
+005BC2A8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005BC2AD    mov esp, ebp
 005BC2AF    pop ebp
 005BC2B0    ret
@@ -77,7 +83,7 @@
 005BC2C9    push esi
 005BC2CA    mov dword ptr ds:[esi+0x10], ebx
 005BC2CD    mov dword ptr ds:[esi+0x14], 0x0F
-005BC2D4    call 0x00761FBE
+005BC2D4    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BC2D9    mov byte ptr ds:[ebx+esi*1], 0x00
 005BC2DD    jmp 0x005BC368
 005BC2E2    mov eax, ebx
@@ -88,7 +94,7 @@
 005BC2F3    mov dword ptr ss:[ebp-0x24], 0x7FFFFFFF
 005BC2FA    add eax, 0x23
 005BC2FD    push eax
-005BC2FE    call 0x00759772
+005BC2FE    call 0x00759772                                 ; => [ Call: operator new ]
 005BC303    add esp, 0x04
 005BC306    test eax, eax
 005BC308    jz 0x005BC33A
@@ -113,7 +119,7 @@
 005BC340    push ecx
 005BC341    call 0x00759772
 005BC346    add esp, 0x04
-005BC349    mov ecx, eax
+005BC349    mov ecx, eax                                    ; => [ Call: operator new ]
 005BC34B    mov eax, dword ptr ss:[ebp-0x24]
 005BC34E    push ebx
 005BC34F    push edi
@@ -122,7 +128,7 @@
 005BC354    mov dword ptr ds:[esi], ecx
 005BC356    mov dword ptr ds:[esi+0x10], ebx
 005BC359    mov dword ptr ds:[esi+0x14], eax
-005BC35C    call 0x00761FBE
+005BC35C    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BC361    mov eax, dword ptr ss:[ebp-0x20]
 005BC364    mov byte ptr ds:[eax+ebx*1], 0x00
 005BC368    mov ecx, dword ptr ss:[ebp-0x04]
@@ -132,9 +138,9 @@
 005BC372    pop edi
 005BC373    pop esi
 005BC374    pop ebx
-005BC375    call 0x0075927A
+005BC375    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005BC37A    mov esp, ebp
 005BC37C    pop ebp
 005BC37D    ret
-005BC37E    call 0x005B0860
-005BC383    call 0x004F7EE0
+005BC37E    call 0x005B0860                                 ; => [ Call: sub_5b0860 ]
+005BC383    call 0x004F7EE0                                 ; => [ Call: sub_4f7ee0 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_572710
+// 起始地址: 0x572710
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00572710    push ebp
 00572711    mov ebp, esp
 00572713    sub esp, 0x08
@@ -19,11 +25,11 @@
 00572737    pop ebx
 00572738    mov esp, ebp
 0057273A    pop ebp
-0057273B    ret
+0057273B    ret                                             ; => [ Call: sub_572660 ]
 0057273C    mov edx, dword ptr ss:[ebp+0x08]
 0057273F    call 0x005722C0
 00572744    add esp, 0x04
-00572747    mov esi, eax
+00572747    mov esi, eax                                    ; => [ Call: sub_5722c0 ]
 00572749    test edi, edi
 0057274B    jle 0x00572775
 0057274D    nop dword ptr ds:[eax], eax
@@ -31,7 +37,7 @@
 00572752    and esi, 0xFFFF
 00572758    cmp esi, 0x320
 0057275E    jb 0x00572765
-00572760    call 0x00591930
+00572760    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572765    imul esi, esi, 0x64
 00572768    add esi, 0x1AA4
 0057276E    add esi, ebx
@@ -42,7 +48,7 @@
 0057277B    mov dword ptr ss:[ebp+0x10], eax
 0057277E    cmp eax, 0x320
 00572783    jb 0x0057278D
-00572785    call 0x00591930
+00572785    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057278A    mov eax, dword ptr ss:[ebp+0x10]
 0057278D    imul edx, eax, 0x64
 00572790    mov eax, dword ptr ss:[ebp+0x08]

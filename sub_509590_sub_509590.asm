@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_509590
+// 起始地址: 0x509590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00509590    dword 83EC8B55
 00509594    in al, 0xF8
 00509596    push ecx
@@ -12,11 +18,11 @@
 005095A6    mov esi, dword ptr ds:[eax+ebx*4]
 005095A9    call 0x00573400
 005095AE    movzx esi, si
-005095B1    mov eax, dword ptr ds:[eax+0x04]
+005095B1    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005095B4    mov dword ptr ss:[esp+0x0C], eax
 005095B8    cmp esi, 0x320
 005095BE    jb 0x005095C9
-005095C0    call 0x00591930
+005095C0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005095C5    mov eax, dword ptr ss:[esp+0x0C]
 005095C9    imul edx, esi, 0x64
 005095CC    mov ecx, eax
@@ -27,12 +33,12 @@
 005095DE    add esp, 0x08
 005095E1    lea ecx, ds:[edi+0x01]
 005095E4    test al, al
-005095E6    cmovz ecx, edi
+005095E6    cmovz ecx, edi                                  ; => [ Call: sub_5754f0 ]
 005095E9    inc ebx
 005095EA    mov edi, ecx
 005095EC    cmp ebx, dword ptr ss:[ebp+0x0C]
 005095EF    jl 0x005095A3
-005095F1    call 0x00573400
+005095F1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005095F6    imul ecx, dword ptr ds:[eax+0x0C], 0x5A30
 005095FD    mov eax, dword ptr ds:[eax+0x04]
 00509600    cmp dword ptr ds:[ecx+eax*1+0x174F8], 0x00

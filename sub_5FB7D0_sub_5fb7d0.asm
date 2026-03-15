@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5fb7d0
+// 起始地址: 0x5fb7d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005FB7D0    push ebp
 005FB7D1    mov ebp, esp
 005FB7D3    sub esp, 0xA8
-005FB7D9    mov eax, dword ptr ds:[0x008C4040]
+005FB7D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005FB7DE    xor eax, ebp
 005FB7E0    mov dword ptr ss:[ebp-0x04], eax
 005FB7E3    push ebx
@@ -11,7 +17,7 @@
 005FB7E8    mov dword ptr ss:[ebp-0xA8], ecx
 005FB7EE    mov edi, 0x01
 005FB7F3    xor bl, bl
-005FB7F5    mov eax, 0x77FEA0
+005FB7F5    mov eax, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 005FB7FA    nop word ptr ds:[eax+eax*1], ax
 005FB800    test ecx, edi
 005FB802    jz 0x005FB81D
@@ -26,7 +32,7 @@
 005FB81D    add eax, 0x04
 005FB820    add edi, edi
 005FB822    cmp eax, 0x77FEE8
-005FB827    jnz 0x005FB800
+005FB827    jnz 0x005FB800                                  ; => [ Data: data_77fee8 ]
 005FB829    test bl, bl
 005FB82B    jz 0x005FB839
 005FB82D    mov dword ptr ss:[ebp+esi*4-0xA4], 0x13
@@ -46,7 +52,7 @@
 005FB852    pop ebx
 005FB853    mov ecx, dword ptr ss:[ebp-0x04]
 005FB856    xor ecx, ebp
-005FB858    call 0x0075927A
+005FB858    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005FB85D    mov esp, ebp
 005FB85F    pop ebp
 005FB860    ret
@@ -56,7 +62,7 @@
 005FB867    pop esi
 005FB868    xor ecx, ebp
 005FB86A    pop ebx
-005FB86B    call 0x0075927A
+005FB86B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005FB870    mov esp, ebp
 005FB872    pop ebp
 005FB873    ret

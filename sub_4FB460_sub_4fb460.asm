@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4fb460
+// 起始地址: 0x4fb460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FB460    push ebp
 004FB461    mov ebp, esp
 004FB463    and esp, 0xFFFFFFF8
@@ -8,8 +14,8 @@
 004FB478    mov ecx, 0x455
 004FB47D    push edi
 004FB47E    push eax
-004FB47F    call 0x00568780
-004FB484    push dword ptr ds:[0x0078316C]
+004FB47F    call 0x00568780                                 ; => [ Call: __chkstk | Call: sub_568780 ]
+004FB484    push dword ptr ds:[0x0078316C]                  ; => [ Call: nullptr ]
 004FB48A    mov esi, eax
 004FB48C    lea edi, ss:[esp+0x10]
 004FB490    push dword ptr ds:[0x00783168]
@@ -17,7 +23,7 @@
 004FB49B    mov edx, 0x455
 004FB4A0    push 0x0B
 004FB4A2    push 0x00
-004FB4A4    rep movsd
+004FB4A4    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004FB4A6    push 0x03
 004FB4A8    push 0x3EA
 004FB4AD    lea ecx, ss:[esp+0x24]
@@ -27,4 +33,4 @@
 004FB4BA    pop esi
 004FB4BB    mov esp, ebp
 004FB4BD    pop ebp
-004FB4BE    ret
+004FB4BE    ret                                             ; => [ Call: sub_566140 ]

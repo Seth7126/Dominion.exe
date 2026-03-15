@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_546a60
+// 起始地址: 0x546a60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00546A60    push ebp
 00546A61    mov ebp, esp
 00546A63    and esp, 0xFFFFFFF8
@@ -11,14 +17,14 @@
 00546A76    mov dword ptr ss:[esp+0x14], eax
 00546A7A    mov eax, dword ptr ds:[0x007BFAD4]
 00546A7F    mov dword ptr ss:[esp+0x10], eax
-00546A83    call 0x00573400
+00546A83    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00546A88    mov esi, eax
 00546A8A    movzx ebx, di
 00546A8D    mov eax, dword ptr ds:[esi+0x04]
 00546A90    mov dword ptr ss:[esp+0x0C], eax
 00546A94    cmp ebx, 0x320
 00546A9A    jb 0x00546AA5
-00546A9C    call 0x00591930
+00546A9C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00546AA1    mov eax, dword ptr ss:[esp+0x0C]
 00546AA5    push dword ptr ss:[esp+0x10]
 00546AA9    mov ecx, dword ptr ds:[esi+0x04]
@@ -37,7 +43,7 @@
 00546AD2    push 0x0B
 00546AD4    push 0x3EE
 00546AD9    push edi
-00546ADA    call 0x00582D10
+00546ADA    call 0x00582D10                                 ; => [ Call: nullptr | Call: sub_582d10 ]
 00546ADF    add esp, 0x38
 00546AE2    pop edi
 00546AE3    pop esi

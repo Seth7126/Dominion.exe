@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6d97a0
+// 起始地址: 0x6d97a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D97A0    push ebp
 006D97A1    mov ebp, esp
 006D97A3    sub esp, 0x14
 006D97A6    push ebx
 006D97A7    push esi
 006D97A8    push edi
-006D97A9    call 0x006DB490
+006D97A9    call 0x006DB490                                 ; => [ Call: sub_6db490 ]
 006D97AE    mov ebx, eax
 006D97B0    mov dword ptr ss:[ebp-0x10], ebx
 006D97B3    cmp byte ptr ds:[ebx+0x28], 0x00
@@ -34,7 +40,7 @@
 006D97FE    mov ecx, dword ptr ds:[0x0147B070]
 006D9804    push edx
 006D9805    mov eax, dword ptr ds:[ecx]
-006D9807    call dword ptr ds:[eax+0x54]
+006D9807    call dword ptr ds:[eax+0x54]                    ; => [ Data: data_147b070 ]
 006D980A    mov ecx, dword ptr ss:[ebp-0x08]
 006D980D    mov dword ptr ds:[esi+0xE40], 0x00
 006D9817    mov eax, dword ptr ss:[ebp-0x0C]
@@ -51,7 +57,7 @@
 006D9852    mov ebx, dword ptr ss:[ebp-0x10]
 006D9855    mov ecx, dword ptr ds:[ecx]
 006D9857    imul edx, eax, 0xF04
-006D985D    call 0x0064C080
+006D985D    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006D9862    mov ecx, dword ptr ss:[ebp-0x04]
 006D9865    inc ecx
 006D9866    mov dword ptr ss:[ebp-0x04], ecx

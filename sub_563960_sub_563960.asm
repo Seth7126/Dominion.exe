@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_563960
+// 起始地址: 0x563960
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00563960    push ebp
 00563961    mov ebp, esp
 00563963    and esp, 0xFFFFFFF0
@@ -12,7 +18,7 @@
 0056397D    push 0xC84
 00563982    push 0x00
 00563984    push esi
-00563985    call 0x00761FC4
+00563985    call 0x00761FC4                                 ; => [ Call: memset ]
 0056398A    add esp, 0x0C
 0056398D    mov eax, esi
 0056398F    pop edi
@@ -20,7 +26,7 @@
 00563991    mov esp, ebp
 00563993    pop ebp
 00563994    ret
-00563995    call 0x00573400
+00563995    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056399A    mov ecx, dword ptr ss:[ebp+0x14]
 0056399D    push dword ptr ss:[ebp+0x20]
 005639A0    mov edi, dword ptr ss:[ebp+0x08]
@@ -37,7 +43,7 @@
 005639C8    movups xmmword ptr ss:[esp+0x4C], xmm0
 005639CD    mov dword ptr ss:[esp+0x4C], ecx
 005639D1    mov ecx, 0x321
-005639D6    rep movsd
+005639D6    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005639D8    mov ecx, dword ptr ss:[esp+0x1C]
 005639DC    mov eax, dword ptr ds:[eax]
 005639DE    mov esi, dword ptr ss:[ebp+0x08]
@@ -58,7 +64,7 @@
 00563A0F    mov ecx, dword ptr ds:[ecx+0x04]
 00563A12    call 0x005869D0
 00563A17    add esp, 0x2C
-00563A1A    mov dword ptr ds:[esi+0xC80], eax
+00563A1A    mov dword ptr ds:[esi+0xC80], eax               ; => [ Call: sub_5869d0 ]
 00563A20    mov eax, esi
 00563A22    pop edi
 00563A23    pop esi

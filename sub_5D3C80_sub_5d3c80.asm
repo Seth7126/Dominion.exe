@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d3c80
+// 起始地址: 0x5d3c80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D3C80    push ebp
 005D3C81    mov ebp, esp
 005D3C83    and esp, 0xFFFFFFF8
@@ -103,10 +109,10 @@
 005D3DC8    mov esp, ebp
 005D3DCA    pop ebp
 005D3DCB    ret
-005D3DCC    push 0x81FC88
+005D3DCC    push 0x81FC88                                   ; => [ String: BoardPileWhat ]
 005D3DD1    push 0x1118
-005D3DD6    push 0x81F4B8
-005D3DDB    mov ecx, 0x81FC98
+005D3DD6    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+005D3DDB    mov ecx, 0x81FC98                               ; => [ String: where >= CW_BOARD_STANDARD_START && where < END_BOARD_PILES ]
 005D3DE0    jmp 0x005D4236
 005D3DE5    mov eax, dword ptr ss:[ebp+0x08]
 005D3DE8    xorps xmm0, xmm0
@@ -177,7 +183,7 @@
 005D3EF9    mov eax, dword ptr ds:[esi+0x60]
 005D3EFC    mov cl, 0x20
 005D3EFE    mov edx, dword ptr ds:[esi+0x64]
-005D3F01    call 0x007622B0
+005D3F01    call 0x007622B0                                 ; => [ Call: __aullshr ]
 005D3F06    mov ecx, eax
 005D3F08    test ecx, ecx
 005D3F0A    jnz 0x005D3F2E
@@ -195,7 +201,7 @@
 005D3F2A    mov esp, ebp
 005D3F2C    pop ebp
 005D3F2D    ret
-005D3F2E    mov edx, dword ptr ds:[0x00CC8D5C]
+005D3F2E    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005D3F34    test edx, edx
 005D3F36    jz 0x005D4225
 005D3F3C    mov eax, dword ptr ds:[esi+0x58]
@@ -208,11 +214,11 @@
 005D3F57    mov dword ptr ds:[edi+0x04], eax
 005D3F5A    cmp esi, 0x320
 005D3F60    jb 0x005D3F67
-005D3F62    call 0x00591930
+005D3F62    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005D3F67    imul ecx, esi, 0x64
 005D3F6A    mov eax, edi
 005D3F6C    mov ecx, dword ptr ds:[ecx+0xB82524]
-005D3F72    mov dword ptr ds:[edi+0x08], ecx
+005D3F72    mov dword ptr ds:[edi+0x08], ecx                ; => [ Data: data_b82524 ]
 005D3F75    mov byte ptr ds:[edi+0x0C], bl
 005D3F78    pop edi
 005D3F79    pop esi
@@ -448,15 +454,15 @@
 005D4221    mov esp, ebp
 005D4223    pop ebp
 005D4224    ret
-005D4225    push 0x77EB90
+005D4225    push 0x77EB90                                   ; => [ String: GetClient ]
 005D422A    push 0x7B
-005D422C    push 0x77EB50
-005D4231    mov ecx, 0x77EB9C
+005D422C    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+005D4231    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 005D4236    mov edx, 0x801800
-005D423B    call 0x0063B870
+005D423B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005D4240    add esp, 0x0C
 005D4243    call 0x0063BC30
 005D4248    test al, al
-005D424A    jz 0x005D424D
+005D424A    jz 0x005D424D                                   ; => [ Call: sub_63bc30 ]
 005D424C    int3
-005D424D    call 0x0063BB00
+005D424D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

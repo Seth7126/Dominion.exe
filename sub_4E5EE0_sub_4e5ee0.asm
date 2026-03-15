@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e5ee0
+// 起始地址: 0x4e5ee0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E5EE0    push ebp
 004E5EE1    mov ebp, esp
 004E5EE3    and esp, 0xFFFFFFF8
@@ -15,25 +21,25 @@
 004E5F00    lea ecx, ss:[esp+0x1C]
 004E5F04    mov dword ptr ss:[esp+0x10], ebx
 004E5F08    xor edi, edi
-004E5F0A    call 0x004DC550
+004E5F0A    call 0x004DC550                                 ; => [ Call: sub_4dc550 ]
 004E5F0F    xorps xmm0, xmm0
 004E5F12    lea ecx, ss:[esp+0x30]
 004E5F16    movlpd qword ptr ss:[esp+0x10], xmm0
 004E5F1C    push dword ptr ss:[esp+0x14]
 004E5F20    push dword ptr ss:[esp+0x14]
-004E5F24    call 0x004DC830
+004E5F24    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004E5F29    mov ecx, dword ptr ss:[esp+0x18]
 004E5F2D    cmp ecx, dword ptr ss:[esp+0x30]
 004E5F31    jz 0x004E5FE4
 004E5F37    mov eax, dword ptr ss:[ebp+0x08]
-004E5F3A    lea ebx, ds:[ebx+eax*4]
+004E5F3A    lea ebx, ds:[ebx+eax*4]                         ; => [ Type: _EXCEPTION_REGISTRATION_RECORD ]
 004E5F3D    nop dword ptr ds:[eax], eax
 004E5F40    cmp edi, dword ptr ss:[ebp+0x0C]
 004E5F43    jnl 0x004E5FE4
 004E5F49    mov edx, dword ptr ss:[esp+0x1C]
 004E5F4D    push 0x01
 004E5F4F    push ecx
-004E5F50    call 0x004DD260
+004E5F50    call 0x004DD260                                 ; => [ Type: _EXCEPTION_REGISTRATION_RECORD | Call: sub_4dd260 ]
 004E5F55    add esp, 0x08
 004E5F58    mov dword ptr ds:[ebx], eax
 004E5F5A    add ebx, 0x04
@@ -41,7 +47,7 @@
 004E5F62    mov ecx, eax
 004E5F64    mov dword ptr ss:[esp+0x10], ebx
 004E5F68    inc edi
-004E5F69    call 0x00571B30
+004E5F69    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 004E5F6E    mov ebx, eax
 004E5F70    xor edx, edx
 004E5F72    lea ecx, ds:[ebx+0xC8]
@@ -71,7 +77,7 @@
 004E5FC1    push dword ptr ss:[esp+0x2C]
 004E5FC5    lea ecx, ss:[esp+0x1C]
 004E5FC9    push dword ptr ss:[esp+0x2C]
-004E5FCD    call 0x004DC830
+004E5FCD    call 0x004DC830                                 ; => [ Call: sub_4dc830 ]
 004E5FD2    mov ecx, dword ptr ss:[esp+0x18]
 004E5FD6    mov ebx, dword ptr ss:[esp+0x10]
 004E5FDA    cmp ecx, dword ptr ss:[esp+0x30]

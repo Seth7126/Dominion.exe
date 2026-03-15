@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_66b420
+// 起始地址: 0x66b420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066B420    push ebp
 0066B421    mov ebp, esp
 0066B423    sub esp, 0x7C
-0066B426    mov eax, dword ptr ds:[0x008C4040]
+0066B426    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0066B42B    xor eax, ebp
 0066B42D    mov dword ptr ss:[ebp-0x08], eax
 0066B430    push esi
 0066B431    push edi
 0066B432    mov edi, edx
-0066B434    call 0x0064E7A0
+0066B434    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 0066B439    mov esi, eax
 0066B43B    xor edx, edx
 0066B43D    push 0x00
@@ -18,7 +24,7 @@
 0066B448    push eax
 0066B449    lea eax, ss:[ebp-0x7C]
 0066B44C    push eax
-0066B44D    call 0x00656980
+0066B44D    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0066B452    push 0x00
 0066B454    mov edx, 0x01
 0066B459    mov ecx, esi
@@ -32,7 +38,7 @@
 0066B46E    lea eax, ss:[ebp-0x7C]
 0066B471    push eax
 0066B472    movups xmmword ptr ss:[ebp-0x1C], xmm0
-0066B476    call 0x00656980
+0066B476    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0066B47B    movups xmm1, xmmword ptr ss:[ebp-0x1C]
 0066B47F    add esp, 0x20
 0066B482    movups xmm0, xmmword ptr ds:[eax]
@@ -54,9 +60,9 @@
 0066B4BD    jz 0x0066B4F3
 0066B4BF    sub eax, 0x01
 0066B4C2    jz 0x0066B4D8
-0066B4C4    push 0x875D20
+0066B4C4    push 0x875D20                                   ; => [ String: UI2TableSetRange ]
 0066B4C9    push 0x3F40
-0066B4CE    mov ecx, 0x801AA4
+0066B4CE    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0066B4D3    jmp 0x0066B5DB
 0066B4D8    mov ecx, dword ptr ds:[edi]
 0066B4DA    mov eax, ecx
@@ -89,7 +95,7 @@
 0066B552    movups xmm0, xmmword ptr ss:[ebp-0x1C]
 0066B556    push eax
 0066B557    movups xmmword ptr ss:[ebp-0x1C], xmm0
-0066B55B    call 0x00655430
+0066B55B    call 0x00655430                                 ; => [ Call: sub_655430 ]
 0066B560    movups xmm2, xmmword ptr ss:[ebp-0x4C]
 0066B564    add esp, 0x04
 0066B567    cmp dword ptr ds:[esi+0x14E8], 0x01
@@ -110,24 +116,24 @@
 0066B5A9    subss xmm0, xmm1
 0066B5AD    movss dword ptr ds:[esi+0x1390], xmm0
 0066B5B5    mov ecx, esi
-0066B5B7    call 0x0065BF00
+0066B5B7    call 0x0065BF00                                 ; => [ Call: sub_65bf00 ]
 0066B5BC    mov ecx, dword ptr ss:[ebp-0x08]
 0066B5BF    pop edi
 0066B5C0    xor ecx, ebp
 0066B5C2    pop esi
-0066B5C3    call 0x0075927A
+0066B5C3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0066B5C8    mov esp, ebp
 0066B5CA    pop ebp
 0066B5CB    ret
-0066B5CC    push 0x875D20
+0066B5CC    push 0x875D20                                   ; => [ String: UI2TableSetRange ]
 0066B5D1    push 0x3F49
-0066B5D6    mov ecx, 0x875D60
+0066B5D6    mov ecx, 0x875D60                               ; => [ String: ui.propsStatic.scrollType == UISCROLL_VERT ]
 0066B5DB    push 0x8739B4
 0066B5E0    mov edx, 0x801800
-0066B5E5    call 0x0063B870
+0066B5E5    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: UI2TableSetRange | String: C:\x\ax2017\Engine\UI2.cpp ]
 0066B5EA    add esp, 0x0C
 0066B5ED    call 0x0063BC30
 0066B5F2    test al, al
-0066B5F4    jz 0x0066B5F7
+0066B5F4    jz 0x0066B5F7                                   ; => [ Call: sub_63bc30 ]
 0066B5F6    int3
-0066B5F7    call 0x0063BB00
+0066B5F7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

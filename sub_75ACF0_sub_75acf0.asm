@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75acf0
+// 起始地址: 0x75acf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075ACF0    push ebp
 0075ACF1    mov ebp, esp
 0075ACF3    push ecx
@@ -17,9 +23,9 @@
 0075AD1D    jz 0x0075AE41
 0075AD23    cmp ebx, 0x08
 0075AD26    jnbe 0x0075AE41
-0075AD2C    call 0x0075ABA0
+0075AD2C    call 0x0075ABA0                                 ; => [ Call: sub_75aba0 ]
 0075AD31    call 0x00761CE0
-0075AD36    mov dword ptr ds:[edi+0x04], eax
+0075AD36    mov dword ptr ds:[edi+0x04], eax                ; => [ Call: sub_761ce0 ]
 0075AD39    mov edx, 0xAC44
 0075AD3E    mov eax, dword ptr ss:[ebp+0x10]
 0075AD41    mov ecx, eax
@@ -52,7 +58,7 @@
 0075AD9D    push dword ptr ss:[ebp+0x08]
 0075ADA0    mov dword ptr ss:[ebp+0x10], ecx
 0075ADA3    push edi
-0075ADA4    call 0x007619E0
+0075ADA4    call 0x007619E0                                 ; => [ Call: sub_7619e0 ]
 0075ADA9    add esp, 0x14
 0075ADAC    test eax, eax
 0075ADAE    jnz 0x0075ADC3
@@ -77,7 +83,7 @@
 0075ADDC    push ecx
 0075ADDD    push dword ptr ss:[ebp+0x08]
 0075ADE0    push edi
-0075ADE1    call 0x007613A0
+0075ADE1    call 0x007613A0                                 ; => [ Call: sub_7613a0 ]
 0075ADE6    add esp, 0x14
 0075ADE9    test eax, eax
 0075ADEB    jnz 0x0075AE00
@@ -108,7 +114,7 @@
 0075AE21    push ecx
 0075AE22    push dword ptr ss:[ebp+0x08]
 0075AE25    push edi
-0075AE26    call 0x00761C80
+0075AE26    call 0x00761C80                                 ; => [ Call: sub_761c80 ]
 0075AE2B    add esp, 0x14
 0075AE2E    test eax, eax
 0075AE30    jnz 0x0075AE46

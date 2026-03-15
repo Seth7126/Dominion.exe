@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_714780
+// 起始地址: 0x714780
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00714780    push ebp
 00714781    mov ebp, esp
 00714783    push ecx
@@ -24,7 +30,7 @@
 007147BB    cmp eax, dword ptr ds:[esi+0x08]
 007147BE    jnz 0x007147ED
 007147C0    push dword ptr ds:[esi+0x04]
-007147C3    call 0x00752840
+007147C3    call 0x00752840                                 ; => [ Call: sub_752840 ]
 007147C8    mov ecx, dword ptr ss:[ebp-0x04]
 007147CB    add esp, 0x04
 007147CE    test eax, eax
@@ -43,7 +49,7 @@
 007147F4    mov dword ptr ds:[ebx+0x34], ecx
 007147F7    mov ecx, ebx
 007147F9    pop edi
-007147FA    call 0x00714370
+007147FA    call 0x00714370                                 ; => [ Call: sub_714370 ]
 007147FF    pop esi
 00714800    pop ebx
 00714801    mov esp, ebp
@@ -61,7 +67,7 @@
 0071481D    jz 0x0071484C
 0071481F    push eax
 00714820    mov edx, esi
-00714822    call 0x00752840
+00714822    call 0x00752840                                 ; => [ Call: sub_752840 ]
 00714827    mov ecx, dword ptr ss:[ebp-0x04]
 0071482A    add esp, 0x04
 0071482D    test eax, eax
@@ -80,7 +86,7 @@
 00714852    pop edi
 00714853    mov dword ptr ds:[ebx+0x34], ecx
 00714856    mov ecx, ebx
-00714858    call 0x00714370
+00714858    call 0x00714370                                 ; => [ Call: sub_714370 ]
 0071485D    pop esi
 0071485E    pop ebx
 0071485F    mov esp, ebp

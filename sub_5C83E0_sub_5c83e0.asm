@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c83e0
+// 起始地址: 0x5c83e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C83E0    push ebx
 005C83E1    mov ebx, esp
 005C83E3    sub esp, 0x08
@@ -8,9 +14,9 @@
 005C83F0    mov dword ptr ss:[esp+0x04], ebp
 005C83F4    mov ebp, esp
 005C83F6    push 0xFFFFFFFF
-005C83F8    push 0x76994D
+005C83F8    push 0x76994D                                   ; => [ Call: sub_76994d | Type: EHRegistrationNode ]
 005C83FD    mov eax, dword ptr fs:[0x00000000]
-005C8403    push eax
+005C8403    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 005C8404    push ebx
 005C8405    sub esp, 0x70
 005C8408    mov eax, dword ptr ds:[0x008C4040]
@@ -18,9 +24,9 @@
 005C840F    mov dword ptr ss:[ebp-0x14], eax
 005C8412    push esi
 005C8413    push edi
-005C8414    push eax
+005C8414    push eax                                        ; => [ Data: __security_cookie ]
 005C8415    lea eax, ss:[ebp-0x0C]
-005C8418    mov dword ptr fs:[0x00000000], eax
+005C8418    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 005C841E    movups xmm1, xmmword ptr ds:[edx]
 005C8421    mov eax, dword ptr ds:[ebx+0x0C]
 005C8424    movq xmm0, qword ptr ds:[edx+0x10]
@@ -40,7 +46,7 @@
 005C8462    cmp eax, 0x20000
 005C8467    jnbe 0x005C847D
 005C8469    add eax, 0x0F
-005C846C    call 0x00762210
+005C846C    call 0x00762210                                 ; => [ Call: __alloca_probe_16 ]
 005C8471    lea edx, ss:[esp+0x0F]
 005C8475    and edx, 0xFFFFFFF0
 005C8478    mov dword ptr ss:[ebp-0x18], edx
@@ -144,7 +150,7 @@
 005C85AF    push eax
 005C85B0    mov dword ptr ss:[ebp-0x1C], 0x01
 005C85B7    mov dword ptr ss:[ebp-0x34], edx
-005C85BA    call 0x005C3D60
+005C85BA    call 0x005C3D60                                 ; => [ Call: sub_5c3d60 ]
 005C85BF    add esp, 0x14
 005C85C2    cmp dword ptr ss:[ebp-0x40], 0x20000
 005C85C9    jbe 0x005C85DE
@@ -156,13 +162,13 @@
 005C85DB    add esp, 0x04
 005C85DE    lea esp, ss:[ebp-0x8C]
 005C85E4    mov ecx, dword ptr ss:[ebp-0x0C]
-005C85E7    mov dword ptr fs:[0x00000000], ecx
+005C85E7    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 005C85EE    pop ecx
 005C85EF    pop edi
 005C85F0    pop esi
 005C85F1    mov ecx, dword ptr ss:[ebp-0x14]
 005C85F4    xor ecx, ebp
-005C85F6    call 0x0075927A
+005C85F6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005C85FB    mov esp, ebp
 005C85FD    pop ebp
 005C85FE    mov esp, ebx
@@ -171,4 +177,4 @@
 005C8602    test edi, edi
 005C8604    jle 0x005C8570
 005C860A    jmp 0x005C8543
-005C860F    call 0x005B0890
+005C860F    call 0x005B0890                                 ; => [ Call: sub_5b0890 ]

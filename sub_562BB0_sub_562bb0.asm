@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_562bb0
+// 起始地址: 0x562bb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00562BB0    push ebp
 00562BB1    mov ebp, esp
 00562BB3    and esp, 0xFFFFFFF0
 00562BB6    mov eax, 0x1988
-00562BBB    call 0x00761E50
-00562BC0    mov eax, dword ptr ds:[0x008C4040]
+00562BBB    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00562BC0    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00562BC5    xor eax, esp
 00562BC7    mov dword ptr ss:[esp+0x1984], eax
 00562BCE    push esi
@@ -21,7 +27,7 @@
 00562BF4    lea edi, ss:[esp+0xD0C]
 00562BFB    mov esi, eax
 00562BFD    add esp, 0x0C
-00562C00    rep movsd
+00562C00    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5685f0 ]
 00562C02    cmp dword ptr ss:[esp+0x1980], 0x00
 00562C0A    jz 0x00562CDE
 00562C10    mov eax, dword ptr ss:[esp+0x08]
@@ -38,7 +44,7 @@
 00562C3C    movlpd qword ptr ss:[esp+0x44], xmm0
 00562C42    movlpd qword ptr ss:[esp+0x3C], xmm0
 00562C48    push eax
-00562C49    mov dword ptr ss:[esp+0x2C], 0x00
+00562C49    mov dword ptr ss:[esp+0x2C], 0x00               ; => [ Call: __builtin_memset ]
 00562C51    lea eax, ss:[esp+0x88]
 00562C58    movaps xmm0, xmmword ptr ss:[esp+0x20]
 00562C5D    movaps xmmword ptr ss:[esp+0x50], xmm0
@@ -56,7 +62,7 @@
 00562C95    lea edi, ss:[esp+0xD1C]
 00562C9C    mov esi, eax
 00562C9E    add esp, 0x1C
-00562CA1    rep movsd
+00562CA1    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
 00562CA3    cmp dword ptr ss:[esp+0x1980], 0x00
 00562CAB    jz 0x00562CDE
 00562CAD    mov esi, dword ptr ss:[esp+0xD00]
@@ -65,14 +71,14 @@
 00562CB8    push ecx
 00562CB9    mov edx, 0x3EA
 00562CBE    mov ecx, esi
-00562CC0    call 0x005624A0
+00562CC0    call 0x005624A0                                 ; => [ Call: sub_5624a0 ]
 00562CC5    add esp, 0x04
 00562CC8    mov eax, esi
 00562CCA    pop edi
 00562CCB    pop esi
 00562CCC    mov ecx, dword ptr ss:[esp+0x1984]
 00562CD3    xor ecx, esp
-00562CD5    call 0x0075927A
+00562CD5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00562CDA    mov esp, ebp
 00562CDC    pop ebp
 00562CDD    ret
@@ -81,7 +87,7 @@
 00562CE7    pop edi
 00562CE8    pop esi
 00562CE9    xor ecx, esp
-00562CEB    call 0x0075927A
+00562CEB    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00562CF0    mov esp, ebp
 00562CF2    pop ebp
 00562CF3    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56cd40
+// 起始地址: 0x56cd40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056CD40    push ebp
 0056CD41    mov ebp, esp
 0056CD43    push ecx
@@ -6,12 +12,12 @@
 0056CD46    push edi
 0056CD47    mov edi, edx
 0056CD49    mov dword ptr ss:[ebp-0x04], ecx
-0056CD4C    call 0x00573400
+0056CD4C    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056CD51    mov ebx, eax
 0056CD53    mov edx, edi
 0056CD55    mov esi, dword ptr ds:[ebx+0x04]
 0056CD58    mov ecx, esi
-0056CD5A    call 0x0057DA30
+0056CD5A    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0056CD5F    mov edx, 0x07
 0056CD64    lea ecx, ds:[esi+0x1594]
 0056CD6A    nop word ptr ds:[eax+eax*1], ax
@@ -50,7 +56,7 @@
 0056CDB6    test edx, edx
 0056CDB8    jz 0x0056CDC2
 0056CDBA    mov ecx, dword ptr ss:[ebp-0x04]
-0056CDBD    call 0x0056CC00
+0056CDBD    call 0x0056CC00                                 ; => [ Call: sub_56cc00 ]
 0056CDC2    pop edi
 0056CDC3    pop esi
 0056CDC4    pop ebx

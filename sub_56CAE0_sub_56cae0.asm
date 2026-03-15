@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56cae0
+// 起始地址: 0x56cae0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056CAE0    push ebp
 0056CAE1    mov ebp, esp
 0056CAE3    and esp, 0xFFFFFFF8
@@ -8,9 +14,9 @@
 0056CAED    mov dword ptr ss:[esp+0x14], edx
 0056CAF1    push edi
 0056CAF2    mov dword ptr ss:[esp+0x14], ebx
-0056CAF6    call 0x00573400
+0056CAF6    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056CAFB    mov dword ptr ss:[esp+0x10], eax
-0056CAFF    call 0x00573400
+0056CAFF    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056CB04    mov esi, dword ptr ss:[ebp+0x08]
 0056CB07    mov edi, eax
 0056CB09    cmp esi, 0x601
@@ -21,16 +27,16 @@
 0056CB1F    jz 0x0056CB2E
 0056CB21    cmp esi, 0xE01
 0056CB27    jz 0x0056CB2E
-0056CB29    call 0x00591930
+0056CB29    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056CB2E    mov ecx, dword ptr ds:[edi+0x04]
 0056CB31    push ebx
 0056CB32    push esi
-0056CB33    call 0x00583F70
+0056CB33    call 0x00583F70                                 ; => [ Call: sub_583f70 ]
 0056CB38    mov edi, dword ptr ss:[ebp+0x0C]
 0056CB3B    add esp, 0x08
 0056CB3E    cmp edi, eax
 0056CB40    jl 0x0056CB7D
-0056CB42    call 0x00573400
+0056CB42    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056CB47    mov edi, eax
 0056CB49    cmp esi, 0x601
 0056CB4F    jz 0x0056CB6E
@@ -40,11 +46,11 @@
 0056CB5F    jz 0x0056CB6E
 0056CB61    cmp esi, 0xE01
 0056CB67    jz 0x0056CB6E
-0056CB69    call 0x00591930
+0056CB69    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056CB6E    mov ecx, dword ptr ds:[edi+0x04]
 0056CB71    push ebx
 0056CB72    push esi
-0056CB73    call 0x00583F70
+0056CB73    call 0x00583F70                                 ; => [ Call: sub_583f70 ]
 0056CB78    add esp, 0x08
 0056CB7B    mov edi, eax
 0056CB7D    test edi, edi
@@ -63,7 +69,7 @@
 0056CBA5    mov dword ptr ss:[esp+0x1C], ecx
 0056CBA9    cmp eax, 0x40
 0056CBAC    jbe 0x0056CBB3
-0056CBAE    call 0x00591930
+0056CBAE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056CBB3    mov ecx, dword ptr ss:[esp+0x10]
 0056CBB7    mov eax, edi
 0056CBB9    push 0x00
@@ -88,7 +94,7 @@
 0056CBEA    push dword ptr ss:[esp+0x30]
 0056CBEE    push edi
 0056CBEF    push esi
-0056CBF0    call 0x00571FA0
+0056CBF0    call 0x00571FA0                                 ; => [ Call: sub_571fa0 | Call: nullptr ]
 0056CBF5    add esp, 0x24
 0056CBF8    pop edi
 0056CBF9    pop esi

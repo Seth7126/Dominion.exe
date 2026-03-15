@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_593ef0
+// 起始地址: 0x593ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00593EF0    push ebp
 00593EF1    mov ebp, esp
 00593EF3    push ecx
@@ -41,7 +47,7 @@
 00593F4E    mov eax, dword ptr ds:[eax+0x98]
 00593F54    and eax, 0x1000
 00593F59    or eax, 0x00
-00593F5C    jnz 0x00593F6C
+00593F5C    jnz 0x00593F6C                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 00593F5E    inc edi
 00593F5F    cmp edi, esi
 00593F61    jl 0x00593F40
@@ -66,10 +72,10 @@
 00593F87    push 0x81F4B8
 00593F8C    mov edx, 0x801800
 00593F91    mov ecx, 0x820D88
-00593F96    call 0x0063B870
+00593F96    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: KingdomSupplyPiles | String: setup.kingdom.piles[i] != CARD_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00593F9B    add esp, 0x0C
 00593F9E    call 0x0063BC30
 00593FA3    test al, al
-00593FA5    jz 0x00593FA8
+00593FA5    jz 0x00593FA8                                   ; => [ Call: sub_63bc30 ]
 00593FA7    int3
-00593FA8    call 0x0063BB00
+00593FA8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4e4560
+// 起始地址: 0x4e4560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E4560    push ebp
 004E4561    mov ebp, esp
 004E4563    sub esp, 0xAC
-004E4569    mov eax, dword ptr ds:[0x008C4040]
+004E4569    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004E456E    xor eax, ebp
 004E4570    mov dword ptr ss:[ebp-0x04], eax
 004E4573    push ebx
@@ -15,7 +21,7 @@
 004E4584    cmp dword ptr ds:[edi], 0x00
 004E4587    jz 0x004E45BF
 004E4589    mov ecx, edi
-004E458B    call 0x004E44E0
+004E458B    call 0x004E44E0                                 ; => [ Call: sub_4e44e0 ]
 004E4590    cmp eax, 0x13
 004E4593    jz 0x004E45B6
 004E4595    xor ecx, ecx
@@ -40,7 +46,7 @@
 004E45D0    cmp dword ptr ds:[edi], 0x00
 004E45D3    jz 0x004E4644
 004E45D5    mov ecx, edi
-004E45D7    call 0x004E44E0
+004E45D7    call 0x004E44E0                                 ; => [ Call: sub_4e44e0 ]
 004E45DC    cmp eax, 0x13
 004E45DF    jz 0x004E463B
 004E45E1    xor ecx, ecx
@@ -84,7 +90,7 @@
 004E4652    cmp dword ptr ds:[edi], 0x00
 004E4655    jz 0x004E468F
 004E4657    mov ecx, edi
-004E4659    call 0x004E44E0
+004E4659    call 0x004E44E0                                 ; => [ Call: sub_4e44e0 ]
 004E465E    cmp eax, 0x13
 004E4661    jz 0x004E4686
 004E4663    xor ecx, ecx
@@ -131,13 +137,13 @@
 004E46D9    nop dword ptr ds:[eax], eax
 004E46E0    mov edx, dword ptr ss:[ebp+edi*4-0xA8]
 004E46E7    mov ecx, 0x01
-004E46EC    mov eax, 0x77FEA0
+004E46EC    mov eax, 0x77FEA0                               ; => [ Data: data_77fea0 ]
 004E46F1    cmp edx, dword ptr ds:[eax]
 004E46F3    jz 0x004E4703
 004E46F5    add eax, 0x04
 004E46F8    add ecx, ecx
 004E46FA    cmp eax, 0x77FEE8
-004E46FF    jnz 0x004E46F1
+004E46FF    jnz 0x004E46F1                                  ; => [ Data: data_77fee8 ]
 004E4701    jmp 0x004E4705
 004E4703    or ebx, ecx
 004E4705    inc edi
@@ -149,7 +155,7 @@
 004E4710    pop esi
 004E4711    xor ecx, ebp
 004E4713    pop ebx
-004E4714    call 0x0075927A
+004E4714    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004E4719    mov esp, ebp
 004E471B    pop ebp
 004E471C    ret

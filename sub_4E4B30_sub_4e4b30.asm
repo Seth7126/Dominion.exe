@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e4b30
+// 起始地址: 0x4e4b30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E4B30    push ebp
 004E4B31    mov ebp, esp
 004E4B33    sub esp, 0x08
@@ -9,15 +15,15 @@
 004E4B3D    xor edx, edx
 004E4B3F    xor eax, eax
 004E4B41    cmp dword ptr ds:[eax+0x780878], ecx
-004E4B47    jz 0x004E4B5D
+004E4B47    jz 0x004E4B5D                                   ; => [ Data: data_780878 ]
 004E4B49    add eax, 0x10C
 004E4B4E    inc edx
 004E4B4F    cmp eax, 0x28D4
 004E4B54    jb 0x004E4B41
-004E4B56    mov eax, 0x780878
+004E4B56    mov eax, 0x780878                               ; => [ Data: data_780878 ]
 004E4B5B    jmp 0x004E4B68
 004E4B5D    imul eax, edx, 0x10C
-004E4B63    add eax, 0x780878
+004E4B63    add eax, 0x780878                               ; => [ Data: data_780878 ]
 004E4B68    mov ecx, dword ptr ds:[eax+0x08]
 004E4B6B    cmp ecx, 0x05
 004E4B6E    jnbe 0x004E4C40
@@ -113,10 +119,10 @@
 004E4C4A    push 0x806FE4
 004E4C4F    mov edx, 0x801800
 004E4C54    mov ecx, 0x801AA4
-004E4C59    call 0x0063B870
+004E4C59    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | String: CalcThingsToTurnOn | String: Halt ]
 004E4C5E    add esp, 0x0C
 004E4C61    call 0x0063BC30
 004E4C66    test al, al
-004E4C68    jz 0x004E4C6B
+004E4C68    jz 0x004E4C6B                                   ; => [ Call: sub_63bc30 ]
 004E4C6A    int3
-004E4C6B    call 0x0063BB00
+004E4C6B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

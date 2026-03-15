@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_598720
+// 起始地址: 0x598720
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00598720    push ebp
 00598721    mov ebp, esp
 00598723    sub esp, 0x08
@@ -9,12 +15,12 @@
 00598732    cmp ecx, 0x03
 00598735    jnbe 0x0059875C
 00598737    jmp dword ptr ds:[ecx*4+0x5987B8]
-0059873E    push 0x801800
+0059873E    push 0x801800                                   ; => [ Data: data_801800 ]
 00598743    push eax
 00598744    push dword ptr ss:[ebp+0x10]
 00598747    push 0x82495C
 0059874C    push esi
-0059874D    call 0x0063DF30
+0059874D    call 0x0063DF30                                 ; => [ Call: sub_63df30 | String: %s%s%s ]
 00598752    add esp, 0x14
 00598755    mov eax, esi
 00598757    pop esi
@@ -26,7 +32,7 @@
 00598761    push dword ptr ss:[ebp+0x10]
 00598764    push 0x808058
 00598769    push esi
-0059876A    call 0x0063DF30
+0059876A    call 0x0063DF30                                 ; => [ Call: sub_63df30 | String: %s ]
 0059876F    add esp, 0x0C
 00598772    mov eax, esi
 00598774    pop esi
@@ -41,7 +47,7 @@
 00598787    push eax
 00598788    push 0x824954
 0059878D    push esi
-0059878E    call 0x0063DF30
+0059878E    call 0x0063DF30                                 ; => [ Call: sub_63df30 | String: %s%s ]
 00598793    add esp, 0x10
 00598796    mov eax, esi
 00598798    pop esi
@@ -52,7 +58,7 @@
 005987A0    push eax
 005987A1    push 0x824964
 005987A6    push esi
-005987A7    call 0x0063DF30
+005987A7    call 0x0063DF30                                 ; => [ Call: sub_63df30 | String: %s %s ]
 005987AC    add esp, 0x10
 005987AF    mov eax, esi
 005987B1    pop esi

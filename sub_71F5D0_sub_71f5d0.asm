@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71f5d0
+// 起始地址: 0x71f5d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071F5D0    push ebp
 0071F5D1    mov ebp, esp
 0071F5D3    sub esp, 0x28
@@ -19,14 +25,14 @@
 0071F609    add esp, 0x04
 0071F60C    mov ecx, esi
 0071F60E    mov dword ptr ds:[esi], edi
-0071F610    call 0x00725250
+0071F610    call 0x00725250                                 ; => [ Call: sub_725250 ]
 0071F615    mov ecx, esi
 0071F617    mov dword ptr ds:[esi+0x47E4], 0x00
 0071F621    mov dword ptr ds:[esi+0x47E8], 0xFFFFFFFF
 0071F62B    mov byte ptr ds:[esi+0x47C4], 0xFF
 0071F632    call 0x00722720
 0071F637    mov ecx, dword ptr ds:[edi+0xB0]
-0071F63D    mov bl, al
+0071F63D    mov bl, al                                      ; => [ Call: sub_722720 ]
 0071F63F    mov eax, dword ptr ds:[edi+0xB4]
 0071F645    push esi
 0071F646    mov dword ptr ds:[edi+0xA8], ecx
@@ -48,7 +54,7 @@
 0071F67E    push 0x00
 0071F680    push dword ptr ss:[ebp+0x0C]
 0071F683    push dword ptr ss:[ebp+0x08]
-0071F686    call 0x007252D0
+0071F686    call 0x007252D0                                 ; => [ Call: sub_7252d0 | Call: sub_725250 ]
 0071F68B    add esp, 0x0C
 0071F68E    mov esi, eax
 0071F690    push edi
@@ -63,7 +69,7 @@
 0071F6A3    pop ebp
 0071F6A4    ret
 0071F6A5    mov ecx, edi
-0071F6A7    call 0x00726640
+0071F6A7    call 0x00726640                                 ; => [ Call: sub_726640 ]
 0071F6AC    mov ecx, dword ptr ds:[edi+0xB0]
 0071F6B2    lea ebx, ds:[edi+0xA8]
 0071F6B8    mov dword ptr ds:[ebx], ecx
@@ -71,7 +77,7 @@
 0071F6C0    mov dword ptr ds:[edi+0xAC], ecx
 0071F6C6    test eax, eax
 0071F6C8    jz 0x0071F75B
-0071F6CE    xor esi, esi
+0071F6CE    xor esi, esi                                    ; => [ Call: nullptr ]
 0071F6D0    mov dword ptr ss:[ebp-0x24], edi
 0071F6D3    push esi
 0071F6D4    xor edx, edx
@@ -79,7 +85,7 @@
 0071F6D9    call 0x007279D0
 0071F6DE    add esp, 0x04
 0071F6E1    test eax, eax
-0071F6E3    jz 0x0071F756
+0071F6E3    jz 0x0071F756                                   ; => [ Call: sub_7279d0 ]
 0071F6E5    mov eax, dword ptr ss:[ebp-0x14]
 0071F6E8    mov ecx, 0x08
 0071F6ED    mov esi, dword ptr ss:[ebp-0x24]
@@ -87,7 +93,7 @@
 0071F6F2    mov ebx, dword ptr ss:[ebp-0x04]
 0071F6F5    cmovl eax, ecx
 0071F6F8    mov ecx, dword ptr ss:[ebp+0x14]
-0071F6FB    xor edx, edx
+0071F6FB    xor edx, edx                                    ; => [ Call: nullptr ]
 0071F6FD    mov dword ptr ds:[ecx], eax
 0071F6FF    mov eax, dword ptr ss:[ebp-0x18]
 0071F702    mov dword ptr ss:[ebp+0x14], eax
@@ -125,7 +131,7 @@
 0071F756    mov edx, dword ptr ss:[ebp-0x18]
 0071F759    jmp 0x0071F723
 0071F75B    mov ecx, edi
-0071F75D    call 0x00728810
+0071F75D    call 0x00728810                                 ; => [ Call: sub_728810 ]
 0071F762    mov ecx, dword ptr ds:[edi+0xB0]
 0071F768    mov dword ptr ds:[ebx], ecx
 0071F76A    mov ecx, dword ptr ds:[edi+0xB4]
@@ -146,9 +152,9 @@
 0071F795    pop ebx
 0071F796    mov esp, ebp
 0071F798    pop ebp
-0071F799    ret
+0071F799    ret                                             ; => [ Call: sub_728e50 ]
 0071F79A    mov ecx, edi
-0071F79C    call 0x0072C020
+0071F79C    call 0x0072C020                                 ; => [ Call: sub_72c020 ]
 0071F7A1    mov ecx, dword ptr ds:[edi+0xB0]
 0071F7A7    mov dword ptr ds:[ebx], ecx
 0071F7A9    mov ecx, dword ptr ds:[edi+0xB4]
@@ -167,14 +173,14 @@
 0071F7D1    pop ebx
 0071F7D2    mov esp, ebp
 0071F7D4    pop ebp
-0071F7D5    ret
-0071F7D6    call 0x007202A0
+0071F7D5    ret                                             ; => [ Call: sub_72d3f0 ]
+0071F7D6    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0071F7DB    mov ecx, edi
 0071F7DD    mov esi, eax
 0071F7DF    call 0x007202A0
 0071F7E4    mov ecx, dword ptr ds:[edi+0xB0]
 0071F7EA    shl esi, 0x10
-0071F7ED    add eax, esi
+0071F7ED    add eax, esi                                    ; => [ Call: sub_7202a0 ]
 0071F7EF    mov dword ptr ds:[ebx], ecx
 0071F7F1    mov ecx, dword ptr ds:[edi+0xB4]
 0071F7F7    lea esi, ds:[edi+0xAC]
@@ -196,12 +202,12 @@
 0071F821    pop ebx
 0071F822    mov esp, ebp
 0071F824    pop ebp
-0071F825    ret
+0071F825    ret                                             ; => [ Call: sub_72b070 ]
 0071F826    mov edx, 0x88DD38
 0071F82B    mov ecx, edi
 0071F82D    call 0x0072B660
 0071F832    test eax, eax
-0071F834    jz 0x0071F89E
+0071F834    jz 0x0071F89E                                   ; => [ Call: sub_72b660 ]
 0071F836    mov ecx, 0x54
 0071F83B    mov dword ptr ss:[ebp-0x08], ecx
 0071F83E    nop
@@ -239,7 +245,7 @@
 0071F88F    mov ecx, edi
 0071F891    call 0x0072B660
 0071F896    test eax, eax
-0071F898    jnz 0x0071FA0D
+0071F898    jnz 0x0071FA0D                                  ; => [ String: PICT | Call: sub_72b660 ]
 0071F89E    mov ecx, dword ptr ds:[edi+0xB0]
 0071F8A4    mov eax, dword ptr ds:[edi+0xB4]
 0071F8AA    mov dword ptr ds:[ebx], ecx
@@ -248,7 +254,7 @@
 0071F8B0    call 0x0072E200
 0071F8B5    mov ecx, edi
 0071F8B7    test eax, eax
-0071F8B9    jz 0x0071F99E
+0071F8B9    jz 0x0071F99E                                   ; => [ Call: sub_72e200 ]
 0071F8BF    lea esi, ds:[edi+0x08]
 0071F8C2    mov edx, edi
 0071F8C4    lea eax, ds:[edi+0x04]
@@ -257,7 +263,7 @@
 0071F8C9    call 0x0072E6B0
 0071F8CE    add esp, 0x08
 0071F8D1    test eax, eax
-0071F8D3    jz 0x0071F993
+0071F8D3    jz 0x0071F993                                   ; => [ Call: sub_72e6b0 ]
 0071F8D9    mov ebx, dword ptr ss:[ebp-0x04]
 0071F8DC    mov eax, dword ptr ds:[edi]
 0071F8DE    mov dword ptr ds:[ebx], eax
@@ -327,7 +333,7 @@
 0071F97C    mov ecx, edi
 0071F97E    imul eax, dword ptr ds:[edi]
 0071F981    push eax
-0071F982    call 0x00720200
+0071F982    call 0x00720200                                 ; => [ Call: sub_720200 ]
 0071F987    add esp, 0x04
 0071F98A    mov eax, esi
 0071F98C    pop edi
@@ -344,7 +350,7 @@
 0071F99A    mov esp, ebp
 0071F99C    pop ebp
 0071F99D    ret
-0071F99E    call 0x0072D560
+0071F99E    call 0x0072D560                                 ; => [ Call: sub_72d560 ]
 0071F9A3    test eax, eax
 0071F9A5    jz 0x0071F9D9
 0071F9A7    mov ecx, dword ptr ss:[ebp+0x14]
@@ -357,7 +363,7 @@
 0071F9B9    push 0x00
 0071F9BB    push esi
 0071F9BC    push edi
-0071F9BD    call 0x0072D900
+0071F9BD    call 0x0072D900                                 ; => [ Call: sub_72d900 ]
 0071F9C2    push dword ptr ds:[esi]
 0071F9C4    mov edx, dword ptr ds:[ebx]
 0071F9C6    mov ecx, eax
@@ -369,9 +375,9 @@
 0071F9D4    pop ebx
 0071F9D5    mov esp, ebp
 0071F9D7    pop ebp
-0071F9D8    ret
+0071F9D8    ret                                             ; => [ Call: sub_7208e0 ]
 0071F9D9    mov ecx, edi
-0071F9DB    call 0x0072A0D0
+0071F9DB    call 0x0072A0D0                                 ; => [ Call: sub_72a0d0 ]
 0071F9E0    test eax, eax
 0071F9E2    jz 0x0071FA04
 0071F9E4    mov ecx, dword ptr ss:[ebp+0x14]
@@ -388,7 +394,7 @@
 0071F9FF    pop ebx
 0071FA00    mov esp, ebp
 0071FA02    pop ebp
-0071FA03    ret
+0071FA03    ret                                             ; => [ Call: sub_72a480 ]
 0071FA04    xor eax, eax
 0071FA06    pop edi
 0071FA07    pop esi
@@ -412,4 +418,4 @@
 0071FA35    pop ebx
 0071FA36    mov esp, ebp
 0071FA38    pop ebp
-0071FA39    ret
+0071FA39    ret                                             ; => [ Call: sub_72be50 ]

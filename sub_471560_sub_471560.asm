@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_471560
+// 起始地址: 0x471560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00471560    mov edx, 0x03
 00471565    mov ecx, 0x82BC98
-0047156A    call 0x0069F030
-0047156F    mov dword ptr ds:[0x0171CE18], eax
+0047156A    call 0x0069F030                                 ; => [ String: res/card_gen/base/sentry.texture | Call: sub_69f030 ]
+0047156F    mov dword ptr ds:[0x0171CE18], eax              ; => [ Data: data_171ce18 ]
 00471574    ret

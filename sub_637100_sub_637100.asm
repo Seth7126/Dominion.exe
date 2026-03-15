@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_637100
+// 起始地址: 0x637100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00637100    push ebp
 00637101    mov ebp, esp
 00637103    push ebx
@@ -18,7 +24,7 @@
 00637132    add esi, 0x118
 00637138    mov eax, dword ptr ss:[ebp+0x08]
 0063713B    lea edi, ds:[edx+0x1C0]
-00637141    rep movsd
+00637141    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00637143    movups xmm0, xmmword ptr ds:[ebx]
 00637146    pop edi
 00637147    pop esi
@@ -35,10 +41,10 @@
 0063717B    push 0x86E0F4
 00637180    mov edx, 0x801800
 00637185    mov ecx, 0x86E1A0
-0063718A    call 0x0063B870
+0063718A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\CardMotion.h | Data: data_801800 | String: MoveComponent<struct DomLoc,struct DomMoveCallback>::QueueDelay | String: &callback.gfx->move == this ]
 0063718F    add esp, 0x0C
 00637192    call 0x0063BC30
 00637197    test al, al
-00637199    jz 0x0063719C
+00637199    jz 0x0063719C                                   ; => [ Call: sub_63bc30 ]
 0063719B    int3
-0063719C    call 0x0063BB00
+0063719C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

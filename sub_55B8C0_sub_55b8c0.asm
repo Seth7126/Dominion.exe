@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_55b8c0
+// 起始地址: 0x55b8c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055B8C0    dword 83EC8B55
 0055B8C4    in al, 0xF8
 0055B8C6    push ecx
 0055B8C7    mov edx, dword ptr ds:[0x00CCE9B0]
 0055B8CD    mov ecx, dword ptr ss:[ebp+0x08]
 0055B8D0    push esi
-0055B8D1    call 0x00571B30
+0055B8D1    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0055B8D6    mov ecx, dword ptr ds:[eax+0x98]
 0055B8DC    mov eax, dword ptr ds:[eax+0x9C]
 0055B8E2    and ecx, 0x7F000400
 0055B8E8    and eax, 0x940
 0055B8ED    or ecx, eax
 0055B8EF    jnz 0x0055B9C8
-0055B8F5    mov eax, dword ptr ds:[0x00CCE9C4]
+0055B8F5    mov eax, dword ptr ds:[0x00CCE9C4]              ; => [ Data: data_cce9c4 ]
 0055B8FA    xor edx, edx
 0055B8FC    nop dword ptr ds:[eax], eax
 0055B900    cmp dword ptr ds:[edx+eax*1+0x28], 0x00
@@ -39,8 +45,8 @@
 0055B94E    xor eax, eax
 0055B950    and ecx, 0x40
 0055B953    or eax, ecx
-0055B955    jnz 0x0055B9C1
-0055B957    mov eax, dword ptr ds:[0x00CCE9C4]
+0055B955    jnz 0x0055B9C1                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
+0055B957    mov eax, dword ptr ds:[0x00CCE9C4]              ; => [ Data: data_cce9c4 ]
 0055B95C    add esi, 0x3C
 0055B95F    cmp esi, 0xF0
 0055B965    jl 0x0055B935
@@ -55,17 +61,17 @@
 0055B988    xor eax, eax
 0055B98A    and ecx, 0x40
 0055B98D    or eax, ecx
-0055B98F    jnz 0x0055B9C1
+0055B98F    jnz 0x0055B9C1                                  ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0055B991    add esi, 0x04
 0055B994    cmp esi, 0x16C
 0055B99A    jnle 0x0055B9A3
-0055B99C    mov eax, dword ptr ds:[0x00CCE9C4]
+0055B99C    mov eax, dword ptr ds:[0x00CCE9C4]              ; => [ Data: data_cce9c4 ]
 0055B9A1    jmp 0x0055B970
 0055B9A3    mov edx, dword ptr ds:[0x00CCE9B0]
 0055B9A9    mov ecx, dword ptr ss:[ebp+0x08]
 0055B9AC    call 0x00571B30
 0055B9B1    mov eax, dword ptr ds:[eax+0x98]
-0055B9B7    and eax, 0x80000000
+0055B9B7    and eax, 0x80000000                             ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 0055B9BC    or eax, 0x00
 0055B9BF    jnz 0x0055B9C8
 0055B9C1    mov al, 0x01

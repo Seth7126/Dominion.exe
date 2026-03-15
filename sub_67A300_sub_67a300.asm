@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67a300
+// 起始地址: 0x67a300
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067A300    push ebx
 0067A301    mov ebx, esp
 0067A303    sub esp, 0x08
@@ -8,7 +14,7 @@
 0067A310    mov dword ptr ss:[esp+0x04], ebp
 0067A314    mov ebp, esp
 0067A316    sub esp, 0xF8
-0067A31C    mov eax, dword ptr ds:[0x008C4040]
+0067A31C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0067A321    xor eax, ebp
 0067A323    mov dword ptr ss:[ebp-0x04], eax
 0067A326    mov eax, dword ptr ds:[ebx+0x08]
@@ -73,7 +79,7 @@
 0067A418    add esp, 0x04
 0067A41B    xor edx, edx
 0067A41D    mov ecx, edi
-0067A41F    movups xmm3, xmmword ptr ds:[eax]
+0067A41F    movups xmm3, xmmword ptr ds:[eax]               ; => [ Call: sub_655430 ]
 0067A422    push 0x00
 0067A424    lea eax, ss:[ebp-0x28]
 0067A427    movaps xmm2, xmm3
@@ -92,7 +98,7 @@
 0067A450    movups xmmword ptr ss:[ebp-0xC8], xmm3
 0067A457    movss dword ptr ss:[ebp-0x10], xmm2
 0067A45C    movss dword ptr ss:[ebp-0x0C], xmm1
-0067A461    call 0x00656980
+0067A461    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0067A466    push 0x00
 0067A468    mov edx, 0x01
 0067A46D    mov ecx, edi
@@ -107,11 +113,11 @@
 0067A488    push eax
 0067A489    movups xmmword ptr ss:[ebp-0x98], xmm0
 0067A490    movups xmmword ptr ss:[ebp-0x48], xmm0
-0067A494    call 0x00656980
+0067A494    call 0x00656980                                 ; => [ Call: sub_656980 ]
 0067A499    movups xmm1, xmmword ptr ss:[ebp-0x98]
 0067A4A0    add esp, 0x20
 0067A4A3    lea ecx, ss:[ebp-0x58]
-0067A4A6    mov edx, 0xBF21E8
+0067A4A6    mov edx, 0xBF21E8                               ; => [ Data: data_bf21e8 ]
 0067A4AB    mov esi, 0x1C
 0067A4B0    movups xmm0, xmmword ptr ds:[eax]
 0067A4B3    movups xmm3, xmmword ptr ds:[eax+0x10]
@@ -141,7 +147,7 @@
 0067A508    pop esi
 0067A509    mov ecx, dword ptr ss:[ebp-0x04]
 0067A50C    xor ecx, ebp
-0067A50E    call 0x0075927A
+0067A50E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067A513    mov esp, ebp
 0067A515    pop ebp
 0067A516    mov esp, ebx
@@ -172,7 +178,7 @@
 0067A591    sub esp, 0x10
 0067A594    mov eax, esp
 0067A596    movups xmmword ptr ds:[eax], xmm0
-0067A599    call 0x006565B0
+0067A599    call 0x006565B0                                 ; => [ Call: sub_6565b0 ]
 0067A59E    movss xmm1, dword ptr ss:[ebp-0x5C]
 0067A5A3    mov ecx, edi
 0067A5A5    movss xmm0, dword ptr ss:[ebp-0x60]
@@ -191,13 +197,13 @@
 0067A5E2    addss xmm0, dword ptr ss:[ebp-0xA8]
 0067A5EA    movss dword ptr ss:[ebp-0x90], xmm2
 0067A5F2    movss dword ptr ss:[ebp-0x8C], xmm0
-0067A5FA    call 0x0067A1C0
+0067A5FA    call 0x0067A1C0                                 ; => [ Call: sub_67a1c0 ]
 0067A5FF    mov ecx, dword ptr ss:[ebp-0x04]
 0067A602    add esp, 0x38
 0067A605    xor ecx, ebp
 0067A607    pop edi
 0067A608    pop esi
-0067A609    call 0x0075927A
+0067A609    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067A60E    mov esp, ebp
 0067A610    pop ebp
 0067A611    mov esp, ebx
@@ -208,10 +214,10 @@
 0067A61F    push 0x8739B4
 0067A624    mov edx, 0x801800
 0067A629    mov ecx, 0x874310
-0067A62E    call 0x0063B870
+0067A62E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: UI2::countChildren | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: numChildren >= 0 ]
 0067A633    add esp, 0x0C
 0067A636    call 0x0063BC30
 0067A63B    test al, al
-0067A63D    jz 0x0067A640
+0067A63D    jz 0x0067A640                                   ; => [ Call: sub_63bc30 ]
 0067A63F    int3
-0067A640    call 0x0063BB00
+0067A640    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

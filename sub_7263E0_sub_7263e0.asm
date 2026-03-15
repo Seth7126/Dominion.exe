@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7263e0
+// 起始地址: 0x7263e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007263E0    push ebp
 007263E1    mov ebp, esp
 007263E3    sub esp, 0x08
@@ -11,7 +17,7 @@
 007263F3    jz 0x0072640E
 007263F5    cmp eax, edi
 007263F7    jnl 0x007263FE
-007263F9    call 0x00725DE0
+007263F9    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 007263FE    mov eax, dword ptr ds:[esi+0x0C]
 00726401    mov ecx, edi
 00726403    shr eax, cl
@@ -106,7 +112,7 @@
 007264F1    push ebx
 007264F2    push dword ptr ds:[esi]
 007264F4    push dword ptr ds:[ecx]
-007264F6    call 0x00761FBE
+007264F6    call 0x00761FBE                                 ; => [ Call: memcpy ]
 007264FB    mov edx, dword ptr ss:[ebp-0x04]
 007264FE    add esp, 0x0C
 00726501    add dword ptr ds:[esi], ebx

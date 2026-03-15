@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c3680
+// 起始地址: 0x6c3680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C3680    push ebp
 006C3681    mov ebp, esp
 006C3683    sub esp, 0x1C
@@ -17,7 +23,7 @@
 006C36A3    lea eax, ds:[edi-0x08]
 006C36A6    mov edx, esi
 006C36A8    push eax
-006C36A9    call 0x006C39B0
+006C36A9    call 0x006C39B0                                 ; => [ Call: sub_6c39b0 ]
 006C36AE    add esp, 0x08
 006C36B1    lea edi, ds:[esi+0x08]
 006C36B4    mov dword ptr ss:[ebp-0x04], edi

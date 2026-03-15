@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72e6b0
+// 起始地址: 0x72e6b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072E6B0    push ebp
 0072E6B1    mov ebp, esp
 0072E6B3    sub esp, 0x10
@@ -149,30 +155,30 @@
 0072E85A    mov byte ptr ss:[ebp+0x0B], cl
 0072E85D    lea edx, ss:[ebp+0x0B]
 0072E860    mov ecx, esi
-0072E862    call 0x0072E320
+0072E862    call 0x0072E320                                 ; => [ Call: sub_72e320 ]
 0072E867    lea edx, ss:[ebp+0x0B]
 0072E86A    mov ecx, esi
 0072E86C    call 0x0072E570
 0072E871    mov ecx, dword ptr ss:[ebp-0x0C]
 0072E874    lea edx, ss:[ebp+0x0B]
-0072E877    mov dword ptr ds:[ecx], eax
+0072E877    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_72e570 ]
 0072E879    mov ecx, esi
-0072E87B    call 0x0072E320
+0072E87B    call 0x0072E320                                 ; => [ Call: sub_72e320 ]
 0072E880    lea edx, ss:[ebp+0x0B]
 0072E883    mov ecx, esi
 0072E885    call 0x0072E570
 0072E88A    mov ecx, dword ptr ss:[ebp-0x10]
 0072E88D    lea edx, ss:[ebp+0x0B]
-0072E890    mov dword ptr ds:[ecx], eax
+0072E890    mov dword ptr ds:[ecx], eax                     ; => [ Call: sub_72e570 ]
 0072E892    mov ecx, esi
-0072E894    call 0x0072E320
+0072E894    call 0x0072E320                                 ; => [ Call: sub_72e320 ]
 0072E899    lea edx, ss:[ebp+0x0B]
 0072E89C    mov ecx, esi
 0072E89E    call 0x0072E570
 0072E8A3    xor ecx, ecx
 0072E8A5    cmp eax, 0xFF
 0072E8AA    pop edi
-0072E8AB    setle cl
+0072E8AB    setle cl                                        ; => [ Call: sub_72e570 ]
 0072E8AE    pop esi
 0072E8AF    mov eax, ecx
 0072E8B1    pop ebx

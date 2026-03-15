@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_539630
+// 起始地址: 0x539630
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00539630    dword 8BEC8B55
 00539634    inc ebp
 00539635    or al, 0x85
@@ -11,13 +17,13 @@
 0053964F    popfd
 00539650    add dword ptr ds:[eax], 0x801800BA
 00539656    add byte ptr ds:[ecx+0x80AE74], bh
-0053965C    call 0x0063B870
+0053965C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Intrigue.cpp | String: numCards == 1 ]
 00539661    add esp, 0x0C
 00539664    call 0x0063BC30
 00539669    test al, al
-0053966B    jz 0x0053966E
+0053966B    jz 0x0053966E                                   ; => [ Call: sub_63bc30 ]
 0053966D    int3
-0053966E    jmp 0x0063BB00
+0053966E    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00539673    mov eax, dword ptr ss:[ebp+0x08]
 00539676    mov ecx, dword ptr ds:[eax]
 00539678    push ecx
@@ -26,4 +32,4 @@
 00539681    call 0x00568530
 00539686    add esp, 0x04
 00539689    pop ebp
-0053968A    ret
+0053968A    ret                                             ; => [ Call: sub_568530 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73b4a0
+// 起始地址: 0x73b4a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073B4A0    push ebx
 0073B4A1    mov ebx, esp
 0073B4A3    sub esp, 0x08
@@ -23,14 +29,14 @@
 0073B4EA    jz 0x0073B587
 0073B4F0    mov eax, dword ptr ds:[0x00CF65B4]
 0073B4F5    cmp byte ptr ds:[eax+0x18], 0x00
-0073B4F9    jz 0x0073B587
+0073B4F9    jz 0x0073B587                                   ; => [ Type: POINT | Data: data_cf65b4 | Data: data_147ac28 ]
 0073B4FF    cmp byte ptr ds:[0x0147DEF0], 0x00
-0073B506    jnz 0x0073B522
+0073B506    jnz 0x0073B522                                  ; => [ Data: data_147def0 ]
 0073B508    push 0x147DEF4
 0073B50D    call ecx
 0073B50F    test eax, eax
-0073B511    jz 0x0073B59B
-0073B517    mov byte ptr ds:[0x0147DEF0], 0x01
+0073B511    jz 0x0073B59B                                   ; => [ Data: data_147def4 ]
+0073B517    mov byte ptr ds:[0x0147DEF0], 0x01              ; => [ Data: data_147def0 ]
 0073B51E    push 0x00
 0073B520    jmp 0x0073B599
 0073B522    lea eax, ss:[ebp-0x30]
@@ -38,14 +44,14 @@
 0073B526    call ecx
 0073B528    test eax, eax
 0073B52A    jz 0x0073B59B
-0073B52C    mov eax, dword ptr ds:[0x0147DEF8]
-0073B531    mov ecx, dword ptr ds:[0x0147DEF4]
+0073B52C    mov eax, dword ptr ds:[0x0147DEF8]              ; => [ Data: data_147def8 ]
+0073B531    mov ecx, dword ptr ds:[0x0147DEF4]              ; => [ Data: data_147def4 ]
 0073B537    mov esi, dword ptr ss:[ebp-0x30]
 0073B53A    mov edi, dword ptr ss:[ebp-0x2C]
-0073B53D    sub esi, ecx
+0073B53D    sub esi, ecx                                    ; => [ Field: x ]
 0073B53F    push eax
 0073B540    push ecx
-0073B541    sub edi, eax
+0073B541    sub edi, eax                                    ; => [ Field: y ]
 0073B543    call dword ptr ds:[0x00775388]
 0073B549    movd xmm0, esi
 0073B54D    xorps xmm3, xmm3
@@ -62,8 +68,8 @@
 0073B580    movss dword ptr ss:[ebp-0x24], xmm0
 0073B585    jmp 0x0073B59B
 0073B587    cmp byte ptr ds:[0x0147DEF0], 0x01
-0073B58E    jnz 0x0073B5A1
-0073B590    mov byte ptr ds:[0x0147DEF0], 0x00
+0073B58E    jnz 0x0073B5A1                                  ; => [ Data: data_147def0 ]
+0073B590    mov byte ptr ds:[0x0147DEF0], 0x00              ; => [ Data: data_147def0 ]
 0073B597    push 0x01
 0073B599    call esi
 0073B59B    mov ecx, dword ptr ds:[0x00775394]
@@ -72,14 +78,14 @@
 0073B5AA    jz 0x0073B639
 0073B5B0    mov eax, dword ptr ds:[0x00CF65B4]
 0073B5B5    cmp byte ptr ds:[eax+0x18], 0x00
-0073B5B9    jz 0x0073B639
+0073B5B9    jz 0x0073B639                                   ; => [ Data: data_cf65b4 | Data: data_147ac28 ]
 0073B5BB    cmp byte ptr ds:[0x0147DEF2], 0x00
-0073B5C2    jnz 0x0073B5DA
+0073B5C2    jnz 0x0073B5DA                                  ; => [ Data: data_147def2 ]
 0073B5C4    push 0x147DF04
 0073B5C9    call ecx
 0073B5CB    test eax, eax
-0073B5CD    jz 0x0073B64D
-0073B5CF    mov byte ptr ds:[0x0147DEF2], 0x01
+0073B5CD    jz 0x0073B64D                                   ; => [ Data: data_147df04 ]
+0073B5CF    mov byte ptr ds:[0x0147DEF2], 0x01              ; => [ Data: data_147def2 ]
 0073B5D6    push 0x00
 0073B5D8    jmp 0x0073B64B
 0073B5DA    lea eax, ss:[ebp-0x30]
@@ -87,14 +93,14 @@
 0073B5DE    call ecx
 0073B5E0    test eax, eax
 0073B5E2    jz 0x0073B64D
-0073B5E4    mov eax, dword ptr ds:[0x0147DF08]
-0073B5E9    mov ecx, dword ptr ds:[0x0147DF04]
+0073B5E4    mov eax, dword ptr ds:[0x0147DF08]              ; => [ Data: data_147df08 ]
+0073B5E9    mov ecx, dword ptr ds:[0x0147DF04]              ; => [ Data: data_147df04 ]
 0073B5EF    mov esi, dword ptr ss:[ebp-0x30]
 0073B5F2    mov edi, dword ptr ss:[ebp-0x2C]
-0073B5F5    sub esi, ecx
+0073B5F5    sub esi, ecx                                    ; => [ Field: x ]
 0073B5F7    push eax
 0073B5F8    push ecx
-0073B5F9    sub edi, eax
+0073B5F9    sub edi, eax                                    ; => [ Field: y ]
 0073B5FB    call dword ptr ds:[0x00775388]
 0073B601    movd xmm0, esi
 0073B605    xorps xmm3, xmm3
@@ -110,31 +116,31 @@
 0073B632    movss dword ptr ss:[ebp-0x18], xmm0
 0073B637    jmp 0x0073B64D
 0073B639    cmp byte ptr ds:[0x0147DEF2], 0x01
-0073B640    jnz 0x0073B64D
-0073B642    mov byte ptr ds:[0x0147DEF2], 0x00
+0073B640    jnz 0x0073B64D                                  ; => [ Data: data_147def2 ]
+0073B642    mov byte ptr ds:[0x0147DEF2], 0x00              ; => [ Data: data_147def2 ]
 0073B649    push 0x01
 0073B64B    call esi
 0073B64D    movss xmm2, dword ptr ds:[0x0147DF0C]
 0073B655    movss xmm0, dword ptr ds:[0x0147DF10]
-0073B65D    subss xmm0, dword ptr ds:[0x0147DF1C]
-0073B665    subss xmm2, dword ptr ds:[0x0147DF18]
+0073B65D    subss xmm0, dword ptr ds:[0x0147DF1C]           ; => [ Data: data_147df10 | Data: data_147df1c ]
+0073B665    subss xmm2, dword ptr ds:[0x0147DF18]           ; => [ Data: data_147df0c | Data: data_147df18 ]
 0073B66D    movss xmm1, dword ptr ds:[0x0147DF14]
-0073B675    subss xmm1, dword ptr ds:[0x0147DF20]
+0073B675    subss xmm1, dword ptr ds:[0x0147DF20]           ; => [ Data: data_147df14 | Data: data_147df20 ]
 0073B67D    mulss xmm0, xmm0
 0073B681    mulss xmm2, xmm2
 0073B685    mulss xmm1, xmm1
 0073B689    addss xmm0, xmm2
 0073B68D    addss xmm0, xmm1
-0073B691    call 0x004AC580
+0073B691    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 0073B696    movss xmm1, dword ptr ds:[0x00890E18]
-0073B69E    movss xmm3, dword ptr ds:[0x0147DF18]
+0073B69E    movss xmm3, dword ptr ds:[0x0147DF18]           ; => [ Data: data_147df18 ]
 0073B6A6    maxss xmm1, xmm0
-0073B6AA    subss xmm3, dword ptr ds:[0x0147DF0C]
+0073B6AA    subss xmm3, dword ptr ds:[0x0147DF0C]           ; => [ Data: data_147df0c ]
 0073B6B2    movss xmm2, dword ptr ds:[0x0147DF20]
-0073B6BA    subss xmm2, dword ptr ds:[0x0147DF14]
+0073B6BA    subss xmm2, dword ptr ds:[0x0147DF14]           ; => [ Data: data_147df14 | Data: data_147df20 ]
 0073B6C2    movss dword ptr ss:[ebp-0x04], xmm1
 0073B6C7    movss xmm1, dword ptr ds:[0x0147DF1C]
-0073B6CF    subss xmm1, dword ptr ds:[0x0147DF10]
+0073B6CF    subss xmm1, dword ptr ds:[0x0147DF10]           ; => [ Data: data_147df10 | Data: data_147df1c ]
 0073B6D7    movss dword ptr ss:[ebp-0x08], xmm3
 0073B6DC    movss dword ptr ss:[ebp-0x28], xmm2
 0073B6E1    movaps xmm0, xmm1
@@ -149,7 +155,7 @@
 0073B703    call 0x004AC580
 0073B708    movss xmm1, dword ptr ds:[0x00890E18]
 0073B710    xorps xmm5, xmm5
-0073B713    divss xmm1, xmm0
+0073B713    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 0073B717    movss xmm0, dword ptr ss:[ebp-0x28]
 0073B71C    movss xmm4, dword ptr ss:[ebp-0x0C]
 0073B721    movss xmm3, dword ptr ss:[ebp-0x08]
@@ -181,7 +187,7 @@
 0073B78A    addss xmm0, xmm1
 0073B78E    call 0x004AC580
 0073B793    movss xmm1, dword ptr ds:[0x00890E18]
-0073B79B    divss xmm1, xmm0
+0073B79B    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 0073B79F    movss xmm7, dword ptr ss:[ebp-0x04]
 0073B7A4    movss xmm2, dword ptr ds:[0x00890D54]
 0073B7AC    movaps xmm3, xmm1
@@ -209,9 +215,9 @@
 0073B809    mulss xmm1, dword ptr ss:[ebp-0x28]
 0073B80E    mulss xmm3, xmm6
 0073B812    movss dword ptr ss:[ebp-0x04], xmm0
-0073B817    addss xmm0, dword ptr ds:[0x0147DF18]
+0073B817    addss xmm0, dword ptr ds:[0x0147DF18]           ; => [ Data: data_147df18 ]
 0073B81F    movss dword ptr ss:[ebp-0x34], xmm0
-0073B824    movss dword ptr ds:[0x0147DF18], xmm0
+0073B824    movss dword ptr ds:[0x0147DF18], xmm0           ; => [ Data: data_147df18 ]
 0073B82C    movaps xmm0, xmm4
 0073B82F    mulss xmm0, xmm7
 0073B833    mulss xmm4, dword ptr ss:[ebp-0x08]
@@ -231,11 +237,11 @@
 0073B873    mulss xmm1, xmm2
 0073B877    subss xmm0, xmm1
 0073B87B    movaps xmm1, xmm0
-0073B87E    addss xmm1, dword ptr ds:[0x0147DF1C]
+0073B87E    addss xmm1, dword ptr ds:[0x0147DF1C]           ; => [ Data: data_147df1c ]
 0073B886    addss xmm0, dword ptr ds:[0x0147DF10]
 0073B88E    movss dword ptr ss:[ebp-0x38], xmm1
-0073B893    subss xmm0, dword ptr ss:[ebp-0x38]
-0073B898    movss dword ptr ds:[0x0147DF1C], xmm1
+0073B893    subss xmm0, dword ptr ss:[ebp-0x38]             ; => [ Data: data_147df10 ]
+0073B898    movss dword ptr ds:[0x0147DF1C], xmm1           ; => [ Data: data_147df1c ]
 0073B8A0    movss xmm1, dword ptr ss:[ebp-0x10]
 0073B8A5    mulss xmm1, xmm7
 0073B8A9    movss dword ptr ss:[ebp-0x0C], xmm0
@@ -245,23 +251,23 @@
 0073B8BB    movss dword ptr ss:[ebp-0x10], xmm1
 0073B8C0    movaps xmm2, xmm1
 0073B8C3    movss xmm0, dword ptr ss:[ebp-0x10]
-0073B8C8    addss xmm2, dword ptr ds:[0x0147DF20]
+0073B8C8    addss xmm2, dword ptr ds:[0x0147DF20]           ; => [ Data: data_147df20 ]
 0073B8D0    addss xmm0, dword ptr ds:[0x0147DF14]
 0073B8D8    movss xmm1, dword ptr ss:[ebp-0x04]
-0073B8DD    addss xmm1, dword ptr ds:[0x0147DF0C]
-0073B8E5    movss dword ptr ss:[ebp-0x2C], xmm2
-0073B8EA    subss xmm0, xmm2
-0073B8EE    movss dword ptr ds:[0x0147DF20], xmm2
+0073B8DD    addss xmm1, dword ptr ds:[0x0147DF0C]           ; => [ Data: data_147df0c ]
+0073B8E5    movss dword ptr ss:[ebp-0x2C], xmm2             ; => [ Field: y ]
+0073B8EA    subss xmm0, xmm2                                ; => [ Data: data_147df14 ]
+0073B8EE    movss dword ptr ds:[0x0147DF20], xmm2           ; => [ Data: data_147df20 ]
 0073B8F6    subss xmm1, dword ptr ss:[ebp-0x34]
 0073B8FB    movss dword ptr ss:[ebp-0x10], xmm0
 0073B900    movss xmm0, dword ptr ss:[ebp-0x14]
 0073B905    mulss xmm0, dword ptr ds:[0x00890D84]
 0073B90D    movss dword ptr ss:[ebp-0x04], xmm1
 0073B912    movss dword ptr ss:[ebp-0x14], xmm0
-0073B917    call 0x004AE0D0
+0073B917    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 0073B91C    movss dword ptr ss:[ebp-0x20], xmm0
 0073B921    movss xmm0, dword ptr ss:[ebp-0x14]
-0073B926    call 0x004AE0F0
+0073B926    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 0073B92B    movss xmm4, dword ptr ss:[ebp-0x0C]
 0073B930    movaps xmm5, xmm0
 0073B933    xorps xmm1, xmm1
@@ -354,15 +360,15 @@
 0073BA9B    addss xmm0, xmm1
 0073BA9F    call 0x004AC580
 0073BAA4    movss xmm1, dword ptr ds:[0x00890E18]
-0073BAAC    divss xmm1, xmm0
+0073BAAC    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 0073BAB0    movss xmm0, dword ptr ss:[ebp-0x24]
 0073BAB5    movss dword ptr ss:[ebp-0x1C], xmm1
 0073BABA    mulss xmm0, dword ptr ds:[0x00890D84]
 0073BAC2    movss dword ptr ss:[ebp-0x24], xmm0
-0073BAC7    call 0x004AE0D0
+0073BAC7    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 0073BACC    movss dword ptr ss:[ebp-0x08], xmm0
 0073BAD1    movss xmm0, dword ptr ss:[ebp-0x24]
-0073BAD6    call 0x004AE0F0
+0073BAD6    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 0073BADB    movss xmm6, dword ptr ss:[ebp-0x1C]
 0073BAE0    movss xmm1, dword ptr ss:[ebp-0x08]
 0073BAE5    movaps xmm2, xmm6
@@ -467,7 +473,7 @@
 0073BC8F    call 0x004AC580
 0073BC94    movss xmm2, dword ptr ds:[0x00890E18]
 0073BC9C    xorps xmm3, xmm3
-0073BC9F    divss xmm2, xmm0
+0073BC9F    divss xmm2, xmm0                                ; => [ Call: sub_4ac580 ]
 0073BCA3    movss xmm5, dword ptr ss:[ebp-0x08]
 0073BCA8    movss xmm4, dword ptr ss:[ebp-0x04]
 0073BCAD    movaps xmm1, xmm2
@@ -484,7 +490,7 @@
 0073BCDC    cvtps2pd xmm1, xmm1
 0073BCDF    andps xmm1, xmmword ptr ds:[0x008937B0]
 0073BCE6    comisd xmm0, xmm1
-0073BCEA    jbe 0x0073BCF7
+0073BCEA    jbe 0x0073BCF7                                  ; => [ Data: data_8937b0 ]
 0073BCEC    movaps xmm0, xmm4
 0073BCEF    movaps xmm1, xmm5
 0073BCF2    movaps xmm2, xmm3
@@ -494,12 +500,12 @@
 0073BD01    movss xmm2, dword ptr ss:[ebp-0x14]
 0073BD06    addss xmm0, dword ptr ss:[ebp-0x34]
 0073BD0B    addss xmm1, dword ptr ss:[ebp-0x38]
-0073BD10    addss xmm2, dword ptr ss:[ebp-0x2C]
-0073BD15    mov ecx, dword ptr ds:[0x0147ABE8]
-0073BD1B    mov eax, dword ptr ds:[0x0147DF54]
-0073BD20    movss dword ptr ds:[0x0147DF0C], xmm0
-0073BD28    movss dword ptr ds:[0x0147DF10], xmm1
-0073BD30    movss dword ptr ds:[0x0147DF14], xmm2
+0073BD10    addss xmm2, dword ptr ss:[ebp-0x2C]             ; => [ Field: y ]
+0073BD15    mov ecx, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
+0073BD1B    mov eax, dword ptr ds:[0x0147DF54]              ; => [ Data: data_147df54 ]
+0073BD20    movss dword ptr ds:[0x0147DF0C], xmm0           ; => [ Data: data_147df0c ]
+0073BD28    movss dword ptr ds:[0x0147DF10], xmm1           ; => [ Data: data_147df10 ]
+0073BD30    movss dword ptr ds:[0x0147DF14], xmm2           ; => [ Data: data_147df14 ]
 0073BD38    test ecx, ecx
 0073BD3A    jz 0x0073BF01
 0073BD40    mov ecx, dword ptr ds:[ecx+0x10]
@@ -515,15 +521,15 @@
 0073BD65    test esi, esi
 0073BD67    jz 0x0073BEF8
 0073BD6D    movss xmm0, dword ptr ds:[0x0147DF58]
-0073BD75    addss xmm0, dword ptr ds:[0x0147DF84]
-0073BD7D    movss dword ptr ds:[0x0147DF58], xmm0
+0073BD75    addss xmm0, dword ptr ds:[0x0147DF84]           ; => [ Data: data_147df84 | Data: data_147df58 ]
+0073BD7D    movss dword ptr ds:[0x0147DF58], xmm0           ; => [ Data: data_147df58 ]
 0073BD85    mulss xmm0, dword ptr ds:[0x00890D84]
-0073BD8D    movss dword ptr ss:[ebp-0x2C], xmm0
-0073BD92    call 0x004AE0D0
+0073BD8D    movss dword ptr ss:[ebp-0x2C], xmm0             ; => [ Field: y ]
+0073BD92    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 0073BD97    movss dword ptr ss:[ebp-0x3C], xmm0
 0073BD9C    movss dword ptr ss:[ebp-0x44], xmm0
 0073BDA1    movss xmm0, dword ptr ss:[ebp-0x2C]
-0073BDA6    call 0x004AE0F0
+0073BDA6    call 0x004AE0F0                                 ; => [ Field: y | Call: sub_4ae0f0 ]
 0073BDAB    movaps xmm6, xmm0
 0073BDAE    mov dword ptr ss:[ebp-0x70], 0x3F800000
 0073BDB5    movaps xmm1, xmm6
@@ -547,11 +553,11 @@
 0073BDFA    xorps xmm1, xmm1
 0073BDFD    movss dword ptr ss:[ebp-0x08], xmm6
 0073BE02    addss xmm5, xmm6
-0073BE06    movss dword ptr ss:[ebp-0x2C], xmm2
+0073BE06    movss dword ptr ss:[ebp-0x2C], xmm2             ; => [ Field: y ]
 0073BE0B    movaps xmm6, xmm3
 0073BE0E    subss xmm6, xmm2
 0073BE12    addss xmm2, xmm3
-0073BE16    movss xmm3, dword ptr ss:[ebp-0x2C]
+0073BE16    movss xmm3, dword ptr ss:[ebp-0x2C]             ; => [ Field: y ]
 0073BE1B    mulss xmm5, xmm1
 0073BE1F    movss xmm1, dword ptr ss:[ebp-0x08]
 0073BE24    subss xmm1, xmm0
@@ -588,13 +594,13 @@
 0073BEB5    subss xmm2, dword ptr ds:[0x00890F10]
 0073BEBD    addss xmm1, dword ptr ds:[0x0147DF68]
 0073BEC5    addss xmm6, xmm4
-0073BEC9    movss dword ptr ss:[ebp-0x5C], xmm2
+0073BEC9    movss dword ptr ss:[ebp-0x5C], xmm2             ; => [ Data: data_147df64 ]
 0073BECE    addss xmm1, xmm0
 0073BED2    addss xmm6, dword ptr ds:[0x0147DF6C]
-0073BEDA    movss dword ptr ss:[ebp-0x58], xmm1
+0073BEDA    movss dword ptr ss:[ebp-0x58], xmm1             ; => [ Data: data_147df68 ]
 0073BEDF    addss xmm6, xmm0
 0073BEE3    movups xmm0, xmmword ptr ss:[ebp-0x70]
-0073BEE7    movss dword ptr ss:[ebp-0x54], xmm6
+0073BEE7    movss dword ptr ss:[ebp-0x54], xmm6             ; => [ Data: data_147df6c ]
 0073BEEC    movups xmmword ptr ds:[esi+0x2C], xmm0
 0073BEF0    movups xmm0, xmmword ptr ss:[ebp-0x60]
 0073BEF4    movups xmmword ptr ds:[esi+0x3C], xmm0
@@ -610,10 +616,10 @@
 0073BF08    push 0x871FA0
 0073BF0D    mov edx, 0x801800
 0073BF12    mov ecx, 0x871F94
-0073BF17    call 0x0063B870
+0073BF17    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetGameData | Data: data_801800 | String: gpGameData | String: C:\x\ax2017\Engine\Game.h ]
 0073BF1C    add esp, 0x0C
 0073BF1F    call 0x0063BC30
 0073BF24    test al, al
-0073BF26    jz 0x0073BF29
+0073BF26    jz 0x0073BF29                                   ; => [ Call: sub_63bc30 ]
 0073BF28    int3
-0073BF29    call 0x0063BB00
+0073BF29    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

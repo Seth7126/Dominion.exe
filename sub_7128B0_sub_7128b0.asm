@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7128b0
+// 起始地址: 0x7128b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007128B0    push ebp
 007128B1    mov ebp, esp
 007128B3    push ecx
@@ -6,7 +12,7 @@
 007128B6    push edi
 007128B7    mov edi, edx
 007128B9    mov ebx, ecx
-007128BB    call 0x00712A90
+007128BB    call 0x00712A90                                 ; => [ Call: sub_712a90 ]
 007128C0    mov esi, dword ptr ds:[ebx+0x08]
 007128C3    mov ecx, dword ptr ss:[ebp+0x08]
 007128C6    mov dword ptr ss:[ebp-0x04], eax
@@ -17,13 +23,13 @@
 007128D8    jz 0x0071290F
 007128DA    mov esi, dword ptr ds:[ebx+0x24]
 007128DD    mov ecx, esi
-007128DF    call 0x00710F50
+007128DF    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007128E4    mov ecx, dword ptr ds:[esi+0x08]
 007128E7    mov eax, dword ptr ds:[esi+0x04]
 007128EA    mov dword ptr ds:[eax+ecx*4], 0x01
 007128F1    mov ecx, esi
 007128F3    inc dword ptr ds:[esi+0x08]
-007128F6    call 0x00710F50
+007128F6    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007128FB    mov ecx, dword ptr ds:[esi+0x08]
 007128FE    mov eax, dword ptr ds:[esi+0x04]
 00712901    mov edx, dword ptr ss:[ebp-0x04]
@@ -49,13 +55,13 @@
 0071294E    mov dword ptr ds:[eax+0x78], 0x00
 00712955    mov esi, dword ptr ds:[ebx+0x24]
 00712958    mov ecx, esi
-0071295A    call 0x00710F50
+0071295A    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 0071295F    mov ecx, dword ptr ds:[esi+0x08]
 00712962    mov eax, dword ptr ds:[esi+0x04]
 00712965    mov dword ptr ds:[eax+ecx*4], 0x00
 0071296C    mov ecx, esi
 0071296E    inc dword ptr ds:[esi+0x08]
-00712971    call 0x00710F50
+00712971    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 00712976    mov ecx, dword ptr ds:[esi+0x08]
 00712979    mov eax, dword ptr ds:[esi+0x04]
 0071297C    mov edx, dword ptr ss:[ebp+0x08]

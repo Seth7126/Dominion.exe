@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d6770
+// 起始地址: 0x6d6770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D6770    push ebx
 006D6771    mov ebx, esp
 006D6773    sub esp, 0x08
@@ -8,11 +14,11 @@
 006D6780    mov dword ptr ss:[esp+0x04], ebp
 006D6784    mov ebp, esp
 006D6786    sub esp, 0x40
-006D6789    mov eax, dword ptr ds:[0x008C4040]
+006D6789    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006D678E    xor eax, ebp
 006D6790    mov dword ptr ss:[ebp-0x04], eax
 006D6793    movss xmm0, dword ptr ds:[ebx+0x14]
-006D6798    xorps xmm0, xmmword ptr ds:[0x008937C0]
+006D6798    xorps xmm0, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 006D679F    mov eax, dword ptr ds:[ebx+0x0C]
 006D67A2    push esi
 006D67A3    push edi
@@ -29,8 +35,8 @@
 006D67C0    cmp eax, 0x08
 006D67C3    jb 0x006D680E
 006D67C5    and eax, 0xFFFFFFF8
-006D67C8    xorps xmm2, xmm2
-006D67CB    xorps xmm1, xmm1
+006D67C8    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+006D67CB    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006D67CE    nop
 006D67D0    movups xmm0, xmmword ptr ds:[edx+ecx*4]
 006D67D4    paddd xmm2, xmm0
@@ -165,7 +171,7 @@
 006D6986    mov edi, dword ptr ss:[ebp-0x1C]
 006D6989    mov edx, esi
 006D698B    mov ecx, edi
-006D698D    call 0x006D6610
+006D698D    call 0x006D6610                                 ; => [ Call: sub_6d6610 ]
 006D6992    mov eax, dword ptr ss:[ebp-0x24]
 006D6995    mov esi, 0x01
 006D699A    cmp eax, esi
@@ -213,7 +219,7 @@
 006D6A12    push ecx
 006D6A13    mov ecx, dword ptr ss:[ebp-0x3C]
 006D6A16    push eax
-006D6A17    call 0x006D6190
+006D6A17    call 0x006D6190                                 ; => [ Call: sub_6d6190 ]
 006D6A1C    add esp, 0x14
 006D6A1F    push edi
 006D6A20    call dword ptr ds:[0x00775528]
@@ -222,7 +228,7 @@
 006D6A2C    pop edi
 006D6A2D    xor ecx, ebp
 006D6A2F    pop esi
-006D6A30    call 0x0075927A
+006D6A30    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D6A35    mov esp, ebp
 006D6A37    pop ebp
 006D6A38    mov esp, ebx

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f5450
+// 起始地址: 0x4f5450
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F5450    push ecx
 004F5451    push esi
 004F5452    push edi
@@ -5,9 +11,9 @@
 004F5459    mov esi, edx
 004F545B    mov ecx, 0x21
 004F5460    add edi, 0x1777620
-004F5466    rep movsd
+004F5466    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004F5468    xor edi, edi
-004F546A    mov esi, 0x1777948
+004F546A    mov esi, 0x1777948                              ; => [ Data: data_1777948 ]
 004F546F    nop
 004F5470    push 0x5851F42D
 004F5475    mov eax, edi
@@ -15,7 +21,7 @@
 004F5478    push 0x4C957F2D
 004F547D    push edx
 004F547E    push eax
-004F547F    call 0x007621D0
+004F547F    call 0x007621D0                                 ; => [ Call: __allmul ]
 004F5484    add eax, 0x03
 004F5487    mov dword ptr ds:[esi], eax
 004F5489    adc edx, 0x00
@@ -25,14 +31,14 @@
 004F5497    mov dword ptr ds:[esi+0x0C], 0x00
 004F549E    add esi, 0x10
 004F54A1    cmp esi, 0x1777F88
-004F54A7    jl 0x004F5470
-004F54A9    cmp byte ptr ds:[0x019E3991], 0x00
+004F54A7    jl 0x004F5470                                   ; => [ Data: data_1777f88 ]
+004F54A9    cmp byte ptr ds:[0x019E3991], 0x00              ; => [ Data: data_19e3991 ]
 004F54B0    movups xmm0, xmmword ptr ds:[0x01777948]
-004F54B7    movups xmmword ptr ds:[0x01777938], xmm0
+004F54B7    movups xmmword ptr ds:[0x01777938], xmm0        ; => [ Data: data_1777938 | Data: data_1777948 ]
 004F54BE    jnz 0x004F598B
 004F54C4    push 0x01
 004F54C6    mov edx, 0x07
-004F54CB    mov byte ptr ds:[0x019E3991], 0x01
+004F54CB    mov byte ptr ds:[0x019E3991], 0x01              ; => [ Data: data_19e3991 ]
 004F54D2    mov ecx, 0x92E3E0
 004F54D7    call 0x004F5340
 004F54DC    add esp, 0x04
@@ -64,7 +70,7 @@
 004F5543    mov edx, 0x20
 004F5548    mov ecx, 0xA24948
 004F554D    push 0x07
-004F554F    call 0x004F5340
+004F554F    call 0x004F5340                                 ; => [ Call: sub_4f5340 ]
 004F5554    add esp, 0x04
 004F5557    mov edx, 0x26
 004F555C    mov ecx, 0xA74D60
@@ -99,7 +105,7 @@
 004F55CF    mov edx, 0x34
 004F55D4    mov ecx, 0xB0ABC8
 004F55D9    push 0x0E
-004F55DB    call 0x004F5340
+004F55DB    call 0x004F5340                                 ; => [ Call: sub_4f5340 ]
 004F55E0    add esp, 0x04
 004F55E3    mov edx, 0x48
 004F55E8    mov ecx, 0xA91AF0
@@ -129,151 +135,151 @@
 004F5647    mov edx, 0x0F
 004F564C    mov ecx, 0xAF3C40
 004F5651    push 0x13
-004F5653    call 0x004F5340
+004F5653    call 0x004F5340                                 ; => [ Call: sub_4f5340 ]
 004F5658    add esp, 0x04
 004F565B    mov ecx, 0x92F
 004F5660    call 0x004EE0D0
 004F5665    mov ecx, 0x930
-004F566A    mov dword ptr ds:[eax+0x04], 0x91C
+004F566A    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F5671    call 0x004EE0D0
 004F5676    mov ecx, 0x931
-004F567B    mov dword ptr ds:[eax+0x04], 0x91C
+004F567B    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F5682    call 0x004EE0D0
 004F5687    mov ecx, 0x932
-004F568C    mov dword ptr ds:[eax+0x04], 0x91C
+004F568C    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F5693    call 0x004EE0D0
 004F5698    mov ecx, 0x933
-004F569D    mov dword ptr ds:[eax+0x04], 0x91C
+004F569D    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F56A4    call 0x004EE0D0
 004F56A9    mov ecx, 0x934
-004F56AE    mov dword ptr ds:[eax+0x04], 0x91C
+004F56AE    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F56B5    call 0x004EE0D0
 004F56BA    mov ecx, 0x935
-004F56BF    mov dword ptr ds:[eax+0x04], 0x91C
+004F56BF    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F56C6    call 0x004EE0D0
 004F56CB    mov ecx, 0x936
-004F56D0    mov dword ptr ds:[eax+0x04], 0x91C
+004F56D0    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F56D7    call 0x004EE0D0
 004F56DC    mov ecx, 0x937
-004F56E1    mov dword ptr ds:[eax+0x04], 0x91C
+004F56E1    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F56E8    call 0x004EE0D0
 004F56ED    mov ecx, 0x938
-004F56F2    mov dword ptr ds:[eax+0x04], 0x91C
+004F56F2    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F56F9    call 0x004EE0D0
 004F56FE    mov ecx, 0xC2A
-004F5703    mov dword ptr ds:[eax+0x04], 0x91C
+004F5703    mov dword ptr ds:[eax+0x04], 0x91C              ; => [ Call: sub_4ee0d0 ]
 004F570A    call 0x004EE0D0
 004F570F    mov ecx, 0xC2B
-004F5714    mov dword ptr ds:[eax+0x04], 0xC0A
+004F5714    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F571B    call 0x004EE0D0
 004F5720    mov ecx, 0xC2C
-004F5725    mov dword ptr ds:[eax+0x04], 0xC0A
+004F5725    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F572C    call 0x004EE0D0
 004F5731    mov ecx, 0xC2D
-004F5736    mov dword ptr ds:[eax+0x04], 0xC0A
+004F5736    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F573D    call 0x004EE0D0
 004F5742    mov ecx, 0xC2E
-004F5747    mov dword ptr ds:[eax+0x04], 0xC0A
+004F5747    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F574E    call 0x004EE0D0
 004F5753    mov ecx, 0xC2F
-004F5758    mov dword ptr ds:[eax+0x04], 0xC0A
+004F5758    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F575F    call 0x004EE0D0
 004F5764    mov ecx, 0xC30
-004F5769    mov dword ptr ds:[eax+0x04], 0xC0A
+004F5769    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F5770    call 0x004EE0D0
 004F5775    mov ecx, 0xC31
-004F577A    mov dword ptr ds:[eax+0x04], 0xC0A
+004F577A    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F5781    call 0x004EE0D0
 004F5786    mov ecx, 0xC05
-004F578B    mov dword ptr ds:[eax+0x04], 0xC0A
+004F578B    mov dword ptr ds:[eax+0x04], 0xC0A              ; => [ Call: sub_4ee0d0 ]
 004F5792    call 0x004EE0D0
 004F5797    mov ecx, 0xC07
-004F579C    mov dword ptr ds:[eax+0x04], 0xC04
+004F579C    mov dword ptr ds:[eax+0x04], 0xC04              ; => [ Call: sub_4ee0d0 ]
 004F57A3    call 0x004EE0D0
 004F57A8    mov ecx, 0xC09
-004F57AD    mov dword ptr ds:[eax+0x04], 0xC06
+004F57AD    mov dword ptr ds:[eax+0x04], 0xC06              ; => [ Call: sub_4ee0d0 ]
 004F57B4    call 0x004EE0D0
 004F57B9    mov ecx, 0xC0C
-004F57BE    mov dword ptr ds:[eax+0x04], 0xC08
+004F57BE    mov dword ptr ds:[eax+0x04], 0xC08              ; => [ Call: sub_4ee0d0 ]
 004F57C5    call 0x004EE0D0
 004F57CA    mov ecx, 0xC11
-004F57CF    mov dword ptr ds:[eax+0x04], 0xC0B
+004F57CF    mov dword ptr ds:[eax+0x04], 0xC0B              ; => [ Call: sub_4ee0d0 ]
 004F57D6    call 0x004EE0D0
 004F57DB    mov ecx, 0x1306
-004F57E0    mov dword ptr ds:[eax+0x04], 0xC10
+004F57E0    mov dword ptr ds:[eax+0x04], 0xC10              ; => [ Call: sub_4ee0d0 ]
 004F57E7    call 0x004EE0D0
 004F57EC    mov ecx, 0x101A
-004F57F1    mov dword ptr ds:[eax+0x04], 0x1305
+004F57F1    mov dword ptr ds:[eax+0x04], 0x1305             ; => [ Call: sub_4ee0d0 ]
 004F57F8    call 0x004EE0D0
 004F57FD    mov ecx, 0x101B
-004F5802    mov dword ptr ds:[eax+0x04], 0x1019
+004F5802    mov dword ptr ds:[eax+0x04], 0x1019             ; => [ Call: sub_4ee0d0 ]
 004F5809    call 0x004EE0D0
 004F580E    mov ecx, 0x101C
-004F5813    mov dword ptr ds:[eax+0x04], 0x1019
+004F5813    mov dword ptr ds:[eax+0x04], 0x1019             ; => [ Call: sub_4ee0d0 ]
 004F581A    call 0x004EE0D0
 004F581F    mov ecx, 0x101D
-004F5824    mov dword ptr ds:[eax+0x04], 0x1019
+004F5824    mov dword ptr ds:[eax+0x04], 0x1019             ; => [ Call: sub_4ee0d0 ]
 004F582B    call 0x004EE0D0
 004F5830    mov ecx, 0x101F
-004F5835    mov dword ptr ds:[eax+0x04], 0x1019
+004F5835    mov dword ptr ds:[eax+0x04], 0x1019             ; => [ Call: sub_4ee0d0 ]
 004F583C    call 0x004EE0D0
 004F5841    mov ecx, 0x1020
-004F5846    mov dword ptr ds:[eax+0x04], 0x101E
+004F5846    mov dword ptr ds:[eax+0x04], 0x101E             ; => [ Call: sub_4ee0d0 ]
 004F584D    call 0x004EE0D0
 004F5852    mov ecx, 0x1021
-004F5857    mov dword ptr ds:[eax+0x04], 0x101E
+004F5857    mov dword ptr ds:[eax+0x04], 0x101E             ; => [ Call: sub_4ee0d0 ]
 004F585E    call 0x004EE0D0
 004F5863    mov ecx, 0x1022
-004F5868    mov dword ptr ds:[eax+0x04], 0x101E
+004F5868    mov dword ptr ds:[eax+0x04], 0x101E             ; => [ Call: sub_4ee0d0 ]
 004F586F    call 0x004EE0D0
 004F5874    mov ecx, 0x1024
-004F5879    mov dword ptr ds:[eax+0x04], 0x101E
+004F5879    mov dword ptr ds:[eax+0x04], 0x101E             ; => [ Call: sub_4ee0d0 ]
 004F5880    call 0x004EE0D0
 004F5885    mov ecx, 0x1025
-004F588A    mov dword ptr ds:[eax+0x04], 0x1023
+004F588A    mov dword ptr ds:[eax+0x04], 0x1023             ; => [ Call: sub_4ee0d0 ]
 004F5891    call 0x004EE0D0
 004F5896    mov ecx, 0x1026
-004F589B    mov dword ptr ds:[eax+0x04], 0x1023
+004F589B    mov dword ptr ds:[eax+0x04], 0x1023             ; => [ Call: sub_4ee0d0 ]
 004F58A2    call 0x004EE0D0
 004F58A7    mov ecx, 0x1027
-004F58AC    mov dword ptr ds:[eax+0x04], 0x1023
+004F58AC    mov dword ptr ds:[eax+0x04], 0x1023             ; => [ Call: sub_4ee0d0 ]
 004F58B3    call 0x004EE0D0
 004F58B8    mov ecx, 0x1029
-004F58BD    mov dword ptr ds:[eax+0x04], 0x1023
+004F58BD    mov dword ptr ds:[eax+0x04], 0x1023             ; => [ Call: sub_4ee0d0 ]
 004F58C4    call 0x004EE0D0
 004F58C9    mov ecx, 0x102A
-004F58CE    mov dword ptr ds:[eax+0x04], 0x1028
+004F58CE    mov dword ptr ds:[eax+0x04], 0x1028             ; => [ Call: sub_4ee0d0 ]
 004F58D5    call 0x004EE0D0
 004F58DA    mov ecx, 0x102B
-004F58DF    mov dword ptr ds:[eax+0x04], 0x1028
+004F58DF    mov dword ptr ds:[eax+0x04], 0x1028             ; => [ Call: sub_4ee0d0 ]
 004F58E6    call 0x004EE0D0
 004F58EB    mov ecx, 0x102C
-004F58F0    mov dword ptr ds:[eax+0x04], 0x1028
+004F58F0    mov dword ptr ds:[eax+0x04], 0x1028             ; => [ Call: sub_4ee0d0 ]
 004F58F7    call 0x004EE0D0
 004F58FC    mov ecx, 0x102E
-004F5901    mov dword ptr ds:[eax+0x04], 0x1028
+004F5901    mov dword ptr ds:[eax+0x04], 0x1028             ; => [ Call: sub_4ee0d0 ]
 004F5908    call 0x004EE0D0
 004F590D    mov ecx, 0x102F
-004F5912    mov dword ptr ds:[eax+0x04], 0x102D
+004F5912    mov dword ptr ds:[eax+0x04], 0x102D             ; => [ Call: sub_4ee0d0 ]
 004F5919    call 0x004EE0D0
 004F591E    mov ecx, 0x1030
-004F5923    mov dword ptr ds:[eax+0x04], 0x102D
+004F5923    mov dword ptr ds:[eax+0x04], 0x102D             ; => [ Call: sub_4ee0d0 ]
 004F592A    call 0x004EE0D0
 004F592F    mov ecx, 0x1031
-004F5934    mov dword ptr ds:[eax+0x04], 0x102D
+004F5934    mov dword ptr ds:[eax+0x04], 0x102D             ; => [ Call: sub_4ee0d0 ]
 004F593B    call 0x004EE0D0
 004F5940    mov ecx, 0x1033
-004F5945    mov dword ptr ds:[eax+0x04], 0x102D
+004F5945    mov dword ptr ds:[eax+0x04], 0x102D             ; => [ Call: sub_4ee0d0 ]
 004F594C    call 0x004EE0D0
 004F5951    mov ecx, 0x1034
-004F5956    mov dword ptr ds:[eax+0x04], 0x1032
+004F5956    mov dword ptr ds:[eax+0x04], 0x1032             ; => [ Call: sub_4ee0d0 ]
 004F595D    call 0x004EE0D0
 004F5962    mov ecx, 0x1035
-004F5967    mov dword ptr ds:[eax+0x04], 0x1032
+004F5967    mov dword ptr ds:[eax+0x04], 0x1032             ; => [ Call: sub_4ee0d0 ]
 004F596E    call 0x004EE0D0
 004F5973    mov ecx, 0x1036
-004F5978    mov dword ptr ds:[eax+0x04], 0x1032
-004F597F    call 0x004EE0D0
+004F5978    mov dword ptr ds:[eax+0x04], 0x1032             ; => [ Call: sub_4ee0d0 ]
+004F597F    call 0x004EE0D0                                 ; => [ Call: sub_4ee0d0 ]
 004F5984    mov dword ptr ds:[eax+0x04], 0x1032
 004F598B    pop edi
 004F598C    pop esi

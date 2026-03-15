@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_575860
+// 起始地址: 0x575860
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00575860    push ebp
 00575861    mov ebp, esp
 00575863    sub esp, 0xC98
-00575869    mov eax, dword ptr ds:[0x008C4040]
+00575869    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0057586E    xor eax, ebp
 00575870    mov dword ptr ss:[ebp-0x08], eax
 00575873    push ebx
@@ -20,7 +26,7 @@
 005758A1    push 0x00
 005758A3    push 0x00
 005758A5    push 0x19
-005758A7    call 0x00576B30
+005758A7    call 0x00576B30                                 ; => [ Call: sub_576b30 ]
 005758AC    add esp, 0x10
 005758AF    test eax, eax
 005758B1    jle 0x005758C6
@@ -30,7 +36,7 @@
 005758B7    pop ebx
 005758B8    mov ecx, dword ptr ss:[ebp-0x08]
 005758BB    xor ecx, ebp
-005758BD    call 0x0075927A
+005758BD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005758C2    mov esp, ebp
 005758C4    pop ebp
 005758C5    ret
@@ -40,12 +46,12 @@
 005758CE    mov ecx, edi
 005758D0    call 0x00590990
 005758D5    mov edx, dword ptr ss:[ebp-0xC90]
-005758DB    mov esi, eax
+005758DB    mov esi, eax                                    ; => [ Call: sub_590990 ]
 005758DD    lea eax, ss:[ebp-0xC8C]
 005758E3    mov ecx, edi
 005758E5    push eax
 005758E6    push 0x3EB
-005758EB    call 0x00590990
+005758EB    call 0x00590990                                 ; => [ Call: sub_590990 ]
 005758F0    add esp, 0x10
 005758F3    mov dword ptr ss:[ebp-0xC90], eax
 005758F9    xor edi, edi
@@ -57,7 +63,7 @@
 00575909    mov ecx, dword ptr ss:[ebp-0xC98]
 0057590F    push 0x1000
 00575914    push 0x00
-00575916    call 0x005757F0
+00575916    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 0057591B    add esp, 0x08
 0057591E    test al, al
 00575920    jz 0x0057592C
@@ -82,7 +88,7 @@
 0057595C    call 0x005757F0
 00575961    add esp, 0x08
 00575964    test al, al
-00575966    jz 0x0057597A
+00575966    jz 0x0057597A                                   ; => [ Call: sub_5757f0 ]
 00575968    mov eax, dword ptr ss:[ebp-0xC90]
 0057596E    mov ecx, dword ptr ss:[ebp-0xC94]
 00575974    mov eax, dword ptr ds:[eax]
@@ -97,7 +103,7 @@
 00575985    pop esi
 00575986    xor ecx, ebp
 00575988    pop ebx
-00575989    call 0x0075927A
+00575989    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0057598E    mov esp, ebp
 00575990    pop ebp
 00575991    ret

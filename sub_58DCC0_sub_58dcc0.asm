@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58dcc0
+// 起始地址: 0x58dcc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058DCC0    push ebp
 0058DCC1    mov ebp, esp
 0058DCC3    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 0058DCD2    test edx, edx
 0058DCD4    jz 0x0058DCFE
 0058DCD6    mov ecx, eax
-0058DCD8    call 0x0063ED10
+0058DCD8    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0058DCDD    mov edx, dword ptr ds:[esi+eax*4]
 0058DCE0    dec dword ptr ds:[esi+0xC80]
 0058DCE6    lea ecx, ds:[esi+eax*4]
@@ -27,7 +33,7 @@
 0058DD0A    test edx, edx
 0058DD0C    jz 0x0058DD42
 0058DD0E    mov ecx, eax
-0058DD10    call 0x0063ED10
+0058DD10    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0058DD15    mov edx, dword ptr ds:[esi+eax*4+0x1908]
 0058DD1C    dec dword ptr ds:[esi+0x2588]
 0058DD22    lea ecx, ds:[esi+eax*4]
@@ -43,7 +49,7 @@
 0058DD48    test edx, edx
 0058DD4A    jz 0x0058DD80
 0058DD4C    mov ecx, eax
-0058DD4E    call 0x0063ED10
+0058DD4E    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0058DD53    mov edx, dword ptr ds:[esi+eax*4+0xC84]
 0058DD5A    dec dword ptr ds:[esi+0x1904]
 0058DD60    lea ecx, ds:[esi+eax*4]

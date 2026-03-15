@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ac580
+// 起始地址: 0x4ac580
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AC580    push ebp
 004AC581    mov ebp, esp
 004AC583    and esp, 0xFFFFFFF8
@@ -10,7 +16,7 @@
 004AC59B    mov esp, ebp
 004AC59D    pop ebp
 004AC59E    ret
-004AC59F    call 0x00762084
+004AC59F    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 004AC5A4    cvtsd2ss xmm0, xmm0
 004AC5A8    mov esp, ebp
 004AC5AA    pop ebp

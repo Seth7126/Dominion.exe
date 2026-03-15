@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_666380
+// 起始地址: 0x666380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00666380    push ebp
 00666381    mov ebp, esp
 00666383    and esp, 0xFFFFFFF8
@@ -6,7 +12,7 @@
 0066638A    push esi
 0066638B    push edi
 0066638C    mov dword ptr ss:[esp+0x14], edx
-00666390    call 0x0064E7A0
+00666390    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00666395    mov edi, eax
 00666397    mov edx, dword ptr ds:[edi+0x16E8]
 0066639D    test edx, edx
@@ -42,7 +48,7 @@
 006663FE    jnz 0x00666424
 00666400    mov ecx, 0x1C00
 00666405    call 0x0064C020
-0066640A    mov dword ptr ds:[edi+0x16F0], eax
+0066640A    mov dword ptr ds:[edi+0x16F0], eax              ; => [ Call: sub_64c020 ]
 00666410    mov dword ptr ds:[edi+0x16F4], 0x00
 0066641A    mov dword ptr ds:[edi+0x16F8], 0x100
 00666424    mov eax, dword ptr ds:[edi+0x16F4]
@@ -63,7 +69,7 @@
 00666472    mov dword ptr ds:[esi], eax
 00666474    mov eax, dword ptr ss:[ebp+0x08]
 00666477    mov dword ptr ds:[esi+0x04], ebx
-0066647A    mov ebx, 0x801800
+0066647A    mov ebx, 0x801800                               ; => [ Data: data_801800 ]
 0066647F    mov dword ptr ds:[esi+0x08], 0x03
 00666486    mov eax, dword ptr ds:[eax]
 00666488    test eax, eax
@@ -99,7 +105,7 @@
 006664F2    mov ecx, edx
 006664F4    mov dword ptr ss:[esp+0x1C], edx
 006664F8    call 0x0064BFD0
-006664FD    mov edx, eax
+006664FD    mov edx, eax                                    ; => [ Call: sub_64bfd0 ]
 006664FF    mov eax, dword ptr ss:[esp+0x1C]
 00666503    mov dword ptr ss:[esp+0x18], edx
 00666507    inc dword ptr ds:[edx+0x0C]
@@ -109,12 +115,12 @@
 00666515    jnz 0x00666522
 00666517    mov ecx, eax
 00666519    call 0x00687730
-0066651E    mov ecx, eax
+0066651E    mov ecx, eax                                    ; => [ Call: sub_687730 ]
 00666520    jmp 0x00666538
 00666522    cmp dword ptr ds:[edx], 0x00
 00666525    jnz 0x00666532
 00666527    mov ecx, edx
-00666529    call 0x0064BE70
+00666529    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0066652E    mov edx, dword ptr ss:[esp+0x18]
 00666532    mov ecx, dword ptr ds:[edx]
 00666534    mov eax, dword ptr ds:[ecx]
@@ -125,11 +131,11 @@
 00666543    push dword ptr ss:[esp+0x10]
 00666547    push dword ptr ds:[edi+0x15E8]
 0066654D    push ecx
-0066654E    call 0x00761FBE
+0066654E    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00666553    mov edx, dword ptr ss:[esp+0x18]
 00666557    add esp, 0x0C
 0066655A    mov ecx, dword ptr ds:[edi+0x15E8]
-00666560    call 0x0064C080
+00666560    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00666565    mov edx, dword ptr ss:[esp+0x18]
 00666569    mov eax, dword ptr ss:[esp+0x1C]
 0066656D    mov ecx, dword ptr ss:[esp+0x10]
@@ -162,16 +168,16 @@
 006665CB    pop ebx
 006665CC    mov esp, ebp
 006665CE    pop ebp
-006665CF    ret
+006665CF    ret                                             ; => [ Call: sub_65bf00 ]
 006665D0    push 0x876A80
 006665D5    push 0xA1
 006665DA    push 0x816BDC
 006665DF    mov edx, 0x801800
 006665E4    mov ecx, 0x816BF8
-006665E9    call 0x0063B870
+006665E9    call 0x0063B870                                 ; => [ String: mSize < mSizeReserved | Call: sub_63b870 | String: C:\x\ax2017\Engine\xArray.h | Data: data_801800 | String: XArray<struct UI2State>::Alloc ]
 006665EE    add esp, 0x0C
 006665F1    call 0x0063BC30
 006665F6    test al, al
-006665F8    jz 0x006665FB
+006665F8    jz 0x006665FB                                   ; => [ Call: sub_63bc30 ]
 006665FA    int3
-006665FB    call 0x0063BB00
+006665FB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7526a0
+// 起始地址: 0x7526a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007526A0    push ebp
 007526A1    mov ebp, esp
 007526A3    sub esp, 0x10
@@ -9,7 +15,7 @@
 007526B1    shr edx, 0x05
 007526B4    mov esi, ecx
 007526B6    imul eax, edx, 0x64
-007526B9    xor ecx, ecx
+007526B9    xor ecx, ecx                                    ; => [ Call: nullptr ]
 007526BB    mov edx, ebx
 007526BD    mov dword ptr ss:[ebp-0x08], esi
 007526C0    push edi
@@ -51,7 +57,7 @@
 00752719    mov esi, dword ptr ds:[esi+0x04]
 0075271C    test esi, esi
 0075271E    jnz 0x007526E0
-00752720    xor ecx, ecx
+00752720    xor ecx, ecx                                    ; => [ Call: nullptr ]
 00752722    mov ebx, dword ptr ss:[ebp+0x0C]
 00752725    test ebx, ebx
 00752727    jz 0x0075272C
@@ -80,23 +86,23 @@
 00752758    ret
 00752759    mov ecx, esi
 0075275B    jmp 0x00752722
-0075275D    mov eax, dword ptr ds:[0x0147DED8]
+0075275D    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00752762    test eax, eax
 00752764    jz 0x00752776
 00752766    push 0x28
 00752768    push 0x890384
 0075276D    push 0x10
-0075276F    call eax
+0075276F    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Skin.c ]
 00752771    add esp, 0x0C
 00752774    jmp 0x00752781
 00752776    push 0x10
-00752778    call dword ptr ds:[0x00800B4C]
+00752778    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0075277E    add esp, 0x04
 00752781    mov esi, eax
 00752783    test esi, esi
 00752785    jz 0x0075278D
 00752787    xorps xmm0, xmm0
-0075278A    movups xmmword ptr ds:[esi], xmm0
+0075278A    movups xmmword ptr ds:[esi], xmm0               ; => [ String: 0 | String: zx ]
 0075278D    mov eax, dword ptr ss:[ebp-0x04]
 00752790    mov ecx, edi
 00752792    mov dword ptr ds:[esi], eax
@@ -105,7 +111,7 @@
 00752799    inc ecx
 0075279A    test al, al
 0075279C    jnz 0x00752797
-0075279E    mov eax, dword ptr ds:[0x0147DED8]
+0075279E    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007527A3    sub ecx, edx
 007527A5    inc ecx
 007527A6    test eax, eax
@@ -113,11 +119,11 @@
 007527AA    push 0x2A
 007527AC    push 0x890384
 007527B1    push ecx
-007527B2    call eax
+007527B2    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Skin.c ]
 007527B4    add esp, 0x0C
 007527B7    jmp 0x007527C3
 007527B9    push ecx
-007527BA    call dword ptr ds:[0x00800B4C]
+007527BA    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007527C0    add esp, 0x04
 007527C3    mov ecx, eax
 007527C5    mov dword ptr ds:[esi+0x04], ecx
@@ -132,24 +138,24 @@
 007527E0    mov ebx, dword ptr ss:[ebp-0x08]
 007527E3    mov eax, dword ptr ds:[ebx+0x14]
 007527E6    mov dword ptr ds:[esi+0x0C], eax
-007527E9    mov eax, dword ptr ds:[0x0147DED8]
+007527E9    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007527EE    mov dword ptr ds:[ebx+0x14], esi
 007527F1    test eax, eax
 007527F3    jz 0x00752805
 007527F5    push 0x36
 007527F7    push 0x890384
 007527FC    push 0x08
-007527FE    call eax
+007527FE    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Skin.c ]
 00752800    add esp, 0x0C
 00752803    jmp 0x00752810
 00752805    push 0x08
-00752807    call dword ptr ds:[0x00800B4C]
+00752807    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0075280D    add esp, 0x04
 00752810    mov ecx, eax
 00752812    test ecx, ecx
 00752814    jz 0x0075281D
 00752816    xorps xmm0, xmm0
-00752819    movq qword ptr ds:[ecx], xmm0
+00752819    movq qword ptr ds:[ecx], xmm0                   ; => [ Call: nullptr ]
 0075281D    mov eax, dword ptr ss:[ebp-0x0C]
 00752820    mov dword ptr ds:[ecx], esi
 00752822    pop edi

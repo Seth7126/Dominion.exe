@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_756060
+// 起始地址: 0x756060
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00756060    push ebp
 00756061    mov ebp, esp
 00756063    sub esp, 0x14
@@ -23,7 +29,7 @@
 007560AC    movss dword ptr ss:[ebp-0x08], xmm0
 007560B1    jnz 0x007560BA
 007560B3    mov ecx, ebx
-007560B5    call 0x00710B10
+007560B5    call 0x00710B10                                 ; => [ Call: sub_710b10 ]
 007560BA    xor ecx, ecx
 007560BC    mov dword ptr ss:[ebp-0x0C], ecx
 007560BF    cmp dword ptr ds:[esi+0x04], ecx
@@ -35,7 +41,7 @@
 007560D9    cmp dword ptr ds:[edi+0x4C], 0x00
 007560DD    jnz 0x007560F1
 007560DF    mov ecx, edi
-007560E1    call 0x00710B10
+007560E1    call 0x00710B10                                 ; => [ Call: sub_710b10 ]
 007560E6    movss xmm1, dword ptr ds:[0x00890E18]
 007560EE    xorps xmm2, xmm2
 007560F1    movss xmm4, dword ptr ss:[ebp-0x10]
@@ -112,7 +118,7 @@
 00756200    movss dword ptr ss:[esp+0x08], xmm0
 00756206    movss dword ptr ss:[esp+0x04], xmm5
 0075620C    movss dword ptr ss:[esp], xmm4
-00756211    call 0x00710240
+00756211    call 0x00710240                                 ; => [ Call: sub_710240 ]
 00756216    mov ecx, dword ptr ss:[ebp-0x0C]
 00756219    add esp, 0x10
 0075621C    movss xmm1, dword ptr ds:[0x00890E18]
@@ -134,7 +140,7 @@
 00756244    pop ebx
 00756245    mov esp, ebp
 00756247    pop ebp
-00756248    ret
+00756248    ret                                             ; => [ Call: sub_755e10 ]
 00756249    test ecx, ecx
 0075624B    mov ecx, esi
 0075624D    jz 0x0075625B
@@ -144,8 +150,8 @@
 00756256    pop ebx
 00756257    mov esp, ebp
 00756259    pop ebp
-0075625A    ret
-0075625B    call 0x00755290
+0075625A    ret                                             ; => [ Call: sub_7558f0 ]
+0075625B    call 0x00755290                                 ; => [ Call: sub_755290 ]
 00756260    pop edi
 00756261    pop esi
 00756262    pop ebx

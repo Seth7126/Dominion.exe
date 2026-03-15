@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_535de0
+// 起始地址: 0x535de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00535DE0    push ebp
 00535DE1    mov ebp, esp
 00535DE3    and esp, 0xFFFFFFF8
@@ -10,19 +16,19 @@
 00535DEF    mov dword ptr ss:[esp+0x0C], ecx
 00535DF3    call 0x00573400
 00535DF8    movzx ebx, si
-00535DFB    mov edi, dword ptr ds:[eax+0x04]
+00535DFB    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00535DFE    cmp ebx, 0x320
 00535E04    jb 0x00535E0B
-00535E06    call 0x00591930
+00535E06    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00535E0B    imul eax, ebx, 0x64
 00535E0E    mov ecx, edi
 00535E10    push 0x00
 00535E12    push 0x08
 00535E14    mov edx, dword ptr ds:[eax+edi*1+0x1A4C]
-00535E1B    call 0x005754F0
+00535E1B    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 00535E20    add esp, 0x08
 00535E23    test al, al
-00535E25    jnz 0x00535E47
+00535E25    jnz 0x00535E47                                  ; => [ Call: sub_568380 ]
 00535E27    mov eax, dword ptr ss:[esp+0x0C]
 00535E2B    mov ecx, esi
 00535E2D    push dword ptr ds:[eax+0x04]

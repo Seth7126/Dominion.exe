@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73ad90
+// 起始地址: 0x73ad90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073AD90    push ebp
 0073AD91    mov ebp, esp
 0073AD93    and esp, 0xFFFFFFF8
@@ -22,7 +28,7 @@
 0073ADC9    push edx
 0073ADCA    mov edx, edi
 0073ADCC    lea ecx, ss:[esp+0x28]
-0073ADD0    call 0x0073AF90
+0073ADD0    call 0x0073AF90                                 ; => [ Call: sub_73af90 ]
 0073ADD5    mov edx, dword ptr ss:[esp+0x14]
 0073ADD9    mov eax, esi
 0073ADDB    sar eax, 0x02
@@ -81,7 +87,7 @@
 0073AE79    add eax, 0x04
 0073AE7C    push edi
 0073AE7D    push eax
-0073AE7E    call 0x00762362
+0073AE7E    call 0x00762362                                 ; => [ Call: memmove ]
 0073AE83    mov eax, dword ptr ss:[esp+0x1C]
 0073AE87    add esp, 0x0C
 0073AE8A    mov dword ptr ds:[edi], eax
@@ -105,7 +111,7 @@
 0073AEC0    push eax
 0073AEC1    push ecx
 0073AEC2    mov ecx, edi
-0073AEC4    call 0x0073B150
+0073AEC4    call 0x0073B150                                 ; => [ Call: sub_73b150 ]
 0073AEC9    mov ecx, dword ptr ss:[esp+0x24]
 0073AECD    add esp, 0x0C
 0073AED0    test esi, esi
@@ -126,7 +132,7 @@
 0073AEFC    xor edx, edx
 0073AEFE    sar eax, 0x02
 0073AF01    push eax
-0073AF02    call 0x0073B150
+0073AF02    call 0x0073B150                                 ; => [ Call: sub_73b150 ]
 0073AF07    mov edx, esi
 0073AF09    add esp, 0x0C
 0073AF0C    mov eax, edx

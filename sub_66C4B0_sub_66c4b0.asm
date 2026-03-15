@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_66c4b0
+// 起始地址: 0x66c4b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0066C4B1    mov ebp, esp
 0066C4B3    sub esp, 0x18
 0066C4B6    lea eax, ss:[ebp-0x18]
@@ -5,10 +11,10 @@
 0066C4BA    call 0x0066BD20
 0066C4BF    add esp, 0x04
 0066C4C2    mov eax, dword ptr ds:[eax+0x04]
-0066C4C5    add eax, 0xFFFFFF9A
+0066C4C5    add eax, 0xFFFFFF9A                             ; => [ Call: sub_66bd20 ]
 0066C4C8    cmp eax, 0xA8
 0066C4CD    jnbe 0x0066C540
-0066C4CF    movzx eax, byte ptr ds:[eax+0x66C5A0]
+0066C4CF    movzx eax, byte ptr ds:[eax+0x66C5A0]           ; => [ Data: lookup_table_66c5a0 ]
 0066C4D6    jmp dword ptr ds:[eax*4+0x66C570]
 0066C4DD    mov eax, 0x876C30
 0066C4E2    mov esp, ebp
@@ -37,11 +43,11 @@
 0066C513    mov eax, 0x7FF180
 0066C518    mov esp, ebp
 0066C51A    pop ebp
-0066C51B    ret
+0066C51B    ret                                             ; => [ Data: data_7ff180 ]
 0066C51C    mov eax, 0x7FFBC8
 0066C521    mov esp, ebp
 0066C523    pop ebp
-0066C524    ret
+0066C524    ret                                             ; => [ Data: data_7ffbc8 ]
 0066C525    mov eax, 0x7FF1F0
 0066C52A    mov esp, ebp
 0066C52C    pop ebp
@@ -59,10 +65,10 @@
 0066C54A    push 0x8739B4
 0066C54F    mov edx, 0x801800
 0066C554    mov ecx, 0x801AA4
-0066C559    call 0x0063B870
+0066C559    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: FieldGetSymbols | String: Halt ]
 0066C55E    add esp, 0x0C
 0066C561    call 0x0063BC30
 0066C566    test al, al
-0066C568    jz 0x0066C56B
+0066C568    jz 0x0066C56B                                   ; => [ Call: sub_63bc30 ]
 0066C56A    int3
-0066C56B    call 0x0063BB00
+0066C56B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

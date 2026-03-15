@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d4820
+// 起始地址: 0x6d4820
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D4820    push ebp
 006D4821    mov ebp, esp
 006D4823    sub esp, 0x4C
@@ -13,13 +19,13 @@
 006D483E    xorps xmm0, xmm0
 006D4841    mov dword ptr ss:[ebp-0x48], 0x01
 006D4848    lea eax, ss:[ebp-0x48]
-006D484B    mov dword ptr ss:[ebp-0x44], 0x00
+006D484B    mov dword ptr ss:[ebp-0x44], 0x00               ; => [ Call: __builtin_memset ]
 006D4852    push eax
 006D4853    movups xmmword ptr ss:[ebp-0x40], xmm0
 006D4857    mov dword ptr ss:[ebp-0x20], 0x00
 006D485E    movups xmmword ptr ss:[ebp-0x30], xmm0
 006D4862    mov dword ptr ss:[ebp-0x1C], 0x00
-006D4869    call 0x006D3180
+006D4869    call 0x006D3180                                 ; => [ Call: sub_6d3180 ]
 006D486E    movss xmm1, dword ptr ss:[ebp-0x08]
 006D4873    xor ebx, ebx
 006D4875    add esp, 0x04
@@ -37,7 +43,7 @@
 006D4895    mov dword ptr ss:[ebp-0x04], edx
 006D4898    cmovnz edi, dword ptr ss:[ebp-0x24]
 006D489C    jmp 0x006D4928
-006D48A1    call 0x006D2320
+006D48A1    call 0x006D2320                                 ; => [ Call: sub_6d2320 ]
 006D48A6    mov edi, eax
 006D48A8    test edi, edi
 006D48AA    js 0x006D4A18
@@ -87,9 +93,9 @@
 006D4945    movsd qword ptr ss:[ebp-0x18], xmm0
 006D494A    fld qword ptr ss:[ebp-0x18]
 006D494D    fstp qword ptr ss:[esp]
-006D4950    call 0x0076208A
+006D4950    call 0x0076208A                                 ; => [ Call: floor ]
 006D4955    add esp, 0x08
-006D4958    call 0x007622D0
+006D4958    call 0x007622D0                                 ; => [ Call: sub_7622d0 ]
 006D495D    mov dword ptr ds:[esi], eax
 006D495F    mov esi, dword ptr ss:[ebp+0x14]
 006D4962    test esi, esi
@@ -104,9 +110,9 @@
 006D4981    movsd qword ptr ss:[ebp-0x18], xmm0
 006D4986    fld qword ptr ss:[ebp-0x18]
 006D4989    fstp qword ptr ss:[esp]
-006D498C    call 0x0076208A
+006D498C    call 0x0076208A                                 ; => [ Call: floor ]
 006D4991    add esp, 0x08
-006D4994    call 0x007622D0
+006D4994    call 0x007622D0                                 ; => [ Call: sub_7622d0 ]
 006D4999    mov dword ptr ds:[esi], eax
 006D499B    mov esi, dword ptr ss:[ebp+0x18]
 006D499E    test esi, esi
@@ -120,9 +126,9 @@
 006D49BA    movsd qword ptr ss:[ebp-0x18], xmm0
 006D49BF    fld qword ptr ss:[ebp-0x18]
 006D49C2    fstp qword ptr ss:[esp]
-006D49C5    call 0x0076239E
+006D49C5    call 0x0076239E                                 ; => [ Call: ceil ]
 006D49CA    add esp, 0x08
-006D49CD    call 0x007622D0
+006D49CD    call 0x007622D0                                 ; => [ Call: sub_7622d0 ]
 006D49D2    mov dword ptr ds:[esi], eax
 006D49D4    mov esi, dword ptr ss:[ebp+0x1C]
 006D49D7    test esi, esi
@@ -137,9 +143,9 @@
 006D49F7    movsd qword ptr ss:[ebp-0x18], xmm0
 006D49FC    fld qword ptr ss:[ebp-0x18]
 006D49FF    fstp qword ptr ss:[esp]
-006D4A02    call 0x0076239E
+006D4A02    call 0x0076239E                                 ; => [ Call: ceil ]
 006D4A07    add esp, 0x08
-006D4A0A    call 0x007622D0
+006D4A0A    call 0x007622D0                                 ; => [ Call: sub_7622d0 ]
 006D4A0F    mov dword ptr ds:[esi], eax
 006D4A11    pop edi
 006D4A12    pop esi

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_704e80
+// 起始地址: 0x704e80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00704E80    push ebp
 00704E81    mov ebp, esp
 00704E83    sub esp, 0x14
-00704E86    mov eax, dword ptr ds:[0x008C4040]
+00704E86    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00704E8B    xor eax, ebp
 00704E8D    mov dword ptr ss:[ebp-0x04], eax
 00704E90    push esi
@@ -12,7 +18,7 @@
 00704E9A    jnz 0x00704FBE
 00704EA0    mov eax, dword ptr ds:[0x0147B06C]
 00704EA5    cmp byte ptr ds:[eax+0x9C], 0x00
-00704EAC    jz 0x00704FBE
+00704EAC    jz 0x00704FBE                                   ; => [ Data: data_147b06c ]
 00704EB2    mov eax, dword ptr ss:[ebp+0x08]
 00704EB5    mov esi, 0x4000
 00704EBA    movss xmm0, dword ptr ds:[0x0089102C]
@@ -29,7 +35,7 @@
 00704EE0    divss xmm4, xmm0
 00704EE4    movzx ecx, cl
 00704EE7    movd xmm2, ecx
-00704EEB    mov ecx, dword ptr ds:[0x0147DED4]
+00704EEB    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00704EF1    movd xmm1, eax
 00704EF5    cvtdq2ps xmm3, xmm3
 00704EF8    cvtdq2ps xmm2, xmm2
@@ -67,7 +73,7 @@
 00704F71    movss dword ptr ss:[esp+0x04], xmm3
 00704F77    movss dword ptr ss:[esp], xmm4
 00704F7C    call dword ptr ds:[0x007751F0]
-00704F82    mov ecx, dword ptr ds:[0x0147DED4]
+00704F82    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
 00704F88    movss xmm0, dword ptr ss:[ebp-0x08]
 00704F8D    movss dword ptr ds:[ecx+0x423C], xmm0
 00704F95    movss xmm0, dword ptr ss:[ebp-0x0C]
@@ -77,8 +83,8 @@
 00704FAF    movss xmm0, dword ptr ss:[ebp-0x14]
 00704FB4    movss dword ptr ds:[ecx+0x4248], xmm0
 00704FBC    jmp 0x00704FC4
-00704FBE    mov ecx, dword ptr ds:[0x0147DED4]
-00704FC4    mov eax, dword ptr ds:[0x00CF65B8]
+00704FBE    mov ecx, dword ptr ds:[0x0147DED4]              ; => [ Data: data_147ded4 ]
+00704FC4    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 00704FC9    cmp byte ptr ds:[eax+0x20], 0x00
 00704FCD    jnz 0x00704FD8
 00704FCF    cmp byte ptr ds:[edi+0x426D], 0x00
@@ -97,7 +103,7 @@
 00705007    pop edi
 00705008    xor ecx, ebp
 0070500A    pop esi
-0070500B    call 0x0075927A
+0070500B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00705010    mov esp, ebp
 00705012    pop ebp
 00705013    ret 0x08

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_734530
+// 起始地址: 0x734530
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00734530    push ebp
 00734531    mov ebp, esp
 00734533    sub esp, 0x08
@@ -5,7 +11,7 @@
 00734537    push edi
 00734538    mov edi, edx
 0073453A    cmp ecx, 0x01
-0073453D    jnz 0x007345CB
+0073453D    jnz 0x007345CB                                  ; => [ Type: SOCKET ]
 00734543    cmp edi, ecx
 00734545    jnz 0x00734553
 00734547    push ecx
@@ -24,7 +30,7 @@
 00734564    push 0x01
 00734566    push 0x17
 00734568    call dword ptr ds:[0x007754E4]
-0073456E    mov esi, eax
+0073456E    mov esi, eax                                    ; => [ Call: nullptr ]
 00734570    cmp esi, 0xFFFFFFFF
 00734573    jz 0x007345E6
 00734575    push 0x04
@@ -37,9 +43,9 @@
 00734587    call dword ptr ds:[0x00775494]
 0073458D    cmp eax, 0xFFFFFFFF
 00734590    jnz 0x007345A3
-00734592    push 0x88ED40
+00734592    push 0x88ED40                                   ; => [ String: SocketCreate ]
 00734597    push 0x4F
-00734599    mov ecx, 0x88ED64
+00734599    mov ecx, 0x88ED64                               ; => [ String: result != SOCKET_ERROR ]
 0073459E    jmp 0x00734668
 007345A3    cmp edi, 0x02
 007345A6    jnz 0x007345EF
@@ -80,9 +86,9 @@
 00734600    call dword ptr ds:[0x007754A4]
 00734606    cmp eax, 0xFFFFFFFF
 00734609    jnz 0x00734619
-0073460B    push 0x88ED40
+0073460B    push 0x88ED40                                   ; => [ String: SocketCreate ]
 00734610    push 0x69
-00734612    mov ecx, 0x88ED64
+00734612    mov ecx, 0x88ED64                               ; => [ String: result != SOCKET_ERROR ]
 00734617    jmp 0x0073462D
 00734619    pop edi
 0073461A    mov eax, esi
@@ -90,31 +96,31 @@
 0073461D    mov esp, ebp
 0073461F    pop ebp
 00734620    ret
-00734621    push 0x88ED40
+00734621    push 0x88ED40                                   ; => [ String: SocketCreate ]
 00734626    push 0x64
-00734628    mov ecx, 0x801AA4
+00734628    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0073462D    push 0x88ECDC
 00734632    mov edx, 0x801800
-00734637    call 0x0063B870
+00734637    call 0x0063B870                                 ; => [ String: SocketCreate | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsNetwork.cpp ]
 0073463C    add esp, 0x0C
 0073463F    call 0x0063BC30
 00734644    test al, al
-00734646    jz 0x00734649
+00734646    jz 0x00734649                                   ; => [ Call: sub_63bc30 ]
 00734648    int3
-00734649    call 0x0063BB00
-0073464E    push 0x88ED40
+00734649    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+0073464E    push 0x88ED40                                   ; => [ String: SocketCreate ]
 00734653    push 0x55
-00734655    mov ecx, 0x88ED64
+00734655    mov ecx, 0x88ED64                               ; => [ String: result != SOCKET_ERROR ]
 0073465A    jmp 0x00734668
-0073465C    push 0x88ED40
+0073465C    push 0x88ED40                                   ; => [ String: SocketCreate ]
 00734661    push 0x45
-00734663    mov ecx, 0x801AA4
+00734663    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00734668    push 0x88ECDC
 0073466D    mov edx, 0x801800
-00734672    call 0x0063B870
+00734672    call 0x0063B870                                 ; => [ String: SocketCreate | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsNetwork.cpp ]
 00734677    add esp, 0x0C
 0073467A    call 0x0063BC30
 0073467F    test al, al
-00734681    jz 0x00734684
+00734681    jz 0x00734684                                   ; => [ Call: sub_63bc30 ]
 00734683    int3
-00734684    call 0x0063BB00
+00734684    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

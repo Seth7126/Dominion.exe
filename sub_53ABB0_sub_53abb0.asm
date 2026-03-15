@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53abb0
+// 起始地址: 0x53abb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053ABB0    push ebp
 0053ABB1    mov ebp, esp
 0053ABB3    and esp, 0xFFFFFFF8
@@ -11,22 +17,22 @@
 0053ABC1    push 0x00
 0053ABC3    push 0x00
 0053ABC5    mov ecx, 0x3EA
-0053ABCA    call 0x00568960
+0053ABCA    call 0x00568960                                 ; => [ Call: sub_568960 ]
 0053ABCF    add esp, 0x0C
 0053ABD2    test eax, eax
 0053ABD4    jle 0x0053AC33
 0053ABD6    xor esi, esi
-0053ABD8    call 0x00573400
+0053ABD8    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0053ABDD    mov edi, eax
 0053ABDF    cmp dword ptr ds:[edi], 0x02
 0053ABE2    jnz 0x0053AC09
 0053ABE4    mov esi, dword ptr ds:[edi+0x10]
 0053ABE7    call 0x00573400
 0053ABEC    movzx esi, si
-0053ABEF    mov ebx, dword ptr ds:[eax+0x04]
+0053ABEF    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0053ABF2    cmp esi, 0x320
 0053ABF8    jb 0x0053ABFF
-0053ABFA    call 0x00591930
+0053ABFA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0053ABFF    imul eax, esi, 0x64
 0053AC02    mov esi, dword ptr ds:[eax+ebx*1+0x1A4C]
 0053AC09    mov edx, dword ptr ds:[edi+0x0C]
@@ -40,7 +46,7 @@
 0053AC1C    push 0x06
 0053AC1E    push 0x00
 0053AC20    push 0x04
-0053AC22    call 0x005911E0
+0053AC22    call 0x005911E0                                 ; => [ Call: sub_5911e0 ]
 0053AC27    mov eax, dword ptr ss:[esp+0x30]
 0053AC2B    add esp, 0x24
 0053AC2E    mov eax, dword ptr ds:[eax+0x04]

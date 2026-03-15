@@ -1,25 +1,31 @@
+// ============================================================
+// 函数名称: sub_6e5ab0
+// 起始地址: 0x6e5ab0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E5AB0    push ebp
 006E5AB1    mov ebp, esp
 006E5AB3    push ecx
 006E5AB4    push ebx
 006E5AB5    push esi
-006E5AB6    mov esi, dword ptr ds:[0x0147ABE8]
+006E5AB6    mov esi, dword ptr ds:[0x0147ABE8]              ; => [ Data: data_147abe8 ]
 006E5ABC    mov dword ptr ss:[ebp-0x04], ecx
 006E5ABF    push edi
 006E5AC0    test esi, esi
 006E5AC2    jnz 0x006E5ADA
-006E5AC4    push 0x871F88
+006E5AC4    push 0x871F88                                   ; => [ String: GetGameData ]
 006E5AC9    push 0x45
-006E5ACB    push 0x871FA0
-006E5AD0    mov ecx, 0x871F94
+006E5ACB    push 0x871FA0                                   ; => [ String: C:\x\ax2017\Engine\Game.h ]
+006E5AD0    mov ecx, 0x871F94                               ; => [ String: gpGameData ]
 006E5AD5    jmp 0x006E5BCF
 006E5ADA    mov esi, dword ptr ds:[esi+0x0C]
 006E5ADD    mov eax, dword ptr ds:[esi+0x10]
 006E5AE0    cmp eax, dword ptr ds:[esi+0x08]
 006E5AE3    jb 0x006E5AF9
-006E5AE5    push 0x88292C
+006E5AE5    push 0x88292C                                   ; => [ String: DataArray<struct Flanim>::DataArrayAlloc ]
 006E5AEA    push 0xF4
-006E5AEF    mov ecx, 0x8019B8
+006E5AEF    mov ecx, 0x8019B8                               ; => [ String: mUsedCount < mMaxSize ]
 006E5AF4    jmp 0x006E5BCA
 006E5AF9    mov eax, dword ptr ds:[esi+0x0C]
 006E5AFC    mov ebx, dword ptr ds:[esi+0x04]
@@ -39,7 +45,7 @@
 006E5B2F    mov dword ptr ds:[esi+0x0C], eax
 006E5B32    add edi, dword ptr ds:[esi]
 006E5B34    push edi
-006E5B35    call 0x00761FC4
+006E5B35    call 0x00761FC4                                 ; => [ Call: memset ]
 006E5B3A    mov eax, dword ptr ds:[esi+0x14]
 006E5B3D    add esp, 0x0C
 006E5B40    shl eax, 0x10
@@ -53,7 +59,7 @@
 006E5B61    mov eax, dword ptr ss:[ebp-0x04]
 006E5B64    mov dword ptr ds:[edi], eax
 006E5B66    movups xmm0, xmmword ptr ds:[0x00800890]
-006E5B6D    movups xmmword ptr ds:[edi+0x20], xmm0
+006E5B6D    movups xmmword ptr ds:[edi+0x20], xmm0          ; => [ Call: __builtin_memcpy | String: \x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f ]
 006E5B71    movups xmm0, xmmword ptr ds:[0x008008A0]
 006E5B78    movups xmmword ptr ds:[edi+0x30], xmm0
 006E5B7C    movups xmm0, xmmword ptr ds:[0x008008B0]
@@ -61,12 +67,12 @@
 006E5B87    movups xmm0, xmmword ptr ds:[0x008008C0]
 006E5B8E    movups xmmword ptr ds:[edi+0x50], xmm0
 006E5B92    mov ecx, dword ptr ds:[0x00BF23AC]
-006E5B98    mov edx, dword ptr ds:[0x00BF23B0]
-006E5B9E    mov dword ptr ds:[edi+0x60], ecx
+006E5B98    mov edx, dword ptr ds:[0x00BF23B0]              ; => [ Data: data_bf23b0 ]
+006E5B9E    mov dword ptr ds:[edi+0x60], ecx                ; => [ Data: data_bf23ac ]
 006E5BA1    mov ecx, edi
 006E5BA3    mov dword ptr ds:[edi+0x64], edx
 006E5BA6    mov dword ptr ds:[edi+0x78], 0xFFFFFFFF
-006E5BAD    call 0x006E5A00
+006E5BAD    call 0x006E5A00                                 ; => [ Call: sub_6e5a00 ]
 006E5BB2    mov eax, edi
 006E5BB4    pop edi
 006E5BB5    pop esi
@@ -74,15 +80,15 @@
 006E5BB7    mov esp, ebp
 006E5BB9    pop ebp
 006E5BBA    ret
-006E5BBB    push 0x88292C
+006E5BBB    push 0x88292C                                   ; => [ String: DataArray<struct Flanim>::DataArrayAlloc ]
 006E5BC0    push 0xF5
-006E5BC5    mov ecx, 0x8019D0
-006E5BCA    push 0x80193C
+006E5BC5    mov ecx, 0x8019D0                               ; => [ String: mFreeListHead <= mMaxUsedCount ]
+006E5BCA    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
 006E5BCF    mov edx, 0x801800
-006E5BD4    call 0x0063B870
+006E5BD4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006E5BD9    add esp, 0x0C
 006E5BDC    call 0x0063BC30
 006E5BE1    test al, al
-006E5BE3    jz 0x006E5BE6
+006E5BE3    jz 0x006E5BE6                                   ; => [ Call: sub_63bc30 ]
 006E5BE5    int3
-006E5BE6    call 0x0063BB00
+006E5BE6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

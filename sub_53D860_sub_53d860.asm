@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_53d860
+// 起始地址: 0x53d860
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053D860    dword 83EC8B55
 0053D864    in al, 0xF8
 0053D866    mov eax, 0x1910
-0053D86B    call 0x00761E50
+0053D86B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0053D870    push esi
 0053D871    push edi
 0053D872    push 0x00
@@ -15,7 +21,7 @@
 0053D88D    lea edi, ss:[esp+0x08]
 0053D891    mov esi, eax
 0053D893    mov ecx, 0x321
-0053D898    rep movsd
+0053D898    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5685f0 ]
 0053D89A    xor eax, eax
 0053D89C    cmp dword ptr ss:[esp+0xC88], eax
 0053D8A3    pop edi

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_56b780
+// 起始地址: 0x56b780
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056B780    push ecx
 0056B781    push esi
 0056B782    push edi
-0056B783    call 0x00573400
+0056B783    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056B788    mov ecx, dword ptr ds:[eax]
 0056B78A    cmp ecx, 0x04
 0056B78D    jnz 0x0056B796
@@ -33,15 +39,15 @@
 0056B7C4    pop edi
 0056B7C5    pop esi
 0056B7C6    pop ecx
-0056B7C7    ret
+0056B7C7    ret                                             ; => [ Call: sub_576940 ]
 0056B7C8    call 0x0056B800
 0056B7CD    mov esi, eax
 0056B7CF    call 0x00573400
-0056B7D4    movzx esi, si
-0056B7D7    mov edi, dword ptr ds:[eax+0x04]
+0056B7D4    movzx esi, si                                   ; => [ Call: sub_56b800 ]
+0056B7D7    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056B7DA    cmp esi, 0x320
 0056B7E0    jb 0x0056B7E7
-0056B7E2    call 0x00591930
+0056B7E2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056B7E7    imul eax, esi, 0x64
 0056B7EA    mov eax, dword ptr ds:[eax+edi*1+0x1A4C]
 0056B7F1    pop edi

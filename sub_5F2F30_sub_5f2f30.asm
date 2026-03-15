@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f2f30
+// 起始地址: 0x5f2f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F2F30    push ebp
 005F2F31    mov ebp, esp
 005F2F33    push ecx
@@ -12,7 +18,7 @@
 005F2F44    mov ecx, dword ptr ss:[ebp+0x0C]
 005F2F47    mov dword ptr ss:[ebp-0x04], ebx
 005F2F4A    mov dword ptr ds:[edi], 0x00
-005F2F50    call 0x005CC410
+005F2F50    call 0x005CC410                                 ; => [ Call: sub_5cc410 ]
 005F2F55    add esp, 0x08
 005F2F58    test eax, eax
 005F2F5A    jz 0x005F2FE3
@@ -22,9 +28,9 @@
 005F2F67    nop word ptr ds:[eax+eax*1], ax
 005F2F70    movzx eax, cx
 005F2F73    cmp eax, dword ptr ds:[0x00B809E4]
-005F2F79    jnb 0x005F3000
+005F2F79    jnb 0x005F3000                                  ; => [ Data: data_b809e4 ]
 005F2F7F    imul edx, eax, 0x1C30
-005F2F85    mov eax, dword ptr ds:[0x00B809E0]
+005F2F85    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005F2F8A    cmp dword ptr ds:[edx+eax*1+0x1C28], ecx
 005F2F91    jnz 0x005F3000
 005F2F93    cmp dword ptr ds:[edx+eax*1+0x2C], 0x00
@@ -64,20 +70,20 @@
 005F2FE6    mov esp, ebp
 005F2FE8    pop ebp
 005F2FE9    ret
-005F2FEA    push 0x8607E0
+005F2FEA    push 0x8607E0                                   ; => [ String: AssignCardsFromPile ]
 005F2FEF    push 0x78E2
-005F2FF4    push 0x86F1E8
-005F2FF9    mov ecx, 0x86F474
+005F2FF4    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+005F2FF9    mov ecx, 0x86F474                               ; => [ String: gfx.type == DOMGFX_CARD ]
 005F2FFE    jmp 0x005F3011
-005F3000    push 0x86E294
+005F3000    push 0x86E294                                   ; => [ String: DataArray<struct DomGfx>::DataArrayGet ]
 005F3005    push 0x6D
-005F3007    push 0x80193C
-005F300C    mov ecx, 0x802748
+005F3007    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h ]
+005F300C    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 005F3011    mov edx, 0x801800
-005F3016    call 0x0063B870
+005F3016    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005F301B    add esp, 0x0C
 005F301E    call 0x0063BC30
 005F3023    test al, al
-005F3025    jz 0x005F3028
+005F3025    jz 0x005F3028                                   ; => [ Call: sub_63bc30 ]
 005F3027    int3
-005F3028    call 0x0063BB00
+005F3028    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

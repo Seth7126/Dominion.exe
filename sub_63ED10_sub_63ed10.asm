@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63ed10
+// 起始地址: 0x63ed10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063ED10    push ebp
 0063ED11    mov ebp, esp
 0063ED13    push ecx
@@ -15,7 +21,7 @@
 0063ED2C    push 0x4C957F2D
 0063ED31    push esi
 0063ED32    push edi
-0063ED33    call 0x007621D0
+0063ED33    call 0x007621D0                                 ; => [ Call: __allmul ]
 0063ED38    mov ecx, dword ptr ss:[ebp-0x04]
 0063ED3B    add eax, dword ptr ds:[ecx+0x08]
 0063ED3E    mov dword ptr ds:[ecx], eax
@@ -42,10 +48,10 @@
 0063ED6F    push 0x871ED0
 0063ED74    mov edx, 0x801800
 0063ED79    mov ecx, 0x871F0C
-0063ED7E    call 0x0063B870
+0063ED7E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Random.cpp | String: RandomInt | String: maxPlusOne > 0 ]
 0063ED83    add esp, 0x0C
 0063ED86    call 0x0063BC30
 0063ED8B    test al, al
-0063ED8D    jz 0x0063ED90
+0063ED8D    jz 0x0063ED90                                   ; => [ Call: sub_63bc30 ]
 0063ED8F    int3
-0063ED90    call 0x0063BB00
+0063ED90    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

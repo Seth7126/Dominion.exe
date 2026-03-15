@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5a53a0
+// 起始地址: 0x5a53a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A53A0    push ebp
 005A53A1    mov ebp, esp
 005A53A3    mov eax, 0x10014
-005A53A8    call 0x00761E50
+005A53A8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A53AD    mov eax, dword ptr ds:[0x008C4040]
 005A53B2    xor eax, ebp
-005A53B4    mov dword ptr ss:[ebp-0x08], eax
+005A53B4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 005A53B7    push esi
 005A53B8    mov esi, edx
 005A53BA    movss xmm3, dword ptr ds:[esi+0x08]
@@ -50,7 +56,7 @@
 005A544A    pop esi
 005A544B    mov ecx, dword ptr ss:[ebp-0x08]
 005A544E    xor ecx, ebp
-005A5450    call 0x0075927A
+005A5450    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A5455    mov esp, ebp
 005A5457    pop ebp
 005A5458    ret
@@ -59,11 +65,11 @@
 005A5463    push dword ptr ss:[ebp-0x10010]
 005A5469    lea ecx, ss:[ebp-0x1000C]
 005A546F    push 0x4000
-005A5474    call 0x005AD4A0
+005A5474    call 0x005AD4A0                                 ; => [ Call: sub_5ad4a0 ]
 005A5479    movss xmm0, dword ptr ds:[edi]
 005A547D    add esp, 0x08
 005A5480    mulss xmm0, dword ptr ds:[0x00891098]
-005A5488    call 0x004D5CB0
+005A5488    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 005A548D    xorps xmm1, xmm1
 005A5490    comiss xmm1, xmm0
 005A5493    jbe 0x005A549F
@@ -156,19 +162,19 @@
 005A562B    pop edi
 005A562C    xor ecx, ebp
 005A562E    pop esi
-005A562F    call 0x0075927A
+005A562F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A5634    mov esp, ebp
 005A5636    pop ebp
 005A5637    ret
-005A5638    push 0x8252D8
+005A5638    push 0x8252D8                                   ; => [ String: ApplySetSealevel ]
 005A563D    push 0x425
 005A5642    push 0x8250E0
 005A5647    mov edx, 0x801800
 005A564C    mov ecx, 0x8252EC
-005A5651    call 0x0063B870
+005A5651    call 0x0063B870                                 ; => [ String: points[i].z > 0.0f | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp ]
 005A5656    add esp, 0x0C
 005A5659    call 0x0063BC30
 005A565E    test al, al
-005A5660    jz 0x005A5663
+005A5660    jz 0x005A5663                                   ; => [ Call: sub_63bc30 ]
 005A5662    int3
-005A5663    call 0x0063BB00
+005A5663    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

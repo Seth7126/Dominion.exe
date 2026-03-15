@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4ec1a0
+// 起始地址: 0x4ec1a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EC1A0    push ebp
 004EC1A1    mov ebp, esp
 004EC1A3    mov eax, 0x2B00
-004EC1A8    call 0x00761E50
+004EC1A8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004EC1AD    mov eax, dword ptr ds:[0x008C4040]
 004EC1B2    xor eax, ebp
-004EC1B4    mov dword ptr ss:[ebp-0x08], eax
+004EC1B4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 004EC1B7    mov eax, dword ptr ss:[ebp+0x08]
 004EC1BA    mov dword ptr ss:[ebp-0x2AFC], eax
 004EC1C0    imul eax, eax, 0x84
@@ -19,7 +25,7 @@
 004EC1DF    mov dword ptr ss:[ebp-0x2AE0], ebx
 004EC1E5    mov ecx, 0x8B
 004EC1EA    xor edx, edx
-004EC1EC    rep stosd
+004EC1EC    rep stosd                                       ; => [ Call: __builtin_memset ]
 004EC1EE    xor ecx, ecx
 004EC1F0    mov dword ptr ss:[ebp-0x2AE4], edx
 004EC1F6    mov dword ptr ss:[ebp-0x2AF0], edx
@@ -52,25 +58,25 @@
 004EC284    xor eax, eax
 004EC286    and ecx, 0x1000
 004EC28C    or eax, ecx
-004EC28E    jnz 0x004EC31F
-004EC294    mov edi, dword ptr ds:[0x0177793C]
-004EC29A    mov ebx, dword ptr ds:[0x01777938]
+004EC28E    jnz 0x004EC31F                                  ; => [ Call: sub_571b30 ]
+004EC294    mov edi, dword ptr ds:[0x0177793C]              ; => [ Data: data_177793c ]
+004EC29A    mov ebx, dword ptr ds:[0x01777938]              ; => [ Data: data_1777938 ]
 004EC2A0    push 0x5851F42D
 004EC2A5    push 0x4C957F2D
 004EC2AA    push edi
 004EC2AB    push ebx
-004EC2AC    call 0x007621D0
-004EC2B1    add eax, dword ptr ds:[0x01777940]
+004EC2AC    call 0x007621D0                                 ; => [ Call: __allmul ]
+004EC2B1    add eax, dword ptr ds:[0x01777940]              ; => [ Data: data_1777940 ]
 004EC2B7    mov ecx, edi
 004EC2B9    mov esi, edi
-004EC2BB    mov dword ptr ds:[0x01777938], eax
+004EC2BB    mov dword ptr ds:[0x01777938], eax              ; => [ Data: data_1777940 | Data: data_1777938 ]
 004EC2C0    adc edx, dword ptr ds:[0x01777944]
 004EC2C6    mov eax, 0x51EB851F
 004EC2CB    shr esi, 0x0D
 004EC2CE    shrd ebx, edi, 0x1B
 004EC2D2    shr ecx, 0x1B
 004EC2D5    xor esi, ebx
-004EC2D7    mov dword ptr ds:[0x0177793C], edx
+004EC2D7    mov dword ptr ds:[0x0177793C], edx              ; => [ Data: data_177793c | Data: data_1777944 ]
 004EC2DD    mov ebx, dword ptr ss:[ebp-0x2AE0]
 004EC2E3    ror esi, cl
 004EC2E5    mov ecx, dword ptr ss:[ebp-0x2AF8]
@@ -138,9 +144,9 @@
 004EC402    mov al, 0x01
 004EC404    mov byte ptr ss:[ebp+esi*1-0x32C], al
 004EC40B    jmp 0x004EC486
-004EC40D    push 0x808898
+004EC40D    push 0x808898                                   ; => [ String: ShufflePlayer ]
 004EC412    push 0x27F
-004EC417    mov ecx, 0x801AA4
+004EC417    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004EC41C    jmp 0x004EC672
 004EC421    cmp esi, 0x320
 004EC427    jnb 0x004EC693
@@ -154,7 +160,7 @@
 004EC450    mov ecx, 0x1777938
 004EC455    mov edx, edi
 004EC457    mov byte ptr ss:[ebp+esi*1-0x32C], 0x00
-004EC45F    call 0x0063ED10
+004EC45F    call 0x0063ED10                                 ; => [ Data: data_1777938 | Call: sub_63ed10 ]
 004EC464    dec edi
 004EC465    lea ecx, ss:[ebp-0x11DC]
 004EC46B    mov edx, dword ptr ds:[ecx+eax*4]
@@ -180,7 +186,7 @@
 004EC4C2    lea eax, ds:[ecx+eax*4]
 004EC4C5    push eax
 004EC4C6    lea ecx, ss:[ebp-0x1E5C]
-004EC4CC    call 0x004EBF20
+004EC4CC    call 0x004EBF20                                 ; => [ Call: sub_4ebf20 ]
 004EC4D1    mov ecx, dword ptr ss:[ebp-0x2AE0]
 004EC4D7    add esp, 0x08
 004EC4DA    add dword ptr ss:[ebp-0x2AF0], esi
@@ -261,29 +267,29 @@
 004EC636    cmp dword ptr ss:[ebp-0x2AE4], 0x00
 004EC63D    jnz 0x004EC663
 004EC63F    jmp 0x004EC652
-004EC641    push 0x808898
+004EC641    push 0x808898                                   ; => [ String: ShufflePlayer ]
 004EC646    push 0x2AB
-004EC64B    mov ecx, 0x8088D8
+004EC64B    mov ecx, 0x8088D8                               ; => [ String: numList == pileCount[i - START_PLAYER_PILES] ]
 004EC650    jmp 0x004EC672
 004EC652    mov ecx, dword ptr ss:[ebp-0x08]
 004EC655    pop edi
 004EC656    pop esi
 004EC657    xor ecx, ebp
 004EC659    pop ebx
-004EC65A    call 0x0075927A
+004EC65A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004EC65F    mov esp, ebp
 004EC661    pop ebp
 004EC662    ret
-004EC663    push 0x808898
+004EC663    push 0x808898                                   ; => [ String: ShufflePlayer ]
 004EC668    push 0x2D7
-004EC66D    mov ecx, 0x808908
+004EC66D    mov ecx, 0x808908                               ; => [ String: numAvail == 0 ]
 004EC672    push 0x8088A8
 004EC677    mov edx, 0x801800
-004EC67C    call 0x0063B870
+004EC67C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp ]
 004EC681    add esp, 0x0C
 004EC684    call 0x0063BC30
 004EC689    test al, al
-004EC68B    jz 0x004EC68E
+004EC68B    jz 0x004EC68E                                   ; => [ Call: sub_63bc30 ]
 004EC68D    int3
-004EC68E    call 0x0063BB00
-004EC693    call 0x007598E1
+004EC68E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+004EC693    call 0x007598E1                                 ; => [ Call: ___report_rangecheckfailure | Call: ___report_rangecheckfailure ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_74bc90
+// 起始地址: 0x74bc90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074BC90    push ebp
 0074BC91    mov ebp, esp
 0074BC93    push ebx
@@ -14,7 +20,7 @@
 0074BCB0    push eax
 0074BCB1    call esi
 0074BCB3    mov ebx, dword ptr ss:[ebp+0x0C]
-0074BCB6    mov dword ptr ds:[0x019E2778], eax
+0074BCB6    mov dword ptr ds:[0x019E2778], eax              ; => [ Data: data_19e2778 | String: lpInsData ]
 0074BCBB    cmp ebx, 0x02
 0074BCBE    jnz 0x0074BCE7
 0074BCC0    push 0x88FEE8
@@ -23,10 +29,10 @@
 0074BCC8    push eax
 0074BCC9    push 0xFFFFFFFC
 0074BCCB    push edi
-0074BCCC    call dword ptr ds:[0x007753D8]
+0074BCCC    call dword ptr ds:[0x007753D8]                  ; => [ String: Wprc ]
 0074BCD2    push 0x88FEE8
 0074BCD7    push edi
-0074BCD8    call dword ptr ds:[0x00775418]
+0074BCD8    call dword ptr ds:[0x00775418]                  ; => [ String: Wprc ]
 0074BCDE    pop edi
 0074BCDF    pop esi
 0074BCE0    xor eax, eax
@@ -39,7 +45,7 @@
 0074BCEF    push 0x00
 0074BCF1    push edi
 0074BCF2    call dword ptr ds:[0x007752BC]
-0074BCF8    mov eax, dword ptr ds:[0x019E2778]
+0074BCF8    mov eax, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074BCFD    test esi, esi
 0074BCFF    jz 0x0074BD21
 0074BD01    cmp dword ptr ds:[eax+0x14], esi
@@ -56,14 +62,14 @@
 0074BD1F    jmp 0x0074BD23
 0074BD21    xor ecx, ecx
 0074BD23    mov dword ptr ds:[eax+0x38], ecx
-0074BD26    mov eax, dword ptr ds:[0x019E2778]
+0074BD26    mov eax, dword ptr ds:[0x019E2778]              ; => [ Data: data_19e2778 ]
 0074BD2B    cmp dword ptr ds:[eax+0x38], 0x00
 0074BD2F    jnz 0x0074BD43
 0074BD31    push 0x105
 0074BD36    push 0x00
 0074BD38    push 0x00
 0074BD3A    push dword ptr ds:[eax+0x14]
-0074BD3D    call dword ptr ds:[0x007753FC]
+0074BD3D    call dword ptr ds:[0x007753FC]                  ; => [ Call: nullptr ]
 0074BD43    push dword ptr ss:[ebp+0x14]
 0074BD46    push esi
 0074BD47    push ebx
@@ -77,7 +83,7 @@
 0074BD5D    pop esi
 0074BD5E    pop ebx
 0074BD5F    pop ebp
-0074BD60    ret 0x10
+0074BD60    ret 0x10                                        ; => [ String: Wprc ]
 0074BD63    cmp ebx, 0x20A
 0074BD69    jnz 0x0074BD7D
 0074BD6B    push 0x00
@@ -122,7 +128,7 @@
 0074BDD2    call dword ptr ds:[0x007752BC]
 0074BDD8    mov eax, dword ptr ds:[0x019E2778]
 0074BDDD    push dword ptr ds:[eax+0x14]
-0074BDE0    call dword ptr ds:[0x0077539C]
+0074BDE0    call dword ptr ds:[0x0077539C]                  ; => [ Data: data_19e2778 ]
 0074BDE6    pop edi
 0074BDE7    pop esi
 0074BDE8    xor eax, eax
@@ -159,7 +165,7 @@
 0074BE32    call dword ptr ds:[0x007752BC]
 0074BE38    mov eax, dword ptr ds:[0x019E2778]
 0074BE3D    push dword ptr ds:[eax+0x08]
-0074BE40    call dword ptr ds:[0x0077539C]
+0074BE40    call dword ptr ds:[0x0077539C]                  ; => [ Data: data_19e2778 ]
 0074BE46    pop edi
 0074BE47    pop esi
 0074BE48    xor eax, eax

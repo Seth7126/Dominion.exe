@@ -1,29 +1,35 @@
+// ============================================================
+// 函数名称: sub_55e940
+// 起始地址: 0x55e940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055E940    dword 83EC8B55
 0055E944    in al, 0xF8
 0055E946    mov eax, 0x1918
-0055E94B    call 0x00761E50
-0055E950    mov eax, dword ptr ds:[0x008C4040]
+0055E94B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+0055E950    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0055E955    xor eax, esp
 0055E957    mov dword ptr ss:[esp+0x1914], eax
 0055E95E    push esi
 0055E95F    push edi
-0055E960    call 0x00573400
+0055E960    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055E965    push 0x00
 0055E967    push 0x00
 0055E969    push 0x01
 0055E96B    mov edx, dword ptr ds:[eax+0x0C]
 0055E96E    mov ecx, dword ptr ds:[eax+0x04]
 0055E971    push 0x01
-0055E973    call 0x00590760
+0055E973    call 0x00590760                                 ; => [ Call: sub_590760 ]
 0055E978    add esp, 0x10
-0055E97B    call 0x00573400
+0055E97B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055E980    mov ecx, dword ptr ds:[eax+0x0C]
 0055E983    cmp ecx, 0xFFFFFFFF
 0055E986    jz 0x0055EACF
 0055E98C    mov eax, dword ptr ds:[eax+0x04]
 0055E98F    imul ecx, ecx, 0x5A30
 0055E995    or dword ptr ds:[ecx+eax*1+0x17558], 0x02
-0055E99D    call 0x00573400
+0055E99D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055E9A2    push 0x0C
 0055E9A4    push 0x00
 0055E9A6    lea ecx, ss:[esp+0x10]
@@ -36,18 +42,18 @@
 0055E9BA    push 0x01
 0055E9BC    push 0x3EE
 0055E9C1    push 0x03
-0055E9C3    call 0x00588DB0
+0055E9C3    call 0x00588DB0                                 ; => [ Call: sub_588db0 ]
 0055E9C8    add esp, 0x20
 0055E9CB    mov dword ptr ss:[esp+0xC8C], eax
 0055E9D2    mov ecx, 0x321
 0055E9D7    lea esi, ss:[esp+0x0C]
 0055E9DB    lea edi, ss:[esp+0xC94]
 0055E9E2    mov edx, 0x3EE
-0055E9E7    rep movsd
+0055E9E7    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0055E9E9    push 0x07
 0055E9EB    push 0x3B
 0055E9ED    lea ecx, ss:[esp+0xC9C]
-0055E9F4    call 0x0056AB80
+0055E9F4    call 0x0056AB80                                 ; => [ Call: sub_56ab80 ]
 0055E9F9    mov esi, eax
 0055E9FB    add esp, 0x0C
 0055E9FE    mov eax, dword ptr ss:[esp+0x1910]
@@ -72,7 +78,7 @@
 0055EA3B    push 0x0E
 0055EA3D    mov edx, 0x3EE
 0055EA42    lea ecx, ss:[esp+0xC9C]
-0055EA49    call 0x0056ACC0
+0055EA49    call 0x0056ACC0                                 ; => [ Call: sub_56acc0 ]
 0055EA4E    mov edi, dword ptr ss:[esp+0x191C]
 0055EA55    add esp, 0x0C
 0055EA58    xor ecx, ecx
@@ -100,7 +106,7 @@
 0055EAA0    mov ecx, dword ptr ss:[esp+esi*4+0xC90]
 0055EAA7    mov edx, 0x3EE
 0055EAAC    push 0x0B
-0055EAAE    call 0x005695C0
+0055EAAE    call 0x005695C0                                 ; => [ Call: sub_5695c0 ]
 0055EAB3    inc esi
 0055EAB4    add esp, 0x04
 0055EAB7    cmp esi, edi
@@ -109,7 +115,7 @@
 0055EAC2    pop edi
 0055EAC3    pop esi
 0055EAC4    xor ecx, esp
-0055EAC6    call 0x0075927A
+0055EAC6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0055EACB    mov esp, ebp
 0055EACD    pop ebp
 0055EACE    ret
@@ -118,10 +124,10 @@
 0055EAD6    push 0x81EA70
 0055EADB    mov edx, 0x801800
 0055EAE0    mov ecx, 0x813C5C
-0055EAE5    call 0x0063B870
+0055EAE5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0055EAEA    add esp, 0x0C
 0055EAED    call 0x0063BC30
 0055EAF2    test al, al
-0055EAF4    jz 0x0055EAF7
+0055EAF4    jz 0x0055EAF7                                   ; => [ Call: sub_63bc30 ]
 0055EAF6    int3
-0055EAF7    call 0x0063BB00
+0055EAF7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

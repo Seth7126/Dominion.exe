@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b48d0
+// 起始地址: 0x6b48d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B48D0    push ecx
 006B48D1    test ecx, ecx
 006B48D3    jz 0x006B4953
@@ -8,7 +14,7 @@
 006B48E2    cmp eax, 0x72
 006B48E5    jnbe 0x006B4910
 006B48E7    movzx eax, byte ptr ds:[eax+0x6B4990]
-006B48EE    jmp dword ptr ds:[eax*4+0x6B4984]
+006B48EE    jmp dword ptr ds:[eax*4+0x6B4984]               ; => [ Data: jump_table_6b4984 | Data: lookup_table_6b4990 ]
 006B48F5    lea eax, ds:[ecx-0x3002]
 006B48FB    cmp eax, 0xE5
 006B4900    jnbe 0x006B4910
@@ -29,10 +35,10 @@
 006B493E    lea eax, ds:[ecx-0x4E00]
 006B4944    cmp eax, 0x51AF
 006B4949    jbe 0x006B494F
-006B494B    xor al, al
+006B494B    xor al, al                                      ; => [ Data: lookup_table_6b4990 ]
 006B494D    pop ecx
 006B494E    ret
-006B494F    mov al, 0x01
+006B494F    mov al, 0x01                                    ; => [ Data: lookup_table_6b4990 ]
 006B4951    pop ecx
 006B4952    ret
 006B4953    push 0x87CB18
@@ -40,10 +46,10 @@
 006B495D    push 0x87CA3C
 006B4962    mov edx, 0x801800
 006B4967    mov ecx, 0x87CB10
-006B496C    call 0x0063B870
+006B496C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: CanBreak | Data: data_801800 | String: c0 != 0 | String: C:\x\ax2017\Engine\Font.cpp ]
 006B4971    add esp, 0x0C
 006B4974    call 0x0063BC30
 006B4979    test al, al
-006B497B    jz 0x006B497E
+006B497B    jz 0x006B497E                                   ; => [ Call: sub_63bc30 ]
 006B497D    int3
-006B497E    call 0x0063BB00
+006B497E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,9 +1,15 @@
-004B80C0    mov eax, dword ptr ds:[0x019E2788]
+// ============================================================
+// 函数名称: sub_4b80c0
+// 起始地址: 0x4b80c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+004B80C0    mov eax, dword ptr ds:[0x019E2788]              ; => [ Data: data_19e2788 ]
 004B80C5    push ebx
 004B80C6    push esi
 004B80C7    mov esi, ecx
 004B80C9    push edi
-004B80CA    mov edi, dword ptr ds:[0x0147ABF0]
+004B80CA    mov edi, dword ptr ds:[0x0147ABF0]              ; => [ Data: data_147abf0 ]
 004B80D0    test eax, eax
 004B80D2    jz 0x004B80EA
 004B80D4    movzx ecx, ax
@@ -33,7 +39,7 @@
 004B810D    jz 0x004B8135
 004B810F    mov eax, dword ptr ds:[0x0147ABE8]
 004B8114    mov eax, dword ptr ds:[eax+0x28]
-004B8117    mov dword ptr ds:[ecx+0x2C], eax
+004B8117    mov dword ptr ds:[ecx+0x2C], eax                ; => [ Data: data_147abe8 ]
 004B811A    mov eax, dword ptr ds:[ecx+0x3C]
 004B811D    mov dword ptr ds:[ecx+0x30], 0x40000000
 004B8124    mov dword ptr ds:[ecx+0x34], eax
@@ -63,10 +69,10 @@
 004B8172    jb 0x004B8160
 004B8174    movss xmm1, dword ptr ds:[0x00890D3C]
 004B817C    mov ecx, esi
-004B817E    call 0x00688930
-004B8183    mov edi, dword ptr ds:[0x0147ABF0]
-004B8189    mov dword ptr ds:[0x019E2788], eax
-004B818E    mov edx, dword ptr ds:[0x019E2784]
+004B817E    call 0x00688930                                 ; => [ Call: sub_688930 ]
+004B8183    mov edi, dword ptr ds:[0x0147ABF0]              ; => [ Data: data_147abf0 ]
+004B8189    mov dword ptr ds:[0x019E2788], eax              ; => [ Data: data_19e2788 ]
+004B818E    mov edx, dword ptr ds:[0x019E2784]              ; => [ Data: data_19e2784 ]
 004B8194    test edx, edx
 004B8196    jz 0x004B81EB
 004B8198    movzx eax, dx
@@ -89,7 +95,7 @@
 004B81C3    jnz 0x004B81EB
 004B81C5    mov eax, dword ptr ds:[0x0147ABE8]
 004B81CA    mov eax, dword ptr ds:[eax+0x28]
-004B81CD    mov dword ptr ds:[ecx+0x2C], eax
+004B81CD    mov dword ptr ds:[ecx+0x2C], eax                ; => [ Data: data_147abe8 ]
 004B81D0    mov eax, dword ptr ds:[ecx+0x3C]
 004B81D3    mov dword ptr ds:[ecx+0x30], 0x3E99999A
 004B81DA    mov dword ptr ds:[ecx+0x34], eax

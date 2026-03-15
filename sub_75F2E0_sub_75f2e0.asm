@@ -1,30 +1,36 @@
+// ============================================================
+// 函数名称: sub_75f2e0
+// 起始地址: 0x75f2e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F2E0    push ebp
 0075F2E1    mov ebp, esp
 0075F2E3    push ecx
 0075F2E4    push ebx
-0075F2E5    mov ebx, dword ptr ss:[ebp+0x08]
+0075F2E5    mov ebx, dword ptr ss:[ebp+0x08]                ; => [ Type: CRITICAL_SECTION ]
 0075F2E8    push esi
 0075F2E9    push edi
 0075F2EA    mov esi, ecx
 0075F2EC    test byte ptr ds:[ebx+0x08], 0x02
-0075F2F0    jz 0x0075F2F9
+0075F2F0    jz 0x0075F2F9                                   ; => [ Field: RecursionCount ]
 0075F2F2    mov ecx, ebx
-0075F2F4    call 0x0075F2D0
-0075F2F9    mov eax, dword ptr ds:[ebx]
+0075F2F4    call 0x0075F2D0                                 ; => [ Call: sub_75f2d0 ]
+0075F2F9    mov eax, dword ptr ds:[ebx]                     ; => [ Type: _RTL_CRITICAL_SECTION_DEBUG | Field: DebugInfo ]
 0075F2FB    mov ecx, ebx
 0075F2FD    mov dword ptr ds:[ebx+0x50], esi
-0075F300    call dword ptr ds:[eax+0x08]
+0075F300    call dword ptr ds:[eax+0x08]                    ; => [ Field: Flink | Field: ProcessLocksList ]
 0075F303    mov ecx, esi
 0075F305    mov dword ptr ss:[ebp+0x08], eax
-0075F308    call 0x0075AE50
+0075F308    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075F30D    mov ecx, esi
-0075F30F    call 0x0075F940
+0075F30F    call 0x0075F940                                 ; => [ Call: sub_75f940 ]
 0075F314    mov edi, eax
 0075F316    mov dword ptr ss:[ebp-0x04], edi
 0075F319    test edi, edi
 0075F31B    jns 0x0075F33F
 0075F31D    mov ecx, esi
-0075F31F    call 0x0075EC70
+0075F31F    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075F324    mov ecx, dword ptr ss:[ebp+0x08]
 0075F327    test ecx, ecx
 0075F329    jz 0x0075F331
@@ -53,12 +59,12 @@
 0075F371    push dword ptr ds:[esi+0x1074]
 0075F377    mov ecx, dword ptr ds:[esi+edi*4+0x50]
 0075F37B    push ebx
-0075F37C    call 0x0075F160
+0075F37C    call 0x0075F160                                 ; => [ Call: sub_75f160 ]
 0075F381    imul ecx, edi, 0x68
 0075F384    push ebx
 0075F385    add ecx, 0x1DB4
 0075F38B    add ecx, esi
-0075F38D    call 0x0075F110
+0075F38D    call 0x0075F110                                 ; => [ Call: sub_75f110 ]
 0075F392    inc dword ptr ds:[esi+0x1074]
 0075F398    cmp dword ptr ds:[esi+0x1074], 0xFFFFF
 0075F3A2    jnz 0x0075F3AE
@@ -72,17 +78,17 @@
 0075F3C2    movss dword ptr ss:[esp], xmm0
 0075F3C7    mov ecx, esi
 0075F3C9    push edi
-0075F3CA    call 0x007608E0
+0075F3CA    call 0x007608E0                                 ; => [ Call: sub_7608e0 ]
 0075F3CF    movss xmm1, dword ptr ss:[ebp+0x0C]
 0075F3D4    xorps xmm0, xmm0
 0075F3D7    comiss xmm0, xmm1
 0075F3DA    jbe 0x0075F3E1
-0075F3DC    movss xmm1, dword ptr ds:[ebx+0x10]
+0075F3DC    movss xmm1, dword ptr ds:[ebx+0x10]             ; => [ Field: LockSemaphore ]
 0075F3E1    push ecx
 0075F3E2    movss dword ptr ss:[esp], xmm1
 0075F3E7    mov ecx, esi
 0075F3E9    push edi
-0075F3EA    call 0x00760D40
+0075F3EA    call 0x00760D40                                 ; => [ Call: sub_760d40 ]
 0075F3EF    mov eax, dword ptr ds:[esi+edi*4+0x50]
 0075F3F3    push ecx
 0075F3F4    mov dword ptr ss:[esp], 0x3F800000
@@ -119,7 +125,7 @@
 0075F498    movss xmm0, dword ptr ds:[eax+0x3C]
 0075F49D    mulss xmm0, dword ptr ds:[eax+0x34]
 0075F4A2    movss dword ptr ds:[eax+0x178], xmm0
-0075F4AA    call 0x00760BD0
+0075F4AA    call 0x00760BD0                                 ; => [ Call: sub_760bd0 ]
 0075F4AF    mov edi, 0x184
 0075F4B4    mov ecx, dword ptr ds:[ebx+edi*1-0x154]
 0075F4BB    test ecx, ecx
@@ -134,7 +140,7 @@
 0075F4D7    jl 0x0075F4B4
 0075F4D9    mov ecx, esi
 0075F4DB    mov byte ptr ds:[esi+0x1CDC0], 0x01
-0075F4E2    call 0x0075EC70
+0075F4E2    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075F4E7    push dword ptr ss:[ebp-0x04]
 0075F4EA    mov ecx, esi
 0075F4EC    call 0x0075F9B0
@@ -143,4 +149,4 @@
 0075F4F3    pop ebx
 0075F4F4    mov esp, ebp
 0075F4F6    pop ebp
-0075F4F7    ret 0x14
+0075F4F7    ret 0x14                                        ; => [ Call: sub_75f9b0 ]

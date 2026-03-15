@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c02a0
+// 起始地址: 0x5c02a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C02A0    push ebp
 005C02A1    mov ebp, esp
 005C02A3    sub esp, 0x08
@@ -7,11 +13,11 @@
 005C02AB    mov esi, dword ptr ds:[ecx]
 005C02AD    push edi
 005C02AE    mov edi, dword ptr ds:[eax]
-005C02B0    xor eax, eax
+005C02B0    xor eax, eax                                    ; => [ Call: nullptr ]
 005C02B2    mov dword ptr ss:[ebp-0x08], ecx
 005C02B5    mov ebx, dword ptr ds:[esi]
 005C02B7    mov edx, dword ptr ds:[esi+0x04]
-005C02BA    mov dword ptr ss:[ebp+0x08], eax
+005C02BA    mov dword ptr ss:[ebp+0x08], eax                ; => [ Call: nullptr ]
 005C02BD    cmp dword ptr ds:[esi+0x08], eax
 005C02C0    jle 0x005C0314
 005C02C2    lea ecx, ds:[edx*4]

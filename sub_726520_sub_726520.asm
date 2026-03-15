@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_726520
+// 起始地址: 0x726520
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00726520    push esi
 00726521    mov esi, ecx
 00726523    push edi
@@ -44,7 +50,7 @@
 00726590    cmp dword ptr ds:[esi+0x08], 0x01
 00726594    jnl 0x0072659D
 00726596    mov ecx, esi
-00726598    call 0x00725DE0
+00726598    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 0072659D    mov eax, dword ptr ds:[esi+0x0C]
 007265A0    mov edi, eax
 007265A2    dec dword ptr ds:[esi+0x08]
@@ -54,7 +60,7 @@
 007265AE    mov dword ptr ds:[esi+0x0C], eax
 007265B1    jnl 0x007265BA
 007265B3    mov ecx, esi
-007265B5    call 0x00725DE0
+007265B5    call 0x00725DE0                                 ; => [ Call: sub_725de0 ]
 007265BA    mov eax, dword ptr ds:[esi+0x0C]
 007265BD    mov ecx, eax
 007265BF    add dword ptr ds:[esi+0x08], 0xFFFFFFFE
@@ -63,7 +69,7 @@
 007265C9    and ecx, 0x03
 007265CC    jnz 0x007265D7
 007265CE    mov ecx, esi
-007265D0    call 0x007263E0
+007265D0    call 0x007263E0                                 ; => [ Call: sub_7263e0 ]
 007265D5    jmp 0x00726623
 007265D7    cmp ecx, 0x03
 007265DA    jz 0x00726637
@@ -72,22 +78,22 @@
 007265E1    push 0x120
 007265E6    lea ecx, ds:[esi+0x20]
 007265E9    mov edx, 0x800CF0
-007265EE    call 0x00725B60
+007265EE    call 0x00725B60                                 ; => [ Call: sub_725b60 ]
 007265F3    add esp, 0x04
 007265F6    test eax, eax
 007265F8    jz 0x00726637
 007265FA    push 0x20
 007265FC    lea ecx, ds:[esi+0x804]
 00726602    mov edx, 0x800CD0
-00726607    call 0x00725B60
+00726607    call 0x00725B60                                 ; => [ Call: sub_725b60 ]
 0072660C    add esp, 0x04
 0072660F    jmp 0x00726618
 00726611    mov ecx, esi
-00726613    call 0x00726140
+00726613    call 0x00726140                                 ; => [ Call: sub_726140 ]
 00726618    test eax, eax
 0072661A    jz 0x00726637
 0072661C    mov ecx, esi
-0072661E    call 0x00725EE0
+0072661E    call 0x00725EE0                                 ; => [ Call: sub_725ee0 ]
 00726623    test eax, eax
 00726625    jz 0x00726637
 00726627    test edi, edi

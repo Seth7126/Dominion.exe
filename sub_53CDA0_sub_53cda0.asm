@@ -1,23 +1,29 @@
+// ============================================================
+// 函数名称: sub_53cda0
+// 起始地址: 0x53cda0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053CDA0    dword 51EC8B55
 0053CDA4    push ebx
 0053CDA5    push esi
 0053CDA6    push edi
-0053CDA7    call 0x0056B800
+0053CDA7    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0053CDAC    mov esi, eax
-0053CDAE    call 0x00573400
+0053CDAE    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0053CDB3    movzx esi, si
 0053CDB6    mov ebx, dword ptr ds:[eax+0x0C]
 0053CDB9    mov edi, dword ptr ds:[eax+0x04]
 0053CDBC    cmp esi, 0x320
 0053CDC2    jb 0x0053CDC9
-0053CDC4    call 0x00591930
+0053CDC4    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0053CDC9    imul eax, esi, 0x64
 0053CDCC    lea ecx, ss:[ebp-0x04]
 0053CDCF    push 0x00
 0053CDD1    mov edx, edi
 0053CDD3    push dword ptr ds:[eax+edi*1+0x1A4C]
 0053CDDA    push ebx
-0053CDDB    call 0x00576E90
+0053CDDB    call 0x00576E90                                 ; => [ Call: sub_576e90 ]
 0053CDE0    push dword ptr ss:[ebp-0x04]
 0053CDE3    xor edx, edx
 0053CDE5    mov ecx, 0x3EA
@@ -28,4 +34,4 @@
 0053CDF4    pop ebx
 0053CDF5    mov esp, ebp
 0053CDF7    pop ebp
-0053CDF8    ret
+0053CDF8    ret                                             ; => [ Call: sub_564f00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_736030
+// 起始地址: 0x736030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00736030    push ebp
 00736031    mov ebp, esp
 00736033    and esp, 0xFFFFFFF0
@@ -9,13 +15,13 @@
 0073603F    mov dword ptr ss:[esp+0x08], eax
 00736043    cmp dword ptr ds:[eax+0x04], 0x03
 00736047    jz 0x00736062
-00736049    push 0x86F01C
+00736049    push 0x86F01C                                   ; => [ String: TextureGetDef ]
 0073604E    push 0x89
-00736053    push 0x86F02C
-00736058    mov ecx, 0x86F04C
+00736053    push 0x86F02C                                   ; => [ String: C:\x\ax2017\Engine\Texture.h ]
+00736058    mov ecx, 0x86F04C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_TEXTURE ]
 0073605D    jmp 0x0073624A
 00736062    call 0x005AF880
-00736067    mov edi, dword ptr ds:[eax]
+00736067    mov edi, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 00736069    mov eax, dword ptr ds:[esi+0x40]
 0073606C    cmp dword ptr ds:[edi], eax
 0073606E    jnle 0x0073620C
@@ -27,15 +33,15 @@
 00736084    call 0x0073A8D0
 00736089    add esp, 0x04
 0073608C    test al, al
-0073608E    jnz 0x007360BA
+0073608E    jnz 0x007360BA                                  ; => [ Call: sub_73a8d0 ]
 00736090    mov eax, dword ptr ss:[esp+0x08]
-00736094    mov ecx, 0x801800
+00736094    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 00736099    mov eax, dword ptr ds:[eax+0x20]
 0073609C    test eax, eax
 0073609E    cmovnz ecx, eax
 007360A1    push ecx
 007360A2    push 0x88F064
-007360A7    call 0x0063B5F0
+007360A7    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: AtlasMaker: Image load failed %s ]
 007360AC    mov eax, 0x03
 007360B1    add esp, 0x08
 007360B4    pop edi
@@ -45,7 +51,7 @@
 007360B9    ret
 007360BA    mov edx, esi
 007360BC    lea ecx, ss:[esp+0x10]
-007360C0    call 0x00735EB0
+007360C0    call 0x00735EB0                                 ; => [ Call: sub_735eb0 ]
 007360C5    cmp eax, 0x01
 007360C8    jnz 0x007360E7
 007360CA    mov eax, dword ptr ss:[esp+0x18]
@@ -69,23 +75,23 @@
 007360FF    mov dword ptr ss:[esp+0x44], eax
 00736103    mov dword ptr ss:[esp+0x4C], edx
 00736107    call 0x006A9570
-0073610C    mov dword ptr ss:[esp+0x48], eax
+0073610C    mov dword ptr ss:[esp+0x48], eax                ; => [ Call: sub_6a9570 ]
 00736110    lea edx, ss:[esp+0x1C]
 00736114    mov eax, dword ptr ss:[esp+0x18]
 00736118    lea ecx, ss:[esp+0x3C]
 0073611C    push esi
 0073611D    mov dword ptr ss:[esp+0x40], eax
-00736121    call 0x00735AF0
+00736121    call 0x00735AF0                                 ; => [ Call: sub_735af0 ]
 00736126    add esp, 0x04
 00736129    mov ecx, 0x1C
 0073612E    call 0x0064BFD0
-00736133    mov edx, eax
+00736133    mov edx, eax                                    ; => [ Call: sub_64bfd0 ]
 00736135    mov dword ptr ss:[esp+0x0C], edx
 00736139    inc dword ptr ds:[edx+0x0C]
 0073613C    cmp dword ptr ds:[edx], 0x00
 0073613F    jnz 0x0073614C
 00736141    mov ecx, edx
-00736143    call 0x0064BE70
+00736143    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00736148    mov edx, dword ptr ss:[esp+0x0C]
 0073614C    mov ecx, dword ptr ds:[edx]
 0073614E    mov eax, dword ptr ds:[ecx]
@@ -112,13 +118,13 @@
 00736192    test eax, eax
 00736194    jnz 0x00736236
 0073619A    mov eax, dword ptr ss:[esp+0x08]
-0073619E    mov ecx, 0x801800
+0073619E    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 007361A3    mov eax, dword ptr ds:[eax+0x20]
 007361A6    test eax, eax
 007361A8    cmovnz ecx, eax
 007361AB    push ecx
 007361AC    push 0x88F0D0
-007361B1    call 0x0063B5F0
+007361B1    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: Atlas Maker: Duplicate image only included once: %s ]
 007361B6    mov eax, dword ptr ss:[esp+0x20]
 007361BA    add esp, 0x08
 007361BD    test eax, eax
@@ -141,7 +147,7 @@
 007361F3    mov dword ptr ds:[edi+0x04], eax
 007361F6    mov eax, dword ptr ds:[esi+0x4C]
 007361F9    mov dword ptr ds:[edi+0x08], eax
-007361FC    call 0x00735FB0
+007361FC    call 0x00735FB0                                 ; => [ Call: sub_735fb0 ]
 00736201    mov eax, 0x02
 00736206    pop edi
 00736207    pop esi
@@ -149,13 +155,13 @@
 0073620A    pop ebp
 0073620B    ret
 0073620C    mov eax, dword ptr ss:[esp+0x08]
-00736210    mov ecx, 0x801800
+00736210    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 00736215    mov eax, dword ptr ds:[eax+0x20]
 00736218    test eax, eax
 0073621A    cmovnz ecx, eax
 0073621D    push ecx
 0073621E    push 0x88F088
-00736223    call 0x0063B5F0
+00736223    call 0x0063B5F0                                 ; => [ String: AtlasMaker: Texture too large for atlas %s | Call: sub_63b5f0 ]
 00736228    add esp, 0x08
 0073622B    mov eax, 0x03
 00736230    pop edi
@@ -163,15 +169,15 @@
 00736232    mov esp, ebp
 00736234    pop ebp
 00736235    ret
-00736236    push 0x88F0B4
+00736236    push 0x88F0B4                                   ; => [ String: AtlasMakerPlaceAssetTexture ]
 0073623B    push 0x288
-00736240    push 0x88F010
-00736245    mov ecx, 0x801AA4
+00736240    push 0x88F010                                   ; => [ String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
+00736245    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0073624A    mov edx, 0x801800
-0073624F    call 0x0063B870
+0073624F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00736254    add esp, 0x0C
 00736257    call 0x0063BC30
 0073625C    test al, al
-0073625E    jz 0x00736261
+0073625E    jz 0x00736261                                   ; => [ Call: sub_63bc30 ]
 00736260    int3
-00736261    call 0x0063BB00
+00736261    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

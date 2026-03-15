@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_540bb0
+// 起始地址: 0x540bb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00540BB0    push ebp
 00540BB1    mov ebp, esp
 00540BB3    push ecx
@@ -11,11 +17,11 @@
 00540BC1    mov dword ptr ss:[ebp+0x08], eax
 00540BC4    call 0x00573400
 00540BC9    movzx esi, bx
-00540BCC    mov eax, dword ptr ds:[eax+0x04]
+00540BCC    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00540BCF    mov dword ptr ss:[ebp-0x04], eax
 00540BD2    cmp esi, 0x320
 00540BD8    jb 0x00540BDF
-00540BDA    call 0x00591930
+00540BDA    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00540BDF    mov edx, dword ptr ss:[ebp-0x04]
 00540BE2    mov ecx, dword ptr ss:[ebp+0x08]
 00540BE5    imul eax, esi, 0x64
@@ -28,7 +34,7 @@
 00540BFA    call 0x00568470
 00540BFF    add esp, 0x04
 00540C02    test al, al
-00540C04    jz 0x00540C11
+00540C04    jz 0x00540C11                                   ; => [ Call: sub_568470 ]
 00540C06    pop edi
 00540C07    pop esi
 00540C08    mov al, 0x01

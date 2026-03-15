@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4c0cc0
+// 起始地址: 0x4c0cc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C0CC0    push ebp
 004C0CC1    mov ebp, esp
 004C0CC3    push ecx
@@ -14,8 +20,8 @@
 004C0CD8    pop ebp
 004C0CD9    ret
 004C0CDA    lea edx, ss:[ebp-0x04]
-004C0CDD    call 0x004C2720
-004C0CE2    mov eax, dword ptr ds:[0x00CC8D5C]
+004C0CDD    call 0x004C2720                                 ; => [ Call: sub_4c2720 ]
+004C0CE2    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C0CE7    test eax, eax
 004C0CE9    jz 0x004C0D04
 004C0CEB    mov ecx, dword ptr ss:[ebp-0x04]
@@ -34,10 +40,10 @@
 004C0D0B    push 0x77EB50
 004C0D10    mov edx, 0x801800
 004C0D15    mov ecx, 0x77EB9C
-004C0D1A    call 0x0063B870
+004C0D1A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004C0D1F    add esp, 0x0C
 004C0D22    call 0x0063BC30
 004C0D27    test al, al
-004C0D29    jz 0x004C0D2C
+004C0D29    jz 0x004C0D2C                                   ; => [ Call: sub_63bc30 ]
 004C0D2B    int3
-004C0D2C    call 0x0063BB00
+004C0D2C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

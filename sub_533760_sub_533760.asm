@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_533760
+// 起始地址: 0x533760
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00533760    dword 53EC8B55
 00533764    push esi
 00533765    push edi
 00533766    mov edi, dword ptr ss:[ebp+0x08]
 00533769    call 0x00573400
 0053376E    movzx esi, di
-00533771    mov ebx, dword ptr ds:[eax+0x04]
+00533771    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00533774    cmp esi, 0x320
 0053377A    jb 0x00533781
-0053377C    call 0x00591930
+0053377C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00533781    imul eax, esi, 0x64
 00533784    cmp dword ptr ds:[eax+ebx*1+0x1A50], 0x3EC
 0053378F    jnz 0x005337A0
@@ -15,7 +21,7 @@
 00533796    cmp edi, eax
 00533798    pop edi
 00533799    pop esi
-0053379A    setz al
+0053379A    setz al                                         ; => [ Call: sub_56b800 ]
 0053379D    pop ebx
 0053379E    pop ebp
 0053379F    ret

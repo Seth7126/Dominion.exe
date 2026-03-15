@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_56efb0
+// 起始地址: 0x56efb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056EFB0    push ebp
 0056EFB1    mov ebp, esp
 0056EFB3    push 0xFFFFFFFF
-0056EFB5    push 0x7623B0
+0056EFB5    push 0x7623B0                                   ; => [ Call: __ehhandler$??0?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@QAE@XZ | Type: EHRegistrationNode ]
 0056EFBA    mov eax, dword ptr fs:[0x00000000]
-0056EFC0    push eax
+0056EFC0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 0056EFC1    mov eax, dword ptr ds:[0x008C4040]
 0056EFC6    xor eax, ebp
-0056EFC8    push eax
+0056EFC8    push eax                                        ; => [ Data: __security_cookie ]
 0056EFC9    lea eax, ss:[ebp-0x0C]
-0056EFCC    mov dword ptr fs:[0x00000000], eax
-0056EFD2    call 0x00573400
+0056EFCC    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
+0056EFD2    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056EFD7    mov ecx, dword ptr ds:[eax+0x04]
 0056EFDA    mov edx, dword ptr ds:[eax+0x0C]
 0056EFDD    mov eax, dword ptr ds:[ecx+0x1504]
@@ -36,10 +42,10 @@
 0056F01C    push 0x00
 0056F01E    push 0x20
 0056F020    push eax
-0056F021    call 0x0059F9B0
+0056F021    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0056F026    add esp, 0x24
 0056F029    mov ecx, dword ptr ss:[ebp-0x0C]
-0056F02C    mov dword ptr fs:[0x00000000], ecx
+0056F02C    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 0056F033    pop ecx
 0056F034    mov esp, ebp
 0056F036    pop ebp

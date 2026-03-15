@@ -1,6 +1,12 @@
-0075ECE0    mov dword ptr ds:[ecx], 0x77EA04
+// ============================================================
+// 函数名称: sub_75ece0
+// 起始地址: 0x75ece0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+0075ECE0    mov dword ptr ds:[ecx], 0x77EA04                ; => [ Data: data_77ea04 ]
 0075ECE6    xorps xmm0, xmm0
-0075ECE9    mov dword ptr ds:[ecx+0x30], 0x00
+0075ECE9    mov dword ptr ds:[ecx+0x30], 0x00               ; => [ Call: __builtin_memset ]
 0075ECF0    mov eax, ecx
 0075ECF2    mov dword ptr ds:[ecx+0x34], 0x00
 0075ECF9    mov dword ptr ds:[ecx+0x38], 0x00

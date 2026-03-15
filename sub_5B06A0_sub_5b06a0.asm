@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5b06a0
+// 起始地址: 0x5b06a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005B06A0    add ecx, 0xFFFFFF9B
 005B06A3    cmp ecx, 0x17
 005B06A6    jnbe 0x005B0743
@@ -39,7 +45,7 @@
 005B0719    mov eax, 0x7CB068
 005B071E    ret
 005B071F    mov eax, 0x7C9730
-005B0724    ret
+005B0724    ret                                             ; => [ Data: data_7c9730 ]
 005B0725    mov eax, 0x7C7DF8
 005B072A    ret
 005B072B    mov eax, 0x7C64C0
@@ -55,10 +61,10 @@
 005B074D    push 0x828138
 005B0752    mov edx, 0x801800
 005B0757    mov ecx, 0x801AA4
-005B075C    call 0x0063B870
+005B075C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GetCampaign | String: C:\x\ax2017\Jams\Dominion\code\DomTutorial.cpp | String: Halt ]
 005B0761    add esp, 0x0C
 005B0764    call 0x0063BC30
 005B0769    test al, al
-005B076B    jz 0x005B076E
+005B076B    jz 0x005B076E                                   ; => [ Call: sub_63bc30 ]
 005B076D    int3
-005B076E    jmp 0x0063BB00
+005B076E    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

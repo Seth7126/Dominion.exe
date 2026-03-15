@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_714370
+// 起始地址: 0x714370
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00714370    push ebp
 00714371    mov ebp, esp
 00714373    sub esp, 0x18
@@ -12,42 +18,42 @@
 00714387    add eax, dword ptr ds:[ebx+0x2C]
 0071438A    push dword ptr ds:[ebx+0x64]
 0071438D    mov dword ptr ds:[ebx+0x60], eax
-00714390    call dword ptr ds:[0x00800B48]
+00714390    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00714396    mov eax, dword ptr ds:[ebx+0x60]
 00714399    add esp, 0x04
-0071439C    mov ecx, dword ptr ds:[0x0147DED8]
+0071439C    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007143A2    shl eax, 0x03
 007143A5    test ecx, ecx
 007143A7    jz 0x007143BB
 007143A9    push 0x15C
 007143AE    push 0x88DCB4
 007143B3    push eax
-007143B4    call ecx
+007143B4    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Skeleton.c ]
 007143B6    add esp, 0x0C
 007143B9    jmp 0x007143C5
 007143BB    push eax
-007143BC    call dword ptr ds:[0x00800B4C]
+007143BC    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007143C2    add esp, 0x04
 007143C5    push dword ptr ds:[ebx+0x70]
 007143C8    mov dword ptr ds:[ebx+0x64], eax
 007143CB    mov eax, dword ptr ds:[ebx+0x04]
 007143CE    mov dword ptr ds:[ebx+0x5C], 0x00
 007143D5    mov dword ptr ds:[ebx+0x6C], eax
-007143D8    call dword ptr ds:[0x00800B48]
+007143D8    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 007143DE    mov eax, dword ptr ds:[ebx+0x6C]
 007143E1    add esp, 0x04
-007143E4    mov ecx, dword ptr ds:[0x0147DED8]
+007143E4    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007143EA    shl eax, 0x02
 007143ED    test ecx, ecx
 007143EF    jz 0x00714403
 007143F1    push 0x161
 007143F6    push 0x88DCB4
 007143FB    push eax
-007143FC    call ecx
+007143FC    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Skeleton.c ]
 007143FE    add esp, 0x0C
 00714401    jmp 0x0071440D
 00714403    push eax
-00714404    call dword ptr ds:[0x00800B4C]
+00714404    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0071440A    add esp, 0x04
 0071440D    mov edx, ebx
 0071440F    xor esi, esi
@@ -145,17 +151,17 @@
 00714506    inc esi
 00714507    jmp 0x007144A3
 00714509    mov ecx, dword ptr ss:[ebp-0x04]
-0071450C    call 0x00713BF0
+0071450C    call 0x00713BF0                                 ; => [ Call: sub_713bf0 ]
 00714511    mov eax, dword ptr ss:[ebp-0x08]
 00714514    inc esi
 00714515    jmp 0x007144A3
 00714517    mov ecx, dword ptr ss:[ebp-0x04]
-0071451A    call 0x007140A0
+0071451A    call 0x007140A0                                 ; => [ Call: sub_7140a0 ]
 0071451F    mov eax, dword ptr ss:[ebp-0x08]
 00714522    inc esi
 00714523    jmp 0x007144A3
 00714528    mov ecx, dword ptr ss:[ebp-0x04]
-0071452B    call 0x00713E20
+0071452B    call 0x00713E20                                 ; => [ Call: sub_713e20 ]
 00714530    mov eax, dword ptr ss:[ebp-0x08]
 00714533    inc esi
 00714534    jmp 0x007144A3
@@ -173,7 +179,7 @@
 0071455F    test edx, edx
 00714561    jz 0x0071456B
 00714563    mov ecx, dword ptr ss:[ebp-0x04]
-00714566    call 0x00713A30
+00714566    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 0071456B    mov edx, dword ptr ss:[ebp-0x04]
 0071456E    mov dword ptr ds:[esi+0x68], 0x01
 00714575    mov eax, dword ptr ds:[edx+0x60]

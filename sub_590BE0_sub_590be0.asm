@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_590be0
+// 起始地址: 0x590be0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00590BE0    push ebp
 00590BE1    mov ebp, esp
 00590BE3    sub esp, 0x0C
@@ -14,14 +20,14 @@
 00590C00    movzx ebx, si
 00590C03    cmp ebx, 0x320
 00590C09    jb 0x00590C10
-00590C0B    call 0x00591930
+00590C0B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00590C10    imul eax, ebx, 0x64
 00590C13    mov ebx, dword ptr ss:[ebp-0x04]
 00590C16    add eax, ebx
 00590C18    mov dword ptr ss:[ebp-0x08], eax
 00590C1B    mov edx, dword ptr ds:[ebx+0xD48]
 00590C21    mov ecx, dword ptr ds:[eax+0x1A4C]
-00590C27    call 0x00571B30
+00590C27    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 00590C2C    mov ecx, dword ptr ds:[eax+0x98]
 00590C32    mov eax, dword ptr ds:[eax+0x9C]
 00590C38    and ecx, 0x7F000400

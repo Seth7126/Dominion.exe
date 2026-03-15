@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_527da0
+// 起始地址: 0x527da0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00527DA0    dword 83EC8B55
 00527DA4    in al, 0xF0
 00527DA6    mov eax, 0x1988
-00527DAB    call 0x00761E50
-00527DB0    mov eax, dword ptr ds:[0x008C4040]
+00527DAB    call 0x00761E50                                 ; => [ Call: __chkstk ]
+00527DB0    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00527DB5    xor eax, esp
 00527DB7    mov dword ptr ss:[esp+0x1984], eax
 00527DBE    push esi
@@ -16,7 +22,7 @@
 00527DDB    mov esi, eax
 00527DDD    mov edx, 0x02
 00527DE2    add esp, 0x04
-00527DE5    rep movsd
+00527DE5    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 00527DE7    cmp dword ptr ss:[esp+0xCF8], edx
 00527DEE    cmovl edx, dword ptr ss:[esp+0xCF8]
 00527DF6    test edx, edx
@@ -25,10 +31,10 @@
 00527DFF    push edx
 00527E00    lea eax, ss:[esp+0x80]
 00527E07    push eax
-00527E08    call 0x00761FC4
+00527E08    call 0x00761FC4                                 ; => [ Call: memset ]
 00527E0D    add esp, 0x0C
 00527E10    jmp 0x00527F57
-00527E15    mov dword ptr ss:[esp+0x1C], 0x00
+00527E15    mov dword ptr ss:[esp+0x1C], 0x00               ; => [ Call: __builtin_memset ]
 00527E1D    xorps xmm0, xmm0
 00527E20    movlpd qword ptr ss:[esp+0x14], xmm0
 00527E26    lea eax, ss:[esp+0x40]
@@ -61,8 +67,8 @@
 00527E97    lea edi, ss:[esp+0x78]
 00527E9B    mov esi, eax
 00527E9D    mov ecx, 0x321
-00527EA2    rep movsd
-00527EA4    call 0x00573400
+00527EA2    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
+00527EA4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00527EA9    mov edx, dword ptr ss:[esp+0xCF8]
 00527EB0    mov esi, dword ptr ds:[eax+0x0C]
 00527EB3    mov eax, dword ptr ds:[eax+0x04]
@@ -94,8 +100,8 @@
 00527EFD    lea edi, ss:[esp+0x78]
 00527F01    mov esi, eax
 00527F03    mov ecx, 0x321
-00527F08    rep movsd
-00527F0A    call 0x00573400
+00527F08    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
+00527F0A    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00527F0F    mov esi, dword ptr ss:[esp+0xCF8]
 00527F16    mov edx, dword ptr ds:[eax+0x0C]
 00527F19    mov eax, dword ptr ds:[eax+0x04]
@@ -115,7 +121,7 @@
 00527F45    lea ecx, ss:[esp+0x88]
 00527F4C    push ecx
 00527F4D    mov ecx, eax
-00527F4F    call 0x00590DE0
+00527F4F    call 0x00590DE0                                 ; => [ Call: sub_590de0 ]
 00527F54    add esp, 0x14
 00527F57    cmp dword ptr ss:[esp+0xCF8], 0x02
 00527F5F    jnz 0x00527F90
@@ -127,18 +133,18 @@
 00527F6E    xor edx, edx
 00527F70    push 0x00
 00527F72    lea ecx, ds:[edx+0x02]
-00527F75    call 0x00561AF0
+00527F75    call 0x00561AF0                                 ; => [ Call: sub_561e00 | Call: sub_561af0 ]
 00527F7A    sub esp, 0x1C
 00527F7D    mov eax, esp
-00527F7F    mov dword ptr ds:[eax], 0x818474
-00527F85    mov dword ptr ds:[eax+0x24], eax
-00527F88    call 0x005699B0
+00527F7F    mov dword ptr ds:[eax], 0x818474                ; => [ Type: std::_Func_base<void>::std::_Func_impl_no_alloc<class <lambda_1f78e14559cb78cfded78feb422feee3>, void>::VTable | Data: std::_Func_impl_no_alloc<class <lambda_1f78e14559cb78cfded78feb422feee3>, void>::`vftable'{for `std::_Func_base<void>'} ]
+00527F85    mov dword ptr ds:[eax+0x24], eax                ; => [ Type: std::_Func_base<void>::std::_Func_impl_no_alloc<class <lambda_1f78e14559cb78cfded78feb422feee3>, void>::VTable ]
+00527F88    call 0x005699B0                                 ; => [ Call: sub_5699b0 ]
 00527F8D    add esp, 0x28
 00527F90    mov ecx, dword ptr ss:[esp+0x198C]
 00527F97    pop edi
 00527F98    pop esi
 00527F99    xor ecx, esp
-00527F9B    call 0x0075927A
+00527F9B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00527FA0    mov esp, ebp
 00527FA2    pop ebp
 00527FA3    ret

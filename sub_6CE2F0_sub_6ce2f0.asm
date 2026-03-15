@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ce2f0
+// 起始地址: 0x6ce2f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CE2F0    push ebp
 006CE2F1    mov ebp, esp
 006CE2F3    push ecx
@@ -5,7 +11,7 @@
 006CE2F5    push edi
 006CE2F6    push ecx
 006CE2F7    mov esi, edx
-006CE2F9    call 0x006D1370
+006CE2F9    call 0x006D1370                                 ; => [ Call: sub_6d1370 ]
 006CE2FE    mov edi, eax
 006CE300    mov eax, dword ptr ss:[ebp+0x08]
 006CE303    mov dword ptr ds:[edi], esi
@@ -25,7 +31,7 @@
 006CE337    comiss xmm0, dword ptr ds:[0x00890C48]
 006CE33E    jbe 0x006CE352
 006CE340    mov ecx, edi
-006CE342    call 0x006CE150
+006CE342    call 0x006CE150                                 ; => [ Call: sub_6ce150 ]
 006CE347    mov eax, dword ptr ds:[edi+0x4CC]
 006CE34D    pop edi
 006CE34E    pop esi
@@ -37,10 +43,10 @@
 006CE35C    push 0x87ED1C
 006CE361    mov edx, 0x801800
 006CE366    mov ecx, 0x87EDF4
-006CE36B    call 0x0063B870
+006CE36B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\FabDef.cpp | String: FabBegin | Data: data_801800 | String: state.transform.t.s > 0 ]
 006CE370    add esp, 0x0C
 006CE373    call 0x0063BC30
 006CE378    test al, al
-006CE37A    jz 0x006CE37D
+006CE37A    jz 0x006CE37D                                   ; => [ Call: sub_63bc30 ]
 006CE37C    int3
-006CE37D    call 0x0063BB00
+006CE37D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

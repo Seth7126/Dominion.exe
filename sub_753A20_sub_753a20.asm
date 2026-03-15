@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_753a20
+// 起始地址: 0x753a20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00753A20    push ebp
 00753A21    mov ebp, esp
 00753A23    sub esp, 0x28
@@ -85,7 +91,7 @@
 00753B70    cvtss2sd xmm0, xmm4
 00753B74    movsd qword ptr ss:[ebp-0x28], xmm0
 00753B79    fld qword ptr ss:[ebp-0x28]
-00753B7C    call 0x00762368
+00753B7C    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00753B81    fstp dword ptr ds:[edi+esi*4+0x08]
 00753B85    pop edi
 00753B86    pop esi
@@ -118,7 +124,7 @@
 00753BEA    cvtps2pd xmm0, xmm2
 00753BED    movsd qword ptr ss:[ebp-0x28], xmm0
 00753BF2    fld qword ptr ss:[ebp-0x28]
-00753BF5    call 0x00762368
+00753BF5    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00753BFA    fstp dword ptr ds:[edi+esi*4+0x08]
 00753BFE    pop edi
 00753BFF    pop esi
@@ -137,7 +143,7 @@
 00753C2A    cvtss2sd xmm0, xmm4
 00753C2E    movsd qword ptr ss:[ebp-0x28], xmm0
 00753C33    fld qword ptr ss:[ebp-0x28]
-00753C36    call 0x00762368
+00753C36    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00753C3B    fstp dword ptr ds:[edi+esi*4+0x08]
 00753C3F    pop edi
 00753C40    pop esi

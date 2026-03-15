@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_761240
+// 起始地址: 0x761240
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00761240    dword 51EC8B55
 00761244    push ebx
 00761245    mov ebx, dword ptr ss:[ebp+0x08]
@@ -5,14 +11,14 @@
 00761249    mov esi, dword ptr ds:[ebx]
 0076124B    test esi, esi
 0076124D    jz 0x00761307
-00761253    mov eax, dword ptr ds:[esi+0x5C]
+00761253    mov eax, dword ptr ds:[esi+0x5C]                ; => [ Type: HANDLE ]
 00761256    push edi
 00761257    mov edi, dword ptr ds:[0x00775178]
 0076125D    test eax, eax
 0076125F    jz 0x00761264
 00761261    push eax
 00761262    call edi
-00761264    mov eax, dword ptr ds:[esi+0x58]
+00761264    mov eax, dword ptr ds:[esi+0x58]                ; => [ Type: HANDLE ]
 00761267    test eax, eax
 00761269    jz 0x0076126E
 0076126B    push eax
@@ -21,11 +27,11 @@
 00761271    test eax, eax
 00761273    jz 0x00761286
 00761275    push eax
-00761276    call 0x00761DF0
+00761276    call 0x00761DF0                                 ; => [ Call: sub_761df0 ]
 0076127B    push dword ptr ds:[esi+0x68]
-0076127E    call 0x00761D90
+0076127E    call 0x00761D90                                 ; => [ Call: sub_761d90 ]
 00761283    add esp, 0x08
-00761286    mov eax, dword ptr ds:[esi+0x54]
+00761286    mov eax, dword ptr ds:[esi+0x54]                ; => [ Type: HWAVEOUT ]
 00761289    test eax, eax
 0076128B    jz 0x007612D4
 0076128D    push eax
@@ -41,7 +47,7 @@
 007612AF    test eax, eax
 007612B1    jz 0x007612BC
 007612B3    push eax
-007612B4    call 0x007597B9
+007612B4    call 0x007597B9                                 ; => [ Call: sub_7597b9 ]
 007612B9    add esp, 0x04
 007612BC    add edi, 0x04
 007612BF    add ebx, 0x20
@@ -50,22 +56,22 @@
 007612C8    push dword ptr ds:[esi+0x54]
 007612CB    call dword ptr ds:[0x0077548C]
 007612D1    mov ebx, dword ptr ss:[ebp+0x08]
-007612D4    mov eax, dword ptr ds:[esi+0x5C]
+007612D4    mov eax, dword ptr ds:[esi+0x5C]                ; => [ Type: HANDLE ]
 007612D7    mov edi, dword ptr ds:[0x007750D8]
 007612DD    test eax, eax
 007612DF    jz 0x007612E4
 007612E1    push eax
 007612E2    call edi
-007612E4    mov eax, dword ptr ds:[esi+0x58]
+007612E4    mov eax, dword ptr ds:[esi+0x58]                ; => [ Type: HANDLE ]
 007612E7    test eax, eax
 007612E9    jz 0x007612EE
 007612EB    push eax
 007612EC    call edi
 007612EE    mov ecx, esi
-007612F0    call 0x0075A680
+007612F0    call 0x0075A680                                 ; => [ Call: sub_75a680 ]
 007612F5    push 0x6C
 007612F7    push esi
-007612F8    call 0x00759661
+007612F8    call 0x00759661                                 ; => [ Call: operator new ]
 007612FD    add esp, 0x08
 00761300    mov dword ptr ds:[ebx], 0x00
 00761306    pop edi

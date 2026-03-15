@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4c5510
+// 起始地址: 0x4c5510
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C5510    push ebp
 004C5511    mov ebp, esp
 004C5513    and esp, 0xFFFFFFF8
@@ -5,7 +11,7 @@
 004C5519    push ebx
 004C551A    push esi
 004C551B    push edi
-004C551C    mov edi, dword ptr ds:[0x00CC8D5C]
+004C551C    mov edi, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C5522    mov esi, ecx
 004C5524    test edi, edi
 004C5526    jz 0x004C5653
@@ -20,7 +26,7 @@
 004C5548    lea eax, ss:[esp+0x20]
 004C554C    add ecx, 0x507C
 004C5552    push eax
-004C5553    call 0x004BAD70
+004C5553    call 0x004BAD70                                 ; => [ Call: sub_4bad70 ]
 004C5558    mov eax, dword ptr ss:[esp+0x24]
 004C555C    cmp eax, 0xFFFFFFFF
 004C555F    jz 0x004C55FA
@@ -38,7 +44,7 @@
 004C5595    mov byte ptr ss:[esp+0x13], 0x01
 004C559A    jmp 0x004C55DF
 004C559C    lea ecx, ds:[eax+0x08]
-004C559F    call 0x004C52C0
+004C559F    call 0x004C52C0                                 ; => [ Call: sub_4c52c0 ]
 004C55A4    cmp eax, 0x10
 004C55A7    jz 0x004C55AE
 004C55A9    cmp eax, 0x12
@@ -56,11 +62,11 @@
 004C55CF    mov dword ptr ss:[esp+0x18], eax
 004C55D3    jmp 0x004C55D9
 004C55D5    mov ebx, dword ptr ss:[esp+0x14]
-004C55D9    mov edi, dword ptr ds:[0x00CC8D5C]
+004C55D9    mov edi, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004C55DF    mov ecx, dword ptr ss:[esp+0x20]
 004C55E3    lea eax, ss:[esp+0x24]
 004C55E7    push eax
-004C55E8    call 0x004BAF10
+004C55E8    call 0x004BAF10                                 ; => [ Call: sub_4baf10 ]
 004C55ED    mov eax, dword ptr ss:[esp+0x24]
 004C55F1    cmp eax, 0xFFFFFFFF
 004C55F4    jnz 0x004C5565
@@ -83,7 +89,7 @@
 004C561D    mov ecx, dword ptr ds:[0x00CC8DC8]
 004C5623    mov ecx, dword ptr ds:[ecx+0x1E1A4]
 004C5629    call 0x004D8F30
-004C562E    mov eax, dword ptr ds:[eax+0x42C0]
+004C562E    mov eax, dword ptr ds:[eax+0x42C0]              ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004C5634    test eax, eax
 004C5636    jz 0x004C564A
 004C5638    mov dword ptr ds:[esi+0x04], eax
@@ -107,10 +113,10 @@
 004C565A    push 0x77EB50
 004C565F    mov edx, 0x801800
 004C5664    mov ecx, 0x77EB9C
-004C5669    call 0x0063B870
+004C5669    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004C566E    add esp, 0x0C
 004C5671    call 0x0063BC30
 004C5676    test al, al
-004C5678    jz 0x004C567B
+004C5678    jz 0x004C567B                                   ; => [ Call: sub_63bc30 ]
 004C567A    int3
-004C567B    call 0x0063BB00
+004C567B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

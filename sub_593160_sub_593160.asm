@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_593160
+// 起始地址: 0x593160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00593162    in al, dx
 00593163    push ecx
 00593164    push ebx
@@ -5,11 +11,11 @@
 00593166    push edi
 00593167    mov edi, dword ptr ss:[ebp+0x08]
 0059316A    mov ecx, edi
-0059316C    call 0x005930A0
+0059316C    call 0x005930A0                                 ; => [ Call: sub_5930a0 ]
 00593171    mov ebx, dword ptr ss:[ebp+0x0C]
 00593174    mov esi, eax
 00593176    mov ecx, ebx
-00593178    call 0x005930A0
+00593178    call 0x005930A0                                 ; => [ Call: sub_5930a0 ]
 0059317D    test esi, esi
 0059317F    jnz 0x00593185
 00593181    test eax, eax
@@ -34,7 +40,7 @@
 005931AE    pop ebx
 005931AF    pop ecx
 005931B0    pop ebp
-005931B1    ret
+005931B1    ret                                             ; => [ Call: sub_592f50 | Call: sub_593100 ]
 005931B2    xor al, al
 005931B4    pop edi
 005931B5    pop esi

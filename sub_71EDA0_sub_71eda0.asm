@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71eda0
+// 起始地址: 0x71eda0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071EDA0    push ebp
 0071EDA1    mov ebp, esp
 0071EDA3    sub esp, 0x18
@@ -13,7 +19,7 @@
 0071EDBD    mov eax, dword ptr ss:[ebp+0x18]
 0071EDC0    mov eax, dword ptr ds:[esi+eax*4]
 0071EDC3    mov dword ptr ss:[ebp+0x10], eax
-0071EDC6    mov eax, dword ptr ds:[0x0147DEE8]
+0071EDC6    mov eax, dword ptr ds:[0x0147DEE8]              ; => [ Data: data_147dee8 ]
 0071EDCB    test eax, eax
 0071EDCD    jz 0x0071EDD7
 0071EDCF    mov ecx, dword ptr ss:[ebp+0x0C]
@@ -71,7 +77,7 @@
 0071EE59    jnbe 0x0071EF46
 0071EE5F    mov ebx, dword ptr ss:[ebp+0x10]
 0071EE62    jmp dword ptr ds:[ebx*4+0x71F0E4]
-0071EE69    mov ecx, dword ptr ss:[ebp+0x0C]
+0071EE69    mov ecx, dword ptr ss:[ebp+0x0C]                ; => [ Call: nullptr ]
 0071EE6C    nop dword ptr ds:[eax], eax
 0071EE70    mov al, byte ptr ds:[edx+eax*1]
 0071EE73    lea edi, ds:[edi+0x01]
@@ -162,7 +168,7 @@
 0071EF5D    mov esp, ebp
 0071EF5F    pop ebp
 0071EF60    ret
-0071EF61    mov ebx, dword ptr ss:[ebp-0x08]
+0071EF61    mov ebx, dword ptr ss:[ebp-0x08]                ; => [ Call: nullptr ]
 0071EF64    mov al, byte ptr ds:[esi+eax*1]
 0071EF67    lea edx, ds:[edx+0x01]
 0071EF6A    inc ecx

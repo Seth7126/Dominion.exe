@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_477b10
+// 起始地址: 0x477b10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00477B10    mov edx, 0x03
 00477B15    mov ecx, 0x836304
-00477B1A    call 0x0069F030
-00477B1F    mov dword ptr ds:[0x0171D8A0], eax
+00477B1A    call 0x0069F030                                 ; => [ String: res/card_gen/shared/platinum.texture | Call: sub_69f030 ]
+00477B1F    mov dword ptr ds:[0x0171D8A0], eax              ; => [ Data: data_171d8a0 ]
 00477B24    ret

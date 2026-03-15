@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c49c0
+// 起始地址: 0x5c49c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C49C0    push ebx
 005C49C1    mov ebx, esp
 005C49C3    sub esp, 0x08
@@ -8,7 +14,7 @@
 005C49D0    mov dword ptr ss:[esp+0x04], ebp
 005C49D4    mov ebp, esp
 005C49D6    sub esp, 0x28
-005C49D9    mov eax, dword ptr ds:[0x008C4040]
+005C49D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005C49DE    xor eax, ebp
 005C49E0    mov dword ptr ss:[ebp-0x04], eax
 005C49E3    movups xmm0, xmmword ptr ds:[ecx]
@@ -38,7 +44,7 @@
 005C4A27    xor ecx, ebp
 005C4A29    pop edi
 005C4A2A    pop esi
-005C4A2B    call 0x0075927A
+005C4A2B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005C4A30    mov esp, ebp
 005C4A32    pop ebp
 005C4A33    mov esp, ebx

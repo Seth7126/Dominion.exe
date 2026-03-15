@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c3440
+// 起始地址: 0x6c3440
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C3440    push ebx
 006C3441    mov ebx, ecx
 006C3443    push esi
@@ -9,10 +15,10 @@
 006C3450    mov edi, esi
 006C3452    mov esi, dword ptr ds:[esi+0x2FC]
 006C3458    mov ecx, edi
-006C345A    call 0x006B85E0
+006C345A    call 0x006B85E0                                 ; => [ Call: boost::exception::~exception ]
 006C345F    mov edx, 0x304
 006C3464    mov ecx, edi
-006C3466    call 0x0064C080
+006C3466    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 006C346B    test esi, esi
 006C346D    jnz 0x006C3450
 006C346F    pop edi

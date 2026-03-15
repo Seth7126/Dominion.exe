@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5e2c70
+// 起始地址: 0x5e2c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E2C70    push ecx
 005E2C71    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 005E2C7B    push esi
-005E2C7C    mov esi, dword ptr ds:[0x00B809E0]
-005E2C82    add eax, esi
+005E2C7C    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+005E2C82    add eax, esi                                    ; => [ Data: data_b809e4 ]
 005E2C84    cmp esi, eax
 005E2C86    jnb 0x005E2CFF
 005E2C88    nop dword ptr ds:[eax+eax*1], eax
@@ -40,9 +46,9 @@
 005E2CEF    pop ecx
 005E2CF0    ret
 005E2CF1    mov ecx, esi
-005E2CF3    call 0x005CD3E0
+005E2CF3    call 0x005CD3E0                                 ; => [ Call: sub_5cd3e0 ]
 005E2CF8    mov ecx, esi
-005E2CFA    call 0x005CB5A0
+005E2CFA    call 0x005CB5A0                                 ; => [ Call: sub_5cb5a0 ]
 005E2CFF    pop esi
 005E2D00    pop ecx
 005E2D01    ret

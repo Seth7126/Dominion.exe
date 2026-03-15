@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5811f0
+// 起始地址: 0x5811f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005811F0    push ebp
 005811F1    mov ebp, esp
 005811F3    sub esp, 0x1C
@@ -66,7 +72,7 @@
 005812AF    push dword ptr ds:[ebx+0x50]
 005812B2    push ecx
 005812B3    setz cl
-005812B6    call 0x0061B1B0
+005812B6    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005812BB    add esp, 0x2C
 005812BE    mov ecx, dword ptr ds:[ebx+0x7C]
 005812C1    test ecx, ecx
@@ -97,7 +103,7 @@
 00581305    push edx
 00581306    setz cl
 00581309    mov edx, 0x1C
-0058130E    call 0x0061B1B0
+0058130E    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00581313    add esp, 0x2C
 00581316    mov edx, dword ptr ss:[ebp-0x08]
 00581319    cmp dword ptr ds:[edx], 0x02
@@ -113,12 +119,12 @@
 00581337    mov edx, dword ptr ss:[ebp-0x10]
 0058133A    mov ecx, esi
 0058133C    push eax
-0058133D    call 0x00573260
+0058133D    call 0x00573260                                 ; => [ Call: sub_573260 ]
 00581342    mov eax, dword ptr ds:[edi]
 00581344    add esp, 0x04
 00581347    call eax
 00581349    mov eax, dword ptr fs:[0x0000002C]
-0058134F    mov ecx, dword ptr ds:[eax]
+0058134F    mov ecx, dword ptr ds:[eax]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 00581351    mov eax, dword ptr ds:[ecx+0xF010]
 00581357    test eax, eax
 00581359    jle 0x005813FE
@@ -134,7 +140,7 @@
 0058138C    add eax, 0x3B568
 00581391    add esi, eax
 00581393    mov eax, dword ptr ss:[ebp-0x0C]
-00581396    rep movsd
+00581396    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00581398    mov edi, dword ptr ss:[ebp-0x14]
 0058139B    dec eax
 0058139C    mov ecx, dword ptr ss:[ebp-0x04]
@@ -162,25 +168,25 @@
 005813E4    mov esp, ebp
 005813E6    pop ebp
 005813E7    ret
-005813E8    push 0x81FFB4
+005813E8    push 0x81FFB4                                   ; => [ String: RemovePlayerOngoingNextTurn ]
 005813ED    push 0x287F
-005813F2    push 0x81F4B8
-005813F7    mov ecx, 0x81FFD0
+005813F2    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+005813F7    mov ecx, 0x81FFD0                               ; => [ String: whoLost != PLAYER_NONE ]
 005813FC    jmp 0x00581428
-005813FE    push 0x81F9E0
+005813FE    push 0x81F9E0                                   ; => [ String: DomPopContext ]
 00581403    push 0x792
-00581408    push 0x81F4B8
-0058140D    mov ecx, 0x81F9F0
+00581408    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+0058140D    mov ecx, 0x81F9F0                               ; => [ String: cs.numContexts > 0 ]
 00581412    jmp 0x00581428
-00581414    push 0x81F478
+00581414    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 00581419    push 0x14D
-0058141E    push 0x81E978
-00581423    mov ecx, 0x81F490
+0058141E    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+00581423    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 00581428    mov edx, 0x801800
-0058142D    call 0x0063B870
+0058142D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00581432    add esp, 0x0C
 00581435    call 0x0063BC30
 0058143A    test al, al
-0058143C    jz 0x0058143F
+0058143C    jz 0x0058143F                                   ; => [ Call: sub_63bc30 ]
 0058143E    int3
-0058143F    call 0x0063BB00
+0058143F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

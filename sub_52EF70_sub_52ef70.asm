@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_52ef70
+// 起始地址: 0x52ef70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052EF70    push ebp
 0052EF71    mov ebp, esp
 0052EF73    and esp, 0xFFFFFFF8
 0052EF76    sub esp, 0x7C
-0052EF79    mov eax, dword ptr ds:[0x008C4040]
+0052EF79    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0052EF7E    xor eax, esp
 0052EF80    mov dword ptr ss:[esp+0x78], eax
 0052EF84    push ebx
@@ -12,7 +18,7 @@
 0052EF8C    xor ebx, ebx
 0052EF8E    mov eax, dword ptr ds:[eax+0x04]
 0052EF91    lea ecx, ds:[ebx+0x07]
-0052EF94    add eax, 0x1594
+0052EF94    add eax, 0x1594                                 ; => [ Call: sub_573400 ]
 0052EF99    nop dword ptr ds:[eax], eax
 0052EFA0    mov edx, dword ptr ds:[eax]
 0052EFA2    test edx, edx
@@ -31,7 +37,7 @@
 0052EFC5    jle 0x0052F0AD
 0052EFCB    nop dword ptr ds:[eax+eax*1], eax
 0052EFD0    mov edi, dword ptr ss:[esp+eax*4+0x18]
-0052EFD4    call 0x00573400
+0052EFD4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052EFD9    test edi, edi
 0052EFDB    jz 0x0052F09C
 0052EFE1    mov ecx, dword ptr ds:[eax+0x04]
@@ -39,7 +45,7 @@
 0052EFE6    push 0x00
 0052EFE8    push 0x20004
 0052EFED    push 0x01
-0052EFEF    call 0x00573890
+0052EFEF    call 0x00573890                                 ; => [ Call: sub_573890 ]
 0052EFF4    mov ecx, eax
 0052EFF6    add esp, 0x0C
 0052EFF9    and ecx, 0x04
@@ -48,12 +54,12 @@
 0052F005    and eax, 0x20000
 0052F00A    or eax, 0x00
 0052F00D    jnz 0x0052F09C
-0052F013    call 0x00573400
+0052F013    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052F018    mov edx, edi
 0052F01A    mov dword ptr ss:[esp+0x10], eax
 0052F01E    mov esi, dword ptr ds:[eax+0x04]
 0052F021    mov ecx, esi
-0052F023    call 0x0057DA30
+0052F023    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0052F028    mov edx, 0x07
 0052F02D    add esi, 0x1594
 0052F033    mov ecx, dword ptr ds:[esi]
@@ -83,7 +89,7 @@
 0052F06F    cmp esi, 0x48
 0052F072    jl 0x0052F062
 0052F074    xor esi, esi
-0052F076    call 0x00573400
+0052F076    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052F07B    push 0x00
 0052F07D    push 0xFFFFFFFF
 0052F07F    push 0x00
@@ -94,7 +100,7 @@
 0052F08C    push esi
 0052F08D    push 0x02
 0052F08F    push 0x601
-0052F094    call 0x00571FA0
+0052F094    call 0x00571FA0                                 ; => [ Call: sub_571fa0 | Call: nullptr ]
 0052F099    add esp, 0x24
 0052F09C    mov eax, dword ptr ss:[esp+0x0C]
 0052F0A0    inc eax
@@ -106,7 +112,7 @@
 0052F0B5    pop esi
 0052F0B6    pop ebx
 0052F0B7    xor ecx, esp
-0052F0B9    call 0x0075927A
+0052F0B9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0052F0BE    mov esp, ebp
 0052F0C0    pop ebp
 0052F0C1    ret
@@ -115,10 +121,10 @@
 0052F0CC    push 0x818830
 0052F0D1    mov edx, 0x801800
 0052F0D6    mov ecx, 0x8188D8
-0052F0DB    call 0x0063B870
+0052F0DB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DefiledShrine_Setup::<lambda_ff2536cb2c7524f8b80e893fda9c3f7e>::operator () | Data: data_801800 | String: num <= NUM_KINGDOM_PILES + MAX_EXTRA_KINGDOM_PILES + MAX_STANDARD_PILES | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Empires.cpp ]
 0052F0E0    add esp, 0x0C
 0052F0E3    call 0x0063BC30
 0052F0E8    test al, al
-0052F0EA    jz 0x0052F0ED
+0052F0EA    jz 0x0052F0ED                                   ; => [ Call: sub_63bc30 ]
 0052F0EC    int3
-0052F0ED    call 0x0063BB00
+0052F0ED    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

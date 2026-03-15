@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f4d70
+// 起始地址: 0x4f4d70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F4D70    push ebp
 004F4D71    mov ebp, esp
 004F4D73    sub esp, 0x28
@@ -11,10 +17,10 @@
 004F4D89    push edi
 004F4D8A    xor edi, edi
 004F4D8C    mov dword ptr ss:[ebp-0x18], eax
-004F4D8F    mov ebx, dword ptr ds:[eax*4+0x1779F8C]
+004F4D8F    mov ebx, dword ptr ds:[eax*4+0x1779F8C]         ; => [ Data: data_1779f8c ]
 004F4D96    mov dword ptr ss:[ebp-0x0C], edi
 004F4D99    mov dword ptr ss:[ebp-0x20], ecx
-004F4D9C    mov byte ptr ds:[0x0177750A], 0x00
+004F4D9C    mov byte ptr ds:[0x0177750A], 0x00              ; => [ Data: data_177750a ]
 004F4DA3    movd xmm0, dword ptr ds:[ecx+0x177763C]
 004F4DAB    movss xmm1, dword ptr ds:[ecx+0x1777640]
 004F4DB3    cvtdq2ps xmm0, xmm0
@@ -29,7 +35,7 @@
 004F4DD5    addss xmm1, dword ptr ds:[0x00890E18]
 004F4DDD    mulss xmm1, xmm0
 004F4DE1    cvttss2si esi, xmm1
-004F4DE5    inc dword ptr ds:[0x019E178C]
+004F4DE5    inc dword ptr ds:[0x019E178C]                   ; => [ Data: data_19e178c ]
 004F4DEB    mov ecx, dword ptr ds:[ebx+0xD4]
 004F4DF1    cmp ecx, 0x01
 004F4DF4    jnz 0x004F4E07
@@ -44,7 +50,7 @@
 004F4E10    mov ebx, edx
 004F4E12    sub ebx, eax
 004F4E14    lea ecx, ds:[eax+esi*1]
-004F4E17    mov eax, dword ptr ds:[0x0183AD10]
+004F4E17    mov eax, dword ptr ds:[0x0183AD10]              ; => [ Data: data_183ad10 ]
 004F4E1C    mov dword ptr ss:[ebp-0x24], eax
 004F4E1F    cmp ecx, edx
 004F4E21    mov eax, dword ptr ss:[ebp-0x1C]
@@ -54,7 +60,7 @@
 004F4E2C    test al, al
 004F4E2E    jnz 0x004F50A1
 004F4E34    mov eax, dword ptr ss:[ebp-0x20]
-004F4E37    mov ecx, dword ptr ds:[0x00CC8D30]
+004F4E37    mov ecx, dword ptr ds:[0x00CC8D30]              ; => [ Data: data_cc8d30 ]
 004F4E3D    movss xmm7, dword ptr ds:[eax+0x1777640]
 004F4E45    comiss xmm7, xmm2
 004F4E48    jbe 0x004F5005
@@ -64,7 +70,7 @@
 004F4E56    sub eax, edi
 004F4E58    xor esi, esi
 004F4E5A    xorps xmm5, xmm5
-004F4E5D    mov ebx, dword ptr ds:[ebx*4+0x1779F8C]
+004F4E5D    mov ebx, dword ptr ds:[ebx*4+0x1779F8C]         ; => [ Data: data_1779f8c ]
 004F4E64    movd xmm0, eax
 004F4E68    xor eax, eax
 004F4E6A    cvtdq2ps xmm0, xmm0
@@ -86,9 +92,9 @@
 004F4EA7    or eax, 0xFFFFFFF8
 004F4EAA    inc eax
 004F4EAB    mov dword ptr ss:[ebp-0x04], edi
-004F4EAE    xorps xmm4, xmm4
+004F4EAE    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 004F4EB1    sub dword ptr ss:[ebp-0x04], eax
-004F4EB4    xorps xmm6, xmm6
+004F4EB4    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 004F4EB7    mov eax, dword ptr ss:[ebp-0x04]
 004F4EBA    add ecx, 0xE0
 004F4EC0    movd xmm2, dword ptr ds:[ecx+0x54]
@@ -177,36 +183,36 @@
 004F5002    mov ebx, dword ptr ss:[ebp-0x08]
 004F5005    mov eax, dword ptr ss:[ebp-0x14]
 004F5008    mov edx, 0x183AD20
-004F500D    inc dword ptr ds:[0x019E1788]
+004F500D    inc dword ptr ds:[0x019E1788]                   ; => [ Data: data_19e1788 ]
 004F5013    mov ecx, 0x1899DA0
 004F5018    push dword ptr ds:[eax+0x50]
-004F501B    call 0x004EBD20
-004F5020    mov ecx, dword ptr ds:[0x0189AAD8]
+004F501B    call 0x004EBD20                                 ; => [ Call: sub_4ebd20 ]
+004F5020    mov ecx, dword ptr ds:[0x0189AAD8]              ; => [ Data: data_189aad8 ]
 004F5026    add esp, 0x04
 004F5029    test ecx, ecx
 004F502B    jle 0x004F503C
 004F502D    mov esi, 0x1839FC8
 004F5032    mov edi, 0x1839FB0
-004F5037    rep movsd
+004F5037    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_1839fb0 | Data: data_1839fc8 ]
 004F5039    mov edi, dword ptr ss:[ebp-0x0C]
 004F503C    mov eax, dword ptr ss:[ebp-0x14]
 004F503F    mov ecx, 0x1899DA0
-004F5044    mov dword ptr ds:[0x01779F88], 0x00
+004F5044    mov dword ptr ds:[0x01779F88], 0x00             ; => [ Data: data_1779f88 ]
 004F504E    mov edx, dword ptr ds:[eax+0x50]
-004F5051    call 0x004F46C0
+004F5051    call 0x004F46C0                                 ; => [ Call: sub_4f46c0 ]
 004F5056    mov edx, eax
-004F5058    call 0x004F4B60
+004F5058    call 0x004F4B60                                 ; => [ Call: sub_4f4b60 ]
 004F505D    mov eax, dword ptr ss:[ebp-0x18]
 004F5060    inc edi
 004F5061    mov dword ptr ss:[ebp-0x0C], edi
-004F5064    mov ecx, dword ptr ds:[eax*4+0x1779F8C]
+004F5064    mov ecx, dword ptr ds:[eax*4+0x1779F8C]         ; => [ Data: data_1779f8c ]
 004F506B    lea eax, ds:[ebx+ebx*2]
 004F506E    cmp edi, eax
 004F5070    jnle 0x004F50A1
 004F5072    mov eax, dword ptr ds:[0x0183AD10]
 004F5077    sub eax, dword ptr ss:[ebp-0x24]
 004F507A    cmp eax, ebx
-004F507C    jl 0x004F5090
+004F507C    jl 0x004F5090                                   ; => [ Data: data_183ad10 ]
 004F507E    mov eax, dword ptr ds:[ecx+0xB0]
 004F5084    cmp eax, ebx
 004F5086    jnl 0x004F50A1
@@ -229,10 +235,10 @@
 004F50B2    push 0x8088A8
 004F50B7    mov edx, 0x801800
 004F50BC    mov ecx, 0x808F8C
-004F50C1    call 0x0063B870
+004F50C1    call 0x0063B870                                 ; => [ String: MCTS_Run | Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: numNonFutile > 0 ]
 004F50C6    add esp, 0x0C
 004F50C9    call 0x0063BC30
 004F50CE    test al, al
-004F50D0    jz 0x004F50D3
+004F50D0    jz 0x004F50D3                                   ; => [ Call: sub_63bc30 ]
 004F50D2    int3
-004F50D3    call 0x0063BB00
+004F50D3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

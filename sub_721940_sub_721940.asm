@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_721940
+// 起始地址: 0x721940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00721940    dword 81EC8B55
 00721944    in al, dx
 00721945    cmp byte ptr ds:[ecx], al
 00721947    add byte ptr ds:[eax], al
-00721949    mov eax, dword ptr ds:[0x008C4040]
+00721949    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0072194E    xor eax, ebp
 00721950    mov dword ptr ss:[ebp-0x04], eax
 00721953    mov eax, dword ptr ss:[ebp+0x08]
@@ -345,7 +351,7 @@
 00721E79    pop esi
 00721E7A    xor ecx, ebp
 00721E7C    pop ebx
-00721E7D    call 0x0075927A
+00721E7D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00721E82    mov esp, ebp
 00721E84    pop ebp
 00721E85    ret

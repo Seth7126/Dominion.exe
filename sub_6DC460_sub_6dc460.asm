@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6dc460
+// 起始地址: 0x6dc460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DC460    push ebx
 006DC461    mov ebx, esp
 006DC463    sub esp, 0x08
@@ -125,7 +131,7 @@
 006DC65E    movss xmm1, dword ptr ss:[ebp-0x04]
 006DC663    mulss xmm1, xmm1
 006DC667    addss xmm0, xmm1
-006DC66B    call 0x004AC580
+006DC66B    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 006DC670    movss xmm1, dword ptr ds:[0x00890C78]
 006DC678    comiss xmm1, xmm0
 006DC67B    jbe 0x006DC69C
@@ -161,7 +167,7 @@
 006DC6E9    addss xmm0, xmm1
 006DC6ED    call 0x004AC580
 006DC6F2    movss xmm1, dword ptr ds:[0x00890E18]
-006DC6FA    divss xmm1, xmm0
+006DC6FA    divss xmm1, xmm0                                ; => [ Call: sub_4ac580 ]
 006DC6FE    movaps xmm0, xmm1
 006DC701    mulss xmm0, dword ptr ss:[ebp-0x20]
 006DC706    movss dword ptr ss:[ebp-0x30], xmm0

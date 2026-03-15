@@ -1,23 +1,29 @@
+// ============================================================
+// 函数名称: sub_6c84d0
+// 起始地址: 0x6c84d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C84D0    push ebp
 006C84D1    mov ebp, esp
 006C84D3    sub esp, 0x14
-006C84D6    mov eax, dword ptr ds:[0x008C4040]
+006C84D6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006C84DB    xor eax, ebp
 006C84DD    mov dword ptr ss:[ebp-0x04], eax
 006C84E0    push esi
 006C84E1    lea eax, ss:[ebp-0x14]
 006C84E4    push eax
 006C84E5    push dword ptr ds:[0x0147B084]
-006C84EB    call dword ptr ds:[0x007753C0]
-006C84F1    mov eax, dword ptr ss:[ebp-0x0C]
+006C84EB    call dword ptr ds:[0x007753C0]                  ; => [ Type: RECT | Data: data_147b084 ]
+006C84F1    mov eax, dword ptr ss:[ebp-0x0C]                ; => [ Field: right ]
 006C84F4    test eax, eax
 006C84F6    jz 0x006C8591
-006C84FC    mov ecx, dword ptr ss:[ebp-0x08]
+006C84FC    mov ecx, dword ptr ss:[ebp-0x08]                ; => [ Field: bottom ]
 006C84FF    test ecx, ecx
 006C8501    jz 0x006C8591
 006C8507    movd xmm1, eax
 006C850B    xorps xmm3, xmm3
-006C850E    mov eax, dword ptr ds:[0x00CF65B8]
+006C850E    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006C8513    cvtdq2ps xmm1, xmm1
 006C8516    movd xmm0, dword ptr ds:[eax+0x14]
 006C851B    mulss xmm1, dword ptr ss:[ebp+0x08]
@@ -44,7 +50,7 @@
 006C8569    pop esi
 006C856A    mov ecx, dword ptr ss:[ebp-0x04]
 006C856D    xor ecx, ebp
-006C856F    call 0x0075927A
+006C856F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C8574    mov esp, ebp
 006C8576    pop ebp
 006C8577    ret
@@ -54,7 +60,7 @@
 006C8582    pop esi
 006C8583    mov ecx, dword ptr ss:[ebp-0x04]
 006C8586    xor ecx, ebp
-006C8588    call 0x0075927A
+006C8588    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C858D    mov esp, ebp
 006C858F    pop ebp
 006C8590    ret
@@ -63,7 +69,7 @@
 006C8596    xor ecx, ebp
 006C8598    xor edx, edx
 006C859A    pop esi
-006C859B    call 0x0075927A
+006C859B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006C85A0    mov esp, ebp
 006C85A2    pop ebp
 006C85A3    ret

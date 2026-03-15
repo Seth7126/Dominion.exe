@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7150f0
+// 起始地址: 0x7150f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007150F0    push ebp
 007150F1    mov ebp, esp
 007150F3    mov edx, dword ptr ss:[ebp+0x08]
@@ -56,7 +62,7 @@
 007151A2    jmp 0x007152AB
 007151A7    push 0x03
 007151A9    mov ecx, eax
-007151AB    call 0x00714A40
+007151AB    call 0x00714A40                                 ; => [ Call: sub_714a40 ]
 007151B0    mov edx, dword ptr ss:[ebp+0x08]
 007151B3    mov ecx, eax
 007151B5    mov dword ptr ss:[ebp+0x0C], ecx
@@ -83,7 +89,7 @@
 00715204    mov dword ptr ss:[ebp-0x04], ecx
 00715207    movss xmm0, dword ptr ds:[edx+ecx*4-0x4C]
 0071520D    jbe 0x00715214
-0071520F    xorps xmm2, xmm2
+0071520F    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00715212    jmp 0x0071521B
 00715214    movaps xmm2, xmm4
 00715217    minss xmm2, xmm1
@@ -95,12 +101,12 @@
 00715227    lahf
 00715228    test ah, 0x44
 0071522B    jp 0x00715232
-0071522D    xorps xmm2, xmm2
+0071522D    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00715230    jmp 0x00715279
 00715232    mov eax, dword ptr ss:[ebp-0x04]
 00715235    add ecx, 0xFFFFFFEE
 00715238    mov dword ptr ss:[ebp-0x08], ecx
-0071523B    xorps xmm5, xmm5
+0071523B    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 0071523E    cmp ecx, eax
 00715240    jnl 0x00715257
 00715242    movss xmm5, dword ptr ds:[edx+ecx*4]
@@ -153,8 +159,8 @@
 007152F1    ret
 007152F2    cmp ecx, dword ptr ss:[ebp-0x08]
 007152F5    jnz 0x007152FF
-007152F7    movaps xmm1, xmm3
-007152FA    movaps xmm6, xmm3
+007152F7    movaps xmm1, xmm3                               ; => [ String: 0 | String: zx ]
+007152FA    movaps xmm6, xmm3                               ; => [ String: 0 | String: zx ]
 007152FD    jmp 0x0071530B
 007152FF    movss xmm1, dword ptr ds:[edx+ecx*4-0x08]
 00715305    movss xmm6, dword ptr ds:[edx+ecx*4-0x04]
@@ -197,7 +203,7 @@
 0071539B    subss xmm1, xmm7
 0071539F    mulss xmm1, xmm2
 007153A3    addss xmm1, xmm7
-007153A7    movss dword ptr ds:[esi+0x20], xmm1
+007153A7    movss dword ptr ds:[esi+0x20], xmm1             ; => [ Data: data_8937a0 ]
 007153AC    jnbe 0x007153BB
 007153AE    comiss xmm6, xmm3
 007153B1    jbe 0x007153B8
@@ -210,7 +216,7 @@
 007153C7    subss xmm0, xmm6
 007153CB    mulss xmm0, xmm2
 007153CF    addss xmm0, xmm6
-007153D3    movss dword ptr ds:[esi+0x24], xmm0
+007153D3    movss dword ptr ds:[esi+0x24], xmm0             ; => [ Data: data_8937a0 | Data: data_8937a0 | String: 0 | Data: data_8937a0 | String: zx | Data: data_8937a0 | Data: data_8937a0 ]
 007153D8    pop esi
 007153D9    mov esp, ebp
 007153DB    pop ebp
@@ -233,7 +239,7 @@
 0071541B    subss xmm1, xmm7
 0071541F    mulss xmm1, xmm2
 00715423    addss xmm1, xmm7
-00715427    movss dword ptr ds:[esi+0x20], xmm1
+00715427    movss dword ptr ds:[esi+0x20], xmm1             ; => [ Data: data_8937a0 ]
 0071542C    jnbe 0x007153BB
 0071542E    comiss xmm6, xmm3
 00715431    jbe 0x007153B8
@@ -250,27 +256,27 @@
 00715457    jbe 0x0071545E
 00715459    movaps xmm6, xmm4
 0071545C    jmp 0x00715461
-0071545E    movaps xmm6, xmm3
+0071545E    movaps xmm6, xmm3                               ; => [ String: 0 | String: zx ]
 00715461    comiss xmm3, xmm7
 00715464    andps xmm1, xmmword ptr ds:[0x008937A0]
 0071546B    mulss xmm1, xmm6
 0071546F    subss xmm1, dword ptr ds:[ecx+0x1C]
 00715474    mulss xmm1, xmm2
 00715478    addss xmm1, dword ptr ds:[esi+0x20]
-0071547D    movss dword ptr ds:[esi+0x20], xmm1
+0071547D    movss dword ptr ds:[esi+0x20], xmm1             ; => [ Data: data_8937a0 ]
 00715482    jnbe 0x00715491
 00715484    comiss xmm7, xmm3
 00715487    jbe 0x0071548E
 00715489    movaps xmm5, xmm4
 0071548C    jmp 0x00715491
-0071548E    movaps xmm5, xmm3
+0071548E    movaps xmm5, xmm3                               ; => [ String: 0 | String: zx ]
 00715491    andps xmm0, xmmword ptr ds:[0x008937A0]
 00715498    mulss xmm0, xmm5
 0071549C    pop edi
 0071549D    subss xmm0, dword ptr ds:[ecx+0x20]
 007154A2    mulss xmm0, xmm2
 007154A6    addss xmm0, xmm7
-007154AA    movss dword ptr ds:[esi+0x24], xmm0
+007154AA    movss dword ptr ds:[esi+0x24], xmm0             ; => [ Data: data_8937a0 ]
 007154AF    pop esi
 007154B0    mov esp, ebp
 007154B2    pop ebp
@@ -279,7 +285,7 @@
 007154BB    movss xmm6, dword ptr ds:[ecx+0x1C]
 007154C0    comiss xmm3, xmm6
 007154C3    jbe 0x007154CC
-007154C5    xorps xmm6, xmmword ptr ds:[0x008937C0]
+007154C5    xorps xmm6, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 007154CC    comiss xmm3, xmm1
 007154CF    movss xmm5, dword ptr ds:[0x008910DC]
 007154D7    jbe 0x007154DE
@@ -289,19 +295,19 @@
 007154E1    jbe 0x007154E8
 007154E3    movaps xmm7, xmm4
 007154E6    jmp 0x007154EB
-007154E8    movaps xmm7, xmm3
+007154E8    movaps xmm7, xmm3                               ; => [ String: 0 | String: zx ]
 007154EB    mulss xmm7, xmm6
 007154EF    movss xmm6, dword ptr ds:[ecx+0x20]
 007154F4    comiss xmm3, xmm6
 007154F7    jbe 0x00715500
-007154F9    xorps xmm6, xmmword ptr ds:[0x008937C0]
+007154F9    xorps xmm6, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 00715500    comiss xmm3, xmm0
 00715503    jnbe 0x00715512
 00715505    comiss xmm0, xmm3
 00715508    jbe 0x0071550F
 0071550A    movaps xmm5, xmm4
 0071550D    jmp 0x00715512
-0071550F    movaps xmm5, xmm3
+0071550F    movaps xmm5, xmm3                               ; => [ String: 0 | String: zx ]
 00715512    mulss xmm5, xmm6
 00715516    subss xmm1, xmm7
 0071551A    pop edi
@@ -319,7 +325,7 @@
 0071553E    movss xmm6, dword ptr ds:[esi+0x20]
 00715543    comiss xmm3, xmm6
 00715546    jbe 0x0071554F
-00715548    xorps xmm6, xmmword ptr ds:[0x008937C0]
+00715548    xorps xmm6, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 0071554F    comiss xmm3, xmm1
 00715552    movss xmm5, dword ptr ds:[0x008910DC]
 0071555A    jbe 0x0071556A
@@ -353,7 +359,7 @@
 007155BE    jbe 0x007155C5
 007155C0    movaps xmm6, xmm4
 007155C3    jmp 0x007155C8
-007155C5    movaps xmm6, xmm3
+007155C5    movaps xmm6, xmm3                               ; => [ String: 0 | String: zx ]
 007155C8    movss xmm5, dword ptr ds:[esi+0x20]
 007155CD    comiss xmm3, xmm5
 007155D0    movss xmm7, dword ptr ds:[0x008937C0]

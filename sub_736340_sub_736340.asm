@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_736340
+// 起始地址: 0x736340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00736340    push ebp
 00736341    mov ebp, esp
 00736343    sub esp, 0x1C
@@ -8,7 +14,7 @@
 0073634D    mov dword ptr ss:[ebp-0x04], edx
 00736350    push edi
 00736351    mov ecx, dword ptr ds:[ebx+0x10]
-00736354    call 0x006A9450
+00736354    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 00736359    mov edi, dword ptr ds:[esi+0x04]
 0073635C    mov ecx, dword ptr ds:[esi]
 0073635E    imul edi, dword ptr ds:[ebx+0x0C]
@@ -46,16 +52,16 @@
 007363B6    pop ebx
 007363B7    mov esp, ebp
 007363B9    pop ebp
-007363BA    ret
+007363BA    ret                                             ; => [ Call: sub_735af0 ]
 007363BB    push 0x88F104
 007363C0    push 0x2E0
 007363C5    push 0x88F010
 007363CA    mov edx, 0x801800
 007363CF    mov ecx, 0x88F154
-007363D4    call 0x0063B870
+007363D4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: AtlasMakerPlaceImage_New | String: fontImageSpec->format == atlasMakingData->mTexureFormat | String: C:\x\ax2017\Engine\Editor\AtlasMaker.cpp ]
 007363D9    add esp, 0x0C
 007363DC    call 0x0063BC30
 007363E1    test al, al
-007363E3    jz 0x007363E6
+007363E3    jz 0x007363E6                                   ; => [ Call: sub_63bc30 ]
 007363E5    int3
-007363E6    call 0x0063BB00
+007363E6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

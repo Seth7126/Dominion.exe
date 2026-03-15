@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_680a70
+// 起始地址: 0x680a70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00680A70    push ebp
 00680A71    mov ebp, esp
 00680A73    sub esp, 0x18
@@ -52,14 +58,14 @@
 00680AFA    mov edx, ecx
 00680AFC    push eax
 00680AFD    mov ecx, esi
-00680AFF    call 0x00681740
+00680AFF    call 0x00681740                                 ; => [ Call: sub_681740 ]
 00680B04    mov edx, dword ptr ss:[ebp-0x04]
 00680B07    mov ecx, edx
 00680B09    push ebx
 00680B0A    sub ecx, edi
 00680B0C    lea eax, ds:[edi+edx*1]
 00680B0F    push eax
-00680B10    call 0x00681740
+00680B10    call 0x00681740                                 ; => [ Call: sub_681740 ]
 00680B15    mov eax, dword ptr ss:[ebp+0x08]
 00680B18    add eax, 0xFFFFFFE4
 00680B1B    mov esi, eax
@@ -76,7 +82,7 @@
 00680B34    mov edx, ebx
 00680B36    push esi
 00680B37    lea ecx, ds:[edi+ecx*1]
-00680B3A    call 0x00681740
+00680B3A    call 0x00681740                                 ; => [ Call: sub_681740 ]
 00680B3F    mov edi, dword ptr ss:[ebp-0x08]
 00680B42    add esp, 0x20
 00680B45    jmp 0x00680B57
@@ -84,7 +90,7 @@
 00680B4A    mov edx, ebx
 00680B4C    mov ecx, edi
 00680B4E    push esi
-00680B4F    call 0x00681740
+00680B4F    call 0x00681740                                 ; => [ Call: sub_681740 ]
 00680B54    add esp, 0x08
 00680B57    lea esi, ds:[ebx+0x1C]
 00680B5A    mov dword ptr ss:[ebp-0x0C], esi

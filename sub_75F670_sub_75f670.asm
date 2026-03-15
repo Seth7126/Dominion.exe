@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75f670
+// 起始地址: 0x75f670
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F670    push ebp
 0075F671    mov ebp, esp
 0075F673    sub esp, 0x08
@@ -7,10 +13,10 @@
 0075F67B    mov edi, ecx
 0075F67D    mov dword ptr ss:[ebp-0x08], esi
 0075F680    mov dword ptr ss:[ebp-0x04], 0x00
-0075F687    call 0x0075AE50
+0075F687    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075F68C    push esi
 0075F68D    mov ecx, edi
-0075F68F    call 0x00761E10
+0075F68F    call 0x00761E10                                 ; => [ Call: sub_761e10 ]
 0075F694    test eax, eax
 0075F696    lea esi, ss:[ebp-0x08]
 0075F699    cmovnz esi, eax
@@ -19,7 +25,7 @@
 0075F6A0    jz 0x0075F72B
 0075F6A6    push eax
 0075F6A7    mov ecx, edi
-0075F6A9    call 0x0075FA60
+0075F6A9    call 0x0075FA60                                 ; => [ Call: sub_75fa60 ]
 0075F6AE    cmp eax, 0xFFFFFFFF
 0075F6B1    jz 0x0075F71D
 0075F6B3    mov ecx, dword ptr ds:[edi+eax*4+0x50]
@@ -55,7 +61,7 @@
 0075F733    pop esi
 0075F734    mov esp, ebp
 0075F736    pop ebp
-0075F737    ret 0x0C
+0075F737    ret 0x0C                                        ; => [ Call: sub_75ec70 ]
 0075F73A    cmp ecx, 0x06
 0075F73D    jnz 0x0075F6F2
 0075F73F    mulss xmm0, dword ptr ds:[0x00890D84]

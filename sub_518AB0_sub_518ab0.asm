@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_518ab0
+// 起始地址: 0x518ab0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00518AB0    dword 840D8B51
 00518AB4    cmpsd
 00518AB5    int3
@@ -5,7 +11,7 @@
 00518AB8    shl byte ptr ds:[ecx+0xCCA780], cl
 00518ABE    shl ecx, 0x0B
 00518AC1    add eax, 0x58C
-00518AC6    add eax, ecx
+00518AC6    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 00518AC8    cmp dword ptr ds:[eax], 0x00
 00518ACB    jz 0x00518AD8
 00518ACD    inc edx
@@ -25,10 +31,10 @@
 00518B06    push 0x80CD80
 00518B0B    mov edx, 0x801800
 00518B10    mov ecx, 0x801AA4
-00518B15    call 0x0063B870
+00518B15    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignAddExtra | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 00518B1A    add esp, 0x0C
 00518B1D    call 0x0063BC30
 00518B22    test al, al
-00518B24    jz 0x00518B27
+00518B24    jz 0x00518B27                                   ; => [ Call: sub_63bc30 ]
 00518B26    int3
-00518B27    call 0x0063BB00
+00518B27    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

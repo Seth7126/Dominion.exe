@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6940a0
+// 起始地址: 0x6940a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006940A0    push ebp
 006940A1    mov ebp, esp
 006940A3    push ebx
@@ -41,7 +47,7 @@
 00694121    xor edx, edx
 00694123    mov ebx, 0x8B9C
 00694128    nop dword ptr ds:[eax+eax*1], eax
-00694130    mov eax, dword ptr ds:[edx+0x7FFB44]
+00694130    mov eax, dword ptr ds:[edx+0x7FFB44]            ; => [ Data: data_7ffb44 ]
 00694136    cmp eax, 0x24
 00694139    jnl 0x00694142
 0069413B    mov edi, 0x0C
@@ -72,7 +78,7 @@
 00694191    xor edx, edx
 00694193    mov ebx, 0x8B9C
 00694198    nop dword ptr ds:[eax+eax*1], eax
-006941A0    mov eax, dword ptr ds:[edx+0x7FFB94]
+006941A0    mov eax, dword ptr ds:[edx+0x7FFB94]            ; => [ Data: data_7ffb94 ]
 006941A6    cmp eax, 0x24
 006941A9    jnl 0x006941B2
 006941AB    mov edi, 0x0C
@@ -107,7 +113,7 @@
 0069420A    test byte ptr ds:[eax], al
 0069420C    add byte ptr ds:[eax], al
 0069420E    add byte ptr ds:[eax], al
-00694210    mov eax, dword ptr ds:[edx+0x7FFBA4]
+00694210    mov eax, dword ptr ds:[edx+0x7FFBA4]            ; => [ Data: data_7ffba4 ]
 00694216    cmp eax, 0x24
 00694219    jnl 0x00694222
 0069421B    mov edi, 0x0C
@@ -138,7 +144,7 @@
 00694271    xor edx, edx
 00694273    mov ebx, 0x8B9C
 00694278    nop dword ptr ds:[eax+eax*1], eax
-00694280    mov eax, dword ptr ds:[edx+0x7FFB70]
+00694280    mov eax, dword ptr ds:[edx+0x7FFB70]            ; => [ Data: data_7ffb70 ]
 00694286    cmp eax, 0x24
 00694289    jnl 0x00694292
 0069428B    mov edi, 0x0C
@@ -170,7 +176,7 @@
 006942DA    pop ds
 006942DB    add byte ptr ds:[eax], 0x00
 006942DE    add byte ptr ds:[eax], al
-006942E0    mov eax, dword ptr ds:[edx+0x7FFB70]
+006942E0    mov eax, dword ptr ds:[edx+0x7FFB70]            ; => [ Data: data_7ffb70 ]
 006942E6    cmp eax, 0x24
 006942E9    jnl 0x006942F2
 006942EB    mov edi, 0x0C
@@ -199,7 +205,7 @@
 00694332    xor edx, edx
 00694334    mov ebx, 0x8B9C
 00694339    nop dword ptr ds:[eax], eax
-00694340    mov eax, dword ptr ds:[edx+0x7FFB70]
+00694340    mov eax, dword ptr ds:[edx+0x7FFB70]            ; => [ Data: data_7ffb70 ]
 00694346    cmp eax, 0x24
 00694349    jnl 0x00694352
 0069434B    mov edi, 0x0C
@@ -230,7 +236,7 @@
 006943A1    xor edx, edx
 006943A3    mov ebx, 0x8B9C
 006943A8    nop dword ptr ds:[eax+eax*1], eax
-006943B0    mov eax, dword ptr ds:[edx+0x7FFB54]
+006943B0    mov eax, dword ptr ds:[edx+0x7FFB54]            ; => [ Data: data_7ffb54 ]
 006943B6    cmp eax, 0x24
 006943B9    jnl 0x006943C2
 006943BB    mov edi, 0x0C
@@ -261,7 +267,7 @@
 00694411    xor edx, edx
 00694413    mov ebx, 0x8B9C
 00694418    nop dword ptr ds:[eax+eax*1], eax
-00694420    mov eax, dword ptr ds:[edx+0x7FFB24]
+00694420    mov eax, dword ptr ds:[edx+0x7FFB24]            ; => [ Data: data_7ffb24 ]
 00694426    cmp eax, 0x24
 00694429    jnl 0x00694432
 0069442B    mov edi, 0x0C
@@ -291,7 +297,7 @@
 00694478    ret
 00694479    xor edx, edx
 0069447B    mov ebx, 0x8B9C
-00694480    mov eax, dword ptr ds:[edx+0x7FF594]
+00694480    mov eax, dword ptr ds:[edx+0x7FF594]            ; => [ Data: data_7ff594 ]
 00694486    cmp eax, 0x24
 00694489    jnl 0x00694492
 0069448B    mov edi, 0x0C
@@ -330,10 +336,10 @@
 006944EA    push 0x878528
 006944EF    mov edx, 0x801800
 006944F4    mov ecx, 0x801AA4
-006944F9    call 0x0063B870
+006944F9    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ControllerClickedAction | Data: data_801800 | String: C:\x\ax2017\Engine\Controller.cpp | String: Halt ]
 006944FE    add esp, 0x0C
 00694501    call 0x0063BC30
 00694506    test al, al
-00694508    jz 0x0069450B
+00694508    jz 0x0069450B                                   ; => [ Call: sub_63bc30 ]
 0069450A    int3
-0069450B    call 0x0063BB00
+0069450B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

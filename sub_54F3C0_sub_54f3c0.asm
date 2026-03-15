@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_54f3c0
+// 起始地址: 0x54f3c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0054F3C0    push ebp
 0054F3C1    mov ebp, esp
 0054F3C3    and esp, 0xFFFFFFF8
@@ -8,12 +14,12 @@
 0054F3CC    push edi
 0054F3CD    mov esi, dword ptr ds:[eax]
 0054F3CF    mov dword ptr ss:[esp+0x0C], ecx
-0054F3D3    call 0x00573400
+0054F3D3    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0054F3D8    movzx esi, si
 0054F3DB    mov ebx, dword ptr ds:[eax+0x04]
 0054F3DE    cmp esi, 0x320
 0054F3E4    jb 0x0054F3EB
-0054F3E6    call 0x00591930
+0054F3E6    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054F3EB    imul edi, esi, 0x64
 0054F3EE    mov ecx, ebx
 0054F3F0    push 0x00
@@ -22,12 +28,12 @@
 0054F3FB    call 0x005754F0
 0054F400    add esp, 0x08
 0054F403    test al, al
-0054F405    jz 0x0054F44A
+0054F405    jz 0x0054F44A                                   ; => [ Call: sub_5754f0 ]
 0054F407    call 0x00573400
-0054F40C    mov ebx, dword ptr ds:[eax+0x04]
+0054F40C    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0054F40F    cmp esi, 0x320
 0054F415    jb 0x0054F41C
-0054F417    call 0x00591930
+0054F417    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054F41C    mov esi, dword ptr ss:[esp+0x0C]
 0054F420    mov edx, dword ptr ds:[edi+ebx*1+0x1A4C]
 0054F427    mov eax, dword ptr ds:[esi+0x08]

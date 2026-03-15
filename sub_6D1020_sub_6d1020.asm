@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d1020
+// 起始地址: 0x6d1020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D1020    push ebp
 006D1021    mov ebp, esp
 006D1023    push ecx
@@ -7,11 +13,11 @@
 006D102A    push edi
 006D102B    mov dword ptr ss:[ebp-0x04], edx
 006D102E    jz 0x006D1041
-006D1030    push 0x87ECE4
+006D1030    push 0x87ECE4                                   ; => [ String: FabDefGet ]
 006D1035    push 0xEB
-006D103A    mov ecx, 0x87ECF8
+006D103A    mov ecx, 0x87ECF8                               ; => [ String: ptr->assetType == ASSET_TYPE_FAB ]
 006D103F    jmp 0x006D10AE
-006D1041    call 0x005AF880
+006D1041    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006D1046    xor esi, esi
 006D1048    mov ebx, dword ptr ds:[eax+0x08]
 006D104B    test ebx, ebx
@@ -33,7 +39,7 @@
 006D1075    add eax, 0x02
 006D1078    test dl, dl
 006D107A    jnz 0x006D1060
-006D107C    xor eax, eax
+006D107C    xor eax, eax                                    ; => [ Call: nullptr | Call: nullptr ]
 006D107E    jmp 0x006D1085
 006D1080    sbb eax, eax
 006D1082    or eax, 0x01
@@ -51,15 +57,15 @@
 006D109B    mov esp, ebp
 006D109D    pop ebp
 006D109E    ret
-006D109F    push 0x87EF50
+006D109F    push 0x87EF50                                   ; => [ String: FabElement ]
 006D10A4    push 0x756
-006D10A9    mov ecx, 0x801AA4
+006D10A9    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006D10AE    push 0x87ED1C
 006D10B3    mov edx, 0x801800
-006D10B8    call 0x0063B870
+006D10B8    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\FabDef.cpp ]
 006D10BD    add esp, 0x0C
 006D10C0    call 0x0063BC30
 006D10C5    test al, al
-006D10C7    jz 0x006D10CA
+006D10C7    jz 0x006D10CA                                   ; => [ Call: sub_63bc30 ]
 006D10C9    int3
-006D10CA    call 0x0063BB00
+006D10CA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

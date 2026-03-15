@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_62bc20
+// 起始地址: 0x62bc20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0062BC20    dword 83EC8B55
 0062BC24    in al, 0xF8
 0062BC26    mov eax, dword ptr ss:[ebp+0x08]
@@ -8,29 +14,29 @@
 0062BC31    push edi
 0062BC32    cmp eax, ebx
 0062BC34    jnz 0x0062BC4A
-0062BC36    push 0x86D1E8
+0062BC36    push 0x86D1E8                                   ; => [ String: DomCardCompare ]
 0062BC3B    push 0x1046E
-0062BC40    mov ecx, 0x86D1DC
+0062BC40    mov ecx, 0x86D1DC                               ; => [ String: h0 != h1 ]
 0062BC45    jmp 0x0062BE73
 0062BC4A    mov ecx, eax
-0062BC4C    call 0x005CBA00
+0062BC4C    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 0062BC51    mov ecx, ebx
 0062BC53    mov esi, eax
-0062BC55    call 0x005CBA00
+0062BC55    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 0062BC5A    cmp dword ptr ds:[esi+0x2C], 0x00
 0062BC5E    mov edi, eax
 0062BC60    jz 0x0062BC76
-0062BC62    push 0x86D1E8
+0062BC62    push 0x86D1E8                                   ; => [ String: DomCardCompare ]
 0062BC67    push 0x10472
-0062BC6C    mov ecx, 0x86D214
+0062BC6C    mov ecx, 0x86D214                               ; => [ String: gfx0.type == DOMGFX_CARD ]
 0062BC71    jmp 0x0062BE73
 0062BC76    cmp dword ptr ds:[edi+0x2C], 0x00
 0062BC7A    jnz 0x0062BE64
 0062BC80    mov ecx, esi
-0062BC82    call 0x005CBB20
+0062BC82    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 0062BC87    mov ecx, edi
 0062BC89    mov ebx, eax
-0062BC8B    call 0x005CBB20
+0062BC8B    call 0x005CBB20                                 ; => [ Call: sub_5cbb20 ]
 0062BC90    cmp dword ptr ds:[esi+0xA4], 0x02
 0062BC97    mov dword ptr ss:[esp+0x14], eax
 0062BC9B    jz 0x0062BD01
@@ -38,7 +44,7 @@
 0062BCA4    jnz 0x0062BCBA
 0062BCA6    lea edx, ss:[esp+0x13]
 0062BCAA    mov ecx, esi
-0062BCAC    call 0x005E3790
+0062BCAC    call 0x005E3790                                 ; => [ Call: sub_5e3790 ]
 0062BCB1    mov byte ptr ss:[esp+0x12], 0x00
 0062BCB6    test al, al
 0062BCB8    jnz 0x0062BCBF
@@ -47,7 +53,7 @@
 0062BCC6    jnz 0x0062BCDB
 0062BCC8    lea edx, ss:[esp+0x13]
 0062BCCC    mov ecx, edi
-0062BCCE    call 0x005E3790
+0062BCCE    call 0x005E3790                                 ; => [ Call: sub_5e3790 ]
 0062BCD3    test al, al
 0062BCD5    jz 0x0062BCDB
 0062BCD7    xor al, al
@@ -70,7 +76,7 @@
 0062BD01    cmp ebx, eax
 0062BD03    jnz 0x0062BE23
 0062BD09    mov ecx, dword ptr ds:[esi+0xD4]
-0062BD0F    mov edx, dword ptr ds:[0x00B809E4]
+0062BD0F    mov edx, dword ptr ds:[0x00B809E4]              ; => [ Data: data_b809e4 ]
 0062BD15    test ecx, ecx
 0062BD17    jz 0x0062BD38
 0062BD19    movzx eax, cx
@@ -79,7 +85,7 @@
 0062BD20    imul eax, eax, 0x1C30
 0062BD26    add eax, dword ptr ds:[0x00B809E0]
 0062BD2C    cmp dword ptr ds:[eax+0x1C28], ecx
-0062BD32    jz 0x0062BE0A
+0062BD32    jz 0x0062BE0A                                   ; => [ Data: data_b809e0 ]
 0062BD38    mov ecx, dword ptr ds:[edi+0xD4]
 0062BD3E    test ecx, ecx
 0062BD40    jz 0x0062BD61
@@ -99,7 +105,7 @@
 0062BD87    cmp dword ptr ds:[esi+0x100], 0x01
 0062BD8E    jnle 0x0062BE0A
 0062BD90    cmp dword ptr ds:[edi+0x100], 0x01
-0062BD97    jnle 0x0062BE0A
+0062BD97    jnle 0x0062BE0A                                 ; => [ Data: data_b809e0 ]
 0062BD99    mov al, byte ptr ds:[esi+0x114]
 0062BD9F    cmp al, byte ptr ds:[edi+0x114]
 0062BDA5    jb 0x0062BE00
@@ -166,7 +172,7 @@
 0062BE41    pop ebx
 0062BE42    mov esp, ebp
 0062BE44    pop ebp
-0062BE45    ret
+0062BE45    ret                                             ; => [ Call: sub_5f1d60 ]
 0062BE46    push eax
 0062BE47    push ebx
 0062BE48    call 0x0058D5A0
@@ -179,16 +185,16 @@
 0062BE5F    pop ebx
 0062BE60    mov esp, ebp
 0062BE62    pop ebp
-0062BE63    ret
-0062BE64    push 0x86D1E8
+0062BE63    ret                                             ; => [ Call: sub_58d5a0 ]
+0062BE64    push 0x86D1E8                                   ; => [ String: DomCardCompare ]
 0062BE69    push 0x10473
-0062BE6E    mov ecx, 0x86D1F8
+0062BE6E    mov ecx, 0x86D1F8                               ; => [ String: gfx1.type == DOMGFX_CARD ]
 0062BE73    push 0x86F1E8
 0062BE78    mov edx, 0x801800
-0062BE7D    call 0x0063B870
+0062BE7D    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: DomCardCompare ]
 0062BE82    add esp, 0x0C
 0062BE85    call 0x0063BC30
 0062BE8A    test al, al
-0062BE8C    jz 0x0062BE8F
+0062BE8C    jz 0x0062BE8F                                   ; => [ Call: sub_63bc30 ]
 0062BE8E    int3
-0062BE8F    call 0x0063BB00
+0062BE8F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

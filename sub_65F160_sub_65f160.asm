@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_65f160
+// 起始地址: 0x65f160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0065F160    push ebx
 0065F161    mov ebx, esp
 0065F163    sub esp, 0x08
@@ -16,18 +22,18 @@
 0065F188    push edi
 0065F189    cmp ecx, 0xFFFFFFFF
 0065F18C    jnz 0x0065F1A7
-0065F18E    push 0x875088
+0065F18E    push 0x875088                                   ; => [ String: UpdateToNewLine ]
 0065F193    push 0x2A68
-0065F198    push 0x8739B4
-0065F19D    mov ecx, 0x875068
+0065F198    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0065F19D    mov ecx, 0x875068                               ; => [ String: firstEntryToMoveNewLine != -1 ]
 0065F1A2    jmp 0x0065F3B1
 0065F1A7    mov eax, dword ptr ds:[ebx+0x10]
 0065F1AA    cmp eax, 0xFFFFFFFF
 0065F1AD    jnz 0x0065F1C8
-0065F1AF    push 0x875088
+0065F1AF    push 0x875088                                   ; => [ String: UpdateToNewLine ]
 0065F1B4    push 0x2A69
-0065F1B9    push 0x8739B4
-0065F1BE    mov ecx, 0x8750BC
+0065F1B9    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0065F1BE    mov ecx, 0x8750BC                               ; => [ String: lastEntryToMoveInclusive != -1 ]
 0065F1C3    jmp 0x0065F3B1
 0065F1C8    test ecx, ecx
 0065F1CA    jle 0x0065F2C3
@@ -62,9 +68,9 @@
 0065F237    lea edi, ss:[ebp-0x90]
 0065F23D    mov ecx, 0x1E
 0065F242    add esp, 0x0C
-0065F245    rep movsd
+0065F245    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_65efc0 ]
 0065F247    mov ecx, dword ptr ss:[ebp-0x80]
-0065F24A    call 0x006B7590
+0065F24A    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 0065F24F    mov ecx, dword ptr ds:[ebx+0x0C]
 0065F252    mov esi, dword ptr ss:[ebp-0x08]
 0065F255    mov dword ptr ss:[ebp-0x18], eax
@@ -116,15 +122,15 @@
 0065F2F1    lahf
 0065F2F2    test ah, 0x44
 0065F2F5    jp 0x0065F329
-0065F2F7    push 0x875088
+0065F2F7    push 0x875088                                   ; => [ String: UpdateToNewLine ]
 0065F2FC    push 0x2A8C
-0065F301    push 0x8739B4
-0065F306    mov ecx, 0x875098
+0065F301    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0065F306    mov ecx, 0x875098                               ; => [ String: lineParamsPrevLine.lineSpacing != 0 ]
 0065F30B    jmp 0x0065F3B1
-0065F310    push 0x875088
+0065F310    push 0x875088                                   ; => [ String: UpdateToNewLine ]
 0065F315    push 0x2A7D
-0065F31A    push 0x8739B4
-0065F31F    mov ecx, 0x874FA0
+0065F31A    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+0065F31F    mov ecx, 0x874FA0                               ; => [ String: entry.entryIdxOnLine == i ]
 0065F324    jmp 0x0065F3B1
 0065F329    test ecx, ecx
 0065F32B    js 0x0065F39D
@@ -134,7 +140,7 @@
 0065F335    xor edi, edi
 0065F337    imul edx, ecx, 0x34
 0065F33A    movss xmm2, dword ptr ds:[edx+eax*1+0x10]
-0065F340    xorps xmm2, xmmword ptr ds:[0x008937C0]
+0065F340    xorps xmm2, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 0065F347    cmp ecx, dword ptr ds:[ebx+0x10]
 0065F34A    jnle 0x0065F38E
 0065F34C    nop dword ptr ds:[eax], eax
@@ -168,15 +174,15 @@
 0065F399    mov esp, ebx
 0065F39B    pop ebx
 0065F39C    ret
-0065F39D    push 0x876A2C
+0065F39D    push 0x876A2C                                   ; => [ String: XDynArray<struct TextEntry>::operator [] ]
 0065F3A2    push 0xD4
-0065F3A7    push 0x824FB0
-0065F3AC    mov ecx, 0x824FD0
+0065F3A7    push 0x824FB0                                   ; => [ String: C:\x\ax2017\Engine\xDynArray.h ]
+0065F3AC    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 0065F3B1    mov edx, 0x801800
-0065F3B6    call 0x0063B870
+0065F3B6    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0065F3BB    add esp, 0x0C
 0065F3BE    call 0x0063BC30
 0065F3C3    test al, al
-0065F3C5    jz 0x0065F3C8
+0065F3C5    jz 0x0065F3C8                                   ; => [ Call: sub_63bc30 ]
 0065F3C7    int3
-0065F3C8    call 0x0063BB00
+0065F3C8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

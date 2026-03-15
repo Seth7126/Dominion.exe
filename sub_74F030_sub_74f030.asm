@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_74f030
+// 起始地址: 0x74f030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074F030    push ebp
 0074F031    mov ebp, esp
 0074F033    push ecx
 0074F034    push ebx
 0074F035    mov ebx, ecx
 0074F037    test ebx, ebx
-0074F039    jz 0x0074F04F
+0074F039    jz 0x0074F04F                                   ; => [ Type: LRESULT ]
 0074F03B    mov edx, ebx
 0074F03D    lea ecx, ds:[edx+0x01]
 0074F040    mov al, byte ptr ds:[edx]
@@ -17,12 +23,12 @@
 0074F054    push esi
 0074F055    mov esi, dword ptr ds:[0x00775308]
 0074F05B    push edi
-0074F05C    xor edi, edi
+0074F05C    xor edi, edi                                    ; => [ Type: WPARAM ]
 0074F05E    push edi
 0074F05F    push edi
 0074F060    push 0x18B
 0074F065    push dword ptr ds:[eax+0x14]
-0074F068    call esi
+0074F068    call esi                                        ; => [ Data: data_19e2778 ]
 0074F06A    test eax, eax
 0074F06C    jle 0x0074F0D2
 0074F06E    nop
@@ -31,7 +37,7 @@
 0074F077    push edi
 0074F078    push 0x199
 0074F07D    push dword ptr ds:[eax+0x14]
-0074F080    call esi
+0074F080    call esi                                        ; => [ Data: data_19e2778 | Type: LRESULT ]
 0074F082    mov esi, eax
 0074F084    cmp esi, 0xFFFFFFFF
 0074F087    jz 0x0074F0B4
@@ -50,7 +56,7 @@
 0074F0A7    cmp dword ptr ds:[esi+0x18], 0x00
 0074F0AB    jz 0x0074F0B4
 0074F0AD    mov ecx, esi
-0074F0AF    call 0x0074CE10
+0074F0AF    call 0x0074CE10                                 ; => [ Call: sub_74ce10 ]
 0074F0B4    mov eax, dword ptr ds:[0x019E2778]
 0074F0B9    inc edi
 0074F0BA    mov esi, dword ptr ds:[0x00775308]
@@ -58,7 +64,7 @@
 0074F0C2    push 0x00
 0074F0C4    push 0x18B
 0074F0C9    push dword ptr ds:[eax+0x14]
-0074F0CC    call esi
+0074F0CC    call esi                                        ; => [ Data: data_19e2778 ]
 0074F0CE    cmp edi, eax
 0074F0D0    jl 0x0074F070
 0074F0D2    pop edi

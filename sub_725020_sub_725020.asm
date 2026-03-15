@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_725020
+// 起始地址: 0x725020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00725020    dword 83EC8B55
 00725024    in al, 0xF8
 00725026    mov ecx, dword ptr ss:[ebp+0x18]
@@ -7,8 +13,8 @@
 00725032    push esi
 00725033    push edi
 00725034    jnz 0x00725139
-0072503A    movaps xmm5, xmmword ptr ds:[0x008937E0]
-00725041    movaps xmm7, xmmword ptr ds:[0x008932F0]
+0072503A    movaps xmm5, xmmword ptr ds:[0x008937E0]        ; => [ Data: data_8937e0 ]
+00725041    movaps xmm7, xmmword ptr ds:[0x008932F0]        ; => [ Data: data_8932f0 ]
 00725048    cmp ecx, 0x07
 0072504B    jle 0x00725139
 00725051    mov esi, dword ptr ss:[ebp+0x10]
@@ -28,21 +34,21 @@
 00725085    movaps xmm2, xmm6
 00725088    mov eax, dword ptr ss:[esp+0x0C]
 0072508C    xorps xmm0, xmm5
-0072508F    punpcklbw xmm2, xmm0
+0072508F    punpcklbw xmm2, xmm0                            ; => [ String: 0 | String: zx ]
 00725093    movaps xmm4, xmm6
 00725096    movq xmm0, qword ptr ds:[esi]
 0072509A    movaps xmm1, xmm5
 0072509D    xorps xmm0, xmm5
 007250A0    movaps xmm3, xmm2
-007250A3    pmulhw xmm2, xmmword ptr ds:[0x008938F0]
+007250A3    pmulhw xmm2, xmmword ptr ds:[0x008938F0]        ; => [ Data: data_8938f0 ]
 007250AB    add edx, 0x08
-007250AE    punpcklbw xmm4, xmm0
+007250AE    punpcklbw xmm4, xmm0                            ; => [ String: 0 | String: zx ]
 007250B2    movq xmm0, qword ptr ds:[eax+esi*1]
 007250B7    add esi, 0x08
 007250BA    punpcklbw xmm1, xmm0
 007250BE    movaps xmm0, xmm4
-007250C1    pmulhw xmm0, xmmword ptr ds:[0x00893300]
-007250C9    pmulhw xmm4, xmmword ptr ds:[0x00893910]
+007250C1    pmulhw xmm0, xmmword ptr ds:[0x00893300]        ; => [ Data: data_893300 ]
+007250C9    pmulhw xmm4, xmmword ptr ds:[0x00893910]        ; => [ Data: data_893910 ]
 007250D1    mov eax, dword ptr ss:[esp+0x08]
 007250D5    pmulhw xmm3, xmm7
 007250D9    add eax, esi
@@ -54,7 +60,7 @@
 007250F1    paddw xmm3, xmm1
 007250F5    psraw xmm4, 0x04
 007250FA    psraw xmm3, 0x04
-007250FF    packuswb xmm4, xmmword ptr ds:[0x00893290]
+007250FF    packuswb xmm4, xmmword ptr ds:[0x00893290]      ; => [ Data: data_893290 ]
 00725107    packuswb xmm3, xmm0
 0072510B    movaps xmm1, xmm3
 0072510E    punpckhbw xmm3, xmm4

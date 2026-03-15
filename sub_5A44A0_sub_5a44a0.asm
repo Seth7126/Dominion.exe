@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a44a0
+// 起始地址: 0x5a44a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A44A0    push ebx
 005A44A1    mov ebx, esp
 005A44A3    sub esp, 0x08
@@ -8,16 +14,16 @@
 005A44B0    mov dword ptr ss:[esp+0x04], ebp
 005A44B4    mov ebp, esp
 005A44B6    mov eax, 0x24078
-005A44BB    call 0x00761E50
+005A44BB    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A44C0    mov eax, dword ptr ds:[0x008C4040]
 005A44C5    xor eax, ebp
-005A44C7    mov dword ptr ss:[ebp-0x04], eax
+005A44C7    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005A44CA    push esi
 005A44CB    mov esi, edx
 005A44CD    lea edx, ss:[ebp-0x24008]
 005A44D3    push edi
 005A44D4    mov dword ptr ss:[ebp-0x24034], esi
-005A44DA    call 0x005A42D0
+005A44DA    call 0x005A42D0                                 ; => [ Call: sub_5a42d0 ]
 005A44DF    lea edx, ss:[ebp-0x23FFC]
 005A44E5    mov edi, 0x800
 005A44EA    lea ecx, ds:[esi+0x14]
@@ -71,33 +77,33 @@
 005A45C4    push eax
 005A45C5    sub esp, 0x10
 005A45C8    lea eax, ss:[ebp-0x24018]
-005A45CE    movups xmmword ptr ss:[ebp-0x24018], xmm0
+005A45CE    movups xmmword ptr ss:[ebp-0x24018], xmm0       ; => [ Data: data_8935c0 ]
 005A45D5    lea edx, ss:[ebp-0x24008]
 005A45DB    xorps xmm0, xmm0
 005A45DE    push eax
-005A45DF    movups xmmword ptr ss:[ebp-0x24050], xmm0
+005A45DF    movups xmmword ptr ss:[ebp-0x24050], xmm0       ; => [ Call: __builtin_memset ]
 005A45E6    movq qword ptr ss:[ebp-0x24040], xmm0
-005A45EE    call 0x005A2EC0
+005A45EE    call 0x005A2EC0                                 ; => [ Call: sub_5a2ec0 ]
 005A45F3    mov eax, dword ptr ss:[ebp-0x24050]
 005A45F9    lea ecx, ss:[ebp-0x24078]
 005A45FF    add esp, 0x18
 005A4602    mov dword ptr ds:[esi+0x8FFD0], edi
-005A4608    xor esi, esi
+005A4608    xor esi, esi                                    ; => [ Call: nullptr ]
 005A460A    mov eax, dword ptr ds:[eax+0x04]
 005A460D    mov dword ptr ss:[ebp-0x24078], eax
 005A4613    call 0x005A13B0
 005A4618    movss xmm3, dword ptr ds:[0x008937A0]
-005A4620    mov edi, eax
+005A4620    mov edi, eax                                    ; => [ Call: sub_5a13b0 ]
 005A4622    movss xmm4, dword ptr ds:[0x00890C6C]
 005A462A    nop word ptr ds:[eax+eax*1], ax
 005A4630    test edi, edi
 005A4632    jz 0x005A463A
 005A4634    mov esi, edi
-005A4636    xor edi, edi
+005A4636    xor edi, edi                                    ; => [ Call: nullptr ]
 005A4638    jmp 0x005A4647
 005A463A    mov ecx, esi
 005A463C    call 0x005A13B0
-005A4641    mov esi, eax
+005A4641    mov esi, eax                                    ; => [ Call: sub_5a13b0 ]
 005A4643    test esi, esi
 005A4645    jz 0x005A469C
 005A4647    mov eax, dword ptr ds:[esi+0x04]
@@ -139,7 +145,7 @@
 005A46BC    mov dword ptr ss:[ebp-0x24028], eax
 005A46C2    lea eax, ss:[ebp-0x4008]
 005A46C8    push eax
-005A46C9    call 0x00761FC4
+005A46C9    call 0x00761FC4                                 ; => [ Call: memset ]
 005A46CE    xor edi, edi
 005A46D0    add esp, 0x0C
 005A46D3    mov dword ptr ss:[ebp-0x2402C], edi
@@ -303,7 +309,7 @@
 005A49B5    xor ecx, ebp
 005A49B7    pop edi
 005A49B8    pop esi
-005A49B9    call 0x0075927A
+005A49B9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A49BE    mov esp, ebp
 005A49C0    pop ebp
 005A49C1    mov esp, ebx
@@ -325,30 +331,30 @@
 005A4A07    mov dword ptr ds:[edx+eax*8+0x30004], ecx
 005A4A0E    inc dword ptr ds:[edx+0x8FFD0]
 005A4A14    jmp 0x005A4630
-005A4A19    push 0x825220
+005A4A19    push 0x825220                                   ; => [ String: GenerateMesh ]
 005A4A1E    push 0x2D6
-005A4A23    mov ecx, 0x825230
+005A4A23    mov ecx, 0x825230                               ; => [ String: mesh.numEdges < NEDGES ]
 005A4A28    jmp 0x005A4A67
-005A4A2A    push 0x825220
+005A4A2A    push 0x825220                                   ; => [ String: GenerateMesh ]
 005A4A2F    push 0x30B
-005A4A34    mov ecx, 0x825254
+005A4A34    mov ecx, 0x825254                               ; => [ String: mesh.numTris < NTRIS ]
 005A4A39    jmp 0x005A4A67
-005A4A3B    push 0x825220
+005A4A3B    push 0x825220                                   ; => [ String: GenerateMesh ]
 005A4A40    push 0x2FA
 005A4A45    jmp 0x005A4A62
-005A4A47    push 0x825220
+005A4A47    push 0x825220                                   ; => [ String: GenerateMesh ]
 005A4A4C    push 0x324
-005A4A51    mov ecx, 0x825254
+005A4A51    mov ecx, 0x825254                               ; => [ String: mesh.numTris < NTRIS ]
 005A4A56    jmp 0x005A4A67
-005A4A58    push 0x825220
+005A4A58    push 0x825220                                   ; => [ String: GenerateMesh ]
 005A4A5D    push 0x313
-005A4A62    mov ecx, 0x825248
+005A4A62    mov ecx, 0x825248                               ; => [ String: adjs < NADJ ]
 005A4A67    push 0x8250E0
 005A4A6C    mov edx, 0x801800
-005A4A71    call 0x0063B870
+005A4A71    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp ]
 005A4A76    add esp, 0x0C
 005A4A79    call 0x0063BC30
 005A4A7E    test al, al
-005A4A80    jz 0x005A4A83
+005A4A80    jz 0x005A4A83                                   ; => [ Call: sub_63bc30 ]
 005A4A82    int3
-005A4A83    call 0x0063BB00
+005A4A83    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

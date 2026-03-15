@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5bc390
+// 起始地址: 0x5bc390
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BC390    push ebp
 005BC391    mov ebp, esp
 005BC393    push ecx
@@ -10,11 +16,11 @@
 005BC3B5    movss xmm1, dword ptr ds:[0x00890C94]
 005BC3BD    xorps xmm5, xmm5
 005BC3C0    comiss xmm1, xmm0
-005BC3C3    jbe 0x005BC3D3
+005BC3C3    jbe 0x005BC3D3                                  ; => [ Call: sub_4ae0b0 ]
 005BC3C5    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 005BC3CC    movss xmm4, dword ptr ss:[ebp-0x04]
 005BC3D1    jmp 0x005BC3D6
-005BC3D3    xorps xmm4, xmm4
+005BC3D3    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005BC3D6    movaps xmm1, xmm3
 005BC3D9    mulss xmm1, xmm3
 005BC3DD    ucomiss xmm4, xmm5

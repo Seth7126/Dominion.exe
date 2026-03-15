@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_771025
+// 起始地址: 0x771025
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00771025    nop
 00771026    nop
 00771027    mov edx, dword ptr ss:[esp+0x08]
 0077102B    lea eax, ds:[edx+0x0C]
 0077102E    mov ecx, dword ptr ds:[edx-0x70]
 00771031    xor ecx, eax
-00771033    call 0x0075927A
+00771033    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00771038    mov eax, 0x8BD75C
-0077103D    jmp 0x00761FA6
+0077103D    jmp 0x00761FA6                                  ; => [ Data: data_8bd75c | Call: __CxxFrameHandler3 ]

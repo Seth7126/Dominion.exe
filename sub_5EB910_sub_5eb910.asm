@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5eb910
+// 起始地址: 0x5eb910
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EB910    push ebp
 005EB911    mov ebp, esp
 005EB913    and esp, 0xFFFFFFF8
@@ -23,7 +29,7 @@
 005EB95E    movzx esi, ax
 005EB961    cmp esi, 0x320
 005EB967    jb 0x005EB96E
-005EB969    call 0x00591930
+005EB969    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005EB96E    mov ecx, dword ptr ss:[esp+0x10]
 005EB972    imul eax, esi, 0x64
 005EB975    push 0x00
@@ -31,13 +37,13 @@
 005EB97C    lea ebx, ds:[ecx+0x1A4C]
 005EB982    add ebx, eax
 005EB984    mov edx, dword ptr ds:[ebx]
-005EB986    call 0x005754F0
+005EB986    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 005EB98B    add esp, 0x08
 005EB98E    test al, al
 005EB990    jz 0x005EBA26
 005EB996    cmp esi, 0x320
 005EB99C    jb 0x005EB9A3
-005EB99E    call 0x00591930
+005EB99E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005EB9A3    mov esi, dword ptr ss:[ebp+0x18]
 005EB9A6    xor eax, eax
 005EB9A8    mov edx, dword ptr ds:[ebx]
@@ -84,18 +90,18 @@
 005EBA25    ret
 005EBA26    cmp esi, 0x320
 005EBA2C    jb 0x005EBA33
-005EBA2E    call 0x00591930
+005EBA2E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005EBA33    mov edx, dword ptr ds:[ebx]
 005EBA35    mov ecx, dword ptr ss:[esp+0x10]
 005EBA39    push 0x00
 005EBA3B    push 0x4000000
-005EBA40    call 0x005754F0
+005EBA40    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 005EBA45    add esp, 0x08
 005EBA48    test al, al
 005EBA4A    jz 0x005EBA87
 005EBA4C    cmp esi, 0x320
 005EBA52    jb 0x005EBA59
-005EBA54    call 0x00591930
+005EBA54    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005EBA59    mov esi, dword ptr ss:[ebp+0x08]
 005EBA5C    xor eax, eax
 005EBA5E    mov edx, dword ptr ds:[ebx]
@@ -113,7 +119,7 @@
 005EBA82    jmp 0x005EB9C0
 005EBA87    cmp esi, 0x320
 005EBA8D    jb 0x005EBA94
-005EBA8F    call 0x00591930
+005EBA8F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005EBA94    mov edx, dword ptr ds:[ebx]
 005EBA96    mov ecx, dword ptr ss:[esp+0x10]
 005EBA9A    push 0x00
@@ -121,10 +127,10 @@
 005EBAA1    call 0x005754F0
 005EBAA6    add esp, 0x08
 005EBAA9    test al, al
-005EBAAB    jz 0x005EB9C8
+005EBAAB    jz 0x005EB9C8                                   ; => [ Call: sub_5754f0 ]
 005EBAB1    cmp esi, 0x320
 005EBAB7    jb 0x005EBABE
-005EBAB9    call 0x00591930
+005EBAB9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005EBABE    mov edx, dword ptr ds:[ebx]
 005EBAC0    xor eax, eax
 005EBAC2    mov ebx, dword ptr ss:[ebp+0x10]

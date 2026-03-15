@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_695390
+// 起始地址: 0x695390
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00695390    push ebp
 00695391    mov ebp, esp
 00695393    sub esp, 0x08
@@ -12,7 +18,7 @@
 006953A7    add eax, edi
 006953A9    mov dword ptr ss:[ebp+0x08], eax
 006953AC    mov edx, dword ptr ds:[eax]
-006953AE    call 0x006DD320
+006953AE    call 0x006DD320                                 ; => [ Call: sub_6dd320 ]
 006953B3    mov esi, eax
 006953B5    cmp dword ptr ds:[esi+0x10], 0x0F
 006953B9    jnz 0x00695421
@@ -53,10 +59,10 @@
 00695404    jnz 0x0069540F
 00695406    mov ecx, esi
 00695408    call 0x006B7EF0
-0069540D    mov edx, eax
+0069540D    mov edx, eax                                    ; => [ Call: sub_6b7ef0 ]
 0069540F    mov ecx, esi
 00695411    call 0x0069F030
-00695416    mov dword ptr ds:[edi], eax
+00695416    mov dword ptr ds:[edi], eax                     ; => [ Call: sub_69f030 ]
 00695418    mov al, 0x01
 0069541A    pop edi
 0069541B    pop esi
@@ -67,7 +73,7 @@
 00695421    mov ecx, esi
 00695423    call 0x0069C520
 00695428    test al, al
-0069542A    jnz 0x006954A6
+0069542A    jnz 0x006954A6                                  ; => [ Call: sub_69c520 ]
 0069542C    mov eax, dword ptr ss:[ebp+0x08]
 0069542F    mov eax, dword ptr ds:[eax]
 00695431    test eax, eax
@@ -90,16 +96,16 @@
 00695468    jz 0x006954D9
 0069546A    cmp eax, 0x03
 0069546D    jz 0x006954D9
-0069546F    push 0x878888
+0069546F    push 0x878888                                   ; => [ String: DefBinShallowDefTypeFixup ]
 00695474    push 0x147
-00695479    push 0x878868
-0069547E    mov edx, 0x8788DC
-00695483    mov ecx, 0x874B64
+00695479    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp ]
+0069547E    mov edx, 0x8788DC                               ; => [ String: Unable to fixup data type ]
+00695483    mov ecx, 0x874B64                               ; => [ String: HaltMsg ]
 00695488    jmp 0x0069555B
-0069548D    push 0x88131C
+0069548D    push 0x88131C                                   ; => [ String: AttribTagGetField ]
 00695492    push 0x8B
-00695497    push 0x8812F8
-0069549C    mov ecx, 0x881344
+00695497    push 0x8812F8                                   ; => [ String: C:\x\ax2017\Engine\AttribMap.cpp ]
+0069549C    mov ecx, 0x881344                               ; => [ String: (int)tag >= 0 && (int)tag < pAttribTable->lookupTableSize ]
 006954A1    jmp 0x00695556
 006954A6    mov eax, dword ptr ds:[esi+0x10]
 006954A9    cmp eax, 0x08
@@ -133,10 +139,10 @@
 006954E4    jle 0x00695501
 006954E6    cmp eax, 0x12
 006954E9    jnl 0x00695501
-006954EB    push 0x878AF8
+006954EB    push 0x878AF8                                   ; => [ String: DefBinReadFixupTagValue ]
 006954F0    push 0x3A6
-006954F5    push 0x878868
-006954FA    mov ecx, 0x878A5C
+006954F5    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp ]
+006954FA    mov ecx, 0x878A5C                               ; => [ String: !DefTypeIsBuiltIn(pDefMap) ]
 006954FF    jmp 0x00695556
 00695501    mov ecx, dword ptr ds:[ebx]
 00695503    mov eax, dword ptr ds:[esi+0x0C]
@@ -165,7 +171,7 @@
 00695537    pop ebx
 00695538    mov esp, ebp
 0069553A    pop ebp
-0069553B    ret
+0069553B    ret                                             ; => [ Call: nullptr | Call: sub_695870 ]
 0069553C    pop edi
 0069553D    pop esi
 0069553E    xor al, al
@@ -173,15 +179,15 @@
 00695541    mov esp, ebp
 00695543    pop ebp
 00695544    ret
-00695545    push 0x87943C
+00695545    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 0069554A    push 0x6D
-0069554C    push 0x879400
-00695551    mov ecx, 0x87948C
-00695556    mov edx, 0x801800
-0069555B    call 0x0063B870
+0069554C    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+00695551    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
+00695556    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+0069555B    call 0x0063B870                                 ; => [ Call: sub_63b870 ]
 00695560    add esp, 0x0C
 00695563    call 0x0063BC30
 00695568    test al, al
-0069556A    jz 0x0069556D
+0069556A    jz 0x0069556D                                   ; => [ Call: sub_63bc30 ]
 0069556C    int3
-0069556D    call 0x0063BB00
+0069556D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

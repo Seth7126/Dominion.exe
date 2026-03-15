@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_67de10
+// 起始地址: 0x67de10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067DE10    push ebp
 0067DE11    mov ebp, esp
 0067DE13    sub esp, 0x58
@@ -10,7 +16,7 @@
 0067DE21    push edi
 0067DE22    movss dword ptr ss:[ebp-0x14], xmm2
 0067DE27    lea edx, ds:[esi+0x3C]
-0067DE2A    call 0x0067EBA0
+0067DE2A    call 0x0067EBA0                                 ; => [ Call: sub_67eba0 ]
 0067DE2F    test al, al
 0067DE31    jz 0x0067DE3D
 0067DE33    xorps xmm0, xmm0
@@ -33,7 +39,7 @@
 0067DE67    mov ecx, ebx
 0067DE69    call 0x0067EBA0
 0067DE6E    test al, al
-0067DE70    jz 0x0067DE9E
+0067DE70    jz 0x0067DE9E                                   ; => [ Call: sub_67eba0 ]
 0067DE72    mov eax, dword ptr ds:[esi+0x80]
 0067DE78    cmp eax, 0x04
 0067DE7B    jz 0x0067DE9E
@@ -62,11 +68,11 @@
 0067DEC0    movaps xmm1, xmm2
 0067DEC3    mov ecx, esi
 0067DEC5    subss xmm1, dword ptr ds:[esi+0x88]
-0067DECD    call 0x0067F6B0
+0067DECD    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0067DED2    movss xmm1, dword ptr ss:[ebp-0x08]
 0067DED7    lea ecx, ds:[esi+0x3C]
 0067DEDA    movss dword ptr ss:[ebp-0x10], xmm0
-0067DEDF    call 0x0067F6B0
+0067DEDF    call 0x0067F6B0                                 ; => [ Call: sub_67f6b0 ]
 0067DEE4    movss xmm1, dword ptr ss:[ebp-0x08]
 0067DEE9    lea ecx, ds:[esi+0x78]
 0067DEEC    movss dword ptr ss:[ebp-0x0C], xmm0
@@ -76,7 +82,7 @@
 0067DEFE    movss xmm0, dword ptr ss:[ebp-0x0C]
 0067DF03    subss xmm0, dword ptr ss:[ebp-0x10]
 0067DF08    mulss xmm3, xmm0
-0067DF0C    addss xmm3, dword ptr ss:[ebp-0x10]
+0067DF0C    addss xmm3, dword ptr ss:[ebp-0x10]             ; => [ Call: sub_64c3c0 ]
 0067DF11    xorps xmm0, xmm0
 0067DF14    movss dword ptr ss:[ebp-0x54], xmm3
 0067DF19    movlpd qword ptr ss:[ebp-0x48], xmm0
@@ -86,7 +92,7 @@
 0067DF29    movlpd qword ptr ss:[ebp-0x38], xmm0
 0067DF2E    movaps xmm3, xmm2
 0067DF31    movlpd qword ptr ss:[ebp-0x30], xmm0
-0067DF36    movlpd qword ptr ss:[ebp-0x50], xmm1
+0067DF36    movlpd qword ptr ss:[ebp-0x50], xmm1            ; => [ Call: __builtin_memset ]
 0067DF3B    movups xmm0, xmmword ptr ss:[ebp-0x54]
 0067DF3F    mov dword ptr ss:[ebp-0x28], 0x00
 0067DF46    mov dword ptr ss:[ebp-0x20], 0xFFFFFFFF
@@ -141,10 +147,10 @@
 0067E00B    push 0x8739B4
 0067E010    mov edx, 0x801800
 0067E015    mov ecx, 0x801AA4
-0067E01A    call 0x0063B870
+0067E01A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: PropDynamicSet | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: Halt ]
 0067E01F    add esp, 0x0C
 0067E022    call 0x0063BC30
 0067E027    test al, al
-0067E029    jz 0x0067E02C
+0067E029    jz 0x0067E02C                                   ; => [ Call: sub_63bc30 ]
 0067E02B    int3
-0067E02C    call 0x0063BB00
+0067E02C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

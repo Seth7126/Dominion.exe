@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73f4a0
+// 起始地址: 0x73f4a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073F4A0    push ebx
 0073F4A1    mov ebx, esp
 0073F4A3    sub esp, 0x08
@@ -14,23 +20,23 @@
 0073F4C6    cmp dword ptr ds:[0x0147EF94], 0x00
 0073F4CD    push esi
 0073F4CE    push edi
-0073F4CF    jnz 0x0073F4EB
+0073F4CF    jnz 0x0073F4EB                                  ; => [ Data: data_147ef94 ]
 0073F4D1    movups xmm0, xmmword ptr ds:[0x008017C8]
 0073F4D8    mov eax, dword ptr ds:[ebx+0x08]
-0073F4DB    movups xmmword ptr ds:[eax], xmm0
+0073F4DB    movups xmmword ptr ds:[eax], xmm0               ; => [ Call: __builtin_memcpy | String: \x00\x00\x80\xbf\x00\x00\x80\xbf\x00\x00\x80\xbf\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f ]
 0073F4DE    movq xmm0, qword ptr ds:[0x008017D8]
 0073F4E6    jmp 0x0073F6A9
-0073F4EB    mov ecx, dword ptr ds:[0x0147DF90]
+0073F4EB    mov ecx, dword ptr ds:[0x0147DF90]              ; => [ Data: data_147df90 ]
 0073F4F1    cmp dword ptr ds:[ecx+0x04], 0x20
 0073F4F5    jnz 0x0073F6C1
-0073F4FB    call 0x005AF880
+0073F4FB    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0073F500    imul ecx, dword ptr ds:[0x0147DF94], 0xE0
 0073F50A    mov edi, eax
 0073F50C    lea eax, ss:[ebp-0x70]
 0073F50F    mov edx, 0x87F4B8
 0073F514    push eax
 0073F515    add ecx, dword ptr ds:[edi]
-0073F517    call 0x006CD460
+0073F517    call 0x006CD460                                 ; => [ Call: sub_6cd460 | Data: data_147df94 ]
 0073F51C    mov esi, 0x01
 0073F521    add esp, 0x04
 0073F524    movups xmm0, xmmword ptr ds:[eax]
@@ -40,13 +46,13 @@
 0073F533    movq xmm0, qword ptr ds:[eax+0x20]
 0073F538    movq qword ptr ss:[ebp-0x20], xmm0
 0073F53D    cmp dword ptr ds:[0x0147EF94], esi
-0073F543    jle 0x0073F5B6
+0073F543    jle 0x0073F5B6                                  ; => [ Data: data_147ef94 ]
 0073F545    imul ecx, dword ptr ds:[esi*4+0x147DF94], 0xE0
 0073F550    lea eax, ss:[ebp-0xF8]
 0073F556    push eax
 0073F557    mov edx, 0x87F4B8
 0073F55C    add ecx, dword ptr ds:[edi]
-0073F55E    call 0x006CD460
+0073F55E    call 0x006CD460                                 ; => [ Call: sub_6cd460 | Data: data_147df94 ]
 0073F563    add esp, 0x04
 0073F566    lea edx, ss:[ebp-0x70]
 0073F569    lea ecx, ss:[ebp-0x40]
@@ -58,7 +64,7 @@
 0073F580    lea eax, ss:[ebp-0xF8]
 0073F586    push eax
 0073F587    movq qword ptr ss:[ebp-0x50], xmm0
-0073F58C    call 0x0073F1B0
+0073F58C    call 0x0073F1B0                                 ; => [ Call: sub_73f1b0 ]
 0073F591    inc esi
 0073F592    add esp, 0x04
 0073F595    movups xmm0, xmmword ptr ds:[eax]
@@ -68,10 +74,10 @@
 0073F5A4    movq xmm0, qword ptr ds:[eax+0x20]
 0073F5A9    movq qword ptr ss:[ebp-0x20], xmm0
 0073F5AE    cmp esi, dword ptr ds:[0x0147EF94]
-0073F5B4    jl 0x0073F545
+0073F5B4    jl 0x0073F545                                   ; => [ Data: data_147ef94 ]
 0073F5B6    lea edx, ss:[ebp-0xD0]
 0073F5BC    lea ecx, ss:[ebp-0x40]
-0073F5BF    call 0x006DB800
+0073F5BF    call 0x006DB800                                 ; => [ Call: sub_6db800 ]
 0073F5C4    movss xmm4, dword ptr ss:[ebp-0xD0]
 0073F5CC    lea eax, ss:[ebp-0xBC]
 0073F5D2    movss xmm1, dword ptr ss:[ebp-0xCC]
@@ -136,7 +142,7 @@
 0073F6AD    xor ecx, ebp
 0073F6AF    movq qword ptr ds:[eax+0x10], xmm0
 0073F6B4    pop esi
-0073F6B5    call 0x0075927A
+0073F6B5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0073F6BA    mov esp, ebp
 0073F6BC    pop ebp
 0073F6BD    mov esp, ebx
@@ -147,10 +153,10 @@
 0073F6CB    push 0x87ED1C
 0073F6D0    mov edx, 0x801800
 0073F6D5    mov ecx, 0x87ECF8
-0073F6DA    call 0x0063B870
+0073F6DA    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\FabDef.cpp | String: FabDefGet | String: ptr->assetType == ASSET_TYPE_FAB | Data: data_801800 | Data: __security_cookie ]
 0073F6DF    add esp, 0x0C
 0073F6E2    call 0x0063BC30
 0073F6E7    test al, al
-0073F6E9    jz 0x0073F6EC
+0073F6E9    jz 0x0073F6EC                                   ; => [ Call: sub_63bc30 ]
 0073F6EB    int3
-0073F6EC    call 0x0063BB00
+0073F6EC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_4b3130
+// 起始地址: 0x4b3130
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B3130    push ebp
 004B3131    mov ebp, esp
 004B3133    push 0xFFFFFFFF
-004B3135    push 0x762A00
+004B3135    push 0x762A00                                   ; => [ Call: __ehhandler$?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MBE?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AAVios_base@2@AAHAAPAX@Z | Type: EHRegistrationNode ]
 004B313A    mov eax, dword ptr fs:[0x00000000]
-004B3140    push eax
+004B3140    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 004B3141    sub esp, 0x34
 004B3144    mov eax, dword ptr ds:[0x008C4040]
-004B3149    xor eax, ebp
+004B3149    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004B314B    mov dword ptr ss:[ebp-0x10], eax
 004B314E    push ebx
 004B314F    push esi
 004B3150    push edi
 004B3151    push eax
 004B3152    lea eax, ss:[ebp-0x0C]
-004B3155    mov dword ptr fs:[0x00000000], eax
+004B3155    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004B315B    mov dword ptr ss:[ebp-0x20], edx
 004B315E    mov esi, ecx
 004B3160    mov dword ptr ss:[ebp-0x38], esi
@@ -26,7 +32,7 @@
 004B3187    mov dword ptr ss:[ebp-0x30], edi
 004B318A    nop word ptr ds:[eax+eax*1], ax
 004B3190    lea edx, ss:[ebp-0x34]
-004B3193    call 0x00571BC0
+004B3193    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004B3198    xor ebx, ebx
 004B319A    mov dword ptr ss:[ebp-0x3C], eax
 004B319D    mov dword ptr ss:[ebp-0x28], ebx
@@ -95,11 +101,11 @@
 004B324E    lea eax, ss:[ebp-0x24]
 004B3251    push 0x808880
 004B3256    push eax
-004B3257    call 0x0063DF30
+004B3257    call 0x0063DF30                                 ; => [ String: %d | Call: sub_63df30 ]
 004B325C    mov eax, dword ptr ss:[ebp-0x24]
 004B325F    add esp, 0x0C
 004B3262    or dword ptr ss:[ebp-0x2C], 0x01
-004B3266    mov ecx, 0x801800
+004B3266    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 004B326B    test eax, eax
 004B326D    mov edx, esi
 004B326F    cmovnz ecx, eax
@@ -125,16 +131,16 @@
 004B32A7    test eax, eax
 004B32A9    jz 0x004B32D2
 004B32AB    cmp byte ptr ds:[eax], 0x00
-004B32AE    jz 0x004B32D2
+004B32AE    jz 0x004B32D2                                   ; => [ Data: data_cf65bc ]
 004B32B0    lea ecx, ss:[ebp-0x24]
-004B32B3    call 0x0063D4E0
+004B32B3    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004B32B8    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 004B32BC    jnz 0x004B32D2
 004B32BE    mov edx, dword ptr ds:[eax+0x0C]
 004B32C1    mov ecx, eax
 004B32C3    add edx, 0x10
-004B32C6    call 0x0064C080
-004B32CB    mov dword ptr ss:[ebp-0x24], 0x801800
+004B32C6    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+004B32CB    mov dword ptr ss:[ebp-0x24], 0x801800           ; => [ Data: data_801800 ]
 004B32D2    mov ebx, dword ptr ss:[ebp-0x28]
 004B32D5    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004B32DC    test esi, esi
@@ -156,14 +162,14 @@
 004B330C    jmp 0x004B3190
 004B3311    xor eax, eax
 004B3313    mov ecx, dword ptr ss:[ebp-0x0C]
-004B3316    mov dword ptr fs:[0x00000000], ecx
+004B3316    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004B331D    pop ecx
 004B331E    pop edi
 004B331F    pop esi
 004B3320    pop ebx
 004B3321    mov ecx, dword ptr ss:[ebp-0x10]
 004B3324    xor ecx, ebp
-004B3326    call 0x0075927A
+004B3326    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004B332B    mov esp, ebp
 004B332D    pop ebp
 004B332E    ret
@@ -177,10 +183,10 @@
 004B3348    push 0x801F28
 004B334D    push 0x904
 004B3352    push 0x801AF8
-004B3357    call 0x0063B870
+004B3357    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: unknown source %s %d | String: SkuGetDLC | Data: data_801800 | Call: sub_63b7f0 | String: Halt | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameClient.cpp ]
 004B335C    add esp, 0x0C
 004B335F    call 0x0063BC30
 004B3364    test al, al
-004B3366    jz 0x004B3369
+004B3366    jz 0x004B3369                                   ; => [ Call: sub_63bc30 ]
 004B3368    int3
-004B3369    call 0x0063BB00
+004B3369    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

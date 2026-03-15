@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ac5b0
+// 起始地址: 0x4ac5b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AC5B0    push ebp
 004AC5B1    mov ebp, esp
 004AC5B3    and esp, 0xFFFFFFF8
@@ -21,7 +27,7 @@
 004AC5F0    jnbe 0x004AC5F8
 004AC5F2    sqrtsd xmm0, xmm0
 004AC5F6    jmp 0x004AC5FD
-004AC5F8    call 0x00762084
+004AC5F8    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 004AC5FD    movss xmm2, dword ptr ds:[0x00890D84]
 004AC605    xorps xmm1, xmm1
 004AC608    cvtsd2ss xmm1, xmm0
@@ -59,7 +65,7 @@
 004AC688    jnbe 0x004AC690
 004AC68A    sqrtsd xmm0, xmm0
 004AC68E    jmp 0x004AC695
-004AC690    call 0x00762084
+004AC690    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 004AC695    movss xmm2, dword ptr ds:[0x00890D84]
 004AC69D    xorps xmm1, xmm1
 004AC6A0    mov ecx, dword ptr ss:[ebp+0x08]
@@ -101,7 +107,7 @@
 004AC724    jnbe 0x004AC72C
 004AC726    sqrtsd xmm0, xmm0
 004AC72A    jmp 0x004AC731
-004AC72C    call 0x00762084
+004AC72C    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 004AC731    movss xmm2, dword ptr ds:[0x00890D84]
 004AC739    xorps xmm1, xmm1
 004AC73C    mov ecx, dword ptr ss:[ebp+0x08]
@@ -142,7 +148,7 @@
 004AC7BB    jnbe 0x004AC7C3
 004AC7BD    sqrtsd xmm0, xmm0
 004AC7C1    jmp 0x004AC7C8
-004AC7C3    call 0x00762084
+004AC7C3    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 004AC7C8    movss xmm2, dword ptr ds:[0x00890D84]
 004AC7D0    xorps xmm1, xmm1
 004AC7D3    mov ecx, dword ptr ss:[ebp+0x08]

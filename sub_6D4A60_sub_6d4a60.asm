@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d4a60
+// 起始地址: 0x6d4a60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D4A60    push ebp
 006D4A61    mov ebp, esp
 006D4A63    sub esp, 0x24
@@ -299,7 +305,7 @@
 006D4EE3    comiss xmm1, xmm3
 006D4EE6    jbe 0x006D4F2B
 006D4EE8    subss xmm5, dword ptr ss:[ebp+0x10]
-006D4EED    xorps xmm7, xmmword ptr ds:[0x008937C0]
+006D4EED    xorps xmm7, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 006D4EF4    subss xmm2, xmm0
 006D4EF8    movss xmm4, dword ptr ss:[ebp+0x0C]
 006D4EFD    movaps xmm0, xmm6

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_69c260
+// 起始地址: 0x69c260
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069C260    push ebp
 0069C261    mov ebp, esp
 0069C263    and esp, 0xFFFFFFF0
 0069C266    sub esp, 0x48
-0069C269    mov eax, dword ptr ds:[0x008C4040]
+0069C269    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0069C26E    xor eax, esp
 0069C270    mov dword ptr ss:[esp+0x44], eax
 0069C274    push esi
@@ -13,7 +19,7 @@
 0069C27D    push esi
 0069C27E    mov dword ptr ss:[esp+0x24], edx
 0069C282    mov edi, ecx
-0069C284    call 0x00761FC4
+0069C284    call 0x00761FC4                                 ; => [ Call: memset ]
 0069C289    movss xmm2, dword ptr ds:[edi+0x08]
 0069C28E    add esp, 0x0C
 0069C291    subss xmm2, dword ptr ds:[edi]
@@ -42,7 +48,7 @@
 0069C2E8    movss dword ptr ss:[esp+0x2C], xmm2
 0069C2EE    movss dword ptr ss:[esp+0x14], xmm1
 0069C2F4    movss dword ptr ss:[esp+0x28], xmm0
-0069C2FA    call 0x006B7590
+0069C2FA    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 0069C2FF    movss xmm1, dword ptr ds:[edi+0x08]
 0069C304    xorps xmm7, xmm7
 0069C307    subss xmm1, dword ptr ds:[edi]
@@ -90,7 +96,7 @@
 0069C3CB    jp 0x0069C3E1
 0069C3CD    movups xmm0, xmmword ptr ds:[0x007FF530]
 0069C3D4    mov eax, dword ptr ss:[esp+0x18]
-0069C3D8    movups xmmword ptr ds:[esi+0x2C], xmm0
+0069C3D8    movups xmmword ptr ds:[esi+0x2C], xmm0          ; => [ Call: __builtin_memset ]
 0069C3DC    jmp 0x0069C4B2
 0069C3E1    movss xmm1, dword ptr ds:[0x00890E18]
 0069C3E9    mov ecx, 0x05
@@ -101,7 +107,7 @@
 0069C402    movss xmm0, dword ptr ss:[esp+0x14]
 0069C408    mulss xmm0, xmm1
 0069C40C    movss dword ptr ss:[esp+0x14], xmm0
-0069C412    call 0x006B7590
+0069C412    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 0069C417    movss xmm0, dword ptr ss:[esp+0x1C]
 0069C41D    xorps xmm4, xmm4
 0069C420    mov dword ptr ss:[esp+0x20], eax
@@ -141,7 +147,7 @@
 0069C4C3    pop edi
 0069C4C4    pop esi
 0069C4C5    xor ecx, esp
-0069C4C7    call 0x0075927A
+0069C4C7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0069C4CC    mov esp, ebp
 0069C4CE    pop ebp
 0069C4CF    ret

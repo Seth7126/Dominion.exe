@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4daf40
+// 起始地址: 0x4daf40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DAF40    push ebp
 004DAF41    mov ebp, esp
 004DAF43    and esp, 0xFFFFFFF8
 004DAF46    sub esp, 0x234
-004DAF4C    mov eax, dword ptr ds:[0x008C4040]
+004DAF4C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004DAF51    xor eax, esp
 004DAF53    mov dword ptr ss:[esp+0x230], eax
 004DAF5A    push ebx
@@ -14,7 +20,7 @@
 004DAF67    mov dword ptr ss:[esp+0x24], ebx
 004DAF6B    mov ecx, dword ptr ds:[ecx+0x1E1A4]
 004DAF71    mov dword ptr ss:[esp+0x28], edi
-004DAF75    call 0x004D8F30
+004DAF75    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004DAF7A    mov dword ptr ss:[esp+0x10], eax
 004DAF7E    cmp dword ptr ds:[eax+0x7450], 0x00
 004DAF85    lea ecx, ds:[eax+0x7454]
@@ -30,7 +36,7 @@
 004DAFA7    pop ebx
 004DAFA8    mov ecx, dword ptr ss:[esp+0x230]
 004DAFAF    xor ecx, esp
-004DAFB1    call 0x0075927A
+004DAFB1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004DAFB6    mov esp, ebp
 004DAFB8    pop ebp
 004DAFB9    ret
@@ -45,7 +51,7 @@
 004DAFDE    push 0x989680
 004DAFE3    push edx
 004DAFE4    push eax
-004DAFE5    call 0x00762120
+004DAFE5    call 0x00762120                                 ; => [ Call: __alldiv ]
 004DAFEA    cmp dword ptr ds:[esi+0x18], edx
 004DAFED    jb 0x004DB02F
 004DAFEF    jnbe 0x004DAFF6
@@ -109,7 +115,7 @@
 004DB0B4    mov dword ptr ss:[esp+0x34], 0x02
 004DB0BC    mov dword ptr ss:[esp+0x10], esi
 004DB0C0    lea edx, ss:[esp+0x1C]
-004DB0C4    call 0x00571BC0
+004DB0C4    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004DB0C9    mov dword ptr ss:[esp+0x20], eax
 004DB0CD    mov dword ptr ss:[esp+0x14], 0x00
 004DB0D5    test eax, eax
@@ -120,7 +126,7 @@
 004DB0E7    jnz 0x004DB0F3
 004DB0E9    mov dword ptr ss:[esp+0x18], 0xC7
 004DB0F1    jmp 0x004DB12D
-004DB0F3    mov eax, dword ptr ds:[0x00BF23B8]
+004DB0F3    mov eax, dword ptr ds:[0x00BF23B8]              ; => [ Data: data_bf23b8 ]
 004DB0F8    sub eax, 0x00
 004DB0FB    jz 0x004DB120
 004DB0FD    sub eax, 0x01
@@ -128,7 +134,7 @@
 004DB102    push 0xCB4518
 004DB107    call dword ptr ds:[0x0077583C]
 004DB10D    add esp, 0x04
-004DB110    mov ecx, dword ptr ds:[eax]
+004DB110    mov ecx, dword ptr ds:[eax]                     ; => [ Data: data_cb4518 ]
 004DB112    push dword ptr ds:[esi+0x04]
 004DB115    mov eax, dword ptr ds:[ecx]
 004DB117    mov eax, dword ptr ds:[eax+0x1C]
@@ -150,14 +156,14 @@
 004DB150    cmp eax, 0x28D4
 004DB155    jnb 0x004DB216
 004DB15B    cmp dword ptr ds:[eax+0x78087C], edx
-004DB161    jz 0x004DB16B
+004DB161    jz 0x004DB16B                                   ; => [ Data: data_78087c ]
 004DB163    inc ecx
 004DB164    add eax, 0x10C
 004DB169    jmp 0x004DB150
 004DB16B    imul eax, ecx, 0x10C
 004DB171    lea ecx, ds:[ebx+0x7654]
 004DB177    mov eax, dword ptr ds:[eax+0x780878]
-004DB17D    mov dword ptr ds:[ebx+edi*4+0x7454], eax
+004DB17D    mov dword ptr ds:[ebx+edi*4+0x7454], eax        ; => [ Data: data_780878 ]
 004DB184    test ecx, ecx
 004DB186    jz 0x004DB18F
 004DB188    mov eax, dword ptr ss:[esp+0x18]
@@ -182,7 +188,7 @@
 004DB1C9    lea edi, ds:[ebx+0x7454]
 004DB1CF    nop
 004DB1D0    mov ecx, dword ptr ds:[edi]
-004DB1D2    call 0x004E4D60
+004DB1D2    call 0x004E4D60                                 ; => [ Call: sub_4e4d60 ]
 004DB1D7    inc esi
 004DB1D8    lea edi, ds:[edi+0x04]
 004DB1DB    cmp esi, dword ptr ds:[ebx+0x7450]
@@ -199,24 +205,24 @@
 004DB203    mov ecx, dword ptr ss:[esp+0x234]
 004DB20A    pop ebx
 004DB20B    xor ecx, esp
-004DB20D    call 0x0075927A
+004DB20D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004DB212    mov esp, ebp
 004DB214    pop ebp
 004DB215    ret
-004DB216    push 0x807018
+004DB216    push 0x807018                                   ; => [ String: DomDLCGrantsEntitlement ]
 004DB21B    push 0xDB
-004DB220    push 0x806FE4
-004DB225    mov ecx, 0x801AA4
+004DB220    push 0x806FE4                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp ]
+004DB225    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004DB22A    jmp 0x004DB240
-004DB22C    push 0x806DCC
+004DB22C    push 0x806DCC                                   ; => [ String: ProfileGetEntitlements ]
 004DB231    push 0x885
-004DB236    push 0x806734
-004DB23B    mov ecx, 0x806DE4
+004DB236    push 0x806734                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSettings.cpp ]
+004DB23B    mov ecx, 0x806DE4                               ; => [ String: numEntitlements < MAX_PROFILE_ENTITLEMENTS ]
 004DB240    mov edx, 0x801800
-004DB245    call 0x0063B870
+004DB245    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004DB24A    add esp, 0x0C
 004DB24D    call 0x0063BC30
 004DB252    test al, al
-004DB254    jz 0x004DB257
+004DB254    jz 0x004DB257                                   ; => [ Call: sub_63bc30 ]
 004DB256    int3
-004DB257    call 0x0063BB00
+004DB257    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

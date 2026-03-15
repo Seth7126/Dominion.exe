@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_70bb10
+// 起始地址: 0x70bb10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0070BB10    push ebp
 0070BB11    mov ebp, esp
 0070BB13    sub esp, 0x10
@@ -7,7 +13,7 @@
 0070BB1E    push esi
 0070BB1F    mov esi, ecx
 0070BB21    mov dword ptr ss:[ebp-0x08], ebx
-0070BB24    mov ecx, dword ptr ds:[0x0147DED8]
+0070BB24    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070BB2A    lea eax, ds:[ebx*4]
 0070BB31    push edi
 0070BB32    test ecx, ecx
@@ -15,11 +21,11 @@
 0070BB36    push 0x264
 0070BB3B    push 0x88DAD0
 0070BB40    push eax
-0070BB41    call ecx
+0070BB41    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 0070BB43    add esp, 0x0C
 0070BB46    jmp 0x0070BB52
 0070BB48    push eax
-0070BB49    call dword ptr ds:[0x00800B4C]
+0070BB49    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070BB4F    add esp, 0x04
 0070BB52    movss xmm1, dword ptr ss:[ebp-0x04]
 0070BB57    mov edi, eax

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6b2240
+// 起始地址: 0x6b2240
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B2240    push ebp
 006B2241    mov ebp, esp
 006B2243    and esp, 0xFFFFFFF8
-006B2246    mov edx, dword ptr ds:[0x0147B06C]
+006B2246    mov edx, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 006B224C    sub esp, 0x40
 006B224F    mov eax, ecx
 006B2251    cmp byte ptr ds:[edx+0x164], 0x00
@@ -9,7 +15,7 @@
 006B225E    movups xmm0, xmmword ptr ds:[0x00800890]
 006B2265    mov ecx, dword ptr ss:[ebp+0x08]
 006B2268    add edx, 0x124
-006B226E    movups xmmword ptr ds:[ecx], xmm0
+006B226E    movups xmmword ptr ds:[ecx], xmm0               ; => [ Call: __builtin_memcpy | String: \x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f ]
 006B2271    movups xmm0, xmmword ptr ds:[0x008008A0]
 006B2278    movups xmmword ptr ds:[ecx+0x10], xmm0
 006B227C    movups xmm0, xmmword ptr ds:[0x008008B0]
@@ -26,7 +32,7 @@
 006B22BA    push eax
 006B22BB    mov dword ptr ds:[ecx+0x1C], 0x3F800000
 006B22C2    movss dword ptr ds:[ecx+0x14], xmm0
-006B22C7    call 0x00642AE0
+006B22C7    call 0x00642AE0                                 ; => [ Call: sub_642ae0 ]
 006B22CC    add esp, 0x04
 006B22CF    movups xmm0, xmmword ptr ds:[eax]
 006B22D2    movups xmm1, xmmword ptr ds:[eax+0x10]
@@ -44,10 +50,10 @@
 006B22FD    push 0x87B990
 006B2302    mov edx, 0x801800
 006B2307    mov ecx, 0x87C570
-006B230C    call 0x0063B870
+006B230C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: Dx11GraphicsInterface::GetUIMatrix | Data: data_801800 | String: C:\x\ax2017\Engine\Windows\WindowsDx11.cpp | String: !gpRenderAppData->uiProjectedInto3D ]
 006B2311    add esp, 0x0C
 006B2314    call 0x0063BC30
 006B2319    test al, al
-006B231B    jz 0x006B231E
+006B231B    jz 0x006B231E                                   ; => [ Call: sub_63bc30 ]
 006B231D    int3
-006B231E    call 0x0063BB00
+006B231E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

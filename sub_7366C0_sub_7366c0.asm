@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7366c0
+// 起始地址: 0x7366c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007366C0    push ebp
 007366C1    mov ebp, esp
 007366C3    sub esp, 0x0C
@@ -13,7 +19,7 @@
 007366D6    mov ecx, edi
 007366D8    mov edx, 0x18
 007366DD    mov edi, dword ptr ds:[edi+0x10]
-007366E0    call 0x0064C080
+007366E0    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 007366E5    test edi, edi
 007366E7    jnz 0x007366D6
 007366E9    mov dword ptr ds:[esi+0x08], 0x00
@@ -25,19 +31,19 @@
 00736703    mov dword ptr ss:[ebp-0x08], ebx
 00736706    mov ecx, 0x18
 0073670B    mov ebx, dword ptr ds:[ebx+0x10]
-0073670E    call 0x0064BFD0
+0073670E    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00736713    mov edi, eax
 00736715    inc dword ptr ds:[edi+0x0C]
 00736718    cmp dword ptr ds:[edi], 0x00
 0073671B    jnz 0x00736724
 0073671D    mov ecx, edi
-0073671F    call 0x0064BE70
+0073671F    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00736724    mov ecx, dword ptr ds:[edi]
 00736726    xorps xmm0, xmm0
 00736729    mov eax, dword ptr ds:[ecx]
 0073672B    mov dword ptr ds:[edi], eax
 0073672D    mov eax, dword ptr ss:[ebp-0x08]
-00736730    movups xmmword ptr ds:[ecx], xmm0
+00736730    movups xmmword ptr ds:[ecx], xmm0               ; => [ Call: __builtin_memset ]
 00736733    movq qword ptr ds:[ecx+0x10], xmm0
 00736738    movups xmm0, xmmword ptr ds:[eax]
 0073673B    movups xmmword ptr ds:[ecx], xmm0
@@ -59,7 +65,7 @@
 00736763    mov ecx, edi
 00736765    mov edx, 0x10
 0073676A    mov edi, dword ptr ds:[edi+0x08]
-0073676D    call 0x0064C080
+0073676D    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00736772    test edi, edi
 00736774    jnz 0x00736763
 00736776    mov ebx, dword ptr ss:[ebp-0x04]
@@ -72,19 +78,19 @@
 00736795    mov dword ptr ss:[ebp-0x08], ebx
 00736798    mov ecx, 0x10
 0073679D    mov ebx, dword ptr ds:[ebx+0x08]
-007367A0    call 0x0064BFD0
+007367A0    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 007367A5    mov edi, eax
 007367A7    inc dword ptr ds:[edi+0x0C]
 007367AA    cmp dword ptr ds:[edi], 0x00
 007367AD    jnz 0x007367B6
 007367AF    mov ecx, edi
-007367B1    call 0x0064BE70
+007367B1    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 007367B6    mov edx, dword ptr ds:[edi]
 007367B8    xorps xmm0, xmm0
 007367BB    mov ecx, dword ptr ss:[ebp-0x08]
 007367BE    mov eax, dword ptr ds:[edx]
 007367C0    mov dword ptr ds:[edi], eax
-007367C2    movups xmmword ptr ds:[edx], xmm0
+007367C2    movups xmmword ptr ds:[edx], xmm0               ; => [ String: 0 | String: zx ]
 007367C5    mov eax, dword ptr ds:[ecx]
 007367C7    mov ecx, dword ptr ds:[ecx+0x04]
 007367CA    mov dword ptr ds:[edx], eax
@@ -107,7 +113,7 @@
 007367F5    mov ecx, edi
 007367F7    mov edx, 0x1C
 007367FC    mov edi, dword ptr ds:[edi+0x14]
-007367FF    call 0x0064C080
+007367FF    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00736804    test edi, edi
 00736806    jnz 0x007367F5
 00736808    mov ecx, dword ptr ss:[ebp-0x04]
@@ -121,19 +127,19 @@
 00736830    mov dword ptr ss:[ebp-0x08], ebx
 00736833    mov ecx, 0x1C
 00736838    mov ebx, dword ptr ds:[ebx+0x14]
-0073683B    call 0x0064BFD0
+0073683B    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00736840    mov edi, eax
 00736842    inc dword ptr ds:[edi+0x0C]
 00736845    cmp dword ptr ds:[edi], 0x00
 00736848    jnz 0x00736851
 0073684A    mov ecx, edi
-0073684C    call 0x0064BE70
+0073684C    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00736851    mov ecx, dword ptr ds:[edi]
 00736853    xorps xmm0, xmm0
 00736856    mov eax, dword ptr ds:[ecx]
 00736858    mov dword ptr ds:[edi], eax
 0073685A    mov eax, dword ptr ss:[ebp-0x08]
-0073685D    movups xmmword ptr ds:[ecx], xmm0
+0073685D    movups xmmword ptr ds:[ecx], xmm0               ; => [ Call: __builtin_memset ]
 00736860    movq qword ptr ds:[ecx+0x10], xmm0
 00736865    mov dword ptr ds:[ecx+0x18], 0x00
 0073686C    movups xmm0, xmmword ptr ds:[eax]

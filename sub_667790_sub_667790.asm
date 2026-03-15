@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_667790
+// 起始地址: 0x667790
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00667790    push ebp
 00667791    mov ebp, esp
 00667793    sub esp, 0x0C
@@ -8,17 +14,17 @@
 0066779C    push edi
 0066779D    mov dword ptr ss:[ebp-0x0C], ebx
 006677A0    call 0x00667720
-006677A5    mov dword ptr ds:[ebx], eax
+006677A5    mov dword ptr ds:[ebx], eax                     ; => [ Call: sub_667720 ]
 006677A7    cmp dword ptr ds:[esi+0x1718], 0x00
 006677AE    jnz 0x006677B4
-006677B0    xor eax, eax
+006677B0    xor eax, eax                                    ; => [ Call: nullptr ]
 006677B2    jmp 0x006677CC
 006677B4    mov ecx, esi
-006677B6    call 0x0064CC90
+006677B6    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 006677BB    push 0x6F
 006677BD    mov edx, eax
 006677BF    mov ecx, 0x8CAE70
-006677C4    call 0x006DD140
+006677C4    call 0x006DD140                                 ; => [ Data: data_8cae70 | Call: sub_6dd140 ]
 006677C9    add esp, 0x04
 006677CC    mov dword ptr ss:[ebp-0x04], eax
 006677CF    mov eax, dword ptr ds:[ebx]
@@ -28,12 +34,12 @@
 006677D8    cmp byte ptr ds:[eax], 0x00
 006677DB    jz 0x0066782E
 006677DD    mov ecx, esi
-006677DF    call 0x0064CC90
+006677DF    call 0x0064CC90                                 ; => [ Call: sub_64cc90 ]
 006677E4    push 0x69
 006677E6    push dword ptr ds:[0x01724A80]
 006677EC    mov edx, eax
 006677EE    mov ecx, 0x8CAE70
-006677F3    call 0x006DD1E0
+006677F3    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_8cae70 | Data: data_1724a80 ]
 006677F8    mov ebx, eax
 006677FA    add esp, 0x08
 006677FD    test ebx, ebx

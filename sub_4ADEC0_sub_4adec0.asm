@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4adec0
+// 起始地址: 0x4adec0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ADEC0    push ebp
 004ADEC1    mov ebp, esp
 004ADEC3    and esp, 0xFFFFFFF0
 004ADEC6    sub esp, 0x5C
-004ADEC9    mov eax, dword ptr ds:[0x008C4040]
+004ADEC9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004ADECE    xor eax, esp
 004ADED0    mov dword ptr ss:[esp+0x58], eax
 004ADED4    movss xmm0, dword ptr ds:[edx+0x14]
@@ -92,7 +98,7 @@
 004AE042    mulss xmm1, xmm5
 004AE046    movups xmmword ptr ss:[esp+0x40], xmm3
 004AE04B    addss xmm0, xmm1
-004AE04F    call 0x004AC580
+004AE04F    call 0x004AC580                                 ; => [ Call: sub_4ac580 ]
 004AE054    movups xmm1, xmmword ptr ss:[esp+0x40]
 004AE059    mov ecx, dword ptr ss:[esp+0x5C]
 004AE05D    mov eax, esi
@@ -111,7 +117,7 @@
 004AE09B    movups xmmword ptr ds:[esi+0x04], xmm0
 004AE09F    pop esi
 004AE0A0    xor ecx, esp
-004AE0A2    call 0x0075927A
+004AE0A2    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AE0A7    mov esp, ebp
 004AE0A9    pop ebp
 004AE0AA    ret

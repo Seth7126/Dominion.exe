@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4f3110
+// 起始地址: 0x4f3110
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F3110    push ebp
 004F3111    mov ebp, esp
 004F3113    mov eax, 0x57A8
-004F3118    call 0x00761E50
+004F3118    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004F311D    mov eax, dword ptr ds:[0x008C4040]
 004F3122    xor eax, ebp
-004F3124    mov dword ptr ss:[ebp-0x08], eax
+004F3124    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 004F3127    mov eax, dword ptr ss:[ebp+0x08]
 004F312A    push ebx
 004F312B    push esi
@@ -21,7 +27,7 @@
 004F3156    lea eax, ss:[ebp-0x578C]
 004F315C    push 0x00
 004F315E    push eax
-004F315F    call 0x00761FC4
+004F315F    call 0x00761FC4                                 ; => [ Call: memset ]
 004F3164    add esp, 0x0C
 004F3167    movzx eax, word ptr ds:[ebx]
 004F316A    xor ecx, ecx
@@ -82,7 +88,7 @@
 004F321D    mov dword ptr ss:[ebp-0x5798], eax
 004F3223    mov dword ptr ss:[ebp-0x5794], edx
 004F3229    nop dword ptr ds:[eax], eax
-004F3230    xorps xmm2, xmm2
+004F3230    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 004F3233    xor edi, edi
 004F3235    movss dword ptr ss:[ebp-0x5790], xmm2
 004F323D    test ebx, ebx
@@ -98,7 +104,7 @@
 004F3268    add eax, edx
 004F326A    imul eax, eax, 0x2717
 004F3270    sub ecx, eax
-004F3272    mov ecx, dword ptr ds:[ecx*4+0x1938E70]
+004F3272    mov ecx, dword ptr ds:[ecx*4+0x1938E70]         ; => [ Data: data_1938e70 ]
 004F3279    test ecx, ecx
 004F327B    jz 0x004F328E
 004F327D    nop dword ptr ds:[eax], eax
@@ -109,10 +115,10 @@
 004F328C    jnz 0x004F3280
 004F328E    push esi
 004F328F    push 0x8089C0
-004F3294    call 0x004F7F30
+004F3294    call 0x004F7F30                                 ; => [ String: Couldn't lookup %d\n | Call: sub_4f7f30 ]
 004F3299    movss xmm2, dword ptr ss:[ebp-0x5790]
 004F32A1    add esp, 0x08
-004F32A4    xor ecx, ecx
+004F32A4    xor ecx, ecx                                    ; => [ Call: nullptr ]
 004F32A6    mov edx, dword ptr ds:[ecx+0x1B4]
 004F32AC    test edx, edx
 004F32AE    jz 0x004F3300
@@ -153,7 +159,7 @@
 004F3350    pop esi
 004F3351    xor ecx, ebp
 004F3353    pop ebx
-004F3354    call 0x0075927A
+004F3354    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F3359    mov esp, ebp
 004F335B    pop ebp
 004F335C    ret
@@ -162,10 +168,10 @@
 004F3367    push 0x8088A8
 004F336C    mov edx, 0x801800
 004F3371    mov ecx, 0x808CEC
-004F3376    call 0x0063B870
+004F3376    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: EvaluateNovelty | String: numExist < MAX_CARDS ]
 004F337B    add esp, 0x0C
 004F337E    call 0x0063BC30
 004F3383    test al, al
-004F3385    jz 0x004F3388
+004F3385    jz 0x004F3388                                   ; => [ Call: sub_63bc30 ]
 004F3387    int3
-004F3388    call 0x0063BB00
+004F3388    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

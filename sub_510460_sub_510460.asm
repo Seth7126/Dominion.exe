@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_510460
+// 起始地址: 0x510460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00510460    dword 2BA51
 00510464    add byte ptr ds:[eax], al
-00510466    call 0x0056B270
-0051046B    call 0x00573400
+00510466    call 0x0056B270                                 ; => [ Call: sub_56b270 ]
+0051046B    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00510470    mov ecx, dword ptr ds:[eax+0x04]
 00510473    mov edx, dword ptr ds:[ecx+0x1504]
 00510479    cmp edx, 0x03
@@ -28,7 +34,7 @@
 005104B5    push 0x00
 005104B7    push 0x4C
 005104B9    push eax
-005104BA    call 0x0059F9B0
+005104BA    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 005104BF    add esp, 0x24
 005104C2    pop ecx
 005104C3    ret

@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_7252d0
+// 起始地址: 0x7252d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007252D0    push ebp
 007252D1    mov ebp, esp
 007252D3    sub esp, 0xD8
-007252D9    mov eax, dword ptr ds:[0x008C4040]
+007252D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 007252DE    xor eax, ebp
 007252E0    mov dword ptr ss:[ebp-0x08], eax
 007252E3    mov eax, dword ptr ss:[ebp+0x08]
@@ -16,7 +22,7 @@
 007252FC    mov dword ptr ss:[ebp-0xD0], edx
 00725302    mov dword ptr ss:[ebp-0xC8], ebx
 00725308    mov dword ptr ds:[eax+0x08], 0x00
-0072530F    call 0x00724680
+0072530F    call 0x00724680                                 ; => [ Call: sub_724680 ]
 00725314    mov edx, dword ptr ds:[ebx]
 00725316    mov edx, dword ptr ds:[edx+0x08]
 00725319    mov dword ptr ss:[ebp-0xCC], edx
@@ -84,7 +90,7 @@
 00725417    jnz 0x00725457
 00725419    cmp esi, ecx
 0072541B    jnz 0x0072544B
-0072541D    mov eax, 0x7249B0
+0072541D    mov eax, 0x7249B0                               ; => [ Call: Platform::Details::Heap::Allocate ]
 00725422    jmp 0x0072547A
 00725424    xor esi, esi
 00725426    mov dword ptr ss:[ebp-0xC4], esi
@@ -96,19 +102,19 @@
 00725446    jmp 0x00725377
 0072544B    cmp esi, 0x02
 0072544E    jnz 0x00725475
-00725450    mov eax, 0x7249C0
+00725450    mov eax, 0x7249C0                               ; => [ Call: sub_7249c0 ]
 00725455    jmp 0x0072547A
 00725457    cmp ecx, 0x02
 0072545A    jnz 0x00725475
 0072545C    cmp esi, 0x01
 0072545F    jnz 0x00725468
-00725461    mov eax, 0x724BA0
+00725461    mov eax, 0x724BA0                               ; => [ Call: sub_724ba0 ]
 00725466    jmp 0x0072547A
 00725468    cmp esi, 0x02
 0072546B    jnz 0x00725475
 0072546D    mov eax, dword ptr ds:[ebx+0x4814]
 00725473    jmp 0x0072547A
-00725475    mov eax, 0x724EC0
+00725475    mov eax, 0x724EC0                               ; => [ Call: sub_724ec0 | Call: sub_724ec0 | Call: sub_724ec0 ]
 0072547A    mov esi, dword ptr ss:[ebp-0xA8]
 00725480    mov edx, dword ptr ss:[ebp-0xAC]
 00725486    add esi, 0x48
@@ -298,7 +304,7 @@
 0072573F    mov edx, dword ptr ds:[eax+0x08]
 00725742    mov ecx, ebx
 00725744    push 0x00
-00725746    call 0x00723F50
+00725746    call 0x00723F50                                 ; => [ Call: sub_723f50 ]
 0072574B    mov eax, dword ptr ds:[ebx]
 0072574D    add esp, 0x04
 00725750    mov ecx, dword ptr ss:[ebp-0xD0]
@@ -323,7 +329,7 @@
 00725789    pop ebx
 0072578A    mov ecx, dword ptr ss:[ebp-0x08]
 0072578D    xor ecx, ebp
-0072578F    call 0x0075927A
+0072578F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00725794    mov esp, ebp
 00725796    pop ebp
 00725797    ret
@@ -610,7 +616,7 @@
 00725B37    mov edx, dword ptr ds:[eax+0x08]
 00725B3A    push 0x00
 00725B3C    mov ecx, ebx
-00725B3E    call 0x00723F50
+00725B3E    call 0x00723F50                                 ; => [ Call: sub_723f50 ]
 00725B43    mov ecx, dword ptr ss:[ebp-0x08]
 00725B46    add esp, 0x04
 00725B49    xor ecx, ebp
@@ -618,7 +624,7 @@
 00725B4D    pop edi
 00725B4E    pop esi
 00725B4F    pop ebx
-00725B50    call 0x0075927A
+00725B50    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00725B55    mov esp, ebp
 00725B57    pop ebp
 00725B58    ret

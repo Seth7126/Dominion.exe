@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4ba7c0
+// 起始地址: 0x4ba7c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BA7C0    push ebp
 004BA7C1    mov ebp, esp
 004BA7C3    and esp, 0xFFFFFFF8
-004BA7C6    mov edx, dword ptr ds:[0x00CC8D5C]
+004BA7C6    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004BA7CC    sub esp, 0x0C
 004BA7CF    push ebx
 004BA7D0    push esi
@@ -38,7 +44,7 @@
 004BA825    cmp dword ptr ds:[edx+0x18], 0x03
 004BA829    jnz 0x004BA87E
 004BA82B    mov eax, dword ptr ds:[edx+0x14]
-004BA82E    mov ecx, dword ptr ds:[0x0147ABF4]
+004BA82E    mov ecx, dword ptr ds:[0x0147ABF4]              ; => [ Data: data_147abf4 ]
 004BA834    test eax, eax
 004BA836    jz 0x004BA87E
 004BA838    movzx edi, ax
@@ -53,14 +59,14 @@
 004BA84E    push 0xF42CF
 004BA853    mov edx, 0x08
 004BA858    lea ecx, ds:[edi+0x50]
-004BA85B    call 0x00689E00
+004BA85B    call 0x00689E00                                 ; => [ Call: sub_689e00 ]
 004BA860    add esp, 0x04
 004BA863    lea eax, ss:[esp+0x10]
 004BA867    mov edx, 0x08
 004BA86C    lea ecx, ds:[edi+0x50]
 004BA86F    push eax
-004BA870    call 0x00689BE0
-004BA875    mov edx, dword ptr ds:[0x00CC8D5C]
+004BA870    call 0x00689BE0                                 ; => [ Call: sub_689be0 ]
+004BA875    mov edx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004BA87B    add esp, 0x04
 004BA87E    mov eax, dword ptr ds:[ebx+0x04]
 004BA881    add esi, 0x0C
@@ -93,10 +99,10 @@
 004BA8C2    push 0x77EB50
 004BA8C7    mov edx, 0x801800
 004BA8CC    mov ecx, 0x77EB9C
-004BA8D1    call 0x0063B870
+004BA8D1    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004BA8D6    add esp, 0x0C
 004BA8D9    call 0x0063BC30
 004BA8DE    test al, al
-004BA8E0    jz 0x004BA8E3
+004BA8E0    jz 0x004BA8E3                                   ; => [ Call: sub_63bc30 ]
 004BA8E2    int3
-004BA8E3    call 0x0063BB00
+004BA8E3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

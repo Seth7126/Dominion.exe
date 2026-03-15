@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_570370
+// 起始地址: 0x570370
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00570370    push ebp
 00570371    mov ebp, esp
 00570373    sub esp, 0x0C
@@ -12,11 +18,11 @@
 00570385    mov dword ptr ss:[ebp-0x04], esi
 00570388    mov ecx, esi
 0057038A    mov dword ptr ss:[ebp-0x08], ebx
-0057038D    call 0x0056A3F0
+0057038D    call 0x0056A3F0                                 ; => [ Call: sub_56a3f0 ]
 00570392    add esp, 0x08
 00570395    cmp esi, 0x48
 00570398    jl 0x0057039F
-0057039A    call 0x00591930
+0057039A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057039F    mov eax, esi
 005703A1    xor edi, edi
 005703A3    add eax, eax
@@ -35,30 +41,30 @@
 005703D9    jz 0x0057043C
 005703DB    cmp dword ptr ds:[ebx-0x14], 0x600
 005703E2    jnz 0x005703FA
-005703E4    call 0x00573400
+005703E4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005703E9    push 0x06
 005703EB    mov edx, edi
 005703ED    mov ecx, dword ptr ds:[eax+0x04]
-005703F0    call 0x00584790
+005703F0    call 0x00584790                                 ; => [ Call: sub_584790 ]
 005703F5    add esp, 0x04
 005703F8    jmp 0x00570439
 005703FA    cmp dword ptr ds:[ebx-0x10], 0xFFFFFFFF
 005703FE    jz 0x00570419
-00570400    call 0x00573400
+00570400    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00570405    push 0x3F1
 0057040A    mov edx, edi
 0057040C    mov ecx, dword ptr ds:[eax+0x04]
-0057040F    call 0x00584790
+0057040F    call 0x00584790                                 ; => [ Call: sub_584790 ]
 00570414    add esp, 0x04
 00570417    jmp 0x00570439
 00570419    test esi, esi
 0057041B    jle 0x0057043C
 0057041D    nop dword ptr ds:[eax], eax
-00570420    call 0x00573400
+00570420    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00570425    push 0x01
 00570427    mov edx, edi
 00570429    mov ecx, dword ptr ds:[eax+0x04]
-0057042C    call 0x00584790
+0057042C    call 0x00584790                                 ; => [ Call: sub_584790 ]
 00570431    add esp, 0x04
 00570434    sub esi, 0x01
 00570437    jnz 0x00570420
@@ -95,7 +101,7 @@
 00570487    push 0x00
 00570489    push 0xFFFFFFFF
 0057048B    setz cl
-0057048E    call 0x0061B1B0
+0057048E    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00570493    add esp, 0x2C
 00570496    pop edi
 00570497    pop esi
@@ -108,10 +114,10 @@
 005704A7    push 0x81EA70
 005704AC    mov edx, 0x801800
 005704B1    mov ecx, 0x817824
-005704B6    call 0x0063B870
+005704B6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: RemovePile | Data: data_801800 | String: where != CW_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 005704BB    add esp, 0x0C
 005704BE    call 0x0063BC30
 005704C3    test al, al
-005704C5    jz 0x005704C8
+005704C5    jz 0x005704C8                                   ; => [ Call: sub_63bc30 ]
 005704C7    int3
-005704C8    call 0x0063BB00
+005704C8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

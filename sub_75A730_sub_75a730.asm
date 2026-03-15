@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_75a730
+// 起始地址: 0x75a730
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075A730    push ebp
 0075A731    mov ebp, esp
 0075A733    sub esp, 0x80
-0075A739    mov eax, dword ptr ds:[0x008C4040]
+0075A739    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0075A73E    xor eax, ebp
 0075A740    mov dword ptr ss:[ebp-0x04], eax
 0075A743    push ebx
@@ -57,13 +63,13 @@
 0075A7C8    jnbe 0x0075A7E8
 0075A7CA    mov dword ptr ds:[ebx+0x1CDBC], ecx
 0075A7D0    mov ecx, ebx
-0075A7D2    call 0x0075AEC0
+0075A7D2    call 0x0075AEC0                                 ; => [ Call: sub_75aec0 | Call: sub_75aec0 ]
 0075A7D7    mov ecx, dword ptr ss:[ebp-0x04]
 0075A7DA    pop edi
 0075A7DB    pop esi
 0075A7DC    xor ecx, ebp
 0075A7DE    pop ebx
-0075A7DF    call 0x0075927A
+0075A7DF    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0075A7E4    mov esp, ebp
 0075A7E6    pop ebp
 0075A7E7    ret

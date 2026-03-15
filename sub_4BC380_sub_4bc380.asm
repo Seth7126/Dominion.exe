@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4bc380
+// 起始地址: 0x4bc380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BC380    push ebp
 004BC381    mov ebp, esp
 004BC383    push ecx
 004BC384    push esi
 004BC385    lea edx, ss:[ebp-0x04]
 004BC388    mov esi, ecx
-004BC38A    call 0x004BC150
+004BC38A    call 0x004BC150                                 ; => [ Call: sub_4bc150 ]
 004BC38F    cmp eax, 0x12
 004BC392    jnbe 0x004BC442
 004BC398    movzx eax, byte ptr ds:[eax+0x4BC498]
@@ -84,10 +90,10 @@
 004BC44C    push 0x80292C
 004BC451    mov edx, 0x801800
 004BC456    mov ecx, 0x801AA4
-004BC45B    call 0x0063B870
+004BC45B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GameCreateButtonState | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp | String: Halt ]
 004BC460    add esp, 0x0C
 004BC463    call 0x0063BC30
 004BC468    test al, al
-004BC46A    jz 0x004BC46D
+004BC46A    jz 0x004BC46D                                   ; => [ Call: sub_63bc30 ]
 004BC46C    int3
-004BC46D    call 0x0063BB00
+004BC46D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

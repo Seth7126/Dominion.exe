@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5950b0
+// 起始地址: 0x5950b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005950B0    push ebp
 005950B1    mov ebp, esp
 005950B3    and esp, 0xFFFFFFF8
@@ -13,7 +19,7 @@
 005950C8    and esi, 0xFFFF
 005950CE    cmp esi, 0x320
 005950D4    jb 0x005950DB
-005950D6    call 0x00591930
+005950D6    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005950DB    mov eax, dword ptr ss:[esp+0x0C]
 005950DF    imul ebx, esi, 0x64
 005950E2    test byte ptr ds:[ebx+eax*1+0x1A6C], 0x01
@@ -21,7 +27,7 @@
 005950EC    mov edi, dword ptr ds:[edi+0x04]
 005950EF    cmp esi, 0x320
 005950F5    jb 0x005950FC
-005950F7    call 0x00591930
+005950F7    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005950FC    mov edx, dword ptr ds:[ebx+edi*1+0x1A4C]
 00595103    mov ecx, edi
 00595105    push 0x00
@@ -29,7 +35,7 @@
 0059510C    call 0x005754F0
 00595111    add esp, 0x08
 00595114    test al, al
-00595116    jnz 0x00595123
+00595116    jnz 0x00595123                                  ; => [ Call: sub_5754f0 ]
 00595118    mov al, 0x01
 0059511A    pop edi
 0059511B    pop esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50ed40
+// 起始地址: 0x50ed40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050ED40    push ebp
 0050ED41    mov ebp, esp
 0050ED43    sub esp, 0x08
@@ -9,27 +15,27 @@
 0050ED55    call 0x00516F30
 0050ED5A    lea edx, ss:[ebp-0x04]
 0050ED5D    mov ecx, eax
-0050ED5F    call 0x0050AF00
+0050ED5F    call 0x0050AF00                                 ; => [ Call: sub_516f30 | Call: sub_50af00 ]
 0050ED64    mov edx, dword ptr ss:[ebp-0x04]
 0050ED67    mov ecx, 0xCC8DE0
 0050ED6C    push eax
-0050ED6D    call 0x0050AF60
+0050ED6D    call 0x0050AF60                                 ; => [ Call: sub_50af60 | Data: data_cc8de0 ]
 0050ED72    add esp, 0x04
 0050ED75    mov esi, eax
 0050ED77    test edi, edi
-0050ED79    jz 0x0050ED88
+0050ED79    jz 0x0050ED88                                   ; => [ Call: sub_511d80 ]
 0050ED7B    mov edx, edi
 0050ED7D    mov ecx, esi
 0050ED7F    call 0x00511D80
 0050ED84    test al, al
 0050ED86    jz 0x0050ED50
-0050ED88    mov eax, 0x790B58
+0050ED88    mov eax, 0x790B58                               ; => [ Data: data_790b58 ]
 0050ED8D    nop dword ptr ds:[eax], eax
 0050ED90    cmp dword ptr ds:[eax], esi
 0050ED92    jz 0x0050EDA6
 0050ED94    add eax, 0x04
 0050ED97    cmp eax, 0x790BBC
-0050ED9C    jl 0x0050ED90
+0050ED9C    jl 0x0050ED90                                   ; => [ Data: data_790bbc ]
 0050ED9E    mov eax, esi
 0050EDA0    pop edi
 0050EDA1    pop esi
@@ -41,7 +47,7 @@
 0050EDAE    mov eax, dword ptr ds:[0x00CCA780]
 0050EDB3    shl ecx, 0x0B
 0050EDB6    add eax, 0x590
-0050EDBB    add eax, ecx
+0050EDBB    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050EDBD    nop dword ptr ds:[eax], eax
 0050EDC0    cmp dword ptr ds:[eax-0x04], esi
 0050EDC3    jnz 0x0050EDC9

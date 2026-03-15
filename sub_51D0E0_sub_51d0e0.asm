@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_51d0e0
+// 起始地址: 0x51d0e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051D0E0    push ebp
 0051D0E1    mov ebp, esp
 0051D0E3    sub esp, 0x40
-0051D0E6    mov eax, dword ptr ds:[0x008C4040]
+0051D0E6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0051D0EB    xor eax, ebp
 0051D0ED    mov dword ptr ss:[ebp-0x08], eax
 0051D0F0    push ebx
@@ -51,7 +57,7 @@
 0051D16D    mov edi, dword ptr ds:[eax]
 0051D16F    push esi
 0051D170    push edi
-0051D171    call 0x007621D0
+0051D171    call 0x007621D0                                 ; => [ Call: __allmul ]
 0051D176    mov ecx, dword ptr ss:[ebp-0x3C]
 0051D179    add eax, dword ptr ds:[ecx+0x08]
 0051D17C    mov dword ptr ds:[ecx], eax
@@ -72,23 +78,23 @@
 0051D19F    xor ecx, ebp
 0051D1A1    mov eax, dword ptr ss:[ebp+edx*4-0x38]
 0051D1A5    pop ebx
-0051D1A6    call 0x0075927A
+0051D1A6    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0051D1AB    mov esp, ebp
 0051D1AD    pop ebp
 0051D1AE    ret
-0051D1AF    push 0x8168AC
+0051D1AF    push 0x8168AC                                   ; => [ String: FlavorThemeDefGet ]
 0051D1B4    push 0x2D49
-0051D1B9    mov ecx, 0x8168C0
+0051D1B9    mov ecx, 0x8168C0                               ; => [ String: def.theme == theme ]
 0051D1BE    jmp 0x0051D1CF
-0051D1C0    push 0x816958
+0051D1C0    push 0x816958                                   ; => [ String: RandomDoodadFromFlavorTheme ]
 0051D1C5    push 0x2DF7
-0051D1CA    mov ecx, 0x817280
+0051D1CA    mov ecx, 0x817280                               ; => [ String: n > 0 ]
 0051D1CF    push 0x80CD80
 0051D1D4    mov edx, 0x801800
-0051D1D9    call 0x0063B870
+0051D1D9    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 0051D1DE    add esp, 0x0C
 0051D1E1    call 0x0063BC30
 0051D1E6    test al, al
-0051D1E8    jz 0x0051D1EB
+0051D1E8    jz 0x0051D1EB                                   ; => [ Call: sub_63bc30 ]
 0051D1EA    int3
-0051D1EB    call 0x0063BB00
+0051D1EB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

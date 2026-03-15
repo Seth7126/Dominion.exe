@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6c3490
+// 起始地址: 0x6c3490
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006C3490    push ebp
 006C3491    mov ebp, esp
 006C3493    sub esp, 0x14
@@ -19,7 +25,7 @@
 006C34BB    push edx
 006C34BC    mov edx, edi
 006C34BE    lea ecx, ss:[ebp-0x14]
-006C34C1    call 0x006C3680
+006C34C1    call 0x006C3680                                 ; => [ Call: sub_6c3680 ]
 006C34C6    mov edx, dword ptr ss:[ebp-0x04]
 006C34C9    mov eax, esi
 006C34CB    sar eax, 0x02
@@ -79,7 +85,7 @@
 006C355E    add eax, 0x08
 006C3561    push edi
 006C3562    push eax
-006C3563    call 0x00762362
+006C3563    call 0x00762362                                 ; => [ Call: memmove ]
 006C3568    mov eax, dword ptr ss:[ebp-0x14]
 006C356B    add esp, 0x0C
 006C356E    mov ecx, dword ptr ss:[ebp-0x10]
@@ -106,7 +112,7 @@
 006C35A3    push dword ptr ss:[ebp-0x08]
 006C35A6    mov dword ptr ss:[ebp-0x10], ecx
 006C35A9    mov ecx, edi
-006C35AB    call 0x006C38E0
+006C35AB    call 0x006C38E0                                 ; => [ Call: sub_6c38e0 ]
 006C35B0    add esp, 0x0C
 006C35B3    test esi, esi
 006C35B5    jnle 0x006C3590
@@ -132,7 +138,7 @@
 006C35F8    xor edx, edx
 006C35FA    push eax
 006C35FB    mov ecx, edi
-006C35FD    call 0x006C38E0
+006C35FD    call 0x006C38E0                                 ; => [ Call: sub_6c38e0 ]
 006C3602    mov edx, esi
 006C3604    add esp, 0x0C
 006C3607    mov eax, edx

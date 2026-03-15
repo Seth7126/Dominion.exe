@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53b2c0
+// 起始地址: 0x53b2c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053B2C0    dword 83EC8B55
 0053B2C4    in al, 0xF8
 0053B2C6    sub esp, 0x0C
@@ -6,20 +12,20 @@
 0053B2CB    push edi
 0053B2CC    call 0x00573400
 0053B2D1    movzx esi, word ptr ss:[ebp+0x08]
-0053B2D5    mov ebx, dword ptr ds:[eax+0x04]
+0053B2D5    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0053B2D8    cmp esi, 0x320
 0053B2DE    jb 0x0053B2E5
-0053B2E0    call 0x00591930
+0053B2E0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0053B2E5    imul edi, esi, 0x64
 0053B2E8    mov eax, dword ptr ds:[edi+ebx*1+0x1A58]
 0053B2EF    mov ebx, dword ptr ds:[edi+ebx*1+0x1A5C]
 0053B2F6    mov dword ptr ss:[esp+0x14], eax
 0053B2FA    call 0x00573400
-0053B2FF    mov ecx, dword ptr ds:[eax+0x04]
+0053B2FF    mov ecx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0053B302    mov dword ptr ss:[esp+0x10], ecx
 0053B306    cmp esi, 0x320
 0053B30C    jb 0x0053B317
-0053B30E    call 0x00591930
+0053B30E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0053B313    mov ecx, dword ptr ss:[esp+0x10]
 0053B317    mov eax, dword ptr ss:[esp+0x14]
 0053B31B    cmp eax, dword ptr ds:[edi+ecx*1+0x1A50]

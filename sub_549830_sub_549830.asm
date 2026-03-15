@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_549830
+// 起始地址: 0x549830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00549830    dword 83EC8B55
 00549834    in al, 0xF8
 00549836    sub esp, 0xC98
-0054983C    mov eax, dword ptr ds:[0x008C4040]
+0054983C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00549841    xor eax, esp
 00549843    mov dword ptr ss:[esp+0xC94], eax
 0054984A    sub esp, 0x28
 0054984D    mov eax, esp
-0054984F    mov dword ptr ds:[eax], 0x81C960
-00549855    mov dword ptr ds:[eax+0x24], eax
-00549858    call 0x005699B0
-0054985D    call 0x00573400
+0054984F    mov dword ptr ds:[eax], 0x81C960                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_50a0b174cfc9e04fa28e44a3d6314d59>, void>::`vftable'{for `std::_Func_base<void>'} | Type: std::_Func_base<void>::std::_Func_impl_no_alloc<class <lambda_50a0b174cfc9e04fa28e44a3d6314d59>, void>::VTable ]
+00549855    mov dword ptr ds:[eax+0x24], eax                ; => [ Type: std::_Func_base<void>::std::_Func_impl_no_alloc<class <lambda_50a0b174cfc9e04fa28e44a3d6314d59>, void>::VTable ]
+00549858    call 0x005699B0                                 ; => [ Call: sub_5699b0 ]
+0054985D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00549862    push 0x00
 00549864    push 0x01
 00549866    mov edx, 0x5498B0
@@ -21,11 +27,11 @@
 00549883    push eax
 00549884    push 0x5498F0
 00549889    mov dword ptr ss:[esp+0xCC4], 0x01
-00549894    call 0x0056BA40
+00549894    call 0x0056BA40                                 ; => [ Call: sub_56ba40 | Call: sub_5498f0 | Call: sub_5498b0 ]
 00549899    mov ecx, dword ptr ss:[esp+0xCCC]
 005498A0    add esp, 0x38
 005498A3    xor ecx, esp
-005498A5    call 0x0075927A
+005498A5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005498AA    mov esp, ebp
 005498AC    pop ebp
 005498AD    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_549750
+// 起始地址: 0x549750
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00549750    dword 83EC8B55
 00549754    in al, 0xF8
 00549756    sub esp, 0xC88
@@ -5,7 +11,7 @@
 0054975E    push ecx
 0054975F    push 0x00
 00549761    lea ecx, ds:[edx+0x03]
-00549764    call 0x00561E00
+00549764    call 0x00561E00                                 ; => [ Call: sub_561e00 ]
 00549769    push 0x802
 0054976E    lea eax, ss:[esp+0x0C]
 00549772    mov dword ptr ss:[esp+0x0C], 0x00
@@ -17,4 +23,4 @@
 0054978C    add esp, 0x14
 0054978F    mov esp, ebp
 00549791    pop ebp
-00549792    ret
+00549792    ret                                             ; => [ Call: Concurrency::details::ListArray<class Concurrency::details::ExternalStatistics>::CheckForDeletionBridge | Call: sub_56bba0 | Call: sub_5497a0 ]

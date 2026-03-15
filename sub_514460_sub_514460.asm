@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_514460
+// 起始地址: 0x514460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00514460    dword 83EC8B55
 00514464    in al, 0xF8
 00514466    push ecx
 00514467    push ebx
 00514468    push esi
-00514469    mov esi, dword ptr ds:[0x00CCA788]
+00514469    mov esi, dword ptr ds:[0x00CCA788]              ; => [ Data: data_cca788 ]
 0051446F    push edi
 00514470    test esi, esi
 00514472    jz 0x00514579
@@ -11,16 +17,16 @@
 0051447D    mov ecx, esi
 0051447F    call 0x00571B30
 00514484    mov eax, dword ptr ds:[eax+0x98]
-0051448A    and eax, 0x04
+0051448A    and eax, 0x04                                   ; => [ Call: sub_571b30 ]
 0051448D    or eax, 0x00
 00514490    jnz 0x005144C8
 00514492    lea edx, ds:[eax+0x17]
 00514495    mov ecx, esi
 00514497    call 0x00571B30
 0051449C    mov eax, dword ptr ds:[eax+0x98]
-005144A2    and eax, 0x02
+005144A2    and eax, 0x02                                   ; => [ Call: sub_571b30 ]
 005144A5    or eax, 0x00
-005144A8    jnz 0x005144C8
+005144A8    jnz 0x005144C8                                  ; => [ Call: sub_571b30 ]
 005144AA    lea edx, ds:[eax+0x17]
 005144AD    mov ecx, esi
 005144AF    call 0x00571B30
@@ -28,7 +34,7 @@
 005144BA    and eax, 0x40000
 005144BF    or eax, 0x00
 005144C2    jz 0x00514582
-005144C8    mov eax, 0x817700
+005144C8    mov eax, 0x817700                               ; => [ Data: data_817700 ]
 005144CD    nop dword ptr ds:[eax], eax
 005144D0    cmp dword ptr ds:[eax], esi
 005144D2    jz 0x00514582
@@ -40,7 +46,7 @@
 005144E9    sar ecx, 0x04
 005144EC    or ecx, esi
 005144EE    and ecx, dword ptr ds:[0x01597E10]
-005144F4    mov ecx, dword ptr ds:[eax+ecx*4]
+005144F4    mov ecx, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 005144F7    mov eax, ecx
 005144F9    mov dword ptr ss:[esp+0x0C], ecx
 005144FD    test eax, eax
@@ -55,7 +61,7 @@
 00514511    test ecx, ecx
 00514513    jz 0x0051452B
 00514515    mov edx, dword ptr ds:[ecx]
-00514517    xor eax, eax
+00514517    xor eax, eax                                    ; => [ Call: nullptr ]
 00514519    mov ecx, dword ptr ds:[ecx+0x04]
 0051451C    test ecx, ecx
 0051451E    jle 0x0051452B
@@ -65,7 +71,7 @@
 00514527    cmp eax, ecx
 00514529    jl 0x00514520
 0051452B    mov ecx, dword ptr ss:[esp+0x0C]
-0051452F    mov edx, 0x8176F0
+0051452F    mov edx, 0x8176F0                               ; => [ Data: data_8176f0 ]
 00514534    mov ebx, dword ptr ds:[edx]
 00514536    mov eax, ecx
 00514538    test eax, eax
@@ -81,7 +87,7 @@
 00514550    test ecx, ecx
 00514552    jz 0x0051456A
 00514554    mov edi, dword ptr ds:[ecx]
-00514556    xor eax, eax
+00514556    xor eax, eax                                    ; => [ Call: nullptr ]
 00514558    mov ecx, dword ptr ds:[ecx+0x04]
 0051455B    test ecx, ecx
 0051455D    jle 0x0051456A

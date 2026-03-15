@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_574180
+// 起始地址: 0x574180
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00574180    push ebp
 00574181    mov ebp, esp
 00574183    and esp, 0xFFFFFFF8
@@ -15,7 +21,7 @@
 005741A5    jz 0x005741C0
 005741A7    push eax
 005741A8    push ebx
-005741A9    call 0x0058D5A0
+005741A9    call 0x0058D5A0                                 ; => [ Call: sub_58d5a0 ]
 005741AE    add esp, 0x08
 005741B1    test al, al
 005741B3    jnz 0x005741C0
@@ -34,7 +40,7 @@
 005741D8    lea eax, ds:[esi+0x01]
 005741DB    mov edx, esi
 005741DD    push eax
-005741DE    call 0x00574000
+005741DE    call 0x00574000                                 ; => [ Call: sub_574000 ]
 005741E3    mov ecx, dword ptr ss:[esp+0x14]
 005741E7    add esp, 0x04
 005741EA    dec esi
@@ -60,16 +66,16 @@
 00574219    pop ebx
 0057421A    mov esp, ebp
 0057421C    pop ebp
-0057421D    ret
+0057421D    ret                                             ; => [ Call: nullptr | Call: sub_5735a0 | Call: sub_573c80 ]
 0057421E    push 0x81FA78
 00574223    push 0x951
 00574228    push 0x81F4B8
 0057422D    mov edx, 0x801800
 00574232    mov ecx, 0x801AA4
-00574237    call 0x0063B870
+00574237    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CalcKingdomInsertIdx | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: Halt ]
 0057423C    add esp, 0x0C
 0057423F    call 0x0063BC30
 00574244    test al, al
-00574246    jz 0x00574249
+00574246    jz 0x00574249                                   ; => [ Call: sub_63bc30 ]
 00574248    int3
-00574249    call 0x0063BB00
+00574249    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

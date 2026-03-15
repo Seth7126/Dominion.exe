@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b8770
+// 起始地址: 0x6b8770
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B8770    push ebp
 006B8771    mov ebp, esp
 006B8773    sub esp, 0x10
@@ -11,7 +17,7 @@
 006B8785    jz 0x006B88A5
 006B878B    mov eax, dword ptr ds:[esi+0x2E4]
 006B8791    mov ecx, dword ptr ds:[eax]
-006B8793    call 0x005AF880
+006B8793    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006B8798    imul edx, dword ptr ds:[esi+0x2DC], 0x168
 006B87A2    add edx, dword ptr ds:[eax]
 006B87A4    cmp byte ptr ds:[edx+edi*1+0x14], 0x00
@@ -19,10 +25,10 @@
 006B87AF    push edi
 006B87B0    push dword ptr ds:[0x01777598]
 006B87B6    mov ecx, 0x8CC5F8
-006B87BB    call 0x006DD1E0
+006B87BB    call 0x006DD1E0                                 ; => [ Call: sub_6dd1e0 | Data: data_8cc5f8 | Data: data_1777598 ]
 006B87C0    add esp, 0x08
 006B87C3    mov edi, eax
-006B87C5    call 0x0063EB70
+006B87C5    call 0x0063EB70                                 ; => [ Call: sub_63eb70 ]
 006B87CA    mov edx, dword ptr ds:[edi+0x08]
 006B87CD    and eax, 0x7FFFFF
 006B87D2    or eax, 0x3F800000
@@ -56,7 +62,7 @@
 006B882B    mov edx, dword ptr ds:[edi+0x0C]
 006B882E    call 0x00706AF0
 006B8833    mov eax, dword ptr ss:[ebp+0x08]
-006B8836    movss dword ptr ds:[eax], xmm0
+006B8836    movss dword ptr ds:[eax], xmm0                  ; => [ Call: sub_706af0 ]
 006B883A    mov al, 0x01
 006B883C    pop edi
 006B883D    pop esi
@@ -73,19 +79,19 @@
 006B885B    lea ecx, ds:[esi-0x10]
 006B885E    divss xmm2, xmm0
 006B8862    movss dword ptr ss:[ebp-0x0C], xmm2
-006B8867    call 0x00706AF0
+006B8867    call 0x00706AF0                                 ; => [ Call: sub_706af0 ]
 006B886C    mov edx, dword ptr ds:[edi+0x0C]
 006B886F    mov ecx, esi
 006B8871    movss xmm1, dword ptr ss:[ebp-0x04]
 006B8876    movss dword ptr ss:[ebp-0x08], xmm0
-006B887B    call 0x00706AF0
+006B887B    call 0x00706AF0                                 ; => [ Call: sub_706af0 ]
 006B8880    mov ecx, dword ptr ds:[esi+0x0C]
 006B8883    movaps xmm2, xmm0
 006B8886    movss xmm1, dword ptr ss:[ebp-0x08]
 006B888B    movss xmm0, dword ptr ss:[ebp-0x0C]
 006B8890    call 0x004AE110
 006B8895    mov eax, dword ptr ss:[ebp+0x08]
-006B8898    movss dword ptr ds:[eax], xmm0
+006B8898    movss dword ptr ds:[eax], xmm0                  ; => [ Call: sub_4ae110 ]
 006B889C    mov al, 0x01
 006B889E    pop edi
 006B889F    pop esi

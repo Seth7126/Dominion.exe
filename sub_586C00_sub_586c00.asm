@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_586c00
+// 起始地址: 0x586c00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00586C00    push ebp
 00586C01    mov ebp, esp
 00586C03    sub esp, 0xCA0
-00586C09    mov eax, dword ptr ds:[0x008C4040]
+00586C09    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00586C0E    xor eax, ebp
 00586C10    mov dword ptr ss:[ebp-0x04], eax
 00586C13    mov eax, dword ptr ss:[ebp+0x10]
@@ -14,7 +20,7 @@
 00586C28    push eax
 00586C29    push 0x3E9
 00586C2E    mov dword ptr ss:[ebp-0xC9C], ecx
-00586C34    call 0x00590990
+00586C34    call 0x00590990                                 ; => [ Call: sub_590990 ]
 00586C39    lea ecx, ss:[ebp-0xC90]
 00586C3F    mov dword ptr ss:[ebp-0x10], eax
 00586C42    mov edx, ecx
@@ -30,7 +36,7 @@
 00586C62    and edi, 0xFFFF
 00586C68    cmp edi, 0x320
 00586C6E    jb 0x00586C75
-00586C70    call 0x00591930
+00586C70    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00586C75    mov ecx, dword ptr ss:[ebp-0xC9C]
 00586C7B    imul eax, edi, 0x64
 00586C7E    mov ecx, dword ptr ds:[eax+ecx*1+0x1A4C]
@@ -62,7 +68,7 @@
 00586CD6    pop esi
 00586CD7    xor ecx, ebp
 00586CD9    pop ebx
-00586CDA    call 0x0075927A
+00586CDA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00586CDF    mov esp, ebp
 00586CE1    pop ebp
 00586CE2    ret

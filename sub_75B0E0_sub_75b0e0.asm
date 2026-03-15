@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75b0e0
+// 起始地址: 0x75b0e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075B0E0    push ebp
 0075B0E1    mov ebp, esp
 0075B0E3    sub esp, 0x38
@@ -49,14 +55,14 @@
 0075B186    divss xmm0, xmm1
 0075B18A    comiss xmm0, xmm3
 0075B18D    jbe 0x0075B192
-0075B18F    movaps xmm0, xmm4
+0075B18F    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0075B192    mulss xmm0, xmm2
 0075B196    sub esp, 0x08
 0075B199    cvtss2sd xmm0, xmm0
 0075B19D    movsd qword ptr ss:[ebp-0x38], xmm0
 0075B1A2    fld qword ptr ss:[ebp-0x38]
 0075B1A5    fstp qword ptr ss:[esp]
-0075B1A8    call 0x0076208A
+0075B1A8    call 0x0076208A                                 ; => [ Call: floor ]
 0075B1AD    mov eax, dword ptr ds:[esi+0x1B4]
 0075B1B3    xor ecx, ecx
 0075B1B5    fstp qword ptr ss:[ebp-0x38]
@@ -89,7 +95,7 @@
 0075B200    push eax
 0075B201    push 0x00
 0075B203    push edi
-0075B204    call 0x00761FC4
+0075B204    call 0x00761FC4                                 ; => [ Call: memset ]
 0075B209    mov ecx, dword ptr ss:[ebp+0x10]
 0075B20C    inc ebx
 0075B20D    add esp, 0x0C
@@ -175,7 +181,7 @@
 0075B327    add eax, edi
 0075B329    push 0x00
 0075B32B    push eax
-0075B32C    call 0x00761FC4
+0075B32C    call 0x00761FC4                                 ; => [ Call: memset ]
 0075B331    mov eax, dword ptr ss:[ebp-0x30]
 0075B334    inc ebx
 0075B335    add esp, 0x0C
@@ -460,7 +466,7 @@
 0075B733    push edx
 0075B734    push dword ptr ss:[ebp+0x08]
 0075B737    push esi
-0075B738    call 0x0075C100
+0075B738    call 0x0075C100                                 ; => [ Call: sub_75c100 ]
 0075B73D    add esp, 0x18
 0075B740    jmp 0x0075B921
 0075B745    mov eax, dword ptr ds:[esi+0x10]
@@ -477,7 +483,7 @@
 0075B770    movsd qword ptr ss:[ebp-0x38], xmm0
 0075B775    fld qword ptr ss:[ebp-0x38]
 0075B778    fstp qword ptr ss:[esp]
-0075B77B    call 0x0076208A
+0075B77B    call 0x0076208A                                 ; => [ Call: floor ]
 0075B780    mov eax, dword ptr ds:[esi+0x1B4]
 0075B786    xor ebx, ebx
 0075B788    mov edx, dword ptr ss:[ebp+0x0C]
@@ -606,7 +612,7 @@
 0075B937    mov eax, dword ptr ss:[ebp-0x20]
 0075B93A    mov ecx, edi
 0075B93C    push dword ptr ds:[edi+eax*4+0x1BDBC]
-0075B943    call 0x00760F30
+0075B943    call 0x00760F30                                 ; => [ Call: sub_760f30 ]
 0075B948    movss xmm3, dword ptr ds:[0x0077E9DC]
 0075B950    xorps xmm4, xmm4
 0075B953    movss xmm2, dword ptr ds:[0x0077E9E0]

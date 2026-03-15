@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_571b30
+// 起始地址: 0x571b30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00571B30    push ebp
 00571B31    mov ebp, esp
 00571B33    push ecx
@@ -14,7 +20,7 @@
 00571B48    idiv ecx
 00571B4A    mov eax, edx
 00571B4C    mov dword ptr ss:[ebp-0x04], eax
-00571B4F    mov eax, dword ptr ds:[eax*4+0x19E1790]
+00571B4F    mov eax, dword ptr ds:[eax*4+0x19E1790]         ; => [ Data: data_19e1790 ]
 00571B56    test eax, eax
 00571B58    jz 0x00571B70
 00571B5A    nop word ptr ds:[eax+eax*1], ax
@@ -27,7 +33,7 @@
 00571B6E    jnz 0x00571B60
 00571B70    mov edx, edi
 00571B72    mov ecx, ebx
-00571B74    call 0x00571A30
+00571B74    call 0x00571A30                                 ; => [ Call: sub_571a30 ]
 00571B79    push 0x10
 00571B7B    call dword ptr ds:[0x0077552C]
 00571B81    mov esi, eax
@@ -36,11 +42,11 @@
 00571B89    mov edx, edi
 00571B8B    mov dword ptr ds:[esi], ebx
 00571B8D    mov ecx, dword ptr ds:[eax*4+0x19E1790]
-00571B94    mov dword ptr ds:[esi+0x0C], ecx
+00571B94    mov dword ptr ds:[esi+0x0C], ecx                ; => [ Data: data_19e1790 ]
 00571B97    mov ecx, ebx
 00571B99    mov dword ptr ds:[esi+0x04], edi
-00571B9C    mov dword ptr ds:[eax*4+0x19E1790], esi
-00571BA3    call 0x00571A30
+00571B9C    mov dword ptr ds:[eax*4+0x19E1790], esi         ; => [ Data: data_19e1790 ]
+00571BA3    call 0x00571A30                                 ; => [ Call: sub_571a30 ]
 00571BA8    mov dword ptr ds:[esi+0x08], eax
 00571BAB    pop edi
 00571BAC    pop esi

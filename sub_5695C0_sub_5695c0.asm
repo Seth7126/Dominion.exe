@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5695c0
+// 起始地址: 0x5695c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005695C0    push ebp
 005695C1    mov ebp, esp
 005695C3    and esp, 0xFFFFFFF8
@@ -14,13 +20,13 @@
 005695E0    mov dword ptr ss:[esp+0x18], eax
 005695E4    mov eax, dword ptr ds:[0x007BFAD4]
 005695E9    mov dword ptr ss:[esp+0x14], eax
-005695ED    call 0x00573400
+005695ED    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005695F2    mov edi, eax
 005695F4    mov eax, dword ptr ds:[edi+0x04]
 005695F7    mov dword ptr ss:[esp+0x10], eax
 005695FB    cmp esi, 0x320
 00569601    jb 0x0056960C
-00569603    call 0x00591930
+00569603    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00569608    mov eax, dword ptr ss:[esp+0x10]
 0056960C    push dword ptr ss:[esp+0x14]
 00569610    mov ecx, dword ptr ds:[edi+0x04]
@@ -39,7 +45,7 @@
 00569639    push dword ptr ss:[ebp+0x08]
 0056963C    push 0x3EA
 00569641    push ebx
-00569642    call 0x00582D10
+00569642    call 0x00582D10                                 ; => [ Call: nullptr | Call: sub_582d10 ]
 00569647    add esp, 0x38
 0056964A    pop edi
 0056964B    pop esi
@@ -50,13 +56,13 @@
 00569651    mov dword ptr ss:[esp+0x1C], eax
 00569655    mov eax, dword ptr ds:[0x007BFAD4]
 0056965A    mov dword ptr ss:[esp+0x10], eax
-0056965E    call 0x00573400
+0056965E    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00569663    mov dword ptr ss:[esp+0x18], eax
 00569667    mov ecx, dword ptr ds:[eax+0x04]
 0056966A    mov dword ptr ss:[esp+0x14], ecx
 0056966E    cmp esi, 0x320
 00569674    jb 0x00569683
-00569676    call 0x00591930
+00569676    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056967B    mov eax, dword ptr ss:[esp+0x18]
 0056967F    mov ecx, dword ptr ss:[esp+0x14]
 00569683    push dword ptr ss:[esp+0x10]
@@ -76,7 +82,7 @@
 005696B0    push dword ptr ss:[ebp+0x08]
 005696B3    push edi
 005696B4    push ebx
-005696B5    call 0x00582D10
+005696B5    call 0x00582D10                                 ; => [ Call: nullptr | Call: sub_582d10 ]
 005696BA    add esp, 0x38
 005696BD    pop edi
 005696BE    pop esi

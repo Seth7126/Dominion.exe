@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6407b0
+// 起始地址: 0x6407b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006407B0    push ebp
 006407B1    mov ebp, esp
 006407B3    sub esp, 0x08
@@ -6,12 +12,12 @@
 006407B8    push edi
 006407B9    push dword ptr ss:[ebp+0x10]
 006407BC    mov edi, ecx
-006407BE    call 0x006406E0
+006407BE    call 0x006406E0                                 ; => [ Call: sub_6406e0 ]
 006407C3    test al, al
 006407C5    jz 0x006407D8
-006407C7    push 0x8720C4
+006407C7    push 0x8720C4                                   ; => [ String: RegionAllocator::AllocRegion ]
 006407CC    push 0x67
-006407CE    mov ecx, 0x8720F0
+006407CE    mov ecx, 0x8720F0                               ; => [ String: HasRegion(key) == false ]
 006407D3    jmp 0x006409B3
 006407D8    mov ebx, dword ptr ss:[ebp+0x0C]
 006407DB    lea eax, ss:[ebp-0x04]
@@ -20,63 +26,63 @@
 006407E0    push dword ptr ds:[edi+0x18]
 006407E3    mov ecx, edi
 006407E5    mov dword ptr ss:[ebp-0x04], 0x00
-006407EC    call 0x006412D0
+006407EC    call 0x006412D0                                 ; => [ Call: sub_6412d0 ]
 006407F1    mov esi, dword ptr ss:[ebp-0x04]
 006407F4    test al, al
 006407F6    jz 0x0064082A
 006407F8    cmp dword ptr ds:[esi+0x20], 0x00
 006407FC    jz 0x00640812
-006407FE    push 0x872220
+006407FE    push 0x872220                                   ; => [ String: RegionAllocator::FindNewRegion ]
 00640803    push 0x13A
-00640808    mov ecx, 0x872204
+00640808    mov ecx, 0x872204                               ; => [ String: best->alloc == ALLOC_NONE ]
 0064080D    jmp 0x006409B3
 00640812    cmp dword ptr ds:[esi], ebx
 00640814    jz 0x00640887
-00640816    push 0x872220
+00640816    push 0x872220                                   ; => [ String: RegionAllocator::FindNewRegion ]
 0064081B    push 0x13B
-00640820    mov ecx, 0x872254
+00640820    mov ecx, 0x872254                               ; => [ String: best->mip == mip ]
 00640825    jmp 0x006409B3
 0064082A    cmp dword ptr ds:[esi+0x20], 0x02
 0064082E    jnz 0x00640852
 00640830    push esi
 00640831    mov ecx, edi
-00640833    call 0x00640D20
+00640833    call 0x00640D20                                 ; => [ Call: sub_640d20 ]
 00640838    cmp dword ptr ds:[esi], ebx
 0064083A    jnl 0x00640850
-0064083C    push 0x872220
+0064083C    push 0x872220                                   ; => [ String: RegionAllocator::FindNewRegion ]
 00640841    push 0x142
-00640846    mov ecx, 0x872240
+00640846    mov ecx, 0x872240                               ; => [ String: best->mip >= mip ]
 0064084B    jmp 0x006409B3
 00640850    jz 0x00640887
 00640852    cmp dword ptr ds:[esi+0x20], 0x01
 00640856    jnz 0x00640864
 00640858    push esi
 00640859    mov ecx, edi
-0064085B    call 0x00640BA0
+0064085B    call 0x00640BA0                                 ; => [ Call: sub_640ba0 ]
 00640860    cmp dword ptr ds:[esi], ebx
 00640862    jz 0x00640887
 00640864    cmp dword ptr ds:[esi], ebx
 00640866    jnle 0x0064087C
-00640868    push 0x872220
+00640868    push 0x872220                                   ; => [ String: RegionAllocator::FindNewRegion ]
 0064086D    push 0x150
-00640872    mov ecx, 0x87228C
+00640872    mov ecx, 0x87228C                               ; => [ String: best->mip > mip ]
 00640877    jmp 0x006409B3
 0064087C    push ebx
 0064087D    push esi
 0064087E    mov ecx, edi
-00640880    call 0x00640DF0
+00640880    call 0x00640DF0                                 ; => [ Call: sub_640df0 ]
 00640885    mov esi, eax
 00640887    test esi, esi
 00640889    jnz 0x0064089C
-0064088B    push 0x8720C4
+0064088B    push 0x8720C4                                   ; => [ String: RegionAllocator::AllocRegion ]
 00640890    push 0x6A
-00640892    mov ecx, 0x8720E4
+00640892    mov ecx, 0x8720E4                               ; => [ String: pr != NULL ]
 00640897    jmp 0x006409B3
 0064089C    cmp dword ptr ds:[esi], ebx
 0064089E    jz 0x006408B1
-006408A0    push 0x8720C4
+006408A0    push 0x8720C4                                   ; => [ String: RegionAllocator::AllocRegion ]
 006408A5    push 0x6D
-006408A7    mov ecx, 0x872120
+006408A7    mov ecx, 0x872120                               ; => [ String: r.mip == mip ]
 006408AC    jmp 0x006409B3
 006408B1    cmp dword ptr ds:[esi+0x20], 0x00
 006408B5    jnz 0x006409A7
@@ -92,7 +98,7 @@
 006408DC    inc dword ptr ds:[edi+0x44]
 006408DF    push dword ptr ds:[edi+0x44]
 006408E2    push dword ptr ds:[esi+0x28]
-006408E5    call 0x00640B10
+006408E5    call 0x00640B10                                 ; => [ Call: sub_640b10 ]
 006408EA    mov edx, dword ptr ds:[ebx]
 006408EC    mov ecx, edx
 006408EE    mov eax, dword ptr ds:[esi+0x44]
@@ -119,13 +125,13 @@
 00640929    jnz 0x00640910
 0064092B    mov ecx, 0x14
 00640930    call 0x0064BFD0
-00640935    mov edx, eax
+00640935    mov edx, eax                                    ; => [ Call: sub_64bfd0 ]
 00640937    mov dword ptr ss:[ebp+0x0C], edx
 0064093A    inc dword ptr ds:[edx+0x0C]
 0064093D    cmp dword ptr ds:[edx], 0x00
 00640940    jnz 0x0064094C
 00640942    mov ecx, edx
-00640944    call 0x0064BE70
+00640944    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00640949    mov edx, dword ptr ss:[ebp+0x0C]
 0064094C    mov ecx, dword ptr ds:[edx]
 0064094E    mov eax, dword ptr ds:[ecx]
@@ -163,15 +169,15 @@
 006409A1    mov esp, ebp
 006409A3    pop ebp
 006409A4    ret 0x0C
-006409A7    push 0x8720C4
+006409A7    push 0x8720C4                                   ; => [ String: RegionAllocator::AllocRegion ]
 006409AC    push 0x6E
-006409AE    mov ecx, 0x872108
+006409AE    mov ecx, 0x872108                               ; => [ String: r.alloc == ALLOC_NONE ]
 006409B3    push 0x8720A4
 006409B8    mov edx, 0x801800
-006409BD    call 0x0063B870
+006409BD    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\TTFont.cpp ]
 006409C2    add esp, 0x0C
 006409C5    call 0x0063BC30
 006409CA    test al, al
-006409CC    jz 0x006409CF
+006409CC    jz 0x006409CF                                   ; => [ Call: sub_63bc30 ]
 006409CE    int3
-006409CF    call 0x0063BB00
+006409CF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

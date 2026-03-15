@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_578710
+// 起始地址: 0x578710
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00578710    push ebp
 00578711    mov ebp, esp
 00578713    sub esp, 0x42C
-00578719    mov eax, dword ptr ds:[0x008C4040]
+00578719    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0057871E    xor eax, ebp
 00578720    mov dword ptr ss:[ebp-0x04], eax
 00578723    mov eax, dword ptr ss:[ebp+0x08]
@@ -38,7 +44,7 @@
 00578789    push 0x00
 0057878B    push 0x10000000
 00578790    mov edx, edi
-00578792    call 0x005757F0
+00578792    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 00578797    add esp, 0x08
 0057879A    test al, al
 0057879C    jnz 0x005789CB
@@ -46,7 +52,7 @@
 005787A4    push 0x20000000
 005787A9    mov edx, edi
 005787AB    mov ecx, esi
-005787AD    call 0x005757F0
+005787AD    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 005787B2    add esp, 0x08
 005787B5    test al, al
 005787B7    jnz 0x005789CB
@@ -54,7 +60,7 @@
 005787BF    push 0x00
 005787C1    mov edx, edi
 005787C3    mov ecx, esi
-005787C5    call 0x005757F0
+005787C5    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 005787CA    add esp, 0x08
 005787CD    test al, al
 005787CF    jnz 0x005789CB
@@ -62,7 +68,7 @@
 005787DA    push 0x00
 005787DC    mov edx, edi
 005787DE    mov ecx, esi
-005787E0    call 0x005757F0
+005787E0    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 005787E5    add esp, 0x08
 005787E8    test al, al
 005787EA    jnz 0x005789CB
@@ -70,7 +76,7 @@
 005787F5    push 0x00
 005787F7    mov edx, edi
 005787F9    mov ecx, esi
-005787FB    call 0x005757F0
+005787FB    call 0x005757F0                                 ; => [ Call: sub_5757f0 ]
 00578800    add esp, 0x08
 00578803    test al, al
 00578805    jnz 0x005789CB
@@ -81,12 +87,12 @@
 00578816    call 0x005757F0
 0057881B    add esp, 0x08
 0057881E    test al, al
-00578820    jz 0x005788D9
+00578820    jz 0x005788D9                                   ; => [ Call: sub_5757f0 ]
 00578826    movzx eax, di
 00578829    mov dword ptr ss:[ebp-0x414], eax
 0057882F    cmp eax, 0x320
 00578834    jb 0x00578841
-00578836    call 0x00591930
+00578836    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057883B    mov eax, dword ptr ss:[ebp-0x414]
 00578841    imul eax, eax, 0x64
 00578844    lea ecx, ss:[ebp-0x414]
@@ -97,7 +103,7 @@
 00578859    mov eax, dword ptr ds:[eax+esi*1+0x1A4C]
 00578860    push eax
 00578861    mov dword ptr ss:[ebp-0x418], eax
-00578867    call 0x00574A80
+00578867    call 0x00574A80                                 ; => [ Call: sub_574a80 ]
 0057886C    add esp, 0x08
 0057886F    test al, al
 00578871    jz 0x00578893
@@ -107,7 +113,7 @@
 0057887D    mov edx, ebx
 0057887F    mov ecx, esi
 00578881    push 0x30
-00578883    call 0x00576B30
+00578883    call 0x00576B30                                 ; => [ Call: sub_576b30 ]
 00578888    add esp, 0x10
 0057888B    test eax, eax
 0057888D    jle 0x005789CB
@@ -133,7 +139,7 @@
 005788DC    mov dword ptr ss:[ebp-0x418], eax
 005788E2    cmp eax, 0x320
 005788E7    jb 0x005788F4
-005788E9    call 0x00591930
+005788E9    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005788EE    mov eax, dword ptr ss:[ebp-0x418]
 005788F4    imul eax, eax, 0x64
 005788F7    mov edx, ebx
@@ -145,7 +151,7 @@
 00578908    call 0x00576B30
 0057890D    add esp, 0x10
 00578910    test eax, eax
-00578912    jnle 0x005789CB
+00578912    jnle 0x005789CB                                 ; => [ Call: sub_576b30 ]
 00578918    mov ecx, dword ptr ss:[ebp-0x428]
 0057891E    mov edx, ebx
 00578920    push dword ptr ds:[ecx+0xC9C]
@@ -176,7 +182,7 @@
 00578982    mov ecx, esi
 00578984    push eax
 00578985    push edi
-00578986    call 0x005782D0
+00578986    call 0x005782D0                                 ; => [ Call: sub_5782d0 ]
 0057898B    mov edx, dword ptr ss:[ebp-0x40C]
 00578991    add esp, 0x4C
 00578994    test al, al
@@ -205,7 +211,7 @@
 005789F0    pop esi
 005789F1    xor ecx, ebp
 005789F3    pop ebx
-005789F4    call 0x0075927A
+005789F4    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005789F9    mov esp, ebp
 005789FB    pop ebp
 005789FC    ret

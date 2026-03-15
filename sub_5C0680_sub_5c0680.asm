@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c0680
+// 起始地址: 0x5c0680
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C0680    push ebx
 005C0681    mov ebx, esp
 005C0683    sub esp, 0x08
@@ -63,7 +69,7 @@
 005C0733    maxps xmm0, xmm2
 005C0736    movaps xmmword ptr ss:[ebp-0x20], xmm0
 005C073A    lea ecx, ss:[ebp-0x20]
-005C073D    call 0x005C49C0
+005C073D    call 0x005C49C0                                 ; => [ Call: sub_5c49c0 ]
 005C0742    movaps xmm1, xmm0
 005C0745    movss dword ptr ss:[ebp-0x04], xmm1
 005C074A    cmp edi, esi

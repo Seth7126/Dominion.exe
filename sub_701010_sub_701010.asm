@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_701010
+// 起始地址: 0x701010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00701010    push ebp
 00701011    mov ebp, esp
 00701013    mov edx, dword ptr ss:[ebp+0x08]
@@ -15,7 +21,7 @@
 00701036    add eax, dword ptr ds:[ecx+0x424C]
 0070103C    xor ecx, ecx
 0070103E    cmp dword ptr ds:[eax+0x148], edx
-00701044    cmovnz eax, ecx
+00701044    cmovnz eax, ecx                                 ; => [ Call: nullptr ]
 00701047    test eax, eax
 00701049    setnz al
 0070104C    pop ebp

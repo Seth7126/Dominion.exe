@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_633d60
+// 起始地址: 0x633d60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00633D60    push ebp
 00633D61    mov ebp, esp
 00633D63    and esp, 0xFFFFFFF0
@@ -5,7 +11,7 @@
 00633D69    movss xmm3, dword ptr ds:[0x0089105C]
 00633D71    push esi
 00633D72    mov esi, ecx
-00633D74    mov ecx, dword ptr ds:[0x0171E9A0]
+00633D74    mov ecx, dword ptr ds:[0x0171E9A0]              ; => [ Data: data_171e9a0 ]
 00633D7A    push edi
 00633D7B    mov edi, edx
 00633D7D    mov eax, dword ptr ds:[esi+0x68]
@@ -33,27 +39,27 @@
 00633DDE    movss dword ptr ss:[esp+0x18], xmm1
 00633DE4    test ecx, ecx
 00633DE6    jnz 0x00633E01
-00633DE8    push 0x874440
+00633DE8    push 0x874440                                   ; => [ String: UI2DefGet ]
 00633DED    push 0xC16
-00633DF2    mov edx, 0x874424
-00633DF7    mov ecx, 0x874470
+00633DF2    mov edx, 0x874424                               ; => [ String: UI2DefGet on null pointer ]
+00633DF7    mov ecx, 0x874470                               ; => [ Data: data_874470 ]
 00633DFC    jmp 0x00634143
 00633E01    cmp dword ptr ds:[ecx+0x04], 0x22
 00633E05    jnz 0x0063412F
-00633E0B    call 0x005AF880
+00633E0B    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00633E10    cmp dword ptr ds:[eax+0x08], 0x00
 00633E14    jnz 0x00633E1F
-00633E16    movups xmm0, xmmword ptr ds:[0x007FF520]
+00633E16    movups xmm0, xmmword ptr ds:[0x007FF520]        ; => [ Data: data_7ff520 ]
 00633E1D    jmp 0x00633E35
 00633E1F    lea ecx, ss:[esp+0x30]
 00633E23    xor edx, edx
 00633E25    push 0x00
 00633E27    push ecx
 00633E28    mov ecx, dword ptr ds:[eax]
-00633E2A    call 0x0064F140
+00633E2A    call 0x0064F140                                 ; => [ Call: nullptr | Call: sub_64f140 ]
 00633E2F    add esp, 0x08
 00633E32    movups xmm0, xmmword ptr ds:[eax]
-00633E35    mov ecx, dword ptr ds:[0x0171E998]
+00633E35    mov ecx, dword ptr ds:[0x0171E998]              ; => [ Data: data_171e998 ]
 00633E3B    movups xmmword ptr ss:[esp+0x20], xmm0
 00633E40    movss xmm1, dword ptr ss:[esp+0x28]
 00633E46    movss xmm0, dword ptr ss:[esp+0x2C]
@@ -65,27 +71,27 @@
 00633E6E    movss dword ptr ss:[esp+0x1C], xmm0
 00633E74    test ecx, ecx
 00633E76    jnz 0x00633E91
-00633E78    push 0x874440
+00633E78    push 0x874440                                   ; => [ String: UI2DefGet ]
 00633E7D    push 0xC16
-00633E82    mov edx, 0x874424
-00633E87    mov ecx, 0x874470
+00633E82    mov edx, 0x874424                               ; => [ String: UI2DefGet on null pointer ]
+00633E87    mov ecx, 0x874470                               ; => [ Data: data_874470 ]
 00633E8C    jmp 0x00634143
 00633E91    cmp dword ptr ds:[ecx+0x04], 0x22
 00633E95    jnz 0x0063412F
-00633E9B    call 0x005AF880
+00633E9B    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00633EA0    cmp dword ptr ds:[eax+0x08], 0x00
 00633EA4    jnz 0x00633EAF
-00633EA6    movups xmm0, xmmword ptr ds:[0x007FF520]
+00633EA6    movups xmm0, xmmword ptr ds:[0x007FF520]        ; => [ Data: data_7ff520 ]
 00633EAD    jmp 0x00633EC5
 00633EAF    lea ecx, ss:[esp+0x40]
 00633EB3    xor edx, edx
 00633EB5    push 0x00
 00633EB7    push ecx
 00633EB8    mov ecx, dword ptr ds:[eax]
-00633EBA    call 0x0064F140
+00633EBA    call 0x0064F140                                 ; => [ Call: nullptr | Call: sub_64f140 ]
 00633EBF    add esp, 0x08
 00633EC2    movups xmm0, xmmword ptr ds:[eax]
-00633EC5    mov ecx, dword ptr ds:[0x0171E99C]
+00633EC5    mov ecx, dword ptr ds:[0x0171E99C]              ; => [ Data: data_171e99c ]
 00633ECB    movups xmmword ptr ss:[esp+0x30], xmm0
 00633ED0    movss xmm0, dword ptr ss:[esp+0x38]
 00633ED6    subss xmm0, dword ptr ss:[esp+0x30]
@@ -95,17 +101,17 @@
 00633EEE    movss dword ptr ss:[esp+0x08], xmm0
 00633EF4    test ecx, ecx
 00633EF6    jnz 0x00633F11
-00633EF8    push 0x874440
+00633EF8    push 0x874440                                   ; => [ String: UI2DefGet ]
 00633EFD    push 0xC16
-00633F02    mov edx, 0x874424
-00633F07    mov ecx, 0x874470
+00633F02    mov edx, 0x874424                               ; => [ String: UI2DefGet on null pointer ]
+00633F07    mov ecx, 0x874470                               ; => [ Data: data_874470 ]
 00633F0C    jmp 0x00634143
 00633F11    cmp dword ptr ds:[ecx+0x04], 0x22
 00633F15    jnz 0x0063412F
-00633F1B    call 0x005AF880
+00633F1B    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00633F20    cmp dword ptr ds:[eax+0x08], 0x00
 00633F24    jnz 0x00633F2F
-00633F26    movups xmm0, xmmword ptr ds:[0x007FF520]
+00633F26    movups xmm0, xmmword ptr ds:[0x007FF520]        ; => [ Data: data_7ff520 ]
 00633F2D    jmp 0x00633F45
 00633F2F    lea ecx, ss:[esp+0x40]
 00633F33    xor edx, edx
@@ -114,7 +120,7 @@
 00633F38    mov ecx, dword ptr ds:[eax]
 00633F3A    call 0x0064F140
 00633F3F    add esp, 0x08
-00633F42    movups xmm0, xmmword ptr ds:[eax]
+00633F42    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: nullptr | Call: sub_64f140 ]
 00633F45    movss xmm6, dword ptr ss:[esp+0x0C]
 00633F4B    xorps xmm1, xmm1
 00633F4E    divss xmm6, dword ptr ss:[esp+0x1C]
@@ -223,15 +229,15 @@
 0063412B    mov esp, ebp
 0063412D    pop ebp
 0063412E    ret
-0063412F    push 0x874440
+0063412F    push 0x874440                                   ; => [ String: UI2DefGet ]
 00634134    push 0xC17
-00634139    mov edx, 0x801800
-0063413E    mov ecx, 0x87444C
+00634139    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+0063413E    mov ecx, 0x87444C                               ; => [ String: ptr->assetType == ASSET_TYPE_UI2 ]
 00634143    push 0x8739B4
-00634148    call 0x0063B870
+00634148    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: UI2DefGet | String: C:\x\ax2017\Engine\UI2.cpp ]
 0063414D    add esp, 0x0C
 00634150    call 0x0063BC30
 00634155    test al, al
-00634157    jz 0x0063415A
+00634157    jz 0x0063415A                                   ; => [ Call: sub_63bc30 ]
 00634159    int3
-0063415A    call 0x0063BB00
+0063415A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

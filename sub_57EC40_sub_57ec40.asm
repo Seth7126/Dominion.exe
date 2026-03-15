@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57ec40
+// 起始地址: 0x57ec40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057EC40    push ebp
 0057EC41    mov ebp, esp
 0057EC43    sub esp, 0x84
@@ -26,7 +32,7 @@
 0057EC74    push eax
 0057EC75    test al, 0x30
 0057EC77    jnz 0x0057EC8C
-0057EC79    call 0x00576940
+0057EC79    call 0x00576940                                 ; => [ Call: sub_576940 ]
 0057EC7E    add esp, 0x04
 0057EC81    cmp dword ptr ds:[eax+0x4C], 0x02
 0057EC85    jnz 0x0057EC9D
@@ -34,7 +40,7 @@
 0057EC8A    jmp 0x0057EC9B
 0057EC8C    call 0x005769E0
 0057EC91    add esp, 0x04
-0057EC94    test byte ptr ds:[eax+0xAC], 0x01
+0057EC94    test byte ptr ds:[eax+0xAC], 0x01               ; => [ Call: sub_5769e0 ]
 0057EC9B    jnz 0x0057ECB0
 0057EC9D    mov ecx, dword ptr ss:[ebp-0x0C]
 0057ECA0    mov eax, dword ptr ds:[esi]
@@ -51,7 +57,7 @@
 0057ECBA    push eax
 0057ECBB    push esi
 0057ECBC    push ecx
-0057ECBD    call 0x00761FBE
+0057ECBD    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0057ECC2    add esp, 0x0C
 0057ECC5    mov cl, 0x01
 0057ECC7    xor esi, esi
@@ -64,13 +70,13 @@
 0057ECD8    push eax
 0057ECD9    test al, 0x30
 0057ECDB    jnz 0x0057ECF1
-0057ECDD    call 0x00576940
+0057ECDD    call 0x00576940                                 ; => [ Call: sub_576940 ]
 0057ECE2    add esp, 0x04
 0057ECE5    cmp dword ptr ds:[eax+0x4C], 0x02
 0057ECE9    jnz 0x0057ED20
 0057ECEB    test byte ptr ds:[eax+0x60], 0x01
 0057ECEF    jmp 0x0057ED00
-0057ECF1    call 0x005769E0
+0057ECF1    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 0057ECF6    add esp, 0x04
 0057ECF9    test byte ptr ds:[eax+0xAC], 0x01
 0057ED00    jz 0x0057ED20
@@ -94,7 +100,7 @@
 0057ED39    movlpd qword ptr ss:[ebp-0x34], xmm0
 0057ED3E    movlpd qword ptr ss:[ebp-0x20], xmm0
 0057ED43    movlpd qword ptr ss:[ebp-0x28], xmm0
-0057ED48    mov dword ptr ss:[ebp-0x48], 0x00
+0057ED48    mov dword ptr ss:[ebp-0x48], 0x00               ; => [ Call: __builtin_memset ]
 0057ED4F    mov dword ptr ss:[ebp-0x2C], 0x00
 0057ED56    mov dword ptr ss:[ebp-0x38], 0x00
 0057ED5D    movups xmm0, xmmword ptr ss:[ebp-0x48]
@@ -115,7 +121,7 @@
 0057ED93    jz 0x0057EDD1
 0057ED95    push esi
 0057ED96    mov ecx, edi
-0057ED98    call 0x005769E0
+0057ED98    call 0x005769E0                                 ; => [ Call: sub_5769e0 ]
 0057ED9D    add esp, 0x04
 0057EDA0    cmp dword ptr ds:[eax+0x04], 0x00
 0057EDA4    jnz 0x0057EDCB
@@ -132,7 +138,7 @@
 0057EDCB    mov cl, byte ptr ss:[ebp-0x01]
 0057EDCE    mov edx, dword ptr ss:[ebp-0x08]
 0057EDD1    mov dword ptr ss:[ebp-0x38], 0x00
-0057EDD8    mov dword ptr ss:[ebp-0x48], 0x00
+0057EDD8    mov dword ptr ss:[ebp-0x48], 0x00               ; => [ Call: __builtin_memset | Call: __builtin_memset ]
 0057EDDF    xorps xmm0, xmm0
 0057EDE2    mov dword ptr ss:[ebp-0x3C], 0x00
 0057EDE9    movlpd qword ptr ss:[ebp-0x20], xmm0
@@ -172,16 +178,16 @@
 0057EE58    pop ebx
 0057EE59    mov esp, ebp
 0057EE5B    pop ebp
-0057EE5C    ret
+0057EE5C    ret                                             ; => [ Call: sub_623300 ]
 0057EE5D    push 0x81E9E4
 0057EE62    push 0x11E
 0057EE67    push 0x81E978
 0057EE6C    mov edx, 0x801800
 0057EE71    mov ecx, 0x81EA08
-0057EE76    call 0x0063B870
+0057EE76    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: AbilityID::static_ability_card_id | Data: data_801800 | String: type() == ABILITY_CARD_STATIC | String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 0057EE7B    add esp, 0x0C
 0057EE7E    call 0x0063BC30
 0057EE83    test al, al
-0057EE85    jz 0x0057EE88
+0057EE85    jz 0x0057EE88                                   ; => [ Call: sub_63bc30 ]
 0057EE87    int3
-0057EE88    call 0x0063BB00
+0057EE88    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

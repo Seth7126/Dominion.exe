@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50c960
+// 起始地址: 0x50c960
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050C960    push ebp
 0050C961    mov ebp, esp
 0050C963    and esp, 0xFFFFFFF8
@@ -10,14 +16,14 @@
 0050C96E    movzx esi, di
 0050C971    cmp esi, 0x320
 0050C977    jb 0x0050C97E
-0050C979    call 0x00591930
+0050C979    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0050C97E    mov eax, dword ptr ss:[ebp+0x08]
 0050C981    mov ecx, eax
 0050C983    imul esi, esi, 0x64
 0050C986    mov dword ptr ds:[esi+ebx*1+0x1A4C], eax
 0050C98D    mov edx, dword ptr ds:[ebx+0xD48]
 0050C993    call 0x00571B30
-0050C998    mov dword ptr ds:[esi+ebx*1+0x1A48], eax
+0050C998    mov dword ptr ds:[esi+ebx*1+0x1A48], eax        ; => [ Call: sub_571b30 ]
 0050C99F    mov eax, dword ptr ds:[ebx+0x1504]
 0050C9A5    cmp eax, 0x03
 0050C9A8    jz 0x0050C9E2
@@ -41,7 +47,7 @@
 0050C9D4    push edi
 0050C9D5    push 0xFFFFFFFF
 0050C9D7    setz cl
-0050C9DA    call 0x0061B1B0
+0050C9DA    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 0050C9DF    add esp, 0x2C
 0050C9E2    pop edi
 0050C9E3    pop esi

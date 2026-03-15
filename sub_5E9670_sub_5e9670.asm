@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e9670
+// 起始地址: 0x5e9670
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E9670    push ebp
 005E9671    mov ebp, esp
 005E9673    push ecx
@@ -104,10 +110,10 @@
 005E9773    push 0x805AF8
 005E9778    mov edx, 0x801800
 005E977D    mov ecx, 0x801AA4
-005E9782    call 0x0063B870
+005E9782    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: LogReadInt | String: Halt | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSave.cpp ]
 005E9787    add esp, 0x0C
 005E978A    call 0x0063BC30
 005E978F    test al, al
-005E9791    jz 0x005E9794
+005E9791    jz 0x005E9794                                   ; => [ Call: sub_63bc30 ]
 005E9793    int3
-005E9794    call 0x0063BB00
+005E9794    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_694890
+// 起始地址: 0x694890
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00694890    push ebp
 00694891    mov ebp, esp
 00694893    push ebx
@@ -6,9 +12,9 @@
 00694898    push edi
 00694899    test ecx, ecx
 0069489B    jnz 0x006948AE
-0069489D    push 0x8788C4
+0069489D    push 0x8788C4                                   ; => [ String: DefBinSerializeString ]
 006948A2    push 0x15B
-006948A7    mov ecx, 0x878950
+006948A7    mov ecx, 0x878950                               ; => [ String: pString ]
 006948AC    jmp 0x00694926
 006948AE    mov eax, dword ptr ds:[esi+0x10]
 006948B1    test eax, eax
@@ -33,7 +39,7 @@
 006948E0    push ebx
 006948E1    push ecx
 006948E2    push eax
-006948E3    call 0x00761FBE
+006948E3    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006948E8    lea eax, ds:[edi+ebx*1]
 006948EB    add esp, 0x0C
 006948EE    mov dword ptr ds:[esi+0x08], eax
@@ -57,15 +63,15 @@
 00694914    pop ebx
 00694915    pop ebp
 00694916    ret
-00694917    push 0x8788C4
+00694917    push 0x8788C4                                   ; => [ String: DefBinSerializeString ]
 0069491C    push 0x15E
-00694921    mov ecx, 0x8788F8
+00694921    mov ecx, 0x8788F8                               ; => [ String: !tSerializer.pDataSizeWithoutHWBuffers || *tSerializer.pDataSizeWithoutHWBuffers == 0 ]
 00694926    push 0x878868
 0069492B    mov edx, 0x801800
-00694930    call 0x0063B870
+00694930    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: DefBinSerializeString | String: C:\x\ax2017\Engine\DefBin.cpp ]
 00694935    add esp, 0x0C
 00694938    call 0x0063BC30
 0069493D    test al, al
-0069493F    jz 0x00694942
+0069493F    jz 0x00694942                                   ; => [ Call: sub_63bc30 ]
 00694941    int3
-00694942    call 0x0063BB00
+00694942    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

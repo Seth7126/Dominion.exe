@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5f1e60
+// 起始地址: 0x5f1e60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005F1E60    push ebp
 005F1E61    mov ebp, esp
 005F1E63    sub esp, 0x15C
@@ -16,7 +22,7 @@
 005F1E83    push dword ptr ss:[ebp+0x14]
 005F1E86    mov ecx, ebx
 005F1E88    mov dword ptr ss:[ebp-0x04], esi
-005F1E8B    call 0x005CE300
+005F1E8B    call 0x005CE300                                 ; => [ Call: sub_5ce300 ]
 005F1E90    mov edx, dword ptr ds:[esi+0x5C]
 005F1E93    add esp, 0x0C
 005F1E96    mov ecx, edx
@@ -35,7 +41,7 @@
 005F1EC6    lea eax, ss:[ebp-0xA8]
 005F1ECC    push 0x00
 005F1ECE    push eax
-005F1ECF    call 0x005CC540
+005F1ECF    call 0x005CC540                                 ; => [ Call: sub_5cc540 ]
 005F1ED4    mov ecx, dword ptr ds:[ebx+0x1A18]
 005F1EDA    add esp, 0x18
 005F1EDD    sub ecx, 0x01
@@ -82,14 +88,14 @@
 005F1F8A    push eax
 005F1F8B    movups xmmword ptr ss:[ebp-0x88], xmm5
 005F1F92    movups xmmword ptr ss:[ebp-0x78], xmm6
-005F1F96    rep movsd
+005F1F96    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005F1F98    movups xmmword ptr ss:[ebp-0x48], xmm0
 005F1F9C    lea esi, ds:[ebx+0x258]
 005F1FA2    movq xmm0, qword ptr ss:[ebp-0x10]
 005F1FA7    mov ecx, esi
 005F1FA9    movq qword ptr ss:[ebp-0x38], xmm0
 005F1FAE    mov dword ptr ss:[ebp-0x30], esi
-005F1FB1    call 0x006371B0
+005F1FB1    call 0x006371B0                                 ; => [ Call: sub_6371b0 ]
 005F1FB6    xorps xmm0, xmm0
 005F1FB9    mov dword ptr ss:[ebp-0x20], ebx
 005F1FBC    movlpd qword ptr ss:[ebp-0x18], xmm0
@@ -104,7 +110,7 @@
 005F1FE4    movq xmm0, qword ptr ss:[ebp-0x10]
 005F1FE9    push 0x3E8
 005F1FEE    movq qword ptr ss:[ebp-0x38], xmm0
-005F1FF3    call 0x00637100
+005F1FF3    call 0x00637100                                 ; => [ Call: sub_637100 ]
 005F1FF8    mov eax, dword ptr ss:[ebp-0x04]
 005F1FFB    mov esi, dword ptr ds:[eax+0x5C]
 005F1FFE    mov ecx, dword ptr ds:[eax+0x64]
@@ -112,14 +118,14 @@
 005F2004    mov dword ptr ss:[ebp-0x04], ecx
 005F2007    test esi, esi
 005F2009    jnz 0x005F2083
-005F200B    push 0x86F4EC
+005F200B    push 0x86F4EC                                   ; => [ String: DomLocSet ]
 005F2010    push 0xA6D
-005F2015    mov ecx, 0x817824
+005F2015    mov ecx, 0x817824                               ; => [ String: where != CW_NONE ]
 005F201A    jmp 0x005F21BC
 005F201F    sub ecx, 0x3EA
 005F2025    cmp ecx, 0x88
 005F202B    jnbe 0x005F21AD
-005F2031    movzx eax, byte ptr ds:[ecx+0x5F21F8]
+005F2031    movzx eax, byte ptr ds:[ecx+0x5F21F8]           ; => [ Call: sub_5f1d60 ]
 005F2038    jmp dword ptr ds:[eax*4+0x5F21E0]
 005F203F    mov ecx, 0x0C
 005F2044    jmp 0x005F2060
@@ -133,15 +139,15 @@
 005F2060    mov eax, dword ptr ds:[esi+0x384]
 005F2066    cmp edi, 0xFFFFFFFF
 005F2069    jnz 0x005F1EC1
-005F206F    push 0x8606C0
+005F206F    push 0x8606C0                                   ; => [ String: DomMoveDisplay ]
 005F2074    push 0x7707
-005F2079    mov ecx, 0x81F8F8
+005F2079    mov ecx, 0x81F8F8                               ; => [ String: who != PLAYER_NONE ]
 005F207E    jmp 0x005F21BC
 005F2083    push 0x40
 005F2085    lea eax, ss:[ebp-0x8C]
 005F208B    push 0x00
 005F208D    push eax
-005F208E    call 0x00761FC4
+005F208E    call 0x00761FC4                                 ; => [ Call: memset ]
 005F2093    mov eax, dword ptr ss:[ebp-0x24]
 005F2096    add esp, 0x0C
 005F2099    movups xmm4, xmmword ptr ss:[ebp-0x88]
@@ -195,12 +201,12 @@
 005F2180    movups xmmword ptr ds:[ebx+0x30], xmm3
 005F2184    movups xmmword ptr ss:[ebp-0x48], xmm0
 005F2188    movq xmm0, qword ptr ss:[ebp-0x10]
-005F218D    rep movsd
+005F218D    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 005F218F    mov ecx, dword ptr ss:[ebp-0x30]
 005F2192    movups xmmword ptr ds:[ebx+0x40], xmm2
 005F2196    movups xmmword ptr ds:[ebx+0x50], xmm1
 005F219A    movq qword ptr ss:[ebp-0x38], xmm0
-005F219F    call 0x006371B0
+005F219F    call 0x006371B0                                 ; => [ Call: sub_6371b0 ]
 005F21A4    pop edi
 005F21A5    pop esi
 005F21A6    mov eax, ebx
@@ -208,15 +214,15 @@
 005F21A9    mov esp, ebp
 005F21AB    pop ebp
 005F21AC    ret
-005F21AD    push 0x8606D0
+005F21AD    push 0x8606D0                                   ; => [ String: DomLocDisplayLoc ]
 005F21B2    push 0x76FA
-005F21B7    mov ecx, 0x801AA4
+005F21B7    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005F21BC    push 0x86F1E8
 005F21C1    mov edx, 0x801800
-005F21C6    call 0x0063B870
+005F21C6    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 ]
 005F21CB    add esp, 0x0C
 005F21CE    call 0x0063BC30
 005F21D3    test al, al
-005F21D5    jz 0x005F21D8
+005F21D5    jz 0x005F21D8                                   ; => [ Call: sub_63bc30 ]
 005F21D7    int3
-005F21D8    call 0x0063BB00
+005F21D8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

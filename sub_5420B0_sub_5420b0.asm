@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_5420b0
+// 起始地址: 0x5420b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005420B0    dword 83EC8B55
 005420B4    in al, 0xF8
 005420B6    push esi
 005420B7    push edi
-005420B8    call 0x0056B800
+005420B8    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 005420BD    mov esi, eax
-005420BF    call 0x00573400
+005420BF    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005420C4    movzx esi, si
 005420C7    mov edi, dword ptr ds:[eax+0x04]
 005420CA    cmp esi, 0x320
 005420D0    jb 0x005420D7
-005420D2    call 0x00591930
+005420D2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005420D7    imul eax, esi, 0x64
 005420DA    mov eax, dword ptr ds:[eax+edi*1+0x1A50]
 005420E1    cmp eax, 0x3EA
@@ -35,7 +41,7 @@
 00542126    add esp, 0x0C
 00542129    xor ecx, ecx
 0054212B    cmp eax, esi
-0054212D    setz cl
+0054212D    setz cl                                         ; => [ Call: sub_568960 ]
 00542130    pop edi
 00542131    mov eax, ecx
 00542133    pop esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4fb230
+// 起始地址: 0x4fb230
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FB230    dword B8EC8B55
 004FB234    or byte ptr ds:[ecx], bl
 004FB236    add byte ptr ds:[eax], al
@@ -12,7 +18,7 @@
 004FB253    lea edi, ss:[ebp-0xC84]
 004FB259    mov esi, eax
 004FB25B    mov ecx, 0x321
-004FB260    rep movsd
+004FB260    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: __chkstk | Call: sub_568780 ]
 004FB262    xor eax, eax
 004FB264    cmp dword ptr ss:[ebp-0x04], eax
 004FB267    pop edi

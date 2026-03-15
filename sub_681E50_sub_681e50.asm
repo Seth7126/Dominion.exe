@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_681e50
+// 起始地址: 0x681e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00681E50    push ebp
 00681E51    mov ebp, esp
 00681E53    movups xmm0, xmmword ptr ds:[ecx]
@@ -15,8 +21,8 @@
 00681E70    test edx, edx
 00681E72    jz 0x00681FC6
 00681E78    movss xmm5, dword ptr ds:[0x00890E18]
-00681E80    xorps xmm4, xmm4
-00681E83    xorps xmm6, xmm6
+00681E80    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
+00681E83    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 00681E86    movaps xmm3, xmm5
 00681E89    test dl, 0x01
 00681E8C    jz 0x00681EBE

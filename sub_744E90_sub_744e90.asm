@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_744e90
+// 起始地址: 0x744e90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00744E90    push esi
 00744E91    mov esi, ecx
-00744E93    mov ecx, dword ptr ds:[0x01512450]
+00744E93    mov ecx, dword ptr ds:[0x01512450]              ; => [ Data: data_1512450 ]
 00744E99    cmp dword ptr ds:[ecx+0x04], 0x1E
 00744E9D    jz 0x00744EB5
-00744E9F    push 0x8790A8
+00744E9F    push 0x8790A8                                   ; => [ String: UIDefGet ]
 00744EA4    push 0x127
-00744EA9    push 0x878EA8
-00744EAE    mov ecx, 0x8790C8
+00744EA9    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+00744EAE    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 00744EB3    jmp 0x00744EEE
-00744EB5    call 0x005AF880
+00744EB5    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00744EBA    mov ecx, eax
 00744EBC    xor eax, eax
 00744EBE    mov edx, dword ptr ds:[ecx+0x08]
@@ -24,15 +30,15 @@
 00744ED6    jmp 0x00744EC7
 00744ED8    pop esi
 00744ED9    ret
-00744EDA    push 0x88FCD4
+00744EDA    push 0x88FCD4                                   ; => [ String: FindElementIndex ]
 00744EDF    push 0x117
-00744EE4    push 0x88FC60
-00744EE9    mov ecx, 0x801AA4
+00744EE4    push 0x88FC60                                   ; => [ String: C:\x\ax2017\Engine\Editor\UIEditor.cpp ]
+00744EE9    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00744EEE    mov edx, 0x801800
-00744EF3    call 0x0063B870
+00744EF3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00744EF8    add esp, 0x0C
 00744EFB    call 0x0063BC30
 00744F00    test al, al
-00744F02    jz 0x00744F05
+00744F02    jz 0x00744F05                                   ; => [ Call: sub_63bc30 ]
 00744F04    int3
-00744F05    call 0x0063BB00
+00744F05    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

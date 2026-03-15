@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_712420
+// 起始地址: 0x712420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00712420    push ebp
 00712421    mov ebp, esp
 00712423    sub esp, 0x44
@@ -21,7 +27,7 @@
 00712463    movsd qword ptr ss:[ebp-0x28], xmm0
 00712468    fld qword ptr ss:[ebp-0x28]
 0071246B    fld qword ptr ss:[ebp-0x40]
-0071246E    call 0x0076236E
+0071246E    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 00712473    mov ecx, dword ptr ss:[ebp-0x04]
 00712476    xor edi, edi
 00712478    fstp dword ptr ss:[ebp-0x0C]
@@ -41,20 +47,20 @@
 007124A4    jnbe 0x007124F4
 007124A6    mov esi, dword ptr ds:[ecx+0x24]
 007124A9    mov ecx, esi
-007124AB    call 0x00710F50
+007124AB    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007124B0    mov ecx, dword ptr ds:[esi+0x08]
 007124B3    mov eax, dword ptr ds:[esi+0x04]
 007124B6    mov dword ptr ds:[eax+ecx*4], 0x05
 007124BD    mov ecx, esi
 007124BF    inc dword ptr ds:[esi+0x08]
-007124C2    call 0x00710F50
+007124C2    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007124C7    mov ecx, dword ptr ds:[esi+0x08]
 007124CA    mov eax, dword ptr ds:[esi+0x04]
 007124CD    mov edx, dword ptr ss:[ebp-0x08]
 007124D0    mov dword ptr ds:[eax+ecx*4], edx
 007124D3    mov ecx, esi
 007124D5    inc dword ptr ds:[esi+0x08]
-007124D8    call 0x00710F50
+007124D8    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007124DD    mov ecx, dword ptr ds:[esi+0x08]
 007124E0    mov eax, dword ptr ds:[esi+0x04]
 007124E3    mov edx, dword ptr ss:[ebp-0x24]
@@ -79,14 +85,14 @@
 0071251F    movsd qword ptr ss:[ebp-0x38], xmm0
 00712524    fld qword ptr ss:[ebp-0x38]
 00712527    fld qword ptr ss:[ebp-0x40]
-0071252A    call 0x0076236E
+0071252A    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 0071252F    movss xmm1, dword ptr ss:[ebp-0x0C]
 00712534    fstp qword ptr ss:[ebp-0x40]
 00712537    movsd xmm0, qword ptr ss:[ebp-0x40]
 0071253C    cvtpd2ps xmm0, xmm0
 00712540    comiss xmm1, xmm0
 00712543    jnbe 0x00712549
-00712545    xor eax, eax
+00712545    xor eax, eax                                    ; => [ Call: nullptr ]
 00712547    jmp 0x0071254E
 00712549    mov eax, 0x01
 0071254E    test eax, eax
@@ -101,13 +107,13 @@
 00712569    mov esi, dword ptr ss:[ebp-0x04]
 0071256C    mov esi, dword ptr ds:[esi+0x24]
 0071256F    mov ecx, esi
-00712571    call 0x00710F50
+00712571    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 00712576    mov ecx, dword ptr ds:[esi+0x08]
 00712579    mov eax, dword ptr ds:[esi+0x04]
 0071257C    mov dword ptr ds:[eax+ecx*4], 0x03
 00712583    mov ecx, esi
 00712585    inc dword ptr ds:[esi+0x08]
-00712588    call 0x00710F50
+00712588    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 0071258D    mov ecx, dword ptr ds:[esi+0x08]
 00712590    mov eax, dword ptr ds:[esi+0x04]
 00712593    mov edx, dword ptr ss:[ebp-0x08]
@@ -125,20 +131,20 @@
 007125B9    mov eax, dword ptr ss:[ebp-0x04]
 007125BC    mov esi, dword ptr ds:[eax+0x24]
 007125BF    mov ecx, esi
-007125C1    call 0x00710F50
+007125C1    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007125C6    mov ecx, dword ptr ds:[esi+0x08]
 007125C9    mov eax, dword ptr ds:[esi+0x04]
 007125CC    mov dword ptr ds:[eax+ecx*4], 0x05
 007125D3    mov ecx, esi
 007125D5    inc dword ptr ds:[esi+0x08]
-007125D8    call 0x00710F50
+007125D8    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007125DD    mov ecx, dword ptr ds:[esi+0x08]
 007125E0    mov eax, dword ptr ds:[esi+0x04]
 007125E3    mov edx, dword ptr ss:[ebp-0x08]
 007125E6    mov dword ptr ds:[eax+ecx*4], edx
 007125E9    mov ecx, esi
 007125EB    inc dword ptr ds:[esi+0x08]
-007125EE    call 0x00710F50
+007125EE    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 007125F3    mov ecx, dword ptr ds:[esi+0x08]
 007125F6    mov eax, dword ptr ds:[esi+0x04]
 007125F9    movss xmm0, dword ptr ss:[ebp-0x18]

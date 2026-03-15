@@ -1,20 +1,26 @@
+// ============================================================
+// 函数名称: sub_55a4a0
+// 起始地址: 0x55a4a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055A4A0    dword B8EC8B55
 0055A4A4    or byte ptr ds:[ecx], bl
 0055A4A6    add byte ptr ds:[eax], al
-0055A4A8    call 0x00761E50
+0055A4A8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0055A4AD    mov eax, dword ptr ds:[0x008C4040]
 0055A4B2    xor eax, ebp
-0055A4B4    mov dword ptr ss:[ebp-0x04], eax
+0055A4B4    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 0055A4B7    push esi
 0055A4B8    push edi
 0055A4B9    call 0x0056B800
 0055A4BE    mov esi, eax
 0055A4C0    call 0x00573400
-0055A4C5    movzx esi, si
-0055A4C8    mov edi, dword ptr ds:[eax+0x04]
+0055A4C5    movzx esi, si                                   ; => [ Call: sub_56b800 ]
+0055A4C8    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0055A4CB    cmp esi, 0x320
 0055A4D1    jb 0x0055A4D8
-0055A4D3    call 0x00591930
+0055A4D3    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0055A4D8    imul eax, esi, 0x64
 0055A4DB    mov eax, dword ptr ds:[eax+edi*1+0x1A50]
 0055A4E2    cmp eax, 0x3EA
@@ -35,14 +41,14 @@
 0055A518    lea edx, ss:[ebp-0x1904]
 0055A51E    call 0x0056D740
 0055A523    add esp, 0x04
-0055A526    mov edx, eax
+0055A526    mov edx, eax                                    ; => [ Call: sub_56d740 ]
 0055A528    jmp 0x0055A574
 0055A52A    lea eax, ss:[ebp-0xC84]
 0055A530    mov ecx, 0x3E9
 0055A535    push eax
 0055A536    lea edx, ss:[ebp-0x1904]
 0055A53C    call 0x0056D740
-0055A541    mov edx, eax
+0055A541    mov edx, eax                                    ; => [ Call: sub_56d740 ]
 0055A543    add esp, 0x04
 0055A546    xor eax, eax
 0055A548    test edx, edx
@@ -68,11 +74,11 @@
 0055A58E    dec eax
 0055A58F    or eax, 0xFFFFFFF8
 0055A592    inc eax
-0055A593    movaps xmm3, xmmword ptr ds:[0x00891390]
+0055A593    movaps xmm3, xmmword ptr ds:[0x00891390]        ; => [ Data: data_891390 ]
 0055A59A    mov esi, edx
 0055A59C    sub esi, eax
-0055A59E    xorps xmm2, xmm2
-0055A5A1    xorps xmm1, xmm1
+0055A59E    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+0055A5A1    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 0055A5A4    lea eax, ss:[ebp-0xC84]
 0055A5AA    nop word ptr ds:[eax+eax*1], ax
 0055A5B0    movups xmm0, xmmword ptr ds:[eax+ecx*4]
@@ -107,7 +113,7 @@
 0055A61A    pop edi
 0055A61B    xor ecx, ebp
 0055A61D    pop esi
-0055A61E    call 0x0075927A
+0055A61E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0055A623    mov esp, ebp
 0055A625    pop ebp
 0055A626    ret

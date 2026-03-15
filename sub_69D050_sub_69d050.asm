@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69d050
+// 起始地址: 0x69d050
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069D050    push ebp
 0069D051    mov ebp, esp
 0069D053    mov eax, dword ptr ss:[ebp+0x10]
@@ -28,7 +34,7 @@
 0069D08C    jz 0x0069D0BF
 0069D08E    imul esi, ecx
 0069D091    mov ecx, esi
-0069D093    call 0x00687730
+0069D093    call 0x00687730                                 ; => [ Call: sub_687730 ]
 0069D098    push esi
 0069D099    mov esi, dword ptr ss:[ebp+0x10]
 0069D09C    push esi
@@ -41,7 +47,7 @@
 0069D0AD    push esi
 0069D0AE    push dword ptr ss:[ebp+0x08]
 0069D0B1    push edi
-0069D0B2    call 0x0069CF40
+0069D0B2    call 0x0069CF40                                 ; => [ Call: sub_69cf40 | Call: memcpy ]
 0069D0B7    add esp, 0x0C
 0069D0BA    pop edi
 0069D0BB    pop esi
@@ -53,10 +59,10 @@
 0069D0C6    push 0x879400
 0069D0CB    mov edx, 0x801800
 0069D0D0    mov ecx, 0x87948C
-0069D0D5    call 0x0063B870
+0069D0D5    call 0x0063B870                                 ; => [ String: pDefMap->definitionSize != 0 | Call: sub_63b870 | String: DefinitionGetSize | String: C:\x\ax2017\Engine\Definition.cpp | Data: data_801800 ]
 0069D0DA    add esp, 0x0C
 0069D0DD    call 0x0063BC30
 0069D0E2    test al, al
-0069D0E4    jz 0x0069D0E7
+0069D0E4    jz 0x0069D0E7                                   ; => [ Call: sub_63bc30 ]
 0069D0E6    int3
-0069D0E7    call 0x0063BB00
+0069D0E7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

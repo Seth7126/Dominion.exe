@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_550790
+// 起始地址: 0x550790
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00550790    dword 83EC8B55
 00550794    in al, 0xF8
 00550796    sub esp, 0x14
@@ -5,15 +11,15 @@
 0055079A    push esi
 0055079B    push edi
 0055079C    lea ecx, ss:[esp+0x14]
-005507A0    call 0x0056FFF0
+005507A0    call 0x0056FFF0                                 ; => [ Call: sub_56fff0 ]
 005507A5    mov dword ptr ss:[esp+0x1C], eax
 005507A9    cmp eax, 0x0F
 005507AC    jnl 0x005507C2
-005507AE    push 0x81CA5C
+005507AE    push 0x81CA5C                                   ; => [ String: BlackMarket_Setup ]
 005507B3    push 0x10A
-005507B8    mov ecx, 0x81CAA4
+005507B8    mov ecx, 0x81CAA4                               ; => [ String: numWhats >= 15 ]
 005507BD    jmp 0x005508FF
-005507C2    call 0x00573400
+005507C2    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005507C7    mov dword ptr ss:[esp+0x18], eax
 005507CB    mov esi, 0x27
 005507D0    mov edi, dword ptr ds:[eax+0x04]
@@ -26,10 +32,10 @@
 005507E6    add ecx, 0x10
 005507E9    cmp esi, 0x47
 005507EC    jl 0x005507E0
-005507EE    push 0x81F994
+005507EE    push 0x81F994                                   ; => [ String: NextAvailableNonSupplyPile ]
 005507F3    push 0x625
-005507F8    push 0x81F4B8
-005507FD    mov ecx, 0x801AA4
+005507F8    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+005507FD    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00550802    jmp 0x00550904
 00550807    mov ecx, edi
 00550809    mov eax, esi
@@ -61,7 +67,7 @@
 00550877    push 0x00
 00550879    push 0xFFFFFFFF
 0055087B    setz cl
-0055087E    call 0x0061B1B0
+0055087E    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00550883    add esp, 0x2C
 00550886    xor ebx, ebx
 00550888    nop dword ptr ds:[eax+eax*1], eax
@@ -74,7 +80,7 @@
 0055089F    push 0xFFFFFFFF
 005508A1    push esi
 005508A2    mov edx, edi
-005508A4    call 0x005727E0
+005508A4    call 0x005727E0                                 ; => [ Call: sub_5727e0 ]
 005508A9    mov eax, dword ptr ss:[esp+0x24]
 005508AD    add esp, 0x0C
 005508B0    mov eax, dword ptr ds:[eax+0x70]
@@ -85,7 +91,7 @@
 005508BD    push 0x01
 005508BF    push eax
 005508C0    mov ecx, edi
-005508C2    call 0x005735A0
+005508C2    call 0x005735A0                                 ; => [ Call: sub_5735a0 ]
 005508C7    inc ebx
 005508C8    add esp, 0x08
 005508CB    cmp ebx, dword ptr ss:[esp+0x1C]
@@ -104,16 +110,16 @@
 005508EB    pop ebx
 005508EC    mov esp, ebp
 005508EE    pop ebp
-005508EF    ret
-005508F0    push 0x81CA5C
+005508EF    ret                                             ; => [ Call: sub_572b80 | Call: sub_572b80 ]
+005508F0    push 0x81CA5C                                   ; => [ String: BlackMarket_Setup ]
 005508F5    push 0x118
-005508FA    mov ecx, 0x813CAC
-005508FF    push 0x81CA70
+005508FA    mov ecx, 0x813CAC                               ; => [ String: c.extraSetup ]
+005508FF    push 0x81CA70                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCards_Promos.cpp ]
 00550904    mov edx, 0x801800
-00550909    call 0x0063B870
+00550909    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0055090E    add esp, 0x0C
 00550911    call 0x0063BC30
 00550916    test al, al
-00550918    jz 0x0055091B
+00550918    jz 0x0055091B                                   ; => [ Call: sub_63bc30 ]
 0055091A    int3
-0055091B    call 0x0063BB00
+0055091B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

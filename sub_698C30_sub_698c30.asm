@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_698c30
+// 起始地址: 0x698c30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00698C30    push ebp
 00698C31    mov ebp, esp
 00698C33    and esp, 0xFFFFFFF0
@@ -8,7 +14,7 @@
 00698C43    push edi
 00698C44    mov edi, edx
 00698C46    mov esi, ecx
-00698C48    jnz 0x00698C52
+00698C48    jnz 0x00698C52                                  ; => [ Data: data_cf65b4 ]
 00698C4A    xor al, al
 00698C4C    pop edi
 00698C4D    pop esi
@@ -21,7 +27,7 @@
 00698C58    lea eax, ss:[esp+0x14]
 00698C5C    lea edx, ds:[esi+0x10]
 00698C5F    push eax
-00698C60    call 0x00697400
+00698C60    call 0x00697400                                 ; => [ Call: sub_697400 ]
 00698C65    movss xmm5, dword ptr ds:[esi+0x168]
 00698C6D    add esp, 0x08
 00698C70    movss xmm4, dword ptr ds:[esi+0x170]
@@ -92,18 +98,18 @@
 00698D81    mov esp, ebp
 00698D83    pop ebp
 00698D84    ret
-00698D85    push 0x8019F0
+00698D85    push 0x8019F0                                   ; => [ String: RectContains ]
 00698D8A    push 0xA4
 00698D8F    jmp 0x00698D9B
-00698D91    push 0x876CA0
+00698D91    push 0x876CA0                                   ; => [ String: RectInflate ]
 00698D96    push 0xB3
 00698D9B    push 0x801A00
 00698DA0    mov edx, 0x801800
 00698DA5    mov ecx, 0x801A1C
-00698DAA    call 0x0063B870
+00698DAA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectIsNormalized(r) | String: C:\x\ax2017\Engine\Rect.cpp ]
 00698DAF    add esp, 0x0C
 00698DB2    call 0x0063BC30
 00698DB7    test al, al
-00698DB9    jz 0x00698DBC
+00698DB9    jz 0x00698DBC                                   ; => [ Call: sub_63bc30 ]
 00698DBB    int3
-00698DBC    call 0x0063BB00
+00698DBC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

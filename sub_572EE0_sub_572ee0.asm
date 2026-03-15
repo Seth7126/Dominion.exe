@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_572ee0
+// 起始地址: 0x572ee0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00572EE0    push ebp
 00572EE1    mov ebp, esp
 00572EE3    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 00572EEE    push edi
 00572EEF    push esi
 00572EF0    mov edi, edx
-00572EF2    call 0x00572B80
+00572EF2    call 0x00572B80                                 ; => [ Call: sub_572b80 ]
 00572EF7    add esp, 0x04
 00572EFA    cmp esi, 0xFFFFFFFF
 00572EFD    jz 0x00572F12
@@ -18,7 +24,7 @@
 00572F01    push 0x44E
 00572F06    mov edx, esi
 00572F08    mov ecx, ebx
-00572F0A    call 0x00572AC0
+00572F0A    call 0x00572AC0                                 ; => [ Call: sub_572ac0 ]
 00572F0F    add esp, 0x0C
 00572F12    pop edi
 00572F13    pop esi

@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_5e2fe0
+// 起始地址: 0x5e2fe0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E2FE0    push ebp
 005E2FE1    mov ebp, esp
 005E2FE3    sub esp, 0x0C
 005E2FE6    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 005E2FF0    push ebx
 005E2FF1    push esi
-005E2FF2    mov esi, dword ptr ds:[0x00B809E0]
+005E2FF2    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005E2FF8    push edi
-005E2FF9    add eax, esi
+005E2FF9    add eax, esi                                    ; => [ Data: data_b809e4 ]
 005E2FFB    mov dword ptr ss:[ebp-0x04], edx
 005E2FFE    mov edi, ecx
 005E3000    cmp esi, eax
@@ -63,10 +69,10 @@
 005E30A2    test edx, edx
 005E30A4    jz 0x005E3100
 005E30A6    mov ebx, 0x07
-005E30AB    mov edi, 0xB8206C
+005E30AB    mov edi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005E30B0    cmp ebx, 0x48
 005E30B3    jl 0x005E30BD
-005E30B5    call 0x00591930
+005E30B5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005E30BA    mov edx, dword ptr ss:[ebp-0x04]
 005E30BD    cmp dword ptr ds:[edi], edx
 005E30BF    jz 0x005E30D4
@@ -81,13 +87,13 @@
 005E30D6    push 0x00
 005E30D8    or edx, 0xFFFFFFFF
 005E30DB    mov ecx, ebx
-005E30DD    call 0x005CC410
+005E30DD    call 0x005CC410                                 ; => [ Call: sub_5cc410 ]
 005E30E2    add esp, 0x08
 005E30E5    test eax, eax
 005E30E7    jz 0x005E3107
 005E30E9    mov edx, eax
 005E30EB    mov ecx, esi
-005E30ED    call 0x005CD880
+005E30ED    call 0x005CD880                                 ; => [ Call: sub_5cd880 ]
 005E30F2    mov ecx, esi
 005E30F4    call 0x005CB5A0
 005E30F9    pop edi
@@ -97,9 +103,9 @@
 005E30FE    pop ebp
 005E30FF    ret
 005E3100    mov ecx, esi
-005E3102    call 0x005CD3E0
+005E3102    call 0x005CD3E0                                 ; => [ Call: sub_5cd3e0 ]
 005E3107    mov ecx, esi
-005E3109    call 0x005CB5A0
+005E3109    call 0x005CB5A0                                 ; => [ Call: sub_5cb5a0 ]
 005E310E    pop edi
 005E310F    pop esi
 005E3110    pop ebx

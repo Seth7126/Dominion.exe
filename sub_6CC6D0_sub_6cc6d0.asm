@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6cc6d0
+// 起始地址: 0x6cc6d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CC6D0    push ebx
 006CC6D1    mov ebx, esp
 006CC6D3    sub esp, 0x08
@@ -8,7 +14,7 @@
 006CC6E0    mov dword ptr ss:[esp+0x04], ebp
 006CC6E4    mov ebp, esp
 006CC6E6    sub esp, 0xC8
-006CC6EC    mov eax, dword ptr ds:[0x008C4040]
+006CC6EC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006CC6F1    xor eax, ebp
 006CC6F3    mov dword ptr ss:[ebp-0x04], eax
 006CC6F6    mov ecx, dword ptr ds:[0x0147D1B0]
@@ -17,13 +23,13 @@
 006CC703    push edi
 006CC704    push edx
 006CC705    mov eax, dword ptr ds:[ecx]
-006CC707    call dword ptr ds:[eax+0x14]
-006CC70A    movss xmm0, dword ptr ds:[0x0147D2B8]
-006CC712    movss xmm4, dword ptr ds:[0x0147D2B4]
+006CC707    call dword ptr ds:[eax+0x14]                    ; => [ Data: data_147d1b0 ]
+006CC70A    movss xmm0, dword ptr ds:[0x0147D2B8]           ; => [ Data: data_147d2b4 ]
+006CC712    movss xmm4, dword ptr ds:[0x0147D2B4]           ; => [ Data: data_147d2b4 ]
 006CC71A    movaps xmm1, xmm0
-006CC71D    movss xmm2, dword ptr ds:[0x0147D2BC]
+006CC71D    movss xmm2, dword ptr ds:[0x0147D2BC]           ; => [ Data: data_147d2b4 ]
 006CC725    movaps xmm3, xmm4
-006CC728    movss xmm5, dword ptr ds:[0x0147D2C0]
+006CC728    movss xmm5, dword ptr ds:[0x0147D2C0]           ; => [ Data: data_147d2b4 ]
 006CC730    movaps xmm7, xmm2
 006CC733    mulss xmm1, xmm0
 006CC737    movaps xmm6, xmm5
@@ -38,7 +44,7 @@
 006CC758    movss dword ptr ss:[ebp-0xA0], xmm1
 006CC760    movss dword ptr ss:[ebp-0x98], xmm4
 006CC768    movss xmm4, dword ptr ds:[0x0147D2BC]
-006CC770    mulss xmm4, dword ptr ds:[0x0147D2B4]
+006CC770    mulss xmm4, dword ptr ds:[0x0147D2B4]           ; => [ Data: data_147d2b4 ]
 006CC778    movss dword ptr ss:[ebp-0x8C], xmm2
 006CC780    movss xmm2, dword ptr ss:[ebp-0x80]
 006CC785    mulss xmm2, dword ptr ds:[0x00890EB8]
@@ -50,7 +56,7 @@
 006CC7AC    movss xmm6, dword ptr ss:[ebp-0x7C]
 006CC7B1    subss xmm2, xmm1
 006CC7B5    movss xmm1, dword ptr ds:[0x0147D2B8]
-006CC7BD    mulss xmm1, xmm5
+006CC7BD    mulss xmm1, xmm5                                ; => [ Data: data_147d2b4 ]
 006CC7C1    movss xmm5, dword ptr ss:[ebp-0x84]
 006CC7C9    mulss xmm5, dword ptr ds:[0x00890EB8]
 006CC7D1    subss xmm2, xmm7
@@ -65,7 +71,7 @@
 006CC803    movss xmm0, dword ptr ss:[ebp-0x90]
 006CC80B    subss xmm0, xmm3
 006CC80F    movss xmm3, dword ptr ds:[0x0147D2B4]
-006CC817    mulss xmm3, dword ptr ds:[0x0147D2C0]
+006CC817    mulss xmm3, dword ptr ds:[0x0147D2C0]           ; => [ Data: data_147d2b4 ]
 006CC81F    movss dword ptr ss:[ebp-0x98], xmm2
 006CC827    movss xmm2, dword ptr ss:[ebp-0x9C]
 006CC82F    movss dword ptr ss:[ebp-0x90], xmm0
@@ -77,7 +83,7 @@
 006CC85B    subss xmm0, xmm7
 006CC85F    movss dword ptr ss:[ebp-0xB0], xmm0
 006CC867    movss xmm0, dword ptr ds:[0x0147D2BC]
-006CC86F    mulss xmm0, dword ptr ds:[0x0147D2B8]
+006CC86F    mulss xmm0, dword ptr ds:[0x0147D2B8]           ; => [ Data: data_147d2b4 ]
 006CC877    addss xmm1, xmm0
 006CC87B    movaps xmm3, xmm0
 006CC87E    movss xmm0, dword ptr ss:[ebp-0x90]
@@ -96,7 +102,7 @@
 006CC8DE    mulss xmm0, xmm4
 006CC8E2    mulss xmm6, dword ptr ss:[ebp-0x90]
 006CC8EA    addss xmm1, xmm0
-006CC8EE    movss xmm7, dword ptr ds:[0x0147D2B8]
+006CC8EE    movss xmm7, dword ptr ds:[0x0147D2B8]           ; => [ Data: data_147d2b4 ]
 006CC8F6    movss xmm0, dword ptr ss:[ebp-0x98]
 006CC8FE    mulss xmm0, xmm5
 006CC902    mulss xmm5, xmm2
@@ -157,7 +163,7 @@
 006CCA35    movaps xmm1, xmm5
 006CCA38    movss dword ptr ss:[ebp-0x74], xmm6
 006CCA3D    mulss xmm1, dword ptr ds:[0x0147D2C0]
-006CCA45    movss xmm6, dword ptr ds:[0x0147D2BC]
+006CCA45    movss xmm6, dword ptr ds:[0x0147D2BC]           ; => [ Data: data_147d2b4 ]
 006CCA4D    subss xmm1, xmm0
 006CCA51    movaps xmm0, xmm3
 006CCA54    mulss xmm0, xmm7
@@ -167,7 +173,7 @@
 006CCA63    subss xmm1, xmm0
 006CCA67    movaps xmm0, xmm4
 006CCA6A    mulss xmm0, dword ptr ds:[0x0147D2C0]
-006CCA72    movss dword ptr ss:[ebp-0xB4], xmm1
+006CCA72    movss dword ptr ss:[ebp-0xB4], xmm1             ; => [ Data: data_147d2b4 ]
 006CCA7A    movaps xmm1, xmm5
 006CCA7D    mulss xmm1, dword ptr ds:[0x0147D2B4]
 006CCA85    addss xmm1, xmm0
@@ -196,17 +202,17 @@
 006CCAF1    subss xmm1, xmm0
 006CCAF5    addss xmm5, xmm2
 006CCAF9    movss xmm2, dword ptr ss:[ebp-0x54]
-006CCAFE    movss dword ptr ss:[ebp-0xBC], xmm1
+006CCAFE    movss dword ptr ss:[ebp-0xBC], xmm1             ; => [ Data: data_147d2b4 ]
 006CCB06    addss xmm5, xmm3
 006CCB0A    movss xmm3, dword ptr ss:[ebp-0x58]
 006CCB0F    subss xmm5, xmm4
 006CCB13    movss xmm4, dword ptr ss:[ebp-0x5C]
-006CCB18    movss dword ptr ss:[ebp-0xB8], xmm5
+006CCB18    movss dword ptr ss:[ebp-0xB8], xmm5             ; => [ Data: data_147d2b4 ]
 006CCB20    movss xmm5, dword ptr ss:[ebp-0x50]
 006CCB25    movaps xmm1, xmm5
 006CCB28    mulss xmm1, dword ptr ds:[0x0147D2C0]
 006CCB30    movups xmm0, xmmword ptr ss:[ebp-0xC0]
-006CCB37    movups xmmword ptr ss:[ebp-0x6C], xmm0
+006CCB37    movups xmmword ptr ss:[ebp-0x6C], xmm0          ; => [ Data: data_147d2b4 ]
 006CCB3B    movaps xmm0, xmm4
 006CCB3E    mulss xmm0, dword ptr ds:[0x0147D2B4]
 006CCB46    subss xmm1, xmm0
@@ -218,7 +224,7 @@
 006CCB5C    subss xmm1, xmm0
 006CCB60    movaps xmm0, xmm4
 006CCB63    mulss xmm0, dword ptr ds:[0x0147D2C0]
-006CCB6B    movss dword ptr ss:[ebp-0xB4], xmm1
+006CCB6B    movss dword ptr ss:[ebp-0xB4], xmm1             ; => [ Data: data_147d2b4 ]
 006CCB73    movaps xmm1, xmm5
 006CCB76    mulss xmm1, dword ptr ds:[0x0147D2B4]
 006CCB7E    addss xmm1, xmm0
@@ -246,11 +252,11 @@
 006CCBE4    addss xmm5, xmm2
 006CCBE8    subss xmm1, xmm0
 006CCBEC    addss xmm5, xmm3
-006CCBF0    movss dword ptr ss:[ebp-0xBC], xmm1
+006CCBF0    movss dword ptr ss:[ebp-0xBC], xmm1             ; => [ Data: data_147d2b4 ]
 006CCBF8    subss xmm5, xmm4
-006CCBFC    movss dword ptr ss:[ebp-0xB8], xmm5
+006CCBFC    movss dword ptr ss:[ebp-0xB8], xmm5             ; => [ Data: data_147d2b4 ]
 006CCC04    movups xmm0, xmmword ptr ss:[ebp-0xC0]
-006CCC0B    movups xmmword ptr ss:[ebp-0x5C], xmm0
+006CCC0B    movups xmmword ptr ss:[ebp-0x5C], xmm0          ; => [ Data: data_147d2b4 ]
 006CCC0F    cmp eax, 0x03
 006CCC12    jz 0x006CCC57
 006CCC14    test eax, eax
@@ -258,49 +264,49 @@
 006CCC18    mov ecx, 0x20
 006CCC1D    lea esi, ss:[ebp-0x88]
 006CCC23    mov edi, 0x147D218
-006CCC28    rep movsd
+006CCC28    rep movsd                                       ; => [ Call: __builtin_memcpy | Data: data_147d218 ]
 006CCC2A    mov ecx, 0x147D234
-006CCC2F    call 0x0064B0D0
+006CCC2F    call 0x0064B0D0                                 ; => [ Data: data_147d234 | Call: sub_64b0d0 ]
 006CCC34    test al, al
 006CCC36    jnz 0x006CCC49
-006CCC38    push 0x87EA98
+006CCC38    push 0x87EA98                                   ; => [ String: VRUpdatePose ]
 006CCC3D    push 0x180
-006CCC42    mov ecx, 0x87EB00
+006CCC42    mov ecx, 0x87EB00                               ; => [ String: QuatIsValid(gVR.currentHmdState.eyeOrientation[VR_EYE_LEFT]) ]
 006CCC47    jmp 0x006CCCC2
 006CCC49    mov ecx, 0x147D244
-006CCC4E    call 0x0064B0D0
+006CCC4E    call 0x0064B0D0                                 ; => [ Data: data_147d244 | Call: sub_64b0d0 ]
 006CCC53    test al, al
 006CCC55    jz 0x006CCCB3
 006CCC57    cmp byte ptr ds:[0x0147D2B1], 0x00
 006CCC5E    jnz 0x006CCC69
 006CCC60    cmp byte ptr ds:[0x0147D254], 0x00
-006CCC67    jnz 0x006CCCA0
+006CCC67    jnz 0x006CCCA0                                  ; => [ Data: data_147d2b1 | Data: data_147d254 ]
 006CCC69    movaps xmm0, xmmword ptr ds:[0x00893400]
-006CCC70    movups xmmword ptr ds:[0x0147D21C], xmm0
-006CCC77    mov dword ptr ds:[0x0147D22C], 0x00
+006CCC70    movups xmmword ptr ds:[0x0147D21C], xmm0        ; => [ Data: data_147d21c | Data: data_893400 ]
+006CCC77    mov dword ptr ds:[0x0147D22C], 0x00             ; => [ Data: data_147d22c ]
 006CCC81    movups xmm0, xmmword ptr ds:[0x00800248]
-006CCC88    mov dword ptr ds:[0x0147D230], 0x00
-006CCC92    movups xmmword ptr ds:[0x0147D234], xmm0
+006CCC88    mov dword ptr ds:[0x0147D230], 0x00             ; => [ Data: data_147d230 ]
+006CCC92    movups xmmword ptr ds:[0x0147D234], xmm0        ; => [ String: \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3f | Call: __builtin_memcpy | Data: data_147d234 ]
 006CCC99    movups xmmword ptr ds:[0x0147D244], xmm0
 006CCCA0    mov ecx, dword ptr ss:[ebp-0x04]
 006CCCA3    pop edi
 006CCCA4    xor ecx, ebp
 006CCCA6    pop esi
-006CCCA7    call 0x0075927A
+006CCCA7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006CCCAC    mov esp, ebp
 006CCCAE    pop ebp
 006CCCAF    mov esp, ebx
 006CCCB1    pop ebx
 006CCCB2    ret
-006CCCB3    push 0x87EA98
+006CCCB3    push 0x87EA98                                   ; => [ String: VRUpdatePose ]
 006CCCB8    push 0x181
-006CCCBD    mov ecx, 0x87EAC0
+006CCCBD    mov ecx, 0x87EAC0                               ; => [ String: QuatIsValid(gVR.currentHmdState.eyeOrientation[VR_EYE_RIGHT]) ]
 006CCCC2    push 0x87E9F4
 006CCCC7    mov edx, 0x801800
-006CCCCC    call 0x0063B870
+006CCCCC    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Engine\VR.cpp | Call: sub_63b870 | Data: data_801800 ]
 006CCCD1    add esp, 0x0C
 006CCCD4    call 0x0063BC30
 006CCCD9    test al, al
-006CCCDB    jz 0x006CCCDE
+006CCCDB    jz 0x006CCCDE                                   ; => [ Call: sub_63bc30 ]
 006CCCDD    int3
-006CCCDE    call 0x0063BB00
+006CCCDE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

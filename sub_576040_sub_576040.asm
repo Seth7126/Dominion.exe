@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_576040
+// 起始地址: 0x576040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00576040    push ebp
 00576041    mov ebp, esp
 00576043    sub esp, 0x08
@@ -26,10 +32,10 @@
 00576098    jz 0x005760B8
 0057609A    cmp edi, 0xFFFFFFFF
 0057609D    jnz 0x0057610B
-0057609F    push 0x81FB8C
+0057609F    push 0x81FB8C                                   ; => [ String: CardHasAllOngoing ]
 005760A4    push 0xE4B
-005760A9    push 0x81F4B8
-005760AE    mov ecx, 0x808A68
+005760A9    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+005760AE    mov ecx, 0x808A68                               ; => [ String: owner != PLAYER_NONE ]
 005760B3    jmp 0x0057614E
 005760B8    test byte ptr ds:[eax+0x154], 0x04
 005760BF    jz 0x005760D5
@@ -66,19 +72,19 @@
 00576125    mov esp, ebp
 00576127    pop ebp
 00576128    ret
-00576129    push 0x81F478
+00576129    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 0057612E    push 0x14D
-00576133    mov ecx, 0x81F490
+00576133    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 00576138    jmp 0x00576149
-0057613A    push 0x81F3E8
+0057613A    push 0x81F3E8                                   ; => [ String: AbilityID::set_idx ]
 0057613F    push 0xF0
-00576144    mov ecx, 0x81F3FC
-00576149    push 0x81E978
+00576144    mov ecx, 0x81F3FC                               ; => [ String: idx() == x ]
+00576149    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 0057614E    mov edx, 0x801800
-00576153    call 0x0063B870
+00576153    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00576158    add esp, 0x0C
 0057615B    call 0x0063BC30
 00576160    test al, al
-00576162    jz 0x00576165
+00576162    jz 0x00576165                                   ; => [ Call: sub_63bc30 ]
 00576164    int3
-00576165    call 0x0063BB00
+00576165    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

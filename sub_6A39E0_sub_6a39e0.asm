@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a39e0
+// 起始地址: 0x6a39e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A39E0    push ebp
 006A39E1    mov ebp, esp
 006A39E3    sub esp, 0x08
@@ -8,16 +14,16 @@
 006A39EE    push edi
 006A39EF    test esi, esi
 006A39F1    jz 0x006A3A1C
-006A39F3    mov edi, 0x801800
+006A39F3    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 006A39F8    mov ebx, dword ptr ds:[esi]
-006A39FA    mov ecx, edi
+006A39FA    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A39FC    mov esi, dword ptr ds:[esi+0x04]
 006A39FF    push edx
 006A3A00    mov eax, dword ptr ds:[ebx]
 006A3A02    test eax, eax
 006A3A04    cmovnz ecx, eax
 006A3A07    push ecx
-006A3A08    call dword ptr ds:[0x00775688]
+006A3A08    call dword ptr ds:[0x00775688]                  ; => [ Type: va_list ]
 006A3A0E    add esp, 0x08
 006A3A11    test eax, eax
 006A3A13    jz 0x006A3A25
@@ -37,7 +43,7 @@
 006A3A2D    cmovnz edi, eax
 006A3A30    push 0x808880
 006A3A35    push edi
-006A3A36    call 0x0064B6D0
+006A3A36    call 0x0064B6D0                                 ; => [ String: %d | Call: sub_64b6d0 ]
 006A3A3B    add esp, 0x0C
 006A3A3E    mov al, 0x01
 006A3A40    pop edi

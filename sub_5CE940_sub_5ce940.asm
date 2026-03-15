@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ce940
+// 起始地址: 0x5ce940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CE940    push ebp
 005CE941    mov ebp, esp
 005CE943    sub esp, 0x08
@@ -22,11 +28,11 @@
 005CE986    push ecx
 005CE987    mov ecx, dword ptr ss:[ebp-0x04]
 005CE98A    push ebx
-005CE98B    call 0x005CE8E0
+005CE98B    call 0x005CE8E0                                 ; => [ Call: sub_5ce8e0 ]
 005CE990    mov edx, dword ptr ss:[ebp-0x08]
 005CE993    add esp, 0x0C
 005CE996    inc dword ptr ds:[esi+0x810]
-005CE99C    xor eax, eax
+005CE99C    xor eax, eax                                    ; => [ Call: nullptr ]
 005CE99E    test ebx, ebx
 005CE9A0    jle 0x005CEA21
 005CE9A2    mov ecx, dword ptr ss:[ebp+0x0C]

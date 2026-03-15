@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4db7a0
+// 起始地址: 0x4db7a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DB7A0    push ebp
 004DB7A1    mov ebp, esp
 004DB7A3    and esp, 0xFFFFFFF8
@@ -9,23 +15,23 @@
 004DB7AF    push edi
 004DB7B0    xor eax, eax
 004DB7B2    cmp dword ptr ds:[eax+0x780878], ecx
-004DB7B8    jz 0x004DB7D9
+004DB7B8    jz 0x004DB7D9                                   ; => [ Data: data_780878 ]
 004DB7BA    add eax, 0x10C
 004DB7BF    inc esi
 004DB7C0    cmp eax, 0x28D4
 004DB7C5    jb 0x004DB7B2
-004DB7C7    mov esi, 0x780884
-004DB7CC    mov eax, 0x780880
-004DB7D1    mov ebx, esi
-004DB7D3    mov ecx, esi
-004DB7D5    mov edi, esi
+004DB7C7    mov esi, 0x780884                               ; => [ Data: data_780884 ]
+004DB7CC    mov eax, 0x780880                               ; => [ Data: data_780880 ]
+004DB7D1    mov ebx, esi                                    ; => [ Data: data_780884 ]
+004DB7D3    mov ecx, esi                                    ; => [ Data: data_780884 ]
+004DB7D5    mov edi, esi                                    ; => [ Data: data_780884 ]
 004DB7D7    jmp 0x004DB7FD
 004DB7D9    imul eax, esi, 0x10C
-004DB7DF    lea esi, ds:[eax+0x780884]
-004DB7E5    lea ebx, ds:[eax+0x780884]
-004DB7EB    lea ecx, ds:[eax+0x780884]
-004DB7F1    lea edi, ds:[eax+0x780884]
-004DB7F7    lea eax, ds:[eax+0x780880]
+004DB7DF    lea esi, ds:[eax+0x780884]                      ; => [ Data: data_780884 ]
+004DB7E5    lea ebx, ds:[eax+0x780884]                      ; => [ Data: data_780884 ]
+004DB7EB    lea ecx, ds:[eax+0x780884]                      ; => [ Data: data_780884 ]
+004DB7F1    lea edi, ds:[eax+0x780884]                      ; => [ Data: data_780884 ]
+004DB7F7    lea eax, ds:[eax+0x780880]                      ; => [ Data: data_780880 ]
 004DB7FD    mov eax, dword ptr ds:[eax]
 004DB7FF    cmp eax, 0x01
 004DB802    jz 0x004DB90C
@@ -52,7 +58,7 @@
 004DB849    mov esp, ebp
 004DB84B    pop ebp
 004DB84C    ret
-004DB84D    xor eax, eax
+004DB84D    xor eax, eax                                    ; => [ Call: nullptr ]
 004DB84F    mov edi, edx
 004DB851    mov edx, dword ptr ds:[ecx]
 004DB853    test edx, edx
@@ -75,7 +81,7 @@
 004DB87E    mov ecx, edi
 004DB880    call 0x00571B30
 004DB885    cmp dword ptr ds:[eax], 0x01
-004DB888    jz 0x004DB903
+004DB888    jz 0x004DB903                                   ; => [ Call: sub_571b30 ]
 004DB88A    mov eax, edi
 004DB88C    cdq
 004DB88D    and edx, 0xFF
@@ -108,7 +114,7 @@
 004DB8CF    mov ecx, edi
 004DB8D1    call 0x00571B30
 004DB8D6    cmp dword ptr ds:[eax], 0x01
-004DB8D9    jnz 0x004DB903
+004DB8D9    jnz 0x004DB903                                  ; => [ Call: sub_571b30 ]
 004DB8DB    mov eax, edi
 004DB8DD    cdq
 004DB8DE    and edx, 0xFF
@@ -144,10 +150,10 @@
 004DB91F    push 0x806FE4
 004DB924    mov edx, 0x801800
 004DB929    mov ecx, 0x801AA4
-004DB92E    call 0x0063B870
+004DB92E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: DomEntitlementGrantsCard | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | String: Halt ]
 004DB933    add esp, 0x0C
 004DB936    call 0x0063BC30
 004DB93B    test al, al
-004DB93D    jz 0x004DB940
+004DB93D    jz 0x004DB940                                   ; => [ Call: sub_63bc30 ]
 004DB93F    int3
-004DB940    call 0x0063BB00
+004DB940    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

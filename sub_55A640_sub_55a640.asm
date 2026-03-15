@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55a640
+// 起始地址: 0x55a640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055A640    dword 6A51D233
 0055A644    add byte ptr ss:[ebp-0x4C17FAB6], cl
 0055A64A    jnbe 0x0055A64C
@@ -10,9 +16,9 @@
 0055A658    mov edx, dword ptr ds:[eax+0x0C]
 0055A65B    mov ecx, dword ptr ds:[eax+0x04]
 0055A65E    push 0x02
-0055A660    call 0x00590760
+0055A660    call 0x00590760                                 ; => [ Call: sub_590760 ]
 0055A665    add esp, 0x18
-0055A668    call 0x00573400
+0055A668    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055A66D    mov ecx, dword ptr ds:[eax+0x0C]
 0055A670    cmp ecx, 0xFFFFFFFF
 0055A673    jnz 0x0055A6A2
@@ -21,15 +27,15 @@
 0055A67C    push 0x81EA70
 0055A681    mov edx, 0x801800
 0055A686    mov ecx, 0x813C5C
-0055A68B    call 0x0063B870
+0055A68B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0055A690    add esp, 0x0C
 0055A693    call 0x0063BC30
 0055A698    test al, al
-0055A69A    jz 0x0055A69D
+0055A69A    jz 0x0055A69D                                   ; => [ Call: sub_63bc30 ]
 0055A69C    int3
-0055A69D    jmp 0x0063BB00
+0055A69D    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 0055A6A2    mov eax, dword ptr ds:[eax+0x04]
 0055A6A5    imul ecx, ecx, 0x5A30
 0055A6AB    or dword ptr ds:[ecx+eax*1+0x17558], 0x08
 0055A6B3    mov ecx, 0x02
-0055A6B8    jmp 0x00562240
+0055A6B8    jmp 0x00562240                                  ; => [ Call: sub_562240 ]

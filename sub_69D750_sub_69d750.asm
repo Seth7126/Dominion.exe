@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69d750
+// 起始地址: 0x69d750
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069D750    push ebp
 0069D751    mov ebp, esp
 0069D753    push ecx
@@ -11,9 +17,9 @@
 0069D762    jnz 0x0069D77E
 0069D764    cmp dword ptr ds:[edi+0x24], 0x00
 0069D768    jnz 0x0069D77E
-0069D76A    push 0x879650
+0069D76A    push 0x879650                                   ; => [ String: DefCalcHashField ]
 0069D76F    push 0x3E3
-0069D774    mov ecx, 0x8796A8
+0069D774    mov ecx, 0x8796A8                               ; => [ String: pField->pDefMap->defType != DT_STRING || pField->defaultValue != 0 ]
 0069D779    jmp 0x0069D94A
 0069D77E    test byte ptr ds:[edi+0x28], 0x80
 0069D782    jz 0x0069D78D
@@ -30,7 +36,7 @@
 0069D794    push dword ptr ds:[edi]
 0069D796    push dword ptr ds:[edi+0x04]
 0069D799    push 0x879684
-0069D79E    call 0x0063B5F0
+0069D79E    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: field %s pos %d crc %x ]
 0069D7A3    add esp, 0x10
 0069D7A6    mov ecx, edi
 0069D7A8    mov edx, 0x04
@@ -40,7 +46,7 @@
 0069D7B6    xor eax, esi
 0069D7B8    shr esi, 0x08
 0069D7BB    movzx eax, al
-0069D7BE    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D7BE    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D7C5    sub edx, 0x01
 0069D7C8    jnz 0x0069D7B0
 0069D7CA    mov edx, dword ptr ds:[edi+0x04]
@@ -58,7 +64,7 @@
 0069D7E6    xor eax, esi
 0069D7E8    shr esi, 0x08
 0069D7EB    movzx eax, al
-0069D7EE    xor esi, dword ptr ds:[eax*4+0x7FFD70]
+0069D7EE    xor esi, dword ptr ds:[eax*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D7F5    sub ecx, 0x01
 0069D7F8    jnz 0x0069D7E0
 0069D7FA    mov ebx, dword ptr ss:[ebp+0x0C]
@@ -66,13 +72,13 @@
 0069D7FF    mov ecx, dword ptr ds:[edi+0x0C]
 0069D802    push ebx
 0069D803    push dword ptr ss:[ebp+0x08]
-0069D806    call 0x0069D970
+0069D806    call 0x0069D970                                 ; => [ Call: sub_69d970 ]
 0069D80B    mov ecx, dword ptr ds:[edi+0x18]
 0069D80E    lea esi, ds:[edi+0x10]
 0069D811    push ebx
 0069D812    push dword ptr ss:[ebp+0x08]
 0069D815    mov edx, eax
-0069D817    call 0x0069D970
+0069D817    call 0x0069D970                                 ; => [ Call: sub_69d970 ]
 0069D81C    add esp, 0x10
 0069D81F    mov edx, 0x04
 0069D824    movzx ecx, byte ptr ds:[esi]
@@ -80,7 +86,7 @@
 0069D82A    xor ecx, eax
 0069D82C    shr eax, 0x08
 0069D82F    movzx ecx, cl
-0069D832    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+0069D832    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D839    sub edx, 0x01
 0069D83C    jnz 0x0069D824
 0069D83E    lea edx, ds:[edi+0x20]
@@ -90,7 +96,7 @@
 0069D84C    xor ecx, eax
 0069D84E    shr eax, 0x08
 0069D851    movzx ecx, cl
-0069D854    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+0069D854    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D85B    sub esi, 0x01
 0069D85E    jnz 0x0069D846
 0069D860    lea edx, ds:[edi+0x28]
@@ -100,7 +106,7 @@
 0069D86E    xor ecx, eax
 0069D870    shr eax, 0x08
 0069D873    movzx ecx, cl
-0069D876    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+0069D876    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D87D    sub esi, 0x01
 0069D880    jnz 0x0069D868
 0069D882    lea edx, ds:[edi+0x2C]
@@ -111,7 +117,7 @@
 0069D896    xor ecx, eax
 0069D898    shr eax, 0x08
 0069D89B    movzx ecx, cl
-0069D89E    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+0069D89E    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D8A5    sub esi, 0x01
 0069D8A8    jnz 0x0069D890
 0069D8AA    mov ecx, dword ptr ds:[edi+0x28]
@@ -136,7 +142,7 @@
 0069D8DE    xor ecx, eax
 0069D8E0    shr eax, 0x08
 0069D8E3    movzx ecx, cl
-0069D8E6    xor eax, dword ptr ds:[ecx*4+0x7FFD70]
+0069D8E6    xor eax, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069D8ED    sub esi, 0x01
 0069D8F0    jnz 0x0069D8D8
 0069D8F2    pop edi
@@ -147,9 +153,9 @@
 0069D8F8    ret
 0069D8F9    test edx, edx
 0069D8FB    jz 0x0069D934
-0069D8FD    push 0x879650
+0069D8FD    push 0x879650                                   ; => [ String: DefCalcHashField ]
 0069D902    push 0x409
-0069D907    mov ecx, 0x8796EC
+0069D907    mov ecx, 0x8796EC                               ; => [ String: pField->itemInfo == 0 ]
 0069D90C    jmp 0x0069D94A
 0069D90E    mov ecx, dword ptr ds:[edi+0x1C]
 0069D911    mov edx, eax
@@ -162,27 +168,27 @@
 0069D921    pop ebx
 0069D922    mov esp, ebp
 0069D924    pop ebp
-0069D925    ret
+0069D925    ret                                             ; => [ Call: sub_69d600 ]
 0069D926    mov ecx, dword ptr ds:[edi+0x1C]
 0069D929    test ecx, ecx
 0069D92B    jz 0x0069D93B
 0069D92D    mov edx, eax
-0069D92F    call 0x0069D590
+0069D92F    call 0x0069D590                                 ; => [ Call: sub_69d590 ]
 0069D934    pop edi
 0069D935    pop esi
 0069D936    pop ebx
 0069D937    mov esp, ebp
 0069D939    pop ebp
 0069D93A    ret
-0069D93B    push 0x879650
+0069D93B    push 0x879650                                   ; => [ String: DefCalcHashField ]
 0069D940    push 0x3F8
-0069D945    mov ecx, 0x879704
+0069D945    mov ecx, 0x879704                               ; => [ String: pField->itemInfo != 0 ]
 0069D94A    push 0x879400
 0069D94F    mov edx, 0x801800
-0069D954    call 0x0063B870
+0069D954    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Definition.cpp | String: DefCalcHashField ]
 0069D959    add esp, 0x0C
 0069D95C    call 0x0063BC30
 0069D961    test al, al
-0069D963    jz 0x0069D966
+0069D963    jz 0x0069D966                                   ; => [ Call: sub_63bc30 ]
 0069D965    int3
-0069D966    call 0x0063BB00
+0069D966    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_596fb0
+// 起始地址: 0x596fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00596FB0    push ebp
 00596FB1    mov ebp, esp
 00596FB3    sub esp, 0x0C
@@ -23,7 +29,7 @@
 00596FE3    lea ecx, ss:[ebp-0x08]
 00596FE6    call 0x00596040
 00596FEB    test al, al
-00596FED    jz 0x00596FFB
+00596FED    jz 0x00596FFB                                   ; => [ Call: sub_596040 ]
 00596FEF    mov ax, word ptr ds:[edi]
 00596FF2    movzx ecx, word ptr ds:[ebx]
 00596FF5    mov word ptr ds:[ebx], ax
@@ -35,7 +41,7 @@
 00597003    lea ecx, ss:[ebp-0x08]
 00597006    call 0x00596040
 0059700B    test al, al
-0059700D    jz 0x0059703C
+0059700D    jz 0x0059703C                                   ; => [ Call: sub_596040 ]
 0059700F    mov eax, dword ptr ss:[ebp-0x04]
 00597012    movzx ecx, word ptr ds:[edi+eax*4]
 00597016    lea edx, ds:[edi+eax*4]
@@ -47,7 +53,7 @@
 00597026    push ebx
 00597027    call 0x00596040
 0059702C    test al, al
-0059702E    jz 0x0059703C
+0059702E    jz 0x0059703C                                   ; => [ Call: sub_596040 ]
 00597030    mov ax, word ptr ds:[edi]
 00597033    movzx ecx, word ptr ds:[ebx]
 00597036    mov word ptr ds:[ebx], ax
@@ -64,7 +70,7 @@
 00597051    lea ecx, ss:[ebp-0x08]
 00597054    call 0x00596040
 00597059    test al, al
-0059705B    jz 0x00597069
+0059705B    jz 0x00597069                                   ; => [ Call: sub_596040 ]
 0059705D    mov ax, word ptr ds:[ebx]
 00597060    movzx ecx, word ptr ds:[esi]
 00597063    mov word ptr ds:[esi], ax
@@ -76,7 +82,7 @@
 00597072    push eax
 00597073    call 0x00596040
 00597078    test al, al
-0059707A    jz 0x005970A7
+0059707A    jz 0x005970A7                                   ; => [ Call: sub_596040 ]
 0059707C    mov edx, dword ptr ss:[ebp-0x0C]
 0059707F    mov ax, word ptr ds:[esi]
 00597082    push ebx
@@ -87,7 +93,7 @@
 0059708F    lea ecx, ss:[ebp-0x08]
 00597092    call 0x00596040
 00597097    test al, al
-00597099    jz 0x005970A7
+00597099    jz 0x005970A7                                   ; => [ Call: sub_596040 ]
 0059709B    mov ax, word ptr ds:[ebx]
 0059709E    movzx ecx, word ptr ds:[esi]
 005970A1    mov word ptr ds:[esi], ax
@@ -106,7 +112,7 @@
 005970C4    push ebx
 005970C5    call 0x00596040
 005970CA    test al, al
-005970CC    jz 0x005970DD
+005970CC    jz 0x005970DD                                   ; => [ Call: sub_596040 ]
 005970CE    mov edx, dword ptr ss:[ebp-0x0C]
 005970D1    movzx ecx, word ptr ds:[ebx]
 005970D4    mov ax, word ptr ds:[edx]
@@ -117,7 +123,7 @@
 005970E1    lea ecx, ss:[ebp-0x08]
 005970E4    call 0x00596040
 005970E9    test al, al
-005970EB    jz 0x0059711B
+005970EB    jz 0x0059711B                                   ; => [ Call: sub_596040 ]
 005970ED    mov edx, dword ptr ss:[ebp+0x08]
 005970F0    mov ax, word ptr ds:[ebx]
 005970F3    push dword ptr ss:[ebp-0x0C]
@@ -128,7 +134,7 @@
 00597102    push ebx
 00597103    call 0x00596040
 00597108    test al, al
-0059710A    jz 0x0059711B
+0059710A    jz 0x0059711B                                   ; => [ Call: sub_596040 ]
 0059710C    mov edx, dword ptr ss:[ebp-0x0C]
 0059710F    movzx ecx, word ptr ds:[ebx]
 00597112    mov ax, word ptr ds:[edx]
@@ -146,7 +152,7 @@
 00597131    lea ecx, ss:[ebp+0x08]
 00597134    call 0x00596040
 00597139    test al, al
-0059713B    jz 0x00597149
+0059713B    jz 0x00597149                                   ; => [ Call: sub_596040 ]
 0059713D    mov ax, word ptr ds:[edi]
 00597140    movzx ecx, word ptr ds:[esi]
 00597143    mov word ptr ds:[esi], ax
@@ -154,7 +160,7 @@
 00597149    push esi
 0059714A    push ebx
 0059714B    lea ecx, ss:[ebp+0x08]
-0059714E    call 0x00596040
+0059714E    call 0x00596040                                 ; => [ Call: sub_596040 ]
 00597153    test al, al
 00597155    jz 0x0059717D
 00597157    movzx ecx, word ptr ds:[ebx]
@@ -164,7 +170,7 @@
 00597161    mov word ptr ds:[esi], cx
 00597164    lea ecx, ss:[ebp+0x08]
 00597167    push esi
-00597168    call 0x00596040
+00597168    call 0x00596040                                 ; => [ Call: sub_596040 ]
 0059716D    test al, al
 0059716F    jz 0x0059717D
 00597171    mov ax, word ptr ds:[edi]

@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_5e72a0
+// 起始地址: 0x5e72a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E72A0    cmp dword ptr ds:[ecx+0x17C0], 0x00
 005E72A7    jz 0x005E7337
 005E72AD    mov eax, dword ptr ds:[ecx+0x248]
 005E72B3    cmp eax, 0x0B
 005E72B6    jnbe 0x005E7307
-005E72B8    movzx eax, byte ptr ds:[eax+0x5E7354]
+005E72B8    movzx eax, byte ptr ds:[eax+0x5E7354]           ; => [ Data: lookup_table_5e7354 ]
 005E72BF    jmp dword ptr ds:[eax*4+0x5E733C]
 005E72C6    mov eax, dword ptr ds:[ecx]
 005E72C8    movss xmm0, dword ptr ds:[eax+0x90]
@@ -23,12 +29,12 @@
 005E7311    push 0x86F1E8
 005E7316    mov edx, 0x801800
 005E731B    mov ecx, 0x801AA4
-005E7320    call 0x0063B870
+005E7320    call 0x0063B870                                 ; => [ String: MoveGetTimeToEnd | Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: Halt ]
 005E7325    add esp, 0x0C
 005E7328    call 0x0063BC30
 005E732D    test al, al
-005E732F    jz 0x005E7332
+005E732F    jz 0x005E7332                                   ; => [ Call: sub_63bc30 ]
 005E7331    int3
-005E7332    jmp 0x0063BB00
+005E7332    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 005E7337    xorps xmm0, xmm0
 005E733A    ret

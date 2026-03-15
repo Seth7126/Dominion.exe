@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_51b610
+// 起始地址: 0x51b610
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051B610    push ebp
 0051B611    mov ebp, esp
 0051B613    sub esp, 0x78
-0051B616    mov eax, dword ptr ds:[0x008C4040]
+0051B616    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0051B61B    xor eax, ebp
 0051B61D    mov dword ptr ss:[ebp-0x08], eax
 0051B620    push ebx
@@ -15,7 +21,7 @@
 0051B630    mov eax, dword ptr ds:[esi+0x04]
 0051B633    mov ecx, dword ptr ds:[esi]
 0051B635    mov dword ptr ss:[ebp-0x64], eax
-0051B638    call 0x00516F30
+0051B638    call 0x00516F30                                 ; => [ Call: sub_516f30 ]
 0051B63D    mov dword ptr ss:[ebp-0x60], eax
 0051B640    xor ecx, ecx
 0051B642    lea edx, ds:[eax+0x0C]
@@ -25,10 +31,10 @@
 0051B64B    add edx, 0x26C
 0051B651    cmp ecx, 0x04
 0051B654    jl 0x0051B645
-0051B656    push 0x80CF80
+0051B656    push 0x80CF80                                   ; => [ String: CampaignPieceDefGetFn ]
 0051B65B    push 0x30A
-0051B660    push 0x80CD80
-0051B665    mov ecx, 0x801AA4
+0051B660    push 0x80CD80                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
+0051B665    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0051B66A    jmp 0x0051B9BC
 0051B66F    imul eax, ecx, 0x26C
 0051B675    mov ecx, dword ptr ss:[ebp-0x60]
@@ -38,16 +44,16 @@
 0051B686    jnz 0x0051B85B
 0051B68C    cmp dword ptr ss:[ebp-0x64], 0x00
 0051B690    jz 0x0051B6AB
-0051B692    push 0x816728
+0051B692    push 0x816728                                   ; => [ String: CampaingApplyExtra ]
 0051B697    push 0x29EE
-0051B69C    push 0x80CD80
-0051B6A1    mov ecx, 0x81375C
+0051B69C    push 0x80CD80                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
+0051B6A1    mov ecx, 0x81375C                               ; => [ String: what == CARD_NONE ]
 0051B6A6    jmp 0x0051B9BC
 0051B6AB    mov eax, dword ptr ds:[esi]
 0051B6AD    add eax, 0xFFFFE88F
 0051B6B2    cmp eax, 0xC9
 0051B6B7    jnbe 0x0051B842
-0051B6BD    movzx eax, byte ptr ds:[eax+0x51BA48]
+0051B6BD    movzx eax, byte ptr ds:[eax+0x51BA48]           ; => [ Data: lookup_table_51ba48 ]
 0051B6C4    jmp dword ptr ds:[eax*4+0x51B9D8]
 0051B6CB    mov esi, 0x1500
 0051B6D0    jmp 0x0051B79E
@@ -111,9 +117,9 @@
 0051B7B6    add eax, 0x10
 0051B7B9    cmp ebx, 0x47
 0051B7BC    jl 0x0051B7B0
-0051B7BE    push 0x81F994
+0051B7BE    push 0x81F994                                   ; => [ String: NextAvailableNonSupplyPile ]
 0051B7C3    push 0x625
-0051B7C8    mov ecx, 0x801AA4
+0051B7C8    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0051B7CD    jmp 0x0051B9B7
 0051B7D2    push 0x00
 0051B7D4    push esi
@@ -131,7 +137,7 @@
 0051B7F4    sub edx, edi
 0051B7F6    lea edx, ds:[edx+eax*1]
 0051B7F9    mov eax, 0x51EB851F
-0051B7FE    imul edx
+0051B7FE    imul edx                                        ; => [ Call: sub_572970 | Call: sub_5727e0 ]
 0051B800    sar edx, 0x05
 0051B803    mov esi, edx
 0051B805    shr esi, 0x1F
@@ -139,7 +145,7 @@
 0051B80A    movzx ebx, si
 0051B80D    cmp ebx, 0x320
 0051B813    jb 0x0051B81A
-0051B815    call 0x00591930
+0051B815    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0051B81A    imul eax, ebx, 0x64
 0051B81D    mov ecx, edi
 0051B81F    mov ebx, dword ptr ss:[ebp-0x6C]
@@ -149,14 +155,14 @@
 0051B82E    mov dword ptr ss:[ebp-0x64], eax
 0051B831    lea eax, ss:[ebp-0x68]
 0051B834    push eax
-0051B835    call 0x00573050
+0051B835    call 0x00573050                                 ; => [ Call: sub_573050 ]
 0051B83A    mov esi, dword ptr ss:[ebp-0x70]
 0051B83D    add esp, 0x04
 0051B840    jmp 0x0051B874
-0051B842    push 0x80CF0C
+0051B842    push 0x80CF0C                                   ; => [ String: TwistGetCard ]
 0051B847    push 0x228
-0051B84C    push 0x80CD80
-0051B851    mov ecx, 0x801AA4
+0051B84C    push 0x80CD80                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
+0051B851    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 0051B856    jmp 0x0051B9BC
 0051B85B    mov edx, dword ptr ss:[ebp-0x64]
 0051B85E    lea eax, ss:[ebp-0x5C]
@@ -164,13 +170,13 @@
 0051B862    push ebx
 0051B863    push eax
 0051B864    mov ecx, edi
-0051B866    call 0x00572F80
+0051B866    call 0x00572F80                                 ; => [ Call: sub_572f80 ]
 0051B86B    mov ecx, dword ptr ds:[esi+0x10]
 0051B86E    add esp, 0x0C
 0051B871    mov dword ptr ds:[eax+0x3C], ecx
 0051B874    call dword ptr ss:[ebp-0x74]
 0051B877    mov eax, dword ptr fs:[0x0000002C]
-0051B87D    mov ecx, dword ptr ds:[eax]
+0051B87D    mov ecx, dword ptr ds:[eax]                     ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 0051B87F    mov eax, dword ptr ds:[ecx+0xF010]
 0051B885    test eax, eax
 0051B887    jle 0x0051B9A8
@@ -226,7 +232,7 @@
 0051B92D    push eax
 0051B92E    mov edx, ebx
 0051B930    mov ecx, edi
-0051B932    call 0x0059F9B0
+0051B932    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 | Call: nullptr | Call: sub_59f9b0 ]
 0051B937    mov edx, dword ptr ss:[ebp-0x60]
 0051B93A    add esp, 0x24
 0051B93D    cmp dword ptr ds:[edx+0x08], 0x1B58
@@ -257,26 +263,26 @@
 0051B98A    push 0x00
 0051B98C    push 0x44
 0051B98E    push eax
-0051B98F    call 0x0059F9B0
+0051B98F    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0051B994    add esp, 0x24
 0051B997    mov ecx, dword ptr ss:[ebp-0x08]
 0051B99A    pop edi
 0051B99B    pop esi
 0051B99C    xor ecx, ebp
 0051B99E    pop ebx
-0051B99F    call 0x0075927A
+0051B99F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0051B9A4    mov esp, ebp
 0051B9A6    pop ebp
 0051B9A7    ret
-0051B9A8    push 0x81F9E0
+0051B9A8    push 0x81F9E0                                   ; => [ String: DomPopContext ]
 0051B9AD    push 0x792
-0051B9B2    mov ecx, 0x81F9F0
-0051B9B7    push 0x81F4B8
+0051B9B2    mov ecx, 0x81F9F0                               ; => [ String: cs.numContexts > 0 ]
+0051B9B7    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0051B9BC    mov edx, 0x801800
-0051B9C1    call 0x0063B870
+0051B9C1    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0051B9C6    add esp, 0x0C
 0051B9C9    call 0x0063BC30
 0051B9CE    test al, al
-0051B9D0    jz 0x0051B9D3
+0051B9D0    jz 0x0051B9D3                                   ; => [ Call: sub_63bc30 ]
 0051B9D2    int3
-0051B9D3    call 0x0063BB00
+0051B9D3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

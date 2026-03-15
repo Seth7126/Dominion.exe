@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_694540
+// 起始地址: 0x694540
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00694540    push ebp
 00694541    mov ebp, esp
 00694543    sub esp, 0x0C
@@ -27,7 +33,7 @@
 00694586    mov ecx, 0xCB
 0069458B    mov edi, ebx
 0069458D    add esi, eax
-0069458F    rep movsd
+0069458F    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00694591    cmp dword ptr ss:[ebp+0x0C], edx
 00694594    jle 0x006945F7
 00694596    mov eax, dword ptr ss:[ebp+0x08]
@@ -55,7 +61,7 @@
 006945E6    jz 0x006945F1
 006945E8    mov ecx, 0xCB
 006945ED    mov edi, ebx
-006945EF    rep movsd
+006945EF    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 006945F1    inc edx
 006945F2    cmp edx, dword ptr ss:[ebp+0x0C]
 006945F5    jl 0x00694596

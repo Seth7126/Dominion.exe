@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6fb630
+// 起始地址: 0x6fb630
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FB630    push ebp
 006FB631    mov ebp, esp
 006FB633    sub esp, 0x18
@@ -22,14 +28,14 @@
 006FB664    mov dword ptr ss:[ebp-0x08], eax
 006FB667    test eax, eax
 006FB669    jnz 0x006FB681
-006FB66B    push 0x87943C
+006FB66B    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 006FB670    push 0x6D
-006FB672    push 0x879400
-006FB677    mov ecx, 0x87948C
+006FB672    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+006FB677    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 006FB67C    jmp 0x006FB716
 006FB681    inc ecx
 006FB682    imul ecx, eax
-006FB685    call 0x00687730
+006FB685    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006FB68A    mov edx, dword ptr ss:[ebp-0x08]
 006FB68D    mov ecx, dword ptr ss:[ebp+0x08]
 006FB690    mov dword ptr ss:[ebp-0x10], eax
@@ -47,7 +53,7 @@
 006FB6AE    push eax
 006FB6AF    push ebx
 006FB6B0    push dword ptr ss:[ebp-0x10]
-006FB6B3    call 0x00761FBE
+006FB6B3    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006FB6B8    mov ecx, dword ptr ss:[ebp+0x08]
 006FB6BB    add esp, 0x0C
 006FB6BE    mov eax, dword ptr ss:[ebp-0x04]
@@ -61,12 +67,12 @@
 006FB6D3    imul eax, edx
 006FB6D6    add eax, dword ptr ds:[edi]
 006FB6D8    push eax
-006FB6D9    call 0x00761FBE
+006FB6D9    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006FB6DE    add esp, 0x0C
 006FB6E1    mov ecx, dword ptr ds:[edi]
 006FB6E3    add ecx, dword ptr ss:[ebp-0x04]
 006FB6E6    mov edx, dword ptr ss:[ebp-0x14]
-006FB6E9    call 0x0069CA00
+006FB6E9    call 0x0069CA00                                 ; => [ Call: sub_69ca00 ]
 006FB6EE    inc dword ptr ds:[esi]
 006FB6F0    test ebx, ebx
 006FB6F2    jz 0x006FB6FE
@@ -79,15 +85,15 @@
 006FB701    mov esp, ebp
 006FB703    pop ebp
 006FB704    ret
-006FB705    push 0x88BF58
+006FB705    push 0x88BF58                                   ; => [ String: DefinitionVariableArrayAddItem ]
 006FB70A    push 0x29
-006FB70C    push 0x88BF0C
-006FB711    mov ecx, 0x88BF30
+006FB70C    push 0x88BF0C                                   ; => [ String: C:\x\ax2017\Engine\DefEditor.cpp ]
+006FB711    mov ecx, 0x88BF30                               ; => [ String: position >= 0 && position <= *pcount ]
 006FB716    mov edx, 0x801800
-006FB71B    call 0x0063B870
+006FB71B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006FB720    add esp, 0x0C
 006FB723    call 0x0063BC30
 006FB728    test al, al
-006FB72A    jz 0x006FB72D
+006FB72A    jz 0x006FB72D                                   ; => [ Call: sub_63bc30 ]
 006FB72C    int3
-006FB72D    call 0x0063BB00
+006FB72D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

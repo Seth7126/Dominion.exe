@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e42d0
+// 起始地址: 0x4e42d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E42D0    movups xmm0, xmmword ptr ds:[0x0078083C]
 004E42D7    mov eax, dword ptr ds:[0x0078086C]
 004E42DC    push ebx
@@ -5,7 +11,7 @@
 004E42DE    push edi
 004E42DF    mov edi, ecx
 004E42E1    mov ecx, 0x04
-004E42E6    movups xmmword ptr ds:[edi+0xBC8], xmm0
+004E42E6    movups xmmword ptr ds:[edi+0xBC8], xmm0         ; => [ String: \x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00 | Call: __builtin_memcpy ]
 004E42ED    mov dword ptr ds:[edi+0xBFC], 0x00
 004E42F7    movups xmm0, xmmword ptr ds:[0x0078084C]
 004E42FE    mov dword ptr ds:[edi+0xC00], 0x00
@@ -29,7 +35,7 @@
 004E4380    mov dword ptr ds:[eax-0x10], 0x00
 004E4387    xorps xmm0, xmm0
 004E438A    lea eax, ds:[eax+0x48]
-004E438D    movups xmmword ptr ds:[eax-0x48], xmm0
+004E438D    movups xmmword ptr ds:[eax-0x48], xmm0          ; => [ Call: __builtin_memset ]
 004E4391    movups xmmword ptr ds:[eax-0x38], xmm0
 004E4395    movups xmmword ptr ds:[eax-0x28], xmm0
 004E4399    movq qword ptr ds:[eax-0x18], xmm0
@@ -67,7 +73,7 @@
 004E440E    add eax, ecx
 004E4410    push eax
 004E4411    push edx
-004E4412    call 0x00762362
+004E4412    call 0x00762362                                 ; => [ Call: memmove ]
 004E4417    add esp, 0x0C
 004E441A    jmp 0x004E4433
 004E441C    cmp dword ptr ds:[eax], 0x00
@@ -103,4 +109,4 @@
 004E44D8    pop edi
 004E44D9    pop esi
 004E44DA    pop ebx
-004E44DB    ret
+004E44DB    ret                                             ; => [ Call: memset ]

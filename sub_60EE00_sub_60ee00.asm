@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_60ee00
+// 起始地址: 0x60ee00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060EE00    push ebp
 0060EE01    mov ebp, esp
 0060EE03    and esp, 0xFFFFFFF8
@@ -15,7 +21,7 @@
 0060EE31    xor edi, edi
 0060EE33    mov dword ptr ss:[esp+0x10], 0x00
 0060EE3B    xor esi, esi
-0060EE3D    mov eax, dword ptr ds:[eax+0x71DC]
+0060EE3D    mov eax, dword ptr ds:[eax+0x71DC]              ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 0060EE43    mov dword ptr ss:[esp+0x18], eax
 0060EE47    test eax, eax
 0060EE49    jle 0x0060EEB5
@@ -30,7 +36,7 @@
 0060EE78    mov ecx, dword ptr ds:[eax+0x08]
 0060EE7B    call 0x0060EAE0
 0060EE80    test al, al
-0060EE82    jz 0x0060EEA9
+0060EE82    jz 0x0060EEA9                                   ; => [ Call: sub_4d8f30 | Call: sub_60eae0 | Data: data_cc8dc8 ]
 0060EE84    mov ecx, dword ptr ss:[esp+0x10]
 0060EE88    mov eax, ecx
 0060EE8A    inc ecx
@@ -57,10 +63,10 @@
 0060EEBD    ret
 0060EEBE    mov edi, dword ptr ss:[ebp+0x0C]
 0060EEC1    xor edx, edx
-0060EEC3    mov eax, 0x783418
+0060EEC3    mov eax, 0x783418                               ; => [ Data: data_783418 ]
 0060EEC8    mov dword ptr ss:[esp+0x10], edx
 0060EECC    mov dword ptr ss:[esp+0x18], edx
-0060EED0    mov dword ptr ss:[esp+0x14], eax
+0060EED0    mov dword ptr ss:[esp+0x14], eax                ; => [ Data: data_783418 ]
 0060EED4    cmp edx, 0x04
 0060EED7    jz 0x0060EF11
 0060EED9    xor esi, esi
@@ -69,7 +75,7 @@
 0060EEE3    lea edx, ss:[esp+0x0F]
 0060EEE7    call 0x0060EB90
 0060EEEC    cmp eax, dword ptr ss:[ebp+0x08]
-0060EEEF    jz 0x0060EF1A
+0060EEEF    jz 0x0060EF1A                                   ; => [ Call: sub_60eb90 ]
 0060EEF1    mov eax, dword ptr ss:[esp+0x14]
 0060EEF5    inc esi
 0060EEF6    cmp esi, 0x03

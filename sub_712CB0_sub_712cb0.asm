@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_712cb0
+// 起始地址: 0x712cb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00712CB0    push ebp
 00712CB1    mov ebp, esp
 00712CB3    sub esp, 0x08
@@ -13,13 +19,13 @@
 00712CC7    nop word ptr ds:[eax+eax*1], ax
 00712CD0    mov esi, dword ptr ds:[ebx+0x24]
 00712CD3    mov ecx, esi
-00712CD5    call 0x00710F50
+00712CD5    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 00712CDA    mov ecx, dword ptr ds:[esi+0x08]
 00712CDD    mov eax, dword ptr ds:[esi+0x04]
 00712CE0    mov dword ptr ds:[eax+ecx*4], 0x04
 00712CE7    mov ecx, esi
 00712CE9    inc dword ptr ds:[esi+0x08]
-00712CEC    call 0x00710F50
+00712CEC    call 0x00710F50                                 ; => [ Call: sub_710f50 ]
 00712CF1    mov ecx, dword ptr ds:[esi+0x08]
 00712CF4    mov eax, dword ptr ds:[esi+0x04]
 00712CF7    mov dword ptr ds:[eax+ecx*4], edi

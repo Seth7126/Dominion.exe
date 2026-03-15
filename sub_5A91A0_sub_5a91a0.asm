@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_5a91a0
+// 起始地址: 0x5a91a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A91A0    push ebp
 005A91A1    mov ebp, esp
 005A91A3    mov eax, 0x4074
-005A91A8    call 0x00761E50
+005A91A8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005A91AD    mov eax, dword ptr ds:[0x008C4040]
-005A91B2    xor eax, ebp
+005A91B2    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 005A91B4    mov dword ptr ss:[ebp-0x04], eax
 005A91B7    mov dword ptr ss:[ebp-0x4014], edx
 005A91BD    mov edx, ecx
@@ -41,7 +47,7 @@
 005A9250    movss dword ptr ss:[ebp-0x400C], xmm2
 005A9258    add ecx, ecx
 005A925A    movss xmm1, dword ptr ds:[edx+eax*8+0xB4A620]
-005A9263    movups xmm0, xmmword ptr ds:[edx+ecx*8+0xB4A638]
+005A9263    movups xmm0, xmmword ptr ds:[edx+ecx*8+0xB4A638] ; => [ Data: data_b4a638 ]
 005A926B    ucomiss xmm1, xmm3
 005A926E    movups xmmword ptr ss:[ebp-0x4040], xmm0
 005A9275    lahf
@@ -52,7 +58,7 @@
 005A9282    movss dword ptr ss:[ebp-0x400C], xmm0
 005A928A    mov esi, dword ptr ss:[ebp-0x4040]
 005A9290    mov ecx, dword ptr ds:[esi]
-005A9292    call 0x005A0E40
+005A9292    call 0x005A0E40                                 ; => [ Call: sub_5a0e40 ]
 005A9297    mov dword ptr ss:[ebp-0x401C], edx
 005A929D    lea ecx, ss:[ebp-0x4030]
 005A92A3    movss xmm0, dword ptr ss:[ebp-0x401C]
@@ -64,17 +70,17 @@
 005A92CD    mulss xmm1, dword ptr ss:[ebp-0x400C]
 005A92D5    push eax
 005A92D6    movss dword ptr ss:[ebp-0x4024], xmm0
-005A92DE    movups xmm0, xmmword ptr ds:[0x00893580]
+005A92DE    movups xmm0, xmmword ptr ds:[0x00893580]        ; => [ Data: data_893580 ]
 005A92E5    movss dword ptr ss:[ebp-0x4028], xmm1
 005A92ED    movups xmmword ptr ss:[ebp-0x4060], xmm0
-005A92F4    call 0x005AF7F0
+005A92F4    call 0x005AF7F0                                 ; => [ Call: sub_5af7f0 ]
 005A92F9    push dword ptr ss:[ebp-0x4014]
 005A92FF    mov edx, dword ptr ds:[esi]
 005A9301    push ecx
 005A9302    movups xmm0, xmmword ptr ds:[eax]
 005A9305    lea ecx, ss:[ebp-0x4050]
 005A930B    movups xmmword ptr ss:[ebp-0x4050], xmm0
-005A9312    call 0x005A8A20
+005A9312    call 0x005A8A20                                 ; => [ Call: __87except ]
 005A9317    mov ecx, dword ptr ss:[ebp-0x403C]
 005A931D    add esp, 0x0C
 005A9320    test ecx, ecx
@@ -85,7 +91,7 @@
 005A9332    push 0xBF23AC
 005A9337    push eax
 005A9338    lea edx, ss:[ebp-0x4050]
-005A933E    call 0x00682A60
+005A933E    call 0x00682A60                                 ; => [ Data: data_171d8e4 | Data: data_bf23ac | Call: sub_682a60 ]
 005A9343    add esp, 0x0C
 005A9346    mov edx, dword ptr ss:[ebp-0x4018]
 005A934C    inc ebx
@@ -102,23 +108,23 @@
 005A937A    pop esi
 005A937B    xor ecx, ebp
 005A937D    pop ebx
-005A937E    call 0x0075927A
+005A937E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A9383    mov esp, ebp
 005A9385    pop ebp
 005A9386    ret
-005A9387    push 0x8253E8
+005A9387    push 0x8253E8                                   ; => [ String: TerrainElementDefImage ]
 005A938C    push 0x9B9
-005A9391    mov ecx, 0x825400
+005A9391    mov ecx, 0x825400                               ; => [ String: seed < def.numImages ]
 005A9396    jmp 0x005A93A7
-005A9398    push 0x8253A0
+005A9398    push 0x8253A0                                   ; => [ String: TerrainElementDefGet ]
 005A939D    push 0x9B0
-005A93A2    mov ecx, 0x8253B8
+005A93A2    mov ecx, 0x8253B8                               ; => [ String: TERRAIN_ELEMENT_DEFS[idx].terrain == element ]
 005A93A7    push 0x8250E0
 005A93AC    mov edx, 0x801800
-005A93B1    call 0x0063B870
+005A93B1    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp ]
 005A93B6    add esp, 0x0C
 005A93B9    call 0x0063BC30
 005A93BE    test al, al
-005A93C0    jz 0x005A93C3
+005A93C0    jz 0x005A93C3                                   ; => [ Call: sub_63bc30 ]
 005A93C2    int3
-005A93C3    call 0x0063BB00
+005A93C3    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

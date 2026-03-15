@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5649c0
+// 起始地址: 0x5649c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005649C0    push ebp
 005649C1    mov ebp, esp
 005649C3    and esp, 0xFFFFFFF8
@@ -11,7 +17,7 @@
 005649D5    xorps xmm0, xmm0
 005649D8    mov dword ptr ss:[esp+0x0C], ecx
 005649DC    push edi
-005649DD    movlpd qword ptr ss:[esp+0x20], xmm0
+005649DD    movlpd qword ptr ss:[esp+0x20], xmm0            ; => [ Call: nullptr ]
 005649E3    mov dword ptr ss:[esp+0x14], edx
 005649E7    cmp dword ptr ds:[esi+0xC80], ecx
 005649ED    jle 0x00564AAF
@@ -31,14 +37,14 @@
 00564A18    or ecx, eax
 00564A1A    jnz 0x00564A76
 00564A1C    call 0x00573400
-00564A21    mov ecx, dword ptr ds:[eax+0x04]
+00564A21    mov ecx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00564A24    mov eax, dword ptr ss:[esp+0x18]
 00564A28    movzx eax, ax
 00564A2B    mov dword ptr ss:[esp+0x20], ecx
 00564A2F    mov dword ptr ss:[esp+0x1C], eax
 00564A33    cmp eax, 0x320
 00564A38    jb 0x00564A47
-00564A3A    call 0x00591930
+00564A3A    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00564A3F    mov eax, dword ptr ss:[esp+0x1C]
 00564A43    mov ecx, dword ptr ss:[esp+0x20]
 00564A47    imul eax, eax, 0x64
@@ -50,7 +56,7 @@
 00564A5C    add esp, 0x08
 00564A5F    test al, al
 00564A61    mov eax, dword ptr ss:[esp+0x0C]
-00564A65    jz 0x00564A7E
+00564A65    jz 0x00564A7E                                   ; => [ Call: sub_5754f0 ]
 00564A67    or eax, esi
 00564A69    or ebx, edi
 00564A6B    inc ecx

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50c9f0
+// 起始地址: 0x50c9f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050C9F0    dword 83EC8B55
 0050C9F4    in al, dx
 0050C9F5    cmp al, 0xA1
@@ -9,7 +15,7 @@
 0050CA00    push ebx
 0050CA01    push esi
 0050CA02    push edi
-0050CA03    call 0x00573400
+0050CA03    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0050CA08    mov edi, eax
 0050CA0A    mov esi, 0x07
 0050CA0F    mov ecx, dword ptr ds:[edi+0x04]
@@ -28,7 +34,7 @@
 0050CA39    mov ebx, dword ptr ds:[edi+0x04]
 0050CA3C    cmp esi, 0x48
 0050CA3F    jl 0x0050CA46
-0050CA41    call 0x00591930
+0050CA41    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0050CA46    mov ecx, dword ptr ds:[edi+0x04]
 0050CA49    mov eax, esi
 0050CA4B    shl eax, 0x04
@@ -37,19 +43,19 @@
 0050CA52    mov dword ptr ss:[ebp-0x38], eax
 0050CA55    lea eax, ss:[ebp-0x34]
 0050CA58    push eax
-0050CA59    call 0x005108A0
+0050CA59    call 0x005108A0                                 ; => [ Call: sub_5108a0 ]
 0050CA5E    add esp, 0x04
 0050CA61    cmp eax, 0x0C
 0050CA64    jnle 0x0050CB4A
 0050CA6A    mov ecx, dword ptr ds:[edi+0x04]
 0050CA6D    mov edx, eax
-0050CA6F    call 0x0063ED10
+0050CA6F    call 0x0063ED10                                 ; => [ Call: sub_63ed10 ]
 0050CA74    mov ebx, dword ptr ds:[edi+0x04]
 0050CA77    mov eax, dword ptr ss:[ebp+eax*4-0x34]
 0050CA7B    movzx esi, ax
 0050CA7E    cmp esi, 0x320
 0050CA84    jb 0x0050CA8B
-0050CA86    call 0x00591930
+0050CA86    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0050CA8B    imul eax, esi, 0x64
 0050CA8E    mov esi, dword ptr ss:[ebp-0x38]
 0050CA91    mov esi, dword ptr ds:[esi+0x152C]
@@ -62,7 +68,7 @@
 0050CAAB    mov dword ptr ss:[ebp-0x38], eax
 0050CAAE    cmp ebx, 0x320
 0050CAB4    jb 0x0050CABB
-0050CAB6    call 0x00591930
+0050CAB6    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0050CABB    mov eax, dword ptr ss:[ebp-0x3C]
 0050CABE    imul ebx, ebx, 0x64
 0050CAC1    add ebx, dword ptr ss:[ebp-0x38]
@@ -71,7 +77,7 @@
 0050CACC    mov ecx, dword ptr ds:[edi+0x04]
 0050CACF    mov edx, esi
 0050CAD1    push eax
-0050CAD2    call 0x0050C960
+0050CAD2    call 0x0050C960                                 ; => [ Call: sub_50c960 ]
 0050CAD7    mov eax, dword ptr ss:[ebp-0x3C]
 0050CADA    add esp, 0x04
 0050CADD    mov esi, dword ptr ds:[ebx+0x1AA4]
@@ -103,14 +109,14 @@
 0050CB2B    push 0x4D
 0050CB2D    push edx
 0050CB2E    or edx, 0xFFFFFFFF
-0050CB31    call 0x0059F9B0
+0050CB31    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0050CB36    add esp, 0x24
 0050CB39    mov ecx, dword ptr ss:[ebp-0x04]
 0050CB3C    pop edi
 0050CB3D    pop esi
 0050CB3E    xor ecx, ebp
 0050CB40    pop ebx
-0050CB41    call 0x0075927A
+0050CB41    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0050CB46    mov esp, ebp
 0050CB48    pop ebp
 0050CB49    ret
@@ -119,10 +125,10 @@
 0050CB54    push 0x80CD80
 0050CB59    mov edx, 0x801800
 0050CB5E    mov ecx, 0x80746C
-0050CB63    call 0x0063B870
+0050CB63    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: num <= 12 | String: Start_SameReward | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 0050CB68    add esp, 0x0C
 0050CB6B    call 0x0063BC30
 0050CB70    test al, al
-0050CB72    jz 0x0050CB75
+0050CB72    jz 0x0050CB75                                   ; => [ Call: sub_63bc30 ]
 0050CB74    int3
-0050CB75    call 0x0063BB00
+0050CB75    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4ba6f0
+// 起始地址: 0x4ba6f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BA6F0    push ebp
 004BA6F1    mov ebp, esp
 004BA6F3    and esp, 0xFFFFFFF8
-004BA6F6    mov ecx, dword ptr ds:[0x00CC8D5C]
+004BA6F6    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004BA6FC    push esi
-004BA6FD    xor esi, esi
+004BA6FD    xor esi, esi                                    ; => [ Call: nullptr ]
 004BA6FF    push edi
 004BA700    test ecx, ecx
 004BA702    jz 0x004BA785
@@ -66,10 +72,10 @@
 004BA78C    push 0x77EB50
 004BA791    mov edx, 0x801800
 004BA796    mov ecx, 0x77EB9C
-004BA79B    call 0x0063B870
+004BA79B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004BA7A0    add esp, 0x0C
 004BA7A3    call 0x0063BC30
 004BA7A8    test al, al
-004BA7AA    jz 0x004BA7AD
+004BA7AA    jz 0x004BA7AD                                   ; => [ Call: sub_63bc30 ]
 004BA7AC    int3
-004BA7AD    call 0x0063BB00
+004BA7AD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

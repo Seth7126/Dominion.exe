@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a2040
+// 起始地址: 0x5a2040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A2040    push ebx
 005A2041    mov ebx, esp
 005A2043    sub esp, 0x08
@@ -56,7 +62,7 @@
 005A20EE    mov dword ptr ss:[ebp-0x04], eax
 005A20F1    mov ecx, dword ptr ss:[ebp-0x20]
 005A20F4    mov edx, 0x20
-005A20F9    call 0x005A1410
+005A20F9    call 0x005A1410                                 ; => [ Call: sub_5a1410 ]
 005A20FE    mov ecx, dword ptr ss:[ebp-0x04]
 005A2101    mov esi, eax
 005A2103    mov eax, dword ptr ss:[ebp-0x10]
@@ -93,7 +99,7 @@
 005A2178    cvtps2pd xmm0, xmm0
 005A217B    movsd qword ptr ss:[ebp-0x18], xmm0
 005A2180    fld qword ptr ss:[ebp-0x18]
-005A2183    call 0x00762368
+005A2183    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 005A2188    xorps xmm0, xmm0
 005A218B    comiss xmm0, dword ptr ss:[ebp-0x2C]
 005A218F    fstp dword ptr ss:[ebp-0x14]

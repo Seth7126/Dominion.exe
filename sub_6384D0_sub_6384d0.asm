@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_6384d0
+// 起始地址: 0x6384d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006384D0    push ebp
 006384D1    mov ebp, esp
 006384D3    push 0xFFFFFFFF
-006384D5    push 0x76C29D
+006384D5    push 0x76C29D                                   ; => [ Call: __ehhandler$?realloc_dbg_nolock@@YAPAXQAXQAIHQBDH_N@Z | Type: EHRegistrationNode ]
 006384DA    mov eax, dword ptr fs:[0x00000000]
-006384E0    push eax
+006384E0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006384E1    sub esp, 0x18
 006384E4    push ebx
 006384E5    push esi
 006384E6    push edi
 006384E7    mov eax, dword ptr ds:[0x008C4040]
-006384EC    xor eax, ebp
+006384EC    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 006384EE    push eax
 006384EF    lea eax, ss:[ebp-0x0C]
-006384F2    mov dword ptr fs:[0x00000000], eax
+006384F2    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006384F8    mov dword ptr ss:[ebp-0x14], edx
 006384FB    mov esi, ecx
 006384FD    mov dword ptr ss:[ebp-0x10], esi
@@ -31,7 +37,7 @@
 00638524    cmp byte ptr ds:[eax], 0x00
 00638527    jz 0x00638534
 00638529    lea ecx, ss:[ebp-0x20]
-0063852C    call 0x0063D4E0
+0063852C    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00638531    inc dword ptr ds:[eax+0x04]
 00638534    mov eax, dword ptr ds:[edi+0x08]
 00638537    mov dword ptr ss:[ebp-0x1C], eax
@@ -54,7 +60,7 @@
 00638569    lea ecx, ds:[esi-0x04]
 0063856C    lea eax, ds:[esi-0x10]
 0063856F    push eax
-00638570    call 0x0063D850
+00638570    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 00638575    mov eax, dword ptr ds:[esi-0x0C]
 00638578    mov dword ptr ds:[esi], eax
 0063857A    lea eax, ds:[esi-0x14]
@@ -74,7 +80,7 @@
 0063859A    mov dword ptr ds:[ebx], eax
 0063859C    lea eax, ds:[esi+0x04]
 0063859F    push eax
-006385A0    call 0x0063D850
+006385A0    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 006385A5    mov eax, dword ptr ds:[esi+0x08]
 006385A8    mov dword ptr ds:[ebx+0x08], eax
 006385AB    mov ebx, esi
@@ -91,26 +97,26 @@
 006385C5    mov dword ptr ds:[ebx], eax
 006385C7    lea eax, ss:[ebp-0x20]
 006385CA    push eax
-006385CB    call 0x0063D850
+006385CB    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 006385D0    mov eax, dword ptr ss:[ebp-0x1C]
 006385D3    mov dword ptr ds:[ebx+0x08], eax
 006385D6    mov dword ptr ss:[ebp-0x04], 0x01
 006385DD    cmp dword ptr ds:[0x00CF65BC], 0x00
-006385E4    jz 0x00638614
+006385E4    jz 0x00638614                                   ; => [ Data: data_cf65bc ]
 006385E6    mov eax, dword ptr ss:[ebp-0x20]
 006385E9    test eax, eax
 006385EB    jz 0x00638614
 006385ED    cmp byte ptr ds:[eax], 0x00
 006385F0    jz 0x00638614
 006385F2    lea ecx, ss:[ebp-0x20]
-006385F5    call 0x0063D4E0
+006385F5    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 006385FA    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 006385FE    jnz 0x00638614
 00638600    mov edx, dword ptr ds:[eax+0x0C]
 00638603    mov ecx, eax
 00638605    add edx, 0x10
-00638608    call 0x0064C080
-0063860D    mov dword ptr ss:[ebp-0x20], 0x801800
+00638608    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+0063860D    mov dword ptr ss:[ebp-0x20], 0x801800           ; => [ Data: data_801800 ]
 00638614    mov edx, dword ptr ss:[ebp-0x14]
 00638617    add edi, 0x0C
 0063861A    mov esi, dword ptr ss:[ebp-0x10]
@@ -119,7 +125,7 @@
 00638626    jnz 0x00638513
 0063862C    mov eax, edx
 0063862E    mov ecx, dword ptr ss:[ebp-0x0C]
-00638631    mov dword ptr fs:[0x00000000], ecx
+00638631    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00638638    pop ecx
 00638639    pop edi
 0063863A    pop esi

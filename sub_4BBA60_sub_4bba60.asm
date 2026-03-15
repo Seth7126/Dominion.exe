@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4bba60
+// 起始地址: 0x4bba60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BBA60    push ebp
 004BBA61    mov ebp, esp
 004BBA63    mov eax, dword ptr ss:[ebp+0x0C]
@@ -25,11 +31,11 @@
 004BBA9D    add eax, dword ptr ds:[0x00C23BA8]
 004BBAA3    cmp dword ptr ds:[eax+0x18C8], edi
 004BBAA9    mov eax, dword ptr ss:[ebp+0x0C]
-004BBAAC    jz 0x004BBAD7
+004BBAAC    jz 0x004BBAD7                                   ; => [ Data: data_c23ba8 | Data: data_c23bac ]
 004BBAAE    push ebx
 004BBAAF    mov edx, eax
 004BBAB1    call 0x0067BE20
-004BBAB6    mov edi, eax
+004BBAB6    mov edi, eax                                    ; => [ Call: sub_67be20 ]
 004BBAB8    add esp, 0x04
 004BBABB    mov eax, dword ptr ss:[ebp+0x0C]
 004BBABE    mov dword ptr ds:[esi+0x20], edi
@@ -43,7 +49,7 @@
 004BBAD7    mov ecx, dword ptr ss:[ebp+0x08]
 004BBADA    mov edx, eax
 004BBADC    push ebx
-004BBADD    call 0x0067BE20
+004BBADD    call 0x0067BE20                                 ; => [ Call: sub_67be20 ]
 004BBAE2    add esp, 0x04
 004BBAE5    cmp eax, edi
 004BBAE7    jnz 0x004BBAF2
@@ -58,10 +64,10 @@
 004BBAFC    push 0x801820
 004BBB01    mov edx, 0x801800
 004BBB06    mov ecx, 0x8028E4
-004BBB0B    call 0x0063B870
+004BBB0B    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: UI2Selector::LookupForce | Data: data_801800 | String: UI2GetHandle(arg_root, arg_name, arg_idx) == retval | String: C:\x\ax2017\Engine\UI2.h ]
 004BBB10    add esp, 0x0C
 004BBB13    call 0x0063BC30
 004BBB18    test al, al
-004BBB1A    jz 0x004BBB1D
+004BBB1A    jz 0x004BBB1D                                   ; => [ Call: sub_63bc30 ]
 004BBB1C    int3
-004BBB1D    call 0x0063BB00
+004BBB1D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

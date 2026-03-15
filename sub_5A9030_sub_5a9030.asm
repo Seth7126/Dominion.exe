@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_5a9030
+// 起始地址: 0x5a9030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A9030    push ebp
 005A9031    mov ebp, esp
 005A9033    sub esp, 0x78
-005A9036    mov eax, dword ptr ds:[0x008C4040]
+005A9036    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A903B    xor eax, ebp
 005A903D    mov dword ptr ss:[ebp-0x08], eax
 005A9040    movaps xmm1, xmmword ptr ds:[0x00893870]
 005A9047    movaps xmm7, xmm0
 005A904A    movups xmm0, xmmword ptr ds:[0x008934E0]
 005A9051    push ebx
-005A9052    movups xmmword ptr ss:[ebp-0x74], xmm1
+005A9052    movups xmmword ptr ss:[ebp-0x74], xmm1          ; => [ Call: __builtin_memcpy | String: \x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\xbf\x00\x00\x80\xbf\x00\x00\x80\xbf\x00\x00\x80\xbf\x00\x00\x80\x3f ]
 005A9056    mov ebx, ecx
 005A9058    movaps xmm1, xmmword ptr ds:[0x008935E0]
 005A905F    xorps xmm2, xmm2
@@ -18,7 +24,7 @@
 005A9067    movups xmmword ptr ss:[ebp-0x64], xmm1
 005A906B    xor edi, edi
 005A906D    movss xmm1, dword ptr ss:[ebp+0x0C]
-005A9072    movups xmmword ptr ss:[ebp-0x48], xmm0
+005A9072    movups xmmword ptr ss:[ebp-0x48], xmm0          ; => [ Call: __builtin_memcpy | String: \x00\x00\x00\x3f\x00\x00\x00\x3f\x00\x00\x00\x3f\x00\x00\x00\x3f\x00\x00\x00\x3f\x00\x00\x00\x3f\x00\x00\x00\x3f\x00\x00\x00\x3f ]
 005A9076    movups xmmword ptr ss:[ebp-0x38], xmm0
 005A907A    movss xmm0, dword ptr ss:[ebp+0x10]
 005A907F    movss dword ptr ss:[ebp-0x4C], xmm7
@@ -35,7 +41,7 @@
 005A90B1    mov dword ptr ss:[ebp-0x50], eax
 005A90B4    mulss xmm3, xmm2
 005A90B8    movaps xmm2, xmm6
-005A90BB    mov eax, dword ptr ds:[0x0147ABE4]
+005A90BB    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 005A90C0    mulss xmm4, xmm7
 005A90C4    mov dword ptr ss:[ebp-0x54], esi
 005A90C7    mulss xmm2, xmm7
@@ -55,7 +61,7 @@
 005A9103    movaps xmm0, xmm4
 005A9106    addss xmm0, dword ptr ds:[eax+0x20]
 005A910B    addss xmm6, dword ptr ss:[ebp+0x0C]
-005A9110    push dword ptr ds:[0x0171EFC4]
+005A9110    push dword ptr ds:[0x0171EFC4]                  ; => [ Data: data_171efc4 ]
 005A9116    push 0x00
 005A9118    movss dword ptr ss:[ebp-0x28], xmm0
 005A911D    movaps xmm0, xmm3
@@ -75,7 +81,7 @@
 005A9161    lea eax, ss:[ebp-0x54]
 005A9164    push eax
 005A9165    movss dword ptr ss:[ebp-0x0C], xmm5
-005A916A    call 0x006867A0
+005A916A    call 0x006867A0                                 ; => [ Call: sub_6867a0 ]
 005A916F    movss xmm7, dword ptr ss:[ebp-0x4C]
 005A9174    inc edi
 005A9175    movss xmm0, dword ptr ss:[ebp+0x10]
@@ -89,7 +95,7 @@
 005A9192    pop esi
 005A9193    xor ecx, ebp
 005A9195    pop ebx
-005A9196    call 0x0075927A
+005A9196    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A919B    mov esp, ebp
 005A919D    pop ebp
 005A919E    ret

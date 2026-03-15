@@ -1,14 +1,20 @@
+// ============================================================
+// 函数名称: sub_6cadd0
+// 起始地址: 0x6cadd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CADD0    push ebp
 006CADD1    mov ebp, esp
 006CADD3    push ecx
-006CADD4    mov edx, dword ptr ds:[0x0147D19C]
+006CADD4    mov edx, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CADDA    xor ecx, ecx
 006CADDC    push ebx
 006CADDD    push esi
 006CADDE    push edi
 006CADDF    cmp dword ptr ds:[edx+0xBBAA84], ecx
 006CADE5    jle 0x006CAE46
-006CADE7    xor esi, esi
+006CADE7    xor esi, esi                                    ; => [ Call: nullptr ]
 006CADE9    nop dword ptr ds:[eax], eax
 006CADF0    lea eax, ds:[esi+edx*1]
 006CADF3    mov dword ptr ds:[eax+0xB9B694], 0x00
@@ -25,20 +31,20 @@
 006CAE32    mov edi, 0xB9B69C
 006CAE37    inc ecx
 006CAE38    add esi, 0x1C
-006CAE3B    mov byte ptr ds:[edi+eax*1], bl
+006CAE3B    mov byte ptr ds:[edi+eax*1], bl                 ; => [ Data: data_b9b69c ]
 006CAE3E    cmp ecx, dword ptr ds:[edx+0xBBAA84]
 006CAE44    jl 0x006CADF0
 006CAE46    xor ebx, ebx
 006CAE48    mov dword ptr ds:[edx+0xBBAA88], 0x00
-006CAE52    xor esi, esi
-006CAE54    mov dword ptr ss:[ebp-0x04], esi
+006CAE52    xor esi, esi                                    ; => [ Call: nullptr ]
+006CAE54    mov dword ptr ss:[ebp-0x04], esi                ; => [ Call: nullptr ]
 006CAE57    cmp byte ptr ds:[edx+0xBBAA8C], 0x00
 006CAE5E    jz 0x006CAE68
 006CAE60    cmp dword ptr ds:[edx+0xB9B680], ebx
 006CAE66    jz 0x006CAED8
 006CAE68    mov ecx, ebx
-006CAE6A    call 0x006CA700
-006CAE6F    mov edx, dword ptr ds:[0x0147D19C]
+006CAE6A    call 0x006CA700                                 ; => [ Call: sub_6ca700 ]
+006CAE6F    mov edx, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CAE75    xor edi, edi
 006CAE77    cmp dword ptr ds:[edx+0xBBAA84], edi
 006CAE7D    jle 0x006CAED2
@@ -74,17 +80,17 @@
 006CAEF7    xor esi, esi
 006CAEF9    nop dword ptr ds:[eax], eax
 006CAF00    mov ecx, esi
-006CAF02    call 0x006CAAB0
+006CAF02    call 0x006CAAB0                                 ; => [ Call: sub_6caab0 ]
 006CAF07    inc esi
 006CAF08    cmp esi, 0x28
 006CAF0B    jl 0x006CAF00
-006CAF0D    mov edx, dword ptr ds:[0x0147D19C]
+006CAF0D    mov edx, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CAF13    xor ecx, ecx
-006CAF15    xor edi, edi
+006CAF15    xor edi, edi                                    ; => [ Call: nullptr ]
 006CAF17    cmp dword ptr ds:[edx+0xBBAA84], ecx
 006CAF1D    jle 0x006CAF4D
 006CAF1F    lea esi, ds:[edx+0xBB6C04]
-006CAF25    lea eax, ds:[edx+0xB9B69C]
+006CAF25    lea eax, ds:[edx+0xB9B69C]                      ; => [ Data: data_b9b69c ]
 006CAF2B    nop dword ptr ds:[eax+eax*1], eax
 006CAF30    cmp dword ptr ds:[eax-0x08], 0x00
 006CAF34    jz 0x006CAF41
@@ -105,8 +111,8 @@
 006CAF60    sar eax, 0x02
 006CAF63    push 0x6CAC40
 006CAF68    push eax
-006CAF69    call 0x004D4E30
-006CAF6E    mov ecx, dword ptr ds:[0x0147D19C]
+006CAF69    call 0x004D4E30                                 ; => [ Call: sub_6cac40 | Call: sub_4d4e30 ]
+006CAF6E    mov ecx, dword ptr ds:[0x0147D19C]              ; => [ Data: data_147d19c ]
 006CAF74    add esp, 0x08
 006CAF77    mov dword ptr ds:[ecx+0xBBAAAC], edi
 006CAF7D    cmp dword ptr ds:[ecx+0xBBAA9C], edi

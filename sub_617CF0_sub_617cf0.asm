@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_617cf0
+// 起始地址: 0x617cf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00617CF0    push ebx
 00617CF1    push esi
 00617CF2    push edi
@@ -46,10 +52,10 @@
 00617D5F    push 0x86F1E8
 00617D64    mov edx, 0x801800
 00617D69    mov ecx, 0x801AA4
-00617D6E    call 0x0063B870
+00617D6E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: IsIntroGame | String: Halt ]
 00617D73    add esp, 0x0C
 00617D76    call 0x0063BC30
 00617D7B    test al, al
-00617D7D    jz 0x00617D80
+00617D7D    jz 0x00617D80                                   ; => [ Call: sub_63bc30 ]
 00617D7F    int3
-00617D80    call 0x0063BB00
+00617D80    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_73af90
+// 起始地址: 0x73af90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0073AF90    push ebp
 0073AF91    mov ebp, esp
 0073AF93    sub esp, 0x14
@@ -18,7 +24,7 @@
 0073AFB6    push edi
 0073AFB7    push eax
 0073AFB8    mov ecx, ebx
-0073AFBA    call 0x0073B200
+0073AFBA    call 0x0073B200                                 ; => [ Call: sub_73b200 ]
 0073AFBF    add esp, 0x08
 0073AFC2    lea ebx, ds:[esi+0x04]
 0073AFC5    mov dword ptr ss:[ebp-0x04], ebx

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_74a6a0
+// 起始地址: 0x74a6a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074A6A0    push ebx
 0074A6A1    mov ebx, esp
 0074A6A3    sub esp, 0x08
@@ -11,16 +17,16 @@
 0074A6B9    push esi
 0074A6BA    mov esi, dword ptr ds:[0x00775298]
 0074A6C0    push edi
-0074A6C1    call esi
+0074A6C1    call esi                                        ; => [ Type: HMENU ]
 0074A6C3    mov dword ptr ss:[ebp-0x10], eax
 0074A6C6    lea eax, ss:[ebp-0x20]
 0074A6C9    push eax
-0074A6CA    call dword ptr ds:[0x00775394]
-0074A6D0    call 0x0074A620
+0074A6CA    call dword ptr ds:[0x00775394]                  ; => [ Type: POINT ]
+0074A6D0    call 0x0074A620                                 ; => [ Call: sub_74a620 ]
 0074A6D5    mov byte ptr ss:[ebp-0x01], al
-0074A6D8    call 0x0074A660
+0074A6D8    call 0x0074A660                                 ; => [ Call: sub_74a660 ]
 0074A6DD    mov byte ptr ss:[ebp-0x02], al
-0074A6E0    call esi
+0074A6E0    call esi                                        ; => [ Type: HMENU ]
 0074A6E2    movzx ecx, byte ptr ss:[ebp-0x01]
 0074A6E6    mov edx, eax
 0074A6E8    mov edi, dword ptr ds:[0x0077529C]
@@ -32,7 +38,7 @@
 0074A701    push ecx
 0074A702    push 0xFFFFFFFF
 0074A704    push edx
-0074A705    call edi
+0074A705    call edi                                        ; => [ String: Lock ]
 0074A707    movzx eax, byte ptr ss:[ebp-0x02]
 0074A70B    push 0x88B790
 0074A710    push 0x17
@@ -41,108 +47,108 @@
 0074A71A    push eax
 0074A71B    push 0xFFFFFFFF
 0074A71D    push dword ptr ss:[ebp-0x14]
-0074A720    call edi
-0074A722    call esi
+0074A720    call edi                                        ; => [ String: Hide ]
+0074A722    call esi                                        ; => [ Type: HMENU ]
 0074A724    push 0x873780
 0074A729    push 0x0A
 0074A72B    push 0x400
 0074A730    push 0xFFFFFFFF
 0074A732    push eax
 0074A733    mov dword ptr ss:[ebp-0x08], eax
-0074A736    call edi
+0074A736    call edi                                        ; => [ String: Left ]
 0074A738    push 0x873798
 0074A73D    push 0x0B
 0074A73F    push 0x400
 0074A744    push 0xFFFFFFFF
 0074A746    push dword ptr ss:[ebp-0x08]
-0074A749    call edi
+0074A749    call edi                                        ; => [ Data: data_873798 ]
 0074A74B    push 0x873790
 0074A750    push 0x0C
 0074A752    push 0x400
 0074A757    push 0xFFFFFFFF
 0074A759    push dword ptr ss:[ebp-0x08]
-0074A75C    call edi
+0074A75C    call edi                                        ; => [ String: Right ]
 0074A75E    push 0x8737A4
 0074A763    push 0x0D
 0074A765    push 0x400
 0074A76A    push 0xFFFFFFFF
 0074A76C    push dword ptr ss:[ebp-0x08]
-0074A76F    call edi
+0074A76F    call edi                                        ; => [ String: Bottom ]
 0074A771    push 0x876700
 0074A776    push 0x0E
 0074A778    push 0x400
 0074A77D    push 0xFFFFFFFF
 0074A77F    push dword ptr ss:[ebp-0x08]
-0074A782    call edi
+0074A782    call edi                                        ; => [ String: Center Vertically ]
 0074A784    push 0x8766EC
 0074A789    push 0x0F
 0074A78B    push 0x400
 0074A790    push 0xFFFFFFFF
 0074A792    push dword ptr ss:[ebp-0x08]
-0074A795    call edi
+0074A795    call edi                                        ; => [ String: Center Horizontally ]
 0074A797    push 0x87671C
 0074A79C    push 0x10
 0074A79E    push 0x400
 0074A7A3    push 0xFFFFFFFF
 0074A7A5    push dword ptr ss:[ebp-0x08]
-0074A7A8    call edi
+0074A7A8    call edi                                        ; => [ String: Center ]
 0074A7AA    push 0x801800
 0074A7AF    push 0x00
 0074A7B1    push 0xC00
 0074A7B6    push 0xFFFFFFFF
 0074A7B8    push dword ptr ss:[ebp-0x08]
-0074A7BB    call edi
+0074A7BB    call edi                                        ; => [ Data: data_801800 ]
 0074A7BD    push 0x88FDDC
 0074A7C2    push 0x12
 0074A7C4    push 0x400
 0074A7C9    push 0xFFFFFFFF
 0074A7CB    push dword ptr ss:[ebp-0x08]
-0074A7CE    call edi
+0074A7CE    call edi                                        ; => [ String: Move Forward\tCtrl-] ]
 0074A7D0    push 0x88FE14
 0074A7D5    push 0x13
 0074A7D7    push 0x400
 0074A7DC    push 0xFFFFFFFF
 0074A7DE    push dword ptr ss:[ebp-0x08]
-0074A7E1    call edi
+0074A7E1    call edi                                        ; => [ String: Move Back\tCtrl-[ ]
 0074A7E3    push 0x88FDFC
 0074A7E8    push 0x14
 0074A7EA    push 0x400
 0074A7EF    push 0xFFFFFFFF
 0074A7F1    push dword ptr ss:[ebp-0x08]
-0074A7F4    call edi
+0074A7F4    call edi                                        ; => [ String: To Front\tCtrl-Shift-] ]
 0074A7F6    push 0x88FE38
 0074A7FB    push 0x15
 0074A7FD    push 0x400
 0074A802    push 0xFFFFFFFF
 0074A804    push dword ptr ss:[ebp-0x08]
-0074A807    call edi
-0074A809    call esi
+0074A807    call edi                                        ; => [ String: To Back\tCtrl-Shift-[ ]
+0074A809    call esi                                        ; => [ Type: HMENU ]
 0074A80B    push 0x87672C
 0074A810    push 0x11
 0074A812    push 0x400
 0074A817    push 0xFFFFFFFF
 0074A819    push eax
 0074A81A    mov dword ptr ss:[ebp-0x18], eax
-0074A81D    call edi
-0074A81F    mov esi, dword ptr ss:[ebp-0x10]
+0074A81D    call edi                                        ; => [ String: SizeToSource ]
+0074A81F    mov esi, dword ptr ss:[ebp-0x10]                ; => [ Type: HMENU ]
 0074A822    push 0x875A88
 0074A827    push dword ptr ss:[ebp-0x14]
 0074A82A    push 0x410
 0074A82F    push 0xFFFFFFFF
 0074A831    push esi
-0074A832    call edi
+0074A832    call edi                                        ; => [ String: Layer ]
 0074A834    push 0x876724
 0074A839    push dword ptr ss:[ebp-0x08]
 0074A83C    push 0x410
 0074A841    push 0xFFFFFFFF
 0074A843    push esi
-0074A844    call edi
+0074A844    call edi                                        ; => [ String: Align ]
 0074A846    push 0x87674C
 0074A84B    push dword ptr ss:[ebp-0x18]
 0074A84E    push 0x410
 0074A853    push 0xFFFFFFFF
 0074A855    push esi
-0074A856    call edi
+0074A856    call edi                                        ; => [ String: Transform ]
 0074A858    push 0x00
 0074A85A    push dword ptr ds:[0x0147B084]
 0074A860    push 0x00
@@ -150,11 +156,11 @@
 0074A865    push dword ptr ss:[ebp-0x20]
 0074A868    push 0x100
 0074A86D    push esi
-0074A86E    call dword ptr ds:[0x007752A0]
+0074A86E    call dword ptr ds:[0x007752A0]                  ; => [ Type: BOOL | Call: nullptr | Field: x | Field: y | Data: data_147b084 ]
 0074A874    cmp eax, 0x17
 0074A877    jnbe 0x0074AB33
 0074A87D    jmp dword ptr ds:[eax*4+0x74AB64]
-0074A884    mov eax, dword ptr ds:[0x0151345C]
+0074A884    mov eax, dword ptr ds:[0x0151345C]              ; => [ Data: data_151345c ]
 0074A889    test eax, eax
 0074A88B    jz 0x0074AB12
 0074A891    cmp eax, 0x01
@@ -164,21 +170,21 @@
 0074A89E    jmp 0x0074A8F7
 0074A8A0    mov ecx, dword ptr ds:[0x0151245C]
 0074A8A6    xor edx, edx
-0074A8A8    call 0x00744F10
+0074A8A8    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074A8AD    mov esi, 0x01
 0074A8B2    movss xmm0, dword ptr ds:[eax+0x10]
-0074A8B7    mov eax, dword ptr ds:[0x0151345C]
+0074A8B7    mov eax, dword ptr ds:[0x0151345C]              ; => [ Data: data_151345c ]
 0074A8BC    movss dword ptr ss:[ebp-0x0C], xmm0
 0074A8C1    cmp eax, esi
 0074A8C3    jle 0x0074A8F7
 0074A8C5    nop word ptr ds:[eax+eax*1], ax
 0074A8D0    mov ecx, dword ptr ds:[esi*4+0x151245C]
 0074A8D7    xor edx, edx
-0074A8D9    call 0x00744F10
+0074A8D9    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074A8DE    inc esi
 0074A8DF    movss xmm0, dword ptr ds:[eax+0x10]
 0074A8E4    minss xmm0, dword ptr ss:[ebp-0x0C]
-0074A8E9    mov eax, dword ptr ds:[0x0151345C]
+0074A8E9    mov eax, dword ptr ds:[0x0151345C]              ; => [ Data: data_151345c ]
 0074A8EE    movss dword ptr ss:[ebp-0x0C], xmm0
 0074A8F3    cmp esi, eax
 0074A8F5    jl 0x0074A8D0
@@ -187,7 +193,7 @@
 0074A8FB    jle 0x0074A9EC
 0074A901    mov ecx, dword ptr ds:[esi*4+0x151245C]
 0074A908    xor edx, edx
-0074A90A    call 0x00744F10
+0074A90A    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074A90F    movss xmm0, dword ptr ss:[ebp-0x0C]
 0074A914    mov edx, eax
 0074A916    movss xmm2, dword ptr ds:[0x00890D84]
@@ -246,83 +252,83 @@
 0074A9D8    movups xmm0, xmmword ptr ss:[ebp-0x30]
 0074A9DC    movups xmmword ptr ds:[edx+0x10], xmm0
 0074A9E0    cmp esi, dword ptr ds:[0x0151345C]
-0074A9E6    jl 0x0074A901
+0074A9E6    jl 0x0074A901                                   ; => [ Data: data_151345c ]
 0074A9EC    mov cl, 0x01
-0074A9EE    call 0x00744CE0
+0074A9EE    call 0x00744CE0                                 ; => [ Call: sub_744ce0 ]
 0074A9F3    mov esi, dword ptr ss:[ebp-0x10]
 0074A9F6    jmp 0x0074AB12
-0074A9FB    call 0x00749930
+0074A9FB    call 0x00749930                                 ; => [ Call: sub_749930 ]
 0074AA00    jmp 0x0074AB12
-0074AA05    call 0x00749770
+0074AA05    call 0x00749770                                 ; => [ Call: sub_749770 ]
 0074AA0A    jmp 0x0074AB12
-0074AA0F    call 0x00749AE0
+0074AA0F    call 0x00749AE0                                 ; => [ Call: sub_749ae0 ]
 0074AA14    jmp 0x0074AB12
-0074AA19    call 0x00749E80
+0074AA19    call 0x00749E80                                 ; => [ Call: sub_749e80 ]
 0074AA1E    mov cl, 0x01
-0074AA20    call 0x00744CE0
+0074AA20    call 0x00744CE0                                 ; => [ Call: sub_744ce0 ]
 0074AA25    jmp 0x0074AB12
-0074AA2A    call 0x00749E80
-0074AA2F    call 0x00749CA0
+0074AA2A    call 0x00749E80                                 ; => [ Call: sub_749e80 ]
+0074AA2F    call 0x00749CA0                                 ; => [ Call: sub_749ca0 ]
 0074AA34    mov cl, 0x01
-0074AA36    call 0x00744CE0
+0074AA36    call 0x00744CE0                                 ; => [ Call: sub_744ce0 ]
 0074AA3B    jmp 0x0074AB12
-0074AA40    call 0x0074A060
+0074AA40    call 0x0074A060                                 ; => [ Call: sub_74a060 ]
 0074AA45    jmp 0x0074AB12
-0074AA4A    call 0x0074A620
+0074AA4A    call 0x0074A620                                 ; => [ Call: sub_74a620 ]
 0074AA4F    xor esi, esi
 0074AA51    cmp dword ptr ds:[0x0151345C], esi
-0074AA57    jle 0x0074AA7D
+0074AA57    jle 0x0074AA7D                                  ; => [ Data: data_151345c ]
 0074AA59    xor al, 0x01
 0074AA5B    mov byte ptr ss:[ebp-0x02], al
 0074AA5E    nop
 0074AA60    mov ecx, dword ptr ds:[esi*4+0x151245C]
 0074AA67    xor edx, edx
-0074AA69    call 0x00744F10
+0074AA69    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074AA6E    mov cl, byte ptr ss:[ebp-0x02]
 0074AA71    inc esi
 0074AA72    mov byte ptr ds:[eax+0x45], cl
 0074AA75    cmp esi, dword ptr ds:[0x0151345C]
-0074AA7B    jl 0x0074AA60
+0074AA7B    jl 0x0074AA60                                   ; => [ Data: data_151345c ]
 0074AA7D    mov cl, 0x01
-0074AA7F    call 0x00744CE0
+0074AA7F    call 0x00744CE0                                 ; => [ Call: sub_744ce0 ]
 0074AA84    mov ecx, dword ptr ds:[0x01512450]
-0074AA8A    call 0x006F6E30
-0074AA8F    call 0x0074AC70
+0074AA8A    call 0x006F6E30                                 ; => [ Call: sub_6f6e30 | Data: data_1512450 ]
+0074AA8F    call 0x0074AC70                                 ; => [ Call: sub_74ac70 ]
 0074AA94    mov esi, dword ptr ss:[ebp-0x10]
 0074AA97    jmp 0x0074AB12
-0074AA99    call 0x0074A660
+0074AA99    call 0x0074A660                                 ; => [ Call: sub_74a660 ]
 0074AA9E    xor esi, esi
 0074AAA0    cmp dword ptr ds:[0x0151345C], esi
-0074AAA6    jle 0x0074AA7D
+0074AAA6    jle 0x0074AA7D                                  ; => [ Data: data_151345c ]
 0074AAA8    xor al, 0x01
 0074AAAA    mov byte ptr ss:[ebp-0x02], al
 0074AAAD    nop dword ptr ds:[eax], eax
 0074AAB0    mov ecx, dword ptr ds:[esi*4+0x151245C]
 0074AAB7    xor edx, edx
-0074AAB9    call 0x00744F10
+0074AAB9    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074AABE    mov cl, byte ptr ss:[ebp-0x02]
 0074AAC1    inc esi
 0074AAC2    mov byte ptr ds:[eax+0x44], cl
 0074AAC5    cmp esi, dword ptr ds:[0x0151345C]
-0074AACB    jl 0x0074AAB0
+0074AACB    jl 0x0074AAB0                                   ; => [ Data: data_151345c ]
 0074AACD    jmp 0x0074AA7D
-0074AACF    call 0x007486F0
+0074AACF    call 0x007486F0                                 ; => [ Call: sub_7486f0 ]
 0074AAD4    jmp 0x0074AB12
-0074AAD6    call 0x00748780
+0074AAD6    call 0x00748780                                 ; => [ Call: sub_748780 ]
 0074AADB    jmp 0x0074AB12
 0074AADD    cmp dword ptr ds:[0x0151345C], 0x00
-0074AAE4    jz 0x0074AB12
+0074AAE4    jz 0x0074AB12                                   ; => [ Data: data_151345c ]
 0074AAE6    or ecx, 0xFFFFFFFF
 0074AAE9    jmp 0x0074AAF6
 0074AAEB    cmp dword ptr ds:[0x0151345C], 0x00
-0074AAF2    jz 0x0074AB12
+0074AAF2    jz 0x0074AB12                                   ; => [ Data: data_151345c ]
 0074AAF4    xor ecx, ecx
-0074AAF6    call 0x0074AE80
+0074AAF6    call 0x0074AE80                                 ; => [ Call: sub_74ae80 ]
 0074AAFB    mov cl, 0x01
-0074AAFD    call 0x00744CE0
+0074AAFD    call 0x00744CE0                                 ; => [ Call: sub_744ce0 ]
 0074AB02    mov ecx, dword ptr ds:[0x01512450]
-0074AB08    call 0x006F6E30
-0074AB0D    call 0x0074AC70
+0074AB08    call 0x006F6E30                                 ; => [ Call: sub_6f6e30 | Data: data_1512450 ]
+0074AB0D    call 0x0074AC70                                 ; => [ Call: sub_74ac70 ]
 0074AB12    push esi
 0074AB13    mov esi, dword ptr ds:[0x007752A4]
 0074AB19    call esi
@@ -344,10 +350,10 @@
 0074AB3D    push 0x88FC60
 0074AB42    mov edx, 0x801800
 0074AB47    mov ecx, 0x801AA4
-0074AB4C    call 0x0063B870
+0074AB4C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DoRClickMenu | Data: data_801800 | String: C:\x\ax2017\Engine\Editor\UIEditor.cpp | String: Halt ]
 0074AB51    add esp, 0x0C
 0074AB54    call 0x0063BC30
 0074AB59    test al, al
-0074AB5B    jz 0x0074AB5E
+0074AB5B    jz 0x0074AB5E                                   ; => [ Call: sub_63bc30 ]
 0074AB5D    int3
-0074AB5E    call 0x0063BB00
+0074AB5E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

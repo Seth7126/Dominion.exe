@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4fadc0
+// 起始地址: 0x4fadc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FADC0    dword 83EC8B55
 004FADC4    in al, 0xF8
 004FADC6    push esi
@@ -7,21 +13,21 @@
 004FADCB    push 0x10
 004FADCD    xor edx, edx
 004FADCF    mov ecx, 0x3EA
-004FADD4    call 0x00568960
+004FADD4    call 0x00568960                                 ; => [ Call: sub_568960 ]
 004FADD9    add esp, 0x08
 004FADDC    xor edx, edx
 004FADDE    mov ecx, 0x3EA
 004FADE3    mov esi, eax
 004FADE5    push 0x00
 004FADE7    push 0x20
-004FADE9    call 0x00568960
+004FADE9    call 0x00568960                                 ; => [ Call: sub_568960 ]
 004FADEE    add esp, 0x08
 004FADF1    xor edx, edx
 004FADF3    mov ecx, 0x3EA
 004FADF8    mov edi, eax
 004FADFA    push 0x00
 004FADFC    push 0x00
-004FADFE    call 0x00568960
+004FADFE    call 0x00568960                                 ; => [ Call: sub_568960 ]
 004FAE03    add esp, 0x0C
 004FAE06    mov ecx, eax
 004FAE08    cmp esi, 0x02

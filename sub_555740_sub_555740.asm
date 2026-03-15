@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_555740
+// 起始地址: 0x555740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00555740    push ebp
 00555741    mov ebp, esp
 00555743    mov eax, dword ptr ss:[ebp+0x08]
-00555746    mov dword ptr ds:[eax], 0x81D19C
+00555746    mov dword ptr ds:[eax], 0x81D19C                ; => [ Data: std::_Func_impl_no_alloc<class <lambda_43826269568e2dde352483b0d30496e8>, void>::`vftable'{for `std::_Func_base<void>'} ]
 0055574C    mov ecx, dword ptr ds:[ecx+0x04]
 0055574F    mov dword ptr ds:[eax+0x04], ecx
 00555752    pop ebp

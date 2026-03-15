@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ddc00
+// 起始地址: 0x6ddc00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DDC00    push ebp
 006DDC01    mov ebp, esp
 006DDC03    sub esp, 0x0C
@@ -16,7 +22,7 @@
 006DDC1F    movd xmm0, esi
 006DDC23    cvtdq2ps xmm0, xmm0
 006DDC26    mulss xmm0, xmm1
-006DDC2A    call 0x006E14D0
+006DDC2A    call 0x006E14D0                                 ; => [ Call: sub_6e14d0 ]
 006DDC2F    movaps xmm3, xmm0
 006DDC32    xorps xmm1, xmm1
 006DDC35    movss xmm0, dword ptr ss:[ebp-0x0C]
@@ -28,7 +34,7 @@
 006DDC51    cvttss2si ecx, xmm0
 006DDC55    test ecx, ecx
 006DDC57    jns 0x006DDC91
-006DDC59    xorps xmm3, xmm3
+006DDC59    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 006DDC5C    xor eax, eax
 006DDC5E    test ecx, ecx
 006DDC60    cmovns eax, ecx
@@ -40,9 +46,9 @@
 006DDC72    add ecx, ebx
 006DDC74    cmp ecx, dword ptr ds:[edi+0x10]
 006DDC77    jl 0x006DDD36
-006DDC7D    push 0x88177C
+006DDC7D    push 0x88177C                                   ; => [ String: AnimGetCurrentBonePositionAtTime ]
 006DDC82    push 0x1B2
-006DDC87    mov ecx, 0x8817A0
+006DDC87    mov ecx, 0x8817A0                               ; => [ String: transformIndex2 < pAnimImportData->boneTransformCount ]
 006DDC8C    jmp 0x006DDE8A
 006DDC91    cmp ecx, esi
 006DDC93    jl 0x006DDC5C
@@ -50,9 +56,9 @@
 006DDC99    add esi, ebx
 006DDC9B    cmp esi, dword ptr ds:[edi+0x10]
 006DDC9E    jl 0x006DDCB4
-006DDCA0    push 0x88177C
+006DDCA0    push 0x88177C                                   ; => [ String: AnimGetCurrentBonePositionAtTime ]
 006DDCA5    push 0x1AA
-006DDCAA    mov ecx, 0x881744
+006DDCAA    mov ecx, 0x881744                               ; => [ String: transformIndex < pAnimImportData->boneTransformCount ]
 006DDCAF    jmp 0x006DDE8A
 006DDCB4    mov ecx, dword ptr ss:[ebp+0x08]
 006DDCB7    imul eax, esi, 0x2C
@@ -86,9 +92,9 @@
 006DDD16    jbe 0x006DDD22
 006DDD18    comiss xmm0, dword ptr ds:[ecx+0x18]
 006DDD1C    jnbe 0x006DDE52
-006DDD22    push 0x88177C
+006DDD22    push 0x88177C                                   ; => [ String: AnimGetCurrentBonePositionAtTime ]
 006DDD27    push 0x1AC
-006DDD2C    mov ecx, 0x8817D8
+006DDD2C    mov ecx, 0x8817D8                               ; => [ String: IsValidBoneTransform(*pAnimatedBone) ]
 006DDD31    jmp 0x006DDE8A
 006DDD36    mov esi, dword ptr ss:[ebp-0x08]
 006DDD39    movss xmm0, dword ptr ds:[0x00891090]
@@ -139,7 +145,7 @@
 006DDE01    mov esi, dword ptr ss:[ebp+0x08]
 006DDE04    mov ecx, esi
 006DDE06    push eax
-006DDE07    call 0x006E12E0
+006DDE07    call 0x006E12E0                                 ; => [ Call: sub_6e12e0 ]
 006DDE0C    movss xmm0, dword ptr ds:[0x00891090]
 006DDE14    add esp, 0x04
 006DDE17    comiss xmm0, dword ptr ds:[esi+0x0C]
@@ -168,23 +174,23 @@
 006DDE55    mov esp, ebp
 006DDE57    pop ebp
 006DDE58    ret
-006DDE59    push 0x88177C
+006DDE59    push 0x88177C                                   ; => [ String: AnimGetCurrentBonePositionAtTime ]
 006DDE5E    push 0x1B8
-006DDE63    mov ecx, 0x8817D8
+006DDE63    mov ecx, 0x8817D8                               ; => [ String: IsValidBoneTransform(*pAnimatedBone) ]
 006DDE68    jmp 0x006DDE8A
-006DDE6A    push 0x88177C
+006DDE6A    push 0x88177C                                   ; => [ String: AnimGetCurrentBonePositionAtTime ]
 006DDE6F    push 0x1B5
-006DDE74    mov ecx, 0x881800
+006DDE74    mov ecx, 0x881800                               ; => [ String: IsValidBoneTransform(pBoneTransforms[transformIndex2]) ]
 006DDE79    jmp 0x006DDE8A
-006DDE7B    push 0x88177C
+006DDE7B    push 0x88177C                                   ; => [ String: AnimGetCurrentBonePositionAtTime ]
 006DDE80    push 0x1B4
-006DDE85    mov ecx, 0x881838
+006DDE85    mov ecx, 0x881838                               ; => [ String: IsValidBoneTransform(pBoneTransforms[transformIndex1]) ]
 006DDE8A    push 0x88162C
 006DDE8F    mov edx, 0x801800
-006DDE94    call 0x0063B870
+006DDE94    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Animation.cpp | String: AnimGetCurrentBonePositionAtTime ]
 006DDE99    add esp, 0x0C
 006DDE9C    call 0x0063BC30
 006DDEA1    test al, al
-006DDEA3    jz 0x006DDEA6
+006DDEA3    jz 0x006DDEA6                                   ; => [ Call: sub_63bc30 ]
 006DDEA5    int3
-006DDEA6    call 0x0063BB00
+006DDEA6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

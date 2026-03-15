@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b7590
+// 起始地址: 0x6b7590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B7590    push ebp
 006B7591    mov ebp, esp
 006B7593    dec ecx
@@ -73,10 +79,10 @@
 006B7689    push 0x87CA3C
 006B768E    mov edx, 0x801800
 006B7693    mov ecx, 0x801AA4
-006B7698    call 0x0063B870
+006B7698    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: Halt | String: C:\x\ax2017\Engine\Font.cpp | String: AlignmentGetOffsetPercent ]
 006B769D    add esp, 0x0C
 006B76A0    call 0x0063BC30
 006B76A5    test al, al
-006B76A7    jz 0x006B76AA
+006B76A7    jz 0x006B76AA                                   ; => [ Call: sub_63bc30 ]
 006B76A9    int3
-006B76AA    call 0x0063BB00
+006B76AA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

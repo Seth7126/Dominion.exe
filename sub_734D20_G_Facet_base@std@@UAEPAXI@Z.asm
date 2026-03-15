@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: ??_G_Facet_base@std@@UAEPAXI@Z
+// 起始地址: 0x734d20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00734D20    push ebp
 00734D21    mov ebp, esp
 00734D23    test byte ptr ss:[ebp+0x08], 0x01
 00734D27    push esi
 00734D28    mov esi, ecx
-00734D2A    mov dword ptr ds:[esi], 0x88EF20
+00734D2A    mov dword ptr ds:[esi], 0x88EF20                ; => [ Data: data_88ef20 ]
 00734D30    jz 0x00734D3D
 00734D32    push 0x04
 00734D34    push esi
-00734D35    call 0x00759661
+00734D35    call 0x00759661                                 ; => [ Call: operator new ]
 00734D3A    add esp, 0x08
 00734D3D    mov eax, esi
 00734D3F    pop esi

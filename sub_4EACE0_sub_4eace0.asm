@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_4eace0
+// 起始地址: 0x4eace0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EACE0    push ebp
 004EACE1    mov ebp, esp
 004EACE3    movss xmm0, dword ptr ss:[ebp+0x18]
 004EACE8    sub esp, 0x24
 004EACEB    movaps xmm2, xmm3
-004EACEE    xorps xmm3, xmm3
+004EACEE    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 004EACF1    ucomiss xmm0, xmm3
 004EACF4    push esi
 004EACF5    push edi
@@ -12,13 +18,13 @@
 004EACFA    lahf
 004EACFB    test ah, 0x44
 004EACFE    jp 0x004EAD60
-004EAD00    mov eax, dword ptr ds:[0x00CC8DC0]
+004EAD00    mov eax, dword ptr ds:[0x00CC8DC0]              ; => [ Data: data_cc8dc0 ]
 004EAD05    test eax, eax
 004EAD07    jnz 0x004EAD22
-004EAD09    push 0x806A44
+004EAD09    push 0x806A44                                   ; => [ String: GetLocalSettings ]
 004EAD0E    push 0x5FB
-004EAD13    push 0x806734
-004EAD18    mov ecx, 0x806A58
+004EAD13    push 0x806734                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSettings.cpp ]
+004EAD18    mov ecx, 0x806A58                               ; => [ String: gGameSettings.localSettings ]
 004EAD1D    jmp 0x004EADFC
 004EAD22    mov eax, dword ptr ds:[eax+0x08]
 004EAD25    movss xmm1, dword ptr ds:[0x00890F38]
@@ -66,12 +72,12 @@
 004EADAF    mov ecx, 0x04
 004EADB4    xorps xmm1, xmm1
 004EADB7    call 0x004AE110
-004EADBC    movaps xmm3, xmm0
+004EADBC    movaps xmm3, xmm0                               ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 004EADBF    lea eax, ss:[ebp-0x24]
 004EADC2    mov edx, esi
 004EADC4    push eax
 004EADC5    mov ecx, edi
-004EADC7    call 0x004ADEC0
+004EADC7    call 0x004ADEC0                                 ; => [ Call: sub_4adec0 ]
 004EADCC    mov ecx, dword ptr ss:[ebp+0x08]
 004EADCF    add esp, 0x04
 004EADD2    movups xmm0, xmmword ptr ds:[eax]
@@ -84,15 +90,15 @@
 004EADE4    mov esp, ebp
 004EADE6    pop ebp
 004EADE7    ret
-004EADE8    push 0x80882C
+004EADE8    push 0x80882C                                   ; => [ String: MoveToSCurve ]
 004EADED    push 0x85
-004EADF2    push 0x8087FC
-004EADF7    mov ecx, 0x801AA4
+004EADF2    push 0x8087FC                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\CardMotion.cpp ]
+004EADF7    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004EADFC    mov edx, 0x801800
-004EAE01    call 0x0063B870
+004EAE01    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004EAE06    add esp, 0x0C
 004EAE09    call 0x0063BC30
 004EAE0E    test al, al
-004EAE10    jz 0x004EAE13
+004EAE10    jz 0x004EAE13                                   ; => [ Call: sub_63bc30 ]
 004EAE12    int3
-004EAE13    call 0x0063BB00
+004EAE13    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

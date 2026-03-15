@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_757fb0
+// 起始地址: 0x757fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00757FB0    push ebp
 00757FB1    mov ebp, esp
 00757FB3    and esp, 0xFFFFFFC0
@@ -10,7 +16,7 @@
 00757FC4    mov ecx, dword ptr ds:[eax+0x68]
 00757FC7    cmp dword ptr ds:[ecx+0x04], 0x15
 00757FCB    jnz 0x00758201
-00757FD1    call 0x005AF880
+00757FD1    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00757FD6    mov esi, eax
 00757FD8    cmp dword ptr ds:[esi+0x18], 0x00
 00757FDC    mov ecx, dword ptr ds:[esi+0x38]
@@ -31,12 +37,12 @@
 00758009    cmp dword ptr ds:[ecx+0x04], 0x15
 0075800D    jnz 0x00758201
 00758013    call 0x005AF880
-00758018    mov ebx, dword ptr ds:[eax+0x28]
+00758018    mov ebx, dword ptr ds:[eax+0x28]                ; => [ Call: sub_5af880 ]
 0075801B    mov eax, dword ptr ds:[esi+0x20]
 0075801E    mov ecx, dword ptr ds:[eax+0x08]
 00758021    cmp dword ptr ds:[ecx+0x04], 0x15
 00758025    jnz 0x00758201
-0075802B    call 0x005AF880
+0075802B    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00758030    mov edx, dword ptr ds:[ebx+0x70]
 00758033    mov eax, dword ptr ds:[eax+0x28]
 00758036    mov eax, dword ptr ds:[eax+0x70]
@@ -54,7 +60,7 @@
 00758068    movsd xmm0, qword ptr ss:[ebp+0x08]
 0075806D    cvtpd2ps xmm0, xmm0
 00758071    mulss xmm0, xmm1
-00758075    call 0x004D5CB0
+00758075    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 0075807A    xorps xmm1, xmm1
 0075807D    comiss xmm1, xmm0
 00758080    jbe 0x0075808C
@@ -92,7 +98,7 @@
 0075810A    cvtps2pd xmm0, xmm2
 0075810D    movsd qword ptr ss:[esp+0x38], xmm0
 00758113    fld qword ptr ss:[esp+0x38]
-00758117    call 0x0076236E
+00758117    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 0075811C    movsd xmm3, qword ptr ss:[esp+0x30]
 00758122    fstp dword ptr ss:[esp+0x38]
 00758126    movss xmm0, dword ptr ss:[esp+0x38]
@@ -170,10 +176,10 @@
 0075820B    push 0x8772E4
 00758210    mov edx, 0x801800
 00758215    mov ecx, 0x877344
-0075821A    call 0x0063B870
+0075821A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SoundGetDef | String: C:\x\ax2017\Engine\Sound.cpp | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 0075821F    add esp, 0x0C
 00758222    call 0x0063BC30
 00758227    test al, al
-00758229    jz 0x0075822C
+00758229    jz 0x0075822C                                   ; => [ Call: sub_63bc30 ]
 0075822B    int3
-0075822C    call 0x0063BB00
+0075822C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5cf520
+// 起始地址: 0x5cf520
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CF520    push ebp
 005CF521    mov ebp, esp
 005CF523    mov eax, 0x4B28
-005CF528    call 0x00761E50
+005CF528    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005CF52D    mov eax, dword ptr ds:[0x008C4040]
 005CF532    xor eax, ebp
-005CF534    mov dword ptr ss:[ebp-0x08], eax
+005CF534    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 005CF537    mov eax, dword ptr ss:[ebp+0x08]
 005CF53A    push ebx
 005CF53B    push esi
@@ -16,26 +22,26 @@
 005CF54B    mov eax, dword ptr ds:[edi+0x178]
 005CF551    test eax, eax
 005CF553    jnz 0x005CF559
-005CF555    xor edi, edi
+005CF555    xor edi, edi                                    ; => [ Call: nullptr ]
 005CF557    jmp 0x005CF57F
 005CF559    movzx ecx, ax
 005CF55C    cmp ecx, dword ptr ds:[0x00B809E4]
-005CF562    jb 0x005CF568
-005CF564    xor edi, edi
+005CF562    jb 0x005CF568                                   ; => [ Data: data_b809e4 ]
+005CF564    xor edi, edi                                    ; => [ Call: nullptr ]
 005CF566    jmp 0x005CF57F
 005CF568    imul edi, ecx, 0x1C30
 005CF56E    xor ecx, ecx
-005CF570    add edi, dword ptr ds:[0x00B809E0]
+005CF570    add edi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CF576    cmp dword ptr ds:[edi+0x1C28], eax
-005CF57C    cmovnz edi, ecx
+005CF57C    cmovnz edi, ecx                                 ; => [ Call: nullptr ]
 005CF57F    test edi, edi
 005CF581    jz 0x005CF7C8
 005CF587    cmp dword ptr ds:[edi+0x2C], 0x00
 005CF58B    jnz 0x005CF7C8
 005CF591    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
-005CF59B    mov esi, dword ptr ds:[0x00B809E0]
+005CF59B    mov esi, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 005CF5A1    mov dword ptr ss:[ebp-0x4B10], 0x00
-005CF5AB    add eax, esi
+005CF5AB    add eax, esi                                    ; => [ Data: data_b809e4 ]
 005CF5AD    cmp esi, eax
 005CF5AF    jnb 0x005CF7C8
 005CF5B5    nop word ptr ds:[eax+eax*1], ax
@@ -49,7 +55,7 @@
 005CF5D8    pop ebx
 005CF5D9    mov ecx, dword ptr ss:[ebp-0x08]
 005CF5DC    xor ecx, ebp
-005CF5DE    call 0x0075927A
+005CF5DE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005CF5E3    mov esp, ebp
 005CF5E5    pop ebp
 005CF5E6    ret
@@ -62,7 +68,7 @@
 005CF606    jnz 0x005CF640
 005CF608    mov ecx, dword ptr ds:[esi+0x9C]
 005CF60E    call 0x005CBA00
-005CF613    mov eax, dword ptr ds:[eax+0x68]
+005CF613    mov eax, dword ptr ds:[eax+0x68]                ; => [ Call: sub_5cba00 ]
 005CF616    cmp eax, dword ptr ds:[edi+0x98]
 005CF61C    jnz 0x005CF640
 005CF61E    inc dword ptr ss:[ebp-0x4B10]
@@ -76,7 +82,7 @@
 005CF63D    mov dword ptr ds:[edx+0x10], esi
 005CF640    imul eax, dword ptr ds:[0x00B809E4], 0x1C30
 005CF64A    add esi, 0x1C30
-005CF650    add eax, dword ptr ds:[0x00B809E0]
+005CF650    add eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e4 | Data: data_b809e0 ]
 005CF656    cmp esi, eax
 005CF658    jnb 0x005CF681
 005CF65A    nop word ptr ds:[eax+eax*1], ax
@@ -105,7 +111,7 @@
 005CF6B9    add edx, ecx
 005CF6BB    lea ecx, ss:[ebp-0x4B0C]
 005CF6C1    push eax
-005CF6C2    call 0x00638210
+005CF6C2    call 0x00638210                                 ; => [ Call: sub_638210 ]
 005CF6C7    mov edx, dword ptr ss:[ebp-0x4B24]
 005CF6CD    add esp, 0x08
 005CF6D0    xorps xmm0, xmm0
@@ -150,7 +156,7 @@
 005CF770    mov ecx, dword ptr ds:[edi+0x08]
 005CF773    call 0x005CBB20
 005CF778    mov edx, dword ptr ss:[ebp-0x4B24]
-005CF77E    mov dword ptr ds:[esi+0x08], eax
+005CF77E    mov dword ptr ds:[esi+0x08], eax                ; => [ Call: sub_5cbb20 ]
 005CF781    mov eax, dword ptr ds:[edi+0x08]
 005CF784    add edi, 0x18
 005CF787    sub dword ptr ss:[ebp-0x4B10], 0x01
@@ -171,7 +177,7 @@
 005CF7CC    pop esi
 005CF7CD    xor ecx, ebp
 005CF7CF    pop ebx
-005CF7D0    call 0x0075927A
+005CF7D0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005CF7D5    mov esp, ebp
 005CF7D7    pop ebp
 005CF7D8    ret

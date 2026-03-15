@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a6f50
+// 起始地址: 0x5a6f50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A6F50    push ebp
 005A6F51    mov ebp, esp
 005A6F53    sub esp, 0x1E0
@@ -13,7 +19,7 @@
 005A6F76    lea eax, ss:[ebp-0x1DC]
 005A6F7C    push 0x00
 005A6F7E    push eax
-005A6F7F    call 0x00761FC4
+005A6F7F    call 0x00761FC4                                 ; => [ Call: memset ]
 005A6F84    mov eax, dword ptr ss:[ebp-0x18]
 005A6F87    add esp, 0x0C
 005A6F8A    mov edi, dword ptr ds:[esi]
@@ -29,10 +35,10 @@
 005A6FB2    mov dword ptr ss:[ebp-0x18], eax
 005A6FB5    push edi
 005A6FB6    mov dword ptr ss:[ebp+ebx*4-0x1D8], 0x00
-005A6FC1    call 0x007621D0
+005A6FC1    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A6FC6    mov ecx, dword ptr ss:[ebp-0x08]
 005A6FC9    mov dword ptr ss:[ebp-0x08], 0x00
-005A6FD0    mov dword ptr ss:[ebp+ebx*4-0x1D0], 0x00
+005A6FD0    mov dword ptr ss:[ebp+ebx*4-0x1D0], 0x00        ; => [ Call: __builtin_memset ]
 005A6FDB    mov dword ptr ss:[ebp+ebx*4-0x1CC], 0x00
 005A6FE6    add eax, dword ptr ds:[ecx+0x08]
 005A6FE9    mov dword ptr ds:[ecx], eax
@@ -65,9 +71,9 @@
 005A7052    sub ecx, eax
 005A7054    inc eax
 005A7055    mov dword ptr ss:[ebp-0x18], eax
-005A7058    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x03
+005A7058    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x03        ; => [ Call: __builtin_memcpy | String: \x03\x00\x00\x00\x28\x00\x00\x00 ]
 005A7063    mov dword ptr ss:[ebp+ecx*4-0x1D4], 0x28
-005A706E    mov dword ptr ss:[ebp+ecx*4-0x1D0], 0x3CCCCCCD
+005A706E    mov dword ptr ss:[ebp+ecx*4-0x1D0], 0x3CCCCCCD  ; => [ Call: __builtin_memcpy | String: \xcd\xcc\xcc\x3c\xcd\xcc\xcc\x3d\x00\x00\x80\x3e\xcd\xcc\xcc\x3d ]
 005A7079    mov dword ptr ss:[ebp+ecx*4-0x1CC], 0x3DCCCCCD
 005A7084    mov dword ptr ss:[ebp+ecx*4-0x1C8], 0x3E800000
 005A708F    mov dword ptr ss:[ebp+ecx*4-0x1C4], 0x3DCCCCCD
@@ -94,13 +100,13 @@
 005A70F5    sub ecx, eax
 005A70F7    inc eax
 005A70F8    mov dword ptr ss:[ebp-0x18], eax
-005A70FB    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07
+005A70FB    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07        ; => [ Call: __builtin_memcpy | String: \x07\x00\x00\x00\x00\x00\x80\xbf ]
 005A7106    mov dword ptr ss:[ebp+ecx*4-0x1D4], 0xBF800000
 005A7111    mov eax, dword ptr ss:[ebp+0x08]
 005A7114    lea esi, ss:[ebp-0x1DC]
 005A711A    mov ecx, 0x74
 005A711F    mov edi, eax
-005A7121    rep movsd
+005A7121    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: __builtin_memcpy | Call: __builtin_memcpy ]
 005A7123    pop edi
 005A7124    pop esi
 005A7125    pop ebx
@@ -115,7 +121,7 @@
 005A713B    mov eax, dword ptr ss:[ebp+0x08]
 005A713E    mov ecx, 0x74
 005A7143    mov edi, eax
-005A7145    rep movsd
+005A7145    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5a6d30 | Call: __builtin_memcpy | Call: sub_5a65b0 | Call: __builtin_memcpy | Call: sub_5a68d0 | Call: __builtin_memcpy | Call: sub_5a6b00 ]
 005A7147    pop edi
 005A7148    pop esi
 005A7149    pop ebx
@@ -138,7 +144,7 @@
 005A717D    lea eax, ss:[ebp-0x1DC]
 005A7183    push 0x00
 005A7185    push eax
-005A7186    call 0x00761FC4
+005A7186    call 0x00761FC4                                 ; => [ Call: memset ]
 005A718B    mov dword ptr ss:[ebp-0x1D0], 0x00
 005A7195    mov eax, 0x01
 005A719A    mov dword ptr ss:[ebp-0x1D8], eax
@@ -149,7 +155,7 @@
 005A71BE    sub ecx, eax
 005A71C0    inc eax
 005A71C1    mov dword ptr ss:[ebp-0x18], eax
-005A71C4    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x03
+005A71C4    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x03        ; => [ String: \x03\x00\x00\x00\x32\x00\x00\x00\xcd\xcc\xcc\x3c\xcd\xcc\xcc\x3d\x00\x00\x80\x3e\xcd\xcc\xcc\x3d | Call: __builtin_memcpy ]
 005A71CF    mov dword ptr ss:[ebp+ecx*4-0x1D4], 0x32
 005A71DA    mov dword ptr ss:[ebp+ecx*4-0x1D0], 0x3CCCCCCD
 005A71E5    mov dword ptr ss:[ebp+ecx*4-0x1CC], 0x3DCCCCCD
@@ -179,7 +185,7 @@
 005A726C    sub ecx, eax
 005A726E    inc eax
 005A726F    mov dword ptr ss:[ebp-0x18], eax
-005A7272    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07
+005A7272    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07        ; => [ Call: __builtin_memcpy | String: \x07\x00\x00\x00\x00\x00\x00\x3f ]
 005A727D    mov dword ptr ss:[ebp+ecx*4-0x1D4], 0x3F000000
 005A7288    mov ecx, dword ptr ss:[ebp-0x18]
 005A728B    lea eax, ds:[ecx*8]
@@ -192,7 +198,7 @@
 005A72AD    sub ecx, eax
 005A72AF    inc eax
 005A72B0    mov dword ptr ss:[ebp-0x18], eax
-005A72B3    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07
+005A72B3    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07        ; => [ Call: __builtin_memcpy | String: \x07\x00\x00\x00\x00\x00\x00\x3f ]
 005A72BE    mov dword ptr ss:[ebp+ecx*4-0x1D4], 0x3F000000
 005A72C9    mov ecx, dword ptr ss:[ebp-0x18]
 005A72CC    lea eax, ds:[ecx*8]
@@ -205,10 +211,10 @@
 005A72EE    lea eax, ss:[ebp-0x1D8]
 005A72F4    push 0x00
 005A72F6    push eax
-005A72F7    call 0x00761FC4
+005A72F7    call 0x00761FC4                                 ; => [ Call: memset ]
 005A72FC    mov eax, dword ptr ss:[ebp-0x18]
 005A72FF    add esp, 0x0C
-005A7302    mov dword ptr ss:[ebp-0x1DC], 0x06
+005A7302    mov dword ptr ss:[ebp-0x1DC], 0x06              ; => [ Call: __builtin_memcpy | String: \x06\x00\x00\x00\x03\x00\x00\x00\x19\x00\x00\x00\xcd\xcc\xcc\x3c\xcd\xcc\xcc\x3d\x00\x00\x80\x3e\xcd\xcc\xcc\x3d ]
 005A730C    lea ecx, ds:[eax*8]
 005A7313    sub ecx, eax
 005A7315    inc eax
@@ -242,7 +248,7 @@
 005A73B6    sub ecx, eax
 005A73B8    inc eax
 005A73B9    mov dword ptr ss:[ebp-0x18], eax
-005A73BC    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07
+005A73BC    mov dword ptr ss:[ebp+ecx*4-0x1D8], 0x07        ; => [ Call: __builtin_memcpy | String: \x07\x00\x00\x00\x00\x00\x00\x3f ]
 005A73C7    mov dword ptr ss:[ebp+ecx*4-0x1D4], 0x3F000000
 005A73D2    mov ecx, dword ptr ss:[ebp-0x18]
 005A73D5    lea eax, ds:[ecx*8]
@@ -262,10 +268,10 @@
 005A7417    push 0x8250E0
 005A741C    mov edx, 0x801800
 005A7421    mov ecx, 0x801AA4
-005A7426    call 0x0063B870
+005A7426    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GetHeightmapPattern | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: Halt ]
 005A742B    add esp, 0x0C
 005A742E    call 0x0063BC30
 005A7433    test al, al
-005A7435    jz 0x005A7438
+005A7435    jz 0x005A7438                                   ; => [ Call: sub_63bc30 ]
 005A7437    int3
-005A7438    call 0x0063BB00
+005A7438    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

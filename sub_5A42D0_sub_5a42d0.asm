@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5a42d0
+// 起始地址: 0x5a42d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A42D0    push ebp
 005A42D1    mov ebp, esp
 005A42D3    sub esp, 0x34
-005A42D6    mov eax, dword ptr ds:[0x008C4040]
+005A42D6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005A42DB    xor eax, ebp
 005A42DD    mov dword ptr ss:[ebp-0x04], eax
 005A42E0    push ebx
@@ -13,7 +19,7 @@
 005A42EA    xor esi, esi
 005A42EC    nop dword ptr ds:[eax], eax
 005A42F0    mov ecx, ebx
-005A42F2    call 0x005A41C0
+005A42F2    call 0x005A41C0                                 ; => [ Call: sub_5a41c0 ]
 005A42F7    mov dword ptr ss:[ebp-0x0C], eax
 005A42FA    movss xmm0, dword ptr ss:[ebp-0x0C]
 005A42FF    movss dword ptr ds:[edi+esi*8], xmm0
@@ -29,7 +35,7 @@
 005A4327    mov edx, eax
 005A4329    mov ecx, edi
 005A432B    push 0x4000
-005A4330    call 0x005AC9F0
+005A4330    call 0x005AC9F0                                 ; => [ Call: sub_5ac9f0 ]
 005A4335    movss xmm1, dword ptr ds:[0x00890CA4]
 005A433D    add esp, 0x08
 005A4340    xor al, al
@@ -39,14 +45,14 @@
 005A4355    subss xmm0, dword ptr ds:[esi+0x04]
 005A435A    call 0x004AE0B0
 005A435F    comiss xmm1, xmm0
-005A4362    jbe 0x005A43A2
+005A4362    jbe 0x005A43A2                                  ; => [ Call: sub_4ae0b0 ]
 005A4364    movss xmm0, dword ptr ds:[esi]
 005A4368    subss xmm0, dword ptr ds:[esi+0x08]
 005A436D    call 0x004AE0B0
 005A4372    comiss xmm1, xmm0
 005A4375    jbe 0x005A43A2
 005A4377    mov ecx, ebx
-005A4379    call 0x005A41C0
+005A4379    call 0x005A41C0                                 ; => [ Call: sub_5a41c0 ]
 005A437E    movss xmm1, dword ptr ds:[0x00890CA4]
 005A4386    mov dword ptr ss:[ebp-0x0C], eax
 005A4389    mov al, 0x01
@@ -68,13 +74,13 @@
 005A43C4    push eax
 005A43C5    sub esp, 0x10
 005A43C8    movq qword ptr ss:[ebp-0x20], xmm0
-005A43CD    movups xmmword ptr ss:[ebp-0x30], xmm0
+005A43CD    movups xmmword ptr ss:[ebp-0x30], xmm0          ; => [ Call: __builtin_memset ]
 005A43D1    lea eax, ss:[ebp-0x14]
 005A43D4    mov edx, edi
 005A43D6    movaps xmm0, xmmword ptr ds:[0x008935C0]
 005A43DD    push eax
-005A43DE    movups xmmword ptr ss:[ebp-0x14], xmm0
-005A43E2    call 0x005A2EC0
+005A43DE    movups xmmword ptr ss:[ebp-0x14], xmm0          ; => [ Data: data_8935c0 ]
+005A43E2    call 0x005A2EC0                                 ; => [ Call: sub_5a2ec0 ]
 005A43E7    mov esi, dword ptr ss:[ebp-0x30]
 005A43EA    add esp, 0x18
 005A43ED    mov ebx, dword ptr ss:[ebp-0x2C]
@@ -132,7 +138,7 @@
 005A4491    pop edi
 005A4492    pop esi
 005A4493    pop ebx
-005A4494    call 0x0075927A
+005A4494    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005A4499    mov esp, ebp
 005A449B    pop ebp
 005A449C    ret

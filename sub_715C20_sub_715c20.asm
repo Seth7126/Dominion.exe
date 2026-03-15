@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_715c20
+// 起始地址: 0x715c20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00715C20    push ebp
 00715C21    mov ebp, esp
 00715C23    mov eax, dword ptr ss:[ebp+0x0C]
@@ -50,7 +56,7 @@
 00715CD9    movss dword ptr ds:[ecx+0x0C], xmm3
 00715CDE    addss xmm0, dword ptr ds:[ecx]
 00715CE2    movss dword ptr ds:[ecx], xmm0
-00715CE6    call 0x00752330
+00715CE6    call 0x00752330                                 ; => [ Call: sub_752330 ]
 00715CEB    movss xmm0, dword ptr ds:[edx]
 00715CEF    mov ecx, esi
 00715CF1    subss xmm0, dword ptr ds:[esi]
@@ -73,7 +79,7 @@
 00715D3F    movss dword ptr ds:[esi+0x08], xmm3
 00715D44    movss dword ptr ds:[esi+0x0C], xmm0
 00715D49    movss dword ptr ds:[esi+0x04], xmm5
-00715D4E    call 0x00752330
+00715D4E    call 0x00752330                                 ; => [ Call: sub_752330 ]
 00715D53    pop esi
 00715D54    pop edi
 00715D55    pop ebx
@@ -119,7 +125,7 @@
 00715DD3    jmp 0x00715F38
 00715DD8    push 0x08
 00715DDA    mov ecx, esi
-00715DDC    call 0x00714A40
+00715DDC    call 0x00714A40                                 ; => [ Call: sub_714a40 ]
 00715DE1    mov dword ptr ss:[ebp+0x0C], eax
 00715DE4    movaps xmm3, xmm4
 00715DE7    add esp, 0x04
@@ -142,7 +148,7 @@
 00715E29    comiss xmm0, xmm3
 00715E2C    movss xmm1, dword ptr ds:[edx+ecx*4-0x4C]
 00715E32    jbe 0x00715E39
-00715E34    xorps xmm2, xmm2
+00715E34    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00715E37    jmp 0x00715E40
 00715E39    movaps xmm2, xmm4
 00715E3C    minss xmm2, xmm3
@@ -154,11 +160,11 @@
 00715E4C    lahf
 00715E4D    test ah, 0x44
 00715E50    jp 0x00715E57
-00715E52    xorps xmm2, xmm2
+00715E52    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00715E55    jmp 0x00715EA7
 00715E57    mov eax, dword ptr ss:[ebp+0x08]
 00715E5A    add ecx, 0xFFFFFFEE
-00715E5D    xorps xmm3, xmm3
+00715E5D    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 00715E60    mov ebx, ecx
 00715E62    cmp ecx, eax
 00715E64    jnl 0x00715E85
@@ -217,14 +223,14 @@
 00715F5B    movss dword ptr ds:[edi+0x0C], xmm3
 00715F60    movss dword ptr ds:[edi+0x10], xmm4
 00715F65    movss dword ptr ds:[edi+0x14], xmm5
-00715F6A    call 0x00752330
+00715F6A    call 0x00752330                                 ; => [ Call: sub_752330 ]
 00715F6F    mov ecx, dword ptr ds:[edi+0x18]
 00715F72    movss xmm0, dword ptr ss:[ebp+0x0C]
 00715F77    movss dword ptr ds:[ecx], xmm6
 00715F7B    movss dword ptr ds:[ecx+0x04], xmm7
 00715F80    movss dword ptr ds:[ecx+0x08], xmm0
 00715F85    mov dword ptr ds:[ecx+0x0C], 0x3F800000
-00715F8C    call 0x00752330
+00715F8C    call 0x00752330                                 ; => [ Call: sub_752330 ]
 00715F91    pop esi
 00715F92    pop edi
 00715F93    pop ebx
@@ -233,8 +239,8 @@
 00715F97    ret
 00715F98    cmp ecx, ebx
 00715F9A    jnz 0x00715FA4
-00715F9C    movaps xmm1, xmm0
-00715F9F    movaps xmm4, xmm0
+00715F9C    movaps xmm1, xmm0                               ; => [ String: 0 | String: zx ]
+00715F9F    movaps xmm4, xmm0                               ; => [ String: 0 | String: zx ]
 00715FA2    jmp 0x00715FB0
 00715FA4    movss xmm1, dword ptr ds:[edx+ecx*4-0x08]
 00715FAA    movss xmm4, dword ptr ds:[edx+ecx*4-0x04]
@@ -303,7 +309,7 @@
 0071607A    movss dword ptr ds:[edx], xmm1
 0071607E    movss dword ptr ds:[ebx], xmm3
 00716082    movss dword ptr ds:[eax], xmm4
-00716086    call 0x00752330
+00716086    call 0x00752330                                 ; => [ Call: sub_752330 ]
 0071608B    mov eax, dword ptr ss:[ebp+0x08]
 0071608E    mov ecx, esi
 00716090    movss xmm1, dword ptr ss:[ebp+0x0C]
@@ -324,7 +330,7 @@
 007160CD    movss xmm0, dword ptr ds:[eax]
 007160D1    addss xmm0, dword ptr ds:[0x00890C48]
 007160D9    movss dword ptr ds:[eax], xmm0
-007160DD    call 0x00752330
+007160DD    call 0x00752330                                 ; => [ Call: sub_752330 ]
 007160E2    pop esi
 007160E3    pop edi
 007160E4    pop ebx

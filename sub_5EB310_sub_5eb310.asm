@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5eb310
+// 起始地址: 0x5eb310
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EB310    push ebp
 005EB311    mov ebp, esp
 005EB313    sub esp, 0x08
@@ -44,10 +50,10 @@
 005EB3A4    push 0x86F1E8
 005EB3A9    mov edx, 0x801800
 005EB3AE    mov ecx, 0x801AA4
-005EB3B3    call 0x0063B870
+005EB3B3    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: EntrySize | String: Halt ]
 005EB3B8    add esp, 0x0C
 005EB3BB    call 0x0063BC30
 005EB3C0    test al, al
-005EB3C2    jz 0x005EB3C5
+005EB3C2    jz 0x005EB3C5                                   ; => [ Call: sub_63bc30 ]
 005EB3C4    int3
-005EB3C5    call 0x0063BB00
+005EB3C5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

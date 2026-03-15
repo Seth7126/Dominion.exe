@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_655430
+// 起始地址: 0x655430
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00655430    push ebp
 00655431    mov ebp, esp
 00655433    sub esp, 0x24
@@ -122,10 +128,10 @@
 00655626    push 0x801A00
 0065562B    mov edx, 0x801800
 00655630    mov ecx, 0x801A1C
-00655635    call 0x0063B870
+00655635    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectBottomRight | String: C:\x\ax2017\Engine\Rect.cpp | String: RectIsNormalized(r) ]
 0065563A    add esp, 0x0C
 0065563D    call 0x0063BC30
 00655642    test al, al
-00655644    jz 0x00655647
+00655644    jz 0x00655647                                   ; => [ Call: sub_63bc30 ]
 00655646    int3
-00655647    call 0x0063BB00
+00655647    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

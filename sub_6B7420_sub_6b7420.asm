@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b7420
+// 起始地址: 0x6b7420
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B7420    push ebp
 006B7421    mov ebp, esp
 006B7423    sub esp, 0x104
@@ -12,7 +18,7 @@
 006B7443    movss dword ptr ss:[ebp-0x0C], xmm1
 006B7448    mov esi, ecx
 006B744A    movq qword ptr ss:[ebp-0xE8], xmm0
-006B7452    call 0x00761FC4
+006B7452    call 0x00761FC4                                 ; => [ Call: memset ]
 006B7457    movss xmm0, dword ptr ss:[ebp-0x08]
 006B745C    lea eax, ss:[ebp-0x04]
 006B745F    mov edx, dword ptr ss:[ebp+0x08]
@@ -25,7 +31,7 @@
 006B747C    lea eax, ss:[ebp-0x100]
 006B7482    push 0x00
 006B7484    push eax
-006B7485    mov dword ptr ss:[ebp-0x100], 0x87C02C
+006B7485    mov dword ptr ss:[ebp-0x100], 0x87C02C          ; => [ String: NORMAL ]
 006B748F    mov dword ptr ss:[ebp-0xF0], 0x01
 006B7499    mov dword ptr ss:[ebp-0xF8], 0x00
 006B74A3    mov dword ptr ss:[ebp-0xF4], 0x00
@@ -35,4 +41,4 @@
 006B74BD    pop esi
 006B74BE    mov esp, ebp
 006B74C0    pop ebp
-006B74C1    ret
+006B74C1    ret                                             ; => [ Call: sub_6b73c0 ]

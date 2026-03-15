@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5adcb0
+// 起始地址: 0x5adcb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005ADCB0    push ebp
 005ADCB1    mov ebp, esp
 005ADCB3    and esp, 0xFFFFFFF8
@@ -103,7 +109,7 @@
 005ADDE3    push edi
 005ADDE4    movq qword ptr ss:[esp+0x1C], xmm0
 005ADDEA    mov dword ptr ss:[esp+0x18], eax
-005ADDEE    call 0x00762362
+005ADDEE    call 0x00762362                                 ; => [ Call: memmove ]
 005ADDF3    mov eax, dword ptr ss:[esp+0x18]
 005ADDF7    add esp, 0x0C
 005ADDFA    movq xmm0, qword ptr ss:[esp+0x10]
@@ -121,7 +127,7 @@
 005ADE1A    push ecx
 005ADE1B    push dword ptr ss:[esp+0x20]
 005ADE1F    mov ecx, edi
-005ADE21    call 0x005AF040
+005ADE21    call 0x005AF040                                 ; => [ Call: sub_5af040 ]
 005ADE26    add esp, 0x18
 005ADE29    pop edi
 005ADE2A    pop esi
@@ -137,7 +143,7 @@
 005ADE41    add ecx, 0x0C
 005ADE44    push edi
 005ADE45    push ecx
-005ADE46    call 0x00762362
+005ADE46    call 0x00762362                                 ; => [ Call: memmove ]
 005ADE4B    movq xmm0, qword ptr ss:[esp+0x1C]
 005ADE51    add esp, 0x0C
 005ADE54    movq qword ptr ds:[edi], xmm0

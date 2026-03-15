@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6827e0
+// 起始地址: 0x6827e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006827E0    push ebp
 006827E1    mov ebp, esp
 006827E3    sub esp, 0x58
-006827E6    mov eax, dword ptr ds:[0x008C4040]
+006827E6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006827EB    xor eax, ebp
 006827ED    mov dword ptr ss:[ebp-0x08], eax
-006827F0    mov eax, dword ptr ds:[0x0147B06C]
+006827F0    mov eax, dword ptr ds:[0x0147B06C]              ; => [ Data: data_147b06c ]
 006827F5    push ebx
 006827F6    mov ebx, dword ptr ss:[ebp+0x10]
 006827F9    push esi
@@ -39,7 +45,7 @@
 0068286D    nop dword ptr ds:[eax], eax
 00682870    movd xmm5, ebx
 00682874    cvtdq2ps xmm5, xmm5
-00682877    mov eax, dword ptr ds:[0x0147ABE4]
+00682877    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 0068287C    movss xmm1, dword ptr ds:[esi]
 00682880    movaps xmm4, xmm5
 00682883    movss xmm0, dword ptr ds:[esi+0x08]
@@ -99,7 +105,7 @@
 00682968    movss dword ptr ss:[ebp-0x20], xmm5
 0068296D    movss dword ptr ss:[ebp-0x10], xmm5
 00682972    movss dword ptr ss:[ebp-0x0C], xmm0
-00682977    call 0x006867A0
+00682977    call 0x006867A0                                 ; => [ Call: sub_6867a0 ]
 0068297C    movss xmm3, dword ptr ss:[ebp-0x50]
 00682981    inc ebx
 00682982    mov ecx, dword ptr ss:[ebp-0x54]
@@ -112,11 +118,11 @@
 00682995    pop ebx
 00682996    mov ecx, dword ptr ss:[ebp-0x08]
 00682999    xor ecx, ebp
-0068299B    call 0x0075927A
+0068299B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006829A0    mov esp, ebp
 006829A2    pop ebp
 006829A3    ret
-006829A4    mov eax, dword ptr ds:[0x0147ABE4]
+006829A4    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 006829A9    push ebx
 006829AA    push ecx
 006829AB    push 0x00
@@ -152,14 +158,14 @@
 00682A2E    movss dword ptr ss:[ebp-0x34], xmm0
 00682A33    movss dword ptr ss:[ebp-0x30], xmm1
 00682A38    movss dword ptr ss:[ebp-0x2C], xmm0
-00682A3D    call 0x006867A0
+00682A3D    call 0x006867A0                                 ; => [ Call: sub_6867a0 ]
 00682A42    add esp, 0x10
 00682A45    mov ecx, dword ptr ss:[ebp-0x08]
 00682A48    pop edi
 00682A49    pop esi
 00682A4A    xor ecx, ebp
 00682A4C    pop ebx
-00682A4D    call 0x0075927A
+00682A4D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00682A52    mov esp, ebp
 00682A54    pop ebp
 00682A55    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c7590
+// 起始地址: 0x5c7590
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C7590    push ebx
 005C7591    mov ebx, esp
 005C7593    sub esp, 0x08
@@ -62,16 +68,16 @@
 005C7644    add ecx, 0x20
 005C7647    mov dword ptr ss:[ebp-0x20], ecx
 005C764A    nop word ptr ds:[eax+eax*1], ax
-005C7650    xorps xmm1, xmm1
+005C7650    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 005C7653    xorps xmm0, xmm0
 005C7656    movaps xmmword ptr ss:[ebp-0x90], xmm1
-005C765D    xorps xmm2, xmm2
-005C7660    movaps xmmword ptr ss:[ebp-0xA0], xmm0
-005C7667    xorps xmm3, xmm3
-005C766A    xorps xmm4, xmm4
-005C766D    xorps xmm5, xmm5
-005C7670    xorps xmm6, xmm6
-005C7673    xorps xmm7, xmm7
+005C765D    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+005C7660    movaps xmmword ptr ss:[ebp-0xA0], xmm0          ; => [ Call: __builtin_memset ]
+005C7667    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C766A    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
+005C766D    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
+005C7670    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
+005C7673    xorps xmm7, xmm7                                ; => [ String: 0 | String: zx ]
 005C7676    cmp esi, edx
 005C7678    jnl 0x005C7743
 005C767E    mov ecx, dword ptr ds:[ebx+0x0C]
@@ -172,10 +178,10 @@
 005C77D2    movss xmm7, dword ptr ds:[ebx+0x18]
 005C77D7    cmp edi, dword ptr ss:[ebp-0x50]
 005C77DA    jnl 0x005C78B8
-005C77E0    xorps xmm2, xmm2
-005C77E3    xorps xmm3, xmm3
-005C77E6    xorps xmm4, xmm4
-005C77E9    xorps xmm5, xmm5
+005C77E0    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+005C77E3    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C77E6    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
+005C77E9    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 005C77EC    cmp esi, edx
 005C77EE    jnl 0x005C786B
 005C77F0    mov eax, dword ptr ds:[ebx+0x0C]
@@ -242,9 +248,9 @@
 005C78BC    mov eax, dword ptr ds:[ebx+0x10]
 005C78BF    cmp edi, dword ptr ss:[ebp-0x54]
 005C78C2    jnl 0x005C797B
-005C78C8    xorps xmm2, xmm2
-005C78CB    xorps xmm3, xmm3
-005C78CE    xorps xmm4, xmm4
+005C78C8    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+005C78CB    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
+005C78CE    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 005C78D1    cmp esi, edx
 005C78D3    jnl 0x005C7947
 005C78D5    mov eax, dword ptr ds:[ebx+0x0C]
@@ -299,8 +305,8 @@
 005C7978    mov dword ptr ss:[ebp-0x0C], edi
 005C797B    cmp edi, dword ptr ss:[ebp-0x58]
 005C797E    jnl 0x005C7A1E
-005C7984    xorps xmm2, xmm2
-005C7987    xorps xmm3, xmm3
+005C7984    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
+005C7987    xorps xmm3, xmm3                                ; => [ String: 0 | String: zx ]
 005C798A    cmp esi, edx
 005C798C    jnl 0x005C79FA
 005C798E    mov eax, dword ptr ds:[ebx+0x0C]
@@ -348,7 +354,7 @@
 005C7A1B    mov dword ptr ss:[ebp-0x0C], edi
 005C7A1E    cmp edi, dword ptr ss:[ebp-0x5C]
 005C7A21    jnl 0x005C7A99
-005C7A23    xorps xmm2, xmm2
+005C7A23    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 005C7A26    cmp esi, edx
 005C7A28    jnl 0x005C7A85
 005C7A2A    mov eax, dword ptr ds:[ebx+0x0C]
@@ -390,7 +396,7 @@
 005C7A9C    cmp edi, ecx
 005C7A9E    jnl 0x005C7C6A
 005C7AA4    mov dword ptr ss:[ebp-0x04], esi
-005C7AA7    xorps xmm2, xmm2
+005C7AA7    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 005C7AAA    cmp esi, edx
 005C7AAC    jnl 0x005C7C50
 005C7AB2    mov eax, dword ptr ds:[ebx+0x0C]

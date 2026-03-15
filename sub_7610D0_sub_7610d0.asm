@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_7610d0
+// 起始地址: 0x7610d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007610D0    push ebp
 007610D1    mov ebp, esp
 007610D3    sub esp, 0xCC
-007610D9    mov eax, dword ptr ds:[0x008C4040]
+007610D9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 007610DE    xor eax, ebp
 007610E0    mov dword ptr ss:[ebp-0x04], eax
 007610E3    push esi
@@ -10,13 +16,13 @@
 007610E8    mov esi, ecx
 007610EA    cmp edi, 0x400
 007610F0    jb 0x00761123
-007610F2    push 0x77EA10
+007610F2    push 0x77EA10                                   ; => [ String: aVoice < VOICE_COUNT ]
 007610F7    push 0x96
-007610FC    push 0x77EA28
+007610FC    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00761101    lea eax, ss:[ebp-0xCC]
 00761107    push 0x77E920
 0076110C    push eax
-0076110D    call 0x0063BB20
+0076110D    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00761112    add esp, 0x14
 00761115    lea eax, ss:[ebp-0xCC]
 0076111B    push eax
@@ -24,13 +30,13 @@
 00761122    int3
 00761123    cmp byte ptr ds:[esi+0x08], 0x00
 00761127    jnz 0x0076115A
-00761129    push 0x77E9B8
+00761129    push 0x77E9B8                                   ; => [ String: mInsideAudioThreadMutex ]
 0076112E    push 0x97
-00761133    push 0x77EA28
+00761133    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00761138    lea eax, ss:[ebp-0xCC]
 0076113E    push 0x77E920
 00761143    push eax
-00761144    call 0x0063BB20
+00761144    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00761149    add esp, 0x14
 0076114C    lea eax, ss:[ebp-0xCC]
 00761152    push eax
@@ -79,7 +85,7 @@
 00761231    pop edi
 00761232    xor ecx, ebp
 00761234    pop esi
-00761235    call 0x0075927A
+00761235    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0076123A    mov esp, ebp
 0076123C    pop ebp
 0076123D    ret 0x04

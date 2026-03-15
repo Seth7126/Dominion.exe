@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_516f30
+// 起始地址: 0x516f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00516F30    mov eax, dword ptr ds:[0x01597DD0]
 00516F35    mov edx, ecx
 00516F37    sar edx, 0x04
 00516F3A    or edx, ecx
 00516F3C    and edx, dword ptr ds:[0x01597DD4]
-00516F42    mov eax, dword ptr ds:[eax+edx*4]
+00516F42    mov eax, dword ptr ds:[eax+edx*4]               ; => [ Data: data_1597dd4 | Data: data_1597dd0 ]
 00516F45    test eax, eax
 00516F47    jz 0x00516F5B
 00516F49    nop dword ptr ds:[eax], eax
@@ -17,13 +23,13 @@
 00516F65    push 0x80CD80
 00516F6A    mov edx, 0x801800
 00516F6F    mov ecx, 0x805FAC
-00516F74    call 0x0063B870
+00516F74    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: CampaignPieceDefGet | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: value ]
 00516F79    add esp, 0x0C
 00516F7C    call 0x0063BC30
 00516F81    test al, al
-00516F83    jz 0x00516F86
+00516F83    jz 0x00516F86                                   ; => [ Call: sub_63bc30 ]
 00516F85    int3
-00516F86    jmp 0x0063BB00
+00516F86    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00516F8B    add eax, 0x04
 00516F8E    jz 0x00516F5B
 00516F90    mov eax, dword ptr ds:[eax]

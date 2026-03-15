@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ca800
+// 起始地址: 0x5ca800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CA800    push ebp
 005CA801    mov ebp, esp
 005CA803    mov eax, dword ptr ss:[ebp+0x10]
@@ -21,7 +27,7 @@
 005CA834    cmp dword ptr ds:[esi+0x14], edi
 005CA837    jnz 0x005CA849
 005CA839    cmp dword ptr ds:[esi+0x18], 0x00
-005CA83D    jnz 0x005CA849
+005CA83D    jnz 0x005CA849                                  ; => [ String: tbl_opponent_pods | String: tbl_opponents ]
 005CA83F    mov eax, dword ptr ds:[esi+0x20]
 005CA842    pop edi
 005CA843    pop esi
@@ -31,12 +37,12 @@
 005CA849    mov ecx, dword ptr ss:[ebp+0x08]
 005CA84C    mov edx, 0x86FA90
 005CA851    push eax
-005CA852    call 0x0067BE20
+005CA852    call 0x0067BE20                                 ; => [ Call: sub_67be20 ]
 005CA857    add esp, 0x04
 005CA85A    mov edx, 0x86FAC8
 005CA85F    mov ecx, eax
 005CA861    push ebx
-005CA862    call 0x0067BE20
+005CA862    call 0x0067BE20                                 ; => [ Call: sub_67be20 ]
 005CA867    add esp, 0x04
 005CA86A    test eax, eax
 005CA86C    jnz 0x005CA878
@@ -49,7 +55,7 @@
 005CA878    push 0x00
 005CA87A    mov edx, edi
 005CA87C    mov ecx, eax
-005CA87E    call 0x0067BE20
+005CA87E    call 0x0067BE20                                 ; => [ Call: nullptr | Call: sub_67be20 ]
 005CA883    add esp, 0x04
 005CA886    mov dword ptr ds:[esi+0x20], eax
 005CA889    test eax, eax
@@ -65,9 +71,9 @@
 005CA89C    mov dword ptr ds:[esi+0x14], edi
 005CA89F    pop edi
 005CA8A0    mov dword ptr ds:[esi+0x10], ebx
-005CA8A3    mov dword ptr ds:[esi+0x04], 0x86FA90
+005CA8A3    mov dword ptr ds:[esi+0x04], 0x86FA90           ; => [ String: tbl_opponents ]
 005CA8AA    mov dword ptr ds:[esi+0x08], ecx
-005CA8AD    mov dword ptr ds:[esi+0x0C], 0x86FAC8
+005CA8AD    mov dword ptr ds:[esi+0x0C], 0x86FAC8           ; => [ String: tbl_opponent_pods ]
 005CA8B4    mov dword ptr ds:[esi+0x18], 0x00
 005CA8BB    pop esi
 005CA8BC    pop ebx

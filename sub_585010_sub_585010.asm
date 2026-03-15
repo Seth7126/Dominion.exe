@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_585010
+// 起始地址: 0x585010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00585010    push ebp
 00585011    mov ebp, esp
 00585013    sub esp, 0x5C
@@ -65,13 +71,13 @@
 005850D8    push 0x21
 005850DA    push eax
 005850DB    mov ecx, esi
-005850DD    call 0x0059F9B0
+005850DD    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 005850E2    add esp, 0x24
 005850E5    push dword ptr ss:[ebp+0x08]
 005850E8    mov edx, ebx
 005850EA    mov ecx, esi
 005850EC    call 0x005849C0
-005850F1    movzx ecx, al
+005850F1    movzx ecx, al                                   ; => [ Call: sub_5849c0 ]
 005850F4    add esp, 0x04
 005850F7    mov eax, dword ptr ds:[esi+0x1504]
 005850FD    cmp eax, 0x03
@@ -96,19 +102,19 @@
 00585128    mov edx, 0x08
 0058512D    push ebx
 0058512E    setz cl
-00585131    call 0x0061B1B0
+00585131    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00585136    add esp, 0x2C
 00585139    push dword ptr ss:[ebp+0x08]
 0058513C    mov edx, ebx
 0058513E    mov ecx, esi
-00585140    call 0x00581700
+00585140    call 0x00581700                                 ; => [ Call: sub_581700 ]
 00585145    mov edx, dword ptr ss:[ebp+0x08]
 00585148    add esp, 0x04
 0058514B    movzx edi, dx
 0058514E    mov dword ptr ss:[ebp-0x0C], edx
 00585151    cmp edi, 0x320
 00585157    jb 0x00585164
-00585159    call 0x00591930
+00585159    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058515E    mov edx, dword ptr ss:[ebp+0x08]
 00585161    mov dword ptr ss:[ebp-0x0C], edx
 00585164    imul eax, edi, 0x64
@@ -119,12 +125,12 @@
 0058517A    mov dword ptr ss:[ebp-0x10], eax
 0058517D    cmp edi, 0x320
 00585183    jb 0x0058518D
-00585185    call 0x00591930
+00585185    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058518A    mov eax, dword ptr ss:[ebp-0x10]
 0058518D    imul ecx, edi, 0x64
 00585190    mov edx, eax
 00585192    mov ecx, dword ptr ds:[ecx+esi*1+0x1A4C]
-00585199    call 0x00571B30
+00585199    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058519E    mov edi, eax
 005851A0    xor edx, edx
 005851A2    mov ecx, dword ptr ds:[edi+0xA8]
@@ -148,13 +154,13 @@
 005851E5    and al, 0x01
 005851E7    movzx eax, al
 005851EA    push eax
-005851EB    call 0x0056F510
+005851EB    call 0x0056F510                                 ; => [ Call: sub_56f510 ]
 005851F0    add esp, 0x08
 005851F3    push 0x48
 005851F5    lea eax, ss:[ebp-0x58]
 005851F8    push 0x00
 005851FA    push eax
-005851FB    call 0x00761FC4
+005851FB    call 0x00761FC4                                 ; => [ Call: memset ]
 00585200    add esp, 0x0C
 00585203    mov dword ptr ss:[ebp-0x10], 0x07
 0058520A    lea eax, ss:[ebp+0x08]
@@ -169,7 +175,7 @@
 0058521C    lea eax, ss:[ebp-0x10]
 0058521F    push 0x01
 00585221    push eax
-00585222    call 0x00580700
+00585222    call 0x00580700                                 ; => [ Call: nullptr | Call: sub_580700 ]
 00585227    mov eax, dword ptr ds:[esi+0x1504]
 0058522D    add esp, 0x1C
 00585230    cmp eax, 0x03
@@ -198,7 +204,7 @@
 0058526C    push eax
 0058526D    mov edx, ebx
 0058526F    mov ecx, esi
-00585271    call 0x0059F9B0
+00585271    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00585276    add esp, 0x24
 00585279    cmp byte ptr ss:[ebp+0x0C], 0x00
 0058527D    jz 0x00585329
@@ -209,7 +215,7 @@
 0058528C    push 0x400000
 00585291    mov edx, eax
 00585293    mov ecx, esi
-00585295    call 0x005754F0
+00585295    call 0x005754F0                                 ; => [ Data: __dos_header | Call: sub_5754f0 ]
 0058529A    add esp, 0x08
 0058529D    test al, al
 0058529F    jnz 0x00585329
@@ -224,7 +230,7 @@
 005852C1    jz 0x005852E5
 005852C3    mov edx, eax
 005852C5    mov ecx, esi
-005852C7    call 0x0057DA30
+005852C7    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 005852CC    cmp eax, dword ptr ss:[ebp-0x10]
 005852CF    jz 0x005852E5
 005852D1    mov eax, dword ptr ss:[ebp+0x0C]
@@ -244,7 +250,7 @@
 005852F3    mov dword ptr ss:[ebp+0x0C], eax
 005852F6    cmp eax, 0x320
 005852FB    jb 0x00585305
-005852FD    call 0x00591930
+005852FD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00585302    mov eax, dword ptr ss:[ebp+0x0C]
 00585305    mov ecx, dword ptr ss:[ebp-0x04]
 00585308    imul eax, eax, 0x64
@@ -267,7 +273,7 @@
 0058533B    push dword ptr ss:[ebp+0x08]
 0058533E    mov edx, ebx
 00585340    mov ecx, esi
-00585342    call 0x00583720
+00585342    call 0x00583720                                 ; => [ Call: nullptr | Call: sub_583720 | Call: nullptr | Call: sub_583720 ]
 00585347    add esp, 0x1C
 0058534A    push 0x00
 0058534C    push 0x00
@@ -280,7 +286,7 @@
 0058535A    push 0x06
 0058535C    mov edx, ebx
 0058535E    mov ecx, esi
-00585360    call 0x005911E0
+00585360    call 0x005911E0                                 ; => [ Call: sub_5911e0 ]
 00585365    mov eax, dword ptr ds:[esi+0x1504]
 0058536B    add esp, 0x24
 0058536E    cmp eax, 0x03
@@ -309,7 +315,7 @@
 005853AA    push eax
 005853AB    mov edx, ebx
 005853AD    mov ecx, esi
-005853AF    call 0x0059F9B0
+005853AF    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 005853B4    add esp, 0x24
 005853B7    pop edi
 005853B8    pop esi

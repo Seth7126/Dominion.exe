@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b3320
+// 起始地址: 0x6b3320
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B3320    push ebp
 006B3321    mov ebp, esp
 006B3323    push esi
@@ -46,10 +52,10 @@
 006B3387    push 0x87CA3C
 006B338C    mov edx, 0x801800
 006B3391    mov ecx, 0x87CA80
-006B3396    call 0x0063B870
+006B3396    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: FontUnicodeToGlyph | String: glyphIndex >= 0 && glyphIndex < pLayer->glyphCount | String: C:\x\ax2017\Engine\Font.cpp ]
 006B339B    add esp, 0x0C
 006B339E    call 0x0063BC30
 006B33A3    test al, al
-006B33A5    jz 0x006B33A8
+006B33A5    jz 0x006B33A8                                   ; => [ Call: sub_63bc30 ]
 006B33A7    int3
-006B33A8    call 0x0063BB00
+006B33A8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

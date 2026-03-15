@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4d5e20
+// 起始地址: 0x4d5e20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D5E20    push ebp
 004D5E21    mov ebp, esp
 004D5E23    sub esp, 0x38
-004D5E26    mov eax, dword ptr ds:[0x008C4040]
+004D5E26    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004D5E2B    xor eax, ebp
 004D5E2D    mov dword ptr ss:[ebp-0x08], eax
 004D5E30    push ebx
@@ -32,15 +38,15 @@
 004D5E73    mov dword ptr ds:[ebx+0x34], eax
 004D5E76    lea eax, ds:[esi+0x30]
 004D5E79    push eax
-004D5E7A    call 0x0063D850
+004D5E7A    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D5E7F    lea eax, ds:[esi+0x34]
 004D5E82    push eax
 004D5E83    lea ecx, ds:[ebx+0x3C]
-004D5E86    call 0x0063D850
+004D5E86    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D5E8B    lea eax, ds:[esi+0x38]
 004D5E8E    push eax
 004D5E8F    lea ecx, ds:[ebx+0x40]
-004D5E92    call 0x0063D850
+004D5E92    call 0x0063D850                                 ; => [ Call: sub_63d850 ]
 004D5E97    mov eax, dword ptr ss:[ebp+0x08]
 004D5E9A    mov dword ptr ds:[ebx+0x11A8], 0x00
 004D5EA4    test eax, eax
@@ -55,14 +61,14 @@
 004D5EC8    mov esi, edx
 004D5ECA    add edi, 0x48
 004D5ECD    add edi, ebx
-004D5ECF    rep movsd
+004D5ECF    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004D5ED1    inc dword ptr ds:[ebx+0x11A8]
 004D5ED7    add edx, 0x22C
 004D5EDD    sub eax, 0x01
 004D5EE0    mov dword ptr ss:[ebp+0x08], eax
 004D5EE3    jnz 0x004D5EB0
-004D5EE5    call 0x0063EB70
-004D5EEA    movaps xmm1, xmmword ptr ds:[0x00891410]
+004D5EE5    call 0x0063EB70                                 ; => [ Call: sub_63eb70 ]
+004D5EEA    movaps xmm1, xmmword ptr ds:[0x00891410]        ; => [ Data: data_891410 ]
 004D5EF1    mov esi, eax
 004D5EF3    mov dword ptr ss:[ebp-0x34], esi
 004D5EF6    mov ecx, esi
@@ -158,34 +164,34 @@
 004D6022    pop esi
 004D6023    xor ecx, ebp
 004D6025    pop ebx
-004D6026    call 0x0075927A
+004D6026    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004D602B    mov esp, ebp
 004D602D    pop ebp
 004D602E    ret
-004D602F    push 0x871F1C
+004D602F    push 0x871F1C                                   ; => [ String: RandomLCInt ]
 004D6034    push 0xCC
-004D6039    push 0x871ED0
-004D603E    mov ecx, 0x871F0C
+004D6039    push 0x871ED0                                   ; => [ String: C:\x\ax2017\Engine\Random.cpp ]
+004D603E    mov ecx, 0x871F0C                               ; => [ String: maxPlusOne > 0 ]
 004D6043    jmp 0x004D607F
-004D6045    push 0x871F4C
+004D6045    push 0x871F4C                                   ; => [ String: RandomLCIntRange ]
 004D604A    push 0xD2
-004D604F    push 0x871ED0
-004D6054    mov ecx, 0x871F28
+004D604F    push 0x871ED0                                   ; => [ String: C:\x\ax2017\Engine\Random.cpp ]
+004D6054    mov ecx, 0x871F28                               ; => [ String: mmin <= mmax ]
 004D6059    jmp 0x004D607F
-004D605B    push 0x8770A0
+004D605B    push 0x8770A0                                   ; => [ String: XMalloc ]
 004D6060    push 0x57
-004D6062    push 0x877080
-004D6067    mov ecx, 0x8770C8
+004D6062    push 0x877080                                   ; => [ String: C:\x\ax2017\Engine\xMemory.cpp ]
+004D6067    mov ecx, 0x8770C8                               ; => [ String: pBuffer ]
 004D606C    jmp 0x004D607F
-004D606E    push 0x805B88
+004D606E    push 0x805B88                                   ; => [ String: LocalGameInitNew ]
 004D6073    push 0x6A
-004D6075    push 0x805AF8
-004D607A    mov ecx, 0x805B9C
+004D6075    push 0x805AF8                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSave.cpp ]
+004D607A    mov ecx, 0x805B9C                               ; => [ String: save.logs.logs[i].logBytes == NULL ]
 004D607F    mov edx, 0x801800
-004D6084    call 0x0063B870
+004D6084    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004D6089    add esp, 0x0C
 004D608C    call 0x0063BC30
 004D6091    test al, al
-004D6093    jz 0x004D6096
+004D6093    jz 0x004D6096                                   ; => [ Call: sub_63bc30 ]
 004D6095    int3
-004D6096    call 0x0063BB00
+004D6096    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

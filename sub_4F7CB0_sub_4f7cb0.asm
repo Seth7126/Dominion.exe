@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4f7cb0
+// 起始地址: 0x4f7cb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F7CB0    push ebp
 004F7CB1    mov ebp, esp
 004F7CB3    sub esp, 0x1C
-004F7CB6    mov eax, dword ptr ds:[0x008C4040]
+004F7CB6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004F7CBB    xor eax, ebp
 004F7CBD    mov dword ptr ss:[ebp-0x04], eax
 004F7CC0    push esi
@@ -71,7 +77,7 @@
 004F7D8A    pop edi
 004F7D8B    xor ecx, ebp
 004F7D8D    pop esi
-004F7D8E    call 0x0075927A
+004F7D8E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F7D93    mov esp, ebp
 004F7D95    pop ebp
 004F7D96    ret

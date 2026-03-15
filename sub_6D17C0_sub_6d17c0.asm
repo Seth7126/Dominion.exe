@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d17c0
+// 起始地址: 0x6d17c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D17C0    push ebp
 006D17C1    mov ebp, esp
 006D17C3    sub esp, 0x08
@@ -80,7 +86,7 @@
 006D1870    mov eax, dword ptr ss:[ebp-0x08]
 006D1873    sub edx, edi
 006D1875    inc eax
-006D1876    mov dword ptr ss:[ebp+0x0C], 0x00
+006D1876    mov dword ptr ss:[ebp+0x0C], 0x00               ; => [ Call: nullptr ]
 006D187D    imul eax, dword ptr ss:[ebp-0x04]
 006D1881    xor ecx, ecx
 006D1883    mov dword ptr ss:[ebp+0x10], 0x00

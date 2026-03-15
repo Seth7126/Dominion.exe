@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71ed40
+// 起始地址: 0x71ed40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071ED40    push ebx
 0071ED41    push edi
 0071ED42    lea edi, ds:[edx+0x04]
@@ -14,7 +20,7 @@
 0071ED5C    movzx edx, al
 0071ED5F    xor edx, ecx
 0071ED61    shr eax, 0x08
-0071ED64    xor eax, dword ptr ds:[edx*4+0x88DEC8]
+0071ED64    xor eax, dword ptr ds:[edx*4+0x88DEC8]          ; => [ Data: data_88dec8 ]
 0071ED6B    sub edi, 0x01
 0071ED6E    jnz 0x0071ED56
 0071ED70    pop esi

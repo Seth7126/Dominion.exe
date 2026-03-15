@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57dc90
+// 起始地址: 0x57dc90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057DC90    push ebp
 0057DC91    mov ebp, esp
 0057DC93    sub esp, 0x08
@@ -9,7 +15,7 @@
 0057DCA1    push esi
 0057DCA2    push edi
 0057DCA3    mov dword ptr ss:[ebp-0x08], ebx
-0057DCA6    call 0x0057DC30
+0057DCA6    call 0x0057DC30                                 ; => [ Call: sub_57dc30 ]
 0057DCAB    mov esi, eax
 0057DCAD    test esi, esi
 0057DCAF    jz 0x0057DCD2
@@ -42,14 +48,14 @@
 0057DD05    jz 0x0057DD66
 0057DD07    cmp esi, eax
 0057DD09    jl 0x0057DD10
-0057DD0B    call 0x00591930
+0057DD0B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057DD10    test esi, esi
 0057DD12    jns 0x0057DD19
-0057DD14    call 0x00591930
+0057DD14    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057DD19    mov ecx, dword ptr ds:[ebx-0x08]
 0057DD1C    call 0x00571910
 0057DD21    xor edx, edx
-0057DD23    add eax, 0x20
+0057DD23    add eax, 0x20                                   ; => [ Call: sub_571910 ]
 0057DD26    mov ecx, dword ptr ds:[eax-0x04]
 0057DD29    test ecx, ecx
 0057DD2B    jz 0x0057DD4A
@@ -101,23 +107,23 @@
 0057DDA8    shr ecx, 0x12
 0057DDAB    cmp ecx, esi
 0057DDAD    jz 0x0057DD4F
-0057DDAF    push 0x81F478
+0057DDAF    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 0057DDB4    push 0x14D
-0057DDB9    mov ecx, 0x81F490
+0057DDB9    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 0057DDBE    jmp 0x0057DDE0
-0057DDC0    push 0x81F408
+0057DDC0    push 0x81F408                                   ; => [ String: AbilityID::set_trigger_card_id ]
 0057DDC5    push 0xFF
-0057DDCA    mov ecx, 0x81F428
+0057DDCA    mov ecx, 0x81F428                               ; => [ String: x >= 0 ]
 0057DDCF    jmp 0x0057DDE0
-0057DDD1    push 0x81F3E8
+0057DDD1    push 0x81F3E8                                   ; => [ String: AbilityID::set_idx ]
 0057DDD6    push 0xF0
-0057DDDB    mov ecx, 0x81F3FC
+0057DDDB    mov ecx, 0x81F3FC                               ; => [ String: idx() == x ]
 0057DDE0    push 0x81E978
 0057DDE5    mov edx, 0x801800
-0057DDEA    call 0x0063B870
+0057DDEA    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 0057DDEF    add esp, 0x0C
 0057DDF2    call 0x0063BC30
 0057DDF7    test al, al
-0057DDF9    jz 0x0057DDFC
+0057DDF9    jz 0x0057DDFC                                   ; => [ Call: sub_63bc30 ]
 0057DDFB    int3
-0057DDFC    call 0x0063BB00
+0057DDFC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

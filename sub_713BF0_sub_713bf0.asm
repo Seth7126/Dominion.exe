@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_713bf0
+// 起始地址: 0x713bf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00713BF0    push ebp
 00713BF1    mov ebp, esp
 00713BF3    sub esp, 0x18
@@ -45,7 +51,7 @@
 00713C5E    test edx, edx
 00713C60    jz 0x00713C69
 00713C62    mov ecx, esi
-00713C64    call 0x00713A30
+00713C64    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 00713C69    mov dword ptr ds:[ebx+0x68], 0x01
 00713C70    lea edi, ds:[esi+0x64]
 00713C73    mov eax, dword ptr ds:[esi+0x60]
@@ -81,7 +87,7 @@
 00713CCB    test edx, edx
 00713CCD    jz 0x00713CD9
 00713CCF    mov ecx, esi
-00713CD1    call 0x00713A30
+00713CD1    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 00713CD6    lea ebx, ds:[esi+0x60]
 00713CD9    mov edx, dword ptr ss:[ebp-0x08]
 00713CDC    mov dword ptr ds:[edx+0x68], 0x01
@@ -174,7 +180,7 @@
 00713DDD    jz 0x00713DED
 00713DDF    mov edx, dword ptr ds:[esi+0x0C]
 00713DE2    mov ecx, dword ptr ds:[esi+0x10]
-00713DE5    call 0x00713BA0
+00713DE5    call 0x00713BA0                                 ; => [ Call: sub_713ba0 ]
 00713DEA    mov eax, dword ptr ss:[ebp-0x0C]
 00713DED    mov dword ptr ds:[esi+0x68], 0x00
 00713DF4    inc edi

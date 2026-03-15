@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7355e0
+// 起始地址: 0x7355e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007355E0    push ebp
 007355E1    mov ebp, esp
 007355E3    push ecx
@@ -13,12 +19,12 @@
 007355F8    jnz 0x00735639
 007355FA    cmp eax, 0x03
 007355FD    jnz 0x00735631
-007355FF    call 0x005AF880
+007355FF    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00735604    mov ecx, dword ptr ds:[esi]
 00735606    mov ebx, eax
 00735608    cmp dword ptr ds:[ecx+0x04], 0x03
 0073560C    jnz 0x00735649
-0073560E    call 0x005AF880
+0073560E    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00735613    mov ecx, dword ptr ds:[ebx]
 00735615    mov eax, dword ptr ds:[eax]
 00735617    mov edx, dword ptr ds:[ecx+0x04]
@@ -57,10 +63,10 @@
 00735653    push 0x86F02C
 00735658    mov edx, 0x801800
 0073565D    mov ecx, 0x86F04C
-00735662    call 0x0063B870
+00735662    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Texture.h | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_TEXTURE | String: TextureGetDef ]
 00735667    add esp, 0x0C
 0073566A    call 0x0063BC30
 0073566F    test al, al
-00735671    jz 0x00735674
+00735671    jz 0x00735674                                   ; => [ Call: sub_63bc30 ]
 00735673    int3
-00735674    call 0x0063BB00
+00735674    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

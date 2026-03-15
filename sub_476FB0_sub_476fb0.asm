@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_476fb0
+// 起始地址: 0x476fb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00476FB0    mov edx, 0x03
 00476FB5    mov ecx, 0x83408C
-00476FBA    jmp 0x0069F030
+00476FBA    jmp 0x0069F030                                  ; => [ String: res/card_gen/shared/frame_curse_treasure_top.texture | Call: sub_69f030 ]

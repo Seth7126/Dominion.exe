@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_75a1df
+// 起始地址: 0x75a1df
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075A1DF    push 0x00
-0075A1E1    call dword ptr ds:[0x00775184]
+0075A1E1    call dword ptr ds:[0x00775184]                  ; => [ Call: nullptr | Type: HMODULE ]
 0075A1E7    test eax, eax
 0075A1E9    jz 0x0075A21E
 0075A1EB    mov ecx, 0x5A4D
 0075A1F0    cmp word ptr ds:[eax], cx
-0075A1F3    jnz 0x0075A21E
+0075A1F3    jnz 0x0075A21E                                  ; => [ Field: unused ]
 0075A1F5    mov ecx, dword ptr ds:[eax+0x3C]
 0075A1F8    add ecx, eax
 0075A1FA    cmp dword ptr ds:[ecx], 0x4550

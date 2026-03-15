@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50cf60
+// 起始地址: 0x50cf60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050CF60    dword 880D8B51
 0050CF64    cmpsd
 0050CF65    int3
@@ -16,10 +22,10 @@
 0050CF8D    int 0x80
 0050CF8F    add byte ptr ds:[edx+0x801800], bh
 0050CF95    mov ecx, 0x8136A0
-0050CF9A    call 0x0063B870
+0050CF9A    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: gCampaignSetup.favoredPile != CARD_NONE | String: CampaignContextFavoredPile ]
 0050CF9F    add esp, 0x0C
 0050CFA2    call 0x0063BC30
 0050CFA7    test al, al
-0050CFA9    jz 0x0050CFAC
+0050CFA9    jz 0x0050CFAC                                   ; => [ Call: sub_63bc30 ]
 0050CFAB    int3
-0050CFAC    call 0x0063BB00
+0050CFAC    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

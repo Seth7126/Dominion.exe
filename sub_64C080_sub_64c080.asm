@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64c080
+// 起始地址: 0x64c080
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064C080    push ebp
 0064C081    mov ebp, esp
 0064C083    push ecx
@@ -7,7 +13,7 @@
 0064C087    mov esi, edx
 0064C089    mov edi, ecx
 0064C08B    mov ecx, esi
-0064C08D    call 0x0064BFD0
+0064C08D    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0064C092    mov ebx, eax
 0064C094    dec dword ptr ds:[ebx+0x0C]
 0064C097    cmp esi, 0x400
@@ -65,10 +71,10 @@
 0064C10D    push 0x825828
 0064C112    mov edx, 0x801800
 0064C117    mov ecx, 0x8736D4
-0064C11C    call 0x0063B870
+0064C11C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\xAlloc.h | Data: data_801800 | String: IsPointerFromAllocator(pItem) | String: XAllocator::Free ]
 0064C121    add esp, 0x0C
 0064C124    call 0x0063BC30
 0064C129    test al, al
-0064C12B    jz 0x0064C12E
+0064C12B    jz 0x0064C12E                                   ; => [ Call: sub_63bc30 ]
 0064C12D    int3
-0064C12E    call 0x0063BB00
+0064C12E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

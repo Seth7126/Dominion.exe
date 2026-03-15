@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_749930
+// 起始地址: 0x749930
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00749930    push ebx
 00749931    mov ebx, esp
 00749933    sub esp, 0x08
@@ -7,36 +13,36 @@
 0074993D    mov ebp, dword ptr ds:[ebx+0x04]
 00749940    mov dword ptr ss:[esp+0x04], ebp
 00749944    mov ebp, esp
-00749946    mov eax, dword ptr ds:[0x0151345C]
+00749946    mov eax, dword ptr ds:[0x0151345C]              ; => [ Data: data_151345c ]
 0074994B    sub esp, 0x2C
 0074994E    push esi
 0074994F    test eax, eax
 00749951    jz 0x00749AA2
-00749957    mov ecx, dword ptr ds:[0x0151245C]
+00749957    mov ecx, dword ptr ds:[0x0151245C]              ; => [ Data: data_151245c ]
 0074995D    cmp eax, 0x01
 00749960    jnz 0x00749989
-00749962    call 0x00744E90
+00749962    call 0x00744E90                                 ; => [ Call: sub_744e90 ]
 00749967    test eax, eax
 00749969    jz 0x00749984
-0074996B    mov ecx, dword ptr ds:[0x01512450]
+0074996B    mov ecx, dword ptr ds:[0x01512450]              ; => [ Data: data_1512450 ]
 00749971    cmp dword ptr ds:[ecx+0x04], 0x1E
 00749975    jnz 0x00749AAA
-0074997B    call 0x005AF880
+0074997B    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 00749980    mov eax, dword ptr ds:[eax]
 00749982    jmp 0x00749990
-00749984    xorps xmm0, xmm0
+00749984    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 00749987    jmp 0x00749995
 00749989    xor edx, edx
-0074998B    call 0x00744F10
+0074998B    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr ]
 00749990    movss xmm0, dword ptr ds:[eax+0x14]
 00749995    xor esi, esi
 00749997    movss dword ptr ss:[ebp-0x04], xmm0
 0074999C    cmp dword ptr ds:[0x0151345C], esi
-007499A2    jle 0x00749A9B
+007499A2    jle 0x00749A9B                                  ; => [ Data: data_151345c ]
 007499A8    nop dword ptr ds:[eax+eax*1], eax
 007499B0    mov ecx, dword ptr ds:[esi*4+0x151245C]
 007499B7    xor edx, edx
-007499B9    call 0x00744F10
+007499B9    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 007499BE    movss xmm0, dword ptr ss:[ebp-0x04]
 007499C3    mov ecx, eax
 007499C5    movss xmm2, dword ptr ds:[0x00890D84]
@@ -95,9 +101,9 @@
 00749A87    movups xmm0, xmmword ptr ss:[ebp-0x20]
 00749A8B    movups xmmword ptr ds:[ecx+0x10], xmm0
 00749A8F    cmp esi, dword ptr ds:[0x0151345C]
-00749A95    jl 0x007499B0
+00749A95    jl 0x007499B0                                   ; => [ Data: data_151345c ]
 00749A9B    mov cl, 0x01
-00749A9D    call 0x00744CE0
+00749A9D    call 0x00744CE0                                 ; => [ Call: sub_744ce0 ]
 00749AA2    pop esi
 00749AA3    mov esp, ebp
 00749AA5    pop ebp
@@ -109,10 +115,10 @@
 00749AB4    push 0x878EA8
 00749AB9    mov edx, 0x801800
 00749ABE    mov ecx, 0x8790C8
-00749AC3    call 0x0063B870
+00749AC3    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: ptr->assetType == ASSET_TYPE_UI | Data: data_801800 | String: C:\x\ax2017\Engine\UIDef.cpp | String: UIDefGet ]
 00749AC8    add esp, 0x0C
 00749ACB    call 0x0063BC30
 00749AD0    test al, al
-00749AD2    jz 0x00749AD5
+00749AD2    jz 0x00749AD5                                   ; => [ Call: sub_63bc30 ]
 00749AD4    int3
-00749AD5    call 0x0063BB00
+00749AD5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

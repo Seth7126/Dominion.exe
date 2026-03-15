@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63c660
+// 起始地址: 0x63c660
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063C660    push ebp
 0063C661    mov ebp, esp
 0063C663    push ecx
@@ -42,7 +48,7 @@
 0063C6E3    jnb 0x0063C6EE
 0063C6E5    xor ebx, ebx
 0063C6E7    mov dl, al
-0063C6E9    mov dword ptr ss:[ebp+0x20], ebx
+0063C6E9    mov dword ptr ss:[ebp+0x20], ebx                ; => [ Call: nullptr ]
 0063C6EC    jmp 0x0063C734
 0063C6EE    mov edx, eax
 0063C6F0    cmp eax, 0x800

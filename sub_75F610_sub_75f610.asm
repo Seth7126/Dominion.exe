@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75f610
+// 起始地址: 0x75f610
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F610    push ebp
 0075F611    mov ebp, esp
 0075F613    mov eax, dword ptr ss:[ebp+0x08]
@@ -6,7 +12,7 @@
 0075F619    cmp dword ptr ds:[eax+0x18], 0x00
 0075F61D    jz 0x0075F65E
 0075F61F    push esi
-0075F620    call 0x0075AE50
+0075F620    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075F625    xor esi, esi
 0075F627    cmp dword ptr ds:[edi+0x1C], esi
 0075F62A    jle 0x0075F656
@@ -21,14 +27,14 @@
 0075F642    jnz 0x0075F64C
 0075F644    push esi
 0075F645    mov ecx, edi
-0075F647    call 0x00760F30
+0075F647    call 0x00760F30                                 ; => [ Call: sub_760f30 ]
 0075F64C    inc esi
 0075F64D    add ebx, 0x04
 0075F650    cmp esi, dword ptr ds:[edi+0x1C]
 0075F653    jl 0x0075F630
 0075F655    pop ebx
 0075F656    mov ecx, edi
-0075F658    call 0x0075EC70
+0075F658    call 0x0075EC70                                 ; => [ Call: sub_75ec70 ]
 0075F65D    pop esi
 0075F65E    pop edi
 0075F65F    pop ebp

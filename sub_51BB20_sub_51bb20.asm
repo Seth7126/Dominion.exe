@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51bb20
+// 起始地址: 0x51bb20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051BB20    push ebp
 0051BB21    mov ebp, esp
 0051BB23    sub esp, 0x0C
@@ -16,7 +22,7 @@
 0051BB43    test ecx, ecx
 0051BB45    jz 0x0051BC0F
 0051BB4B    call 0x00516F30
-0051BB50    mov eax, dword ptr ds:[eax+0x08]
+0051BB50    mov eax, dword ptr ds:[eax+0x08]                ; => [ Call: sub_516f30 ]
 0051BB53    cmp eax, 0x1770
 0051BB58    jnle 0x0051BB9F
 0051BB5A    jz 0x0051BB95
@@ -53,7 +59,7 @@
 0051BBB6    lea eax, ds:[ecx-0x01]
 0051BBB9    cmp eax, 0x1F
 0051BBBC    jnbe 0x0051BC59
-0051BBC2    movzx eax, byte ptr ds:[eax+0x51BCB8]
+0051BBC2    movzx eax, byte ptr ds:[eax+0x51BCB8]           ; => [ Data: lookup_table_51bcb8 ]
 0051BBC9    jmp dword ptr ds:[eax*4+0x51BCA8]
 0051BBD0    or dword ptr ss:[ebp-0x04], 0x01
 0051BBD4    cmp esi, 0xFFFFFFFF
@@ -64,7 +70,7 @@
 0051BBE3    push esi
 0051BBE4    mov edx, edi
 0051BBE6    mov ecx, ebx
-0051BBE8    call 0x0051B610
+0051BBE8    call 0x0051B610                                 ; => [ Call: sub_51b610 ]
 0051BBED    inc esi
 0051BBEE    add esp, 0x04
 0051BBF1    cmp esi, dword ptr ds:[ebx+0xD38]
@@ -91,7 +97,7 @@
 0051BC25    push esi
 0051BC26    mov edx, edi
 0051BC28    mov ecx, ebx
-0051BC2A    call 0x0051B610
+0051BC2A    call 0x0051B610                                 ; => [ Call: sub_51b610 ]
 0051BC2F    add esp, 0x04
 0051BC32    jmp 0x0051BBFC
 0051BC34    cmp esi, 0xFFFFFFFF
@@ -99,27 +105,27 @@
 0051BC39    push esi
 0051BC3A    mov edx, edi
 0051BC3C    mov ecx, ebx
-0051BC3E    call 0x0051B610
+0051BC3E    call 0x0051B610                                 ; => [ Call: sub_51b610 ]
 0051BC43    add esp, 0x04
 0051BC46    jmp 0x0051BBFC
-0051BC48    push 0x81673C
+0051BC48    push 0x81673C                                   ; => [ String: CampaignApplyExtras ]
 0051BC4D    push 0x2A2F
-0051BC52    mov ecx, 0x816750
+0051BC52    mov ecx, 0x816750                               ; => [ String: who == PLAYER_NONE ]
 0051BC57    byte EB
 0051BC58    byte 1B
-0051BC59    push 0x81673C
+0051BC59    push 0x81673C                                   ; => [ String: CampaignApplyExtras ]
 0051BC5E    push 0x2A33
 0051BC63    jmp 0x0051BC6F
-0051BC65    byte 68
+0051BC65    byte 68                                         ; => [ String: CampaignExtraApplies ]
 0051BC66    byte 10
 0051BC67    add dword ptr ds:[bx+si*1], 0x29E168
 0051BC6E    add byte ptr ds:[ecx+0x801AA4], bh
 0051BC74    push 0x80CD80
 0051BC79    mov edx, 0x801800
-0051BC7E    call 0x0063B870
+0051BC7E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 0051BC83    add esp, 0x0C
 0051BC86    call 0x0063BC30
 0051BC8B    test al, al
-0051BC8D    jz 0x0051BC90
+0051BC8D    jz 0x0051BC90                                   ; => [ Call: sub_63bc30 ]
 0051BC8F    int3
-0051BC90    call 0x0063BB00
+0051BC90    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4ac840
+// 起始地址: 0x4ac840
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AC840    push ebp
 004AC841    mov ebp, esp
 004AC843    and esp, 0xFFFFFFF8
 004AC846    sub esp, 0x84
-004AC84C    mov eax, dword ptr ds:[0x008C4040]
+004AC84C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004AC851    xor eax, esp
 004AC853    mov dword ptr ss:[esp+0x80], eax
 004AC85A    movss xmm5, dword ptr ds:[ecx+0x04]
@@ -72,7 +78,7 @@
 004AC97B    subss xmm3, xmm0
 004AC97F    movss dword ptr ss:[esp+0x44], xmm4
 004AC985    movss dword ptr ss:[esp+0x38], xmm3
-004AC98B    call 0x004AC390
+004AC98B    call 0x004AC390                                 ; => [ Call: sub_4ac390 ]
 004AC990    lea eax, ss:[esp+0x54]
 004AC994    push eax
 004AC995    call 0x004AC5B0
@@ -82,8 +88,8 @@
 004AC9A7    mov eax, dword ptr ss:[ebp+0x08]
 004AC9AA    pop esi
 004AC9AB    xor ecx, esp
-004AC9AD    movups xmmword ptr ds:[eax], xmm0
-004AC9B0    call 0x0075927A
+004AC9AD    movups xmmword ptr ds:[eax], xmm0               ; => [ Call: sub_4ac5b0 ]
+004AC9B0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004AC9B5    mov esp, ebp
 004AC9B7    pop ebp
 004AC9B8    ret

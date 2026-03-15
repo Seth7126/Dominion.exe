@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_643560
+// 起始地址: 0x643560
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00643560    push ebp
 00643561    mov ebp, esp
 00643563    sub esp, 0x1C
@@ -8,27 +14,27 @@
 0064356E    push edi
 0064356F    mov dword ptr ss:[ebp-0x1C], esi
 00643572    jz 0x0064358D
-00643574    push 0x880BB4
+00643574    push 0x880BB4                                   ; => [ String: ShaderGetDef ]
 00643579    push 0x8A
-0064357E    push 0x880B94
-00643583    mov ecx, 0x880BC4
+0064357E    push 0x880B94                                   ; => [ String: C:\x\ax2017\Engine\Shader.cpp ]
+00643583    mov ecx, 0x880BC4                               ; => [ String: assetPtr->assetType == ASSET_TYPE_SHADER ]
 00643588    jmp 0x00643773
 0064358D    mov ecx, edx
 0064358F    call 0x005AF880
 00643594    mov ecx, dword ptr ds:[0x0147B070]
-0064359A    mov ebx, eax
+0064359A    mov ebx, eax                                    ; => [ Call: sub_5af880 ]
 0064359C    push dword ptr ds:[esi+0x40]
 0064359F    mov dword ptr ss:[ebp-0x04], ebx
 006435A2    mov edx, dword ptr ds:[ecx]
 006435A4    mov edx, dword ptr ds:[edx+0x2C]
-006435A7    call edx
+006435A7    call edx                                        ; => [ Data: data_147b070 ]
 006435A9    test al, al
 006435AB    jnz 0x0064367D
 006435B1    cmp dword ptr ds:[esi+0x10], 0x04
 006435B5    jz 0x006435CB
-006435B7    push 0x872784
+006435B7    push 0x872784                                   ; => [ String: BindInstanceBuffersMesh ]
 006435BC    push 0x15E
-006435C1    mov ecx, 0x872750
+006435C1    mov ecx, 0x872750                               ; => [ String: mesh.vertexFormat == VERTEX_FORMAT_POS_NORM_COL_TEX ]
 006435C6    jmp 0x0064376E
 006435CB    mov eax, dword ptr ds:[esi+0x20]
 006435CE    mov ecx, dword ptr ds:[ebx+0x54]
@@ -40,7 +46,7 @@
 006435E0    mov dword ptr ss:[ebp-0x08], eax
 006435E3    mov dword ptr ss:[ebp-0x18], ecx
 006435E6    call 0x00687730
-006435EB    mov edi, eax
+006435EB    mov edi, eax                                    ; => [ Call: sub_687730 ]
 006435ED    xor ebx, ebx
 006435EF    mov eax, dword ptr ss:[ebp-0x04]
 006435F2    mov dword ptr ss:[ebp-0x14], edi
@@ -84,7 +90,7 @@
 00643660    push dword ptr ss:[ebp-0x18]
 00643663    mov eax, dword ptr ds:[ecx]
 00643665    push edi
-00643666    call dword ptr ds:[eax+0x28]
+00643666    call dword ptr ds:[eax+0x28]                    ; => [ Data: data_147b070 ]
 00643669    mov dword ptr ds:[esi+0x40], eax
 0064366C    test edi, edi
 0064366E    jz 0x0064367A
@@ -98,7 +104,7 @@
 0064368D    push dword ptr ds:[esi+0x44]
 00643690    mov eax, dword ptr ds:[ecx]
 00643692    mov eax, dword ptr ds:[eax+0x38]
-00643695    call eax
+00643695    call eax                                        ; => [ Data: data_147b070 ]
 00643697    test al, al
 00643699    jnz 0x00643758
 0064369F    mov eax, dword ptr ds:[esi+0x28]
@@ -110,7 +116,7 @@
 006436B2    imul eax, ecx
 006436B5    mov ecx, eax
 006436B7    mov dword ptr ss:[ebp-0x18], eax
-006436BA    call 0x00687730
+006436BA    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006436BF    mov dword ptr ss:[ebp-0x0C], eax
 006436C2    mov eax, dword ptr ds:[ebx+0x54]
 006436C5    mov ecx, eax
@@ -118,9 +124,9 @@
 006436CA    imul ecx, ebx
 006436CD    cmp ecx, 0xFFFF
 006436D3    jle 0x006436E9
-006436D5    push 0x872784
+006436D5    push 0x872784                                   ; => [ String: BindInstanceBuffersMesh ]
 006436DA    push 0x17C
-006436DF    mov ecx, 0x87279C
+006436DF    mov ecx, 0x87279C                               ; => [ String: mesh.vertexCount * shaderDef->instanceCount <= 0xFFFF ]
 006436E4    jmp 0x0064376E
 006436E9    xor edi, edi
 006436EB    test eax, eax
@@ -158,7 +164,7 @@
 0064373E    push dword ptr ss:[ebp-0x18]
 00643741    mov eax, dword ptr ds:[ecx]
 00643743    push ebx
-00643744    call dword ptr ds:[eax+0x34]
+00643744    call dword ptr ds:[eax+0x34]                    ; => [ Data: data_147b070 ]
 00643747    mov dword ptr ds:[esi+0x44], eax
 0064374A    test ebx, ebx
 0064374C    jz 0x00643758
@@ -171,15 +177,15 @@
 0064375B    mov esp, ebp
 0064375D    pop ebp
 0064375E    ret
-0064375F    push 0x872784
+0064375F    push 0x872784                                   ; => [ String: BindInstanceBuffersMesh ]
 00643764    push 0x177
-00643769    mov ecx, 0x8727D4
-0064376E    push 0x872630
+00643769    mov ecx, 0x8727D4                               ; => [ String: MeshUsesDefIndex16(mesh) ]
+0064376E    push 0x872630                                   ; => [ String: C:\x\ax2017\Engine\Draw3d.cpp | String: C:\x\ax2017\Engine\Draw3d.cpp | String: C:\x\ax2017\Engine\Draw3d.cpp ]
 00643773    mov edx, 0x801800
-00643778    call 0x0063B870
+00643778    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0064377D    add esp, 0x0C
 00643780    call 0x0063BC30
 00643785    test al, al
-00643787    jz 0x0064378A
+00643787    jz 0x0064378A                                   ; => [ Call: sub_63bc30 ]
 00643789    int3
-0064378A    call 0x0063BB00
+0064378A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

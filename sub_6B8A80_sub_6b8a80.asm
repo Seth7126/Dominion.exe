@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b8a80
+// 起始地址: 0x6b8a80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B8A80    push ebp
 006B8A81    mov ebp, esp
 006B8A83    and esp, 0xFFFFFFC0
@@ -17,7 +23,7 @@
 006B8AAD    movsd qword ptr ss:[esp+0x30], xmm0
 006B8AB3    fld qword ptr ss:[esp+0x30]
 006B8AB7    fstp qword ptr ss:[esp]
-006B8ABA    call 0x0076208A
+006B8ABA    call 0x0076208A                                 ; => [ Call: floor ]
 006B8ABF    mov edx, dword ptr ds:[esi+0x2C]
 006B8AC2    add esp, 0x08
 006B8AC5    fstp qword ptr ss:[esp+0x38]
@@ -165,7 +171,7 @@
 006B8CA5    subss xmm0, xmm1
 006B8CA9    movss dword ptr ss:[esp+0x38], xmm0
 006B8CAF    fxch st1
-006B8CB1    call 0x0076236E
+006B8CB1    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 006B8CB6    movss xmm2, dword ptr ds:[0x00890E18]
 006B8CBE    xorps xmm1, xmm1
 006B8CC1    fstp qword ptr ss:[esp+0x28]
@@ -186,7 +192,7 @@
 006B8CFE    movss xmm1, dword ptr ss:[esp+0x1C]
 006B8D04    call 0x004AE110
 006B8D09    movss xmm2, dword ptr ds:[0x00890E18]
-006B8D11    movaps xmm1, xmm0
+006B8D11    movaps xmm1, xmm0                               ; => [ Call: sub_4ae110 ]
 006B8D14    movss xmm0, dword ptr ss:[esp+0x28]
 006B8D1A    mov esi, dword ptr ss:[ebp+0x08]
 006B8D1D    movss dword ptr ds:[esi], xmm1
@@ -203,7 +209,7 @@
 006B8D44    mov ecx, 0x04
 006B8D49    movss xmm1, dword ptr ss:[esp+0x24]
 006B8D4F    call 0x004AE110
-006B8D54    movaps xmm1, xmm0
+006B8D54    movaps xmm1, xmm0                               ; => [ Call: sub_4ae110 ]
 006B8D57    movss xmm0, dword ptr ss:[esp+0x28]
 006B8D5D    movss dword ptr ds:[esi+0x04], xmm1
 006B8D62    xorps xmm1, xmm1
@@ -236,7 +242,7 @@
 006B8DB1    movaps xmm1, xmm0
 006B8DB4    mov eax, esi
 006B8DB6    pop edi
-006B8DB7    movss dword ptr ds:[esi+0x08], xmm1
+006B8DB7    movss dword ptr ds:[esi+0x08], xmm1             ; => [ Call: sub_4ae110 ]
 006B8DBC    pop esi
 006B8DBD    pop ebx
 006B8DBE    mov esp, ebp

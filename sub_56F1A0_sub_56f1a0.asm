@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56f1a0
+// 起始地址: 0x56f1a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056F1A0    push ebp
 0056F1A1    mov ebp, esp
 0056F1A3    and esp, 0xFFFFFFF8
@@ -8,13 +14,13 @@
 0056F1AD    push edi
 0056F1AE    mov edi, edx
 0056F1B0    mov dword ptr ss:[esp+0x0C], esi
-0056F1B4    call 0x00573400
+0056F1B4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056F1B9    push 0x48
 0056F1BB    mov ebx, eax
 0056F1BD    lea eax, ss:[esp+0x14]
 0056F1C1    push 0x00
 0056F1C3    push eax
-0056F1C4    call 0x00761FC4
+0056F1C4    call 0x00761FC4                                 ; => [ Call: memset ]
 0056F1C9    add esp, 0x0C
 0056F1CC    cmp esi, 0x06
 0056F1CF    jnz 0x0056F20E
@@ -38,24 +44,24 @@
 0056F209    pop ebx
 0056F20A    mov esp, ebp
 0056F20C    pop ebp
-0056F20D    ret
+0056F20D    ret                                             ; => [ Call: nullptr | Call: sub_580700 ]
 0056F20E    cmp esi, 0x08
 0056F211    jnz 0x0056F224
-0056F213    push 0x81EE78
+0056F213    push 0x81EE78                                   ; => [ String: TriggerEvent ]
 0056F218    push 0x1AE3
-0056F21D    mov ecx, 0x81EE88
+0056F21D    mov ecx, 0x81EE88                               ; => [ String: event != EVENT_GAIN ]
 0056F222    jmp 0x0056F238
 0056F224    cmp esi, 0x09
 0056F227    jnz 0x0056F1E1
-0056F229    push 0x81EE78
+0056F229    push 0x81EE78                                   ; => [ String: TriggerEvent ]
 0056F22E    push 0x1AE4
-0056F233    mov ecx, 0x81EE9C
+0056F233    mov ecx, 0x81EE9C                               ; => [ String: event != EVENT_PLAY ]
 0056F238    push 0x81EA70
 0056F23D    mov edx, 0x801800
-0056F242    call 0x0063B870
+0056F242    call 0x0063B870                                 ; => [ String: TriggerEvent | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0056F247    add esp, 0x0C
 0056F24A    call 0x0063BC30
 0056F24F    test al, al
-0056F251    jz 0x0056F254
+0056F251    jz 0x0056F254                                   ; => [ Call: sub_63bc30 ]
 0056F253    int3
-0056F254    call 0x0063BB00
+0056F254    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

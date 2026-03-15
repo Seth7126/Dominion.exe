@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4fe640
+// 起始地址: 0x4fe640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004FE640    push ebp
 004FE641    mov ebp, esp
 004FE643    and esp, 0xFFFFFFF8
 004FE646    mov eax, 0x1910
-004FE64B    call 0x00761E50
+004FE64B    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004FE650    mov ecx, dword ptr ss:[ebp+0x08]
 004FE653    lea eax, ss:[esp+0xC88]
 004FE65A    push esi
@@ -15,7 +21,7 @@
 004FE669    lea edi, ss:[esp+0x08]
 004FE66D    mov esi, eax
 004FE66F    mov ecx, 0x321
-004FE674    rep movsd
+004FE674    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_56f370 ]
 004FE676    cmp dword ptr ss:[esp+0xC88], 0x00
 004FE67E    pop edi
 004FE67F    setnle al

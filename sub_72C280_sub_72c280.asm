@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_72c280
+// 起始地址: 0x72c280
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072C280    push ebp
 0072C281    mov ebp, esp
 0072C283    push ecx
 0072C284    cmp dword ptr ss:[ebp+0x08], 0x00
 0072C288    push esi
 0072C289    mov esi, ecx
-0072C28B    mov dword ptr ss:[ebp-0x04], 0x00
+0072C28B    mov dword ptr ss:[ebp-0x04], 0x00               ; => [ Call: nullptr ]
 0072C292    jle 0x0072C433
 0072C298    push ebx
 0072C299    push edi

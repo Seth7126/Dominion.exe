@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_598670
+// 起始地址: 0x598670
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00598670    push ebp
 00598671    mov ebp, esp
 00598673    sub esp, 0x08
@@ -16,7 +22,7 @@
 00598697    push dword ptr ss:[ebp+0x10]
 0059869A    push 0x824914
 0059869F    push esi
-005986A0    call 0x0063DF30
+005986A0    call 0x0063DF30                                 ; => [ String: [color_start]%s %s%s[color_end] | Call: sub_63df30 ]
 005986A5    add esp, 0x14
 005986A8    mov eax, esi
 005986AA    pop esi
@@ -28,7 +34,7 @@
 005986B4    push dword ptr ss:[ebp+0x10]
 005986B7    push 0x8248F8
 005986BC    push esi
-005986BD    call 0x0063DF30
+005986BD    call 0x0063DF30                                 ; => [ String: [color_start]%s[color_end] | Call: sub_63df30 ]
 005986C2    add esp, 0x0C
 005986C5    mov eax, esi
 005986C7    pop esi
@@ -43,7 +49,7 @@
 005986DA    push eax
 005986DB    push 0x8248D8
 005986E0    push esi
-005986E1    call 0x0063DF30
+005986E1    call 0x0063DF30                                 ; => [ Call: sub_63df30 | String: [color_start]%s%s[color_end] ]
 005986E6    add esp, 0x10
 005986E9    mov eax, esi
 005986EB    pop esi
@@ -54,7 +60,7 @@
 005986F3    push eax
 005986F4    push 0x824934
 005986F9    push esi
-005986FA    call 0x0063DF30
+005986FA    call 0x0063DF30                                 ; => [ String: [color_start]%s %s[color_end] | Call: sub_63df30 ]
 005986FF    add esp, 0x10
 00598702    mov eax, esi
 00598704    pop esi

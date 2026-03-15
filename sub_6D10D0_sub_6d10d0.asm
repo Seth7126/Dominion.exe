@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d10d0
+// 起始地址: 0x6d10d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D10D0    push ebp
 006D10D1    mov ebp, esp
 006D10D3    sub esp, 0x7C
@@ -14,7 +20,7 @@
 006D10FE    add ecx, dword ptr ds:[eax]
 006D1100    lea eax, ss:[ebp-0x78]
 006D1103    push eax
-006D1104    call 0x006CD460
+006D1104    call 0x006CD460                                 ; => [ Call: sub_6cd460 | Call: sub_5af880 ]
 006D1109    add esp, 0x04
 006D110C    mov dword ptr ss:[ebp-0x50], 0x3F800000
 006D1113    lea edx, ss:[ebp-0x50]
@@ -31,7 +37,7 @@
 006D1140    psrldq xmm1, 0x08
 006D1145    movd dword ptr ss:[ebp-0x34], xmm1
 006D114A    movups xmmword ptr ss:[ebp-0x4C], xmm0
-006D114E    call 0x004EB600
+006D114E    call 0x004EB600                                 ; => [ Call: sub_4eb600 | Data: data_bf21e8 ]
 006D1153    mov eax, dword ptr ss:[ebp+0x08]
 006D1156    add esp, 0x04
 006D1159    movups xmm0, xmmword ptr ss:[ebp-0x28]
@@ -41,7 +47,7 @@
 006D1165    pop esi
 006D1166    movups xmm0, xmmword ptr ss:[ebp-0x18]
 006D116A    movups xmmword ptr ds:[eax+0x10], xmm0
-006D116E    call 0x0075927A
+006D116E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006D1173    mov esp, ebp
 006D1175    pop ebp
 006D1176    ret
@@ -50,10 +56,10 @@
 006D1181    push 0x87ED1C
 006D1186    mov edx, 0x801800
 006D118B    mov ecx, 0x87ECF8
-006D1190    call 0x0063B870
+006D1190    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\FabDef.cpp | String: FabDefGet | String: ptr->assetType == ASSET_TYPE_FAB | Data: data_801800 | Data: __security_cookie ]
 006D1195    add esp, 0x0C
 006D1198    call 0x0063BC30
 006D119D    test al, al
-006D119F    jz 0x006D11A2
+006D119F    jz 0x006D11A2                                   ; => [ Call: sub_63bc30 ]
 006D11A1    int3
-006D11A2    call 0x0063BB00
+006D11A2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

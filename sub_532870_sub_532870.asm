@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_532870
+// 起始地址: 0x532870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00532870    push ebp
 00532871    mov ebp, esp
 00532873    mov eax, dword ptr ss:[ebp+0x08]
@@ -8,10 +14,10 @@
 0053287B    mov edi, dword ptr ds:[ecx+0x04]
 0053287E    call 0x00573400
 00532883    movzx esi, si
-00532886    mov ebx, dword ptr ds:[eax+0x04]
+00532886    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00532889    cmp esi, 0x320
 0053288F    jb 0x00532896
-00532891    call 0x00591930
+00532891    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00532896    imul eax, esi, 0x64
 00532899    cmp dword ptr ds:[eax+ebx*1+0x1A4C], edi
 005328A0    pop edi

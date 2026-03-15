@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_658160
+// 起始地址: 0x658160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00658160    push ebp
 00658161    mov ebp, esp
 00658163    and esp, 0xFFFFFFF0
 00658166    sub esp, 0x50
-00658169    mov eax, dword ptr ds:[0x00CF65B8]
-0065816E    xorps xmm4, xmm4
+00658169    mov eax, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
+0065816E    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 00658171    movss dword ptr ss:[esp+0x10], xmm1
 00658177    movd xmm1, dword ptr ds:[eax+0x14]
 0065817C    movd xmm0, dword ptr ds:[eax+0x18]
@@ -156,7 +162,7 @@
 00658426    movss dword ptr ss:[esp+0x30], xmm3
 0065842C    addss xmm7, xmm1
 00658430    movss dword ptr ss:[esp+0x3C], xmm0
-00658436    xorps xmm1, xmm1
+00658436    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00658439    movss dword ptr ss:[esp+0x38], xmm7
 0065843F    movaps xmm2, xmm7
 00658442    movaps xmm0, xmmword ptr ss:[esp+0x30]
@@ -195,26 +201,26 @@
 006584CE    movups xmmword ptr ss:[esp+0x34], xmm0
 006584D3    movups xmm0, xmmword ptr ss:[esp+0x30]
 006584D8    movss dword ptr ss:[esp+0x48], xmm4
-006584DE    movups xmmword ptr ds:[eax], xmm0
+006584DE    movups xmmword ptr ds:[eax], xmm0               ; => [ Data: data_800248 ]
 006584E1    movups xmm0, xmmword ptr ss:[esp+0x40]
 006584E6    movups xmmword ptr ds:[eax+0x10], xmm0
 006584EA    mov esp, ebp
 006584EC    pop ebp
 006584ED    ret
-006584EE    push 0x874CA8
+006584EE    push 0x874CA8                                   ; => [ String: ComputeTaptipAlignment ]
 006584F3    push 0x1ED5
-006584F8    push 0x8739B4
-006584FD    mov ecx, 0x801AA4
+006584F8    push 0x8739B4                                   ; => [ String: C:\x\ax2017\Engine\UI2.cpp ]
+006584FD    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00658502    jmp 0x00658518
-00658504    push 0x876CA0
+00658504    push 0x876CA0                                   ; => [ String: RectInflate ]
 00658509    push 0xB3
-0065850E    mov ecx, 0x801A1C
-00658513    push 0x801A00
+0065850E    mov ecx, 0x801A1C                               ; => [ String: RectIsNormalized(r) ]
+00658513    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
 00658518    mov edx, 0x801800
-0065851D    call 0x0063B870
+0065851D    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00658522    add esp, 0x0C
 00658525    call 0x0063BC30
 0065852A    test al, al
-0065852C    jz 0x0065852F
+0065852C    jz 0x0065852F                                   ; => [ Call: sub_63bc30 ]
 0065852E    int3
-0065852F    call 0x0063BB00
+0065852F    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

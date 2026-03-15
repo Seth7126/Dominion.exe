@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4e5db0
+// 起始地址: 0x4e5db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004E5DB0    push ebp
 004E5DB1    mov ebp, esp
 004E5DB3    push ecx
@@ -15,7 +21,7 @@
 004E5DC8    push ebx
 004E5DC9    mov ebx, dword ptr ds:[0x00775670]
 004E5DCF    push esi
-004E5DD0    mov esi, 0x93E508
+004E5DD0    mov esi, 0x93E508                               ; => [ Data: data_93e508 ]
 004E5DD5    push edi
 004E5DD6    push eax
 004E5DD7    push dword ptr ds:[esi+0x04]

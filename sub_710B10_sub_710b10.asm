@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_710b10
+// 起始地址: 0x710b10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00710B10    push ebp
 00710B11    mov ebp, esp
 00710B13    and esp, 0xFFFFFFF8
@@ -20,7 +26,7 @@
 00710B51    cvtps2pd xmm0, xmm0
 00710B54    movsd qword ptr ss:[esp+0x28], xmm0
 00710B5A    fld qword ptr ss:[esp+0x28]
-00710B5E    call 0x00762368
+00710B5E    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00710B63    movss xmm1, dword ptr ds:[esi+0x50]
 00710B68    fstp qword ptr ss:[esp+0x28]
 00710B6C    movsd xmm0, qword ptr ss:[esp+0x28]
@@ -37,7 +43,7 @@
 00710B9E    jnbe 0x00710BA6
 00710BA0    sqrtsd xmm0, xmm0
 00710BA4    jmp 0x00710BAB
-00710BA6    call 0x00762084
+00710BA6    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00710BAB    movss xmm1, dword ptr ds:[esi+0x60]
 00710BB0    cvtsd2ss xmm0, xmm0
 00710BB4    mulss xmm1, xmm1
@@ -51,7 +57,7 @@
 00710BD4    jnbe 0x00710BDC
 00710BD6    sqrtsd xmm0, xmm0
 00710BDA    jmp 0x00710BE1
-00710BDC    call 0x00762084
+00710BDC    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00710BE1    movss xmm5, dword ptr ds:[esi+0x50]
 00710BE6    movss xmm3, dword ptr ds:[esi+0x54]
 00710BEB    movaps xmm1, xmm5
@@ -71,7 +77,7 @@
 00710C2B    cvtps2pd xmm0, xmm5
 00710C2E    movsd qword ptr ss:[esp+0x28], xmm0
 00710C34    fld qword ptr ss:[esp+0x28]
-00710C38    call 0x00762368
+00710C38    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00710C3D    fstp qword ptr ss:[esp+0x28]
 00710C41    movsd xmm0, qword ptr ss:[esp+0x28]
 00710C47    cvtpd2ps xmm0, xmm0
@@ -162,7 +168,7 @@
 00710DC7    jnbe 0x00710DCF
 00710DC9    sqrtsd xmm0, xmm0
 00710DCD    jmp 0x00710DD4
-00710DCF    call 0x00762084
+00710DCF    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00710DD4    xorps xmm6, xmm6
 00710DD7    cvtsd2ss xmm6, xmm0
 00710DDB    comiss xmm6, dword ptr ds:[0x00890C88]
@@ -187,7 +193,7 @@
 00710E39    cvtps2pd xmm0, xmm1
 00710E3C    movsd qword ptr ss:[esp+0x28], xmm0
 00710E42    fld qword ptr ss:[esp+0x28]
-00710E46    call 0x00762368
+00710E46    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00710E4B    fstp qword ptr ss:[esp+0x28]
 00710E4F    movsd xmm0, qword ptr ss:[esp+0x28]
 00710E55    cvtpd2ps xmm0, xmm0
@@ -201,7 +207,7 @@
 00710E7F    cvtps2pd xmm0, xmm0
 00710E82    movsd qword ptr ss:[esp+0x28], xmm0
 00710E88    fld qword ptr ss:[esp+0x28]
-00710E8C    call 0x00762368
+00710E8C    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00710E91    fstp qword ptr ss:[esp+0x28]
 00710E95    movsd xmm0, qword ptr ss:[esp+0x28]
 00710E9B    cvtpd2ps xmm0, xmm0
@@ -223,7 +229,7 @@
 00710EDA    jnbe 0x00710EE2
 00710EDC    sqrtsd xmm0, xmm0
 00710EE0    jmp 0x00710EE7
-00710EE2    call 0x00762084
+00710EE2    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00710EE7    movss xmm2, dword ptr ss:[esp+0x08]
 00710EED    cvtsd2ss xmm0, xmm0
 00710EF1    mov dword ptr ds:[esi+0x48], 0x00
@@ -235,7 +241,7 @@
 00710F10    cvtps2pd xmm0, xmm2
 00710F13    movsd qword ptr ss:[esp+0x28], xmm0
 00710F19    fld qword ptr ss:[esp+0x28]
-00710F1D    call 0x00762368
+00710F1D    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 00710F22    movss xmm0, dword ptr ds:[0x00890FEC]
 00710F2A    fstp qword ptr ss:[esp+0x28]
 00710F2E    movsd xmm1, qword ptr ss:[esp+0x28]

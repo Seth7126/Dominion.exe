@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_621d60
+// 起始地址: 0x621d60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00621D60    push ebp
 00621D61    mov ebp, esp
 00621D63    sub esp, 0x8C
-00621D69    mov eax, dword ptr ds:[0x008C4040]
+00621D69    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00621D6E    xor eax, ebp
 00621D70    mov dword ptr ss:[ebp-0x04], eax
 00621D73    push ebx
@@ -10,27 +16,27 @@
 00621D79    push esi
 00621D7A    push edi
 00621D7B    call 0x0064E7A0
-00621D80    mov dword ptr ds:[eax+0x18BC], 0x621910
+00621D80    mov dword ptr ds:[eax+0x18BC], 0x621910         ; => [ Call: sub_64e7a0 | Call: sub_621910 ]
 00621D8A    mov ecx, dword ptr ds:[0x00CC8DC8]
 00621D90    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-00621D96    call 0x004D8F30
+00621D96    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 00621D9B    mov edi, eax
 00621D9D    mov ecx, dword ptr ds:[edi+0x3508]
 00621DA3    sub ecx, 0x00
 00621DA6    jz 0x00621DB8
 00621DA8    sub ecx, 0x01
 00621DAB    jnz 0x00621F7A
-00621DB1    mov esi, 0xBF017C
+00621DB1    mov esi, 0xBF017C                               ; => [ Data: data_bf017c ]
 00621DB6    jmp 0x00621DBD
-00621DB8    mov esi, 0xBF0170
+00621DB8    mov esi, 0xBF0170                               ; => [ Data: data_bf0170 ]
 00621DBD    mov ecx, ebx
-00621DBF    call 0x0064E7A0
+00621DBF    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00621DC4    movss xmm3, dword ptr ds:[0x00890E18]
 00621DCC    mov edx, esi
 00621DCE    push 0x00
 00621DD0    push 0xFFFFFFFF
 00621DD2    mov ecx, eax
-00621DD4    call 0x00665DB0
+00621DD4    call 0x00665DB0                                 ; => [ Call: sub_665db0 ]
 00621DD9    add esp, 0x08
 00621DDC    mov dword ptr ss:[ebp-0x4C], 0x00
 00621DE3    xor esi, esi
@@ -81,7 +87,7 @@
 00621E9E    lea ecx, ss:[ebp-0x8C]
 00621EA4    push 0x60DDF0
 00621EA9    push eax
-00621EAA    call 0x00637C10
+00621EAA    call 0x00637C10                                 ; => [ Call: sub_60ddf0 | Call: sub_637c10 ]
 00621EAF    movups xmm0, xmmword ptr ss:[ebp-0x8C]
 00621EB6    mov edi, dword ptr ss:[ebp-0x4C]
 00621EB9    mov ecx, ebx
@@ -93,7 +99,7 @@
 00621ECE    movups xmmword ptr ss:[ebp-0x28], xmm0
 00621ED2    movups xmm0, xmmword ptr ss:[ebp-0x5C]
 00621ED6    movups xmmword ptr ss:[ebp-0x18], xmm0
-00621EDA    call 0x0064E7A0
+00621EDA    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 00621EDF    movss xmm3, dword ptr ds:[0x00890E18]
 00621EE7    mov edx, 0xBF0194
 00621EEC    push 0x00
@@ -104,7 +110,7 @@
 00621EF9    push edi
 00621EFA    mov edx, 0xBF0140
 00621EFF    mov ecx, ebx
-00621F01    call 0x00666120
+00621F01    call 0x00666120                                 ; => [ Call: sub_665db0 | Call: sub_666120 | Data: data_bf0194 | Data: data_bf0140 | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00621F06    add esp, 0x18
 00621F09    xor esi, esi
 00621F0B    test edi, edi
@@ -113,7 +119,7 @@
 00621F12    push esi
 00621F13    mov edx, edi
 00621F15    mov ecx, ebx
-00621F17    call 0x0060BA50
+00621F17    call 0x0060BA50                                 ; => [ Call: sub_60ba50 ]
 00621F1C    inc esi
 00621F1D    add esp, 0x04
 00621F20    add edi, 0x10
@@ -122,14 +128,14 @@
 00621F28    push 0x00
 00621F2A    mov edx, 0x06
 00621F2F    mov ecx, ebx
-00621F31    call 0x0060DE40
+00621F31    call 0x0060DE40                                 ; => [ Call: sub_60de40 ]
 00621F36    mov ecx, dword ptr ss:[ebp-0x04]
 00621F39    add esp, 0x04
 00621F3C    xor ecx, ebp
 00621F3E    pop edi
 00621F3F    pop esi
 00621F40    pop ebx
-00621F41    call 0x0075927A
+00621F41    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00621F46    mov esp, ebp
 00621F48    pop ebp
 00621F49    ret
@@ -138,22 +144,22 @@
 00621F54    push 0x86F1E8
 00621F59    mov edx, 0x801800
 00621F5E    mov ecx, 0x801AA4
-00621F63    call 0x0063B870
+00621F63    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: AILevelToType | String: Halt ]
 00621F68    add esp, 0x0C
 00621F6B    call 0x0063BC30
 00621F70    test al, al
-00621F72    jz 0x00621F75
+00621F72    jz 0x00621F75                                   ; => [ Call: sub_63bc30 ]
 00621F74    int3
-00621F75    call 0x0063BB00
+00621F75    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 00621F7A    push 0x86B094
 00621F7F    push 0xE473
 00621F84    push 0x86F1E8
 00621F89    mov edx, 0x801800
 00621F8E    mov ecx, 0x801AA4
-00621F93    call 0x0063B870
+00621F93    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: CampaignHomeDlgUpdate | String: Halt ]
 00621F98    add esp, 0x0C
 00621F9B    call 0x0063BC30
 00621FA0    test al, al
-00621FA2    jz 0x00621FA5
+00621FA2    jz 0x00621FA5                                   ; => [ Call: sub_63bc30 ]
 00621FA4    int3
-00621FA5    call 0x0063BB00
+00621FA5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

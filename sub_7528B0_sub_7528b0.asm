@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7528b0
+// 起始地址: 0x7528b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007528B0    dword 83EC8B55
 007528B4    in al, dx
 007528B5    sbb byte ptr ds:[ecx+0x8C4040], ah
@@ -16,12 +22,12 @@
 007528DB    jmp dword ptr ds:[eax*4+0x752AE0]
 007528E2    mov edx, ecx
 007528E4    mov ecx, dword ptr ds:[ebx+0x0C]
-007528E7    call 0x00708720
+007528E7    call 0x00708720                                 ; => [ Call: sub_708720 ]
 007528EC    mov esi, eax
 007528EE    test esi, esi
 007528F0    jz 0x007529BD
 007528F6    mov ecx, edi
-007528F8    call 0x00707A50
+007528F8    call 0x00707A50                                 ; => [ Call: sub_707a50 ]
 007528FD    mov ecx, eax
 007528FF    mov dword ptr ds:[ecx+0x44], esi
 00752902    cmp dword ptr ds:[esi+0x38], 0x00
@@ -65,20 +71,20 @@
 0075299E    pop ebx
 0075299F    mov ecx, dword ptr ss:[ebp-0x04]
 007529A2    xor ecx, ebp
-007529A4    call 0x0075927A
+007529A4    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 007529A9    mov esp, ebp
 007529AB    pop ebp
 007529AC    ret
 007529AD    mov edx, ecx
 007529AF    mov ecx, dword ptr ds:[ebx+0x0C]
-007529B2    call 0x00708720
+007529B2    call 0x00708720                                 ; => [ Call: sub_708720 ]
 007529B7    mov esi, eax
 007529B9    test esi, esi
 007529BB    jnz 0x007529E2
 007529BD    push dword ptr ss:[ebp-0x18]
 007529C0    mov edx, 0x89049C
 007529C5    mov ecx, ebx
-007529C7    call 0x00707B20
+007529C7    call 0x00707B20                                 ; => [ String: Region not found: | Call: sub_707b20 ]
 007529CC    add esp, 0x04
 007529CF    xor eax, eax
 007529D1    pop edi
@@ -86,12 +92,12 @@
 007529D3    pop ebx
 007529D4    mov ecx, dword ptr ss:[ebp-0x04]
 007529D7    xor ecx, ebp
-007529D9    call 0x0075927A
+007529D9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 007529DE    mov esp, ebp
 007529E0    pop ebp
 007529E1    ret
 007529E2    mov ecx, edi
-007529E4    call 0x00752F80
+007529E4    call 0x00752F80                                 ; => [ Call: sub_752f80 ]
 007529E9    mov edx, eax
 007529EB    pop edi
 007529EC    mov dword ptr ds:[edx+0x30], esi
@@ -124,51 +130,51 @@
 00752A3A    pop ebx
 00752A3B    mov ecx, dword ptr ss:[ebp-0x04]
 00752A3E    xor ecx, ebp
-00752A40    call 0x0075927A
+00752A40    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00752A45    mov esp, ebp
 00752A47    pop ebp
 00752A48    ret
 00752A49    mov ecx, edi
-00752A4B    call 0x00758BD0
+00752A4B    call 0x00758BD0                                 ; => [ Call: sub_758bd0 ]
 00752A50    pop edi
 00752A51    pop esi
 00752A52    pop ebx
 00752A53    mov ecx, dword ptr ss:[ebp-0x04]
 00752A56    xor ecx, ebp
-00752A58    call 0x0075927A
+00752A58    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00752A5D    mov esp, ebp
 00752A5F    pop ebp
 00752A60    ret
 00752A61    mov ecx, edi
-00752A63    call 0x00758D60
+00752A63    call 0x00758D60                                 ; => [ Call: sub_758d60 ]
 00752A68    pop edi
 00752A69    pop esi
 00752A6A    pop ebx
 00752A6B    mov ecx, dword ptr ss:[ebp-0x04]
 00752A6E    xor ecx, ebp
-00752A70    call 0x0075927A
+00752A70    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00752A75    mov esp, ebp
 00752A77    pop ebp
 00752A78    ret
 00752A79    mov ecx, edi
-00752A7B    call 0x00758B50
+00752A7B    call 0x00758B50                                 ; => [ Call: sub_758b50 ]
 00752A80    pop edi
 00752A81    pop esi
 00752A82    pop ebx
 00752A83    mov ecx, dword ptr ss:[ebp-0x04]
 00752A86    xor ecx, ebp
-00752A88    call 0x0075927A
+00752A88    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00752A8D    mov esp, ebp
 00752A8F    pop ebp
 00752A90    ret
 00752A91    mov ecx, edi
-00752A93    call 0x00758A10
+00752A93    call 0x00758A10                                 ; => [ Call: sub_758a10 ]
 00752A98    pop edi
 00752A99    pop esi
 00752A9A    pop ebx
 00752A9B    mov ecx, dword ptr ss:[ebp-0x04]
 00752A9E    xor ecx, ebp
-00752AA0    call 0x0075927A
+00752AA0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00752AA5    mov esp, ebp
 00752AA7    pop ebp
 00752AA8    ret
@@ -176,12 +182,12 @@
 00752AAA    lea eax, ss:[ebp-0x14]
 00752AAD    push 0x808880
 00752AB2    push eax
-00752AB3    call 0x0063BB20
+00752AB3    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %d ]
 00752AB8    lea eax, ss:[ebp-0x14]
 00752ABB    mov edx, 0x88D9E8
 00752AC0    push eax
 00752AC1    mov ecx, ebx
-00752AC3    call 0x00707B20
+00752AC3    call 0x00707B20                                 ; => [ String: Unknown attachment type: | Call: sub_707b20 ]
 00752AC8    mov ecx, dword ptr ss:[ebp-0x04]
 00752ACB    add esp, 0x10
 00752ACE    xor ecx, ebp
@@ -189,7 +195,7 @@
 00752AD2    pop edi
 00752AD3    pop esi
 00752AD4    pop ebx
-00752AD5    call 0x0075927A
+00752AD5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00752ADA    mov esp, ebp
 00752ADC    pop ebp
 00752ADD    ret

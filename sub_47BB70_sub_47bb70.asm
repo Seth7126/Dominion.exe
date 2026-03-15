@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_47bb70
+// 起始地址: 0x47bb70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0047BB70    mov edx, 0x15
 0047BB75    mov ecx, 0x83D818
-0047BB7A    call 0x0069F030
-0047BB7F    mov dword ptr ds:[0x0171DF80], eax
+0047BB7A    call 0x0069F030                                 ; => [ String: res/sound/sound_cards/fx_landplay_junk_dealer.sound | Call: sub_69f030 ]
+0047BB7F    mov dword ptr ds:[0x0171DF80], eax              ; => [ Data: data_171df80 ]
 0047BB84    ret

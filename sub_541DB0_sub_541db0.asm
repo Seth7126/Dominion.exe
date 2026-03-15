@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_541db0
+// 起始地址: 0x541db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00541DB0    dword 164AE856
 00541DB4    add eax, dword ptr ds:[eax]
-00541DB6    mov esi, dword ptr ds:[eax+0x0C]
+00541DB6    mov esi, dword ptr ds:[eax+0x0C]                ; => [ Call: sub_573400 ]
 00541DB9    call 0x00573400
 00541DBE    xor ecx, ecx
-00541DC0    mov eax, dword ptr ds:[eax+0x04]
+00541DC0    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00541DC3    mov edx, dword ptr ds:[eax+0x1520]
 00541DC9    test edx, edx
 00541DCB    jle 0x00541DE7

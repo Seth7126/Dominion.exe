@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58b9f0
+// 起始地址: 0x58b9f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058B9F0    push ebp
 0058B9F1    mov ebp, esp
 0058B9F3    sub esp, 0x18
@@ -9,7 +15,7 @@
 0058BA04    push esi
 0058BA05    push edi
 0058BA06    mov dword ptr ss:[ebp-0x10], ebx
-0058BA09    call 0x00571B30
+0058BA09    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0058BA0E    mov ecx, eax
 0058BA10    xor edi, edi
 0058BA12    mov esi, dword ptr ds:[ecx+0xA8]
@@ -38,7 +44,7 @@
 0058BA55    xor esi, esi
 0058BA57    cmp dword ptr ds:[edi+0xD38], esi
 0058BA5D    jle 0x0058BA37
-0058BA5F    mov eax, dword ptr fs:[0x0000002C]
+0058BA5F    mov eax, dword ptr fs:[0x0000002C]              ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 0058BA65    xorps xmm0, xmm0
 0058BA68    movlpd qword ptr ss:[ebp-0x18], xmm0
 0058BA6D    mov eax, dword ptr ds:[eax]
@@ -55,10 +61,10 @@
 0058BA86    test eax, eax
 0058BA88    mov ecx, edi
 0058BA8A    lea eax, ss:[ebp-0x18]
-0058BA8D    setnle bl
+0058BA8D    setnle bl                                       ; => [ Call: sub_576b30 ]
 0058BA90    push eax
 0058BA91    inc ebx
-0058BA92    call 0x00573050
+0058BA92    call 0x00573050                                 ; => [ Call: sub_573050 ]
 0058BA97    add esp, 0x14
 0058BA9A    call dword ptr ss:[ebp-0x0C]
 0058BA9D    mov ecx, dword ptr ss:[ebp+0x08]
@@ -85,10 +91,10 @@
 0058BAD7    push 0x81F4B8
 0058BADC    mov edx, 0x801800
 0058BAE1    mov ecx, 0x81F9F0
-0058BAE6    call 0x0063B870
+0058BAE6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomPopContext ]
 0058BAEB    add esp, 0x0C
 0058BAEE    call 0x0063BC30
 0058BAF3    test al, al
-0058BAF5    jz 0x0058BAF8
+0058BAF5    jz 0x0058BAF8                                   ; => [ Call: sub_63bc30 ]
 0058BAF7    int3
-0058BAF8    call 0x0063BB00
+0058BAF8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

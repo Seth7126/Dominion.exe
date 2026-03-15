@@ -1,16 +1,22 @@
-006053A0    mov eax, dword ptr ds:[0x00B7FCF4]
+// ============================================================
+// 函数名称: sub_6053a0
+// 起始地址: 0x6053a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+006053A0    mov eax, dword ptr ds:[0x00B7FCF4]              ; => [ Data: data_b7fcf4 ]
 006053A5    test eax, eax
 006053A7    jz 0x006053EA
 006053A9    movzx ecx, ax
 006053AC    cmp ecx, dword ptr ds:[0x00B809E4]
-006053B2    jnb 0x006053EA
+006053B2    jnb 0x006053EA                                  ; => [ Data: data_b809e4 ]
 006053B4    imul ecx, ecx, 0x1C30
-006053BA    add ecx, dword ptr ds:[0x00B809E0]
+006053BA    add ecx, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
 006053C0    cmp dword ptr ds:[ecx+0x1C28], eax
 006053C6    jnz 0x006053EA
 006053C8    test ecx, ecx
 006053CA    jz 0x006053EA
-006053CC    call 0x005D4360
+006053CC    call 0x005D4360                                 ; => [ Call: sub_5d4360 ]
 006053D1    cmp eax, 0x06
 006053D4    jz 0x006053E7
 006053D6    cmp eax, 0x05

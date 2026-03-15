@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56d920
+// 起始地址: 0x56d920
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056D920    push ecx
 0056D921    push esi
 0056D922    push edi
@@ -5,7 +11,7 @@
 0056D925    call 0x00573400
 0056D92A    mov edx, dword ptr ds:[eax+0x04]
 0056D92D    xor eax, eax
-0056D92F    add edx, 0x1594
+0056D92F    add edx, 0x1594                                 ; => [ Call: sub_573400 ]
 0056D935    lea esi, ds:[eax+0x07]
 0056D938    mov ecx, dword ptr ds:[edx]
 0056D93A    test ecx, ecx

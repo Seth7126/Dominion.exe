@@ -1,46 +1,52 @@
+// ============================================================
+// 函数名称: sub_5641d0
+// 起始地址: 0x5641d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005641D0    push ebp
 005641D1    mov ebp, esp
 005641D3    mov eax, 0x1914
-005641D8    call 0x00761E50
+005641D8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005641DD    mov eax, dword ptr ds:[0x008C4040]
 005641E2    xor eax, ebp
-005641E4    mov dword ptr ss:[ebp-0x04], eax
+005641E4    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 005641E7    push ebx
 005641E8    push esi
 005641E9    push edi
 005641EA    mov dword ptr ss:[ebp-0x190C], ecx
-005641F0    call 0x00573400
+005641F0    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005641F5    mov edi, eax
-005641F7    call 0x00573400
+005641F7    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005641FC    mov esi, eax
 005641FE    lea eax, ss:[ebp-0x1908]
 00564204    push eax
 00564205    push 0x3EB
 0056420A    mov edx, dword ptr ds:[esi+0x0C]
 0056420D    mov ecx, dword ptr ds:[esi+0x04]
-00564210    call 0x00590990
+00564210    call 0x00590990                                 ; => [ Call: sub_590990 ]
 00564215    mov ecx, dword ptr ds:[esi+0x04]
 00564218    lea edx, ss:[ebp-0xC88]
 0056421E    push eax
 0056421F    lea eax, ss:[ebp-0x1908]
 00564225    push eax
-00564226    call 0x00593CA0
+00564226    call 0x00593CA0                                 ; => [ Call: sub_593ca0 ]
 0056422B    mov ebx, eax
-0056422D    call 0x00573400
+0056422D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00564232    mov esi, eax
 00564234    lea eax, ss:[ebp-0x1908]
 0056423A    push eax
 0056423B    push 0x3EC
 00564240    mov edx, dword ptr ds:[esi+0x0C]
 00564243    mov ecx, dword ptr ds:[esi+0x04]
-00564246    call 0x00590990
+00564246    call 0x00590990                                 ; => [ Call: sub_590990 ]
 0056424B    mov ecx, dword ptr ds:[esi+0x04]
 0056424E    lea edx, ss:[ebp-0xC88]
 00564254    push eax
 00564255    lea eax, ss:[ebp-0x1908]
 0056425B    push eax
 0056425C    lea edx, ds:[edx+ebx*4]
-0056425F    call 0x00593CA0
+0056425F    call 0x00593CA0                                 ; => [ Call: sub_593ca0 ]
 00564264    add esp, 0x20
 00564267    add ebx, eax
 00564269    jz 0x00564317
@@ -67,7 +73,7 @@
 005642B0    push eax
 005642B1    push 0x07
 005642B3    lea edx, ss:[ebp-0x1914]
-005642B9    call 0x00623B70
+005642B9    call 0x00623B70                                 ; => [ Call: nullptr | Call: sub_623b70 | Data: data_cce9d8 ]
 005642BE    mov ecx, dword ptr ds:[edi+0x04]
 005642C1    add esp, 0x28
 005642C4    test eax, eax
@@ -94,10 +100,10 @@
 00564304    push 0x00
 00564306    push 0x00
 00564308    push 0x00
-0056430A    push 0x00
+0056430A    push 0x00                                       ; => [ Call: __builtin_memset ]
 0056430C    push 0x1C
 0056430E    push eax
-0056430F    call 0x0059F9B0
+0056430F    call 0x0059F9B0                                 ; => [ Call: sub_59f9b0 ]
 00564314    add esp, 0x24
 00564317    xor eax, eax
 00564319    pop edi
@@ -105,7 +111,7 @@
 0056431B    pop ebx
 0056431C    mov ecx, dword ptr ss:[ebp-0x04]
 0056431F    xor ecx, ebp
-00564321    call 0x0075927A
+00564321    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00564326    mov esp, ebp
 00564328    pop ebp
 00564329    ret
@@ -133,7 +139,7 @@
 0056436A    push 0x00
 0056436C    push 0x1C
 0056436E    push eax
-0056436F    call 0x0059F9B0
+0056436F    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00564374    add esp, 0x24
 00564377    mov ecx, dword ptr ss:[ebp-0x04]
 0056437A    mov eax, dword ptr ss:[ebp-0xC88]
@@ -141,7 +147,7 @@
 00564382    pop edi
 00564383    pop esi
 00564384    pop ebx
-00564385    call 0x0075927A
+00564385    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0056438A    mov esp, ebp
 0056438C    pop ebp
 0056438D    ret

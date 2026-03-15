@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_52eaf0
+// 起始地址: 0x52eaf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052EAF0    dword 3E5CBE8
 0052EAF4    add byte ptr ds:[eax+eax*8+0x2E82575], al
 0052EAFB    dec ecx
@@ -5,7 +11,7 @@
 0052EAFE    imul ecx, dword ptr ds:[eax+0x0C], 0x5A30
 0052EB05    mov eax, dword ptr ds:[eax+0x04]
 0052EB08    cmp dword ptr ds:[ecx+eax*1+0x174F4], 0x02
-0052EB10    jl 0x0052EB1E
+0052EB10    jl 0x0052EB1E                                   ; => [ Call: sub_56d6b0 ]
 0052EB12    call 0x0056D6B0
 0052EB17    test eax, eax
 0052EB19    jle 0x0052EB1E

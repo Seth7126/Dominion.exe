@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_75f040
+// 起始地址: 0x75f040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F040    push esi
 0075F041    push edi
-0075F042    mov dword ptr ds:[ecx], 0x77E9EC
+0075F042    mov dword ptr ds:[ecx], 0x77E9EC                ; => [ Data: data_77e9ec ]
 0075F048    lea esi, ds:[ecx+0x184]
 0075F04E    mov edi, 0x08
 0075F053    mov ecx, dword ptr ds:[esi]

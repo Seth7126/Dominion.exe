@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6bc0e0
+// 起始地址: 0x6bc0e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BC0E0    push ebp
 006BC0E1    mov ebp, esp
 006BC0E3    and esp, 0xFFFFFFF8
@@ -9,29 +15,29 @@
 006BC0EC    mov edx, edi
 006BC0EE    mov eax, dword ptr ds:[edi+0x2E4]
 006BC0F4    inc dword ptr ds:[eax+0x14]
-006BC0F7    call 0x006BB270
+006BC0F7    call 0x006BB270                                 ; => [ Call: sub_6bb270 ]
 006BC0FC    mov eax, dword ptr ds:[edi+0x2E4]
 006BC102    mov ecx, dword ptr ds:[eax]
-006BC104    call 0x005AF880
+006BC104    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006BC109    imul ebx, dword ptr ds:[edi+0x2DC], 0x168
 006BC113    mov ecx, 0x8CC5F8
 006BC118    push 0x03
 006BC11A    add ebx, dword ptr ds:[eax]
 006BC11C    mov edx, ebx
-006BC11E    call 0x006DCF50
+006BC11E    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8cc5f8 ]
 006BC123    mov esi, eax
 006BC125    add esp, 0x04
 006BC128    test esi, esi
 006BC12A    jle 0x006BC13C
 006BC12C    nop dword ptr ds:[eax], eax
 006BC130    mov ecx, edi
-006BC132    call 0x006BC970
+006BC132    call 0x006BC970                                 ; => [ Call: sub_6bc970 ]
 006BC137    sub esi, 0x01
 006BC13A    jnz 0x006BC130
 006BC13C    push 0x04
 006BC13E    mov edx, ebx
 006BC140    mov ecx, 0x8CC5F8
-006BC145    call 0x006DCF50
+006BC145    call 0x006DCF50                                 ; => [ Call: sub_6dcf50 | Data: data_8cc5f8 ]
 006BC14A    add esp, 0x04
 006BC14D    movd xmm0, eax
 006BC151    cvtdq2ps xmm0, xmm0

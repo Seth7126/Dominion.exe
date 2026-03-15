@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_55b0b0
+// 起始地址: 0x55b0b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055B0B0    dword 83EC8B55
 0055B0B4    in al, 0xF8
 0055B0B6    mov eax, 0x1910
-0055B0BB    call 0x00761E50
+0055B0BB    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0055B0C0    push esi
 0055B0C1    push edi
-0055B0C2    call 0x00573400
+0055B0C2    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055B0C7    push 0x00
 0055B0C9    push 0x00
 0055B0CB    push 0x01
 0055B0CD    mov edx, dword ptr ds:[eax+0x0C]
 0055B0D0    mov ecx, dword ptr ds:[eax+0x04]
 0055B0D3    push 0x02
-0055B0D5    call 0x00590760
+0055B0D5    call 0x00590760                                 ; => [ Call: sub_590760 ]
 0055B0DA    add esp, 0x10
-0055B0DD    call 0x00573400
+0055B0DD    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055B0E2    mov ecx, dword ptr ds:[eax+0x0C]
 0055B0E5    cmp ecx, 0xFFFFFFFF
 0055B0E8    jz 0x0055B13A
@@ -28,9 +34,9 @@
 0055B10F    lea edi, ss:[esp+0x0C]
 0055B113    mov ecx, 0x321
 0055B118    add esp, 0x04
-0055B11B    rep movsd
+0055B11B    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 0055B11D    lea ecx, ss:[esp+0x08]
-0055B121    call 0x005649C0
+0055B121    call 0x005649C0                                 ; => [ Call: sub_5649c0 ]
 0055B126    push 0x00
 0055B128    xor edx, edx
 0055B12A    mov ecx, eax
@@ -40,16 +46,16 @@
 0055B135    pop esi
 0055B136    mov esp, ebp
 0055B138    pop ebp
-0055B139    ret
+0055B139    ret                                             ; => [ Call: sub_561af0 ]
 0055B13A    push 0x81EA64
 0055B13F    push 0x52
 0055B141    push 0x81EA70
 0055B146    mov edx, 0x801800
 0055B14B    mov ecx, 0x813C5C
-0055B150    call 0x0063B870
+0055B150    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0055B155    add esp, 0x0C
 0055B158    call 0x0063BC30
 0055B15D    test al, al
-0055B15F    jz 0x0055B162
+0055B15F    jz 0x0055B162                                   ; => [ Call: sub_63bc30 ]
 0055B161    int3
-0055B162    call 0x0063BB00
+0055B162    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

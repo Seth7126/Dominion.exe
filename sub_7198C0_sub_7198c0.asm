@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_7198c0
+// 起始地址: 0x7198c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007198C0    push ebp
 007198C1    mov ebp, esp
 007198C3    and esp, 0xFFFFFFC0
 007198C6    sub esp, 0x40
-007198C9    mov eax, dword ptr ds:[ecx*8+0xCB3CB0]
+007198C9    mov eax, dword ptr ds:[ecx*8+0xCB3CB0]          ; => [ Data: data_cb3cb0 ]
 007198D0    movss xmm0, dword ptr ds:[0x00890E18]
 007198D8    mov dword ptr ss:[esp+0x38], eax
 007198DC    xor eax, eax
@@ -22,7 +28,7 @@
 00719908    movsd qword ptr ss:[esp+0x40], xmm0
 0071990E    fld qword ptr ss:[esp+0x40]
 00719912    fstp qword ptr ss:[esp]
-00719915    call 0x0076239E
+00719915    call 0x0076239E                                 ; => [ Call: ceil ]
 0071991A    fstp qword ptr ss:[esp+0x40]
 0071991E    cvttsd2si eax, qword ptr ss:[esp+0x40]
 00719924    add esp, 0x08
@@ -39,7 +45,7 @@
 00719946    movsd qword ptr ss:[esp+0x40], xmm0
 0071994C    fld qword ptr ss:[esp+0x40]
 00719950    fstp qword ptr ss:[esp]
-00719953    call 0x0076239E
+00719953    call 0x0076239E                                 ; => [ Call: ceil ]
 00719958    fstp qword ptr ss:[esp+0x40]
 0071995C    cvttsd2si eax, qword ptr ss:[esp+0x40]
 00719962    add esp, 0x08

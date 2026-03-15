@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4af390
+// 起始地址: 0x4af390
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004AF390    push ebp
 004AF391    mov ebp, esp
 004AF393    and esp, 0xFFFFFFF8
@@ -10,10 +16,10 @@
 004AF3AE    mov dword ptr ss:[esp], eax
 004AF3B1    call 0x006938E0
 004AF3B6    test al, al
-004AF3B8    jz 0x004AF3CC
+004AF3B8    jz 0x004AF3CC                                   ; => [ Call: sub_6938e0 ]
 004AF3BA    mov ecx, dword ptr ss:[ebp+0x08]
 004AF3BD    lea edx, ss:[esp]
-004AF3C0    call 0x004AF0E0
+004AF3C0    call 0x004AF0E0                                 ; => [ Call: sub_4af0e0 ]
 004AF3C5    mov eax, dword ptr ss:[ebp+0x08]
 004AF3C8    mov esp, ebp
 004AF3CA    pop ebp
@@ -28,12 +34,12 @@
 004AF3E7    mov eax, edx
 004AF3E9    mov dword ptr ds:[edx+0x1C], ecx
 004AF3EC    mov ecx, dword ptr ss:[esp+0x34]
-004AF3F0    mov dword ptr ds:[edx+0x0C], 0x8028C4
+004AF3F0    mov dword ptr ds:[edx+0x0C], 0x8028C4           ; => [ Data: UI2HitResult::`vftable'{for `InputHitResult'} ]
 004AF3F7    mov dword ptr ds:[edx+0x10], 0x00
 004AF3FE    mov dword ptr ds:[edx+0x14], 0x00
 004AF405    mov dword ptr ds:[edx+0x20], 0x00
 004AF40C    movq qword ptr ds:[edx+0x24], xmm0
-004AF411    mov dword ptr ds:[edx], 0x8028BC
+004AF411    mov dword ptr ds:[edx], 0x8028BC                ; => [ Data: HitResult::`vftable'{for `InputHitResult'} ]
 004AF417    mov dword ptr ds:[edx+0x04], 0x00
 004AF41E    mov dword ptr ds:[edx+0x2C], ecx
 004AF421    mov esp, ebp

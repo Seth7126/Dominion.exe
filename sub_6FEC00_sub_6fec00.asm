@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6fec00
+// 起始地址: 0x6fec00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FEC00    push ebp
 006FEC01    mov ebp, esp
 006FEC03    sub esp, 0x20
-006FEC06    mov eax, dword ptr ds:[0x008C4040]
+006FEC06    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006FEC0B    xor eax, ebp
 006FEC0D    mov dword ptr ss:[ebp-0x04], eax
 006FEC10    mov eax, dword ptr ss:[ebp+0x08]
@@ -21,7 +27,7 @@
 006FEC30    push edi
 006FEC31    push dword ptr ss:[ebp-0x20]
 006FEC34    push 0x88C4B8
-006FEC39    call 0x0063B5F0
+006FEC39    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: %s(%d): %s - glError (0x%x)\n ]
 006FEC3E    inc esi
 006FEC3F    add esp, 0x14
 006FEC42    mov bl, 0x01
@@ -39,7 +45,7 @@
 006FEC5F    pop esi
 006FEC60    xor ecx, ebp
 006FEC62    pop ebx
-006FEC63    call 0x0075927A
+006FEC63    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006FEC68    mov esp, ebp
 006FEC6A    pop ebp
 006FEC6B    ret

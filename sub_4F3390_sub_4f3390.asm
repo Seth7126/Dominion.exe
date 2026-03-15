@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4f3390
+// 起始地址: 0x4f3390
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F3390    push ebp
 004F3391    mov ebp, esp
 004F3393    mov eax, 0x14710
-004F3398    call 0x00761E50
+004F3398    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004F339D    mov eax, dword ptr ds:[0x008C4040]
 004F33A2    xor eax, ebp
-004F33A4    mov dword ptr ss:[ebp-0x08], eax
+004F33A4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 004F33A7    push ebx
 004F33A8    mov ebx, edx
 004F33AA    push esi
@@ -41,7 +47,7 @@
 004F3429    push eax
 004F342A    push ecx
 004F342B    mov ecx, edi
-004F342D    call 0x004EE440
+004F342D    call 0x004EE440                                 ; => [ Call: sub_4ee440 ]
 004F3432    mov ecx, dword ptr ds:[esi+0x54]
 004F3435    add esp, 0x08
 004F3438    xor eax, eax
@@ -53,7 +59,7 @@
 004F3447    jnz 0x004F3456
 004F3449    push dword ptr ds:[esi+0x58]
 004F344C    mov ecx, edi
-004F344E    call 0x005916B0
+004F344E    call 0x005916B0                                 ; => [ Call: sub_5916b0 ]
 004F3453    add esp, 0x04
 004F3456    mov ecx, dword ptr ds:[ebx+0xB4]
 004F345C    lea edx, ss:[ebp-0x14704]
@@ -66,17 +72,17 @@
 004F3473    lea eax, ss:[ebp-0x50]
 004F3476    push eax
 004F3477    push ebx
-004F3478    call 0x005B1CE0
+004F3478    call 0x005B1CE0                                 ; => [ Call: sub_5b1ce0 ]
 004F347D    add esp, 0x1C
 004F3480    lea edx, ss:[ebp-0x14704]
 004F3486    mov ecx, edi
 004F3488    push ebx
-004F3489    call 0x004F3110
+004F3489    call 0x004F3110                                 ; => [ Call: sub_4f3110 ]
 004F348E    add esp, 0x04
 004F3491    lea edx, ss:[ebp-0x14704]
 004F3497    mov ecx, edi
 004F3499    push ebx
-004F349A    call 0x004F2B60
+004F349A    call 0x004F2B60                                 ; => [ Call: sub_4f2b60 ]
 004F349F    mov eax, dword ptr ds:[edi+0x19CC]
 004F34A5    add esp, 0x04
 004F34A8    xor esi, esi
@@ -107,7 +113,7 @@
 004F350A    push eax
 004F350B    lea eax, ss:[ebp-0x20]
 004F350E    push eax
-004F350F    call 0x00761FBE
+004F350F    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004F3514    add esp, 0x0C
 004F3517    lea edx, ss:[ebp-0x20]
 004F351A    mov eax, esi
@@ -116,7 +122,7 @@
 004F3522    add edx, esi
 004F3524    push dword ptr ss:[ebp-0x14708]
 004F352A    push eax
-004F352B    call 0x004F6060
+004F352B    call 0x004F6060                                 ; => [ Call: sub_4f6060 ]
 004F3530    xor ecx, ecx
 004F3532    add esp, 0x08
 004F3535    cmp dword ptr ds:[edi+0xD38], ecx
@@ -140,8 +146,8 @@
 004F3577    jl 0x004F3550
 004F3579    mov eax, dword ptr ds:[0x0183AD10]
 004F357E    xor edx, edx
-004F3580    inc eax
-004F3581    mov dword ptr ds:[0x0183AD10], eax
+004F3580    inc eax                                         ; => [ Data: data_183ad10 ]
+004F3581    mov dword ptr ds:[0x0183AD10], eax              ; => [ Data: data_183ad10 ]
 004F3586    cmp dword ptr ds:[edi+0xD38], edx
 004F358C    jle 0x004F362A
 004F3592    movss xmm3, dword ptr ds:[0x00890D18]
@@ -180,7 +186,7 @@
 004F362E    pop esi
 004F362F    xor ecx, ebp
 004F3631    pop ebx
-004F3632    call 0x0075927A
+004F3632    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F3637    mov esp, ebp
 004F3639    pop ebp
 004F363A    ret

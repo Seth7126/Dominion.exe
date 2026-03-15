@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64c7e0
+// 起始地址: 0x64c7e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064C7E0    push ebp
 0064C7E1    mov ebp, esp
 0064C7E3    push ebx
@@ -16,7 +22,7 @@
 0064C808    lea eax, ds:[esi+0x5E7]
 0064C80E    lea eax, ds:[ebx+eax*4]
 0064C811    push eax
-0064C812    call 0x00762362
+0064C812    call 0x00762362                                 ; => [ Call: memmove ]
 0064C817    add esp, 0x0C
 0064C81A    lea eax, ds:[esi-0x01]
 0064C81D    add dword ptr ds:[ebx+0x189C], 0xFFFFFFFF
@@ -32,10 +38,10 @@
 0064C83A    push 0x8739B4
 0064C83F    mov edx, 0x801800
 0064C844    mov ecx, 0x874310
-0064C849    call 0x0063B870
+0064C849    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: UI2::removeAt | String: numChildren >= 0 ]
 0064C84E    add esp, 0x0C
 0064C851    call 0x0063BC30
 0064C856    test al, al
-0064C858    jz 0x0064C85B
+0064C858    jz 0x0064C85B                                   ; => [ Call: sub_63bc30 ]
 0064C85A    int3
-0064C85B    call 0x0063BB00
+0064C85B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

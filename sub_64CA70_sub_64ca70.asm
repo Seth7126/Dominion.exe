@@ -1,4 +1,10 @@
-0064CA70    mov dword ptr ds:[ecx+0x04], 0x801800
+// ============================================================
+// 函数名称: sub_64ca70
+// 起始地址: 0x64ca70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+0064CA70    mov dword ptr ds:[ecx+0x04], 0x801800           ; => [ Data: data_801800 ]
 0064CA77    mov eax, ecx
-0064CA79    mov dword ptr ds:[ecx+0x18], 0x801800
+0064CA79    mov dword ptr ds:[ecx+0x18], 0x801800           ; => [ Data: data_801800 ]
 0064CA80    ret

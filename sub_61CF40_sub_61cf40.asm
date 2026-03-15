@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_61cf40
+// 起始地址: 0x61cf40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0061CF40    push ebp
 0061CF41    mov ebp, esp
 0061CF43    push ecx
@@ -5,7 +11,7 @@
 0061CF45    push esi
 0061CF46    push edi
 0061CF47    mov ebx, edx
-0061CF49    mov esi, 0x7E7D30
+0061CF49    mov esi, 0x7E7D30                               ; => [ Data: data_7e7d30 ]
 0061CF4E    nop
 0061CF50    cmp dword ptr ds:[esi], ecx
 0061CF52    jz 0x0061CF64
@@ -48,10 +54,10 @@
 0061CFBA    push 0x86F1E8
 0061CFBF    mov edx, 0x801800
 0061CFC4    mov ecx, 0x801AA4
-0061CFC9    call 0x0063B870
+0061CFC9    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: SmartplayNextOption | String: Halt ]
 0061CFCE    add esp, 0x0C
 0061CFD1    call 0x0063BC30
 0061CFD6    test al, al
-0061CFD8    jz 0x0061CFDB
+0061CFD8    jz 0x0061CFDB                                   ; => [ Call: sub_63bc30 ]
 0061CFDA    int3
-0061CFDB    call 0x0063BB00
+0061CFDB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

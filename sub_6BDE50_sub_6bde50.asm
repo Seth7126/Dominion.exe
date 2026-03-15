@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6bde50
+// 起始地址: 0x6bde50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BDE50    push ebx
 006BDE51    mov ebx, esp
 006BDE53    sub esp, 0x08
@@ -10,9 +16,9 @@
 006BDE66    sub esp, 0x88
 006BDE6C    mov eax, dword ptr ds:[0x008C4040]
 006BDE71    xor eax, ebp
-006BDE73    mov dword ptr ss:[ebp-0x04], eax
+006BDE73    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 006BDE76    mov ecx, dword ptr ds:[ebx+0x0C]
-006BDE79    xorps xmm1, xmm1
+006BDE79    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BDE7C    push esi
 006BDE7D    mov esi, dword ptr ds:[ebx+0x08]
 006BDE80    push edi
@@ -28,8 +34,8 @@
 006BDEA0    cvtps2pd xmm0, xmm2
 006BDEA3    movsd qword ptr ss:[ebp-0x58], xmm0
 006BDEA8    fld qword ptr ss:[ebp-0x58]
-006BDEAB    call 0x0076236E
-006BDEB0    xorps xmm1, xmm1
+006BDEAB    call 0x0076236E                                 ; => [ Call: _CIfmod ]
+006BDEB0    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BDEB3    comiss xmm1, dword ptr ds:[esi+0x14]
 006BDEB7    fstp dword ptr ss:[ebp-0x50]
 006BDEBA    movss xmm0, dword ptr ss:[ebp-0x50]
@@ -48,8 +54,8 @@
 006BDEE9    cvtps2pd xmm0, xmm2
 006BDEEC    movsd qword ptr ss:[ebp-0x58], xmm0
 006BDEF1    fld qword ptr ss:[ebp-0x58]
-006BDEF4    call 0x0076236E
-006BDEF9    xorps xmm1, xmm1
+006BDEF4    call 0x0076236E                                 ; => [ Call: _CIfmod ]
+006BDEF9    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BDEFC    comiss xmm1, dword ptr ds:[esi+0x18]
 006BDF00    fstp dword ptr ss:[ebp-0x50]
 006BDF03    movss xmm0, dword ptr ss:[ebp-0x50]
@@ -68,8 +74,8 @@
 006BDF32    cvtps2pd xmm0, xmm2
 006BDF35    movsd qword ptr ss:[ebp-0x58], xmm0
 006BDF3A    fld qword ptr ss:[ebp-0x58]
-006BDF3D    call 0x0076236E
-006BDF42    xorps xmm1, xmm1
+006BDF3D    call 0x0076236E                                 ; => [ Call: _CIfmod ]
+006BDF42    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BDF45    comiss xmm1, dword ptr ds:[esi+0x1C]
 006BDF49    fstp dword ptr ss:[ebp-0x50]
 006BDF4C    movss xmm0, dword ptr ss:[ebp-0x50]
@@ -81,8 +87,8 @@
 006BDF65    movss xmm0, dword ptr ds:[0x00890D84]
 006BDF6D    movss xmm3, dword ptr ds:[0x00890E18]
 006BDF75    jbe 0x006BE233
-006BDF7B    movups xmm3, xmmword ptr ds:[0x00CF6668]
-006BDF82    mov eax, dword ptr ds:[0x00CF6680]
+006BDF7B    movups xmm3, xmmword ptr ds:[0x00CF6668]        ; => [ Data: data_cf6668 ]
+006BDF82    mov eax, dword ptr ds:[0x00CF6680]              ; => [ Data: data_cf6680 ]
 006BDF87    movss xmm1, dword ptr ds:[edi+0x1C]
 006BDF8C    movaps xmm5, xmm4
 006BDF8F    mulss xmm1, xmm0
@@ -90,7 +96,7 @@
 006BDF96    mov dword ptr ss:[ebp-0x34], eax
 006BDF99    mulss xmm5, xmm0
 006BDF9D    movaps xmm2, xmm3
-006BDFA0    movq xmm0, qword ptr ds:[0x00CF6678]
+006BDFA0    movq xmm0, qword ptr ds:[0x00CF6678]            ; => [ Data: data_cf6678 ]
 006BDFA8    movq qword ptr ss:[ebp-0x3C], xmm0
 006BDFAD    shufps xmm6, xmm3, 0x55
 006BDFB1    movaps xmm7, xmm6
@@ -135,7 +141,7 @@
 006BE055    movaps xmmword ptr ss:[ebp-0x30], xmm6
 006BE059    movss dword ptr ss:[ebp-0x6C], xmm0
 006BE05E    divss xmm0, xmm4
-006BE062    call 0x004D5CB0
+006BE062    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 006BE067    movss xmm2, dword ptr ds:[esi+0x14]
 006BE06C    movaps xmm1, xmm0
 006BE06F    mulss xmm1, dword ptr ds:[0x00890F9C]
@@ -154,7 +160,7 @@
 006BE0B0    movsd qword ptr ss:[ebp-0x68], xmm0
 006BE0B5    fld qword ptr ss:[ebp-0x68]
 006BE0B8    fld qword ptr ss:[ebp-0x58]
-006BE0BB    call 0x0076236E
+006BE0BB    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 006BE0C0    xorps xmm0, xmm0
 006BE0C3    comiss xmm0, dword ptr ss:[ebp-0x74]
 006BE0C7    fstp dword ptr ss:[ebp-0x64]
@@ -168,7 +174,7 @@
 006BE0E8    movsd qword ptr ss:[ebp-0x68], xmm0
 006BE0ED    fld qword ptr ss:[ebp-0x68]
 006BE0F0    fld qword ptr ss:[ebp-0x58]
-006BE0F3    call 0x0076236E
+006BE0F3    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 006BE0F8    xorps xmm0, xmm0
 006BE0FB    comiss xmm0, dword ptr ss:[ebp-0x6C]
 006BE0FF    fstp dword ptr ss:[ebp-0x64]
@@ -182,7 +188,7 @@
 006BE120    movsd qword ptr ss:[ebp-0x70], xmm0
 006BE125    fld qword ptr ss:[ebp-0x70]
 006BE128    fld qword ptr ss:[ebp-0x58]
-006BE12B    call 0x0076236E
+006BE12B    call 0x0076236E                                 ; => [ Call: _CIfmod ]
 006BE130    xorps xmm0, xmm0
 006BE133    comiss xmm0, dword ptr ss:[ebp-0x78]
 006BE137    fstp dword ptr ss:[ebp-0x6C]
@@ -211,22 +217,22 @@
 006BE19C    subss xmm1, dword ptr ss:[ebp-0x80]
 006BE1A1    subss xmm0, dword ptr ss:[ebp-0x80]
 006BE1A6    movss xmm3, dword ptr ds:[0x00890E18]
-006BE1AE    divss xmm0, xmm1
-006BE1B2    xorps xmm1, xmm1
+006BE1AE    divss xmm0, xmm1                                ; => [ Call: sub_4ac580 ]
+006BE1B2    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BE1B5    comiss xmm1, xmm0
 006BE1B8    jb 0x006BE1BF
 006BE1BA    movaps xmm0, xmm3
 006BE1BD    jmp 0x006BE1E4
 006BE1BF    comiss xmm0, xmm3
 006BE1C2    jb 0x006BE1C9
-006BE1C4    xorps xmm0, xmm0
+006BE1C4    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 006BE1C7    jmp 0x006BE1E4
 006BE1C9    mov ecx, 0x01
 006BE1CE    xorps xmm2, xmm2
 006BE1D1    movaps xmm1, xmm3
-006BE1D4    call 0x004AE110
+006BE1D4    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 006BE1D9    movss xmm3, dword ptr ds:[0x00890E18]
-006BE1E1    xorps xmm1, xmm1
+006BE1E1    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BE1E4    mov ecx, dword ptr ss:[ebp-0x60]
 006BE1E7    movzx eax, byte ptr ds:[ecx+0x03]
 006BE1EB    movd xmm2, eax
@@ -259,7 +265,7 @@
 006BE252    divss xmm0, xmm2
 006BE256    comiss xmm1, xmm0
 006BE259    jb 0x006BE260
-006BE25B    xorps xmm0, xmm0
+006BE25B    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 006BE25E    jmp 0x006BE27D
 006BE260    comiss xmm0, xmm3
 006BE263    jb 0x006BE26A
@@ -267,7 +273,7 @@
 006BE268    jmp 0x006BE27D
 006BE26A    mov ecx, 0x01
 006BE26F    movaps xmm2, xmm3
-006BE272    call 0x004AE110
+006BE272    call 0x004AE110                                 ; => [ Call: sub_4ae110 ]
 006BE277    mov ecx, dword ptr ss:[ebp-0x60]
 006BE27A    xorps xmm1, xmm1
 006BE27D    movzx eax, byte ptr ds:[ecx+0x03]
@@ -288,10 +294,10 @@
 006BE2C0    mov eax, dword ptr ds:[0x00CF6680]
 006BE2C5    movss xmm2, dword ptr ds:[esi+0x14]
 006BE2CA    movss xmm1, dword ptr ds:[esi+0x1C]
-006BE2CF    movups xmmword ptr ss:[ebp-0x30], xmm0
+006BE2CF    movups xmmword ptr ss:[ebp-0x30], xmm0          ; => [ Data: data_cf6668 ]
 006BE2D3    mov dword ptr ss:[ebp-0x18], eax
-006BE2D6    movq xmm0, qword ptr ds:[0x00CF6678]
-006BE2DE    subss xmm1, dword ptr ss:[ebp-0x18]
+006BE2D6    movq xmm0, qword ptr ds:[0x00CF6678]            ; => [ Data: data_cf6678 ]
+006BE2DE    subss xmm1, dword ptr ss:[ebp-0x18]             ; => [ Data: data_cf6680 ]
 006BE2E3    movq qword ptr ss:[ebp-0x20], xmm0
 006BE2E8    movss xmm0, dword ptr ds:[esi+0x18]
 006BE2ED    subss xmm0, dword ptr ss:[ebp-0x1C]
@@ -307,19 +313,19 @@
 006BE316    movss xmm0, dword ptr ds:[edi+0x50]
 006BE31B    subss xmm0, dword ptr ds:[edi+0x4C]
 006BE320    subss xmm3, dword ptr ds:[edi+0x4C]
-006BE325    divss xmm3, xmm0
+006BE325    divss xmm3, xmm0                                ; => [ Call: sub_4ac580 ]
 006BE329    movss xmm0, dword ptr ds:[0x00890E18]
 006BE331    comiss xmm1, xmm3
 006BE334    jnb 0x006BE356
 006BE336    comiss xmm3, xmm0
 006BE339    jb 0x006BE340
-006BE33B    xorps xmm0, xmm0
+006BE33B    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 006BE33E    jmp 0x006BE356
 006BE340    movaps xmm1, xmm0
 006BE343    mov ecx, 0x01
 006BE348    xorps xmm2, xmm2
 006BE34B    movaps xmm0, xmm3
-006BE34E    call 0x004AE110
+006BE34E    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 006BE353    xorps xmm1, xmm1
 006BE356    mov ecx, dword ptr ss:[ebp-0x60]
 006BE359    movzx eax, byte ptr ds:[ecx+0x03]
@@ -340,10 +346,10 @@
 006BE39C    mov eax, dword ptr ds:[0x00CF6680]
 006BE3A1    movss xmm2, dword ptr ds:[esi+0x14]
 006BE3A6    movss xmm1, dword ptr ds:[esi+0x1C]
-006BE3AB    movups xmmword ptr ss:[ebp-0x30], xmm0
+006BE3AB    movups xmmword ptr ss:[ebp-0x30], xmm0          ; => [ Data: data_cf6668 ]
 006BE3AF    mov dword ptr ss:[ebp-0x18], eax
-006BE3B2    movq xmm0, qword ptr ds:[0x00CF6678]
-006BE3BA    subss xmm1, dword ptr ss:[ebp-0x18]
+006BE3B2    movq xmm0, qword ptr ds:[0x00CF6678]            ; => [ Data: data_cf6678 ]
+006BE3BA    subss xmm1, dword ptr ss:[ebp-0x18]             ; => [ Data: data_cf6680 ]
 006BE3BF    movq qword ptr ss:[ebp-0x20], xmm0
 006BE3C4    movss xmm0, dword ptr ds:[esi+0x18]
 006BE3C9    subss xmm0, dword ptr ss:[ebp-0x1C]
@@ -358,11 +364,11 @@
 006BE3EF    movss xmm0, dword ptr ds:[edi+0x58]
 006BE3F4    subss xmm0, dword ptr ds:[edi+0x54]
 006BE3F9    subss xmm3, dword ptr ds:[edi+0x54]
-006BE3FE    divss xmm3, xmm0
+006BE3FE    divss xmm3, xmm0                                ; => [ Call: sub_4ac580 ]
 006BE402    xorps xmm0, xmm0
 006BE405    comiss xmm0, xmm3
 006BE408    jb 0x006BE40F
-006BE40A    xorps xmm1, xmm1
+006BE40A    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 006BE40D    jmp 0x006BE435
 006BE40F    movss xmm1, dword ptr ds:[0x00890E18]
 006BE417    comiss xmm3, xmm1
@@ -372,7 +378,7 @@
 006BE424    xorps xmm1, xmm1
 006BE427    movaps xmm0, xmm3
 006BE42A    call 0x004AE110
-006BE42F    movaps xmm1, xmm0
+006BE42F    movaps xmm1, xmm0                               ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 006BE432    xorps xmm0, xmm0
 006BE435    mov ecx, dword ptr ss:[ebp-0x60]
 006BE438    movzx eax, byte ptr ds:[ecx+0x03]
@@ -390,7 +396,7 @@
 006BE468    pop edi
 006BE469    xor ecx, ebp
 006BE46B    pop esi
-006BE46C    call 0x0075927A
+006BE46C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006BE471    mov esp, ebp
 006BE473    pop ebp
 006BE474    mov esp, ebx

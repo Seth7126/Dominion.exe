@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_579b90
+// 起始地址: 0x579b90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00579B90    push ebp
 00579B91    mov ebp, esp
 00579B93    push esi
@@ -257,7 +263,7 @@
 00579F64    cmp eax, 0xDC
 00579F69    jnbe 0x0057A395
 00579F6F    movzx eax, byte ptr ds:[eax+0x57AF60]
-00579F76    jmp dword ptr ds:[eax*4+0x57AF54]
+00579F76    jmp dword ptr ds:[eax*4+0x57AF54]               ; => [ Data: jump_table_57af54 ]
 00579F7D    cmp edi, 0x39
 00579F80    jnz 0x00579F8C
 00579F82    mov dword ptr ds:[esi+eax*4], 0x03
@@ -340,7 +346,7 @@
 0057A0CA    cmp eax, 0x25
 0057A0CD    jnbe 0x0057A385
 0057A0D3    movzx eax, byte ptr ds:[eax+0x57B04C]
-0057A0DA    jmp dword ptr ds:[eax*4+0x57B040]
+0057A0DA    jmp dword ptr ds:[eax*4+0x57B040]               ; => [ Data: jump_table_57b040 ]
 0057A0E1    cmp edx, 0x1302
 0057A0E7    jnz 0x0057A0C4
 0057A0E9    jmp 0x0057A110
@@ -374,7 +380,7 @@
 0057A169    cmp eax, 0x16
 0057A16C    jnbe 0x0057A3C5
 0057A172    movzx eax, byte ptr ds:[eax+0x57B084]
-0057A179    jmp dword ptr ds:[eax*4+0x57B074]
+0057A179    jmp dword ptr ds:[eax*4+0x57B074]               ; => [ Data: jump_table_57b074 ]
 0057A180    cmp edi, 0x27
 0057A183    jnz 0x0057A5C3
 0057A189    mov dword ptr ds:[esi+ecx*4], 0x04
@@ -433,14 +439,14 @@
 0057A286    cmp eax, 0xF5
 0057A28B    jnbe 0x0057A599
 0057A291    movzx eax, byte ptr ds:[eax+0x57B0A4]
-0057A298    jmp dword ptr ds:[eax*4+0x57B09C]
+0057A298    jmp dword ptr ds:[eax*4+0x57B09C]               ; => [ Data: jump_table_57b09c ]
 0057A29F    lea ebx, ds:[edx-0xF0B]
 0057A2A5    mov ecx, eax
 0057A2A7    cmp ebx, 0x38
 0057A2AA    jnbe 0x0057A37D
 0057A2B0    mov ecx, eax
 0057A2B2    movzx eax, byte ptr ds:[ebx+0x57B1A4]
-0057A2B9    jmp dword ptr ds:[eax*4+0x57B19C]
+0057A2B9    jmp dword ptr ds:[eax*4+0x57B19C]               ; => [ Data: lookup_table_57b1a4 | Data: jump_table_57b19c ]
 0057A2C0    cmp edi, 0x25
 0057A2C3    jnz 0x0057A4A9
 0057A2C9    mov dword ptr ds:[esi+ecx*4], 0x04
@@ -536,7 +542,7 @@
 0057A455    cmp eax, 0x46
 0057A458    jnbe 0x0057A479
 0057A45A    movzx eax, byte ptr ds:[eax+0x57B2F8]
-0057A461    jmp dword ptr ds:[eax*4+0x57B2E4]
+0057A461    jmp dword ptr ds:[eax*4+0x57B2E4]               ; => [ Data: jump_table_57b2e4 ]
 0057A468    cmp edi, 0x3F
 0057A46B    jnz 0x0057A534
 0057A471    mov dword ptr ds:[esi+ecx*4], 0x01
@@ -688,14 +694,14 @@
 0057A733    cmp eax, 0x0A
 0057A736    jnbe 0x0057A999
 0057A73C    movzx eax, byte ptr ds:[eax+0x57B490]
-0057A743    jmp dword ptr ds:[eax*4+0x57B484]
+0057A743    jmp dword ptr ds:[eax*4+0x57B484]               ; => [ Data: jump_table_57b484 | Data: lookup_table_57b490 ]
 0057A74A    cmp edi, 0x36
 0057A74D    jmp 0x0057A6A0
 0057A752    lea eax, ds:[edx-0x112B]
 0057A758    cmp eax, 0xF4
 0057A75D    jnbe 0x0057A9AE
 0057A763    movzx eax, byte ptr ds:[eax+0x57B4A8]
-0057A76A    jmp dword ptr ds:[eax*4+0x57B49C]
+0057A76A    jmp dword ptr ds:[eax*4+0x57B49C]               ; => [ Data: jump_table_57b49c ]
 0057A771    mov ebx, edx
 0057A773    mov ecx, eax
 0057A775    sub ebx, 0xA0B
@@ -1075,7 +1081,7 @@
 0057AD53    cmp eax, 0x15
 0057AD56    jnbe 0x0057AE4A
 0057AD5C    movzx eax, byte ptr ds:[eax+0x57B6FC]
-0057AD63    jmp dword ptr ds:[eax*4+0x57B6F4]
+0057AD63    jmp dword ptr ds:[eax*4+0x57B6F4]               ; => [ Data: lookup_table_57b6fc ]
 0057AD6A    mov ecx, eax
 0057AD6C    cmp edx, 0x1221
 0057AD72    jnle 0x0057ADB2

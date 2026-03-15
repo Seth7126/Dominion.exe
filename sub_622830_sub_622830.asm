@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_622830
+// 起始地址: 0x622830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00622830    push ebp
 00622831    mov ebp, esp
 00622833    push ecx
@@ -8,7 +14,7 @@
 0062283A    call 0x004B9480
 0062283F    mov edx, esi
 00622841    lea ecx, ds:[eax+0x08]
-00622844    call 0x004B9680
+00622844    call 0x004B9680                                 ; => [ Call: sub_4b9680 | Call: sub_4b9480 ]
 00622849    mov ecx, dword ptr ds:[eax+0x228]
 0062284F    lea edx, ds:[eax+0x28]
 00622852    test ecx, ecx
@@ -26,7 +32,7 @@
 0062286C    mov ecx, edi
 0062286E    call 0x0061CEE0
 00622873    cmp eax, dword ptr ss:[ebp+0x08]
-00622876    setz al
+00622876    setz al                                         ; => [ Call: sub_61cee0 ]
 00622879    pop edi
 0062287A    pop esi
 0062287B    pop ecx
@@ -45,10 +51,10 @@
 00622896    push 0x86F1E8
 0062289B    mov edx, 0x801800
 006228A0    mov ecx, 0x86B0C8
-006228A5    call 0x0063B870
+006228A5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: player.smartplays.numSmartplays >= 0 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: PlayerGetSmartplays ]
 006228AA    add esp, 0x0C
 006228AD    call 0x0063BC30
 006228B2    test al, al
-006228B4    jz 0x006228B7
+006228B4    jz 0x006228B7                                   ; => [ Call: sub_63bc30 ]
 006228B6    int3
-006228B7    call 0x0063BB00
+006228B7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,13 +1,19 @@
+// ============================================================
+// 函数名称: sub_565de0
+// 起始地址: 0x565de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00565DE0    push ebx
 00565DE1    push esi
 00565DE2    push edi
 00565DE3    mov ebx, edx
 00565DE5    mov esi, ecx
-00565DE7    call 0x00573400
+00565DE7    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00565DEC    mov edi, eax
 00565DEE    mov edx, esi
 00565DF0    mov ecx, dword ptr ds:[edi+0x04]
-00565DF3    call 0x0057DC30
+00565DF3    call 0x0057DC30                                 ; => [ Call: sub_57dc30 ]
 00565DF8    test eax, eax
 00565DFA    jz 0x00565E22
 00565DFC    mov ecx, dword ptr ds:[edi+0x04]
@@ -34,6 +40,6 @@
 00565E33    pop edi
 00565E34    test eax, eax
 00565E36    pop esi
-00565E37    setnz al
+00565E37    setnz al                                        ; => [ Call: sub_563590 ]
 00565E3A    pop ebx
 00565E3B    ret

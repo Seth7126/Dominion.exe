@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_74faa0
+// 起始地址: 0x74faa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074FAA0    push ebp
 0074FAA1    mov ebp, esp
 0074FAA3    sub esp, 0x110
-0074FAA9    mov eax, dword ptr ds:[0x008C4040]
+0074FAA9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0074FAAE    xor eax, ebp
 0074FAB0    mov dword ptr ss:[ebp-0x04], eax
 0074FAB3    push esi
@@ -11,13 +17,13 @@
 0074FAC0    mov esi, ecx
 0074FAC2    push 0x00
 0074FAC4    push eax
-0074FAC5    call 0x00761FC4
+0074FAC5    call 0x00761FC4                                 ; => [ Call: memset ]
 0074FACA    mov ecx, dword ptr ds:[0x019E2778]
 0074FAD0    add esp, 0x0C
-0074FAD3    mov edi, 0x801800
+0074FAD3    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 0074FAD8    push dword ptr ds:[esi]
 0074FADA    mov ecx, dword ptr ds:[ecx+0x14]
-0074FADD    call 0x0074CD80
+0074FADD    call 0x0074CD80                                 ; => [ Data: data_19e2778 | Call: sub_74cd80 | Type: WPARAM ]
 0074FAE2    add esp, 0x04
 0074FAE5    cmp eax, 0xFFFFFFFF
 0074FAE8    jnz 0x0074FB18
@@ -27,7 +33,7 @@
 0074FAF0    push edi
 0074FAF1    push edi
 0074FAF2    push edi
-0074FAF3    call 0x0074AFE0
+0074FAF3    call 0x0074AFE0                                 ; => [ Data: data_801800 | Call: sub_74afe0 ]
 0074FAF8    add esp, 0x10
 0074FAFB    mov dword ptr ds:[eax+0x18], 0x01
 0074FB02    push eax
@@ -35,18 +41,18 @@
 0074FB08    push 0x00
 0074FB0A    push 0x180
 0074FB0F    push dword ptr ds:[eax+0x14]
-0074FB12    call dword ptr ds:[0x00775308]
+0074FB12    call dword ptr ds:[0x00775308]                  ; => [ Data: data_19e2778 ]
 0074FB18    mov eax, dword ptr ds:[esi+0x14]
 0074FB1B    cmp eax, 0x63
 0074FB1E    jnbe 0x0074FC99
-0074FB24    movzx eax, byte ptr ds:[eax+0x74FD04]
+0074FB24    movzx eax, byte ptr ds:[eax+0x74FD04]           ; => [ Data: lookup_table_74fd04 ]
 0074FB2B    jmp dword ptr ds:[eax*4+0x74FCD8]
 0074FB32    mov eax, 0xFFFFFFFE
 0074FB37    pop edi
 0074FB38    pop esi
 0074FB39    mov ecx, dword ptr ss:[ebp-0x04]
 0074FB3C    xor ecx, ebp
-0074FB3E    call 0x0075927A
+0074FB3E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0074FB43    mov esp, ebp
 0074FB45    pop ebp
 0074FB46    ret
@@ -64,21 +70,21 @@
 0074FB67    lea eax, ss:[ebp-0x110]
 0074FB6D    push 0x104
 0074FB72    push eax
-0074FB73    call 0x0074AFA0
+0074FB73    call 0x0074AFA0                                 ; => [ Call: sub_74afa0 | String: %d,%d,%d ]
 0074FB78    add esp, 0x18
 0074FB7B    jmp 0x0074FC93
 0074FB80    mov ecx, dword ptr ds:[esi+0x10]
-0074FB83    call 0x0074CB60
-0074FB88    mov edi, eax
+0074FB83    call 0x0074CB60                                 ; => [ Call: sub_74cb60 ]
+0074FB88    mov edi, eax                                    ; => [ Data: data_1a9a490 ]
 0074FB8A    jmp 0x0074FC99
 0074FB8F    cmp dword ptr ds:[esi+0x10], 0x00
-0074FB93    mov edi, 0x8901E0
-0074FB98    mov eax, 0x88FF00
-0074FB9D    cmovz edi, eax
+0074FB93    mov edi, 0x8901E0                               ; => [ Data: data_8901e0 ]
+0074FB98    mov eax, 0x88FF00                               ; => [ Data: data_88ff00 ]
+0074FB9D    cmovz edi, eax                                  ; => [ Data: data_88ff00 ]
 0074FBA0    jmp 0x0074FC99
 0074FBA5    mov ecx, dword ptr ds:[esi+0x10]
-0074FBA8    call 0x0074CBE0
-0074FBAD    mov dword ptr ds:[esi+0x08], eax
+0074FBA8    call 0x0074CBE0                                 ; => [ Call: sub_74cbe0 ]
+0074FBAD    mov dword ptr ds:[esi+0x08], eax                ; => [ Data: data_1a9ac18 ]
 0074FBB0    mov eax, dword ptr ds:[esi+0x10]
 0074FBB3    mov edi, dword ptr ds:[eax+0x04]
 0074FBB6    jmp 0x0074FC99
@@ -99,7 +105,7 @@
 0074FBDD    lea eax, ss:[ebp-0x110]
 0074FBE3    push 0x104
 0074FBE8    push eax
-0074FBE9    call 0x0074AFA0
+0074FBE9    call 0x0074AFA0                                 ; => [ Call: sub_74afa0 | String: %d.%d.%d.%d ]
 0074FBEE    add esp, 0x1C
 0074FBF1    jmp 0x0074FC93
 0074FBF6    push 0x104
@@ -109,7 +115,7 @@
 0074FC04    push dword ptr ds:[esi+0x10]
 0074FC07    push 0x01
 0074FC09    push 0x400
-0074FC0E    call dword ptr ds:[0x0077511C]
+0074FC0E    call dword ptr ds:[0x0077511C]                  ; => [ Call: nullptr ]
 0074FC14    jmp 0x0074FC93
 0074FC16    push 0x104
 0074FC1B    lea eax, ss:[ebp-0x110]
@@ -121,7 +127,7 @@
 0074FC31    push dword ptr ds:[esi+0x10]
 0074FC34    push 0x01
 0074FC36    push 0x400
-0074FC3B    call dword ptr ds:[0x0077511C]
+0074FC3B    call dword ptr ds:[0x0077511C]                  ; => [ Call: nullptr ]
 0074FC41    lea edi, ss:[ebp-0x110]
 0074FC47    dec edi
 0074FC48    mov al, byte ptr ds:[edi+0x01]
@@ -147,7 +153,7 @@
 0074FC83    push dword ptr ds:[esi+0x10]
 0074FC86    push 0x00
 0074FC88    push 0x400
-0074FC8D    call dword ptr ds:[0x00775118]
+0074FC8D    call dword ptr ds:[0x00775118]                  ; => [ String: hh':'mm':'ss tt | String: hh':'mm':'ss tt ]
 0074FC93    lea edi, ss:[ebp-0x110]
 0074FC99    push dword ptr ds:[esi+0x14]
 0074FC9C    mov edx, dword ptr ds:[esi+0x04]
@@ -155,19 +161,19 @@
 0074FCA2    mov ecx, dword ptr ds:[esi]
 0074FCA4    push dword ptr ds:[esi+0x08]
 0074FCA7    push edi
-0074FCA8    call 0x0074AFE0
+0074FCA8    call 0x0074AFE0                                 ; => [ Call: sub_74afe0 ]
 0074FCAD    add esp, 0x10
 0074FCB0    push eax
 0074FCB1    mov eax, dword ptr ds:[0x019E2778]
 0074FCB6    push 0x00
 0074FCB8    push 0x180
 0074FCBD    push dword ptr ds:[eax+0x18]
-0074FCC0    call dword ptr ds:[0x00775308]
+0074FCC0    call dword ptr ds:[0x00775308]                  ; => [ Data: data_19e2778 | Type: LRESULT ]
 0074FCC6    mov ecx, dword ptr ss:[ebp-0x04]
 0074FCC9    pop edi
 0074FCCA    xor ecx, ebp
 0074FCCC    pop esi
-0074FCCD    call 0x0075927A
+0074FCCD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0074FCD2    mov esp, ebp
 0074FCD4    pop ebp
 0074FCD5    ret

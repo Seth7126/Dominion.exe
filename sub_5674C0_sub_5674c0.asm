@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5674c0
+// 起始地址: 0x5674c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005674C0    push ebp
 005674C1    mov ebp, esp
 005674C3    and esp, 0xFFFFFFF8
@@ -6,12 +12,12 @@
 005674CA    push edi
 005674CB    mov dword ptr ss:[esp+0x0C], edx
 005674CF    mov esi, ecx
-005674D1    call 0x00573400
+005674D1    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005674D6    mov edi, eax
 005674D8    xor eax, eax
 005674DA    test byte ptr ss:[ebp+0x10], 0x01
 005674DE    jz 0x005674E5
-005674E0    call 0x0056B780
+005674E0    call 0x0056B780                                 ; => [ Call: sub_56b780 ]
 005674E5    push dword ptr ds:[0x007BFAD4]
 005674EB    mov edx, dword ptr ds:[edi+0x0C]
 005674EE    push dword ptr ds:[0x007BFAD0]
@@ -30,4 +36,4 @@
 00567517    pop esi
 00567518    mov esp, ebp
 0056751A    pop ebp
-0056751B    ret
+0056751B    ret                                             ; => [ Call: nullptr | Call: sub_582eb0 ]

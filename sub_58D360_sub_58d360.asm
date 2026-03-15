@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_58d360
+// 起始地址: 0x58d360
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0058D360    push ebp
 0058D361    mov ebp, esp
 0058D363    push ecx
@@ -11,7 +17,7 @@
 0058D371    mov dword ptr ss:[ebp-0x04], eax
 0058D374    cmp edi, 0x320
 0058D37A    jb 0x0058D381
-0058D37C    call 0x00591930
+0058D37C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058D381    imul eax, edi, 0x64
 0058D384    mov edi, dword ptr ss:[ebp-0x04]
 0058D387    mov edi, dword ptr ds:[eax+edi*1+0x1A4C]
@@ -22,7 +28,7 @@
 0058D399    mov dword ptr ss:[ebp+0x08], eax
 0058D39C    cmp eax, 0x320
 0058D3A1    jb 0x0058D3AB
-0058D3A3    call 0x00591930
+0058D3A3    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0058D3A8    mov eax, dword ptr ss:[ebp+0x08]
 0058D3AB    mov ecx, dword ptr ss:[ebp-0x04]
 0058D3AE    imul eax, eax, 0x64

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5cc6c0
+// 起始地址: 0x5cc6c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005CC6C0    push ebx
 005CC6C1    push esi
 005CC6C2    push edi
@@ -17,9 +23,9 @@
 005CC6F3    add ecx, 0xFFFFF2B5
 005CC6F9    cmp ecx, 0xD2
 005CC6FF    jnbe 0x005CC8E6
-005CC705    movzx eax, byte ptr ds:[ecx+0x5CC930]
+005CC705    movzx eax, byte ptr ds:[ecx+0x5CC930]           ; => [ Call: sub_5cbb20 ]
 005CC70C    jmp dword ptr ds:[eax*4+0x5CC918]
-005CC713    mov ebx, 0xD3D
+005CC713    mov ebx, 0xD3D                                  ; => [ Call: nullptr ]
 005CC718    jmp 0x005CC734
 005CC71A    mov ebx, 0xE00
 005CC71F    jmp 0x005CC734
@@ -28,7 +34,7 @@
 005CC728    mov ebx, 0xE16
 005CC72D    jmp 0x005CC734
 005CC72F    mov ebx, 0xE17
-005CC734    mov eax, 0xB8199C
+005CC734    mov eax, 0xB8199C                               ; => [ Data: data_b8199c ]
 005CC739    nop dword ptr ds:[eax], eax
 005CC740    mov ecx, dword ptr ds:[eax]
 005CC742    test ecx, ecx
@@ -40,15 +46,15 @@
 005CC752    jl 0x005CC740
 005CC754    jmp 0x005CC75B
 005CC756    mov ebx, 0x1300
-005CC75B    call 0x005CC650
+005CC75B    call 0x005CC650                                 ; => [ Call: sub_5cc650 ]
 005CC760    mov esi, 0x07
-005CC765    mov edi, 0xB8206C
+005CC765    mov edi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005CC76A    cmp ebx, eax
 005CC76C    jnz 0x005CC7A0
 005CC76E    nop
 005CC770    cmp esi, 0x48
 005CC773    jl 0x005CC77A
-005CC775    call 0x00591930
+005CC775    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CC77A    cmp dword ptr ds:[edi], 0xF3A
 005CC780    jz 0x005CC7C1
 005CC782    cmp dword ptr ds:[edi+0x04], 0xF3A
@@ -60,7 +66,7 @@
 005CC797    jmp 0x005CC7BF
 005CC7A0    cmp esi, 0x48
 005CC7A3    jl 0x005CC7AA
-005CC7A5    call 0x00591930
+005CC7A5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CC7AA    cmp dword ptr ds:[edi], ebx
 005CC7AC    jz 0x005CC7C1
 005CC7AE    cmp dword ptr ds:[edi+0x04], ebx
@@ -73,11 +79,11 @@
 005CC7C1    test esi, esi
 005CC7C3    jnz 0x005CC830
 005CC7C5    mov esi, 0x07
-005CC7CA    mov edi, 0xB8206C
+005CC7CA    mov edi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005CC7CF    nop
 005CC7D0    cmp esi, 0x48
 005CC7D3    jl 0x005CC7DA
-005CC7D5    call 0x00591930
+005CC7D5    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CC7DA    cmp dword ptr ds:[edi], 0x121C
 005CC7E0    jz 0x005CC7F9
 005CC7E2    cmp dword ptr ds:[edi+0x04], 0x121C
@@ -90,10 +96,10 @@
 005CC7F9    test esi, esi
 005CC7FB    jnz 0x005CC830
 005CC7FD    mov esi, 0x07
-005CC802    mov edi, 0xB8206C
+005CC802    mov edi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005CC807    cmp esi, 0x48
 005CC80A    jl 0x005CC811
-005CC80C    call 0x00591930
+005CC80C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005CC811    cmp dword ptr ds:[edi], 0x1517
 005CC817    jz 0x005CC830
 005CC819    cmp dword ptr ds:[edi+0x04], 0x1517
@@ -107,13 +113,13 @@
 005CC832    push 0x00
 005CC834    or edx, 0xFFFFFFFF
 005CC837    mov ecx, esi
-005CC839    call 0x005CC410
+005CC839    call 0x005CC410                                 ; => [ Call: sub_5cc410 ]
 005CC83E    add esp, 0x08
 005CC841    test eax, eax
 005CC843    jnz 0x005CC8D1
 005CC849    imul ecx, dword ptr ds:[0x00B809E4], 0x1C30
-005CC853    mov eax, dword ptr ds:[0x00B809E0]
-005CC858    add ecx, eax
+005CC853    mov eax, dword ptr ds:[0x00B809E0]              ; => [ Data: data_b809e0 ]
+005CC858    add ecx, eax                                    ; => [ Data: data_b809e4 ]
 005CC85A    cmp eax, ecx
 005CC85C    jnb 0x005CC8D5
 005CC85E    nop
@@ -122,9 +128,9 @@
 005CC86C    add eax, 0x1C30
 005CC871    cmp eax, ecx
 005CC873    jb 0x005CC860
-005CC875    push 0x86F52C
+005CC875    push 0x86F52C                                   ; => [ String: BoardAreaPile ]
 005CC87A    push 0xB7E
-005CC87F    mov ecx, 0x803BE4
+005CC87F    mov ecx, 0x803BE4                               ; => [ String: retval ]
 005CC884    jmp 0x005CC8F5
 005CC886    cmp eax, 0xFFFFFFFF
 005CC889    jz 0x005CC8D5
@@ -141,9 +147,9 @@
 005CC8B0    add eax, 0x1C30
 005CC8B5    cmp eax, ecx
 005CC8B7    jb 0x005CC8A4
-005CC8B9    push 0x86F52C
+005CC8B9    push 0x86F52C                                   ; => [ String: BoardAreaPile ]
 005CC8BE    push 0xB7E
-005CC8C3    mov ecx, 0x803BE4
+005CC8C3    mov ecx, 0x803BE4                               ; => [ String: retval ]
 005CC8C8    jmp 0x005CC8F5
 005CC8CA    cmp eax, 0xFFFFFFFF
 005CC8CD    jz 0x005CC8D5
@@ -152,19 +158,19 @@
 005CC8D2    pop esi
 005CC8D3    pop ebx
 005CC8D4    ret
-005CC8D5    push 0x86F52C
+005CC8D5    push 0x86F52C                                   ; => [ String: BoardAreaPile ]
 005CC8DA    push 0xB7E
-005CC8DF    mov ecx, 0x803BE4
+005CC8DF    mov ecx, 0x803BE4                               ; => [ String: retval ]
 005CC8E4    jmp 0x005CC8F5
-005CC8E6    push 0x86F52C
+005CC8E6    push 0x86F52C                                   ; => [ String: BoardAreaPile ]
 005CC8EB    push 0xB51
-005CC8F0    mov ecx, 0x801AA4
+005CC8F0    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005CC8F5    push 0x86F1E8
 005CC8FA    mov edx, 0x801800
-005CC8FF    call 0x0063B870
+005CC8FF    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: BoardAreaPile ]
 005CC904    add esp, 0x0C
 005CC907    call 0x0063BC30
 005CC90C    test al, al
-005CC90E    jz 0x005CC911
+005CC90E    jz 0x005CC911                                   ; => [ Call: sub_63bc30 ]
 005CC910    int3
-005CC911    call 0x0063BB00
+005CC911    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

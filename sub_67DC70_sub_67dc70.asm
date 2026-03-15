@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_67dc70
+// 起始地址: 0x67dc70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067DC70    push ebp
 0067DC71    mov ebp, esp
 0067DC73    sub esp, 0xB0
-0067DC79    mov eax, dword ptr ds:[0x008C4040]
+0067DC79    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0067DC7E    xor eax, ebp
 0067DC80    mov dword ptr ss:[ebp-0x08], eax
 0067DC83    push ebx
@@ -14,7 +20,7 @@
 0067DC92    lea edx, ds:[ebx+0x84]
 0067DC98    mov dword ptr ss:[ebp-0x10], esi
 0067DC9B    mov ecx, esi
-0067DC9D    call 0x0067EB10
+0067DC9D    call 0x0067EB10                                 ; => [ Call: sub_67eb10 ]
 0067DCA2    test al, al
 0067DCA4    jz 0x0067DCBA
 0067DCA6    xorps xmm0, xmm0
@@ -23,7 +29,7 @@
 0067DCAB    pop ebx
 0067DCAC    mov ecx, dword ptr ss:[ebp-0x08]
 0067DCAF    xor ecx, ebp
-0067DCB1    call 0x0075927A
+0067DCB1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067DCB6    mov esp, ebp
 0067DCB8    pop ebp
 0067DCB9    ret
@@ -37,7 +43,7 @@
 0067DCE0    mov ecx, esi
 0067DCE2    call 0x0067EB10
 0067DCE7    test al, al
-0067DCE9    jz 0x0067DD17
+0067DCE9    jz 0x0067DD17                                   ; => [ Call: sub_67eb10 ]
 0067DCEB    mov eax, dword ptr ds:[ebx+0x110]
 0067DCF1    cmp eax, 0x04
 0067DCF4    jz 0x0067DD17
@@ -57,7 +63,7 @@
 0067DD19    lea eax, ss:[ebp-0xAC]
 0067DD1F    push 0x00
 0067DD21    push eax
-0067DD22    call 0x00761FC4
+0067DD22    call 0x00761FC4                                 ; => [ Call: memset ]
 0067DD27    movss xmm2, dword ptr ss:[ebp-0x0C]
 0067DD2C    lea eax, ss:[ebp-0x20]
 0067DD2F    add esp, 0x0C
@@ -71,17 +77,17 @@
 0067DD54    lea esi, ss:[ebp-0xAC]
 0067DD5A    movaps xmm1, xmm2
 0067DD5D    movups xmm0, xmmword ptr ds:[eax]
-0067DD60    movups xmmword ptr ss:[ebp-0xAC], xmm0
+0067DD60    movups xmmword ptr ss:[ebp-0xAC], xmm0          ; => [ Call: sub_67d460 ]
 0067DD67    jmp 0x0067DD6F
 0067DD69    lea esi, ds:[ebx+0x84]
 0067DD6F    mov edi, ebx
 0067DD71    mov ecx, 0x21
-0067DD76    rep movsd
+0067DD76    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0067DD78    mov esi, dword ptr ss:[ebp-0x10]
 0067DD7B    lea edi, ds:[ebx+0x84]
 0067DD81    movss dword ptr ds:[ebx+0x118], xmm1
 0067DD89    mov ecx, 0x21
-0067DD8E    rep movsd
+0067DD8E    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0067DD90    mov ecx, dword ptr ss:[ebp+0x08]
 0067DD93    pop edi
 0067DD94    pop esi
@@ -96,7 +102,7 @@
 0067DDC3    mov ecx, dword ptr ss:[ebp-0x08]
 0067DDC6    xor ecx, ebp
 0067DDC8    pop ebx
-0067DDC9    call 0x0075927A
+0067DDC9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0067DDCE    mov esp, ebp
 0067DDD0    pop ebp
 0067DDD1    ret
@@ -105,10 +111,10 @@
 0067DDDC    push 0x8739B4
 0067DDE1    mov edx, 0x801800
 0067DDE6    mov ecx, 0x801AA4
-0067DDEB    call 0x0063B870
+0067DDEB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: PropDynamicSet | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: Halt ]
 0067DDF0    add esp, 0x0C
 0067DDF3    call 0x0063BC30
 0067DDF8    test al, al
-0067DDFA    jz 0x0067DDFD
+0067DDFA    jz 0x0067DDFD                                   ; => [ Call: sub_63bc30 ]
 0067DDFC    int3
-0067DDFD    call 0x0063BB00
+0067DDFD    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

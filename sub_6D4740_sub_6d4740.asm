@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6d4740
+// 起始地址: 0x6d4740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006D4740    push ebp
 006D4741    mov ebp, esp
 006D4743    and esp, 0xFFFFFFF8
@@ -17,11 +23,11 @@
 006D4763    pop ebx
 006D4764    mov esp, ebp
 006D4766    pop ebp
-006D4767    ret
+006D4767    ret                                             ; => [ Call: sub_6d24b0 ]
 006D4768    xorps xmm0, xmm0
 006D476B    mov dword ptr ss:[esp+0x10], 0x01
 006D4773    lea eax, ss:[esp+0x10]
-006D4777    mov dword ptr ss:[esp+0x14], 0x00
+006D4777    mov dword ptr ss:[esp+0x14], 0x00               ; => [ Call: __builtin_memset ]
 006D477F    push eax
 006D4780    movups xmmword ptr ss:[esp+0x1C], xmm0
 006D4785    mov dword ptr ss:[esp+0x3C], 0x00
@@ -36,7 +42,7 @@
 006D47C1    mov ebx, dword ptr ss:[ebp+0x08]
 006D47C4    add esp, 0x04
 006D47C7    test eax, eax
-006D47C9    jz 0x006D480A
+006D47C9    jz 0x006D480A                                   ; => [ Call: sub_6d3180 ]
 006D47CB    mov eax, dword ptr ss:[esp+0x3C]
 006D47CF    lea ecx, ds:[eax*8]
 006D47D6    sub ecx, eax
@@ -53,7 +59,7 @@
 006D47F3    call 0x006D3180
 006D47F8    add esp, 0x04
 006D47FB    test eax, eax
-006D47FD    jz 0x006D480A
+006D47FD    jz 0x006D480A                                   ; => [ Call: sub_6d3180 ]
 006D47FF    mov eax, dword ptr ss:[esp+0x6C]
 006D4803    pop edi
 006D4804    pop esi

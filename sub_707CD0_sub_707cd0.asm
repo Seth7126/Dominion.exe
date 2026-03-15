@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_707cd0
+// 起始地址: 0x707cd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00707CD0    push ebp
 00707CD1    mov ebp, esp
 00707CD3    sub esp, 0x08
@@ -6,8 +12,8 @@
 00707CD9    mov dword ptr ss:[ebp-0x04], edx
 00707CDC    push esi
 00707CDD    push edi
-00707CDE    xor edi, edi
-00707CE0    xor esi, esi
+00707CDE    xor edi, edi                                    ; => [ Call: nullptr ]
+00707CE0    xor esi, esi                                    ; => [ Call: nullptr ]
 00707CE2    mov eax, dword ptr ds:[ebx]
 00707CE4    cmp eax, edx
 00707CE6    jz 0x00707D49
@@ -87,7 +93,7 @@
 00707D87    mov ecx, ebx
 00707D89    lea eax, ds:[edi-0x02]
 00707D8C    mov dword ptr ds:[ebx+0x04], eax
-00707D8F    call 0x00707BE0
+00707D8F    call 0x00707BE0                                 ; => [ Call: sub_707be0 ]
 00707D94    mov edx, dword ptr ss:[ebp-0x04]
 00707D97    add ebx, 0x08
 00707D9A    inc edx
@@ -98,7 +104,7 @@
 00707DA6    lea ecx, ds:[ecx+edx*8]
 00707DA9    mov dword ptr ds:[ecx], edi
 00707DAB    mov dword ptr ds:[ecx+0x04], esi
-00707DAE    call 0x00707BE0
+00707DAE    call 0x00707BE0                                 ; => [ Call: sub_707be0 ]
 00707DB3    mov eax, dword ptr ss:[ebp-0x04]
 00707DB6    pop edi
 00707DB7    pop esi

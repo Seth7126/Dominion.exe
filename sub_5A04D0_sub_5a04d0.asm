@@ -1,15 +1,21 @@
+// ============================================================
+// 函数名称: sub_5a04d0
+// 起始地址: 0x5a04d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A04D0    push ebx
 005A04D1    push esi
 005A04D2    push edi
 005A04D3    cmp ecx, 0x03
 005A04D6    jnbe 0x005A058C
-005A04DC    mov ebx, dword ptr ds:[0x01597E30]
+005A04DC    mov ebx, dword ptr ds:[0x01597E30]              ; => [ Data: data_1597e30 ]
 005A04E2    jmp dword ptr ds:[ecx*4+0x5A05BC]
 005A04E9    mov ecx, dword ptr ds:[0x01597E30]
 005A04EF    xor edx, edx
-005A04F1    mov eax, dword ptr ds:[0x01597E2C]
+005A04F1    mov eax, dword ptr ds:[0x01597E2C]              ; => [ Data: data_1597e2c ]
 005A04F6    shl ecx, 0x06
-005A04F9    add ecx, eax
+005A04F9    add ecx, eax                                    ; => [ Data: data_1597e30 ]
 005A04FB    cmp eax, ecx
 005A04FD    jz 0x005A050E
 005A04FF    nop
@@ -24,7 +30,7 @@
 005A0511    pop esi
 005A0512    pop ebx
 005A0513    ret
-005A0514    mov eax, dword ptr ds:[0x01597E2C]
+005A0514    mov eax, dword ptr ds:[0x01597E2C]              ; => [ Data: data_1597e2c ]
 005A0519    mov edx, ebx
 005A051B    shl edx, 0x06
 005A051E    mov ecx, eax
@@ -63,14 +69,14 @@
 005A0575    pop edi
 005A0576    pop esi
 005A0577    pop ebx
-005A0578    ret
+005A0578    ret                                             ; => [ Data: data_1597e30 ]
 005A0579    mov eax, dword ptr ds:[0x01597E30]
 005A057E    mov edx, ebx
 005A0580    sub eax, edx
 005A0582    pop edi
 005A0583    pop esi
 005A0584    pop ebx
-005A0585    ret
+005A0585    ret                                             ; => [ Data: data_1597e30 ]
 005A0586    pop edi
 005A0587    pop esi
 005A0588    mov eax, ebx
@@ -81,10 +87,10 @@
 005A0596    push 0x82487C
 005A059B    mov edx, 0x801800
 005A05A0    mov ecx, 0x801AA4
-005A05A5    call 0x0063B870
+005A05A5    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomLog.cpp | Call: sub_63b870 | Data: data_801800 | String: DomLogTotalLines | String: Halt ]
 005A05AA    add esp, 0x0C
 005A05AD    call 0x0063BC30
 005A05B2    test al, al
-005A05B4    jz 0x005A05B7
+005A05B4    jz 0x005A05B7                                   ; => [ Call: sub_63bc30 ]
 005A05B6    int3
-005A05B7    call 0x0063BB00
+005A05B7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

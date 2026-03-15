@@ -1,18 +1,24 @@
+// ============================================================
+// 函数名称: sub_4cabd0
+// 起始地址: 0x4cabd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004CABD0    push ebp
 004CABD1    mov ebp, esp
 004CABD3    push 0xFFFFFFFF
-004CABD5    push 0x76324D
+004CABD5    push 0x76324D                                   ; => [ Call: __ehhandler$?_Tidy@ios_base@std@@AAEXXZ | Type: EHRegistrationNode ]
 004CABDA    mov eax, dword ptr fs:[0x00000000]
-004CABE0    push eax
+004CABE0    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 004CABE1    sub esp, 0x10
 004CABE4    push ebx
 004CABE5    push esi
 004CABE6    push edi
 004CABE7    mov eax, dword ptr ds:[0x008C4040]
 004CABEC    xor eax, ebp
-004CABEE    push eax
+004CABEE    push eax                                        ; => [ Data: __security_cookie ]
 004CABEF    lea eax, ss:[ebp-0x0C]
-004CABF2    mov dword ptr fs:[0x00000000], eax
+004CABF2    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004CABF8    mov edx, ecx
 004CABFA    mov dword ptr ss:[ebp-0x18], edx
 004CABFD    mov ecx, dword ptr ss:[ebp+0x18]
@@ -20,9 +26,9 @@
 004CAC03    cmp edi, ecx
 004CAC05    jnl 0x004CAED3
 004CAC0B    mov eax, dword ptr ss:[ebp+0x08]
-004CAC0E    xor esi, esi
-004CAC10    mov dword ptr ss:[ebp-0x1C], esi
-004CAC13    mov ebx, 0x19E58FC
+004CAC0E    xor esi, esi                                    ; => [ Call: nullptr ]
+004CAC10    mov dword ptr ss:[ebp-0x1C], esi                ; => [ Call: nullptr ]
+004CAC13    mov ebx, 0x19E58FC                              ; => [ Data: data_19e58fc ]
 004CAC18    lea eax, ds:[eax+edi*4]
 004CAC1B    mov dword ptr ss:[ebp-0x14], eax
 004CAC1E    nop
@@ -33,7 +39,7 @@
 004CAC2D    cmp dword ptr ds:[ebx+0x04], esi
 004CAC30    jnz 0x004CAC5E
 004CAC32    cmp dword ptr ds:[ebx+0x08], 0x00
-004CAC36    jnz 0x004CAC5E
+004CAC36    jnz 0x004CAC5E                                  ; => [ String: tblStoreItems ]
 004CAC38    mov edi, dword ptr ds:[ebx+0x1C]
 004CAC3B    test edi, edi
 004CAC3D    jz 0x004CAC5E
@@ -43,19 +49,19 @@
 004CAC4A    imul eax, eax, 0x18D0
 004CAC50    add eax, dword ptr ds:[0x00C23BA8]
 004CAC56    cmp dword ptr ds:[eax+0x18C8], edi
-004CAC5C    jz 0x004CAC91
+004CAC5C    jz 0x004CAC91                                   ; => [ Data: data_c23ba8 | Data: data_c23bac ]
 004CAC5E    mov ecx, dword ptr ss:[ebp-0x18]
 004CAC61    mov edx, 0x804790
 004CAC66    push esi
 004CAC67    call 0x0067BE20
 004CAC6C    mov ecx, dword ptr ss:[ebp+0x18]
-004CAC6F    mov edi, eax
+004CAC6F    mov edi, eax                                    ; => [ Call: sub_67be20 ]
 004CAC71    add esp, 0x04
 004CAC74    mov dword ptr ds:[ebx+0x1C], edi
 004CAC77    test edi, edi
 004CAC79    jz 0x004CAC91
 004CAC7B    mov eax, dword ptr ss:[ebp-0x18]
-004CAC7E    mov dword ptr ds:[ebx], 0x804790
+004CAC7E    mov dword ptr ds:[ebx], 0x804790                ; => [ String: tblStoreItems ]
 004CAC84    mov dword ptr ds:[ebx-0x04], eax
 004CAC87    mov dword ptr ds:[ebx+0x04], esi
 004CAC8A    mov dword ptr ds:[ebx+0x08], 0x00
@@ -69,41 +75,41 @@
 004CACA7    cmp dword ptr ss:[ebp+0x10], 0x01
 004CACAB    jnz 0x004CACCF
 004CACAD    mov ecx, edi
-004CACAF    call 0x0064E7A0
+004CACAF    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004CACB4    movss xmm3, dword ptr ds:[0x00890E18]
 004CACBC    mov edx, 0x8DC3BC
 004CACC1    push 0x00
 004CACC3    push 0xFFFFFFFF
 004CACC5    mov ecx, eax
-004CACC7    call 0x00665DB0
+004CACC7    call 0x00665DB0                                 ; => [ Call: sub_665db0 | Data: data_8dc3bc ]
 004CACCC    add esp, 0x08
 004CACCF    mov esi, dword ptr ds:[esi+0x20]
 004CACD2    mov ecx, edi
-004CACD4    call 0x0064E7A0
+004CACD4    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004CACD9    movss xmm3, dword ptr ds:[0x00890E18]
 004CACE1    mov edx, esi
 004CACE3    push 0x00
 004CACE5    push 0xFFFFFFFF
 004CACE7    mov ecx, eax
-004CACE9    call 0x00665DB0
+004CACE9    call 0x00665DB0                                 ; => [ Call: sub_665db0 ]
 004CACEE    mov esi, dword ptr ss:[ebp-0x10]
 004CACF1    add esp, 0x08
 004CACF4    mov ecx, esi
-004CACF6    call 0x004DAE80
+004CACF6    call 0x004DAE80                                 ; => [ Call: sub_4dae80 ]
 004CACFB    cmp eax, 0x07
 004CACFE    jnbe 0x004CAEF5
 004CAD04    jmp dword ptr ds:[eax*4+0x4CAF28]
 004CAD0B    test edi, edi
 004CAD0D    jz 0x004CAE7F
 004CAD13    mov ecx, edi
-004CAD15    call 0x0064E7A0
-004CAD1A    mov edx, 0x8DC380
+004CAD15    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+004CAD1A    mov edx, 0x8DC380                               ; => [ Data: data_8dc380 ]
 004CAD1F    jmp 0x004CAE69
 004CAD24    test edi, edi
 004CAD26    jz 0x004CAE7F
 004CAD2C    mov ecx, edi
-004CAD2E    call 0x0064E7A0
-004CAD33    mov edx, 0x8DC38C
+004CAD2E    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+004CAD33    mov edx, 0x8DC38C                               ; => [ Data: data_8dc38c ]
 004CAD38    jmp 0x004CAE69
 004CAD3D    test edi, edi
 004CAD3F    jz 0x004CAE7F
@@ -112,103 +118,103 @@
 004CAD4B    cmp dword ptr ds:[esi], 0x02
 004CAD4E    jnz 0x004CAD72
 004CAD50    mov ecx, edi
-004CAD52    call 0x0064E7A0
+004CAD52    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004CAD57    movss xmm3, dword ptr ds:[0x00890E18]
 004CAD5F    mov edx, 0x8DC3F8
 004CAD64    push 0x00
 004CAD66    push 0xFFFFFFFF
 004CAD68    mov ecx, eax
-004CAD6A    call 0x00665DB0
+004CAD6A    call 0x00665DB0                                 ; => [ Data: data_8dc3f8 | Call: sub_665db0 ]
 004CAD6F    add esp, 0x08
 004CAD72    mov ecx, dword ptr ds:[esi]
 004CAD74    call 0x004E3B00
 004CAD79    test al, al
-004CAD7B    jz 0x004CAD8E
+004CAD7B    jz 0x004CAD8E                                   ; => [ Call: sub_4e3b00 ]
 004CAD7D    mov ecx, edi
-004CAD7F    call 0x0064E7A0
-004CAD84    mov edx, 0x8DC3B0
+004CAD7F    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+004CAD84    mov edx, 0x8DC3B0                               ; => [ Data: data_8dc3b0 ]
 004CAD89    jmp 0x004CAE69
-004CAD8E    mov dword ptr ss:[ebp-0x10], 0x801800
+004CAD8E    mov dword ptr ss:[ebp-0x10], 0x801800           ; => [ Data: data_801800 ]
 004CAD95    lea edx, ss:[ebp-0x10]
 004CAD98    mov dword ptr ss:[ebp-0x04], 0x00
 004CAD9F    mov ecx, esi
 004CADA1    call 0x0064BBA0
 004CADA6    test al, al
-004CADA8    jz 0x004CADDE
+004CADA8    jz 0x004CADDE                                   ; => [ Call: sub_64bba0 ]
 004CADAA    mov ecx, edi
-004CADAC    call 0x0064E7A0
+004CADAC    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004CADB1    movss xmm3, dword ptr ds:[0x00890E18]
 004CADB9    mov edx, 0x8DC3E0
 004CADBE    push 0x00
 004CADC0    push 0xFFFFFFFF
 004CADC2    mov ecx, eax
-004CADC4    call 0x00665DB0
+004CADC4    call 0x00665DB0                                 ; => [ Call: sub_665db0 | Data: data_8dc3e0 ]
 004CADC9    lea eax, ss:[ebp-0x10]
 004CADCC    mov edx, 0x8DC3EC
 004CADD1    push 0xFFFFFFFF
 004CADD3    push eax
 004CADD4    mov ecx, edi
-004CADD6    call 0x00666380
+004CADD6    call 0x00666380                                 ; => [ Call: sub_666380 | Data: data_8dc3ec ]
 004CADDB    add esp, 0x10
 004CADDE    mov ecx, edi
-004CADE0    call 0x0064E7A0
+004CADE0    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004CADE5    movss xmm3, dword ptr ds:[0x00890E18]
 004CADED    mov edx, 0x8DC398
 004CADF2    push 0x00
 004CADF4    push 0xFFFFFFFF
 004CADF6    mov ecx, eax
-004CADF8    call 0x00665DB0
+004CADF8    call 0x00665DB0                                 ; => [ Data: data_8dc398 | Call: sub_665db0 ]
 004CADFD    add esp, 0x08
 004CAE00    mov dword ptr ss:[ebp-0x04], 0x01
 004CAE07    cmp dword ptr ds:[0x00CF65BC], 0x00
-004CAE0E    jz 0x004CAE3E
+004CAE0E    jz 0x004CAE3E                                   ; => [ Data: data_cf65bc ]
 004CAE10    mov eax, dword ptr ss:[ebp-0x10]
 004CAE13    test eax, eax
 004CAE15    jz 0x004CAE3E
 004CAE17    cmp byte ptr ds:[eax], 0x00
 004CAE1A    jz 0x004CAE3E
 004CAE1C    lea ecx, ss:[ebp-0x10]
-004CAE1F    call 0x0063D4E0
+004CAE1F    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 004CAE24    mov ecx, eax
 004CAE26    add dword ptr ds:[ecx+0x04], 0xFFFFFFFF
 004CAE2A    jnz 0x004CAE3E
 004CAE2C    mov edx, dword ptr ds:[ecx+0x0C]
 004CAE2F    add edx, 0x10
-004CAE32    call 0x0064C080
-004CAE37    mov dword ptr ss:[ebp-0x10], 0x801800
+004CAE32    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
+004CAE37    mov dword ptr ss:[ebp-0x10], 0x801800           ; => [ Data: data_801800 ]
 004CAE3E    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 004CAE45    jmp 0x004CAE7F
 004CAE47    test edi, edi
 004CAE49    jz 0x004CAE7F
 004CAE4B    mov ecx, edi
-004CAE4D    call 0x0064E7A0
-004CAE52    mov edx, 0x8DC3A4
+004CAE4D    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+004CAE52    mov edx, 0x8DC3A4                               ; => [ Data: data_8dc3a4 ]
 004CAE57    jmp 0x004CAE69
 004CAE59    test edi, edi
 004CAE5B    jz 0x004CAE7F
 004CAE5D    mov ecx, edi
-004CAE5F    call 0x0064E7A0
-004CAE64    mov edx, 0x8DC374
+004CAE5F    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
+004CAE64    mov edx, 0x8DC374                               ; => [ Data: data_8dc374 ]
 004CAE69    movss xmm3, dword ptr ds:[0x00890E18]
 004CAE71    mov ecx, eax
 004CAE73    push 0x00
 004CAE75    push 0xFFFFFFFF
-004CAE77    call 0x00665DB0
+004CAE77    call 0x00665DB0                                 ; => [ Call: sub_665db0 ]
 004CAE7C    add esp, 0x08
 004CAE7F    mov ecx, dword ptr ds:[esi]
 004CAE81    call 0x004BE9D0
 004CAE86    test al, al
 004CAE88    jz 0x004CAEB0
 004CAE8A    test edi, edi
-004CAE8C    jz 0x004CAEB0
+004CAE8C    jz 0x004CAEB0                                   ; => [ Call: sub_4be9d0 ]
 004CAE8E    mov ecx, edi
-004CAE90    call 0x0064E7A0
+004CAE90    call 0x0064E7A0                                 ; => [ Call: sub_64e7a0 ]
 004CAE95    movss xmm3, dword ptr ds:[0x00890E18]
 004CAE9D    mov edx, 0x8DB988
 004CAEA2    push 0x00
 004CAEA4    push 0xFFFFFFFF
 004CAEA6    mov ecx, eax
-004CAEA8    call 0x00665DB0
+004CAEA8    call 0x00665DB0                                 ; => [ Data: data_8db988 | Call: sub_665db0 ]
 004CAEAD    add esp, 0x08
 004CAEB0    mov ecx, dword ptr ss:[ebp+0x18]
 004CAEB3    mov esi, dword ptr ss:[ebp-0x1C]
@@ -225,7 +231,7 @@
 004CAED3    sub ecx, edi
 004CAED5    mov eax, ecx
 004CAED7    mov ecx, dword ptr ss:[ebp-0x0C]
-004CAEDA    mov dword ptr fs:[0x00000000], ecx
+004CAEDA    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004CAEE1    pop ecx
 004CAEE2    pop edi
 004CAEE3    pop esi
@@ -233,18 +239,18 @@
 004CAEE5    mov esp, ebp
 004CAEE7    pop ebp
 004CAEE8    ret
-004CAEE9    push 0x8047A0
+004CAEE9    push 0x8047A0                                   ; => [ String: StoreDlgUpdateRow ]
 004CAEEE    push 0x22B8
 004CAEF3    jmp 0x004CAEFF
-004CAEF5    push 0x8047A0
+004CAEF5    push 0x8047A0                                   ; => [ String: StoreDlgUpdateRow ]
 004CAEFA    push 0x22BA
 004CAEFF    push 0x80292C
 004CAF04    mov edx, 0x801800
 004CAF09    mov ecx, 0x801AA4
-004CAF0E    call 0x0063B870
+004CAF0E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: StoreDlgUpdateRow | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameDialogs.cpp | String: Halt ]
 004CAF13    add esp, 0x0C
 004CAF16    call 0x0063BC30
 004CAF1B    test al, al
-004CAF1D    jz 0x004CAF20
+004CAF1D    jz 0x004CAF20                                   ; => [ Call: sub_63bc30 ]
 004CAF1F    int3
-004CAF20    call 0x0063BB00
+004CAF20    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

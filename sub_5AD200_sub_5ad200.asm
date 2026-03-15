@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5ad200
+// 起始地址: 0x5ad200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AD200    push ebp
 005AD201    mov ebp, esp
 005AD203    sub esp, 0x0C
@@ -17,7 +23,7 @@
 005AD224    mov edi, dword ptr ss:[ebp-0x04]
 005AD227    mov ecx, edi
 005AD229    push eax
-005AD22A    call 0x005ADF60
+005AD22A    call 0x005ADF60                                 ; => [ Call: sub_5adf60 ]
 005AD22F    add esp, 0x08
 005AD232    lea ebx, ds:[esi+0x08]
 005AD235    cmp edi, esi

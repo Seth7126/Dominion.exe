@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5911e0
+// 起始地址: 0x5911e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005911E0    push ebp
 005911E1    mov ebp, esp
 005911E3    sub esp, 0x08
@@ -7,7 +13,7 @@
 005911EA    mov ebx, edx
 005911EC    push edi
 005911ED    mov dword ptr ss:[ebp-0x04], eax
-005911F0    call 0x005768A0
+005911F0    call 0x005768A0                                 ; => [ Call: sub_5768a0 ]
 005911F5    mov esi, dword ptr ss:[ebp+0x20]
 005911F8    mov edi, eax
 005911FA    mov eax, dword ptr ss:[ebp+0x10]
@@ -62,7 +68,7 @@
 005912A2    mov edx, 0x1B
 005912A7    push ebx
 005912A8    setz cl
-005912AB    call 0x0061B1B0
+005912AB    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005912B0    add esp, 0x2C
 005912B3    mov ecx, dword ptr ds:[edi+0x7C]
 005912B6    test ecx, ecx
@@ -90,7 +96,7 @@
 005912F1    push 0x14
 005912F3    push ebx
 005912F4    setz cl
-005912F7    call 0x0061B1B0
+005912F7    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005912FC    add esp, 0x2C
 005912FF    mov eax, dword ptr ds:[edi+0x40]
 00591302    pop edi

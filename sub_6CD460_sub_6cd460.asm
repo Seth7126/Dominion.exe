@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6cd460
+// 起始地址: 0x6cd460
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006CD460    push ebp
 006CD461    mov ebp, esp
 006CD463    and esp, 0xFFFFFFF0
 006CD466    sub esp, 0x168
-006CD46C    mov eax, dword ptr ds:[0x008C4040]
+006CD46C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006CD471    xor eax, esp
 006CD473    mov dword ptr ss:[esp+0x164], eax
 006CD47A    mov eax, dword ptr ds:[edx+0x480]
@@ -32,7 +38,7 @@
 006CD4EB    lea eax, ss:[esp+0x70]
 006CD4EF    push eax
 006CD4F0    movups xmmword ptr ss:[esp+0x94], xmm0
-006CD4F8    call 0x006CD2A0
+006CD4F8    call 0x006CD2A0                                 ; => [ Call: sub_6cd2a0 ]
 006CD4FD    add esp, 0x04
 006CD500    movq xmm0, qword ptr ds:[eax]
 006CD504    mov eax, dword ptr ds:[eax+0x08]
@@ -53,10 +59,10 @@
 006CD571    mulss xmm0, dword ptr ds:[0x00890CB4]
 006CD579    mulss xmm0, dword ptr ds:[0x00890D84]
 006CD581    movss dword ptr ss:[esp+0x0C], xmm0
-006CD587    call 0x004AE0F0
+006CD587    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006CD58C    movss dword ptr ss:[esp+0x10], xmm0
 006CD592    movss xmm0, dword ptr ss:[esp+0x0C]
-006CD598    call 0x004AE0D0
+006CD598    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006CD59D    movss dword ptr ss:[esp+0x24], xmm0
 006CD5A3    movss xmm0, dword ptr ss:[esp+0x4C]
 006CD5A9    addss xmm0, xmm0
@@ -64,10 +70,10 @@
 006CD5B5    mulss xmm0, dword ptr ds:[0x00890CB4]
 006CD5BD    mulss xmm0, dword ptr ds:[0x00890D84]
 006CD5C5    movss dword ptr ss:[esp+0x0C], xmm0
-006CD5CB    call 0x004AE0F0
+006CD5CB    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006CD5D0    movss dword ptr ss:[esp+0x2C], xmm0
 006CD5D6    movss xmm0, dword ptr ss:[esp+0x0C]
-006CD5DC    call 0x004AE0D0
+006CD5DC    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006CD5E1    movss dword ptr ss:[esp+0x28], xmm0
 006CD5E7    movss xmm0, dword ptr ss:[esp+0x50]
 006CD5ED    addss xmm0, xmm0
@@ -75,10 +81,10 @@
 006CD5F9    mulss xmm0, dword ptr ds:[0x00890CB4]
 006CD601    mulss xmm0, dword ptr ds:[0x00890D84]
 006CD609    movss dword ptr ss:[esp+0x0C], xmm0
-006CD60F    call 0x004AE0F0
+006CD60F    call 0x004AE0F0                                 ; => [ Call: sub_4ae0f0 ]
 006CD614    movss dword ptr ss:[esp+0x20], xmm0
 006CD61A    movss xmm0, dword ptr ss:[esp+0x0C]
-006CD620    call 0x004AE0D0
+006CD620    call 0x004AE0D0                                 ; => [ Call: sub_4ae0d0 ]
 006CD625    movss xmm6, dword ptr ss:[esp+0x28]
 006CD62B    movss xmm7, dword ptr ss:[esp+0x2C]
 006CD631    movaps xmm1, xmm6
@@ -130,16 +136,16 @@
 006CD709    mov ecx, dword ptr ds:[esi+0x60]
 006CD70C    cmp dword ptr ds:[ecx+0x04], 0x02
 006CD710    jz 0x006CD72B
-006CD712    push 0x8811E4
+006CD712    push 0x8811E4                                   ; => [ String: StructureGetDef ]
 006CD717    push 0x559
-006CD71C    push 0x880FE4
-006CD721    mov ecx, 0x87A4FC
+006CD71C    push 0x880FE4                                   ; => [ String: C:\x\ax2017\Engine\Structure.cpp ]
+006CD721    mov ecx, 0x87A4FC                               ; => [ String: assetPtr->assetType == ASSET_TYPE_STRUCTURE ]
 006CD726    jmp 0x006CDDD4
 006CD72B    call 0x005AF880
 006CD730    movss xmm1, dword ptr ds:[0x00890D84]
 006CD738    movss xmm6, dword ptr ss:[esp+0x20]
 006CD73E    movss xmm5, dword ptr ss:[esp+0x18]
-006CD744    mov eax, dword ptr ds:[eax]
+006CD744    mov eax, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006CD746    movss xmm7, dword ptr ss:[esp+0x14]
 006CD74C    movss xmm4, dword ptr ss:[esp+0x24]
 006CD752    movaps xmm3, xmm4
@@ -243,12 +249,12 @@
 006CD921    pop esi
 006CD922    mov ecx, dword ptr ss:[esp+0x164]
 006CD929    xor ecx, esp
-006CD92B    call 0x0075927A
+006CD92B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006CD930    mov esp, ebp
 006CD932    pop ebp
 006CD933    ret
 006CD934    mov eax, dword ptr ds:[esi+0x48]
-006CD937    mov edx, dword ptr ds:[0x00CF65EC]
+006CD937    mov edx, dword ptr ds:[0x00CF65EC]              ; => [ Data: data_cf65e0 ]
 006CD93D    cmp eax, 0x03
 006CD940    jnbe 0x006CDDC0
 006CD946    jmp dword ptr ds:[eax*4+0x6CDDF0]
@@ -267,17 +273,17 @@
 006CD97A    pop esi
 006CD97B    mov ecx, dword ptr ss:[esp+0x164]
 006CD982    xor ecx, esp
-006CD984    call 0x0075927A
+006CD984    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006CD989    mov esp, ebp
 006CD98B    pop ebp
 006CD98C    ret
-006CD98D    movss xmm6, dword ptr ds:[0x00CF65E0]
+006CD98D    movss xmm6, dword ptr ds:[0x00CF65E0]           ; => [ Data: data_cf65e0 ]
 006CD995    lea eax, ss:[esp+0x13C]
-006CD99C    movss xmm2, dword ptr ds:[0x00CF65D4]
+006CD99C    movss xmm2, dword ptr ds:[0x00CF65D4]           ; => [ Data: data_cf65d0 ]
 006CD9A4    movaps xmm0, xmm6
-006CD9A7    movss xmm4, dword ptr ds:[0x00CF65D8]
+006CD9A7    movss xmm4, dword ptr ds:[0x00CF65D8]           ; => [ Data: data_cf65d0 ]
 006CD9AF    movaps xmm1, xmm2
-006CD9B2    movss xmm7, dword ptr ds:[0x00CF65DC]
+006CD9B2    movss xmm7, dword ptr ds:[0x00CF65DC]           ; => [ Data: data_cf65d0 ]
 006CD9BA    mulss xmm0, xmm4
 006CD9BE    movaps xmm5, xmm7
 006CD9C1    push eax
@@ -340,7 +346,7 @@
 006CDAD8    mov eax, dword ptr ss:[esp+0x12C]
 006CDADF    sub esp, 0x0C
 006CDAE2    unpcklps xmm1, xmm0
-006CDAE5    movq xmm0, qword ptr ds:[0x00CF65E4]
+006CDAE5    movq xmm0, qword ptr ds:[0x00CF65E4]            ; => [ Data: data_cf65e0 ]
 006CDAED    movq qword ptr ds:[ecx], xmm1
 006CDAF1    mov dword ptr ds:[ecx+0x08], eax
 006CDAF4    mov eax, esp
@@ -353,7 +359,7 @@
 006CDB0F    movq qword ptr ds:[eax], xmm0
 006CDB13    mov dword ptr ds:[eax+0x08], esi
 006CDB16    xor ecx, ecx
-006CDB18    call 0x00649E10
+006CDB18    call 0x00649E10                                 ; => [ Call: sub_649e10 ]
 006CDB1D    mov edi, dword ptr ss:[ebp+0x08]
 006CDB20    lea eax, ss:[esp+0x170]
 006CDB27    movq xmm0, qword ptr ss:[esp+0x74]
@@ -376,7 +382,7 @@
 006CDB82    add esp, 0x0C
 006CDB85    movups xmm0, xmmword ptr ds:[eax]
 006CDB88    mov eax, edi
-006CDB8A    movups xmmword ptr ds:[edi+0x0C], xmm0
+006CDB8A    movups xmmword ptr ds:[edi+0x0C], xmm0          ; => [ Call: sub_4ac840 ]
 006CDB8E    movq xmm0, qword ptr ss:[esp+0x30]
 006CDB94    movq qword ptr ds:[edi+0x1C], xmm0
 006CDB99    mov dword ptr ds:[edi+0x24], ecx
@@ -384,17 +390,17 @@
 006CDBA3    pop edi
 006CDBA4    pop esi
 006CDBA5    xor ecx, esp
-006CDBA7    call 0x0075927A
+006CDBA7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006CDBAC    mov esp, ebp
 006CDBAE    pop ebp
 006CDBAF    ret
-006CDBB0    movss xmm6, dword ptr ds:[0x00CF65D4]
+006CDBB0    movss xmm6, dword ptr ds:[0x00CF65D4]           ; => [ Data: data_cf65d0 ]
 006CDBB8    lea eax, ss:[esp+0x148]
-006CDBBF    movss xmm3, dword ptr ds:[0x00CF65DC]
+006CDBBF    movss xmm3, dword ptr ds:[0x00CF65DC]           ; => [ Data: data_cf65d0 ]
 006CDBC7    movaps xmm0, xmm6
-006CDBCA    movss xmm1, dword ptr ds:[0x00CF65E0]
+006CDBCA    movss xmm1, dword ptr ds:[0x00CF65E0]           ; => [ Data: data_cf65e0 ]
 006CDBD2    movaps xmm5, xmm3
-006CDBD5    movss xmm2, dword ptr ds:[0x00CF65D8]
+006CDBD5    movss xmm2, dword ptr ds:[0x00CF65D8]           ; => [ Data: data_cf65d0 ]
 006CDBDD    movaps xmm4, xmm6
 006CDBE0    mulss xmm0, xmm2
 006CDBE4    push eax
@@ -427,7 +433,7 @@
 006CDC50    mov eax, dword ptr ds:[0x007FEF1C]
 006CDC55    sub esp, 0x0C
 006CDC58    movq qword ptr ds:[ecx], xmm0
-006CDC5C    movq xmm0, qword ptr ds:[0x00CF65E4]
+006CDC5C    movq xmm0, qword ptr ds:[0x00CF65E4]            ; => [ Data: data_cf65e0 ]
 006CDC64    mov dword ptr ds:[ecx+0x08], eax
 006CDC67    mov eax, esp
 006CDC69    sub esp, 0x0C
@@ -439,7 +445,7 @@
 006CDC80    lea edx, ss:[esp+0x188]
 006CDC87    movq qword ptr ds:[eax], xmm0
 006CDC8B    mov dword ptr ds:[eax+0x08], esi
-006CDC8E    call 0x00649E10
+006CDC8E    call 0x00649E10                                 ; => [ Call: sub_649e10 ]
 006CDC93    mov edi, dword ptr ss:[ebp+0x08]
 006CDC96    lea eax, ss:[esp+0x17C]
 006CDC9D    movq xmm0, qword ptr ss:[esp+0x74]
@@ -472,7 +478,7 @@
 006CDD21    mov eax, dword ptr ds:[0x007FEF1C]
 006CDD26    sub esp, 0x0C
 006CDD29    movq qword ptr ds:[ecx], xmm0
-006CDD2D    movq xmm0, qword ptr ds:[0x00CF65E4]
+006CDD2D    movq xmm0, qword ptr ds:[0x00CF65E4]            ; => [ Data: data_cf65e0 ]
 006CDD35    mov dword ptr ds:[ecx+0x08], eax
 006CDD38    mov eax, esp
 006CDD3A    sub esp, 0x0C
@@ -484,7 +490,7 @@
 006CDD51    lea edx, ss:[esp+0x154]
 006CDD58    movq qword ptr ds:[eax], xmm0
 006CDD5C    mov dword ptr ds:[eax+0x08], esi
-006CDD5F    call 0x00649E10
+006CDD5F    call 0x00649E10                                 ; => [ Call: sub_649e10 ]
 006CDD64    mov edi, dword ptr ss:[ebp+0x08]
 006CDD67    lea eax, ss:[esp+0x194]
 006CDD6E    movq xmm0, qword ptr ss:[esp+0x74]
@@ -502,15 +508,15 @@
 006CDDB1    movss dword ptr ss:[esp+0x120], xmm0
 006CDDBA    push eax
 006CDDBB    jmp 0x006CDB74
-006CDDC0    push 0x87ED48
+006CDDC0    push 0x87ED48                                   ; => [ String: ElBox ]
 006CDDC5    push 0x166
-006CDDCA    push 0x87ED1C
-006CDDCF    mov ecx, 0x801AA4
+006CDDCA    push 0x87ED1C                                   ; => [ String: C:\x\ax2017\Engine\FabDef.cpp ]
+006CDDCF    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006CDDD4    mov edx, 0x801800
-006CDDD9    call 0x0063B870
+006CDDD9    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006CDDDE    add esp, 0x0C
 006CDDE1    call 0x0063BC30
 006CDDE6    test al, al
-006CDDE8    jz 0x006CDDEB
+006CDDE8    jz 0x006CDDEB                                   ; => [ Call: sub_63bc30 ]
 006CDDEA    int3
-006CDDEB    call 0x0063BB00
+006CDDEB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

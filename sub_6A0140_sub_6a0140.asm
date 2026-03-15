@@ -1,16 +1,22 @@
+// ============================================================
+// 函数名称: sub_6a0140
+// 起始地址: 0x6a0140
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A0140    push ebp
 006A0141    mov ebp, esp
 006A0143    push ecx
 006A0144    push esi
-006A0145    mov esi, dword ptr ds:[0x0147AC2C]
-006A014B    mov ecx, 0x801800
+006A0145    mov esi, dword ptr ds:[0x0147AC2C]              ; => [ Data: data_147ac2c ]
+006A014B    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A0150    push edi
 006A0151    mov edi, dword ptr ss:[ebp+0x08]
 006A0154    mov eax, dword ptr ds:[edi]
 006A0156    test eax, eax
 006A0158    cmovnz ecx, eax
 006A015B    xor edx, edx
-006A015D    call 0x0069C4D0
+006A015D    call 0x0069C4D0                                 ; => [ Call: sub_69c4d0 ]
 006A0162    mov ecx, dword ptr ds:[esi+0x04]
 006A0165    mov esi, dword ptr ds:[esi]
 006A0167    and ecx, eax
@@ -21,7 +27,7 @@
 006A0171    mov ecx, edi
 006A0173    call 0x0063D7F0
 006A0178    test al, al
-006A017A    jz 0x006A018D
+006A017A    jz 0x006A018D                                   ; => [ Call: sub_63d7f0 ]
 006A017C    mov esi, dword ptr ds:[esi+0x08]
 006A017F    test esi, esi
 006A0181    jnz 0x006A0170

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_631e90
+// 起始地址: 0x631e90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00631E90    push ebp
 00631E91    mov ebp, esp
 00631E93    and esp, 0xFFFFFFF0
@@ -6,7 +12,7 @@
 00631E9C    lea eax, ss:[esp+0x2C]
 00631EA0    push edi
 00631EA1    push eax
-00631EA2    call 0x005CF960
+00631EA2    call 0x005CF960                                 ; => [ Call: sub_5cf960 ]
 00631EA7    mov edi, dword ptr ss:[ebp+0x0C]
 00631EAA    add esp, 0x04
 00631EAD    mov ecx, edi
@@ -17,7 +23,7 @@
 00631EBC    movaps xmmword ptr ss:[esp+0x14], xmm0
 00631EC1    call 0x005CF960
 00631EC6    add esp, 0x04
-00631EC9    movups xmm0, xmmword ptr ds:[eax]
+00631EC9    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_5cf960 ]
 00631ECC    mov eax, dword ptr ss:[esp+0x30]
 00631ED0    movd ecx, xmm0
 00631ED4    movaps xmmword ptr ss:[esp+0x20], xmm0

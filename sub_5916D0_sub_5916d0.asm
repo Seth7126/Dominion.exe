@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5916d0
+// 起始地址: 0x5916d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005916D0    push ebp
 005916D1    mov ebp, esp
 005916D3    sub esp, 0x10
@@ -11,7 +17,7 @@
 005916E3    and eax, 0x03
 005916E6    jmp dword ptr ds:[eax*4+0x591868]
 005916ED    push esi
-005916EE    call 0x00576940
+005916EE    call 0x00576940                                 ; => [ Call: sub_576940 ]
 005916F3    mov edx, eax
 005916F5    add esp, 0x04
 005916F8    mov eax, dword ptr ds:[edx+0x1C]
@@ -26,7 +32,7 @@
 00591708    movzx edi, si
 0059170B    cmp edi, 0x320
 00591711    jb 0x00591718
-00591713    call 0x00591930
+00591713    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00591718    imul ecx, edi, 0x64
 0059171B    mov eax, esi
 0059171D    mov edx, dword ptr ds:[ecx+ebx*1+0x1A54]
@@ -40,10 +46,10 @@
 0059172D    and al, 0x30
 0059172F    cmp al, 0x20
 00591731    jz 0x0059174C
-00591733    push 0x81E9A4
+00591733    push 0x81E9A4                                   ; => [ String: AbilityID::static_ability_card_enum ]
 00591738    push 0x111
-0059173D    push 0x81E978
-00591742    mov ecx, 0x81E9C8
+0059173D    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+00591742    mov ecx, 0x81E9C8                               ; => [ String: type() == ABILITY_CARD_ENUM ]
 00591747    jmp 0x0059184A
 0059174C    mov ecx, dword ptr ds:[ebx+0x1520]
 00591752    xor edi, edi
@@ -70,7 +76,7 @@
 00591782    movzx esi, di
 00591785    cmp esi, 0x320
 0059178B    jb 0x00591792
-0059178D    call 0x00591930
+0059178D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00591792    imul ecx, esi, 0x64
 00591795    mov eax, edi
 00591797    pop edi
@@ -84,14 +90,14 @@
 005917A7    and eax, 0x30
 005917AA    cmp al, 0x30
 005917AC    jz 0x005917C7
-005917AE    push 0x81EA28
+005917AE    push 0x81EA28                                   ; => [ String: AbilityID::static_ability_token_id ]
 005917B3    push 0x12A
-005917B8    push 0x81E978
-005917BD    mov ecx, 0x81EA4C
+005917B8    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
+005917BD    mov ecx, 0x81EA4C                               ; => [ String: type() == ABILITY_TOKEN ]
 005917C2    jmp 0x0059184A
 005917C7    shr esi, 0x12
 005917CA    mov edx, esi
-005917CC    call 0x00591420
+005917CC    call 0x00591420                                 ; => [ Call: sub_591420 ]
 005917D1    mov edx, dword ptr ds:[ebx+0x1520]
 005917D7    xor esi, esi
 005917D9    mov edi, eax
@@ -122,16 +128,16 @@
 0059182D    add eax, 0x64
 00591830    cmp esi, edx
 00591832    jl 0x00591820
-00591834    push 0x820900
+00591834    push 0x820900                                   ; => [ String: AbilitySourceCardRef ]
 00591839    push 0x4DBA
 0059183E    jmp 0x00591840
-00591840    mov ecx, 0x801AA4
-00591845    push 0x81F4B8
+00591840    mov ecx, 0x801AA4                               ; => [ String: Halt ]
+00591845    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 0059184A    mov edx, 0x801800
-0059184F    call 0x0063B870
+0059184F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00591854    add esp, 0x0C
 00591857    call 0x0063BC30
 0059185C    test al, al
-0059185E    jz 0x00591861
+0059185E    jz 0x00591861                                   ; => [ Call: sub_63bc30 ]
 00591860    int3
-00591861    call 0x0063BB00
+00591861    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

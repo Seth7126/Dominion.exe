@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_5177c0
+// 起始地址: 0x5177c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005177C0    push ebp
 005177C1    mov ebp, esp
 005177C3    mov ecx, dword ptr ss:[ebp+0x08]
 005177C6    mov edx, 0x18
-005177CB    call 0x00571B30
+005177CB    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 005177D0    mov ecx, dword ptr ds:[eax+0x98]
 005177D6    mov eax, dword ptr ds:[eax+0x9C]
 005177DC    and ecx, 0x7F000400

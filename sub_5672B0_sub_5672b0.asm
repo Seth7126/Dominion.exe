@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_5672b0
+// 起始地址: 0x5672b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005672B0    push ebp
 005672B1    mov ebp, esp
 005672B3    mov eax, 0x25B0
-005672B8    call 0x00761E50
+005672B8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 005672BD    mov eax, dword ptr ds:[0x008C4040]
 005672C2    xor eax, ebp
-005672C4    mov dword ptr ss:[ebp-0x08], eax
+005672C4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 005672C7    push ebx
 005672C8    push esi
 005672C9    lea eax, ss:[ebp-0x1924]
@@ -20,7 +26,7 @@
 005672F2    mov esi, eax
 005672F4    mov ecx, 0x321
 005672F9    lea eax, ss:[ebp-0x25AC]
-005672FF    rep movsd
+005672FF    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 00567301    push dword ptr ss:[ebp+0x10]
 00567304    lea ecx, ss:[ebp-0xC94]
 0056730A    push 0x07
@@ -33,13 +39,13 @@
 0056731D    mov eax, dword ptr ss:[ebp+0x08]
 00567320    mov ecx, 0x321
 00567325    mov edi, eax
-00567327    rep movsd
+00567327    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_5671b0 ]
 00567329    mov ecx, dword ptr ss:[ebp-0x08]
 0056732C    pop edi
 0056732D    pop esi
 0056732E    xor ecx, ebp
 00567330    pop ebx
-00567331    call 0x0075927A
+00567331    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00567336    mov esp, ebp
 00567338    pop ebp
 00567339    ret

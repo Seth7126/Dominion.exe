@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6baf30
+// 起始地址: 0x6baf30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006BAF30    push ebp
 006BAF31    mov ebp, esp
 006BAF33    sub esp, 0x0C
@@ -6,18 +12,18 @@
 006BAF38    push edi
 006BAF39    mov eax, ecx
 006BAF3B    mov edi, edx
-006BAF3D    xor ecx, ecx
+006BAF3D    xor ecx, ecx                                    ; => [ Call: nullptr ]
 006BAF3F    mov dword ptr ss:[ebp-0x08], eax
 006BAF42    xor esi, esi
-006BAF44    mov dword ptr ss:[ebp-0x04], ecx
+006BAF44    mov dword ptr ss:[ebp-0x04], ecx                ; => [ Call: nullptr ]
 006BAF47    test edi, edi
 006BAF49    jle 0x006BAFEE
 006BAF4F    cmp edi, 0x08
 006BAF52    jb 0x006BAFEE
 006BAF58    mov ecx, edi
-006BAF5A    xorps xmm5, xmm5
+006BAF5A    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 006BAF5D    and ecx, 0xFFFFFFF8
-006BAF60    xorps xmm4, xmm4
+006BAF60    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 006BAF63    add eax, 0x2C
 006BAF66    nop word ptr ds:[eax+eax*1], ax
 006BAF70    movd xmm2, dword ptr ds:[eax+0x10]
@@ -50,7 +56,7 @@
 006BAFE7    movd ecx, xmm4
 006BAFEB    mov dword ptr ss:[ebp-0x04], ecx
 006BAFEE    xor edx, edx
-006BAFF0    xor ebx, ebx
+006BAFF0    xor ebx, ebx                                    ; => [ Call: nullptr ]
 006BAFF2    cmp esi, edi
 006BAFF4    jnl 0x006BB046
 006BAFF6    mov eax, edi
@@ -85,15 +91,15 @@
 006BB043    mov dword ptr ss:[ebp-0x04], ecx
 006BB046    test ecx, ecx
 006BB048    jnle 0x006BB05B
-006BB04A    push 0x87DBDC
+006BB04A    push 0x87DBDC                                   ; => [ String: ParticlePickColorFromArray ]
 006BB04F    push 0x467
-006BB054    mov ecx, 0x87DC28
+006BB054    mov ecx, 0x87DC28                               ; => [ String: totalWeight > 0 ]
 006BB059    jmp 0x006BB099
 006BB05B    call 0x0063EB70
 006BB060    xor edx, edx
 006BB062    xor esi, esi
-006BB064    div dword ptr ss:[ebp-0x04]
-006BB067    xor eax, eax
+006BB064    div dword ptr ss:[ebp-0x04]                     ; => [ Call: sub_63eb70 ]
+006BB067    xor eax, eax                                    ; => [ Call: nullptr ]
 006BB069    test edi, edi
 006BB06B    jle 0x006BB08A
 006BB06D    mov ecx, dword ptr ss:[ebp-0x08]
@@ -112,15 +118,15 @@
 006BB086    mov esp, ebp
 006BB088    pop ebp
 006BB089    ret
-006BB08A    push 0x87DBDC
+006BB08A    push 0x87DBDC                                   ; => [ String: ParticlePickColorFromArray ]
 006BB08F    push 0x477
-006BB094    mov ecx, 0x801AA4
+006BB094    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006BB099    push 0x87DBAC
 006BB09E    mov edx, 0x801800
-006BB0A3    call 0x0063B870
+006BB0A3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ParticlePickColorFromArray | String: C:\x\ax2017\Engine\Particle.cpp ]
 006BB0A8    add esp, 0x0C
 006BB0AB    call 0x0063BC30
 006BB0B0    test al, al
-006BB0B2    jz 0x006BB0B5
+006BB0B2    jz 0x006BB0B5                                   ; => [ Call: sub_63bc30 ]
 006BB0B4    int3
-006BB0B5    call 0x0063BB00
+006BB0B5    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

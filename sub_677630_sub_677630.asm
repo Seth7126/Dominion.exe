@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_677630
+// 起始地址: 0x677630
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00677630    push ebp
 00677631    mov ebp, esp
 00677633    push ecx
@@ -18,7 +24,7 @@
 00677655    add esp, 0x04
 00677658    push dword ptr ss:[ebp-0x04]
 0067765B    push eax
-0067765C    call dword ptr ds:[0x00775688]
+0067765C    call dword ptr ds:[0x00775688]                  ; => [ Data: data_8cae70 | Call: sub_6dd140 ]
 00677662    add esp, 0x08
 00677665    test eax, eax
 00677667    jz 0x00677674
@@ -41,10 +47,10 @@
 0067768D    push 0x8739B4
 00677692    mov edx, 0x801800
 00677697    mov ecx, 0x801AA4
-0067769C    call 0x0063B870
+0067769C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | String: FindElement | Data: data_801800 | String: Halt ]
 006776A1    add esp, 0x0C
 006776A4    call 0x0063BC30
 006776A9    test al, al
-006776AB    jz 0x006776AE
+006776AB    jz 0x006776AE                                   ; => [ Call: sub_63bc30 ]
 006776AD    int3
-006776AE    call 0x0063BB00
+006776AE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

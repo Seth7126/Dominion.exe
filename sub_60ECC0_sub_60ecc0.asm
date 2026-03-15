@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_60ecc0
+// 起始地址: 0x60ecc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0060ECC0    push ebp
 0060ECC1    mov ebp, esp
 0060ECC3    sub esp, 0x18
@@ -12,7 +18,7 @@
 0060ECD9    mov ecx, dword ptr ds:[ecx+0x1E1A4]
 0060ECDF    call 0x004D8F30
 0060ECE4    xor esi, esi
-0060ECE6    mov ebx, dword ptr ds:[eax+0x71DC]
+0060ECE6    mov ebx, dword ptr ds:[eax+0x71DC]              ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 0060ECEC    test ebx, ebx
 0060ECEE    jle 0x0060ED2F
 0060ECF0    mov edi, 0x6EDC
@@ -23,7 +29,7 @@
 0060ED11    mov edx, dword ptr ss:[ebp-0x08]
 0060ED14    mov ecx, dword ptr ds:[eax+edi*1+0x08]
 0060ED18    call 0x0060EAE0
-0060ED1D    test al, al
+0060ED1D    test al, al                                     ; => [ Call: sub_4d8f30 | Call: sub_60eae0 | Data: data_cc8dc8 ]
 0060ED1F    lea ecx, ds:[esi+0x01]
 0060ED22    lea edi, ds:[edi+0x0C]
 0060ED25    cmovz ecx, esi
@@ -41,21 +47,21 @@
 0060ED3E    mov esp, ebp
 0060ED40    pop ebp
 0060ED41    ret
-0060ED42    mov eax, dword ptr ds:[eax*4+0x1A957E0]
+0060ED42    mov eax, dword ptr ds:[eax*4+0x1A957E0]         ; => [ Data: data_1a957e0 ]
 0060ED49    test eax, eax
 0060ED4B    jnz 0x0060EDD3
 0060ED51    mov ebx, dword ptr ss:[ebp+0x0C]
 0060ED54    mov edi, dword ptr ss:[ebp+0x08]
 0060ED57    mov dword ptr ss:[ebp-0x0C], eax
-0060ED5A    mov eax, 0x783418
-0060ED5F    mov dword ptr ss:[ebp-0x10], eax
+0060ED5A    mov eax, 0x783418                               ; => [ Data: data_783418 ]
+0060ED5F    mov dword ptr ss:[ebp-0x10], eax                ; => [ Data: data_783418 ]
 0060ED62    xor esi, esi
 0060ED64    mov ecx, dword ptr ds:[eax+esi*4]
 0060ED67    lea edx, ss:[ebp-0x01]
 0060ED6A    call 0x0060EB90
 0060ED6F    mov ecx, dword ptr ss:[ebp-0x08]
 0060ED72    cmp eax, ecx
-0060ED74    jz 0x0060ED81
+0060ED74    jz 0x0060ED81                                   ; => [ Call: sub_60eb90 ]
 0060ED76    mov eax, dword ptr ss:[ebp-0x10]
 0060ED79    inc esi
 0060ED7A    cmp esi, 0x03
@@ -90,7 +96,7 @@
 0060EDC4    and edx, 0x03
 0060EDC7    add eax, edx
 0060EDC9    sar eax, 0x02
-0060EDCC    mov dword ptr ds:[ecx*4+0x1A957E0], eax
+0060EDCC    mov dword ptr ds:[ecx*4+0x1A957E0], eax         ; => [ Data: data_1a957e0 ]
 0060EDD3    pop edi
 0060EDD4    pop esi
 0060EDD5    pop ebx

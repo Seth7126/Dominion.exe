@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_682450
+// 起始地址: 0x682450
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00682450    push ebp
 00682451    mov ebp, esp
 00682453    sub esp, 0x0C
@@ -56,10 +62,10 @@
 0068252C    push 0x801A00
 00682531    mov edx, 0x801800
 00682536    mov ecx, 0x801A1C
-0068253B    call 0x0063B870
+0068253B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectBottomRight | String: C:\x\ax2017\Engine\Rect.cpp | String: RectIsNormalized(r) ]
 00682540    add esp, 0x0C
 00682543    call 0x0063BC30
 00682548    test al, al
-0068254A    jz 0x0068254D
+0068254A    jz 0x0068254D                                   ; => [ Call: sub_63bc30 ]
 0068254C    int3
-0068254D    call 0x0063BB00
+0068254D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_618270
+// 起始地址: 0x618270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00618270    push ebp
 00618271    mov ebp, esp
 00618273    and esp, 0xFFFFFFF0
@@ -10,16 +16,16 @@
 00618283    mov dword ptr ss:[esp+0x14], edi
 00618287    test eax, eax
 00618289    jnz 0x0061829F
-0061828B    push 0x868AA8
+0061828B    push 0x868AA8                                   ; => [ String: PreloadTexture ]
 00618290    push 0xCD0D
-00618295    mov ecx, 0x868B20
+00618295    mov ecx, 0x868B20                               ; => [ String: asset != NULL ]
 0061829A    jmp 0x00618531
 0061829F    cmp dword ptr ds:[edi], 0x00
 006182A2    jz 0x0061851A
 006182A8    mov ecx, eax
 006182AA    call 0x005AF880
 006182AF    cmp byte ptr ss:[ebp+0x08], 0x00
-006182B3    mov eax, dword ptr ds:[eax]
+006182B3    mov eax, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006182B5    mov ecx, dword ptr ds:[eax]
 006182B7    mov eax, dword ptr ds:[eax+0x04]
 006182BA    jz 0x00618358
@@ -52,7 +58,7 @@
 00618310    sub eax, esi
 00618312    mov ecx, dword ptr ds:[edi+eax*4]
 00618315    lea edi, ds:[edi+eax*4]
-00618318    call 0x0069EC60
+00618318    call 0x0069EC60                                 ; => [ Call: sub_69ec60 ]
 0061831D    mov ecx, dword ptr ss:[esp+0x10]
 00618321    mov dword ptr ds:[edi], ecx
 00618323    mov edi, dword ptr ss:[esp+0x14]
@@ -63,9 +69,9 @@
 0061833A    sub eax, esi
 0061833C    mov dword ptr ds:[edi+eax*4], ecx
 0061833F    jmp 0x006183C7
-00618344    push 0x868AA8
+00618344    push 0x868AA8                                   ; => [ String: PreloadTexture ]
 00618349    push 0xCD17
-0061834E    mov ecx, 0x868AFC
+0061834E    mov ecx, 0x868AFC                               ; => [ String: allocator.sizeReverse == assetSize ]
 00618353    jmp 0x00618531
 00618358    cmp dword ptr ds:[edi+0x1C], ecx
 0061835B    jnz 0x00618522
@@ -94,7 +100,7 @@
 006183A3    mov esi, edx
 006183A5    mov dword ptr ds:[edi+0x43C], eax
 006183AB    mov ecx, dword ptr ds:[edi+esi*4+0x34]
-006183AF    call 0x0069EC60
+006183AF    call 0x0069EC60                                 ; => [ Call: sub_69ec60 ]
 006183B4    mov ecx, dword ptr ss:[esp+0x10]
 006183B8    jmp 0x006183C3
 006183BA    lea eax, ds:[esi+0x01]
@@ -104,14 +110,14 @@
 006183CA    jz 0x0061851A
 006183D0    cmp dword ptr ds:[ecx+0x04], 0x03
 006183D4    jz 0x006183EF
-006183D6    push 0x86F01C
+006183D6    push 0x86F01C                                   ; => [ String: TextureGetDef ]
 006183DB    push 0x89
-006183E0    push 0x86F02C
-006183E5    mov ecx, 0x86F04C
+006183E0    push 0x86F02C                                   ; => [ String: C:\x\ax2017\Engine\Texture.h ]
+006183E5    mov ecx, 0x86F04C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_TEXTURE ]
 006183EA    jmp 0x00618536
 006183EF    call 0x005AF880
 006183F4    cmp byte ptr ss:[ebp+0x08], 0x00
-006183F8    mov edx, dword ptr ds:[eax]
+006183F8    mov edx, dword ptr ds:[eax]                     ; => [ Call: sub_5af880 ]
 006183FA    mov dword ptr ss:[esp+0x1C], edx
 006183FE    mov dword ptr ds:[edx+0x28], 0x00
 00618405    mov eax, dword ptr ds:[0x00800188]
@@ -162,16 +168,16 @@
 00618496    mov dword ptr ss:[esp+0x2C], eax
 0061849A    movaps xmm0, xmmword ptr ss:[esp+0x20]
 0061849F    movaps xmmword ptr ss:[esp+0x20], xmm0
-006184A4    call 0x006A02A0
+006184A4    call 0x006A02A0                                 ; => [ Call: sub_6a02a0 ]
 006184A9    mov esi, dword ptr ss:[esp+0x14]
 006184AD    lea eax, ss:[esp+0x3C]
 006184B1    push eax
 006184B2    lea edx, ss:[esp+0x24]
 006184B6    mov ecx, dword ptr ds:[esi]
-006184B8    call 0x006AE120
+006184B8    call 0x006AE120                                 ; => [ Call: sub_6ae120 ]
 006184BD    mov ecx, dword ptr ss:[esp+0x14]
 006184C1    add esp, 0x04
-006184C4    call 0x006A0540
+006184C4    call 0x006A0540                                 ; => [ Call: sub_6a0540 ]
 006184C9    mov edi, dword ptr ss:[esp+0x1C]
 006184CD    mov eax, dword ptr ds:[esi]
 006184CF    mov ecx, dword ptr ss:[esp+0x24]
@@ -182,13 +188,13 @@
 006184E0    mov ecx, dword ptr ds:[esi]
 006184E2    cmp dword ptr ds:[ecx+0x04], 0x03
 006184E6    jz 0x006184FE
-006184E8    push 0x86F01C
+006184E8    push 0x86F01C                                   ; => [ String: TextureGetDef ]
 006184ED    push 0x89
-006184F2    push 0x86F02C
-006184F7    mov ecx, 0x86F04C
+006184F2    push 0x86F02C                                   ; => [ String: C:\x\ax2017\Engine\Texture.h ]
+006184F7    mov ecx, 0x86F04C                               ; => [ String: assetPtr->assetType == ASSET_TYPE_TEXTURE ]
 006184FC    jmp 0x00618536
-006184FE    call 0x005AF880
-00618503    or byte ptr ds:[0x008C4154], 0x01
+006184FE    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
+00618503    or byte ptr ds:[0x008C4154], 0x01               ; => [ Data: data_8c4154 ]
 0061850A    mov eax, dword ptr ds:[eax]
 0061850C    mov eax, dword ptr ds:[eax+0x30]
 0061850F    mov dword ptr ds:[edi+0x30], eax
@@ -204,15 +210,15 @@
 0061851E    mov esp, ebp
 00618520    pop ebp
 00618521    ret
-00618522    push 0x868AA8
+00618522    push 0x868AA8                                   ; => [ String: PreloadTexture ]
 00618527    push 0xCD1B
-0061852C    mov ecx, 0x868B40
-00618531    push 0x86F1E8
+0061852C    mov ecx, 0x868B40                               ; => [ String: allocator.size == assetSize ]
+00618531    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
 00618536    mov edx, 0x801800
-0061853B    call 0x0063B870
+0061853B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00618540    add esp, 0x0C
 00618543    call 0x0063BC30
 00618548    test al, al
-0061854A    jz 0x0061854D
+0061854A    jz 0x0061854D                                   ; => [ Call: sub_63bc30 ]
 0061854C    int3
-0061854D    call 0x0063BB00
+0061854D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a1010
+// 起始地址: 0x5a1010
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A1010    push ebp
 005A1011    mov ebp, esp
 005A1013    sub esp, 0x20
@@ -13,11 +19,11 @@
 005A102C    subss xmm1, xmm0
 005A1030    call 0x005A0EB0
 005A1035    movss xmm1, dword ptr ss:[ebp-0x04]
-005A103A    mov ebx, eax
+005A103A    mov ebx, eax                                    ; => [ Call: sub_5a0eb0 ]
 005A103C    addss xmm1, dword ptr ds:[edi]
 005A1040    mov ecx, esi
 005A1042    mov dword ptr ss:[ebp-0x14], ebx
-005A1045    call 0x005A0EB0
+005A1045    call 0x005A0EB0                                 ; => [ Call: sub_5a0eb0 ]
 005A104A    movss xmm1, dword ptr ds:[edi+0x04]
 005A104F    mov ecx, esi
 005A1051    subss xmm1, dword ptr ss:[ebp-0x04]
@@ -26,8 +32,8 @@
 005A105E    movss xmm1, dword ptr ss:[ebp-0x04]
 005A1063    mov ecx, esi
 005A1065    addss xmm1, dword ptr ds:[edi+0x04]
-005A106A    mov dword ptr ss:[ebp-0x0C], eax
-005A106D    call 0x005A0F60
+005A106A    mov dword ptr ss:[ebp-0x0C], eax                ; => [ Call: sub_5a0f60 ]
+005A106D    call 0x005A0F60                                 ; => [ Call: sub_5a0f60 ]
 005A1072    mov ecx, eax
 005A1074    mov eax, dword ptr ss:[ebp-0x0C]
 005A1077    mov dword ptr ss:[ebp-0x10], ecx
@@ -60,7 +66,7 @@
 005A10D9    mov dword ptr ss:[ebp-0x1C], eax
 005A10DC    jnz 0x005A10EA
 005A10DE    mov ecx, esi
-005A10E0    call 0x005AC970
+005A10E0    call 0x005AC970                                 ; => [ Call: sub_5ac970 ]
 005A10E5    movss xmm0, dword ptr ss:[ebp-0x04]
 005A10EA    mov edx, dword ptr ds:[esi]
 005A10EC    inc ebx
@@ -95,32 +101,32 @@
 005A1136    mov esp, ebp
 005A1138    pop ebp
 005A1139    ret
-005A113A    push 0x82572C
+005A113A    push 0x82572C                                   ; => [ String: XArray<struct Bin2DNode *>::operator [] ]
 005A113F    push 0xB5
-005A1144    push 0x816BDC
-005A1149    mov ecx, 0x824FD0
+005A1144    push 0x816BDC                                   ; => [ String: C:\x\ax2017\Engine\xArray.h ]
+005A1149    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 005A114E    jmp 0x005A118B
-005A1150    push 0x8250D4
+005A1150    push 0x8250D4                                   ; => [ String: BinGetHeadW ]
 005A1155    push 0x4D
-005A1157    mov ecx, 0x825144
+005A1157    mov ecx, 0x825144                               ; => [ String: coord.y < bin.dims.y ]
 005A115C    jmp 0x005A1186
-005A115E    push 0x8250D4
+005A115E    push 0x8250D4                                   ; => [ String: BinGetHeadW ]
 005A1163    push 0x4C
-005A1165    mov ecx, 0x82512C
+005A1165    mov ecx, 0x82512C                               ; => [ String: coord.x < bin.dims.x ]
 005A116A    jmp 0x005A1186
-005A116C    push 0x8250D4
+005A116C    push 0x8250D4                                   ; => [ String: BinGetHeadW ]
 005A1171    push 0x4B
-005A1173    mov ecx, 0x82511C
+005A1173    mov ecx, 0x82511C                               ; => [ String: coord.y >= 0 ]
 005A1178    jmp 0x005A1186
-005A117A    push 0x8250D4
+005A117A    push 0x8250D4                                   ; => [ String: BinGetHeadW ]
 005A117F    push 0x4A
-005A1181    mov ecx, 0x82510C
-005A1186    push 0x8250E0
+005A1181    mov ecx, 0x82510C                               ; => [ String: coord.x >= 0 ]
+005A1186    push 0x8250E0                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp ]
 005A118B    mov edx, 0x801800
-005A1190    call 0x0063B870
+005A1190    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005A1195    add esp, 0x0C
 005A1198    call 0x0063BC30
 005A119D    test al, al
-005A119F    jz 0x005A11A2
+005A119F    jz 0x005A11A2                                   ; => [ Call: sub_63bc30 ]
 005A11A1    int3
-005A11A2    call 0x0063BB00
+005A11A2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

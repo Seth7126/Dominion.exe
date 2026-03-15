@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_516870
+// 起始地址: 0x516870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00516870    push ebp
 00516871    mov ebp, esp
 00516873    and esp, 0xFFFFFFF8
 00516876    sub esp, 0x19C
-0051687C    mov eax, dword ptr ds:[0x008C4040]
+0051687C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00516881    xor eax, esp
 00516883    mov dword ptr ss:[esp+0x198], eax
-0051688A    mov ecx, dword ptr ds:[0x00CCA790]
-00516890    mov eax, dword ptr ds:[0x00CCA780]
+0051688A    mov ecx, dword ptr ds:[0x00CCA790]              ; => [ Data: data_cca790 ]
+00516890    mov eax, dword ptr ds:[0x00CCA780]              ; => [ Data: data_cca780 ]
 00516895    push ebx
 00516896    push esi
 00516897    push edi
@@ -15,15 +21,15 @@
 0051689D    mov ecx, dword ptr ds:[0x00CCA784]
 005168A3    add eax, 0x540
 005168A8    shl ecx, 0x0B
-005168AB    add ecx, eax
+005168AB    add ecx, eax                                    ; => [ Data: data_cca784 ]
 005168AD    jmp 0x005168B8
 005168AF    add ecx, 0xA02
 005168B5    lea ecx, ds:[eax+ecx*8]
 005168B8    cmp dword ptr ds:[ecx], 0x384
 005168BE    jnz 0x00516A10
 005168C4    mov ecx, dword ptr ds:[ecx+0x04]
-005168C7    call 0x00516EC0
-005168CC    mov ecx, dword ptr ds:[0x00CCB414]
+005168C7    call 0x00516EC0                                 ; => [ Call: sub_516ec0 ]
+005168CC    mov ecx, dword ptr ds:[0x00CCB414]              ; => [ Data: data_ccb414 ]
 005168D2    xor esi, esi
 005168D4    xor edi, edi
 005168D6    lea edx, ds:[eax+0x04]
@@ -37,7 +43,7 @@
 005168ED    jle 0x00516983
 005168F3    mov edx, dword ptr ds:[edx+edi*4]
 005168F6    cmp dword ptr ds:[eax*4+0xCCA794], edx
-005168FD    jz 0x00516906
+005168FD    jz 0x00516906                                   ; => [ Data: data_cca794 ]
 005168FF    inc eax
 00516900    cmp eax, ecx
 00516902    jl 0x005168F6
@@ -48,7 +54,7 @@
 00516912    mov ecx, dword ptr ds:[eax+0x9C]
 00516918    xor eax, eax
 0051691A    and ecx, 0x800
-00516920    or eax, ecx
+00516920    or eax, ecx                                     ; => [ Call: sub_571b30 ]
 00516922    jnz 0x00516979
 00516924    mov ecx, dword ptr ds:[ebx]
 00516926    lea edx, ds:[eax+0x17]
@@ -56,7 +62,7 @@
 0051692E    mov ecx, dword ptr ds:[eax+0x9C]
 00516934    xor eax, eax
 00516936    and ecx, 0x40
-00516939    or eax, ecx
+00516939    or eax, ecx                                     ; => [ Call: sub_571b30 ]
 0051693B    jnz 0x00516979
 0051693D    cmp edi, 0x0A
 00516940    jnl 0x00516947
@@ -78,7 +84,7 @@
 00516970    mov dword ptr ss:[esp+esi*8+0x10], ecx
 00516974    mov dword ptr ss:[esp+esi*8+0x14], eax
 00516978    inc esi
-00516979    mov ecx, dword ptr ds:[0x00CCB414]
+00516979    mov ecx, dword ptr ds:[0x00CCB414]              ; => [ Data: data_ccb414 ]
 0051697F    mov edx, dword ptr ss:[esp+0x0C]
 00516983    inc edi
 00516984    add ebx, 0x04
@@ -90,7 +96,7 @@
 00516996    push esi
 00516997    lea edx, ss:[esp+0x14]
 0051699B    mov ecx, 0xCC8DE0
-005169A0    call 0x0051E050
+005169A0    call 0x0051E050                                 ; => [ Call: sub_51e050 | Data: data_cc8de0 ]
 005169A5    add esp, 0x04
 005169A8    mov edi, eax
 005169AA    mov ecx, edi
@@ -99,10 +105,10 @@
 005169B0    call 0x0050A6A0
 005169B5    add esp, 0x08
 005169B8    test al, al
-005169BA    jz 0x005169C8
+005169BA    jz 0x005169C8                                   ; => [ Call: sub_50a6a0 ]
 005169BC    mov edx, edi
 005169BE    mov ecx, 0xCCA794
-005169C3    call 0x0058FFD0
+005169C3    call 0x0058FFD0                                 ; => [ Data: data_cca794 | Call: sub_58ffd0 ]
 005169C8    xor eax, eax
 005169CA    test esi, esi
 005169CC    jle 0x005169F5
@@ -127,7 +133,7 @@
 00516A03    pop esi
 00516A04    pop ebx
 00516A05    xor ecx, esp
-00516A07    call 0x0075927A
+00516A07    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00516A0C    mov esp, ebp
 00516A0E    pop ebp
 00516A0F    ret
@@ -136,10 +142,10 @@
 00516A1A    push 0x80CD80
 00516A1F    mov edx, 0x801800
 00516A24    mov ecx, 0x8144D8
-00516A29    call 0x0063B870
+00516A29    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: theme.piece == CTHEME_CATEGORY | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: ThemePiece_CategoryCombo::<lambda_f432f8b976f9d1c000aabc76fd2255ce>::operator () ]
 00516A2E    add esp, 0x0C
 00516A31    call 0x0063BC30
 00516A36    test al, al
-00516A38    jz 0x00516A3B
+00516A38    jz 0x00516A3B                                   ; => [ Call: sub_63bc30 ]
 00516A3A    int3
-00516A3B    call 0x0063BB00
+00516A3B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

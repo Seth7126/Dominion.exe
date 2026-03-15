@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_63a3b0
+// 起始地址: 0x63a3b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063A3B0    push ebp
 0063A3B1    mov ebp, esp
 0063A3B3    sub esp, 0xE4
-0063A3B9    mov eax, dword ptr ds:[0x008C4040]
+0063A3B9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0063A3BE    xor eax, ebp
 0063A3C0    mov dword ptr ss:[ebp-0x04], eax
 0063A3C3    mov eax, dword ptr ss:[ebp+0x08]
@@ -17,14 +23,14 @@
 0063A3EA    jnb 0x0063A407
 0063A3EC    push esi
 0063A3ED    push eax
-0063A3EE    call 0x00639C00
+0063A3EE    call 0x00639C00                                 ; => [ Call: sub_639c00 ]
 0063A3F3    add esp, 0x08
 0063A3F6    pop edi
 0063A3F7    pop esi
 0063A3F8    pop ebx
 0063A3F9    mov ecx, dword ptr ss:[ebp-0x04]
 0063A3FC    xor ecx, ebp
-0063A3FE    call 0x0075927A
+0063A3FE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0063A403    mov esp, ebp
 0063A405    pop ebp
 0063A406    ret
@@ -363,7 +369,7 @@
 0063A9B0    push ebx
 0063A9B1    push ecx
 0063A9B2    push eax
-0063A9B3    call 0x00761FBE
+0063A9B3    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0063A9B8    add esp, 0x0C
 0063A9BB    mov eax, 0x60
 0063A9C0    sub eax, ebx
@@ -372,7 +378,7 @@
 0063A9C6    add eax, ebx
 0063A9C8    push 0x00
 0063A9CA    push eax
-0063A9CB    call 0x00761FC4
+0063A9CB    call 0x00761FC4                                 ; => [ Call: memset ]
 0063A9D0    mov ecx, dword ptr ss:[ebp-0x10]
 0063A9D3    add esp, 0x0C
 0063A9D6    mov edx, dword ptr ss:[ebp-0x54]
@@ -959,7 +965,7 @@
 0063B284    xor ecx, ebp
 0063B286    mov dword ptr ds:[edx], eax
 0063B288    pop ebx
-0063B289    call 0x0075927A
+0063B289    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0063B28E    mov esp, ebp
 0063B290    pop ebp
 0063B291    ret

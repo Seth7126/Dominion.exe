@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_618760
+// 起始地址: 0x618760
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00618760    push ecx
 00618761    push esi
 00618762    push edi
@@ -5,7 +11,7 @@
 00618765    cmp edx, 0xFFFFFFFF
 00618768    jz 0x006187AE
 0061876A    nop word ptr ds:[eax+eax*1], ax
-00618770    mov ecx, dword ptr ds:[0x00CC8D5C]
+00618770    mov ecx, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 00618776    test ecx, ecx
 00618778    jz 0x006187EC
 0061877A    mov eax, dword ptr ds:[ecx]
@@ -39,25 +45,25 @@
 006187BD    pop esi
 006187BE    pop ecx
 006187BF    ret
-006187C0    push 0x868BCC
+006187C0    push 0x868BCC                                   ; => [ String: SMDefLookup ]
 006187C5    push 0xCE67
-006187CA    push 0x86F1E8
-006187CF    mov ecx, 0x868BEC
+006187CA    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+006187CF    mov ecx, 0x868BEC                               ; => [ String: defs[state].state == state ]
 006187D4    jmp 0x006187FD
-006187D6    push 0x868BCC
+006187D6    push 0x868BCC                                   ; => [ String: SMDefLookup ]
 006187DB    push 0xCE66
-006187E0    push 0x86F1E8
-006187E5    mov ecx, 0x868C08
+006187E0    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+006187E5    mov ecx, 0x868C08                               ; => [ String: state >= 0 ]
 006187EA    jmp 0x006187FD
-006187EC    push 0x77EB90
+006187EC    push 0x77EB90                                   ; => [ String: GetClient ]
 006187F1    push 0x7B
-006187F3    push 0x77EB50
-006187F8    mov ecx, 0x77EB9C
+006187F3    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+006187F8    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 006187FD    mov edx, 0x801800
-00618802    call 0x0063B870
+00618802    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00618807    add esp, 0x0C
 0061880A    call 0x0063BC30
 0061880F    test al, al
-00618811    jz 0x00618814
+00618811    jz 0x00618814                                   ; => [ Call: sub_63bc30 ]
 00618813    int3
-00618814    call 0x0063BB00
+00618814    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

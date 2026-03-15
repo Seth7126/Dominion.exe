@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_522750
+// 起始地址: 0x522750
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00522750    dword 8BEC8B55
 00522754    adc eax, 0xCCE9B0
 00522759    sub esp, 0x28
 0052275C    mov ecx, dword ptr ss:[ebp+0x08]
-0052275F    call 0x00571B30
+0052275F    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 00522764    mov ecx, dword ptr ds:[eax+0x98]
 0052276A    mov eax, dword ptr ds:[eax+0x9C]
 00522770    and ecx, 0x7F000400
@@ -21,7 +27,7 @@
 0052279C    push eax
 0052279D    call 0x00576C00
 005227A2    add esp, 0x08
-005227A5    movups xmm0, xmmword ptr ds:[eax]
+005227A5    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Data: data_cce9b0 | Call: sub_571b30 ]
 005227A8    movups xmmword ptr ss:[ebp-0x14], xmm0
 005227AC    psrldq xmm0, 0x08
 005227B1    movd eax, xmm0

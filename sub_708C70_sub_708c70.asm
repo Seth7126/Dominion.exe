@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_708c70
+// 起始地址: 0x708c70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00708C70    push ebp
 00708C71    mov ebp, esp
 00708C73    sub esp, 0x70
-00708C76    mov eax, dword ptr ds:[0x0147DED8]
+00708C76    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00708C7B    mov dword ptr ss:[ebp-0x70], edx
 00708C7E    mov dword ptr ss:[ebp-0x14], ecx
 00708C81    push ebx
@@ -13,19 +19,19 @@
 00708C8D    push 0x88DAD0
 00708C92    push 0x0C
 00708C94    call eax
-00708C96    mov edi, eax
+00708C96    mov edi, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 00708C98    add esp, 0x0C
 00708C9B    mov dword ptr ss:[ebp-0x08], edi
 00708C9E    jmp 0x00708CB0
 00708CA0    push 0x0C
-00708CA2    call dword ptr ds:[0x00800B4C]
+00708CA2    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00708CA8    add esp, 0x04
 00708CAB    mov dword ptr ss:[ebp-0x08], eax
 00708CAE    mov edi, eax
 00708CB0    test edi, edi
 00708CB2    jz 0x00708CBB
 00708CB4    mov dword ptr ds:[edi+0x08], 0x00
-00708CBB    mov eax, dword ptr ds:[0x0147DED8]
+00708CBB    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00708CC0    mov dword ptr ds:[edi], 0x00
 00708CC6    mov dword ptr ds:[edi+0x04], 0x12
 00708CCD    test eax, eax
@@ -33,11 +39,11 @@
 00708CD1    push 0xF9
 00708CD6    push 0x88DAD0
 00708CDB    push 0x48
-00708CDD    call eax
+00708CDD    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 00708CDF    add esp, 0x0C
 00708CE2    jmp 0x00708CEF
 00708CE4    push 0x48
-00708CE6    call dword ptr ds:[0x00800B4C]
+00708CE6    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 00708CEC    add esp, 0x04
 00708CEF    mov esi, eax
 00708CF1    test esi, esi
@@ -45,7 +51,7 @@
 00708CF5    push 0x48
 00708CF7    push 0x00
 00708CF9    push esi
-00708CFA    call 0x00761FC4
+00708CFA    call 0x00761FC4                                 ; => [ Call: memset ]
 00708CFF    add esp, 0x0C
 00708D02    mov dword ptr ds:[edi+0x08], esi
 00708D05    xorps xmm0, xmm0
@@ -258,7 +264,7 @@
 00708F0D    push 0x08
 00708F0F    lea edx, ds:[eax+0x0E]
 00708F12    mov ecx, ebx
-00708F14    call 0x00714AD0
+00708F14    call 0x00714AD0                                 ; => [ Call: sub_715c20 | Call: sub_714ad0 | Call: sub_7160f0 ]
 00708F19    mov esi, eax
 00708F1B    mov dword ptr ss:[ebp-0x3C], 0x00
 00708F22    mov eax, dword ptr ss:[ebp-0x10]
@@ -271,7 +277,7 @@
 00708F3E    lea eax, ds:[ebx-0x01]
 00708F41    xor ecx, ecx
 00708F43    mov dword ptr ss:[ebp-0x50], eax
-00708F46    mov dword ptr ss:[ebp-0x34], ecx
+00708F46    mov dword ptr ss:[ebp-0x34], ecx                ; => [ Call: nullptr ]
 00708F49    nop dword ptr ds:[eax], eax
 00708F50    mov eax, dword ptr ds:[edi]
 00708F52    mov cl, byte ptr ds:[eax]
@@ -376,7 +382,7 @@
 00709079    mov edx, ecx
 0070907B    mov ecx, edi
 0070907D    push esi
-0070907E    call 0x00708A00
+0070907E    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 00709083    movss xmm1, dword ptr ds:[0x0089102C]
 0070908B    add esp, 0x04
 0070908E    add dword ptr ss:[ebp-0x34], 0x20
@@ -401,7 +407,7 @@
 007090CF    shl eax, 0x02
 007090D2    push eax
 007090D3    push dword ptr ds:[edx+0x08]
-007090D6    call dword ptr ds:[0x00800B50]
+007090D6    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 007090DC    mov edx, dword ptr ss:[ebp-0x08]
 007090DF    add esp, 0x08
 007090E2    mov dword ptr ds:[edx+0x08], eax
@@ -419,7 +425,7 @@
 0070910F    push 0x05
 00709111    mov edx, 0x05
 00709116    mov ecx, ebx
-00709118    call 0x00714AD0
+00709118    call 0x00714AD0                                 ; => [ Call: sub_715c10 | Call: sub_714ad0 | Call: sub_7158f0 ]
 0070911D    mov esi, eax
 0070911F    mov dword ptr ss:[ebp-0x3C], 0x00
 00709126    mov eax, dword ptr ss:[ebp-0x10]
@@ -432,7 +438,7 @@
 00709142    lea eax, ds:[ebx-0x01]
 00709145    xor ecx, ecx
 00709147    mov dword ptr ss:[ebp-0x50], eax
-0070914A    mov dword ptr ss:[ebp-0x34], ecx
+0070914A    mov dword ptr ss:[ebp-0x34], ecx                ; => [ Call: nullptr ]
 0070914D    nop dword ptr ds:[eax], eax
 00709150    mov eax, dword ptr ds:[edi]
 00709152    mov cl, byte ptr ds:[eax]
@@ -506,7 +512,7 @@
 00709217    jnl 0x0070922C
 00709219    push esi
 0070921A    mov ecx, edi
-0070921C    call 0x00708A00
+0070921C    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 00709221    movss xmm1, dword ptr ds:[0x0089102C]
 00709229    add esp, 0x04
 0070922C    add dword ptr ss:[ebp-0x34], 0x14
@@ -531,7 +537,7 @@
 0070926D    shl eax, 0x02
 00709270    push eax
 00709271    push dword ptr ds:[edx+0x08]
-00709274    call dword ptr ds:[0x00800B50]
+00709274    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070927A    mov edx, dword ptr ss:[ebp-0x08]
 0070927D    add esp, 0x08
 00709280    mov dword ptr ds:[edx+0x08], eax
@@ -544,51 +550,51 @@
 00709295    mov eax, dword ptr ds:[esi+0x10]
 00709298    maxss xmm1, dword ptr ds:[eax+ecx*4-0x14]
 0070929E    jmp 0x00709541
-007092A3    mov eax, dword ptr ds:[0x0147DED8]
+007092A3    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007092A8    test eax, eax
 007092AA    jz 0x007092C4
 007092AC    push 0x36E
 007092B1    push 0x88DCF8
 007092B6    push 0x18
 007092B8    call eax
-007092BA    mov esi, eax
+007092BA    mov esi, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 007092BC    add esp, 0x0C
 007092BF    mov dword ptr ss:[ebp-0x30], esi
 007092C2    jmp 0x007092D4
 007092C4    push 0x18
-007092C6    call dword ptr ds:[0x00800B4C]
+007092C6    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007092CC    add esp, 0x04
 007092CF    mov dword ptr ss:[ebp-0x30], eax
 007092D2    mov esi, eax
 007092D4    test esi, esi
 007092D6    jz 0x007092E3
 007092D8    xorps xmm0, xmm0
-007092DB    movups xmmword ptr ds:[esi], xmm0
+007092DB    movups xmmword ptr ds:[esi], xmm0               ; => [ Call: __builtin_memset ]
 007092DE    movq qword ptr ds:[esi+0x10], xmm0
-007092E3    mov eax, dword ptr ds:[0x0147DED8]
+007092E3    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007092E8    mov dword ptr ds:[esi], 0x04
 007092EE    test eax, eax
 007092F0    jz 0x00709302
 007092F2    push 0x52
 007092F4    push 0x88DCF8
 007092F9    push 0x0C
-007092FB    call eax
+007092FB    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 007092FD    add esp, 0x0C
 00709300    jmp 0x0070930D
 00709302    push 0x0C
-00709304    call dword ptr ds:[0x00800B4C]
+00709304    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070930A    add esp, 0x04
 0070930D    test eax, eax
 0070930F    jz 0x0070931E
 00709311    mov dword ptr ds:[eax], 0x00
 00709317    mov dword ptr ds:[eax+0x04], 0x00
-0070931E    mov ecx, dword ptr ds:[0x0147DED8]
+0070931E    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00709324    mov dword ptr ds:[esi+0x04], eax
-00709327    mov dword ptr ds:[eax+0x08], 0x7162A0
+00709327    mov dword ptr ds:[eax+0x08], 0x7162A0           ; => [ Call: sub_7162a0 ]
 0070932E    mov eax, dword ptr ds:[esi+0x04]
-00709331    mov dword ptr ds:[eax], 0x716100
+00709331    mov dword ptr ds:[eax], 0x716100                ; => [ Call: sub_716100 ]
 00709337    mov eax, dword ptr ds:[esi+0x04]
-0070933A    mov dword ptr ds:[eax+0x04], 0x716290
+0070933A    mov dword ptr ds:[eax+0x04], 0x716290           ; => [ Call: sub_716290 ]
 00709341    lea eax, ds:[ebx*4]
 00709348    mov dword ptr ds:[esi+0x08], ebx
 0070934B    test ecx, ecx
@@ -597,12 +603,12 @@
 00709354    push 0x88DCF8
 00709359    push eax
 0070935A    call ecx
-0070935C    mov ecx, eax
+0070935C    mov ecx, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070935E    add esp, 0x0C
 00709361    mov dword ptr ss:[ebp-0x3C], ecx
 00709364    jmp 0x00709375
 00709366    push eax
-00709367    call dword ptr ds:[0x00800B4C]
+00709367    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070936D    add esp, 0x04
 00709370    mov dword ptr ss:[ebp-0x3C], eax
 00709373    mov ecx, eax
@@ -612,24 +618,24 @@
 00709380    push eax
 00709381    push 0x00
 00709383    push ecx
-00709384    call 0x00761FC4
+00709384    call 0x00761FC4                                 ; => [ Call: memset ]
 00709389    mov ecx, dword ptr ss:[ebp-0x3C]
 0070938C    add esp, 0x0C
 0070938F    mov dword ptr ds:[esi+0x0C], ecx
 00709392    lea eax, ds:[ebx*4]
-00709399    mov ecx, dword ptr ds:[0x0147DED8]
+00709399    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070939F    test ecx, ecx
 007093A1    jz 0x007093BA
 007093A3    push 0x373
 007093A8    push 0x88DCF8
 007093AD    push eax
-007093AE    call ecx
+007093AE    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 007093B0    mov ecx, eax
 007093B2    add esp, 0x0C
 007093B5    mov dword ptr ss:[ebp-0x3C], ecx
 007093B8    jmp 0x007093C9
 007093BA    push eax
-007093BB    call dword ptr ds:[0x00800B4C]
+007093BB    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007093C1    add esp, 0x04
 007093C4    mov dword ptr ss:[ebp-0x3C], eax
 007093C7    mov ecx, eax
@@ -639,7 +645,7 @@
 007093D4    push eax
 007093D5    push 0x00
 007093D7    push ecx
-007093D8    call 0x00761FC4
+007093D8    call 0x00761FC4                                 ; => [ Call: memset ]
 007093DD    mov ecx, dword ptr ss:[ebp-0x3C]
 007093E0    add esp, 0x0C
 007093E3    mov eax, dword ptr ss:[ebp-0x10]
@@ -648,7 +654,7 @@
 007093EC    mov dword ptr ss:[ebp-0x20], 0x00
 007093F3    test ebx, ebx
 007093F5    jle 0x007094E8
-007093FB    mov dword ptr ss:[ebp-0x34], 0x00
+007093FB    mov dword ptr ss:[ebp-0x34], 0x00               ; => [ Call: nullptr ]
 00709402    mov eax, dword ptr ds:[edi]
 00709404    mov cl, byte ptr ds:[eax]
 00709406    inc eax
@@ -677,7 +683,7 @@
 00709439    mov ecx, edi
 0070943B    call 0x00708970
 00709440    mov ebx, dword ptr ss:[ebp-0x30]
-00709443    mov esi, eax
+00709443    mov esi, eax                                    ; => [ Call: sub_708970 ]
 00709445    mov eax, dword ptr ss:[ebp-0x34]
 00709448    movss xmm0, dword ptr ss:[ebp-0x54]
 0070944D    mov ecx, dword ptr ds:[ebx+0x0C]
@@ -685,7 +691,7 @@
 00709455    mov ecx, dword ptr ds:[ebx+0x14]
 00709458    mov eax, dword ptr ss:[ebp-0x20]
 0070945B    push dword ptr ds:[ecx+eax*4]
-0070945E    call dword ptr ds:[0x00800B48]
+0070945E    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00709464    add esp, 0x04
 00709467    test esi, esi
 00709469    jz 0x007094C2
@@ -695,7 +701,7 @@
 00709472    inc ecx
 00709473    test al, al
 00709475    jnz 0x00709470
-00709477    mov eax, dword ptr ds:[0x0147DED8]
+00709477    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070947C    sub ecx, edx
 0070947E    inc ecx
 0070947F    test eax, eax
@@ -703,11 +709,11 @@
 00709483    push 0x37D
 00709488    push 0x88DCF8
 0070948D    push ecx
-0070948E    call eax
+0070948E    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 00709490    add esp, 0x0C
 00709493    jmp 0x0070949F
 00709495    push ecx
-00709496    call dword ptr ds:[0x00800B4C]
+00709496    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070949C    add esp, 0x04
 0070949F    mov edx, dword ptr ss:[ebp-0x20]
 007094A2    mov ecx, eax
@@ -748,7 +754,7 @@
 00709513    shl eax, 0x02
 00709516    push eax
 00709517    push dword ptr ds:[edx+0x08]
-0070951A    call dword ptr ds:[0x00800B50]
+0070951A    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 00709520    mov edx, dword ptr ss:[ebp-0x08]
 00709523    add esp, 0x08
 00709526    mov dword ptr ds:[edx+0x08], eax
@@ -981,9 +987,9 @@
 00709768    cmp esi, dword ptr ds:[ebx]
 0070976A    jl 0x00709755
 0070976C    push dword ptr ds:[ebx+0x08]
-0070976F    call dword ptr ds:[0x00800B48]
+0070976F    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00709775    push ebx
-00709776    call dword ptr ds:[0x00800B48]
+00709776    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070977C    mov eax, dword ptr ss:[ebp+0x0C]
 0070977F    mov edx, 0x88DB38
 00709784    mov ecx, dword ptr ss:[ebp-0x10]
@@ -991,7 +997,7 @@
 0070978A    mov eax, dword ptr ds:[eax+ecx*4]
 0070978D    mov ecx, dword ptr ss:[ebp-0x14]
 00709790    push dword ptr ds:[eax+0x04]
-00709793    call 0x007087D0
+00709793    call 0x007087D0                                 ; => [ Call: sub_7087d0 | String: Invalid timeline type for a slot: ]
 00709798    add esp, 0x0C
 0070979B    xor eax, eax
 0070979D    pop edi
@@ -1005,7 +1011,7 @@
 007097AE    push 0x02
 007097B0    xor edx, edx
 007097B2    mov ecx, ebx
-007097B4    call 0x00714AD0
+007097B4    call 0x00714AD0                                 ; => [ Call: sub_714ad0 | Call: ?get@Length@?$WriteOnlyArray@E$00@Platform@@Q$ABAIXZ | Call: sub_714b80 ]
 007097B9    mov ecx, dword ptr ss:[ebp-0x10]
 007097BC    mov esi, eax
 007097BE    add esp, 0x0C
@@ -1077,7 +1083,7 @@
 00709870    push ebx
 00709871    mov edx, esi
 00709873    mov ecx, edi
-00709875    call 0x00708A00
+00709875    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 0070987A    add esp, 0x04
 0070987D    inc ebx
 0070987E    mov dword ptr ss:[ebp-0x3C], ebx
@@ -1099,7 +1105,7 @@
 007098B8    shl eax, 0x02
 007098BB    push eax
 007098BC    push dword ptr ds:[edx+0x08]
-007098BF    call dword ptr ds:[0x00800B50]
+007098BF    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 007098C5    mov edx, dword ptr ss:[ebp-0x08]
 007098C8    add esp, 0x08
 007098CB    mov dword ptr ds:[edx+0x08], eax
@@ -1112,9 +1118,9 @@
 007098E0    maxss xmm0, dword ptr ds:[eax+ebx*8-0x08]
 007098E6    jmp 0x00709AF8
 007098EB    movss xmm1, dword ptr ds:[0x00890E18]
-007098F3    xor ecx, ecx
+007098F3    xor ecx, ecx                                    ; => [ Call: nullptr ]
 007098F5    movss dword ptr ss:[ebp-0x30], xmm1
-007098FA    mov dword ptr ss:[ebp-0x28], ecx
+007098FA    mov dword ptr ss:[ebp-0x28], ecx                ; => [ Call: nullptr ]
 007098FD    sub eax, 0x01
 00709900    jz 0x0070994C
 00709902    sub eax, 0x01
@@ -1126,7 +1132,7 @@
 00709916    lea edx, ds:[ecx+0x03]
 00709919    mov ecx, ebx
 0070991B    push 0x03
-0070991D    call 0x00714AD0
+0070991D    call 0x00714AD0                                 ; => [ Call: sub_714ad0 | Call: sub_7158e0 | Call: sub_715670 ]
 00709922    movss xmm1, dword ptr ss:[ebp-0x30]
 00709927    mov ecx, eax
 00709929    jmp 0x00709972
@@ -1135,7 +1141,7 @@
 00709935    push 0x03
 00709937    mov edx, 0x02
 0070993C    mov ecx, ebx
-0070993E    call 0x00714AD0
+0070993E    call 0x00714AD0                                 ; => [ Call: sub_7150f0 | Call: sub_714ad0 | Call: sub_715660 ]
 00709943    movss xmm1, dword ptr ss:[ebp-0x30]
 00709948    mov ecx, eax
 0070994A    jmp 0x00709972
@@ -1144,7 +1150,7 @@
 00709956    push 0x03
 00709958    mov edx, 0x01
 0070995D    mov ecx, ebx
-0070995F    call 0x00714AD0
+0070995F    call 0x00714AD0                                 ; => [ Call: sub_7150e0 | Call: sub_714ad0 | Call: sub_714e70 ]
 00709964    mov ecx, eax
 00709966    mov eax, dword ptr ss:[ebp-0x14]
 00709969    movss xmm1, dword ptr ds:[eax]
@@ -1156,7 +1162,7 @@
 00709982    test ebx, ebx
 00709984    jle 0x00709A9C
 0070998A    lea eax, ds:[ebx-0x01]
-0070998D    mov dword ptr ss:[ebp-0x38], 0x00
+0070998D    mov dword ptr ss:[ebp-0x38], 0x00               ; => [ Call: nullptr ]
 00709994    mov dword ptr ss:[ebp-0x48], eax
 00709997    mov eax, dword ptr ds:[edi]
 00709999    mov cl, byte ptr ds:[eax]
@@ -1247,7 +1253,7 @@
 00709A75    mov edx, ecx
 00709A77    mov ecx, edi
 00709A79    push esi
-00709A7A    call 0x00708A00
+00709A7A    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 00709A7F    movss xmm1, dword ptr ss:[ebp-0x30]
 00709A84    add esp, 0x04
 00709A87    add ebx, 0x0C
@@ -1274,7 +1280,7 @@
 00709ACB    push dword ptr ds:[esi+0x08]
 00709ACE    call dword ptr ds:[0x00800B50]
 00709AD4    add esp, 0x08
-00709AD7    mov dword ptr ds:[esi+0x08], eax
+00709AD7    mov dword ptr ds:[esi+0x08], eax                ; => [ Call: realloc ]
 00709ADA    mov ecx, dword ptr ds:[esi]
 00709ADC    mov eax, dword ptr ds:[esi+0x08]
 00709ADF    mov edx, dword ptr ss:[ebp-0x28]
@@ -1440,7 +1446,7 @@
 00709C73    push 0x06
 00709C75    mov edx, 0x09
 00709C7A    mov ecx, esi
-00709C7C    call 0x00714AD0
+00709C7C    call 0x00714AD0                                 ; => [ Call: sub_714ad0 | Call: sub_718870 | Call: sub_718c00 ]
 00709C81    mov ebx, eax
 00709C83    mov dword ptr ss:[ebp-0x3C], 0x00
 00709C8A    mov eax, dword ptr ss:[ebp-0x28]
@@ -1450,7 +1456,7 @@
 00709C96    test esi, esi
 00709C98    jle 0x00709E63
 00709C9E    lea eax, ds:[esi-0x01]
-00709CA1    mov dword ptr ss:[ebp-0x38], 0x00
+00709CA1    mov dword ptr ss:[ebp-0x38], 0x00               ; => [ Call: nullptr ]
 00709CA8    mov dword ptr ss:[ebp-0x48], eax
 00709CAB    nop dword ptr ds:[eax+eax*1], eax
 00709CB0    mov eax, dword ptr ds:[edi]
@@ -1569,9 +1575,9 @@
 00709DD7    cmp esi, dword ptr ds:[ebx]
 00709DD9    jl 0x00709DC4
 00709DDB    push dword ptr ds:[ebx+0x08]
-00709DDE    call dword ptr ds:[0x00800B48]
+00709DDE    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00709DE4    push ebx
-00709DE5    call dword ptr ds:[0x00800B48]
+00709DE5    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 00709DEB    mov eax, dword ptr ss:[ebp+0x0C]
 00709DEE    mov edx, 0x88DB14
 00709DF3    mov ecx, dword ptr ss:[ebp-0x10]
@@ -1579,7 +1585,7 @@
 00709DF9    mov eax, dword ptr ds:[eax+ecx*4]
 00709DFC    mov ecx, dword ptr ss:[ebp-0x14]
 00709DFF    push dword ptr ds:[eax+0x04]
-00709E02    call 0x007087D0
+00709E02    call 0x007087D0                                 ; => [ String: Invalid timeline type for a bone: | Call: sub_7087d0 ]
 00709E07    add esp, 0x0C
 00709E0A    xor eax, eax
 00709E0C    pop edi
@@ -1588,14 +1594,14 @@
 00709E0F    mov esp, ebp
 00709E11    pop ebp
 00709E12    ret
-00709E13    movaps xmm0, xmm1
+00709E13    movaps xmm0, xmm1                               ; => [ String: 0 | String: zx ]
 00709E16    mov eax, dword ptr ds:[esi+0x10]
 00709E19    movss dword ptr ds:[ebx+eax*1+0x10], xmm0
 00709E1F    test ch, ch
 00709E21    jz 0x00709E28
 00709E23    movaps xmm0, xmm2
 00709E26    jmp 0x00709E2B
-00709E28    movaps xmm0, xmm1
+00709E28    movaps xmm0, xmm1                               ; => [ String: 0 | String: zx ]
 00709E2B    mov eax, dword ptr ds:[esi+0x10]
 00709E2E    mov esi, dword ptr ss:[ebp-0x3C]
 00709E31    movss dword ptr ds:[ebx+eax*1+0x14], xmm0
@@ -1604,7 +1610,7 @@
 00709E3C    mov edx, dword ptr ss:[ebp-0x34]
 00709E3F    mov ecx, edi
 00709E41    push esi
-00709E42    call 0x00708A00
+00709E42    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 00709E47    add esp, 0x04
 00709E4A    inc esi
 00709E4B    add ebx, 0x18
@@ -1629,7 +1635,7 @@
 00709E8E    shl eax, 0x02
 00709E91    push eax
 00709E92    push dword ptr ds:[edx+0x08]
-00709E95    call dword ptr ds:[0x00800B50]
+00709E95    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 00709E9B    mov edx, dword ptr ss:[ebp-0x08]
 00709E9E    add esp, 0x08
 00709EA1    mov dword ptr ds:[edx+0x08], eax
@@ -1783,7 +1789,7 @@
 0070A012    push 0x05
 0070A014    mov edx, 0x0A
 0070A019    mov ecx, ebx
-0070A01B    call 0x00714AD0
+0070A01B    call 0x00714AD0                                 ; => [ Call: sub_718c10 | Call: sub_714ad0 | Call: sub_718f20 ]
 0070A020    add esp, 0x0C
 0070A023    mov dword ptr ss:[ebp-0x38], eax
 0070A026    mov dword ptr ss:[ebp-0x40], 0x00
@@ -1791,7 +1797,7 @@
 0070A030    test ebx, ebx
 0070A032    jle 0x0070A1C6
 0070A038    lea eax, ds:[ebx-0x01]
-0070A03B    mov dword ptr ss:[ebp-0x3C], 0x00
+0070A03B    mov dword ptr ss:[ebp-0x3C], 0x00               ; => [ Call: nullptr ]
 0070A042    mov dword ptr ss:[ebp-0x34], eax
 0070A045    mov eax, dword ptr ds:[edi]
 0070A047    mov cl, byte ptr ds:[eax]
@@ -1932,7 +1938,7 @@
 0070A1A4    mov edx, ecx
 0070A1A6    mov ecx, edi
 0070A1A8    push esi
-0070A1A9    call 0x00708A00
+0070A1A9    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 0070A1AE    add esp, 0x04
 0070A1B1    add ebx, 0x14
 0070A1B4    inc esi
@@ -1958,7 +1964,7 @@
 0070A1F5    push dword ptr ds:[esi+0x08]
 0070A1F8    call dword ptr ds:[0x00800B50]
 0070A1FE    add esp, 0x08
-0070A201    mov dword ptr ds:[esi+0x08], eax
+0070A201    mov dword ptr ds:[esi+0x08], eax                ; => [ Call: realloc ]
 0070A204    mov ecx, dword ptr ds:[esi]
 0070A206    mov eax, dword ptr ds:[esi+0x08]
 0070A209    mov edx, dword ptr ss:[ebp-0x38]
@@ -2178,7 +2184,7 @@
 0070A42A    push 0x03
 0070A42C    lea edx, ds:[eax+0x0D]
 0070A42F    mov ecx, ebx
-0070A431    call 0x00714AD0
+0070A431    call 0x00714AD0                                 ; => [ Call: sub_719530 | Call: sub_714ad0 | Call: sub_7192f0 ]
 0070A436    mov esi, eax
 0070A438    mov dword ptr ss:[ebp-0x40], 0x00
 0070A43F    mov eax, dword ptr ss:[ebp-0x1C]
@@ -2188,7 +2194,7 @@
 0070A44B    test ebx, ebx
 0070A44D    jle 0x0070A55C
 0070A453    lea eax, ds:[ebx-0x01]
-0070A456    mov dword ptr ss:[ebp-0x3C], 0x00
+0070A456    mov dword ptr ss:[ebp-0x3C], 0x00               ; => [ Call: nullptr ]
 0070A45D    mov dword ptr ss:[ebp-0x48], eax
 0070A460    mov eax, dword ptr ds:[edi]
 0070A462    mov cl, byte ptr ds:[eax]
@@ -2277,7 +2283,7 @@
 0070A537    mov edx, ecx
 0070A539    mov ecx, edi
 0070A53B    push esi
-0070A53C    call 0x00708A00
+0070A53C    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 0070A541    add esp, 0x04
 0070A544    add ebx, 0x0C
 0070A547    inc esi
@@ -2302,7 +2308,7 @@
 0070A587    shl eax, 0x02
 0070A58A    push eax
 0070A58B    push dword ptr ds:[edx+0x08]
-0070A58E    call dword ptr ds:[0x00800B50]
+0070A58E    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070A594    mov edx, dword ptr ss:[ebp-0x08]
 0070A597    add esp, 0x08
 0070A59A    mov dword ptr ds:[edx+0x08], eax
@@ -2325,7 +2331,7 @@
 0070A5D9    push 0x719110
 0070A5DE    push 0x02
 0070A5E0    mov edx, 0x0C
-0070A5E5    call 0x00714AD0
+0070A5E5    call 0x00714AD0                                 ; => [ Call: sub_719110 | Call: sub_714ad0 | Call: sub_7192e0 ]
 0070A5EA    mov ecx, eax
 0070A5EC    add esp, 0x0C
 0070A5EF    mov eax, dword ptr ss:[ebp-0x30]
@@ -2343,7 +2349,7 @@
 0070A614    push 0x718F30
 0070A619    push 0x02
 0070A61B    mov edx, 0x0B
-0070A620    call 0x00714AD0
+0070A620    call 0x00714AD0                                 ; => [ Call: sub_718f30 | Call: sub_714ad0 | Call: sub_719100 ]
 0070A625    mov ecx, eax
 0070A627    add esp, 0x0C
 0070A62A    mov eax, dword ptr ss:[ebp-0x30]
@@ -2419,7 +2425,7 @@
 0070A6E9    mov edx, ecx
 0070A6EB    mov ecx, edi
 0070A6ED    push esi
-0070A6EE    call 0x00708A00
+0070A6EE    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 0070A6F3    movss xmm1, dword ptr ss:[ebp-0x28]
 0070A6F8    add esp, 0x04
 0070A6FB    mov ebx, dword ptr ss:[ebp-0x10]
@@ -2443,7 +2449,7 @@
 0070A738    shl eax, 0x02
 0070A73B    push eax
 0070A73C    push dword ptr ds:[edx+0x08]
-0070A73F    call dword ptr ds:[0x00800B50]
+0070A73F    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070A745    mov edx, dword ptr ss:[ebp-0x08]
 0070A748    add esp, 0x08
 0070A74B    mov dword ptr ds:[edx+0x08], eax
@@ -2703,12 +2709,12 @@
 0070A9C7    nop word ptr ds:[eax+eax*1], ax
 0070A9D0    mov edx, dword ptr ss:[ebp+0x0C]
 0070A9D3    mov ecx, edi
-0070A9D5    call 0x00708970
+0070A9D5    call 0x00708970                                 ; => [ Call: sub_708970 ]
 0070A9DA    mov edx, dword ptr ss:[ebp-0x20]
 0070A9DD    mov esi, eax
 0070A9DF    mov ecx, dword ptr ss:[ebp-0x58]
 0070A9E2    push esi
-0070A9E3    call 0x00752840
+0070A9E3    call 0x00752840                                 ; => [ Call: sub_752840 ]
 0070A9E8    add esp, 0x04
 0070A9EB    mov dword ptr ss:[ebp-0x38], eax
 0070A9EE    test eax, eax
@@ -2726,18 +2732,18 @@
 0070AA12    add ebx, edx
 0070AA14    add ebx, ebx
 0070AA16    mov dword ptr ss:[ebp-0x1C], ebx
-0070AA19    mov ecx, dword ptr ds:[0x0147DED8]
+0070AA19    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070AA1F    lea eax, ds:[ebx*4]
 0070AA26    test ecx, ecx
 0070AA28    jz 0x0070AA3C
 0070AA2A    push 0x1F0
 0070AA2F    push 0x88DAD0
 0070AA34    push eax
-0070AA35    call ecx
+0070AA35    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 0070AA37    add esp, 0x0C
 0070AA3A    jmp 0x0070AA46
 0070AA3C    push eax
-0070AA3D    call dword ptr ds:[0x00800B4C]
+0070AA3D    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070AA43    add esp, 0x04
 0070AA46    mov dword ptr ss:[ebp-0x10], eax
 0070AA49    mov eax, dword ptr ds:[edi]
@@ -2788,7 +2794,7 @@
 0070AAB3    mov dword ptr ss:[ebp-0x18], esi
 0070AAB6    mov edx, ebx
 0070AAB8    mov ecx, esi
-0070AABA    call 0x007183A0
+0070AABA    call 0x007183A0                                 ; => [ Call: sub_7183a0 ]
 0070AABF    mov esi, eax
 0070AAC1    mov dword ptr ss:[ebp-0x48], 0x00
 0070AAC8    mov eax, dword ptr ss:[ebp-0x20]
@@ -2800,7 +2806,7 @@
 0070AADA    test eax, eax
 0070AADC    jle 0x0070AF8B
 0070AAE2    lea ecx, ds:[ebx*4]
-0070AAE9    mov dword ptr ss:[ebp-0x3C], 0x00
+0070AAE9    mov dword ptr ss:[ebp-0x3C], 0x00               ; => [ Call: nullptr ]
 0070AAF0    dec eax
 0070AAF1    mov dword ptr ss:[ebp-0x5C], ecx
 0070AAF4    mov dword ptr ss:[ebp-0x6C], eax
@@ -2882,7 +2888,7 @@
 0070ABA3    push edx
 0070ABA4    push esi
 0070ABA5    mov dword ptr ss:[ebp-0x34], esi
-0070ABA8    call 0x00761FC4
+0070ABA8    call 0x00761FC4                                 ; => [ Call: memset ]
 0070ABAD    add esp, 0x0C
 0070ABB0    jmp 0x0070AEE5
 0070ABB5    mov eax, dword ptr ss:[ebp-0x38]
@@ -2935,7 +2941,7 @@
 0070AC28    push 0x00
 0070AC2A    push ecx
 0070AC2B    mov dword ptr ss:[ebp-0x34], ecx
-0070AC2E    call 0x00761FC4
+0070AC2E    call 0x00761FC4                                 ; => [ Call: memset ]
 0070AC33    mov eax, dword ptr ss:[ebp-0x14]
 0070AC36    add esp, 0x0C
 0070AC39    mov ecx, dword ptr ss:[ebp-0x28]
@@ -3021,7 +3027,7 @@
 0070ACFD    push 0x00
 0070ACFF    lea eax, ds:[eax+esi*4]
 0070AD02    push eax
-0070AD03    call 0x00761FC4
+0070AD03    call 0x00761FC4                                 ; => [ Call: memset ]
 0070AD08    add esp, 0x0C
 0070AD0B    cmp dword ptr ss:[ebp-0x44], 0x00
 0070AD0F    jnz 0x0070AEE5
@@ -3174,7 +3180,7 @@
 0070AEF6    movss dword ptr ds:[ecx+eax*1], xmm0
 0070AEFB    mov eax, dword ptr ds:[esi+0x18]
 0070AEFE    push dword ptr ds:[eax+ebx*4]
-0070AF01    call dword ptr ds:[0x00800B48]
+0070AF01    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070AF07    add esp, 0x04
 0070AF0A    cmp dword ptr ss:[ebp-0x34], 0x00
 0070AF0E    jnz 0x0070AF1C
@@ -3182,18 +3188,18 @@
 0070AF13    mov dword ptr ds:[eax+ebx*4], 0x00
 0070AF1A    jmp 0x0070AF68
 0070AF1C    mov eax, dword ptr ds:[esi+0x14]
-0070AF1F    mov ecx, dword ptr ds:[0x0147DED8]
+0070AF1F    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070AF25    shl eax, 0x02
 0070AF28    test ecx, ecx
 0070AF2A    jz 0x0070AF3E
 0070AF2C    push 0x47A
 0070AF31    push 0x88DCF8
 0070AF36    push eax
-0070AF37    call ecx
+0070AF37    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070AF39    add esp, 0x0C
 0070AF3C    jmp 0x0070AF48
 0070AF3E    push eax
-0070AF3F    call dword ptr ds:[0x00800B4C]
+0070AF3F    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070AF45    add esp, 0x04
 0070AF48    mov ecx, eax
 0070AF4A    mov eax, dword ptr ds:[esi+0x18]
@@ -3204,14 +3210,14 @@
 0070AF57    mov eax, dword ptr ds:[esi+0x18]
 0070AF5A    push dword ptr ss:[ebp-0x34]
 0070AF5D    push dword ptr ds:[eax+ebx*4]
-0070AF60    call 0x00761FBE
+0070AF60    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0070AF65    add esp, 0x0C
 0070AF68    cmp ebx, dword ptr ss:[ebp-0x6C]
 0070AF6B    jnl 0x0070AF7A
 0070AF6D    push ebx
 0070AF6E    mov edx, esi
 0070AF70    mov ecx, edi
-0070AF72    call 0x00708A00
+0070AF72    call 0x00708A00                                 ; => [ Call: sub_708a00 ]
 0070AF77    add esp, 0x04
 0070AF7A    add dword ptr ss:[ebp-0x3C], 0x04
 0070AF7E    inc ebx
@@ -3219,7 +3225,7 @@
 0070AF82    cmp ebx, dword ptr ss:[ebp-0x18]
 0070AF85    jl 0x0070AAF7
 0070AF8B    push dword ptr ss:[ebp-0x10]
-0070AF8E    call dword ptr ds:[0x00800B48]
+0070AF8E    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070AF94    mov ebx, dword ptr ss:[ebp-0x08]
 0070AF97    add esp, 0x04
 0070AF9A    mov eax, dword ptr ds:[ebx]
@@ -3238,7 +3244,7 @@
 0070AFC6    push dword ptr ds:[ebx+0x08]
 0070AFC9    call dword ptr ds:[0x00800B50]
 0070AFCF    add esp, 0x08
-0070AFD2    mov dword ptr ds:[ebx+0x08], eax
+0070AFD2    mov dword ptr ds:[ebx+0x08], eax                ; => [ Call: realloc ]
 0070AFD5    mov ecx, dword ptr ds:[ebx]
 0070AFD7    mov eax, dword ptr ds:[ebx+0x08]
 0070AFDA    movss xmm1, dword ptr ss:[ebp-0x0C]
@@ -3314,14 +3320,14 @@
 0070B09A    mov eax, dword ptr ss:[ebp+0x0C]
 0070B09D    mov eax, dword ptr ds:[eax+0x28]
 0070B0A0    mov dword ptr ss:[ebp-0x6C], eax
-0070B0A3    mov eax, dword ptr ds:[0x0147DED8]
+0070B0A3    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B0A8    test eax, eax
 0070B0AA    jz 0x0070B111
 0070B0AC    push 0x501
 0070B0B1    push 0x88DCF8
 0070B0B6    push 0x18
 0070B0B8    call eax
-0070B0BA    mov esi, eax
+0070B0BA    mov esi, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B0BC    add esp, 0x0C
 0070B0BF    mov dword ptr ss:[ebp-0x54], esi
 0070B0C2    jmp 0x0070B121
@@ -3340,13 +3346,13 @@
 0070B0E3    cmp edi, dword ptr ds:[ebx]
 0070B0E5    jl 0x0070B0D0
 0070B0E7    push dword ptr ds:[ebx+0x08]
-0070B0EA    call dword ptr ds:[0x00800B48]
+0070B0EA    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070B0F0    push ebx
 0070B0F1    call dword ptr ds:[0x00800B48]
 0070B0F7    mov ecx, dword ptr ss:[ebp-0x14]
 0070B0FA    mov edx, 0x88DB5C
 0070B0FF    push esi
-0070B100    call 0x007087D0
+0070B100    call 0x007087D0                                 ; => [ String: Attachment not found: | Call: sub_7087d0 | Call: free ]
 0070B105    add esp, 0x0C
 0070B108    xor eax, eax
 0070B10A    pop edi
@@ -3356,39 +3362,39 @@
 0070B10F    pop ebp
 0070B110    ret
 0070B111    push 0x18
-0070B113    call dword ptr ds:[0x00800B4C]
+0070B113    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B119    add esp, 0x04
 0070B11C    mov dword ptr ss:[ebp-0x54], eax
 0070B11F    mov esi, eax
 0070B121    test esi, esi
 0070B123    jz 0x0070B130
 0070B125    xorps xmm0, xmm0
-0070B128    movups xmmword ptr ds:[esi], xmm0
+0070B128    movups xmmword ptr ds:[esi], xmm0               ; => [ Call: __builtin_memset ]
 0070B12B    movq qword ptr ds:[esi+0x10], xmm0
-0070B130    mov eax, dword ptr ds:[0x0147DED8]
+0070B130    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B135    mov dword ptr ds:[esi], 0x08
 0070B13B    test eax, eax
 0070B13D    jz 0x0070B14F
 0070B13F    push 0x52
 0070B141    push 0x88DCF8
 0070B146    push 0x0C
-0070B148    call eax
+0070B148    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B14A    add esp, 0x0C
 0070B14D    jmp 0x0070B15A
 0070B14F    push 0x0C
-0070B151    call dword ptr ds:[0x00800B4C]
+0070B151    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B157    add esp, 0x04
 0070B15A    test eax, eax
 0070B15C    jz 0x0070B16B
 0070B15E    mov dword ptr ds:[eax], 0x00
 0070B164    mov dword ptr ds:[eax+0x04], 0x00
 0070B16B    mov dword ptr ds:[esi+0x04], eax
-0070B16E    mov dword ptr ds:[eax+0x08], 0x718810
+0070B16E    mov dword ptr ds:[eax+0x08], 0x718810           ; => [ Call: sub_718810 ]
 0070B175    mov eax, dword ptr ds:[esi+0x04]
-0070B178    mov dword ptr ds:[eax], 0x718700
+0070B178    mov dword ptr ds:[eax], 0x718700                ; => [ Call: sub_718700 ]
 0070B17E    mov eax, dword ptr ds:[esi+0x04]
-0070B181    mov dword ptr ds:[eax+0x04], 0x718800
-0070B188    mov eax, dword ptr ds:[0x0147DED8]
+0070B181    mov dword ptr ds:[eax+0x04], 0x718800           ; => [ Call: sub_718800 ]
+0070B188    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B18D    mov dword ptr ds:[esi+0x08], ebx
 0070B190    shl ebx, 0x02
 0070B193    test eax, eax
@@ -3396,11 +3402,11 @@
 0070B197    push 0x505
 0070B19C    push 0x88DCF8
 0070B1A1    push ebx
-0070B1A2    call eax
+0070B1A2    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B1A4    add esp, 0x0C
 0070B1A7    jmp 0x0070B1B3
 0070B1A9    push ebx
-0070B1AA    call dword ptr ds:[0x00800B4C]
+0070B1AA    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B1B0    add esp, 0x04
 0070B1B3    mov dword ptr ss:[ebp+0x08], eax
 0070B1B6    test eax, eax
@@ -3408,21 +3414,21 @@
 0070B1BA    push ebx
 0070B1BB    push 0x00
 0070B1BD    push eax
-0070B1BE    call 0x00761FC4
+0070B1BE    call 0x00761FC4                                 ; => [ Call: memset ]
 0070B1C3    mov eax, dword ptr ss:[ebp+0x08]
 0070B1C6    add esp, 0x0C
 0070B1C9    mov dword ptr ds:[esi+0x0C], eax
-0070B1CC    mov eax, dword ptr ds:[0x0147DED8]
+0070B1CC    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B1D1    test eax, eax
 0070B1D3    jz 0x0070B1E7
 0070B1D5    push 0x506
 0070B1DA    push 0x88DCF8
 0070B1DF    push ebx
-0070B1E0    call eax
+0070B1E0    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B1E2    add esp, 0x0C
 0070B1E5    jmp 0x0070B1F1
 0070B1E7    push ebx
-0070B1E8    call dword ptr ds:[0x00800B4C]
+0070B1E8    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B1EE    add esp, 0x04
 0070B1F1    mov dword ptr ss:[ebp+0x08], eax
 0070B1F4    test eax, eax
@@ -3430,7 +3436,7 @@
 0070B1F8    push ebx
 0070B1F9    push 0x00
 0070B1FB    push eax
-0070B1FC    call 0x00761FC4
+0070B1FC    call 0x00761FC4                                 ; => [ Call: memset ]
 0070B201    mov eax, dword ptr ss:[ebp+0x08]
 0070B204    add esp, 0x0C
 0070B207    mov ebx, dword ptr ss:[ebp-0x20]
@@ -3440,7 +3446,7 @@
 0070B213    mov dword ptr ss:[ebp-0x2C], 0x00
 0070B21A    test ebx, ebx
 0070B21C    jle 0x0070B548
-0070B222    mov dword ptr ss:[ebp-0x38], 0x00
+0070B222    mov dword ptr ss:[ebp-0x38], 0x00               ; => [ Call: nullptr ]
 0070B229    nop dword ptr ds:[eax], eax
 0070B230    mov eax, dword ptr ds:[edi]
 0070B232    mov cl, byte ptr ds:[eax]
@@ -3512,7 +3518,7 @@
 0070B2CC    or ebx, eax
 0070B2CE    mov dword ptr ss:[ebp+0x08], ebx
 0070B2D1    mov esi, dword ptr ss:[ebp+0x0C]
-0070B2D4    mov ecx, dword ptr ds:[0x0147DED8]
+0070B2D4    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B2DA    mov eax, dword ptr ds:[esi+0x28]
 0070B2DD    shl eax, 0x02
 0070B2E0    test ecx, ecx
@@ -3520,13 +3526,13 @@
 0070B2E4    push 0x226
 0070B2E9    push 0x88DAD0
 0070B2EE    push eax
-0070B2EF    call ecx
+0070B2EF    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 0070B2F1    add esp, 0x0C
 0070B2F4    jmp 0x0070B300
 0070B2F6    push eax
-0070B2F7    call dword ptr ds:[0x00800B4C]
+0070B2F7    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B2FD    add esp, 0x04
-0070B300    mov ecx, dword ptr ds:[0x0147DED8]
+0070B300    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B306    mov dword ptr ss:[ebp-0x30], eax
 0070B309    mov eax, dword ptr ds:[esi+0x28]
 0070B30C    sub eax, ebx
@@ -3536,11 +3542,11 @@
 0070B315    push 0x227
 0070B31A    push 0x88DAD0
 0070B31F    push eax
-0070B320    call ecx
+0070B320    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 0070B322    add esp, 0x0C
 0070B325    jmp 0x0070B331
 0070B327    push eax
-0070B328    call dword ptr ds:[0x00800B4C]
+0070B328    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B32E    add esp, 0x04
 0070B331    mov dword ptr ss:[ebp-0x34], eax
 0070B334    xor esi, esi
@@ -3551,7 +3557,7 @@
 0070B341    push eax
 0070B342    push 0xFFFFFFFF
 0070B344    push dword ptr ss:[ebp-0x30]
-0070B347    call 0x00761FC4
+0070B347    call 0x00761FC4                                 ; => [ Call: memset ]
 0070B34C    add esp, 0x0C
 0070B34F    cmp dword ptr ss:[ebp+0x08], ebx
 0070B352    jle 0x0070B45C
@@ -3686,7 +3692,7 @@
 0070B49B    jmp 0x0070B4A0
 0070B49D    mov ebx, dword ptr ss:[ebp-0x30]
 0070B4A0    push ecx
-0070B4A1    call dword ptr ds:[0x00800B48]
+0070B4A1    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070B4A7    mov esi, dword ptr ss:[ebp-0x54]
 0070B4AA    mov ecx, dword ptr ss:[ebp-0x38]
 0070B4AD    movss xmm0, dword ptr ss:[ebp-0x6C]
@@ -3695,7 +3701,7 @@
 0070B4BA    mov eax, dword ptr ds:[esi+0x10]
 0070B4BD    mov ecx, dword ptr ss:[ebp-0x2C]
 0070B4C0    push dword ptr ds:[eax+ecx*4]
-0070B4C3    call dword ptr ds:[0x00800B48]
+0070B4C3    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070B4C9    add esp, 0x08
 0070B4CC    test ebx, ebx
 0070B4CE    jnz 0x0070B4DB
@@ -3704,18 +3710,18 @@
 0070B4D6    mov dword ptr ds:[eax+ecx*4], ebx
 0070B4D9    jmp 0x0070B528
 0070B4DB    mov eax, dword ptr ds:[esi+0x14]
-0070B4DE    mov ecx, dword ptr ds:[0x0147DED8]
+0070B4DE    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B4E4    shl eax, 0x02
 0070B4E7    test ecx, ecx
 0070B4E9    jz 0x0070B4FD
 0070B4EB    push 0x513
 0070B4F0    push 0x88DCF8
 0070B4F5    push eax
-0070B4F6    call ecx
+0070B4F6    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B4F8    add esp, 0x0C
 0070B4FB    jmp 0x0070B507
 0070B4FD    push eax
-0070B4FE    call dword ptr ds:[0x00800B4C]
+0070B4FE    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B504    add esp, 0x04
 0070B507    mov edx, dword ptr ss:[ebp-0x2C]
 0070B50A    mov ecx, eax
@@ -3727,10 +3733,10 @@
 0070B519    mov eax, dword ptr ds:[esi+0x10]
 0070B51C    push ebx
 0070B51D    push dword ptr ds:[eax+edx*4]
-0070B520    call 0x00761FBE
+0070B520    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0070B525    add esp, 0x0C
 0070B528    push ebx
-0070B529    call dword ptr ds:[0x00800B48]
+0070B529    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070B52F    mov eax, dword ptr ss:[ebp-0x2C]
 0070B532    add esp, 0x04
 0070B535    add dword ptr ss:[ebp-0x38], 0x04
@@ -3754,7 +3760,7 @@
 0070B573    shl eax, 0x02
 0070B576    push eax
 0070B577    push dword ptr ds:[edx+0x08]
-0070B57A    call dword ptr ds:[0x00800B50]
+0070B57A    call dword ptr ds:[0x00800B50]                  ; => [ Call: realloc ]
 0070B580    mov edx, dword ptr ss:[ebp-0x08]
 0070B583    add esp, 0x08
 0070B586    mov dword ptr ds:[edx+0x08], eax
@@ -3814,19 +3820,19 @@
 0070B610    mov dword ptr ss:[ebp+0x08], esi
 0070B613    test esi, esi
 0070B615    jz 0x0070BAB9
-0070B61B    mov eax, dword ptr ds:[0x0147DED8]
+0070B61B    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B620    test eax, eax
 0070B622    jz 0x0070B63C
 0070B624    push 0x4B6
 0070B629    push 0x88DCF8
 0070B62E    push 0x14
 0070B630    call eax
-0070B632    mov ebx, eax
+0070B632    mov ebx, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B634    add esp, 0x0C
 0070B637    mov dword ptr ss:[ebp-0x50], ebx
 0070B63A    jmp 0x0070B64C
 0070B63C    push 0x14
-0070B63E    call dword ptr ds:[0x00800B4C]
+0070B63E    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B644    add esp, 0x04
 0070B647    mov dword ptr ss:[ebp-0x50], eax
 0070B64A    mov ebx, eax
@@ -3836,30 +3842,30 @@
 0070B657    mov dword ptr ds:[ebx+0x08], 0x00
 0070B65E    mov dword ptr ds:[ebx+0x0C], 0x00
 0070B665    mov dword ptr ds:[ebx+0x10], 0x00
-0070B66C    mov eax, dword ptr ds:[0x0147DED8]
+0070B66C    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B671    mov dword ptr ds:[ebx], 0x07
 0070B677    test eax, eax
 0070B679    jz 0x0070B68B
 0070B67B    push 0x52
 0070B67D    push 0x88DCF8
 0070B682    push 0x0C
-0070B684    call eax
+0070B684    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B686    add esp, 0x0C
 0070B689    jmp 0x0070B696
 0070B68B    push 0x0C
-0070B68D    call dword ptr ds:[0x00800B4C]
+0070B68D    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B693    add esp, 0x04
 0070B696    test eax, eax
 0070B698    jz 0x0070B6A7
 0070B69A    mov dword ptr ds:[eax], 0x00
 0070B6A0    mov dword ptr ds:[eax+0x04], 0x00
-0070B6A7    mov ecx, dword ptr ds:[0x0147DED8]
+0070B6A7    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B6AD    mov dword ptr ds:[ebx+0x04], eax
-0070B6B0    mov dword ptr ds:[eax+0x08], 0x718690
+0070B6B0    mov dword ptr ds:[eax+0x08], 0x718690           ; => [ Call: sub_718690 ]
 0070B6B7    mov eax, dword ptr ds:[ebx+0x04]
-0070B6BA    mov dword ptr ds:[eax], 0x718540
+0070B6BA    mov dword ptr ds:[eax], 0x718540                ; => [ Call: sub_718540 ]
 0070B6C0    mov eax, dword ptr ds:[ebx+0x04]
-0070B6C3    mov dword ptr ds:[eax+0x04], 0x718680
+0070B6C3    mov dword ptr ds:[eax+0x04], 0x718680           ; => [ Call: sub_718680 ]
 0070B6CA    lea eax, ds:[esi*4]
 0070B6D1    mov dword ptr ds:[ebx+0x08], esi
 0070B6D4    test ecx, ecx
@@ -3868,12 +3874,12 @@
 0070B6DD    push 0x88DCF8
 0070B6E2    push eax
 0070B6E3    call ecx
-0070B6E5    mov ecx, eax
+0070B6E5    mov ecx, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B6E7    add esp, 0x0C
 0070B6EA    mov dword ptr ss:[ebp-0x54], ecx
 0070B6ED    jmp 0x0070B6FE
 0070B6EF    push eax
-0070B6F0    call dword ptr ds:[0x00800B4C]
+0070B6F0    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B6F6    add esp, 0x04
 0070B6F9    mov dword ptr ss:[ebp-0x54], eax
 0070B6FC    mov ecx, eax
@@ -3883,24 +3889,24 @@
 0070B709    push eax
 0070B70A    push 0x00
 0070B70C    push ecx
-0070B70D    call 0x00761FC4
+0070B70D    call 0x00761FC4                                 ; => [ Call: memset ]
 0070B712    mov ecx, dword ptr ss:[ebp-0x54]
 0070B715    add esp, 0x0C
 0070B718    mov dword ptr ds:[ebx+0x0C], ecx
 0070B71B    lea eax, ds:[esi*4]
-0070B722    mov ecx, dword ptr ds:[0x0147DED8]
+0070B722    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B728    test ecx, ecx
 0070B72A    jz 0x0070B743
 0070B72C    push 0x4BB
 0070B731    push 0x88DCF8
 0070B736    push eax
-0070B737    call ecx
+0070B737    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 0070B739    mov ecx, eax
 0070B73B    add esp, 0x0C
 0070B73E    mov dword ptr ss:[ebp-0x54], ecx
 0070B741    jmp 0x0070B752
 0070B743    push eax
-0070B744    call dword ptr ds:[0x00800B4C]
+0070B744    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B74A    add esp, 0x04
 0070B74D    mov dword ptr ss:[ebp-0x54], eax
 0070B750    mov ecx, eax
@@ -3910,7 +3916,7 @@
 0070B75D    push eax
 0070B75E    push 0x00
 0070B760    push ecx
-0070B761    call 0x00761FC4
+0070B761    call 0x00761FC4                                 ; => [ Call: memset ]
 0070B766    mov ecx, dword ptr ss:[ebp-0x54]
 0070B769    add esp, 0x0C
 0070B76C    mov dword ptr ds:[ebx+0x10], ecx
@@ -3985,7 +3991,7 @@
 0070B810    mov eax, dword ptr ss:[ebp+0x0C]
 0070B813    mov eax, dword ptr ds:[eax+0x40]
 0070B816    mov ebx, dword ptr ds:[eax+edx*4]
-0070B819    mov eax, dword ptr ds:[0x0147DED8]
+0070B819    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B81E    mov dword ptr ss:[ebp-0x54], ebx
 0070B821    test eax, eax
 0070B823    jz 0x0070B83A
@@ -3993,18 +3999,18 @@
 0070B827    push 0x8905C0
 0070B82C    push 0x1C
 0070B82E    call eax
-0070B830    mov esi, eax
+0070B830    mov esi, eax                                    ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Event.c ]
 0070B832    add esp, 0x0C
 0070B835    mov dword ptr ss:[ebp-0x3C], esi
 0070B838    jmp 0x0070B84A
 0070B83A    push 0x1C
-0070B83C    call dword ptr ds:[0x00800B4C]
+0070B83C    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B842    add esp, 0x04
 0070B845    mov dword ptr ss:[ebp-0x3C], eax
 0070B848    mov esi, eax
 0070B84A    test esi, esi
 0070B84C    jz 0x0070B871
-0070B84E    mov dword ptr ds:[esi+0x08], 0x00
+0070B84E    mov dword ptr ds:[esi+0x08], 0x00               ; => [ Call: __builtin_memset ]
 0070B855    mov dword ptr ds:[esi+0x0C], 0x00
 0070B85C    mov dword ptr ds:[esi+0x10], 0x00
 0070B863    mov dword ptr ds:[esi+0x14], 0x00
@@ -4092,7 +4098,7 @@
 0070B92E    test cl, cl
 0070B930    jz 0x0070B941
 0070B932    mov ecx, edi
-0070B934    call 0x007088B0
+0070B934    call 0x007088B0                                 ; => [ Call: sub_7088b0 ]
 0070B939    mov ebx, dword ptr ss:[ebp-0x54]
 0070B93C    mov dword ptr ds:[esi+0x10], eax
 0070B93F    jmp 0x0070B9A0
@@ -4105,7 +4111,7 @@
 0070B952    inc ecx
 0070B953    test al, al
 0070B955    jnz 0x0070B950
-0070B957    mov eax, dword ptr ds:[0x0147DED8]
+0070B957    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 0070B95C    sub ecx, edx
 0070B95E    inc ecx
 0070B95F    test eax, eax
@@ -4113,11 +4119,11 @@
 0070B963    push 0x24F
 0070B968    push 0x88DAD0
 0070B96D    push ecx
-0070B96E    call eax
+0070B96E    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 0070B970    add esp, 0x0C
 0070B973    jmp 0x0070B97F
 0070B975    push ecx
-0070B976    call dword ptr ds:[0x00800B4C]
+0070B976    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070B97C    add esp, 0x04
 0070B97F    mov ecx, eax
 0070B981    mov eax, dword ptr ss:[ebp-0x3C]
@@ -4191,7 +4197,7 @@
 0070BA32    mov dword ptr ds:[ecx+edx*4], eax
 0070BA35    mov eax, dword ptr ds:[ebx+0x10]
 0070BA38    push dword ptr ds:[eax+edx*4]
-0070BA3B    call dword ptr ds:[0x00800B48]
+0070BA3B    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070BA41    mov ecx, dword ptr ss:[ebp-0x38]
 0070BA44    add esp, 0x04
 0070BA47    mov eax, dword ptr ds:[ebx+0x10]
@@ -4218,7 +4224,7 @@
 0070BA8B    push dword ptr ds:[edi+0x08]
 0070BA8E    call dword ptr ds:[0x00800B50]
 0070BA94    add esp, 0x08
-0070BA97    mov dword ptr ds:[edi+0x08], eax
+0070BA97    mov dword ptr ds:[edi+0x08], eax                ; => [ Call: realloc ]
 0070BA9A    mov ecx, dword ptr ds:[edi]
 0070BA9C    mov eax, dword ptr ds:[edi+0x08]
 0070BA9F    movss xmm0, dword ptr ss:[ebp-0x0C]
@@ -4230,10 +4236,10 @@
 0070BAB7    jmp 0x0070BABC
 0070BAB9    mov edi, dword ptr ss:[ebp-0x08]
 0070BABC    mov ecx, dword ptr ss:[ebp-0x70]
-0070BABF    call 0x00714870
+0070BABF    call 0x00714870                                 ; => [ Call: sub_714870 ]
 0070BAC4    mov esi, eax
 0070BAC6    push dword ptr ds:[esi+0x0C]
-0070BAC9    call dword ptr ds:[0x00800B48]
+0070BAC9    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070BACF    movss xmm0, dword ptr ss:[ebp-0x0C]
 0070BAD4    movss dword ptr ds:[esi+0x04], xmm0
 0070BAD9    mov ecx, dword ptr ds:[edi]
@@ -4241,7 +4247,7 @@
 0070BADE    mov eax, dword ptr ds:[edi+0x08]
 0070BAE1    push edi
 0070BAE2    mov dword ptr ds:[esi+0x0C], eax
-0070BAE5    call dword ptr ds:[0x00800B48]
+0070BAE5    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
 0070BAEB    add esp, 0x08
 0070BAEE    mov eax, esi
 0070BAF0    pop edi

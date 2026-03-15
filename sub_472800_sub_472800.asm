@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_472800
+// 起始地址: 0x472800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00472800    mov edx, 0x03
 00472805    mov ecx, 0x82D578
-0047280A    call 0x0069F030
-0047280F    mov dword ptr ds:[0x0171D068], eax
+0047280A    call 0x0069F030                                 ; => [ String: res/card_gen/empires/landmark-78.texture | Call: sub_69f030 ]
+0047280F    mov dword ptr ds:[0x0171D068], eax              ; => [ Data: data_171d068 ]
 00472814    ret

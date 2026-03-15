@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_696d50
+// 起始地址: 0x696d50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00696D50    push ebp
 00696D51    mov ebp, esp
 00696D53    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 00696D5B    push edi
 00696D5C    mov edi, edx
 00696D5E    lea edx, ss:[esp+0x10]
-00696D62    call 0x00694630
+00696D62    call 0x00694630                                 ; => [ Type: FILE | Call: sub_694630 ]
 00696D67    test al, al
 00696D69    jnz 0x00696D72
 00696D6B    pop edi
@@ -16,7 +22,7 @@
 00696D6E    mov esp, ebp
 00696D70    pop ebp
 00696D71    ret
-00696D72    mov esi, dword ptr ss:[esp+0x10]
+00696D72    mov esi, dword ptr ss:[esp+0x10]                ; => [ Type: FILE ]
 00696D76    push 0x00
 00696D78    push dword ptr ss:[ebp+0x08]
 00696D7B    push esi

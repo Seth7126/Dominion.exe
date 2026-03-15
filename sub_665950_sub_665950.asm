@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_665950
+// 起始地址: 0x665950
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00665950    push ebp
 00665951    mov ebp, esp
 00665953    sub esp, 0x08
@@ -30,9 +36,9 @@
 0066599B    jz 0x006659F6
 0066599D    movzx eax, dx
 006659A0    cmp eax, dword ptr ds:[0x00C23BAC]
-006659A6    jnb 0x006659E8
+006659A6    jnb 0x006659E8                                  ; => [ Data: data_c23bac ]
 006659A8    imul ecx, eax, 0x18D0
-006659AE    add ecx, dword ptr ds:[0x00C23BA8]
+006659AE    add ecx, dword ptr ds:[0x00C23BA8]              ; => [ Data: data_c23ba8 ]
 006659B4    cmp dword ptr ds:[ecx+0x18C8], edx
 006659BA    jnz 0x006659E8
 006659BC    cmp dword ptr ds:[ecx+0x1600], edi
@@ -55,19 +61,19 @@
 006659E4    mov esp, ebp
 006659E6    pop ebp
 006659E7    ret
-006659E8    push 0x876B2C
+006659E8    push 0x876B2C                                   ; => [ String: DataArray<struct UI2>::DataArrayGet ]
 006659ED    push 0x6D
-006659EF    mov ecx, 0x802748
+006659EF    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 006659F4    jmp 0x00665A02
-006659F6    push 0x876B2C
+006659F6    push 0x876B2C                                   ; => [ String: DataArray<struct UI2>::DataArrayGet ]
 006659FB    push 0x6C
-006659FD    mov ecx, 0x802734
+006659FD    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 00665A02    push 0x80193C
 00665A07    mov edx, 0x801800
-00665A0C    call 0x0063B870
+00665A0C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\DataArray.h | String: DataArray<struct UI2>::DataArrayGet ]
 00665A11    add esp, 0x0C
 00665A14    call 0x0063BC30
 00665A19    test al, al
-00665A1B    jz 0x00665A1E
+00665A1B    jz 0x00665A1E                                   ; => [ Call: sub_63bc30 ]
 00665A1D    int3
-00665A1E    call 0x0063BB00
+00665A1E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

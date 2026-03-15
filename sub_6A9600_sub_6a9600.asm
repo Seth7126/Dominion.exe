@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a9600
+// 起始地址: 0x6a9600
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A9600    add edx, 0xFFFFFFF3
 006A9603    cmp edx, 0x08
 006A9606    jnbe 0x006A9646
@@ -8,12 +14,12 @@
 006A9620    push 0x87B1B4
 006A9625    mov edx, 0x801800
 006A962A    mov ecx, 0x87B1F4
-006A962F    call 0x0063B870
+006A962F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\ImageUtils.cpp | String: TextureFormatRows | String: !TextureFormatIsCompressed(format) ]
 006A9634    add esp, 0x0C
 006A9637    call 0x0063BC30
 006A963C    test al, al
-006A963E    jz 0x006A9641
+006A963E    jz 0x006A9641                                   ; => [ Call: sub_63bc30 ]
 006A9640    int3
-006A9641    jmp 0x0063BB00
+006A9641    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 006A9646    mov eax, ecx
 006A9648    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69ce80
+// 起始地址: 0x69ce80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069CE81    mov ebp, esp
 0069CE83    and esp, 0xFFFFFFF8
 0069CE86    push ecx
@@ -20,7 +26,7 @@
 0069CEA9    mov ecx, ebx
 0069CEAB    cmp eax, dword ptr ds:[edi+0x08]
 0069CEAE    jnl 0x0069CEC6
-0069CEB0    call 0x0069CCD0
+0069CEB0    call 0x0069CCD0                                 ; => [ Call: sub_69ccd0 ]
 0069CEB5    add esp, 0x04
 0069CEB8    mov eax, esi
 0069CEBA    cmp esi, 0xFFFFFFFF
@@ -31,7 +37,7 @@
 0069CEC2    mov esp, ebp
 0069CEC4    pop ebp
 0069CEC5    ret
-0069CEC6    call 0x0069CCD0
+0069CEC6    call 0x0069CCD0                                 ; => [ Call: sub_69ccd0 ]
 0069CECB    add esp, 0x04
 0069CECE    pop edi
 0069CECF    pop esi

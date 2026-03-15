@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_55c600
+// 起始地址: 0x55c600
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0055C600    push ebp
 0055C601    mov ebp, esp
 0055C603    and esp, 0xFFFFFFF8
@@ -5,12 +11,12 @@
 0055C607    push ebx
 0055C608    push esi
 0055C609    push edi
-0055C60A    call 0x00573400
+0055C60A    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055C60F    movzx esi, word ptr ss:[ebp+0x08]
 0055C613    mov edi, dword ptr ds:[eax+0x04]
 0055C616    cmp esi, 0x320
 0055C61C    jb 0x0055C623
-0055C61E    call 0x00591930
+0055C61E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0055C623    imul ebx, esi, 0x64
 0055C626    mov ecx, edi
 0055C628    push 0x00
@@ -19,17 +25,17 @@
 0055C633    call 0x005754F0
 0055C638    add esp, 0x08
 0055C63B    test al, al
-0055C63D    jnz 0x0055C674
-0055C63F    call 0x00573400
+0055C63D    jnz 0x0055C674                                  ; => [ Call: sub_5754f0 ]
+0055C63F    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0055C644    mov edi, dword ptr ds:[eax+0x04]
 0055C647    cmp esi, 0x320
 0055C64D    jb 0x0055C654
-0055C64F    call 0x00591930
+0055C64F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0055C654    mov edx, dword ptr ds:[ebx+edi*1+0x1A4C]
 0055C65B    mov ecx, edi
 0055C65D    push 0x00
 0055C65F    push 0x04
-0055C661    call 0x005754F0
+0055C661    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 0055C666    add esp, 0x08
 0055C669    test al, al
 0055C66B    jnz 0x0055C674

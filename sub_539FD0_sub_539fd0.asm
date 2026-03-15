@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_539fd0
+// 起始地址: 0x539fd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00539FD0    dword B8EC8B55
 00539FD4    or byte ptr ds:[ecx], bl
 00539FD6    add byte ptr ds:[eax], al
-00539FD8    call 0x00761E50
+00539FD8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00539FDD    cmp dword ptr ss:[ebp+0x0C], 0x00
 00539FE1    jnz 0x00539FE9
 00539FE3    xor al, al
@@ -18,7 +24,7 @@
 00539FFF    lea edi, ss:[ebp-0xC84]
 0053A005    mov esi, eax
 0053A007    mov ecx, 0x321
-0053A00C    rep movsd
+0053A00C    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_568780 ]
 0053A00E    cmp dword ptr ss:[ebp-0x04], 0x00
 0053A012    pop edi
 0053A013    setz al

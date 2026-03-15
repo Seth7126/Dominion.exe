@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4f0b20
+// 起始地址: 0x4f0b20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F0B20    push ebp
 004F0B21    mov ebp, esp
 004F0B23    mov eax, 0x19C0
-004F0B28    call 0x00761E50
+004F0B28    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004F0B2D    mov eax, dword ptr ds:[0x008C4040]
 004F0B32    xor eax, ebp
-004F0B34    mov dword ptr ss:[ebp-0x08], eax
+004F0B34    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 004F0B37    push ebx
 004F0B38    mov ebx, dword ptr ss:[ebp+0x08]
 004F0B3B    push esi
@@ -38,7 +44,7 @@
 004F0BA7    xor ecx, ecx
 004F0BA9    cmp dword ptr ds:[edi+0xD4], ecx
 004F0BAF    jle 0x004F0BD4
-004F0BB1    xor eax, eax
+004F0BB1    xor eax, eax                                    ; => [ Call: nullptr ]
 004F0BB3    mov edx, dword ptr ds:[edi+0xD0]
 004F0BB9    cmp dword ptr ds:[eax+edx*1+0x10], 0x00
 004F0BBE    jnz 0x004F0BC8
@@ -68,7 +74,7 @@
 004F0C11    cmp dword ptr ds:[edi+0xD4], edx
 004F0C17    jle 0x004F0C4C
 004F0C19    movss xmm1, dword ptr ds:[0x00890D18]
-004F0C21    xor eax, eax
+004F0C21    xor eax, eax                                    ; => [ Call: nullptr ]
 004F0C23    mov ecx, dword ptr ds:[edi+0xD0]
 004F0C29    cmp dword ptr ds:[eax+ecx*1+0x10], 0x00
 004F0C2E    jnz 0x004F0C40
@@ -82,26 +88,26 @@
 004F0C4C    mov ecx, dword ptr ss:[ebp-0x19AC]
 004F0C52    mov edx, edi
 004F0C54    push ebx
-004F0C55    call 0x004F0750
+004F0C55    call 0x004F0750                                 ; => [ Call: sub_4f0750 ]
 004F0C5A    mov ecx, dword ptr ss:[ebp-0x08]
 004F0C5D    add esp, 0x04
 004F0C60    xor ecx, ebp
 004F0C62    pop edi
 004F0C63    pop esi
 004F0C64    pop ebx
-004F0C65    call 0x0075927A
+004F0C65    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F0C6A    mov esp, ebp
 004F0C6C    pop ebp
 004F0C6D    ret
 004F0C6E    test ecx, ecx
 004F0C70    jnz 0x004F0C86
-004F0C72    push 0x808B28
+004F0C72    push 0x808B28                                   ; => [ String: FillNodePriors ]
 004F0C77    push 0xE0A
-004F0C7C    mov ecx, 0x808B38
+004F0C7C    mov ecx, 0x808B38                               ; => [ String: yld.aiHint != DOMAI_HINT_NONE ]
 004F0C81    jmp 0x004F0F0F
 004F0C86    mov eax, dword ptr ds:[ebx+0x54]
-004F0C89    xor esi, esi
-004F0C8B    mov dword ptr ss:[ebp-0x19B0], esi
+004F0C89    xor esi, esi                                    ; => [ Call: nullptr ]
+004F0C8B    mov dword ptr ss:[ebp-0x19B0], esi              ; => [ Call: nullptr ]
 004F0C91    cmp eax, 0x02
 004F0C94    jnz 0x004F0CA1
 004F0C96    mov esi, dword ptr ds:[ebx+0x58]
@@ -111,25 +117,25 @@
 004F0CA4    jnz 0x004F0CBB
 004F0CA6    push dword ptr ds:[ebx+0x58]
 004F0CA9    mov ecx, edx
-004F0CAB    call 0x005916B0
+004F0CAB    call 0x005916B0                                 ; => [ Call: sub_5916b0 ]
 004F0CB0    add esp, 0x04
 004F0CB3    mov dword ptr ss:[ebp-0x19B0], eax
 004F0CB9    mov esi, eax
 004F0CBB    cmp dword ptr ds:[edi+0xD4], 0x00
-004F0CC2    mov dword ptr ss:[ebp-0x19B8], 0x00
+004F0CC2    mov dword ptr ss:[ebp-0x19B8], 0x00             ; => [ Call: nullptr ]
 004F0CCC    jle 0x004F0C4C
 004F0CD2    mov dword ptr ss:[ebp-0x19B4], 0x00
 004F0CDC    nop dword ptr ds:[eax], eax
 004F0CE0    mov edx, ebx
 004F0CE2    lea ecx, ss:[ebp-0x19A4]
-004F0CE8    call 0x005939A0
+004F0CE8    call 0x005939A0                                 ; => [ Call: sub_5939a0 ]
 004F0CED    mov eax, dword ptr ds:[edi+0xD0]
 004F0CF3    lea edx, ss:[ebp-0x19A4]
 004F0CF9    add eax, dword ptr ss:[ebp-0x19B4]
 004F0CFF    mov ecx, dword ptr ss:[ebp-0x19AC]
 004F0D05    push eax
 004F0D06    push edi
-004F0D07    call 0x004F02F0
+004F0D07    call 0x004F02F0                                 ; => [ Call: sub_4f02f0 ]
 004F0D0C    mov eax, dword ptr ds:[ebx+0x04]
 004F0D0F    add esp, 0x08
 004F0D12    dec eax
@@ -144,7 +150,7 @@
 004F0D36    jnz 0x004F0EDE
 004F0D3C    push dword ptr ss:[ebp-0x1934]
 004F0D42    mov ecx, dword ptr ss:[ebp-0x19AC]
-004F0D48    call 0x005915B0
+004F0D48    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 004F0D4D    mov esi, dword ptr ss:[ebp-0x1934]
 004F0D53    add esp, 0x04
 004F0D56    mov edx, dword ptr ss:[ebp-0x1958]
@@ -153,26 +159,26 @@
 004F0D68    lea eax, ss:[ebp-0xC8C]
 004F0D6E    push eax
 004F0D6F    push esi
-004F0D70    call 0x0057EE90
+004F0D70    call 0x0057EE90                                 ; => [ Call: sub_57ee90 ]
 004F0D75    add esp, 0x08
 004F0D78    mov dword ptr ss:[ebp-0x19BC], eax
 004F0D7E    test eax, eax
 004F0D80    jnle 0x004F0DD2
 004F0D82    mov ecx, dword ptr ss:[ebp-0x19AC]
 004F0D88    push esi
-004F0D89    call 0x005915B0
+004F0D89    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 004F0D8E    add esp, 0x04
 004F0D91    cmp eax, 0x1121
 004F0D96    jnz 0x004F0DCC
 004F0D98    mov ecx, dword ptr ss:[ebp-0x19AC]
 004F0D9E    push esi
-004F0D9F    call 0x005916B0
+004F0D9F    call 0x005916B0                                 ; => [ Call: sub_5916b0 ]
 004F0DA4    add esp, 0x04
 004F0DA7    lea ecx, ss:[ebp-0xC8C]
 004F0DAD    mov edx, eax
 004F0DAF    push ecx
 004F0DB0    mov ecx, dword ptr ss:[ebp-0x19AC]
-004F0DB6    call 0x00590930
+004F0DB6    call 0x00590930                                 ; => [ Call: sub_590930 ]
 004F0DBB    mov esi, dword ptr ss:[ebp-0x19B0]
 004F0DC1    add esp, 0x04
 004F0DC4    mov ecx, dword ptr ss:[ebp-0x19C0]
@@ -184,32 +190,32 @@
 004F0DE0    xor eax, eax
 004F0DE2    push 0x00
 004F0DE4    push esi
-004F0DE5    push 0x00
-004F0DE7    push 0x00
+004F0DE5    push 0x00                                       ; => [ Call: nullptr ]
+004F0DE7    push 0x00                                       ; => [ Call: nullptr ]
 004F0DE9    push ecx
-004F0DEA    push 0x00
-004F0DEC    push 0x00
+004F0DEA    push 0x00                                       ; => [ Call: nullptr ]
+004F0DEC    push 0x00                                       ; => [ Call: nullptr ]
 004F0DEE    push eax
 004F0DEF    lea eax, ss:[ebp-0xC8C]
 004F0DF5    jmp 0x004F0E8D
-004F0DFA    push 0x00
+004F0DFA    push 0x00                                       ; => [ Call: nullptr ]
 004F0DFC    push esi
 004F0DFD    push 0x00
 004F0DFF    jmp 0x004F0E79
 004F0E01    push 0x01
 004F0E03    push esi
-004F0E04    push 0x00
+004F0E04    push 0x00                                       ; => [ Call: nullptr ]
 004F0E06    jmp 0x004F0E79
 004F0E08    push 0x00
 004F0E0A    push esi
-004F0E0B    push 0x00
-004F0E0D    push 0x00
+004F0E0B    push 0x00                                       ; => [ Call: nullptr ]
+004F0E0D    push 0x00                                       ; => [ Call: nullptr ]
 004F0E0F    push 0x00
 004F0E11    push dword ptr ss:[ebp-0x1938]
 004F0E17    lea eax, ss:[ebp-0x1934]
 004F0E1D    push eax
 004F0E1E    push 0x00
-004F0E20    push 0x00
+004F0E20    push 0x00                                       ; => [ Call: nullptr ]
 004F0E22    jmp 0x004F0E8E
 004F0E24    mov eax, dword ptr ss:[ebp-0x1938]
 004F0E2A    xor ecx, ecx
@@ -220,35 +226,35 @@
 004F0E39    mov ecx, dword ptr ss:[ebp-0x1934]
 004F0E3F    push 0x00
 004F0E41    push esi
-004F0E42    push 0x00
-004F0E44    push 0x00
+004F0E42    push 0x00                                       ; => [ Call: nullptr ]
+004F0E44    push 0x00                                       ; => [ Call: nullptr ]
 004F0E46    push ecx
-004F0E47    push 0x00
-004F0E49    push 0x00
+004F0E47    push 0x00                                       ; => [ Call: nullptr ]
+004F0E49    push 0x00                                       ; => [ Call: nullptr ]
 004F0E4B    push 0x00
-004F0E4D    push 0x00
+004F0E4D    push 0x00                                       ; => [ Call: nullptr ]
 004F0E4F    jmp 0x004F0E8E
 004F0E51    mov eax, dword ptr ss:[ebp-0x1938]
 004F0E57    push 0x00
 004F0E59    push esi
-004F0E5A    push 0x00
+004F0E5A    push 0x00                                       ; => [ Call: nullptr ]
 004F0E5C    inc eax
 004F0E5D    push eax
 004F0E5E    push 0x00
 004F0E60    push 0x00
 004F0E62    push 0x00
 004F0E64    push 0x00
-004F0E66    push 0x00
+004F0E66    push 0x00                                       ; => [ Call: __builtin_memset ]
 004F0E68    jmp 0x004F0E8E
 004F0E6A    mov ecx, dword ptr ss:[ebp-0xCA4]
 004F0E70    call 0x004EE120
 004F0E75    push 0x00
 004F0E77    push esi
-004F0E78    push eax
+004F0E78    push eax                                        ; => [ Call: sub_4ee120 ]
 004F0E79    push 0x00
 004F0E7B    push 0x00
 004F0E7D    push 0x00
-004F0E7F    push 0x00
+004F0E7F    push 0x00                                       ; => [ Call: __builtin_memset ]
 004F0E81    push dword ptr ss:[ebp-0x1938]
 004F0E87    lea eax, ss:[ebp-0x1934]
 004F0E8D    push eax
@@ -259,7 +265,7 @@
 004F0EA2    mov ecx, dword ptr ss:[ebp-0x19B4]
 004F0EA8    add esp, 0x28
 004F0EAB    mov eax, dword ptr ds:[edi+0xD0]
-004F0EB1    movss dword ptr ds:[ecx+eax*1+0x3C], xmm0
+004F0EB1    movss dword ptr ds:[ecx+eax*1+0x3C], xmm0       ; => [ Call: sub_5baeb0 ]
 004F0EB7    add ecx, 0x54
 004F0EBA    mov eax, dword ptr ss:[ebp-0x19B8]
 004F0EC0    inc eax
@@ -268,23 +274,23 @@
 004F0ECD    cmp eax, dword ptr ds:[edi+0xD4]
 004F0ED3    jl 0x004F0CE0
 004F0ED9    jmp 0x004F0C4C
-004F0EDE    push 0x808B28
+004F0EDE    push 0x808B28                                   ; => [ String: FillNodePriors ]
 004F0EE3    push 0xE1D
-004F0EE8    mov ecx, 0x808B58
+004F0EE8    mov ecx, 0x808B58                               ; => [ String: act.numChoices == 1 ]
 004F0EED    jmp 0x004F0F0F
-004F0EEF    push 0x808B28
+004F0EEF    push 0x808B28                                   ; => [ String: FillNodePriors ]
 004F0EF4    push 0xE47
-004F0EF9    mov ecx, 0x808B58
+004F0EF9    mov ecx, 0x808B58                               ; => [ String: act.numChoices == 1 ]
 004F0EFE    jmp 0x004F0F0F
-004F0F00    push 0x808B28
+004F0F00    push 0x808B28                                   ; => [ String: FillNodePriors ]
 004F0F05    push 0xE61
-004F0F0A    mov ecx, 0x801AA4
+004F0F0A    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004F0F0F    push 0x8088A8
 004F0F14    mov edx, 0x801800
-004F0F19    call 0x0063B870
+004F0F19    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp ]
 004F0F1E    add esp, 0x0C
 004F0F21    call 0x0063BC30
 004F0F26    test al, al
-004F0F28    jz 0x004F0F2B
+004F0F28    jz 0x004F0F2B                                   ; => [ Call: sub_63bc30 ]
 004F0F2A    int3
-004F0F2B    call 0x0063BB00
+004F0F2B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

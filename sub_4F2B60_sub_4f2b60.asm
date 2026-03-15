@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4f2b60
+// 起始地址: 0x4f2b60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F2B60    push ebp
 004F2B61    mov ebp, esp
 004F2B63    mov eax, 0xA2C8
-004F2B68    call 0x00761E50
+004F2B68    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004F2B6D    mov eax, dword ptr ds:[0x008C4040]
 004F2B72    xor eax, ebp
-004F2B74    mov dword ptr ss:[ebp-0x08], eax
+004F2B74    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 004F2B77    mov eax, dword ptr ss:[ebp+0x08]
 004F2B7A    push ebx
 004F2B7B    push esi
@@ -20,13 +26,13 @@
 004F2B9D    xor eax, eax
 004F2B9F    lea edi, ss:[ebp-0x20]
 004F2BA2    mov ecx, edx
-004F2BA4    rep stosd
+004F2BA4    rep stosd                                       ; => [ Call: __builtin_memset ]
 004F2BA6    imul eax, edx, 0xC80
 004F2BAC    push eax
 004F2BAD    lea eax, ss:[ebp-0x57A4]
 004F2BB3    push ebx
 004F2BB4    push eax
-004F2BB5    call 0x00761FC4
+004F2BB5    call 0x00761FC4                                 ; => [ Call: memset ]
 004F2BBA    add esp, 0x0C
 004F2BBD    movzx eax, word ptr ds:[esi]
 004F2BC0    xor ecx, ecx
@@ -244,7 +250,7 @@
 004F2F45    jbe 0x004F2F7E
 004F2F47    movaps xmm0, xmm2
 004F2F4A    divss xmm0, xmm1
-004F2F4E    call 0x004EA070
+004F2F4E    call 0x004EA070                                 ; => [ Call: sub_4ea070 ]
 004F2F53    mulss xmm0, dword ptr ds:[ebx+esi*1]
 004F2F58    xorps xmm3, xmm3
 004F2F5B    movss xmm1, dword ptr ss:[ebp-0xA2BC]
@@ -255,7 +261,7 @@
 004F2F7E    comiss xmm0, xmm3
 004F2F81    jbe 0x004F2FA3
 004F2F83    divss xmm0, xmm1
-004F2F87    call 0x004EA070
+004F2F87    call 0x004EA070                                 ; => [ Call: sub_4ea070 ]
 004F2F8C    mulss xmm0, dword ptr ds:[esi]
 004F2F90    xorps xmm3, xmm3
 004F2F93    addss xmm0, dword ptr ss:[ebp-0xA2A8]
@@ -269,7 +275,7 @@
 004F2FC1    fld dword ptr ss:[ebp-0xA2A8]
 004F2FC7    push ecx
 004F2FC8    fstp dword ptr ss:[esp]
-004F2FCB    call 0x00762374
+004F2FCB    call 0x00762374                                 ; => [ Call: _fdclass ]
 004F2FD0    movss xmm0, dword ptr ss:[ebp-0xA2A8]
 004F2FD8    add esp, 0x04
 004F2FDB    xorps xmm3, xmm3
@@ -307,16 +313,16 @@
 004F305E    maxss xmm3, xmm1
 004F3062    mulss xmm3, dword ptr ds:[eax+0x78]
 004F3067    movss dword ptr ds:[eax+0x78], xmm3
-004F306C    call 0x0075927A
+004F306C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F3071    mov esp, ebp
 004F3073    pop ebp
 004F3074    ret
-004F3075    push 0x808CD8
+004F3075    push 0x808CD8                                   ; => [ String: EvaluateDivergence ]
 004F307A    push 0x12FB
-004F307F    mov ecx, 0x808CEC
+004F307F    mov ecx, 0x808CEC                               ; => [ String: numExist < MAX_CARDS ]
 004F3084    jmp 0x004F30E5
 004F3086    push 0x808CA8
-004F308B    call 0x004F7F30
+004F308B    call 0x004F7F30                                 ; => [ String: Abnormal divergence:\n | Call: sub_4f7f30 ]
 004F3090    add esp, 0x04
 004F3093    xor esi, esi
 004F3095    test ebx, ebx
@@ -330,21 +336,21 @@
 004F30B7    movss xmm0, dword ptr ds:[eax+esi*4]
 004F30BC    cvtps2pd xmm0, xmm0
 004F30BF    movsd qword ptr ss:[esp], xmm0
-004F30C4    push 0x808CC0
-004F30C9    call 0x004F7F30
+004F30C4    push 0x808CC0                                   ; => [ String: %f\t%f\n ]
+004F30C9    call 0x004F7F30                                 ; => [ Call: sub_4f7f30 ]
 004F30CE    inc esi
 004F30CF    add esp, 0x14
 004F30D2    cmp esi, ebx
 004F30D4    jl 0x004F30A0
-004F30D6    push 0x808CC8
+004F30D6    push 0x808CC8                                   ; => [ String: CalcDivergence ]
 004F30DB    push 0x12CC
-004F30E0    mov ecx, 0x801AA4
-004F30E5    push 0x8088A8
+004F30E0    mov ecx, 0x801AA4                               ; => [ String: Halt ]
+004F30E5    push 0x8088A8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp ]
 004F30EA    mov edx, 0x801800
-004F30EF    call 0x0063B870
+004F30EF    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004F30F4    add esp, 0x0C
 004F30F7    call 0x0063BC30
 004F30FC    test al, al
-004F30FE    jz 0x004F3101
+004F30FE    jz 0x004F3101                                   ; => [ Call: sub_63bc30 ]
 004F3100    int3
-004F3101    call 0x0063BB00
+004F3101    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

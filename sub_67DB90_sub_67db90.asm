@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_67db90
+// 起始地址: 0x67db90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0067DB90    push ebp
 0067DB91    mov ebp, esp
 0067DB93    mov eax, dword ptr ss:[ebp+0x08]
-0067DB96    mov dword ptr ds:[eax+0x04], 0x00
+0067DB96    mov dword ptr ds:[eax+0x04], 0x00               ; => [ Call: __builtin_memset ]
 0067DB9D    mov dword ptr ds:[eax+0x08], 0x00
 0067DBA4    mov dword ptr ds:[eax+0x0C], 0x00
 0067DBAB    mov dword ptr ds:[eax+0x10], 0x00

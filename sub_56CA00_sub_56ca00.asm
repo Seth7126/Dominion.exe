@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56ca00
+// 起始地址: 0x56ca00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056CA00    push ebp
 0056CA01    mov ebp, esp
 0056CA03    sub esp, 0x14
@@ -17,11 +23,11 @@
 0056CA24    mov esi, dword ptr ds:[edx+eax*4]
 0056CA27    call 0x00573400
 0056CA2C    movzx esi, si
-0056CA2F    mov eax, dword ptr ds:[eax+0x04]
+0056CA2F    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056CA32    mov dword ptr ss:[ebp-0x08], eax
 0056CA35    cmp esi, 0x320
 0056CA3B    jb 0x0056CA42
-0056CA3D    call 0x00591930
+0056CA3D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056CA42    mov ecx, dword ptr ss:[ebp-0x08]
 0056CA45    imul eax, esi, 0x64
 0056CA48    mov ecx, dword ptr ds:[eax+ecx*1+0x1A4C]

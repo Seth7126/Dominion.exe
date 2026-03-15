@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f5990
+// 起始地址: 0x4f5990
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F5990    push ebp
 004F5991    mov ebp, esp
 004F5993    and esp, 0xFFFFFFF8
@@ -20,7 +26,7 @@
 004F59C0    mov edx, edi
 004F59C2    lea ecx, ss:[esp+0x1C]
 004F59C6    push ebx
-004F59C7    call 0x004F63C0
+004F59C7    call 0x004F63C0                                 ; => [ Call: sub_4f63c0 ]
 004F59CC    mov edx, dword ptr ss:[esp+0x20]
 004F59D0    mov eax, esi
 004F59D2    sar eax, 0x02
@@ -69,7 +75,7 @@
 004F5A4D    add eax, 0x04
 004F5A50    push edi
 004F5A51    push eax
-004F5A52    call 0x00762362
+004F5A52    call 0x00762362                                 ; => [ Call: memmove ]
 004F5A57    add esp, 0x0C
 004F5A5A    mov dword ptr ds:[edi], ebx
 004F5A5C    jmp 0x004F5B07
@@ -93,7 +99,7 @@
 004F5A92    mov ecx, edi
 004F5A94    push eax
 004F5A95    push ebx
-004F5A96    call 0x004F7240
+004F5A96    call 0x004F7240                                 ; => [ Call: sub_4f7240 ]
 004F5A9B    add esp, 0x0C
 004F5A9E    test esi, esi
 004F5AA0    jnle 0x004F5A80
@@ -114,7 +120,7 @@
 004F5ACA    lea eax, ds:[ebx-0x04]
 004F5ACD    sar eax, 0x02
 004F5AD0    push eax
-004F5AD1    call 0x004F7240
+004F5AD1    call 0x004F7240                                 ; => [ Call: sub_4f7240 ]
 004F5AD6    add ebx, 0xFFFFFFFC
 004F5AD9    add esp, 0x0C
 004F5ADC    mov eax, ebx

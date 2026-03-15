@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a41c0
+// 起始地址: 0x5a41c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A41C0    push ebp
 005A41C1    mov ebp, esp
 005A41C3    sub esp, 0x14
@@ -31,7 +37,7 @@
 005A420D    or eax, 0x3F800000
 005A4212    push ebx
 005A4213    mov dword ptr ss:[ebp-0x0C], eax
-005A4216    call 0x007621D0
+005A4216    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A421B    mov edi, eax
 005A421D    mov esi, edx
 005A421F    mov eax, dword ptr ss:[ebp-0x04]
@@ -42,7 +48,7 @@
 005A4231    adc esi, dword ptr ds:[eax+0x0C]
 005A4234    push esi
 005A4235    push edi
-005A4236    call 0x007621D0
+005A4236    call 0x007621D0                                 ; => [ Call: __allmul ]
 005A423B    mov ecx, dword ptr ss:[ebp-0x04]
 005A423E    add eax, ebx
 005A4240    movss xmm2, dword ptr ss:[ebp-0x0C]

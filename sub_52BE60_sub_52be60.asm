@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_52be60
+// 起始地址: 0x52be60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052BE60    push ebp
 0052BE61    mov ebp, esp
 0052BE63    and esp, 0xFFFFFFF8
@@ -6,12 +12,12 @@
 0052BE68    push esi
 0052BE69    push edi
 0052BE6A    mov edi, edx
-0052BE6C    call 0x00573400
+0052BE6C    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052BE71    mov edx, edi
 0052BE73    mov dword ptr ss:[esp+0x0C], eax
 0052BE77    mov esi, dword ptr ds:[eax+0x04]
 0052BE7A    mov ecx, esi
-0052BE7C    call 0x0057DA30
+0052BE7C    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0052BE81    mov ebx, eax
 0052BE83    mov ecx, 0x07
 0052BE88    add esi, 0x1598
@@ -54,7 +60,7 @@
 0052BEE2    xor esi, esi
 0052BEE4    test esi, esi
 0052BEE6    jz 0x0052BF0E
-0052BEE8    call 0x00573400
+0052BEE8    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052BEED    push 0x00
 0052BEEF    push 0xFFFFFFFF
 0052BEF1    push 0x00
@@ -65,7 +71,7 @@
 0052BEFE    push esi
 0052BEFF    push 0x01
 0052BF01    push 0x601
-0052BF06    call 0x00571FA0
+0052BF06    call 0x00571FA0                                 ; => [ Call: sub_571fa0 | Call: nullptr ]
 0052BF0B    add esp, 0x24
 0052BF0E    pop edi
 0052BF0F    pop esi

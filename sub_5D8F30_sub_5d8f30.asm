@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d8f30
+// 起始地址: 0x5d8f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D8F30    push ebp
 005D8F31    mov ebp, esp
 005D8F33    push ecx
@@ -7,12 +13,12 @@
 005D8F38    push edi
 005D8F39    mov edi, edx
 005D8F3B    mov dword ptr ss:[ebp-0x04], ebx
-005D8F3E    call 0x004B9480
+005D8F3E    call 0x004B9480                                 ; => [ Call: sub_4b9480 ]
 005D8F43    mov esi, eax
 005D8F45    mov edx, ebx
 005D8F47    lea ecx, ds:[esi+0x08]
 005D8F4A    call 0x004B9680
-005D8F4F    mov edx, eax
+005D8F4F    mov edx, eax                                    ; => [ Call: sub_4b9680 ]
 005D8F51    mov ecx, edx
 005D8F53    mov dword ptr ds:[edx+0x18], edi
 005D8F56    lea ebx, ds:[ecx+0x01]
@@ -55,7 +61,7 @@
 005D8FBD    cmp ecx, eax
 005D8FBF    jl 0x005D8FCC
 005D8FC1    mov ecx, esi
-005D8FC3    call 0x004D63A0
+005D8FC3    call 0x004D63A0                                 ; => [ Call: sub_4d63a0 ]
 005D8FC8    test al, al
 005D8FCA    jnz 0x005D8FE8
 005D8FCC    mov eax, dword ptr ds:[esi+0x20]
@@ -66,27 +72,27 @@
 005D8FDC    mov dword ptr ds:[esi+0x20], ecx
 005D8FDF    mov ecx, esi
 005D8FE1    mov edx, dword ptr ds:[esi]
-005D8FE3    call 0x004DA3A0
+005D8FE3    call 0x004DA3A0                                 ; => [ Call: sub_4da3a0 ]
 005D8FE8    mov ebx, dword ptr ds:[esi]
 005D8FEA    xor esi, esi
 005D8FEC    nop dword ptr ds:[eax], eax
 005D8FF0    call 0x0061DAD0
 005D8FF5    cmp dword ptr ds:[eax+esi*1+0x08], ebx
-005D8FF9    jz 0x005D9005
+005D8FF9    jz 0x005D9005                                   ; => [ Call: sub_61dad0 ]
 005D8FFB    add esi, 0x0C
 005D8FFE    cmp esi, 0x78
 005D9001    jl 0x005D8FF0
 005D9003    jmp 0x005D900C
 005D9005    call 0x0061DAD0
-005D900A    mov dword ptr ds:[eax], edi
-005D900C    mov ecx, dword ptr ds:[0x00BE232C]
+005D900A    mov dword ptr ds:[eax], edi                     ; => [ Call: sub_61dad0 ]
+005D900C    mov ecx, dword ptr ds:[0x00BE232C]              ; => [ Data: data_be232c ]
 005D9012    xor eax, eax
 005D9014    test ecx, ecx
 005D9016    jle 0x005D903C
 005D9018    mov edx, dword ptr ss:[ebp-0x04]
 005D901B    nop dword ptr ds:[eax+eax*1], eax
 005D9020    cmp dword ptr ds:[eax*8+0xBE22FC], edx
-005D9027    jz 0x005D9035
+005D9027    jz 0x005D9035                                   ; => [ Data: data_be22fc ]
 005D9029    inc eax
 005D902A    cmp eax, ecx
 005D902C    jl 0x005D9020
@@ -96,7 +102,7 @@
 005D9031    mov esp, ebp
 005D9033    pop ebp
 005D9034    ret
-005D9035    mov dword ptr ds:[eax*8+0xBE2300], edi
+005D9035    mov dword ptr ds:[eax*8+0xBE2300], edi          ; => [ Data: data_be2300 ]
 005D903C    pop edi
 005D903D    pop esi
 005D903E    pop ebx

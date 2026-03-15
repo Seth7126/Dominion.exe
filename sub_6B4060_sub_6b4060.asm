@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b4060
+// 起始地址: 0x6b4060
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B4060    push ebp
 006B4061    mov ebp, esp
 006B4063    and esp, 0xFFFFFFF8
@@ -7,7 +13,7 @@
 006B406B    mov edi, ecx
 006B406D    mov esi, edx
 006B406F    mov ecx, 0x07
-006B4074    call 0x006B7590
+006B4074    call 0x006B7590                                 ; => [ Call: sub_6b7590 ]
 006B4079    movss xmm0, dword ptr ss:[ebp+0x10]
 006B407E    mov dword ptr ss:[esp+0x08], eax
 006B4082    mov eax, dword ptr ss:[ebp+0x08]
@@ -32,4 +38,4 @@
 006B40CB    pop esi
 006B40CC    mov esp, ebp
 006B40CE    pop ebp
-006B40CF    ret
+006B40CF    ret                                             ; => [ Call: sub_6b3f10 ]

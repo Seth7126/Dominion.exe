@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_712e80
+// 起始地址: 0x712e80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00712E80    push ebp
 00712E81    mov ebp, esp
 00712E83    sub esp, 0x28
@@ -36,7 +42,7 @@
 00712EEA    movss xmm1, dword ptr ds:[0x00890E78]
 00712EF2    mov edx, 0x08
 00712EF7    mov ecx, dword ptr ss:[ebp-0x08]
-00712EFA    mov dword ptr ds:[edi+0x08], eax
+00712EFA    mov dword ptr ds:[edi+0x08], eax                ; => [ Call: realloc ]
 00712EFD    mov eax, dword ptr ds:[esi+0x70]
 00712F00    mov edi, dword ptr ds:[edi+0x08]
 00712F03    mov dword ptr ss:[ebp-0x24], edi
@@ -56,7 +62,7 @@
 00712F2E    call dword ptr ds:[0x00800B50]
 00712F34    mov ecx, dword ptr ss:[ebp-0x08]
 00712F37    add esp, 0x08
-00712F3A    mov dword ptr ds:[esi+0x08], eax
+00712F3A    mov dword ptr ds:[esi+0x08], eax                ; => [ Call: realloc ]
 00712F3D    mov eax, dword ptr ds:[esi+0x08]
 00712F40    mov dword ptr ss:[ebp-0x28], eax
 00712F43    test ebx, ebx
@@ -79,7 +85,7 @@
 00712F6C    add esp, 0x04
 00712F6F    mov edx, eax
 00712F71    mov ecx, ebx
-00712F73    call 0x00712DA0
+00712F73    call 0x00712DA0                                 ; => [ Call: sub_712da0 ]
 00712F78    mov eax, dword ptr ss:[ebp-0x04]
 00712F7B    lea edi, ds:[edi+0x04]
 00712F7E    mov dword ptr ds:[edi-0x04], 0x02
@@ -92,7 +98,7 @@
 00712F8F    pop ebp
 00712F90    ret
 00712F91    mov edx, dword ptr ss:[ebp-0x04]
-00712F94    xor eax, eax
+00712F94    xor eax, eax                                    ; => [ Call: nullptr ]
 00712F96    sub edx, edi
 00712F98    mov dword ptr ss:[ebp-0x04], edx
 00712F9B    nop dword ptr ds:[eax+eax*1], eax
@@ -111,7 +117,7 @@
 00712FBE    add esp, 0x04
 00712FC1    mov dword ptr ss:[ebp-0x20], ebx
 00712FC4    mov edx, ebx
-00712FC6    call 0x00712DA0
+00712FC6    call 0x00712DA0                                 ; => [ Call: sub_712da0 ]
 00712FCB    test eax, eax
 00712FCD    jnz 0x00712FE0
 00712FCF    mov ecx, dword ptr ss:[ebp-0x08]

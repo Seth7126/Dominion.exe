@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6962c0
+// 起始地址: 0x6962c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006962C0    push ebp
 006962C1    mov ebp, esp
 006962C3    sub esp, 0xC8
@@ -16,7 +22,7 @@
 006962ED    mov eax, dword ptr ds:[0x0147B07C]
 006962F2    shl edx, 0x05
 006962F5    cmp dword ptr ds:[esi+0x10], 0x00
-006962F9    mov ebx, dword ptr ds:[edx+eax*1+0x1C]
+006962F9    mov ebx, dword ptr ds:[edx+eax*1+0x1C]          ; => [ Data: data_147b07c ]
 006962FD    mov dword ptr ss:[ebp-0xC4], ebx
 00696303    jnz 0x006963E8
 00696309    lea edx, ss:[ebp-0x14]
@@ -25,7 +31,7 @@
 00696313    test al, al
 00696315    jz 0x0069637C
 00696317    cmp dword ptr ss:[ebp-0x0C], 0x01
-0069631B    jnz 0x0069637C
+0069631B    jnz 0x0069637C                                  ; => [ Call: sub_696240 ]
 0069631D    push 0x00
 0069631F    push dword ptr ds:[edi+0x04]
 00696322    push dword ptr ds:[edi]
@@ -47,12 +53,12 @@
 0069635C    cmp eax, dword ptr ds:[ebx+0x18]
 0069635F    jz 0x0069638F
 00696361    mov eax, dword ptr ds:[esi+0x20]
-00696364    mov ecx, 0x801800
+00696364    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 00696369    test eax, eax
 0069636B    cmovnz ecx, eax
 0069636E    push ecx
 0069636F    push 0x878CE8
-00696374    call 0x0063B5F0
+00696374    call 0x0063B5F0                                 ; => [ String: Can't load pack asset because hash doesn't match '%s' | Call: sub_63b5f0 | Call: sub_63b5f0 | String: Can't load pack asset because version doesn't match '%s' ]
 00696379    add esp, 0x08
 0069637C    xor al, al
 0069637E    pop edi
@@ -60,7 +66,7 @@
 00696380    pop ebx
 00696381    mov ecx, dword ptr ss:[ebp-0x08]
 00696384    xor ecx, ebp
-00696386    call 0x0075927A
+00696386    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0069638B    mov esp, ebp
 0069638D    pop ebp
 0069638E    ret
@@ -68,14 +74,14 @@
 00696395    cmp ecx, 0x25
 00696398    jnbe 0x006964DC
 0069639E    shl ecx, 0x05
-006963A1    add ecx, dword ptr ds:[0x0147B07C]
+006963A1    add ecx, dword ptr ds:[0x0147B07C]              ; => [ Data: data_147b07c ]
 006963A7    test byte ptr ds:[ecx+0x18], 0x01
 006963AB    jnz 0x006963CD
 006963AD    mov eax, dword ptr ss:[ebp-0xB4]
 006963B3    cmp eax, dword ptr ds:[ecx+0x14]
 006963B6    jz 0x006963CD
 006963B8    mov eax, dword ptr ds:[esi+0x20]
-006963BB    mov ecx, 0x801800
+006963BB    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006963C0    test eax, eax
 006963C2    cmovnz ecx, eax
 006963C5    push ecx
@@ -94,7 +100,7 @@
 006963F5    mov eax, dword ptr ds:[esi+0x14]
 006963F8    mov dword ptr ss:[ebp-0xC0], eax
 006963FE    lea ecx, ds:[eax+0x10]
-00696401    call 0x00687730
+00696401    call 0x00687730                                 ; => [ Call: sub_687730 ]
 00696406    push 0x00
 00696408    push dword ptr ds:[esi+0x10]
 0069640B    mov ebx, eax
@@ -112,7 +118,7 @@
 0069642B    call dword ptr ds:[0x00775618]
 00696431    add esp, 0x10
 00696434    cmp eax, 0x01
-00696437    jnz 0x00696487
+00696437    jnz 0x00696487                                  ; => [ Call: nullptr | Call: sub_695870 ]
 00696439    push esi
 0069643A    mov esi, dword ptr ss:[ebp-0xC4]
 00696440    mov edx, edi
@@ -138,7 +144,7 @@
 00696478    pop ebx
 00696479    mov ecx, dword ptr ss:[ebp-0x08]
 0069647C    xor ecx, ebp
-0069647E    call 0x0075927A
+0069647E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00696483    mov esp, ebp
 00696485    pop ebp
 00696486    ret
@@ -153,7 +159,7 @@
 006964A0    pop edi
 006964A1    pop esi
 006964A2    pop ebx
-006964A3    call 0x0075927A
+006964A3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006964A8    mov esp, ebp
 006964AA    pop ebp
 006964AB    ret
@@ -162,22 +168,22 @@
 006964B6    push 0x87CC50
 006964BB    mov edx, 0x801800
 006964C0    mov ecx, 0x87CF74
-006964C5    call 0x0063B870
+006964C5    call 0x0063B870                                 ; => [ String: AssetTypeGetInfo | Call: sub_63b870 | String: assetType >= 0 && assetType < ASSET_TYPE_COUNT | Data: data_801800 | String: C:\x\ax2017\Engine\AssetTypeRegistry.cpp | Data: __security_cookie ]
 006964CA    add esp, 0x0C
 006964CD    call 0x0063BC30
 006964D2    test al, al
-006964D4    jz 0x006964D7
+006964D4    jz 0x006964D7                                   ; => [ Call: sub_63bc30 ]
 006964D6    int3
-006964D7    call 0x0063BB00
+006964D7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 006964DC    push 0x87CF18
 006964E1    push 0xC3
 006964E6    push 0x87CC50
 006964EB    mov edx, 0x801800
 006964F0    mov ecx, 0x87CF74
-006964F5    call 0x0063B870
+006964F5    call 0x0063B870                                 ; => [ String: AssetTypeGetInfo | Call: sub_63b870 | String: assetType >= 0 && assetType < ASSET_TYPE_COUNT | Data: data_801800 | String: C:\x\ax2017\Engine\AssetTypeRegistry.cpp ]
 006964FA    add esp, 0x0C
 006964FD    call 0x0063BC30
 00696502    test al, al
-00696504    jz 0x00696507
+00696504    jz 0x00696507                                   ; => [ Call: sub_63bc30 ]
 00696506    int3
-00696507    call 0x0063BB00
+00696507    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_540200
+// 起始地址: 0x540200
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00540200    push ebp
 00540201    mov ebp, esp
 00540203    and esp, 0xFFFFFFF8
@@ -5,16 +11,16 @@
 00540209    push ebx
 0054020A    push esi
 0054020B    push edi
-0054020C    call 0x0056B800
+0054020C    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 00540211    mov edi, eax
-00540213    call 0x00573400
+00540213    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00540218    movzx esi, di
 0054021B    mov ebx, dword ptr ds:[eax+0x04]
 0054021E    mov eax, dword ptr ds:[eax+0x0C]
 00540221    mov dword ptr ss:[esp+0x0C], eax
 00540225    cmp esi, 0x320
 0054022B    jb 0x00540232
-0054022D    call 0x00591930
+0054022D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00540232    mov edx, dword ptr ss:[esp+0x0C]
 00540236    xorps xmm0, xmm0
 00540239    imul eax, esi, 0x64
@@ -38,4 +44,4 @@
 00540274    pop ebx
 00540275    mov esp, ebp
 00540277    pop ebp
-00540278    ret
+00540278    ret                                             ; => [ Call: sub_586320 ]

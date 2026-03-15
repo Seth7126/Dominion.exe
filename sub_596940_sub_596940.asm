@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_596940
+// 起始地址: 0x596940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00596940    push ebp
 00596941    mov ebp, esp
 00596943    sub esp, 0x10
@@ -24,7 +30,7 @@
 00596977    movzx ecx, al
 0059697A    xor ecx, 0x01
 0059697D    inc ecx
-0059697E    add ecx, edi
+0059697E    add ecx, edi                                    ; => [ Call: sub_586690 ]
 00596980    mov eax, dword ptr ds:[ebx+ecx*4]
 00596983    mov dword ptr ds:[ebx+esi*4], eax
 00596986    mov esi, ecx
@@ -53,7 +59,7 @@
 005969C0    push dword ptr ds:[ebx+edi*4]
 005969C3    call 0x00586690
 005969C8    test al, al
-005969CA    jz 0x005969D9
+005969CA    jz 0x005969D9                                   ; => [ Call: sub_586690 ]
 005969CC    mov eax, dword ptr ds:[ebx+edi*4]
 005969CF    mov dword ptr ds:[ebx+esi*4], eax
 005969D2    mov esi, edi

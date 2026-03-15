@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64f3f0
+// 起始地址: 0x64f3f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064F3F0    push ebp
 0064F3F1    mov ebp, esp
 0064F3F3    push ecx
@@ -7,14 +13,14 @@
 0064F3F9    push edi
 0064F3FA    test ecx, ecx
 0064F3FC    jnz 0x0064F414
-0064F3FE    push 0x874440
+0064F3FE    push 0x874440                                   ; => [ String: UI2DefGet ]
 0064F403    push 0xC16
-0064F408    mov edx, 0x874424
-0064F40D    mov ecx, 0x874470
+0064F408    mov edx, 0x874424                               ; => [ String: UI2DefGet on null pointer ]
+0064F40D    mov ecx, 0x874470                               ; => [ Data: data_874470 ]
 0064F412    jmp 0x0064F489
 0064F414    cmp dword ptr ds:[ecx+0x04], 0x22
 0064F418    jnz 0x0064F475
-0064F41A    call 0x005AF880
+0064F41A    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 0064F41F    mov ebx, eax
 0064F421    xor esi, esi
 0064F423    cmp dword ptr ds:[ebx+0x08], esi
@@ -29,7 +35,7 @@
 0064F440    add esp, 0x04
 0064F443    push dword ptr ss:[ebp-0x04]
 0064F446    push eax
-0064F447    call dword ptr ds:[0x00775688]
+0064F447    call dword ptr ds:[0x00775688]                  ; => [ Data: data_8cae70 | Call: sub_6dd140 ]
 0064F44D    add esp, 0x08
 0064F450    test eax, eax
 0064F452    jz 0x0064F466
@@ -53,15 +59,15 @@
 0064F471    mov esp, ebp
 0064F473    pop ebp
 0064F474    ret
-0064F475    push 0x874440
+0064F475    push 0x874440                                   ; => [ String: UI2DefGet ]
 0064F47A    push 0xC17
-0064F47F    mov edx, 0x801800
-0064F484    mov ecx, 0x87444C
+0064F47F    mov edx, 0x801800                               ; => [ Data: data_801800 ]
+0064F484    mov ecx, 0x87444C                               ; => [ String: ptr->assetType == ASSET_TYPE_UI2 ]
 0064F489    push 0x8739B4
-0064F48E    call 0x0063B870
+0064F48E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: UI2DefGet | String: C:\x\ax2017\Engine\UI2.cpp ]
 0064F493    add esp, 0x0C
 0064F496    call 0x0063BC30
 0064F49B    test al, al
-0064F49D    jz 0x0064F4A0
+0064F49D    jz 0x0064F4A0                                   ; => [ Call: sub_63bc30 ]
 0064F49F    int3
-0064F4A0    call 0x0063BB00
+0064F4A0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

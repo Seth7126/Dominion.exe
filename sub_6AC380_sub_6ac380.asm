@@ -1,23 +1,29 @@
+// ============================================================
+// 函数名称: sub_6ac380
+// 起始地址: 0x6ac380
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AC380    push ebp
 006AC381    mov ebp, esp
 006AC383    sub esp, 0x3C
 006AC386    push ebx
 006AC387    push esi
-006AC388    mov esi, dword ptr ss:[ebp+0x08]
+006AC388    mov esi, dword ptr ss:[ebp+0x08]                ; => [ Type: FILE ]
 006AC38B    mov ebx, ecx
 006AC38D    push edi
 006AC38E    mov edi, edx
 006AC390    mov ecx, esi
 006AC392    mov dword ptr ss:[ebp-0x10], edi
-006AC395    call 0x006AA0D0
+006AC395    call 0x006AA0D0                                 ; => [ Call: sub_6aa0d0 ]
 006AC39A    mov edx, dword ptr ds:[ebx+0x04]
 006AC39D    lea ecx, ss:[ebp-0x28]
 006AC3A0    xorps xmm0, xmm0
 006AC3A3    mov dword ptr ss:[ebp-0x18], edx
 006AC3A6    mov edx, esi
 006AC3A8    mov dword ptr ss:[ebp-0x0C], eax
-006AC3AB    movups xmmword ptr ss:[ebp-0x28], xmm0
-006AC3AF    call 0x006AACF0
+006AC3AB    movups xmmword ptr ss:[ebp-0x28], xmm0          ; => [ String: 0 | String: zx ]
+006AC3AF    call 0x006AACF0                                 ; => [ Call: sub_6aacf0 ]
 006AC3B4    mov edx, dword ptr ss:[ebp-0x0C]
 006AC3B7    mov ecx, 0x0B
 006AC3BC    cmp edx, 0x06
@@ -46,7 +52,7 @@
 006AC404    movd xmm0, eax
 006AC408    cvtdq2ps xmm0, xmm0
 006AC40B    mulss xmm0, xmm1
-006AC40F    call 0x004D5CF0
+006AC40F    call 0x004D5CF0                                 ; => [ Call: sub_4d5cf0 ]
 006AC414    xorps xmm1, xmm1
 006AC417    comiss xmm1, xmm0
 006AC41A    jbe 0x006AC426
@@ -58,7 +64,7 @@
 006AC437    cvtdq2ps xmm0, xmm0
 006AC43A    mov dword ptr ss:[ebp-0x04], eax
 006AC43D    mulss xmm0, dword ptr ds:[ebx+0x1C]
-006AC442    call 0x004D5CF0
+006AC442    call 0x004D5CF0                                 ; => [ Call: sub_4d5cf0 ]
 006AC447    xorps xmm1, xmm1
 006AC44A    comiss xmm1, xmm0
 006AC44D    jbe 0x006AC459
@@ -68,17 +74,17 @@
 006AC461    cvttss2si edi, xmm0
 006AC465    mov edx, esi
 006AC467    mov ecx, edi
-006AC469    call 0x006A9570
+006AC469    call 0x006A9570                                 ; => [ Call: sub_6a9570 ]
 006AC46E    push dword ptr ss:[ebp-0x18]
 006AC471    mov edx, dword ptr ss:[ebp-0x04]
 006AC474    mov ecx, edi
 006AC476    mov esi, eax
 006AC478    call 0x006A9660
 006AC47D    mov ecx, eax
-006AC47F    call 0x00687730
+006AC47F    call 0x00687730                                 ; => [ Call: sub_687730 | Call: sub_6a9660 ]
 006AC484    mov ecx, dword ptr ss:[ebp-0x18]
 006AC487    mov dword ptr ss:[ebp-0x08], eax
-006AC48A    call 0x006A9450
+006AC48A    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 006AC48F    sub esp, 0x1C
 006AC492    mov edx, dword ptr ss:[ebp-0x28]
 006AC495    push eax
@@ -93,7 +99,7 @@
 006AC4C0    push ecx
 006AC4C1    push dword ptr ss:[ebp-0x14]
 006AC4C4    push dword ptr ss:[ebp-0x24]
-006AC4C7    call 0x0071DDA0
+006AC4C7    call 0x0071DDA0                                 ; => [ Call: sub_71dda0 ]
 006AC4CC    mov eax, dword ptr ss:[ebp-0x04]
 006AC4CF    add esp, 0x54
 006AC4D2    mov ecx, dword ptr ss:[ebp-0x08]
@@ -122,7 +128,7 @@
 006AC515    push esi
 006AC516    push eax
 006AC517    mov edx, edi
-006AC519    call 0x006AB350
+006AC519    call 0x006AB350                                 ; => [ Call: sub_6ab350 ]
 006AC51E    add esp, 0x0C
 006AC521    mov al, 0x01
 006AC523    pop edi
@@ -140,7 +146,7 @@
 006AC539    push esi
 006AC53A    push eax
 006AC53B    mov ecx, ebx
-006AC53D    call 0x006ABE10
+006AC53D    call 0x006ABE10                                 ; => [ Call: sub_6abe10 ]
 006AC542    add esp, 0x08
 006AC545    mov al, 0x01
 006AC547    pop edi
@@ -159,7 +165,7 @@
 006AC55D    push esi
 006AC55E    push eax
 006AC55F    mov ecx, ebx
-006AC561    call 0x006AB350
+006AC561    call 0x006AB350                                 ; => [ Call: sub_6ab350 ]
 006AC566    add esp, 0x0C
 006AC569    mov al, 0x01
 006AC56B    pop edi
@@ -175,9 +181,9 @@
 006AC57B    push ecx
 006AC57C    call dword ptr ds:[0x00775524]
 006AC582    add esp, 0x04
-006AC585    push esi
+006AC585    push esi                                        ; => [ Type: FILE ]
 006AC586    push 0x87B6BC
-006AC58B    call 0x0063B5F0
+006AC58B    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: texture encoding not supported %s ]
 006AC590    add esp, 0x08
 006AC593    mov al, 0x01
 006AC595    pop edi
@@ -191,7 +197,7 @@
 006AC5A1    push esi
 006AC5A2    push eax
 006AC5A3    mov edx, edi
-006AC5A5    call 0x006ABFD0
+006AC5A5    call 0x006ABFD0                                 ; => [ Call: sub_6abfd0 ]
 006AC5AA    add esp, 0x08
 006AC5AD    mov al, 0x01
 006AC5AF    pop edi

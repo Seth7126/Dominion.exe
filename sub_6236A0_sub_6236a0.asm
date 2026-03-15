@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6236a0
+// 起始地址: 0x6236a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006236A0    push ebp
 006236A1    mov ebp, esp
 006236A3    push ecx
@@ -8,7 +14,7 @@
 006236AB    mov dword ptr ss:[ebp-0x04], edx
 006236AE    mov edx, esi
 006236B0    push edi
-006236B1    call 0x0061CD10
+006236B1    call 0x0061CD10                                 ; => [ Call: sub_61cd10 ]
 006236B6    mov eax, dword ptr ds:[ebx+0x1504]
 006236BC    cmp eax, 0x03
 006236BF    jz 0x0062370A
@@ -35,13 +41,13 @@
 006236FD    push 0x00
 006236FF    push 0x00
 00623701    push eax
-00623702    call 0x0059F9B0
+00623702    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00623707    add esp, 0x24
 0062370A    call 0x00573400
 0062370F    xor ecx, ecx
 00623711    mov edi, 0x08
 00623716    cmp byte ptr ds:[eax+0x6C], cl
-00623719    cmovz edi, ecx
+00623719    cmovz edi, ecx                                  ; => [ Call: sub_573400 ]
 0062371C    mov ecx, dword ptr ds:[ebx+0x1A1C]
 00623722    lea eax, ds:[ecx+0x01]
 00623725    mov dword ptr ds:[ebx+0x1A1C], eax
@@ -76,7 +82,7 @@
 0062379D    push eax
 0062379E    mov dword ptr ds:[ebx+0x7C], 0xFFFFFFFF
 006237A5    mov dword ptr ds:[ebx+0x80], 0xFFFFFFFF
-006237AF    call 0x00761FBE
+006237AF    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006237B4    mov dword ptr ds:[ebx+0xD30], esi
 006237BA    add esp, 0x0C
 006237BD    mov dword ptr ds:[ebx+0x84], 0x00
@@ -87,10 +93,10 @@
 006237DD    jnz 0x0062380D
 006237DF    cmp dword ptr ds:[ebx+0x80], 0x00
 006237E6    jz 0x00623801
-006237E8    push 0x86B114
+006237E8    push 0x86B114                                   ; => [ String: DomNotifyYieldWheres ]
 006237ED    push 0xE80D
-006237F2    push 0x86F1E8
-006237F7    mov ecx, 0x86B154
+006237F2    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
+006237F7    mov ecx, 0x86B154                               ; => [ String: yld.minChoices == 0 ]
 006237FC    jmp 0x00623916
 00623801    mov dword ptr ds:[ebx+0x8C], 0x00
 0062380B    jmp 0x0062386A
@@ -102,11 +108,11 @@
 0062381F    jz 0x00623902
 00623825    lea edx, ds:[ebx+0x20]
 00623828    mov ecx, ebx
-0062382A    call 0x004F4440
+0062382A    call 0x004F4440                                 ; => [ Call: sub_4f4440 ]
 0062382F    jmp 0x0062386A
 00623831    lea edx, ds:[ebx+0x20]
 00623834    mov ecx, ebx
-00623836    call 0x00622940
+00623836    call 0x00622940                                 ; => [ Call: sub_622940 ]
 0062383B    call 0x004B9480
 00623840    mov edx, dword ptr ds:[ebx+0x70]
 00623843    mov ecx, eax
@@ -115,19 +121,19 @@
 0062384D    mov ecx, eax
 0062384F    call 0x005E9670
 00623854    test al, al
-00623856    jz 0x00623865
+00623856    jz 0x00623865                                   ; => [ Call: sub_5e9670 | Call: sub_4b9480 | Call: sub_4d5db0 ]
 00623858    cmp dword ptr ds:[ebx+0x24], 0x03
 0062385C    jz 0x0062386A
-0062385E    call 0x00591930
+0062385E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00623863    jmp 0x0062386A
-00623865    call 0x006A90E0
+00623865    call 0x006A90E0                                 ; => [ Call: sub_6a90e0 ]
 0062386A    mov eax, dword ptr ds:[ebx+0x8C]
 00623870    shl eax, 0x02
 00623873    push eax
 00623874    lea eax, ds:[ebx+0x90]
 0062387A    push eax
 0062387B    push dword ptr ss:[ebp+0x10]
-0062387E    call 0x00762362
+0062387E    call 0x00762362                                 ; => [ Call: memmove ]
 00623883    mov eax, dword ptr ds:[ebx+0x8C]
 00623889    add esp, 0x0C
 0062388C    shl eax, 0x02
@@ -135,7 +141,7 @@
 00623890    lea eax, ds:[ebx+0xD20]
 00623896    push eax
 00623897    push dword ptr ss:[ebp+0x14]
-0062389A    call 0x00762362
+0062389A    call 0x00762362                                 ; => [ Call: memmove ]
 0062389F    mov eax, dword ptr ds:[ebx+0x1504]
 006238A5    add esp, 0x0C
 006238A8    cmp eax, 0x03
@@ -163,7 +169,7 @@
 006238EE    push 0x00
 006238F0    push 0x01
 006238F2    push eax
-006238F3    call 0x0059F9B0
+006238F3    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 006238F8    add esp, 0x24
 006238FB    pop edi
 006238FC    pop esi
@@ -171,15 +177,15 @@
 006238FE    mov esp, ebp
 00623900    pop ebp
 00623901    ret
-00623902    push 0x85E4A4
+00623902    push 0x85E4A4                                   ; => [ String: DomAISimYield ]
 00623907    push 0x131
-0062390C    push 0x85E454
-00623911    mov ecx, 0x85E48C
+0062390C    push 0x85E454                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomAI.cpp ]
+00623911    mov ecx, 0x85E48C                               ; => [ String: ai.aiLevel != DBAI_NONE ]
 00623916    mov edx, 0x801800
-0062391B    call 0x0063B870
+0062391B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00623920    add esp, 0x0C
 00623923    call 0x0063BC30
 00623928    test al, al
-0062392A    jz 0x0062392D
+0062392A    jz 0x0062392D                                   ; => [ Call: sub_63bc30 ]
 0062392C    int3
-0062392D    call 0x0063BB00
+0062392D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_6fef50
+// 起始地址: 0x6fef50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FEF50    push ebp
 006FEF51    mov ebp, esp
 006FEF53    mov eax, 0x4050
-006FEF58    call 0x00761E50
+006FEF58    call 0x00761E50                                 ; => [ Call: __chkstk ]
 006FEF5D    mov eax, dword ptr ds:[0x008C4040]
 006FEF62    xor eax, ebp
-006FEF64    mov dword ptr ss:[ebp-0x08], eax
+006FEF64    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 006FEF67    mov dword ptr ss:[ebp-0x4018], edx
 006FEF6D    mov eax, ecx
 006FEF6F    mov dword ptr ss:[ebp-0x404C], eax
@@ -114,7 +120,7 @@
 006FF179    pop esi
 006FF17A    xor ecx, ebp
 006FF17C    pop ebx
-006FF17D    call 0x0075927A
+006FF17D    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006FF182    mov esp, ebp
 006FF184    pop ebp
 006FF185    ret

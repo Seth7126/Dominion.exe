@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69c620
+// 起始地址: 0x69c620
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069C620    push ebp
 0069C621    mov ebp, esp
 0069C623    push ecx
@@ -8,7 +14,7 @@
 0069C62B    push edi
 0069C62C    cmp eax, 0x0F
 0069C62F    jnbe 0x0069C6E6
-0069C635    movzx eax, byte ptr ds:[eax+0x69C738]
+0069C635    movzx eax, byte ptr ds:[eax+0x69C738]           ; => [ Data: lookup_table_69c738 ]
 0069C63C    jmp dword ptr ds:[eax*4+0x69C718]
 0069C643    mov eax, dword ptr ss:[ebp+0x08]
 0069C646    mov eax, dword ptr ds:[eax+0x24]
@@ -19,8 +25,8 @@
 0069C64E    pop ebp
 0069C64F    ret
 0069C650    xorps xmm0, xmm0
-0069C653    push 0x879464
-0069C658    movsd qword ptr ds:[esi], xmm0
+0069C653    push 0x879464                                   ; => [ String: DefinitionFillShallowFieldWithDefaults ]
+0069C658    movsd qword ptr ds:[esi], xmm0                  ; => [ String: 0 | String: zx ]
 0069C65C    push 0x8F
 0069C661    jmp 0x0069C6F0
 0069C666    dword 6608458B
@@ -75,25 +81,25 @@
 0069C6CD    jnz 0x0069C6D8
 0069C6CF    mov ecx, edi
 0069C6D1    call 0x006B7EF0
-0069C6D6    mov edx, eax
+0069C6D6    mov edx, eax                                    ; => [ Call: sub_6b7ef0 ]
 0069C6D8    mov ecx, edi
-0069C6DA    call 0x0069F030
+0069C6DA    call 0x0069F030                                 ; => [ Call: sub_69f030 ]
 0069C6DF    pop edi
 0069C6E0    mov dword ptr ds:[esi], eax
 0069C6E2    pop esi
 0069C6E3    pop ecx
 0069C6E4    pop ebp
 0069C6E5    ret
-0069C6E6    dword 87946468
+0069C6E6    dword 87946468                                  ; => [ String: DefinitionFillShallowFieldWithDefaults ]
 0069C6EA    byte 0
 0069C6EB    push 0xAF
 0069C6F0    push 0x879400
 0069C6F5    mov edx, 0x801800
 0069C6FA    mov ecx, 0x801AA4
-0069C6FF    call 0x0063B870
+0069C6FF    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Definition.cpp | Data: data_801800 | String: DefinitionFillShallowFieldWithDefaults | String: Halt ]
 0069C704    add esp, 0x0C
 0069C707    call 0x0063BC30
 0069C70C    test al, al
-0069C70E    jz 0x0069C711
+0069C70E    jz 0x0069C711                                   ; => [ Call: sub_63bc30 ]
 0069C710    int3
-0069C711    call 0x0063BB00
+0069C711    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

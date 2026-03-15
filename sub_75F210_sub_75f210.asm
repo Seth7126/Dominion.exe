@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75f210
+// 起始地址: 0x75f210
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F210    push ebp
 0075F211    mov ebp, esp
 0075F213    movsd xmm1, qword ptr ss:[ebp+0x08]
@@ -26,7 +32,7 @@
 0075F256    movsd qword ptr ss:[ebp-0x08], xmm0
 0075F25B    fld qword ptr ss:[ebp-0x08]
 0075F25E    fstp qword ptr ss:[esp]
-0075F261    call 0x0076208A
+0075F261    call 0x0076208A                                 ; => [ Call: floor ]
 0075F266    fstp qword ptr ss:[ebp-0x08]
 0075F269    cvttsd2si ebx, qword ptr ss:[ebp-0x08]
 0075F26E    add esp, 0x08

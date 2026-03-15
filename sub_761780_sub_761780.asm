@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_761780
+// 起始地址: 0x761780
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00761780    push ebp
 00761781    mov ebp, esp
 00761783    sub esp, 0x28
-00761786    mov eax, dword ptr ds:[0x008C4040]
+00761786    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0076178B    xor eax, ebp
 0076178D    mov dword ptr ss:[ebp-0x04], eax
 00761790    push ebx
@@ -13,7 +19,7 @@
 0076179D    push dword ptr ds:[esi+0x14]
 007617A0    call dword ptr ds:[0x00775108]
 007617A6    test eax, eax
-007617A8    jz 0x007619C3
+007617A8    jz 0x007619C3                                   ; => [ Type: WAIT_EVENT ]
 007617AE    push edi
 007617AF    lea edi, ds:[esi+0x08]
 007617B2    test bl, bl
@@ -46,7 +52,7 @@
 007617FE    mov ecx, dword ptr ds:[esi+0x1C]
 00761801    push ebx
 00761802    push dword ptr ss:[ebp-0x24]
-00761805    call 0x0075B980
+00761805    call 0x0075B980                                 ; => [ Call: sub_75b980 ]
 0076180A    mov eax, dword ptr ds:[esi+0x0C]
 0076180D    push 0x00
 0076180F    push ebx
@@ -118,10 +124,10 @@
 007618B3    push eax
 007618B4    call dword ptr ds:[ecx+0x0C]
 007618B7    shr eax, 0x1F
-007618BA    mov dword ptr ss:[ebp-0x28], 0x00
+007618BA    mov dword ptr ss:[ebp-0x28], 0x00               ; => [ Call: nullptr ]
 007618C1    xorps xmm0, xmm0
 007618C4    mov word ptr ss:[ebp-0x08], 0x00
-007618CA    movups xmmword ptr ss:[ebp-0x18], xmm0
+007618CA    movups xmmword ptr ss:[ebp-0x18], xmm0          ; => [ Call: __builtin_memset ]
 007618CE    test al, al
 007618D0    jnz 0x00761965
 007618D6    mov eax, dword ptr ds:[edi]
@@ -213,7 +219,7 @@
 007619C6    pop esi
 007619C7    xor ecx, ebp
 007619C9    pop ebx
-007619CA    call 0x0075927A
+007619CA    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 007619CF    mov esp, ebp
 007619D1    pop ebp
 007619D2    ret

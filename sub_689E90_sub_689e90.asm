@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_689e90
+// 起始地址: 0x689e90
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00689E90    push ebp
 00689E91    mov ebp, esp
 00689E93    sub esp, 0x08
@@ -10,21 +16,21 @@
 00689EA0    test eax, eax
 00689EA2    jz 0x00689EDC
 00689EA4    cmp eax, 0x801800
-00689EA9    jz 0x00689EDC
+00689EA9    jz 0x00689EDC                                   ; => [ Data: data_801800 ]
 00689EAB    cmp dword ptr ds:[0x00CF65BC], 0x00
 00689EB2    jz 0x00689ED6
 00689EB4    cmp byte ptr ds:[eax], 0x00
-00689EB7    jz 0x00689ED6
+00689EB7    jz 0x00689ED6                                   ; => [ Data: data_cf65bc ]
 00689EB9    mov ecx, edi
-00689EBB    call 0x0063D4E0
+00689EBB    call 0x0063D4E0                                 ; => [ Call: sub_63d4e0 ]
 00689EC0    add dword ptr ds:[eax+0x04], 0xFFFFFFFF
 00689EC4    jnz 0x00689ED3
 00689EC6    mov edx, dword ptr ds:[eax+0x0C]
 00689EC9    mov ecx, eax
 00689ECB    add edx, 0x10
-00689ECE    call 0x0064C080
+00689ECE    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 00689ED3    mov ecx, dword ptr ss:[ebp-0x04]
-00689ED6    mov dword ptr ds:[edi], 0x801800
+00689ED6    mov dword ptr ds:[edi], 0x801800                ; => [ Data: data_801800 ]
 00689EDC    mov ebx, dword ptr ds:[ecx]
 00689EDE    mov esi, ebx
 00689EE0    mov dl, byte ptr ds:[esi]
@@ -51,7 +57,7 @@
 00689F0F    push ebx
 00689F10    mov dword ptr ds:[ecx], eax
 00689F12    mov ecx, edi
-00689F14    call 0x0063DB30
+00689F14    call 0x0063DB30                                 ; => [ Call: sub_63db30 ]
 00689F19    pop edi
 00689F1A    pop esi
 00689F1B    mov al, 0x01
@@ -64,7 +70,7 @@
 00689F26    sub eax, ebx
 00689F28    push eax
 00689F29    push ebx
-00689F2A    call 0x0063DB30
+00689F2A    call 0x0063DB30                                 ; => [ Call: sub_63db30 ]
 00689F2F    mov ecx, dword ptr ss:[ebp-0x04]
 00689F32    xor al, al
 00689F34    pop edi

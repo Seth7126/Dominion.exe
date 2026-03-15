@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4cbf00
+// 起始地址: 0x4cbf00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004CBF00    push ebp
 004CBF01    mov ebp, esp
 004CBF03    and esp, 0xFFFFFFF8
@@ -12,7 +18,7 @@
 004CBF16    cmp ecx, 0x03
 004CBF19    cmovz ecx, eax
 004CBF1C    mov dword ptr ss:[esp+0x10], ecx
-004CBF20    call 0x00571BC0
+004CBF20    call 0x00571BC0                                 ; => [ Call: sub_571bc0 ]
 004CBF25    mov ebx, dword ptr ss:[esp+0x0C]
 004CBF29    mov esi, eax
 004CBF2B    or eax, 0xFFFFFFFF

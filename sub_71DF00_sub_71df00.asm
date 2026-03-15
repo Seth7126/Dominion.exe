@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_71df00
+// 起始地址: 0x71df00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071DF00    push ebp
 0071DF01    mov ebp, esp
 0071DF03    sub esp, 0x40
 0071DF06    push esi
-0071DF07    xor esi, esi
+0071DF07    xor esi, esi                                    ; => [ Call: nullptr ]
 0071DF09    mov dword ptr ss:[ebp-0x20], edx
 0071DF0C    push 0x10000
 0071DF11    mov dword ptr ss:[ebp-0x1C], ecx
-0071DF14    mov dword ptr ss:[ebp-0x0C], esi
+0071DF14    mov dword ptr ss:[ebp-0x0C], esi                ; => [ Call: nullptr ]
 0071DF17    call dword ptr ds:[0x0077552C]
 0071DF1D    add esp, 0x04
 0071DF20    mov dword ptr ss:[ebp-0x28], eax
@@ -21,7 +27,7 @@
 0071DF33    push edi
 0071DF34    push 0x0A
 0071DF36    push 0x00
-0071DF38    call ebx
+0071DF38    call ebx                                        ; => [ Call: nullptr ]
 0071DF3A    add esp, 0x08
 0071DF3D    test eax, eax
 0071DF3F    jz 0x0071DF50
@@ -44,7 +50,7 @@
 0071DF72    push eax
 0071DF73    xor eax, eax
 0071DF75    test esi, esi
-0071DF77    cmovz ecx, eax
+0071DF77    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071DF7A    push ecx
 0071DF7B    call ebx
 0071DF7D    add esp, 0x08
@@ -60,15 +66,15 @@
 0071DF98    mov ecx, 0x4000
 0071DF9D    mov dword ptr ss:[ebp-0x08], 0x03
 0071DFA4    bts ebx, 0x01
-0071DFA8    xor edx, edx
+0071DFA8    xor edx, edx                                    ; => [ Call: nullptr ]
 0071DFAA    mov byte ptr ds:[esi+eax*1], 0x5E
 0071DFAE    xor eax, eax
 0071DFB0    inc dword ptr ds:[esi-0x04]
-0071DFB3    rep stosd
+0071DFB3    rep stosd                                       ; => [ Call: __builtin_memset ]
 0071DFB5    mov eax, dword ptr ss:[ebp-0x20]
 0071DFB8    add eax, 0xFFFFFFFD
 0071DFBB    mov dword ptr ss:[ebp-0x18], ebx
-0071DFBE    mov dword ptr ss:[ebp-0x10], edx
+0071DFBE    mov dword ptr ss:[ebp-0x10], edx                ; => [ Call: nullptr ]
 0071DFC1    test eax, eax
 0071DFC3    jle 0x0071E8CD
 0071DFC9    nop dword ptr ds:[eax], eax
@@ -159,7 +165,7 @@
 0071E0C9    lea eax, ds:[edx+0x20]
 0071E0CC    push eax
 0071E0CD    push edx
-0071E0CE    call 0x00762362
+0071E0CE    call 0x00762362                                 ; => [ Call: memmove ]
 0071E0D3    mov edi, dword ptr ss:[ebp-0x2C]
 0071E0D6    add esp, 0x0C
 0071E0D9    mov eax, dword ptr ds:[edi]
@@ -188,7 +194,7 @@
 0071E118    mov eax, dword ptr ss:[ebp-0x14]
 0071E11B    mov edi, 0x02
 0071E120    mov dword ptr ss:[ebp-0x14], eax
-0071E123    xor ecx, ecx
+0071E123    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071E125    mov eax, dword ptr ss:[ebp-0x24]
 0071E128    mov dword ptr ss:[ebp-0x24], eax
 0071E12B    mov eax, dword ptr ss:[ebp-0x2C]
@@ -268,7 +274,7 @@
 0071E20A    cmp eax, ecx
 0071E20C    jle 0x0071E24A
 0071E20E    mov edx, dword ptr ss:[ebp-0x20]
-0071E211    xor ecx, ecx
+0071E211    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071E213    sub edx, dword ptr ss:[ebp-0x10]
 0071E216    dec edx
 0071E217    test edx, edx
@@ -298,13 +304,13 @@
 0071E259    mov edx, dword ptr ss:[ebp-0x14]
 0071E25C    mov eax, edi
 0071E25E    sub eax, dword ptr ss:[ebp-0x24]
-0071E261    xor ecx, ecx
+0071E261    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071E263    add eax, dword ptr ss:[ebp-0x1C]
 0071E266    mov dword ptr ss:[ebp-0x30], eax
-0071E269    mov dword ptr ss:[ebp-0x34], ecx
+0071E269    mov dword ptr ss:[ebp-0x34], ecx                ; => [ Call: nullptr ]
 0071E26C    cmp edx, 0x03
 0071E26F    jle 0x0071E282
-0071E271    movzx eax, word ptr ds:[ecx*2+0x88E32C]
+0071E271    movzx eax, word ptr ds:[ecx*2+0x88E32C]         ; => [ Data: data_88e32c ]
 0071E279    inc ecx
 0071E27A    dec eax
 0071E27B    cmp edx, eax
@@ -355,7 +361,7 @@
 0071E302    push eax
 0071E303    xor eax, eax
 0071E305    test esi, esi
-0071E307    cmovz ecx, eax
+0071E307    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E30A    push ecx
 0071E30B    call dword ptr ds:[0x00775520]
 0071E311    add esp, 0x08
@@ -416,7 +422,7 @@
 0071E3B2    push eax
 0071E3B3    xor eax, eax
 0071E3B5    test esi, esi
-0071E3B7    cmovz ecx, eax
+0071E3B7    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E3BA    push ecx
 0071E3BB    call dword ptr ds:[0x00775520]
 0071E3C1    add esp, 0x08
@@ -478,7 +484,7 @@
 0071E462    push eax
 0071E463    xor eax, eax
 0071E465    test esi, esi
-0071E467    cmovz ecx, eax
+0071E467    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E46A    push ecx
 0071E46B    call dword ptr ds:[0x00775520]
 0071E471    add esp, 0x08
@@ -537,7 +543,7 @@
 0071E502    push eax
 0071E503    xor eax, eax
 0071E505    test esi, esi
-0071E507    cmovz ecx, eax
+0071E507    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E50A    push ecx
 0071E50B    call dword ptr ds:[0x00775520]
 0071E511    add esp, 0x08
@@ -567,7 +573,7 @@
 0071E55E    movzx eax, byte ptr ss:[ebp-0x01]
 0071E562    shl edx, cl
 0071E564    add ecx, eax
-0071E566    or ebx, edx
+0071E566    or ebx, edx                                     ; => [ Data: data_88e328 ]
 0071E568    mov dword ptr ss:[ebp-0x08], ecx
 0071E56B    mov dword ptr ss:[ebp-0x0C], esi
 0071E56E    cmp ecx, 0x08
@@ -594,7 +600,7 @@
 0071E5A7    push eax
 0071E5A8    xor eax, eax
 0071E5AA    test esi, esi
-0071E5AC    cmovz ecx, eax
+0071E5AC    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E5AF    push ecx
 0071E5B0    call dword ptr ds:[0x00775520]
 0071E5B6    add esp, 0x08
@@ -613,12 +619,12 @@
 0071E5DA    jnz 0x0071E585
 0071E5DC    mov dword ptr ss:[ebp-0x0C], esi
 0071E5DF    mov ecx, dword ptr ss:[ebp-0x30]
-0071E5E2    xor edi, edi
-0071E5E4    mov dword ptr ss:[ebp-0x2C], edi
+0071E5E2    xor edi, edi                                    ; => [ Call: nullptr ]
+0071E5E4    mov dword ptr ss:[ebp-0x2C], edi                ; => [ Call: nullptr ]
 0071E5E7    cmp ecx, 0x01
 0071E5EA    jle 0x0071E601
 0071E5EC    nop dword ptr ds:[eax], eax
-0071E5F0    movzx eax, word ptr ds:[edi*2+0x88E2EC]
+0071E5F0    movzx eax, word ptr ds:[edi*2+0x88E2EC]         ; => [ Data: data_88e2ec ]
 0071E5F8    inc edi
 0071E5F9    dec eax
 0071E5FA    cmp ecx, eax
@@ -665,7 +671,7 @@
 0071E664    push eax
 0071E665    xor eax, eax
 0071E667    test esi, esi
-0071E669    cmovz ecx, eax
+0071E669    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E66C    push ecx
 0071E66D    call dword ptr ds:[0x00775520]
 0071E673    add esp, 0x08
@@ -695,7 +701,7 @@
 0071E6C0    mov dword ptr ss:[ebp-0x0C], esi
 0071E6C3    shl edi, cl
 0071E6C5    movzx eax, dl
-0071E6C8    or ebx, edi
+0071E6C8    or ebx, edi                                     ; => [ Data: data_88e2e8 ]
 0071E6CA    add ecx, eax
 0071E6CC    mov dword ptr ss:[ebp-0x18], ebx
 0071E6CF    mov dword ptr ss:[ebp-0x08], ecx
@@ -724,7 +730,7 @@
 0071E712    push eax
 0071E713    xor eax, eax
 0071E715    test esi, esi
-0071E717    cmovz ecx, eax
+0071E717    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E71A    push ecx
 0071E71B    call dword ptr ds:[0x00775520]
 0071E721    add esp, 0x08
@@ -793,7 +799,7 @@
 0071E7D4    push eax
 0071E7D5    xor eax, eax
 0071E7D7    test esi, esi
-0071E7D9    cmovz ecx, eax
+0071E7D9    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E7DC    push ecx
 0071E7DD    call dword ptr ds:[0x00775520]
 0071E7E3    add esp, 0x08
@@ -851,7 +857,7 @@
 0071E871    lea edi, ds:[edi*2+0x01]
 0071E878    jmp 0x0071E881
 0071E87A    mov edi, 0x02
-0071E87F    xor ecx, ecx
+0071E87F    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071E881    lea eax, ds:[edi+0x08]
 0071E884    push eax
 0071E885    push ecx
@@ -926,7 +932,7 @@
 0071E95A    push eax
 0071E95B    xor eax, eax
 0071E95D    test esi, esi
-0071E95F    cmovz ecx, eax
+0071E95F    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071E962    push ecx
 0071E963    call dword ptr ds:[0x00775520]
 0071E969    add esp, 0x08
@@ -981,7 +987,7 @@
 0071E9E7    lea edi, ds:[edi*2+0x01]
 0071E9EE    jmp 0x0071E9F7
 0071E9F0    mov edi, 0x02
-0071E9F5    xor ecx, ecx
+0071E9F5    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071E9F7    lea eax, ds:[edi+0x08]
 0071E9FA    push eax
 0071E9FB    push ecx
@@ -1040,7 +1046,7 @@
 0071EA83    lea eax, ds:[edx*2+0x01]
 0071EA8A    jmp 0x0071EA93
 0071EA8C    mov eax, 0x02
-0071EA91    xor ecx, ecx
+0071EA91    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071EA93    mov dword ptr ss:[ebp-0x38], eax
 0071EA96    add eax, 0x08
 0071EA99    push eax
@@ -1086,7 +1092,7 @@
 0071EB01    lea edi, ds:[edi*2+0x01]
 0071EB08    jmp 0x0071EB11
 0071EB0A    mov edi, 0x02
-0071EB0F    xor ecx, ecx
+0071EB0F    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071EB11    lea eax, ds:[edi+0x08]
 0071EB14    push eax
 0071EB15    push ecx
@@ -1187,7 +1193,7 @@
 0071EC26    lea ecx, ds:[esi-0x08]
 0071EC29    jmp 0x0071EC32
 0071EC2B    mov edi, 0x02
-0071EC30    xor ecx, ecx
+0071EC30    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071EC32    lea eax, ds:[edi+0x08]
 0071EC35    push eax
 0071EC36    push ecx
@@ -1217,7 +1223,7 @@
 0071EC78    push eax
 0071EC79    xor eax, eax
 0071EC7B    test esi, esi
-0071EC7D    cmovz ecx, eax
+0071EC7D    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071EC80    push ecx
 0071EC81    call dword ptr ds:[0x00775520]
 0071EC87    add esp, 0x08
@@ -1241,7 +1247,7 @@
 0071ECB7    push eax
 0071ECB8    xor eax, eax
 0071ECBA    test esi, esi
-0071ECBC    cmovz ecx, eax
+0071ECBC    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071ECBF    push ecx
 0071ECC0    call dword ptr ds:[0x00775520]
 0071ECC6    add esp, 0x08
@@ -1266,7 +1272,7 @@
 0071ECF8    push eax
 0071ECF9    xor eax, eax
 0071ECFB    test esi, esi
-0071ECFD    cmovz ecx, eax
+0071ECFD    cmovz ecx, eax                                  ; => [ Call: nullptr ]
 0071ED00    push ecx
 0071ED01    call dword ptr ds:[0x00775520]
 0071ED07    add esp, 0x08
@@ -1285,7 +1291,7 @@
 0071ED25    push edi
 0071ED26    mov dword ptr ds:[esi-0x04], ecx
 0071ED29    mov dword ptr ds:[eax], ecx
-0071ED2B    call 0x00762362
+0071ED2B    call 0x00762362                                 ; => [ Call: memmove ]
 0071ED30    add esp, 0x0C
 0071ED33    mov eax, edi
 0071ED35    pop edi

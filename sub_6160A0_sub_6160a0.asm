@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6160a0
+// 起始地址: 0x6160a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006160A0    push ebp
 006160A1    mov ebp, esp
 006160A3    and esp, 0xFFFFFFF8
@@ -21,7 +27,7 @@
 006160D6    test ecx, ecx
 006160D8    jz 0x00616112
 006160DA    call 0x005CBA00
-006160DF    mov edx, eax
+006160DF    mov edx, eax                                    ; => [ Call: sub_5cba00 ]
 006160E1    jmp 0x006160B0
 006160E3    mov eax, dword ptr ds:[edx+0x170]
 006160E9    pop edi
@@ -33,7 +39,7 @@
 006160F5    and esi, 0xFFFF
 006160FB    cmp esi, 0x320
 00616101    jb 0x00616108
-00616103    call 0x00591930
+00616103    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00616108    imul eax, esi, 0x64
 0061610B    mov eax, dword ptr ds:[eax+edi*1+0x1A4C]
 00616112    pop edi
@@ -46,10 +52,10 @@
 00616122    push 0x86F1E8
 00616127    mov edx, 0x801800
 0061612C    mov ecx, 0x801AA4
-00616131    call 0x0063B870
+00616131    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: GfxGetCardEnum | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: Halt ]
 00616136    add esp, 0x0C
 00616139    call 0x0063BC30
 0061613E    test al, al
-00616140    jz 0x00616143
+00616140    jz 0x00616143                                   ; => [ Call: sub_63bc30 ]
 00616142    int3
-00616143    call 0x0063BB00
+00616143    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

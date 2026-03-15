@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_562100
+// 起始地址: 0x562100
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00562100    push ebp
 00562101    mov ebp, esp
 00562103    and esp, 0xFFFFFFF8
@@ -7,12 +13,12 @@
 00562109    push edi
 0056210A    mov ebx, edx
 0056210C    mov edi, ecx
-0056210E    call 0x00573400
+0056210E    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00562113    mov esi, eax
 00562115    xor eax, eax
 00562117    test bl, 0x01
 0056211A    jz 0x00562121
-0056211C    call 0x0056B780
+0056211C    call 0x0056B780                                 ; => [ Call: sub_56b780 ]
 00562121    mov edx, dword ptr ds:[esi+0x0C]
 00562124    mov ecx, dword ptr ds:[esi+0x04]
 00562127    push ebx
@@ -23,9 +29,9 @@
 00562130    push 0x476
 00562135    push edi
 00562136    push 0x601
-0056213B    call 0x00571FA0
+0056213B    call 0x00571FA0                                 ; => [ Call: sub_571fa0 | Call: nullptr ]
 00562140    add esp, 0x24
-00562143    call 0x00573400
+00562143    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00562148    mov ecx, dword ptr ds:[eax+0x0C]
 0056214B    cmp ecx, 0xFFFFFFFF
 0056214E    jz 0x00562170
@@ -39,16 +45,16 @@
 0056216B    pop ebx
 0056216C    mov esp, ebp
 0056216E    pop ebp
-0056216F    ret
+0056216F    ret                                             ; => [ Call: sub_583350 ]
 00562170    push 0x81EA64
 00562175    push 0x52
 00562177    push 0x81EA70
 0056217C    mov edx, 0x801800
 00562181    mov ecx, 0x813C5C
-00562186    call 0x0063B870
+00562186    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0056218B    add esp, 0x0C
 0056218E    call 0x0063BC30
 00562193    test al, al
-00562195    jz 0x00562198
+00562195    jz 0x00562198                                   ; => [ Call: sub_63bc30 ]
 00562197    int3
-00562198    call 0x0063BB00
+00562198    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

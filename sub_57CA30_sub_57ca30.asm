@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_57ca30
+// 起始地址: 0x57ca30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0057CA30    push ebp
 0057CA31    mov ebp, esp
 0057CA33    sub esp, 0x10
@@ -75,7 +81,7 @@
 0057CB0C    call 0x0057C810
 0057CB11    add esp, 0x14
 0057CB14    test al, al
-0057CB16    jz 0x0057CB3C
+0057CB16    jz 0x0057CB3C                                   ; => [ Call: sub_57c810 ]
 0057CB18    cmp dword ptr ds:[edi-0x50], 0x05
 0057CB1C    jnz 0x0057CB2A
 0057CB1E    mov eax, dword ptr ss:[ebp+0x0C]
@@ -99,24 +105,24 @@
 0057CB5B    mov esp, ebp
 0057CB5D    pop ebp
 0057CB5E    ret
-0057CB5F    push 0x81FD78
+0057CB5F    push 0x81FD78                                   ; => [ String: CollectRegisteredOpponentAbilities ]
 0057CB64    push 0x1E44
-0057CB69    push 0x81F4B8
-0057CB6E    mov ecx, 0x81FD9C
+0057CB69    push 0x81F4B8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
+0057CB6E    mov ecx, 0x81FD9C                               ; => [ String: source != CARDID_NULL ]
 0057CB73    jmp 0x0057CB9A
-0057CB75    push 0x81F478
+0057CB75    push 0x81F478                                   ; => [ String: AbilityID::set_payload ]
 0057CB7A    push 0x14D
-0057CB7F    mov ecx, 0x81F490
+0057CB7F    mov ecx, 0x81F490                               ; => [ String: payload() == arg_payload ]
 0057CB84    jmp 0x0057CB95
-0057CB86    push 0x81F408
+0057CB86    push 0x81F408                                   ; => [ String: AbilityID::set_trigger_card_id ]
 0057CB8B    push 0xFF
-0057CB90    mov ecx, 0x81F428
-0057CB95    push 0x81E978
+0057CB90    mov ecx, 0x81F428                               ; => [ String: x >= 0 ]
+0057CB95    push 0x81E978                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomGame.h ]
 0057CB9A    mov edx, 0x801800
-0057CB9F    call 0x0063B870
+0057CB9F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0057CBA4    add esp, 0x0C
 0057CBA7    call 0x0063BC30
 0057CBAC    test al, al
-0057CBAE    jz 0x0057CBB1
+0057CBAE    jz 0x0057CBB1                                   ; => [ Call: sub_63bc30 ]
 0057CBB0    int3
-0057CBB1    call 0x0063BB00
+0057CBB1    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

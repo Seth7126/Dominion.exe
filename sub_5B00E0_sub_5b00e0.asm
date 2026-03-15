@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5b00e0
+// 起始地址: 0x5b00e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005B00E0    cmp edx, 0x929
 005B00E6    jnle 0x005B0223
 005B00EC    jz 0x005B0211
@@ -14,19 +20,19 @@
 005B0122    mov edx, dword ptr ds:[0x0171E380]
 005B0128    push 0x00
 005B012A    push ecx
-005B012B    call 0x005AF930
+005B012B    call 0x005AF930                                 ; => [ Data: data_171e380 | Call: sub_5af930 ]
 005B0130    add esp, 0x08
 005B0133    ret
 005B0134    mov edx, dword ptr ds:[0x0171E39C]
 005B013A    push 0x00
 005B013C    push ecx
-005B013D    call 0x005AF930
+005B013D    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e39c ]
 005B0142    add esp, 0x08
 005B0145    ret
 005B0146    mov edx, dword ptr ds:[0x0171E3A4]
 005B014C    push 0x00
 005B014E    push ecx
-005B014F    call 0x005AF930
+005B014F    call 0x005AF930                                 ; => [ Data: data_171e3a4 | Call: sub_5af930 ]
 005B0154    add esp, 0x08
 005B0157    ret
 005B0158    cmp edx, 0x604
@@ -36,19 +42,19 @@
 005B016C    mov edx, dword ptr ds:[0x0171E390]
 005B0172    push 0x00
 005B0174    push ecx
-005B0175    call 0x005AF930
+005B0175    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e390 ]
 005B017A    add esp, 0x08
 005B017D    ret
 005B017E    mov edx, dword ptr ds:[0x0171E3BC]
 005B0184    push 0x00
 005B0186    push ecx
-005B0187    call 0x005AF930
+005B0187    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e3bc ]
 005B018C    add esp, 0x08
 005B018F    ret
 005B0190    mov edx, dword ptr ds:[0x0171E38C]
 005B0196    push 0x00
 005B0198    push ecx
-005B0199    call 0x005AF930
+005B0199    call 0x005AF930                                 ; => [ Data: data_171e38c | Call: sub_5af930 ]
 005B019E    add esp, 0x08
 005B01A1    ret
 005B01A2    cmp edx, 0x901
@@ -61,19 +67,19 @@
 005B01BD    mov edx, dword ptr ds:[0x0171E3B0]
 005B01C3    push 0x00
 005B01C5    push ecx
-005B01C6    call 0x005AF930
+005B01C6    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e3b0 ]
 005B01CB    add esp, 0x08
 005B01CE    ret
 005B01CF    mov edx, dword ptr ds:[0x0171E3B4]
 005B01D5    push 0x00
 005B01D7    push ecx
-005B01D8    call 0x005AF930
+005B01D8    call 0x005AF930                                 ; => [ Data: data_171e3b4 | Call: sub_5af930 ]
 005B01DD    add esp, 0x08
 005B01E0    ret
 005B01E1    mov edx, dword ptr ds:[0x0171E374]
 005B01E7    push 0x00
 005B01E9    push ecx
-005B01EA    call 0x005AF930
+005B01EA    call 0x005AF930                                 ; => [ Data: data_171e374 | Call: sub_5af930 ]
 005B01EF    add esp, 0x08
 005B01F2    ret
 005B01F3    cmp edx, 0x906
@@ -81,13 +87,13 @@
 005B01FF    mov edx, dword ptr ds:[0x0171E398]
 005B0205    push 0x00
 005B0207    push ecx
-005B0208    call 0x005AF930
+005B0208    call 0x005AF930                                 ; => [ Data: data_171e398 | Call: sub_5af930 ]
 005B020D    add esp, 0x08
 005B0210    ret
 005B0211    mov edx, dword ptr ds:[0x0171E394]
 005B0217    push 0x00
 005B0219    push ecx
-005B021A    call 0x005AF930
+005B021A    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e394 ]
 005B021F    add esp, 0x08
 005B0222    ret
 005B0223    cmp edx, 0xF01
@@ -103,19 +109,19 @@
 005B024F    mov edx, dword ptr ds:[0x0171E384]
 005B0255    push 0x00
 005B0257    push ecx
-005B0258    call 0x005AF930
+005B0258    call 0x005AF930                                 ; => [ Data: data_171e384 | Call: sub_5af930 ]
 005B025D    add esp, 0x08
 005B0260    ret
 005B0261    mov edx, dword ptr ds:[0x0171E37C]
 005B0267    push 0x00
 005B0269    push ecx
-005B026A    call 0x005AF930
+005B026A    call 0x005AF930                                 ; => [ Data: data_171e37c | Call: sub_5af930 ]
 005B026F    add esp, 0x08
 005B0272    ret
 005B0273    mov edx, dword ptr ds:[0x0171E3A0]
 005B0279    push 0x00
 005B027B    push ecx
-005B027C    call 0x005AF930
+005B027C    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e3a0 ]
 005B0281    add esp, 0x08
 005B0284    ret
 005B0285    cmp edx, 0xF00
@@ -123,13 +129,13 @@
 005B0291    mov edx, dword ptr ds:[0x0171E378]
 005B0297    push 0x00
 005B0299    push ecx
-005B029A    call 0x005AF930
+005B029A    call 0x005AF930                                 ; => [ Data: data_171e378 | Call: sub_5af930 ]
 005B029F    add esp, 0x08
 005B02A2    ret
 005B02A3    mov edx, dword ptr ds:[0x0171E3AC]
 005B02A9    push 0x00
 005B02AB    push ecx
-005B02AC    call 0x005AF930
+005B02AC    call 0x005AF930                                 ; => [ Data: data_171e3ac | Call: sub_5af930 ]
 005B02B1    add esp, 0x08
 005B02B4    ret
 005B02B5    cmp edx, 0xF12
@@ -142,19 +148,19 @@
 005B02CC    mov edx, dword ptr ds:[0x0171E3B8]
 005B02D2    push 0x00
 005B02D4    push ecx
-005B02D5    call 0x005AF930
+005B02D5    call 0x005AF930                                 ; => [ Data: data_171e3b8 | Call: sub_5af930 ]
 005B02DA    add esp, 0x08
 005B02DD    ret
 005B02DE    mov edx, dword ptr ds:[0x0171E3A8]
 005B02E4    push 0x00
 005B02E6    push ecx
-005B02E7    call 0x005AF930
+005B02E7    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171e3a8 ]
 005B02EC    add esp, 0x08
 005B02EF    ret
 005B02F0    mov edx, dword ptr ds:[0x0171E388]
 005B02F6    push 0x00
 005B02F8    push ecx
-005B02F9    call 0x005AF930
+005B02F9    call 0x005AF930                                 ; => [ Data: data_171e388 | Call: sub_5af930 ]
 005B02FE    add esp, 0x08
 005B0301    ret
 005B0302    cmp edx, 0x1134
@@ -162,6 +168,6 @@
 005B030A    mov edx, dword ptr ds:[0x0171E5CC]
 005B0310    push 0x00
 005B0312    push ecx
-005B0313    call 0x005AF930
+005B0313    call 0x005AF930                                 ; => [ Data: data_171e5cc | Call: sub_5af930 ]
 005B0318    add esp, 0x08
 005B031B    ret

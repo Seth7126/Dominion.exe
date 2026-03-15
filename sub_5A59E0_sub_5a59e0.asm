@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a59e0
+// 起始地址: 0x5a59e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A59E0    push ebp
 005A59E1    mov ebp, esp
 005A59E3    and esp, 0xFFFFFFF8
@@ -12,7 +18,7 @@
 005A59FD    lea edi, ds:[esi+0x175FD0]
 005A5A03    push eax
 005A5A04    mov edx, edi
-005A5A06    call 0x005A5840
+005A5A06    call 0x005A5840                                 ; => [ Call: sub_5a5840 ]
 005A5A0B    mov ecx, dword ptr ss:[esp+0x14]
 005A5A0F    add esp, 0x04
 005A5A12    mov byte ptr ds:[esi+0x175FCC], 0x01
@@ -42,7 +48,7 @@
 005A5A79    call 0x004AC580
 005A5A7E    movss xmm1, dword ptr ss:[esp+0x0C]
 005A5A84    divss xmm1, xmm0
-005A5A88    movss dword ptr ss:[esp+0x0C], xmm1
+005A5A88    movss dword ptr ss:[esp+0x0C], xmm1             ; => [ Call: sub_4ac580 ]
 005A5A8E    movss xmm0, dword ptr ds:[edi]
 005A5A92    xorps xmm1, xmm1
 005A5A95    cvtps2pd xmm0, xmm0
@@ -50,7 +56,7 @@
 005A5A9C    jnbe 0x005A5AA4
 005A5A9E    sqrtsd xmm0, xmm0
 005A5AA2    jmp 0x005A5AA9
-005A5AA4    call 0x00762084
+005A5AA4    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 005A5AA9    mov edx, dword ptr ss:[esp+0x14]
 005A5AAD    xorps xmm1, xmm1
 005A5AB0    cvtsd2ss xmm1, xmm0

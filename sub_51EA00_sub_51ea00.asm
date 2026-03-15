@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_51ea00
+// 起始地址: 0x51ea00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051EA00    push ebp
 0051EA01    mov ebp, esp
 0051EA03    mov eax, dword ptr ss:[ebp+0x08]
@@ -5,7 +11,7 @@
 0051EA0B    push esi
 0051EA0C    mov esi, dword ptr ds:[eax]
 0051EA0E    mov ecx, esi
-0051EA10    call 0x00571B30
+0051EA10    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0051EA15    mov ecx, dword ptr ds:[eax+0x98]
 0051EA1B    mov eax, dword ptr ds:[eax+0x9C]
 0051EA21    and ecx, 0x7F000400
@@ -17,7 +23,7 @@
 0051EA37    sar ecx, 0x04
 0051EA3A    or ecx, esi
 0051EA3C    and ecx, dword ptr ds:[0x01597E10]
-0051EA42    mov eax, dword ptr ds:[eax+ecx*4]
+0051EA42    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 0051EA45    test eax, eax
 0051EA47    jz 0x0051EA7F
 0051EA49    nop dword ptr ds:[eax], eax
@@ -34,7 +40,7 @@
 0051EA65    test ecx, ecx
 0051EA67    jz 0x0051EA7F
 0051EA69    mov edx, dword ptr ds:[ecx]
-0051EA6B    xor eax, eax
+0051EA6B    xor eax, eax                                    ; => [ Call: nullptr ]
 0051EA6D    mov ecx, dword ptr ds:[ecx+0x04]
 0051EA70    test ecx, ecx
 0051EA72    jle 0x0051EA7F

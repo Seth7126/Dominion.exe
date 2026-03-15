@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_74b280
+// 起始地址: 0x74b280
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0074B280    push ebp
 0074B281    mov ebp, esp
 0074B283    sub esp, 0x24
-0074B286    mov eax, dword ptr ds:[0x008C4040]
+0074B286    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0074B28B    xor eax, ebp
 0074B28D    mov dword ptr ss:[ebp-0x04], eax
 0074B290    push ebx
@@ -15,17 +21,17 @@
 0074B2A2    mov esi, dword ptr ds:[0x00775098]
 0074B2A8    push eax
 0074B2A9    push ebx
-0074B2AA    call esi
+0074B2AA    call esi                                        ; => [ Type: HGDIOBJ ]
 0074B2AC    lea ecx, ss:[ebp-0x14]
 0074B2AF    mov dword ptr ss:[ebp-0x24], eax
 0074B2B2    push ecx
 0074B2B3    push 0x10
 0074B2B5    push eax
-0074B2B6    call dword ptr ds:[0x00775068]
+0074B2B6    call dword ptr ds:[0x00775068]                  ; => [ Type: LOGPEN ]
 0074B2BC    mov ecx, dword ptr ss:[ebp+0x0C]
 0074B2BF    lea eax, ss:[ebp-0x14]
 0074B2C2    push eax
-0074B2C3    mov dword ptr ss:[ebp-0x08], ecx
+0074B2C3    mov dword ptr ss:[ebp-0x08], ecx                ; => [ Field: lopnColor ]
 0074B2C6    call dword ptr ds:[0x00775070]
 0074B2CC    push eax
 0074B2CD    push ebx
@@ -43,7 +49,7 @@
 0074B2EE    push dword ptr ds:[ecx]
 0074B2F0    push edi
 0074B2F1    push ebx
-0074B2F2    call edx
+0074B2F2    call edx                                        ; => [ Call: nullptr ]
 0074B2F4    push esi
 0074B2F5    push edi
 0074B2F6    push ebx
@@ -64,7 +70,7 @@
 0074B322    push esi
 0074B323    push dword ptr ds:[eax]
 0074B325    push ebx
-0074B326    call edx
+0074B326    call edx                                        ; => [ Call: nullptr ]
 0074B328    push esi
 0074B329    push edi
 0074B32A    push ebx
@@ -81,7 +87,7 @@
 0074B348    push dword ptr ds:[eax]
 0074B34A    push edi
 0074B34B    push ebx
-0074B34C    call dword ptr ds:[0x0077507C]
+0074B34C    call dword ptr ds:[0x0077507C]                  ; => [ Call: nullptr ]
 0074B352    push esi
 0074B353    push edi
 0074B354    push ebx
@@ -97,7 +103,7 @@
 0074B36D    push dword ptr ds:[eax]
 0074B36F    mov edi, dword ptr ds:[eax+0x08]
 0074B372    push ebx
-0074B373    call dword ptr ds:[0x0077507C]
+0074B373    call dword ptr ds:[0x0077507C]                  ; => [ Call: nullptr ]
 0074B379    push esi
 0074B37A    push edi
 0074B37B    push ebx
@@ -106,13 +112,13 @@
 0074B385    push ebx
 0074B386    call dword ptr ds:[0x00775098]
 0074B38C    push eax
-0074B38D    call dword ptr ds:[0x0077503C]
+0074B38D    call dword ptr ds:[0x0077503C]                  ; => [ Type: BOOL ]
 0074B393    mov ecx, dword ptr ss:[ebp-0x04]
 0074B396    pop edi
 0074B397    pop esi
 0074B398    xor ecx, ebp
 0074B39A    pop ebx
-0074B39B    call 0x0075927A
+0074B39B    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0074B3A0    mov esp, ebp
 0074B3A2    pop ebp
 0074B3A3    ret

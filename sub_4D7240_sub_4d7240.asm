@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4d7240
+// 起始地址: 0x4d7240
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D7240    push ebx
 004D7241    mov ebx, esp
 004D7243    sub esp, 0x08
@@ -8,20 +14,20 @@
 004D7250    mov dword ptr ss:[esp+0x04], ebp
 004D7254    mov ebp, esp
 004D7256    push 0xFFFFFFFF
-004D7258    push 0x763A00
+004D7258    push 0x763A00                                   ; => [ Type: EHRegistrationNode | Call: sub_763a00 ]
 004D725D    mov eax, dword ptr fs:[0x00000000]
-004D7263    push eax
+004D7263    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 004D7264    push ebx
 004D7265    mov eax, 0x11C0
-004D726A    call 0x00761E50
+004D726A    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004D726F    mov eax, dword ptr ds:[0x008C4040]
-004D7274    xor eax, ebp
+004D7274    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 004D7276    mov dword ptr ss:[ebp-0x14], eax
 004D7279    push esi
 004D727A    push edi
 004D727B    push eax
 004D727C    lea eax, ss:[ebp-0x0C]
-004D727F    mov dword ptr fs:[0x00000000], eax
+004D727F    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 004D7285    mov edi, edx
 004D7287    mov eax, ecx
 004D7289    mov dword ptr ss:[ebp-0x11C8], eax
@@ -30,17 +36,17 @@
 004D7298    mov dword ptr ss:[ebp-0x11C4], eax
 004D729E    push 0x1160
 004D72A3    lea eax, ss:[ebp-0x1180]
-004D72A9    movq qword ptr ss:[ebp-0x11C0], xmm0
+004D72A9    movq qword ptr ss:[ebp-0x11C0], xmm0            ; => [ Call: __builtin_memset ]
 004D72B1    push 0x00
 004D72B3    push eax
 004D72B4    movups xmmword ptr ss:[ebp-0x11B8], xmm0
-004D72BB    mov dword ptr ss:[ebp-0x1190], 0x801800
+004D72BB    mov dword ptr ss:[ebp-0x1190], 0x801800         ; => [ Data: data_801800 ]
 004D72C5    movups xmmword ptr ss:[ebp-0x11A8], xmm0
-004D72CC    mov dword ptr ss:[ebp-0x118C], 0x801800
+004D72CC    mov dword ptr ss:[ebp-0x118C], 0x801800         ; => [ Data: data_801800 ]
 004D72D6    movq qword ptr ss:[ebp-0x1198], xmm0
-004D72DE    mov dword ptr ss:[ebp-0x1188], 0x801800
+004D72DE    mov dword ptr ss:[ebp-0x1188], 0x801800         ; => [ Data: data_801800 ]
 004D72E8    mov dword ptr ss:[ebp-0x1184], 0x00
-004D72F2    call 0x00761FC4
+004D72F2    call 0x00761FC4                                 ; => [ Call: memset ]
 004D72F7    add esp, 0x0C
 004D72FA    mov dword ptr ss:[ebp-0x04], 0x00
 004D7301    xorps xmm0, xmm0
@@ -67,10 +73,10 @@
 004D737C    mov eax, dword ptr ds:[edi+0x1AC]
 004D7382    movq qword ptr ss:[ebp-0x20], xmm0
 004D7387    mov dword ptr ss:[ebp-0x1194], eax
-004D738D    call 0x0063D8D0
+004D738D    call 0x0063D8D0                                 ; => [ Call: sub_63d8d0 ]
 004D7392    push dword ptr ds:[edi+0x1B8]
 004D7398    lea ecx, ss:[ebp-0x118C]
-004D739E    call 0x0063D8D0
+004D739E    call 0x0063D8D0                                 ; => [ Call: sub_63d8d0 ]
 004D73A3    mov eax, dword ptr ds:[edi+0x180]
 004D73A9    lea esi, ss:[ebp-0x1170]
 004D73AF    mov dword ptr ss:[ebp-0x20], eax
@@ -100,7 +106,7 @@
 004D73FC    push dword ptr ds:[edi+0x18]
 004D73FF    lea eax, ds:[esi+0x18]
 004D7402    push eax
-004D7403    call 0x00761FBE
+004D7403    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004D7408    add esp, 0x18
 004D740B    cmp dword ptr ds:[esi+0x218], 0x00
 004D7412    jl 0x004D7470
@@ -114,18 +120,18 @@
 004D742F    mov ecx, dword ptr ss:[ebp-0x11C8]
 004D7435    lea eax, ss:[ebp-0x11C0]
 004D743B    push eax
-004D743C    call 0x004B1B50
+004D743C    call 0x004B1B50                                 ; => [ Call: sub_4b1b50 ]
 004D7441    lea ecx, ss:[ebp-0x11B8]
-004D7447    call 0x004AB0E0
+004D7447    call 0x004AB0E0                                 ; => [ Call: Concurrency::details::_Micro_queue::_Pop_finalizer::~_Pop_finalizer ]
 004D744C    mov eax, dword ptr ss:[ebp-0x11C8]
 004D7452    mov ecx, dword ptr ss:[ebp-0x0C]
-004D7455    mov dword ptr fs:[0x00000000], ecx
+004D7455    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 004D745C    pop ecx
 004D745D    pop edi
 004D745E    pop esi
 004D745F    mov ecx, dword ptr ss:[ebp-0x14]
 004D7462    xor ecx, ebp
-004D7464    call 0x0075927A
+004D7464    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004D7469    mov esp, ebp
 004D746B    pop ebp
 004D746C    mov esp, ebx
@@ -136,10 +142,10 @@
 004D747A    push 0x806734
 004D747F    mov edx, 0x801800
 004D7484    mov ecx, 0x806838
-004D7489    call 0x0063B870
+004D7489    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSettings.cpp | Data: data_801800 | String: ToSetup | String: setupDest.players[k].smartplays.numSmartplays >= 0 ]
 004D748E    add esp, 0x0C
 004D7491    call 0x0063BC30
 004D7496    test al, al
-004D7498    jz 0x004D749B
+004D7498    jz 0x004D749B                                   ; => [ Call: sub_63bc30 ]
 004D749A    int3
-004D749B    call 0x0063BB00
+004D749B    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

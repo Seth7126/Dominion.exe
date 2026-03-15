@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_4b97c0
+// 起始地址: 0x4b97c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004B97C0    push ebp
 004B97C1    mov ebp, esp
 004B97C3    and esp, 0xFFFFFFF8
 004B97C6    sub esp, 0x1C
-004B97C9    mov eax, dword ptr ds:[0x008C4040]
+004B97C9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 004B97CE    xor eax, esp
 004B97D0    mov dword ptr ss:[esp+0x18], eax
 004B97D4    mov ecx, dword ptr ds:[0x00CC8DC8]
@@ -10,7 +16,7 @@
 004B97DB    push esi
 004B97DC    push edi
 004B97DD    mov ecx, dword ptr ds:[ecx+0x1E1A4]
-004B97E3    call 0x004D8F30
+004B97E3    call 0x004D8F30                                 ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
 004B97E8    mov ebx, eax
 004B97EA    xor ecx, ecx
 004B97EC    mov edi, dword ptr ds:[ebx+0x72FC]
@@ -27,7 +33,7 @@
 004B9808    pop ebx
 004B9809    mov ecx, dword ptr ss:[esp+0x18]
 004B980D    xor ecx, esp
-004B980F    call 0x0075927A
+004B980F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004B9814    mov esp, ebp
 004B9816    pop ebp
 004B9817    ret
@@ -54,7 +60,7 @@
 004B9849    add ecx, 0x04
 004B984C    cmp eax, edx
 004B984E    jbe 0x004B9842
-004B9850    xor esi, esi
+004B9850    xor esi, esi                                    ; => [ Call: nullptr ]
 004B9852    cmp dword ptr ds:[edi+0x18], 0x00
 004B9856    jnz 0x004B9887
 004B9858    mov eax, dword ptr ds:[edi]
@@ -63,10 +69,10 @@
 004B9861    mov dword ptr ss:[esp+0x14], eax
 004B9865    call 0x004BA140
 004B986A    lea ecx, ss:[esp+0x14]
-004B986E    mov dword ptr ss:[esp+0x18], eax
+004B986E    mov dword ptr ss:[esp+0x18], eax                ; => [ Call: sub_4ba140 ]
 004B9872    mov dword ptr ss:[esp+0x1C], 0xFFFFFFFF
 004B987A    mov dword ptr ss:[esp+0x20], 0xFFFFFFFF
-004B9882    call 0x004BB8B0
+004B9882    call 0x004BB8B0                                 ; => [ Call: sub_4bb8b0 ]
 004B9887    test esi, esi
 004B9889    jnz 0x004B9818
 004B988B    mov ecx, dword ptr ss:[esp+0x24]
@@ -74,7 +80,7 @@
 004B9890    pop esi
 004B9891    pop ebx
 004B9892    xor ecx, esp
-004B9894    call 0x0075927A
+004B9894    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004B9899    mov esp, ebp
 004B989B    pop ebp
 004B989C    ret

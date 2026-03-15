@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_581b30
+// 起始地址: 0x581b30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00581B30    push ebp
 00581B31    mov ebp, esp
 00581B33    sub esp, 0x0C
@@ -10,19 +16,19 @@
 00581B41    mov edi, ecx
 00581B43    call 0x005722C0
 00581B48    add esp, 0x04
-00581B4B    mov ecx, dword ptr ds:[eax]
+00581B4B    mov ecx, dword ptr ds:[eax]                     ; => [ Call: sub_5722c0 ]
 00581B4D    mov dword ptr ss:[ebp-0x04], ecx
 00581B50    test ecx, ecx
 00581B52    jz 0x00581B73
 00581B54    movzx esi, cx
 00581B57    cmp esi, 0x320
 00581B5D    jb 0x00581B67
-00581B5F    call 0x00591930
+00581B5F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00581B64    mov ecx, dword ptr ss:[ebp-0x04]
 00581B67    imul eax, esi, 0x64
 00581B6A    mov eax, dword ptr ds:[eax+edi*1+0x1AA4]
 00581B71    jmp 0x00581B75
-00581B73    xor eax, eax
+00581B73    xor eax, eax                                    ; => [ Call: nullptr ]
 00581B75    mov dword ptr ss:[ebp-0x08], eax
 00581B78    test ecx, ecx
 00581B7A    jz 0x00581BC6
@@ -39,7 +45,7 @@
 00581B9C    mov edx, ecx
 00581B9E    mov ecx, edi
 00581BA0    push esi
-00581BA1    call 0x00581A00
+00581BA1    call 0x00581A00                                 ; => [ Call: sub_581a00 ]
 00581BA6    mov ecx, dword ptr ss:[ebp-0x04]
 00581BA9    add esp, 0x08
 00581BAC    inc esi

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_6530a0
+// 起始地址: 0x6530a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006530A0    push ebp
 006530A1    mov ebp, esp
 006530A3    and esp, 0xFFFFFFF8
 006530A6    sub esp, 0x824
-006530AC    mov eax, dword ptr ds:[0x008C4040]
+006530AC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006530B1    xor eax, esp
 006530B3    mov dword ptr ss:[esp+0x820], eax
 006530BA    mov eax, dword ptr ss:[ebp+0x0C]
@@ -49,7 +55,7 @@
 00653142    mov ecx, dword ptr ss:[esp+0x44]
 00653146    push ebx
 00653147    push edi
-00653148    call 0x00650190
+00653148    call 0x00650190                                 ; => [ Call: sub_650190 ]
 0065314D    mov eax, dword ptr ss:[esp+0x4C]
 00653151    inc esi
 00653152    mov edx, dword ptr ss:[esp+0x3C]
@@ -90,7 +96,7 @@
 006531BF    mov ecx, edi
 006531C1    push edx
 006531C2    mov edx, ebx
-006531C4    call 0x00652C30
+006531C4    call 0x00652C30                                 ; => [ Call: sub_652c30 ]
 006531C9    add esp, 0x1C
 006531CC    mov edx, dword ptr ss:[esp+0x10]
 006531D0    inc esi
@@ -101,7 +107,7 @@
 006531DF    pop esi
 006531E0    pop ebx
 006531E1    xor ecx, esp
-006531E3    call 0x0075927A
+006531E3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006531E8    mov esp, ebp
 006531EA    pop ebp
 006531EB    ret
@@ -110,10 +116,10 @@
 006531F6    push 0x8739B4
 006531FB    mov edx, 0x801800
 00653200    mov ecx, 0x8748F0
-00653205    call 0x0063B870
+00653205    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\UI2.cpp | Data: data_801800 | String: attribMap.attributeCount < 1000 | String: UI2MergeAttribMap ]
 0065320A    add esp, 0x0C
 0065320D    call 0x0063BC30
 00653212    test al, al
-00653214    jz 0x00653217
+00653214    jz 0x00653217                                   ; => [ Call: sub_63bc30 ]
 00653216    int3
-00653217    call 0x0063BB00
+00653217    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

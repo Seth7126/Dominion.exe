@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_52db30
+// 起始地址: 0x52db30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052DB30    dword 83EC8B55
 0052DB34    in al, 0xF8
 0052DB36    push ecx
@@ -6,14 +12,14 @@
 0052DB39    push edi
 0052DB3A    mov edx, 0x28
 0052DB3F    xor ecx, ecx
-0052DB41    call 0x0056B490
+0052DB41    call 0x0056B490                                 ; => [ Call: sub_56b490 ]
 0052DB46    mov edi, eax
-0052DB48    call 0x00573400
+0052DB48    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052DB4D    mov ebx, eax
 0052DB4F    mov edx, edi
 0052DB51    mov esi, dword ptr ds:[ebx+0x04]
 0052DB54    mov ecx, esi
-0052DB56    call 0x0057DA30
+0052DB56    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 0052DB5B    mov edx, 0x07
 0052DB60    lea ecx, ds:[esi+0x1594]
 0052DB66    mov esi, dword ptr ds:[ecx]
@@ -43,7 +49,7 @@
 0052DBA0    cmp esi, 0x48
 0052DBA3    jl 0x0052DB93
 0052DBA5    xor esi, esi
-0052DBA7    call 0x00573400
+0052DBA7    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052DBAC    push 0x10
 0052DBAE    or edx, 0xFFFFFFFF
 0052DBB1    push dword ptr ds:[eax+0x0C]
@@ -61,4 +67,4 @@
 0052DBD0    pop ebx
 0052DBD1    mov esp, ebp
 0052DBD3    pop ebp
-0052DBD4    ret
+0052DBD4    ret                                             ; => [ Call: sub_571fa0 | Call: nullptr ]

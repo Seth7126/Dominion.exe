@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_574000
+// 起始地址: 0x574000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00574000    push ebp
 00574001    mov ebp, esp
 00574003    and esp, 0xFFFFFFF8
@@ -14,9 +20,9 @@
 00574020    mov dword ptr ss:[esp+0x14], eax
 00574024    cmp dword ptr ds:[eax], 0x00
 00574027    jz 0x0057403D
-00574029    push 0x81FA90
+00574029    push 0x81FA90                                   ; => [ String: ShiftPile ]
 0057402E    push 0x956
-00574033    mov ecx, 0x81FA9C
+00574033    mov ecx, 0x81FA9C                               ; => [ String: g._boardPiles[newWhere].what == CARD_NONE ]
 00574038    jmp 0x00574155
 0057403D    mov edi, esi
 0057403F    shl edi, 0x04
@@ -47,7 +53,7 @@
 00574087    push 0x00
 00574089    push 0xFFFFFFFF
 0057408B    setz cl
-0057408E    call 0x0061B1B0
+0057408E    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00574093    mov ecx, dword ptr ss:[esp+0x38]
 00574097    add esp, 0x2C
 0057409A    mov edx, dword ptr ss:[ebp+0x08]
@@ -58,7 +64,7 @@
 005740B0    movzx edi, si
 005740B3    cmp edi, 0x320
 005740B9    jb 0x005740C7
-005740BB    call 0x00591930
+005740BB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005740C0    mov ecx, dword ptr ss:[esp+0x0C]
 005740C4    mov edx, dword ptr ss:[ebp+0x08]
 005740C7    imul edi, edi, 0x64
@@ -87,7 +93,7 @@
 00574105    push esi
 00574106    push 0xFFFFFFFF
 00574108    setz cl
-0057410B    call 0x0061B1B0
+0057410B    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00574110    mov ecx, dword ptr ss:[esp+0x38]
 00574114    add esp, 0x2C
 00574117    mov edx, dword ptr ss:[ebp+0x08]
@@ -99,21 +105,21 @@
 0057412F    mov eax, dword ptr ss:[esp+0x14]
 00574133    movups xmmword ptr ds:[eax], xmm0
 00574136    xorps xmm0, xmm0
-00574139    movups xmmword ptr ds:[edi+0x1524], xmm0
+00574139    movups xmmword ptr ds:[edi+0x1524], xmm0        ; => [ String: 0 | String: zx ]
 00574140    pop edi
 00574141    pop esi
 00574142    mov esp, ebp
 00574144    pop ebp
 00574145    ret
-00574146    push 0x81FA90
+00574146    push 0x81FA90                                   ; => [ String: ShiftPile ]
 0057414B    push 0x957
-00574150    mov ecx, 0x81FAC8
+00574150    mov ecx, 0x81FAC8                               ; => [ String: g._boardPiles[where].what != CARD_NONE ]
 00574155    push 0x81F4B8
 0057415A    mov edx, 0x801800
-0057415F    call 0x0063B870
+0057415F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: ShiftPile | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00574164    add esp, 0x0C
 00574167    call 0x0063BC30
 0057416C    test al, al
-0057416E    jz 0x00574171
+0057416E    jz 0x00574171                                   ; => [ Call: sub_63bc30 ]
 00574170    int3
-00574171    call 0x0063BB00
+00574171    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

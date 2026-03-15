@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_54b1d0
+// 起始地址: 0x54b1d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0054B1D0    dword 83EC8B55
 0054B1D4    in al, 0xF8
 0054B1D6    sub esp, 0xC88
 0054B1DC    xor edx, edx
 0054B1DE    push 0x00
 0054B1E0    lea ecx, ds:[edx+0x03]
-0054B1E3    call 0x00561AF0
+0054B1E3    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 0054B1E8    add esp, 0x04
 0054B1EB    mov dword ptr ss:[esp], 0x00
 0054B1F2    lea eax, ss:[esp]
@@ -17,4 +23,4 @@
 0054B206    add esp, 0x0C
 0054B209    mov esp, ebp
 0054B20B    pop ebp
-0054B20C    ret
+0054B20C    ret                                             ; => [ Call: sub_5022f0 | Call: sub_56bba0 ]

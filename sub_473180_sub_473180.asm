@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_473180
+// 起始地址: 0x473180
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00473180    mov edx, 0x03
 00473185    mov ecx, 0x82E278
-0047318A    call 0x0069F030
-0047318F    mov dword ptr ds:[0x0171D194], eax
+0047318A    call 0x0069F030                                 ; => [ String: res/card_gen/intrigue/bridge.texture | Call: sub_69f030 ]
+0047318F    mov dword ptr ds:[0x0171D194], eax              ; => [ Data: data_171d194 ]
 00473194    ret

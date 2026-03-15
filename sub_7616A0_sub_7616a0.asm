@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7616a0
+// 起始地址: 0x7616a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007616A0    dword 53EC8B55
 007616A4    mov ebx, dword ptr ss:[ebp+0x08]
 007616A7    push edi
@@ -14,9 +20,9 @@
 007616C6    test eax, eax
 007616C8    jz 0x007616DB
 007616CA    push eax
-007616CB    call 0x00761DF0
+007616CB    call 0x00761DF0                                 ; => [ Call: sub_761df0 ]
 007616D0    push dword ptr ds:[edi+0x18]
-007616D3    call 0x00761D90
+007616D3    call 0x00761D90                                 ; => [ Call: sub_761d90 ]
 007616D8    add esp, 0x08
 007616DB    mov edx, dword ptr ds:[edi+0x38]
 007616DE    test edx, edx
@@ -72,7 +78,7 @@
 0076175A    mov dword ptr ds:[edi], 0x00
 00761760    push 0x40
 00761762    push edi
-00761763    call 0x00759661
+00761763    call 0x00759661                                 ; => [ Call: operator new ]
 00761768    add esp, 0x08
 0076176B    mov dword ptr ds:[ebx], 0x00
 00761771    pop edi

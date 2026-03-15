@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_563a30
+// 起始地址: 0x563a30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00563A30    push ebp
 00563A31    mov ebp, esp
 00563A33    mov eax, 0x1910
-00563A38    call 0x00761E50
+00563A38    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00563A3D    push esi
 00563A3E    push edi
 00563A3F    push 0x00
@@ -18,7 +24,7 @@
 00563A5C    lea edi, ss:[ebp-0xC88]
 00563A62    add esp, 0x1C
 00563A65    mov ecx, 0x321
-00563A6A    rep movsd
+00563A6A    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_563960 ]
 00563A6C    mov eax, dword ptr ss:[ebp-0xC88]
 00563A72    xor ecx, ecx
 00563A74    cmp dword ptr ss:[ebp-0x08], ecx

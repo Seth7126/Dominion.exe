@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_69e6f0
+// 起始地址: 0x69e6f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069E6F0    push ebp
 0069E6F1    mov ebp, esp
 0069E6F3    sub esp, 0x120
-0069E6F9    mov eax, dword ptr ds:[0x008C4040]
+0069E6F9    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0069E6FE    xor eax, ebp
 0069E700    mov dword ptr ss:[ebp-0x08], eax
 0069E703    mov eax, dword ptr ss:[ebp+0x14]
@@ -14,12 +20,12 @@
 0069E716    lea edi, ss:[ebp-0x10C]
 0069E71C    mov dword ptr ds:[ebx+0x325], 0x00
 0069E726    lea esi, ds:[ebx+0x110]
-0069E72C    rep movsd
+0069E72C    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0069E72E    mov esi, dword ptr ss:[ebp+0x10]
 0069E731    lea edi, ds:[ebx+0x110]
 0069E737    mov byte ptr ds:[ebx+0x324], 0x00
 0069E73E    mov ecx, 0x40
-0069E743    rep movsd
+0069E743    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0069E745    mov ecx, dword ptr ds:[eax]
 0069E747    lea esi, ds:[ebx+0x210]
 0069E74D    mov eax, dword ptr ds:[eax+0x04]
@@ -35,10 +41,10 @@
 0069E77C    mov eax, dword ptr ds:[esi]
 0069E77E    call dword ptr ds:[eax]
 0069E780    cmp eax, 0x4AB040
-0069E785    jnz 0x0069E7DA
+0069E785    jnz 0x0069E7DA                                  ; => [ Call: sub_4ab040 ]
 0069E787    push 0x800190
 0069E78C    push esi
-0069E78D    call eax
+0069E78D    call eax                                        ; => [ Data: data_800190 ]
 0069E78F    add esp, 0x08
 0069E792    lea edi, ds:[ebx+0x110]
 0069E798    test al, al
@@ -73,19 +79,19 @@
 0069E804    lea esi, ds:[ebx+0x110]
 0069E80A    mov byte ptr ds:[ebx+0x327], 0x01
 0069E811    mov ecx, 0x40
-0069E816    rep movsd
+0069E816    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: __builtin_memcpy ]
 0069E818    lea ecx, ds:[ebx+0x04]
 0069E81B    mov edi, dword ptr ss:[ebp-0x11C]
 0069E821    mov esi, 0x800190
 0069E826    mov byte ptr ds:[ecx], 0x00
 0069E829    mov ecx, 0x40
-0069E82E    rep movsd
+0069E82E    rep movsd                                       ; => [ Data: data_800190 | Call: __builtin_memcpy ]
 0069E830    pop edi
 0069E831    pop esi
 0069E832    pop ebx
 0069E833    mov ecx, dword ptr ss:[ebp-0x08]
 0069E836    xor ecx, ebp
-0069E838    call 0x0075927A
+0069E838    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0069E83D    mov esp, ebp
 0069E83F    pop ebp
 0069E840    ret
@@ -132,7 +138,7 @@
 0069E8D3    lea edi, ds:[ebx+0x210]
 0069E8D9    mov ecx, 0x40
 0069E8DE    mov byte ptr ds:[ebx+0x04], 0x01
-0069E8E2    rep movsd
+0069E8E2    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0069E8E4    lea esi, ds:[ebx+0x110]
 0069E8EA    mov dword ptr ss:[ebp-0x118], eax
 0069E8F0    mov eax, dword ptr ds:[esi]
@@ -165,13 +171,13 @@
 0069E943    mov eax, dword ptr ss:[ebp+0x0C]
 0069E946    mov byte ptr ds:[ebx+0x325], 0x01
 0069E94D    mov dword ptr ds:[ebx+0x0C], eax
-0069E950    rep movsd
+0069E950    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0069E952    pop edi
 0069E953    pop esi
 0069E954    pop ebx
 0069E955    mov ecx, dword ptr ss:[ebp-0x08]
 0069E958    xor ecx, ebp
-0069E95A    call 0x0075927A
+0069E95A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0069E95F    mov esp, ebp
 0069E961    pop ebp
 0069E962    ret
@@ -202,7 +208,7 @@
 0069E9AC    pop esi
 0069E9AD    xor ecx, ebp
 0069E9AF    pop ebx
-0069E9B0    call 0x0075927A
+0069E9B0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0069E9B5    mov esp, ebp
 0069E9B7    pop ebp
 0069E9B8    ret

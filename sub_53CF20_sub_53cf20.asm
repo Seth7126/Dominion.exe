@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_53cf20
+// 起始地址: 0x53cf20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0053CF20    dword 83EC8B55
 0053CF24    in al, 0xF8
 0053CF26    sub esp, 0xC88
@@ -20,4 +26,4 @@
 0053CF67    add esp, 0x10
 0053CF6A    mov esp, ebp
 0053CF6C    pop ebp
-0053CF6D    ret
+0053CF6D    ret                                             ; => [ Call: sub_53ce30 | Call: sub_56bba0 | Call: sub_4f9ea0 | Call: sub_53cec0 | Call: sub_56c4a0 ]

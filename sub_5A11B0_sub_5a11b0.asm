@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5a11b0
+// 起始地址: 0x5a11b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005A11B0    push ebp
 005A11B1    mov ebp, esp
 005A11B3    sub esp, 0x18
@@ -12,11 +18,11 @@
 005A11C9    subss xmm1, xmm0
 005A11CD    call 0x005A0EB0
 005A11D2    movss xmm1, dword ptr ss:[ebp-0x04]
-005A11D7    mov esi, eax
+005A11D7    mov esi, eax                                    ; => [ Call: sub_5a0eb0 ]
 005A11D9    addss xmm1, dword ptr ds:[ebx]
 005A11DD    mov ecx, edi
 005A11DF    mov dword ptr ss:[ebp-0x10], esi
-005A11E2    call 0x005A0EB0
+005A11E2    call 0x005A0EB0                                 ; => [ Call: sub_5a0eb0 ]
 005A11E7    movss xmm1, dword ptr ds:[ebx+0x04]
 005A11EC    mov ecx, edi
 005A11EE    subss xmm1, dword ptr ss:[ebp-0x04]
@@ -25,8 +31,8 @@
 005A11FB    movss xmm1, dword ptr ss:[ebp-0x04]
 005A1200    mov ecx, edi
 005A1202    addss xmm1, dword ptr ds:[ebx+0x04]
-005A1207    mov dword ptr ss:[ebp-0x0C], eax
-005A120A    call 0x005A0F60
+005A1207    mov dword ptr ss:[ebp-0x0C], eax                ; => [ Call: sub_5a0f60 ]
+005A120A    call 0x005A0F60                                 ; => [ Call: sub_5a0f60 ]
 005A120F    mov ecx, eax
 005A1211    mov eax, dword ptr ss:[ebp-0x0C]
 005A1214    mov dword ptr ss:[ebp-0x14], ecx
@@ -99,32 +105,32 @@
 005A12E2    mov esp, ebp
 005A12E4    pop ebp
 005A12E5    ret
-005A12E6    push 0x82572C
+005A12E6    push 0x82572C                                   ; => [ String: XArray<struct Bin2DNode *>::operator [] ]
 005A12EB    push 0xC3
-005A12F0    push 0x816BDC
-005A12F5    mov ecx, 0x824FD0
+005A12F0    push 0x816BDC                                   ; => [ String: C:\x\ax2017\Engine\xArray.h ]
+005A12F5    mov ecx, 0x824FD0                               ; => [ String: index >= 0 && index < mSize ]
 005A12FA    jmp 0x005A1337
-005A12FC    push 0x82515C
+005A12FC    push 0x82515C                                   ; => [ String: BinGetHead ]
 005A1301    push 0x58
-005A1303    mov ecx, 0x825144
+005A1303    mov ecx, 0x825144                               ; => [ String: coord.y < bin.dims.y ]
 005A1308    jmp 0x005A1332
-005A130A    push 0x82515C
+005A130A    push 0x82515C                                   ; => [ String: BinGetHead ]
 005A130F    push 0x57
-005A1311    mov ecx, 0x82512C
+005A1311    mov ecx, 0x82512C                               ; => [ String: coord.x < bin.dims.x ]
 005A1316    jmp 0x005A1332
-005A1318    push 0x82515C
+005A1318    push 0x82515C                                   ; => [ String: BinGetHead ]
 005A131D    push 0x56
-005A131F    mov ecx, 0x82511C
+005A131F    mov ecx, 0x82511C                               ; => [ String: coord.y >= 0 ]
 005A1324    jmp 0x005A1332
-005A1326    push 0x82515C
+005A1326    push 0x82515C                                   ; => [ String: BinGetHead ]
 005A132B    push 0x55
-005A132D    mov ecx, 0x82510C
-005A1332    push 0x8250E0
+005A132D    mov ecx, 0x82510C                               ; => [ String: coord.x >= 0 ]
+005A1332    push 0x8250E0                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomMap.cpp ]
 005A1337    mov edx, 0x801800
-005A133C    call 0x0063B870
+005A133C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005A1341    add esp, 0x0C
 005A1344    call 0x0063BC30
 005A1349    test al, al
-005A134B    jz 0x005A134E
+005A134B    jz 0x005A134E                                   ; => [ Call: sub_63bc30 ]
 005A134D    int3
-005A134E    call 0x0063BB00
+005A134E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

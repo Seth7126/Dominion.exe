@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7276f0
+// 起始地址: 0x7276f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007276F0    push ebp
 007276F1    mov ebp, esp
 007276F3    sub esp, 0xAC
@@ -29,7 +35,7 @@
 00727738    pop esi
 00727739    mov esp, ebp
 0072773B    pop ebp
-0072773C    ret
+0072773C    ret                                             ; => [ Call: sub_7266e0 ]
 0072773D    mov edi, dword ptr ds:[esi+0x04]
 00727740    mov esi, dword ptr ds:[esi]
 00727742    test esi, esi
@@ -62,12 +68,12 @@
 00727783    mov dword ptr ss:[ebp-0x10], 0x00
 0072778A    mov ecx, dword ptr ss:[ebp+0x08]
 0072778D    xor eax, eax
-0072778F    movups xmm0, xmmword ptr ds:[0x008913D0]
+0072778F    movups xmm0, xmmword ptr ds:[0x008913D0]        ; => [ Data: data_8913d0 ]
 00727796    mov dword ptr ss:[ebp-0x0C], eax
-00727799    movups xmm1, xmmword ptr ds:[0x008911E0]
+00727799    movups xmm1, xmmword ptr ds:[0x008911E0]        ; => [ Data: data_8911e0 ]
 007277A0    mov dword ptr ss:[ebp-0x18], ecx
-007277A3    movups xmm2, xmmword ptr ds:[0x00891450]
-007277AA    movups xmm3, xmmword ptr ds:[0x00891460]
+007277A3    movups xmm2, xmmword ptr ds:[0x00891450]        ; => [ Data: data_891450 ]
+007277AA    movups xmm3, xmmword ptr ds:[0x00891460]        ; => [ Data: data_891460 ]
 007277B1    mov edi, dword ptr ss:[ebp-0x04]
 007277B4    xor edx, edx
 007277B6    movups xmmword ptr ss:[ebp-0x74], xmm2
@@ -134,7 +140,7 @@
 007278AB    call 0x007266E0
 007278B0    add esp, 0x18
 007278B3    test eax, eax
-007278B5    jz 0x007279AD
+007278B5    jz 0x007279AD                                   ; => [ Call: sub_7266e0 ]
 007278BB    test edi, edi
 007278BD    jle 0x00727951
 007278C3    mov eax, dword ptr ss:[ebp+0x18]
@@ -167,7 +173,7 @@
 00727911    imul eax, ecx
 00727914    add eax, dword ptr ss:[ebp-0x10]
 00727917    push eax
-00727918    call 0x00761FBE
+00727918    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0072791D    mov ecx, dword ptr ss:[ebp-0x1C]
 00727920    add esp, 0x0C
 00727923    add edi, dword ptr ss:[ebp-0x30]
@@ -193,10 +199,10 @@
 00727960    add esp, 0x04
 00727963    add dword ptr ss:[ebp-0x14], eax
 00727966    sub dword ptr ss:[ebp-0x18], eax
-00727969    movups xmm0, xmmword ptr ds:[0x008913D0]
-00727970    movups xmm1, xmmword ptr ds:[0x008911E0]
-00727977    movups xmm2, xmmword ptr ds:[0x00891450]
-0072797E    movups xmm3, xmmword ptr ds:[0x00891460]
+00727969    movups xmm0, xmmword ptr ds:[0x008913D0]        ; => [ Data: data_8913d0 ]
+00727970    movups xmm1, xmmword ptr ds:[0x008911E0]        ; => [ Data: data_8911e0 ]
+00727977    movups xmm2, xmmword ptr ds:[0x00891450]        ; => [ Data: data_891450 ]
+0072797E    movups xmm3, xmmword ptr ds:[0x00891460]        ; => [ Data: data_891460 ]
 00727985    jmp 0x0072798A
 00727987    mov esi, dword ptr ss:[ebp-0x04]
 0072798A    mov eax, dword ptr ss:[ebp-0x0C]

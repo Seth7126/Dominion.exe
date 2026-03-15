@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_56f260
+// 起始地址: 0x56f260
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056F260    push ebp
 0056F261    mov ebp, esp
 0056F263    and esp, 0xFFFFFFF8
@@ -8,11 +14,11 @@
 0056F26C    mov ebx, ecx
 0056F26E    call 0x00573400
 0056F273    movzx esi, bx
-0056F276    mov eax, dword ptr ds:[eax+0x04]
+0056F276    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056F279    mov dword ptr ss:[esp+0x0C], eax
 0056F27D    cmp esi, 0x320
 0056F283    jb 0x0056F28E
-0056F285    call 0x00591930
+0056F285    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056F28A    mov eax, dword ptr ss:[esp+0x0C]
 0056F28E    imul edi, esi, 0x64
 0056F291    mov ecx, dword ptr ds:[edi+eax*1+0x1A58]
@@ -20,11 +26,11 @@
 0056F29F    mov dword ptr ss:[esp+0x10], ecx
 0056F2A3    mov dword ptr ss:[esp+0x14], eax
 0056F2A7    call 0x00573400
-0056F2AC    mov ecx, dword ptr ds:[eax+0x04]
+0056F2AC    mov ecx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056F2AF    mov dword ptr ss:[esp+0x0C], ecx
 0056F2B3    cmp esi, 0x320
 0056F2B9    jb 0x0056F2C4
-0056F2BB    call 0x00591930
+0056F2BB    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056F2C0    mov ecx, dword ptr ss:[esp+0x0C]
 0056F2C4    mov eax, dword ptr ss:[esp+0x10]
 0056F2C8    cmp eax, dword ptr ds:[edi+ecx*1+0x1A50]
@@ -33,15 +39,15 @@
 0056F2D5    cmp eax, dword ptr ds:[edi+ecx*1+0x1A54]
 0056F2DC    jnz 0x0056F330
 0056F2DE    call 0x00573400
-0056F2E3    mov eax, dword ptr ds:[eax+0x04]
+0056F2E3    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0056F2E6    mov dword ptr ss:[esp+0x14], eax
 0056F2EA    cmp esi, 0x320
 0056F2F0    jb 0x0056F2FB
-0056F2F2    call 0x00591930
+0056F2F2    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056F2F7    mov eax, dword ptr ss:[esp+0x14]
 0056F2FB    cmp dword ptr ds:[edi+eax*1+0x1A50], 0x3EB
 0056F306    jnz 0x0056F327
-0056F308    call 0x00573400
+0056F308    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056F30D    mov ecx, dword ptr ds:[eax+0x0C]
 0056F310    mov edx, dword ptr ds:[eax+0x04]
 0056F313    cmp ecx, 0xFFFFFFFF
@@ -68,10 +74,10 @@
 0056F343    push 0x81F4B8
 0056F348    mov edx, 0x801800
 0056F34D    mov ecx, 0x81F8F8
-0056F352    call 0x0063B870
+0056F352    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: who != PLAYER_NONE | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: GetPileHead ]
 0056F357    add esp, 0x0C
 0056F35A    call 0x0063BC30
 0056F35F    test al, al
-0056F361    jz 0x0056F364
+0056F361    jz 0x0056F364                                   ; => [ Call: sub_63bc30 ]
 0056F363    int3
-0056F364    call 0x0063BB00
+0056F364    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

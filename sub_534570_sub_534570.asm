@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_534570
+// 起始地址: 0x534570
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00534570    dword 83EC8B55
 00534574    in al, 0xF0
 00534576    sub esp, 0x6C
@@ -5,11 +11,11 @@
 0053457B    push esi
 0053457C    push 0x00
 0053457E    lea ecx, ds:[edx+0x01]
-00534581    call 0x00561AF0
+00534581    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 00534586    add esp, 0x04
-00534589    call 0x0056B800
+00534589    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0053458E    mov esi, eax
-00534590    call 0x00573400
+00534590    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00534595    push 0x00
 00534597    push dword ptr ds:[eax+0x2C]
 0053459A    push dword ptr ds:[eax+0x28]
@@ -18,7 +24,7 @@
 005345A2    push ecx
 005345A3    push 0x62
 005345A5    push eax
-005345A6    call 0x00591880
+005345A6    call 0x00591880                                 ; => [ Call: sub_591880 ]
 005345AB    add esp, 0x1C
 005345AE    mov edx, 0x3EA
 005345B3    mov ecx, 0x104
@@ -35,4 +41,4 @@
 005345DF    pop esi
 005345E0    mov esp, ebp
 005345E2    pop ebp
-005345E3    ret
+005345E3    ret                                             ; => [ Call: sub_565120 ]

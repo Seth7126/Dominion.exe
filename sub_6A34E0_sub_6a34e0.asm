@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_6a34e0
+// 起始地址: 0x6a34e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A34E0    push ebp
 006A34E1    mov ebp, esp
 006A34E3    sub esp, 0x34
-006A34E6    mov eax, dword ptr ds:[0x008C4040]
+006A34E6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006A34EB    xor eax, ebp
 006A34ED    mov dword ptr ss:[ebp-0x04], eax
 006A34F0    push ebx
@@ -18,48 +24,48 @@
 006A3509    push edi
 006A350A    cmp eax, 0x2A
 006A350D    jnbe 0x006A392E
-006A3513    movzx eax, byte ptr ds:[eax+0x6A39AC]
-006A351A    mov edi, 0x801800
+006A3513    movzx eax, byte ptr ds:[eax+0x6A39AC]           ; => [ Data: lookup_table_6a39ac ]
+006A351A    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 006A351F    jmp dword ptr ds:[eax*4+0x6A3960]
 006A3526    mov eax, dword ptr ds:[ecx+0x28]
 006A3529    test al, 0x22
 006A352B    jnz 0x006A354E
 006A352D    mov eax, dword ptr ds:[ebx+0x04]
-006A3530    mov ecx, edi
+006A3530    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A3532    test eax, eax
 006A3534    push esi
 006A3535    cmovnz ecx, eax
 006A3538    push 0x808880
 006A353D    push ecx
-006A353E    call 0x0064B6D0
+006A353E    call 0x0064B6D0                                 ; => [ String: %d | Call: sub_64b6d0 ]
 006A3543    add esp, 0x0C
 006A3546    cmp eax, 0x01
 006A3549    jmp 0x006A38E8
 006A354E    mov edi, dword ptr ds:[ecx+0x1C]
 006A3551    test al, 0x20
 006A3553    jz 0x006A3594
-006A3555    mov edx, 0x801800
+006A3555    mov edx, 0x801800                               ; => [ Data: data_801800 ]
 006A355A    test edi, edi
 006A355C    jnz 0x006A3572
-006A355E    push 0x87A72C
+006A355E    push 0x87A72C                                   ; => [ String: DefParseReadEnum ]
 006A3563    push 0xDD
-006A3568    mov ecx, 0x87A74C
+006A3568    mov ecx, 0x87A74C                               ; => [ String: pAttribTable ]
 006A356D    jmp 0x006A3942
 006A3572    mov eax, dword ptr ds:[ebx+0x04]
 006A3575    mov ecx, edi
 006A3577    test eax, eax
 006A3579    cmovnz edx, eax
-006A357C    call 0x006DD380
+006A357C    call 0x006DD380                                 ; => [ Call: sub_6dd380 ]
 006A3581    cmp eax, 0xFFFFFFFF
 006A3584    jz 0x006A35CD
 006A3586    mov dword ptr ds:[esi], eax
 006A3588    mov dl, 0x01
-006A358A    mov edi, 0x801800
+006A358A    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 006A358F    jmp 0x006A38EB
 006A3594    test edi, edi
 006A3596    jz 0x006A35CD
 006A3598    mov eax, dword ptr ds:[ebx+0x04]
-006A359B    mov ecx, 0x801800
+006A359B    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A35A0    test eax, eax
 006A35A2    cmovnz ecx, eax
 006A35A5    cmp dword ptr ds:[edi+0x04], 0x00
@@ -77,38 +83,38 @@
 006A35C7    cmp dword ptr ds:[edi+0x04], 0x00
 006A35CB    jnz 0x006A35B0
 006A35CD    xor dl, dl
-006A35CF    mov edi, 0x801800
+006A35CF    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 006A35D4    jmp 0x006A38EB
 006A35D9    test edi, edi
 006A35DB    jz 0x006A35CD
 006A35DD    mov eax, dword ptr ds:[edi]
 006A35DF    mov dl, 0x01
 006A35E1    mov dword ptr ds:[esi], eax
-006A35E3    mov edi, 0x801800
+006A35E3    mov edi, 0x801800                               ; => [ Data: data_801800 ]
 006A35E8    jmp 0x006A38EB
 006A35ED    mov eax, dword ptr ds:[ebx+0x04]
-006A35F0    mov ecx, edi
+006A35F0    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A35F2    test eax, eax
 006A35F4    cmovnz ecx, eax
 006A35F7    lea eax, ss:[ebp-0x18]
 006A35FA    push eax
 006A35FB    push 0x808880
 006A3600    push ecx
-006A3601    call 0x0064B6D0
+006A3601    call 0x0064B6D0                                 ; => [ String: %d | Call: sub_64b6d0 ]
 006A3606    add esp, 0x0C
 006A3609    cmp eax, 0x01
 006A360C    mov ax, word ptr ss:[ebp-0x18]
 006A3610    mov word ptr ds:[esi], ax
 006A3613    jmp 0x006A38E8
 006A3618    mov eax, dword ptr ds:[ebx+0x04]
-006A361B    mov ecx, edi
+006A361B    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A361D    test eax, eax
 006A361F    cmovnz ecx, eax
 006A3622    lea eax, ss:[ebp-0x30]
 006A3625    push eax
 006A3626    push 0x87A724
 006A362B    push ecx
-006A362C    call 0x0064B6D0
+006A362C    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %lld ]
 006A3631    mov ecx, dword ptr ss:[ebp-0x2C]
 006A3634    add esp, 0x0C
 006A3637    cmp eax, 0x01
@@ -117,28 +123,28 @@
 006A3640    mov dword ptr ds:[esi], eax
 006A3642    jmp 0x006A38E8
 006A3647    mov eax, dword ptr ds:[ebx+0x04]
-006A364A    mov ecx, edi
+006A364A    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A364C    test eax, eax
 006A364E    cmovnz ecx, eax
 006A3651    lea eax, ss:[ebp-0x1C]
 006A3654    push eax
 006A3655    push 0x808880
 006A365A    push ecx
-006A365B    call 0x0064B6D0
+006A365B    call 0x0064B6D0                                 ; => [ String: %d | Call: sub_64b6d0 ]
 006A3660    add esp, 0x0C
 006A3663    cmp eax, 0x01
 006A3666    mov al, byte ptr ss:[ebp-0x1C]
 006A3669    mov byte ptr ds:[esi], al
 006A366B    jmp 0x006A38E8
 006A3670    mov eax, dword ptr ds:[ebx+0x04]
-006A3673    mov ecx, edi
+006A3673    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A3675    test eax, eax
 006A3677    cmovnz ecx, eax
 006A367A    lea eax, ss:[ebp-0x20]
 006A367D    push eax
 006A367E    push 0x808880
 006A3683    push ecx
-006A3684    call 0x0064B6D0
+006A3684    call 0x0064B6D0                                 ; => [ String: %d | Call: sub_64b6d0 ]
 006A3689    add esp, 0x0C
 006A368C    cmp eax, 0x01
 006A368F    setz dl
@@ -147,30 +153,30 @@
 006A3699    mov byte ptr ds:[esi], al
 006A369B    jmp 0x006A38EB
 006A36A0    mov eax, dword ptr ds:[ebx+0x04]
-006A36A3    mov ecx, edi
+006A36A3    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A36A5    test eax, eax
 006A36A7    push esi
 006A36A8    cmovnz ecx, eax
 006A36AB    push 0x874634
 006A36B0    push ecx
-006A36B1    call 0x0064B6D0
+006A36B1    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %g ]
 006A36B6    add esp, 0x0C
 006A36B9    cmp eax, 0x01
 006A36BC    jmp 0x006A38E8
 006A36C1    mov eax, dword ptr ds:[ebx+0x04]
-006A36C4    mov ecx, edi
+006A36C4    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A36C6    test eax, eax
 006A36C8    push esi
 006A36C9    cmovnz ecx, eax
 006A36CC    push 0x87A740
 006A36D1    push ecx
-006A36D2    call 0x0064B6D0
+006A36D2    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %lf ]
 006A36D7    add esp, 0x0C
 006A36DA    cmp eax, 0x01
 006A36DD    jmp 0x006A38E8
 006A36E2    mov edx, ebx
 006A36E4    mov ecx, esi
-006A36E6    call 0x006A3280
+006A36E6    call 0x006A3280                                 ; => [ Call: sub_6a3280 ]
 006A36EB    mov dl, al
 006A36ED    jmp 0x006A38EB
 006A36F2    mov eax, dword ptr ds:[ebx+0x04]
@@ -180,13 +186,13 @@
 006A36FC    jz 0x006A370B
 006A36FE    lea ecx, ds:[ebx+0x04]
 006A3701    call 0x0063D4E0
-006A3706    mov ecx, dword ptr ds:[eax+0x08]
+006A3706    mov ecx, dword ptr ds:[eax+0x08]                ; => [ Call: sub_63d4e0 ]
 006A3709    jmp 0x006A370D
 006A370B    xor ecx, ecx
 006A370D    inc ecx
 006A370E    call 0x00687730
-006A3713    mov edi, eax
-006A3715    mov edx, 0x801800
+006A3713    mov edi, eax                                    ; => [ Call: sub_687730 ]
+006A3715    mov edx, 0x801800                               ; => [ Data: data_801800 ]
 006A371A    mov dword ptr ds:[esi], edi
 006A371C    mov ecx, dword ptr ds:[ebx+0x04]
 006A371F    test ecx, ecx
@@ -202,12 +208,12 @@
 006A3734    pop ebx
 006A3735    mov ecx, dword ptr ss:[ebp-0x04]
 006A3738    xor ecx, ebp
-006A373A    call 0x0075927A
+006A373A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction | Call: CookieCheckFunction ]
 006A373F    mov esp, ebp
 006A3741    pop ebp
 006A3742    ret
 006A3743    mov eax, dword ptr ds:[ebx+0x04]
-006A3746    mov ecx, edi
+006A3746    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A3748    test eax, eax
 006A374A    cmovnz ecx, eax
 006A374D    lea eax, ds:[esi+0x04]
@@ -215,12 +221,12 @@
 006A3751    push esi
 006A3752    push 0x87A744
 006A3757    push ecx
-006A3758    call 0x0064B6D0
+006A3758    call 0x0064B6D0                                 ; => [ String: %f %f | Call: sub_64b6d0 ]
 006A375D    add esp, 0x10
 006A3760    cmp eax, 0x02
 006A3763    jmp 0x006A38E8
 006A3768    mov eax, dword ptr ds:[ebx+0x04]
-006A376B    mov ecx, edi
+006A376B    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A376D    test eax, eax
 006A376F    cmovnz ecx, eax
 006A3772    lea eax, ds:[esi+0x08]
@@ -228,10 +234,10 @@
 006A3776    lea eax, ds:[esi+0x04]
 006A3779    push eax
 006A377A    push esi
-006A377B    push 0x87A768
+006A377B    push 0x87A768                                   ; => [ String: %f %f %f ]
 006A3780    jmp 0x006A38DC
 006A3785    mov eax, dword ptr ds:[ebx+0x04]
-006A3788    mov ecx, edi
+006A3788    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A378A    test eax, eax
 006A378C    cmovnz ecx, eax
 006A378F    lea eax, ds:[esi+0x0C]
@@ -243,12 +249,12 @@
 006A379B    push esi
 006A379C    push 0x87A75C
 006A37A1    push ecx
-006A37A2    call 0x0064B6D0
+006A37A2    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %f %f %f %f ]
 006A37A7    add esp, 0x18
 006A37AA    cmp eax, 0x04
 006A37AD    jmp 0x006A38E8
 006A37B2    mov eax, dword ptr ds:[ebx+0x04]
-006A37B5    mov ecx, edi
+006A37B5    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A37B7    test eax, eax
 006A37B9    cmovnz ecx, eax
 006A37BC    lea eax, ds:[esi+0x14]
@@ -264,12 +270,12 @@
 006A37D0    push esi
 006A37D1    push 0x87A78C
 006A37D6    push ecx
-006A37D7    call 0x0064B6D0
+006A37D7    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %f %f %f %f %f %f ]
 006A37DC    add esp, 0x20
 006A37DF    cmp eax, 0x06
 006A37E2    jmp 0x006A38E8
 006A37E7    mov eax, dword ptr ds:[ebx+0x04]
-006A37EA    mov ecx, edi
+006A37EA    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A37EC    test eax, eax
 006A37EE    cmovnz ecx, eax
 006A37F1    lea eax, ds:[esi+0x1C]
@@ -289,12 +295,12 @@
 006A380D    push esi
 006A380E    push 0x87A774
 006A3813    push ecx
-006A3814    call 0x0064B6D0
+006A3814    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %f %f %f %f %f %f %f %f ]
 006A3819    add esp, 0x28
 006A381C    cmp eax, 0x08
 006A381F    jmp 0x006A38E8
 006A3824    mov eax, dword ptr ds:[ebx+0x04]
-006A3827    mov ecx, edi
+006A3827    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A3829    test eax, eax
 006A382B    cmovnz ecx, eax
 006A382E    lea eax, ds:[esi+0x0C]
@@ -306,12 +312,12 @@
 006A383A    push esi
 006A383B    push 0x875CE4
 006A3840    push ecx
-006A3841    call 0x0064B6D0
+006A3841    call 0x0064B6D0                                 ; => [ String: %d %d %d %d | Call: sub_64b6d0 ]
 006A3846    add esp, 0x18
 006A3849    cmp eax, 0x04
 006A384C    jmp 0x006A38E8
-006A3851    mov eax, dword ptr ds:[ebx+0x04]
-006A3854    mov ecx, edi
+006A3851    mov eax, dword ptr ds:[ebx+0x04]                ; => [ Type: va_list ]
+006A3854    mov ecx, edi                                    ; => [ Type: va_list | Data: data_801800 ]
 006A3856    test eax, eax
 006A3858    cmovnz ecx, eax
 006A385B    lea eax, ds:[esi+0x04]
@@ -319,12 +325,12 @@
 006A385F    push esi
 006A3860    push 0x87A7A0
 006A3865    push ecx
-006A3866    call 0x0064B6D0
+006A3866    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 | String: %d %d ]
 006A386B    add esp, 0x10
 006A386E    cmp eax, 0x02
 006A3871    jmp 0x006A38E8
 006A3873    mov eax, dword ptr ds:[ebx+0x04]
-006A3876    mov ecx, edi
+006A3876    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A3878    test eax, eax
 006A387A    cmovnz ecx, eax
 006A387D    lea eax, ss:[ebp-0x08]
@@ -337,7 +343,7 @@
 006A388C    push eax
 006A388D    push 0x875CE4
 006A3892    push ecx
-006A3893    call 0x0064B6D0
+006A3893    call 0x0064B6D0                                 ; => [ String: %d %d %d %d | Call: sub_64b6d0 ]
 006A3898    movzx ecx, byte ptr ss:[ebp-0x08]
 006A389C    add esp, 0x18
 006A389F    cmp eax, 0x04
@@ -354,7 +360,7 @@
 006A38C0    mov dword ptr ds:[esi], ecx
 006A38C2    jmp 0x006A38EB
 006A38C4    mov eax, dword ptr ds:[ebx+0x04]
-006A38C7    mov ecx, edi
+006A38C7    mov ecx, edi                                    ; => [ Data: data_801800 ]
 006A38C9    test eax, eax
 006A38CB    cmovnz ecx, eax
 006A38CE    lea eax, ds:[esi+0x08]
@@ -362,9 +368,9 @@
 006A38D2    lea eax, ds:[esi+0x04]
 006A38D5    push eax
 006A38D6    push esi
-006A38D7    push 0x87A7A8
+006A38D7    push 0x87A7A8                                   ; => [ String: %d %d %d ]
 006A38DC    push ecx
-006A38DD    call 0x0064B6D0
+006A38DD    call 0x0064B6D0                                 ; => [ Call: sub_64b6d0 ]
 006A38E2    add esp, 0x14
 006A38E5    cmp eax, 0x03
 006A38E8    setz dl
@@ -382,26 +388,26 @@
 006A390F    add esp, 0x0C
 006A3912    mov ecx, esi
 006A3914    push edi
-006A3915    call 0x0069C750
+006A3915    call 0x0069C750                                 ; => [ Call: sub_63b5f0 | Call: sub_69c750 | String: DefParse: failed to read '%s': %s ]
 006A391A    mov ecx, dword ptr ss:[ebp-0x04]
 006A391D    add esp, 0x04
 006A3920    xor ecx, ebp
 006A3922    pop edi
 006A3923    pop esi
 006A3924    pop ebx
-006A3925    call 0x0075927A
+006A3925    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006A392A    mov esp, ebp
 006A392C    pop ebp
 006A392D    ret
-006A392E    push 0x87A7D8
+006A392E    push 0x87A7D8                                   ; => [ String: DefParseReadSimpleField ]
 006A3933    push 0x1CA
 006A3938    mov edx, 0x801800
-006A393D    mov ecx, 0x801AA4
+006A393D    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006A3942    push 0x87A6C8
-006A3947    call 0x0063B870
+006A3947    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\DefParseTree.cpp ]
 006A394C    add esp, 0x0C
 006A394F    call 0x0063BC30
 006A3954    test al, al
-006A3956    jz 0x006A3959
+006A3956    jz 0x006A3959                                   ; => [ Call: sub_63bc30 ]
 006A3958    int3
-006A3959    call 0x0063BB00
+006A3959    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

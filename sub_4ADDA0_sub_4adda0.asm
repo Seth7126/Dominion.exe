@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4adda0
+// 起始地址: 0x4adda0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ADDA0    push ebp
 004ADDA1    mov ebp, esp
 004ADDA3    sub esp, 0x0C
@@ -8,7 +14,7 @@
 004ADDAC    mov esi, edx
 004ADDAE    push eax
 004ADDAF    mov ebx, ecx
-004ADDB1    call 0x004ADE00
+004ADDB1    call 0x004ADE00                                 ; => [ Call: sub_4ade00 ]
 004ADDB6    mov edi, dword ptr ss:[ebp-0x04]
 004ADDB9    cmp edi, 0xFFFFFFFF
 004ADDBC    jz 0x004ADDE1
@@ -17,11 +23,11 @@
 004ADDC2    mov ecx, edi
 004ADDC4    call 0x004ACEB0
 004ADDC9    test al, al
-004ADDCB    jnz 0x004ADDEA
+004ADDCB    jnz 0x004ADDEA                                  ; => [ Call: sub_4aceb0 ]
 004ADDCD    mov ecx, dword ptr ss:[ebp-0x08]
 004ADDD0    lea eax, ss:[ebp-0x04]
 004ADDD3    push eax
-004ADDD4    call 0x004ADE60
+004ADDD4    call 0x004ADE60                                 ; => [ Call: sub_4ade60 ]
 004ADDD9    mov edi, dword ptr ss:[ebp-0x04]
 004ADDDC    cmp edi, 0xFFFFFFFF
 004ADDDF    jnz 0x004ADDC0

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_556e50
+// 起始地址: 0x556e50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00556E50    dword E8EC8B55
 00556E54    test al, 0x49
 00556E56    add dword ptr ds:[eax], eax
 00556E58    cmp dword ptr ss:[ebp+0x08], eax
-00556E5B    jnz 0x00556E72
+00556E5B    jnz 0x00556E72                                  ; => [ Call: sub_56b800 | Call: sub_573400 ]
 00556E5D    call 0x00573400
 00556E62    mov eax, dword ptr ds:[eax+0x04]
 00556E65    cmp dword ptr ds:[eax+0x19EC], 0x01

@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_7200a0
+// 起始地址: 0x7200a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007200A0    push ebp
 007200A1    mov ebp, esp
 007200A3    and esp, 0xFFFFFFF8
 007200A6    sub esp, 0xC0
-007200AC    mov eax, dword ptr ds:[0x008C4040]
+007200AC    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 007200B1    xor eax, esp
 007200B3    mov dword ptr ss:[esp+0xBC], eax
 007200BA    lea eax, ds:[ecx+edx*1]
@@ -14,7 +20,7 @@
 007200DB    mov dword ptr ss:[esp+0x20], 0x00
 007200E3    mov dword ptr ss:[esp+0xB4], eax
 007200EA    mov dword ptr ss:[esp+0xAC], eax
-007200F1    call 0x0072D4A0
+007200F1    call 0x0072D4A0                                 ; => [ String: #?RADIANCE\n | Call: sub_72d4a0 ]
 007200F6    mov ecx, dword ptr ss:[esp+0xB0]
 007200FD    mov dword ptr ss:[esp+0xA8], ecx
 00720104    mov ecx, dword ptr ss:[esp+0xB4]
@@ -23,10 +29,10 @@
 00720114    jnz 0x00720123
 00720116    mov edx, 0x88DD60
 0072011B    lea ecx, ss:[esp]
-0072011E    call 0x0072D4A0
+0072011E    call 0x0072D4A0                                 ; => [ String: #?RGBE\n | Call: sub_72d4a0 ]
 00720123    mov ecx, dword ptr ss:[esp+0xBC]
 0072012A    xor ecx, esp
-0072012C    call 0x0075927A
+0072012C    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00720131    mov esp, ebp
 00720133    pop ebp
 00720134    ret

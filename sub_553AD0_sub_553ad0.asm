@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_553ad0
+// 起始地址: 0x553ad0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00553AD0    dword 83DC8B53
 00553AD4    in al, dx
 00553AD5    or byte ptr ds:[ebx-0x3B7C071C], al
@@ -6,32 +12,32 @@
 00553AE0    mov dword ptr ss:[esp+0x04], ebp
 00553AE4    mov ebp, esp
 00553AE6    push 0xFFFFFFFF
-00553AE8    push 0x765D0B
+00553AE8    push 0x765D0B                                   ; => [ Type: EHRegistrationNode | Call: sub_765d0b ]
 00553AED    mov eax, dword ptr fs:[0x00000000]
-00553AF3    push eax
+00553AF3    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 00553AF4    push ebx
 00553AF5    mov eax, 0x2630
-00553AFA    call 0x00761E50
+00553AFA    call 0x00761E50                                 ; => [ Call: __chkstk ]
 00553AFF    mov eax, dword ptr ds:[0x008C4040]
-00553B04    xor eax, ebp
+00553B04    xor eax, ebp                                    ; => [ Data: __security_cookie ]
 00553B06    mov dword ptr ss:[ebp-0x14], eax
 00553B09    push esi
 00553B0A    push edi
 00553B0B    push eax
 00553B0C    lea eax, ss:[ebp-0x0C]
-00553B0F    mov dword ptr fs:[0x00000000], eax
+00553B0F    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 00553B15    lea eax, ss:[ebp-0x19B8]
 00553B1B    mov ecx, 0x3EC
 00553B20    push eax
-00553B21    call 0x00568780
+00553B21    call 0x00568780                                 ; => [ Call: sub_568780 ]
 00553B26    mov esi, eax
-00553B28    mov dword ptr ss:[ebp-0xD00], 0x81D3B0
+00553B28    mov dword ptr ss:[ebp-0xD00], 0x81D3B0          ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_5b791521578f094017b52dab3e5e888b>,bool,enum CardID>::VTable | Data: std::_Func_impl_no_alloc<class <lambda_5b791521578f094017b52dab3e5e888b>,bool,enum CardID>::`vftable'{for `std::_Func_base<bool,enum CardID>'} ]
 00553B32    mov ecx, 0x321
 00553B37    lea edi, ss:[ebp-0xCA0]
 00553B3D    lea eax, ss:[ebp-0xD00]
 00553B43    add esp, 0x04
-00553B46    rep movsd
-00553B48    mov dword ptr ss:[ebp-0xCDC], eax
+00553B46    rep movsd                                       ; => [ Call: __builtin_memcpy ]
+00553B48    mov dword ptr ss:[ebp-0xCDC], eax               ; => [ Type: std::_Func_base<bool,enum CardID>::std::_Func_impl_no_alloc<class <lambda_5b791521578f094017b52dab3e5e888b>,bool,enum CardID>::VTable ]
 00553B4E    lea eax, ss:[ebp-0xCA4]
 00553B54    mov dword ptr ss:[ebp-0x04], 0x00
 00553B5B    push eax
@@ -48,12 +54,12 @@
 00553B84    mov eax, dword ptr ds:[ecx]
 00553B86    push esi
 00553B87    mov eax, dword ptr ds:[eax]
-00553B89    call eax
+00553B89    call eax                                        ; => [ Field: vFunc_0 ]
 00553B8B    mov dword ptr ds:[esi+0x24], eax
 00553B8E    mov byte ptr ss:[ebp-0x04], 0x00
 00553B92    mov ecx, edi
 00553B94    mov edx, dword ptr ss:[ebp-0x20]
-00553B97    call 0x0057EB70
+00553B97    call 0x0057EB70                                 ; => [ Call: GSI1::OffForSym ]
 00553B9C    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
 00553BA3    add esp, 0x30
 00553BA6    mov ecx, dword ptr ss:[ebp-0xCDC]
@@ -67,15 +73,15 @@
 00553BBF    setnz al
 00553BC2    movzx eax, al
 00553BC5    push eax
-00553BC6    call dword ptr ds:[edx+0x10]
+00553BC6    call dword ptr ds:[edx+0x10]                    ; => [ Field: vFunc_4 ]
 00553BC9    test esi, esi
 00553BCB    jnz 0x00553BD9
 00553BCD    xor ecx, ecx
-00553BCF    call 0x0056E9C0
+00553BCF    call 0x0056E9C0                                 ; => [ Call: sub_56e9c0 ]
 00553BD4    jmp 0x00553CAE
 00553BD9    xorps xmm0, xmm0
 00553BDC    mov dword ptr ss:[ebp-0xCCC], 0x00
-00553BE6    movlpd qword ptr ss:[ebp-0xCD4], xmm0
+00553BE6    movlpd qword ptr ss:[ebp-0xCD4], xmm0           ; => [ Call: __builtin_memset ]
 00553BEE    lea eax, ss:[ebp-0xD30]
 00553BF4    movlpd qword ptr ss:[ebp-0xCC4], xmm0
 00553BFC    lea ecx, ss:[ebp-0xCA0]
@@ -99,12 +105,12 @@
 00553C5E    push eax
 00553C5F    movups xmm0, xmmword ptr ss:[ebp-0xCB8]
 00553C66    movups xmmword ptr ss:[ebp-0xD10], xmm0
-00553C6D    call 0x00563960
+00553C6D    call 0x00563960                                 ; => [ Call: sub_563960 ]
 00553C72    add esp, 0x1C
 00553C75    lea edi, ss:[ebp-0xCA0]
 00553C7B    mov esi, eax
 00553C7D    mov ecx, 0x321
-00553C82    rep movsd
+00553C82    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00553C84    mov edx, 0x3EC
 00553C89    lea ecx, ss:[ebp-0xCA0]
 00553C8F    push dword ptr ds:[0x007BFA5C]
@@ -113,16 +119,16 @@
 00553C9D    push 0x00
 00553C9F    push 0x00
 00553CA1    push 0x3EA
-00553CA6    call 0x00566140
+00553CA6    call 0x00566140                                 ; => [ Call: nullptr | Call: sub_566140 ]
 00553CAB    add esp, 0x18
 00553CAE    mov ecx, dword ptr ss:[ebp-0x0C]
-00553CB1    mov dword ptr fs:[0x00000000], ecx
+00553CB1    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 00553CB8    pop ecx
 00553CB9    pop edi
 00553CBA    pop esi
 00553CBB    mov ecx, dword ptr ss:[ebp-0x14]
 00553CBE    xor ecx, ebp
-00553CC0    call 0x0075927A
+00553CC0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00553CC5    mov esp, ebp
 00553CC7    pop ebp
 00553CC8    mov esp, ebx

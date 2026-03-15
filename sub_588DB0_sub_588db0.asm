@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_588db0
+// 起始地址: 0x588db0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00588DB0    push ebp
 00588DB1    mov ebp, esp
 00588DB3    sub esp, 0x58
@@ -8,7 +14,7 @@
 00588DBB    mov ebx, ecx
 00588DBD    push 0xB08
 00588DC2    mov dword ptr ss:[ebp-0x08], edi
-00588DC5    call 0x00571EE0
+00588DC5    call 0x00571EE0                                 ; => [ Call: sub_571ee0 ]
 00588DCA    add esp, 0x04
 00588DCD    cmp eax, 0xFFFFFFFF
 00588DD0    jz 0x00588E39
@@ -23,25 +29,25 @@
 00588DEC    push 0xB08
 00588DF1    mov edx, edi
 00588DF3    mov ecx, ebx
-00588DF5    call 0x00571EE0
+00588DF5    call 0x00571EE0                                 ; => [ Call: sub_571ee0 ]
 00588DFA    add esp, 0x04
 00588DFD    mov dword ptr ss:[ebp+0x08], eax
 00588E00    cmp eax, 0xFFFFFFFF
 00588E03    jnz 0x00588E0D
-00588E05    call 0x00591930
+00588E05    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00588E0A    mov eax, dword ptr ss:[ebp+0x08]
 00588E0D    mov ecx, eax
 00588E0F    shl ecx, 0x05
 00588E12    cmp dword ptr ds:[ecx+ebx*1+0x152DC], 0x01
 00588E1A    jz 0x00588E24
-00588E1C    call 0x00591930
+00588E1C    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00588E21    mov eax, dword ptr ss:[ebp+0x08]
 00588E24    push 0x00
 00588E26    push 0x00
 00588E28    push 0xFFFFFFFF
 00588E2A    mov edx, eax
 00588E2C    mov ecx, ebx
-00588E2E    call 0x00571CB0
+00588E2E    call 0x00571CB0                                 ; => [ Call: sub_571cb0 ]
 00588E33    add esp, 0x0C
 00588E36    dec esi
 00588E37    jmp 0x00588E3C
@@ -50,13 +56,13 @@
 00588E41    push 0x3EB
 00588E46    mov edx, edi
 00588E48    mov ecx, ebx
-00588E4A    call 0x00590C70
+00588E4A    call 0x00590C70                                 ; => [ Call: sub_590c70 | Call: sub_5ee870 ]
 00588E4F    add esp, 0x04
 00588E52    cmp esi, eax
 00588E54    jle 0x00588E5F
 00588E56    mov edx, edi
 00588E58    mov ecx, ebx
-00588E5A    call 0x00588490
+00588E5A    call 0x00588490                                 ; => [ Call: sub_588490 ]
 00588E5F    xor edi, edi
 00588E61    test esi, esi
 00588E63    jle 0x00588E9A
@@ -69,7 +75,7 @@
 00588E76    push dword ptr ss:[ebp+0x14]
 00588E79    push dword ptr ss:[ebp+0x10]
 00588E7C    push dword ptr ss:[ebp+0x0C]
-00588E7F    call 0x005889B0
+00588E7F    call 0x005889B0                                 ; => [ Call: sub_5889b0 ]
 00588E84    mov ecx, dword ptr ss:[ebp+0x20]
 00588E87    add esp, 0x1C
 00588E8A    mov dword ptr ds:[ecx+edi*4], eax
@@ -84,7 +90,7 @@
 00588E9C    lea eax, ss:[ebp-0x54]
 00588E9F    push 0x00
 00588EA1    push eax
-00588EA2    call 0x00761FC4
+00588EA2    call 0x00761FC4                                 ; => [ Call: memset ]
 00588EA7    mov edx, dword ptr ss:[ebp-0x08]
 00588EAA    lea eax, ss:[ebp-0x54]
 00588EAD    add esp, 0x0C
@@ -98,7 +104,7 @@
 00588EC2    lea eax, ss:[ebp+0x08]
 00588EC5    push 0x01
 00588EC7    push eax
-00588EC8    call 0x00580700
+00588EC8    call 0x00580700                                 ; => [ Call: nullptr | Call: sub_580700 ]
 00588ECD    add esp, 0x1C
 00588ED0    mov eax, esi
 00588ED2    pop edi

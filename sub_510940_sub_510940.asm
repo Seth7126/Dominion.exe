@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_510940
+// 起始地址: 0x510940
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00510940    dword 83EC8B55
 00510944    byte E4
 00510945    byte F8
 00510946    sub esp, 0xC94
-0051094C    mov eax, dword ptr ds:[0x008C4040]
+0051094C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00510951    xor eax, esp
 00510953    mov dword ptr ss:[esp+0xC90], eax
 0051095A    push ebx
 0051095B    push esi
 0051095C    push edi
 0051095D    call 0x0056B780
-00510962    mov edi, eax
+00510962    mov edi, eax                                    ; => [ Call: sub_56b780 ]
 00510964    mov dword ptr ss:[esp+0x14], edi
-00510968    call 0x00573400
+00510968    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0051096D    mov ebx, eax
 0051096F    mov dword ptr ss:[esp+0x10], ebx
 00510973    mov eax, dword ptr ds:[ebx+0x04]
@@ -32,14 +38,14 @@
 0051099B    lea eax, ss:[esp+0x18]
 0051099F    push eax
 005109A0    mov edx, esi
-005109A2    call 0x005108A0
+005109A2    call 0x005108A0                                 ; => [ Call: sub_5108a0 ]
 005109A7    mov ecx, dword ptr ds:[ebx+0x04]
 005109AA    lea edx, ss:[esp+0x1C]
 005109AE    add esp, 0x04
 005109B1    mov dword ptr ss:[esp+0x0C], eax
 005109B5    push eax
 005109B6    push eax
-005109B7    call 0x0063EDA0
+005109B7    call 0x0063EDA0                                 ; => [ Call: sub_63eda0 ]
 005109BC    xor ebx, ebx
 005109BE    add esp, 0x08
 005109C1    cmp dword ptr ss:[esp+0x0C], ebx
@@ -61,7 +67,7 @@
 005109F2    push esi
 005109F3    push 0x0B
 005109F5    push dword ptr ss:[esp+ebx*4+0x48]
-005109F9    call 0x005822E0
+005109F9    call 0x005822E0                                 ; => [ Call: nullptr | Call: sub_5822e0 ]
 005109FE    inc ebx
 005109FF    add esp, 0x34
 00510A02    cmp ebx, dword ptr ss:[esp+0x0C]
@@ -94,14 +100,14 @@
 00510A54    push 0x48
 00510A56    push eax
 00510A57    or edx, 0xFFFFFFFF
-00510A5A    call 0x0059F9B0
+00510A5A    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 00510A5F    add esp, 0x24
 00510A62    mov ecx, dword ptr ss:[esp+0xC9C]
 00510A69    pop edi
 00510A6A    pop esi
 00510A6B    pop ebx
 00510A6C    xor ecx, esp
-00510A6E    call 0x0075927A
+00510A6E    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00510A73    mov esp, ebp
 00510A75    pop ebp
 00510A76    ret

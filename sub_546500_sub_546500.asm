@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_546500
+// 起始地址: 0x546500
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00546500    dword 83EC8B55
 00546504    in al, 0xF8
 00546506    sub esp, 0x08
@@ -5,7 +11,7 @@
 0054650A    mov esi, dword ptr ds:[0x007BFA10]
 00546510    push edi
 00546511    mov edi, dword ptr ds:[0x007BFA0C]
-00546517    call 0x0056B800
+00546517    call 0x0056B800                                 ; => [ Call: sub_56b800 ]
 0054651C    push esi
 0054651D    push edi
 0054651E    push 0x0B
@@ -15,21 +21,21 @@
 00546526    push 0xFFFFFFFF
 00546528    mov edx, 0x3F1
 0054652D    mov ecx, eax
-0054652F    call 0x00565FF0
+0054652F    call 0x00565FF0                                 ; => [ Call: nullptr | Call: sub_565ff0 ]
 00546534    add esp, 0x1C
 00546537    xor esi, esi
-00546539    call 0x00573400
+00546539    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0054653E    mov edi, eax
 00546540    cmp dword ptr ds:[edi], 0x02
 00546543    jnz 0x00546572
 00546545    mov esi, dword ptr ds:[edi+0x10]
 00546548    call 0x00573400
 0054654D    movzx esi, si
-00546550    mov eax, dword ptr ds:[eax+0x04]
+00546550    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00546553    mov dword ptr ss:[esp+0x0C], eax
 00546557    cmp esi, 0x320
 0054655D    jb 0x00546564
-0054655F    call 0x00591930
+0054655F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00546564    imul eax, esi, 0x64
 00546567    mov esi, dword ptr ss:[esp+0x0C]
 0054656B    mov esi, dword ptr ds:[eax+esi*1+0x1A4C]
@@ -50,4 +56,4 @@
 00546594    pop esi
 00546595    mov esp, ebp
 00546597    pop ebp
-00546598    ret
+00546598    ret                                             ; => [ Call: sub_5911e0 ]

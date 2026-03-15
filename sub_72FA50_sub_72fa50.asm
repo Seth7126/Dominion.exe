@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72fa50
+// 起始地址: 0x72fa50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072FA50    push ebp
 0072FA51    mov ebp, esp
 0072FA53    cmp ecx, 0x05
@@ -56,10 +62,10 @@
 0072FB4C    push 0x88E364
 0072FB51    mov edx, 0x801800
 0072FB56    mov ecx, 0x801AA4
-0072FB5B    call 0x0063B870
+0072FB5B    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\IBLImport.cpp | String: FaceToDirs | String: Halt ]
 0072FB60    add esp, 0x0C
 0072FB63    call 0x0063BC30
 0072FB68    test al, al
-0072FB6A    jz 0x0072FB6D
+0072FB6A    jz 0x0072FB6D                                   ; => [ Call: sub_63bc30 ]
 0072FB6C    int3
-0072FB6D    jmp 0x0063BB00
+0072FB6D    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

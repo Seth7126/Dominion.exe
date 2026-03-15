@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_586320
+// 起始地址: 0x586320
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00586320    push ebp
 00586321    mov ebp, esp
 00586323    sub esp, 0xC94
-00586329    mov eax, dword ptr ds:[0x008C4040]
+00586329    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0058632E    xor eax, ebp
 00586330    mov dword ptr ss:[ebp-0x04], eax
 00586333    push ebx
@@ -14,7 +20,7 @@
 00586346    mov esi, ecx
 00586348    push 0x05
 0058634A    or edx, 0xFFFFFFFF
-0058634D    call 0x00590990
+0058634D    call 0x00590990                                 ; => [ Call: sub_590990 ]
 00586352    add esp, 0x08
 00586355    test eax, eax
 00586357    jnz 0x0058635D
@@ -22,7 +28,7 @@
 0058635B    jmp 0x0058636D
 0058635D    cmp eax, 0x01
 00586360    jz 0x00586367
-00586362    call 0x00591930
+00586362    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00586367    mov edx, dword ptr ss:[ebp-0xC88]
 0058636D    mov ebx, dword ptr ss:[ebp+0x14]
 00586370    mov ecx, dword ptr ds:[edi]
@@ -33,7 +39,7 @@
 00586383    cmovnz ebx, dword ptr ss:[ebp+0x14]
 00586387    cmp eax, 0x320
 0058638C    jb 0x00586399
-0058638E    call 0x00591930
+0058638E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00586393    mov eax, dword ptr ss:[ebp-0xC90]
 00586399    imul ecx, eax, 0x64
 0058639C    add ecx, esi
@@ -66,7 +72,7 @@
 005863F9    push 0x02
 005863FB    push dword ptr ds:[edi]
 005863FD    push 0xFFFFFFFF
-005863FF    call 0x0061B1B0
+005863FF    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00586404    mov ecx, dword ptr ss:[ebp-0xC90]
 0058640A    add esp, 0x2C
 0058640D    test bl, 0x06
@@ -93,7 +99,7 @@
 00586458    add eax, 0x02
 0058645B    push eax
 0058645C    push dword ptr ds:[edi]
-0058645E    call 0x005822E0
+0058645E    call 0x005822E0                                 ; => [ Call: nullptr | Call: sub_5822e0 ]
 00586463    mov eax, dword ptr ss:[ebp-0xC90]
 00586469    add esp, 0x34
 0058646C    mov eax, dword ptr ds:[eax+0x1A54]
@@ -116,7 +122,7 @@
 00586499    push dword ptr ss:[ebp+0x10]
 0058649C    push dword ptr ss:[ebp+0x0C]
 0058649F    push edi
-005864A0    call 0x005858C0
+005864A0    call 0x005858C0                                 ; => [ Call: sub_5858c0 | Call: sub_578d90 ]
 005864A5    mov ecx, dword ptr ds:[esi+0x1504]
 005864AB    add esp, 0x10
 005864AE    mov byte ptr ss:[ebp-0xC89], al
@@ -142,19 +148,19 @@
 005864DF    mov edx, 0x16
 005864E4    push 0xFFFFFFFF
 005864E6    setz cl
-005864E9    call 0x0061B1B0
+005864E9    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005864EE    add esp, 0x2C
 005864F1    test bl, bl
 005864F3    js 0x005864FC
 005864F5    mov ecx, esi
-005864F7    call 0x00583350
+005864F7    call 0x00583350                                 ; => [ Call: sub_583350 ]
 005864FC    mov ecx, dword ptr ss:[ebp-0x04]
 005864FF    mov al, byte ptr ss:[ebp-0xC89]
 00586505    xor ecx, ebp
 00586507    pop edi
 00586508    pop esi
 00586509    pop ebx
-0058650A    call 0x0075927A
+0058650A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0058650F    mov esp, ebp
 00586511    pop ebp
 00586512    ret
@@ -163,10 +169,10 @@
 0058651D    push 0x81F4B8
 00586522    mov edx, 0x801800
 00586527    mov ecx, 0x82016C
-0058652C    call 0x0063B870
+0058652C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: card.where != CW_PLAYER_IN_PLAY | String: PlayCard ]
 00586531    add esp, 0x0C
 00586534    call 0x0063BC30
 00586539    test al, al
-0058653B    jz 0x0058653E
+0058653B    jz 0x0058653E                                   ; => [ Call: sub_63bc30 ]
 0058653D    int3
-0058653E    call 0x0063BB00
+0058653E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

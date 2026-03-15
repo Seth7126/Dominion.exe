@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a9de0
+// 起始地址: 0x6a9de0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A9DE0    push ebp
 006A9DE1    mov ebp, esp
 006A9DE3    sub esp, 0x2C
@@ -29,9 +35,9 @@
 006A9E26    add eax, 0xFFFFFFF3
 006A9E29    cmp eax, 0x08
 006A9E2C    jnbe 0x006A9E4B
-006A9E2E    movzx eax, byte ptr ds:[eax+0x6AA080]
+006A9E2E    movzx eax, byte ptr ds:[eax+0x6AA080]           ; => [ Data: lookup_table_6aa080 ]
 006A9E35    jmp dword ptr ds:[eax*4+0x6AA078]
-006A9E3C    push 0x87B2A4
+006A9E3C    push 0x87B2A4                                   ; => [ String: ImageBufferCopyToNewFormat ]
 006A9E41    push 0x1CE
 006A9E46    jmp 0x006AA04F
 006A9E4B    mov eax, dword ptr ds:[ecx+0x10]
@@ -40,11 +46,11 @@
 006A9E54    mov dword ptr ss:[ebp-0x08], edx
 006A9E57    cmp eax, 0x08
 006A9E5A    jnbe 0x006A9E7E
-006A9E5C    movzx eax, byte ptr ds:[eax+0x6AA094]
+006A9E5C    movzx eax, byte ptr ds:[eax+0x6AA094]           ; => [ Data: lookup_table_6aa094 ]
 006A9E63    jmp dword ptr ds:[eax*4+0x6AA08C]
-006A9E6A    push 0x87B2A4
+006A9E6A    push 0x87B2A4                                   ; => [ String: ImageBufferCopyToNewFormat ]
 006A9E6F    push 0x1CF
-006A9E74    mov ecx, 0x87B2D4
+006A9E74    mov ecx, 0x87B2D4                               ; => [ String: !TextureFormatIsCompressed(pSourceSpec->format) ]
 006A9E79    jmp 0x006AA054
 006A9E7E    lea eax, ds:[edi-0x01]
 006A9E81    mov edi, eax
@@ -74,7 +80,7 @@
 006A9EBE    lea eax, ds:[ecx-0x0D]
 006A9EC1    cmp eax, 0x08
 006A9EC4    jnbe 0x006A9F98
-006A9ECA    movzx eax, byte ptr ds:[eax+0x6AA0A8]
+006A9ECA    movzx eax, byte ptr ds:[eax+0x6AA0A8]           ; => [ Data: lookup_table_6aa094 ]
 006A9ED1    jmp dword ptr ds:[eax*4+0x6AA0A0]
 006A9ED8    cmp eax, 0x0B
 006A9EDB    jnz 0x006A9EE2
@@ -96,10 +102,10 @@
 006A9F04    call 0x006A9600
 006A9F09    mov edx, dword ptr ss:[ebp-0x20]
 006A9F0C    mov ecx, dword ptr ss:[ebp-0x0C]
-006A9F0F    mov dword ptr ss:[ebp-0x08], eax
+006A9F0F    mov dword ptr ss:[ebp-0x08], eax                ; => [ Call: sub_6a9600 ]
 006A9F12    mov edx, dword ptr ds:[edx]
 006A9F14    call 0x006A9570
-006A9F19    mov ecx, eax
+006A9F19    mov ecx, eax                                    ; => [ Call: sub_6a9570 ]
 006A9F1B    mov eax, dword ptr ss:[ebp-0x04]
 006A9F1E    mov dword ptr ss:[ebp-0x20], ecx
 006A9F21    cmp dword ptr ds:[eax+0x0C], ecx
@@ -123,14 +129,14 @@
 006A9F4C    pop ebx
 006A9F4D    mov esp, ebp
 006A9F4F    pop ebp
-006A9F50    ret
+006A9F50    ret                                             ; => [ Call: memcpy | Call: memcpy ]
 006A9F51    cmp dword ptr ss:[ebp-0x08], 0x00
 006A9F55    jle 0x006AA03E
 006A9F5B    nop dword ptr ds:[eax+eax*1], eax
 006A9F60    push ecx
 006A9F61    push esi
 006A9F62    push edi
-006A9F63    call 0x00761FBE
+006A9F63    call 0x00761FBE                                 ; => [ Call: memcpy ]
 006A9F68    mov eax, dword ptr ss:[ebp-0x04]
 006A9F6B    add esp, 0x0C
 006A9F6E    add edi, dword ptr ds:[ebx+0x0C]
@@ -144,20 +150,20 @@
 006A9F80    mov esp, ebp
 006A9F82    pop ebp
 006A9F83    ret
-006A9F84    push 0x87B2A4
+006A9F84    push 0x87B2A4                                   ; => [ String: ImageBufferCopyToNewFormat ]
 006A9F89    push 0x209
-006A9F8E    mov ecx, 0x87B2D4
+006A9F8E    mov ecx, 0x87B2D4                               ; => [ String: !TextureFormatIsCompressed(pSourceSpec->format) ]
 006A9F93    jmp 0x006AA054
 006A9F98    mov eax, dword ptr ds:[ebx+0x10]
 006A9F9B    add eax, 0xFFFFFFF3
 006A9F9E    cmp eax, 0x08
 006A9FA1    jnbe 0x006A9FB1
-006A9FA3    movzx eax, byte ptr ds:[eax+0x6AA0BC]
+006A9FA3    movzx eax, byte ptr ds:[eax+0x6AA0BC]           ; => [ Data: lookup_table_6aa0bc ]
 006A9FAA    jmp dword ptr ds:[eax*4+0x6AA0B4]
-006A9FB1    call 0x006A9450
+006A9FB1    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 006A9FB6    mov ecx, dword ptr ds:[ebx+0x10]
 006A9FB9    mov dword ptr ss:[ebp-0x2C], eax
-006A9FBC    call 0x006A9450
+006A9FBC    call 0x006A9450                                 ; => [ Call: sub_6a9450 ]
 006A9FC1    xor edx, edx
 006A9FC3    mov dword ptr ss:[ebp-0x28], eax
 006A9FC6    mov dword ptr ss:[ebp-0x20], edx
@@ -176,12 +182,12 @@
 006A9FF0    mov eax, dword ptr ss:[ebp-0x04]
 006A9FF3    mov ecx, ebx
 006A9FF5    mov edx, dword ptr ds:[eax+0x10]
-006A9FF8    call 0x006A97A0
+006A9FF8    call 0x006A97A0                                 ; => [ Call: sub_6a97a0 ]
 006A9FFD    push eax
 006A9FFE    mov eax, dword ptr ss:[ebp-0x10]
 006AA001    mov ecx, esi
 006AA003    mov edx, dword ptr ds:[eax+0x10]
-006AA006    call 0x006A9BC0
+006AA006    call 0x006A9BC0                                 ; => [ Call: sub_6a9bc0 ]
 006AA00B    add esi, dword ptr ss:[ebp-0x28]
 006AA00E    inc edi
 006AA00F    add ebx, dword ptr ss:[ebp-0x2C]
@@ -207,15 +213,15 @@
 006AA041    mov esp, ebp
 006AA043    pop ebp
 006AA044    ret
-006AA045    push 0x87B2A4
+006AA045    push 0x87B2A4                                   ; => [ String: ImageBufferCopyToNewFormat ]
 006AA04A    push 0x20A
-006AA04F    mov ecx, 0x87B304
+006AA04F    mov ecx, 0x87B304                               ; => [ String: !TextureFormatIsCompressed(pDestSpec->format) ]
 006AA054    push 0x87B1B4
 006AA059    mov edx, 0x801800
-006AA05E    call 0x0063B870
+006AA05E    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Engine\ImageUtils.cpp | Call: sub_63b870 | Data: data_801800 | String: ImageBufferCopyToNewFormat ]
 006AA063    add esp, 0x0C
 006AA066    call 0x0063BC30
 006AA06B    test al, al
-006AA06D    jz 0x006AA070
+006AA06D    jz 0x006AA070                                   ; => [ Call: sub_63bc30 ]
 006AA06F    int3
-006AA070    call 0x0063BB00
+006AA070    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

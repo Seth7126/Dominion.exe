@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_69b9c0
+// 起始地址: 0x69b9c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069B9C0    push ebp
 0069B9C1    mov ebp, esp
 0069B9C3    and esp, 0xFFFFFFF0
 0069B9C6    mov eax, 0x1B08
-0069B9CB    call 0x00761E50
+0069B9CB    call 0x00761E50                                 ; => [ Call: __chkstk ]
 0069B9D0    mov eax, dword ptr ds:[0x008C4040]
-0069B9D5    xor eax, esp
+0069B9D5    xor eax, esp                                    ; => [ Data: __security_cookie ]
 0069B9D7    mov dword ptr ss:[esp+0x1B04], eax
 0069B9DE    push esi
 0069B9DF    push edi
@@ -13,25 +19,25 @@
 0069B9E8    mov edx, ecx
 0069B9EA    test edx, edx
 0069B9EC    jnz 0x0069B9FF
-0069B9EE    push 0x8793D8
+0069B9EE    push 0x8793D8                                   ; => [ String: DataArray<struct UIState>::DataArrayGet ]
 0069B9F3    push 0x6C
-0069B9F5    mov ecx, 0x802734
+0069B9F5    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 0069B9FA    jmp 0x0069BD18
 0069B9FF    movzx eax, dx
 0069BA02    cmp eax, dword ptr ds:[0x00CAF264]
-0069BA08    jnb 0x0069BD0C
+0069BA08    jnb 0x0069BD0C                                  ; => [ Data: data_caf264 ]
 0069BA0E    imul esi, eax, 0x438
-0069BA14    add esi, dword ptr ds:[0x00CAF260]
+0069BA14    add esi, dword ptr ds:[0x00CAF260]              ; => [ Data: data_caf260 ]
 0069BA1A    mov dword ptr ss:[esp+0x14], esi
 0069BA1E    cmp dword ptr ds:[esi+0x434], edx
-0069BA24    jnz 0x0069BD0C
+0069BA24    jnz 0x0069BD0C                                  ; => [ Data: data_caf264 ]
 0069BA2A    cmp byte ptr ds:[esi+0x08], 0x00
 0069BA2E    jnz 0x0069BCF8
 0069BA34    push 0x189C
 0069BA39    lea eax, ss:[esp+0x268]
 0069BA40    push 0x00
 0069BA42    push eax
-0069BA43    call 0x00761FC4
+0069BA43    call 0x00761FC4                                 ; => [ Call: memset ]
 0069BA48    movups xmm0, xmmword ptr ds:[edi]
 0069BA4B    mov ecx, dword ptr ds:[esi+0x04]
 0069BA4E    lea eax, ss:[esp+0x20C]
@@ -51,13 +57,13 @@
 0069BA8E    movups xmmword ptr ds:[eax+0x50], xmm0
 0069BA92    mov dword ptr ss:[esp+0x260], 0xFFFFFFFF
 0069BA9D    jz 0x0069BAB8
-0069BA9F    push 0x8790A8
+0069BA9F    push 0x8790A8                                   ; => [ String: UIDefGet ]
 0069BAA4    push 0x127
-0069BAA9    push 0x878EA8
-0069BAAE    mov ecx, 0x8790C8
+0069BAA9    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+0069BAAE    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 0069BAB3    jmp 0x0069BD1D
 0069BAB8    call 0x005AF880
-0069BABD    mov edx, eax
+0069BABD    mov edx, eax                                    ; => [ Call: sub_5af880 ]
 0069BABF    xor eax, eax
 0069BAC1    mov dword ptr ss:[esp+0x1C], edx
 0069BAC5    mov dword ptr ss:[esp+0x0C], eax
@@ -70,7 +76,7 @@
 0069BADC    add edi, ecx
 0069BADE    mov ecx, esi
 0069BAE0    push dword ptr ds:[edi+0x08]
-0069BAE3    call 0x00698630
+0069BAE3    call 0x00698630                                 ; => [ Call: sub_698630 ]
 0069BAE8    add esp, 0x04
 0069BAEB    mov esi, eax
 0069BAED    cmp dword ptr ds:[edi+0x04], 0x06
@@ -78,7 +84,7 @@
 0069BAF7    lea eax, ss:[esp+0x20]
 0069BAFB    push eax
 0069BAFC    lea ecx, ss:[esp+0x204]
-0069BB03    call 0x00698FB0
+0069BB03    call 0x00698FB0                                 ; => [ Call: sub_698fb0 ]
 0069BB08    add esp, 0x04
 0069BB0B    mov edx, esi
 0069BB0D    mov ecx, edi
@@ -98,7 +104,7 @@
 0069BB56    lea eax, ss:[esp+0x84]
 0069BB5D    push eax
 0069BB5E    movups xmmword ptr ss:[esp+0x1F8], xmm0
-0069BB66    call 0x00699790
+0069BB66    call 0x00699790                                 ; => [ Call: sub_699790 ]
 0069BB6B    mov ecx, dword ptr ss:[esp+0x1B08]
 0069BB72    add esp, 0x08
 0069BB75    imul edx, ecx, 0x64
@@ -134,7 +140,7 @@
 0069BC01    lea eax, ss:[esp+0xE0]
 0069BC08    push eax
 0069BC09    lea ecx, ss:[esp+0x204]
-0069BC10    call 0x00698FB0
+0069BC10    call 0x00698FB0                                 ; => [ Call: sub_698fb0 ]
 0069BC15    add esp, 0x04
 0069BC18    xorps xmm2, xmm2
 0069BC1B    movups xmm1, xmmword ptr ds:[eax]
@@ -177,10 +183,10 @@
 0069BCB3    mov edx, dword ptr ss:[esp+0x0C]
 0069BCB7    mov ecx, dword ptr ss:[esp+0x14]
 0069BCBB    push eax
-0069BCBC    call 0x0069B330
+0069BCBC    call 0x0069B330                                 ; => [ Call: sub_69b330 ]
 0069BCC1    add esp, 0x04
 0069BCC4    lea ecx, ss:[esp+0x200]
-0069BCCB    call 0x00699030
+0069BCCB    call 0x00699030                                 ; => [ Call: sub_699030 ]
 0069BCD0    mov eax, dword ptr ss:[esp+0x0C]
 0069BCD4    mov edx, dword ptr ss:[esp+0x1C]
 0069BCD8    inc eax
@@ -195,19 +201,19 @@
 0069BCFF    pop edi
 0069BD00    pop esi
 0069BD01    xor ecx, esp
-0069BD03    call 0x0075927A
+0069BD03    call 0x0075927A                                 ; => [ Call: CookieCheckFunction | Call: CookieCheckFunction ]
 0069BD08    mov esp, ebp
 0069BD0A    pop ebp
 0069BD0B    ret
-0069BD0C    push 0x8793D8
+0069BD0C    push 0x8793D8                                   ; => [ String: DataArray<struct UIState>::DataArrayGet ]
 0069BD11    push 0x6D
-0069BD13    mov ecx, 0x802748
-0069BD18    push 0x80193C
+0069BD13    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
+0069BD18    push 0x80193C                                   ; => [ String: C:\x\ax2017\Engine\DataArray.h | String: C:\x\ax2017\Engine\DataArray.h ]
 0069BD1D    mov edx, 0x801800
-0069BD22    call 0x0063B870
+0069BD22    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0069BD27    add esp, 0x0C
 0069BD2A    call 0x0063BC30
 0069BD2F    test al, al
-0069BD31    jz 0x0069BD34
+0069BD31    jz 0x0069BD34                                   ; => [ Call: sub_63bc30 ]
 0069BD33    int3
-0069BD34    call 0x0063BB00
+0069BD34    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

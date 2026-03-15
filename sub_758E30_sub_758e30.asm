@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_758e30
+// 起始地址: 0x758e30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00758E30    push ebp
 00758E31    mov ebp, esp
 00758E33    sub esp, 0x24
@@ -56,12 +62,12 @@
 00758EDD    mov esp, ebp
 00758EDF    pop ebp
 00758EE0    ret
-00758EE1    xor eax, eax
+00758EE1    xor eax, eax                                    ; => [ Call: nullptr ]
 00758EE3    xor edx, edx
 00758EE5    xor edi, edi
 00758EE7    mov dword ptr ss:[ebp-0x08], edx
-00758EEA    xor ecx, ecx
-00758EEC    mov dword ptr ss:[ebp+0x0C], eax
+00758EEA    xor ecx, ecx                                    ; => [ Call: nullptr ]
+00758EEC    mov dword ptr ss:[ebp+0x0C], eax                ; => [ Call: nullptr ]
 00758EEF    cmp dword ptr ss:[ebp+0x08], eax
 00758EF2    jle 0x00758F46
 00758EF4    mov eax, dword ptr ss:[ebp+0x08]
@@ -106,11 +112,11 @@
 00758F68    mov eax, dword ptr ss:[ebp+0x10]
 00758F6B    nop dword ptr ds:[eax+eax*1], eax
 00758F70    mov edi, dword ptr ds:[ebx+ecx*4]
-00758F73    xorps xmm5, xmm5
+00758F73    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 00758F76    inc ecx
 00758F77    mov dword ptr ss:[ebp-0x08], edi
 00758F7A    add edi, ecx
-00758F7C    xorps xmm6, xmm6
+00758F7C    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 00758F7F    cmp ecx, edi
 00758F81    jnl 0x00758FFE
 00758F83    mov eax, dword ptr ss:[ebp-0x0C]
@@ -166,11 +172,11 @@
 00759027    jnl 0x007590F2
 0075902D    mov eax, dword ptr ss:[ebp+0x10]
 00759030    mov edi, dword ptr ds:[ebx+ecx*4]
-00759033    xorps xmm5, xmm5
+00759033    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 00759036    inc ecx
 00759037    mov dword ptr ss:[ebp-0x1C], edi
 0075903A    add edi, ecx
-0075903C    xorps xmm6, xmm6
+0075903C    xorps xmm6, xmm6                                ; => [ String: 0 | String: zx ]
 0075903F    cmp ecx, edi
 00759041    jnl 0x007590D8
 00759047    mov eax, dword ptr ss:[ebp-0x0C]

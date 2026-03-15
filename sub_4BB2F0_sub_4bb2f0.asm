@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4bb2f0
+// 起始地址: 0x4bb2f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004BB2F0    push ebp
 004BB2F1    mov ebp, esp
 004BB2F3    mov eax, dword ptr ss:[ebp+0x08]
@@ -13,7 +19,7 @@
 004BB307    mov eax, dword ptr ds:[edi]
 004BB309    mov ecx, dword ptr ds:[eax+edx*4]
 004BB30C    lea ebx, ds:[eax+edx*4]
-004BB30F    xor edx, edx
+004BB30F    xor edx, edx                                    ; => [ Call: nullptr ]
 004BB311    test ecx, ecx
 004BB313    jz 0x004BB356
 004BB315    cmp esi, dword ptr ds:[ecx]
@@ -32,7 +38,7 @@
 004BB32E    jnz 0x004BB346
 004BB330    mov edx, 0x0C
 004BB335    mov dword ptr ds:[ebx], eax
-004BB337    call 0x0064C080
+004BB337    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004BB33C    dec dword ptr ds:[edi+0x08]
 004BB33F    pop edi
 004BB340    pop esi
@@ -41,7 +47,7 @@
 004BB343    ret 0x04
 004BB346    mov dword ptr ds:[edx+0x08], eax
 004BB349    mov edx, 0x0C
-004BB34E    call 0x0064C080
+004BB34E    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 004BB353    dec dword ptr ds:[edi+0x08]
 004BB356    pop edi
 004BB357    pop esi

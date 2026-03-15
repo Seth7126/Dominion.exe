@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_483d40
+// 起始地址: 0x483d40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00483D40    mov edx, 0x22
 00483D45    mov ecx, 0x853650
-00483D4A    call 0x0069F030
-00483D4F    mov dword ptr ds:[0x0171E7E4], eax
+00483D4A    call 0x0069F030                                 ; => [ String: res/ui2/campaign_share.ui2 | Call: sub_69f030 ]
+00483D4F    mov dword ptr ds:[0x0171E7E4], eax              ; => [ Data: data_171e7e4 ]
 00483D54    ret

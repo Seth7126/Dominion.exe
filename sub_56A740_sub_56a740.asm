@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_56a740
+// 起始地址: 0x56a740
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056A740    push ebp
 0056A741    mov ebp, esp
 0056A743    sub esp, 0xD04
-0056A749    mov eax, dword ptr ds:[0x008C4040]
+0056A749    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0056A74E    xor eax, ebp
 0056A750    mov dword ptr ss:[ebp-0x04], eax
 0056A753    push ebx
@@ -9,7 +15,7 @@
 0056A755    push edi
 0056A756    mov dword ptr ss:[ebp-0xC94], edx
 0056A75C    mov esi, ecx
-0056A75E    call 0x00573400
+0056A75E    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0056A763    mov ebx, eax
 0056A765    mov dword ptr ss:[ebp-0xCC4], 0x00
 0056A76F    push 0x00
@@ -28,7 +34,7 @@
 0056A7A4    lea eax, ss:[ebp-0xD00]
 0056A7AA    push eax
 0056A7AB    push 0x09
-0056A7AD    movlpd qword ptr ss:[ebp-0xCCC], xmm0
+0056A7AD    movlpd qword ptr ss:[ebp-0xCCC], xmm0           ; => [ Call: __builtin_memset ]
 0056A7B5    lea eax, ss:[ebp-0xC90]
 0056A7BB    movlpd qword ptr ss:[ebp-0xCBC], xmm0
 0056A7C3    movlpd qword ptr ss:[ebp-0xCA8], xmm0
@@ -36,7 +42,7 @@
 0056A7CD    mov dword ptr ss:[ebp-0xCD0], 0x14
 0056A7D7    movups xmm0, xmmword ptr ss:[ebp-0xCD0]
 0056A7DE    push 0x01
-0056A7E0    rep movsd
+0056A7E0    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 0056A7E2    push dword ptr ss:[ebp-0x10]
 0056A7E5    mov ecx, dword ptr ds:[ebx+0x2C]
 0056A7E8    movups xmmword ptr ss:[ebp-0xD00], xmm0
@@ -51,7 +57,7 @@
 0056A81D    movups xmm0, xmmword ptr ss:[ebp-0xCB0]
 0056A824    push dword ptr ds:[ebx+0x0C]
 0056A827    movups xmmword ptr ss:[ebp-0xCE0], xmm0
-0056A82E    call 0x005869D0
+0056A82E    call 0x005869D0                                 ; => [ Call: sub_5869d0 ]
 0056A833    add esp, 0x2C
 0056A836    test eax, eax
 0056A838    jz 0x0056A868
@@ -62,14 +68,14 @@
 0056A849    call 0x005624A0
 0056A84E    add esp, 0x04
 0056A851    test al, al
-0056A853    jz 0x0056A868
+0056A853    jz 0x0056A868                                   ; => [ Call: sub_5624a0 ]
 0056A855    mov eax, esi
 0056A857    pop edi
 0056A858    pop esi
 0056A859    pop ebx
 0056A85A    mov ecx, dword ptr ss:[ebp-0x04]
 0056A85D    xor ecx, ebp
-0056A85F    call 0x0075927A
+0056A85F    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0056A864    mov esp, ebp
 0056A866    pop ebp
 0056A867    ret
@@ -79,7 +85,7 @@
 0056A86E    pop esi
 0056A86F    xor ecx, ebp
 0056A871    pop ebx
-0056A872    call 0x0075927A
+0056A872    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0056A877    mov esp, ebp
 0056A879    pop ebp
 0056A87A    ret

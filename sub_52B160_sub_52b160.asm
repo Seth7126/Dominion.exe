@@ -1,9 +1,15 @@
+// ============================================================
+// 函数名称: sub_52b160
+// 起始地址: 0x52b160
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052B160    dword 83EC8B55
 0052B164    in al, 0xF8
 0052B166    sub esp, 0xC88
 0052B16C    push ecx
 0052B16D    mov ecx, 0x0A
-0052B172    call 0x0056EA30
+0052B172    call 0x0056EA30                                 ; => [ Call: sub_56ea30 ]
 0052B177    add esp, 0x04
 0052B17A    mov dword ptr ss:[esp], 0x00
 0052B181    lea eax, ss:[esp]
@@ -16,4 +22,4 @@
 0052B195    add esp, 0x0C
 0052B198    mov esp, ebp
 0052B19A    pop ebp
-0052B19B    ret
+0052B19B    ret                                             ; => [ Call: sub_5022f0 | Call: sub_56bba0 ]

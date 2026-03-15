@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5e97a0
+// 起始地址: 0x5e97a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005E97A0    push ebp
 005E97A1    mov ebp, esp
 005E97A3    sub esp, 0x3C
@@ -7,27 +13,27 @@
 005E97AA    push edi
 005E97AB    mov dword ptr ss:[ebp-0x0C], esi
 005E97AE    mov edi, ecx
-005E97B0    call 0x004D5DB0
+005E97B0    call 0x004D5DB0                                 ; => [ Call: sub_4d5db0 ]
 005E97B5    mov ebx, eax
 005E97B7    push dword ptr ds:[ebx+0x10]
 005E97BA    push esi
 005E97BB    push 0x85FA90
-005E97C0    call 0x0063B5F0
+005E97C0    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: submit network action who:%d pos:%d ]
 005E97C5    add esp, 0x0C
 005E97C8    cmp dword ptr ds:[edi], 0x00
 005E97CB    jnle 0x005E97E1
-005E97CD    push 0x85FAC0
+005E97CD    push 0x85FAC0                                   ; => [ String: SubmitNetworkAction ]
 005E97D2    push 0x57C7
-005E97D7    mov ecx, 0x85FAB4
+005E97D7    mov ecx, 0x85FAB4                               ; => [ String: save.id > 0 ]
 005E97DC    jmp 0x005E98DA
-005E97E1    mov eax, dword ptr ds:[0x00CC8D5C]
+005E97E1    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 005E97E6    mov dword ptr ss:[ebp-0x08], eax
 005E97E9    test eax, eax
 005E97EB    jnz 0x005E9803
-005E97ED    push 0x77EB90
+005E97ED    push 0x77EB90                                   ; => [ String: GetClient ]
 005E97F2    push 0x7B
-005E97F4    push 0x77EB50
-005E97F9    mov ecx, 0x77EB9C
+005E97F4    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+005E97F9    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 005E97FE    jmp 0x005E98DF
 005E9803    mov eax, dword ptr ds:[eax+0x5068]
 005E9809    cmp eax, 0x02
@@ -36,20 +42,20 @@
 005E9811    jnz 0x005E981C
 005E9813    test dword ptr ds:[edi+0x20], 0x104
 005E981A    jnz 0x005E9830
-005E981C    push 0x85FAC0
+005E981C    push 0x85FAC0                                   ; => [ String: SubmitNetworkAction ]
 005E9821    push 0x57CB
-005E9826    mov ecx, 0x85FAF0
+005E9826    mov ecx, 0x85FAF0                               ; => [ String: c.activeGame.gameType == GAME_NETWORK || (c.activeGame.gameType == GAME_LOCAL && (save.setup.config.flags & (GAMEFLAG_WEEKLY_CAMPAIGN | GAMEFLAG ]
 005E982B    jmp 0x005E98DA
 005E9830    cmp dword ptr ss:[ebp+0x0C], 0x02
 005E9834    jnz 0x005E985A
 005E9836    lea ecx, ds:[edi+0x08]
 005E9839    mov edx, esi
-005E983B    call 0x004B9680
+005E983B    call 0x004B9680                                 ; => [ Call: sub_4b9680 ]
 005E9840    cmp dword ptr ds:[eax+0x14], 0x03
 005E9844    jz 0x005E985A
-005E9846    push 0x85FAC0
+005E9846    push 0x85FAC0                                   ; => [ String: SubmitNetworkAction ]
 005E984B    push 0x57CF
-005E9850    mov ecx, 0x85FAD4
+005E9850    mov ecx, 0x85FAD4                               ; => [ String: IsAI(save, who) == true ]
 005E9855    jmp 0x005E98DA
 005E985A    mov eax, dword ptr ds:[ebx+0x10]
 005E985D    mov dword ptr ss:[ebp-0x04], eax
@@ -58,7 +64,7 @@
 005E9865    mov esi, dword ptr ss:[ebp+0x08]
 005E9868    mov ecx, ebx
 005E986A    mov edx, esi
-005E986C    call 0x005E94E0
+005E986C    call 0x005E94E0                                 ; => [ Call: sub_5e94e0 ]
 005E9871    mov edx, dword ptr ds:[ebx+0x10]
 005E9874    mov ecx, dword ptr ds:[ebx]
 005E9876    mov ebx, dword ptr ss:[ebp-0x08]
@@ -91,16 +97,16 @@
 005E98C6    pop ebx
 005E98C7    mov esp, ebp
 005E98C9    pop ebp
-005E98CA    ret
-005E98CB    push 0x85FAC0
+005E98CA    ret                                             ; => [ Call: sub_68b720 | Data: data_1597ce0 ]
+005E98CB    push 0x85FAC0                                   ; => [ String: SubmitNetworkAction ]
 005E98D0    push 0x57D3
-005E98D5    mov ecx, 0x85FB90
-005E98DA    push 0x86F1E8
+005E98D5    mov ecx, 0x85FB90                               ; => [ String: log.logSizePlayed == log.logSizeWritten ]
+005E98DA    push 0x86F1E8                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp ]
 005E98DF    mov edx, 0x801800
-005E98E4    call 0x0063B870
+005E98E4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 005E98E9    add esp, 0x0C
 005E98EC    call 0x0063BC30
 005E98F1    test al, al
-005E98F3    jz 0x005E98F6
+005E98F3    jz 0x005E98F6                                   ; => [ Call: sub_63bc30 ]
 005E98F5    int3
-005E98F6    call 0x0063BB00
+005E98F6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

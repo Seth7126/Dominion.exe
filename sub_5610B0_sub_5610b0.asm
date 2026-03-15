@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_5610b0
+// 起始地址: 0x5610b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005610B0    dword 83EC8B55
 005610B4    in al, 0xF8
 005610B6    sub esp, 0xC8C
 005610BC    push ebx
 005610BD    push esi
 005610BE    push edi
-005610BF    call 0x00573400
+005610BF    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005610C4    push 0x00
 005610C6    push 0x00
 005610C8    push 0x01
 005610CA    mov edx, dword ptr ds:[eax+0x0C]
 005610CD    mov ecx, dword ptr ds:[eax+0x04]
 005610D0    push 0x01
-005610D2    call 0x00590760
+005610D2    call 0x00590760                                 ; => [ Call: sub_590760 ]
 005610D7    add esp, 0x10
-005610DA    call 0x00573400
+005610DA    call 0x00573400                                 ; => [ Call: sub_573400 ]
 005610DF    mov ecx, dword ptr ds:[eax+0x0C]
 005610E2    cmp ecx, 0xFFFFFFFF
 005610E5    jz 0x00561186
@@ -23,20 +29,20 @@
 005610F6    push 0x00
 005610F8    or dword ptr ds:[ecx+eax*1+0x17558], 0x02
 00561100    lea ecx, ds:[edx+0x01]
-00561103    call 0x00561AF0
+00561103    call 0x00561AF0                                 ; => [ Call: sub_561af0 ]
 00561108    add esp, 0x04
 0056110B    xor esi, esi
-0056110D    call 0x00573400
+0056110D    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00561112    mov edi, eax
 00561114    cmp dword ptr ds:[edi], 0x02
 00561117    jnz 0x0056113E
 00561119    mov esi, dword ptr ds:[edi+0x10]
 0056111C    call 0x00573400
 00561121    movzx esi, si
-00561124    mov ebx, dword ptr ds:[eax+0x04]
+00561124    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00561127    cmp esi, 0x320
 0056112D    jb 0x00561134
-0056112F    call 0x00591930
+0056112F    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00561134    imul eax, esi, 0x64
 00561137    mov esi, dword ptr ds:[eax+ebx*1+0x1A4C]
 0056113E    mov edx, dword ptr ds:[edi+0x0C]
@@ -50,7 +56,7 @@
 00561151    push 0x02
 00561153    push 0x00
 00561155    push 0x00
-00561157    call 0x005911E0
+00561157    call 0x005911E0                                 ; => [ Call: sub_5911e0 ]
 0056115C    add esp, 0x24
 0056115F    mov dword ptr ss:[esp+0x10], 0x00
 00561167    lea eax, ss:[esp+0x10]
@@ -66,16 +72,16 @@
 00561181    pop ebx
 00561182    mov esp, ebp
 00561184    pop ebp
-00561185    ret
+00561185    ret                                             ; => [ Call: sub_4f8860 | Call: sub_56bba0 ]
 00561186    push 0x81EA64
 0056118B    push 0x52
 0056118D    push 0x81EA70
 00561192    mov edx, 0x801800
 00561197    mov ecx, 0x813C5C
-0056119C    call 0x0063B870
+0056119C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 005611A1    add esp, 0x0C
 005611A4    call 0x0063BC30
 005611A9    test al, al
-005611AB    jz 0x005611AE
+005611AB    jz 0x005611AE                                   ; => [ Call: sub_63bc30 ]
 005611AD    int3
-005611AE    call 0x0063BB00
+005611AE    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

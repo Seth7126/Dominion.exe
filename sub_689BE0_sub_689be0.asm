@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_689be0
+// 起始地址: 0x689be0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00689BE0    push ebp
 00689BE1    mov ebp, esp
 00689BE3    sub esp, 0x10
@@ -9,21 +15,21 @@
 00689BEF    push edi
 00689BF0    test eax, eax
 00689BF2    jnle 0x00689C0D
-00689BF4    push 0x8775EC
+00689BF4    push 0x8775EC                                   ; => [ String: NetBufferListAppendData ]
 00689BF9    push 0x24C
-00689BFE    push 0x8773A8
-00689C03    mov ecx, 0x871DE8
+00689BFE    push 0x8773A8                                   ; => [ String: C:\x\ax2017\Engine\Network.cpp ]
+00689C03    mov ecx, 0x871DE8                               ; => [ String: length > 0 ]
 00689C08    jmp 0x00689D4C
 00689C0D    cmp dword ptr ds:[ebx+0x08], 0x00
 00689C11    lea eax, ds:[ebx+0x04]
 00689C14    mov dword ptr ss:[ebp-0x08], eax
 00689C17    jnz 0x00689C31
 00689C19    call 0x00688F10
-00689C1E    mov dword ptr ss:[ebp-0x0C], eax
+00689C1E    mov dword ptr ss:[ebp-0x0C], eax                ; => [ Call: sub_688f10 ]
 00689C21    mov ecx, ebx
 00689C23    lea eax, ss:[ebp-0x0C]
 00689C26    push eax
-00689C27    call 0x0068B830
+00689C27    call 0x0068B830                                 ; => [ Call: sub_68b830 ]
 00689C2C    lea edx, ds:[ebx+0x04]
 00689C2F    jmp 0x00689C72
 00689C31    mov ecx, dword ptr ds:[eax]
@@ -39,11 +45,11 @@
 00689C55    cmp eax, 0x01
 00689C58    jnl 0x00689C72
 00689C5A    call 0x00688F10
-00689C5F    mov dword ptr ss:[ebp-0x10], eax
+00689C5F    mov dword ptr ss:[ebp-0x10], eax                ; => [ Call: sub_688f10 ]
 00689C62    mov ecx, ebx
 00689C64    lea eax, ss:[ebp-0x10]
 00689C67    push eax
-00689C68    call 0x0068B830
+00689C68    call 0x0068B830                                 ; => [ Call: sub_68b830 ]
 00689C6D    mov edx, esi
 00689C6F    mov dword ptr ss:[ebp-0x08], edx
 00689C72    mov ecx, dword ptr ds:[edx]
@@ -66,21 +72,21 @@
 00689CA6    push esi
 00689CA7    push dword ptr ss:[ebp+0x08]
 00689CAA    push ecx
-00689CAB    call 0x00761FBE
+00689CAB    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00689CB0    add dword ptr ds:[edi+0xFDEC], esi
 00689CB6    add esp, 0x0C
 00689CB9    add dword ptr ss:[ebp+0x08], esi
 00689CBC    sub dword ptr ss:[ebp-0x04], esi
-00689CBF    call 0x00688F10
+00689CBF    call 0x00688F10                                 ; => [ Call: sub_688f10 ]
 00689CC4    mov ecx, 0x0C
 00689CC9    mov edi, eax
-00689CCB    call 0x0064BFD0
+00689CCB    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00689CD0    mov esi, eax
 00689CD2    inc dword ptr ds:[esi+0x0C]
 00689CD5    cmp dword ptr ds:[esi], 0x00
 00689CD8    jnz 0x00689CE1
 00689CDA    mov ecx, esi
-00689CDC    call 0x0064BE70
+00689CDC    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00689CE1    mov ecx, dword ptr ds:[esi]
 00689CE3    mov edx, dword ptr ss:[ebp-0x08]
 00689CE6    mov eax, dword ptr ds:[ecx]
@@ -104,7 +110,7 @@
 00689D1E    push eax
 00689D1F    push dword ptr ss:[ebp+0x08]
 00689D22    push ecx
-00689D23    call 0x00761FBE
+00689D23    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00689D28    mov eax, dword ptr ss:[ebp-0x04]
 00689D2B    add esp, 0x0C
 00689D2E    add dword ptr ds:[edi+0xFDEC], eax
@@ -114,15 +120,15 @@
 00689D37    mov esp, ebp
 00689D39    pop ebp
 00689D3A    ret
-00689D3B    push 0x877BA0
+00689D3B    push 0x877BA0                                   ; => [ String: XList<struct NetBuffer *>::GetTail ]
 00689D40    push 0x5A
-00689D42    mov ecx, 0x877B90
-00689D47    push 0x86E34C
+00689D42    mov ecx, 0x877B90                               ; => [ String: mpTail != NULL ]
+00689D47    push 0x86E34C                                   ; => [ String: C:\x\ax2017\Engine\xList.h ]
 00689D4C    mov edx, 0x801800
-00689D51    call 0x0063B870
+00689D51    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00689D56    add esp, 0x0C
 00689D59    call 0x0063BC30
 00689D5E    test al, al
-00689D60    jz 0x00689D63
+00689D60    jz 0x00689D63                                   ; => [ Call: sub_63bc30 ]
 00689D62    int3
-00689D63    call 0x0063BB00
+00689D63    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

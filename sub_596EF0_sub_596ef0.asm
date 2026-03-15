@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_596ef0
+// 起始地址: 0x596ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00596EF0    push ebp
 00596EF1    mov ebp, esp
 00596EF3    sub esp, 0x10
@@ -27,7 +33,7 @@
 00596F2A    movzx ecx, al
 00596F2D    xor ecx, 0x01
 00596F30    inc ecx
-00596F31    add ecx, edi
+00596F31    add ecx, edi                                    ; => [ Call: sub_596040 ]
 00596F33    mov ax, word ptr ds:[ebx+ecx*2]
 00596F37    mov word ptr ds:[ebx+esi*2], ax
 00596F3B    mov esi, ecx
@@ -57,7 +63,7 @@
 00596F7E    push eax
 00596F7F    call 0x00596040
 00596F84    test al, al
-00596F86    jz 0x00596F97
+00596F86    jz 0x00596F97                                   ; => [ Call: sub_596040 ]
 00596F88    mov ax, word ptr ds:[ebx+edi*2]
 00596F8C    mov word ptr ds:[ebx+esi*2], ax
 00596F90    mov esi, edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_540dc0
+// 起始地址: 0x540dc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00540DC0    dword 83EC8B55
 00540DC4    in al, dx
 00540DC5    cmp al, 0xA1
@@ -63,7 +69,7 @@
 00540E72    push ecx
 00540E73    mov ecx, dword ptr ds:[0x00CCE9BC]
 00540E79    mov dword ptr ss:[ebp-0x3C], eax
-00540E7C    call 0x0063EDA0
+00540E7C    call 0x0063EDA0                                 ; => [ Data: data_cce9bc | Call: sub_63eda0 ]
 00540E81    add esp, 0x08
 00540E84    cmp ebx, 0x03
 00540E87    jnl 0x00540E9A
@@ -72,14 +78,14 @@
 00540E8F    mov ecx, dword ptr ss:[ebp-0x3C]
 00540E92    lea esi, ds:[esi+ebx*4]
 00540E95    lea edi, ds:[eax+ebx*4]
-00540E98    rep movsd
+00540E98    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 00540E9A    mov ecx, dword ptr ss:[ebp-0x04]
 00540E9D    mov eax, 0x03
 00540EA2    pop edi
 00540EA3    pop esi
 00540EA4    xor ecx, ebp
 00540EA6    pop ebx
-00540EA7    call 0x0075927A
+00540EA7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00540EAC    mov esp, ebp
 00540EAE    pop ebp
 00540EAF    ret
@@ -88,10 +94,10 @@
 00540EB7    push 0x81B034
 00540EBC    mov edx, 0x801800
 00540EC1    mov ecx, 0x81B06C
-00540EC6    call 0x0063B870
+00540EC6    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: numEntries == 3 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Nocturne.cpp | String: Druid_SetupGenerate ]
 00540ECB    add esp, 0x0C
 00540ECE    call 0x0063BC30
 00540ED3    test al, al
-00540ED5    jz 0x00540ED8
+00540ED5    jz 0x00540ED8                                   ; => [ Call: sub_63bc30 ]
 00540ED7    int3
-00540ED8    call 0x0063BB00
+00540ED8    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

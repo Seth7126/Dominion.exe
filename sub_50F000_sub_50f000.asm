@@ -1,17 +1,23 @@
+// ============================================================
+// 函数名称: sub_50f000
+// 起始地址: 0x50f000
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050F000    dword 51EC8B55
 0050F004    push esi
 0050F005    mov ecx, 0x9CC
 0050F00A    call 0x00516F30
 0050F00F    lea edx, ss:[ebp-0x04]
 0050F012    mov ecx, eax
-0050F014    call 0x0050AF00
+0050F014    call 0x0050AF00                                 ; => [ Call: sub_516f30 | Call: sub_50af00 ]
 0050F019    mov edx, dword ptr ss:[ebp-0x04]
 0050F01C    mov ecx, 0xCC8DE0
 0050F021    push eax
 0050F022    call 0x0050AF60
 0050F027    add esp, 0x04
 0050F02A    mov ecx, eax
-0050F02C    call 0x00516F30
+0050F02C    call 0x00516F30                                 ; => [ Call: sub_50af60 | Call: sub_516f30 | Data: data_cc8de0 ]
 0050F031    mov esi, eax
 0050F033    xor ecx, ecx
 0050F035    lea edx, ds:[esi+0x0C]
@@ -34,10 +40,10 @@
 0050F066    push 0x80CD80
 0050F06B    mov edx, 0x801800
 0050F070    mov ecx, 0x801AA4
-0050F075    call 0x0063B870
+0050F075    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: CampaignPieceDefGetFn | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 0050F07A    add esp, 0x0C
 0050F07D    call 0x0063BC30
 0050F082    test al, al
-0050F084    jz 0x0050F087
+0050F084    jz 0x0050F087                                   ; => [ Call: sub_63bc30 ]
 0050F086    int3
-0050F087    call 0x0063BB00
+0050F087    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

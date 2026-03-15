@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5661e0
+// 起始地址: 0x5661e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005661E0    push ebp
 005661E1    mov ebp, esp
 005661E3    sub esp, 0x08
@@ -10,7 +16,7 @@
 005661F0    cmp dword ptr ds:[ebx+0xC80], edi
 005661F6    jle 0x0056622F
 005661F8    mov esi, dword ptr ds:[ebx+edi*4]
-005661FB    call 0x00573400
+005661FB    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00566200    push 0x00
 00566202    push 0x00
 00566204    push dword ptr ss:[ebp+0x10]
@@ -23,7 +29,7 @@
 00566217    push dword ptr ss:[ebp+0x08]
 0056621A    push dword ptr ss:[ebp-0x04]
 0056621D    push esi
-0056621E    call 0x005820C0
+0056621E    call 0x005820C0                                 ; => [ Call: sub_5820c0 | Call: nullptr ]
 00566223    inc edi
 00566224    add esp, 0x28
 00566227    cmp edi, dword ptr ds:[ebx+0xC80]

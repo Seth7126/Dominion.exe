@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_4a8c30
+// 起始地址: 0x4a8c30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004A8C30    xor edx, edx
 004A8C32    mov ecx, 0x880C08
-004A8C37    call 0x0069C4D0
-004A8C3C    mov dword ptr ds:[0x01777534], eax
+004A8C37    call 0x0069C4D0                                 ; => [ Call: sub_69c4d0 | String: top ]
+004A8C3C    mov dword ptr ds:[0x01777534], eax              ; => [ Data: data_1777534 ]
 004A8C41    ret

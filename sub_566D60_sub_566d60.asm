@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_566d60
+// 起始地址: 0x566d60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00566D60    push ebp
 00566D61    mov ebp, esp
 00566D63    and esp, 0xFFFFFFF8
@@ -5,7 +11,7 @@
 00566D67    push ebx
 00566D68    mov bl, cl
 00566D6A    call 0x00573400
-00566D6F    mov eax, dword ptr ds:[eax+0x04]
+00566D6F    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00566D72    mov edx, dword ptr ds:[eax+0x1504]
 00566D78    cmp edx, 0x03
 00566D7B    jz 0x00566DB7
@@ -30,7 +36,7 @@
 00566DA5    push 0xFFFFFFFF
 00566DA7    setz cl
 00566DAA    mov edx, 0x07
-00566DAF    call 0x0061B1B0
+00566DAF    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 00566DB4    add esp, 0x2C
 00566DB7    pop ebx
 00566DB8    mov esp, ebp

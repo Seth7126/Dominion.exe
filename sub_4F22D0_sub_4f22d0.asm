@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4f22d0
+// 起始地址: 0x4f22d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F22D0    push ebp
 004F22D1    mov ebp, esp
 004F22D3    mov eax, 0x5230
-004F22D8    call 0x00761E50
+004F22D8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004F22DD    mov eax, dword ptr ds:[0x008C4040]
 004F22E2    xor eax, ebp
-004F22E4    mov dword ptr ss:[ebp-0x08], eax
+004F22E4    mov dword ptr ss:[ebp-0x08], eax                ; => [ Data: __security_cookie ]
 004F22E7    push ebx
 004F22E8    push esi
 004F22E9    push edi
@@ -13,7 +19,7 @@
 004F22EE    mov edx, dword ptr ss:[ebp+0x08]
 004F22F1    lea ecx, ss:[ebp-0x37EC]
 004F22F7    mov dword ptr ss:[ebp-0x37F0], edi
-004F22FD    call 0x005939A0
+004F22FD    call 0x005939A0                                 ; => [ Call: sub_5939a0 ]
 004F2302    mov edx, dword ptr ss:[ebp-0x37AC]
 004F2308    test edx, edx
 004F230A    jnz 0x004F233F
@@ -25,7 +31,7 @@
 004F2323    push 0x808C70
 004F2328    push 0x11BE
 004F232D    push 0x8088A8
-004F2332    call 0x0063B870
+004F2332    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | String: FillNode | Data: data_801800 | Call: sub_4f7f30 | String: Got no hint!\n | String: Halt ]
 004F2337    add esp, 0x0C
 004F233A    jmp 0x004F27CA
 004F233F    mov ecx, dword ptr ss:[ebp-0x379C]
@@ -35,7 +41,7 @@
 004F2357    mov dword ptr ds:[ebx+0xC0], edx
 004F235D    mov eax, dword ptr ds:[edi+0x19E4]
 004F2363    mov dword ptr ds:[ebx+0xC8], eax
-004F2369    mov eax, dword ptr ds:[ecx*4+0x1779F8C]
+004F2369    mov eax, dword ptr ds:[ecx*4+0x1779F8C]         ; => [ Data: data_1779f8c ]
 004F2370    test eax, eax
 004F2372    jz 0x004F237C
 004F2374    mov eax, dword ptr ds:[eax+0xC8]
@@ -58,7 +64,7 @@
 004F23C7    sar eax, 0x02
 004F23CA    lea ecx, ss:[ebp-0x377C]
 004F23D0    push eax
-004F23D1    call 0x004F5990
+004F23D1    call 0x004F5990                                 ; => [ Call: sub_4f5990 ]
 004F23D6    add esp, 0x08
 004F23D9    cmp dword ptr ss:[ebp-0x3790], 0x01
 004F23E0    jnz 0x004F24F1
@@ -73,12 +79,12 @@
 004F2401    push 0x8088A8
 004F2406    mov edx, 0x801800
 004F240B    mov ecx, 0x808B7C
-004F2410    call 0x0063B870
+004F2410    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: FillNodeUnique | String: yld.minChoices == 0 || yld.minChoices == 1 ]
 004F2415    add esp, 0x0C
 004F2418    jmp 0x004F27CA
 004F241D    lea edx, ss:[ebp-0x37EC]
 004F2423    lea ecx, ss:[ebp-0x1DBC]
-004F2429    call 0x005939A0
+004F2429    call 0x005939A0                                 ; => [ Call: sub_5939a0 ]
 004F242E    mov edx, dword ptr ss:[ebp-0x3780]
 004F2434    xor eax, eax
 004F2436    mov dword ptr ss:[ebp-0x1D50], 0x01
@@ -105,7 +111,7 @@
 004F248F    mov ecx, edi
 004F2491    lea eax, ss:[ebp-0x1DBC]
 004F2497    push eax
-004F2498    call 0x004EFCF0
+004F2498    call 0x004EFCF0                                 ; => [ Call: sub_4efcf0 ]
 004F249D    mov eax, dword ptr ss:[ebp-0x37F4]
 004F24A3    add esp, 0x04
 004F24A6    mov edx, dword ptr ss:[ebp-0x3780]
@@ -123,19 +129,19 @@
 004F24E2    push eax
 004F24E3    mov edx, ebx
 004F24E5    mov ecx, edi
-004F24E7    call 0x004EFCF0
+004F24E7    call 0x004EFCF0                                 ; => [ Call: sub_4efcf0 ]
 004F24EC    jmp 0x004F275E
 004F24F1    lea eax, ss:[ebp-0x37EC]
 004F24F7    mov edx, ebx
 004F24F9    push eax
 004F24FA    mov ecx, edi
-004F24FC    call 0x004F1230
+004F24FC    call 0x004F1230                                 ; => [ Call: sub_4f1230 ]
 004F2501    jmp 0x004F275E
 004F2506    push 0x320
 004F250B    lea eax, ss:[ebp-0x32C]
 004F2511    push 0x00
 004F2513    push eax
-004F2514    call 0x00761FC4
+004F2514    call 0x00761FC4                                 ; => [ Call: memset ]
 004F2519    add esp, 0x0C
 004F251C    lea eax, ss:[ebp-0x32C]
 004F2522    mov edx, ebx
@@ -146,7 +152,7 @@
 004F252F    push eax
 004F2530    lea eax, ss:[ebp-0x37EC]
 004F2536    push eax
-004F2537    call 0x004F14D0
+004F2537    call 0x004F14D0                                 ; => [ Call: sub_4f14d0 ]
 004F253C    add esp, 0x10
 004F253F    jmp 0x004F2761
 004F2544    cmp dword ptr ss:[ebp-0x3780], 0x01
@@ -156,13 +162,13 @@
 004F2557    push 0x8088A8
 004F255C    mov edx, 0x801800
 004F2561    mov ecx, 0x808C18
-004F2566    call 0x0063B870
+004F2566    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: yld.numChoices == 1 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: FillNodeWhere ]
 004F256B    add esp, 0x0C
 004F256E    jmp 0x004F27CA
 004F2573    mov ecx, 0x346
 004F2578    lea esi, ss:[ebp-0x37EC]
 004F257E    lea edi, ss:[ebp-0x4514]
-004F2584    rep movsd
+004F2584    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004F2586    xor esi, esi
 004F2588    cmp dword ptr ss:[ebp-0x2ADC], esi
 004F258E    jle 0x004F2761
@@ -174,7 +180,7 @@
 004F25AF    mov ecx, edi
 004F25B1    lea eax, ss:[ebp-0x4514]
 004F25B7    push eax
-004F25B8    call 0x004EFCF0
+004F25B8    call 0x004EFCF0                                 ; => [ Call: sub_4efcf0 ]
 004F25BD    inc esi
 004F25BE    add esp, 0x04
 004F25C1    cmp esi, dword ptr ss:[ebp-0x2ADC]
@@ -187,7 +193,7 @@
 004F25E1    push 0x8088A8
 004F25E6    mov edx, 0x801800
 004F25EB    mov ecx, 0x808C3C
-004F25F0    call 0x0063B870
+004F25F0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | Data: data_801800 | String: FillNodeOptions | String: yld.maxChoices < 32 ]
 004F25F5    add esp, 0x0C
 004F25F8    jmp 0x004F27CA
 004F25FD    push 0x00
@@ -196,14 +202,14 @@
 004F2607    push 0x00
 004F2609    push eax
 004F260A    mov ecx, edi
-004F260C    call 0x004F16B0
+004F260C    call 0x004F16B0                                 ; => [ Call: sub_4f16b0 ]
 004F2611    add esp, 0x0C
 004F2614    jmp 0x004F2761
 004F2619    mov eax, dword ptr ss:[ebp-0x3790]
 004F261F    lea esi, ss:[ebp-0x37EC]
 004F2625    mov ecx, 0x346
 004F262A    lea edi, ss:[ebp-0x522C]
-004F2630    rep movsd
+004F2630    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004F2632    mov esi, dword ptr ss:[ebp-0x378C]
 004F2638    cmp esi, eax
 004F263A    jnle 0x004F2761
@@ -215,7 +221,7 @@
 004F2657    push eax
 004F2658    mov edx, ebx
 004F265A    mov ecx, edi
-004F265C    call 0x004EFCF0
+004F265C    call 0x004EFCF0                                 ; => [ Call: sub_4efcf0 ]
 004F2661    mov eax, dword ptr ss:[ebp-0x3790]
 004F2667    add esp, 0x04
 004F266A    inc esi
@@ -232,7 +238,7 @@
 004F268D    push 0x8088A8
 004F2692    mov edx, 0x801800
 004F2697    mov ecx, 0x808B7C
-004F269C    call 0x0063B870
+004F269C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | String: FillNodeAbility | Data: data_801800 | String: yld.minChoices == 0 || yld.minChoices == 1 ]
 004F26A1    add esp, 0x0C
 004F26A4    jmp 0x004F27CA
 004F26A9    cmp dword ptr ss:[ebp-0x3790], 0x01
@@ -242,12 +248,12 @@
 004F26BC    push 0x8088A8
 004F26C1    mov edx, 0x801800
 004F26C6    mov ecx, 0x808BA8
-004F26CB    call 0x0063B870
+004F26CB    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | String: FillNodeAbility | Data: data_801800 | String: yld.maxChoices == 1 ]
 004F26D0    add esp, 0x0C
 004F26D3    jmp 0x004F27CA
 004F26D8    lea edx, ss:[ebp-0x37EC]
 004F26DE    lea ecx, ss:[ebp-0x2AD4]
-004F26E4    call 0x005939A0
+004F26E4    call 0x005939A0                                 ; => [ Call: sub_5939a0 ]
 004F26E9    xor esi, esi
 004F26EB    mov dword ptr ss:[ebp-0x2A68], 0x01
 004F26F5    cmp dword ptr ss:[ebp-0x3780], esi
@@ -259,7 +265,7 @@
 004F270F    mov ecx, edi
 004F2711    lea eax, ss:[ebp-0x2AD4]
 004F2717    push eax
-004F2718    call 0x004EFCF0
+004F2718    call 0x004EFCF0                                 ; => [ Call: sub_4efcf0 ]
 004F271D    inc esi
 004F271E    add esp, 0x04
 004F2721    cmp esi, dword ptr ss:[ebp-0x3780]
@@ -271,13 +277,13 @@
 004F2742    push eax
 004F2743    mov edx, ebx
 004F2745    mov ecx, edi
-004F2747    call 0x004EFCF0
+004F2747    call 0x004EFCF0                                 ; => [ Call: sub_4efcf0 ]
 004F274C    jmp 0x004F275E
 004F274E    lea eax, ss:[ebp-0x37EC]
 004F2754    mov edx, ebx
 004F2756    push eax
 004F2757    mov ecx, edi
-004F2759    call 0x004F1780
+004F2759    call 0x004F1780                                 ; => [ Call: sub_4f1780 ]
 004F275E    add esp, 0x04
 004F2761    cmp dword ptr ds:[ebx+0xD4], 0x00
 004F2768    jle 0x004F277B
@@ -286,7 +292,7 @@
 004F276E    pop esi
 004F276F    xor ecx, ebp
 004F2771    pop ebx
-004F2772    call 0x0075927A
+004F2772    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F2777    mov esp, ebp
 004F2779    pop ebp
 004F277A    ret
@@ -295,7 +301,7 @@
 004F2785    push 0x8088A8
 004F278A    mov edx, 0x801800
 004F278F    mov ecx, 0x808C94
-004F2794    call 0x0063B870
+004F2794    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | String: node->numEdges > 0 | Data: data_801800 | String: FillNode ]
 004F2799    add esp, 0x0C
 004F279C    jmp 0x004F27CA
 004F279E    push ecx
@@ -306,10 +312,10 @@
 004F27B3    push 0x8088A8
 004F27B8    mov edx, 0x801800
 004F27BD    mov ecx, 0x801AA4
-004F27C2    call 0x0063B870
+004F27C2    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp | String: FillNode | Data: data_801800 | String: Unknown choice type %d\n | Call: sub_4f7f30 | String: Halt ]
 004F27C7    add esp, 0x14
 004F27CA    call 0x0063BC30
 004F27CF    test al, al
-004F27D1    jz 0x004F27D4
+004F27D1    jz 0x004F27D4                                   ; => [ Call: sub_63bc30 ]
 004F27D3    int3
-004F27D4    call 0x0063BB00
+004F27D4    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

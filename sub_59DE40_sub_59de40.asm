@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_59de40
+// 起始地址: 0x59de40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0059DE40    cmp ecx, 0x08
 0059DE43    jnbe 0x0059DE7C
 0059DE45    jmp dword ptr ds:[ecx*4+0x59DEAC]
@@ -22,10 +28,10 @@
 0059DE86    push 0x82487C
 0059DE8B    mov edx, 0x801800
 0059DE90    mov ecx, 0x801AA4
-0059DE95    call 0x0063B870
+0059DE95    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomLog.cpp | Call: sub_63b870 | String: GameEndReasonLoc | Data: data_801800 | String: Halt ]
 0059DE9A    add esp, 0x0C
 0059DE9D    call 0x0063BC30
 0059DEA2    test al, al
-0059DEA4    jz 0x0059DEA7
+0059DEA4    jz 0x0059DEA7                                   ; => [ Call: sub_63bc30 ]
 0059DEA6    int3
-0059DEA7    jmp 0x0063BB00
+0059DEA7    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

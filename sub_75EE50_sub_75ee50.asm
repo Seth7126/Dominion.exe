@@ -1,22 +1,28 @@
+// ============================================================
+// 函数名称: sub_75ee50
+// 起始地址: 0x75ee50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075EE50    push esi
 0075EE51    mov esi, ecx
 0075EE53    lea ecx, ds:[esi+0x68]
-0075EE56    mov dword ptr ds:[esi], 0x77E9EC
-0075EE5C    call 0x007607A0
+0075EE56    mov dword ptr ds:[esi], 0x77E9EC                ; => [ Data: data_77e9ec ]
+0075EE5C    call 0x007607A0                                 ; => [ Call: sub_7607a0 ]
 0075EE61    lea ecx, ds:[esi+0x98]
-0075EE67    call 0x007607A0
+0075EE67    call 0x007607A0                                 ; => [ Call: sub_7607a0 ]
 0075EE6C    lea ecx, ds:[esi+0xC8]
-0075EE72    call 0x007607A0
+0075EE72    call 0x007607A0                                 ; => [ Call: sub_7607a0 ]
 0075EE77    lea ecx, ds:[esi+0xF8]
-0075EE7D    call 0x007607A0
+0075EE7D    call 0x007607A0                                 ; => [ Call: sub_7607a0 ]
 0075EE82    lea ecx, ds:[esi+0x128]
-0075EE88    call 0x007607A0
+0075EE88    call 0x007607A0                                 ; => [ Call: sub_7607a0 ]
 0075EE8D    mov dword ptr ds:[esi+0x08], 0x00
 0075EE94    xorps xmm0, xmm0
 0075EE97    mov dword ptr ds:[esi+0x10], 0x00
 0075EE9E    mov eax, esi
 0075EEA0    mov dword ptr ds:[esi+0x14], 0x00
-0075EEA7    mov dword ptr ds:[esi+0x18], 0x3F800000
+0075EEA7    mov dword ptr ds:[esi+0x18], 0x3F800000         ; => [ String: \x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f\x00\x00\x80\x3f | Call: __builtin_memcpy ]
 0075EEAE    mov dword ptr ds:[esi+0x1C], 0x3F800000
 0075EEB5    mov dword ptr ds:[esi+0x20], 0x3F800000
 0075EEBC    mov dword ptr ds:[esi+0x24], 0x3F800000
@@ -25,17 +31,17 @@
 0075EED1    mov dword ptr ds:[esi+0x30], 0x3F800000
 0075EED8    mov dword ptr ds:[esi+0x34], 0x3F800000
 0075EEDF    mov dword ptr ds:[esi+0x38], 0x3F800000
-0075EEE6    mov dword ptr ds:[esi+0x40], 0x472C4400
+0075EEE6    mov dword ptr ds:[esi+0x40], 0x472C4400         ; => [ Call: __builtin_memcpy | String: \x00\x44\x2c\x47\x00\x44\x2c\x47\x01\x00\x00\x00\x00\x00\x80\x3f\x00\x00\x80\x3f ]
 0075EEED    mov dword ptr ds:[esi+0x44], 0x472C4400
 0075EEF4    mov dword ptr ds:[esi+0x4C], 0x3F800000
-0075EEFB    movups xmmword ptr ds:[esi+0x58], xmm0
+0075EEFB    movups xmmword ptr ds:[esi+0x58], xmm0          ; => [ String: 0 | String: zx ]
 0075EEFF    mov dword ptr ds:[esi+0x17C], 0x00
-0075EF09    mov dword ptr ds:[esi+0x158], 0x00
+0075EF09    mov dword ptr ds:[esi+0x158], 0x00              ; => [ Call: __builtin_memset ]
 0075EF13    mov dword ptr ds:[esi+0x48], 0x01
 0075EF1A    mov dword ptr ds:[esi+0x180], 0xFFFFFFFF
 0075EF24    mov dword ptr ds:[esi+0x0C], 0x00
 0075EF2B    movsd qword ptr ds:[esi+0x1B8], xmm0
-0075EF33    mov dword ptr ds:[esi+0x184], 0x00
+0075EF33    mov dword ptr ds:[esi+0x184], 0x00              ; => [ Call: __builtin_memset ]
 0075EF3D    mov dword ptr ds:[esi+0x188], 0x00
 0075EF47    mov dword ptr ds:[esi+0x18C], 0x00
 0075EF51    mov dword ptr ds:[esi+0x190], 0x00

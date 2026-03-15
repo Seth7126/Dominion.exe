@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_52bf20
+// 起始地址: 0x52bf20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0052BF20    dword 83EC8B55
 0052BF24    in al, 0xF8
 0052BF26    mov eax, 0x25A4
-0052BF2B    call 0x00761E50
-0052BF30    mov eax, dword ptr ds:[0x008C4040]
+0052BF2B    call 0x00761E50                                 ; => [ Call: __chkstk ]
+0052BF30    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0052BF35    xor eax, esp
 0052BF37    mov dword ptr ss:[esp+0x25A0], eax
 0052BF3E    xor edx, edx
@@ -19,7 +25,7 @@
 0052BF5C    lea edi, ss:[esp+0x1924]
 0052BF63    mov ecx, 0x321
 0052BF68    lea eax, ss:[esp+0xC9C]
-0052BF6F    rep movsd
+0052BF6F    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_562100 | Call: sub_568780 ]
 0052BF71    add esp, 0x04
 0052BF74    mov edx, 0x01
 0052BF79    push 0x07
@@ -33,8 +39,8 @@
 0052BF93    lea edi, ss:[esp+0x10]
 0052BF97    mov esi, eax
 0052BF99    mov ecx, 0x321
-0052BF9E    rep movsd
-0052BFA0    call 0x00573400
+0052BF9E    rep movsd                                       ; => [ Call: __builtin_memcpy | Call: sub_56dc10 ]
+0052BFA0    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0052BFA5    mov esi, dword ptr ss:[esp+0xC90]
 0052BFAC    mov edx, dword ptr ds:[eax+0x0C]
 0052BFAF    mov ebx, dword ptr ds:[eax+0x04]
@@ -55,14 +61,14 @@
 0052BFDA    call 0x00590DE0
 0052BFDF    add esp, 0x10
 0052BFE2    mov edx, 0xC13
-0052BFE7    call 0x0052BE60
+0052BFE7    call 0x0052BE60                                 ; => [ Call: sub_590de0 | Call: sub_52be60 ]
 0052BFEC    mov ecx, dword ptr ss:[esp+0x25B0]
 0052BFF3    add esp, 0x04
 0052BFF6    pop edi
 0052BFF7    pop esi
 0052BFF8    pop ebx
 0052BFF9    xor ecx, esp
-0052BFFB    call 0x0075927A
+0052BFFB    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0052C000    mov esp, ebp
 0052C002    pop ebp
 0052C003    ret

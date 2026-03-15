@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5862a0
+// 起始地址: 0x5862a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005862A0    push ebp
 005862A1    mov ebp, esp
 005862A3    push ebx
@@ -12,7 +18,7 @@
 005862B5    mov dword ptr ss:[ebp+0x08], eax
 005862B8    cmp eax, 0x320
 005862BD    jb 0x005862C7
-005862BF    call 0x00591930
+005862BF    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005862C4    mov eax, dword ptr ss:[ebp+0x08]
 005862C7    imul ecx, eax, 0x64
 005862CA    add ecx, 0x1A6C
@@ -27,7 +33,7 @@
 005862E4    mov dword ptr ss:[ebp+0x08], eax
 005862E7    cmp eax, 0x320
 005862EC    jb 0x005862F6
-005862EE    call 0x00591930
+005862EE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005862F3    mov eax, dword ptr ss:[ebp+0x08]
 005862F6    imul ecx, eax, 0x64
 005862F9    add ecx, 0x1A6C
@@ -47,4 +53,4 @@
 0058631B    pop esi
 0058631C    pop ebx
 0058631D    pop ebp
-0058631E    ret
+0058631E    ret                                             ; => [ Call: nullptr | Call: sub_578d90 ]

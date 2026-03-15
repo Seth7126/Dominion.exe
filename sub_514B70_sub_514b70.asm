@@ -1,4 +1,10 @@
-00514B70    dword A788158B
+// ============================================================
+// 函数名称: sub_514b70
+// 起始地址: 0x514b70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00514B70    dword A788158B                                  ; => [ Data: data_cca788 ]
 00514B74    int3
 00514B75    add byte ptr ds:[esi+0x57], dl
 00514B78    test edx, edx
@@ -8,7 +14,7 @@
 00514B87    sar ecx, 0x04
 00514B8A    or ecx, edx
 00514B8C    and ecx, dword ptr ds:[0x01597E10]
-00514B92    mov eax, dword ptr ds:[eax+ecx*4]
+00514B92    mov eax, dword ptr ds:[eax+ecx*4]               ; => [ Data: data_1597e0c | Data: data_1597e10 ]
 00514B95    mov ecx, eax
 00514B97    test ecx, ecx
 00514B99    jz 0x00514BD4
@@ -77,7 +83,7 @@
 00514C24    test ecx, ecx
 00514C26    jz 0x00514C3E
 00514C28    mov edx, dword ptr ds:[ecx]
-00514C2A    xor eax, eax
+00514C2A    xor eax, eax                                    ; => [ Call: nullptr ]
 00514C2C    mov ecx, dword ptr ds:[ecx+0x04]
 00514C2F    test ecx, ecx
 00514C31    jle 0x00514C3E

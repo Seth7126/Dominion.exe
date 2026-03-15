@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_75f7d0
+// 起始地址: 0x75f7d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0075F7D0    push ebp
 0075F7D1    mov ebp, esp
 0075F7D3    sub esp, 0x08
@@ -7,10 +13,10 @@
 0075F7DB    mov edi, ecx
 0075F7DD    mov dword ptr ss:[ebp-0x08], esi
 0075F7E0    mov dword ptr ss:[ebp-0x04], 0x00
-0075F7E7    call 0x0075AE50
+0075F7E7    call 0x0075AE50                                 ; => [ Call: sub_75ae50 ]
 0075F7EC    push esi
 0075F7ED    mov ecx, edi
-0075F7EF    call 0x00761E10
+0075F7EF    call 0x00761E10                                 ; => [ Call: sub_761e10 ]
 0075F7F4    test eax, eax
 0075F7F6    lea esi, ss:[ebp-0x08]
 0075F7F9    cmovnz esi, eax
@@ -21,7 +27,7 @@
 0075F803    mov bl, byte ptr ss:[ebp+0x0C]
 0075F806    push eax
 0075F807    mov ecx, edi
-0075F809    call 0x0075FA60
+0075F809    call 0x0075FA60                                 ; => [ Call: sub_75fa60 ]
 0075F80E    cmp eax, 0xFFFFFFFF
 0075F811    jz 0x0075F825
 0075F813    mov eax, dword ptr ds:[edi+eax*4+0x50]
@@ -41,4 +47,4 @@
 0075F838    pop esi
 0075F839    mov esp, ebp
 0075F83B    pop ebp
-0075F83C    ret 0x08
+0075F83C    ret 0x08                                        ; => [ Call: sub_75ec70 ]

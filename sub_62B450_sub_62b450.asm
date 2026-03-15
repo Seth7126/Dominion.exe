@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_62b450
+// 起始地址: 0x62b450
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0062B450    push ebp
 0062B451    mov ebp, esp
 0062B453    sub esp, 0x0C
@@ -26,7 +32,7 @@
 0062B491    test eax, eax
 0062B493    js 0x0062B4AB
 0062B495    cmp eax, ecx
-0062B497    jnl 0x0062B4AB
+0062B497    jnl 0x0062B4AB                                  ; => [ Call: sub_571770 ]
 0062B499    imul ecx, eax, 0x698
 0062B49F    mov eax, dword ptr ss:[ebp-0x08]
 0062B4A2    mov eax, dword ptr ds:[ecx+eax*1+0x8C]

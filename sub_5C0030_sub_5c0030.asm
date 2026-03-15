@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5c0030
+// 起始地址: 0x5c0030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005C0030    push ebx
 005C0031    mov ebx, esp
 005C0033    sub esp, 0x08
@@ -83,7 +89,7 @@
 005C0107    movups xmm0, xmmword ptr ds:[edx+eax*4]
 005C010B    addps xmm2, xmm0
 005C010E    movaps xmm1, xmm2
-005C0111    xor eax, eax
+005C0111    xor eax, eax                                    ; => [ Call: nullptr ]
 005C0113    movhlps xmm1, xmm2
 005C0116    addps xmm1, xmm2
 005C0119    movaps xmm0, xmm1

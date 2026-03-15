@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7364d0
+// 起始地址: 0x7364d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007364D0    push ebp
 007364D1    mov ebp, esp
 007364D3    sub esp, 0x0C
@@ -8,7 +14,7 @@
 007364DE    push edi
 007364DF    call 0x006A9450
 007364E4    mov ebx, dword ptr ss:[ebp+0x0C]
-007364E7    mov ecx, eax
+007364E7    mov ecx, eax                                    ; => [ Call: sub_6a9450 ]
 007364E9    mov dword ptr ss:[ebp-0x08], ecx
 007364EC    cmp ebx, dword ptr ss:[ebp+0x14]
 007364EF    jnl 0x0073652F
@@ -27,7 +33,7 @@
 00736510    call 0x006A97A0
 00736515    shr eax, 0x18
 00736518    cmp al, 0x01
-0073651A    jnbe 0x00736538
+0073651A    jnbe 0x00736538                                 ; => [ Call: sub_6a97a0 ]
 0073651C    mov ecx, dword ptr ss:[ebp-0x08]
 0073651F    inc esi
 00736520    mov eax, dword ptr ss:[ebp+0x10]

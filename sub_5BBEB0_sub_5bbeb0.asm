@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5bbeb0
+// 起始地址: 0x5bbeb0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005BBEB0    push ebp
 005BBEB1    mov ebp, esp
 005BBEB3    push ecx
@@ -8,7 +14,7 @@
 005BBEBC    push edi
 005BBEBD    mov edi, ecx
 005BBEBF    mov esi, ebx
-005BBEC1    movups xmmword ptr ds:[edi], xmm0
+005BBEC1    movups xmmword ptr ds:[edi], xmm0               ; => [ Call: __builtin_memset ]
 005BBEC4    mov dword ptr ds:[edi+0x10], 0x00
 005BBECB    lea ecx, ds:[esi+0x01]
 005BBECE    mov dword ptr ds:[edi+0x14], 0x00
@@ -26,7 +32,7 @@
 005BBEF1    push edi
 005BBEF2    mov dword ptr ds:[edi+0x10], esi
 005BBEF5    mov dword ptr ds:[edi+0x14], 0x0F
-005BBEFC    call 0x00761FBE
+005BBEFC    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BBF01    mov byte ptr ds:[esi+edi*1], 0x00
 005BBF05    add esp, 0x0C
 005BBF08    mov eax, edi
@@ -44,7 +50,7 @@
 005BBF25    mov ebx, 0x7FFFFFFF
 005BBF2A    add ecx, 0x23
 005BBF2D    push ecx
-005BBF2E    call 0x00759772
+005BBF2E    call 0x00759772                                 ; => [ Call: operator new ]
 005BBF33    mov ecx, eax
 005BBF35    add esp, 0x04
 005BBF38    test ecx, ecx
@@ -67,7 +73,7 @@
 005BBF66    jmp 0x005BBF2D
 005BBF68    call dword ptr ds:[0x007755F4]
 005BBF6E    push eax
-005BBF6F    call 0x00759772
+005BBF6F    call 0x00759772                                 ; => [ Call: operator new ]
 005BBF74    add esp, 0x04
 005BBF77    push esi
 005BBF78    push dword ptr ss:[ebp+0x08]
@@ -76,7 +82,7 @@
 005BBF7F    mov dword ptr ds:[edi], eax
 005BBF81    mov dword ptr ds:[edi+0x10], esi
 005BBF84    mov dword ptr ds:[edi+0x14], ebx
-005BBF87    call 0x00761FBE
+005BBF87    call 0x00761FBE                                 ; => [ Call: memcpy ]
 005BBF8C    mov eax, dword ptr ss:[ebp-0x04]
 005BBF8F    add esp, 0x0C
 005BBF92    mov byte ptr ds:[eax+esi*1], 0x00
@@ -87,5 +93,5 @@
 005BBF9B    mov esp, ebp
 005BBF9D    pop ebp
 005BBF9E    ret 0x04
-005BBFA1    call 0x005B0860
-005BBFA6    call 0x004F7EE0
+005BBFA1    call 0x005B0860                                 ; => [ Call: sub_5b0860 ]
+005BBFA6    call 0x004F7EE0                                 ; => [ Call: sub_4f7ee0 ]

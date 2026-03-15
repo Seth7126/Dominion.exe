@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_511a60
+// 起始地址: 0x511a60
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00511A60    push ebp
 00511A61    mov ebp, esp
 00511A63    sub esp, 0x19C
-00511A69    mov eax, dword ptr ds:[0x008C4040]
+00511A69    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00511A6E    xor eax, ebp
 00511A70    mov dword ptr ss:[ebp-0x04], eax
 00511A73    mov eax, dword ptr ds:[0x01597DE8]
@@ -12,7 +18,7 @@
 00511A85    push ebx
 00511A86    push esi
 00511A87    push edi
-00511A88    mov eax, dword ptr ds:[eax+edx*4]
+00511A88    mov eax, dword ptr ds:[eax+edx*4]               ; => [ Data: data_1597dec | Data: data_1597de8 ]
 00511A8B    test eax, eax
 00511A8D    jz 0x00511A9B
 00511A8F    nop
@@ -27,7 +33,7 @@
 00511A9F    pop ebx
 00511AA0    mov ecx, dword ptr ss:[ebp-0x04]
 00511AA3    xor ecx, ebp
-00511AA5    call 0x0075927A
+00511AA5    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00511AAA    mov esp, ebp
 00511AAC    pop ebp
 00511AAD    ret
@@ -39,7 +45,7 @@
 00511AB9    xor esi, esi
 00511ABB    xor edi, edi
 00511ABD    cmp dword ptr ds:[0x00CCB414], esi
-00511AC3    jle 0x00511A9B
+00511AC3    jle 0x00511A9B                                  ; => [ Data: data_ccb414 ]
 00511AC5    nop word ptr ds:[eax+eax*1], ax
 00511AD0    mov ecx, dword ptr ds:[esi*4+0xCCA794]
 00511AD7    mov edx, 0x17
@@ -47,7 +53,7 @@
 00511AE1    mov ecx, dword ptr ds:[eax+0x9C]
 00511AE7    xor eax, eax
 00511AE9    and ecx, 0x800
-00511AEF    or eax, ecx
+00511AEF    or eax, ecx                                     ; => [ Call: sub_571b30 | Data: data_cca794 ]
 00511AF1    jnz 0x00511B76
 00511AF7    mov ecx, dword ptr ds:[esi*4+0xCCA794]
 00511AFE    lea edx, ds:[eax+0x17]
@@ -55,9 +61,9 @@
 00511B06    mov ecx, dword ptr ds:[eax+0x9C]
 00511B0C    xor eax, eax
 00511B0E    and ecx, 0x40
-00511B11    or eax, ecx
+00511B11    or eax, ecx                                     ; => [ Call: sub_571b30 | Data: data_cca794 ]
 00511B13    jnz 0x00511B76
-00511B15    mov edx, dword ptr ds:[esi*4+0xCCA794]
+00511B15    mov edx, dword ptr ds:[esi*4+0xCCA794]          ; => [ Data: data_cca794 ]
 00511B1C    lea ecx, ds:[ebx+0x04]
 00511B1F    nop
 00511B20    cmp dword ptr ds:[ecx], edx
@@ -90,25 +96,25 @@
 00511B75    inc edi
 00511B76    inc esi
 00511B77    cmp esi, dword ptr ds:[0x00CCB414]
-00511B7D    jl 0x00511AD0
+00511B7D    jl 0x00511AD0                                   ; => [ Data: data_ccb414 ]
 00511B83    test edi, edi
 00511B85    jz 0x00511A9B
 00511B8B    push edi
 00511B8C    lea edx, ss:[ebp-0x198]
 00511B92    mov ecx, 0xCC8DE0
-00511B97    call 0x0051E050
+00511B97    call 0x0051E050                                 ; => [ Call: sub_51e050 | Data: data_cc8de0 ]
 00511B9C    add esp, 0x04
 00511B9F    mov esi, eax
 00511BA1    mov edx, esi
 00511BA3    mov ecx, 0xCCA794
-00511BA8    call 0x0058FFD0
+00511BA8    call 0x0058FFD0                                 ; => [ Data: data_cca794 | Call: sub_58ffd0 ]
 00511BAD    mov ecx, dword ptr ss:[ebp-0x04]
 00511BB0    mov eax, esi
 00511BB2    pop edi
 00511BB3    pop esi
 00511BB4    xor ecx, ebp
 00511BB6    pop ebx
-00511BB7    call 0x0075927A
+00511BB7    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00511BBC    mov esp, ebp
 00511BBE    pop ebp
 00511BBF    ret

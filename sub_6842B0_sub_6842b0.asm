@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6842b0
+// 起始地址: 0x6842b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006842B0    push ebp
 006842B1    mov ebp, esp
 006842B3    push ecx
@@ -29,9 +35,9 @@
 006842F6    cmp dword ptr ds:[eax+0x10], 0x00
 006842FA    jz 0x006845CE
 00684300    test byte ptr ds:[eax+0x10], 0x01
-00684304    xorps xmm2, xmm2
+00684304    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 00684307    movss xmm0, dword ptr ds:[0x00890E18]
-0068430F    xorps xmm7, xmm7
+0068430F    xorps xmm7, xmm7                                ; => [ String: 0 | String: zx ]
 00684312    movss dword ptr ss:[ebp+0x0C], xmm0
 00684317    movss dword ptr ss:[ebp-0x04], xmm2
 0068431C    movss dword ptr ss:[ebp+0x08], xmm0

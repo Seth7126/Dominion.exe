@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_760d40
+// 起始地址: 0x760d40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00760D40    push ebp
 00760D41    mov ebp, esp
 00760D43    sub esp, 0xCC
-00760D49    mov eax, dword ptr ds:[0x008C4040]
+00760D49    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 00760D4E    xor eax, ebp
 00760D50    mov dword ptr ss:[ebp-0x04], eax
 00760D53    push ebx
@@ -12,13 +18,13 @@
 00760D5F    mov esi, ecx
 00760D61    cmp edi, 0x400
 00760D67    jb 0x00760D93
-00760D69    push 0x77EA10
+00760D69    push 0x77EA10                                   ; => [ String: aVoice < VOICE_COUNT ]
 00760D6E    push 0x6A
-00760D70    push 0x77EA28
+00760D70    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00760D75    lea eax, ss:[ebp-0xCC]
 00760D7B    push 0x77E920
 00760D80    push eax
-00760D81    call 0x0063BB20
+00760D81    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00760D86    add esp, 0x14
 00760D89    lea eax, ss:[ebp-0xCC]
 00760D8F    push eax
@@ -26,13 +32,13 @@
 00760D92    int3
 00760D93    cmp byte ptr ds:[esi+0x08], 0x00
 00760D97    jnz 0x00760DC3
-00760D99    push 0x77E9B8
+00760D99    push 0x77E9B8                                   ; => [ String: mInsideAudioThreadMutex ]
 00760D9E    push 0x6B
-00760DA0    push 0x77EA28
+00760DA0    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00760DA5    lea eax, ss:[ebp-0xCC]
 00760DAB    push 0x77E920
 00760DB0    push eax
-00760DB1    call 0x0063BB20
+00760DB1    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00760DB6    add esp, 0x14
 00760DB9    lea eax, ss:[ebp-0xCC]
 00760DBF    push eax
@@ -46,13 +52,13 @@
 00760DDB    movss dword ptr ds:[eax+0x38], xmm0
 00760DE0    cmp edi, 0x400
 00760DE6    jb 0x00760E15
-00760DE8    push 0x77EA10
+00760DE8    push 0x77EA10                                   ; => [ String: aVoice < VOICE_COUNT ]
 00760DED    push 0x96
-00760DF2    push 0x77EA28
+00760DF2    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00760DF7    lea eax, ss:[ebp-0xCC]
 00760DFD    push 0x77E920
 00760E02    push eax
-00760E03    call 0x0063BB20
+00760E03    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00760E08    add esp, 0x14
 00760E0B    lea eax, ss:[ebp-0xCC]
 00760E11    push eax
@@ -60,13 +66,13 @@
 00760E14    int3
 00760E15    cmp byte ptr ds:[esi+0x08], 0x00
 00760E19    jnz 0x00760E48
-00760E1B    push 0x77E9B8
+00760E1B    push 0x77E9B8                                   ; => [ String: mInsideAudioThreadMutex ]
 00760E20    push 0x97
-00760E25    push 0x77EA28
+00760E25    push 0x77EA28                                   ; => [ String: D:\soloud\src\core\soloud_core_voiceops.cpp ]
 00760E2A    lea eax, ss:[ebp-0xCC]
 00760E30    push 0x77E920
 00760E35    push eax
-00760E36    call 0x0063BB20
+00760E36    call 0x0063BB20                                 ; => [ Call: sub_63bb20 | String: %s(%d): assert(%s) failed.\n ]
 00760E3B    add esp, 0x14
 00760E3E    lea eax, ss:[ebp-0xCC]
 00760E44    push eax
@@ -116,7 +122,7 @@
 00760F20    pop esi
 00760F21    xor ecx, ebp
 00760F23    pop ebx
-00760F24    call 0x0075927A
+00760F24    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00760F29    mov esp, ebp
 00760F2B    pop ebp
 00760F2C    ret 0x08

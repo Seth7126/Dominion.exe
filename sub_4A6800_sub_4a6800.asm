@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_4a6800
+// 起始地址: 0x4a6800
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004A6800    mov edx, 0x05
 004A6805    mov ecx, 0x85D3B8
-004A680A    call 0x0069F030
-004A680F    mov dword ptr ds:[0x01724A60], eax
+004A680A    call 0x0069F030                                 ; => [ String: sys/draw3d.material | Call: sub_69f030 ]
+004A680F    mov dword ptr ds:[0x01724A60], eax              ; => [ Data: data_1724a60 ]
 004A6814    ret

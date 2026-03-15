@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_63d540
+// 起始地址: 0x63d540
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0063D540    push ebp
 0063D541    mov ebp, esp
 0063D543    push ecx
@@ -10,7 +16,7 @@
 0063D54F    lea ebx, ds:[edi+0x11]
 0063D552    push esi
 0063D553    mov ecx, ebx
-0063D555    call 0x0064BFD0
+0063D555    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0063D55A    mov esi, eax
 0063D55C    inc dword ptr ds:[esi+0x0C]
 0063D55F    cmp ebx, 0x400
@@ -19,12 +25,12 @@
 0063D56B    jnz 0x0063D578
 0063D56D    mov ecx, ebx
 0063D56F    call 0x00687730
-0063D574    mov ecx, eax
+0063D574    mov ecx, eax                                    ; => [ Call: sub_687730 ]
 0063D576    jmp 0x0063D58A
 0063D578    cmp dword ptr ds:[esi], 0x00
 0063D57B    jnz 0x0063D584
 0063D57D    mov ecx, esi
-0063D57F    call 0x0064BE70
+0063D57F    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0063D584    mov ecx, dword ptr ds:[esi]
 0063D586    mov eax, dword ptr ds:[ecx]
 0063D588    mov dword ptr ds:[esi], eax
@@ -47,10 +53,10 @@
 0063D5B6    push 0x871D5C
 0063D5BB    mov edx, 0x801800
 0063D5C0    mov ecx, 0x871DE8
-0063D5C5    call 0x0063B870
+0063D5C5    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\xString.cpp | String: length > 0 | String: sXStringAllocBufferLength ]
 0063D5CA    add esp, 0x0C
 0063D5CD    call 0x0063BC30
 0063D5D2    test al, al
-0063D5D4    jz 0x0063D5D7
+0063D5D4    jz 0x0063D5D7                                   ; => [ Call: sub_63bc30 ]
 0063D5D6    int3
-0063D5D7    call 0x0063BB00
+0063D5D7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

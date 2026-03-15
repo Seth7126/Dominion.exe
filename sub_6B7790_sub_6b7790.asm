@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6b7790
+// 起始地址: 0x6b7790
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006B7790    push ebp
 006B7791    mov ebp, esp
 006B7793    sub esp, 0x4C
@@ -15,10 +21,10 @@
 006B77AF    cmp dword ptr ds:[ebx+0x08], 0x00
 006B77B3    mov dword ptr ss:[ebp-0x24], edx
 006B77B6    jz 0x006B77D1
-006B77B8    push 0x87CBF0
+006B77B8    push 0x87CBF0                                   ; => [ String: DrawParentedStringFancy4 ]
 006B77BD    push 0x7DB
-006B77C2    push 0x87CA3C
-006B77C7    mov ecx, 0x87CBD0
+006B77C2    push 0x87CA3C                                   ; => [ String: C:\x\ax2017\Engine\Font.cpp ]
+006B77C7    mov ecx, 0x87CBD0                               ; => [ String: defaultFancy->mImage == NULL ]
 006B77CC    jmp 0x006B7ABB
 006B77D1    mov esi, dword ptr ds:[ebx+0x10]
 006B77D4    test esi, esi
@@ -27,7 +33,7 @@
 006B77DB    mov eax, dword ptr ss:[ebp-0x10]
 006B77DE    xorps xmm7, xmm7
 006B77E1    movups xmm2, xmmword ptr ds:[edi]
-006B77E4    mov ecx, dword ptr ds:[0x00CF65B8]
+006B77E4    mov ecx, dword ptr ds:[0x00CF65B8]              ; => [ Data: data_cf65b8 ]
 006B77EA    movss xmm0, dword ptr ds:[eax+0x04]
 006B77EF    ucomiss xmm0, xmm7
 006B77F2    movups xmmword ptr ss:[ebp-0x34], xmm2
@@ -125,7 +131,7 @@
 006B797A    push eax
 006B797B    push ebx
 006B797C    movaps xmm1, xmm0
-006B797F    call 0x006B73C0
+006B797F    call 0x006B73C0                                 ; => [ Call: sub_6b73c0 ]
 006B7984    movss xmm2, dword ptr ds:[0x00890D84]
 006B798C    movaps xmm1, xmm0
 006B798F    movss xmm0, dword ptr ss:[ebp-0x08]
@@ -134,7 +140,7 @@
 006B799A    jbe 0x006B79BB
 006B799C    subss xmm0, xmm1
 006B79A0    mulss xmm0, xmm2
-006B79A4    call 0x004D5CB0
+006B79A4    call 0x004D5CB0                                 ; => [ Call: sub_4d5cb0 ]
 006B79A9    addss xmm0, dword ptr ss:[ebp-0x30]
 006B79AE    movss xmm2, dword ptr ds:[0x00890D84]
 006B79B6    movss dword ptr ss:[ebp-0x30], xmm0
@@ -177,7 +183,7 @@
 006B7A4B    push 0x00
 006B7A4D    push 0x00
 006B7A4F    push ebx
-006B7A50    call 0x006B73C0
+006B7A50    call 0x006B73C0                                 ; => [ Call: sub_6b73c0 ]
 006B7A55    movaps xmm1, xmm0
 006B7A58    add esp, 0x0C
 006B7A5B    movss xmm0, dword ptr ss:[ebp-0x08]
@@ -200,7 +206,7 @@
 006B7A90    sub esp, 0x10
 006B7A93    mov eax, esp
 006B7A95    movups xmmword ptr ds:[eax], xmm0
-006B7A98    call 0x006B6C50
+006B7A98    call 0x006B6C50                                 ; => [ Call: sub_6b6c50 ]
 006B7A9D    add esp, 0x28
 006B7AA0    pop edi
 006B7AA1    pop esi
@@ -208,15 +214,15 @@
 006B7AA3    mov esp, ebp
 006B7AA5    pop ebp
 006B7AA6    ret
-006B7AA7    push 0x86E3C4
+006B7AA7    push 0x86E3C4                                   ; => [ String: RectBottomRight ]
 006B7AAC    push 0x12D
-006B7AB1    push 0x801A00
-006B7AB6    mov ecx, 0x801A1C
+006B7AB1    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
+006B7AB6    mov ecx, 0x801A1C                               ; => [ String: RectIsNormalized(r) ]
 006B7ABB    mov edx, 0x801800
-006B7AC0    call 0x0063B870
+006B7AC0    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006B7AC5    add esp, 0x0C
 006B7AC8    call 0x0063BC30
 006B7ACD    test al, al
-006B7ACF    jz 0x006B7AD2
+006B7ACF    jz 0x006B7AD2                                   ; => [ Call: sub_63bc30 ]
 006B7AD1    int3
-006B7AD2    call 0x0063BB00
+006B7AD2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,11 +1,17 @@
+// ============================================================
+// 函数名称: sub_753020
+// 起始地址: 0x753020
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00753020    push ebx
 00753021    push esi
 00753022    mov esi, ecx
 00753024    push edi
 00753025    push dword ptr ds:[esi+0x6C]
 00753028    mov ebx, dword ptr ds:[esi+0x24]
-0075302B    call dword ptr ds:[0x00800B48]
-00753031    mov ecx, dword ptr ds:[0x0147DED8]
+0075302B    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
+00753031    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00753037    lea eax, ds:[ebx*4]
 0075303E    add esp, 0x04
 00753041    test ecx, ecx
@@ -13,11 +19,11 @@
 00753045    push 0x80
 0075304A    push 0x8904F0
 0075304F    push eax
-00753050    call ecx
+00753050    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\MeshAttachment.c ]
 00753052    add esp, 0x0C
 00753055    jmp 0x00753061
 00753057    push eax
-00753058    call dword ptr ds:[0x00800B4C]
+00753058    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0075305E    add esp, 0x04
 00753061    movss xmm1, dword ptr ds:[esi+0x4C]
 00753066    mov edi, eax

@@ -1,4 +1,10 @@
-00573400    mov eax, dword ptr fs:[0x0000002C]
+// ============================================================
+// 函数名称: sub_573400
+// 起始地址: 0x573400
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
+00573400    mov eax, dword ptr fs:[0x0000002C]              ; => [ Type: TEB | Field: ThreadLocalStoragePointer ]
 00573406    mov ecx, dword ptr ds:[eax]
 00573408    add ecx, 0x10
 0057340E    mov edx, dword ptr ds:[ecx+0xF000]
@@ -9,13 +15,13 @@
 00573422    push 0x81F4B8
 00573427    mov edx, 0x801800
 0057342C    mov ecx, 0x81F9F0
-00573431    call 0x0063B870
+00573431    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: DomGetContext | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp ]
 00573436    add esp, 0x0C
 00573439    call 0x0063BC30
 0057343E    test al, al
-00573440    jz 0x00573443
+00573440    jz 0x00573443                                   ; => [ Call: sub_63bc30 ]
 00573442    int3
-00573443    jmp 0x0063BB00
+00573443    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 00573448    mov eax, edx
 0057344A    shl eax, 0x04
 0057344D    sub eax, edx

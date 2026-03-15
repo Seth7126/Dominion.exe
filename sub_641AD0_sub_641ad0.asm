@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_641ad0
+// 起始地址: 0x641ad0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00641AD0    push ebp
 00641AD1    mov ebp, esp
 00641AD3    push ecx
@@ -138,10 +144,10 @@
 00641D0F    push 0x801A00
 00641D14    mov edx, 0x801800
 00641D19    mov ecx, 0x801A1C
-00641D1E    call 0x0063B870
+00641D1E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: RectBottomRight | String: C:\x\ax2017\Engine\Rect.cpp | String: RectIsNormalized(r) ]
 00641D23    add esp, 0x0C
 00641D26    call 0x0063BC30
 00641D2B    test al, al
-00641D2D    jz 0x00641D30
+00641D2D    jz 0x00641D30                                   ; => [ Call: sub_63bc30 ]
 00641D2F    int3
-00641D30    call 0x0063BB00
+00641D30    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

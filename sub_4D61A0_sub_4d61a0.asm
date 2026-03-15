@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_4d61a0
+// 起始地址: 0x4d61a0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D61A0    push ebp
 004D61A1    mov ebp, esp
 004D61A3    sub esp, 0x0C
-004D61A6    mov eax, dword ptr ds:[0x00CC8D5C]
+004D61A6    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004D61AB    mov dword ptr ss:[ebp-0x04], ecx
 004D61AE    mov dword ptr ss:[ebp-0x08], eax
 004D61B1    push ebx
@@ -24,7 +30,7 @@
 004D61E2    jnz 0x004D61D0
 004D61E4    mov esi, dword ptr ss:[ebp-0x04]
 004D61E7    lea ecx, ds:[esi+0x10]
-004D61EA    call 0x004AB0E0
+004D61EA    call 0x004AB0E0                                 ; => [ Call: Concurrency::details::_Micro_queue::_Pop_finalizer::~_Pop_finalizer ]
 004D61EF    mov edx, dword ptr ss:[ebp-0x08]
 004D61F2    movzx eax, word ptr ds:[esi+0x1328]
 004D61F9    pop edi
@@ -42,10 +48,10 @@
 004D621F    push 0x77EB50
 004D6224    mov edx, 0x801800
 004D6229    mov ecx, 0x77EB9C
-004D622E    call 0x0063B870
+004D622E    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp | Data: data_801800 | String: gClient | String: GetClient ]
 004D6233    add esp, 0x0C
 004D6236    call 0x0063BC30
 004D623B    test al, al
-004D623D    jz 0x004D6240
+004D623D    jz 0x004D6240                                   ; => [ Call: sub_63bc30 ]
 004D623F    int3
-004D6240    call 0x0063BB00
+004D6240    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

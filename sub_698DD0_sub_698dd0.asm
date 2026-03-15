@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_698dd0
+// 起始地址: 0x698dd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00698DD0    push ebp
 00698DD1    mov ebp, esp
 00698DD3    and esp, 0xFFFFFFF8
 00698DD6    sub esp, 0x3C
 00698DD9    mov eax, dword ptr ds:[0x008C4040]
 00698DDE    xor eax, esp
-00698DE0    mov dword ptr ss:[esp+0x38], eax
+00698DE0    mov dword ptr ss:[esp+0x38], eax                ; => [ Data: __security_cookie ]
 00698DE4    push ebx
 00698DE5    mov bl, byte ptr ss:[ebp+0x10]
 00698DE8    push esi
@@ -42,9 +48,9 @@
 00698E51    jz 0x00698E6D
 00698E53    lea edx, ss:[esp+0x14]
 00698E57    mov ecx, ebx
-00698E59    call 0x006883D0
+00698E59    call 0x006883D0                                 ; => [ Call: sub_6883d0 ]
 00698E5E    lea ecx, ss:[esp+0x14]
-00698E62    call 0x00688660
+00698E62    call 0x00688660                                 ; => [ Call: sub_688660 ]
 00698E67    mov cl, byte ptr ds:[esi+0x02]
 00698E6A    mov al, byte ptr ds:[esi+0x03]
 00698E6D    mov edx, dword ptr ss:[esp+0x0C]
@@ -75,9 +81,9 @@
 00698EB6    test ecx, ecx
 00698EB8    jz 0x00698ECC
 00698EBA    lea edx, ss:[esp+0x14]
-00698EBE    call 0x006883D0
+00698EBE    call 0x006883D0                                 ; => [ Call: sub_6883d0 ]
 00698EC3    lea ecx, ss:[esp+0x14]
-00698EC7    call 0x00688660
+00698EC7    call 0x00688660                                 ; => [ Call: sub_688660 ]
 00698ECC    cmp byte ptr ds:[esi+0x03], 0x00
 00698ED0    jnz 0x00698ED6
 00698ED2    mov byte ptr ds:[esi+0x04], 0x00
@@ -87,7 +93,7 @@
 00698EDA    pop ebx
 00698EDB    mov ecx, dword ptr ss:[esp+0x38]
 00698EDF    xor ecx, esp
-00698EE1    call 0x0075927A
+00698EE1    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00698EE6    mov esp, ebp
 00698EE8    pop ebp
 00698EE9    ret
@@ -98,7 +104,7 @@
 00698EF5    pop esi
 00698EF6    pop ebx
 00698EF7    xor ecx, esp
-00698EF9    call 0x0075927A
+00698EF9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00698EFE    mov esp, ebp
 00698F00    pop ebp
 00698F01    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6936c0
+// 起始地址: 0x6936c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006936C0    push ebp
 006936C1    mov ebp, esp
 006936C3    sub esp, 0x0C
@@ -13,14 +19,14 @@
 006936DC    jz 0x00693825
 006936E2    sub eax, 0x01
 006936E5    jz 0x006936FB
-006936E7    push 0x878694
+006936E7    push 0x878694                                   ; => [ String: ControllerGetClickState ]
 006936EC    push 0x14C
-006936F1    mov ecx, 0x801AA4
+006936F1    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006936F6    jmp 0x00693884
 006936FB    mov edi, dword ptr ds:[ebx+0x08]
 006936FE    lea ecx, ds:[edx+0x08]
 00693701    mov dword ptr ss:[ebp-0x04], edi
-00693704    mov esi, 0x8787D4
+00693704    mov esi, 0x8787D4                               ; => [ String: $%&'()* ]
 00693709    nop dword ptr ds:[eax], eax
 00693710    mov edx, dword ptr ds:[esi]
 00693712    mov dword ptr ds:[ecx-0x08], edx
@@ -38,28 +44,28 @@
 0069373B    jnbe 0x00693853
 00693741    jmp dword ptr ds:[edx*4+0x6938A8]
 00693748    mov edx, 0x8785A0
-0069374D    mov dword ptr ds:[edi], edx
+0069374D    mov dword ptr ds:[edi], edx                     ; => [ String: lh oc touch a ]
 0069374F    mov edi, dword ptr ss:[ebp-0x04]
 00693752    jmp 0x006937F1
 00693757    dword 878590BA
 0069375B    add byte ptr ds:[ecx-0x38274E9], cl
 00693761    jmp 0x006937F1
 00693766    mov edx, 0x8785C0
-0069376B    mov dword ptr ds:[edi], edx
+0069376B    mov dword ptr ds:[edi], edx                     ; => [ String: lh oc touch trigger ]
 0069376D    mov edi, dword ptr ss:[ebp-0x04]
 00693770    jmp 0x006937F1
 00693772    dword 8785B0BA
 00693776    add byte ptr ds:[ecx-0x38274E9], cl
 0069377C    jmp 0x006937F1
 0069377E    mov edx, 0x8785E8
-00693783    mov dword ptr ds:[edi], edx
+00693783    mov dword ptr ds:[edi], edx                     ; => [ String: lh vive grip ]
 00693785    mov edi, dword ptr ss:[ebp-0x04]
 00693788    jmp 0x006937F1
 0069378A    dword 8785D4BA
 0069378E    add byte ptr ds:[ecx-0x38274E9], cl
 00693794    jmp 0x006937F1
 00693796    mov edx, 0x878608
-0069379B    mov dword ptr ds:[edi], edx
+0069379B    mov dword ptr ds:[edi], edx                     ; => [ String: lh vive menu ]
 0069379D    mov edi, dword ptr ss:[ebp-0x04]
 006937A0    jmp 0x006937F1
 006937A2    add eax, 0x8B9C
@@ -68,27 +74,27 @@
 006937AB    cmp edx, 0x06
 006937AE    jnbe 0x00693864
 006937B4    jmp dword ptr ds:[edx*4+0x6938C4]
-006937BB    dword 85F800C7
+006937BB    dword 85F800C7                                  ; => [ String: rh oc touch a ]
 006937BF    xchg dword ptr ds:[eax], eax
 006937C1    jmp 0x006937F1
-006937C3    mov dword ptr ds:[eax], 0x87862C
+006937C3    mov dword ptr ds:[eax], 0x87862C                ; => [ String: rh oc touch b ]
 006937C9    jmp 0x006937F1
-006937CB    dword 861800C7
+006937CB    dword 861800C7                                  ; => [ String: rh oc touch trigger ]
 006937CF    xchg dword ptr ds:[eax], eax
 006937D1    jmp 0x006937F1
-006937D3    mov dword ptr ds:[eax], 0x87864C
+006937D3    mov dword ptr ds:[eax], 0x87864C                ; => [ String: rh vive trigger ]
 006937D9    jmp 0x006937F1
-006937DB    dword 863C00C7
+006937DB    dword 863C00C7                                  ; => [ String: rh vive grip ]
 006937DF    xchg dword ptr ds:[eax], eax
 006937E1    jmp 0x006937F1
-006937E3    mov dword ptr ds:[eax], 0x87866C
+006937E3    mov dword ptr ds:[eax], 0x87866C                ; => [ String: rh vive trackpad ]
 006937E9    jmp 0x006937F1
-006937EB    dword 865C00C7
+006937EB    dword 865C00C7                                  ; => [ String: rh vive menu ]
 006937EF    xchg dword ptr ds:[eax], eax
 006937F1    add esi, 0x04
 006937F4    add ecx, 0x0C
 006937F7    cmp esi, 0x8787F0
-006937FD    jl 0x00693710
+006937FD    jl 0x00693710                                   ; => [ String: $%&'()* ]
 00693803    mov eax, dword ptr ss:[ebp-0x08]
 00693806    mov edx, 0x878764
 0069380B    add eax, 0x54
@@ -103,7 +109,7 @@
 00693820    pop ebx
 00693821    mov esp, ebp
 00693823    pop ebp
-00693824    ret
+00693824    ret                                             ; => [ Call: sub_693450 ]
 00693825    push edx
 00693826    push 0x15
 00693828    mov edx, 0x878780
@@ -114,7 +120,7 @@
 00693837    pop ebx
 00693838    mov esp, ebp
 0069383A    pop ebp
-0069383B    ret
+0069383B    ret                                             ; => [ Call: sub_693450 ]
 0069383C    push edx
 0069383D    push 0x0E
 0069383F    mov edx, 0x8787F0
@@ -125,24 +131,24 @@
 0069384E    pop ebx
 0069384F    mov esp, ebp
 00693851    pop ebp
-00693852    ret
-00693853    push 0x87857C
+00693852    ret                                             ; => [ String: $%&'()* | Call: sub_693450 ]
+00693853    push 0x87857C                                   ; => [ String: ClickStateAllocHand ]
 00693858    push 0xC7
-0069385D    mov ecx, 0x801AA4
+0069385D    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00693862    jmp 0x00693884
-00693864    push 0x87857C
+00693864    push 0x87857C                                   ; => [ String: ClickStateAllocHand ]
 00693869    push 0xD5
-0069386E    mov ecx, 0x801AA4
+0069386E    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00693873    jmp 0x00693884
-00693875    push 0x87857C
+00693875    push 0x87857C                                   ; => [ String: ClickStateAllocHand ]
 0069387A    push 0xB7
-0069387F    mov ecx, 0x87855C
+0069387F    mov ecx, 0x87855C                               ; => [ String: ButtonSourceIsHanded(source) ]
 00693884    push 0x878528
 00693889    mov edx, 0x801800
-0069388E    call 0x0063B870
+0069388E    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Controller.cpp ]
 00693893    add esp, 0x0C
 00693896    call 0x0063BC30
 0069389B    test al, al
-0069389D    jz 0x006938A0
+0069389D    jz 0x006938A0                                   ; => [ Call: sub_63bc30 ]
 0069389F    int3
-006938A0    call 0x0063BB00
+006938A0    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

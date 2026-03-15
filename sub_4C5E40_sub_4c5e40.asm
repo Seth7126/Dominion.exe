@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4c5e40
+// 起始地址: 0x4c5e40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004C5E40    push ebp
 004C5E41    mov ebp, esp
 004C5E43    push ecx
@@ -16,7 +22,7 @@
 004C5E59    cmp edx, 0x04
 004C5E5C    jnz 0x004C5EA1
 004C5E5E    mov ebx, dword ptr ds:[0x0077568C]
-004C5E64    xor esi, esi
+004C5E64    xor esi, esi                                    ; => [ Call: nullptr ]
 004C5E66    mov edi, dword ptr ds:[0x00775680]
 004C5E6C    nop dword ptr ds:[eax], eax
 004C5E70    movsx eax, byte ptr ds:[esi+ecx*1]

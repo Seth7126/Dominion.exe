@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_6ff830
+// 起始地址: 0x6ff830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006FF830    xor eax, eax
-006FF832    mov edx, 0x8D1028
+006FF832    mov edx, 0x8D1028                               ; => [ Data: data_8d1028 ]
 006FF837    cmp dword ptr ds:[edx], ecx
 006FF839    jz 0x006FF874
 006FF83B    inc eax
@@ -11,13 +17,13 @@
 006FF84E    push 0x88C504
 006FF853    mov edx, 0x801800
 006FF858    mov ecx, 0x801AA4
-006FF85D    call 0x0063B870
+006FF85D    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp | Data: data_801800 | String: Halt | String: GLGetTextureFormat ]
 006FF862    add esp, 0x0C
 006FF865    call 0x0063BC30
 006FF86A    test al, al
-006FF86C    jz 0x006FF86F
+006FF86C    jz 0x006FF86F                                   ; => [ Call: sub_63bc30 ]
 006FF86E    int3
-006FF86F    jmp 0x0063BB00
+006FF86F    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 006FF874    shl eax, 0x04
 006FF877    add eax, 0x8D1028
-006FF87C    ret
+006FF87C    ret                                             ; => [ Data: data_8d1028 ]

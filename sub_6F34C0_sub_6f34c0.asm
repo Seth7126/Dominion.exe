@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_6f34c0
+// 起始地址: 0x6f34c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006F34C0    push ecx
 006F34C1    push ebx
 006F34C2    mov bl, cl
-006F34C4    mov ecx, dword ptr ds:[0x0147DED0]
+006F34C4    mov ecx, dword ptr ds:[0x0147DED0]              ; => [ Data: data_147ded0 ]
 006F34CA    push esi
 006F34CB    test ecx, ecx
 006F34CD    jz 0x006F354B
 006F34CF    cmp dword ptr ds:[ecx+0x04], 0x19
-006F34D3    jnz 0x006F354B
+006F34D3    jnz 0x006F354B                                  ; => [ Call: sub_5af880 ]
 006F34D5    call 0x005AF880
 006F34DA    test eax, eax
 006F34DC    jz 0x006F354B
@@ -18,20 +24,20 @@
 006F34F0    push 0x188
 006F34F5    push eax
 006F34F6    call dword ptr ds:[0x00775308]
-006F34FC    mov esi, eax
+006F34FC    mov esi, eax                                    ; => [ Data: data_147d470 | Type: LRESULT ]
 006F34FE    cmp esi, 0xFFFFFFFF
 006F3501    jz 0x006F354B
 006F3503    mov ecx, esi
 006F3505    call 0x006EF080
-006F350A    inc eax
+006F350A    inc eax                                         ; => [ Call: sub_6ef080 ]
 006F350B    test eax, eax
 006F350D    jle 0x006F3520
-006F350F    lea ecx, ds:[esi*8+0x147D4B8]
+006F350F    lea ecx, ds:[esi*8+0x147D4B8]                   ; => [ Data: data_147d4b8 ]
 006F3516    mov byte ptr ds:[ecx], bl
 006F3518    lea ecx, ds:[ecx+0x08]
 006F351B    sub eax, 0x01
 006F351E    jnz 0x006F3516
-006F3520    mov eax, dword ptr ds:[0x0147DED0]
+006F3520    mov eax, dword ptr ds:[0x0147DED0]              ; => [ Data: data_147ded0 | Type: LRESULT ]
 006F3525    test eax, eax
 006F3527    jz 0x006F354B
 006F3529    mov eax, dword ptr ds:[eax+0x04]
@@ -39,7 +45,7 @@
 006F352F    jnz 0x006F353F
 006F3531    or edx, 0xFFFFFFFF
 006F3534    mov ecx, esi
-006F3536    call 0x006F0170
+006F3536    call 0x006F0170                                 ; => [ Call: sub_6f0170 ]
 006F353B    pop esi
 006F353C    pop ebx
 006F353D    pop ecx
@@ -47,7 +53,7 @@
 006F353F    cmp eax, 0x1B
 006F3542    jnz 0x006F354B
 006F3544    mov ecx, esi
-006F3546    call 0x006F0970
+006F3546    call 0x006F0970                                 ; => [ Call: sub_6f0970 ]
 006F354B    pop esi
 006F354C    pop ebx
 006F354D    pop ecx

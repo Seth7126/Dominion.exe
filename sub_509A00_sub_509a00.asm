@@ -1,19 +1,25 @@
+// ============================================================
+// 函数名称: sub_509a00
+// 起始地址: 0x509a00
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00509A00    dword 83EC8B55
 00509A04    in al, 0xF8
 00509A06    push ecx
 00509A07    push ebx
 00509A08    push esi
 00509A09    push edi
-00509A0A    call 0x00573400
+00509A0A    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00509A0F    cmp dword ptr ds:[eax], 0x05
 00509A12    jz 0x00509A2D
-00509A14    push 0x81EF48
+00509A14    push 0x81EF48                                   ; => [ String: DomAchievementDataGet ]
 00509A19    push 0x1CB1
-00509A1E    push 0x81EA70
-00509A23    mov ecx, 0x80AEA0
+00509A1E    push 0x81EA70                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
+00509A23    mov ecx, 0x80AEA0                               ; => [ String: c.contextType == CONTEXT_ACHIEVEMENT ]
 00509A28    jmp 0x00509AC4
 00509A2D    mov edi, dword ptr ds:[eax+0x18]
-00509A30    call 0x00509340
+00509A30    call 0x00509340                                 ; => [ Call: sub_509340 ]
 00509A35    mov esi, dword ptr ds:[edi+0x24]
 00509A38    xor ecx, ecx
 00509A3A    test esi, esi
@@ -39,10 +45,10 @@
 00509A63    mov esi, dword ptr ds:[eax]
 00509A65    call 0x00573400
 00509A6A    movzx esi, si
-00509A6D    mov ebx, dword ptr ds:[eax+0x04]
+00509A6D    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00509A70    cmp esi, 0x320
 00509A76    jb 0x00509A7D
-00509A78    call 0x00591930
+00509A78    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00509A7D    imul eax, esi, 0x64
 00509A80    mov ecx, dword ptr ds:[eax+ebx*1+0x1A4C]
 00509A87    cmp ecx, 0x106
@@ -66,15 +72,15 @@
 00509AAC    mov esp, ebp
 00509AAE    pop ebp
 00509AAF    ret
-00509AB0    push 0x80AF84
+00509AB0    push 0x80AF84                                   ; => [ String: Mine_Achievement_OnGain ]
 00509AB5    push 0x3A1
-00509ABA    push 0x80AE10
-00509ABF    mov ecx, 0x80AE74
+00509ABA    push 0x80AE10                                   ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomCards_Base.cpp ]
+00509ABF    mov ecx, 0x80AE74                               ; => [ String: numCards == 1 ]
 00509AC4    mov edx, 0x801800
-00509AC9    call 0x0063B870
+00509AC9    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00509ACE    add esp, 0x0C
 00509AD1    call 0x0063BC30
 00509AD6    test al, al
-00509AD8    jz 0x00509ADB
+00509AD8    jz 0x00509ADB                                   ; => [ Call: sub_63bc30 ]
 00509ADA    int3
-00509ADB    call 0x0063BB00
+00509ADB    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

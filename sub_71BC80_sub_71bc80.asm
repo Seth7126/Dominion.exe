@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_71bc80
+// 起始地址: 0x71bc80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0071BC80    push ebx
 0071BC81    mov ebx, esp
 0071BC83    sub esp, 0x08
@@ -8,11 +14,11 @@
 0071BC90    mov dword ptr ss:[esp+0x04], ebp
 0071BC94    mov ebp, esp
 0071BC96    sub esp, 0xB8
-0071BC9C    mov eax, dword ptr ds:[0x008C4040]
+0071BC9C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0071BCA1    xor eax, ebp
 0071BCA3    mov dword ptr ss:[ebp-0x04], eax
 0071BCA6    mov eax, dword ptr ds:[ebx+0x0C]
-0071BCA9    xorps xmm4, xmm4
+0071BCA9    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 0071BCAC    movss xmm2, dword ptr ds:[0x00890E18]
 0071BCB4    mov dword ptr ss:[ebp-0x98], ecx
 0071BCBA    mov ecx, dword ptr ds:[ebx+0x14]
@@ -34,7 +40,7 @@
 0071BCFC    test esi, esi
 0071BCFE    jle 0x0071BE22
 0071BD04    lea edx, ds:[eax+0x08]
-0071BD07    mov dword ptr ss:[ebp-0xB0], 0x00
+0071BD07    mov dword ptr ss:[ebp-0xB0], 0x00               ; => [ Call: nullptr ]
 0071BD11    lea eax, ds:[eax+ecx*4]
 0071BD14    mov dword ptr ss:[ebp-0xB4], edx
 0071BD1A    mov dword ptr ss:[ebp-0xA0], eax
@@ -47,7 +53,7 @@
 0071BD33    movaps xmm1, xmm2
 0071BD36    divss xmm1, xmm0
 0071BD3A    jmp 0x0071BD3F
-0071BD3C    movaps xmm1, xmm4
+0071BD3C    movaps xmm1, xmm4                               ; => [ String: 0 | String: zx ]
 0071BD3F    xor edx, edx
 0071BD41    cmp edi, 0x04
 0071BD44    jl 0x0071BDC2
@@ -134,11 +140,11 @@
 0071BE70    cmp dword ptr ss:[ebp-0x90], 0x00
 0071BE77    jle 0x0071CAC2
 0071BE7D    movss xmm5, dword ptr ds:[0x0089102C]
-0071BE85    xor esi, esi
+0071BE85    xor esi, esi                                    ; => [ Call: nullptr ]
 0071BE87    movsd xmm6, qword ptr ds:[0x00890E80]
 0071BE8F    mov dword ptr ss:[ebp-0x98], eax
 0071BE95    mov eax, dword ptr ss:[ebp-0x90]
-0071BE9B    mov dword ptr ss:[ebp-0xAC], esi
+0071BE9B    mov dword ptr ss:[ebp-0xAC], esi                ; => [ Call: nullptr ]
 0071BEA1    xor ecx, ecx
 0071BEA3    test edi, edi
 0071BEA5    jle 0x0071C052
@@ -178,12 +184,12 @@
 0071BF33    andnps xmm1, xmm0
 0071BF36    xorps xmm0, xmm0
 0071BF39    movsd xmm0, xmm2
-0071BF3D    mulps xmm1, xmm0
-0071BF40    movups xmm7, xmmword ptr ds:[0x008935B0]
+0071BF3D    mulps xmm1, xmm0                                ; => [ Data: data_8936b0 | String: 0 | String: zx | Data: data_8935b0 ]
+0071BF40    movups xmm7, xmmword ptr ds:[0x008935B0]        ; => [ Data: data_8935b0 ]
 0071BF47    cvtps2pd xmm0, xmm1
 0071BF4A    addpd xmm0, xmmword ptr ds:[0x00893620]
 0071BF52    cvttpd2dq xmm0, xmm0
-0071BF56    andps xmm0, xmmword ptr ds:[0x00891990]
+0071BF56    andps xmm0, xmmword ptr ds:[0x00891990]         ; => [ Data: data_891990 | Data: data_893620 ]
 0071BF5D    packuswb xmm0, xmm0
 0071BF61    packuswb xmm0, xmm0
 0071BF65    movd eax, xmm0
@@ -204,7 +210,7 @@
 0071BF9D    cvtps2pd xmm0, xmm2
 0071BFA0    addpd xmm0, xmmword ptr ds:[0x00893620]
 0071BFA8    cvttpd2dq xmm0, xmm0
-0071BFAC    andps xmm0, xmmword ptr ds:[0x00891990]
+0071BFAC    andps xmm0, xmmword ptr ds:[0x00891990]         ; => [ Data: data_893620 | Data: data_8936b0 | String: 0 | String: zx | Data: data_891990 ]
 0071BFB3    packuswb xmm0, xmm0
 0071BFB7    packuswb xmm0, xmm0
 0071BFBB    movd eax, xmm0
@@ -232,7 +238,7 @@
 0071C010    movss xmm1, dword ptr ds:[esi]
 0071C014    comiss xmm4, xmm1
 0071C017    jbe 0x0071C01E
-0071C019    movaps xmm0, xmm4
+0071C019    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0071C01C    jmp 0x0071C025
 0071C01E    movaps xmm0, xmm2
 0071C021    minss xmm0, xmm1
@@ -260,7 +266,7 @@
 0071C07F    pop esi
 0071C080    mov ecx, dword ptr ss:[ebp-0x04]
 0071C083    xor ecx, ebp
-0071C085    call 0x0075927A
+0071C085    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C08A    mov esp, ebp
 0071C08C    pop ebp
 0071C08D    mov esp, ebx
@@ -269,15 +275,15 @@
 0071C091    cmp dword ptr ss:[ebp-0x90], 0x00
 0071C098    jle 0x0071CAC2
 0071C09E    and dword ptr ss:[ebp-0xA4], 0x02
-0071C0A5    xor ecx, ecx
+0071C0A5    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071C0A7    movss xmm3, dword ptr ds:[0x00890C90]
 0071C0AF    movss xmm5, dword ptr ds:[0x00890E14]
 0071C0B7    movss xmm6, dword ptr ds:[0x0089102C]
 0071C0BF    movsd xmm7, qword ptr ds:[0x00890E80]
-0071C0C7    mov dword ptr ss:[ebp-0x98], ecx
+0071C0C7    mov dword ptr ss:[ebp-0x98], ecx                ; => [ Call: nullptr ]
 0071C0CD    nop dword ptr ds:[eax], eax
-0071C0D0    xor eax, eax
-0071C0D2    mov dword ptr ss:[ebp-0x9C], eax
+0071C0D0    xor eax, eax                                    ; => [ Call: nullptr ]
+0071C0D2    mov dword ptr ss:[ebp-0x9C], eax                ; => [ Call: nullptr ]
 0071C0D8    test esi, esi
 0071C0DA    jle 0x0071C171
 0071C0E0    mov edi, dword ptr ss:[ebp-0xB0]
@@ -294,7 +300,7 @@
 0071C11E    lea ecx, ds:[eax-0x39000000]
 0071C124    shr eax, 0x0C
 0071C127    shr ecx, 0x14
-0071C12A    mov edx, dword ptr ds:[ecx*4+0x801138]
+0071C12A    mov edx, dword ptr ds:[ecx*4+0x801138]          ; => [ String: \rs\rz\r ]
 0071C131    movzx ecx, al
 0071C134    movzx eax, dx
 0071C137    imul ecx, eax
@@ -320,7 +326,7 @@
 0071C189    movss xmm1, dword ptr ds:[ecx+eax*4]
 0071C18E    comiss xmm4, xmm1
 0071C191    jbe 0x0071C198
-0071C193    movaps xmm0, xmm4
+0071C193    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0071C196    jmp 0x0071C19F
 0071C198    movaps xmm0, xmm2
 0071C19B    minss xmm0, xmm1
@@ -341,7 +347,7 @@
 0071C1D8    pop esi
 0071C1D9    mov ecx, dword ptr ss:[ebp-0x04]
 0071C1DC    xor ecx, ebp
-0071C1DE    call 0x0075927A
+0071C1DE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C1E3    mov esp, ebp
 0071C1E5    pop ebp
 0071C1E6    mov esp, ebx
@@ -353,7 +359,7 @@
 0071C1FF    lea ecx, ds:[edi*4]
 0071C206    movss xmm7, dword ptr ds:[0x008910A0]
 0071C20E    lea esi, ds:[edi+edi*1]
-0071C211    mov dword ptr ss:[ebp-0xAC], 0x00
+0071C211    mov dword ptr ss:[ebp-0xAC], 0x00               ; => [ Call: nullptr ]
 0071C21B    mov dword ptr ss:[ebp-0x98], eax
 0071C221    mov dword ptr ss:[ebp-0xA4], edx
 0071C227    mov dword ptr ss:[ebp-0xA0], ecx
@@ -394,15 +400,15 @@
 0071C2B8    andnps xmm1, xmm0
 0071C2BB    xorps xmm0, xmm0
 0071C2BE    movsd xmm0, xmm2
-0071C2C2    mulps xmm1, xmm0
-0071C2C5    movups xmm5, xmmword ptr ds:[0x008935B0]
+0071C2C2    mulps xmm1, xmm0                                ; => [ String: 0 | String: zx | Data: data_893750 | Data: data_8935b0 ]
+0071C2C5    movups xmm5, xmmword ptr ds:[0x008935B0]        ; => [ Data: data_8935b0 ]
 0071C2CC    cvtps2pd xmm0, xmm1
 0071C2CF    addpd xmm0, xmmword ptr ds:[0x00893620]
 0071C2D7    cvttpd2dq xmm0, xmm0
 0071C2DB    pshufhw xmm0, xmm0, 0xD8
 0071C2E0    pshuflw xmm0, xmm0, 0xD8
 0071C2E5    pshufd xmm0, xmm0, 0xD8
-0071C2EA    movd dword ptr ds:[edx], xmm0
+0071C2EA    movd dword ptr ds:[edx], xmm0                   ; => [ Data: data_893620 ]
 0071C2EE    xorps xmm0, xmm0
 0071C2F1    movsd xmm1, qword ptr ds:[edi+0x08]
 0071C2F6    add edi, 0x10
@@ -422,7 +428,7 @@
 0071C32D    pshufhw xmm0, xmm0, 0xD8
 0071C332    pshuflw xmm0, xmm0, 0xD8
 0071C337    pshufd xmm0, xmm0, 0xD8
-0071C33C    movd dword ptr ds:[edx+0x04], xmm0
+0071C33C    movd dword ptr ds:[edx+0x04], xmm0              ; => [ String: 0 | String: zx | Data: data_893750 | Data: data_893620 ]
 0071C341    add edx, 0x08
 0071C344    cmp ecx, eax
 0071C346    jl 0x0071C290
@@ -444,7 +450,7 @@
 0071C390    movss xmm1, dword ptr ds:[ecx]
 0071C394    comiss xmm4, xmm1
 0071C397    jbe 0x0071C39E
-0071C399    movaps xmm0, xmm4
+0071C399    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0071C39C    jmp 0x0071C3A5
 0071C39E    movaps xmm0, xmm2
 0071C3A1    minss xmm0, xmm1
@@ -474,7 +480,7 @@
 0071C414    pop esi
 0071C415    mov ecx, dword ptr ss:[ebp-0x04]
 0071C418    xor ecx, ebp
-0071C41A    call 0x0075927A
+0071C41A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C41F    mov esp, ebp
 0071C421    pop ebp
 0071C422    mov esp, ebx
@@ -489,8 +495,8 @@
 0071C44A    mov ecx, dword ptr ds:[ecx+0x48]
 0071C44D    and ecx, 0x02
 0071C450    mov dword ptr ss:[ebp-0x9C], ecx
-0071C456    xor ecx, ecx
-0071C458    mov dword ptr ss:[ebp-0xA0], ecx
+0071C456    xor ecx, ecx                                    ; => [ Call: nullptr ]
+0071C458    mov dword ptr ss:[ebp-0xA0], ecx                ; => [ Call: nullptr ]
 0071C45E    nop
 0071C460    mov dword ptr ss:[ebp-0x8C], 0x00
 0071C46A    test esi, esi
@@ -504,7 +510,7 @@
 0071C496    movss xmm1, dword ptr ds:[ecx+eax*4]
 0071C49B    comiss xmm4, xmm1
 0071C49E    jbe 0x0071C4A5
-0071C4A0    movaps xmm0, xmm4
+0071C4A0    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0071C4A3    jmp 0x0071C4AC
 0071C4A5    movaps xmm0, xmm2
 0071C4A8    minss xmm0, xmm1
@@ -515,7 +521,7 @@
 0071C4C1    jmp 0x0071C501
 0071C4C3    movsd xmm1, qword ptr ds:[0x00890E68]
 0071C4CB    cvtss2sd xmm0, xmm0
-0071C4CF    call 0x00762090
+0071C4CF    call 0x00762090                                 ; => [ Call: _libm_sse2_pow_precise ]
 0071C4D4    movss xmm2, dword ptr ds:[0x00890E18]
 0071C4DC    xorps xmm4, xmm4
 0071C4DF    movss xmm3, dword ptr ds:[0x008910A0]
@@ -546,7 +552,7 @@
 0071C55E    movss xmm5, dword ptr ds:[eax+esi*4]
 0071C563    comiss xmm4, xmm5
 0071C566    jbe 0x0071C56D
-0071C568    movaps xmm0, xmm4
+0071C568    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0071C56B    jmp 0x0071C574
 0071C56D    movaps xmm0, xmm2
 0071C570    minss xmm0, xmm5
@@ -566,7 +572,7 @@
 0071C5AC    pop esi
 0071C5AD    mov ecx, dword ptr ss:[ebp-0x04]
 0071C5B0    xor ecx, ebp
-0071C5B2    call 0x0075927A
+0071C5B2    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C5B7    mov esp, ebp
 0071C5B9    pop ebp
 0071C5BA    mov esp, ebx
@@ -593,9 +599,9 @@
 0071C604    cvtss2sd xmm0, xmm4
 0071C608    mulsd xmm0, qword ptr ds:[0x00890FA0]
 0071C610    addsd xmm0, qword ptr ds:[0x00890E80]
-0071C618    call 0x00761E80
+0071C618    call 0x00761E80                                 ; => [ Call: __dtol3 ]
 0071C61D    movss xmm2, dword ptr ds:[0x00890E18]
-0071C625    xorps xmm4, xmm4
+0071C625    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 0071C628    mov dword ptr ds:[esi], eax
 0071C62A    add esi, 0x04
 0071C62D    sub dword ptr ss:[ebp-0x9C], 0x01
@@ -604,7 +610,7 @@
 0071C639    mov edx, dword ptr ss:[ebp-0xA8]
 0071C63F    mov ecx, dword ptr ss:[ebp-0xA0]
 0071C645    lea eax, ds:[edi*4]
-0071C64C    xorps xmm4, xmm4
+0071C64C    xorps xmm4, xmm4                                ; => [ String: 0 | String: zx ]
 0071C64F    add ecx, eax
 0071C651    sub dword ptr ss:[ebp-0x90], 0x01
 0071C658    mov eax, dword ptr ss:[ebp-0x94]
@@ -614,7 +620,7 @@
 0071C66B    pop esi
 0071C66C    mov ecx, dword ptr ss:[ebp-0x04]
 0071C66F    xor ecx, ebp
-0071C671    call 0x0075927A
+0071C671    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C676    mov esp, ebp
 0071C678    pop ebp
 0071C679    mov esp, ebx
@@ -627,8 +633,8 @@
 0071C691    mov ecx, dword ptr ds:[ecx+0x48]
 0071C694    and ecx, 0x02
 0071C697    mov dword ptr ss:[ebp-0x9C], ecx
-0071C69D    xor ecx, ecx
-0071C69F    mov dword ptr ss:[ebp-0xA0], ecx
+0071C69D    xor ecx, ecx                                    ; => [ Call: nullptr ]
+0071C69F    mov dword ptr ss:[ebp-0xA0], ecx                ; => [ Call: nullptr ]
 0071C6A5    nop word ptr ds:[eax+eax*1], ax
 0071C6B0    mov dword ptr ss:[ebp-0x8C], 0x00
 0071C6BA    test esi, esi
@@ -642,7 +648,7 @@
 0071C6E6    movss xmm1, dword ptr ds:[ecx+eax*4]
 0071C6EB    comiss xmm4, xmm1
 0071C6EE    jbe 0x0071C6F5
-0071C6F0    movaps xmm0, xmm4
+0071C6F0    movaps xmm0, xmm4                               ; => [ String: 0 | String: zx ]
 0071C6F3    jmp 0x0071C6FC
 0071C6F5    movaps xmm0, xmm2
 0071C6F8    minss xmm0, xmm1
@@ -653,7 +659,7 @@
 0071C711    jmp 0x0071C738
 0071C713    movsd xmm1, qword ptr ds:[0x00890E68]
 0071C71B    cvtss2sd xmm0, xmm0
-0071C71F    call 0x00762090
+0071C71F    call 0x00762090                                 ; => [ Call: _libm_sse2_pow_precise ]
 0071C724    cvtsd2ss xmm0, xmm0
 0071C728    mulss xmm0, dword ptr ds:[0x00890E24]
 0071C730    subss xmm0, dword ptr ds:[0x00890D04]
@@ -666,7 +672,7 @@
 0071C758    mov edx, dword ptr ss:[ebp-0xA8]
 0071C75E    xorps xmm4, xmm4
 0071C761    movss xmm2, dword ptr ds:[0x00890E18]
-0071C769    mov dword ptr ds:[edx+ecx*4], eax
+0071C769    mov dword ptr ds:[edx+ecx*4], eax               ; => [ Call: __dtol3 ]
 0071C76C    mov ecx, dword ptr ss:[ebp-0xA0]
 0071C772    cmp edi, esi
 0071C774    jl 0x0071C6D0
@@ -684,7 +690,7 @@
 0071C7AC    movss xmm1, dword ptr ds:[esi+eax*1]
 0071C7B1    comiss xmm4, xmm1
 0071C7B4    jbe 0x0071C7BB
-0071C7B6    xorps xmm0, xmm0
+0071C7B6    xorps xmm0, xmm0                                ; => [ String: 0 | String: zx ]
 0071C7B9    jmp 0x0071C7C2
 0071C7BB    movaps xmm0, xmm2
 0071C7BE    minss xmm0, xmm1
@@ -704,7 +710,7 @@
 0071C801    pop esi
 0071C802    mov ecx, dword ptr ss:[ebp-0x04]
 0071C805    xor ecx, ebp
-0071C807    call 0x0075927A
+0071C807    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C80C    mov esp, ebp
 0071C80E    pop ebp
 0071C80F    mov esp, ebx
@@ -713,7 +719,7 @@
 0071C813    cmp dword ptr ss:[ebp-0x90], 0x00
 0071C81A    jle 0x0071CAC2
 0071C820    lea ecx, ds:[edi*4]
-0071C827    mov dword ptr ss:[ebp-0xA4], 0x00
+0071C827    mov dword ptr ss:[ebp-0xA4], 0x00               ; => [ Call: nullptr ]
 0071C831    mov dword ptr ss:[ebp-0xA0], ecx
 0071C837    mov esi, eax
 0071C839    mov ecx, edx
@@ -748,7 +754,7 @@
 0071C8AC    add eax, esi
 0071C8AE    push esi
 0071C8AF    push eax
-0071C8B0    call 0x00761FBE
+0071C8B0    call 0x00761FBE                                 ; => [ Call: memcpy ]
 0071C8B5    add esp, 0x0C
 0071C8B8    jmp 0x0071C984
 0071C8BD    mov eax, edi
@@ -819,7 +825,7 @@
 0071C9B3    pop esi
 0071C9B4    mov ecx, dword ptr ss:[ebp-0x04]
 0071C9B7    xor ecx, ebp
-0071C9B9    call 0x0075927A
+0071C9B9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071C9BE    mov esp, ebp
 0071C9C0    pop ebp
 0071C9C1    mov esp, ebx
@@ -830,12 +836,12 @@
 0071C9D2    mov eax, dword ptr ss:[ebp-0x98]
 0071C9D8    mov eax, dword ptr ds:[eax+0x48]
 0071C9DB    and eax, 0x02
-0071C9DE    xor ecx, ecx
+0071C9DE    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0071C9E0    mov dword ptr ss:[ebp-0x8C], eax
-0071C9E6    mov dword ptr ss:[ebp-0xA4], ecx
+0071C9E6    mov dword ptr ss:[ebp-0xA4], ecx                ; => [ Call: nullptr ]
 0071C9EC    nop dword ptr ds:[eax], eax
-0071C9F0    xor eax, eax
-0071C9F2    mov dword ptr ss:[ebp-0x9C], eax
+0071C9F0    xor eax, eax                                    ; => [ Call: nullptr ]
+0071C9F2    mov dword ptr ss:[ebp-0x9C], eax                ; => [ Call: nullptr ]
 0071C9F8    test esi, esi
 0071C9FA    jle 0x0071CA8C
 0071CA00    movss xmm1, dword ptr ds:[0x00890CB8]
@@ -850,7 +856,7 @@
 0071CA30    jmp 0x0071CA70
 0071CA32    movsd xmm1, qword ptr ds:[0x00890E68]
 0071CA3A    cvtps2pd xmm0, xmm0
-0071CA3D    call 0x00762090
+0071CA3D    call 0x00762090                                 ; => [ Call: _libm_sse2_pow_precise ]
 0071CA42    movss xmm1, dword ptr ds:[0x00890CB8]
 0071CA4A    mov eax, dword ptr ss:[ebp-0x9C]
 0071CA50    mov edx, dword ptr ss:[ebp-0xA8]
@@ -880,7 +886,7 @@
 0071CAC5    pop edi
 0071CAC6    xor ecx, ebp
 0071CAC8    pop esi
-0071CAC9    call 0x0075927A
+0071CAC9    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0071CACE    mov esp, ebp
 0071CAD0    pop ebp
 0071CAD1    mov esp, ebx

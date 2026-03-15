@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_535ff0
+// 起始地址: 0x535ff0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00535FF0    push ebp
 00535FF1    mov ebp, esp
 00535FF3    mov eax, dword ptr ss:[ebp+0x08]
@@ -7,18 +13,18 @@
 00535FF9    mov esi, dword ptr ds:[eax]
 00535FFB    call 0x00573400
 00536000    movzx edi, si
-00536003    mov ebx, dword ptr ds:[eax+0x04]
+00536003    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00536006    cmp edi, 0x320
 0053600C    jb 0x00536013
-0053600E    call 0x00591930
+0053600E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00536013    imul esi, edi, 0x64
 00536016    cmp dword ptr ds:[esi+ebx*1+0x1A4C], 0x105
 00536021    jz 0x0053604E
 00536023    call 0x00573400
-00536028    mov ebx, dword ptr ds:[eax+0x04]
+00536028    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0053602B    cmp edi, 0x320
 00536031    jb 0x00536038
-00536033    call 0x00591930
+00536033    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00536038    cmp dword ptr ds:[esi+ebx*1+0x1A4C], 0x106
 00536043    jz 0x0053604E
 00536045    pop edi

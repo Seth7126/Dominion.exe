@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_639a10
+// 起始地址: 0x639a10
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00639A10    push ebp
 00639A11    mov ebp, esp
 00639A13    sub esp, 0x30
@@ -75,7 +81,7 @@
 00639B48    subss xmm0, dword ptr ss:[ebp-0x10]
 00639B4D    movss dword ptr ss:[ebp-0x08], xmm3
 00639B52    movss xmm3, dword ptr ds:[eax]
-00639B56    xorps xmm3, xmmword ptr ds:[0x008937C0]
+00639B56    xorps xmm3, xmmword ptr ds:[0x008937C0]         ; => [ Data: data_8937c0 ]
 00639B5D    mulss xmm0, dword ptr ss:[ebp-0x1C]
 00639B62    addss xmm1, xmm0
 00639B66    movaps xmm0, xmm7

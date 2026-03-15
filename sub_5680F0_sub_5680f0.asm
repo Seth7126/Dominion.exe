@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5680f0
+// 起始地址: 0x5680f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005680F0    push ebp
 005680F1    mov ebp, esp
 005680F3    sub esp, 0x30
@@ -6,14 +12,14 @@
 005680F8    push edi
 005680F9    mov edi, edx
 005680FB    mov esi, ecx
-005680FD    call 0x00573400
+005680FD    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00568102    movzx esi, si
 00568105    mov ecx, dword ptr ds:[eax+0x0C]
 00568108    mov ebx, dword ptr ds:[eax+0x04]
 0056810B    mov dword ptr ss:[ebp-0x04], ecx
 0056810E    cmp esi, 0x320
 00568114    jb 0x0056811E
-00568116    call 0x00591930
+00568116    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056811B    mov ecx, dword ptr ss:[ebp-0x04]
 0056811E    imul eax, esi, 0x64
 00568121    mov edx, ebx
@@ -21,14 +27,14 @@
 00568125    push dword ptr ds:[eax+ebx*1+0x1A4C]
 0056812C    push ecx
 0056812D    lea ecx, ss:[ebp-0x04]
-00568130    call 0x00576E90
+00568130    call 0x00576E90                                 ; => [ Call: sub_576e90 ]
 00568135    add esp, 0x0C
 00568138    lea eax, ss:[ebp-0x30]
 0056813B    push dword ptr ss:[ebp-0x04]
 0056813E    push eax
 0056813F    call 0x00576C00
 00568144    add esp, 0x08
-00568147    movups xmm0, xmmword ptr ds:[eax]
+00568147    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 ]
 0056814A    movups xmmword ptr ss:[ebp-0x18], xmm0
 0056814E    psrldq xmm0, 0x08
 00568153    movd eax, xmm0

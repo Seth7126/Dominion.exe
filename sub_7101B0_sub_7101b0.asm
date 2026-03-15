@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_7101b0
+// 起始地址: 0x7101b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007101B0    push ebp
 007101B1    mov ebp, esp
-007101B3    mov eax, dword ptr ds:[0x0147DED8]
+007101B3    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007101B8    push ebx
 007101B9    mov ebx, edx
 007101BB    push esi
@@ -11,11 +17,11 @@
 007101C3    push 0x2C
 007101C5    push 0x88DC2C
 007101CA    push 0x70
-007101CC    call eax
+007101CC    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\Bone.c ]
 007101CE    add esp, 0x0C
 007101D1    jmp 0x007101DE
 007101D3    push 0x70
-007101D5    call dword ptr ds:[0x00800B4C]
+007101D5    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007101DB    add esp, 0x04
 007101DE    mov esi, eax
 007101E0    test esi, esi
@@ -23,7 +29,7 @@
 007101E4    push 0x70
 007101E6    push 0x00
 007101E8    push esi
-007101E9    call 0x00761FC4
+007101E9    call 0x00761FC4                                 ; => [ Call: memset ]
 007101EE    add esp, 0x0C
 007101F1    mov eax, dword ptr ss:[ebp+0x08]
 007101F4    mov dword ptr ds:[esi], edi

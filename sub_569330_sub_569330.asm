@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_569330
+// 起始地址: 0x569330
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00569330    push ebp
 00569331    mov ebp, esp
 00569333    and esp, 0xFFFFFFF0
@@ -16,7 +22,7 @@
 00569358    mov ecx, dword ptr ds:[esi+edi*4]
 0056935B    mov edx, eax
 0056935D    push 0x0B
-0056935F    call 0x005695C0
+0056935F    call 0x005695C0                                 ; => [ Call: sub_5695c0 ]
 00569364    mov eax, dword ptr ss:[esp+0x14]
 00569368    inc edi
 00569369    add esp, 0x04
@@ -25,11 +31,11 @@
 00569374    mov edi, dword ptr ds:[esi]
 00569376    call 0x00573400
 0056937B    movzx edi, di
-0056937E    mov eax, dword ptr ds:[eax+0x04]
+0056937E    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00569381    mov dword ptr ss:[esp+0x14], eax
 00569385    cmp edi, 0x320
 0056938B    jb 0x00569392
-0056938D    call 0x00591930
+0056938D    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00569392    mov ecx, dword ptr ss:[esp+0x14]
 00569396    imul eax, edi, 0x64
 00569399    mov eax, dword ptr ds:[eax+ecx*1+0x1A4C]
@@ -42,11 +48,11 @@
 005693B7    mov edi, dword ptr ds:[esi+eax*4]
 005693BA    call 0x00573400
 005693BF    movzx edi, di
-005693C2    mov eax, dword ptr ds:[eax+0x04]
+005693C2    mov eax, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 005693C5    mov dword ptr ss:[esp+0x18], eax
 005693C9    cmp edi, 0x320
 005693CF    jb 0x005693D6
-005693D1    call 0x00591930
+005693D1    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005693D6    mov ecx, dword ptr ss:[esp+0x18]
 005693DA    mov edx, dword ptr ss:[esp+0x1C]
 005693DE    imul eax, edi, 0x64
@@ -64,7 +70,7 @@
 00569403    mov edx, dword ptr ss:[esp+0x10]
 00569407    mov ecx, dword ptr ds:[esi+edi*4]
 0056940A    push 0x0B
-0056940C    call 0x005695C0
+0056940C    call 0x005695C0                                 ; => [ Call: sub_5695c0 ]
 00569411    inc edi
 00569412    add esp, 0x04
 00569415    cmp edi, dword ptr ds:[esi+0xC80]
@@ -85,13 +91,13 @@
 00569440    push 0x00
 00569442    push 0x00
 00569444    push 0x3EE
-00569449    call 0x00566140
+00569449    call 0x00566140                                 ; => [ Call: nullptr | Call: sub_566140 ]
 0056944E    add esp, 0x18
 00569451    mov eax, dword ptr ss:[ebp+0x08]
 00569454    lea edx, ss:[esp+0x50]
 00569458    xorps xmm0, xmm0
 0056945B    mov dword ptr ss:[esp+0x20], eax
-0056945F    movlpd qword ptr ss:[esp+0x24], xmm0
+0056945F    movlpd qword ptr ss:[esp+0x24], xmm0            ; => [ Call: __builtin_memset ]
 00569465    mov ecx, esi
 00569467    movlpd qword ptr ss:[esp+0x34], xmm0
 0056946D    movlpd qword ptr ss:[esp+0x48], xmm0
@@ -106,7 +112,7 @@
 005694A5    movaps xmm0, xmmword ptr ss:[esp+0x40]
 005694AA    push 0x38
 005694AC    movaps xmmword ptr ss:[esp+0x74], xmm0
-005694B1    call 0x00563D00
+005694B1    call 0x00563D00                                 ; => [ Call: sub_563d00 ]
 005694B6    xor edi, edi
 005694B8    add esp, 0x04
 005694BB    cmp dword ptr ds:[esi+0xC80], edi
@@ -115,7 +121,7 @@
 005694D0    mov ecx, dword ptr ds:[esi+edi*4]
 005694D3    mov edx, 0x3EE
 005694D8    push 0x0B
-005694DA    call 0x005695C0
+005694DA    call 0x005695C0                                 ; => [ Call: sub_5695c0 ]
 005694DF    inc edi
 005694E0    add esp, 0x04
 005694E3    cmp edi, dword ptr ds:[esi+0xC80]

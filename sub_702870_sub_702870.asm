@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_702870
+// 起始地址: 0x702870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00702870    dec ecx
 00702871    cmp ecx, 0x04
 00702874    jnbe 0x0070289B
@@ -17,10 +23,10 @@
 007028A5    push 0x88C504
 007028AA    mov edx, 0x801800
 007028AF    mov ecx, 0x801AA4
-007028B4    call 0x0063B870
+007028B4    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: GLBlendEquationFromDx | String: Halt | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 007028B9    add esp, 0x0C
 007028BC    call 0x0063BC30
 007028C1    test al, al
-007028C3    jz 0x007028C6
+007028C3    jz 0x007028C6                                   ; => [ Call: sub_63bc30 ]
 007028C5    int3
-007028C6    jmp 0x0063BB00
+007028C6    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_756270
+// 起始地址: 0x756270
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00756270    push ebp
 00756271    mov ebp, esp
 00756273    and esp, 0xFFFFFFF8
@@ -14,7 +20,7 @@
 00756292    cmp dword ptr ds:[esi+0x4C], 0x00
 00756296    mov edi, dword ptr ds:[esi+0x08]
 00756299    jnz 0x007562AC
-0075629B    call 0x00710B10
+0075629B    call 0x00710B10                                 ; => [ Call: sub_710b10 ]
 007562A0    movss xmm6, dword ptr ss:[esp+0x18]
 007562A6    movss xmm7, dword ptr ss:[esp+0x14]
 007562AC    movss xmm4, dword ptr ds:[edi+0x50]
@@ -48,7 +54,7 @@
 00756328    movss dword ptr ss:[esp+0x20], xmm4
 0075632E    movsd qword ptr ss:[esp+0x18], xmm0
 00756334    fld qword ptr ss:[esp+0x18]
-00756338    call 0x00762368
+00756338    call 0x00762368                                 ; => [ Call: _CIatan2 ]
 0075633D    movss xmm0, dword ptr ds:[esi+0x3C]
 00756342    movss xmm2, dword ptr ds:[esi+0x3C]
 00756347    fstp qword ptr ss:[esp+0x18]
@@ -96,7 +102,7 @@
 00756403    jnbe 0x0075640B
 00756405    sqrtsd xmm0, xmm0
 00756409    jmp 0x00756410
-0075640B    call 0x00762084
+0075640B    call 0x00762084                                 ; => [ Call: _libm_sse2_sqrt_precise ]
 00756410    xorps xmm1, xmm1
 00756413    cvtsd2ss xmm1, xmm0
 00756417    movss xmm0, dword ptr ss:[esp+0x10]
@@ -141,7 +147,7 @@
 007564BF    movss dword ptr ss:[esp+0x04], xmm0
 007564C5    movss xmm0, dword ptr ss:[esp+0x28]
 007564CB    movss dword ptr ss:[esp], xmm0
-007564D0    call 0x00710240
+007564D0    call 0x00710240                                 ; => [ Call: sub_710240 ]
 007564D5    add esp, 0x10
 007564D8    pop edi
 007564D9    pop esi

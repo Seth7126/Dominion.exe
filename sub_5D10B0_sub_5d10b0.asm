@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5d10b0
+// 起始地址: 0x5d10b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D10B0    push ebp
 005D10B1    mov ebp, esp
 005D10B3    and esp, 0xFFFFFFF8
@@ -8,7 +14,7 @@
 005D10BC    push 0x00
 005D10BE    push 0x00
 005D10C0    mov ecx, eax
-005D10C2    call 0x005CC410
+005D10C2    call 0x005CC410                                 ; => [ Call: sub_5cc410 ]
 005D10C7    add esp, 0x08
 005D10CA    test eax, eax
 005D10CC    jnz 0x005D10D3
@@ -22,7 +28,7 @@
 005D10DA    jz 0x005D1106
 005D10DC    nop dword ptr ds:[eax], eax
 005D10E0    mov ecx, eax
-005D10E2    call 0x005CBA00
+005D10E2    call 0x005CBA00                                 ; => [ Call: sub_5cba00 ]
 005D10E7    cmp dword ptr ds:[eax+0x2C], 0x00
 005D10EB    jnz 0x005D110D
 005D10ED    cmp dword ptr ds:[eax+0xC0], 0x00
@@ -42,10 +48,10 @@
 005D1117    push 0x86F1E8
 005D111C    mov edx, 0x801800
 005D1121    mov ecx, 0x86F474
-005D1126    call 0x0063B870
+005D1126    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: NumCardPiles | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | String: gfx.type == DOMGFX_CARD | Data: data_801800 ]
 005D112B    add esp, 0x0C
 005D112E    call 0x0063BC30
 005D1133    test al, al
-005D1135    jz 0x005D1138
+005D1135    jz 0x005D1138                                   ; => [ Call: sub_63bc30 ]
 005D1137    int3
-005D1138    call 0x0063BB00
+005D1138    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

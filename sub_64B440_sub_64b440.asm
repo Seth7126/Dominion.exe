@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64b440
+// 起始地址: 0x64b440
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064B440    push ebp
 0064B441    mov ebp, esp
 0064B443    mov eax, dword ptr fs:[0x0000002C]
@@ -5,21 +11,21 @@
 0064B44C    mov ecx, dword ptr ds:[eax]
 0064B44E    mov eax, dword ptr ds:[0x01A98F90]
 0064B453    cmp eax, dword ptr ds:[ecx+0x08]
-0064B459    jle 0x0064B499
+0064B459    jle 0x0064B499                                  ; => [ Type: TEB | Field: ThreadLocalStoragePointer | Data: data_1a98f90 ]
 0064B45B    push 0x1A98F90
-0064B460    call 0x0075970E
+0064B460    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a98f90 ]
 0064B465    add esp, 0x04
 0064B468    cmp dword ptr ds:[0x01A98F90], 0xFFFFFFFF
-0064B46F    jnz 0x0064B499
+0064B46F    jnz 0x0064B499                                  ; => [ Data: data_1a98f90 ]
 0064B471    lea eax, ss:[ebp-0x08]
 0064B474    push eax
 0064B475    call dword ptr ds:[0x007750AC]
 0064B47B    mov eax, dword ptr ss:[ebp-0x08]
 0064B47E    mov ecx, dword ptr ss:[ebp-0x04]
 0064B481    push 0x1A98F90
-0064B486    mov dword ptr ds:[0x01A98F98], eax
-0064B48B    mov dword ptr ds:[0x01A98F9C], ecx
-0064B491    call 0x007596BD
+0064B486    mov dword ptr ds:[0x01A98F98], eax              ; => [ Data: data_1a98f98 ]
+0064B48B    mov dword ptr ds:[0x01A98F9C], ecx              ; => [ Data: data_1a98f9c ]
+0064B491    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a98f90 ]
 0064B496    add esp, 0x04
 0064B499    lea eax, ss:[ebp-0x08]
 0064B49C    push eax
@@ -34,4 +40,4 @@
 0064B4BC    add esp, 0x08
 0064B4BF    mov esp, ebp
 0064B4C1    pop ebp
-0064B4C2    ret
+0064B4C2    ret                                             ; => [ Data: data_1a98f98 | Data: data_1a98f9c | Call: sub_63c000 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4dc650
+// 起始地址: 0x4dc650
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004DC650    push ebp
 004DC651    mov ebp, esp
 004DC653    sub esp, 0x28
@@ -17,7 +23,7 @@
 004DC680    mov edx, 0x8070A8
 004DC685    push eax
 004DC686    mov ecx, esi
-004DC688    call 0x004DC570
+004DC688    call 0x004DC570                                 ; => [ String: ():, | Call: sub_4dc570 ]
 004DC68D    add esp, 0x04
 004DC690    mov dword ptr ss:[ebp-0x10], edx
 004DC693    test eax, eax
@@ -34,7 +40,7 @@
 004DC6BA    lea edx, ss:[ebp+0x0C]
 004DC6BD    mov ecx, esi
 004DC6BF    mov dword ptr ds:[esi+0x04], eax
-004DC6C2    call 0x004DC5E0
+004DC6C2    call 0x004DC5E0                                 ; => [ Call: sub_4dc5e0 ]
 004DC6C7    push edx
 004DC6C8    push eax
 004DC6C9    mov dword ptr ds:[esi+0x08], eax
@@ -66,20 +72,20 @@
 004DC722    lea edx, ss:[ebp+0x0C]
 004DC725    mov ecx, esi
 004DC727    mov dword ptr ds:[esi+0x04], eax
-004DC72A    call 0x004DC5E0
+004DC72A    call 0x004DC5E0                                 ; => [ Call: sub_4dc5e0 ]
 004DC72F    mov ebx, edx
 004DC731    mov dword ptr ss:[ebp-0x10], eax
 004DC734    mov dword ptr ds:[esi+0x08], eax
 004DC737    mov dword ptr ds:[esi+0x0C], ebx
 004DC73A    mov dword ptr ss:[ebp-0x0C], 0x01
-004DC741    xor esi, esi
+004DC741    xor esi, esi                                    ; => [ Call: nullptr ]
 004DC743    test edx, edx
 004DC745    jle 0x004DC768
 004DC747    lea edi, ds:[esi+eax*1]
 004DC74A    movsx eax, byte ptr ds:[edi]
 004DC74D    push eax
 004DC74E    push 0x8070B0
-004DC753    call dword ptr ds:[0x00775454]
+004DC753    call dword ptr ds:[0x00775454]                  ; => [ Data: data_8070b0 ]
 004DC759    add esp, 0x08
 004DC75C    test eax, eax
 004DC75E    jnz 0x004DC787
@@ -91,7 +97,7 @@
 004DC76B    xorps xmm0, xmm0
 004DC76E    movlpd qword ptr ss:[ebp-0x14], xmm0
 004DC773    mov ebx, dword ptr ss:[ebp-0x10]
-004DC776    mov edi, dword ptr ss:[ebp-0x14]
+004DC776    mov edi, dword ptr ss:[ebp-0x14]                ; => [ Call: nullptr ]
 004DC779    test edi, edi
 004DC77B    jz 0x004DC7AB
 004DC77D    mov ecx, dword ptr ss:[ebp-0x0C]
@@ -131,9 +137,9 @@
 004DC7CB    sub eax, dword ptr ds:[esi]
 004DC7CD    mov dword ptr ds:[esi+0x04], eax
 004DC7D0    mov ecx, esi
-004DC7D2    call 0x0063E5A0
+004DC7D2    call 0x0063E5A0                                 ; => [ Call: sub_63e5a0 ]
 004DC7D7    lea ecx, ds:[esi+0x08]
-004DC7DA    call 0x0063E5A0
+004DC7DA    call 0x0063E5A0                                 ; => [ Call: sub_63e5a0 ]
 004DC7DF    mov eax, dword ptr ds:[esi+0x0C]
 004DC7E2    test eax, eax
 004DC7E4    jz 0x004DC7F6
@@ -154,10 +160,10 @@
 004DC809    push 0x806FE4
 004DC80E    mov edx, 0x801800
 004DC813    mov ecx, 0x801AA4
-004DC818    call 0x0063B870
+004DC818    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: STokenize::STokenizeIter::ParseStr | Data: data_801800 | String: C:\x\ax2017\Jams\Shared\TggGame\code\GameShared.cpp | String: Halt ]
 004DC81D    add esp, 0x0C
 004DC820    call 0x0063BC30
 004DC825    test al, al
-004DC827    jz 0x004DC82A
+004DC827    jz 0x004DC82A                                   ; => [ Call: sub_63bc30 ]
 004DC829    int3
-004DC82A    call 0x0063BB00
+004DC82A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

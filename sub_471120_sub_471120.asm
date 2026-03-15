@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_471120
+// 起始地址: 0x471120
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00471120    mov edx, 0x03
 00471125    mov ecx, 0x82B76C
-0047112A    call 0x0069F030
-0047112F    mov dword ptr ds:[0x0171CD94], eax
+0047112A    call 0x0069F030                                 ; => [ String: res/card_gen/allies/town.texture | Call: sub_69f030 ]
+0047112F    mov dword ptr ds:[0x0171CD94], eax              ; => [ Data: data_171cd94 ]
 00471134    ret

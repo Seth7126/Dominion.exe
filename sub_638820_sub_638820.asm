@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_638820
+// 起始地址: 0x638820
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00638820    push ebp
 00638821    mov ebp, esp
 00638823    sub esp, 0x14
@@ -49,14 +55,14 @@
 006388A3    lea edx, ds:[edi+ecx*1]
 006388A6    push eax
 006388A7    mov dword ptr ss:[ebp-0x0C], edx
-006388AA    call 0x006396D0
+006388AA    call 0x006396D0                                 ; => [ Call: sub_6396d0 ]
 006388AF    push dword ptr ss:[ebp+0x0C]
 006388B2    lea eax, ds:[edi+esi*1]
 006388B5    mov ecx, esi
 006388B7    push eax
 006388B8    sub ecx, edi
 006388BA    mov edx, esi
-006388BC    call 0x006396D0
+006388BC    call 0x006396D0                                 ; => [ Call: sub_6396d0 ]
 006388C1    mov ecx, dword ptr ss:[ebp-0x10]
 006388C4    mov eax, ecx
 006388C6    sub eax, edi
@@ -66,7 +72,7 @@
 006388CD    sub ecx, ebx
 006388CF    mov dword ptr ss:[ebp-0x10], eax
 006388D2    mov edx, eax
-006388D4    call 0x006396D0
+006388D4    call 0x006396D0                                 ; => [ Call: sub_6396d0 ]
 006388D9    mov ebx, dword ptr ss:[ebp-0x0C]
 006388DC    add esp, 0x18
 006388DF    mov eax, dword ptr ss:[ebp-0x10]
@@ -74,7 +80,7 @@
 006388E4    push edi
 006388E5    push eax
 006388E6    mov ecx, ebx
-006388E8    call 0x006396D0
+006388E8    call 0x006396D0                                 ; => [ Call: sub_6396d0 ]
 006388ED    add esp, 0x08
 006388F0    lea ebx, ds:[esi+0x38]
 006388F3    mov dword ptr ss:[ebp-0x04], ebx

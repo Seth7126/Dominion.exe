@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_509230
+// 起始地址: 0x509230
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00509230    dword 83EC8B55
 00509234    byte E4
 00509235    byte F8
@@ -15,32 +21,32 @@
 00509252    call 0x00568960
 00509257    add esp, 0x0C
 0050925A    test eax, eax
-0050925C    jnz 0x00509271
+0050925C    jnz 0x00509271                                  ; => [ Call: sub_568960 | Data: __security_cookie ]
 0050925E    xor al, al
 00509260    pop edi
 00509261    pop esi
 00509262    mov ecx, dword ptr ss:[esp+0x1C]
 00509266    xor ecx, esp
-00509268    call 0x0075927A
+00509268    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0050926D    mov esp, ebp
 0050926F    pop ebp
 00509270    ret
 00509271    call 0x00573400
 00509276    lea edx, ss:[esp+0x0C]
 0050927A    mov ecx, dword ptr ds:[eax+0x04]
-0050927D    call 0x0058BC10
+0050927D    call 0x0058BC10                                 ; => [ Call: sub_58bc10 | Call: sub_573400 ]
 00509282    push ecx
 00509283    push 0x00
 00509285    push 0x00
 00509287    mov edx, 0x209
 0050928C    xor ecx, ecx
-0050928E    call 0x00568960
+0050928E    call 0x00568960                                 ; => [ Call: sub_568960 ]
 00509293    add esp, 0x0C
 00509296    mov edi, eax
 00509298    call 0x00568C80
 0050929D    mov ecx, eax
 0050929F    mov eax, 0x66666667
-005092A4    imul ecx
+005092A4    imul ecx                                        ; => [ Call: sub_568c80 ]
 005092A6    sar edx, 0x02
 005092A9    mov esi, edx
 005092AB    shr esi, 0x1F
@@ -53,9 +59,9 @@
 005092BF    pop esi
 005092C0    cmp eax, dword ptr ss:[esp+ecx*4+0x04]
 005092C4    mov ecx, dword ptr ss:[esp+0x1C]
-005092C8    setnle al
+005092C8    setnle al                                       ; => [ Call: sub_573400 ]
 005092CB    xor ecx, esp
-005092CD    call 0x0075927A
+005092CD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005092D2    mov esp, ebp
 005092D4    pop ebp
 005092D5    ret

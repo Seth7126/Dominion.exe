@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5af040
+// 起始地址: 0x5af040
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AF040    push ebx
 005AF041    mov ebx, esp
 005AF043    sub esp, 0x08
@@ -25,7 +31,7 @@
 005AF080    push esi
 005AF081    push edi
 005AF082    push dword ptr ds:[ebx+0x14]
-005AF085    call 0x00762362
+005AF085    call 0x00762362                                 ; => [ Call: memmove ]
 005AF08A    mov ecx, dword ptr ss:[ebp-0x04]
 005AF08D    add esp, 0x0C
 005AF090    mov edx, dword ptr ds:[ebx+0x14]
@@ -107,7 +113,7 @@
 005AF16E    pop ebp
 005AF16F    mov esp, ebx
 005AF171    pop ebx
-005AF172    ret
+005AF172    ret                                             ; => [ Call: memmove ]
 005AF173    mov eax, dword ptr ss:[ebp-0x04]
 005AF176    mov ecx, dword ptr ds:[ebx+0x08]
 005AF179    movq xmm0, qword ptr ds:[esi]
@@ -118,7 +124,7 @@
 005AF184    push edi
 005AF185    movq qword ptr ss:[ebp-0x10], xmm0
 005AF18A    mov dword ptr ss:[ebp-0x08], ecx
-005AF18D    call 0x00762362
+005AF18D    call 0x00762362                                 ; => [ Call: memmove ]
 005AF192    mov eax, dword ptr ss:[ebp-0x08]
 005AF195    add esp, 0x0C
 005AF198    movq xmm0, qword ptr ss:[ebp-0x10]
@@ -139,7 +145,7 @@
 005AF1BE    push edi
 005AF1BF    push edx
 005AF1C0    push dword ptr ds:[ebx+0x14]
-005AF1C3    call 0x00762362
+005AF1C3    call 0x00762362                                 ; => [ Call: memmove ]
 005AF1C8    mov edx, dword ptr ss:[ebp-0x04]
 005AF1CB    add esi, 0xFFFFFFF4
 005AF1CE    add esp, 0x0C
@@ -185,7 +191,7 @@
 005AF248    sub esi, edx
 005AF24A    push edi
 005AF24B    push esi
-005AF24C    call 0x00762362
+005AF24C    call 0x00762362                                 ; => [ Call: memmove ]
 005AF251    mov eax, dword ptr ds:[ebx+0x14]
 005AF254    add esp, 0x0C
 005AF257    movq xmm0, qword ptr ds:[eax]
@@ -243,7 +249,7 @@
 005AF2EA    pop ebp
 005AF2EB    mov esp, ebx
 005AF2ED    pop ebx
-005AF2EE    ret
+005AF2EE    ret                                             ; => [ Call: memmove ]
 005AF2EF    push dword ptr ds:[ebx+0x1C]
 005AF2F2    push eax
 005AF2F3    push dword ptr ds:[ebx+0x14]
@@ -259,4 +265,4 @@
 005AF309    pop ebp
 005AF30A    mov esp, ebx
 005AF30C    pop ebx
-005AF30D    ret
+005AF30D    ret                                             ; => [ Call: sub_5af3b0 ]

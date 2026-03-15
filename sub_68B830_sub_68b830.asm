@@ -1,16 +1,22 @@
+// ============================================================
+// 函数名称: sub_68b830
+// 起始地址: 0x68b830
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0068B830    push ebp
 0068B831    mov ebp, esp
 0068B833    push esi
 0068B834    mov esi, ecx
 0068B836    mov ecx, 0x0C
 0068B83B    push edi
-0068B83C    call 0x0064BFD0
+0068B83C    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 0068B841    mov edi, eax
 0068B843    inc dword ptr ds:[edi+0x0C]
 0068B846    cmp dword ptr ds:[edi], 0x00
 0068B849    jnz 0x0068B852
 0068B84B    mov ecx, edi
-0068B84D    call 0x0064BE70
+0068B84D    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 0068B852    mov ecx, dword ptr ds:[edi]
 0068B854    xorps xmm0, xmm0
 0068B857    mov eax, dword ptr ds:[ecx]

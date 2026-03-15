@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_713e20
+// 起始地址: 0x713e20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00713E20    push ebp
 00713E21    mov ebp, esp
 00713E23    sub esp, 0x14
@@ -60,7 +66,7 @@
 00713EB4    mov edx, dword ptr ds:[esi+0x08]
 00713EB7    push ecx
 00713EB8    mov ecx, edi
-00713EBA    call 0x00713A90
+00713EBA    call 0x00713A90                                 ; => [ Call: sub_713a90 ]
 00713EBF    mov ecx, dword ptr ss:[ebp-0x04]
 00713EC2    add esp, 0x04
 00713EC5    mov esi, dword ptr ds:[esi+0x0C]
@@ -81,7 +87,7 @@
 00713EE7    mov edx, dword ptr ds:[esi+0x08]
 00713EEA    push ecx
 00713EEB    mov ecx, edi
-00713EED    call 0x00713A90
+00713EED    call 0x00713A90                                 ; => [ Call: sub_713a90 ]
 00713EF2    add esp, 0x04
 00713EF5    mov esi, dword ptr ds:[esi+0x0C]
 00713EF8    mov ecx, dword ptr ss:[ebp-0x04]
@@ -106,7 +112,7 @@
 00713F24    push dword ptr ss:[ebp-0x04]
 00713F27    mov edx, dword ptr ds:[esi+0x08]
 00713F2A    mov ecx, edi
-00713F2C    call 0x00713A90
+00713F2C    call 0x00713A90                                 ; => [ Call: sub_713a90 ]
 00713F31    add esp, 0x04
 00713F34    mov esi, dword ptr ds:[esi+0x0C]
 00713F37    test esi, esi
@@ -124,7 +130,7 @@
 00713F55    jnz 0x00713F64
 00713F57    push dword ptr ss:[ebp-0x04]
 00713F5A    mov ecx, edi
-00713F5C    call 0x00713A90
+00713F5C    call 0x00713A90                                 ; => [ Call: sub_713a90 ]
 00713F61    add esp, 0x04
 00713F64    mov ecx, dword ptr ss:[ebp-0x08]
 00713F67    xor ebx, ebx
@@ -143,7 +149,7 @@
 00713F8C    test edx, edx
 00713F8E    jz 0x00713F9D
 00713F90    mov ecx, edi
-00713F92    call 0x00713A30
+00713F92    call 0x00713A30                                 ; => [ Call: sub_713a30 ]
 00713F97    mov ecx, dword ptr ds:[0x00775520]
 00713F9D    mov dword ptr ds:[esi+0x68], 0x01
 00713FA4    mov eax, dword ptr ds:[edi+0x60]
@@ -184,9 +190,9 @@
 00714007    mov edx, dword ptr ss:[ebp-0x08]
 0071400A    mov dword ptr ds:[eax+ecx*8], 0x02
 00714011    mov dword ptr ds:[eax+ecx*8+0x04], edx
-00714015    xor eax, eax
+00714015    xor eax, eax                                    ; => [ Call: nullptr ]
 00714017    inc dword ptr ds:[edi+0x5C]
-0071401A    mov dword ptr ss:[ebp-0x08], eax
+0071401A    mov dword ptr ss:[ebp-0x08], eax                ; => [ Call: nullptr ]
 0071401D    test esi, esi
 0071401F    jle 0x00713E8A
 00714025    mov edx, dword ptr ss:[ebp-0x04]
@@ -205,7 +211,7 @@
 0071404D    jz 0x0071405D
 0071404F    mov edx, dword ptr ds:[esi+0x0C]
 00714052    mov ecx, dword ptr ds:[esi+0x10]
-00714055    call 0x00713BA0
+00714055    call 0x00713BA0                                 ; => [ Call: sub_713ba0 ]
 0071405A    mov eax, dword ptr ss:[ebp-0x14]
 0071405D    mov dword ptr ds:[esi+0x68], 0x00
 00714064    inc edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_69c4d0
+// 起始地址: 0x69c4d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0069C4D0    push esi
 0069C4D1    push edi
 0069C4D2    mov edi, ecx
@@ -21,7 +27,7 @@
 0069C501    shr esi, 0x08
 0069C504    movzx ecx, al
 0069C507    mov al, byte ptr ds:[edi]
-0069C509    xor esi, dword ptr ds:[ecx*4+0x7FFD70]
+0069C509    xor esi, dword ptr ds:[ecx*4+0x7FFD70]          ; => [ Data: data_7ffd70 ]
 0069C510    test al, al
 0069C512    jnz 0x0069C4E3
 0069C514    pop ebx

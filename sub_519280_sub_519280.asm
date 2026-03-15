@@ -1,12 +1,18 @@
+// ============================================================
+// 函数名称: sub_519280
+// 起始地址: 0x519280
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00519280    dword 45B956
 00519284    add byte ptr ds:[eax], al
-00519286    call 0x0050E1C0
+00519286    call 0x0050E1C0                                 ; => [ Call: sub_50e1c0 ]
 0051928B    mov esi, eax
 0051928D    test esi, esi
 0051928F    jz 0x0051930D
 00519291    mov edx, 0x18
 00519296    mov ecx, esi
-00519298    call 0x00571B30
+00519298    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0051929D    mov ecx, dword ptr ds:[eax+0x98]
 005192A3    mov eax, dword ptr ds:[eax+0x9C]
 005192A9    and ecx, 0x7F000400
@@ -18,7 +24,7 @@
 005192C0    mov eax, dword ptr ds:[0x00CCA780]
 005192C5    shl ecx, 0x0B
 005192C8    add eax, 0x58C
-005192CD    add eax, ecx
+005192CD    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 005192CF    nop
 005192D0    cmp dword ptr ds:[eax], 0x00
 005192D3    jz 0x005192EF
@@ -26,9 +32,9 @@
 005192D6    add eax, 0x14
 005192D9    cmp edx, 0x20
 005192DC    jl 0x005192D0
-005192DE    push 0x80CF1C
+005192DE    push 0x80CF1C                                   ; => [ String: CampaignAddExtra ]
 005192E3    push 0x242
-005192E8    mov ecx, 0x801AA4
+005192E8    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 005192ED    jmp 0x0051931E
 005192EF    mov dword ptr ds:[eax], 0xDB8
 005192F5    mov dword ptr ds:[eax+0x04], esi
@@ -37,15 +43,15 @@
 00519306    mov dword ptr ds:[eax+0x10], 0x00
 0051930D    pop esi
 0051930E    ret
-0051930F    push 0x81483C
+0051930F    push 0x81483C                                   ; => [ String: Theme_PileChangesB_CopyCard ]
 00519314    push 0x20DB
-00519319    mov ecx, 0x80CEE4
+00519319    mov ecx, 0x80CEE4                               ; => [ String: !IsLandscape(what) ]
 0051931E    push 0x80CD80
 00519323    mov edx, 0x801800
-00519328    call 0x0063B870
+00519328    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp ]
 0051932D    add esp, 0x0C
 00519330    call 0x0063BC30
 00519335    test al, al
-00519337    jz 0x0051933A
+00519337    jz 0x0051933A                                   ; => [ Call: sub_63bc30 ]
 00519339    int3
-0051933A    call 0x0063BB00
+0051933A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

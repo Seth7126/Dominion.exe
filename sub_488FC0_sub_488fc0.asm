@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_488fc0
+// 起始地址: 0x488fc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00488FC0    mov edx, 0x03
 00488FC5    mov ecx, 0x85BBA8
-00488FCA    jmp 0x0069F030
+00488FCA    jmp 0x0069F030                                  ; => [ String: res/ui_art/ico_modifier_requirecards.texture | Call: sub_69f030 ]

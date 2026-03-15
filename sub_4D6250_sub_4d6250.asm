@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4d6250
+// 起始地址: 0x4d6250
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004D6250    push ecx
 004D6251    push esi
 004D6252    push edi
@@ -14,8 +20,8 @@
 004D6276    mov ecx, dword ptr ds:[ecx+0x1E1A4]
 004D627C    call 0x004D8F30
 004D6281    cmp dword ptr ds:[eax+0x4250], esi
-004D6287    jz 0x004D62D4
-004D6289    mov eax, dword ptr ds:[0x00CC8D5C]
+004D6287    jz 0x004D62D4                                   ; => [ Call: sub_4d8f30 | Data: data_cc8dc8 ]
+004D6289    mov eax, dword ptr ds:[0x00CC8D5C]              ; => [ Data: data_cc8d5c ]
 004D628E    xor ecx, ecx
 004D6290    mov edx, dword ptr ds:[edi+0x18]
 004D6293    test eax, eax
@@ -36,27 +42,27 @@
 004D62B7    pop esi
 004D62B8    pop ecx
 004D62B9    ret
-004D62BA    push 0x77EB90
+004D62BA    push 0x77EB90                                   ; => [ String: GetClient ]
 004D62BF    push 0x7B
-004D62C1    push 0x77EB50
-004D62C6    mov ecx, 0x77EB9C
+004D62C1    push 0x77EB50                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameApp.cpp ]
+004D62C6    mov ecx, 0x77EB9C                               ; => [ String: gClient ]
 004D62CB    jmp 0x004D62EE
 004D62CD    cmp eax, 0x3E9
 004D62D2    jnz 0x004D62DA
 004D62D4    pop edi
-004D62D5    xor al, al
+004D62D5    xor al, al                                      ; => [ Call: nullptr ]
 004D62D7    pop esi
 004D62D8    pop ecx
 004D62D9    ret
-004D62DA    push 0x805BC0
+004D62DA    push 0x805BC0                                   ; => [ String: GameCanAddFriend ]
 004D62DF    push 0xC8
-004D62E4    push 0x805AF8
-004D62E9    mov ecx, 0x801AA4
+004D62E4    push 0x805AF8                                   ; => [ String: C:\x\ax2017\Jams\Shared\TggGame\code\GameSave.cpp ]
+004D62E9    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 004D62EE    mov edx, 0x801800
-004D62F3    call 0x0063B870
+004D62F3    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 004D62F8    add esp, 0x0C
 004D62FB    call 0x0063BC30
 004D6300    test al, al
-004D6302    jz 0x004D6305
+004D6302    jz 0x004D6305                                   ; => [ Call: sub_63bc30 ]
 004D6304    int3
-004D6305    call 0x0063BB00
+004D6305    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

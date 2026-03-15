@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a86b0
+// 起始地址: 0x6a86b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A86B0    push ebx
 006A86B1    mov ebx, esp
 006A86B3    sub esp, 0x08
@@ -8,9 +14,9 @@
 006A86C0    mov dword ptr ss:[esp+0x04], ebp
 006A86C4    mov ebp, esp
 006A86C6    push 0xFFFFFFFF
-006A86C8    push 0x76F9D5
+006A86C8    push 0x76F9D5                                   ; => [ Call: __ehhandler$??$sort@ABVparallel_policy@execution@std@@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@UGSISymbolEntry@@@std@@@std@@@3@V<lambda_f12f7cc50901386c0acd4a75a468741a>@@$0A@@std@@YAXABVparallel_policy@execution@0@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@UGSISymbolEntry@@@std@@@std@@@0@1V<lambda_f12f7cc50901386c0acd4a75a468741a>@@@Z | Type: EHRegistrationNode ]
 006A86CD    mov eax, dword ptr fs:[0x00000000]
-006A86D3    push eax
+006A86D3    push eax                                        ; => [ Type: TEB | Field: ExceptionList | Field: NtTib | Type: _EXCEPTION_REGISTRATION_RECORD ]
 006A86D4    push ebx
 006A86D5    sub esp, 0x90
 006A86DB    mov eax, dword ptr ds:[0x008C4040]
@@ -18,12 +24,12 @@
 006A86E2    mov dword ptr ss:[ebp-0x14], eax
 006A86E5    push esi
 006A86E6    push edi
-006A86E7    push eax
+006A86E7    push eax                                        ; => [ Data: __security_cookie ]
 006A86E8    lea eax, ss:[ebp-0x0C]
-006A86EB    mov dword ptr fs:[0x00000000], eax
+006A86EB    mov dword ptr fs:[0x00000000], eax              ; => [ Field: ExceptionList | Field: NtTib ]
 006A86F1    mov esi, edx
 006A86F3    mov dword ptr ss:[ebp-0x78], esi
-006A86F6    call 0x006A82E0
+006A86F6    call 0x006A82E0                                 ; => [ Call: sub_6a82e0 ]
 006A86FB    xorps xmm1, xmm1
 006A86FE    mov dword ptr ss:[ebp-0x70], eax
 006A8701    mov ecx, dword ptr ds:[eax+0x04]
@@ -187,7 +193,7 @@
 006A896A    movups xmmword ptr ds:[eax], xmm0
 006A896D    call 0x0064B360
 006A8972    add esp, 0x10
-006A8975    mov ecx, eax
+006A8975    mov ecx, eax                                    ; => [ Call: sub_64b360 ]
 006A8977    mov eax, dword ptr ss:[ebp-0x70]
 006A897A    sub esp, 0x10
 006A897D    mov eax, dword ptr ds:[eax+0x04]
@@ -211,104 +217,104 @@
 006A89DE    movups xmm0, xmmword ptr ss:[ebp-0x9C]
 006A89E5    movups xmmword ptr ds:[eax], xmm0
 006A89E8    call 0x0064B360
-006A89ED    mov dword ptr ss:[ebp-0x8C], eax
+006A89ED    mov dword ptr ss:[ebp-0x8C], eax                ; => [ Call: sub_64b360 ]
 006A89F3    add esp, 0x10
 006A89F6    mov eax, dword ptr ds:[edx]
 006A89F8    mov dword ptr ss:[ebp-0x88], ecx
 006A89FE    mov eax, dword ptr ds:[eax+0x24]
 006A8A01    mov dword ptr ss:[ebp-0x7C], eax
 006A8A04    mov eax, dword ptr fs:[0x0000002C]
-006A8A0A    mov esi, dword ptr ds:[eax]
+006A8A0A    mov esi, dword ptr ds:[eax]                     ; => [ Field: ThreadLocalStoragePointer ]
 006A8A0C    mov eax, dword ptr ds:[0x01A9A078]
 006A8A11    cmp eax, dword ptr ds:[esi+0x08]
-006A8A17    jle 0x006A8A5E
-006A8A19    push 0x1A9A078
-006A8A1E    call 0x0075970E
+006A8A17    jle 0x006A8A5E                                  ; => [ Data: data_1a9a078 ]
+006A8A19    push 0x1A9A078                                  ; => [ Data: data_1a9a078 ]
+006A8A1E    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a9a078 ]
 006A8A23    add esp, 0x04
 006A8A26    cmp dword ptr ds:[0x01A9A078], 0xFFFFFFFF
-006A8A2D    jnz 0x006A8A5E
+006A8A2D    jnz 0x006A8A5E                                  ; => [ Data: data_1a9a078 ]
 006A8A2F    mov edx, 0x05
 006A8A34    mov dword ptr ss:[ebp-0x04], 0x00
 006A8A3B    mov ecx, 0x876F04
 006A8A40    call 0x0069F030
-006A8A45    push 0x1A9A078
-006A8A4A    mov dword ptr ds:[0x01A9A07C], eax
+006A8A45    push 0x1A9A078                                  ; => [ Data: data_1a9a078 ]
+006A8A4A    mov dword ptr ds:[0x01A9A07C], eax              ; => [ Data: data_1a9a07c | String: sys/SpineTint.material | Call: sub_69f030 ]
 006A8A4F    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-006A8A56    call 0x007596BD
+006A8A56    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a9a078 ]
 006A8A5B    add esp, 0x04
 006A8A5E    mov eax, dword ptr ds:[0x01A9A080]
 006A8A63    cmp eax, dword ptr ds:[esi+0x08]
-006A8A69    jle 0x006A8AB0
-006A8A6B    push 0x1A9A080
-006A8A70    call 0x0075970E
+006A8A69    jle 0x006A8AB0                                  ; => [ Data: data_1a9a080 ]
+006A8A6B    push 0x1A9A080                                  ; => [ Data: data_1a9a080 ]
+006A8A70    call 0x0075970E                                 ; => [ Data: data_1a9a080 | Call: sub_75970e ]
 006A8A75    add esp, 0x04
 006A8A78    cmp dword ptr ds:[0x01A9A080], 0xFFFFFFFF
-006A8A7F    jnz 0x006A8AB0
+006A8A7F    jnz 0x006A8AB0                                  ; => [ Data: data_1a9a080 ]
 006A8A81    mov edx, 0x05
 006A8A86    mov dword ptr ss:[ebp-0x04], 0x01
 006A8A8D    mov ecx, 0x87AF20
 006A8A92    call 0x0069F030
-006A8A97    push 0x1A9A080
-006A8A9C    mov dword ptr ds:[0x01A9A084], eax
+006A8A97    push 0x1A9A080                                  ; => [ Data: data_1a9a080 ]
+006A8A9C    mov dword ptr ds:[0x01A9A084], eax              ; => [ String: sys/SpineTintAdditive.material | Data: data_1a9a084 | Call: sub_69f030 ]
 006A8AA1    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-006A8AA8    call 0x007596BD
+006A8AA8    call 0x007596BD                                 ; => [ Data: data_1a9a080 | Call: __Init_thread_footer ]
 006A8AAD    add esp, 0x04
 006A8AB0    mov eax, dword ptr ds:[0x01A9A088]
 006A8AB5    cmp eax, dword ptr ds:[esi+0x08]
-006A8ABB    jle 0x006A8B02
-006A8ABD    push 0x1A9A088
-006A8AC2    call 0x0075970E
+006A8ABB    jle 0x006A8B02                                  ; => [ Data: data_1a9a088 ]
+006A8ABD    push 0x1A9A088                                  ; => [ Data: data_1a9a088 ]
+006A8AC2    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a9a088 ]
 006A8AC7    add esp, 0x04
 006A8ACA    cmp dword ptr ds:[0x01A9A088], 0xFFFFFFFF
-006A8AD1    jnz 0x006A8B02
+006A8AD1    jnz 0x006A8B02                                  ; => [ Data: data_1a9a088 ]
 006A8AD3    mov edx, 0x05
 006A8AD8    mov dword ptr ss:[ebp-0x04], 0x02
 006A8ADF    mov ecx, 0x87AF60
 006A8AE4    call 0x0069F030
-006A8AE9    push 0x1A9A088
-006A8AEE    mov dword ptr ds:[0x01A9A08C], eax
+006A8AE9    push 0x1A9A088                                  ; => [ Data: data_1a9a088 ]
+006A8AEE    mov dword ptr ds:[0x01A9A08C], eax              ; => [ Data: data_1a9a08c | String: sys/SpineTintMultiply.material | Call: sub_69f030 ]
 006A8AF3    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-006A8AFA    call 0x007596BD
+006A8AFA    call 0x007596BD                                 ; => [ Call: __Init_thread_footer | Data: data_1a9a088 ]
 006A8AFF    add esp, 0x04
 006A8B02    mov eax, dword ptr ds:[0x01A9A090]
 006A8B07    cmp eax, dword ptr ds:[esi+0x08]
-006A8B0D    jle 0x006A8B54
-006A8B0F    push 0x1A9A090
-006A8B14    call 0x0075970E
+006A8B0D    jle 0x006A8B54                                  ; => [ Data: data_1a9a090 ]
+006A8B0F    push 0x1A9A090                                  ; => [ Data: data_1a9a090 ]
+006A8B14    call 0x0075970E                                 ; => [ Call: sub_75970e | Data: data_1a9a090 ]
 006A8B19    add esp, 0x04
 006A8B1C    cmp dword ptr ds:[0x01A9A090], 0xFFFFFFFF
-006A8B23    jnz 0x006A8B54
+006A8B23    jnz 0x006A8B54                                  ; => [ Data: data_1a9a090 ]
 006A8B25    mov edx, 0x05
 006A8B2A    mov dword ptr ss:[ebp-0x04], 0x03
 006A8B31    mov ecx, 0x87AF40
 006A8B36    call 0x0069F030
-006A8B3B    push 0x1A9A090
-006A8B40    mov dword ptr ds:[0x01A9A094], eax
+006A8B3B    push 0x1A9A090                                  ; => [ Data: data_1a9a090 ]
+006A8B40    mov dword ptr ds:[0x01A9A094], eax              ; => [ Data: data_1a9a094 | String: sys/SpineTintScreen.material | Call: sub_69f030 ]
 006A8B45    mov dword ptr ss:[ebp-0x04], 0xFFFFFFFF
-006A8B4C    call 0x007596BD
+006A8B4C    call 0x007596BD                                 ; => [ Data: data_1a9a090 | Call: __Init_thread_footer ]
 006A8B51    add esp, 0x04
 006A8B54    mov eax, dword ptr ss:[ebp-0x7C]
 006A8B57    cmp eax, 0x03
 006A8B5A    jnbe 0x006A8C8F
 006A8B60    jmp dword ptr ds:[eax*4+0x6A8CF0]
-006A8B67    mov esi, dword ptr ds:[0x01A9A07C]
+006A8B67    mov esi, dword ptr ds:[0x01A9A07C]              ; => [ Data: data_1a9a07c ]
 006A8B6D    jmp 0x006A8B85
-006A8B6F    mov esi, dword ptr ds:[0x01A9A084]
+006A8B6F    mov esi, dword ptr ds:[0x01A9A084]              ; => [ Data: data_1a9a084 ]
 006A8B75    jmp 0x006A8B85
-006A8B77    mov esi, dword ptr ds:[0x01A9A08C]
+006A8B77    mov esi, dword ptr ds:[0x01A9A08C]              ; => [ Data: data_1a9a08c ]
 006A8B7D    jmp 0x006A8B85
-006A8B7F    mov esi, dword ptr ds:[0x01A9A094]
+006A8B7F    mov esi, dword ptr ds:[0x01A9A094]              ; => [ Data: data_1a9a094 ]
 006A8B85    mov eax, dword ptr ss:[ebp-0x70]
 006A8B88    mov ecx, dword ptr ds:[eax]
 006A8B8A    cmp dword ptr ds:[ecx+0x04], 0x23
 006A8B8E    jnz 0x006A8C7E
-006A8B94    call 0x005AF880
+006A8B94    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006A8B99    mov ecx, dword ptr ds:[edi+0x44]
 006A8B9C    cmp dword ptr ds:[eax+0x20], 0x00
 006A8BA0    jz 0x006A8BA8
 006A8BA2    mov eax, dword ptr ds:[ecx+0x4C]
 006A8BA5    mov ecx, dword ptr ds:[eax+0x1C]
-006A8BA8    mov eax, dword ptr ds:[0x0147ABE4]
+006A8BA8    mov eax, dword ptr ds:[0x0147ABE4]              ; => [ Data: data_147abe4 ]
 006A8BAD    lea edx, ss:[ebp-0x34]
 006A8BB0    movss xmm0, dword ptr ss:[ebp-0x80]
 006A8BB5    movss xmm2, dword ptr ss:[ebp-0x68]
@@ -342,7 +348,7 @@
 006A8C2D    addss xmm1, xmm0
 006A8C31    movss dword ptr ss:[ebp-0x3C], xmm2
 006A8C36    movss dword ptr ss:[ebp-0x38], xmm1
-006A8C3B    call 0x006867A0
+006A8C3B    call 0x006867A0                                 ; => [ Call: sub_6867a0 ]
 006A8C40    add esp, 0x10
 006A8C43    xorps xmm1, xmm1
 006A8C46    mov eax, dword ptr ss:[ebp-0x70]
@@ -355,46 +361,46 @@
 006A8C58    mov esi, dword ptr ss:[ebp-0x78]
 006A8C5B    jmp 0x006A8724
 006A8C60    mov ecx, dword ptr ss:[ebp-0x0C]
-006A8C63    mov dword ptr fs:[0x00000000], ecx
+006A8C63    mov dword ptr fs:[0x00000000], ecx              ; => [ Field: ExceptionList | Field: NtTib ]
 006A8C6A    pop ecx
 006A8C6B    pop edi
 006A8C6C    pop esi
 006A8C6D    mov ecx, dword ptr ss:[ebp-0x14]
 006A8C70    xor ecx, ebp
-006A8C72    call 0x0075927A
+006A8C72    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006A8C77    mov esp, ebp
 006A8C79    pop ebp
 006A8C7A    mov esp, ebx
 006A8C7C    pop ebx
 006A8C7D    ret
-006A8C7E    push 0x87AED4
+006A8C7E    push 0x87AED4                                   ; => [ String: SpineDefGet ]
 006A8C83    push 0x1BD
-006A8C88    byte B9
+006A8C88    byte B9                                         ; => [ String: assetPtr->assetType == ASSET_TYPE_SPINE ]
 006A8C89    clc
 006A8C8A    scasb
 006A8C8B    xchg dword ptr ds:[eax], eax
 006A8C8D    jmp 0x006A8C9E
-006A8C8F    push 0x87AEE8
+006A8C8F    push 0x87AEE8                                   ; => [ String: SpineMaterial ]
 006A8C94    push 0x269
-006A8C99    mov ecx, 0x801AA4
-006A8C9E    push 0x87ADA4
+006A8C99    mov ecx, 0x801AA4                               ; => [ String: Halt ]
+006A8C9E    push 0x87ADA4                                   ; => [ String: C:\x\ax2017\Engine\Spine.cpp ]
 006A8CA3    mov edx, 0x801800
-006A8CA8    call 0x0063B870
+006A8CA8    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006A8CAD    add esp, 0x0C
 006A8CB0    call 0x0063BC30
 006A8CB5    test al, al
-006A8CB7    jz 0x006A8CBA
+006A8CB7    jz 0x006A8CBA                                   ; => [ Call: sub_63bc30 ]
 006A8CB9    int3
-006A8CBA    call 0x0063BB00
-006A8CBF    push 0x87AF98
+006A8CBA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
+006A8CBF    push 0x87AF98                                   ; => [ String: SpineDraw ]
 006A8CC4    push 0x2D1
-006A8CC9    push 0x87ADA4
+006A8CC9    push 0x87ADA4                                   ; => [ String: C:\x\ax2017\Engine\Spine.cpp ]
 006A8CCE    mov edx, 0x801800
 006A8CD3    mov ecx, 0x801AA4
-006A8CD8    call 0x0063B870
+006A8CD8    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: Halt ]
 006A8CDD    add esp, 0x0C
 006A8CE0    call 0x0063BC30
 006A8CE5    test al, al
-006A8CE7    jz 0x006A8CEA
+006A8CE7    jz 0x006A8CEA                                   ; => [ Call: sub_63bc30 ]
 006A8CE9    int3
-006A8CEA    call 0x0063BB00
+006A8CEA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

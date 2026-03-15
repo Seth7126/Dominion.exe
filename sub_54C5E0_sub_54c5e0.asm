@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_54c5e0
+// 起始地址: 0x54c5e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0054C5E0    push ebp
 0054C5E1    mov ebp, esp
 0054C5E3    and esp, 0xFFFFFFF8
@@ -8,10 +14,10 @@
 0054C5EA    call 0x00573400
 0054C5EF    mov esi, dword ptr ss:[ebp+0x08]
 0054C5F2    movzx edi, si
-0054C5F5    mov ebx, dword ptr ds:[eax+0x04]
+0054C5F5    mov ebx, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 0054C5F8    cmp edi, 0x320
 0054C5FE    jb 0x0054C605
-0054C600    call 0x00591930
+0054C600    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0054C605    imul eax, edi, 0x64
 0054C608    mov ecx, ebx
 0054C60A    push 0x00
@@ -20,7 +26,7 @@
 0054C615    call 0x005754F0
 0054C61A    add esp, 0x08
 0054C61D    test al, al
-0054C61F    jz 0x0054C635
+0054C61F    jz 0x0054C635                                   ; => [ Call: sub_56f260 | Call: sub_5754f0 ]
 0054C621    mov ecx, esi
 0054C623    call 0x0056F260
 0054C628    test al, al

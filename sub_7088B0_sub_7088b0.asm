@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7088b0
+// 起始地址: 0x7088b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007088B0    push ebx
 007088B1    mov ebx, ecx
 007088B3    push esi
@@ -50,24 +56,24 @@
 00708919    xor eax, eax
 0070891B    pop ebx
 0070891C    ret
-0070891D    mov eax, dword ptr ds:[0x0147DED8]
+0070891D    mov eax, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 00708922    test eax, eax
 00708924    jz 0x00708938
 00708926    push 0x95
 0070892B    push 0x88DAD0
 00708930    push esi
-00708931    call eax
+00708931    call eax                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\SkeletonBinary.c ]
 00708933    add esp, 0x0C
 00708936    jmp 0x00708942
 00708938    push esi
-00708939    call dword ptr ds:[0x00800B4C]
+00708939    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 0070893F    add esp, 0x04
 00708942    mov edi, eax
 00708944    lea eax, ds:[esi-0x01]
 00708947    push eax
 00708948    push dword ptr ds:[ebx]
 0070894A    push edi
-0070894B    call 0x00761FBE
+0070894B    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00708950    add esp, 0x0C
 00708953    lea eax, ds:[esi-0x01]
 00708956    add dword ptr ds:[ebx], eax

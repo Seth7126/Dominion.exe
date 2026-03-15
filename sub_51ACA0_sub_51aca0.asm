@@ -1,29 +1,35 @@
+// ============================================================
+// 函数名称: sub_51aca0
+// 起始地址: 0x51aca0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0051ACA0    push ebp
 0051ACA1    mov ebp, esp
 0051ACA3    sub esp, 0x0C
 0051ACA6    push ebx
-0051ACA7    mov ebx, dword ptr ds:[0x00CC8DE0]
+0051ACA7    mov ebx, dword ptr ds:[0x00CC8DE0]              ; => [ Data: data_cc8de0 ]
 0051ACAD    push esi
 0051ACAE    push edi
-0051ACAF    mov edi, dword ptr ds:[0x00CC8DE4]
+0051ACAF    mov edi, dword ptr ds:[0x00CC8DE4]              ; => [ Data: data_cc8de4 ]
 0051ACB5    push 0x5851F42D
 0051ACBA    push 0x4C957F2D
 0051ACBF    push edi
 0051ACC0    push ebx
 0051ACC1    mov dword ptr ss:[ebp-0x08], edx
 0051ACC4    mov dword ptr ss:[ebp-0x04], ecx
-0051ACC7    call 0x007621D0
-0051ACCC    add eax, dword ptr ds:[0x00CC8DE8]
+0051ACC7    call 0x007621D0                                 ; => [ Call: __allmul ]
+0051ACCC    add eax, dword ptr ds:[0x00CC8DE8]              ; => [ Data: data_cc8de8 ]
 0051ACD2    mov ecx, edi
 0051ACD4    mov esi, edi
-0051ACD6    mov dword ptr ds:[0x00CC8DE0], eax
+0051ACD6    mov dword ptr ds:[0x00CC8DE0], eax              ; => [ Data: data_cc8de8 | Data: data_cc8de0 ]
 0051ACDB    adc edx, dword ptr ds:[0x00CC8DEC]
 0051ACE1    mov eax, 0xCCCCCCCD
 0051ACE6    shr esi, 0x0D
 0051ACE9    shrd ebx, edi, 0x1B
 0051ACED    shr ecx, 0x1B
 0051ACF0    xor esi, ebx
-0051ACF2    mov dword ptr ds:[0x00CC8DE4], edx
+0051ACF2    mov dword ptr ds:[0x00CC8DE4], edx              ; => [ Data: data_cc8dec | Data: data_cc8de4 ]
 0051ACF8    ror esi, cl
 0051ACFA    mul esi
 0051ACFC    shr edx, 0x03
@@ -51,10 +57,10 @@
 0051AD33    push 0x80CD80
 0051AD38    mov edx, 0x801800
 0051AD3D    mov ecx, 0x80CEF8
-0051AD42    call 0x0063B870
+0051AD42    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignMissionRandomCardIsExpansion | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: what != CARD_NONE ]
 0051AD47    add esp, 0x0C
 0051AD4A    call 0x0063BC30
 0051AD4F    test al, al
-0051AD51    jz 0x0051AD54
+0051AD51    jz 0x0051AD54                                   ; => [ Call: sub_63bc30 ]
 0051AD53    int3
-0051AD54    call 0x0063BB00
+0051AD54    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e7700
+// 起始地址: 0x6e7700
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7700    push ebp
 006E7701    mov ebp, esp
 006E7703    sub esp, 0x64
@@ -23,18 +29,18 @@
 006E7734    pop ebx
 006E7735    mov esp, ebp
 006E7737    pop ebp
-006E7738    ret
+006E7738    ret                                             ; => [ Call: sub_6e6c40 ]
 006E7739    lea eax, ss:[ebp-0x30]
 006E773C    push eax
 006E773D    push ecx
 006E773E    mov ecx, ebx
-006E7740    call 0x006E6C40
+006E7740    call 0x006E6C40                                 ; => [ Call: sub_6e6c40 ]
 006E7745    lea eax, ss:[ebp-0x60]
 006E7748    mov edx, edi
 006E774A    push eax
 006E774B    push dword ptr ds:[esi+0x04]
 006E774E    mov ecx, ebx
-006E7750    call 0x006E6C40
+006E7750    call 0x006E6C40                                 ; => [ Call: sub_6e6c40 ]
 006E7755    movss xmm1, dword ptr ss:[ebp-0x5C]
 006E775A    lea edx, ss:[ebp-0x40]
 006E775D    subss xmm1, dword ptr ss:[ebp-0x2C]
@@ -73,10 +79,10 @@
 006E77F3    movss dword ptr ds:[esi+0x14], xmm1
 006E77F8    call 0x005AF6F0
 006E77FD    lea edx, ss:[ebp-0x3C]
-006E7800    mov dword ptr ds:[esi+0x20], eax
+006E7800    mov dword ptr ds:[esi+0x20], eax                ; => [ Call: sub_5af6f0 ]
 006E7803    lea ecx, ss:[ebp-0x0C]
 006E7806    call 0x005AF6F0
-006E780B    mov dword ptr ds:[esi+0x24], eax
+006E780B    mov dword ptr ds:[esi+0x24], eax                ; => [ Call: sub_5af6f0 ]
 006E780E    mov eax, dword ptr ss:[ebp-0x08]
 006E7811    mov dword ptr ds:[esi+0x28], eax
 006E7814    mov eax, dword ptr ss:[ebp-0x04]

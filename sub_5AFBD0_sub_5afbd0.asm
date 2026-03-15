@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5afbd0
+// 起始地址: 0x5afbd0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005AFBD0    push ebp
 005AFBD1    mov ebp, esp
 005AFBD3    sub esp, 0x14
@@ -7,22 +13,22 @@
 005AFBDA    mov esi, edx
 005AFBDC    push edi
 005AFBDD    mov ecx, 0xB80AD8
-005AFBE2    call 0x00591F80
+005AFBE2    call 0x00591F80                                 ; => [ Call: sub_591f80 ]
 005AFBE7    mov dword ptr ss:[ebp-0x0C], eax
 005AFBEA    test eax, eax
 005AFBEC    jz 0x005AFC56
 005AFBEE    mov edx, esi
 005AFBF0    mov ecx, 0xB80AD8
 005AFBF5    call 0x0057DA30
-005AFBFA    mov edx, eax
+005AFBFA    mov edx, eax                                    ; => [ Call: sub_57da30 ]
 005AFBFC    mov ecx, 0x07
 005AFC01    mov dword ptr ss:[ebp-0x08], edx
-005AFC04    mov edi, 0xB8206C
+005AFC04    mov edi, 0xB8206C                               ; => [ Data: data_b8206c ]
 005AFC09    mov dword ptr ss:[ebp-0x04], ecx
 005AFC0C    nop dword ptr ds:[eax], eax
 005AFC10    cmp ecx, 0x48
 005AFC13    jl 0x005AFC20
-005AFC15    call 0x00591930
+005AFC15    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005AFC1A    mov ecx, dword ptr ss:[ebp-0x04]
 005AFC1D    mov edx, dword ptr ss:[ebp-0x08]
 005AFC20    mov eax, dword ptr ds:[edi]
@@ -43,7 +49,7 @@
 005AFC45    mov edx, dword ptr ds:[0x0171DC10]
 005AFC4B    push 0x00
 005AFC4D    push ecx
-005AFC4E    call 0x005AF930
+005AFC4E    call 0x005AF930                                 ; => [ Call: sub_5af930 | Data: data_171dc10 ]
 005AFC53    add esp, 0x08
 005AFC56    cmp esi, 0x600
 005AFC5C    jnle 0x005AFD3E
@@ -62,7 +68,7 @@
 005AFC91    pop ebx
 005AFC92    mov esp, ebp
 005AFC94    pop ebp
-005AFC95    ret
+005AFC95    ret                                             ; => [ Data: data_171dc2c | Call: sub_5af930 ]
 005AFC96    mov edx, dword ptr ds:[0x0171DC38]
 005AFC9C    push 0x00
 005AFC9E    push ecx
@@ -73,7 +79,7 @@
 005AFCA9    pop ebx
 005AFCAA    mov esp, ebp
 005AFCAC    pop ebp
-005AFCAD    ret
+005AFCAD    ret                                             ; => [ Data: data_171dc38 | Call: sub_5af930 ]
 005AFCAE    mov edx, dword ptr ds:[0x0171DC30]
 005AFCB4    push 0x00
 005AFCB6    push ecx
@@ -84,7 +90,7 @@
 005AFCC1    pop ebx
 005AFCC2    mov esp, ebp
 005AFCC4    pop ebp
-005AFCC5    ret
+005AFCC5    ret                                             ; => [ Data: data_171dc30 | Call: sub_5af930 ]
 005AFCC6    mov edx, dword ptr ds:[0x0171DC48]
 005AFCCC    push 0x00
 005AFCCE    push ecx
@@ -95,7 +101,7 @@
 005AFCD9    pop ebx
 005AFCDA    mov esp, ebp
 005AFCDC    pop ebp
-005AFCDD    ret
+005AFCDD    ret                                             ; => [ Data: data_171dc48 | Call: sub_5af930 ]
 005AFCDE    mov edx, dword ptr ds:[0x0171DC40]
 005AFCE4    push 0x00
 005AFCE6    push ecx
@@ -106,7 +112,7 @@
 005AFCF1    pop ebx
 005AFCF2    mov esp, ebp
 005AFCF4    pop ebp
-005AFCF5    ret
+005AFCF5    ret                                             ; => [ Data: data_171dc40 | Call: sub_5af930 ]
 005AFCF6    mov edx, dword ptr ds:[0x0171DC44]
 005AFCFC    push 0x00
 005AFCFE    push ecx
@@ -117,7 +123,7 @@
 005AFD09    pop ebx
 005AFD0A    mov esp, ebp
 005AFD0C    pop ebp
-005AFD0D    ret
+005AFD0D    ret                                             ; => [ Data: data_171dc44 | Call: sub_5af930 ]
 005AFD0E    mov edx, dword ptr ds:[0x0171E6F8]
 005AFD14    push 0x00
 005AFD16    push ecx
@@ -128,7 +134,7 @@
 005AFD21    pop ebx
 005AFD22    mov esp, ebp
 005AFD24    pop ebp
-005AFD25    ret
+005AFD25    ret                                             ; => [ Data: data_171e6f8 | Call: sub_5af930 ]
 005AFD26    mov edx, dword ptr ds:[0x0171DC34]
 005AFD2C    push 0x00
 005AFD2E    push ecx
@@ -139,7 +145,7 @@
 005AFD39    pop ebx
 005AFD3A    mov esp, ebp
 005AFD3C    pop ebp
-005AFD3D    ret
+005AFD3D    ret                                             ; => [ Data: data_171dc34 | Call: sub_5af930 ]
 005AFD3E    cmp esi, 0x924
 005AFD44    jnle 0x005AFF6F
 005AFD4A    jz 0x005AFF8B
@@ -158,8 +164,8 @@
 005AFD79    pop ebx
 005AFD7A    mov esp, ebp
 005AFD7C    pop ebp
-005AFD7D    ret
-005AFD7E    mov edx, dword ptr ds:[0x00B604E0]
+005AFD7D    ret                                             ; => [ Data: data_171dc3c | Call: sub_5af930 ]
+005AFD7E    mov edx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005AFD84    xor ecx, ecx
 005AFD86    cmp edx, 0xFFFFFFFF
 005AFD89    mov eax, edx
@@ -171,14 +177,14 @@
 005AFD97    cmovz edx, eax
 005AFD9A    cmp ebx, edx
 005AFD9C    jnz 0x005B0080
-005AFDA2    mov ecx, dword ptr ds:[0x0171E35C]
+005AFDA2    mov ecx, dword ptr ds:[0x0171E35C]              ; => [ Data: data_171e35c ]
 005AFDA8    call 0x00688A10
 005AFDAD    pop edi
 005AFDAE    pop esi
 005AFDAF    pop ebx
 005AFDB0    mov esp, ebp
 005AFDB2    pop ebp
-005AFDB3    ret
+005AFDB3    ret                                             ; => [ Call: sub_688a10 ]
 005AFDB4    mov edx, dword ptr ds:[0x0171DC14]
 005AFDBA    push 0x00
 005AFDBC    push ecx
@@ -189,13 +195,13 @@
 005AFDC7    pop ebx
 005AFDC8    mov esp, ebp
 005AFDCA    pop ebp
-005AFDCB    ret
+005AFDCB    ret                                             ; => [ Data: data_171dc14 | Call: sub_5af930 ]
 005AFDCC    lea eax, ds:[esi-0x70F]
 005AFDD2    cmp eax, 0x0E
 005AFDD5    jnbe 0x005AFFC7
 005AFDDB    movzx eax, byte ptr ds:[eax+0x5B00BC]
 005AFDE2    jmp dword ptr ds:[eax*4+0x5B00A4]
-005AFDE9    mov edx, dword ptr ds:[0x00B604E0]
+005AFDE9    mov edx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005AFDEF    xor ecx, ecx
 005AFDF1    cmp edx, 0xFFFFFFFF
 005AFDF4    mov eax, edx
@@ -207,14 +213,14 @@
 005AFE02    cmovz edx, eax
 005AFE05    cmp ebx, edx
 005AFE07    jnz 0x005B0080
-005AFE0D    mov ecx, dword ptr ds:[0x0171E360]
+005AFE0D    mov ecx, dword ptr ds:[0x0171E360]              ; => [ Data: data_171e360 ]
 005AFE13    call 0x00688A10
 005AFE18    pop edi
 005AFE19    pop esi
 005AFE1A    pop ebx
 005AFE1B    mov esp, ebp
 005AFE1D    pop ebp
-005AFE1E    ret
+005AFE1E    ret                                             ; => [ Call: sub_688a10 ]
 005AFE1F    mov edx, dword ptr ds:[0x0171DC18]
 005AFE25    push 0x00
 005AFE27    push ecx
@@ -225,8 +231,8 @@
 005AFE32    pop ebx
 005AFE33    mov esp, ebp
 005AFE35    pop ebp
-005AFE36    ret
-005AFE37    mov edx, dword ptr ds:[0x00B604E0]
+005AFE36    ret                                             ; => [ Data: data_171dc18 | Call: sub_5af930 ]
+005AFE37    mov edx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005AFE3D    xor ecx, ecx
 005AFE3F    cmp edx, 0xFFFFFFFF
 005AFE42    mov eax, edx
@@ -238,14 +244,14 @@
 005AFE50    cmovz edx, eax
 005AFE53    cmp ebx, edx
 005AFE55    jnz 0x005B0080
-005AFE5B    mov ecx, dword ptr ds:[0x0171E364]
+005AFE5B    mov ecx, dword ptr ds:[0x0171E364]              ; => [ Data: data_171e364 ]
 005AFE61    call 0x00688A10
 005AFE66    pop edi
 005AFE67    pop esi
 005AFE68    pop ebx
 005AFE69    mov esp, ebp
 005AFE6B    pop ebp
-005AFE6C    ret
+005AFE6C    ret                                             ; => [ Call: sub_688a10 ]
 005AFE6D    mov edx, dword ptr ds:[0x0171DC1C]
 005AFE73    push 0x00
 005AFE75    push ecx
@@ -256,8 +262,8 @@
 005AFE80    pop ebx
 005AFE81    mov esp, ebp
 005AFE83    pop ebp
-005AFE84    ret
-005AFE85    mov edx, dword ptr ds:[0x00B604E0]
+005AFE84    ret                                             ; => [ Data: data_171dc1c | Call: sub_5af930 ]
+005AFE85    mov edx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005AFE8B    xor ecx, ecx
 005AFE8D    cmp edx, 0xFFFFFFFF
 005AFE90    mov eax, edx
@@ -269,14 +275,14 @@
 005AFE9E    cmovz edx, eax
 005AFEA1    cmp ebx, edx
 005AFEA3    jnz 0x005B0080
-005AFEA9    mov ecx, dword ptr ds:[0x0171E368]
+005AFEA9    mov ecx, dword ptr ds:[0x0171E368]              ; => [ Data: data_171e368 ]
 005AFEAF    call 0x00688A10
 005AFEB4    pop edi
 005AFEB5    pop esi
 005AFEB6    pop ebx
 005AFEB7    mov esp, ebp
 005AFEB9    pop ebp
-005AFEBA    ret
+005AFEBA    ret                                             ; => [ Call: sub_688a10 ]
 005AFEBB    mov edx, dword ptr ds:[0x0171DC20]
 005AFEC1    push 0x00
 005AFEC3    push ecx
@@ -287,8 +293,8 @@
 005AFECE    pop ebx
 005AFECF    mov esp, ebp
 005AFED1    pop ebp
-005AFED2    ret
-005AFED3    mov edx, dword ptr ds:[0x00B604E0]
+005AFED2    ret                                             ; => [ Call: sub_5af930 | Data: data_171dc20 ]
+005AFED3    mov edx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005AFED9    xor ecx, ecx
 005AFEDB    cmp edx, 0xFFFFFFFF
 005AFEDE    mov eax, edx
@@ -300,14 +306,14 @@
 005AFEEC    cmovz edx, eax
 005AFEEF    cmp ebx, edx
 005AFEF1    jnz 0x005B0080
-005AFEF7    mov ecx, dword ptr ds:[0x0171E36C]
+005AFEF7    mov ecx, dword ptr ds:[0x0171E36C]              ; => [ Data: data_171e36c ]
 005AFEFD    call 0x00688A10
 005AFF02    pop edi
 005AFF03    pop esi
 005AFF04    pop ebx
 005AFF05    mov esp, ebp
 005AFF07    pop ebp
-005AFF08    ret
+005AFF08    ret                                             ; => [ Call: sub_688a10 ]
 005AFF09    mov edx, dword ptr ds:[0x0171E36C]
 005AFF0F    push 0x00
 005AFF11    push ecx
@@ -318,8 +324,8 @@
 005AFF1C    pop ebx
 005AFF1D    mov esp, ebp
 005AFF1F    pop ebp
-005AFF20    ret
-005AFF21    mov edx, dword ptr ds:[0x00B604E0]
+005AFF20    ret                                             ; => [ Data: data_171e36c | Call: sub_5af930 ]
+005AFF21    mov edx, dword ptr ds:[0x00B604E0]              ; => [ Data: data_b604e0 ]
 005AFF27    xor ecx, ecx
 005AFF29    cmp edx, 0xFFFFFFFF
 005AFF2C    mov eax, edx
@@ -331,14 +337,14 @@
 005AFF3A    cmovz edx, eax
 005AFF3D    cmp ebx, edx
 005AFF3F    jnz 0x005B0080
-005AFF45    mov ecx, dword ptr ds:[0x0171DAC4]
+005AFF45    mov ecx, dword ptr ds:[0x0171DAC4]              ; => [ Data: data_171dac4 ]
 005AFF4B    call 0x00688A10
 005AFF50    pop edi
 005AFF51    pop esi
 005AFF52    pop ebx
 005AFF53    mov esp, ebp
 005AFF55    pop ebp
-005AFF56    ret
+005AFF56    ret                                             ; => [ Call: sub_688a10 ]
 005AFF57    mov edx, dword ptr ds:[0x0171DA80]
 005AFF5D    push 0x00
 005AFF5F    push ecx
@@ -349,7 +355,7 @@
 005AFF6A    pop ebx
 005AFF6B    mov esp, ebp
 005AFF6D    pop ebp
-005AFF6E    ret
+005AFF6E    ret                                             ; => [ Data: data_171da80 | Call: sub_5af930 ]
 005AFF6F    cmp esi, 0xD29
 005AFF75    jnle 0x005AFFBB
 005AFF77    jz 0x005AFFA3
@@ -367,7 +373,7 @@
 005AFF9E    pop ebx
 005AFF9F    mov esp, ebp
 005AFFA1    pop ebp
-005AFFA2    ret
+005AFFA2    ret                                             ; => [ Call: sub_5af930 | Data: data_171dc28 ]
 005AFFA3    mov edx, dword ptr ds:[0x0171DC4C]
 005AFFA9    push 0x00
 005AFFAB    push ecx
@@ -378,13 +384,13 @@
 005AFFB6    pop ebx
 005AFFB7    mov esp, ebp
 005AFFB9    pop ebp
-005AFFBA    ret
+005AFFBA    ret                                             ; => [ Call: sub_5af930 | Data: data_171dc4c ]
 005AFFBB    cmp esi, 0xD2F
 005AFFC1    jz 0x005B006F
 005AFFC7    call 0x005CF7E0
 005AFFCC    mov edx, eax
 005AFFCE    mov ecx, esi
-005AFFD0    call 0x00571B30
+005AFFD0    call 0x00571B30                                 ; => [ Call: sub_571b30 | Call: sub_5cf7e0 ]
 005AFFD5    mov edx, dword ptr ds:[eax+0x98]
 005AFFDB    mov ecx, edx
 005AFFDD    and ecx, 0x02
@@ -403,7 +409,7 @@
 005B0003    pop ebx
 005B0004    mov esp, ebp
 005B0006    pop ebp
-005B0007    ret
+005B0007    ret                                             ; => [ Data: data_171e6fc | Call: sub_5af930 ]
 005B0008    push 0x00
 005B000A    push ecx
 005B000B    cmp eax, 0x06
@@ -416,7 +422,7 @@
 005B0020    pop ebx
 005B0021    mov esp, ebp
 005B0023    pop ebp
-005B0024    ret
+005B0024    ret                                             ; => [ Data: data_171e700 | Call: sub_5af930 ]
 005B0025    mov edx, dword ptr ds:[0x0171E704]
 005B002B    call 0x005AF930
 005B0030    add esp, 0x08
@@ -425,7 +431,7 @@
 005B0035    pop ebx
 005B0036    mov esp, ebp
 005B0038    pop ebp
-005B0039    ret
+005B0039    ret                                             ; => [ Data: data_171e704 | Call: sub_5af930 ]
 005B003A    and edx, 0x08
 005B003D    or edx, 0x00
 005B0040    push 0x00
@@ -439,7 +445,7 @@
 005B0055    pop ebx
 005B0056    mov esp, ebp
 005B0058    pop ebp
-005B0059    ret
+005B0059    ret                                             ; => [ Call: sub_5af930 | Data: data_171e708 ]
 005B005A    mov edx, dword ptr ds:[0x0171E6F4]
 005B0060    call 0x005AF930
 005B0065    add esp, 0x08
@@ -448,11 +454,11 @@
 005B006A    pop ebx
 005B006B    mov esp, ebp
 005B006D    pop ebp
-005B006E    ret
+005B006E    ret                                             ; => [ Data: data_171e6f4 | Call: sub_5af930 ]
 005B006F    mov edx, dword ptr ds:[0x0171DC0C]
 005B0075    push 0x00
 005B0077    push ecx
-005B0078    call 0x005AF930
+005B0078    call 0x005AF930                                 ; => [ Data: data_171dc0c | Call: sub_5af930 ]
 005B007D    add esp, 0x08
 005B0080    pop edi
 005B0081    pop esi

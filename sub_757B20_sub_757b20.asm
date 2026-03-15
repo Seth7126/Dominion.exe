@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_757b20
+// 起始地址: 0x757b20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00757B20    push ebp
 00757B21    mov ebp, esp
 00757B23    and esp, 0xFFFFFFF8
@@ -38,7 +44,7 @@
 00757BA0    jnz 0x00757C5F
 00757BA6    call 0x005AF880
 00757BAB    cmp dword ptr ds:[eax+0x18], 0x01
-00757BAF    jnz 0x00757BD8
+00757BAF    jnz 0x00757BD8                                  ; => [ Call: sub_5af880 ]
 00757BB1    mov ecx, dword ptr ds:[esi+0x78C]
 00757BB7    test ecx, ecx
 00757BB9    jnz 0x00757BC7
@@ -86,22 +92,22 @@
 00757C39    push 0x88C304
 00757C3E    mov edx, 0x801800
 00757C43    mov ecx, 0x88C39C
-00757C48    call 0x0063B870
+00757C48    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\SoundOgg.cpp | Data: data_801800 | String: result >= 0 | String: SoundOggReadFrameFloat ]
 00757C4D    add esp, 0x0C
 00757C50    call 0x0063BC30
 00757C55    test al, al
-00757C57    jz 0x00757C5A
+00757C57    jz 0x00757C5A                                   ; => [ Call: sub_63bc30 ]
 00757C59    int3
-00757C5A    call 0x0063BB00
+00757C5A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 00757C5F    push 0x877324
 00757C64    push 0x356
 00757C69    push 0x8772E4
 00757C6E    mov edx, 0x801800
 00757C73    mov ecx, 0x877344
-00757C78    call 0x0063B870
+00757C78    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SoundGetDef | String: C:\x\ax2017\Engine\Sound.cpp | Data: data_801800 | String: assetPtr->assetType == ASSET_TYPE_SOUND ]
 00757C7D    add esp, 0x0C
 00757C80    call 0x0063BC30
 00757C85    test al, al
-00757C87    jz 0x00757C8A
+00757C87    jz 0x00757C8A                                   ; => [ Call: sub_63bc30 ]
 00757C89    int3
-00757C8A    call 0x0063BB00
+00757C8A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

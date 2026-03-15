@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4ebd20
+// 起始地址: 0x4ebd20
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004EBD20    push ebp
 004EBD21    mov ebp, esp
 004EBD23    sub esp, 0x14
@@ -9,14 +15,14 @@
 004EBD31    push esi
 004EBD32    push ebx
 004EBD33    mov dword ptr ss:[ebp-0x14], esi
-004EBD36    call 0x00761FBE
+004EBD36    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBD3B    imul eax, dword ptr ds:[ebx+0x1520], 0x64
 004EBD42    push eax
 004EBD43    lea eax, ds:[esi+0x1A48]
 004EBD49    push eax
 004EBD4A    lea eax, ds:[ebx+0x1A48]
 004EBD50    push eax
-004EBD51    call 0x00761FBE
+004EBD51    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBD56    mov eax, dword ptr ds:[ebx+0x19A4]
 004EBD5C    shl eax, 0x05
 004EBD5F    push eax
@@ -24,7 +30,7 @@
 004EBD66    push eax
 004EBD67    lea eax, ds:[ebx+0x152C8]
 004EBD6D    push eax
-004EBD6E    call 0x00761FBE
+004EBD6E    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBD73    add esp, 0x24
 004EBD76    mov dword ptr ss:[ebp-0x08], 0x00
 004EBD7D    cmp dword ptr ds:[ebx+0xD38], 0x00
@@ -42,7 +48,7 @@
 004EBDB0    add edi, 0xFFFFFD50
 004EBDB6    add esi, 0xFFFFE450
 004EBDBC    mov ecx, 0xAB
-004EBDC1    rep movsd
+004EBDC1    rep movsd                                       ; => [ Call: __builtin_memcpy ]
 004EBDC3    mov edi, dword ptr ss:[ebp-0x0C]
 004EBDC6    mov eax, dword ptr ds:[edi-0x74]
 004EBDC9    shl eax, 0x02
@@ -50,7 +56,7 @@
 004EBDCD    lea eax, ds:[edx+edi*1]
 004EBDD0    push eax
 004EBDD1    push edi
-004EBDD2    call 0x00761FBE
+004EBDD2    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBDD7    mov eax, dword ptr ds:[edi-0x64]
 004EBDDA    mov esi, dword ptr ss:[ebp-0x04]
 004EBDDD    shl eax, 0x02
@@ -59,14 +65,14 @@
 004EBDE7    push eax
 004EBDE8    lea eax, ds:[edi+0xC80]
 004EBDEE    push eax
-004EBDEF    call 0x00761FBE
+004EBDEF    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBDF4    mov eax, dword ptr ds:[edi-0x4C]
 004EBDF7    shl eax, 0x02
 004EBDFA    push eax
 004EBDFB    lea eax, ds:[edi+0x1900]
 004EBE01    push esi
 004EBE02    push eax
-004EBE03    call 0x00761FBE
+004EBE03    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBE08    mov eax, dword ptr ds:[edi-0x34]
 004EBE0B    shl eax, 0x02
 004EBE0E    push eax
@@ -74,7 +80,7 @@
 004EBE15    push eax
 004EBE16    lea eax, ds:[edi+0x2580]
 004EBE1C    push eax
-004EBE1D    call 0x00761FBE
+004EBE1D    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBE22    mov eax, dword ptr ds:[edi-0x2C]
 004EBE25    shl eax, 0x02
 004EBE28    push eax
@@ -82,7 +88,7 @@
 004EBE2F    push eax
 004EBE30    lea eax, ds:[edi+0x3200]
 004EBE36    push eax
-004EBE37    call 0x00761FBE
+004EBE37    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBE3C    mov eax, dword ptr ds:[edi-0x28]
 004EBE3F    shl eax, 0x02
 004EBE42    push eax
@@ -90,7 +96,7 @@
 004EBE49    push eax
 004EBE4A    lea eax, ds:[edi+0x3E80]
 004EBE50    push eax
-004EBE51    call 0x00761FBE
+004EBE51    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBE56    mov eax, dword ptr ds:[edi-0x24]
 004EBE59    add esp, 0x48
 004EBE5C    shl eax, 0x02
@@ -99,7 +105,7 @@
 004EBE66    push eax
 004EBE67    lea eax, ds:[edi+0x4B00]
 004EBE6D    push eax
-004EBE6E    call 0x00761FBE
+004EBE6E    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBE73    mov eax, dword ptr ss:[ebp-0x08]
 004EBE76    add edi, 0x5A30
 004EBE7C    mov edx, dword ptr ss:[ebp-0x10]
@@ -120,7 +126,7 @@
 004EBEB2    push eax
 004EBEB3    lea eax, ds:[ebx+0x38FE8]
 004EBEB9    push eax
-004EBEBA    call 0x00761FBE
+004EBEBA    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBEBF    mov eax, dword ptr ds:[ebx+0x1A08]
 004EBEC5    shl eax, 0x03
 004EBEC8    push eax
@@ -128,14 +134,14 @@
 004EBECF    push eax
 004EBED0    lea eax, ds:[ebx+0x39C68]
 004EBED6    push eax
-004EBED7    call 0x00761FBE
+004EBED7    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBEDC    imul eax, dword ptr ds:[ebx+0x19B8], 0xA8
 004EBEE6    push eax
 004EBEE7    lea eax, ds:[esi+0x3B568]
 004EBEED    push eax
 004EBEEE    lea eax, ds:[ebx+0x3B568]
 004EBEF4    push eax
-004EBEF5    call 0x00761FBE
+004EBEF5    call 0x00761FBE                                 ; => [ Call: memcpy ]
 004EBEFA    mov eax, dword ptr ss:[ebp+0x08]
 004EBEFD    add esp, 0x24
 004EBF00    mov dword ptr ds:[ebx+0x5EB68], 0xFFFFFFFF

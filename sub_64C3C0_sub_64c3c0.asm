@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_64c3c0
+// 起始地址: 0x64c3c0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0064C3C0    movaps xmm3, xmm1
 0064C3C3    push ecx
 0064C3C4    movss xmm1, dword ptr ds:[ecx]
@@ -47,6 +53,6 @@
 0064C444    ret
 0064C445    xorps xmm1, xmm1
 0064C448    movaps xmm0, xmm3
-0064C44B    call 0x004AE110
+0064C44B    call 0x004AE110                                 ; => [ String: 0 | String: zx | Call: sub_4ae110 ]
 0064C450    pop ecx
 0064C451    ret

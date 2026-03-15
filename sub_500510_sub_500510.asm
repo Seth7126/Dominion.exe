@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_500510
+// 起始地址: 0x500510
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00500510    dword 83EC8B55
 00500514    in al, 0xF8
 00500516    push esi
 00500517    push edi
-00500518    call 0x00573400
+00500518    call 0x00573400                                 ; => [ Call: sub_573400 ]
 0050051D    push 0x00
 0050051F    push 0x00
 00500521    push 0x00
@@ -12,13 +18,13 @@
 0050052B    call 0x00576B30
 00500530    add esp, 0x10
 00500533    test eax, eax
-00500535    jle 0x005005A0
+00500535    jle 0x005005A0                                  ; => [ Call: sub_576b30 ]
 00500537    call 0x00573400
 0050053C    movzx esi, word ptr ss:[ebp+0x08]
-00500540    mov edi, dword ptr ds:[eax+0x04]
+00500540    mov edi, dword ptr ds:[eax+0x04]                ; => [ Call: sub_573400 ]
 00500543    cmp esi, 0x320
 00500549    jb 0x00500550
-0050054B    call 0x00591930
+0050054B    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00500550    imul eax, esi, 0x64
 00500553    mov ecx, edi
 00500555    push 0x00
@@ -27,19 +33,19 @@
 00500560    call 0x005754F0
 00500565    add esp, 0x08
 00500568    test al, al
-0050056A    jz 0x005005A0
+0050056A    jz 0x005005A0                                   ; => [ Call: sub_5754f0 | Call: sub_573400 ]
 0050056C    call 0x00573400
 00500571    mov eax, dword ptr ds:[eax+0x04]
 00500574    mov esi, dword ptr ds:[eax+0x19CC]
 0050057A    call 0x00573400
 0050057F    cmp esi, dword ptr ds:[eax+0x0C]
 00500582    jnz 0x005005A0
-00500584    call 0x00573400
+00500584    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00500589    mov edx, dword ptr ds:[eax+0x0C]
 0050058C    mov ecx, dword ptr ds:[eax+0x04]
 0050058F    call 0x005854E0
 00500594    cmp eax, 0x01
-00500597    setle al
+00500597    setle al                                        ; => [ Call: sub_5854e0 ]
 0050059A    pop edi
 0050059B    pop esi
 0050059C    mov esp, ebp

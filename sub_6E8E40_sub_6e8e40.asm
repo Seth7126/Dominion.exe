@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e8e40
+// 起始地址: 0x6e8e40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E8E40    push ebp
 006E8E41    mov ebp, esp
 006E8E43    push ecx
@@ -6,7 +12,7 @@
 006E8E49    push edi
 006E8E4A    mov edi, edx
 006E8E4C    jnz 0x006E8EC7
-006E8E4E    call 0x005AF880
+006E8E4E    call 0x005AF880                                 ; => [ Call: sub_5af880 ]
 006E8E53    mov esi, eax
 006E8E55    test edi, edi
 006E8E57    jnz 0x006E8E75
@@ -26,7 +32,7 @@
 006E8E74    ret
 006E8E75    mov edx, edi
 006E8E77    mov ecx, esi
-006E8E79    call 0x006E6890
+006E8E79    call 0x006E6890                                 ; => [ Call: sub_6e6890 ]
 006E8E7E    mov edi, eax
 006E8E80    test edi, edi
 006E8E82    jz 0x006E8EA7
@@ -66,10 +72,10 @@
 006E8ED1    push 0x87A2E0
 006E8ED6    mov edx, 0x801800
 006E8EDB    mov ecx, 0x87A4C0
-006E8EE0    call 0x0063B870
+006E8EE0    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: assetPtr->assetType == ASSET_TYPE_FLANIM | Data: data_801800 | String: FlanimGetDef | String: C:\x\ax2017\Engine\AssetUtils.cpp ]
 006E8EE5    add esp, 0x0C
 006E8EE8    call 0x0063BC30
 006E8EED    test al, al
-006E8EEF    jz 0x006E8EF2
+006E8EEF    jz 0x006E8EF2                                   ; => [ Call: sub_63bc30 ]
 006E8EF1    int3
-006E8EF2    call 0x0063BB00
+006E8EF2    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_724cf0
+// 起始地址: 0x724cf0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00724CF0    dword 83EC8B55
 00724CF4    in al, 0xF8
 00724CF6    mov ecx, dword ptr ss:[ebp+0x0C]
@@ -9,7 +15,7 @@
 00724D04    mov edi, dword ptr ss:[ebp+0x14]
 00724D07    lea edx, ds:[eax+eax*2]
 00724D0A    movzx eax, byte ptr ds:[ecx]
-00724D0D    xor esi, esi
+00724D0D    xor esi, esi                                    ; => [ Call: nullptr ]
 00724D0F    add edx, eax
 00724D11    cmp edi, 0x01
 00724D14    jnz 0x00724D2A
@@ -33,7 +39,7 @@
 00724D41    jle 0x00724E27
 00724D47    mov edi, dword ptr ss:[ebp+0x08]
 00724D4A    add ecx, 0x08
-00724D4D    movaps xmm5, xmmword ptr ds:[0x00893270]
+00724D4D    movaps xmm5, xmmword ptr ds:[0x00893270]        ; => [ Data: data_893270 ]
 00724D54    xorps xmm4, xmm4
 00724D57    mov dword ptr ss:[esp+0x0C], edi
 00724D5B    mov edi, dword ptr ss:[esp+0x14]

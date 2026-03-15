@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6ab1b0
+// 起始地址: 0x6ab1b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AB1B0    push ebp
 006AB1B1    mov ebp, esp
 006AB1B3    sub esp, 0x38
@@ -16,7 +22,7 @@
 006AB1D3    jz 0x006AB1E8
 006AB1D5    mov ecx, dword ptr ss:[ebp-0x18]
 006AB1D8    imul ecx, dword ptr ss:[ebp-0x1C]
-006AB1DC    call 0x00687730
+006AB1DC    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006AB1E1    mov ebx, eax
 006AB1E3    mov dword ptr ss:[ebp-0x24], ebx
 006AB1E6    jmp 0x006AB1EB
@@ -28,15 +34,15 @@
 006AB1FA    push ecx
 006AB1FB    mov ecx, dword ptr ss:[ebp+0x08]
 006AB1FE    push eax
-006AB1FF    call 0x0072F030
+006AB1FF    call 0x0072F030                                 ; => [ Call: sub_72f030 ]
 006AB204    mov esi, eax
 006AB206    add esp, 0x08
 006AB209    mov dword ptr ss:[ebp-0x38], esi
 006AB20C    test esi, esi
 006AB20E    jnz 0x006AB224
-006AB210    push 0x88DE18
+006AB210    push 0x88DE18                                   ; => [ String: TextureLoadWithQOI ]
 006AB215    push 0xC3
-006AB21A    mov ecx, 0x87B4EC
+006AB21A    mov ecx, 0x87B4EC                               ; => [ String: sourceSpec.pImage ]
 006AB21F    jmp 0x006AB321
 006AB224    mov eax, dword ptr ss:[ebp-0x0C]
 006AB227    mov ecx, dword ptr ss:[ebp-0x10]
@@ -53,9 +59,9 @@
 006AB24C    mov dword ptr ss:[ebp-0x28], edx
 006AB24F    call 0x006A9570
 006AB254    lea edx, ss:[ebp-0x24]
-006AB257    mov dword ptr ss:[ebp-0x2C], eax
+006AB257    mov dword ptr ss:[ebp-0x2C], eax                ; => [ Call: sub_6a9570 ]
 006AB25A    lea ecx, ss:[ebp-0x38]
-006AB25D    call 0x006A9DE0
+006AB25D    call 0x006A9DE0                                 ; => [ Call: sub_6a9de0 ]
 006AB262    push esi
 006AB263    call dword ptr ds:[0x00775524]
 006AB269    mov esi, dword ptr ss:[ebp+0x10]
@@ -94,7 +100,7 @@
 006AB2CE    push ecx
 006AB2CF    push dword ptr ss:[ebp-0x1C]
 006AB2D2    push edi
-006AB2D3    call 0x0071DDA0
+006AB2D3    call 0x0071DDA0                                 ; => [ Call: sub_71dda0 ]
 006AB2D8    add esp, 0x54
 006AB2DB    test ebx, ebx
 006AB2DD    jz 0x006AB2E9
@@ -111,7 +117,7 @@
 006AB2F2    push dword ptr ss:[ebp+0x0C]
 006AB2F5    lea edx, ss:[ebp-0x24]
 006AB2F8    push dword ptr ss:[ebp+0x08]
-006AB2FB    call 0x006AAFF0
+006AB2FB    call 0x006AAFF0                                 ; => [ Call: sub_6aaff0 ]
 006AB300    add esp, 0x08
 006AB303    test al, al
 006AB305    jnz 0x006AB26F
@@ -121,15 +127,15 @@
 006AB30E    mov esp, ebp
 006AB310    pop ebp
 006AB311    ret
-006AB312    push 0x88DE18
+006AB312    push 0x88DE18                                   ; => [ String: TextureLoadWithQOI ]
 006AB317    push 0xDC
-006AB31C    mov ecx, 0x801AA4
+006AB31C    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 006AB321    push 0x88DDC0
 006AB326    mov edx, 0x801800
-006AB32B    call 0x0063B870
+006AB32B    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Engine\stb_image_resize.cpp | Call: sub_63b870 | Data: data_801800 | String: TextureLoadWithQOI ]
 006AB330    add esp, 0x0C
 006AB333    call 0x0063BC30
 006AB338    test al, al
-006AB33A    jz 0x006AB33D
+006AB33A    jz 0x006AB33D                                   ; => [ Call: sub_63bc30 ]
 006AB33C    int3
-006AB33D    call 0x0063BB00
+006AB33D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

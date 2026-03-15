@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_6dd960
+// 起始地址: 0x6dd960
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006DD960    movss xmm3, dword ptr ds:[ecx]
 006DD964    xorps xmm2, xmm2
-006DD967    mulss xmm3, dword ptr ds:[0x008C4634]
+006DD967    mulss xmm3, dword ptr ds:[0x008C4634]           ; => [ Data: data_8c4634 ]
 006DD96F    movss xmm0, dword ptr ds:[ecx+0x04]
 006DD974    movss xmm1, dword ptr ds:[0x00890E18]
 006DD97C    comiss xmm3, xmm2
@@ -36,7 +42,7 @@
 006DD9EA    mov al, 0x01
 006DD9EC    mov dword ptr ds:[ecx+0x18], 0x00
 006DD9F3    ret
-006DD9F4    push 0x881660
+006DD9F4    push 0x881660                                   ; => [ String: AnimSetUpdateTime ]
 006DD9F9    push 0x107
 006DD9FE    jmp 0x006DDA39
 006DDA00    comiss xmm2, xmm3
@@ -56,18 +62,18 @@
 006DDA28    comiss xmm2, xmm0
 006DDA2B    jnbe 0x006DDA24
 006DDA2D    jmp 0x006DD9B9
-006DDA2F    push 0x881660
+006DDA2F    push 0x881660                                   ; => [ String: AnimSetUpdateTime ]
 006DDA34    push 0x11C
 006DDA39    push 0x88162C
 006DDA3E    mov edx, 0x801800
 006DDA43    mov ecx, 0x801AA4
-006DDA48    call 0x0063B870
+006DDA48    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Engine\Animation.cpp | Data: data_801800 | String: AnimSetUpdateTime | String: Halt ]
 006DDA4D    add esp, 0x0C
 006DDA50    call 0x0063BC30
 006DDA55    test al, al
-006DDA57    jz 0x006DDA5A
+006DDA57    jz 0x006DDA5A                                   ; => [ Call: sub_63bc30 ]
 006DDA59    int3
-006DDA5A    jmp 0x0063BB00
+006DDA5A    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]
 006DDA5F    comiss xmm2, xmm0
 006DDA62    jbe 0x006DDA78
 006DDA64    addss xmm0, xmm3

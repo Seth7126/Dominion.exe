@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_590760
+// 起始地址: 0x590760
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00590760    push ebp
 00590761    mov ebp, esp
 00590763    and esp, 0xFFFFFFF8
@@ -22,14 +28,14 @@
 00590793    test eax, eax
 00590795    jle 0x00590822
 0059079B    test edi, edi
-0059079D    jnle 0x0059091E
+0059079D    jnle 0x0059091E                                 ; => [ Call: sub_576b30 ]
 005907A3    jmp 0x00590822
 005907A5    test eax, eax
 005907A7    jnz 0x00590822
 005907A9    test edi, edi
 005907AB    jle 0x00590822
 005907AD    push 0xB09
-005907B2    call 0x00571EE0
+005907B2    call 0x00571EE0                                 ; => [ Call: sub_571ee0 ]
 005907B7    add esp, 0x04
 005907BA    cmp eax, 0xFFFFFFFF
 005907BD    jz 0x00590822
@@ -39,25 +45,25 @@
 005907CC    push 0xB09
 005907D1    mov edx, ebx
 005907D3    mov ecx, esi
-005907D5    call 0x00571EE0
+005907D5    call 0x00571EE0                                 ; => [ Call: sub_571ee0 ]
 005907DA    add esp, 0x04
 005907DD    mov dword ptr ss:[esp+0x10], eax
 005907E1    cmp eax, 0xFFFFFFFF
 005907E4    jnz 0x005907EF
-005907E6    call 0x00591930
+005907E6    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005907EB    mov eax, dword ptr ss:[esp+0x10]
 005907EF    mov ecx, eax
 005907F1    shl ecx, 0x05
 005907F4    cmp dword ptr ds:[ecx+esi*1+0x152DC], 0x01
 005907FC    jz 0x00590807
-005907FE    call 0x00591930
+005907FE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00590803    mov eax, dword ptr ss:[esp+0x10]
 00590807    push 0x00
 00590809    push 0x00
 0059080B    push 0xFFFFFFFF
 0059080D    mov edx, eax
 0059080F    mov ecx, esi
-00590811    call 0x00571CB0
+00590811    call 0x00571CB0                                 ; => [ Call: sub_571cb0 ]
 00590816    add esp, 0x0C
 00590819    sub edi, 0x01
 0059081C    jz 0x0059091E
@@ -75,7 +81,7 @@
 0059084D    add eax, ecx
 0059084F    mov dword ptr ds:[edx+0x174F4], eax
 00590855    jns 0x0059085C
-00590857    call 0x00591930
+00590857    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0059085C    mov edx, dword ptr ss:[ebp+0x14]
 0059085F    mov eax, edx
 00590861    mov ecx, dword ptr ds:[esi+0x1504]
@@ -110,7 +116,7 @@
 005908B1    push edi
 005908B2    push 0x00
 005908B4    push ebx
-005908B5    call 0x0061B1B0
+005908B5    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005908BA    mov eax, dword ptr ss:[esp+0x40]
 005908BE    add esp, 0x2C
 005908C1    mov edx, dword ptr ss:[ebp+0x14]
@@ -145,7 +151,7 @@
 00590911    push 0x0A
 00590913    push ecx
 00590914    mov ecx, esi
-00590916    call 0x0059F9B0
+00590916    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0059091B    add esp, 0x24
 0059091E    pop edi
 0059091F    pop esi

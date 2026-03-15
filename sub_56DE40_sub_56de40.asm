@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_56de40
+// 起始地址: 0x56de40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0056DE40    push ebp
 0056DE41    mov ebp, esp
 0056DE43    and esp, 0xFFFFFFF0
 0056DE46    sub esp, 0x48
-0056DE49    mov eax, dword ptr ds:[0x008C4040]
+0056DE49    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0056DE4E    xor eax, esp
 0056DE50    mov dword ptr ss:[esp+0x44], eax
 0056DE54    push esi
@@ -14,12 +20,12 @@
 0056DE63    cmp eax, 0x0E
 0056DE66    jnbe 0x0056E010
 0056DE6C    xorps xmm0, xmm0
-0056DE6F    xor esi, esi
+0056DE6F    xor esi, esi                                    ; => [ Call: nullptr ]
 0056DE71    movaps xmmword ptr ss:[esp+0x30], xmm0
-0056DE76    movaps xmmword ptr ss:[esp+0x20], xmm0
+0056DE76    movaps xmmword ptr ss:[esp+0x20], xmm0          ; => [ Call: __builtin_memset ]
 0056DE7B    cmp edx, 0x48
 0056DE7E    jl 0x0056DE89
-0056DE80    call 0x00591930
+0056DE80    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056DE85    mov edx, dword ptr ss:[esp+0x18]
 0056DE89    mov eax, edx
 0056DE8B    shl eax, 0x04
@@ -31,7 +37,7 @@
 0056DEA2    cmp edx, 0x48
 0056DEA5    jnbe 0x0056E021
 0056DEAB    jl 0x0056DEB6
-0056DEAD    call 0x00591930
+0056DEAD    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056DEB2    mov eax, dword ptr ss:[esp+0x1C]
 0056DEB6    mov eax, dword ptr ds:[eax+0x1524]
 0056DEBC    cmp eax, 0x91C
@@ -45,7 +51,7 @@
 0056DEE3    mov dword ptr ss:[esp+0x1C], eax
 0056DEE7    cmp eax, 0x320
 0056DEEC    jb 0x0056DEF7
-0056DEEE    call 0x00591930
+0056DEEE    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0056DEF3    mov eax, dword ptr ss:[esp+0x1C]
 0056DEF7    mov ecx, dword ptr ss:[esp+esi*4+0x30]
 0056DEFB    imul edx, eax, 0x64
@@ -112,7 +118,7 @@
 0056DFA8    push 0x00
 0056DFAA    push 0xFFFFFFFF
 0056DFAC    mov edx, 0x02
-0056DFB1    call 0x0061B1B0
+0056DFB1    call 0x0061B1B0                                 ; => [ Call: sub_61b1b0 ]
 0056DFB6    mov eax, dword ptr ss:[esp+0x40]
 0056DFBA    add esp, 0x2C
 0056DFBD    mov ecx, dword ptr ds:[eax+0x1504]
@@ -141,13 +147,13 @@
 0056E001    push 0x00
 0056E003    push 0xFFFFFFFF
 0056E005    setz cl
-0056E008    call 0x0061B1B0
+0056E008    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 | Call: sub_61b1b0 ]
 0056E00D    add esp, 0x2C
 0056E010    mov ecx, dword ptr ss:[esp+0x4C]
 0056E014    pop edi
 0056E015    pop esi
 0056E016    xor ecx, esp
-0056E018    call 0x0075927A
+0056E018    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0056E01D    mov esp, ebp
 0056E01F    pop ebp
 0056E020    ret
@@ -156,10 +162,10 @@
 0056E02B    push 0x81EA70
 0056E030    mov edx, 0x801800
 0056E035    mov ecx, 0x81EE10
-0056E03A    call 0x0063B870
+0056E03A    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: IsGlobalPile(where) | Data: data_801800 | String: UpdateSplitPileInfo | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 0056E03F    add esp, 0x0C
 0056E042    call 0x0063BC30
 0056E047    test al, al
-0056E049    jz 0x0056E04C
+0056E049    jz 0x0056E04C                                   ; => [ Call: sub_63bc30 ]
 0056E04B    int3
-0056E04C    call 0x0063BB00
+0056E04C    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

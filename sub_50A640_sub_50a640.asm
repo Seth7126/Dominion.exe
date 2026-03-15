@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50a640
+// 起始地址: 0x50a640
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050A640    push ebp
 0050A641    mov ebp, esp
 0050A643    push ecx
@@ -8,14 +14,14 @@
 0050A64E    push edi
 0050A64F    mov edi, dword ptr ds:[0x00CCA784]
 0050A655    shl edi, 0x0B
-0050A658    add edi, eax
+0050A658    add edi, eax                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050A65A    xor esi, esi
 0050A65C    nop dword ptr ds:[eax], eax
 0050A660    mov ecx, dword ptr ds:[edi+esi*4+0x0C]
 0050A664    test ecx, ecx
 0050A666    jz 0x0050A68D
 0050A668    mov edx, 0x17
-0050A66D    call 0x00571B30
+0050A66D    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0050A672    mov ecx, dword ptr ss:[ebp+0x08]
 0050A675    and ecx, dword ptr ds:[eax+0x98]
 0050A67B    mov eax, dword ptr ds:[eax+0x9C]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_704ba0
+// 起始地址: 0x704ba0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00704BA0    push ebp
 00704BA1    mov ebp, esp
 00704BA3    and esp, 0xFFFFFFF8
@@ -49,10 +55,10 @@
 00704C2D    push 0x88C504
 00704C32    mov edx, 0x801800
 00704C37    mov ecx, 0x88D120
-00704C3C    call 0x0063B870
+00704C3C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: OpenGLInterface::MarkFrameBegin | String: index >= 0 && index < MAX_QUERIES | String: C:\x\ax2017\Engine\OpenGLGraphics.cpp ]
 00704C41    add esp, 0x0C
 00704C44    call 0x0063BC30
 00704C49    test al, al
-00704C4B    jz 0x00704C4E
+00704C4B    jz 0x00704C4E                                   ; => [ Call: sub_63bc30 ]
 00704C4D    int3
-00704C4E    call 0x0063BB00
+00704C4E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

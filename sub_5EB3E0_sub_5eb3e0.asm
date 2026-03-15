@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_5eb3e0
+// 起始地址: 0x5eb3e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005EB3E1    mov ebp, esp
 005EB3E3    sub esp, 0x20
 005EB3E6    push ebx
@@ -9,9 +15,9 @@
 005EB3F1    mov eax, dword ptr ds:[esi+0x3A20]
 005EB3F7    cmp eax, 0x80
 005EB3FC    jl 0x005EB412
-005EB3FE    push 0x860054
+005EB3FE    push 0x860054                                   ; => [ String: KingdomViewAddEntry ]
 005EB403    push 0x6396
-005EB408    mov ecx, 0x860028
+005EB408    mov ecx, 0x860028                               ; => [ String: kv.numEntries < MAX_KINGDOM_VIEW_ENTRIES ]
 005EB40D    jmp 0x005EB6AE
 005EB412    imul ecx, eax, 0x74
 005EB415    xorps xmm1, xmm1
@@ -64,7 +70,7 @@
 005EB4E4    mov dword ptr ds:[ecx+esi*1+0x28], 0x00
 005EB4EC    movss dword ptr ds:[ecx+esi*1+0x2C], xmm0
 005EB4F2    mov ecx, edx
-005EB4F4    call 0x005EB310
+005EB4F4    call 0x005EB310                                 ; => [ Call: sub_5eb310 ]
 005EB4F9    movss xmm1, dword ptr ds:[esi+0x08]
 005EB4FE    addss xmm1, dword ptr ds:[0x00890F7C]
 005EB506    mov dword ptr ss:[ebp-0x1C], eax
@@ -117,7 +123,7 @@
 005EB599    mov dword ptr ds:[ecx+esi*1+0x28], 0x00
 005EB5A1    movss dword ptr ds:[ecx+esi*1+0x2C], xmm0
 005EB5A7    mov ecx, edx
-005EB5A9    call 0x005EB310
+005EB5A9    call 0x005EB310                                 ; => [ Call: sub_5eb310 ]
 005EB5AE    movss xmm1, dword ptr ds:[esi+0x08]
 005EB5B3    xor ecx, ecx
 005EB5B5    mov dword ptr ss:[ebp-0x0C], eax
@@ -154,7 +160,7 @@
 005EB62A    movss xmm0, dword ptr ds:[esi+0x08]
 005EB62F    mov dword ptr ds:[ebx+esi*1+0x28], 0x00
 005EB637    movss dword ptr ds:[ebx+esi*1+0x2C], xmm0
-005EB63D    call 0x005EB310
+005EB63D    call 0x005EB310                                 ; => [ Call: sub_5eb310 ]
 005EB642    movss xmm1, dword ptr ds:[esi+0x08]
 005EB647    xor ecx, ecx
 005EB649    mov dword ptr ss:[ebp-0x14], eax
@@ -185,15 +191,15 @@
 005EB69B    mov esp, ebp
 005EB69D    pop ebp
 005EB69E    ret
-005EB69F    push 0x860054
+005EB69F    push 0x860054                                   ; => [ String: KingdomViewAddEntry ]
 005EB6A4    push 0x63A5
-005EB6A9    mov ecx, 0x860084
+005EB6A9    mov ecx, 0x860084                               ; => [ String: numRow1 ]
 005EB6AE    push 0x86F1E8
 005EB6B3    mov edx, 0x801800
-005EB6B8    call 0x0063B870
+005EB6B8    call 0x0063B870                                 ; => [ String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Call: sub_63b870 | Data: data_801800 | String: KingdomViewAddEntry ]
 005EB6BD    add esp, 0x0C
 005EB6C0    call 0x0063BC30
 005EB6C5    test al, al
-005EB6C7    jz 0x005EB6CA
+005EB6C7    jz 0x005EB6CA                                   ; => [ Call: sub_63bc30 ]
 005EB6C9    int3
-005EB6CA    call 0x0063BB00
+005EB6CA    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

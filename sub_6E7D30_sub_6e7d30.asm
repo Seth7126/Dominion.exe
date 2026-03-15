@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e7d30
+// 起始地址: 0x6e7d30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E7D30    push ebp
 006E7D31    mov ebp, esp
 006E7D33    mov eax, dword ptr ds:[ecx]
@@ -39,10 +45,10 @@
 006E7D85    push 0x882314
 006E7D8A    mov edx, 0x801800
 006E7D8F    mov ecx, 0x801AA4
-006E7D94    call 0x0063B870
+006E7D94    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\Flanim.cpp | String: FlanimCompressGetVec2 | String: Halt ]
 006E7D99    add esp, 0x0C
 006E7D9C    call 0x0063BC30
 006E7DA1    test al, al
-006E7DA3    jz 0x006E7DA6
+006E7DA3    jz 0x006E7DA6                                   ; => [ Call: sub_63bc30 ]
 006E7DA5    int3
-006E7DA6    call 0x0063BB00
+006E7DA6    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

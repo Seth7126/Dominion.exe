@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f87b0
+// 起始地址: 0x4f87b0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F87B0    dword 83EC8B55
 004F87B4    in al, 0xF8
 004F87B6    sub esp, 0xC88
@@ -5,17 +11,17 @@
 004F87BE    push ecx
 004F87BF    push 0x00
 004F87C1    lea ecx, ds:[edx+0x01]
-004F87C4    call 0x00561E00
-004F87C9    call 0x00573400
+004F87C4    call 0x00561E00                                 ; => [ Call: sub_561e00 ]
+004F87C9    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004F87CE    push 0x00
 004F87D0    push 0x00
 004F87D2    push 0x01
 004F87D4    mov edx, dword ptr ds:[eax+0x0C]
 004F87D7    mov ecx, dword ptr ds:[eax+0x04]
 004F87DA    push 0x01
-004F87DC    call 0x00590760
+004F87DC    call 0x00590760                                 ; => [ Call: sub_590760 ]
 004F87E1    add esp, 0x18
-004F87E4    call 0x00573400
+004F87E4    call 0x00573400                                 ; => [ Call: sub_573400 ]
 004F87E9    mov ecx, dword ptr ds:[eax+0x0C]
 004F87EC    cmp ecx, 0xFFFFFFFF
 004F87EF    jz 0x004F8826
@@ -33,16 +39,16 @@
 004F881F    add esp, 0x0C
 004F8822    mov esp, ebp
 004F8824    pop ebp
-004F8825    ret
+004F8825    ret                                             ; => [ Call: sub_4f8860 | Call: sub_56bba0 ]
 004F8826    push 0x81EA64
 004F882B    push 0x52
 004F882D    push 0x81EA70
 004F8832    mov edx, 0x801800
 004F8837    mov ecx, 0x813C5C
-004F883C    call 0x0063B870
+004F883C    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: SetGainFlag | String: c.activePlayer != PLAYER_NONE | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomCardUtils.cpp ]
 004F8841    add esp, 0x0C
 004F8844    call 0x0063BC30
 004F8849    test al, al
-004F884B    jz 0x004F884E
+004F884B    jz 0x004F884E                                   ; => [ Call: sub_63bc30 ]
 004F884D    int3
-004F884E    call 0x0063BB00
+004F884E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

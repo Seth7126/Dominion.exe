@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_597190
+// 起始地址: 0x597190
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00597190    push ebp
 00597191    mov ebp, esp
 00597193    sub esp, 0x10
@@ -24,7 +30,7 @@
 005971C7    movzx ecx, al
 005971CA    xor ecx, 0x01
 005971CD    inc ecx
-005971CE    add ecx, edi
+005971CE    add ecx, edi                                    ; => [ Call: sub_593b90 ]
 005971D0    mov eax, dword ptr ds:[ebx+ecx*4]
 005971D3    mov dword ptr ds:[ebx+esi*4], eax
 005971D6    mov esi, ecx
@@ -53,7 +59,7 @@
 00597210    push dword ptr ds:[ebx+edi*4]
 00597213    call 0x00593B90
 00597218    test al, al
-0059721A    jz 0x00597229
+0059721A    jz 0x00597229                                   ; => [ Call: sub_593b90 ]
 0059721C    mov eax, dword ptr ds:[ebx+edi*4]
 0059721F    mov dword ptr ds:[ebx+esi*4], eax
 00597222    mov esi, edi

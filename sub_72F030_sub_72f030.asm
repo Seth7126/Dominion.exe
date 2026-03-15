@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_72f030
+// 起始地址: 0x72f030
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072F030    push ebp
 0072F031    mov ebp, esp
 0072F033    sub esp, 0x128
-0072F039    mov eax, dword ptr ds:[0x008C4040]
+0072F039    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0072F03E    xor eax, ebp
 0072F040    mov dword ptr ss:[ebp-0x04], eax
 0072F043    push ebx
@@ -11,7 +17,7 @@
 0072F04A    push edi
 0072F04B    mov edi, ecx
 0072F04D    mov dword ptr ss:[ebp-0x124], eax
-0072F053    mov dword ptr ss:[ebp-0x118], 0x00
+0072F053    mov dword ptr ss:[ebp-0x118], 0x00              ; => [ Call: nullptr ]
 0072F05D    test edi, edi
 0072F05F    jz 0x0072F3C6
 0072F065    test esi, esi
@@ -83,7 +89,7 @@
 0072F168    imul eax, ebx
 0072F16B    mov ecx, eax
 0072F16D    mov dword ptr ss:[ebp-0x120], eax
-0072F173    call 0x00687730
+0072F173    call 0x00687730                                 ; => [ Call: sub_687730 ]
 0072F178    mov dword ptr ss:[ebp-0x114], eax
 0072F17E    test eax, eax
 0072F180    jz 0x0072F3C6
@@ -91,7 +97,7 @@
 0072F18B    lea eax, ss:[ebp-0x104]
 0072F191    push 0x00
 0072F193    push eax
-0072F194    call 0x00761FC4
+0072F194    call 0x00761FC4                                 ; => [ Call: memset ]
 0072F199    add dword ptr ss:[ebp-0x124], 0xFFFFFFF8
 0072F1A0    xor dl, dl
 0072F1A2    or dh, 0xFF
@@ -108,7 +114,7 @@
 0072F1D9    sub ecx, dword ptr ss:[ebp-0x114]
 0072F1DF    add eax, 0x02
 0072F1E2    mov dword ptr ss:[ebp-0x128], ecx
-0072F1E8    xor ecx, ecx
+0072F1E8    xor ecx, ecx                                    ; => [ Call: nullptr ]
 0072F1EA    mov dword ptr ss:[ebp-0x110], eax
 0072F1F0    test ecx, ecx
 0072F1F2    jle 0x0072F200
@@ -232,7 +238,7 @@
 0072F3B7    pop ebx
 0072F3B8    mov ecx, dword ptr ss:[ebp-0x04]
 0072F3BB    xor ecx, ebp
-0072F3BD    call 0x0075927A
+0072F3BD    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0072F3C2    mov esp, ebp
 0072F3C4    pop ebp
 0072F3C5    ret
@@ -242,7 +248,7 @@
 0072F3CC    pop esi
 0072F3CD    xor ecx, ebp
 0072F3CF    pop ebx
-0072F3D0    call 0x0075927A
+0072F3D0    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0072F3D5    mov esp, ebp
 0072F3D7    pop ebp
 0072F3D8    ret

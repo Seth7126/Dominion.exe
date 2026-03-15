@@ -1,8 +1,14 @@
+// ============================================================
+// 函数名称: sub_520ef0
+// 起始地址: 0x520ef0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00520EF0    dword 8BEC8B55
 00520EF4    adc eax, 0xCCE9B0
 00520EF9    sub esp, 0x28
 00520EFC    mov ecx, dword ptr ss:[ebp+0x08]
-00520EFF    call 0x00571B30
+00520EFF    call 0x00571B30                                 ; => [ Data: data_cce9b0 | Call: sub_571b30 ]
 00520F04    mov ecx, dword ptr ds:[eax+0x98]
 00520F0A    mov eax, dword ptr ds:[eax+0x9C]
 00520F10    and ecx, 0x7F000400
@@ -21,7 +27,7 @@
 00520F3C    push eax
 00520F3D    call 0x00576C00
 00520F42    add esp, 0x08
-00520F45    movups xmm0, xmmword ptr ds:[eax]
+00520F45    movups xmm0, xmmword ptr ds:[eax]               ; => [ Call: sub_576c00 | Data: data_cce9b0 | Call: sub_571b30 ]
 00520F48    movups xmmword ptr ss:[ebp-0x14], xmm0
 00520F4C    psrldq xmm0, 0x08
 00520F51    movd eax, xmm0

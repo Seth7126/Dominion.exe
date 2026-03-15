@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_54f340
+// 起始地址: 0x54f340
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0054F340    push ebp
 0054F341    mov ebp, esp
 0054F343    mov eax, dword ptr ss:[ebp+0x08]
@@ -8,7 +14,7 @@
 0054F34C    call 0x00573400
 0054F351    mov edx, esi
 0054F353    mov ecx, dword ptr ds:[eax+0x04]
-0054F356    call 0x0057DC30
+0054F356    call 0x0057DC30                                 ; => [ Call: sub_57dc30 | Call: sub_573400 ]
 0054F35B    mov esi, dword ptr ds:[edi+0x08]
 0054F35E    xor edx, edx
 0054F360    test esi, esi

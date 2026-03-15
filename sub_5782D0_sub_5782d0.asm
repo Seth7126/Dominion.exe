@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_5782d0
+// 起始地址: 0x5782d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005782D0    push ebp
 005782D1    mov ebp, esp
 005782D3    sub esp, 0x60
-005782D6    mov eax, dword ptr ds:[0x008C4040]
+005782D6    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 005782DB    xor eax, ebp
 005782DD    mov dword ptr ss:[ebp-0x08], eax
 005782E0    mov eax, dword ptr ss:[ebp+0x0C]
@@ -15,7 +21,7 @@
 005782F1    mov byte ptr ds:[eax], 0x00
 005782F4    cmp esi, 0x320
 005782FA    jb 0x00578301
-005782FC    call 0x00591930
+005782FC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578301    mov ecx, dword ptr ss:[ebp+0x28]
 00578304    imul eax, esi, 0x64
 00578307    add eax, ebx
@@ -38,11 +44,11 @@
 00578338    jz 0x0057837A
 0057833A    cmp esi, 0x320
 00578340    jb 0x00578347
-00578342    call 0x00591930
+00578342    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578347    mov ecx, dword ptr ss:[ebp-0x1C]
 0057834A    mov edx, dword ptr ds:[ebx+0xD48]
 00578350    mov ecx, dword ptr ds:[ecx+0x1A4C]
-00578356    call 0x00571B30
+00578356    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0057835B    mov ecx, dword ptr ds:[eax+0x98]
 00578361    mov eax, dword ptr ds:[eax+0x9C]
 00578367    and ecx, 0x7F000400
@@ -58,7 +64,7 @@
 00578388    call 0x005757F0
 0057838D    add esp, 0x08
 00578390    test al, al
-00578392    jnz 0x00578699
+00578392    jnz 0x00578699                                  ; => [ Call: sub_5757f0 ]
 00578398    imul eax, edi, 0x64
 0057839B    xor ecx, ecx
 0057839D    add eax, 0x1A48
@@ -67,7 +73,7 @@
 005783A7    mov edx, dword ptr ds:[eax]
 005783A9    mov eax, dword ptr ds:[edx+0xA8]
 005783AF    test eax, eax
-005783B1    jz 0x0057843C
+005783B1    jz 0x0057843C                                   ; => [ Type: TEB ]
 005783B7    cmp eax, 0x04
 005783BA    jz 0x005783D0
 005783BC    inc ecx
@@ -83,7 +89,7 @@
 005783E2    jz 0x0057843C
 005783E4    cmp esi, 0x320
 005783EA    jb 0x005783F1
-005783EC    call 0x00591930
+005783EC    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005783F1    mov eax, dword ptr ss:[ebp-0x1C]
 005783F4    mov ecx, ebx
 005783F6    mov edx, dword ptr ss:[ebp-0x28]
@@ -92,12 +98,12 @@
 00578402    mov dword ptr ss:[ebp-0x14], eax
 00578405    lea eax, ss:[ebp-0x18]
 00578408    push eax
-00578409    call 0x00573050
+00578409    call 0x00573050                                 ; => [ Call: sub_573050 ]
 0057840E    add esp, 0x04
 00578411    call dword ptr ss:[ebp-0x20]
 00578414    mov ecx, dword ptr fs:[0x0000002C]
 0057841B    mov dl, al
-0057841D    mov ecx, dword ptr ds:[ecx]
+0057841D    mov ecx, dword ptr ds:[ecx]                     ; => [ Field: ThreadLocalStoragePointer ]
 0057841F    mov eax, dword ptr ds:[ecx+0xF010]
 00578425    test eax, eax
 00578427    jle 0x005786AC
@@ -114,7 +120,7 @@
 0057844D    mov dword ptr ds:[eax], ecx
 0057844F    lea eax, ss:[ebp-0x5C]
 00578452    push eax
-00578453    call 0x00576C00
+00578453    call 0x00576C00                                 ; => [ Call: sub_576c00 ]
 00578458    mov ecx, dword ptr ss:[ebp-0x10]
 0057845B    add esp, 0x08
 0057845E    movups xmm0, xmmword ptr ds:[eax]
@@ -143,7 +149,7 @@
 005784B5    jz 0x00578528
 005784B7    cmp esi, 0x320
 005784BD    jb 0x005784C4
-005784BF    call 0x00591930
+005784BF    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005784C4    mov eax, dword ptr ss:[ebp-0x1C]
 005784C7    mov ecx, ebx
 005784C9    mov edx, dword ptr ss:[ebp-0x28]
@@ -152,7 +158,7 @@
 005784D5    mov dword ptr ss:[ebp-0x20], eax
 005784D8    lea eax, ss:[ebp-0x24]
 005784DB    push eax
-005784DC    call 0x00573050
+005784DC    call 0x00573050                                 ; => [ Call: sub_573050 ]
 005784E1    add esp, 0x04
 005784E4    lea eax, ss:[ebp-0x09]
 005784E7    push eax
@@ -162,14 +168,14 @@
 005784EF    push dword ptr ss:[ebp-0x14]
 005784F2    lea eax, ss:[ebp-0x5C]
 005784F5    push eax
-005784F6    call 0x00576C00
+005784F6    call 0x00576C00                                 ; => [ Call: sub_576c00 ]
 005784FB    add esp, 0x10
 005784FE    movups xmm0, xmmword ptr ds:[eax]
 00578501    mov eax, dword ptr ds:[eax+0x10]
 00578504    mov dword ptr ss:[ebp-0x20], eax
 00578507    mov eax, dword ptr fs:[0x0000002C]
 0057850D    movups xmmword ptr ss:[ebp-0x44], xmm0
-00578511    mov ecx, dword ptr ds:[eax]
+00578511    mov ecx, dword ptr ds:[eax]                     ; => [ Field: ThreadLocalStoragePointer ]
 00578513    mov eax, dword ptr ds:[ecx+0xF010]
 00578519    test eax, eax
 0057851B    jle 0x005786DC
@@ -178,11 +184,11 @@
 00578528    movzx esi, di
 0057852B    cmp esi, 0x320
 00578531    jb 0x00578538
-00578533    call 0x00591930
+00578533    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00578538    imul eax, esi, 0x64
 0057853B    mov ecx, ebx
 0057853D    mov edx, dword ptr ds:[eax+ebx*1+0x1A4C]
-00578544    call 0x0057DA30
+00578544    call 0x0057DA30                                 ; => [ Call: sub_57da30 ]
 00578549    mov edx, eax
 0057854B    xor ecx, ecx
 0057854D    mov eax, dword ptr ss:[ebp+0x48]
@@ -243,7 +249,7 @@
 005785E4    jle 0x0057860B
 005785E6    mov eax, dword ptr ss:[ebp-0x2C]
 005785E9    test eax, eax
-005785EB    jz 0x0057860B
+005785EB    jz 0x0057860B                                   ; => [ Call: sub_5754f0 ]
 005785ED    push 0x00
 005785EF    push 0x04
 005785F1    mov edx, eax
@@ -258,7 +264,7 @@
 0057860B    mov eax, dword ptr ss:[ebp-0x10]
 0057860E    mov edx, dword ptr ds:[ebx+0xD48]
 00578614    mov ecx, dword ptr ds:[eax+0x8C]
-0057861A    call 0x00571B30
+0057861A    call 0x00571B30                                 ; => [ Call: sub_571b30 ]
 0057861F    mov ecx, dword ptr ds:[eax+0x98]
 00578625    mov eax, dword ptr ds:[eax+0x9C]
 0057862B    and ecx, 0x7F000400
@@ -284,7 +290,7 @@
 00578661    pop ebx
 00578662    mov ecx, dword ptr ss:[ebp-0x08]
 00578665    xor ecx, ebp
-00578667    call 0x0075927A
+00578667    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 0057866C    mov esp, ebp
 0057866E    pop ebp
 0057866F    ret
@@ -302,7 +308,7 @@
 0057868A    pop ebx
 0057868B    mov ecx, dword ptr ss:[ebp-0x08]
 0057868E    xor ecx, ebp
-00578690    call 0x0075927A
+00578690    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00578695    mov esp, ebp
 00578697    pop ebp
 00578698    ret
@@ -312,7 +318,7 @@
 0057869F    pop esi
 005786A0    xor ecx, ebp
 005786A2    pop ebx
-005786A3    call 0x0075927A
+005786A3    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 005786A8    mov esp, ebp
 005786AA    pop ebp
 005786AB    ret
@@ -321,22 +327,22 @@
 005786B6    push 0x81F4B8
 005786BB    mov edx, 0x801800
 005786C0    mov ecx, 0x81F9F0
-005786C5    call 0x0063B870
+005786C5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomPopContext ]
 005786CA    add esp, 0x0C
 005786CD    call 0x0063BC30
 005786D2    test al, al
-005786D4    jz 0x005786D7
+005786D4    jz 0x005786D7                                   ; => [ Call: sub_63bc30 ]
 005786D6    int3
-005786D7    call 0x0063BB00
+005786D7    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]
 005786DC    push 0x81F9E0
 005786E1    push 0x792
 005786E6    push 0x81F4B8
 005786EB    mov edx, 0x801800
 005786F0    mov ecx, 0x81F9F0
-005786F5    call 0x0063B870
+005786F5    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: cs.numContexts > 0 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: DomPopContext ]
 005786FA    add esp, 0x0C
 005786FD    call 0x0063BC30
 00578702    test al, al
-00578704    jz 0x00578707
+00578704    jz 0x00578707                                   ; => [ Call: sub_63bc30 ]
 00578706    int3
-00578707    call 0x0063BB00
+00578707    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

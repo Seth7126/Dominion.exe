@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: __dtol3
+// 起始地址: 0x761e80
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00761E80    test byte ptr ds:[0x008C4008], 0x20
-00761E87    jnz 0x00761E9E
+00761E87    jnz 0x00761E9E                                  ; => [ Data: data_8c4008 ]
 00761E89    vmovq xmm0, xmm0
 00761E8D    vcvttpd2qq xmm0, xmm0
 00761E93    vmovd eax, xmm0
@@ -22,8 +28,8 @@
 00761EFE    cmp edx, 0x43E00000
 00761F04    jnb 0x00761F17
 00761F06    test ecx, ecx
-00761F08    jz 0x00761EC8
-00761F0A    call 0x00761EC8
+00761F08    jz 0x00761EC8                                   ; => [ Call: _dtol3_getbits ]
+00761F0A    call 0x00761EC8                                 ; => [ Call: _dtol3_getbits ]
 00761F0F    neg eax
 00761F11    adc edx, 0x00
 00761F14    neg edx

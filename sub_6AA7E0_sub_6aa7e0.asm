@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6aa7e0
+// 起始地址: 0x6aa7e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006AA7E0    push ebp
 006AA7E1    mov ebp, esp
 006AA7E3    sub esp, 0x28
@@ -12,10 +18,10 @@
 006AA7F6    mov dword ptr ss:[ebp-0x14], esi
 006AA7F9    lea ecx, ss:[ebp-0x28]
 006AA7FC    mov dword ptr ss:[ebp-0x18], 0x00
-006AA803    movups xmmword ptr ss:[ebp-0x28], xmm0
+006AA803    movups xmmword ptr ss:[ebp-0x28], xmm0          ; => [ Call: __builtin_memset ]
 006AA807    call 0x006AACF0
 006AA80C    test al, al
-006AA80E    jz 0x006AA865
+006AA80E    jz 0x006AA865                                   ; => [ Call: sub_6aacf0 ]
 006AA810    mov eax, dword ptr ss:[ebp-0x28]
 006AA813    mov dword ptr ds:[esi], 0x08
 006AA819    test eax, eax
@@ -34,14 +40,14 @@
 006AA83F    mov dword ptr ss:[ebp-0x08], esi
 006AA842    push 0x8723C4
 006AA847    push ebx
-006AA848    call dword ptr ds:[0x0077564C]
+006AA848    call dword ptr ds:[0x0077564C]                  ; => [ String: rb | Type: FILE ]
 006AA84E    mov edi, eax
 006AA850    add esp, 0x08
 006AA853    test edi, edi
 006AA855    jnz 0x006AA86E
-006AA857    push ebx
+006AA857    push ebx                                        ; => [ Type: FILE ]
 006AA858    push 0x87B430
-006AA85D    call 0x0063B5F0
+006AA85D    call 0x0063B5F0                                 ; => [ String: failed to open file: %s | Call: sub_63b5f0 ]
 006AA862    add esp, 0x08
 006AA865    pop edi
 006AA866    pop esi
@@ -66,9 +72,9 @@
 006AA88F    add esp, 0x1C
 006AA892    test esi, esi
 006AA894    jnz 0x006AA8B4
-006AA896    push ebx
+006AA896    push ebx                                        ; => [ Type: FILE ]
 006AA897    push 0x87B41C
-006AA89C    call 0x0063B5F0
+006AA89C    call 0x0063B5F0                                 ; => [ String: file too small: %s | Call: sub_63b5f0 ]
 006AA8A1    push edi
 006AA8A2    call dword ptr ds:[0x00775648]
 006AA8A8    add esp, 0x0C
@@ -80,7 +86,7 @@
 006AA8B2    pop ebp
 006AA8B3    ret
 006AA8B4    mov ecx, esi
-006AA8B6    call 0x00687730
+006AA8B6    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006AA8BB    push edi
 006AA8BC    push esi
 006AA8BD    push 0x01
@@ -94,9 +100,9 @@
 006AA8D5    add esp, 0x14
 006AA8D8    cmp esi, edi
 006AA8DA    jz 0x006AA908
-006AA8DC    push ebx
+006AA8DC    push ebx                                        ; => [ Type: FILE ]
 006AA8DD    push 0x87B450
-006AA8E2    call 0x0063B5F0
+006AA8E2    call 0x0063B5F0                                 ; => [ Call: sub_63b5f0 | String: failed to read: %s ]
 006AA8E7    mov ecx, dword ptr ss:[ebp-0x0C]
 006AA8EA    add esp, 0x08
 006AA8ED    test ecx, ecx
@@ -119,14 +125,14 @@
 006AA918    mov dword ptr ds:[esi+0x04], eax
 006AA91B    mov dword ptr ds:[esi+0x10], 0x01
 006AA922    mov dword ptr ds:[esi+0x3C], 0x01
-006AA929    call 0x00687730
+006AA929    call 0x00687730                                 ; => [ Call: sub_687730 ]
 006AA92E    xorps xmm0, xmm0
 006AA931    mov ecx, ebx
-006AA933    movups xmmword ptr ds:[eax], xmm0
+006AA933    movups xmmword ptr ds:[eax], xmm0               ; => [ String: 0 | String: zx ]
 006AA936    mov dword ptr ds:[esi+0x48], eax
 006AA939    call 0x006AA0D0
 006AA93E    mov ecx, dword ptr ss:[ebp-0x0C]
-006AA941    mov dword ptr ds:[esi+0x14], eax
+006AA941    mov dword ptr ds:[esi+0x14], eax                ; => [ Call: sub_6aa0d0 ]
 006AA944    mov eax, dword ptr ss:[ebp-0x08]
 006AA947    mov dword ptr ds:[esi+0x18], eax
 006AA94A    mov eax, dword ptr ds:[esi+0x48]

@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_5d3300
+// 起始地址: 0x5d3300
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 005D3300    cmp ecx, 0x8B
 005D3306    jnbe 0x005D3337
-005D3308    movzx eax, byte ptr ds:[ecx+0x5D3384]
+005D3308    movzx eax, byte ptr ds:[ecx+0x5D3384]           ; => [ Data: lookup_table_5d3384 ]
 005D330F    jmp dword ptr ds:[eax*4+0x5D3368]
 005D3316    xor eax, eax
 005D3318    ret
@@ -19,10 +25,10 @@
 005D3341    push 0x86F1E8
 005D3346    mov edx, 0x801800
 005D334B    mov ecx, 0x801AA4
-005D3350    call 0x0063B870
+005D3350    call 0x0063B870                                 ; => [ Call: sub_63b870 | String: C:\x\ax2017\Jams\Dominion\code\DomClient.cpp | Data: data_801800 | String: LayoutBaneStyle | String: Halt ]
 005D3355    add esp, 0x0C
 005D3358    call 0x0063BC30
 005D335D    test al, al
-005D335F    jz 0x005D3362
+005D335F    jz 0x005D3362                                   ; => [ Call: sub_63bc30 ]
 005D3361    int3
-005D3362    jmp 0x0063BB00
+005D3362    jmp 0x0063BB00                                  ; => [ Call: sub_63bb00 ]

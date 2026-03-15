@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6a4510
+// 起始地址: 0x6a4510
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006A4510    push ebp
 006A4511    mov ebp, esp
 006A4513    sub esp, 0x20
@@ -47,7 +53,7 @@
 006A4592    mov ecx, dword ptr ds:[ecx+0x04]
 006A4595    mov dword ptr ss:[ebp-0x10], eax
 006A4598    mov dword ptr ss:[ebp-0x1C], ecx
-006A459B    mov ecx, 0x801800
+006A459B    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A45A0    mov eax, dword ptr ds:[eax]
 006A45A2    test eax, eax
 006A45A4    cmovnz ecx, eax
@@ -58,7 +64,7 @@
 006A45B4    test eax, eax
 006A45B6    jnz 0x006A45FD
 006A45B8    mov ecx, dword ptr ds:[esi+0x18]
-006A45BB    call 0x0069C590
+006A45BB    call 0x0069C590                                 ; => [ Call: sub_69c590 ]
 006A45C0    mov edx, dword ptr ds:[esi+0x18]
 006A45C3    test al, al
 006A45C5    jz 0x006A45D5
@@ -66,7 +72,7 @@
 006A45CA    mov ecx, edi
 006A45CC    push eax
 006A45CD    push esi
-006A45CE    call 0x006A34E0
+006A45CE    call 0x006A34E0                                 ; => [ Call: sub_6a34e0 ]
 006A45D3    jmp 0x006A45F1
 006A45D5    mov eax, dword ptr ds:[edx+0x10]
 006A45D8    dec eax
@@ -76,7 +82,7 @@
 006A45E5    mov ecx, edi
 006A45E7    push 0x00
 006A45E9    push dword ptr ds:[eax+0x0C]
-006A45EC    call 0x006A4770
+006A45EC    call 0x006A4770                                 ; => [ Call: sub_6a4770 ]
 006A45F1    add edi, dword ptr ss:[ebp-0x14]
 006A45F4    inc ebx
 006A45F5    add esp, 0x08
@@ -120,7 +126,7 @@
 006A466A    test cl, 0x40
 006A466D    jnz 0x006A468F
 006A466F    mov eax, dword ptr ds:[ebx]
-006A4671    mov ecx, 0x801800
+006A4671    mov ecx, 0x801800                               ; => [ Data: data_801800 ]
 006A4676    test eax, eax
 006A4678    cmovnz ecx, eax
 006A467B    push ecx
@@ -141,7 +147,7 @@
 006A46A6    mov edx, esi
 006A46A8    push dword ptr ss:[ebp+0x08]
 006A46AB    add ecx, edi
-006A46AD    call 0x006A4230
+006A46AD    call 0x006A4230                                 ; => [ Call: sub_6a4230 ]
 006A46B2    add esp, 0x04
 006A46B5    jmp 0x006A460A
 006A46BA    cmp eax, 0x14
@@ -151,7 +157,7 @@
 006A46C4    mov ecx, edi
 006A46C6    push esi
 006A46C7    add edx, edi
-006A46C9    call 0x006A3FF0
+006A46C9    call 0x006A3FF0                                 ; => [ Call: sub_6a3ff0 ]
 006A46CE    add esp, 0x08
 006A46D1    jmp 0x006A460A
 006A46D6    dec eax
@@ -161,13 +167,13 @@
 006A46DE    push 0x00
 006A46E0    push dword ptr ss:[ebp+0x08]
 006A46E3    add ecx, edi
-006A46E5    call 0x006A4770
+006A46E5    call 0x006A4770                                 ; => [ Call: sub_6a4770 ]
 006A46EA    add esp, 0x08
 006A46ED    jmp 0x006A460A
 006A46F2    mov ecx, dword ptr ss:[ebp-0x08]
 006A46F5    mov edx, edi
 006A46F7    push ebx
-006A46F8    call 0x006A4320
+006A46F8    call 0x006A4320                                 ; => [ Call: sub_6a4320 ]
 006A46FD    add esp, 0x04
 006A4700    mov ebx, dword ptr ss:[ebp-0x1C]
 006A4703    mov edx, dword ptr ss:[ebp-0x04]
@@ -179,24 +185,24 @@
 006A4711    mov esp, ebp
 006A4713    pop ebp
 006A4714    ret
-006A4715    push 0x87A8C4
+006A4715    push 0x87A8C4                                   ; => [ String: DefParseReadFixedArray ]
 006A471A    push 0x29A
-006A471F    mov ecx, 0x878958
+006A471F    mov ecx, 0x878958                               ; => [ String: !DefTypeIsBuiltIn(pField->pSubDefMap) ]
 006A4724    jmp 0x006A4748
-006A4726    push 0x87943C
+006A4726    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 006A472B    push 0x6D
-006A472D    push 0x879400
-006A4732    mov ecx, 0x87948C
+006A472D    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+006A4732    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 006A4737    jmp 0x006A474D
-006A4739    push 0x87AA50
+006A4739    push 0x87AA50                                   ; => [ String: DefParseReadBlockNoVersion ]
 006A473E    push 0x453
-006A4743    mov ecx, 0x877B04
-006A4748    push 0x87A6C8
+006A4743    mov ecx, 0x877B04                               ; => [ String: !DefTypeIsBuiltIn(pField->pDefMap) ]
+006A4748    push 0x87A6C8                                   ; => [ String: C:\x\ax2017\Engine\DefParseTree.cpp ]
 006A474D    mov edx, 0x801800
-006A4752    call 0x0063B870
+006A4752    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 006A4757    add esp, 0x0C
 006A475A    call 0x0063BC30
 006A475F    test al, al
-006A4761    jz 0x006A4764
+006A4761    jz 0x006A4764                                   ; => [ Call: sub_63bc30 ]
 006A4763    int3
-006A4764    call 0x0063BB00
+006A4764    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

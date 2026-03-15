@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_716300
+// 起始地址: 0x716300
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00716300    dword 83DC8B53
 00716304    in al, dx
 00716305    or byte ptr ds:[ebx-0x3B7C0F1C], al
@@ -28,7 +34,7 @@
 00716358    dec eax
 00716359    cmp eax, 0x05
 0071635C    jnbe 0x007182D1
-00716362    movzx eax, byte ptr ds:[eax+0x7182E8]
+00716362    movzx eax, byte ptr ds:[eax+0x7182E8]           ; => [ Data: lookup_table_7182e8 ]
 00716369    jmp dword ptr ds:[eax*4+0x7182E0]
 00716370    mov eax, dword ptr ds:[edx+0x28]
 00716373    cmp eax, dword ptr ds:[edi+0x20]
@@ -44,8 +50,8 @@
 00716393    cmp dword ptr ds:[ecx+0x20], esi
 00716396    jnl 0x007163E6
 00716398    push dword ptr ds:[ecx+0x28]
-0071639B    call dword ptr ds:[0x00800B48]
-007163A1    mov ecx, dword ptr ds:[0x0147DED8]
+0071639B    call dword ptr ds:[0x00800B48]                  ; => [ Call: free ]
+007163A1    mov ecx, dword ptr ds:[0x0147DED8]              ; => [ Data: data_147ded8 ]
 007163A7    lea eax, ds:[esi*4]
 007163AE    add esp, 0x04
 007163B1    test ecx, ecx
@@ -53,11 +59,11 @@
 007163B5    push 0x3A8
 007163BA    push 0x88DCF8
 007163BF    push eax
-007163C0    call ecx
+007163C0    call ecx                                        ; => [ String: C:\x\ax2017\Engine\ExternalCode\spine-c\src\spine\spAnimation.c ]
 007163C2    add esp, 0x0C
 007163C5    jmp 0x007163D1
 007163C7    push eax
-007163C8    call dword ptr ds:[0x00800B4C]
+007163C8    call dword ptr ds:[0x00800B4C]                  ; => [ Call: malloc ]
 007163CE    add esp, 0x04
 007163D1    mov ecx, dword ptr ss:[ebp-0x10]
 007163D4    movss xmm3, dword ptr ds:[ebx+0x20]
@@ -675,7 +681,7 @@
 00716B64    pop ebp
 00716B65    mov esp, ebx
 00716B67    pop ebx
-00716B68    ret
+00716B68    ret                                             ; => [ Call: memcpy ]
 00716B69    cmp edx, 0x03
 00716B6C    jnbe 0x007182D1
 00716B72    jmp dword ptr ds:[edx*4+0x7182F0]
@@ -1385,9 +1391,9 @@
 00717461    mov edx, ecx
 00717463    mov ecx, eax
 00717465    push 0x01
-00717467    call 0x00714A40
+00717467    call 0x00714A40                                 ; => [ Call: sub_714a40 ]
 0071746C    mov esi, dword ptr ss:[ebp-0x20]
-0071746F    xorps xmm1, xmm1
+0071746F    xorps xmm1, xmm1                                ; => [ String: 0 | String: zx ]
 00717472    mov edx, dword ptr ss:[ebp-0x28]
 00717475    add esp, 0x04
 00717478    movss xmm7, dword ptr ds:[0x00890E18]
@@ -1410,7 +1416,7 @@
 007174BC    subss xmm6, xmm2
 007174C0    comiss xmm1, xmm6
 007174C3    jbe 0x007174CA
-007174C5    xorps xmm5, xmm5
+007174C5    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 007174C8    jmp 0x007174D1
 007174CA    movaps xmm5, xmm7
 007174CD    minss xmm5, xmm6
@@ -1423,10 +1429,10 @@
 007174E0    lahf
 007174E1    test ah, 0x44
 007174E4    jp 0x007174EB
-007174E6    xorps xmm5, xmm5
+007174E6    xorps xmm5, xmm5                                ; => [ String: 0 | String: zx ]
 007174E9    jmp 0x00717544
 007174EB    mov edi, dword ptr ss:[ebp-0x1C]
-007174EE    xorps xmm2, xmm2
+007174EE    xorps xmm2, xmm2                                ; => [ String: 0 | String: zx ]
 007174F1    lea eax, ds:[edi-0x12]
 007174F4    cmp eax, edi
 007174F6    mov dword ptr ss:[ebp-0x28], eax
@@ -1546,7 +1552,7 @@
 00717660    jmp 0x007176AA
 00717662    cmp eax, dword ptr ss:[ebp-0x28]
 00717665    jnz 0x0071766C
-00717667    movaps xmm6, xmm1
+00717667    movaps xmm6, xmm1                               ; => [ String: 0 | String: zx ]
 0071766A    jmp 0x0071767E
 0071766C    mov edi, dword ptr ss:[ebp-0x18]
 0071766F    movss xmm1, dword ptr ds:[edi+eax*4-0x08]

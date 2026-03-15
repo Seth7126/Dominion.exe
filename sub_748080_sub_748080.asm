@@ -1,6 +1,12 @@
+// ============================================================
+// 函数名称: sub_748080
+// 起始地址: 0x748080
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00748080    push ebp
 00748081    mov ebp, esp
-00748083    mov eax, dword ptr ds:[0x01593C7C]
+00748083    mov eax, dword ptr ds:[0x01593C7C]              ; => [ Data: data_1593c7c ]
 00748088    sub esp, 0x10
 0074808B    push ebx
 0074808C    mov bl, cl
@@ -10,7 +16,7 @@
 00748092    jnz 0x00748230
 00748098    mov ecx, dword ptr ds:[0x0151245C]
 0074809E    xor edx, edx
-007480A0    call 0x00744F10
+007480A0    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 007480A5    mov esi, dword ptr ss:[ebp+0x08]
 007480A8    test bl, bl
 007480AA    jz 0x007480B2
@@ -40,10 +46,10 @@
 0074811C    mov edi, 0x01
 00748121    movups xmmword ptr ds:[esi], xmm0
 00748124    cmp dword ptr ds:[0x0151345C], edi
-0074812A    jle 0x00748266
+0074812A    jle 0x00748266                                  ; => [ Data: data_151345c ]
 00748130    mov ecx, dword ptr ds:[edi*4+0x151245C]
 00748137    xor edx, edx
-00748139    call 0x00744F10
+00748139    call 0x00744F10                                 ; => [ Call: sub_744f10 | Call: nullptr | Data: data_151245c ]
 0074813E    movss xmm1, dword ptr ds:[esi]
 00748142    test bl, bl
 00748144    jz 0x00748178
@@ -53,10 +59,10 @@
 00748150    movss xmm0, dword ptr ds:[esi+0x0C]
 00748155    comiss xmm0, dword ptr ds:[esi+0x04]
 00748159    jnb 0x0074821A
-0074815F    push 0x872E98
+0074815F    push 0x872E98                                   ; => [ String: RectUnion ]
 00748164    push 0xDB
-00748169    push 0x801A00
-0074816E    mov ecx, 0x872EA4
+00748169    push 0x801A00                                   ; => [ String: C:\x\ax2017\Engine\Rect.cpp ]
+0074816E    mov ecx, 0x872EA4                               ; => [ String: RectIsNormalized(r0) ]
 00748173    jmp 0x00748283
 00748178    movss xmm0, dword ptr ds:[eax+0x10]
 0074817D    movss xmm3, dword ptr ds:[eax+0x18]
@@ -99,7 +105,7 @@
 00748215    movss dword ptr ds:[esi+0x0C], xmm0
 0074821A    inc edi
 0074821B    cmp edi, dword ptr ds:[0x0151345C]
-00748221    jl 0x00748130
+00748221    jl 0x00748130                                   ; => [ Data: data_151345c ]
 00748227    mov eax, esi
 00748229    pop edi
 0074822A    pop esi
@@ -109,18 +115,18 @@
 0074822F    ret
 00748230    cmp eax, 0x02
 00748233    jnz 0x0074826F
-00748235    mov ecx, dword ptr ds:[0x01512450]
+00748235    mov ecx, dword ptr ds:[0x01512450]              ; => [ Data: data_1512450 ]
 0074823B    cmp dword ptr ds:[ecx+0x04], 0x1E
 0074823F    jz 0x00748257
-00748241    push 0x8790A8
+00748241    push 0x8790A8                                   ; => [ String: UIDefGet ]
 00748246    push 0x127
-0074824B    push 0x878EA8
-00748250    mov ecx, 0x8790C8
+0074824B    push 0x878EA8                                   ; => [ String: C:\x\ax2017\Engine\UIDef.cpp ]
+00748250    mov ecx, 0x8790C8                               ; => [ String: ptr->assetType == ASSET_TYPE_UI ]
 00748255    jmp 0x00748283
 00748257    call 0x005AF880
 0074825C    mov esi, dword ptr ss:[ebp+0x08]
 0074825F    movups xmm0, xmmword ptr ds:[eax+0x0C]
-00748263    movups xmmword ptr ds:[esi], xmm0
+00748263    movups xmmword ptr ds:[esi], xmm0               ; => [ Call: sub_5af880 ]
 00748266    pop edi
 00748267    mov eax, esi
 00748269    pop esi
@@ -128,15 +134,15 @@
 0074826B    mov esp, ebp
 0074826D    pop ebp
 0074826E    ret
-0074826F    push 0x88FD78
+0074826F    push 0x88FD78                                   ; => [ String: DragSelectionRect ]
 00748274    push 0x4B4
-00748279    push 0x88FC60
-0074827E    mov ecx, 0x801AA4
+00748279    push 0x88FC60                                   ; => [ String: C:\x\ax2017\Engine\Editor\UIEditor.cpp ]
+0074827E    mov ecx, 0x801AA4                               ; => [ String: Halt ]
 00748283    mov edx, 0x801800
-00748288    call 0x0063B870
+00748288    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 0074828D    add esp, 0x0C
 00748290    call 0x0063BC30
 00748295    test al, al
-00748297    jz 0x0074829A
+00748297    jz 0x0074829A                                   ; => [ Call: sub_63bc30 ]
 00748299    int3
-0074829A    call 0x0063BB00
+0074829A    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

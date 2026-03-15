@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_723fc0
+// 起始地址: 0x723fc0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00723FC0    push ebp
 00723FC1    mov ebp, esp
 00723FC3    sub esp, 0x18
@@ -11,7 +17,7 @@
 00723FD2    mov dword ptr ss:[ebp-0x04], eax
 00723FD5    mov dword ptr ss:[ebp-0x10], 0x01
 00723FDC    mov dword ptr ss:[ebp-0x14], 0x01
-00723FE3    call 0x007202A0
+00723FE3    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 00723FE8    mov dword ptr ss:[ebp-0x0C], eax
 00723FEB    cmp eax, 0x0B
 00723FEE    jl 0x00724570
@@ -47,12 +53,12 @@
 00724050    cmp al, 0x08
 00724052    jnz 0x00724570
 00724058    mov ecx, esi
-0072405A    call 0x007202A0
+0072405A    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072405F    mov dword ptr ds:[esi+0x04], eax
 00724062    test eax, eax
 00724064    jz 0x00724570
 0072406A    mov ecx, esi
-0072406C    call 0x007202A0
+0072406C    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 00724071    mov dword ptr ds:[esi], eax
 00724073    test eax, eax
 00724075    jz 0x00724570
@@ -173,7 +179,7 @@
 007241D2    mov eax, dword ptr ss:[ebp-0x0C]
 007241D5    movzx eax, byte ptr ds:[eax+0x88DE90]
 007241DC    cmp ecx, eax
-007241DE    jnz 0x007241E9
+007241DE    jnz 0x007241E9                                  ; => [ Data: data_88de90 ]
 007241E0    mov eax, dword ptr ss:[ebp-0x04]
 007241E3    inc dword ptr ds:[eax+0x47EC]
 007241E9    mov eax, dword ptr ds:[edi]
@@ -475,7 +481,7 @@
 0072456B    pop ebx
 0072456C    mov esp, ebp
 0072456E    pop ebp
-0072456F    ret
+0072456F    ret                                             ; => [ Call: sub_723f50 ]
 00724570    pop edi
 00724571    pop esi
 00724572    xor eax, eax

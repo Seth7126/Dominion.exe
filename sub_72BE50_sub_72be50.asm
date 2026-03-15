@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_72be50
+// 起始地址: 0x72be50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0072BE50    push ebp
 0072BE51    mov ebp, esp
 0072BE53    sub esp, 0x0C
@@ -49,8 +55,8 @@
 0072BEDE    mov ecx, esi
 0072BEE0    call 0x007202A0
 0072BEE5    mov ecx, esi
-0072BEE7    mov dword ptr ss:[ebp+0x0C], eax
-0072BEEA    call 0x007202A0
+0072BEE7    mov dword ptr ss:[ebp+0x0C], eax                ; => [ Call: sub_7202a0 ]
+0072BEEA    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072BEEF    cmp dword ptr ds:[esi+0x10], 0x00
 0072BEF3    mov ebx, eax
 0072BEF5    jz 0x0072BF0F
@@ -83,13 +89,13 @@
 0072BF53    cmp eax, 0x1FFFFFFF
 0072BF58    jnle 0x0072C00E
 0072BF5E    mov ecx, esi
-0072BF60    call 0x007202A0
+0072BF60    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072BF65    mov ecx, esi
-0072BF67    call 0x007202A0
+0072BF67    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072BF6C    mov ecx, esi
-0072BF6E    call 0x007202A0
+0072BF6E    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072BF73    mov ecx, esi
-0072BF75    call 0x007202A0
+0072BF75    call 0x007202A0                                 ; => [ Call: sub_7202a0 ]
 0072BF7A    test ebx, ebx
 0072BF7C    jz 0x0072BF91
 0072BF7E    mov eax, 0x7FFFFFFF
@@ -97,8 +103,8 @@
 0072BF84    idiv ebx
 0072BF86    cmp edi, eax
 0072BF88    jle 0x0072BF91
-0072BF8A    xor ecx, ecx
-0072BF8C    mov dword ptr ss:[ebp+0x0C], ecx
+0072BF8A    xor ecx, ecx                                    ; => [ Call: nullptr ]
+0072BF8C    mov dword ptr ss:[ebp+0x0C], ecx                ; => [ Call: nullptr ]
 0072BF8F    jmp 0x0072BFA8
 0072BF91    mov eax, ebx
 0072BF93    imul eax, edi
@@ -123,11 +129,11 @@
 0072BFC7    call 0x0072B850
 0072BFCC    add esp, 0x18
 0072BFCF    test eax, eax
-0072BFD1    jnz 0x0072BFE6
+0072BFD1    jnz 0x0072BFE6                                  ; => [ Call: memset | Call: sub_72b850 ]
 0072BFD3    push dword ptr ss:[ebp+0x0C]
 0072BFD6    call dword ptr ds:[0x00775528]
 0072BFDC    add esp, 0x04
-0072BFDF    mov dword ptr ss:[ebp+0x0C], 0x00
+0072BFDF    mov dword ptr ss:[ebp+0x0C], 0x00               ; => [ Call: nullptr ]
 0072BFE6    mov eax, dword ptr ss:[ebp-0x08]
 0072BFE9    mov edx, 0x04
 0072BFEE    mov ecx, dword ptr ss:[ebp+0x0C]
@@ -145,7 +151,7 @@
 0072C009    pop ebx
 0072C00A    mov esp, ebp
 0072C00C    pop ebp
-0072C00D    ret
+0072C00D    ret                                             ; => [ Call: sub_720510 ]
 0072C00E    pop edi
 0072C00F    pop esi
 0072C010    xor eax, eax

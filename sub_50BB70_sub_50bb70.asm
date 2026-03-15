@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_50bb70
+// 起始地址: 0x50bb70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 0050BB70    dword 840D8B51
 0050BB74    byte A7
 0050BB75    byte CC
@@ -6,7 +12,7 @@
 0050BB79    mov eax, dword ptr ds:[0x00CCA780]
 0050BB7E    shl ecx, 0x0B
 0050BB81    add eax, 0x58C
-0050BB86    add eax, ecx
+0050BB86    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050BB88    cmp dword ptr ds:[eax], 0x00
 0050BB8B    jz 0x0050BB9B
 0050BB8D    inc edx
@@ -24,7 +30,7 @@
 0050BBC5    mov eax, dword ptr ds:[0x00CCA780]
 0050BBCA    shl ecx, 0x0B
 0050BBCD    add eax, 0x58C
-0050BBD2    add eax, ecx
+0050BBD2    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050BBD4    cmp dword ptr ds:[eax], 0x00
 0050BBD7    jz 0x0050BBE7
 0050BBD9    inc edx
@@ -42,7 +48,7 @@
 0050BC11    mov eax, dword ptr ds:[0x00CCA780]
 0050BC16    shl ecx, 0x0B
 0050BC19    add eax, 0x58C
-0050BC1E    add eax, ecx
+0050BC1E    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050BC20    cmp dword ptr ds:[eax], 0x00
 0050BC23    jz 0x0050BC30
 0050BC25    inc edx
@@ -60,7 +66,7 @@
 0050BC5A    mov eax, dword ptr ds:[0x00CCA780]
 0050BC5F    shl ecx, 0x0B
 0050BC62    add eax, 0x58C
-0050BC67    add eax, ecx
+0050BC67    add eax, ecx                                    ; => [ Data: data_cca780 | Data: data_cca784 ]
 0050BC69    nop dword ptr ds:[eax], eax
 0050BC70    cmp dword ptr ds:[eax], 0x00
 0050BC73    jz 0x0050BC80
@@ -81,10 +87,10 @@
 0050BCAE    push 0x80CD80
 0050BCB3    mov edx, 0x801800
 0050BCB8    mov ecx, 0x801AA4
-0050BCBD    call 0x0063B870
+0050BCBD    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: CampaignAddExtra | String: C:\x\ax2017\Jams\Dominion\code\DomCards_Campaign.cpp | String: Halt ]
 0050BCC2    add esp, 0x0C
 0050BCC5    call 0x0063BC30
 0050BCCA    test al, al
-0050BCCC    jz 0x0050BCCF
+0050BCCC    jz 0x0050BCCF                                   ; => [ Call: sub_63bc30 ]
 0050BCCE    int3
-0050BCCF    call 0x0063BB00
+0050BCCF    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

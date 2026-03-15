@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_6e8f30
+// 起始地址: 0x6e8f30
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 006E8F30    push ebx
 006E8F31    mov ebx, esp
 006E8F33    sub esp, 0x08
@@ -8,7 +14,7 @@
 006E8F40    mov dword ptr ss:[esp+0x04], ebp
 006E8F44    mov ebp, esp
 006E8F46    sub esp, 0xA8
-006E8F4C    mov eax, dword ptr ds:[0x008C4040]
+006E8F4C    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 006E8F51    xor eax, ebp
 006E8F53    mov dword ptr ss:[ebp-0x04], eax
 006E8F56    movups xmm0, xmmword ptr ds:[edx+0x0C]
@@ -29,7 +35,7 @@
 006E8F8C    push eax
 006E8F8D    movups xmm0, xmmword ptr ss:[ebp-0x70]
 006E8F91    movups xmmword ptr ss:[ebp-0x20], xmm0
-006E8F95    call 0x00639A10
+006E8F95    call 0x00639A10                                 ; => [ Call: sub_639a10 ]
 006E8F9A    add esp, 0x04
 006E8F9D    movups xmm6, xmmword ptr ds:[eax]
 006E8FA0    movups xmm1, xmmword ptr ds:[eax+0x10]
@@ -200,13 +206,13 @@
 006E925D    addss xmm3, xmm1
 006E9261    movss dword ptr ss:[ebp-0x20], xmm0
 006E9266    movss dword ptr ss:[ebp-0x14], xmm3
-006E926B    call 0x006E9290
+006E926B    call 0x006E9290                                 ; => [ Call: sub_6e9290 ]
 006E9270    mov ecx, dword ptr ss:[ebp-0x04]
 006E9273    add esp, 0x04
 006E9276    xor ecx, ebp
 006E9278    pop edi
 006E9279    pop esi
-006E927A    call 0x0075927A
+006E927A    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 006E927F    mov esp, ebp
 006E9281    pop ebp
 006E9282    mov esp, ebx

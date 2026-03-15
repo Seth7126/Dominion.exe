@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_682fe0
+// 起始地址: 0x682fe0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00682FE0    push ebp
 00682FE1    mov ebp, esp
 00682FE3    and esp, 0xFFFFFFF0
@@ -40,17 +46,17 @@
 00683094    movss dword ptr ss:[esp+0x14], xmm0
 0068309A    movaps xmm0, xmmword ptr ss:[esp+0x10]
 0068309F    movaps xmmword ptr ss:[esp+0x10], xmm0
-006830A4    call 0x00682F00
+006830A4    call 0x00682F00                                 ; => [ Call: sub_682f00 ]
 006830A9    mov edx, esi
 006830AB    lea ecx, ss:[esp+0x30]
-006830AF    call 0x00682F00
+006830AF    call 0x00682F00                                 ; => [ Call: sub_682f00 ]
 006830B4    mov edx, esi
 006830B6    lea ecx, ss:[esp+0x40]
-006830BA    call 0x00682F00
+006830BA    call 0x00682F00                                 ; => [ Call: sub_682f00 ]
 006830BF    mov edx, esi
 006830C1    lea ecx, ss:[esp+0x10]
 006830C5    call 0x00682F00
 006830CA    pop esi
 006830CB    mov esp, ebp
 006830CD    pop ebp
-006830CE    ret
+006830CE    ret                                             ; => [ Call: sub_682f00 ]

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_7052d0
+// 起始地址: 0x7052d0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007052D0    push ebp
 007052D1    mov ebp, esp
 007052D3    mov edx, dword ptr ss:[ebp+0x08]
@@ -5,9 +11,9 @@
 007052D7    mov esi, ecx
 007052D9    test edx, edx
 007052DB    jnz 0x007052EB
-007052DD    push 0x88D514
+007052DD    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 007052E2    push 0x6C
-007052E4    mov ecx, 0x802734
+007052E4    mov ecx, 0x802734                               ; => [ String: id != DATAID_NULL ]
 007052E9    jmp 0x00705335
 007052EB    movzx eax, dx
 007052EE    cmp eax, dword ptr ds:[esi+0x4250]
@@ -21,20 +27,20 @@
 00705312    test eax, eax
 00705314    jnz 0x00705324
 00705316    mov ecx, dword ptr ds:[esi+0x08]
-00705319    call 0x00687730
+00705319    call 0x00687730                                 ; => [ Call: sub_687730 ]
 0070531E    mov dword ptr ds:[esi+0xD8], eax
 00705324    pop esi
 00705325    pop ebp
 00705326    ret 0x04
-00705329    push 0x88D514
+00705329    push 0x88D514                                   ; => [ String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 0070532E    push 0x6D
-00705330    mov ecx, 0x802748
+00705330    mov ecx, 0x802748                               ; => [ String: DataArrayTryToGet(id) != NULL ]
 00705335    push 0x80193C
 0070533A    mov edx, 0x801800
-0070533F    call 0x0063B870
+0070533F    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Engine\DataArray.h | String: DataArray<struct OpenGLBufferData>::DataArrayGet ]
 00705344    add esp, 0x0C
 00705347    call 0x0063BC30
 0070534C    test al, al
-0070534E    jz 0x00705351
+0070534E    jz 0x00705351                                   ; => [ Call: sub_63bc30 ]
 00705350    int3
-00705351    call 0x0063BB00
+00705351    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

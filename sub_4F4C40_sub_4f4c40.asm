@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4f4c40
+// 起始地址: 0x4f4c40
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F4C40    push ebp
 004F4C41    mov ebp, esp
 004F4C43    sub esp, 0x10
@@ -38,7 +44,7 @@
 004F4CB7    test esi, esi
 004F4CB9    jle 0x004F4D32
 004F4CBB    mov eax, dword ptr ds:[edx+0xD4]
-004F4CC1    xor edx, edx
+004F4CC1    xor edx, edx                                    ; => [ Call: nullptr ]
 004F4CC3    mov dword ptr ss:[ebp-0x08], eax
 004F4CC6    mov eax, dword ptr ss:[ebp-0x0C]
 004F4CC9    cmp dword ptr ds:[eax+0xD4], edx
@@ -76,19 +82,19 @@
 004F4D1D    mov esp, ebp
 004F4D1F    pop ebp
 004F4D20    ret
-004F4D21    push 0x808F50
+004F4D21    push 0x808F50                                   ; => [ String: NodeMaxChild ]
 004F4D26    push 0x1842
-004F4D2B    mov ecx, 0x808E1C
+004F4D2B    mov ecx, 0x808E1C                               ; => [ String: best_i >= 0 ]
 004F4D30    jmp 0x004F4D41
-004F4D32    push 0x808F50
+004F4D32    push 0x808F50                                   ; => [ String: NodeMaxChild ]
 004F4D37    push 0x182E
-004F4D3C    mov ecx, 0x808F60
+004F4D3C    mov ecx, 0x808F60                               ; => [ String: maxVisits > 0 ]
 004F4D41    push 0x8088A8
 004F4D46    mov edx, 0x801800
-004F4D4B    call 0x0063B870
+004F4D4B    call 0x0063B870                                 ; => [ String: NodeMaxChild | Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp ]
 004F4D50    add esp, 0x0C
 004F4D53    call 0x0063BC30
 004F4D58    test al, al
-004F4D5A    jz 0x004F4D5D
+004F4D5A    jz 0x004F4D5D                                   ; => [ Call: sub_63bc30 ]
 004F4D5C    int3
-004F4D5D    call 0x0063BB00
+004F4D5D    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

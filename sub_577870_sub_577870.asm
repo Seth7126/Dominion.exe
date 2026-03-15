@@ -1,7 +1,13 @@
+// ============================================================
+// 函数名称: sub_577870
+// 起始地址: 0x577870
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00577870    push ebp
 00577871    mov ebp, esp
 00577873    sub esp, 0xC9C
-00577879    mov eax, dword ptr ds:[0x008C4040]
+00577879    mov eax, dword ptr ds:[0x008C4040]              ; => [ Data: __security_cookie ]
 0057787E    xor eax, ebp
 00577880    mov dword ptr ss:[ebp-0x04], eax
 00577883    push ebx
@@ -40,19 +46,19 @@
 005778F2    push eax
 005778F3    push 0x05
 005778F5    or edx, 0xFFFFFFFF
-005778F8    call 0x00590990
+005778F8    call 0x00590990                                 ; => [ Call: sub_590990 ]
 005778FD    add esp, 0x08
 00577900    test eax, eax
 00577902    jz 0x0057792F
 00577904    cmp eax, 0x01
 00577907    jz 0x0057790E
-00577909    call 0x00591930
+00577909    call 0x00591930                                 ; => [ Call: sub_591930 ]
 0057790E    mov eax, dword ptr ss:[ebp-0xC88]
 00577914    movzx eax, ax
 00577917    mov dword ptr ss:[ebp-0xC90], eax
 0057791D    cmp eax, 0x320
 00577922    jb 0x0057792F
-00577924    call 0x00591930
+00577924    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577929    mov eax, dword ptr ss:[ebp-0xC90]
 0057792F    mov ecx, dword ptr ss:[ebp-0xC8C]
 00577935    imul eax, eax, 0x64
@@ -104,7 +110,7 @@
 005779C6    mov ecx, dword ptr ss:[ebp-0xC8C]
 005779CC    push 0x800
 005779D1    push 0x00
-005779D3    call 0x005754F0
+005779D3    call 0x005754F0                                 ; => [ Call: sub_5754f0 ]
 005779D8    add esp, 0x08
 005779DB    test al, al
 005779DD    jnz 0x00577A07
@@ -120,7 +126,7 @@
 005779F8    pop ebx
 005779F9    mov ecx, dword ptr ss:[ebp-0x04]
 005779FC    xor ecx, ebp
-005779FE    call 0x0075927A
+005779FE    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00577A03    mov esp, ebp
 00577A05    pop ebp
 00577A06    ret
@@ -129,10 +135,10 @@
 00577A0F    lea eax, ds:[ebx-0x07]
 00577A12    cmp eax, 0x41
 00577A15    jbe 0x00577A1C
-00577A17    call 0x00591930
+00577A17    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577A1C    cmp ebx, 0x48
 00577A1F    jl 0x00577A26
-00577A21    call 0x00591930
+00577A21    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577A26    mov eax, dword ptr ss:[ebp-0xC8C]
 00577A2C    add ebx, ebx
 00577A2E    mov eax, dword ptr ds:[eax+ebx*8+0x152C]
@@ -142,7 +148,7 @@
 00577A40    mov dword ptr ss:[ebp-0xC90], ecx
 00577A46    cmp ecx, 0x320
 00577A4C    jb 0x00577A59
-00577A4E    call 0x00591930
+00577A4E    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577A53    mov ecx, dword ptr ss:[ebp-0xC90]
 00577A59    mov ebx, dword ptr ss:[ebp-0xC8C]
 00577A5F    imul eax, ecx, 0x64
@@ -152,7 +158,7 @@
 00577A74    jnz 0x005779F4
 00577A7A    cmp ecx, 0x320
 00577A80    jb 0x00577A8D
-00577A82    call 0x00591930
+00577A82    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00577A87    mov eax, dword ptr ss:[ebp-0xC90]
 00577A8D    push dword ptr ds:[eax+0x1A50]
 00577A93    mov ecx, ebx
@@ -160,7 +166,7 @@
 00577A9A    call 0x00583F70
 00577A9F    add esp, 0x08
 00577AA2    test eax, eax
-00577AA4    jnz 0x005779F4
+00577AA4    jnz 0x005779F4                                  ; => [ Call: sub_583f70 ]
 00577AAA    xor ecx, ecx
 00577AAC    lea eax, ds:[ebx+0xD4C]
 00577AB2    mov edx, dword ptr ds:[eax]
@@ -204,7 +210,7 @@
 00577B0F    pop esi
 00577B10    xor ecx, ebp
 00577B12    pop ebx
-00577B13    call 0x0075927A
+00577B13    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 00577B18    mov esp, ebp
 00577B1A    pop ebp
 00577B1B    ret
@@ -213,10 +219,10 @@
 00577B26    push 0x81F4B8
 00577B2B    mov edx, 0x801800
 00577B30    mov ecx, 0x814060
-00577B35    call 0x0063B870
+00577B35    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: which != CARDID_NULL | String: C:\x\ax2017\Jams\Dominion\code\DomGame.cpp | String: ProphecyCard ]
 00577B3A    add esp, 0x0C
 00577B3D    call 0x0063BC30
 00577B42    test al, al
-00577B44    jz 0x00577B47
+00577B44    jz 0x00577B47                                   ; => [ Call: sub_63bc30 ]
 00577B46    int3
-00577B47    call 0x0063BB00
+00577B47    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_7076e0
+// 起始地址: 0x7076e0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 007076E0    push ebp
 007076E1    mov ebp, esp
 007076E3    and esp, 0xFFFFFFF8
 007076E6    push esi
 007076E7    push edi
 007076E8    mov esi, ecx
-007076EA    call 0x007072D0
+007076EA    call 0x007072D0                                 ; => [ Call: sub_7072d0 ]
 007076EF    mov eax, dword ptr ds:[esi+0x04]
 007076F2    test eax, eax
 007076F4    jz 0x0070773A
@@ -24,29 +30,29 @@
 0070772C    test ecx, ecx
 0070772E    jz 0x0070773A
 00707730    mov edx, 0x10
-00707735    call 0x0064C080
+00707735    call 0x0064C080                                 ; => [ Call: sub_64c080 ]
 0070773A    mov ecx, esi
 0070773C    call 0x007074E0
 00707741    pop edi
 00707742    pop esi
 00707743    mov esp, ebp
 00707745    pop ebp
-00707746    ret
+00707746    ret                                             ; => [ Call: sub_7074e0 ]
 00707747    cmp eax, 0x01
 0070774A    jnz 0x007077B3
 0070774C    lea ecx, ds:[eax+0x0F]
-0070774F    call 0x0064BFD0
+0070774F    call 0x0064BFD0                                 ; => [ Call: sub_64bfd0 ]
 00707754    mov edi, eax
 00707756    inc dword ptr ds:[edi+0x0C]
 00707759    cmp dword ptr ds:[edi], 0x00
 0070775C    jnz 0x00707765
 0070775E    mov ecx, edi
-00707760    call 0x0064BE70
+00707760    call 0x0064BE70                                 ; => [ Call: sub_64be70 ]
 00707765    mov edx, dword ptr ds:[edi]
 00707767    xorps xmm0, xmm0
 0070776A    mov eax, dword ptr ds:[edx]
 0070776C    mov dword ptr ds:[edi], eax
-0070776E    movups xmmword ptr ds:[edx], xmm0
+0070776E    movups xmmword ptr ds:[edx], xmm0               ; => [ String: 0 | String: zx ]
 00707771    mov eax, dword ptr ds:[esi+0x0C]
 00707774    mov ecx, dword ptr ds:[esi+0x10]
 00707777    mov dword ptr ds:[edx], eax
@@ -67,7 +73,7 @@
 007077AE    pop esi
 007077AF    mov esp, ebp
 007077B1    pop ebp
-007077B2    ret
+007077B2    ret                                             ; => [ Call: sub_7075e0 ]
 007077B3    cmp eax, 0x02
 007077B6    jz 0x007077A6
 007077B8    pop edi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_572970
+// 起始地址: 0x572970
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00572970    push ebp
 00572971    mov ebp, esp
 00572973    and esp, 0xFFFFFFF8
@@ -9,7 +15,7 @@
 0057297C    mov ebx, ecx
 0057297E    cmp edi, 0x48
 00572981    jl 0x00572988
-00572983    call 0x00591930
+00572983    call 0x00591930                                 ; => [ Call: sub_591930 ]
 00572988    mov eax, dword ptr ss:[ebp+0x0C]
 0057298B    mov esi, edi
 0057298D    mov ecx, dword ptr ss:[ebp+0x08]
@@ -43,7 +49,7 @@
 005729E0    push 0x00
 005729E2    push 0xFFFFFFFF
 005729E4    setz cl
-005729E7    call 0x0061B1B0
+005729E7    call 0x0061B1B0                                 ; => [ Call: nullptr | Call: sub_61b1b0 ]
 005729EC    add esp, 0x2C
 005729EF    pop edi
 005729F0    mov eax, esi

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_694aa0
+// 起始地址: 0x694aa0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00694AA0    push ebp
 00694AA1    mov ebp, esp
 00694AA3    sub esp, 0x10
@@ -46,9 +52,9 @@
 00694B0E    jz 0x00694AE8
 00694B10    test ebx, ebx
 00694B12    jz 0x00694AE8
-00694B14    push 0x878998
+00694B14    push 0x878998                                   ; => [ String: DefBinSerializeVariableArray ]
 00694B19    push 0x1DC
-00694B1E    mov ecx, 0x8789D8
+00694B1E    mov ecx, 0x8789D8                               ; => [ String: !tSerializer.pDataSizeWithoutHWBuffers || *tSerializer.pDataSizeWithoutHWBuffers == 0 || count == 0 ]
 00694B23    jmp 0x00694BBD
 00694B28    mov edi, dword ptr ds:[esi+0x08]
 00694B2B    add edi, 0x03
@@ -61,10 +67,10 @@
 00694B3D    mov ecx, dword ptr ds:[eax+0x0C]
 00694B40    test ecx, ecx
 00694B42    jnz 0x00694B57
-00694B44    push 0x87943C
+00694B44    push 0x87943C                                   ; => [ String: DefinitionGetSize ]
 00694B49    push 0x6D
-00694B4B    push 0x879400
-00694B50    mov ecx, 0x87948C
+00694B4B    push 0x879400                                   ; => [ String: C:\x\ax2017\Engine\Definition.cpp ]
+00694B50    mov ecx, 0x87948C                               ; => [ String: pDefMap->definitionSize != 0 ]
 00694B55    jmp 0x00694BC2
 00694B57    mov esi, dword ptr ss:[ebp-0x04]
 00694B5A    mov eax, dword ptr ds:[edx]
@@ -80,7 +86,7 @@
 00694B73    mov eax, dword ptr ds:[esi]
 00694B75    add eax, edi
 00694B77    push eax
-00694B78    call 0x00761FBE
+00694B78    call 0x00761FBE                                 ; => [ Call: memcpy ]
 00694B7D    mov edx, dword ptr ss:[ebp-0x08]
 00694B80    add esp, 0x0C
 00694B83    mov ecx, dword ptr ss:[ebp-0x0C]
@@ -92,7 +98,7 @@
 00694B93    push edx
 00694B94    mov edx, ebx
 00694B96    mov dword ptr ds:[esi+0x08], eax
-00694B99    call 0x00694950
+00694B99    call 0x00694950                                 ; => [ Call: sub_694950 ]
 00694B9E    mov eax, dword ptr ss:[ebp-0x10]
 00694BA1    add esp, 0x0C
 00694BA4    mov dword ptr ds:[esi+0x04], eax
@@ -102,15 +108,15 @@
 00694BAA    mov esp, ebp
 00694BAC    pop ebp
 00694BAD    ret
-00694BAE    push 0x878998
+00694BAE    push 0x878998                                   ; => [ String: DefBinSerializeVariableArray ]
 00694BB3    push 0x1C8
-00694BB8    mov ecx, 0x878A3C
-00694BBD    push 0x878868
+00694BB8    mov ecx, 0x878A3C                               ; => [ String: count >= 0 && count < 100000000 ]
+00694BBD    push 0x878868                                   ; => [ String: C:\x\ax2017\Engine\DefBin.cpp | String: C:\x\ax2017\Engine\DefBin.cpp ]
 00694BC2    mov edx, 0x801800
-00694BC7    call 0x0063B870
+00694BC7    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 ]
 00694BCC    add esp, 0x0C
 00694BCF    call 0x0063BC30
 00694BD4    test al, al
-00694BD6    jz 0x00694BD9
+00694BD6    jz 0x00694BD9                                   ; => [ Call: sub_63bc30 ]
 00694BD8    int3
-00694BD9    call 0x0063BB00
+00694BD9    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

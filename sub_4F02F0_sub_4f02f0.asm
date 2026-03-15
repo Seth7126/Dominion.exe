@@ -1,10 +1,16 @@
+// ============================================================
+// 函数名称: sub_4f02f0
+// 起始地址: 0x4f02f0
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004F02F0    push ebp
 004F02F1    mov ebp, esp
 004F02F3    mov eax, 0x25A4
-004F02F8    call 0x00761E50
+004F02F8    call 0x00761E50                                 ; => [ Call: __chkstk ]
 004F02FD    mov eax, dword ptr ds:[0x008C4040]
 004F0302    xor eax, ebp
-004F0304    mov dword ptr ss:[ebp-0x04], eax
+004F0304    mov dword ptr ss:[ebp-0x04], eax                ; => [ Data: __security_cookie ]
 004F0307    push ebx
 004F0308    mov ebx, ecx
 004F030A    mov dword ptr ss:[ebp-0x2598], edx
@@ -16,16 +22,16 @@
 004F031D    mov dword ptr ss:[ebp-0x258C], edi
 004F0323    cmp eax, dword ptr ds:[edx+0x50]
 004F0326    jz 0x004F033C
-004F0328    push 0x808AB0
+004F0328    push 0x808AB0                                   ; => [ String: ExtractAction ]
 004F032D    push 0xC9D
-004F0332    mov ecx, 0x808AC0
+004F0332    mov ecx, 0x808AC0                               ; => [ String: node->who == act.controlWho ]
 004F0337    jmp 0x004F0712
 004F033C    mov eax, dword ptr ds:[edx+0x04]
 004F033F    cmp dword ptr ds:[ecx+0xBC], eax
 004F0345    jz 0x004F035B
-004F0347    push 0x808AB0
+004F0347    push 0x808AB0                                   ; => [ String: ExtractAction ]
 004F034C    push 0xC9E
-004F0351    mov ecx, 0x808ADC
+004F0351    mov ecx, 0x808ADC                               ; => [ String: node->choice == act.choice ]
 004F0356    jmp 0x004F0712
 004F035B    cmp eax, 0x05
 004F035E    jz 0x004F06C5
@@ -103,7 +109,7 @@
 004F047B    mov dword ptr ss:[ebp-0x25A0], edx
 004F0481    push dword ptr ds:[ecx+eax*4+0x70]
 004F0485    mov ecx, ebx
-004F0487    call 0x005915B0
+004F0487    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 004F048C    mov edx, dword ptr ss:[ebp-0x2594]
 004F0492    add esp, 0x04
 004F0495    add edx, dword ptr ds:[edi+0x0C]
@@ -125,20 +131,20 @@
 004F04D9    push esi
 004F04DA    mov ecx, ebx
 004F04DC    mov edx, dword ptr ds:[edx+0x4C]
-004F04DF    call 0x0057EE90
+004F04DF    call 0x0057EE90                                 ; => [ Call: sub_57ee90 ]
 004F04E4    mov edi, eax
 004F04E6    add esp, 0x08
 004F04E9    test edi, edi
 004F04EB    jnle 0x004F051F
 004F04ED    push esi
 004F04EE    mov ecx, ebx
-004F04F0    call 0x005915B0
+004F04F0    call 0x005915B0                                 ; => [ Call: sub_5915b0 ]
 004F04F5    add esp, 0x04
 004F04F8    cmp eax, 0x1121
 004F04FD    jnz 0x004F051F
 004F04FF    push esi
 004F0500    mov ecx, ebx
-004F0502    call 0x005916B0
+004F0502    call 0x005916B0                                 ; => [ Call: sub_5916b0 ]
 004F0507    add esp, 0x04
 004F050A    lea ecx, ss:[ebp-0x2588]
 004F0510    mov edx, eax
@@ -146,7 +152,7 @@
 004F0513    mov ecx, ebx
 004F0515    call 0x00590930
 004F051A    add esp, 0x04
-004F051D    mov edi, eax
+004F051D    mov edi, eax                                    ; => [ Call: sub_590930 ]
 004F051F    mov eax, dword ptr ss:[ebp+0x0C]
 004F0522    cmp edi, dword ptr ds:[eax+0x18]
 004F0525    jnz 0x004F05DB
@@ -170,7 +176,7 @@
 004F0573    add edx, ecx
 004F0575    push eax
 004F0576    lea ecx, ss:[ebp-0x1908]
-004F057C    call 0x004F5990
+004F057C    call 0x004F5990                                 ; => [ Call: sub_4f5990 ]
 004F0581    add esp, 0x08
 004F0584    xor eax, eax
 004F0586    test edi, edi
@@ -247,7 +253,7 @@
 004F06B6    pop ebx
 004F06B7    mov ecx, dword ptr ss:[ebp-0x04]
 004F06BA    xor ecx, ebp
-004F06BC    call 0x0075927A
+004F06BC    call 0x0075927A                                 ; => [ Call: CookieCheckFunction ]
 004F06C1    mov esp, ebp
 004F06C3    pop ebp
 004F06C4    ret
@@ -260,27 +266,27 @@
 004F06D4    pop esi
 004F06D5    xor ecx, ebp
 004F06D7    pop ebx
-004F06D8    call 0x0075927A
+004F06D8    call 0x0075927A                                 ; => [ Call: CookieCheckFunction | Call: CookieCheckFunction ]
 004F06DD    mov esp, ebp
 004F06DF    pop ebp
 004F06E0    ret
-004F06E1    push 0x808AB0
+004F06E1    push 0x808AB0                                   ; => [ String: ExtractAction ]
 004F06E6    push 0xCC1
-004F06EB    mov ecx, 0x808AF8
+004F06EB    mov ecx, 0x808AF8                               ; => [ String: i < MAX_WHERE_RESULTS ]
 004F06F0    jmp 0x004F0712
-004F06F2    push 0x808AB0
+004F06F2    push 0x808AB0                                   ; => [ String: ExtractAction ]
 004F06F7    push 0xCF1
-004F06FC    mov ecx, 0x808B10
+004F06FC    mov ecx, 0x808B10                               ; => [ String: j < n ]
 004F0701    jmp 0x004F0712
-004F0703    push 0x808AB0
+004F0703    push 0x808AB0                                   ; => [ String: ExtractAction ]
 004F0708    push 0xD05
-004F070D    mov ecx, 0x808B18
+004F070D    mov ecx, 0x808B18                               ; => [ String: best_j != -1 ]
 004F0712    push 0x8088A8
 004F0717    mov edx, 0x801800
-004F071C    call 0x0063B870
+004F071C    call 0x0063B870                                 ; => [ Call: sub_63b870 | Data: data_801800 | String: C:\x\ax2017\Jams\Dominion\code\DomAIMCTS.cpp ]
 004F0721    add esp, 0x0C
 004F0724    call 0x0063BC30
 004F0729    test al, al
-004F072B    jz 0x004F072E
+004F072B    jz 0x004F072E                                   ; => [ Call: sub_63bc30 ]
 004F072D    int3
-004F072E    call 0x0063BB00
+004F072E    call 0x0063BB00                                 ; => [ Call: sub_63bb00 ]

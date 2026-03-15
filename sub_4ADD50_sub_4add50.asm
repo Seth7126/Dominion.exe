@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_4add50
+// 起始地址: 0x4add50
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 004ADD50    push ebx
 004ADD51    push esi
 004ADD52    mov ebx, ecx
@@ -9,7 +15,7 @@
 004ADD61    cmp dword ptr ds:[esi], 0x00
 004ADD64    jz 0x004ADD6D
 004ADD66    mov ecx, esi
-004ADD68    call 0x0064E810
+004ADD68    call 0x0064E810                                 ; => [ Call: sub_64e810 ]
 004ADD6D    inc edi
 004ADD6E    add esi, 0x04
 004ADD71    cmp edi, dword ptr ds:[ebx+0xBBC]
@@ -18,6 +24,6 @@
 004ADD83    movups xmm0, xmmword ptr ds:[0x007FF530]
 004ADD8A    pop edi
 004ADD8B    pop esi
-004ADD8C    movups xmmword ptr ds:[ebx+0xBC4], xmm0
+004ADD8C    movups xmmword ptr ds:[ebx+0xBC4], xmm0         ; => [ Data: data_7ff530 ]
 004ADD93    pop ebx
 004ADD94    ret

@@ -1,3 +1,9 @@
+// ============================================================
+// 函数名称: sub_547860
+// 起始地址: 0x547860
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00547860    push ebp
 00547861    mov ebp, esp
 00547863    sub esp, 0x0C
@@ -6,7 +12,7 @@
 00547868    mov ebx, ecx
 0054786A    push edi
 0054786B    mov dword ptr ss:[ebp-0x04], ebx
-0054786E    call 0x00573400
+0054786E    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00547873    mov edi, eax
 00547875    mov esi, 0x07
 0054787A    mov edx, dword ptr ds:[edi+0x04]
@@ -27,11 +33,11 @@
 005478AC    call 0x00588650
 005478B1    add esp, 0x04
 005478B4    test al, al
-005478B6    jnz 0x005478DB
+005478B6    jnz 0x005478DB                                  ; => [ Call: sub_588650 ]
 005478B8    mov ebx, dword ptr ds:[edi+0x04]
 005478BB    cmp esi, 0x48
 005478BE    jl 0x005478C5
-005478C0    call 0x00591930
+005478C0    call 0x00591930                                 ; => [ Call: sub_591930 ]
 005478C5    add esi, esi
 005478C7    mov esi, dword ptr ds:[ebx+esi*8+0x152C]
 005478CE    test esi, esi
@@ -65,9 +71,9 @@
 00547923    push 0x3C
 00547925    push eax
 00547926    or edx, 0xFFFFFFFF
-00547929    call 0x0059F9B0
+00547929    call 0x0059F9B0                                 ; => [ Call: nullptr | Call: sub_59f9b0 ]
 0054792E    add esp, 0x24
-00547931    call 0x00573400
+00547931    call 0x00573400                                 ; => [ Call: sub_573400 ]
 00547936    push 0x04
 00547938    push 0x00
 0054793A    push 0x00
@@ -80,7 +86,7 @@
 0054794B    call 0x00583720
 00547950    add esp, 0x1C
 00547953    test al, al
-00547955    jz 0x00547960
+00547955    jz 0x00547960                                   ; => [ Call: nullptr | Call: sub_583720 ]
 00547957    mov eax, esi
 00547959    pop edi
 0054795A    pop esi

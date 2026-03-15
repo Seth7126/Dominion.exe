@@ -1,5 +1,11 @@
+// ============================================================
+// 函数名称: sub_484e70
+// 起始地址: 0x484e70
+// 备注: 带有 ; => 的注释为 Binary Ninja 解析出的高级语义 Token
+// ============================================================
+
 00484E70    mov edx, 0x22
 00484E75    mov ecx, 0x854A4C
-00484E7A    call 0x0069F030
-00484E7F    mov dword ptr ds:[0x0171E98C], eax
+00484E7A    call 0x0069F030                                 ; => [ String: res/ui2/title_more.ui2 | Call: sub_69f030 ]
+00484E7F    mov dword ptr ds:[0x0171E98C], eax              ; => [ Data: data_171e98c ]
 00484E84    ret
